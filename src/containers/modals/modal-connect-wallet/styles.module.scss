@@ -1,0 +1,39 @@
+.modal {
+  // margin-top: 250px;
+}
+
+.modalItem {
+  border: 1px solid #E6E6E6;
+  padding: 16px 18px 16px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalLeftBox {
+  display: flex;
+  align-items: center;
+}
+
+.modalsTextForIcon {
+  font-size: 16px;
+  line-height: 19px;
+  margin-right: 10px;
+  font-weight: 700;
+
+  img {
+    width: 52px;
+    height: 43px;
+    object-fit: contain;
+  }
+}
+
+.modalIcon {
+  width: 52px;
+  height: 43px;
+}
+
+.modalButton {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

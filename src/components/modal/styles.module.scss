@@ -1,0 +1,46 @@
+@import '../../assets/scss/helpers/helpers.scss';
+
+.wrapper {
+  background-color: rgba(0,0,0,0.2);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 48px;
+  position: relative;
+  max-width: 840px;
+  margin: 200px auto;
+}
+
+.closeIcon {
+  @include reset-button(); 
+  @include active(); 
+  position: absolute;
+  right: 32px;
+  top: 32px;
+}
+
+.title {
+  font-size: 32px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-bottom: 44px;
+}
+
+.modalBodyText {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+

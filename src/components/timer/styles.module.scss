@@ -1,0 +1,38 @@
+@import '@assets/scss/helpers/variables.scss';
+
+.isDefault {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 900;
+
+  .dots {
+    transform: translateY(-2px);
+    display: inline-block;
+  }
+}
+
+.isLarge {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+
+  .item {
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+  
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  .dots {
+    transform: translateY(-4px);
+  }
+}
+
+.isSmall {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+}

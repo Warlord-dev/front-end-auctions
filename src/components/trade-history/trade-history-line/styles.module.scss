@@ -1,0 +1,23 @@
+.item {
+  display: grid;
+  grid-template-columns: 335fr 390fr 390fr 205fr; 
+  padding: 14px 0;
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+  align-items: center;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.priceEth {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.priceUsd {
+  font-size: 16px;
+}

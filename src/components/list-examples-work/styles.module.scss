@@ -1,0 +1,23 @@
+@import '../../assets/scss/helpers/variables.scss';
+@import '../../assets/scss/helpers/helpers.scss';
+
+.headerTitle {
+  display: grid;
+  grid-template-columns: 156px 355px repeat(4, 172px);
+  column-gap: 24px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.headerTitleItem {
+  padding-bottom: 12px;
+  color: $darkGray3;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.body {
+  max-height: 1020px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include grayScroll();
+}

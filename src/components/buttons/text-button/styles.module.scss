@@ -1,0 +1,7 @@
+@import '../../../assets/scss/helpers/helpers.scss';
+
+.button {
+  @include reset-button();
+  @include active();
+  border-bottom: 1px solid #111;
+}
