@@ -1,0 +1,30 @@
+@import '../../assets/scss/helpers/helpers.scss';
+
+.designerPhotoWrapper {
+  display: flex;
+  align-items: center
+}
+
+.designerPhoto {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+  border-radius: 36px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.designerName {
+  @include active();
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+
+.hashAddress {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+

@@ -1,0 +1,49 @@
+@import '../../../assets/scss/helpers/grid.scss';
+@import '../../../assets/scss/helpers/variables.scss';
+@import '../../../assets/scss/helpers/helpers.scss';
+
+.wrapper {
+  @include wrapper();
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rightBox {
+  min-height: 47px;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  @include active();
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: $black;
+  text-transform: uppercase;
+  margin-right: 62px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.buttonWrapper {
+  min-width: 167px;
+}
+
+.hashAddress {
+  :global {
+    .smallPhotoWithText__hashAddress {
+      max-width: 94px;
+    }
+  }
+}
+
+.arrowBottom {
+  margin-left: 8px;
+  @include reset-button();
+  @include active();
+}

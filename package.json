@@ -1,0 +1,91 @@
+{
+  "name": "frontend",
+  "version": "0.6.0",
+  "repository": "git@gitlab.pixelplex.by:full-stack/nextjs.git",
+  "author": {
+    "name": "PixelPlex Inc.",
+    "email": "dev@pixelplex.io"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "NODE_ENV=production PORT=27181 node server.js",
+    "export": "next build && next export",
+    "audit": "audit-ci --config audit-ci.json",
+    "lint": "eslint \"src/**/*.js\" \"*.js\"",
+    "lint-win ": "cross-env eslint \"src/**/*.js\" \"*.js\"",
+    "lint:fix": "eslint \"src/**/*.js\" \"*.js\" --fix"
+  },
+  "license": "MIT",
+  "resolutions": {
+    "terser-webpack-plugin": "^4.1.0",
+    "elliptic": ">=6.5.3"
+  },
+  "dependencies": {
+    "@sentry/browser": "^5.18.0",
+    "async-mutex": "^0.2.2",
+    "axios": "^0.19.2",
+    "axios-retry": "^3.1.8",
+    "cacheable-response": "^2.0.9",
+    "classnames": "^2.2.6",
+    "config": "^3.3.1",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "es6-object-assign": "^1.1.0",
+    "es6-promise": "^4.2.8",
+    "express": "^4.17.1",
+    "immutable": "^4.0.0-rc.12",
+    "json-immutable": "^0.4.0",
+    "lodash.chunk": "^4.2.0",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.uniqby": "^4.7.0",
+    "next": "10.0.0",
+    "next-cookies": "^2.0.3",
+    "next-images": "^1.4.0",
+    "next-redux-wrapper": "^5.0.0",
+    "next-seo": "^4.4.0",
+    "prop-types": "^15.7.2",
+    "qs": "^6.9.3",
+    "query-string": "^6.12.1",
+    "react": "^16.13.1",
+    "react-autosuggest": "10.0.0",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-batched-actions": "^0.5.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-modules": "^1.1.1",
+    "redux-modules-middleware": "^1.2.0",
+    "redux-sentry-middleware": "^0.1.8",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "sass": "^1.26.3",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.1"
+  },
+  "devDependencies": {
+    "@babel/traverse": "^7.9.5",
+    "@babel/types": "^7.9.5",
+    "audit-ci": "^2.5.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^4.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ]
+}

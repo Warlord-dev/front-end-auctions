@@ -1,0 +1,5 @@
+@import '../../assets/scss/helpers/grid.scss';
+
+.wrapper {
+  @include wrapper()
+}

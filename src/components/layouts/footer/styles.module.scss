@@ -1,0 +1,35 @@
+@import '../../../assets/scss/helpers/grid.scss';
+@import '../../../assets/scss/helpers/variables.scss';
+@import '../../../assets/scss/helpers/helpers.scss';
+
+.wrapper {
+  margin-top: auto;
+  background: $lightGray2;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.inner {
+  @include wrapper();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftItem, .centerItem {
+  @include active();
+  padding-bottom: 3px;
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.leftItem {
+  color: black;
+  border-bottom: 1px solid $darkGray3;
+}
+
+.centerItem {
+  color: $darkGray3;
+  border-bottom: 1px solid $darkGray3;
+}

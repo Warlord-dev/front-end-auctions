@@ -1,0 +1,42 @@
+@import "../../../assets/scss/helpers/grid.scss";
+
+.wrapper {
+  @include wrapper();
+  margin-bottom: 25px;
+  margin-top: 68px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.info {
+  background: #FAFAFA;
+  padding: 10px 10px 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftSection {
+  padding-top: 40px;
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.item {
+  line-height: 32px;
+  line-height: 32px;
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+.value {
+  font-weight: 700;
+}

@@ -1,0 +1,19 @@
+@import '../../assets/scss/helpers/variables.scss';
+
+.wrapper {
+  margin-bottom: 80px;
+}
+.headerTitle {
+  display: grid;
+  grid-template-columns: 335fr 390fr 390fr 205fr;
+  align-items: center;
+}
+
+.headerTitleItem {
+  color: $darkGray3;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}

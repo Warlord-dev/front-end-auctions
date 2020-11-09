@@ -1,0 +1,84 @@
+{
+  "extends": ["airbnb"],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "template-curly-spacing" : "off",
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-indent": [2],
+    "react/jsx-indent-props": [2],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/button-has-type": "off",
+    "padded-blocks": [
+      "error",
+      {
+        "classes": "always"
+      }
+    ],
+    "class-methods-use-this": 0,
+    "react/prefer-stateless-function": 0,
+    "no-nested-ternary": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "components": [
+          "label"
+        ],
+        "required": {
+          "some": [
+            "nesting",
+            "id"
+          ]
+        },
+        "allowChildren": false
+      }
+    ],
+    "no-param-reassign": 0,
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "max-len": ["error", { "code": 140 }]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [
+          ["@components", "./src/components"],
+          ["@containers", "./src/containers"],
+          ["@constants", "./src/constants"],
+          ["@selectors", "./src/selectors"],
+          ["@assets", "./src/assets"],
+          ["@helpers", "./src/helpers"],
+          ["@actions", "./src/actions"]
+      ]
+    }
+  } 
+}

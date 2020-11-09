@@ -1,0 +1,10 @@
+{
+  "CLIENT_URL": "",
+  "BACKEND_API": "",
+  "STATIC_DOMAIN": "",
+  "TTL_STATIC": 3600000,
+  "TTL_NO_STATIC": 600000,
+  "IS_PROD": false,
+  "SENTRY_DSN": "",
+  "ENVIRONMENT": ""
+}

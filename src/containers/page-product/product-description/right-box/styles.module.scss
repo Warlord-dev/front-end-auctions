@@ -1,0 +1,63 @@
+@import '../../../../assets/scss/helpers/variables.scss';
+@import '../../../../assets/scss/helpers/helpers.scss';
+
+.title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 30px;
+}
+
+.smallPhotoWithText {
+  margin-bottom: 25px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.youReceiveText {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 900;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.youReceive {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+}
+
+.tab {
+  @include reset-button();
+  @include active();
+  padding: 17px 35px 19px 35px;
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: $darkGray3;
+  border: 1px solid #E6E6E6;
+  min-height: 54px;
+  text-transform: uppercase;
+  
+
+  &.active {
+    background-color: $lightGray1;
+    border: 0;
+    border: 1px solid transparent;
+    border-top: 2px solid $black;
+    color: $black;
+  }
+}

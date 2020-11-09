@@ -1,0 +1,13 @@
+version: '3.4'
+x-restart-policy: &restart_policy
+  restart: unless-stopped
+
+services:
+  front:
+    image: $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME
+    << : *restart_policy
+    environment:
+      - NODE_APP_INSTANCE=$CI_ENVIRONMENT_NAME
+    network_mode: "host"
+    ports:
+      - "127:0.0.1:27181:27181"

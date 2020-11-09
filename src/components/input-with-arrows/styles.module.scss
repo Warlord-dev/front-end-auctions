@@ -1,0 +1,115 @@
+@import '../../assets/scss/helpers/helpers.scss';
+
+.wrapper {
+  display: flex;
+}
+
+.input {
+  padding: 7px 8px 7px 14px;
+  width: 240px;
+  height: 44px;
+  border: 0;
+  border: 1px solid #E6E6E6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 0;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+
+
+  // prefixRightInInput
+  // border-right: 0;
+
+
+  // prefixCenter
+  width: 210px;
+
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
+.buttonWrapper {
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #E6E6E6;
+  border-left: 0;
+
+  // prefixRightInInput
+  // border-right: 0;
+}
+
+.button {
+  @include reset-button();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:not(.disabled) {
+  @include active();
+}
+
+.buttonTop {
+  transform: rotate(180deg);
+  padding: 2px 8px 4px 8px;
+  margin-bottom: 2px;
+}
+
+.buttonBottom {
+  padding: 4px 8px 2px 8px;
+  margin-top: 2px;
+}
+
+
+
+// TODO here you need to choose one option
+.prefixLeft {
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  margin-right: 6px;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.prefixRight {
+  display: flex;
+  justify-content: center;
+  margin-left: 6px;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+
+.prefixWithBorder {
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  margin-right: 6px;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #E6E6E6;
+  border-left: 0;
+  padding-right: 6px;
+  padding-left: 1px;
+}
+
+
+.prefixCenter {
+  padding-right: 4px;
+  display: flex;
+  height: 44px;
+  align-items: center;
+  border-top: 1px solid  #E6E6E6;;
+  border-bottom: 1px solid  #E6E6E6;;
+}

@@ -1,0 +1,90 @@
+@import '../../assets/scss/helpers/variables.scss';
+@import '../../assets/scss/helpers/helpers.scss';
+
+.item {
+  width: 618px;
+  margin-bottom: 68px;
+
+  &:nth-child(2n) {
+    margin-left: 84px;
+  }
+}
+
+.clothesName {
+  @include active();
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 15px;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.clothesPhotoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 618px;
+  height: 605px;
+  padding: 45px;
+}
+
+.clothesPhoto {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: contain;
+  box-sizing: content-box;
+}
+
+.card {
+  background: $lightGray1;
+  margin-top: 16px;
+  padding-bottom: 12px;
+  min-height: 765px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imageWrapper {
+  position: relative;
+  flex-grow: 1;
+}
+
+.chart {
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  right: 2px;
+  opacity: 0;
+  visibility: hidden;
+  &.chartActive {
+    opacity: 1;
+    visibility: initial;
+  }
+}
+
+.triangle {
+  @include active();
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px 10px 24px 28px;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  background-image: url('/images/icons/triangle.svg');
+  width: 20px;
+  height: 15px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.triangleActive {
+    bottom: 144px;
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,69 @@
+@import "../helpers/variables.scss";
+
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+  height: 100%;
+
+  h1, h2, h3, h4, h5, body, button, input, optgroup, select, textarea {
+    font-family: $primary-font;
+  }
+
+  body {
+    overflow-anchor: none;
+    color: $black;
+    height: 100%;
+    line-height: initial;
+  }
+
+  a {
+    color: $black;
+
+    &:hover {
+      color: $black;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  *, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+    list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+  } 
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input[type="number"]:hover,
+  input[type="number"]:focus {
+    -moz-appearance: number-input;
+  }
+}
+
+#__next {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
