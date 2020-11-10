@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import Link from 'next/link';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-import { INDEX_PATH } from '@constants/router-constants';
 
 import { openModal } from '@actions/modals.actions';
 import Logo from './logo';
@@ -30,9 +28,14 @@ const HeaderTopLine = ({
       <Logo />
       <div className={styles.rightBox}>
         {isShowStaking && (
-          <Link href={INDEX_PATH}>
-            <a className={styles.link}>{linkText}</a>
-          </Link>
+          <a
+            href="https://digitalax.gitbook.io/digitalax/tools-functionality/staking"
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {linkText}
+          </a>
         )}
         {isSignIn ? (
           <div className={styles.buttonWrapper}>

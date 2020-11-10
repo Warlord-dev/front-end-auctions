@@ -7,30 +7,34 @@ import styles from './styles.module.scss';
 const dataLeftList = [
   {
     item: 'FAQs',
-    href: '',
+    href: 'https://digitalax.gitbook.io/digitalax/faq',
   },
   {
     item: 'Digital Fashion Auctions',
-    href: '',
+    href: 'https://digitalax.gitbook.io/digitalax/tools-functionality/auction',
   },
   {
     item: 'Staking Rewards',
-    href: '',
+    href: 'https://digitalax.gitbook.io/digitalax/tools-functionality/staking',
   },
 ];
 
 const dataCenterList = [
   {
     item: 'Documentation',
-    href: '',
+    href: 'https://digitalax.gitbook.io/digitalax/',
   },
   {
     item: 'Project Overview',
-    href: '',
+    href: 'https://digitalax.s3.us-east-2.amazonaws.com/DIGITALAXProjectOverview.pdf',
   },
   {
     item: 'Monavaile Executive Summary',
     href: '',
+  },
+  {
+    item: 'We are Hiring!',
+    href: '/documents/DIGITALAX Overview and Careers.pdf',
   },
 ];
 
@@ -40,11 +44,19 @@ const Footer = ({ className, leftList, centerList }) => (
     <div className={styles.inner}>
       {!!leftList.length && (
         <div>
-          {leftList.map(({ item, href }) => <a className={styles.leftItem} key={item} href={href}>{item}</a>)}
+          {leftList.map(({ item, href }) => (
+            <a className={styles.leftItem} key={item} href={href} target="_blank" rel="noreferrer">
+              {item}
+            </a>
+          ))}
         </div>
       )}
       <div>
-        {centerList.map(({ item, href }) => <a className={styles.centerItem} key={item} href={href}>{item}</a>)}
+        {centerList.map(({ item, href }) => (
+          <a className={styles.centerItem} key={item} href={href} target="_blank" rel="noreferrer">
+            {item}
+          </a>
+        ))}
       </div>
       <ListSocialNetworks />
     </div>

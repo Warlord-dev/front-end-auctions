@@ -9,23 +9,23 @@ import styles from './styles.module.scss';
 const SOCIAL_MEDIA = [
   {
     item: <Twitter />,
-    href: '',
+    href: 'https://twitter.com/DIGITALAX_',
   },
   {
     item: <Medium />,
-    href: '',
+    href: 'https://medium.com/@digitalax',
   },
   {
     item: <Telegram />,
-    href: '',
+    href: 'https://t.me/digitalaxTG',
   },
   {
     item: <Github />,
-    href: '',
+    href: 'https://github.com/DIGITALAX',
   },
   {
     item: <Instagram />,
-    href: '',
+    href: 'https://www.instagram.com/digitalax_',
   },
 ];
 
