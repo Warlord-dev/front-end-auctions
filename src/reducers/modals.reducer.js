@@ -7,6 +7,7 @@ const DEFAULT_FIELDS = Map({
   isShowModalPlaceBid: false,
   isShowModalRaiseBid: false,
   isShowModalWithdrawBid: false,
+  isShowNotificationConnectMetamask: false,
 });
 
 

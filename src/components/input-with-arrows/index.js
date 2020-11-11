@@ -30,16 +30,13 @@ const InputWithArrows = ({
   return (
     <>
       <div className={cn(className, styles.wrapper)}>
-        {/* prefixLeft */}
-        {/* <p className={styles.prefixLeft}>{currency}</p> */}
+
         <input
           type="number"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           className={styles.input}
         />
-        {/* prefixCenter */}
-        <p className={styles.prefixCenter}>{currency}</p>
         <div className={styles.buttonWrapper}>
           <button onClick={() => handleClickUp()} className={cn(styles.button, styles.buttonTop)}>
             <img src={iconUrl} alt="arrow" />
@@ -48,10 +45,7 @@ const InputWithArrows = ({
             <img src={iconUrl} alt="arrow" />
           </button>
         </div>
-        {/* prefixWithBorder */}
-        {/* <p className={styles.prefixWithBorder}>{currency}</p> */}
-        {/* prefixRight */}
-        {/* <p className={styles.prefixRight}>{currency}</p> */}
+        <p className={styles.prefixRight}>{currency}</p>
       </div>
     </>
   );

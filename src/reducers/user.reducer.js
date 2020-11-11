@@ -4,7 +4,7 @@ import { Map, List } from 'immutable';
 
 const DEFAULT_FIELDS = Map({
   isSignIn: false,
-  userPhoto: 'images/user-photo.png',
+  userPhoto: '/images/user-photo.png',
   userHashAddress: 'aX0034edDaX0034edD',
   bids: List([]),
   activeProductInModal: Map({}),

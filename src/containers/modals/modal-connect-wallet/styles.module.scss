@@ -37,3 +37,11 @@
   padding-top: 12px;
   padding-bottom: 12px;
 }
+
+.notificationBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 25px;
+}

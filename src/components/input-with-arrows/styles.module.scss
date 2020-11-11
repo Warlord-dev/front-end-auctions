@@ -18,14 +18,6 @@
   line-height: 17px;
   font-weight: 400;
 
-
-  // prefixRightInInput
-  // border-right: 0;
-
-
-  // prefixCenter
-  width: 210px;
-
   &:focus, &:active {
     outline: none;
   }
@@ -39,9 +31,6 @@
   background-color: #fff;
   border: 1px solid #E6E6E6;
   border-left: 0;
-
-  // prefixRightInInput
-  // border-right: 0;
 }
 
 .button {
@@ -66,19 +55,6 @@
   margin-top: 2px;
 }
 
-
-
-// TODO here you need to choose one option
-.prefixLeft {
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  margin-right: 6px;
-  font-size: 16px;
-  justify-content: center;
-  align-items: center;
-}
-
 .prefixRight {
   display: flex;
   justify-content: center;
@@ -87,29 +63,4 @@
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-}
-
-
-.prefixWithBorder {
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  margin-right: 6px;
-  font-size: 15px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #E6E6E6;
-  border-left: 0;
-  padding-right: 6px;
-  padding-left: 1px;
-}
-
-
-.prefixCenter {
-  padding-right: 4px;
-  display: flex;
-  height: 44px;
-  align-items: center;
-  border-top: 1px solid  #E6E6E6;;
-  border-bottom: 1px solid  #E6E6E6;;
 }

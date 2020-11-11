@@ -7,10 +7,10 @@ import ModalWithdrawBid from '@containers/modals/modal-withdraw-bid';
 
 
 const Modals = () => {
-  const isShowModalConnectMetamask = useSelector((state) => state.modals.toJS().isShowModalConnectMetamask);
-  const isShowModalPlaceBid = useSelector((state) => state.modals.toJS().isShowModalPlaceBid);
-  const isShowModalRaiseBid = useSelector((state) => state.modals.toJS().isShowModalRaiseBid);
-  const isShowModalWithdrawBid = useSelector((state) => state.modals.toJS().isShowModalWithdrawBid);
+  const modals = useSelector((state) => state.modals.toJS());
+  const {
+    isShowModalConnectMetamask, isShowModalPlaceBid, isShowModalRaiseBid, isShowModalWithdrawBid,
+  } = modals;
 
   return (
     <>

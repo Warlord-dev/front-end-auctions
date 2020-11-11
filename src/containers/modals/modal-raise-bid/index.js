@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,14 +14,15 @@ import styles from './styles.module.scss';
 
 
 const ModalRaiseBid = ({
-  className, title, text, textForSelect, buttonText, yourBidText,
+  className, title, text, textForSelect, buttonText, yourBidText, textError,
 }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.toJS());
   const clothesInfo = useSelector((state) => state.clothesInfo.toJS());
   const { activeValueEthInInputInModal, bids, activeProductInModal: { clothesId, priceEth } } = user;
-  const lastBid = bids.filter((item) => item.clothesId === clothesId).sort((a, b) => b.valueBid - a.valueBid)[0];
+  const [showError, setShowError] = useState(false);
 
+  const lastBid = bids.filter((item) => item.clothesId === clothesId).sort((a, b) => b.valueBid - a.valueBid)[0];
   const currentClothesInfo = clothesInfo.find((item) => item.clothesId === clothesId);
 
   const handleClose = () => {
@@ -38,21 +39,25 @@ const ModalRaiseBid = ({
         dateAndTameBids: Date.now(),
       });
       dispatch(setValueInUserReducer('bids', bids));
-    }
 
-    const newClothesInfo = clothesInfo.reduce((accumulator, item) => {
-      if (item.clothesId === currentClothesInfo.clothesId) {
-        item.priceEth = +activeValueEthInInputInModal;
+      const newClothesInfo = clothesInfo.reduce((accumulator, item) => {
+        if (item.clothesId === currentClothesInfo.clothesId) {
+          item.priceEth = +activeValueEthInInputInModal;
+          accumulator.push(item);
+          return accumulator;
+        }
         accumulator.push(item);
+
         return accumulator;
-      }
-      accumulator.push(item);
+      }, []);
 
-      return accumulator;
-    }, []);
+      dispatch(setValueInClothesInfoReducer('', newClothesInfo));
+      setShowError(false);
 
-    dispatch(setValueInClothesInfoReducer('', newClothesInfo));
-    handleClose();
+      handleClose();
+    } else {
+      setShowError(true);
+    }
   };
 
   return (
@@ -69,7 +74,10 @@ const ModalRaiseBid = ({
               <span> {getSumFloatNumber(priceEth, STEP)}ETH</span>
             </p>
             <div className={styles.selectWrapper}>
-              <InputWithArrows className={styles.inputWithArrows} value={getSumFloatNumber(priceEth, STEP)} />
+              <div>
+                <InputWithArrows className={styles.inputWithArrows} value={getSumFloatNumber(priceEth, STEP)} />
+                {showError && <p className={styles.error}>{textError}</p>}
+              </div>
               <Button background="black" onClick={() => handleClick()} className={styles.button}>
                 {buttonText}
               </Button>
@@ -89,6 +97,7 @@ ModalRaiseBid.propTypes = {
   textForSelect: PropTypes.string,
   yourBidText: PropTypes.string,
   buttonText: PropTypes.string,
+  textError: PropTypes.string,
 };
 
 ModalRaiseBid.defaultProps = {
@@ -99,6 +108,7 @@ ModalRaiseBid.defaultProps = {
   yourBidText: 'Your Bid:',
   textForSelect: 'Minimum Bid:',
   buttonText: 'RAISE BID',
+  textError: 'You must bid at least 0.05ETH higher than the current highest bid',
 };
 
-export default memo(ModalRaiseBid);
+export default ModalRaiseBid;

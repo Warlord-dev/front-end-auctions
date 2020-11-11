@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -14,12 +14,13 @@ import styles from './styles.module.scss';
 
 
 const ModalPlaceBid = ({
-  className, title, text, textForSelect, buttonText,
+  className, title, text, textForSelect, buttonText, textError,
 }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.toJS());
   const clothesInfo = useSelector((state) => state.clothesInfo.toJS());
   const { activeValueEthInInputInModal, bids, activeProductInModal: { priceEth, clothesId } } = user;
+  const [showError, setShowError] = useState(false);
 
   const currentClothesInfo = clothesInfo.find((item) => item.clothesId === clothesId);
 
@@ -52,7 +53,11 @@ const ModalPlaceBid = ({
       }, []);
 
       dispatch(setValueInClothesInfoReducer('', newClothesInfo));
+      setShowError(false);
+
       handleClose();
+    } else {
+      setShowError(true);
     }
 
   };
@@ -67,7 +72,10 @@ const ModalPlaceBid = ({
               <span> {getSumFloatNumber(priceEth, STEP)}ETH</span>
             </p>
             <div className={styles.selectWrapper}>
-              <InputWithArrows className={styles.inputWithArrows} value={getSumFloatNumber(priceEth, STEP)} />
+              <div>
+                <InputWithArrows className={styles.inputWithArrows} value={getSumFloatNumber(priceEth, STEP)} />
+                {showError && <p className={styles.error}>{textError}</p>}
+              </div>
               <Button background="black" onClick={() => handleClick()} className={styles.button}>
                 {buttonText}
               </Button>
@@ -86,6 +94,7 @@ ModalPlaceBid.propTypes = {
   text: PropTypes.array,
   textForSelect: PropTypes.string,
   buttonText: PropTypes.string,
+  textError: PropTypes.string,
 };
 
 ModalPlaceBid.defaultProps = {
@@ -95,6 +104,7 @@ ModalPlaceBid.defaultProps = {
   text: ['Your ETH will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. If another bidder outbids you, your ETH will be immediatley transferred back into your wallet.', 'After placing a bid, you will be unable to withdraw for 20 minutes.'],
   textForSelect: 'Minimum Bid:',
   buttonText: 'PLACE A BID',
+  textError: 'You must bid at least 0.05ETH higher than the current highest bid',
 };
 
-export default memo(ModalPlaceBid);
+export default ModalPlaceBid;

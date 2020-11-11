@@ -1,33 +1,44 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import cn from 'classnames';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
+import Notification from '@components/notification';
 import { closeModal, openModal } from '@actions/modals.actions';
 import { setValueInUserReducer } from '@actions/user.actions';
 import styles from './styles.module.scss';
 
+
+const IS_EXTENSION_INSTALLED = true;
 
 const ModalConnectWallet = ({
   className, title, textForIcon, icon, buttonText,
 }) => {
   const dispatch = useDispatch();
   const activeProductInModal = useSelector((state) => state.user.toJS().activeProductInModal);
+  const isShowNotificationConnectMetamask = useSelector((state) => state.modals.toJS().isShowNotificationConnectMetamask);
 
   const handleClose = () => {
     dispatch(closeModal('isShowModalConnectMetamask', 'addScroll'));
     dispatch(setValueInUserReducer('activeProductInModal', {}));
+    dispatch(closeModal('isShowNotificationConnectMetamask'));
   };
 
-  const handleClick = () => {
-    dispatch(setValueInUserReducer('isSignIn', true));
-    dispatch(closeModal('isShowModalConnectMetamask', 'addScroll'));
 
-    if (Object.keys(activeProductInModal).length) {
-      dispatch(openModal('isShowModalPlaceBid', 'hideScroll'));
+  const handleClick = () => {
+    if (IS_EXTENSION_INSTALLED) {
+      dispatch(setValueInUserReducer('isSignIn', true));
+      dispatch(closeModal('isShowModalConnectMetamask', 'addScroll'));
+
+      if (Object.keys(activeProductInModal).length) {
+        dispatch(openModal('isShowModalPlaceBid', 'hideScroll'));
+      }
+    } else {
+      dispatch(openModal('isShowNotificationConnectMetamask'));
     }
+
   };
 
   return (
@@ -42,6 +53,12 @@ const ModalConnectWallet = ({
             <Button className={styles.modalButton} background="black" onClick={() => handleClick()}>
               {buttonText}
             </Button>
+            {isShowNotificationConnectMetamask && (
+              <Notification
+                text={['You have to install the metamask extension.']}
+                className={styles.notificationBox}
+              />
+            )}
           </div>
         </Modal>,
         document.body,
@@ -68,4 +85,4 @@ ModalConnectWallet.defaultProps = {
   buttonText: 'Connect Wallet',
 };
 
-export default memo(ModalConnectWallet);
+export default ModalConnectWallet;

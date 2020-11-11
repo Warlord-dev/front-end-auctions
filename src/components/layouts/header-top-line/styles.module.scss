@@ -44,6 +44,9 @@
 
 .arrowBottom {
   margin-left: 8px;
+  display: flex;
+  align-items: center;
+  
   @include reset-button();
   @include active();
 }
