@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
@@ -19,6 +19,8 @@ const HeaderTopLine = ({
   const user = useSelector((state) => state.user.toJS());
   const { isSignIn, userPhoto, userHashAddress } = user;
 
+  const [isShowLogOut, setIsShowLogOut] = useState(false);
+
   const handleClick = () => {
     dispatch(openModal('isShowModalConnectMetamask', 'hideScroll'));
   };
@@ -35,10 +37,11 @@ const HeaderTopLine = ({
         {isSignIn ? (
           <div className={styles.buttonWrapper}>
             <SmallPhotoWithText designerPhoto={userPhoto} hashAddress={userHashAddress} className={styles.hashAddress}>
-              <button className={styles.arrowBottom} onClick={() => {}}>
-                <img src="/images/icons/arrow-bottom.svg" alt="arrow-bottom" />
+              <button className={styles.arrowBottom} onClick={() => setIsShowLogOut(!isShowLogOut)}>
+                <img className={styles.arrowBottomImg} src="/images/icons/arrow-bottom.svg" alt="arrow-bottom" />
               </button>
             </SmallPhotoWithText>
+            {isShowLogOut && <button className={styles.logOut}>Logout</button>}
           </div>
         ) : (
           <Button onClick={() => handleClick()}>{buttonText}</Button>
@@ -62,4 +65,4 @@ HeaderTopLine.defaultProps = {
   linkText: 'Staking',
 };
 
-export default memo(HeaderTopLine);
+export default HeaderTopLine;

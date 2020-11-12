@@ -32,6 +32,20 @@
 
 .buttonWrapper {
   min-width: 167px;
+  position: relative;
+}
+
+.logOut {
+  @include reset-button();
+  @include active();
+  border: 1px solid #E6E6E6;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 10px 16px;
+  width: 100%;
+  top: 100%;
+  margin-top: 10px;
+  position: absolute;
 }
 
 .hashAddress {
@@ -43,10 +57,12 @@
 }
 
 .arrowBottom {
-  margin-left: 8px;
   display: flex;
   align-items: center;
-  
   @include reset-button();
   @include active();
+
+  .arrowBottomImg {
+    padding: 8px 0 8px 8px;
+  }
 }
