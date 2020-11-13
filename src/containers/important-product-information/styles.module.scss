@@ -8,6 +8,11 @@
   display: flex;
   justify-content: space-between;
 
+  .leftWrapper {
+    width: 260px;
+    max-width: 100%;
+  }
+
   .priceWrapper {
     margin-bottom: 20px;
     display: flex;
@@ -27,7 +32,11 @@
     color: $darkGray3;
     font-weight: 400;
   }
-  
+
+  .estimateWrapper {
+    position: relative;
+  }
+
   .estimateApy {
     font-size: 24px;
     line-height: 29px;
@@ -62,6 +71,20 @@
     line-height: 11px;
     font-weight: 600;
     margin-left: 2px;
+    cursor: pointer;
+  }
+
+  .hint {
+    display: block;
+    position: absolute;
+    width: 165px;
+    padding: 4px;
+    border: 0.5px solid #000000;
+    background: #fff;
+    font-size: 9px;
+    line-height: 120%;
+    top: -7px;
+    right: -9px;
   }
   
   .button {
@@ -79,11 +102,15 @@
   }
 }
 
-
 .largeTransparent {
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  .leftWrapper {
+    width: 260px;
+    max-width: 100%;
+  }
   
   .priceWrapper {
     margin-bottom: 40px;
@@ -105,8 +132,9 @@
 
   .estimateWrapper {
     display: flex;
+    position: relative;
   }
-  
+
   .estimateApyText  {
     @include active();
     letter-spacing: 0.12em;
@@ -138,6 +166,20 @@
     font-weight: 600;
     transform: translateY(-9px);
     background: #fff;
+    cursor: pointer;
+  }
+
+  .hint {
+    display: block;
+    position: absolute;
+    width: 165px;
+    padding: 4px;
+    border: 0.5px solid #000000;
+    background: #fff;
+    font-size: 9px;
+    line-height: 120%;
+    top: -26px;
+    right: -48px;;
   }
 
   .footerBoxRight {
@@ -183,7 +225,6 @@
     line-height: 11px;
   }
 }
-
 
 .wrapperButtonWithdraw {
   margin-top: 12px;

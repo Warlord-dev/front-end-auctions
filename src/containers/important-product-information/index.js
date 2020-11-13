@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
@@ -13,7 +13,7 @@ import styles from './styles.module.scss';
 
 const ImportantProductInformation = ({
   clothesId, priceEth, estimateApyText, estimateApy, buttonTextPlace, buttonTextRaise,
-  buttonTextWithdraw, expirationDate, expirationDateText, styleTypeBlock,
+  buttonTextWithdraw, expirationDate, expirationDateText, styleTypeBlock, hintText,
 }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.toJS());
@@ -21,6 +21,7 @@ const ImportantProductInformation = ({
   const { isSignIn, bids } = user;
   const isMakeBid = bids.some((item) => item.clothesId === clothesId);
 
+  const [isShowHint, setIsShowHint] = useState(false);
 
   const handleClickPlaceBid = () => {
     dispatch(setValueInUserReducer('activeProductInModal', { priceEth, clothesId }));
@@ -54,7 +55,7 @@ const ImportantProductInformation = ({
       [styles.largeTransparent]: styleTypeBlock === 'largeTransparent',
     })}
     >
-      <div>
+      <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
           <span className={styles.priceEth}>{priceEth} E</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
@@ -63,8 +64,15 @@ const ImportantProductInformation = ({
           <span className={styles.estimateApy}>{estimateApy}%</span>
           <span className={styles.estimateApyTextWrapper}>
             <a href="" className={styles.estimateApyText}>{estimateApyText}</a>
-            <span className={styles.questionMark}>?</span>
+            <span
+              onMouseEnter={() => setIsShowHint(true)}
+              onMouseLeave={() => setIsShowHint(false)}
+              className={styles.questionMark}
+            >
+              ?
+            </span>
           </span>
+          {isShowHint && <span className={styles.hint}>{hintText}</span>}
         </p>
       </div>
       <div className={styles.footerBoxRight}>
@@ -109,6 +117,7 @@ ImportantProductInformation.propTypes = {
   expirationDate: PropTypes.string,
   expirationDateText: PropTypes.string,
   styleTypeBlock: PropTypes.oneOf(['smallWhite', 'largeTransparent']),
+  hintText: PropTypes.string,
 };
 
 ImportantProductInformation.defaultProps = {
@@ -122,6 +131,8 @@ ImportantProductInformation.defaultProps = {
   expirationDate: '',
   expirationDateText: 'Time left',
   styleTypeBlock: 'smallWhite',
+  hintText: `APY estimated based on the current total staked value across each of the $MONA 
+  reward pools and current highest bid value of the NFT.`,
 };
 
 
