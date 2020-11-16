@@ -147,7 +147,7 @@ export const getAuctionContracts = gql`
 
 export const getResultedAuctionsByEndTimeGt = gql`
   query getAuctionsHistoryByTimestampGt($endTime: BigInt!) {
-    digitalaxGarmentAuctions(where: { resulted_not_in:[true], endTime_gt: $endTime }) {
+    digitalaxGarmentAuctions(where: { resulted_not_in:[false], endTime_gt: $endTime }) {
       id
       reservePrice
       endTime

@@ -4,6 +4,7 @@ import {
   onAuctionsChangeByIds,
   onDesignerByIds,
   onAuctionsHistoryByIds,
+  onResultedAuctionsByEndTimeGtAndIds,
 } from '@services/api/gql.subscriptions.ws.service';
 
 class WSService {
@@ -40,6 +41,10 @@ class WSService {
 
   onAuctionsHistoryByIds(ids) {
     return this.client.request({ query: onAuctionsHistoryByIds, variables: { ids } });
+  }
+
+  onResultedAuctionsByEndTimeGtAndIds(ids, endTime) {
+    return this.client.request({ query: onResultedAuctionsByEndTimeGtAndIds, variables: { endTime, ids } });
   }
 
 }

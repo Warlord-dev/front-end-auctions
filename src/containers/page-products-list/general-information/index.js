@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import Timer from '@components/timer';
-import { prepareGraphAuctions } from '@helpers/graph.helpers';
+import { getMainPageChartOptions } from '@services/graph.service';
 import styles from './styles.module.scss';
 
 const HIGHEST_APY = 'Highest APY';
@@ -13,51 +13,7 @@ const GeneralInformation = ({
   title, timestamp, list, history,
 }) => {
 
-  const options = {
-    title: {
-      text: '',
-    },
-    chart: {
-      height: 175,
-      width: 825,
-      backgroundColor: 'transparent',
-    },
-    credits: {
-      enabled: false,
-    },
-    xAxis: {
-      type: 'datetime',
-      visible: false,
-    },
-    legend: {
-      enabled: false,
-    },
-    plotOptions: {
-      series: {
-        marker: {
-          radius: 3,
-          enabled: true,
-          fillColor: '#FFFFFF',
-          lineWidth: 1,
-          lineColor: null, // inherit from series
-        },
-        label: {
-          enabled: false,
-        },
-      },
-    },
-    yAxis: {
-      title: '',
-      labels: {
-        formatter(params) {
-          return `${params.value}E`;
-        },
-      },
-    },
-    series: [{
-      data: prepareGraphAuctions(history),
-    }],
-  };
+  const options = getMainPageChartOptions(history);
 
   return (
     <div className={cn(styles.wrapper)}>

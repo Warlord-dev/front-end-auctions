@@ -7,6 +7,7 @@ import { getDesignerGarmentIds } from '@selectors/designer.selectors';
 import wsApi from '@services/api/ws.service';
 import designerPageActions from '@actions/designer.page.actions';
 import historyActions from '@actions/history.actions';
+import auctionActions from '@actions/auction.actions';
 
 const Designers = () => {
   const router = useRouter();
@@ -76,6 +77,36 @@ const Designers = () => {
     return () => unsubscribe();
 
   }, [chainId, JSON.stringify(designerGarmentIds)]);
+
+
+  useEffect(() => {
+
+    const ids = designerGarmentIds.toJS();
+
+    if (!ids.length) {
+      return () => {};
+    }
+
+    const dateMonth = new Date();
+    dateMonth.setDate(dateMonth.getDate() - 30); // now - 30 days
+
+    const request = wsApi.onResultedAuctionsByEndTimeGtAndIds(ids, parseInt(dateMonth / 1000, 10));
+
+    const { unsubscribe } = request.subscribe({
+      next({ data }) {
+
+        if (!data) {
+          return;
+        }
+
+        dispatch(auctionActions.setValue('monthResultedAuctions', data.digitalaxGarmentAuctions));
+      },
+    });
+
+    return () => unsubscribe();
+
+  }, [chainId, JSON.stringify(designerGarmentIds)]);
+
 
   useEffect(() => () => {
     dispatch(designerPageActions.reset());
