@@ -1,0 +1,182 @@
+stages:
+  - 🚦 test
+  - 📦 package
+  - 🚀 deploy
+
+##############################
+#        🚦 TEST 🚦         #
+##############################
+
+🚦 lint:
+  stage: 🚦 test
+  script:
+    - yarn install
+    - yarn lint
+  tags:
+    - docker
+  only:
+    - merge_requests
+  cache:
+    paths:
+      - node_modules/
+
+🚦 audit:
+  stage: 🚦 test
+  script:
+    - yarn install
+    - yarn run audit
+  tags:
+    - docker
+  only:
+    - merge_requests
+  cache:
+    paths:
+      - node_modules/
+
+🚦 test build:
+  image: node:12
+  stage: 🚦 test
+  cache:
+    paths:
+      - node_modules
+  script:
+    - yarn install
+    - yarn build
+  tags:
+    - docker
+  only:
+    - merge_requests
+
+
+##############################
+#       📦 PACKAGE 📦        #
+##############################
+
+.build:
+  stage: 📦 package
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker-compose pull || echo "Container not found"
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME --build-arg NODE_APP_INSTANCE=$CI_ENVIRONMENT_NAME .
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker push $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME
+  tags:
+    - pp-builder
+
+📦 develop:
+  extends: .build
+  environment:
+    name: develop
+    url: https://732-digitalax.pixelplex-test.by/
+  only:
+    - develop
+
+📦 master:
+  extends: .build
+  environment:
+    name: master
+    url: https://732-digitalax.pixelplexlabs.com/
+  only:
+    - master
+
+# 📦 prod:
+#   extends: .build
+#   environment:
+#     name: prod
+#     url: http://digitalax.com/
+#   only:
+#     - tags
+#     - master
+
+📦 manual.master:
+  extends: .build
+  environment:
+    name: master
+    url: https://732-digitalax.pixelplexlabs.com/
+  except:
+    - tags
+    - develop
+    - master
+  when: manual
+
+# 📦 manual.prod:
+#   extends: .build
+#   environment:
+#     name: prod
+#     url: http://digitalax.com/
+#   except:
+#     - tags
+#     - develop
+#     - master
+#   when: manual
+
+
+##############################
+#       🚀 DEPLOY 🚀        #
+##############################
+
+.deploy:
+  stage: 🚀 deploy
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker-compose pull
+  script:
+    - docker-compose -p 732-digitalax up -d
+
+🚀 develop:
+  extends: .deploy
+  environment:
+    name: develop
+    url: https://732-digitalax.pixelplex-test.by/
+  tags:
+    - pp-new-develop
+  only:
+    - develop
+
+🚀 master:
+  extends: .deploy
+  environment:
+    name: master
+    url: https://732-digitalax.pixelplexlabs.com/
+  tags:
+    - pp-stage
+  only:
+    - master
+
+# 🚀 prod:
+#   extends: .deploy
+#   environment:
+#     name: prod
+#     url: http://digitalax.com/
+#   tags:
+#     - todo
+#   only:
+#     - tags
+#     - master
+#   when: manual
+
+🚀 other.master:
+  extends: .deploy
+  environment:
+    name: master
+    url: https://732-digitalax.pixelplexlabs.com/
+  tags:
+    - pp-stage
+  except:
+    - tags
+    - develop
+    - master
+  when: manual
+
+# 🚀 other.prod:
+#   extends: .deploy
+#   environment:
+#     name: prod
+#     url: http://digitalax.com/
+#   tags:
+#     - todo
+#   except:
+#     - tags
+#     - develop
+#     - master
+#   when: manual

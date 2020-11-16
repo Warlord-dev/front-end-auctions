@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production PORT=27181 node server.js",
+    "start": "NODE_ENV=production PORT=27320 node server.js",
     "export": "next build && next export",
     "audit": "audit-ci --config audit-ci.json",
     "lint": "eslint \"src/**/*.js\" \"*.js\"",

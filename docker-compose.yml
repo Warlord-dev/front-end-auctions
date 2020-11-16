@@ -10,4 +10,4 @@ services:
       - NODE_APP_INSTANCE=$CI_ENVIRONMENT_NAME
     network_mode: "host"
     ports:
-      - "127:0.0.1:27181:27181"
+      - "127:0.0.1:27320:27320"
