@@ -1,27 +1,17 @@
 import { createModule } from 'redux-modules';
 import cloneDeep from 'lodash.clonedeep';
 import { Map, List } from 'immutable';
+import TransformModules from '../utils/transform-modules';
 
 const DEFAULT_FIELDS = Map({
-  isSignIn: false,
-  userPhoto: '/images/user-photo.png',
-  userHashAddress: 'aX0034edDaX0034edD',
+  account: null,
+  accountPhoto: '/images/user-photo.png',
   bids: List([]),
   activeProductInModal: Map({}),
-  activeValueEthInInputInModal: null,
 });
-
 
 export default createModule({
   name: 'user',
   initialState: cloneDeep(DEFAULT_FIELDS),
-  transformations: {
-    setValue: {
-      reducer: (state, { payload }) => {
-        // debugger;
-        state = state.set(payload.field, payload.value);
-        return state;
-      },
-    },
-  },
+  transformations: cloneDeep(TransformModules(DEFAULT_FIELDS)),
 });

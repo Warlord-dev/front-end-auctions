@@ -1,37 +1,96 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 import Link from 'next/link';
 import ImportantProductInformation from '@containers/important-product-information';
 import SmallPhotoWithText from '@components/small-photo-with-text';
+import { prepareGraphHistory } from '@helpers/graph.helpers';
 import { PRODUCTS } from '@constants/router-constants';
+
 import styles from './styles.module.scss';
 
 const CardProduct = ({
-  clothesId, className, clothesName, clothesPhotos, priceEth,
-  estimateApy, chartImage, expirationDate, designerId,
+  history, garment, designer, className,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const designersInfo = useSelector((state) => state.designersInfo.toJS());
 
-  const clothesPhoto = clothesPhotos.find(({ isMain }) => isMain);
-  const CURRENT_DESIGNER_INFO = designersInfo.find((item) => item?.designerId === designerId);
+  const designerPhoto = '/images/Kris-Seed.png';
+  const [isOpen, setIsOpen] = useState(false);
+
+  const options = {
+    title: {
+      text: '',
+    },
+    chart: {
+      height: 105,
+      width: 573,
+    },
+    credits: {
+      enabled: false,
+    },
+
+    xAxis: {
+      type: 'datetime',
+      visible: false,
+    },
+    legend: {
+      enabled: false,
+    },
+    plotOptions: {
+      series: {
+        marker: {
+          radius: 3,
+          enabled: true,
+          fillColor: '#FFFFFF',
+          lineWidth: 1,
+          lineColor: null, // inherit from series
+        },
+        label: {
+          enabled: false,
+        },
+      },
+    },
+    yAxis: {
+      lineColor: '#BABABA',
+      lineWidth: 1,
+      title: '',
+      labels: {
+        formatter(params) {
+          return `${params.value}E`;
+        },
+      },
+    },
+    series: [{
+      data: prepareGraphHistory(history),
+    }],
+  };
+
+  if (!garment) {
+    return null;
+  }
 
   return (
     <li className={cn(styles.item, className)}>
-      <Link href={`${PRODUCTS}${clothesId}`}>
-        <a className={styles.clothesName}>{clothesName}</a>
+      <Link href={`${PRODUCTS}${garment.id}`}>
+        <a className={styles.clothesName}>{garment.id}</a>
       </Link>
-      <SmallPhotoWithText {...CURRENT_DESIGNER_INFO} />
+      <SmallPhotoWithText id={designer ? designer.id : ''} photo={designerPhoto} />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link href={`${PRODUCTS}${clothesId}`}>
+          <Link href={`${PRODUCTS}${garment.id}`}>
             <a className={styles.clothesPhotoWrapper}>
-              <img className={styles.clothesPhoto} src={clothesPhoto?.image} alt={clothesName} />
+              <img className={styles.clothesPhoto} src={garment.tokenUri} alt={garment.id} />
             </a>
           </Link>
-          <img className={cn(styles.chart, { [styles.chartActive]: isOpen })} src={chartImage} alt="chart" />
+          {isOpen && (
+            <div className={cn(styles.chart, { [styles.chartActive]: isOpen })}>
+              <HighchartsReact
+                highcharts={Highcharts}
+                options={options}
+              />
+            </div>
+          )}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={cn(styles.triangle, { [styles.triangleActive]: isOpen })}
@@ -39,10 +98,7 @@ const CardProduct = ({
           />
         </div>
         <ImportantProductInformation
-          clothesId={clothesId}
-          priceEth={priceEth}
-          estimateApy={estimateApy}
-          expirationDate={expirationDate}
+          clothesId={garment.id}
         />
       </div>
     </li>
@@ -51,27 +107,15 @@ const CardProduct = ({
 
 
 CardProduct.propTypes = {
+  garment: PropTypes.object.isRequired,
+  designer: PropTypes.object.isRequired,
+  history: PropTypes.array,
   className: PropTypes.string,
-  clothesId: PropTypes.string,
-  clothesName: PropTypes.string,
-  designerId: PropTypes.string,
-  clothesPhotos: PropTypes.array,
-  priceEth: PropTypes.number,
-  estimateApy: PropTypes.number,
-  chartImage: PropTypes.string,
-  expirationDate: PropTypes.string,
 };
 
 CardProduct.defaultProps = {
   className: '',
-  clothesId: '',
-  clothesName: '',
-  designerId: '',
-  clothesPhotos: [],
-  priceEth: null,
-  estimateApy: null,
-  chartImage: '',
-  expirationDate: '',
+  history: [],
 };
 
 

@@ -19,6 +19,10 @@
   margin-bottom: 26px;
   font-size: 48px;
   line-height: 52px;
+  max-width: 870px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .titleWrapper {

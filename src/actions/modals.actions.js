@@ -17,14 +17,30 @@ const showScroll = (scroll) => {
   }
 };
 
-export const openModal = (modalNameInReducer, statusScroll) => (dispatch) => {
+export const openModal = (modalNameInReducer, statusScroll, params) => (dispatch) => {
+  dispatch(actions.setValue({ field: 'params', value: params }));
   dispatch(actions.setValue({ field: modalNameInReducer, value: true }));
-
   hideScroll(statusScroll);
 };
 
 export const closeModal = (modalNameInReducer, statusScroll) => (dispatch) => {
   dispatch(actions.setValue({ field: modalNameInReducer, value: false }));
-
+  dispatch(actions.setValue({ field: 'params', value: null }));
   showScroll(statusScroll);
 };
+
+export const openConnectMetamaskModal = () => (dispatch) => dispatch(openModal('isShowModalConnectMetamask', 'hideScroll'));
+export const closeConnectMetamaskModal = () => (dispatch) => dispatch(closeModal('isShowModalConnectMetamask', 'addScroll'));
+
+export const openNotInstalledMetamask = () => (dispatch) => dispatch(openModal('isShowNotificationConnectMetamask'));
+export const closeNotInstalledMetamask = () => (dispatch) => dispatch(closeModal('isShowNotificationConnectMetamask'));
+
+export const openPlaceBidModal = (params) => (dispatch) => dispatch(openModal('isShowModalPlaceBid', 'hideScroll', params));
+export const closePlaceBidModal = () => (dispatch) => dispatch(closeModal('isShowModalPlaceBid', 'addScroll'));
+
+
+export const openWithdrawModal = (params) => (dispatch) => dispatch(openModal('isShowModalWithdrawBid', 'hideScroll', params));
+export const closeWithdrawModal = () => (dispatch) => dispatch(closeModal('isShowModalWithdrawBid', 'addScroll'));
+
+export const openRaiseModal = (params) => (dispatch) => dispatch(openModal('isShowModalRaiseBid', 'hideScroll', params));
+export const closeRaiseModal = () => (dispatch) => dispatch(closeModal('isShowModalRaiseBid', 'addScroll'));

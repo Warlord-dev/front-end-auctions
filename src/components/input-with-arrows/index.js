@@ -1,40 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import { setValueInUserReducer } from '@actions/user.actions';
-import { getSumFloatNumber, getSubtractFloatNumber } from '@helpers/prise.helpers';
-import { STEP } from '@constants/price-constants';
+import { getSumFloatNumber, getSubtractFloatNumber } from '@helpers/price.helpers';
 import styles from './styles.module.scss';
 
 const InputWithArrows = ({
-  className, value, currency, iconUrl,
+  className, value, currency, iconUrl, onChange, minBidIncrement,
 }) => {
-  const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState(value);
 
   const handleClickUp = () => {
-    setInputValue(getSumFloatNumber(inputValue, STEP));
+    setInputValue(getSumFloatNumber(inputValue, minBidIncrement));
+    onChange(getSumFloatNumber(inputValue, minBidIncrement));
   };
 
   const handleClickDown = () => {
     if (inputValue >= 0.05) {
-      setInputValue(getSubtractFloatNumber(inputValue, STEP));
+      setInputValue(getSubtractFloatNumber(inputValue, minBidIncrement));
+      onChange(getSumFloatNumber(inputValue, minBidIncrement));
     }
   };
-
-  useEffect(() => {
-    dispatch(setValueInUserReducer('activeValueEthInInputInModal', inputValue));
-  }, [inputValue]);
 
   return (
     <>
       <div className={cn(className, styles.wrapper)}>
-
         <input
           type="number"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={(e) => {
+            setInputValue(e.target.value);
+            onChange(e.target.value);
+          }}
           className={styles.input}
         />
         <div className={styles.buttonWrapper}>
@@ -57,6 +53,8 @@ InputWithArrows.propTypes = {
   value: PropTypes.number,
   currency: PropTypes.string,
   iconUrl: PropTypes.string,
+  minBidIncrement: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 InputWithArrows.defaultProps = {

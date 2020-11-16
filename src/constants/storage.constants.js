@@ -1,0 +1,2 @@
+export const STORAGE_SORT_BY = 'STORAGE_SORT_BY';
+export const STORAGE_IS_LOGGED_IN = 'STORAGE_IS_LOGGED_IN';

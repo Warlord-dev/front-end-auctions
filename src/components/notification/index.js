@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { closeModal } from '@actions/modals.actions';
+import { closeNotInstalledMetamask } from '@actions/modals.actions';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
@@ -12,7 +12,7 @@ const Notification = ({
   const dispatch = useDispatch();
 
   const closeNotification = () => {
-    dispatch(closeModal('isShowNotificationConnectMetamask'));
+    dispatch(closeNotInstalledMetamask());
   };
 
   return (

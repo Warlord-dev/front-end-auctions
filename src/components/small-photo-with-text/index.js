@@ -6,33 +6,35 @@ import { DESIGNERS } from '@constants/router-constants';
 import styles from './styles.module.scss';
 
 const SmallPhotoWithText = ({
-  className, designerPhoto, designerId, designerName, hashAddress, children,
+  id,
+  photo,
+  address,
+  className,
+  children,
 }) => (
   <div className={cn(styles.designerPhotoWrapper, className)}>
-    {designerPhoto && <img className={styles.designerPhoto} src={designerPhoto} alt={designerName} />}
-    <Link href={`${DESIGNERS}${designerId}`}>
-      <a className={styles.designerName}>{designerName}</a>
+    {photo && <img className={styles.designerPhoto} src={photo} alt={id} />}
+    <Link href={`${DESIGNERS}${id}`}>
+      <a className={styles.designerName}>{id}</a>
     </Link>
-    {hashAddress && <p className={cn(styles.hashAddress, 'smallPhotoWithText__hashAddress')} title={hashAddress}>{hashAddress}</p>}
+    {address && <p className={cn(styles.hashAddress, 'smallPhotoWithText__hashAddress')} title={address}>{address}</p>}
     {children}
   </div>
 );
 
 SmallPhotoWithText.propTypes = {
   className: PropTypes.string,
-  designerPhoto: PropTypes.string,
-  designerId: PropTypes.string,
-  designerName: PropTypes.string,
-  hashAddress: PropTypes.string,
+  photo: PropTypes.string,
+  id: PropTypes.string,
+  address: PropTypes.string,
   children: PropTypes.any,
 };
 
 SmallPhotoWithText.defaultProps = {
   className: '',
-  designerPhoto: '',
-  designerId: '',
-  designerName: '',
-  hashAddress: '',
+  photo: '',
+  id: '',
+  address: '',
   children: null,
 };
 

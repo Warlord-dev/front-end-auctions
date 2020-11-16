@@ -2,50 +2,95 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
+import BigNumber from 'bignumber.js';
 import Button from '@components/buttons/button';
 import TextButton from '@components/buttons/text-button';
 import Timer from '@components/timer';
-import { openModal } from '@actions/modals.actions';
-import { setValueInUserReducer } from '@actions/user.actions';
-import { getSumFloatNumber } from '@helpers/prise.helpers';
-import { STEP } from '@constants/price-constants';
+import {
+  openRaiseModal, openWithdrawModal, openPlaceBidModal, openConnectMetamaskModal,
+} from '@actions/modals.actions';
+import { HISTORY_BID_PLACED_EVENT, HISTORY_BID_WITHDRAWN_EVENT } from '@constants/history.constants';
+import { convertToEth } from '@helpers/price.helpers';
+import { getAuctionById } from '@selectors/auction.selectors';
+import { getHistoryByTokenId } from '@selectors/history.selectors';
+import { getAccount } from '@selectors/user.selectors';
+import { getExchangeRateETH, getMinBidIncrement, getBidWithdrawalLockTime } from '@selectors/global.selectors';
+
 import styles from './styles.module.scss';
 
 const ImportantProductInformation = ({
-  clothesId, priceEth, estimateApyText, estimateApy, buttonTextPlace, buttonTextRaise,
-  buttonTextWithdraw, expirationDate, expirationDateText, styleTypeBlock, hintText,
+  clothesId, estimateApyText, buttonTextPlace, buttonTextRaise,
+  buttonTextWithdraw, expirationDateText, styleTypeBlock, hintText,
 }) => {
-  const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.toJS());
-  const exchangeRateE = useSelector((state) => state.global.toJS().exchangeRateETH);
-  const { isSignIn, bids } = user;
-  const isMakeBid = bids.some((item) => item.clothesId === clothesId);
 
+  const dispatch = useDispatch();
+  const account = useSelector(getAccount);
+
+  const auction = useSelector(getAuctionById(clothesId));
+  const history = useSelector(getHistoryByTokenId(clothesId));
+  const exchangeRateETH = useSelector(getExchangeRateETH);
+  const minBidIncrement = useSelector(getMinBidIncrement);
+  const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
   const [isShowHint, setIsShowHint] = useState(false);
 
-  const handleClickPlaceBid = () => {
-    dispatch(setValueInUserReducer('activeProductInModal', { priceEth, clothesId }));
 
-    if (isSignIn) {
-      dispatch(openModal('isShowModalPlaceBid', 'hideScroll'));
+  if (!auction) {
+    return null;
+  }
+
+  const priceEth = convertToEth(auction.topBid);
+  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
+  const expirationDate = auction.endTime * 1000;
+  const estimateApy = (0).toFixed(2); // TODO::
+
+  const sortedHistory = history.filter((item) => account
+  && item.bidder
+   && item.bidder.id.toLowerCase() === account.toLowerCase() && [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT]
+    .includes(item.eventName))
+    .sort((a, b) => b.timestamp - a.timestamp);
+
+  let isMakeBid = false;
+  let canShowWithdrawBtn = false;
+  let withdrawValue = 0;
+
+  if (sortedHistory.length) {
+
+    const lastEvent = sortedHistory[0];
+
+    if (lastEvent.eventName === HISTORY_BID_PLACED_EVENT) {
+
+      isMakeBid = true;
+
+      const timeDiff = Date.now() - lastEvent.timestamp * 1000;
+
+      if (timeDiff > 0 && timeDiff / 1000 >= bidWithdrawalLockTime) {
+        canShowWithdrawBtn = true;
+      }
+
+      withdrawValue = lastEvent.value;
+
+    }
+
+  }
+
+  const handleClickPlaceBid = () => {
+    if (account) {
+      dispatch(openPlaceBidModal({ id: clothesId, priceEth }));
     } else {
-      dispatch(openModal('isShowModalConnectMetamask', 'hideScroll'));
+      dispatch(openConnectMetamaskModal());
     }
   };
 
   const handleClickRaiseBid = () => {
-    dispatch(setValueInUserReducer('activeProductInModal', { priceEth, clothesId }));
-    dispatch(openModal('isShowModalRaiseBid', 'hideScroll'));
+    dispatch(openRaiseModal({ id: clothesId, priceEth, withdrawValue: convertToEth(withdrawValue) }));
   };
 
   const handleClickWithdrawBid = () => {
-    dispatch(setValueInUserReducer('activeProductInModal', { priceEth, clothesId }));
-    dispatch(openModal('isShowModalWithdrawBid', 'hideScroll'));
+    dispatch(openWithdrawModal({ id: clothesId, withdrawValue: convertToEth(withdrawValue) }));
   };
 
-
   const getPriceUsd = (valueEth) => {
-    const priceUsd = valueEth * exchangeRateE;
+    const priceUsd = valueEth * exchangeRateETH;
     return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
   };
 
@@ -82,18 +127,18 @@ const ImportantProductInformation = ({
           <Button onClick={() => handleClickRaiseBid()} className={styles.button} background="black">
             <span className={styles.buttonText}>{buttonTextRaise}</span>
             {styleTypeBlock === 'largeTransparent' && (
-              <span className={styles.buttonGray}>(need min {getSumFloatNumber(priceEth, STEP)} to compete)</span>
+              <span className={styles.buttonGray}>(need min {minBid.toString(10)}E to compete)</span>
             )}
           </Button>
         ) : (
           <Button onClick={() => handleClickPlaceBid()} className={styles.button} background="black">
             <span className={styles.buttonText}>{buttonTextPlace}</span>
             {styleTypeBlock === 'largeTransparent' && (
-              <span className={styles.buttonGray}>(need min {getSumFloatNumber(priceEth, STEP)} to compete)</span>
+              <span className={styles.buttonGray}>(need min {minBid.toString(10)}E to compete)</span>
             )}
           </Button>
         )}
-        {isMakeBid && (
+        {canShowWithdrawBtn && (
           <div className={styles.wrapperButtonWithdraw}>
             <TextButton onClick={() => handleClickWithdrawBid()}>
               {buttonTextWithdraw}
@@ -107,28 +152,21 @@ const ImportantProductInformation = ({
 
 
 ImportantProductInformation.propTypes = {
-  clothesId: PropTypes.string,
-  priceEth: PropTypes.number,
+  clothesId: PropTypes.string.isRequired,
   estimateApyText: PropTypes.string,
-  estimateApy: PropTypes.number,
   buttonTextPlace: PropTypes.string,
   buttonTextRaise: PropTypes.string,
   buttonTextWithdraw: PropTypes.string,
-  expirationDate: PropTypes.string,
   expirationDateText: PropTypes.string,
   styleTypeBlock: PropTypes.oneOf(['smallWhite', 'largeTransparent']),
   hintText: PropTypes.string,
 };
 
 ImportantProductInformation.defaultProps = {
-  clothesId: '',
-  priceEth: null,
   estimateApyText: 'Estimate APY',
-  estimateApy: null,
   buttonTextPlace: 'Place a Bid',
   buttonTextRaise: 'Raise a Bid',
   buttonTextWithdraw: 'Withdraw a Bid',
-  expirationDate: '',
   expirationDateText: 'Time left',
   styleTypeBlock: 'smallWhite',
   hintText: `APY estimated based on the current total staked value across each of the $MONA 

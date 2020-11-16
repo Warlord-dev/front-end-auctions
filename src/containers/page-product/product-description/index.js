@@ -5,26 +5,29 @@ import LeftBox from './left-box';
 import RightBox from './right-box';
 import styles from './styles.module.scss';
 
-const ProductDescription = ({ currentClothesInfo, currentMaterial }) => {
+const ProductDescription = ({ clothesId, currentClothesInfo }) => {
   const designersInfo = useSelector((state) => state.designersInfo.toJS());
 
-  const currentDesignersInfo = designersInfo.find((item) => item?.designerId === currentClothesInfo?.designerId);
+  const currentDesignersInfo = designersInfo.find((item) => item?.designerId === '1');
 
   return (
     <div className={styles.wrapper}>
       <LeftBox {...currentClothesInfo} />
-      <RightBox currentClothesInfo={currentClothesInfo} currentDesignersInfo={currentDesignersInfo} currentMaterial={currentMaterial} />
+      <RightBox
+        clothesId={clothesId}
+        currentClothesInfo={currentClothesInfo}
+        currentDesignersInfo={currentDesignersInfo}
+      />
     </div>
   );
 };
 
 ProductDescription.propTypes = {
   currentClothesInfo: PropTypes.object.isRequired,
-  currentMaterial: PropTypes.array,
+  clothesId: PropTypes.string.isRequired,
 };
 
 ProductDescription.defaultProps = {
-  currentMaterial: null,
 };
 
 export default memo(ProductDescription);

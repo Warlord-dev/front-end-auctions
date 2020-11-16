@@ -43,12 +43,20 @@
 .textForImg {
   font-size: 8px;
   font-weight: 700;
+  max-width: 57px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .name {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
 }
 
 .address {

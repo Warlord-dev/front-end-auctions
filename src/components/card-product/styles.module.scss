@@ -59,9 +59,23 @@
   right: 2px;
   opacity: 0;
   visibility: hidden;
+  max-width: 595px;
+  background: #eee;
+  padding: 25px 11px 5px 11px;
+
+  rect {
+    fill: transparent !important;
+  }
+
   &.chartActive {
     opacity: 1;
     visibility: initial;
+  }
+
+  :global {
+    .highcharts-grid-line {
+      stroke-width: 0;
+    }
   }
 }
 

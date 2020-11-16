@@ -1,27 +1,90 @@
-import React, { memo } from 'react';
-import { useSelector } from 'react-redux';
+import React, { memo, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 import PageDesignerDescription from '@containers/page-designer-description';
-
+import { getChainId } from '@selectors/global.selectors';
+import { getDesignerGarmentIds } from '@selectors/designer.selectors';
+import wsApi from '@services/api/ws.service';
+import designerPageActions from '@actions/designer.page.actions';
+import historyActions from '@actions/history.actions';
 
 const Designers = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const clothesInfo = useSelector((state) => state.clothesInfo.toJS());
-  const designersInfo = useSelector((state) => state.designersInfo.toJS());
-  const infoAboutTransaction = useSelector((state) => state.infoAboutTransaction.toJS());
+  const dispatch = useDispatch();
+  const chainId = useSelector(getChainId);
+  const designerGarmentIds = useSelector(getDesignerGarmentIds(id));
 
-  const designerInfo = designersInfo.find((item) => item?.designerId === id);
-  const allClothesThisDesigner = clothesInfo.filter((row) => row?.designerId === id);
-  const currentTradeHistory = infoAboutTransaction.filter((item) => allClothesThisDesigner.some((row) => row.clothesId === item.clothesId));
+  useEffect(() => {
 
+    const request = wsApi.onDesignerByIds([id]);
+
+    const { unsubscribe } = request.subscribe({
+      next({ data }) {
+        if (!data) {
+          return;
+        }
+        data.digitalaxGarmentDesigners[0].listings.push({
+          endTime: '1606310534',
+          id: '4',
+          lastBidTime: null,
+          reservePrice: '0',
+          resulted: false,
+          startTime: '1605879479',
+          topBid: null,
+          topBidder: null,
+        }, {
+          endTime: '1606310534',
+          id: '3',
+          lastBidTime: '1605189787',
+          reservePrice: '650000000000000000',
+          resulted: false,
+          startTime: '0',
+          topBid: '900000000000000000',
+          topBidder: {
+            id: '0xd677aed0965ac9b54e709f01a99ceca205aebc4b',
+          },
+        });
+        dispatch(designerPageActions.update(data.digitalaxGarmentDesigners));
+      },
+    });
+
+    return () => unsubscribe();
+
+  }, [chainId]);
+
+  useEffect(() => {
+
+    const ids = designerGarmentIds.toJS();
+
+    if (!ids.length) {
+      return () => {};
+    }
+
+    const request = wsApi.onAuctionsHistoryByIds(ids);
+
+    const { unsubscribe } = request.subscribe({
+      next({ data }) {
+        if (!data) {
+          return;
+        }
+        dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories));
+      },
+    });
+
+    return () => unsubscribe();
+
+  }, [chainId, JSON.stringify(designerGarmentIds)]);
+
+  useEffect(() => () => {
+    dispatch(designerPageActions.reset());
+  }, []);
 
   return (
     <PageDesignerDescription
-      designerInfo={designerInfo}
-      allClothesThisDesigner={allClothesThisDesigner}
-      currentTradeHistory={currentTradeHistory}
+      designerId={id}
+      clothesIds={designerGarmentIds}
     />
   );
 };

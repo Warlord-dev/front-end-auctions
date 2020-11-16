@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import SmallPhotoWithText from '@components/small-photo-with-text';
+import { getGarmentsById } from '@selectors/garment.selectors';
 import AuctionInformation from './auction-information';
 import MaterialList from './material-list';
 import styles from './styles.module.scss';
@@ -10,11 +12,12 @@ const SHOW_FIRST_TAB = 0;
 const SHOW_SECOND_TAB = 1;
 
 const RightBox = ({
-  currentClothesInfo, currentDesignersInfo, youReceiveText, currentMaterial,
+  clothesId, currentClothesInfo, currentDesignersInfo, youReceiveText,
 }) => {
-
-  const VALUE_NFT = currentMaterial.length > 0 ? `(${currentMaterial.length} NFTs)` : '';
-  const VALUE_APY = currentClothesInfo?.estimateApy ? `~${currentClothesInfo?.estimateApy} APY` : '';
+  const garment = useSelector(getGarmentsById(clothesId));
+  const estimateApy = 0;
+  const VALUE_NFT = garment && garment.strands.length > 0 ? `(${garment.strands.length} NFTs)` : '';
+  const VALUE_APY = `~${estimateApy} APY`;
 
   const TABS = ['Auction Information', `Material Composition ${VALUE_NFT} ${VALUE_APY}`];
   const [activeItem, setActiveItem] = useState(SHOW_FIRST_TAB);
@@ -39,7 +42,7 @@ const RightBox = ({
       {activeItem === SHOW_FIRST_TAB && <AuctionInformation {...currentClothesInfo} /> }
       {activeItem === SHOW_SECOND_TAB && (
         <MaterialList
-          currentMaterial={currentMaterial}
+          clothesId={clothesId}
           valueChildNfts={currentClothesInfo.valueChildNfts}
         />
       )}
@@ -52,12 +55,11 @@ RightBox.propTypes = {
   currentClothesInfo: PropTypes.object.isRequired,
   currentDesignersInfo: PropTypes.object.isRequired,
   youReceiveText: PropTypes.string,
-  currentMaterial: PropTypes.array,
+  clothesId: PropTypes.string.isRequired,
 };
 
 RightBox.defaultProps = {
   youReceiveText: 'You will receive',
-  currentMaterial: null,
 };
 
 export default RightBox;

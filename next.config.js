@@ -1,6 +1,7 @@
 const {
   CLIENT_URL, BACKEND_API, STATIC_DOMAIN,
-  IS_PROD, ENVIRONMENT, SENTRY_DSN,
+  IS_PROD, ENVIRONMENT, SENTRY_DSN, NETWORKS,
+  API_URLS, DEFAULT_NETWORK, RATE_API_KEY,
 } = require('config');
 const withImages = require('next-images');
 
@@ -12,9 +13,13 @@ module.exports = withImages({
     IS_PROD,
     ENVIRONMENT,
     SENTRY_DSN,
+    NETWORKS,
+    API_URLS,
+    DEFAULT_NETWORK,
+    RATE_API_KEY,
   },
   trailingSlash: true,
-  webpack(cfg) {
+  webpack(cfg, { isServer }) {
     const originalEntry = cfg.entry;
     cfg.entry = async () => {
       const entries = await originalEntry();
@@ -26,6 +31,12 @@ module.exports = withImages({
       }
       return entries;
     };
+
+    if (!isServer) {
+      cfg.node = {
+        ws: 'empty',
+      };
+    }
 
     return cfg;
   },

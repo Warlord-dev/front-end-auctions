@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-
-import { openModal } from '@actions/modals.actions';
+import { getAccount, getAccountPhoto } from '@selectors/user.selectors';
+import { getChainId } from '@selectors/global.selectors';
+import { openConnectMetamaskModal } from '@actions/modals.actions';
+import accountActions from '@actions/user.actions';
 import Logo from './logo';
 import styles from './styles.module.scss';
 
@@ -13,14 +15,19 @@ import styles from './styles.module.scss';
 const HeaderTopLine = ({
   className, isShowStaking, buttonText, linkText,
 }) => {
+
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.toJS());
-  const { isSignIn, userPhoto, userHashAddress } = user;
+  const account = useSelector(getAccount);
+  const accountPhoto = useSelector(getAccountPhoto);
+  const chainId = useSelector(getChainId);
+
+  const handleClick = () => dispatch(openConnectMetamaskModal());
 
   const [isShowLogOut, setIsShowLogOut] = useState(false);
 
-  const handleClick = () => {
-    dispatch(openModal('isShowModalConnectMetamask', 'hideScroll'));
+  const handleLogoutClick = () => {
+    setIsShowLogOut(false);
+    dispatch(accountActions.logout());
   };
 
   return (
@@ -37,14 +44,14 @@ const HeaderTopLine = ({
             {linkText}
           </a>
         )}
-        {isSignIn ? (
+        {account ? (
           <div className={styles.buttonWrapper}>
-            <SmallPhotoWithText designerPhoto={userPhoto} hashAddress={userHashAddress} className={styles.hashAddress}>
+            <SmallPhotoWithText photo={accountPhoto} address={`${account}(${chainId})`} className={styles.hashAddress}>
               <button className={styles.arrowBottom} onClick={() => setIsShowLogOut(!isShowLogOut)}>
-                <img className={styles.arrowBottomImg} src="/images/icons/arrow-bottom.svg" alt="arrow-bottom" />
+                <img src="/images/icons/arrow-bottom.svg" alt="arrow-bottom" />
               </button>
             </SmallPhotoWithText>
-            {isShowLogOut && <button className={styles.logOut}>Logout</button>}
+            {isShowLogOut && <button onClick={() => handleLogoutClick()} className={styles.logOut}>Logout</button>}
           </div>
         ) : (
           <Button onClick={() => handleClick()}>{buttonText}</Button>

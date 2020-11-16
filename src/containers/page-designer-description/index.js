@@ -6,25 +6,23 @@ import ExamplesList from './examples-list';
 import Trade from './trade';
 import styles from './styles.module.scss';
 
-
-const PageDesignerDescription = ({ designerInfo, allClothesThisDesigner, currentTradeHistory }) => (
+const PageDesignerDescription = ({
+  designerId, clothesIds,
+}) => (
   <div className={styles.wrapper}>
-    <Header {...designerInfo} />
+    <Header designerId={designerId} />
     <GraphWrapper />
-    <ExamplesList data={allClothesThisDesigner} />
-    <Trade tradeHistory={currentTradeHistory} />
+    <ExamplesList designerId={designerId} />
+    <Trade clothesIds={clothesIds} />
   </div>
 );
 
 PageDesignerDescription.propTypes = {
-  designerInfo: PropTypes.object.isRequired,
-  allClothesThisDesigner: PropTypes.array,
-  currentTradeHistory: PropTypes.array,
+  designerId: PropTypes.string.isRequired,
+  clothesIds: PropTypes.array.isRequired,
 };
 
 PageDesignerDescription.defaultProps = {
-  allClothesThisDesigner: null,
-  currentTradeHistory: null,
 };
 
 export default memo(PageDesignerDescription);

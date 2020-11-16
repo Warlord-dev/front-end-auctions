@@ -6,6 +6,7 @@ import cn from 'classnames';
 import styles from './styles.module.scss';
 
 const Timer = ({ className, expirationDate, size }) => {
+
   const [days, updateDays] = useState(0);
   const [hours, updateHours] = useState(0);
   const [minutes, updateMinutes] = useState(0);
@@ -13,7 +14,8 @@ const Timer = ({ className, expirationDate, size }) => {
   const interval = useRef();
 
   useEffect(() => {
-    interval.current = setInterval(() => {
+
+    const getTimer = () => {
       const nowDate = new Date();
       const finalDate = new Date(expirationDate);
       const restDate = (finalDate - nowDate) + 1000;
@@ -25,13 +27,16 @@ const Timer = ({ className, expirationDate, size }) => {
       updateHours(Math.floor((restDate / 1000 / 60 / 60) % 24));
       updateMinutes(Math.floor(Math.floor((restDate / 1000 / 60) % 60)));
       updateSeconds(Math.floor(Math.floor((restDate / 1000) % 60)));
+    };
 
-    }, 10);
+    getTimer();
+    interval.current = setInterval(() => getTimer(), 1000);
+
     return () => {
       clearInterval(interval.current);
       interval.current = null;
     };
-  }, []);
+  }, [expirationDate]);
 
   return (
     <div className={cn(className, {
@@ -57,7 +62,7 @@ const Timer = ({ className, expirationDate, size }) => {
 
 Timer.propTypes = {
   className: PropTypes.string,
-  expirationDate: PropTypes.string.isRequired,
+  expirationDate: PropTypes.number.isRequired,
   size: PropTypes.oneOf(['default', 'large', 'small']),
 };
 

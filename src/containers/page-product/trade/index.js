@@ -3,24 +3,19 @@ import PropTypes from 'prop-types';
 import TradeHistory from '@components/trade-history';
 import styles from './styles.module.scss';
 
-const Trade = ({ tradeHistory, tradeHistoryText }) => (
+const Trade = ({ clothesIds, tradeHistoryText }) => (
   <section>
-    {!!tradeHistory.length && (
-      <>
-        <p className={styles.title}>{tradeHistoryText}</p>
-        <TradeHistory tradeHistory={tradeHistory} />
-      </>
-    )}
+    <p className={styles.title}>{tradeHistoryText}</p>
+    <TradeHistory clothesIds={clothesIds} />
   </section>
 );
 
 Trade.propTypes = {
-  tradeHistory: PropTypes.array,
+  clothesIds: PropTypes.array.isRequired,
   tradeHistoryText: PropTypes.string,
 };
 
 Trade.defaultProps = {
-  tradeHistory: null,
   tradeHistoryText: 'Trade history',
 };
 

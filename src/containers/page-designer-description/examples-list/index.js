@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import ListExamplesWork from '@components/list-examples-work';
 import styles from './styles.module.scss';
 
-const ExamplesList = ({ data, examplesListTitle }) => (
+const ExamplesList = ({ designerId, examplesListTitle }) => (
   <section className={styles.wrapper}>
     <p className={styles.title}>{examplesListTitle}</p>
-    <ListExamplesWork data={data} />
+    <ListExamplesWork designerId={designerId} />
   </section>
 );
 
 ExamplesList.propTypes = {
-  data: PropTypes.array.isRequired,
+  designerId: PropTypes.string.isRequired,
   examplesListTitle: PropTypes.string,
 };
 

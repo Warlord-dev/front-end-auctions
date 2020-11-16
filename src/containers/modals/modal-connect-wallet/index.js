@@ -6,40 +6,24 @@ import cn from 'classnames';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
 import Notification from '@components/notification';
-import { closeModal, openModal } from '@actions/modals.actions';
-import { setValueInUserReducer } from '@actions/user.actions';
+
+import { closeConnectMetamaskModal, closeNotInstalledMetamask } from '@actions/modals.actions';
+import userActions from '@actions/user.actions';
+
 import styles from './styles.module.scss';
-
-
-const IS_EXTENSION_INSTALLED = true;
 
 const ModalConnectWallet = ({
   className, title, textForIcon, icon, buttonText,
 }) => {
   const dispatch = useDispatch();
-  const activeProductInModal = useSelector((state) => state.user.toJS().activeProductInModal);
-  const isShowNotificationConnectMetamask = useSelector((state) => state.modals.toJS().isShowNotificationConnectMetamask);
+  const isShowNotificationConnectMetamask = useSelector((state) => state.modals.get('isShowNotificationConnectMetamask'));
 
   const handleClose = () => {
-    dispatch(closeModal('isShowModalConnectMetamask', 'addScroll'));
-    dispatch(setValueInUserReducer('activeProductInModal', {}));
-    dispatch(closeModal('isShowNotificationConnectMetamask'));
+    dispatch(closeConnectMetamaskModal());
+    dispatch(closeNotInstalledMetamask());
   };
 
-
-  const handleClick = () => {
-    if (IS_EXTENSION_INSTALLED) {
-      dispatch(setValueInUserReducer('isSignIn', true));
-      dispatch(closeModal('isShowModalConnectMetamask', 'addScroll'));
-
-      if (Object.keys(activeProductInModal).length) {
-        dispatch(openModal('isShowModalPlaceBid', 'hideScroll'));
-      }
-    } else {
-      dispatch(openModal('isShowNotificationConnectMetamask'));
-    }
-
-  };
+  const handleClick = () => dispatch(userActions.tryToLogin());
 
   return (
     <>

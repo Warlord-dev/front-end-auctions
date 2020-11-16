@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import BigNumber from 'bignumber.js';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
+import bidActions from '@actions/bid.actions';
 import InputWithArrows from '@components/input-with-arrows';
-import { closeModal } from '@actions/modals.actions';
-import { setValueInUserReducer } from '@actions/user.actions';
-import { setValueInClothesInfoReducer } from '@actions/clothes-info.actions';
-import { getSumFloatNumber } from '@helpers/prise.helpers';
-import { STEP } from '@constants/price-constants';
+import { closeRaiseModal } from '@actions/modals.actions';
+import { getModalParams } from '@selectors/modal.selectors';
+import { getMinBidIncrement } from '@selectors/global.selectors';
+
 import styles from './styles.module.scss';
 
 
@@ -17,47 +18,31 @@ const ModalRaiseBid = ({
   className, title, text, textForSelect, buttonText, yourBidText, textError,
 }) => {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.toJS());
-  const clothesInfo = useSelector((state) => state.clothesInfo.toJS());
-  const { activeValueEthInInputInModal, bids, activeProductInModal: { clothesId, priceEth } } = user;
-  const [showError, setShowError] = useState(false);
-
-  const lastBid = bids.filter((item) => item.clothesId === clothesId).sort((a, b) => b.valueBid - a.valueBid)[0];
-  const currentClothesInfo = clothesInfo.find((item) => item.clothesId === clothesId);
+  const { id, priceEth, withdrawValue } = useSelector(getModalParams);
+  const minBidIncrement = useSelector(getMinBidIncrement);
+  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
+  const [inputPriceEth, setInputPriceEth] = useState(minBid);
+  const [showError, setShowError] = useState(null);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const handleClose = () => {
-    dispatch(closeModal('isShowModalRaiseBid', 'addScroll'));
-    dispatch(setValueInUserReducer('activeProductInModal', {}));
-    dispatch(setValueInUserReducer('activeValueEthInInputInModal', ''));
+    dispatch(closeRaiseModal());
   };
 
   const handleClick = () => {
-    if (+activeValueEthInInputInModal >= getSumFloatNumber(priceEth, STEP)) {
-      bids.push({
-        clothesId,
-        valueBid: +activeValueEthInInputInModal,
-        dateAndTameBids: Date.now(),
-      });
-      dispatch(setValueInUserReducer('bids', bids));
 
-      const newClothesInfo = clothesInfo.reduce((accumulator, item) => {
-        if (item.clothesId === currentClothesInfo.clothesId) {
-          item.priceEth = +activeValueEthInInputInModal;
-          accumulator.push(item);
-          return accumulator;
-        }
-        accumulator.push(item);
-
-        return accumulator;
-      }, []);
-
-      dispatch(setValueInClothesInfoReducer('', newClothesInfo));
-      setShowError(false);
-
-      handleClose();
-    } else {
-      setShowError(true);
+    if (minBid.toNumber() > Number(inputPriceEth)) {
+      setShowError(`You must bid at least ${minBid.toString(10)}ETH higher than the current highest bid`);
+      return;
     }
+
+    setShowError(null);
+    setIsDisabled(true);
+    dispatch(bidActions.bid(id, inputPriceEth))
+      .then(() => handleClose())
+      .catch((e) => setShowError(e.message))
+      .finally(() => setIsDisabled(false));
+
   };
 
   return (
@@ -67,18 +52,23 @@ const ModalRaiseBid = ({
           <div className={styles.footer}>
             <p>
               <span className={styles.footerSubtitle}>{yourBidText}</span>
-              <span className={styles.footerSubtitleValue}>{lastBid.valueBid} ETH</span>
+              <span className={styles.footerSubtitleValue}>{withdrawValue} ETH</span>
             </p>
             <p className={styles.caption}>
               <span>{textForSelect}</span>
-              <span> {getSumFloatNumber(priceEth, STEP)}ETH</span>
+              <span> {minBid.toString(10)}ETH</span>
             </p>
             <div className={styles.selectWrapper}>
               <div>
-                <InputWithArrows className={styles.inputWithArrows} value={getSumFloatNumber(priceEth, STEP)} />
+                <InputWithArrows
+                  minBidIncrement={minBidIncrement}
+                  onChange={setInputPriceEth}
+                  className={styles.inputWithArrows}
+                  value={inputPriceEth}
+                />
                 {showError && <p className={styles.error}>{textError}</p>}
               </div>
-              <Button background="black" onClick={() => handleClick()} className={styles.button}>
+              <Button isDisabled={isDisabled} background="black" onClick={() => handleClick()} className={styles.button}>
                 {buttonText}
               </Button>
             </div>

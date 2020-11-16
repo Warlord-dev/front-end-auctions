@@ -30,7 +30,8 @@ const SOCIAL_MEDIA = [
 ];
 
 const Header = ({
-  designerName, designerPhoto, descriptionDesigner, designerSocialMedia,
+  designerId,
+  designerPhoto, descriptionDesigner, designerSocialMedia,
   designerCountryFlagIcon, designerCountry,
 }) => {
 
@@ -52,7 +53,7 @@ const Header = ({
       <img className={styles.photo} src={designerPhoto} alt="flag" />
       <div>
         <div className={styles.titleWrapper}>
-          <p className={styles.title}>{designerName}</p>
+          <p className={styles.title} title={designerId}>{designerId}</p>
           <div className={styles.countryWrapper}>
             <img src={designerCountryFlagIcon} alt={designerCountry} />
             <span className={styles.designerCountry}>{designerCountry}</span>
@@ -66,7 +67,7 @@ const Header = ({
 };
 
 Header.propTypes = {
-  designerName: PropTypes.string,
+  designerId: PropTypes.string,
   designerPhoto: PropTypes.string,
   descriptionDesigner: PropTypes.string,
   designerSocialMedia: PropTypes.array,
@@ -75,8 +76,8 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  designerName: 'Estimate APY',
-  designerPhoto: 'Estimate APY',
+  designerId: '',
+  designerPhoto: '',
   descriptionDesigner: 'Estimate APY',
   designerSocialMedia: [],
   designerCountryFlagIcon: '',

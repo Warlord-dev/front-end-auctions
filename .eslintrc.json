@@ -75,9 +75,12 @@
           ["@containers", "./src/containers"],
           ["@constants", "./src/constants"],
           ["@selectors", "./src/selectors"],
+          ["@reducers", "./src/reducers"],
           ["@assets", "./src/assets"],
           ["@helpers", "./src/helpers"],
-          ["@actions", "./src/actions"]
+          ["@actions", "./src/actions"],
+          ["@services", "./src/services"],
+          ["@utils", "./src/utils"]
       ]
     }
   } 

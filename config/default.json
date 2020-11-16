@@ -6,5 +6,15 @@
   "TTL_NO_STATIC": 600000,
   "IS_PROD": false,
   "SENTRY_DSN": "",
-  "ENVIRONMENT": ""
+  "ENVIRONMENT": "",
+  "NETWORKS": [
+    "mainnet",
+    "rinkeby"
+  ],
+  "API_URLS": {
+    "mainnet": "https://api.thegraph.com/subgraphs/name/digitalax/digitalax",
+    "rinkeby": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxropsten"
+  },
+  "DEFAULT_NETWORK": "rinkeby",
+  "RATE_API_KEY": "3bf24c602c139a6a000b9e852bb42b56dac326cafcfbca9e29dbc4a17441c21a"
 }
