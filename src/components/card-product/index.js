@@ -4,18 +4,19 @@ import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 import ImportantProductInformation from '@containers/important-product-information';
 import SmallPhotoWithText from '@components/small-photo-with-text';
+import { getDesignerInfoById } from '@selectors/designer.selectors';
 import { getCardProductChartOptions } from '@services/graph.service';
 import { PRODUCTS } from '@constants/router-constants';
 
 import styles from './styles.module.scss';
 
 const CardProduct = ({
-  history, garment, designer, className,
+  history, garment, className,
 }) => {
 
-  const designerPhoto = '/images/Kris-Seed.png';
   const [isOpen, setIsOpen] = useState(false);
 
   const options = getCardProductChartOptions(history);
@@ -24,12 +25,14 @@ const CardProduct = ({
     return null;
   }
 
+  const designerInfo = useSelector(getDesignerInfoById(garment.designer));
+
   return (
     <li className={cn(styles.item, className)}>
       <Link href={`${PRODUCTS}${garment.id}`}>
         <a className={styles.clothesName}>{garment.id}</a>
       </Link>
-      <SmallPhotoWithText id={designer ? designer.id : ''} photo={designerPhoto} />
+      <SmallPhotoWithText id={designerInfo ? designerInfo.id : ''} name={designerInfo?.designerName} photo={designerInfo?.designerPhoto} />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
           <Link href={`${PRODUCTS}${garment.id}`}>
@@ -62,7 +65,6 @@ const CardProduct = ({
 
 CardProduct.propTypes = {
   garment: PropTypes.object.isRequired,
-  designer: PropTypes.object.isRequired,
   history: PropTypes.array,
   className: PropTypes.string,
 };

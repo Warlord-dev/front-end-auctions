@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { Dropdown } from 'semantic-ui-react';
 import CardProduct from '@components/card-product';
+import Loader from '@components/loader';
 import { STORAGE_SORT_BY } from '@constants/storage.constants';
 import { getAllGarmentsById } from '@selectors/garment.selectors';
-import { getAllDesignersById } from '@selectors/designer.selectors';
 import { getAllHistoryByTokenId } from '@selectors/history.selectors';
-import { } from '@selectors/auction.selectors';
+import { getAuctionsIsLoaded } from '@selectors/auction.page.selectors';
 import {
   sortByLowestBid, sortByHighestBid, sortByHighestVolume, sortByLowestVolume,
 } from '@helpers/sort.helpers';
@@ -27,7 +27,7 @@ const CardList = ({ auctions, className }) => {
   ];
   const historyByTokenId = useSelector(getAllHistoryByTokenId);
   const garmentsById = useSelector(getAllGarmentsById);
-  const designersById = useSelector(getAllDesignersById);
+  const auctionsIsLoaded = useSelector(getAuctionsIsLoaded);
   const [dropdownActiveItem, setDropdownActiveItem] = useState(localStorage.getItem(STORAGE_SORT_BY));
 
 
@@ -66,20 +66,26 @@ const CardList = ({ auctions, className }) => {
           value={dropdownActiveItem}
         />
       </div>
-      <ul className={cn(styles.list, className)}>
-        {auctions.map((auction) => {
-          const garment = garmentsById.get(auction.get('id'));
-          const designer = garment ? designersById.get(garment.designer) : null;
-          return (
-            <CardProduct
-              key={auction.get('id')}
-              history={historyByTokenId.get(auction.get('id'))}
-              garment={garment}
-              designer={designer}
-            />
-          );
-        })}
-      </ul>
+      {auctionsIsLoaded ? (
+        <>
+          {auctions.toJS().length
+            ? (
+              <ul className={cn(styles.list, className)}>
+                {auctions.map((auction) => {
+                  const garment = garmentsById.get(auction.get('id'));
+                  return (
+                    <CardProduct
+                      key={auction.get('id')}
+                      history={historyByTokenId.get(auction.get('id'))}
+                      garment={garment}
+                    />
+                  );
+                })}
+              </ul>
+            )
+            : <p className={styles.empty}>Data is empty</p>}
+        </>
+      ) : <Loader size="large" className={styles.loader} /> }
     </>
   );
 };

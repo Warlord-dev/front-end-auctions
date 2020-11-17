@@ -1,4 +1,7 @@
 import React, { memo } from 'react';
+import { useSelector } from 'react-redux';
+import { getDesignerInfoById } from '@selectors/designer.selectors.js';
+
 import PropTypes from 'prop-types';
 import Header from './header';
 import GraphWrapper from './graph-wrapper';
@@ -8,14 +11,19 @@ import styles from './styles.module.scss';
 
 const PageDesignerDescription = ({
   designerId, clothesIds,
-}) => (
-  <div className={styles.wrapper}>
-    <Header designerId={designerId} />
-    <GraphWrapper />
-    <ExamplesList designerId={designerId} />
-    <Trade clothesIds={clothesIds} />
-  </div>
-);
+}) => {
+
+  const designerInfo = useSelector(getDesignerInfoById(designerId));
+
+  return (
+    <div className={styles.wrapper}>
+      <Header designerId={designerId} {...designerInfo} />
+      <GraphWrapper />
+      <ExamplesList designerId={designerId} />
+      <Trade clothesIds={clothesIds} />
+    </div>
+  );
+};
 
 PageDesignerDescription.propTypes = {
   designerId: PropTypes.string.isRequired,

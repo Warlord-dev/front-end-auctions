@@ -26,7 +26,8 @@
 
   width: 618px;
   height: 605px;
-  padding: 45px;
+  // padding: 45px;
+  padding: 45px 0;
 }
 
 .clothesPhoto {
@@ -60,12 +61,8 @@
   opacity: 0;
   visibility: hidden;
   max-width: 595px;
-  background: #eee;
+  background: rgba(230, 230, 230, 0.5);
   padding: 25px 11px 5px 11px;
-
-  rect {
-    fill: transparent !important;
-  }
 
   &.chartActive {
     opacity: 1;

@@ -29,7 +29,6 @@ const MaterialList = ({
       <div className={styles.headerTitle}>
         {headerTitle.map((item) => <p key={item} className={styles.headerTitleItem}>{item}</p>)}
       </div>
-      {console.log(garment.strands)}
       {garment.strands.map((item) => <MaterialLine item={item} className={styles.materialLine} />)}
     </div>
   );

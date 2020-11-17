@@ -19,7 +19,7 @@
   margin-bottom: 26px;
   font-size: 48px;
   line-height: 52px;
-  max-width: 870px;
+  max-width: 600px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -30,12 +30,19 @@
   align-items: flex-start;
 }
 
-.description {
+.descriptionWrapper {
+  max-width: 690px;
+  margin-bottom: 54px;
+}
+
+.descriptionItem {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  max-width: 690px;
-  margin-bottom: 54px;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
 }
 
 .countryWrapper {
@@ -43,6 +50,10 @@
   align-items: center;
   justify-self: center;
   margin-left: 40px;
+}
+
+.flag {
+  width: 27px;
 }
 
 .designerCountryFlagIcon {

@@ -4,7 +4,7 @@ import { Map } from 'immutable';
 import TransformModules from '../utils/transform-modules';
 
 const DEFAULT_FIELDS = Map({
-
+  auctionsIsLoaded: false,
 });
 
 export default createModule({

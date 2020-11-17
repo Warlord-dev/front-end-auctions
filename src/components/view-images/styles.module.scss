@@ -13,10 +13,20 @@
   justify-content: center;
 }
 
+.video {
+  width: 100%;
+  max-width: 100%;
+
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
 .itemLargeImg {
   max-width: 100%;
   max-height: 100%;
-  padding: 40px 55px;
+  // padding: 40px 55px;
+  padding: 40px 0;
   object-fit: contain;
 }
 
@@ -41,6 +51,7 @@
 .itemSmallImg {
   max-width: 100%;
   max-height: 100%;
-  padding: 8px 10px;
+  // padding: 8px 10px;
+  padding: 8px 0;
   object-fit: contain;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
@@ -105,7 +106,7 @@ const ImportantProductInformation = ({
           <span className={styles.priceEth}>{priceEth} E</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
-        <p className={styles.estimateWrapper}>
+        {/* <p className={styles.estimateWrapper}>
           <span className={styles.estimateApy}>{estimateApy}%</span>
           <span className={styles.estimateApyTextWrapper}>
             <a href="" className={styles.estimateApyText}>{estimateApyText}</a>
@@ -118,7 +119,7 @@ const ImportantProductInformation = ({
             </span>
           </span>
           {isShowHint && <span className={styles.hint}>{hintText}</span>}
-        </p>
+        </p> */}
       </div>
       <div className={styles.footerBoxRight}>
         <Timer className={styles.timer} expirationDate={expirationDate} />

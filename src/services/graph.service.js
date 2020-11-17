@@ -162,6 +162,7 @@ export const getCardProductChartOptions = (history) => {
     chart: {
       height: 105,
       width: 573,
+      backgroundColor: 'transparent',
     },
     credits: {
       enabled: false,
@@ -195,6 +196,11 @@ export const getCardProductChartOptions = (history) => {
       labels: {
         formatter(params) {
           return `${params.value}E`;
+        },
+        style: {
+          color: '#111',
+          fontWeight: '300',
+          fontSize: '9px',
         },
       },
     },

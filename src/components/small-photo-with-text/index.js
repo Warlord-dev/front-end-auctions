@@ -7,6 +7,7 @@ import styles from './styles.module.scss';
 
 const SmallPhotoWithText = ({
   id,
+  name,
   photo,
   address,
   className,
@@ -14,9 +15,11 @@ const SmallPhotoWithText = ({
 }) => (
   <div className={cn(styles.designerPhotoWrapper, className)}>
     {photo && <img className={styles.designerPhoto} src={photo} alt={id} />}
-    <Link href={`${DESIGNERS}${id}`}>
-      <a className={styles.designerName}>{id}</a>
-    </Link>
+    {id && (
+      <Link href={`${DESIGNERS}${id}`}>
+        <a className={cn(styles.designerName, styles.designerNameLink)}>{name}</a>
+      </Link>
+    )}
     {address && <p className={cn(styles.hashAddress, 'smallPhotoWithText__hashAddress')} title={address}>{address}</p>}
     {children}
   </div>
@@ -25,6 +28,7 @@ const SmallPhotoWithText = ({
 SmallPhotoWithText.propTypes = {
   className: PropTypes.string,
   photo: PropTypes.string,
+  name: PropTypes.string,
   id: PropTypes.string,
   address: PropTypes.string,
   children: PropTypes.any,
@@ -33,6 +37,7 @@ SmallPhotoWithText.propTypes = {
 SmallPhotoWithText.defaultProps = {
   className: '',
   photo: '',
+  name: '',
   id: '',
   address: '',
   children: null,

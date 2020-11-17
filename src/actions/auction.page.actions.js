@@ -34,7 +34,7 @@ class AuctionPageActions extends BaseActions {
       dispatch(auctionActions.setValue('weekResultedAuctions', weekResultedAuctions.digitalaxGarmentAuctions));
       dispatch(auctionActions.setValue('monthResultedAuctions', monthResultedAuctions.digitalaxGarmentAuctions));
       dispatch(auctionActions.setValue('auctions', digitalaxGarmentAuctions));
-
+      dispatch(auctionActions.setValue('auctionsIsLoaded', true));
     };
 
   }

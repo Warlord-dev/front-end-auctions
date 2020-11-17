@@ -27,12 +27,19 @@ const SOCIAL_MEDIA = [
     item: <Instagram />,
     name: 'instagram',
   },
+  {
+    item: '',
+    name: 'website',
+  },
+  {
+    item: '',
+    name: 'linkedIn',
+  },
 ];
 
 const Header = ({
-  designerId,
   designerPhoto, descriptionDesigner, designerSocialMedia,
-  designerCountryFlagIcon, designerCountry,
+  designerCountryFlagIcon, designerCountry, designerName,
 }) => {
 
   const socialMedia = designerSocialMedia.reduce((accumulator, item) => {
@@ -53,13 +60,15 @@ const Header = ({
       <img className={styles.photo} src={designerPhoto} alt="flag" />
       <div>
         <div className={styles.titleWrapper}>
-          <p className={styles.title} title={designerId}>{designerId}</p>
+          <p className={styles.title}>{designerName}</p>
           <div className={styles.countryWrapper}>
-            <img src={designerCountryFlagIcon} alt={designerCountry} />
+            {designerCountryFlagIcon && <img className={styles.flag} src={designerCountryFlagIcon} alt={designerCountry} />}
             <span className={styles.designerCountry}>{designerCountry}</span>
           </div>
         </div>
-        <p className={styles.description}>{descriptionDesigner}</p>
+        <div className={styles.descriptionWrapper}>
+          {descriptionDesigner.map((item) => <p key={item} className={styles.descriptionItem}>{item}</p>)}
+        </div>
         <ListSocialNetworks list={socialMedia} />
       </div>
     </section>
@@ -67,7 +76,7 @@ const Header = ({
 };
 
 Header.propTypes = {
-  designerId: PropTypes.string,
+  designerName: PropTypes.string,
   designerPhoto: PropTypes.string,
   descriptionDesigner: PropTypes.string,
   designerSocialMedia: PropTypes.array,
@@ -76,9 +85,9 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  designerId: '',
+  designerName: '',
   designerPhoto: '',
-  descriptionDesigner: 'Estimate APY',
+  descriptionDesigner: '',
   designerSocialMedia: [],
   designerCountryFlagIcon: '',
   designerCountry: '',

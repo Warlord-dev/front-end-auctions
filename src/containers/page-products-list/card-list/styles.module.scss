@@ -76,3 +76,24 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.loader {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.empty {
+  @include wrapper();
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
