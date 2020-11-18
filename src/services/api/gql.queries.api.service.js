@@ -43,7 +43,7 @@ export const getGarmentsByIds = gql`
       owner
       primarySalePrice
       tokenUri
-      strands {
+      children {
         amount
         tokenUri
         id
@@ -83,7 +83,7 @@ export const getGarmentsByDesignerId = gql`
       owner
       primarySalePrice
       tokenUri
-      strands {
+      children {
         amount
         tokenUri
         id
@@ -108,7 +108,7 @@ export const getAuctionsHistoryByIds = gql`
         owner
         primarySalePrice
         tokenUri
-        strands {
+        children {
           id
           amount
           tokenUri

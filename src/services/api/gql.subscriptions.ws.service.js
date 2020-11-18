@@ -73,7 +73,7 @@ export const onAuctionsHistoryByIds = `
         owner
         primarySalePrice
         tokenUri
-        strands {
+        children {
           id
           amount
           tokenUri
