@@ -5,7 +5,7 @@ import cloneDeep from 'lodash.clonedeep';
 const DEFAULT_FIELDS = List([
   {
     materialId: '1',
-    imgUrl: '/images/material-1.png',
+    imgUrl: './images/material-1.png',
     textForImg: '#PN8798',
     name: 'Material ABC...',
     address: '0xe45efe0ca012xe45efe0cc13e',
@@ -14,7 +14,7 @@ const DEFAULT_FIELDS = List([
   },
   {
     materialId: '2',
-    imgUrl: '/images/material-1.png',
+    imgUrl: './images/material-1.png',
     textForImg: '#PN8798',
     name: 'Material #PN8798',
     address: '0xe45efe0cc13eb9',
@@ -23,7 +23,7 @@ const DEFAULT_FIELDS = List([
   },
   {
     materialId: '3',
-    imgUrl: '/images/material-1.png',
+    imgUrl: './images/material-1.png',
     textForImg: '#PN8798',
     name: 'Material ABC...',
     address: 'e45efe0ca012xe45efe',
@@ -32,7 +32,7 @@ const DEFAULT_FIELDS = List([
   },
   {
     materialId: '4',
-    imgUrl: '/images/material-1.png',
+    imgUrl: './images/material-1.png',
     textForImg: '#PN8798',
     name: 'Material #PN8798',
     address: '0xe45efe0cc13eb92',
@@ -41,7 +41,7 @@ const DEFAULT_FIELDS = List([
   },
   {
     materialId: '5',
-    imgUrl: '/images/material-2.png',
+    imgUrl: './images/material-2.png',
     textForImg: '#M087EE',
     name: 'Material ABC...',
     address: '0xe45efe0ca012xe45efe0cc13e',
@@ -50,7 +50,7 @@ const DEFAULT_FIELDS = List([
   },
   {
     materialId: '6',
-    imgUrl: '/images/material-1.png',
+    imgUrl: './images/material-1.png',
     textForImg: '#PN8798',
     name: 'Material #PN8798',
     address: '0xe45efe0cc13eb9',
@@ -59,7 +59,7 @@ const DEFAULT_FIELDS = List([
   },
   {
     materialId: '7',
-    imgUrl: '/images/material-2.png',
+    imgUrl: './images/material-2.png',
     textForImg: '#M087EE',
     name: 'Material ABC...',
     address: 'e45efe0ca012xe45efe',
@@ -68,7 +68,7 @@ const DEFAULT_FIELDS = List([
   },
   {
     materialId: '8',
-    imgUrl: '/images/material-1.png',
+    imgUrl: './images/material-1.png',
     textForImg: '#PN8798',
     name: 'Material #PN8798',
     address: '0xe45efe0cc13eb92',

@@ -115,13 +115,23 @@ stages:
 #       🚀 DEPLOY 🚀        #
 ##############################
 
-.deploy:
+.deploy_pull:
   stage: 🚀 deploy
   before_script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker-compose pull
+
+.deploy:
+  extends: .deploy_pull
+  stage: 🚀 deploy
   script:
-    - docker-compose -p 732-digitalax up -d
+    - docker-compose -p 732-digitalax up -d front
+
+.deploy_ipfs:
+  extends: .deploy_pull
+  stage: 🚀 deploy
+  script:
+    - docker-compose -p 732-digitalax up ipfs_upload
 
 🚀 develop:
   extends: .deploy
@@ -154,6 +164,27 @@ stages:
 #     - tags
 #     - master
 #   when: manual
+
+🚀 develop_ipfs:
+  extends: .deploy_ipfs
+  environment:
+    name: develop
+    url: https://732-digitalax.pixelplex-test.by/
+  tags:
+    - pp-new-develop
+  only:
+    - develop
+  when: manual
+
+🚀 master_ipfs:
+  extends: .deploy_ipfs
+  environment:
+    name: master
+    url: https://732-digitalax.pixelplexlabs.com/
+  tags:
+    - pp-stage
+  only:
+    - master
 
 🚀 other.master:
   extends: .deploy

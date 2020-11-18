@@ -7,10 +7,10 @@ const DEFAULT_FIELDS = List([
   {
     designerId: '1',
     designerName: 'Chamila Hetti',
-    designerPhoto: '/images/Chamila-Hetti.png',
+    designerPhoto: './images/Chamila-Hetti.png',
     descriptionDesigner: 'We are seeking a  logo and graphic designer. I really like your resume and hope we can cooperate. Also, mention the word bingo to prove that you read the entire requirement for the job. Our team is looking for someone who can take our current logos and improve upon them and create some new logo ideas as well.',
     designerCountry: 'uganda',
-    designerCountryFlagIcon: '/images/icons/uganda.png',
+    designerCountryFlagIcon: './images/icons/uganda.png',
     designerSocialMedia: List([
       {
         name: 'twitter',
@@ -37,10 +37,10 @@ const DEFAULT_FIELDS = List([
   {
     designerId: '2',
     designerName: 'Nessa Verve',
-    designerPhoto: '/images/Nessa-Verve-large.png',
+    designerPhoto: './images/Nessa-Verve-large.png',
     descriptionDesigner: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro perspiciatis iusto natus ipsa omnis sunt placeat hic nobis cum at et sit, illo vitae facere rerum dicta vel obcaecati dignissimos. Facere rerum dicta vel obcaecati dignissimos.',
     designerCountry: 'uganda',
-    designerCountryFlagIcon: '/images/icons/uganda.png',
+    designerCountryFlagIcon: './images/icons/uganda.png',
     designerSocialMedia: List([
       {
         name: 'twitter',
@@ -67,7 +67,7 @@ const DEFAULT_FIELDS = List([
   {
     designerId: '3',
     designerName: 'Sergion Neffortunotti',
-    designerPhoto: '/images/Sergion-Neffortunotti.png',
+    designerPhoto: './images/Sergion-Neffortunotti.png',
     descriptionDesigner: 'We are seeking a  logo and graphic designer. I really like your resume and hope we can cooperate. Also, mention the word bingo to prove that you read the entire requirement for the job. Our team is looking for someone who can take our current logos and improve upon them and create some new logo ideas as well.',
     designerCountry: '',
     designerCountryFlagIcon: '',
@@ -97,7 +97,7 @@ const DEFAULT_FIELDS = List([
   {
     designerId: '4',
     designerName: 'Kris Seed',
-    designerPhoto: '/images/Kris-Seed.png',
+    designerPhoto: './images/Kris-Seed.png',
     descriptionDesigner: 'We are seeking a  logo and graphic designer. I really like your resume and hope we can cooperate. Also, mention the word bingo to prove that you read the entire requirement for the job. Our team is looking for someone who can take our current logos and improve upon them and create some new logo ideas as well.',
     designerCountry: '',
     designerCountryFlagIcon: '',

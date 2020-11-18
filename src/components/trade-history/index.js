@@ -17,9 +17,9 @@ const TradeHistory = ({ clothesIds, className, headerTitle }) => {
     clothesId: item.token.id,
     priceEth: convertToEth(item.value),
     date: item.timestamp * 1000,
-    sendersPhoto: '/images/Kris-Seed.png',
+    sendersPhoto: './images/Kris-Seed.png',
     sendersAddress: item.bidder ? item.bidder.id : item.token.owner,
-    recipientPhoto: '/images/avatar.svg',
+    recipientPhoto: './images/avatar.svg',
     recipientAddress: item.transactionHash,
     eventName: item.eventName,
   }));

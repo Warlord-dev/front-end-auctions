@@ -10,7 +10,7 @@ const Loader = ({ className, size }) => (
         [styles.default]: size === 'default',
         [styles.large]: size === 'large',
       })}
-      src="/images/icons/loader.svg"
+      src="./images/icons/loader.svg"
       alt="loader"
     />
   </div>

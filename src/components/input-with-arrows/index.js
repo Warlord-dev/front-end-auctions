@@ -61,7 +61,7 @@ InputWithArrows.defaultProps = {
   className: '',
   value: '',
   currency: 'ETH',
-  iconUrl: '/images/icons/arrow-bottom.svg',
+  iconUrl: './images/icons/arrow-bottom.svg',
 };
 
 export default InputWithArrows;

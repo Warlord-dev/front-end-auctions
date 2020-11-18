@@ -1,2 +1,2 @@
 
-export const createProductPhotoUrl = () => '/images/dress1.png';
+export const createProductPhotoUrl = () => './images/dress1.png';

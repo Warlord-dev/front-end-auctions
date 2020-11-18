@@ -16,7 +16,7 @@ const Modal = ({
               onClick={onClose}
               className={styles.closeIcon}
             >
-              <img src="/images/icons/close-button.svg" alt="close-icon" />
+              <img src="./images/icons/close-button.svg" alt="close-icon" />
             </button>
           )}
         </div>

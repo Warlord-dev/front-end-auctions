@@ -11,3 +11,11 @@ services:
     network_mode: "host"
     ports:
       - "127:0.0.1:27320:27320"
+
+  ipfs_upload:
+    image: $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME
+    environment:
+      - NODE_APP_INSTANCE=$CI_ENVIRONMENT_NAME
+      - PINATA_API_KEY=$PINATA_API_KEY
+      - PINATA_SECRET_KEY=$PINATA_SECRET_KEY
+    command: yarn ipfs-upload

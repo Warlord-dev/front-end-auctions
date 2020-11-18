@@ -14,6 +14,7 @@ import { getEnabledNetworkByChainId } from '@services/network.service';
 import getOrCreateStore from '../lib/with-redux-store';
 import config from '../utils/config';
 import '../assets/scss/global.scss';
+import '../assets/scss/base/fonts.scss';
 
 
 if (config.SENTRY_DSN) {

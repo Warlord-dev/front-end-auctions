@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 const Logo = ({ className }) => (
   <Link href={INDEX_PATH}>
     <a className={cn(className, styles.wrapper)}>
-      <img src="/images/icons/logo.svg" alt="logo" />
+      <img src="./images/icons/logo.svg" alt="logo" />
       <p className={styles.description}>The Digital Fashion Engine</p>
     </a>
   </Link>

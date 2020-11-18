@@ -10,19 +10,19 @@ const DEFAULT_FIELDS = List([
     clothesPhotos: List([
       {
         isMain: true,
-        image: '/images/dress1.png',
+        image: './images/dress1.png',
       },
       {
-        image: '/images/dress2.png',
+        image: './images/dress2.png',
       },
       {
-        image: '/images/dress3.png',
+        image: './images/dress3.png',
       },
     ]),
     priceEth: 13.5,
     estimateApy: 127,
     expirationDate: 'November 12, 2020, 1:59 PM PST',
-    chartImage: '/images/chart-small.png',
+    chartImage: './images/chart-small.png',
     youReceive: '1 x FBX (specs), 1 x JPEG (1080x1350)',
     listedDate: '9 hour ago',
     status: 'sold',
@@ -38,13 +38,13 @@ const DEFAULT_FIELDS = List([
     clothesPhotos: List([
       {
         isMain: true,
-        image: '/images/dress2.png',
+        image: './images/dress2.png',
       },
     ]),
     priceEth: 9.5,
     estimateApy: 78,
     expirationDate: 'November 12, 2020, 5:59 PM PST',
-    chartImage: '/images/chart-small.png',
+    chartImage: './images/chart-small.png',
     youReceive: '2 x FBX (specs), 1 x JPEG (2680x1350)',
     listedDate: '9 hour ago',
     status: '',
@@ -60,13 +60,13 @@ const DEFAULT_FIELDS = List([
     clothesPhotos: List([
       {
         isMain: true,
-        image: '/images/dress3.png',
+        image: './images/dress3.png',
       },
     ]),
     priceEth: 21,
     estimateApy: 33,
     expirationDate: 'November 14, 2020, 04:59 PM PST',
-    chartImage: '/images/chart-small.png',
+    chartImage: './images/chart-small.png',
     youReceive: '2 x FBX (specs), 2 x JPEG (780x1350)',
     listedDate: '',
     status: '',
@@ -82,13 +82,13 @@ const DEFAULT_FIELDS = List([
     clothesPhotos: List([
       {
         isMain: true,
-        image: '/images/dress4.png',
+        image: './images/dress4.png',
       },
     ]),
     priceEth: 16.5,
     estimateApy: 65,
     expirationDate: 'November 10, 2020, 06:59 PM PST',
-    chartImage: '/images/chart-small.png',
+    chartImage: './images/chart-small.png',
     youReceive: '2 x FBX (specs), 1 x JPEG (1680x1350)',
     listedDate: '',
     status: '',
@@ -104,13 +104,13 @@ const DEFAULT_FIELDS = List([
     clothesPhotos: List([
       {
         isMain: true,
-        image: '/images/dress4.png',
+        image: './images/dress4.png',
       },
     ]),
     priceEth: 13.5,
     estimateApy: 127,
     expirationDate: 'November 15, 2020, 3:59 PM PST',
-    chartImage: '/images/chart-small.png',
+    chartImage: './images/chart-small.png',
     youReceive: '1 x FBX (specs), 1 x JPEG (1000x1000)',
     listedDate: '',
     status: '',
@@ -126,13 +126,13 @@ const DEFAULT_FIELDS = List([
     clothesPhotos: List([
       {
         isMain: true,
-        image: '/images/dress2.png',
+        image: './images/dress2.png',
       },
     ]),
     priceEth: 9.5,
     estimateApy: 78,
     expirationDate: 'November 12, 2020, 2:59 PM PST',
-    chartImage: '/images/chart-small.png',
+    chartImage: './images/chart-small.png',
     youReceive: '3 x FBX (specs), 1 x JPEG (1000x1000)',
     listedDate: '',
     status: '',
@@ -148,19 +148,19 @@ const DEFAULT_FIELDS = List([
     clothesPhotos: List([
       {
         isMain: true,
-        image: '/images/dress2.png',
+        image: './images/dress2.png',
       },
       {
-        image: '/images/dress1.png',
+        image: './images/dress1.png',
       },
       {
-        image: '/images/dress3.png',
+        image: './images/dress3.png',
       },
     ]),
     priceEth: 13.5,
     estimateApy: 127,
     expirationDate: 'November 11, 2020, 1:59 PM PST',
-    chartImage: '/images/chart-small.png',
+    chartImage: './images/chart-small.png',
     youReceive: '1 x FBX (specs), 1 x JPEG (1080x1350)',
     listedDate: '9 hour ago',
     status: 'sold',
@@ -176,19 +176,19 @@ const DEFAULT_FIELDS = List([
     clothesPhotos: List([
       {
         isMain: true,
-        image: '/images/dress1.png',
+        image: './images/dress1.png',
       },
       {
-        image: '/images/dress2.png',
+        image: './images/dress2.png',
       },
       {
-        image: '/images/dress3.png',
+        image: './images/dress3.png',
       },
     ]),
     priceEth: 13.5,
     estimateApy: 127,
     expirationDate: 'November 13, 2020, 1:59 PM PST',
-    chartImage: '/images/chart-small.png',
+    chartImage: './images/chart-small.png',
     youReceive: '1 x FBX (specs), 1 x JPEG (1080x1350)',
     listedDate: '9 hour ago',
     status: 'sold',
@@ -204,10 +204,10 @@ const DEFAULT_FIELDS = List([
     clothesPhotos: List([
       {
         isMain: true,
-        image: '/images/dress1.png',
+        image: './images/dress1.png',
       },
       {
-        image: '/images/dress2.png',
+        image: './images/dress2.png',
       },
       {
         image: '/images/dress3.png',
@@ -216,7 +216,7 @@ const DEFAULT_FIELDS = List([
     priceEth: 43.5,
     estimateApy: 127,
     expirationDate: 'November 12, 2020, 1:59 PM PST',
-    chartImage: '/images/chart-small.png',
+    chartImage: './images/chart-small.png',
     youReceive: '1 x FBX (specs), 1 x JPEG (1080x1350)',
     listedDate: '9 hour ago',
     status: 'sold',

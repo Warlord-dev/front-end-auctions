@@ -65,7 +65,7 @@ ModalConnectWallet.defaultProps = {
   className: '',
   title: 'Connect Metamask wallet',
   textForIcon: 'Metamask',
-  icon: '/images/icons/metamask.svg',
+  icon: './images/icons/metamask.svg',
   buttonText: 'Connect Wallet',
 };
 

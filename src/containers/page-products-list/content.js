@@ -5,7 +5,7 @@ const content = [
   {
     title: 'All Bids',
     date: 'November 16, 2020, 00:59 PM PST',
-    chartImage: '/images/chart.png',
+    chartImage: './images/chart.png',
     list: [
       {
         description: 'Total NFT’s value',

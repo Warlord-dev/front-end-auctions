@@ -48,7 +48,7 @@ const HeaderTopLine = ({
           <div className={styles.buttonWrapper}>
             <SmallPhotoWithText photo={accountPhoto} address={`${account}(${chainId})`} className={styles.hashAddress}>
               <button className={styles.arrowBottom} onClick={() => setIsShowLogOut(!isShowLogOut)}>
-                <img className={styles.arrowBottomImg} src="/images/icons/arrow-bottom.svg" alt="arrow-bottom" />
+                <img className={styles.arrowBottomImg} src="./images/icons/arrow-bottom.svg" alt="arrow-bottom" />
               </button>
             </SmallPhotoWithText>
             {isShowLogOut && <button onClick={() => handleLogoutClick()} className={styles.logOut}>Logout</button>}

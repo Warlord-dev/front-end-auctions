@@ -7,7 +7,7 @@ WORKDIR /app/
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 COPY . .
-RUN NODE_ENV=production yarn build
+RUN NODE_ENV=production yarn export
 
 FROM node:12-alpine
 
@@ -15,6 +15,8 @@ ARG NODE_APP_INSTANCE
 ENV NODE_ENV="production"
 
 WORKDIR /app/
+COPY --from=builder /app/scripts /app/scripts
+COPY --from=builder /app/out /app/out
 COPY --from=builder /app/.next /app/.next
 COPY config /app/config
 COPY package.json yarn.lock next.config.js ./

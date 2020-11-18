@@ -11,6 +11,7 @@
     "build": "next build",
     "start": "NODE_ENV=production PORT=27320 node server.js",
     "export": "next build && next export",
+    "ipfs-upload": "node scripts/ipfsUpload.js",
     "audit": "audit-ci --config audit-ci.json",
     "lint": "eslint \"src/**/*.js\" \"*.js\"",
     "lint-win ": "cross-env eslint \"src/**/*.js\" \"*.js\"",
@@ -22,6 +23,7 @@
     "elliptic": ">=6.5.3"
   },
   "dependencies": {
+    "@pinata/sdk": "^1.1.11",
     "@sentry/browser": "^5.18.0",
     "async-mutex": "^0.2.2",
     "axios": "^0.19.2",

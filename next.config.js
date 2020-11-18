@@ -19,6 +19,7 @@ module.exports = withImages({
     RATE_API_KEY,
   },
   trailingSlash: true,
+  assetPrefix: './',
   webpack(cfg, { isServer }) {
     const originalEntry = cfg.entry;
     cfg.entry = async () => {
