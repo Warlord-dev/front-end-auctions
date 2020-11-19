@@ -1,6 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import BigNumber from 'bignumber.js';
 import { convertToEth } from '@helpers/price.helpers';
 import { useTokenInfo } from '@hooks/token.info.hooks';
 import { createPreviewURL } from '@services/imgix.service';
@@ -9,6 +10,7 @@ import styles from './styles.module.scss';
 const MaterialLine = ({ className, item: { tokenUri, id, amount } }) => {
 
   const tokenInfo = useTokenInfo(tokenUri, [tokenUri]);
+  const ETH = new BigNumber(convertToEth(amount)).toFixed(4);
 
   return (
     <ul className={className}>
@@ -23,7 +25,7 @@ const MaterialLine = ({ className, item: { tokenUri, id, amount } }) => {
           <p className={styles.address}>{tokenInfo && tokenInfo.description}</p>
         </div>
         <div className={styles.priceWrapper}>
-          <span className={styles.price}>{convertToEth(amount)} E</span>
+          <span className={styles.price}>{ETH} E</span>
         </div>
         <span className={styles.estimate}>
           <span className={styles.estimateInnerGray}>~AYP:</span>
