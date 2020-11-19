@@ -25,7 +25,7 @@ const TradeHistory = ({ clothesIds, className, headerTitle }) => {
   }));
 
   return (
-    <div className={cn(styles.wrapper, className)}>
+    <div className={cn(styles.wrapper, className, 'animate__animated animate__fadeInUp')}>
       <div className={styles.headerTitle}>
         {headerTitle.map((item) => <p key={item} className={styles.headerTitleItem}>{item}</p>)}
       </div>

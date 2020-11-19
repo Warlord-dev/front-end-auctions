@@ -5,6 +5,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import Timer from '@components/timer';
 import { getMainPageChartOptions } from '@services/graph.service';
+import { MAIN_GRAPH_COUNT_DAYS } from '@constants/global.constants';
 import styles from './styles.module.scss';
 
 const HIGHEST_APY = 'Highest APY';
@@ -38,7 +39,7 @@ const GeneralInformation = ({
             highcharts={Highcharts}
             options={options}
           />
-          <p className={styles.chartBottomText}>30 days sales</p>
+          <p className={styles.chartBottomText}>{MAIN_GRAPH_COUNT_DAYS} days sales</p>
         </div>
       </section>
     </div>

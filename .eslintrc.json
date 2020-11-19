@@ -80,7 +80,8 @@
           ["@helpers", "./src/helpers"],
           ["@actions", "./src/actions"],
           ["@services", "./src/services"],
-          ["@utils", "./src/utils"]
+          ["@utils", "./src/utils"],
+          ["@hooks", "./src/hooks"]
       ]
     }
   } 

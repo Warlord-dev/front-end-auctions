@@ -4,16 +4,15 @@ import ProductDescription from './product-description';
 import Trade from './trade';
 import styles from './styles.module.scss';
 
-const PageProduct = ({ clothesId, currentClothesInfo }) => (
+const PageProduct = ({ clothesId }) => (
   <div className={styles.wrapper}>
-    <ProductDescription clothesId={clothesId} currentClothesInfo={currentClothesInfo} />
+    <ProductDescription clothesId={clothesId} />
     <Trade clothesIds={[clothesId]} />
   </div>
 );
 
 PageProduct.propTypes = {
   clothesId: PropTypes.string.isRequired,
-  currentClothesInfo: PropTypes.object.isRequired,
 };
 
 PageProduct.defaultProps = {

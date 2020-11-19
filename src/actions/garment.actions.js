@@ -13,6 +13,15 @@ class GarmentActions extends BaseActions {
     };
   }
 
+  setGarmentInfo(id, value) {
+    return (dispatch, getState) => {
+      const state = getState();
+      const garmentsInfoById = state.garment.get('garmentsInfoById').set(id, value);
+      dispatch(this.setValue('garmentsInfoById', garmentsInfoById));
+    };
+
+  }
+
 }
 
 export default new GarmentActions(reducer);

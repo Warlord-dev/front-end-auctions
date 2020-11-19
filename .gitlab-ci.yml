@@ -185,6 +185,7 @@ stages:
     - pp-stage
   only:
     - master
+  when: manual
 
 🚀 other.master:
   extends: .deploy

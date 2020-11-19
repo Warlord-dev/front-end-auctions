@@ -1,5 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.module.scss';
@@ -11,7 +11,6 @@ const ViewImages = ({ className, clothesPhotos, clothesName }) => {
   const [largeImage, setLargeImage] = useState(DEFAULT_LARGE_IMAGE);
   const [isShowVideoBlock, setIsShowVideoBlock] = useState(false);
 
-
   const handleClick = (item, index) => {
     if (item.isVideo) {
       setIsShowVideoBlock(true);
@@ -20,6 +19,10 @@ const ViewImages = ({ className, clothesPhotos, clothesName }) => {
       setIsShowVideoBlock(false);
     }
   };
+
+  useEffect(() => {
+    setLargeImage(clothesPhotos.find(({ isMain }) => isMain)?.image);
+  }, [clothesPhotos]);
 
   return (
     <div className={cn(styles.wrapper, className)}>
@@ -40,7 +43,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName }) => {
           <div className={styles.itemSmallWrapper}>
             {clothesPhotos.map((item, index) => (
               <button key={index} className={styles.itemSmall} onClick={() => handleClick(item, index)}>
-                <img className={styles.itemSmallImg} src={item?.image} alt={clothesName} />
+                <img className={styles.itemSmallImg} src={item?.preview} alt={clothesName} />
               </button>
             ))}
           </div>

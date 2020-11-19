@@ -4,6 +4,7 @@ import reducer from '../reducers/garment.page.reducer';
 import garmentActions from './garment.actions';
 import historyActions from './history.actions';
 import auctionActions from './auction.actions';
+import designerActions from './designer.actions';
 
 class GarmentPageActions extends BaseActions {
 
@@ -22,6 +23,7 @@ class GarmentPageActions extends BaseActions {
       dispatch(historyActions.clear());
       dispatch(garmentActions.clear());
       dispatch(auctionActions.clear());
+      dispatch(designerActions.clear());
     };
   }
 

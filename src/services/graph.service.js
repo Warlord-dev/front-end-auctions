@@ -1,4 +1,4 @@
-import { prepareGraphAuctions, prepareGraphHistory } from '@helpers/graph.helpers';
+import { prepareMainGraphStats, prepareGraphAuctions, prepareGraphHistory } from '@helpers/graph.helpers';
 
 export const getDesignerChartOptions = (history) => {
   const options = {
@@ -93,7 +93,7 @@ export const getMainPageChartOptions = (history) => {
       },
     },
     series: [{
-      data: prepareGraphAuctions(history),
+      data: prepareMainGraphStats(history),
     }],
   };
   return options;

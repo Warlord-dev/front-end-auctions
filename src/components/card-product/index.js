@@ -9,7 +9,9 @@ import ImportantProductInformation from '@containers/important-product-informati
 import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getDesignerInfoById } from '@selectors/designer.selectors';
 import { getCardProductChartOptions } from '@services/graph.service';
+import { create2KURL } from '@services/imgix.service';
 import { PRODUCTS } from '@constants/router-constants';
+import { useTokenInfo } from '@hooks/token.info.hooks';
 
 import styles from './styles.module.scss';
 
@@ -25,19 +27,21 @@ const CardProduct = ({
     return null;
   }
 
+  const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
+
   const designerInfo = useSelector(getDesignerInfoById(garment.designer));
 
   return (
     <li className={cn(styles.item, className)}>
       <Link href={`${PRODUCTS}${garment.id}`}>
-        <a className={styles.clothesName}>{garment.id}</a>
+        <a className={styles.clothesName}>{tokenInfo && tokenInfo.name ? tokenInfo.name : `ID:${garment.id}`}</a>
       </Link>
       <SmallPhotoWithText id={designerInfo ? designerInfo.id : ''} name={designerInfo?.designerName} photo={designerInfo?.designerPhoto} />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
           <Link href={`${PRODUCTS}${garment.id}`}>
             <a className={styles.clothesPhotoWrapper}>
-              <img className={styles.clothesPhoto} src={garment.tokenUri} alt={garment.id} />
+              {tokenInfo ? <img className={styles.clothesPhoto} src={create2KURL(tokenInfo.image)} alt={garment.id} /> : null}
             </a>
           </Link>
           {isOpen && (

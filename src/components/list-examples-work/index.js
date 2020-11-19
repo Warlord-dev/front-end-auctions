@@ -18,7 +18,7 @@ const ListExamplesWork = ({ designerId, headerTitle }) => {
         {headerTitle.map((item) => <p key={item} className={styles.headerTitleItem}>{item}</p>)}
       </div>
       <div className={styles.body}>
-        {designer && designer.listings.map((item) => {
+        {designer && designer.listings && designer.listings.map((item) => {
           const garment = garmentsById.get(item.id);
 
           return (

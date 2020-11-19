@@ -11,32 +11,37 @@ class AuctionPageActions extends BaseActions {
   updateAuctions(digitalaxGarmentAuctions) {
     return async (dispatch) => {
 
-      const date = new Date();
-      date.setDate(date.getDate() - 7); // now - 7 days
-
-      const weekResultedAuctions = await api.getResultedAuctionsByEndTimeGt(parseInt(date / 1000, 10));
-
-      const dateMonth = new Date();
-      dateMonth.setDate(dateMonth.getDate() - 30); // now - 30 days
-
-      const monthResultedAuctions = await api.getResultedAuctionsByEndTimeGt(parseInt(date / 1000, 10));
-
-      const [{ digitalaxGarments }, { digitalaxGarmentAuctionHistories }] = await Promise.all([
-        api.getGarmentsByIds(digitalaxGarmentAuctions.map((auction) => auction.id)),
+      const [{ digitalaxGarmentAuctionHistories }] = await Promise.all([
         api.getAuctionsHistoryByIds(digitalaxGarmentAuctions.map((auction) => auction.id)),
       ]);
-      const { digitalaxGarmentDesigners } = await api.getDesignersByIds(digitalaxGarments.map((garment) => garment.designer));
 
       dispatch(historyActions.mapData(digitalaxGarmentAuctionHistories));
-      dispatch(designerActions.mapData(digitalaxGarmentDesigners));
-      dispatch(garmentActions.mapData(digitalaxGarments));
+      dispatch(designerActions.mapData(digitalaxGarmentAuctions.map((auction) => auction.designer)));
+      dispatch(garmentActions.mapData(digitalaxGarmentAuctions.map((auction) => auction.garment)));
       dispatch(auctionActions.mapData(digitalaxGarmentAuctions));
-      dispatch(auctionActions.setValue('weekResultedAuctions', weekResultedAuctions.digitalaxGarmentAuctions));
-      dispatch(auctionActions.setValue('monthResultedAuctions', monthResultedAuctions.digitalaxGarmentAuctions));
       dispatch(auctionActions.setValue('auctions', digitalaxGarmentAuctions));
-      dispatch(auctionActions.setValue('auctionsIsLoaded', true));
+      dispatch(this.setValue('auctionsIsLoaded', true));
+
     };
 
+  }
+
+  updateMonthStats(items) {
+    return async (dispatch) => {
+      dispatch(auctionActions.setValue('monthResultedAuctions', items));
+    };
+  }
+
+  updateWeekStats(items) {
+    return async (dispatch) => {
+      dispatch(auctionActions.setValue('weekResultedAuctions', items));
+    };
+  }
+
+  updateGlobalStats(stats) {
+    return async (dispatch) => {
+      dispatch(auctionActions.setValue('globalStats', stats));
+    };
   }
 
   reset() {
@@ -44,6 +49,7 @@ class AuctionPageActions extends BaseActions {
       dispatch(historyActions.clear());
       dispatch(designerActions.clear());
       dispatch(auctionActions.clear());
+      dispatch(this.setValue('auctionsIsLoaded', false));
     };
   }
 

@@ -3,9 +3,13 @@ import BigNumber from 'bignumber.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { convertToEth } from '@helpers/price.helpers';
 import auctionPageActions from '@actions/auction.page.actions';
-import { getAllAuctions, getWeekResultedAuctions, getMonthResultedAuctions } from '@selectors/auction.selectors';
+import { MAIN_GRAPH_COUNT_DAYS, TOTAL_VOLUME_DAYS } from '@constants/global.constants';
+import { getChainId } from '@selectors/global.selectors';
+import {
+  getAllAuctions, getGlobalStats, getWeekResultedAuctions, getMonthResultedAuctions,
+} from '@selectors/auction.selectors';
 import wsApi from '@services/api/ws.service';
-import content from './content';
+import { useSubscription } from '@hooks/subscription.hooks';
 import GeneralInformation from './general-information';
 import CardList from './card-list';
 
@@ -14,22 +18,29 @@ const PageProductsList = () => {
   const dispatch = useDispatch();
   const auctions = useSelector(getAllAuctions);
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
-  const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS(); // TODO::rm toJS
+  const globalStats = useSelector(getGlobalStats).toJS();
+  const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
+  const chainId = useSelector(getChainId);
 
-  useEffect(() => {
+  useSubscription({
+    request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
+    next: (data) => dispatch(auctionPageActions.updateMonthStats(data.days)),
+  }, [chainId]);
 
-    const request = wsApi.onAuctionsChange();
+  useSubscription({
+    request: wsApi.onDaysChange(TOTAL_VOLUME_DAYS),
+    next: (data) => dispatch(auctionPageActions.updateWeekStats(data.days)),
+  }, [chainId]);
 
-    const { unsubscribe } = request.subscribe({
-      next({ data }) {
-        if (!data) {
-          return;
-        }
-        dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions));
-      },
-    });
-    return () => unsubscribe();
-  }, []);
+  useSubscription({
+    request: wsApi.onNFTGlobalStats(),
+    next: (data) => dispatch(auctionPageActions.updateGlobalStats(data.digitalaxGarmentNFTGlobalStats[0])),
+  }, [chainId]);
+
+  useSubscription({
+    request: wsApi.onAuctionsChange(),
+    next: (data) => dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions)),
+  }, [chainId]);
 
   useEffect(() => () => {
     dispatch(auctionPageActions.reset());
@@ -45,30 +56,25 @@ const PageProductsList = () => {
   const minTimestampAutcionTime = filteredAuctionsTimes.length ? Math.min(...filteredAuctionsTimes) : 0;
 
   const sumTopBids = (items) => items
-    .reduce((acc, auction) => (auction.topBid ? acc.plus(new BigNumber(auction.topBid)) : acc), new BigNumber(0));
+    .reduce((acc, auction) => (auction.totalNetBidActivity ? acc.plus(new BigNumber(auction.totalNetBidActivity)) : acc), new BigNumber(0));
 
-  const totalValue = sumTopBids(currentAuctions);
   const totalWeekValue = sumTopBids(weekResultedAuctions);
 
   const list = [
     {
       description: 'Total NFT’s value',
-      value: convertToEth(totalValue),
+      value: convertToEth(globalStats.totalSalesValue),
     },
     {
-      description: 'Highest APY',
-      value: 120,
-    },
-    {
-      description: 'Total Vol 7 days',
+      description: `Total Vol ${TOTAL_VOLUME_DAYS} days`,
       value: convertToEth(totalWeekValue),
     },
   ];
 
   return (
     <>
-      <GeneralInformation {...content[0]} list={list} timestamp={minTimestampAutcionTime} history={monthResultedAuctions} />
-      <CardList auctions={auctions} {...content[1]} />
+      <GeneralInformation title="All Bids" list={list} timestamp={minTimestampAutcionTime} history={monthResultedAuctions} />
+      <CardList auctions={auctions} />
     </>
   );
 };

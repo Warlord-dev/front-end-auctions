@@ -1,1 +1,1 @@
-export const getAuctionsIsLoaded = (state) => state.auction.get('auctionsIsLoaded');
+export const getAuctionsIsLoaded = (state) => state.auctionPage.get('auctionsIsLoaded');

@@ -12,6 +12,7 @@
         "@services/*": ["./src/services/*"],
         "@utils/*": ["./src/utils/*"],
         "@actions/*": ["./src/actions/*"],
+        "@hooks/*": ["./src/hooks/*"],
       }
     }
   }

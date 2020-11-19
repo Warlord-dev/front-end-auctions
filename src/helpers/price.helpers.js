@@ -16,7 +16,11 @@ export const convertToEth = (value) => {
     return '0';
   }
 
-  return Units.convert(value, 'wei', 'eth');
+  value = String(value);
+
+  const modifier = value.search('-') === -1 ? '' : '-';
+
+  return modifier + Units.convert(value.replace('-', ''), 'wei', 'eth');
 };
 
 

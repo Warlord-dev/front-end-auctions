@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import { getMonthResultedAuctions } from '@selectors/auction.selectors';
+import { getMonthDesignerResultedAuctions } from '@selectors/auction.selectors';
 import { getDesignerChartOptions } from '@services/graph.service';
 
 import styles from './styles.module.scss';
 
 const GraphWrapper = ({ title }) => {
 
-  const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS(); // TODO::rm toJS
+  const monthResultedAuctions = useSelector(getMonthDesignerResultedAuctions).toJS();
 
   const options = getDesignerChartOptions(monthResultedAuctions);
 

@@ -8,6 +8,7 @@ import wsApi from '@services/api/ws.service';
 import designerPageActions from '@actions/designer.page.actions';
 import historyActions from '@actions/history.actions';
 import auctionActions from '@actions/auction.actions';
+import { useSubscription } from '@hooks/subscription.hooks';
 
 const Designers = () => {
   const router = useRouter();
@@ -16,72 +17,19 @@ const Designers = () => {
   const dispatch = useDispatch();
   const chainId = useSelector(getChainId);
   const designerGarmentIds = useSelector(getDesignerGarmentIds(id));
+  const ids = designerGarmentIds.toJS();
 
-  useEffect(() => {
-
-    const request = wsApi.onDesignerByIds([id]);
-
-    const { unsubscribe } = request.subscribe({
-      next({ data }) {
-        if (!data) {
-          return;
-        }
-        data.digitalaxGarmentDesigners[0].listings.push({
-          endTime: '1606310534',
-          id: '4',
-          lastBidTime: null,
-          reservePrice: '0',
-          resulted: false,
-          startTime: '1605879479',
-          topBid: null,
-          topBidder: null,
-        }, {
-          endTime: '1606310534',
-          id: '3',
-          lastBidTime: '1605189787',
-          reservePrice: '650000000000000000',
-          resulted: false,
-          startTime: '0',
-          topBid: '900000000000000000',
-          topBidder: {
-            id: '0xd677aed0965ac9b54e709f01a99ceca205aebc4b',
-          },
-        });
-        dispatch(designerPageActions.update(data.digitalaxGarmentDesigners));
-      },
-    });
-
-    return () => unsubscribe();
-
+  useSubscription({
+    request: wsApi.onDesignerByIds([id]),
+    next: (data) => dispatch(designerPageActions.update(data.digitalaxGarmentDesigners)),
   }, [chainId]);
 
-  useEffect(() => {
-
-    const ids = designerGarmentIds.toJS();
-
-    if (!ids.length) {
-      return () => {};
-    }
-
-    const request = wsApi.onAuctionsHistoryByIds(ids);
-
-    const { unsubscribe } = request.subscribe({
-      next({ data }) {
-        if (!data) {
-          return;
-        }
-        dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories));
-      },
-    });
-
-    return () => unsubscribe();
-
+  useSubscription({
+    request: wsApi.onAuctionsHistoryByIds(ids),
+    next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
   }, [chainId, JSON.stringify(designerGarmentIds)]);
 
-
   useEffect(() => {
-
-    const ids = designerGarmentIds.toJS();
 
     if (!ids.length) {
       return () => {};
@@ -99,7 +47,7 @@ const Designers = () => {
           return;
         }
 
-        dispatch(auctionActions.setValue('monthResultedAuctions', data.digitalaxGarmentAuctions));
+        dispatch(auctionActions.setValue('monthDesignerResultedAuctions', data.digitalaxGarmentAuctions));
       },
     });
 

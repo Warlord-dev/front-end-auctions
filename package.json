@@ -25,6 +25,7 @@
   "dependencies": {
     "@pinata/sdk": "^1.1.11",
     "@sentry/browser": "^5.18.0",
+    "animate.css": "^4.1.1",
     "async-mutex": "^0.2.2",
     "axios": "^0.19.2",
     "axios-retry": "^3.1.8",
@@ -44,6 +45,7 @@
     "graphql-subscriptions-client": "^0.15.0",
     "highcharts": "^8.2.2",
     "highcharts-react-official": "^3.0.0",
+    "imgix-core-js": "^2.3.2",
     "immutable": "^4.0.0-rc.12",
     "json-immutable": "^0.4.0",
     "lodash.chunk": "^4.2.0",

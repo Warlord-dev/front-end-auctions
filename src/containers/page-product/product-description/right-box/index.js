@@ -12,7 +12,7 @@ const SHOW_FIRST_TAB = 0;
 const SHOW_SECOND_TAB = 1;
 
 const RightBox = ({
-  clothesId, currentClothesInfo, currentDesignersInfo, youReceiveText,
+  clothesId, currentClothesInfo, youReceiveText,
 }) => {
   const garment = useSelector(getGarmentsById(clothesId));
   const estimateApy = 0;
@@ -23,10 +23,10 @@ const RightBox = ({
   const [activeItem, setActiveItem] = useState(SHOW_FIRST_TAB);
 
   return (
-    <div>
+    <div className="animate__animated animate__fadeIn">
       <h2 className={styles.title}>{currentClothesInfo?.clothesName}</h2>
-      <SmallPhotoWithText className={styles.smallPhotoWithText} {...currentDesignersInfo} />
-      <p className={styles.description}>{currentDesignersInfo?.descriptionDesigner}</p>
+      <SmallPhotoWithText className={styles.smallPhotoWithText} />
+      <p className={styles.description}>{currentClothesInfo?.description}</p>
       {currentClothesInfo?.youReceive && <p className={styles.youReceiveText}>{youReceiveText}</p>}
       <p className={styles.youReceive}>{currentClothesInfo?.youReceive}</p>
       <div className={styles.tabs}>

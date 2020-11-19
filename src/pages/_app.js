@@ -1,7 +1,7 @@
+import 'animate.css';
 import React, { useEffect } from 'react';
 import { Provider, useDispatch, useSelector } from 'react-redux';
 import * as Sentry from '@sentry/browser';
-
 import withRedux from 'next-redux-wrapper';
 import { deserialize, serialize } from 'json-immutable/lib';
 import PropTypes from 'prop-types';
@@ -15,7 +15,6 @@ import getOrCreateStore from '../lib/with-redux-store';
 import config from '../utils/config';
 import '../assets/scss/global.scss';
 import '../assets/scss/base/fonts.scss';
-
 
 if (config.SENTRY_DSN) {
   Sentry.init({

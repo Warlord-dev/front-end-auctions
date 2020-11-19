@@ -1,4 +1,14 @@
 
+export const onDaysChange = `
+  subscription onDaysChange($first: Int = 1) {
+    days(first: $first) {
+      id
+      totalBidValue
+      totalWithdrawalValue
+      totalNetBidActivity
+    }
+  }`;
+
 export const onAuctionsChange = `
   subscription onAuctionsChange {
     digitalaxGarmentAuctions(where:{resulted_not_in:[true]}) {
@@ -12,6 +22,25 @@ export const onAuctionsChange = `
       }
       topBid
       lastBidTime
+      garment {
+        id
+        designer
+        primarySalePrice
+        tokenUri
+        children {
+          amount
+          tokenUri
+          id
+        }
+      }
+      designer {
+        id
+      }
+      contract {
+        id
+        minBidIncrement
+        bidWithdrawalLockTime
+      }
     }
   }`;
 
@@ -85,7 +114,7 @@ export const onAuctionsHistoryByIds = `
 
 export const onResultedAuctionsByEndTimeGtAndIds = `
   subscription getAuctionsHistoryByTimestampGt($ids: [ID!], $endTime: BigInt!) {
-    digitalaxGarmentAuctions(where: {id_in: $ids, resulted_not_in:[false], endTime_gt: $endTime }) {
+    digitalaxGarmentAuctions(where: {id_in: $ids, resulted_not_in:[true], endTime_gt: $endTime }) {
       id
       reservePrice
       endTime
@@ -96,6 +125,16 @@ export const onResultedAuctionsByEndTimeGtAndIds = `
       }
       topBid
       lastBidTime
+    }
+  }
+`;
+
+export const onNFTGlobalStats = `
+  subscription onNFTGlobalStats {
+    digitalaxGarmentNFTGlobalStats {
+      id
+      totalSalesValue
+      totalActiveBidsValue
     }
   }
 `;

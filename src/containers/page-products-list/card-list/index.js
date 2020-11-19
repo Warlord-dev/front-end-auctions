@@ -70,7 +70,7 @@ const CardList = ({ auctions, className }) => {
         <>
           {auctions.toJS().length
             ? (
-              <ul className={cn(styles.list, className)}>
+              <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
                 {auctions.map((auction) => {
                   const garment = garmentsById.get(auction.get('id'));
                   return (

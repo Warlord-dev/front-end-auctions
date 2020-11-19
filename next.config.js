@@ -1,7 +1,7 @@
 const {
   CLIENT_URL, BACKEND_API, STATIC_DOMAIN,
   IS_PROD, ENVIRONMENT, SENTRY_DSN, NETWORKS,
-  API_URLS, DEFAULT_NETWORK, RATE_API_KEY,
+  API_URLS, DEFAULT_NETWORK, RATE_API_KEY, IMGIX_URL,
 } = require('config');
 const withImages = require('next-images');
 
@@ -17,6 +17,7 @@ module.exports = withImages({
     API_URLS,
     DEFAULT_NETWORK,
     RATE_API_KEY,
+    IMGIX_URL,
   },
   trailingSlash: true,
   assetPrefix: './',

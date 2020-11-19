@@ -1,10 +1,12 @@
 import { SubscriptionClient } from 'graphql-subscriptions-client';
 import {
+  onDaysChange,
   onAuctionsChange,
   onAuctionsChangeByIds,
   onDesignerByIds,
   onAuctionsHistoryByIds,
   onResultedAuctionsByEndTimeGtAndIds,
+  onNFTGlobalStats,
 } from '@services/api/gql.subscriptions.ws.service';
 
 class WSService {
@@ -25,6 +27,14 @@ class WSService {
   setUrl(url) {
     this.url = url;
     this.createClient();
+  }
+
+  onDaysChange(countDays) {
+    return this.client.request({ query: onDaysChange, variables: { first: countDays } });
+  }
+
+  onNFTGlobalStats() {
+    return this.client.request({ query: onNFTGlobalStats });
   }
 
   onAuctionsChange() {

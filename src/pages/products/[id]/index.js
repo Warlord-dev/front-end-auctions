@@ -63,24 +63,7 @@ const Products = () => {
     return null;
   }
 
-  const currentClothesInfo = { // TODO::rm
-    clothesId: garment.id,
-    clothesName: garment.id,
-    clothesHashAddress: '0xe45efe0cc13eb90xe45efe0cc13eb90xe45efe0cc2',
-    clothesPhotos: [
-      {
-        isMain: true,
-        image: garment.tokenUri,
-      },
-    ],
-    estimateApy: 127,
-    expirationDate: 'November 12, 2020, 1:59 PM PST',
-    youReceive: '1 x FBX (specs), 1 x JPEG (1080x1350)',
-    valueChildNfts: 'ERC1155',
-    valueApy: '',
-  };
-
-  return <PageProduct clothesId={garment.id} currentClothesInfo={currentClothesInfo} />;
+  return <PageProduct clothesId={garment.id} />;
 };
 
 

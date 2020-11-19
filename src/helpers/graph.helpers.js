@@ -1,4 +1,5 @@
 import BigNumber from 'bignumber.js';
+import moment from 'moment';
 import { convertToEth } from '@helpers/price.helpers';
 import { HISTORY_BID_PLACED_EVENT, HISTORY_BID_WITHDRAWN_EVENT } from '@constants/history.constants';
 
@@ -37,6 +38,17 @@ export const prepareGraphAuctions = (auctions) => {
 
   const data = sortedAuctions
     .map((item) => [item.endTime * 1000, Number(convertToEth(item.topBid))]);
+
+  return data;
+};
+
+export const prepareMainGraphStats = (items) => {
+  const sortedAuctions = items
+    .filter((item) => item.totalNetBidActivity !== null)
+    .sort((a, b) => a.id - b.id);
+
+  const data = sortedAuctions
+    .map((item) => [moment(item.id).valueOf(), Number(convertToEth(item.totalNetBidActivity))]);
 
   return data;
 };

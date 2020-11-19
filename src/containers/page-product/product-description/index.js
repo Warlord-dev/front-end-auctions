@@ -1,22 +1,55 @@
 import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import { useTokenInfo } from '@hooks/token.info.hooks';
+import { getGarmentsById } from '@selectors/garment.selectors';
+import { create2KURL, createPreviewURL } from '@services/imgix.service';
 import LeftBox from './left-box';
 import RightBox from './right-box';
 import styles from './styles.module.scss';
 
-const ProductDescription = ({ clothesId, currentClothesInfo }) => {
-  const designersInfo = useSelector((state) => state.designersInfo.toJS());
+const ProductDescription = ({ clothesId }) => {
 
-  const currentDesignersInfo = designersInfo.find((item) => item?.designerId === '1');
+  const garment = useSelector(getGarmentsById(clothesId));
+  const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
+
+  const clothesPhotos = [];
+
+  if (tokenInfo) {
+    if (tokenInfo.image) {
+      clothesPhotos.push({
+        isMain: true,
+        image: create2KURL(tokenInfo.image),
+        preview: createPreviewURL(tokenInfo.image),
+      });
+    }
+
+    ['image_quarter_url', 'image_side_url', 'animation_url'].forEach((objectKey) => {
+      if (tokenInfo[objectKey]) {
+        clothesPhotos.push({
+          image: create2KURL(tokenInfo[objectKey]),
+          preview: createPreviewURL(tokenInfo[objectKey]),
+        });
+      }
+    });
+  }
+
+  const currentClothesInfo = {
+    clothesId,
+    clothesName: tokenInfo && tokenInfo.name ? tokenInfo.name : clothesId,
+    description: tokenInfo && tokenInfo.description ? tokenInfo.description : clothesId,
+    estimateApy: 127,
+    youReceive: '1 x FBX (specs), 1 x JPEG (1080x1350)',
+    valueChildNfts: 'ERC1155',
+    valueApy: '',
+  };
 
   return (
     <div className={styles.wrapper}>
-      <LeftBox {...currentClothesInfo} />
+      <LeftBox {...currentClothesInfo} clothesPhotos={clothesPhotos} />
       <RightBox
         clothesId={clothesId}
         currentClothesInfo={currentClothesInfo}
-        currentDesignersInfo={currentDesignersInfo}
       />
     </div>
   );
