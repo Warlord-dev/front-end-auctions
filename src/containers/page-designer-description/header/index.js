@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import ListSocialNetworks from '@components/layouts/footer/list-social-networks';
 import {
-  Twitter, Medium, Telegram, Github, Instagram,
+  Twitter, Medium, Telegram, Github, Instagram, Website, LinkedIn,
 } from '@constants/icons-constants';
 import styles from './styles.module.scss';
 
@@ -28,11 +28,11 @@ const SOCIAL_MEDIA = [
     name: 'instagram',
   },
   {
-    item: '',
+    item: <Website />,
     name: 'website',
   },
   {
-    item: '',
+    item: <LinkedIn />,
     name: 'linkedIn',
   },
 ];
@@ -67,7 +67,7 @@ const Header = ({
           </div>
         </div>
         <div className={styles.descriptionWrapper}>
-          {descriptionDesigner.map((item) => <p key={item} className={styles.descriptionItem}>{item}</p>)}
+          {descriptionDesigner && descriptionDesigner.map((item) => <p key={item} className={styles.descriptionItem}>{item}</p>)}
         </div>
         <ListSocialNetworks list={socialMedia} />
       </div>
@@ -78,8 +78,8 @@ const Header = ({
 Header.propTypes = {
   designerName: PropTypes.string,
   designerPhoto: PropTypes.string,
-  descriptionDesigner: PropTypes.string,
-  designerSocialMedia: PropTypes.array,
+  descriptionDesigner: PropTypes.array,
+  designerSocialMedia: PropTypes.object,
   designerCountryFlagIcon: PropTypes.string,
   designerCountry: PropTypes.string,
 };
@@ -87,8 +87,8 @@ Header.propTypes = {
 Header.defaultProps = {
   designerName: '',
   designerPhoto: '',
-  descriptionDesigner: '',
-  designerSocialMedia: [],
+  descriptionDesigner: [],
+  designerSocialMedia: {},
   designerCountryFlagIcon: '',
   designerCountry: '',
 };

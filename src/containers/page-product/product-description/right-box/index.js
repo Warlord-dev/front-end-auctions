@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import kebabCase from 'lodash.kebabcase';
 import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getGarmentsById } from '@selectors/garment.selectors';
 import AuctionInformation from './auction-information';
@@ -12,7 +13,7 @@ const SHOW_FIRST_TAB = 0;
 const SHOW_SECOND_TAB = 1;
 
 const RightBox = ({
-  clothesId, currentClothesInfo, youReceiveText,
+  clothesId, currentClothesInfo, currentDesignersInfo, youReceiveText,
 }) => {
   const garment = useSelector(getGarmentsById(clothesId));
   const estimateApy = 0;
@@ -25,7 +26,12 @@ const RightBox = ({
   return (
     <div className="animate__animated animate__fadeIn">
       <h2 className={styles.title}>{currentClothesInfo?.clothesName}</h2>
-      <SmallPhotoWithText className={styles.smallPhotoWithText} />
+      <SmallPhotoWithText
+        className={styles.smallPhotoWithText}
+        id={currentDesignersInfo ? kebabCase(currentDesignersInfo.designerName) : ''}
+        photo={currentDesignersInfo?.designerPhoto}
+        name={currentDesignersInfo?.designerName}
+      />
       <p className={styles.description}>{currentClothesInfo?.description}</p>
       {currentClothesInfo?.youReceive && <p className={styles.youReceiveText}>{youReceiveText}</p>}
       <p className={styles.youReceive}>{currentClothesInfo?.youReceive}</p>
@@ -52,6 +58,7 @@ const RightBox = ({
 
 RightBox.propTypes = {
   currentClothesInfo: PropTypes.object,
+  currentDesignersInfo: PropTypes.object.isRequired,
   youReceiveText: PropTypes.string,
   clothesId: PropTypes.string.isRequired,
 };

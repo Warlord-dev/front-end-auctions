@@ -63,7 +63,9 @@ const Products = () => {
     return null;
   }
 
-  return <PageProduct clothesId={garment.id} />;
+  const designerId = garment.designer;
+
+  return <PageProduct clothesId={garment.id} designerId={designerId} />;
 };
 
 

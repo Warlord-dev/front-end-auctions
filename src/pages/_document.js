@@ -18,7 +18,7 @@ class MyDocument extends Document {
 
   getPreloadFontsLinks() {
     const fontSizes = [400, 600, 700, 800, 900];
-    return fontSizes.map((size) => (<link rel="preload" key={size} as="font" href={`./fonts/inter-${size}.woff2`} type="font/woff2" crossOrigin="" />));
+    return fontSizes.map((size) => (<link rel="preload" key={size} as="font" href={`/fonts/inter-${size}.woff2`} type="font/woff2" crossOrigin="" />));
   }
 
   render() {

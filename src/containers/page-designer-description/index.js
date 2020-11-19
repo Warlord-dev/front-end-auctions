@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
-import { getDesignerInfoById } from '@selectors/designer.selectors.js';
+import { getDesignerInfoByName } from '@selectors/designer.selectors.js';
 
 import PropTypes from 'prop-types';
 import Header from './header';
@@ -9,25 +9,26 @@ import ExamplesList from './examples-list';
 import Trade from './trade';
 import styles from './styles.module.scss';
 
-const PageDesignerDescription = ({
-  designerId, clothesIds,
-}) => {
 
-  const designerInfo = useSelector(getDesignerInfoById(designerId));
+const PageDesignerDescription = ({
+  designerName, clothesIds,
+}) => {
+  const designerInfo = useSelector(getDesignerInfoByName(designerName));
 
   return (
     <div className={styles.wrapper}>
-      <Header designerId={designerId} {...designerInfo} />
+      <Header {...designerInfo} />
       <GraphWrapper />
-      <ExamplesList designerId={designerId} />
+      <ExamplesList designerName={designerName} />
       <Trade clothesIds={clothesIds} />
     </div>
   );
 };
 
+
 PageDesignerDescription.propTypes = {
-  designerId: PropTypes.string.isRequired,
-  clothesIds: PropTypes.array.isRequired,
+  designerName: PropTypes.string.isRequired,
+  clothesIds: PropTypes.object.isRequired,
 };
 
 PageDesignerDescription.defaultProps = {

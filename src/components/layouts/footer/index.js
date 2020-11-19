@@ -29,10 +29,6 @@ const dataCenterList = [
     href: 'https://digitalax.s3.us-east-2.amazonaws.com/DIGITALAXProjectOverview.pdf',
   },
   {
-    item: 'Monavaile Executive Summary',
-    href: '',
-  },
-  {
     item: 'We are Hiring!',
     href: '/documents/DIGITALAX Overview and Careers.pdf',
   },

@@ -1,15 +1,16 @@
 import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getDesignerById } from '@selectors/designer.selectors';
+import { getDesignerInfoByName, getDesignerById } from '@selectors/designer.selectors';
 import { getAllGarmentsById } from '@selectors/garment.selectors';
 import ExamplesWorkLine from './examples-work-line';
 import styles from './styles.module.scss';
 
 
-const ListExamplesWork = ({ designerId, headerTitle }) => {
+const ListExamplesWork = ({ designerName, headerTitle }) => {
 
-  const designer = useSelector(getDesignerById(designerId));
+  const currentDesigner = useSelector(getDesignerInfoByName(designerName));
+  const designer = useSelector(getDesignerById(currentDesigner.id));
   const garmentsById = useSelector(getAllGarmentsById);
 
   return (
@@ -40,7 +41,7 @@ const ListExamplesWork = ({ designerId, headerTitle }) => {
 
 ListExamplesWork.propTypes = {
   headerTitle: PropTypes.array,
-  designerId: PropTypes.string.isRequired,
+  designerName: PropTypes.string.isRequired,
 };
 
 ListExamplesWork.defaultProps = {

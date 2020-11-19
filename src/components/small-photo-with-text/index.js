@@ -14,7 +14,7 @@ const SmallPhotoWithText = ({
   children,
 }) => (
   <div className={cn(styles.designerPhotoWrapper, className)}>
-    {photo && <img className={styles.designerPhoto} src={photo} alt={id} />}
+    {photo && <img className={styles.designerPhoto} src={photo} alt="" />}
     {id && (
       <Link href={`${DESIGNERS}${id}`}>
         <a className={cn(styles.designerName, styles.designerNameLink)}>{name}</a>

@@ -1,9 +1,10 @@
 import React, { memo, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
+import kebabCase from 'lodash.kebabcase';
 import PageDesignerDescription from '@containers/page-designer-description';
 import { getChainId } from '@selectors/global.selectors';
-import { getDesignerGarmentIds } from '@selectors/designer.selectors';
+import { getDesignerGarmentIds, getDesignerInfoByName } from '@selectors/designer.selectors';
 import wsApi from '@services/api/ws.service';
 import designerPageActions from '@actions/designer.page.actions';
 import historyActions from '@actions/history.actions';
@@ -16,11 +17,12 @@ const Designers = () => {
 
   const dispatch = useDispatch();
   const chainId = useSelector(getChainId);
-  const designerGarmentIds = useSelector(getDesignerGarmentIds(id));
+  const currentDesigner = useSelector(getDesignerInfoByName(kebabCase(id)));
+  const designerGarmentIds = useSelector(getDesignerGarmentIds(currentDesigner.id));
   const ids = designerGarmentIds.toJS();
 
   useSubscription({
-    request: wsApi.onDesignerByIds([id]),
+    request: wsApi.onDesignerByIds([currentDesigner.id]),
     next: (data) => dispatch(designerPageActions.update(data.digitalaxGarmentDesigners)),
   }, [chainId]);
 
@@ -62,7 +64,7 @@ const Designers = () => {
 
   return (
     <PageDesignerDescription
-      designerId={id}
+      designerName={id}
       clothesIds={designerGarmentIds}
     />
   );

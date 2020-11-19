@@ -5,6 +5,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
+import kebabCase from 'lodash.kebabcase';
 import ImportantProductInformation from '@containers/important-product-information';
 import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getDesignerInfoById } from '@selectors/designer.selectors';
@@ -36,7 +37,11 @@ const CardProduct = ({
       <Link href={`${PRODUCTS}${garment.id}`}>
         <a className={styles.clothesName}>{tokenInfo && tokenInfo.name ? tokenInfo.name : `ID:${garment.id}`}</a>
       </Link>
-      <SmallPhotoWithText id={designerInfo ? designerInfo.id : ''} name={designerInfo?.designerName} photo={designerInfo?.designerPhoto} />
+      <SmallPhotoWithText
+        id={designerInfo ? kebabCase(designerInfo.designerName) : ''}
+        name={designerInfo?.designerName}
+        photo={designerInfo?.designerPhoto}
+      />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
           <Link href={`${PRODUCTS}${garment.id}`}>

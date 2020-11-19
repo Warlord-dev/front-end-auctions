@@ -4,18 +4,16 @@ import ProductDescription from './product-description';
 import Trade from './trade';
 import styles from './styles.module.scss';
 
-const PageProduct = ({ clothesId }) => (
+const PageProduct = ({ clothesId, designerId }) => (
   <div className={styles.wrapper}>
-    <ProductDescription clothesId={clothesId} />
+    <ProductDescription clothesId={clothesId} designerId={designerId} />
     <Trade clothesIds={[clothesId]} />
   </div>
 );
 
 PageProduct.propTypes = {
   clothesId: PropTypes.string.isRequired,
-};
-
-PageProduct.defaultProps = {
+  designerId: PropTypes.string.isRequired,
 };
 
 export default memo(PageProduct);

@@ -13,8 +13,8 @@ const ProductDescription = ({ clothesId }) => {
   const garment = useSelector(getGarmentsById(clothesId));
   const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
 
-  const clothesPhotos = [];
 
+  const clothesPhotos = [];
   if (tokenInfo) {
 
     if (tokenInfo.image) {
@@ -60,9 +60,7 @@ const ProductDescription = ({ clothesId }) => {
 
 ProductDescription.propTypes = {
   clothesId: PropTypes.string.isRequired,
-};
-
-ProductDescription.defaultProps = {
+  designerId: PropTypes.string.isRequired,
 };
 
 export default memo(ProductDescription);
