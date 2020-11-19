@@ -16,6 +16,7 @@ const ProductDescription = ({ clothesId }) => {
   const clothesPhotos = [];
 
   if (tokenInfo) {
+
     if (tokenInfo.image) {
       clothesPhotos.push({
         isMain: true,
@@ -24,8 +25,10 @@ const ProductDescription = ({ clothesId }) => {
       });
     }
 
-    ['image_quarter_url', 'image_side_url', 'animation_url'].forEach((objectKey) => {
-      if (tokenInfo[objectKey]) {
+    const imagePrefix = 'image_';
+
+    Object.keys(tokenInfo).forEach((objectKey) => {
+      if (objectKey.search(imagePrefix) !== -1 && tokenInfo[objectKey]) {
         clothesPhotos.push({
           image: create2KURL(tokenInfo[objectKey]),
           preview: createPreviewURL(tokenInfo[objectKey]),
@@ -36,8 +39,8 @@ const ProductDescription = ({ clothesId }) => {
 
   const currentClothesInfo = {
     clothesId,
-    clothesName: tokenInfo && tokenInfo.name ? tokenInfo.name : clothesId,
-    description: tokenInfo && tokenInfo.description ? tokenInfo.description : clothesId,
+    clothesName: tokenInfo && tokenInfo.name ? tokenInfo.name : `ID: ${clothesId}`,
+    description: tokenInfo && tokenInfo.description ? tokenInfo.description : `ID: ${clothesId}`,
     estimateApy: 127,
     youReceive: '1 x FBX (specs), 1 x JPEG (1080x1350)',
     valueChildNfts: 'ERC1155',
@@ -56,7 +59,6 @@ const ProductDescription = ({ clothesId }) => {
 };
 
 ProductDescription.propTypes = {
-  currentClothesInfo: PropTypes.object.isRequired,
   clothesId: PropTypes.string.isRequired,
 };
 

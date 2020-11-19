@@ -1,5 +1,6 @@
 import { request } from 'graphql-request';
 import config from '@utils/config';
+import { DEV_HTTP_NETWORK_URL } from '@constants/global.constants';
 import {
   getAuctionsByIds,
   getAuctionsHistoryByTimestampGt,
@@ -16,7 +17,7 @@ import {
 class APIService {
 
   constructor() {
-    this.url = 'https://api.thegraph.com/subgraphs/name/digitalax/digitalaxropsten'; // TODO::rm default url
+    this.url = DEV_HTTP_NETWORK_URL;
   }
 
   setUrl(url) {

@@ -1,4 +1,5 @@
 import { SubscriptionClient } from 'graphql-subscriptions-client';
+import { DEV_WS_NETWORK_URL } from '@constants/global.constants';
 import {
   onDaysChange,
   onAuctionsChange,
@@ -12,7 +13,7 @@ import {
 class WSService {
 
   constructor() {
-    this.url = 'wss://api.thegraph.com/subgraphs/name/digitalax/digitalaxropsten'; // TODO::rm default url
+    this.url = DEV_WS_NETWORK_URL;
     this.client = null;
   }
 

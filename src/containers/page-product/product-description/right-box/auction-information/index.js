@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Highcharts from 'highcharts';
+import cn from 'classnames';
 import HighchartsReact from 'highcharts-react-official';
 import ImportantProductInformation from '@containers/important-product-information';
 import { getHistoryByTokenId } from '@selectors/history.selectors';
@@ -17,7 +18,7 @@ const AuctionInformation = ({
   const options = getAuctionInformationChartOptions(history);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={cn(styles.wrapper, 'animate__animated animate__fadeIn')}>
       <div className={styles.chartWrapper}>
         <HighchartsReact
           highcharts={Highcharts}

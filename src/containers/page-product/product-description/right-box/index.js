@@ -43,22 +43,21 @@ const RightBox = ({
       {activeItem === SHOW_SECOND_TAB && (
         <MaterialList
           clothesId={clothesId}
-          valueChildNfts={currentClothesInfo.valueChildNfts}
+          valueChildNfts={currentClothesInfo?.valueChildNfts}
         />
       )}
     </div>
   );
 };
 
-
 RightBox.propTypes = {
-  currentClothesInfo: PropTypes.object.isRequired,
-  currentDesignersInfo: PropTypes.object.isRequired,
+  currentClothesInfo: PropTypes.object,
   youReceiveText: PropTypes.string,
   clothesId: PropTypes.string.isRequired,
 };
 
 RightBox.defaultProps = {
+  currentClothesInfo: null,
   youReceiveText: 'You will receive',
 };
 

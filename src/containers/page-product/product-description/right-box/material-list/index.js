@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import { useSelector } from 'react-redux';
 import MaterialLine from '@components/material-line';
 import { getGarmentsById } from '@selectors/garment.selectors';
 import { buildClientSchema } from 'graphql';
 import styles from './styles.module.scss';
-
 
 const MaterialList = ({
   clothesId, childNftsText, headerTitle, valueChildNfts,
@@ -17,7 +17,7 @@ const MaterialList = ({
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={cn(styles.wrapper, 'animate__animated animate__fadeIn')}>
       <p className={styles.titleWrapper}>
         {valueChildNfts && (
           <>
