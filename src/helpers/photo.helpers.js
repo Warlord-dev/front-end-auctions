@@ -44,6 +44,7 @@ export const createArrayForGallery = (tokenInfo) => {
   if (tokenInfo && tokenInfo.image) {
     clothesPhotos.push({
       isMain: !clothesPhotos.length,
+      isGif: true,
       image: tokenInfo.image,
       preview: tokenInfo.image,
     });

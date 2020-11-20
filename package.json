@@ -64,6 +64,7 @@
     "react": "^16.13.1",
     "react-autosuggest": "10.0.0",
     "react-dom": "^16.13.1",
+    "react-image-magnify": "^2.7.4",
     "react-immutable-proptypes": "^2.2.0",
     "react-redux": "^7.2.0",
     "react-toastify": "^6.1.0",

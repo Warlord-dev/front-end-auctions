@@ -2,40 +2,55 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import ReactImageMagnify from 'react-image-magnify';
 import { create2KURL, createPreviewURL } from '@services/imgix.service';
 import styles from './styles.module.scss';
 
 const ViewImages = ({ className, clothesPhotos, clothesName }) => {
 
   const DEFAULT_LARGE_IMAGE = clothesPhotos.find(({ isMain }) => isMain)?.image;
-  const VIDEO = clothesPhotos.find(({ isVideo }) => isVideo)?.video;
   const [largeImage, setLargeImage] = useState(DEFAULT_LARGE_IMAGE);
-  const [isShowVideoBlock, setIsShowVideoBlock] = useState(false);
+  const [isShowGif, setIsShowGif] = useState(false);
 
   const handleClick = (item, index) => {
-    if (item.isVideo) {
-      setIsShowVideoBlock(true);
+    if (item.isGif) {
+      setIsShowGif(true);
     } else {
       setLargeImage(clothesPhotos[index]?.image);
-      setIsShowVideoBlock(false);
+      setIsShowGif(false);
     }
   };
+
 
   useEffect(() => {
     setLargeImage(clothesPhotos.find(({ isMain }) => isMain)?.image);
   }, [clothesPhotos]);
 
+
   return (
     <div className={cn(styles.wrapper, className)}>
       <div className={styles.itemLarge}>
-        {isShowVideoBlock ? (
-          // eslint-disable-next-line jsx-a11y/media-has-caption
-          <video controls className={styles.video} autoPlay>
-            <source src={VIDEO} type="video/mp4" />
-          </video>
-        ) : largeImage && (
-          <a href={largeImage} target="_blank" rel="noreferrer">
+        {isShowGif ? (
+          <a href={largeImage} target="_blank" rel="noreferrer" className={styles.largeImgWrapper}>
             <img className={styles.itemLargeImg} src={create2KURL(largeImage)} alt={clothesName} />
+          </a>
+        ) : largeImage && (
+          <a href={largeImage} target="_blank" rel="noreferrer" className={styles.largeImgWrapper}>
+            <ReactImageMagnify
+              className={styles.itemLargeImg}
+              LargeImageClassName={styles.itemLargeImgZoom}
+              {...{
+                smallImage: {
+                  isFluidWidth: true,
+                  src: create2KURL(largeImage),
+                },
+                largeImage: {
+                  src: create2KURL(largeImage),
+                  width: 1176,
+                  height: 1176,
+                },
+              }}
+            />
           </a>
         )}
       </div>
