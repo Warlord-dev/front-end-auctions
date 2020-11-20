@@ -2,10 +2,13 @@ import BigNumber from 'bignumber.js';
 
 export const sortByLowestBid = (auctions) => auctions.sort((a, b) => {
 
-  if (a.get('topBid') < b.get('topBid')) {
+  const aBN = new BigNumber(a.get('topBid'), 10);
+  const bBN = new BigNumber(b.get('topBid'), 10);
+
+  if (aBN.lt(bBN)) {
     return -1;
   }
-  if (a.get('topBid') > b.get('topBid')) {
+  if (aBN.gt(bBN)) {
     return 1;
   }
   return 0;
@@ -13,12 +16,17 @@ export const sortByLowestBid = (auctions) => auctions.sort((a, b) => {
 
 export const sortByHighestBid = (auctions) => auctions.sort((a, b) => {
 
-  if (a.get('topBid') > b.get('topBid')) {
+  const aBN = new BigNumber(a.get('topBid'), 10);
+  const bBN = new BigNumber(b.get('topBid'), 10);
+
+  if (aBN.gt(bBN)) {
     return -1;
   }
-  if (a.get('topBid') < b.get('topBid')) {
+
+  if (aBN.lt(bBN)) {
     return 1;
   }
+
   return 0;
 });
 
