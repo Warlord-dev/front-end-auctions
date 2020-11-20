@@ -16,11 +16,11 @@ const RightBox = ({
   clothesId, currentClothesInfo, currentDesignersInfo, youReceiveText,
 }) => {
   const garment = useSelector(getGarmentsById(clothesId));
-  const estimateApy = 0;
+  // const estimateApy = 0;
   const VALUE_NFT = garment && garment.children.length > 0 ? `(${garment.children.length} NFTs)` : '';
-  const VALUE_APY = `~${estimateApy} APY`;
+  // const VALUE_APY = `~${estimateApy} APY`;
 
-  const TABS = ['Auction Information', `Material Composition ${VALUE_NFT} ${VALUE_APY}`];
+  const TABS = ['Auction Information', `Material Composition ${VALUE_NFT}`];
   const [activeItem, setActiveItem] = useState(SHOW_FIRST_TAB);
 
   return (

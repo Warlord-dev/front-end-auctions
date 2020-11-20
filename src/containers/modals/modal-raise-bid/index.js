@@ -56,7 +56,7 @@ const ModalRaiseBid = ({
             </p>
             <p className={styles.caption}>
               <span>{textForSelect}</span>
-              <span> {minBid.toString(10)}ETH</span>
+              <span> {minBid.toString(10)} ETH</span>
             </p>
             <div className={styles.selectWrapper}>
               <div>
