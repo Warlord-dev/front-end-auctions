@@ -4,8 +4,16 @@ import { convertToEth } from '@helpers/price.helpers';
 import { HISTORY_BID_PLACED_EVENT, HISTORY_BID_WITHDRAWN_EVENT } from '@constants/history.constants';
 
 export const prepareGraphHistory = (history) => {
+
   const sortedHistory = history
-    .sort((a, b) => a.timestamp - b.timestamp);
+    .sort((a, b) => {
+      if (a.timestamp === b.timestamp) {
+        return new BigNumber(a.value, 10).comparedTo(new BigNumber(b.value));
+      }
+
+      return a.timestamp - b.timestamp;
+
+    });
 
   let lastBidPlaced = null;
 
@@ -31,6 +39,7 @@ export const prepareGraphHistory = (history) => {
 
   return data;
 };
+
 export const prepareGraphAuctions = (auctions) => {
   const sortedAuctions = auctions
     .filter((item) => item.topBid !== null)
@@ -43,9 +52,10 @@ export const prepareGraphAuctions = (auctions) => {
 };
 
 export const prepareMainGraphStats = (items) => {
+
   const sortedAuctions = items
     .filter((item) => item.totalNetBidActivity !== null)
-    .sort((a, b) => a.id - b.id);
+    .sort((a, b) => moment(a.id).unix() - moment(b.id).unix());
 
   const data = sortedAuctions
     .map((item) => [moment(item.id).valueOf(), Number(convertToEth(item.totalNetBidActivity))]);

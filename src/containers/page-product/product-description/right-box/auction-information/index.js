@@ -14,7 +14,6 @@ const AuctionInformation = ({
 }) => {
 
   const history = useSelector(getHistoryByTokenId(clothesId));
-
   const options = getAuctionInformationChartOptions(history);
 
   return (

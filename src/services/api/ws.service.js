@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { SubscriptionClient } from 'graphql-subscriptions-client';
 import { DEV_WS_NETWORK_URL } from '@constants/global.constants';
 import {
@@ -31,7 +32,8 @@ class WSService {
   }
 
   onDaysChange(countDays) {
-    return this.client.request({ query: onDaysChange, variables: { first: countDays } });
+    const date = moment().subtract(countDays, 'day').format('YYYY-MM-DD');
+    return this.client.request({ query: onDaysChange, variables: { date } });
   }
 
   onNFTGlobalStats() {

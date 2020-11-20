@@ -2,32 +2,20 @@ import BigNumber from 'bignumber.js';
 
 export const sortByLowestBid = (auctions) => auctions.sort((a, b) => {
 
-  const aBN = new BigNumber(a.get('topBid'), 10);
-  const bBN = new BigNumber(b.get('topBid'), 10);
+  const aBN = new BigNumber(a.get('topBid') ? a.get('topBid') : 0, 10);
+  const bBN = new BigNumber(b.get('topBid') ? b.get('topBid') : 0, 10);
 
-  if (aBN.lt(bBN)) {
-    return -1;
-  }
-  if (aBN.gt(bBN)) {
-    return 1;
-  }
-  return 0;
+  return aBN.comparedTo(bBN);
+
 });
 
 export const sortByHighestBid = (auctions) => auctions.sort((a, b) => {
 
-  const aBN = new BigNumber(a.get('topBid'), 10);
-  const bBN = new BigNumber(b.get('topBid'), 10);
+  const aBN = new BigNumber(a.get('topBid') ? a.get('topBid') : 0, 10);
+  const bBN = new BigNumber(b.get('topBid') ? b.get('topBid') : 0, 10);
 
-  if (aBN.gt(bBN)) {
-    return -1;
-  }
+  return bBN.comparedTo(aBN);
 
-  if (aBN.lt(bBN)) {
-    return 1;
-  }
-
-  return 0;
 });
 
 const getHistorySum = (history) => (history

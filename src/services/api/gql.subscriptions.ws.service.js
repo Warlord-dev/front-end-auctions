@@ -1,7 +1,7 @@
 
 export const onDaysChange = `
-  subscription onDaysChange($first: Int = 1) {
-    days(first: $first) {
+  subscription onAuctionsChangeByIds($date: String!) {
+    days(where: {id_gt: $date }) {
       id
       totalBidValue
       totalWithdrawalValue
