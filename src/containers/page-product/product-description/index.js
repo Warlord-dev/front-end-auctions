@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useTokenInfo } from '@hooks/token.info.hooks';
 import { getGarmentsById } from '@selectors/garment.selectors';
+import { getDesignerInfoById } from '@selectors/designer.selectors';
 import { createArrayForGallery } from '@helpers/photo.helpers';
 import LeftBox from './left-box';
 import RightBox from './right-box';
@@ -13,6 +14,7 @@ const ProductDescription = ({ clothesId }) => {
   const garment = useSelector(getGarmentsById(clothesId));
   const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
   const clothesPhotos = createArrayForGallery(tokenInfo);
+  const currentDesignersInfo = useSelector(getDesignerInfoById(garment.designer));
 
   const currentClothesInfo = {
     clothesId,
@@ -30,6 +32,7 @@ const ProductDescription = ({ clothesId }) => {
       <RightBox
         clothesId={clothesId}
         currentClothesInfo={currentClothesInfo}
+        currentDesignersInfo={currentDesignersInfo}
       />
     </div>
   );

@@ -31,6 +31,7 @@ const CardProduct = ({
 
   const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
   const designerInfo = useSelector(getDesignerInfoById(garment.designer));
+
   const imageUrl = getImageForCardProduct(tokenInfo);
 
   return (

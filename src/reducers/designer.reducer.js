@@ -9,7 +9,7 @@ const DEFAULT_FIELDS = Map({
   designerGarmentIds: List([]),
   infoByDesignerId: List([
     {
-      id: '0xa9d8b169783100639bb137ec09f7277dc7948760',
+      id: '0x7Cae538968727B73be60D01bD198a7a9613E6a4c',
       designerName: 'Christina Lalch',
       designerPhoto: './images/Christina-Lalch.jpeg',
       descriptionDesigner: [
@@ -27,7 +27,25 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0xcEC711b7fa42683260Ad8402247455c04d98c463',
+      designerName: '3dBehemoth',
+      designerPhoto: '',
+      descriptionDesigner: [
+        'Diego is a 26 year old cloth artist from Alicante, on the east coast of Spain. He is addicted to video games and fashion, and that made him start in the 3D fashion industry less than a year ago',
+        'He has always been the weird boy in his childhood, he’s always thought out of the box and had tastes that most people haven’t. His brand and designs are mostly based on that feeling of being weird, the feeling that he’s the only person who likes what he likes and that he’s ok with that.',
+        'He has tons of influences, but the most relevant are: Japanese culture, plastic/latex and neon, dark, spooky and cute things. In his designs he loves mixing different concepts to create high contrast between colours, textures and shapes, and to create a feeling of both separation and togetherness.',
+      ],
+      designerCountry: 'Spain',
+      designerCountryFlagIcon: './images/icons/spain.png',
+      designerSocialMedia: List([
+        {
+          name: 'instagram',
+          href: 'https://www.instagram.com/3dbehemoth/',
+        },
+      ]),
+    },
+    {
+      id: '0x321E73Dbf24F31B25C515E52b362185888D111b1',
       designerName: 'Edward Harber',
       designerPhoto: './images/Edward-Harber.jpeg',
       descriptionDesigner: [
@@ -45,11 +63,10 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0x64cAA1F61e012594E757c0Ea7e1801AB18ef9285',
       designerName: 'HonoreHL',
       designerPhoto: './images/HonoreHL.jpeg',
       descriptionDesigner: ['Hirwa Leon Honore is a 3d artist from Rwanda. He is most experienced with animation, modeling, and shading. His work inspires to simultaneously merge traditional and contemporary culture driven styles, that aim to paint a richly diverse and fantastical picture of digital clothing possibilities and bring about a minimal, yet fashion forward style.'],
-      designerCountry: 'Africa',
       designerCountryFlagIcon: './images/icons/',
       designerSocialMedia: List([
         {
@@ -59,7 +76,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0xA53CC97D140Ba317Bd6272A2Af0f8D3eAE4809Bb',
       designerName: 'Lorena Bellow',
       designerPhoto: './images/Lorena-Bellow.jpeg',
       descriptionDesigner: ['Designer Paragraph: Lorena Bello is a Spanish 3D Fashion and Graphic Designer. Driven-by her passion for design, she turned her life 180º when in 2013 she decided to change her professional path by leaving her corporate career (She also has a Law Degree) to start completely afresh as a Digital Fashion Designer. From this moment she has followed her passion working in fashion in London, Milan and Madrid.'],
@@ -77,7 +94,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0x430e85c85f2324F4d3018f7c5c1d7bC12F6FA5e8 ',
       designerName: 'Mar Guixa Studio',
       designerPhoto: './images/Mar-Guixa-Studio.jpeg',
       descriptionDesigner: ['Mar Guixa is the founder of Mar Guixa Studio studio— a design studio based in Barcelona. Mar is an emerging virtual fashion designer who loves the interaction of colors and shapes, quality rather than quantity and bringing unique creative concepts behind digitally constructed garments. She believes that the essence of the fashion industry lies in living constantly between reality and art. She is passionate about art, tech and the exploration of creative’s limit'],
@@ -91,7 +108,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0xa9d8b169783100639bb137ec09f7277dc7948760',
+      id: '',
       designerName: 'McAfee.Design',
       designerPhoto: './images/McAfee-Design.jpeg',
       descriptionDesigner: [
@@ -109,7 +126,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0xFF0c60609522fb053E58AC106EBb7D48ff3d0CCB',
       designerName: 'Msistema',
       designerPhoto: './images/msistema.jpeg',
       descriptionDesigner: [
@@ -131,7 +148,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0x2456862a0B57814371287De31cC617CA22e096A8',
       designerName: 'Nina Doll',
       designerPhoto: './images/Nina-Doll.jpeg',
       descriptionDesigner: [
@@ -171,7 +188,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0x2937f59BD9740F5cFD4d74e545f355BBd2FE0E90 ',
       designerName: 'Stanislav Mclygin',
       designerPhoto: './images/Stanislav Mclygin.jpeg',
       descriptionDesigner: [
@@ -189,7 +206,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0x3C7558B416673aA01350FbFE1b63Db477432C4cB',
       designerName: 'Vitaly Kovalev',
       designerPhoto: './images/Vitaly-Kovalev.jpeg',
       descriptionDesigner: [
@@ -225,7 +242,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x12d062b19a2df1920eb9fc28bd6e9a7e936de4c2',
+      id: '0x29bD7BD73A6748AcFc7c55F708DE95DEb042E9F3',
       designerName: 'Xander Designer',
       designerPhoto: './images/Xander-Designer.jpeg',
       descriptionDesigner: [
