@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import { create2KURL, createPreviewURL } from '@services/imgix.service';
 import styles from './styles.module.scss';
 
 const ViewImages = ({ className, clothesPhotos, clothesName }) => {
@@ -32,9 +33,9 @@ const ViewImages = ({ className, clothesPhotos, clothesName }) => {
           <video controls className={styles.video} autoPlay>
             <source src={VIDEO} type="video/mp4" />
           </video>
-        ) : (
+        ) : largeImage && (
           <a href={largeImage} target="_blank" rel="noreferrer">
-            <img className={styles.itemLargeImg} src={largeImage} alt={clothesName} />
+            <img className={styles.itemLargeImg} src={create2KURL(largeImage)} alt={clothesName} />
           </a>
         )}
       </div>
@@ -43,7 +44,13 @@ const ViewImages = ({ className, clothesPhotos, clothesName }) => {
           <div className={styles.itemSmallWrapper}>
             {clothesPhotos.map((item, index) => (
               <button key={index} className={styles.itemSmall} onClick={() => handleClick(item, index)}>
-                <img className={styles.itemSmallImg} src={item?.preview} alt={clothesName} />
+                {item && item.preview ? (
+                  <img
+                    className={styles.itemSmallImg}
+                    src={createPreviewURL(item?.preview)}
+                    alt={clothesName}
+                  />
+                ) : null }
               </button>
             ))}
           </div>

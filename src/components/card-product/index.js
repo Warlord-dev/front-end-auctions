@@ -11,6 +11,7 @@ import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getDesignerInfoById } from '@selectors/designer.selectors';
 import { getCardProductChartOptions } from '@services/graph.service';
 import { create2KURL } from '@services/imgix.service';
+import { getImageForCardProduct } from '@helpers/photo.helpers';
 import { PRODUCTS } from '@constants/router-constants';
 import { useTokenInfo } from '@hooks/token.info.hooks';
 
@@ -29,8 +30,8 @@ const CardProduct = ({
   }
 
   const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
-
   const designerInfo = useSelector(getDesignerInfoById(garment.designer));
+  const imageUrl = getImageForCardProduct(tokenInfo);
 
   return (
     <li className={cn(styles.item, className)}>
@@ -46,7 +47,7 @@ const CardProduct = ({
         <div className={styles.imageWrapper}>
           <Link href={`${PRODUCTS}${garment.id}`}>
             <a className={styles.clothesPhotoWrapper}>
-              {tokenInfo ? <img className={styles.clothesPhoto} src={create2KURL(tokenInfo.image)} alt={garment.id} /> : null}
+              {tokenInfo && imageUrl ? <img className={styles.clothesPhoto} src={create2KURL(imageUrl)} alt={garment.id} /> : null}
             </a>
           </Link>
           {isOpen && (

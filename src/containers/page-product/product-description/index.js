@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useTokenInfo } from '@hooks/token.info.hooks';
 import { getGarmentsById } from '@selectors/garment.selectors';
-import { create2KURL, createPreviewURL } from '@services/imgix.service';
+import { createArrayForGallery } from '@helpers/photo.helpers';
 import LeftBox from './left-box';
 import RightBox from './right-box';
 import styles from './styles.module.scss';
@@ -12,30 +12,7 @@ const ProductDescription = ({ clothesId }) => {
 
   const garment = useSelector(getGarmentsById(clothesId));
   const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
-
-
-  const clothesPhotos = [];
-  if (tokenInfo) {
-
-    if (tokenInfo.image) {
-      clothesPhotos.push({
-        isMain: true,
-        image: create2KURL(tokenInfo.image),
-        preview: createPreviewURL(tokenInfo.image),
-      });
-    }
-
-    const imagePrefix = 'image_';
-
-    Object.keys(tokenInfo).forEach((objectKey) => {
-      if (objectKey.search(imagePrefix) !== -1 && tokenInfo[objectKey]) {
-        clothesPhotos.push({
-          image: create2KURL(tokenInfo[objectKey]),
-          preview: createPreviewURL(tokenInfo[objectKey]),
-        });
-      }
-    });
-  }
+  const clothesPhotos = createArrayForGallery(tokenInfo);
 
   const currentClothesInfo = {
     clothesId,
