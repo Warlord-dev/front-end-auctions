@@ -42,13 +42,13 @@ const ImportantProductInformation = ({
   const priceEth = convertToEth(auction.topBid);
   const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
   const expirationDate = auction.endTime * 1000;
-  const estimateApy = (0).toFixed(2); // TODO::
 
   const sortedHistory = history.filter((item) => account
-  && item.bidder
-   && item.bidder.id.toLowerCase() === account.toLowerCase() && [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT]
+  && item.bidder && [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT]
     .includes(item.eventName))
     .sort((a, b) => b.timestamp - a.timestamp);
+
+  const mySortedHistory = sortedHistory.filter((item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase());
 
   let isMakeBid = false;
   let canShowWithdrawBtn = false;
@@ -58,9 +58,7 @@ const ImportantProductInformation = ({
 
     const lastEvent = sortedHistory[0];
 
-    if (lastEvent.eventName === HISTORY_BID_PLACED_EVENT) {
-
-      isMakeBid = true;
+    if (lastEvent.bidder.id.toLowerCase() === account.toLowerCase() && lastEvent.eventName === HISTORY_BID_PLACED_EVENT) {
 
       const timeDiff = Date.now() - lastEvent.timestamp * 1000;
 
@@ -69,7 +67,19 @@ const ImportantProductInformation = ({
       }
 
       withdrawValue = lastEvent.value;
+    }
 
+    if (mySortedHistory.length) {
+
+      const myLastEvent = mySortedHistory[0];
+
+      if (myLastEvent.eventName === HISTORY_BID_PLACED_EVENT) {
+
+        isMakeBid = true;
+
+        withdrawValue = myLastEvent.value;
+
+      }
     }
 
   }

@@ -41,7 +41,7 @@ stages:
       - node_modules
   script:
     - yarn install
-    - yarn build
+    - yarn export
   tags:
     - docker
   only:

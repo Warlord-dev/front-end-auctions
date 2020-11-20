@@ -58,13 +58,14 @@ const RightBox = ({
 
 RightBox.propTypes = {
   currentClothesInfo: PropTypes.object,
-  currentDesignersInfo: PropTypes.object.isRequired,
+  currentDesignersInfo: PropTypes.object,
   youReceiveText: PropTypes.string,
   clothesId: PropTypes.string.isRequired,
 };
 
 RightBox.defaultProps = {
   currentClothesInfo: null,
+  currentDesignersInfo: null,
   youReceiveText: 'You will receive',
 };
 

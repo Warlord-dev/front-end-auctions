@@ -49,6 +49,10 @@ class GlobalActions extends BaseActions {
 
       });
 
+      if (ethereum.selectedAddress && localStorage.getItem(STORAGE_IS_LOGGED_IN)) {
+        dispatch(userActions.setValue('account', ethereum.selectedAddress));
+      }
+
       ethereum.on('chainChanged', async (chainId) => {
 
         if (!chainId) {
