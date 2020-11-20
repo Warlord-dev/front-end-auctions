@@ -2,6 +2,9 @@ import { prepareMainGraphStats, prepareGraphAuctions, prepareGraphHistory } from
 
 export const getDesignerChartOptions = (history) => {
   const options = {
+    time: {
+      useUTC: false,
+    },
     title: {
       text: '',
     },
@@ -52,6 +55,9 @@ export const getDesignerChartOptions = (history) => {
 
 export const getMainPageChartOptions = (history) => {
   const options = {
+    time: {
+      useUTC: false,
+    },
     title: {
       text: '',
     },
@@ -102,6 +108,9 @@ export const getMainPageChartOptions = (history) => {
 export const getAuctionInformationChartOptions = (history) => {
 
   const options = {
+    time: {
+      useUTC: false,
+    },
     title: {
       text: '',
     },
@@ -156,6 +165,9 @@ export const getAuctionInformationChartOptions = (history) => {
 
 export const getCardProductChartOptions = (history) => {
   const options = {
+    time: {
+      useUTC: false,
+    },
     title: {
       text: '',
     },
