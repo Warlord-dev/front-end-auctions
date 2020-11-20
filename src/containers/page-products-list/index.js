@@ -63,7 +63,7 @@ const PageProductsList = () => {
   const list = [
     {
       description: 'Total NFT’s value',
-      value: convertToEth(globalStats.totalSalesValue),
+      value: convertToEth(globalStats.totalActiveBidsValue),
     },
     {
       description: `Total Vol ${TOTAL_VOLUME_DAYS} days`,
