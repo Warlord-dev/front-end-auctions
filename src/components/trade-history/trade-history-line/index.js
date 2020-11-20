@@ -17,12 +17,14 @@ const TradeHistoryLine = ({
     return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
   };
 
+  const getDefaultText = (text) => text.split(/(?=[A-Z])/).join(' ');
+
   return (
     <div className={cn(styles.item, className)}>
       <div>
         <span className={styles.priceEth}>{priceEth} E</span>
         <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
-        - {eventName}
+        - {getDefaultText(eventName)}
       </div>
       <SmallPhotoWithText address={sendersAddress} photo={sendersPhoto} />
       <SmallPhotoWithText address={recipientAddress} photo={recipientPhoto} />
