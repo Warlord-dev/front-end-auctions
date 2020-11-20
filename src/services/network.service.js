@@ -16,10 +16,24 @@ export const getAPIUrlByChainId = (chainId) => {
   return config.API_URLS[network.alias];
 
 };
+export const getDefaultNetworkChainId = () => {
+  const network = AVAILABLE_NETWORKS.find((net) => net.alias === config.DEFAULT_NETWORK);
+
+  if (!network) {
+    throw new Error('Invalid DEFAULT_NETWORK: getDefaultNetworkChainId');
+  }
+
+  return network.hex;
+};
+
 
 export const getWSUrlByChainId = (chainId) => {
 
   const url = getAPIUrlByChainId(chainId);
+
+  if (!url) {
+    throw new Error('Invalid chainId: getWSUrlByChainId');
+  }
 
   return url.replace('http', 'ws');
 

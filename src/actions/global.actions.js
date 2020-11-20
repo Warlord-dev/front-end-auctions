@@ -2,9 +2,12 @@ import BaseActions from '@actions/base-actions';
 import userActions from '@actions/user.actions';
 import globalReducer from '@reducers/global.reducer';
 import { isMetamaskInstalled } from '@services/metamask.service';
+import {
+  getDefaultNetworkChainId, getEnabledNetworkByChainId, getAPIUrlByChainId, getWSUrlByChainId,
+} from '@services/network.service';
 import api from '@services/api/api.service';
 import ws from '@services/api/ws.service';
-import { getEnabledNetworkByChainId, getAPIUrlByChainId, getWSUrlByChainId } from '@services/network.service';
+
 import { convertToEth } from '@helpers/price.helpers';
 import { STORAGE_IS_LOGGED_IN } from '@constants/storage.constants';
 
@@ -14,9 +17,21 @@ class GlobalActions extends BaseActions {
     return async (dispatch) => {
 
       /**
+       * Get eth/usd rate
+       */
+      try {
+        const [rateItem] = await api.getEthRate();
+        dispatch(this.setValue('exchangeRateETH', rateItem.rate.USD));
+      } catch (e) {
+        console.error(e);
+      }
+
+      /**
        * Check installed Metamask
        */
       if (!isMetamaskInstalled()) {
+        dispatch(this.changeNetwork(getDefaultNetworkChainId()));
+        await dispatch(this.setContractParams());
         dispatch(this.setValue('isInitialized', true));
         return;
       }
@@ -34,13 +49,15 @@ class GlobalActions extends BaseActions {
 
       });
 
-      ethereum.on('chainChanged', (chainId) => {
+      ethereum.on('chainChanged', async (chainId) => {
 
         if (!chainId) {
           return;
         }
 
-        if (!getEnabledNetworkByChainId(chainId)) {
+        if (getEnabledNetworkByChainId(chainId)) {
+          await dispatch(this.setContractParams());
+        } else {
           console.error('Wrong network. Contracts are not deployed yet');
         }
 
@@ -48,16 +65,16 @@ class GlobalActions extends BaseActions {
 
       });
 
-      /**
-       * Get eth/usd rate
-       */
-      try {
-        const [rateItem] = await api.getEthRate();
-        dispatch(this.setValue('exchangeRateETH', rateItem.rate.USD));
-      } catch (e) {
-        console.error(e);
-      }
+      dispatch(this.changeNetwork(ethereum.chainId));
+      await dispatch(this.setContractParams());
+      dispatch(this.setValue('isInitialized', true));
 
+    };
+
+  }
+
+  setContractParams() {
+    return async (dispatch) => {
       const { digitalaxAuctionContracts } = await api.getAuctionContracts();
 
       const [{ minBidIncrement, id, bidWithdrawalLockTime }] = digitalaxAuctionContracts;
@@ -65,15 +82,7 @@ class GlobalActions extends BaseActions {
       dispatch(this.setValue('minBidIncrement', convertToEth(minBidIncrement)));
       dispatch(this.setValue('auctionContractAddress', id));
       dispatch(this.setValue('bidWithdrawalLockTime', bidWithdrawalLockTime));
-
-      /**
-       * Set the current network from Metamask
-       */
-      dispatch(this.changeNetwork(ethereum.chainId));
-      dispatch(this.setValue('isInitialized', true));
-
     };
-
   }
 
   changeNetwork(chainId) {

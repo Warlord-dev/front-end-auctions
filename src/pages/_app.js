@@ -1,6 +1,8 @@
 import 'animate.css';
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useEffect } from 'react';
 import { Provider, useDispatch, useSelector } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 import * as Sentry from '@sentry/browser';
 import withRedux from 'next-redux-wrapper';
 import { deserialize, serialize } from 'json-immutable/lib';
@@ -12,6 +14,7 @@ import globalActions from '@actions/global.actions';
 import { getIsInitialized, getChainId } from '@selectors/global.selectors';
 import { getEnabledNetworkByChainId } from '@services/network.service';
 import getOrCreateStore from '../lib/with-redux-store';
+
 import config from '../utils/config';
 import '../assets/scss/global.scss';
 import '../assets/scss/base/fonts.scss';
@@ -72,6 +75,7 @@ const MyApp = ({
         </NetworkWrapper>
         <Footer />
       </InitWrapper>
+      <ToastContainer />
     </Provider>
   );
 };

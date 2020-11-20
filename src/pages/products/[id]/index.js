@@ -8,7 +8,7 @@ import garmentPageActions from '@actions/garment.page.actions';
 import auctionActions from '@actions/auction.actions';
 import { getGarmentsById } from '@selectors/garment.selectors';
 import { getChainId } from '@selectors/global.selectors';
-
+import { useSubscription } from '@hooks/subscription.hooks';
 
 const Products = () => {
   const router = useRouter();
@@ -22,38 +22,18 @@ const Products = () => {
     dispatch(garmentPageActions.fetchGarmentByIds([id]));
   };
 
-  useEffect(() => {
-
-    const request = wsApi.onAuctionsChangeByIds([id]);
-    const { unsubscribe } = request.subscribe({
-      next({ data }) {
-        if (!data) {
-          return;
-        }
-        dispatch(auctionActions.mapData(data.digitalaxGarmentAuctions));
-        fetchAdditionalData();
-      },
-    });
-
-    return () => unsubscribe();
+  useSubscription({
+    request: wsApi.onAuctionsChangeByIds([id]),
+    next: (data) => {
+      dispatch(auctionActions.mapData(data.digitalaxGarmentAuctions));
+      fetchAdditionalData();
+    },
   }, [chainId, id]);
 
-  useEffect(() => {
-
-    const request = wsApi.onAuctionsHistoryByIds([id]);
-
-    const { unsubscribe } = request.subscribe({
-      next({ data }) {
-        if (!data) {
-          return;
-        }
-        dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories));
-      },
-    });
-
-    return () => unsubscribe();
-
-  }, [id, chainId]);
+  useSubscription({
+    request: wsApi.onAuctionsHistoryByIds([id]),
+    next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
+  }, [chainId, id]);
 
   useEffect(() => () => {
     dispatch(garmentPageActions.reset());

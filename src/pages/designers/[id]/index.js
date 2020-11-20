@@ -11,6 +11,7 @@ import historyActions from '@actions/history.actions';
 import auctionActions from '@actions/auction.actions';
 import { useSubscription } from '@hooks/subscription.hooks';
 
+
 const Designers = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -31,32 +32,13 @@ const Designers = () => {
     next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
   }, [chainId, JSON.stringify(designerGarmentIds)]);
 
-  useEffect(() => {
+  const dateMonth = new Date();
+  dateMonth.setDate(dateMonth.getDate() - 30); // now - 30 days
 
-    if (!ids.length) {
-      return () => {};
-    }
-
-    const dateMonth = new Date();
-    dateMonth.setDate(dateMonth.getDate() - 30); // now - 30 days
-
-    const request = wsApi.onResultedAuctionsByEndTimeGtAndIds(ids, parseInt(dateMonth / 1000, 10));
-
-    const { unsubscribe } = request.subscribe({
-      next({ data }) {
-
-        if (!data) {
-          return;
-        }
-
-        dispatch(auctionActions.setValue('monthDesignerResultedAuctions', data.digitalaxGarmentAuctions));
-      },
-    });
-
-    return () => unsubscribe();
-
+  useSubscription({
+    request: wsApi.onResultedAuctionsByEndTimeGtAndIds(ids, parseInt(dateMonth / 1000, 10)),
+    next: (data) => dispatch(auctionActions.setValue('monthDesignerResultedAuctions', data.digitalaxGarmentAuctions)),
   }, [chainId, JSON.stringify(designerGarmentIds)]);
-
 
   useEffect(() => () => {
     dispatch(designerPageActions.reset());
