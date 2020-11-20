@@ -15,6 +15,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName }) => {
   const handleClick = (item, index) => {
     if (item.isGif) {
       setIsShowGif(true);
+      setLargeImage(clothesPhotos[index]?.image);
     } else {
       setLargeImage(clothesPhotos[index]?.image);
       setIsShowGif(false);
