@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import ReactImageMagnify from 'react-image-magnify';
-import { create2KURL, createPreviewURL } from '@services/imgix.service';
+import { createGifURL, create2KURL, createPreviewURL } from '@services/imgix.service';
 import styles from './styles.module.scss';
 
 const ViewImages = ({ className, clothesPhotos, clothesName }) => {
@@ -13,15 +13,9 @@ const ViewImages = ({ className, clothesPhotos, clothesName }) => {
   const [isShowGif, setIsShowGif] = useState(false);
 
   const handleClick = (item, index) => {
-    if (item.isGif) {
-      setIsShowGif(true);
-      setLargeImage(clothesPhotos[index]?.image);
-    } else {
-      setLargeImage(clothesPhotos[index]?.image);
-      setIsShowGif(false);
-    }
+    setLargeImage(clothesPhotos[index]?.image);
+    setIsShowGif(!!item.isGif);
   };
-
 
   useEffect(() => {
     setLargeImage(clothesPhotos.find(({ isMain }) => isMain)?.image);
@@ -33,7 +27,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName }) => {
       <div className={styles.itemLarge}>
         {isShowGif ? (
           <a href={largeImage} target="_blank" rel="noreferrer" className={styles.largeImgWrapper}>
-            <img className={styles.itemLargeImg} src={create2KURL(largeImage)} alt={clothesName} />
+            <img className={styles.itemLargeImg} src={createGifURL(largeImage)} alt={clothesName} />
           </a>
         ) : largeImage && (
           <a href={largeImage} target="_blank" rel="noreferrer" className={styles.largeImgWrapper}>
