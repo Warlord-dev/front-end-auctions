@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useTokenInfo } from '@hooks/token.info.hooks';
-import { getGarmentsById } from '@selectors/garment.selectors';
+import { getGarmentsById, getGarmentsReceiveByName } from '@selectors/garment.selectors';
 import { getDesignerInfoById } from '@selectors/designer.selectors';
 import { createArrayForGallery } from '@helpers/photo.helpers';
 import LeftBox from './left-box';
@@ -15,13 +15,14 @@ const ProductDescription = ({ clothesId }) => {
   const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
   const clothesPhotos = createArrayForGallery(tokenInfo);
   const currentDesignersInfo = useSelector(getDesignerInfoById(garment.designer));
+  const receive = useSelector(getGarmentsReceiveByName(tokenInfo?.name));
 
   const currentClothesInfo = {
     clothesId,
     clothesName: tokenInfo && tokenInfo.name ? tokenInfo.name : `ID: ${clothesId}`,
     description: tokenInfo && tokenInfo.description ? tokenInfo.description : `ID: ${clothesId}`,
     estimateApy: 127,
-    youReceive: '1 x FBX (specs), 1 x JPEG (1080x1350)',
+    youReceive: receive?.receive ? receive.receive : '',
     valueChildNfts: 'ERC1155',
     valueApy: '',
   };

@@ -29,7 +29,10 @@ const MaterialList = ({
       <div className={styles.headerTitle}>
         {headerTitle.map((item) => <p key={item} className={styles.headerTitleItem}>{item}</p>)}
       </div>
-      {garment.children.map((item) => <MaterialLine item={item} className={styles.materialLine} />)}
+      <div className={styles.materialLine}>
+        {garment.children.map((item) => <MaterialLine item={item} className={styles.materialLine} />)}
+      </div>
+
     </div>
   );
 };
