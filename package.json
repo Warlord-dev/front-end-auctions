@@ -1,7 +1,7 @@
 {
-  "name": "frontend",
-  "version": "0.6.0",
-  "repository": "git@gitlab.pixelplex.by:full-stack/nextjs.git",
+  "name": "digitalax-front",
+  "version": "0.1.0",
+  "repository": "git@gitlab.pixelplex.by:732-digitalax/frontend.git",
   "author": {
     "name": "PixelPlex Inc.",
     "email": "dev@pixelplex.io"
