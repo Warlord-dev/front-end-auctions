@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useSelector } from 'react-redux';
+import BigNumber from 'bignumber.js';
 import { getHistoryByTokenIds } from '@selectors/history.selectors';
 import { convertToEth } from '@helpers/price.helpers';
 import TradeHistoryLine from './trade-history-line';
@@ -12,7 +13,14 @@ const TradeHistory = ({ clothesIds, className, headerTitle }) => {
 
   const history = useSelector(getHistoryByTokenIds(clothesIds));
 
-  const tradeHistory = history.sort((a, b) => b.timestamp - a.timestamp).map((item) => ({
+  const tradeHistory = history.sort((a, b) => {
+
+    if (a.eventName === b.eventName && a.timestamp === b.timestamp) {
+      return new BigNumber(b.value, 10).comparedTo(new BigNumber(a.value));
+    }
+
+    return b.timestamp - a.timestamp;
+  }).map((item) => ({
     id: item.id,
     clothesId: item.token.id,
     priceEth: convertToEth(item.value),
