@@ -22,8 +22,7 @@ class HistoryActions extends BaseActions {
         const tokenArray = historyByTokenId.get(tokenId);
 
         if (!tokenArray.find((item) => item.id === itemHistory.id)) {
-          tokenArray.push(itemHistory);
-          historyByTokenId = historyByTokenId.set(tokenId, tokenArray);
+          historyByTokenId = historyByTokenId.set(tokenId, [...tokenArray, itemHistory]);
         }
 
       });

@@ -1,4 +1,6 @@
-import React, { memo, useState } from 'react';
+import React, {
+  memo, useRef, useState, useEffect,
+} from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,6 +17,7 @@ const ModalWithdrawBid = ({
 }) => {
 
   const dispatch = useDispatch();
+  const requests = useRef([]);
   const [showError, setShowError] = useState(null);
   const { id, withdrawValue } = useSelector(getModalParams);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -28,11 +31,22 @@ const ModalWithdrawBid = ({
     setShowError(null);
     setIsDisabled(true);
     dispatch(bidActions.withdraw(id, withdrawValue))
-      .then(() => handleClose())
-      .catch((e) => setShowError(e.message))
-      .finally(() => setIsDisabled(false));
+      .then((request) => {
+        requests.current.push(request);
+        request.promise
+          .then(() => handleClose())
+          .catch((e) => {
+            setShowError(e.message);
+            setIsDisabled(false);
+          });
+      });
 
   };
+
+  useEffect(() => () => {
+    requests.current.forEach((request) => request.unsubscribe());
+    requests.current = [];
+  }, []);
 
   return (
     <>

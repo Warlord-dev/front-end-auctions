@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 
 export const useSubscription = ({ request, next }, deps) => {
+
   useEffect(() => {
 
     const { unsubscribe } = request.subscribe({

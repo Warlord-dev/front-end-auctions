@@ -13,14 +13,18 @@ class BidActions extends BaseActions {
       const auctionContractAddress = getState().global.get('auctionContractAddress');
       const contract = await getContract(auctionContractAddress);
       const weiValue = convertToWei(value);
-
-      await new Promise((resolve, reject) => {
-
-        contract.methods.placeBid(id).send({ from: account, value: weiValue })
-          .on('error', (error) => reject(error))
-          .on('transactionHash', (transactionHash) => resolve(transactionHash));
-
+      const listener = contract.methods.placeBid(id).send({ from: account, value: weiValue });
+      const promise = new Promise((resolve, reject) => {
+        listener.on('error', (error) => reject(error));
+        listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
       });
+      return {
+        promise,
+        unsubscribe: () => {
+          listener.off('error');
+          listener.off('transactionHash');
+        },
+      };
 
     };
 
@@ -32,15 +36,19 @@ class BidActions extends BaseActions {
       const account = getState().user.get('account');
       const auctionContractAddress = getState().global.get('auctionContractAddress');
       const contract = await getContract(auctionContractAddress);
-
-      await new Promise((resolve, reject) => {
-
-        contract.methods.withdrawBid(id).send({ from: account })
-          .on('error', (error) => reject(error))
-          .on('transactionHash', (transactionHash) => resolve(transactionHash));
-
+      const listener = contract.methods.withdrawBid(id).send({ from: account });
+      const promise = new Promise((resolve, reject) => {
+        listener.on('error', (error) => reject(error));
+        listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
       });
 
+      return {
+        promise,
+        unsubscribe: () => {
+          listener.off('error');
+          listener.off('transactionHash');
+        },
+      };
     };
 
   }

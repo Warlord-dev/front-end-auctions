@@ -50,7 +50,7 @@ const InputWithArrows = ({
 
 InputWithArrows.propTypes = {
   className: PropTypes.string,
-  value: PropTypes.number,
+  value: PropTypes.string,
   currency: PropTypes.string,
   iconUrl: PropTypes.string,
   minBidIncrement: PropTypes.string.isRequired,

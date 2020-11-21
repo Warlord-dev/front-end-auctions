@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,6 +18,7 @@ const ModalRaiseBid = ({
   className, title, text, textForSelect, buttonText, yourBidText, textError,
 }) => {
   const dispatch = useDispatch();
+  const requests = useRef([]);
   const { id, priceEth, withdrawValue } = useSelector(getModalParams);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
@@ -38,12 +39,22 @@ const ModalRaiseBid = ({
 
     setShowError(null);
     setIsDisabled(true);
-    dispatch(bidActions.bid(id, inputPriceEth))
-      .then(() => handleClose())
-      .catch((e) => setShowError(e.message))
-      .finally(() => setIsDisabled(false));
 
+    dispatch(bidActions.bid(id, inputPriceEth)).then((request) => {
+      requests.current.push(request);
+      request.promise
+        .then(() => handleClose())
+        .catch((e) => {
+          setShowError(e.message);
+          setIsDisabled(false);
+        });
+    });
   };
+
+  useEffect(() => () => {
+    requests.current.forEach((request) => request.unsubscribe());
+    requests.current = [];
+  }, []);
 
   return (
     <>

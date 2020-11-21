@@ -14,7 +14,7 @@ const MaterialLine = ({ className, item: { tokenUri, id, amount } }) => {
 
   return (
     <ul className={className}>
-      <li key={Math.random()} className={styles.item}>
+      <li className={styles.item}>
         <div className={styles.imgWrapper}>
           {tokenInfo && tokenInfo.image
             ? <img className={styles.img} src={createPreviewURL(tokenInfo.image)} alt={tokenInfo && tokenInfo.name} /> : null}

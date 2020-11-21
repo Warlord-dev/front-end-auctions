@@ -15,27 +15,38 @@ export const useTokenInfo = (tokenUri, deps) => {
 
   useEffect(() => {
 
+    let isMounted = true;
+
     if (!tokenUri || String(tokenUri).search(/^http/) === -1) {
-      return;
+      return () => {};
     }
 
     if (storeInfo || storeInfo === null) {
-      return;
+      return () => {};
     }
 
     fetch(tokenUri).then((response) => response.text()).then((infoResponse) => {
       try {
         const jsonInfo = JSON.parse(infoResponse);
+
         if (!jsonInfo || !jsonInfo.image || !jsonInfo.name) {
           throw new Error('Invalid json info');
         }
-        setInfo(jsonInfo);
+
+        if (isMounted) {
+          setInfo(jsonInfo);
+        }
+
         dispatch(garmentActions.setGarmentInfo(tokenUri, jsonInfo));
       } catch (e) {
         console.log('[INFO] Invalid tokenUri', tokenUri);
       }
 
     });
+
+    return () => {
+      isMounted = false;
+    };
 
   }, deps);
 

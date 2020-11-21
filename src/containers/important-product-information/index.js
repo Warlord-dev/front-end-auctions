@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
@@ -33,6 +33,13 @@ const ImportantProductInformation = ({
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
   const [isShowHint, setIsShowHint] = useState(false);
+  const [, updateState] = React.useState();
+  const timer = useRef(null);
+  let canShowWithdrawBtn = false;
+
+  clearTimeout(timer.current);
+
+  useEffect(() => () => clearTimeout(timer.current), []);
 
 
   if (!auction) {
@@ -51,7 +58,6 @@ const ImportantProductInformation = ({
   const mySortedHistory = sortedHistory.filter((item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase());
 
   let isMakeBid = false;
-  let canShowWithdrawBtn = false;
   let withdrawValue = 0;
 
   if (sortedHistory.length) {
@@ -64,22 +70,24 @@ const ImportantProductInformation = ({
 
       if (timeDiff > 0 && timeDiff / 1000 >= bidWithdrawalLockTime) {
         canShowWithdrawBtn = true;
+      } else if ((bidWithdrawalLockTime - timeDiff / 1000) > 0) {
+        timer.current = setTimeout(() => {
+          updateState();
+        }, (bidWithdrawalLockTime - timeDiff / 1000) * 1000);
       }
 
       withdrawValue = lastEvent.value;
     }
-
     if (mySortedHistory.length) {
 
       const myLastEvent = mySortedHistory[0];
 
+      isMakeBid = !!mySortedHistory.find((item) => item.eventName === HISTORY_BID_PLACED_EVENT);
+
       if (myLastEvent.eventName === HISTORY_BID_PLACED_EVENT) {
-
-        isMakeBid = true;
-
         withdrawValue = myLastEvent.value;
-
       }
+
     }
 
   }
@@ -134,7 +142,7 @@ const ImportantProductInformation = ({
       <div className={styles.footerBoxRight}>
         <Timer className={styles.timer} expirationDate={expirationDate} />
         <p className={styles.expirationDateText}>{expirationDateText}</p>
-        {isMakeBid ? (
+        {isMakeBid && priceEth > 0 ? (
           <Button onClick={() => handleClickRaiseBid()} className={styles.button} background="black">
             <span className={styles.buttonText}>{buttonTextRaise}</span>
             {styleTypeBlock === 'largeTransparent' && (

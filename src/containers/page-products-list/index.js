@@ -21,6 +21,7 @@ const PageProductsList = () => {
   const globalStats = useSelector(getGlobalStats).toJS();
   const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
   const chainId = useSelector(getChainId);
+  const currentAuctions = auctions.toJS();
 
   useSubscription({
     request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
@@ -42,12 +43,17 @@ const PageProductsList = () => {
     next: (data) => dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions)),
   }, [chainId]);
 
+  useSubscription({
+    request: wsApi.onAuctionsHistoryByIds(currentAuctions.map((auction) => auction.id)),
+    next: (data) => dispatch(auctionPageActions.udateHistory(data.digitalaxGarmentAuctionHistories)),
+  }, [chainId, JSON.stringify(currentAuctions.map((auction) => auction.id))]);
+
   useEffect(() => () => {
     dispatch(auctionPageActions.reset());
   }, []);
 
   const nowTimestamp = Date.now();
-  const currentAuctions = auctions.toJS(); // TODO:: rm .toJS
+
 
   const filteredAuctionsTimes = currentAuctions
     .filter((item) => (item.endTime * 1000 - nowTimestamp) > 0)

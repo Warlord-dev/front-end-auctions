@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import BigNumber from 'bignumber.js';
@@ -16,6 +16,7 @@ const ModalPlaceBid = ({
   className, title, text, textForSelect, buttonText,
 }) => {
   const dispatch = useDispatch();
+  const requests = useRef([]);
 
   const { id, priceEth } = useSelector(getModalParams);
   const minBidIncrement = useSelector(getMinBidIncrement);
@@ -39,12 +40,21 @@ const ModalPlaceBid = ({
     }
     setShowError(null);
     setIsDisabled(true);
-    dispatch(bidActions.bid(id, inputPriceEth))
-      .then(() => handleClose())
-      .catch((e) => setShowError(e.message))
-      .finally(() => setIsDisabled(false));
-
+    dispatch(bidActions.bid(id, inputPriceEth)).then((request) => {
+      requests.current.push(request);
+      request.promise
+        .then(() => handleClose())
+        .catch((e) => {
+          setShowError(e.message);
+          setIsDisabled(false);
+        });
+    });
   };
+
+  useEffect(() => () => {
+    requests.current.forEach((request) => request.unsubscribe());
+    requests.current = [];
+  }, []);
 
   text[1] = text[1].replace('{minutes}', bidWithdrawalLockTime / 60);
 
