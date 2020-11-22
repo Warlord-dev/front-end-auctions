@@ -10,6 +10,14 @@ COPY . .
 RUN NODE_ENV=production yarn export
 
 FROM node:12-alpine
+RUN apk add --no-cache \
+        python3 \
+        py3-pip \
+    && pip3 install --upgrade pip \
+    && pip3 install \
+        awscli \
+    && rm -rf /var/cache/apk/*
+
 
 ARG NODE_APP_INSTANCE
 ENV NODE_ENV="production"

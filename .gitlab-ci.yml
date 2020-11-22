@@ -79,14 +79,14 @@ stages:
   only:
     - master
 
-# 📦 prod:
-#   extends: .build
-#   environment:
-#     name: prod
-#     url: http://digitalax.com/
-#   only:
-#     - tags
-#     - master
+📦 prod:
+  extends: .build
+  environment:
+    name: prod
+    url: https://marketplace.digitalax.xyz/
+  only:
+    - tags
+    - master
 
 📦 manual.master:
   extends: .build
@@ -153,17 +153,25 @@ stages:
   only:
     - master
 
-# 🚀 prod:
-#   extends: .deploy
-#   environment:
-#     name: prod
-#     url: http://digitalax.com/
-#   tags:
-#     - todo
-#   only:
-#     - tags
-#     - master
-#   when: manual
+🚀 prod:
+  stage: 🚀 deploy
+  environment:
+    name: prod
+    url: https://marketplace.digitalax.xyz/
+  tags:
+    - pp-builder
+  only:
+    - tags
+    - master
+  when: manual
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME
+    - docker run -i --rm -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_REGION
+      $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME /bin/sh -c "
+      aws s3 cp /app/out/ s3://${AWS_BUCKET}/ --recursive --cache-control max-age=31536000,s-maxage=31536000;
+      aws cloudfront  create-invalidation --distribution-id=${AWS_DISTRIBUTION_ID} --paths /
+      "
 
 🚀 develop_ipfs:
   extends: .deploy_ipfs
