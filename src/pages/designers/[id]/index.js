@@ -23,7 +23,7 @@ const Designers = () => {
   const ids = designerGarmentIds.toJS();
 
   useSubscription({
-    request: wsApi.onDesignerByIds([currentDesigner.id]),
+    request: wsApi.onDesignerByIds([currentDesigner.id.toLowerCase()]),
     next: (data) => dispatch(designerPageActions.update(data.digitalaxGarmentDesigners)),
   }, [chainId]);
 

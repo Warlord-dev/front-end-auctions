@@ -9,7 +9,7 @@ const DEFAULT_FIELDS = Map({
   designerGarmentIds: List([]),
   infoByDesignerId: List([
     {
-      id: '0x7Cae538968727B73be60D01bD198a7a9613E6a4c',
+      id: '0x7cae538968727b73be60d01bd198a7a9613e6a4c',
       designerName: 'Christina Lalch',
       designerPhoto: './images/Christina-Lalch.jpeg',
       descriptionDesigner: [
@@ -27,7 +27,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0xcEC711b7fa42683260Ad8402247455c04d98c463',
+      id: '0xcec711b7fa42683260ad8402247455c04d98c463',
       designerName: '3dBehemoth',
       designerPhoto: '',
       descriptionDesigner: [
@@ -45,7 +45,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x321E73Dbf24F31B25C515E52b362185888D111b1',
+      id: '0x321e73dbf24f31b25c515e52b362185888d111b1',
       designerName: 'Edward Harber',
       designerPhoto: './images/Edward-Harber.jpeg',
       descriptionDesigner: [
@@ -63,7 +63,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x64cAA1F61e012594E757c0Ea7e1801AB18ef9285',
+      id: '0x64caa1f61e012594e757c0ea7e1801ab18ef9285',
       designerName: 'HonoreHL',
       designerPhoto: './images/HonoreHL.jpeg',
       descriptionDesigner: ['Hirwa Leon Honore is a 3d artist from Rwanda. He is most experienced with animation, modeling, and shading. His work inspires to simultaneously merge traditional and contemporary culture driven styles, that aim to paint a richly diverse and fantastical picture of digital clothing possibilities and bring about a minimal, yet fashion forward style.'],
@@ -76,7 +76,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0xA53CC97D140Ba317Bd6272A2Af0f8D3eAE4809Bb',
+      id: '0xa53cc97d140ba317bd6272a2af0f8d3eae4809bb',
       designerName: 'Lorena Bellow',
       designerPhoto: './images/Lorena-Bellow.jpeg',
       descriptionDesigner: ['Designer Paragraph: Lorena Bello is a Spanish 3D Fashion and Graphic Designer. Driven-by her passion for design, she turned her life 180º when in 2013 she decided to change her professional path by leaving her corporate career (She also has a Law Degree) to start completely afresh as a Digital Fashion Designer. From this moment she has followed her passion working in fashion in London, Milan and Madrid.'],
@@ -94,7 +94,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x430e85c85f2324F4d3018f7c5c1d7bC12F6FA5e8 ',
+      id: '0x430e85c85f2324f4d3018f7c5c1d7bc12f6fa5e8',
       designerName: 'Mar Guixa Studio',
       designerPhoto: './images/Mar-Guixa-Studio.jpeg',
       descriptionDesigner: ['Mar Guixa is the founder of Mar Guixa Studio studio— a design studio based in Barcelona. Mar is an emerging virtual fashion designer who loves the interaction of colors and shapes, quality rather than quantity and bringing unique creative concepts behind digitally constructed garments. She believes that the essence of the fashion industry lies in living constantly between reality and art. She is passionate about art, tech and the exploration of creative’s limit'],
@@ -126,7 +126,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0xFF0c60609522fb053E58AC106EBb7D48ff3d0CCB',
+      id: '0xff0c60609522fb053e58ac106ebb7d48ff3d0ccb',
       designerName: 'Msistema',
       designerPhoto: './images/msistema.jpeg',
       descriptionDesigner: [
@@ -148,7 +148,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x2456862a0B57814371287De31cC617CA22e096A8',
+      id: '0x2456862a0b57814371287de31cc617ca22e096a8',
       designerName: 'Nina Doll',
       designerPhoto: './images/Nina-Doll.jpeg',
       descriptionDesigner: [
@@ -188,7 +188,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x2937f59BD9740F5cFD4d74e545f355BBd2FE0E90 ',
+      id: '0x2937f59bd9740f5cfd4d74e545f355bbd2fe0e90',
       designerName: 'Stanislav Mclygin',
       designerPhoto: './images/Stanislav Mclygin.jpeg',
       descriptionDesigner: [
@@ -206,7 +206,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x3C7558B416673aA01350FbFE1b63Db477432C4cB',
+      id: '0x3c7558b416673aa01350fbfe1b63db477432c4cb',
       designerName: 'Vitaly Kovalev',
       designerPhoto: './images/Vitaly-Kovalev.jpeg',
       descriptionDesigner: [
@@ -242,7 +242,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x29bD7BD73A6748AcFc7c55F708DE95DEb042E9F3',
+      id: '0x29bd7bd73a6748acfc7c55f708de95deb042e9f3',
       designerName: 'Xander Designer',
       designerPhoto: './images/Xander-Designer.jpeg',
       descriptionDesigner: [
