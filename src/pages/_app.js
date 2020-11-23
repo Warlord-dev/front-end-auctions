@@ -1,12 +1,13 @@
 import 'animate.css';
 import 'react-toastify/dist/ReactToastify.css';
 import React, { useEffect } from 'react';
+import Head from 'next/head';
 import { Provider, useDispatch, useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
-import * as Sentry from '@sentry/browser';
 import withRedux from 'next-redux-wrapper';
 import { deserialize, serialize } from 'json-immutable/lib';
 import PropTypes from 'prop-types';
+import * as Sentry from '@sentry/browser';
 import Modals from '@containers/modals/index';
 import Footer from '@components/layouts/footer';
 import HeaderTopLine from '@components/layouts/header-top-line';
@@ -66,6 +67,9 @@ const MyApp = ({
   }
   return (
     <Provider store={store}>
+      <Head>
+        <title>Digitalax - The Digital Fashion Engine</title>
+      </Head>
       <InitWrapper>
         <HeaderTopLine />
         <Modals />

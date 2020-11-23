@@ -25,7 +25,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Digitalax - The Digital Fashion Engine</title>
           <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
           {this.getPreloadFontsLinks()}
           { /* ipfs next.js fix */ }
