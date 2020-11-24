@@ -28,6 +28,9 @@ class WSService {
 
   setUrl(url) {
     this.url = url;
+    if (this.client) {
+      this.client.close(true);
+    }
     this.createClient();
   }
 
