@@ -13,8 +13,9 @@ import { getMinBidIncrement, getBidWithdrawalLockTime } from '@selectors/global.
 import styles from './styles.module.scss';
 
 const ModalPlaceBid = ({
-  className, title, text, textForSelect, buttonText,
+  className, title, textForSelect, buttonText,
 }) => {
+
   const dispatch = useDispatch();
   const requests = useRef([]);
 
@@ -56,7 +57,11 @@ const ModalPlaceBid = ({
     requests.current = [];
   }, []);
 
-  text[1] = text[1].replace('{minutes}', bidWithdrawalLockTime / 60);
+  const text = [
+    `Your ETH will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. 
+      If another bidder outbids you, your ETH will be immediatley transferred back into your wallet.`,
+    `After placing a bid, you will be unable to withdraw for ${bidWithdrawalLockTime / 60} minutes.`,
+  ];
 
   return (
     <>
@@ -92,7 +97,6 @@ const ModalPlaceBid = ({
 ModalPlaceBid.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
-  text: PropTypes.array,
   textForSelect: PropTypes.string,
   buttonText: PropTypes.string,
 };
@@ -100,8 +104,6 @@ ModalPlaceBid.propTypes = {
 ModalPlaceBid.defaultProps = {
   className: '',
   title: 'Place a Bid',
-  // eslint-disable-next-line max-len
-  text: ['Your ETH will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. If another bidder outbids you, your ETH will be immediatley transferred back into your wallet.', 'After placing a bid, you will be unable to withdraw for {minutes} minutes.'],
   textForSelect: 'Minimum Bid:',
   buttonText: 'PLACE A BID',
 };
