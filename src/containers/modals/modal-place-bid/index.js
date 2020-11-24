@@ -57,10 +57,20 @@ const ModalPlaceBid = ({
     requests.current = [];
   }, []);
 
+
+  const hours = Math.trunc(bidWithdrawalLockTime / 60 / 60);
+  const minutes = hours ? bidWithdrawalLockTime % 60 : Math.trunc(bidWithdrawalLockTime / 60);
+
+  const hoursTextPrefix = hours === 1 ? 'hour' : 'hours';
+  const minutesTextPrefix = minutes === 1 ? 'minute' : 'minutes';
+
+  const hoursText = hours ? `${hours} ${hoursTextPrefix}` : '';
+  const minutesText = minutes ? `${minutes} ${minutesTextPrefix}` : '';
+
   const text = [
     `Your ETH will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. 
       If another bidder outbids you, your ETH will be immediatley transferred back into your wallet.`,
-    `After placing a bid, you will be unable to withdraw for ${bidWithdrawalLockTime / 60} minutes.`,
+    `After placing a bid, you will be unable to withdraw for ${hoursText} ${minutesText}`,
   ];
 
   return (
