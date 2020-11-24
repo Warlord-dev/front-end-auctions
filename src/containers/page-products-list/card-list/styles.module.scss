@@ -73,8 +73,11 @@
 
 .list {
   @include wrapper();
-  display: flex;
-  flex-wrap: wrap;
+
+  display: grid;
+  grid-template-columns: 618px 618px; 
+  row-gap: 68px;
+  column-gap: 84px;
 }
 
 .loader {
