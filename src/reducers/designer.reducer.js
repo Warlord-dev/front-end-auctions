@@ -67,7 +67,7 @@ const DEFAULT_FIELDS = Map({
       designerName: 'HonoreHL',
       designerPhoto: './images/HonoreHL.jpeg',
       descriptionDesigner: ['Hirwa Leon Honore is a 3d artist from Rwanda. He is most experienced with animation, modeling, and shading. His work inspires to simultaneously merge traditional and contemporary culture driven styles, that aim to paint a richly diverse and fantastical picture of digital clothing possibilities and bring about a minimal, yet fashion forward style.'],
-      designerCountryFlagIcon: './images/icons/',
+      designerCountryFlagIcon: './images/icons/rwanda.png',
       designerSocialMedia: List([
         {
           name: 'instagram',
@@ -88,7 +88,7 @@ const DEFAULT_FIELDS = Map({
           href: 'https://www.instagram.com/studiolobe/?hl=en',
         },
         {
-          name: '',
+          name: 'website',
           href: 'https://en.studiolobe.com/',
         },
       ]),
