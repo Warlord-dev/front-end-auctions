@@ -77,7 +77,7 @@ const DEFAULT_FIELDS = Map({
     },
     {
       id: '0xa53cc97d140ba317bd6272a2af0f8d3eae4809bb',
-      designerName: 'Lorena Bellow',
+      designerName: 'Lorena Bello',
       designerPhoto: './images/Lorena-Bellow.jpeg',
       descriptionDesigner: ['Designer Paragraph: Lorena Bello is a Spanish 3D Fashion and Graphic Designer. Driven-by her passion for design, she turned her life 180º when in 2013 she decided to change her professional path by leaving her corporate career (She also has a Law Degree) to start completely afresh as a Digital Fashion Designer. From this moment she has followed her passion working in fashion in London, Milan and Madrid.'],
       designerCountry: 'Spain',
@@ -243,7 +243,7 @@ const DEFAULT_FIELDS = Map({
     },
     {
       id: '0x29bd7bd73a6748acfc7c55f708de95deb042e9f3',
-      designerName: 'Xander Designer',
+      designerName: 'Xander Smith',
       designerPhoto: './images/Xander-Designer.jpeg',
       descriptionDesigner: [
         'Xander is a founding member and the Lead Digital Artist at Aliza Technologies, where they are working to use AI and deep-learning techniques for animation and character design.',

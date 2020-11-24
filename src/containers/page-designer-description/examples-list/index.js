@@ -16,7 +16,7 @@ ExamplesList.propTypes = {
 };
 
 ExamplesList.defaultProps = {
-  examplesListTitle: 'Designers listings',
+  examplesListTitle: "Designer's listings",
 };
 
 export default memo(ExamplesList);
