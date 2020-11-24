@@ -1,5 +1,13 @@
+import { toast } from 'react-toastify';
 import BaseActions from '@actions/base-actions';
 import userActions from '@actions/user.actions';
+import auctionActions from '@actions/auction.actions';
+import auctionPageActions from '@actions/auction.page.actions';
+import designerActions from '@actions/designer.actions';
+import designerPageActions from '@actions/designer.page.actions';
+import garmentActions from '@actions/garment.actions';
+import garmentPageActions from '@actions/garment.page.actions';
+import historyActions from '@actions/history.actions';
 import globalReducer from '@reducers/global.reducer';
 import { isMetamaskInstalled } from '@services/metamask.service';
 import {
@@ -23,7 +31,7 @@ class GlobalActions extends BaseActions {
         const [rateItem] = await api.getEthRate();
         dispatch(this.setValue('exchangeRateETH', rateItem.rate.USD));
       } catch (e) {
-        console.error(e);
+        toast.error(`Set USD rate error: ${JSON.stringify(e)}`);
       }
 
       /**
@@ -59,6 +67,15 @@ class GlobalActions extends BaseActions {
           return;
         }
 
+        dispatch(auctionPageActions.clear());
+        dispatch(auctionActions.clear());
+        dispatch(historyActions.clear());
+        dispatch(garmentActions.clear());
+        dispatch(garmentPageActions.clear());
+        dispatch(designerPageActions.clear());
+        dispatch(designerActions.clear());
+
+        dispatch(this.resetContratParams());
         dispatch(this.changeNetwork(chainId));
 
         if (getEnabledNetworkByChainId(chainId)) {
@@ -79,13 +96,29 @@ class GlobalActions extends BaseActions {
 
   setContractParams() {
     return async (dispatch) => {
-      const { digitalaxAuctionContracts } = await api.getAuctionContracts();
 
-      const [{ minBidIncrement, id, bidWithdrawalLockTime }] = digitalaxAuctionContracts;
+      try {
 
-      dispatch(this.setValue('minBidIncrement', convertToEth(minBidIncrement)));
-      dispatch(this.setValue('auctionContractAddress', id));
-      dispatch(this.setValue('bidWithdrawalLockTime', bidWithdrawalLockTime));
+        const { digitalaxAuctionContracts } = await api.getAuctionContracts();
+
+        const [{ minBidIncrement, id, bidWithdrawalLockTime }] = digitalaxAuctionContracts;
+
+        dispatch(this.setValue('minBidIncrement', convertToEth(minBidIncrement)));
+        dispatch(this.setValue('auctionContractAddress', id));
+        dispatch(this.setValue('bidWithdrawalLockTime', bidWithdrawalLockTime));
+
+      } catch (e) {
+        toast.error(`Set contract params error: ${JSON.stringify(e)}`);
+      }
+
+    };
+  }
+
+  resetContratParams() {
+    return async (dispatch) => {
+      dispatch(this.setValue('minBidIncrement', 0));
+      dispatch(this.setValue('auctionContractAddress', null));
+      dispatch(this.setValue('bidWithdrawalLockTime', 0));
     };
   }
 
