@@ -26,11 +26,11 @@ const dataCenterList = [
   },
   {
     item: 'Project Overview',
-    href: 'https://digitalax.s3.us-east-2.amazonaws.com/DIGITALAXProjectOverview.pdf',
+    href: 'https://digitalax.s3.us-east-2.amazonaws.com/DIGITALAX+Project+Overview+v1.2.pdf',
   },
   {
     item: 'We are Hiring!',
-    href: '/documents/DIGITALAX Overview and Careers.pdf',
+    href: 'https://digitalax.s3.us-east-2.amazonaws.com/Careers+November+v1.pdf',
   },
 ];
 

@@ -16,6 +16,12 @@ export const getAPIUrlByChainId = (chainId) => {
   return config.API_URLS[network.alias];
 
 };
+
+export const getExplorerUrlByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+  return config.EXPLORER_URLS[network.alias];
+};
+
 export const getDefaultNetworkChainId = () => {
   const network = AVAILABLE_NETWORKS.find((net) => net.alias === config.DEFAULT_NETWORK);
 

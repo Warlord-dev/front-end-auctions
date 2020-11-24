@@ -11,6 +11,8 @@ const SmallPhotoWithText = ({
   photo,
   address,
   className,
+  addressLink,
+  addressText,
   children,
 }) => (
   <div className={cn(styles.designerPhotoWrapper, className)}>
@@ -21,6 +23,17 @@ const SmallPhotoWithText = ({
       </Link>
     )}
     {address && <p className={cn(styles.hashAddress, 'smallPhotoWithText__hashAddress')} title={address}>{address}</p>}
+    {addressLink && (
+      <a
+        className={styles.hashAddress}
+        href={addressLink}
+        target="_blank"
+        rel="noreferrer"
+        title={addressText}
+      >
+        {addressText}
+      </a>
+    )}
     {children}
   </div>
 );
@@ -31,6 +44,8 @@ SmallPhotoWithText.propTypes = {
   name: PropTypes.string,
   id: PropTypes.string,
   address: PropTypes.string,
+  addressLink: PropTypes.string,
+  addressText: PropTypes.string,
   children: PropTypes.any,
 };
 
@@ -40,6 +55,8 @@ SmallPhotoWithText.defaultProps = {
   name: '',
   id: '',
   address: '',
+  addressLink: '',
+  addressText: '',
   children: null,
 };
 

@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import moment from 'moment';
 import { useSelector } from 'react-redux';
-import { getExchangeRateETH } from '@selectors/global.selectors';
+import { getExchangeRateETH, getChainId } from '@selectors/global.selectors';
+import { getExplorerUrlByChainId } from '@services/network.service';
 import SmallPhotoWithText from '../../small-photo-with-text';
 import styles from './styles.module.scss';
 
@@ -12,6 +13,11 @@ const TradeHistoryLine = ({
   className, priceEth, date, sendersPhoto, sendersAddress, recipientAddress, recipientPhoto, eventName,
 }) => {
   const exchangeRateETH = useSelector(getExchangeRateETH);
+  const chainId = useSelector(getChainId);
+
+  const senderLink = `${getExplorerUrlByChainId(chainId)}address/${sendersAddress}`;
+  const txLink = `${getExplorerUrlByChainId(chainId)}tx/${recipientAddress}`;
+
   const getPriceUsd = (valueEth) => {
     const priceUsd = valueEth * exchangeRateETH;
     return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
@@ -26,8 +32,16 @@ const TradeHistoryLine = ({
         <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         - {getDefaultText(eventName)}
       </div>
-      <SmallPhotoWithText address={sendersAddress} photo={sendersPhoto} />
-      <SmallPhotoWithText address={recipientAddress} photo={recipientPhoto} />
+      <SmallPhotoWithText
+        addressLink={senderLink}
+        addressText={sendersAddress}
+        photo={sendersPhoto}
+      />
+      <SmallPhotoWithText
+        addressLink={txLink}
+        addressText={recipientAddress}
+        photo={recipientPhoto}
+      />
       <span>{moment(date).fromNow()}</span>
     </div>
   );

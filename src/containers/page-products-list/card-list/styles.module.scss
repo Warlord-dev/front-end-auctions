@@ -73,12 +73,11 @@
 
 .list {
   @include wrapper();
-
   display: grid;
   grid-template-columns: 618px 618px; 
   row-gap: 68px;
   column-gap: 84px;
-  margin-bottom: 68px;
+  margin-bottom: 100px;
 }
 
 .loader {

@@ -2,7 +2,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Twitter, Medium, Telegram, Instagram, Github,
+  Twitter, Medium, Telegram, Instagram, Github, Discord,
 } from '@constants/icons-constants';
 import styles from './styles.module.scss';
 
@@ -26,6 +26,10 @@ const SOCIAL_MEDIA = [
   {
     item: <Github />,
     href: 'https://github.com/DIGITALAX',
+  },
+  {
+    item: <Discord />,
+    href: 'https://discord.com/invite/DKbSqRGtKv',
   },
 ];
 
