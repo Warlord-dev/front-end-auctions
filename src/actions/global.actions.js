@@ -28,8 +28,8 @@ class GlobalActions extends BaseActions {
        * Get eth/usd rate
        */
       try {
-        const [rateItem] = await api.getEthRate();
-        dispatch(this.setValue('exchangeRateETH', rateItem.rate.USD));
+        const rateItem = await api.getEthRate();
+        dispatch(this.setValue('exchangeRateETH', rateItem.ethereum.usd));
       } catch (e) {
         toast.error(`Set USD rate error: ${JSON.stringify(e)}`);
       }

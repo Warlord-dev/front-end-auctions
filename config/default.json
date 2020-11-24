@@ -20,6 +20,6 @@
     "mainnet": "https://etherscan.io/",
     "rinkeby": "https://rinkeby.etherscan.io/"
   },
-  "RATE_API_KEY": "3bf24c602c139a6a000b9e852bb42b56dac326cafcfbca9e29dbc4a17441c21a",
+  "EXCHANGE_API": "https://api.coingecko.com/api/v3",
   "IMGIX_URL": "digitalax.imgix.net"
 }

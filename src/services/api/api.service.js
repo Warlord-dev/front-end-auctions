@@ -61,7 +61,7 @@ class APIService {
   }
 
   async getEthRate() {
-    return fetch(`https://api.apikey.io/api/v1/rates/eth?token=${config.RATE_API_KEY}`).then((response) => response.json());
+    return fetch(`${config.EXCHANGE_API}/simple/price?ids=ethereum&vs_currencies=usd`).then((response) => response.json());
   }
 
 }
