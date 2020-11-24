@@ -25,7 +25,7 @@ const MaterialLine = ({ className, item: { tokenUri, id, amount } }) => {
           <p className={styles.address}>{tokenInfo && tokenInfo.description}</p>
         </div>
         <div className={styles.priceWrapper}>
-          <span className={styles.price}>{ETH} E</span>
+          <span className={styles.price}>{ETH} Ξ</span>
         </div>
         <span className={styles.estimate}>
           <span className={styles.estimateInnerGray}>~</span>

@@ -28,7 +28,7 @@ const TradeHistoryLine = ({
   return (
     <div className={cn(styles.item, className)}>
       <div>
-        <span className={styles.priceEth}>{priceEth} E</span>
+        <span className={styles.priceEth}>{priceEth} Ξ</span>
         <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         - {getDefaultText(eventName)}
       </div>

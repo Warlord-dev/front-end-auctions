@@ -62,7 +62,7 @@ const ModalWithdrawBid = ({
               {buttonText}
             </Button>
             <p className={styles.caption}>{yourBidText}</p>
-            <p className={styles.value}>{withdrawValue} ETH</p>
+            <p className={styles.value}>{withdrawValue} Ξ</p>
           </div>
           {showError && <p className={styles.error}>{showError}</p>}
         </Modal>,
@@ -83,7 +83,7 @@ ModalWithdrawBid.propTypes = {
 ModalWithdrawBid.defaultProps = {
   className: '',
   title: 'Withdraw a Bid',
-  text: ['Your ETH will be withdrawn and your bid will no longer be active. You can place a new bid at anytime before the auction ends.'],
+  text: ['Your Ξ will be withdrawn and your bid will no longer be active. You can place a new bid at anytime before the auction ends.'],
   yourBidText: 'Your Bid:',
   buttonText: 'WITHDRAW BID',
 };

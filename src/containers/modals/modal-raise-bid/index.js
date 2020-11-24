@@ -63,11 +63,11 @@ const ModalRaiseBid = ({
           <div className={styles.footer}>
             <p>
               <span className={styles.footerSubtitle}>{yourBidText}</span>
-              <span className={styles.footerSubtitleValue}>{withdrawValue} ETH</span>
+              <span className={styles.footerSubtitleValue}>{withdrawValue} Ξ</span>
             </p>
             <p className={styles.caption}>
               <span>{textForSelect}</span>
-              <span> {minBid.toString(10)} ETH</span>
+              <span> {minBid.toString(10)} Ξ</span>
             </p>
             <div className={styles.selectWrapper}>
               <div>
@@ -104,7 +104,7 @@ ModalRaiseBid.defaultProps = {
   className: '',
   title: 'Raise Bid',
   // eslint-disable-next-line max-len
-  text: ['Your ETH will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. ', 'If you are successful in winning the auction (i.e. the highest bidder at auction end) then your bidded ETH will be transferred to the designer’s account. If you are unsuccessful (i.e. not highest bidder at auction end) then they will be released back to your connected wallet.'],
+  text: ['Your Ξ will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. ', 'If you are successful in winning the auction (i.e. the highest bidder at auction end) then your bidded Ξ will be transferred to the designer’s account. If you are unsuccessful (i.e. not highest bidder at auction end) then they will be released back to your connected wallet.'],
   yourBidText: 'Your Bid:',
   textForSelect: 'Minimum Bid:',
   buttonText: 'RAISE BID',

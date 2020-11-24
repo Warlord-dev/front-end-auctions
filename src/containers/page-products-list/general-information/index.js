@@ -28,7 +28,7 @@ const GeneralInformation = ({
                 <span>{description}</span>
                 <span className={styles.value}>
                   {value.toLocaleString('en')}
-                  {description === HIGHEST_APY ? '%' : ' ETH'}
+                  {description === HIGHEST_APY ? '%' : ' Ξ'}
                 </span>
               </li>
             ))}

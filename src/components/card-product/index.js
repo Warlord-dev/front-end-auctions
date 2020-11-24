@@ -43,6 +43,7 @@ const CardProduct = ({
         id={designerInfo ? kebabCase(designerInfo.designerName) : ''}
         name={designerInfo?.designerName}
         photo={designerInfo?.designerPhoto}
+        className={styles.designerWrapper}
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>

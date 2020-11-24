@@ -121,7 +121,7 @@ const ImportantProductInformation = ({
     >
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{priceEth} E</span>
+          <span className={styles.priceEth}>{priceEth} Ξ</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
         {/* <p className={styles.estimateWrapper}>
@@ -146,14 +146,14 @@ const ImportantProductInformation = ({
           <Button onClick={() => handleClickRaiseBid()} className={styles.button} background="black">
             <span className={styles.buttonText}>{buttonTextRaise}</span>
             {styleTypeBlock === 'largeTransparent' && (
-              <span className={styles.buttonGray}>(need min {minBid.toString(10)}E to compete)</span>
+              <span className={styles.buttonGray}>(need min {minBid.toString(10)}Ξ to compete)</span>
             )}
           </Button>
         ) : (
           <Button onClick={() => handleClickPlaceBid()} className={styles.button} background="black">
             <span className={styles.buttonText}>{buttonTextPlace}</span>
             {styleTypeBlock === 'largeTransparent' && (
-              <span className={styles.buttonGray}>(need min {minBid.toString(10)}E to compete)</span>
+              <span className={styles.buttonGray}>(need min {minBid.toString(10)}Ξ to compete)</span>
             )}
           </Button>
         )}

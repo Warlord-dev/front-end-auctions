@@ -29,7 +29,7 @@ const DEFAULT_FIELDS = Map({
     {
       id: '0xcec711b7fa42683260ad8402247455c04d98c463',
       designerName: '3dBehemoth',
-      designerPhoto: '',
+      designerPhoto: './images/3dBehemoth.jpeg',
       descriptionDesigner: [
         'Diego is a 26 year old cloth artist from Alicante, on the east coast of Spain. He is addicted to video games and fashion, and that made him start in the 3D fashion industry less than a year ago',
         'He has always been the weird boy in his childhood, he’s always thought out of the box and had tastes that most people haven’t. His brand and designs are mostly based on that feeling of being weird, the feeling that he’s the only person who likes what he likes and that he’s ok with that.',
@@ -131,7 +131,7 @@ const DEFAULT_FIELDS = Map({
       designerPhoto: './images/msistema.jpeg',
       descriptionDesigner: [
         'Msistema is an art director and Motion designer, living in Belgium.',
-        'After working in the design Industry for a number of different agencies, he stepped away to start his solo career, focused on specializing in making seamless satisfying cgi loops.',
+        'After working in the design Industry for a number of different agencies, he stepped away to start his solo career, focused on specializing in making seamless satisfying CGI loops.',
         'He is an active member of the crypto-art community and a firm believer in the future of cryptocurrencies.',
       ],
       designerCountry: 'Belgium',

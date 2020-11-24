@@ -69,6 +69,7 @@ const MyApp = ({
     <Provider store={store}>
       <Head>
         <title>Digitalax - The Digital Fashion Engine</title>
+        <link rel="icon" type="image/png" href="/images/icons/favicon-digitalax.ico" />
       </Head>
       <InitWrapper>
         <HeaderTopLine />
