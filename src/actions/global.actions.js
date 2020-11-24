@@ -59,13 +59,13 @@ class GlobalActions extends BaseActions {
           return;
         }
 
+        dispatch(this.changeNetwork(chainId));
+
         if (getEnabledNetworkByChainId(chainId)) {
           await dispatch(this.setContractParams());
         } else {
           console.error('Wrong network. Contracts are not deployed yet');
         }
-
-        dispatch(this.changeNetwork(chainId));
 
       });
 
