@@ -15,7 +15,7 @@ import styles from './styles.module.scss';
 
 
 const ModalRaiseBid = ({
-  className, title, text, textForSelect, buttonText, yourBidText, textError,
+  className, title, text, textForSelect, buttonText, yourBidText,
 }) => {
   const dispatch = useDispatch();
   const requests = useRef([]);
@@ -33,7 +33,7 @@ const ModalRaiseBid = ({
   const handleClick = () => {
 
     if (minBid.toNumber() > Number(inputPriceEth)) {
-      setShowError(`You must bid at least ${minBid.toString(10)}ETH higher than the current highest bid`);
+      setShowError(`You must bid at least ${minBidIncrement} higher than the current highest bid`);
       return;
     }
 
@@ -77,7 +77,7 @@ const ModalRaiseBid = ({
                   className={styles.inputWithArrows}
                   value={inputPriceEth}
                 />
-                {showError && <p className={styles.error}>{textError}</p>}
+                {showError && <p className={styles.error}>{showError}</p>}
               </div>
               <Button isDisabled={isDisabled} background="black" onClick={() => handleClick()} className={styles.button}>
                 {buttonText}
@@ -98,7 +98,6 @@ ModalRaiseBid.propTypes = {
   textForSelect: PropTypes.string,
   yourBidText: PropTypes.string,
   buttonText: PropTypes.string,
-  textError: PropTypes.string,
 };
 
 ModalRaiseBid.defaultProps = {
@@ -109,7 +108,6 @@ ModalRaiseBid.defaultProps = {
   yourBidText: 'Your Bid:',
   textForSelect: 'Minimum Bid:',
   buttonText: 'RAISE BID',
-  textError: 'You must bid at least 0.05ETH higher than the current highest bid',
 };
 
 export default ModalRaiseBid;

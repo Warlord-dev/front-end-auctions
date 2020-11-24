@@ -35,7 +35,7 @@ const ModalPlaceBid = ({
   const handleClick = () => {
 
     if (minBid.toNumber() > Number(inputPriceEth)) {
-      setShowError(`You must bid at least ${minBid.toString(10)}ETH higher than the current highest bid`);
+      setShowError(`You must bid at least ${minBidIncrement} higher than the current highest bid`);
       return;
     }
     setShowError(null);
