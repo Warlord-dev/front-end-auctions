@@ -54,11 +54,11 @@ export const prepareGraphAuctions = (auctions) => {
 export const prepareMainGraphStats = (items) => {
 
   const sortedAuctions = items
-    .filter((item) => item.totalNetBidActivity !== null)
+    .filter((item) => item.totalBidValue !== null)
     .sort((a, b) => moment(a.id).unix() - moment(b.id).unix());
 
   const data = sortedAuctions
-    .map((item) => [moment(item.id).valueOf(), Number(convertToEth(item.totalNetBidActivity))]);
+    .map((item) => [moment(item.id).valueOf(), Number(convertToEth(item.totalBidValue))]);
 
   return data;
 };
