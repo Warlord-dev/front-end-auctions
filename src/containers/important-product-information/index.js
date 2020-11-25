@@ -33,13 +33,20 @@ const ImportantProductInformation = ({
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
   const [isShowHint, setIsShowHint] = useState(false);
-  const [, updateState] = React.useState();
+
+  const [, updateState] = React.useState(0);
   const timer = useRef(null);
+  const timerToSoldButton = useRef(null);
   let canShowWithdrawBtn = false;
+  let showSoldButton = false;
 
   clearTimeout(timer.current);
+  clearTimeout(timerToSoldButton.current);
 
-  useEffect(() => () => clearTimeout(timer.current), []);
+  useEffect(() => () => ((
+    clearTimeout(timer.current),
+    clearTimeout(timerToSoldButton.current)
+  )), []);
 
 
   if (!auction) {
@@ -50,17 +57,23 @@ const ImportantProductInformation = ({
   const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
   const expirationDate = auction.endTime * 1000;
 
+  const timeOut = new Date(expirationDate) - new Date() + 1000;
+
+  if (timeOut > 0) {
+    timerToSoldButton.current = setTimeout(() => updateState(Date.now()), timeOut);
+  } else {
+    showSoldButton = true;
+  }
+
   const sortedHistory = history.filter((item) => account
   && item.bidder && [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT]
     .includes(item.eventName))
     .sort((a, b) => b.timestamp - a.timestamp);
 
-  const mySortedHistory = sortedHistory.filter((item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase());
-
   let isMakeBid = false;
   let withdrawValue = 0;
 
-  if (sortedHistory.length) {
+  if (!showSoldButton && sortedHistory.length) {
 
     const lastEvent = sortedHistory[0];
 
@@ -71,13 +84,15 @@ const ImportantProductInformation = ({
       if (timeDiff > 0 && timeDiff / 1000 >= bidWithdrawalLockTime) {
         canShowWithdrawBtn = true;
       } else if ((bidWithdrawalLockTime - timeDiff / 1000) > 0) {
-        timer.current = setTimeout(() => {
-          updateState();
-        }, (bidWithdrawalLockTime - timeDiff / 1000) * 1000);
+        timer.current = setTimeout(() => updateState(Date.now()), (bidWithdrawalLockTime - timeDiff / 1000) * 1000);
       }
 
       withdrawValue = lastEvent.value;
     }
+
+    const mySortedHistory = sortedHistory
+      .filter((item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase());
+
     if (mySortedHistory.length) {
 
       const myLastEvent = mySortedHistory[0];
@@ -142,27 +157,35 @@ const ImportantProductInformation = ({
       <div className={styles.footerBoxRight}>
         <Timer className={styles.timer} expirationDate={expirationDate} />
         <p className={styles.expirationDateText}>{expirationDateText}</p>
-        {isMakeBid && priceEth > 0 ? (
-          <Button onClick={() => handleClickRaiseBid()} className={styles.button} background="black">
-            <span className={styles.buttonText}>{buttonTextRaise}</span>
-            {styleTypeBlock === 'largeTransparent' && (
-              <span className={styles.buttonGray}>(need min {minBid.toString(10)}Ξ to compete)</span>
+        {!showSoldButton ? (
+          <>
+            {isMakeBid && priceEth > 0 ? (
+              <Button onClick={() => handleClickRaiseBid()} className={styles.button} background="black">
+                <span className={styles.buttonText}>{buttonTextRaise}</span>
+                {styleTypeBlock === 'largeTransparent' && (
+                  <span className={styles.buttonGray}>(need min {minBid.toString(10)}Ξ to compete)</span>
+                )}
+              </Button>
+            ) : (
+              <Button onClick={() => handleClickPlaceBid()} className={styles.button} background="black">
+                <span className={styles.buttonText}>{buttonTextPlace}</span>
+                {styleTypeBlock === 'largeTransparent' && (
+                  <span className={styles.buttonGray}>(need min {minBid.toString(10)}Ξ to compete)</span>
+                )}
+              </Button>
             )}
-          </Button>
+            {canShowWithdrawBtn && (
+              <div className={styles.wrapperButtonWithdraw}>
+                <TextButton onClick={() => handleClickWithdrawBid()}>
+                  {buttonTextWithdraw}
+                </TextButton>
+              </div>
+            )}
+          </>
         ) : (
-          <Button onClick={() => handleClickPlaceBid()} className={styles.button} background="black">
-            <span className={styles.buttonText}>{buttonTextPlace}</span>
-            {styleTypeBlock === 'largeTransparent' && (
-              <span className={styles.buttonGray}>(need min {minBid.toString(10)}Ξ to compete)</span>
-            )}
+          <Button className={styles.buttonSold} background="black">
+            <span>SOLD</span>
           </Button>
-        )}
-        {canShowWithdrawBtn && (
-          <div className={styles.wrapperButtonWithdraw}>
-            <TextButton onClick={() => handleClickWithdrawBid()}>
-              {buttonTextWithdraw}
-            </TextButton>
-          </div>
         )}
       </div>
     </div>

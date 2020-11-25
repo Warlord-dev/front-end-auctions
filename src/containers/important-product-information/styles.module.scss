@@ -100,6 +100,19 @@
     margin-bottom: 12px;
     font-weight: 900;
   }
+
+  .footerBoxRight .buttonSold {
+    min-width: 188px;
+    opacity: 0.7;
+    cursor: initial;
+  
+    &:hover, &:active  {
+      opacity: 0.7;
+      background-color: #111;
+      color: #fff;
+      cursor: initial;
+    }
+  }
 }
 
 .largeTransparent {
@@ -185,6 +198,21 @@
   .footerBoxRight {
     display: flex;
     flex-direction: column;
+
+    .buttonSold {
+      min-width: 265px;
+      opacity: 0.7;
+      cursor: initial;
+      order: 3;
+      margin-top: 30px;
+    
+      &:hover, &:active  {
+        opacity: 0.7;
+        background-color: #111;
+        color: #fff;
+        cursor: initial;
+      }
+    }
   }
   
   .expirationDateText {
