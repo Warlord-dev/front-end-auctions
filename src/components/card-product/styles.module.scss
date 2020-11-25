@@ -78,14 +78,11 @@
 .triangle {
   @include active();
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -8px;
+  bottom: -6px;
   padding: 10px 10px 24px 28px;
   border: 0;
-  background-repeat: no-repeat;
-  background-position: center center;
   background-color: transparent;
-  background-image: url('../../../public/images/icons/triangle.svg');
   width: 20px;
   height: 15px;
 
@@ -97,4 +94,11 @@
     bottom: 144px;
     transform: rotate(180deg);
   }
+}
+
+.triangleImg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

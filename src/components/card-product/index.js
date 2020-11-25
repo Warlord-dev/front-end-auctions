@@ -63,8 +63,9 @@ const CardProduct = ({
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={cn(styles.triangle, { [styles.triangleActive]: isOpen })}
-            alt="triangle"
-          />
+          >
+            <img src="/images/icons/triangle.svg" alt="triangle" className={styles.triangleImg} />
+          </button>
         </div>
         <ImportantProductInformation
           clothesId={garment.id}
