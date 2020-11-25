@@ -108,7 +108,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0xA9185c81960e17a36792FF467e9866c7dd179E71',
       designerName: 'McAfee.Design',
       designerPhoto: './images/McAfee-Design.jpeg',
       descriptionDesigner: [
@@ -166,7 +166,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0xa336D3F47EC35517035a85eE8a0D09094801E2e7',
       designerName: 'Rendooo Lab',
       designerPhoto: './images/Rendooo-Lab.jpeg',
       descriptionDesigner: [
@@ -224,7 +224,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '',
+      id: '0x0E07940858070Ca27c380Ffc260186138046666F',
       designerName: 'Album Corvum',
       designerPhoto: './images/Album-Corvum.jpeg',
       descriptionDesigner: [
