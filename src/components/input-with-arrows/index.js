@@ -15,9 +15,11 @@ const InputWithArrows = ({
   };
 
   const handleClickDown = () => {
-    if (inputValue >= 0.05) {
+    if (inputValue > minBidIncrement) {
       setInputValue(getSubtractFloatNumber(inputValue, minBidIncrement));
       onChange(getSumFloatNumber(inputValue, minBidIncrement));
+    } else {
+      setInputValue(0);
     }
   };
 
