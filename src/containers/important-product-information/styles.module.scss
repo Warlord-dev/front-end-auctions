@@ -7,6 +7,8 @@
   padding: 18px 16px 16px 24px;
   display: flex;
   justify-content: space-between;
+  min-height: 160px;
+  align-items: center;
 
   .leftWrapper {
     width: 260px;
@@ -143,9 +145,16 @@
     color: $darkGray3;
   }
 
+  .estimateApyTextWrapper {
+    min-height: 24px;
+    align-items: center;
+    display: inline-flex;
+  }
+
   .estimateWrapper {
     display: flex;
     position: relative;
+    align-items: flex-end;
   }
 
   .estimateApyText  {

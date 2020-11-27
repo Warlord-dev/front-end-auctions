@@ -40,10 +40,11 @@ const CardProduct = ({
         <a className={styles.clothesName}>{tokenInfo && tokenInfo.name ? tokenInfo.name : `ID:${garment.id}`}</a>
       </Link>
       <SmallPhotoWithText
+        className={styles.designerWrapper}
         id={designerInfo ? kebabCase(designerInfo.designerName) : ''}
         name={designerInfo?.designerName}
         photo={designerInfo?.designerPhoto}
-        className={styles.designerWrapper}
+        photoIsLink
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>

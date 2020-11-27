@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -16,8 +17,8 @@ const ExamplesWorkLine = ({
       <p className={styles.clothesName}>{clothesName}</p>
       <p className={styles.clothesHashAddress} title={address}>{address}</p>
     </div>
-    <p className={styles.boldText}>{convertToEth(topBid)} E</p>
-    <p className={styles.boldText}><span className={styles.boldTextGray}>~: </span>{estimateApy}%</p>
+    <p className={styles.boldText}>{convertToEth(topBid)} Ξ</p>
+    <p className={styles.boldText}><span className={styles.boldTextGray}>~</span>%</p>
     <p className={styles.boldText}>{moment(startTime * 1000).fromNow()}</p>
     {resulted ? <p className={styles.boldText}>Sold</p> : <Timer expirationDate={endTime * 1000} size="small" />}
   </div>

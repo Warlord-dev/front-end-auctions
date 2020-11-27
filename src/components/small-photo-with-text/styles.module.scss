@@ -14,6 +14,16 @@
   object-position: center center;
 }
 
+.photoLinkWrapper {
+  padding-right: 12px;
+  height: 36px;
+}
+
+.designerPhotoLink {
+  cursor: pointer;
+  margin-right: 0;
+}
+
 .designerName {
   font-size: 14px;
   line-height: 17px;
@@ -22,6 +32,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
 }
 
 .designerNameLink {
