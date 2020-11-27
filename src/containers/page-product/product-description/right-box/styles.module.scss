@@ -42,7 +42,7 @@
 .tab {
   @include reset-button();
   @include active();
-  padding: 17px 35px 19px 35px;
+  padding: 17px 25px 19px 25px;
   flex-grow: 1;
   font-weight: 700;
   font-size: 12px;

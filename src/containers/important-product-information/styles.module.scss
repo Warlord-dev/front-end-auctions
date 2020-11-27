@@ -52,7 +52,6 @@
   }
   
   .estimateApyText {
-    @include active();
     color: $darkGray1;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -158,7 +157,6 @@
   }
 
   .estimateApyText  {
-    @include active();
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-size: 14px;

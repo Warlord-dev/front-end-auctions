@@ -145,7 +145,7 @@ const ImportantProductInformation = ({
         <p className={styles.estimateWrapper}>
           <span className={styles.estimateApy}>{estimateApy}%</span>
           <span className={styles.estimateApyTextWrapper}>
-            <a href="" className={styles.estimateApyText}>{estimateApyText}</a>
+            <span className={styles.estimateApyText}>{estimateApyText}</span>
             <span
               onMouseEnter={() => setIsShowHint(true)}
               onMouseLeave={() => setIsShowHint(false)}
