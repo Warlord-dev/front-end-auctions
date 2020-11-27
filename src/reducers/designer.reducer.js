@@ -232,8 +232,8 @@ const DEFAULT_FIELDS = Map({
         'In time, he was led towards 3D and design, becoming fascinated by the ability to be able to give life to drawings and digital form.',
         'Album centers his designs around bold styles, colours, and then contrasting this through unifying patterns and extra magnification of select details',
       ],
-      designerCountry: 'Russia',
-      designerCountryFlagIcon: './images/icons/russia.png',
+      designerCountry: 'Ukraine',
+      designerCountryFlagIcon: './images/icons/ukraine.png',
       designerSocialMedia: List([
         {
           name: 'instagram',
