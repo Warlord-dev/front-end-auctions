@@ -8,75 +8,75 @@ const DEFAULT_FIELDS = Map({
   garmentsReceiveByName: List([
     {
       name: 'Bitcoin For Pizza',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'HODL King',
-      receive: '3 x PNG renders different views, FBX file, MP4 video.',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'Decentralised Dress',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'DAI DAI DAI',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'The Puurse',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'DAO Out',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'When Lambo?',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'The Whale Hunter',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'Crypto Bitch',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'The Shitcoin Jacket',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'DeFi Summer (Male)',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'Design Title: DeFi Summer (Female)',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'Crypto Winter',
-      receive: '3 x renders different views, FBX file, MP4 video.',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'Incognito',
-      receive: '3 x renders different views, FBX file, MP4 video.',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'To the Moon',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'ICO Suit',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'DeFi Shoe',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'Lightning Network',
-      receive: '3 X PNG renders different views, FBX file, GIF',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
   ]),
 });
