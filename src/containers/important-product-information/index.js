@@ -35,7 +35,7 @@ const ImportantProductInformation = ({
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
   const [isShowHint, setIsShowHint] = useState(false);
 
-  const estimateApy = useAPY(clothesId, []);
+  const estimateApy = useAPY(auction ? auction.topBid : 0);
 
   const [, updateState] = React.useState(0);
   const timer = useRef(null);
