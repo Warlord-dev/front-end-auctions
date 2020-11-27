@@ -9,6 +9,7 @@ const SmallPhotoWithText = ({
   id,
   name,
   photo,
+  photoIsLink,
   address,
   className,
   addressLink,
@@ -16,7 +17,14 @@ const SmallPhotoWithText = ({
   children,
 }) => (
   <div className={cn(styles.designerPhotoWrapper, className)}>
-    {photo && <img className={styles.designerPhoto} src={photo} alt="" />}
+    {photo && !photoIsLink && <img className={styles.designerPhoto} src={photo} alt="" />}
+    {photo && photoIsLink && (
+      <Link href={`${DESIGNERS}${id}`}>
+        <a className={styles.photoLinkWrapper}>
+          <img className={cn(styles.designerPhoto, styles.designerPhotoLink)} src={photo} alt="" />
+        </a>
+      </Link>
+    )}
     {id && (
       <Link href={`${DESIGNERS}${id}`}>
         <a className={cn(styles.designerName, styles.designerNameLink)}>{name}</a>
@@ -46,6 +54,7 @@ SmallPhotoWithText.propTypes = {
   address: PropTypes.string,
   addressLink: PropTypes.string,
   addressText: PropTypes.string,
+  photoIsLink: PropTypes.bool,
   children: PropTypes.any,
 };
 
@@ -57,6 +66,7 @@ SmallPhotoWithText.defaultProps = {
   address: '',
   addressLink: '',
   addressText: '',
+  photoIsLink: false,
   children: null,
 };
 

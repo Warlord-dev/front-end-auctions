@@ -139,8 +139,8 @@ const ImportantProductInformation = ({
           <span className={styles.priceEth}>{priceEth} Ξ</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
-        {/* <p className={styles.estimateWrapper}>
-          <span className={styles.estimateApy}>{estimateApy}%</span>
+        <p className={styles.estimateWrapper}>
+          <span className={styles.estimateApy}>~%</span>
           <span className={styles.estimateApyTextWrapper}>
             <a href="" className={styles.estimateApyText}>{estimateApyText}</a>
             <span
@@ -152,7 +152,7 @@ const ImportantProductInformation = ({
             </span>
           </span>
           {isShowHint && <span className={styles.hint}>{hintText}</span>}
-        </p> */}
+        </p>
       </div>
       <div className={styles.footerBoxRight}>
         <Timer className={styles.timer} expirationDate={expirationDate} />

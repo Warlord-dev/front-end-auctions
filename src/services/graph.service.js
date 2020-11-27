@@ -41,7 +41,7 @@ export const getDesignerChartOptions = (history) => {
       title: '',
       labels: {
         formatter(params) {
-          return `${params.value}E`;
+          return `${params.value} Ξ`;
         },
       },
     },
@@ -94,7 +94,7 @@ export const getMainPageChartOptions = (history) => {
       title: '',
       labels: {
         formatter(params) {
-          return `${params.value}E`;
+          return `${params.value} Ξ`;
         },
       },
     },
@@ -150,7 +150,7 @@ export const getAuctionInformationChartOptions = (history) => {
       title: '',
       labels: {
         formatter(params) {
-          return `${params.value}E`;
+          return `${params.value} Ξ`;
         },
       },
       gridLineWidth: 0,
@@ -207,7 +207,7 @@ export const getCardProductChartOptions = (history) => {
       title: '',
       labels: {
         formatter(params) {
-          return `${params.value}E`;
+          return `${params.value} Ξ`;
         },
         style: {
           color: '#111',

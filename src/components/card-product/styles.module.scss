@@ -3,6 +3,8 @@
 
 .item {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .clothesName {
@@ -41,10 +43,11 @@
   background: $lightGray1;
   margin-top: 16px;
   padding-bottom: 12px;
-  min-height: 765px;
+  min-height: 795px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 1;
 }
 
 .imageWrapper {
@@ -91,7 +94,7 @@
   }
 
   &.triangleActive {
-    bottom: 144px;
+    bottom: 130px;
     transform: rotate(180deg);
   }
 }

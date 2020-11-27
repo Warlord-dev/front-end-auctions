@@ -8,7 +8,7 @@ const DEFAULT_FIELDS = Map({
   garmentsReceiveByName: List([
     {
       name: 'Bitcoin For Pizza',
-      receive: 'PNG renders different views, FBX file, GIF, Child NFTs',
+      receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
       name: 'HODL King',
