@@ -8,16 +8,22 @@ export const createArrayForGallery = (tokenInfo) => {
     return clothesPhotos;
   }
 
-  if (tokenInfo.image_front_url) {
+  if (tokenInfo.image) {
+    exceptImage = 'image';
+    clothesPhotos.push({
+      isMain: true,
+      isGif: true,
+      image: tokenInfo.image,
+      preview: tokenInfo.image,
+    });
+  } else if (tokenInfo.image_front_url) {
     exceptImage = 'image_front_url';
     clothesPhotos.push({
       isMain: true,
       image: tokenInfo.image_front_url,
       preview: tokenInfo.image_front_url,
     });
-
   } else {
-
     const firstFoundImageKey = Object.keys(tokenInfo)
       .find((objectKey) => objectKey.search(imagePrefixWithoutAnimation) !== -1 && tokenInfo[objectKey]);
 
@@ -29,7 +35,6 @@ export const createArrayForGallery = (tokenInfo) => {
         preview: tokenInfo[firstFoundImageKey],
       });
     }
-
   }
 
   Object.keys(tokenInfo).forEach((objectKey) => {
@@ -40,15 +45,6 @@ export const createArrayForGallery = (tokenInfo) => {
       });
     }
   });
-
-  if (tokenInfo && tokenInfo.image) {
-    clothesPhotos.push({
-      isMain: !clothesPhotos.length,
-      isGif: true,
-      image: tokenInfo.image,
-      preview: tokenInfo.image,
-    });
-  }
 
   return clothesPhotos;
 };

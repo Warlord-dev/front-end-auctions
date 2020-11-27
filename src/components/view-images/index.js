@@ -10,7 +10,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName }) => {
 
   const DEFAULT_LARGE_IMAGE = clothesPhotos.find(({ isMain }) => isMain)?.image;
   const [largeImage, setLargeImage] = useState(DEFAULT_LARGE_IMAGE);
-  const [isShowGif, setIsShowGif] = useState(false);
+  const [isShowGif, setIsShowGif] = useState(true);
 
   const handleClick = (item, index) => {
     setLargeImage(clothesPhotos[index]?.image);
@@ -25,7 +25,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName }) => {
   return (
     <div className={cn(styles.wrapper, className)}>
       <div className={styles.itemLarge}>
-        {isShowGif ? (
+        {(largeImage && isShowGif) ? (
           <a href={largeImage} target="_blank" rel="noreferrer" className={styles.largeImgWrapper}>
             <img className={styles.itemLargeImg} src={createGifURL(largeImage)} alt={clothesName} />
           </a>
