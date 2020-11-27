@@ -32,6 +32,7 @@ class GlobalActions extends BaseActions {
       /**
        * Get eth/usd rate
        */
+
       try {
         const rateItem = await api.getEthRate();
         dispatch(this.setValue('exchangeRateETH', rateItem.ethereum.usd));
