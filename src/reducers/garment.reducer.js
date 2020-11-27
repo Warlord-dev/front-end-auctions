@@ -51,7 +51,7 @@ const DEFAULT_FIELDS = Map({
       receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
-      name: 'Design Title: DeFi Summer (Female)',
+      name: 'DeFi Summer (Female)',
       receive: '3 X PNG renders different views, FBX file, GIF, Child NFTs',
     },
     {
