@@ -16,9 +16,13 @@
     "rinkeby": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxropsten"
   },
   "DEFAULT_NETWORK": "mainnet",
+  "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/1321075b381b462cae2a4697658c1f08",
   "EXPLORER_URLS": {
     "mainnet": "https://etherscan.io/",
     "rinkeby": "https://rinkeby.etherscan.io/"
+  },
+  "REWARD_CONTRACT_ADDRESSES": {
+    "rinkeby": "0xb0DED58EF09929b0A0F2b10f48D42883df97466E"
   },
   "EXCHANGE_API": "https://api.coingecko.com/api/v3",
   "IMGIX_URL": "digitalax.imgix.net"

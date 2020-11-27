@@ -10,6 +10,7 @@ import {
 } from '@selectors/auction.selectors';
 import wsApi from '@services/api/ws.service';
 import { useSubscription } from '@hooks/subscription.hooks';
+import { useAPY } from '@hooks/apy.hooks';
 import GeneralInformation from './general-information';
 import CardList from './card-list';
 
@@ -66,6 +67,23 @@ const PageProductsList = () => {
 
   const totalWeekValue = sumTopBids(weekResultedAuctions);
 
+  let highestBid = new BigNumber(0);
+
+  currentAuctions.forEach((auction) => {
+    if (!auction.topBid) {
+      return;
+    }
+
+    const bid = new BigNumber(auction.topBid);
+
+    if (bid.gt(highestBid)) {
+      highestBid = bid;
+    }
+
+  });
+
+  const estimateApy = useAPY(highestBid.toString(10));
+
   const list = [
     {
       description: 'Total NFT’s value',
@@ -75,6 +93,11 @@ const PageProductsList = () => {
       description: `Total Vol ${TOTAL_VOLUME_DAYS} days`,
       value: convertToEth(totalWeekValue),
     },
+    {
+      description: 'Highest APY',
+      value: estimateApy,
+    },
+
   ];
 
   return (

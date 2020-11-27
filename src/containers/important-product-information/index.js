@@ -16,6 +16,7 @@ import { getAuctionById } from '@selectors/auction.selectors';
 import { getHistoryByTokenId } from '@selectors/history.selectors';
 import { getAccount } from '@selectors/user.selectors';
 import { getExchangeRateETH, getMinBidIncrement, getBidWithdrawalLockTime } from '@selectors/global.selectors';
+import { useAPY } from '@hooks/apy.hooks';
 
 import styles from './styles.module.scss';
 
@@ -33,6 +34,8 @@ const ImportantProductInformation = ({
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
   const [isShowHint, setIsShowHint] = useState(false);
+
+  const estimateApy = useAPY(auction ? auction.topBid : 0);
 
   const [, updateState] = React.useState(0);
   const timer = useRef(null);
@@ -140,7 +143,7 @@ const ImportantProductInformation = ({
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
         <p className={styles.estimateWrapper}>
-          <span className={styles.estimateApy}>~%</span>
+          <span className={styles.estimateApy}>{estimateApy}%</span>
           <span className={styles.estimateApyTextWrapper}>
             <a href="" className={styles.estimateApyText}>{estimateApyText}</a>
             <span

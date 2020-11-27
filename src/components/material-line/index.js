@@ -5,12 +5,14 @@ import BigNumber from 'bignumber.js';
 import { convertToEth } from '@helpers/price.helpers';
 import { useTokenInfo } from '@hooks/token.info.hooks';
 import { createPreviewURL } from '@services/imgix.service';
+import { useAPY } from '@hooks/apy.hooks';
 import styles from './styles.module.scss';
 
 const MaterialLine = ({ className, item: { tokenUri, id, amount } }) => {
 
   const tokenInfo = useTokenInfo(tokenUri, [tokenUri]);
   const ETH = new BigNumber(convertToEth(amount)).toFixed(4);
+  const estimateApy = useAPY(amount || 0);
 
   return (
     <ul className={className}>
@@ -28,7 +30,8 @@ const MaterialLine = ({ className, item: { tokenUri, id, amount } }) => {
           <span className={styles.price}>{ETH} Ξ</span>
         </div>
         <span className={styles.estimate}>
-          <span className={styles.estimateInnerGray}>~</span>
+          <span className={styles.estimateInnerGray}>~APY:</span>
+          {estimateApy}%
         </span>
       </li>
     </ul>

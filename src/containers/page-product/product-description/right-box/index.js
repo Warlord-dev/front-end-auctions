@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+import BigNumber from 'bignumber.js';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import kebabCase from 'lodash.kebabcase';
 import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getGarmentsById } from '@selectors/garment.selectors';
+import { useAPY } from '@hooks/apy.hooks';
 import AuctionInformation from './auction-information';
 import MaterialList from './material-list';
 import styles from './styles.module.scss';
+
 
 const SHOW_FIRST_TAB = 0;
 const SHOW_SECOND_TAB = 1;
@@ -17,7 +20,12 @@ const RightBox = ({
 }) => {
   const garment = useSelector(getGarmentsById(clothesId));
   const VALUE_NFT = garment && garment.children.length > 0 ? `(${garment.children.length} NFTs)` : '';
-  const VALUE_APY = '~ APY';
+
+  const amount = garment ? garment.children
+    .reduce((acc, item) => (item.amount ? acc.plus(item.amount) : acc), new BigNumber(0)).toString(10) : 0;
+  const estimateApy = useAPY(amount);
+
+  const VALUE_APY = `~ ${estimateApy} APY`;
 
   const TABS = ['Auction Information', `Material Composition ${VALUE_NFT} ${VALUE_APY}`];
   const [activeItem, setActiveItem] = useState(SHOW_FIRST_TAB);

@@ -1,4 +1,5 @@
 import { toast } from 'react-toastify';
+import moment from 'moment';
 import BaseActions from '@actions/base-actions';
 import userActions from '@actions/user.actions';
 import auctionActions from '@actions/auction.actions';
@@ -11,13 +12,17 @@ import historyActions from '@actions/history.actions';
 import globalReducer from '@reducers/global.reducer';
 import { isMetamaskInstalled } from '@services/metamask.service';
 import {
+  getRewardContractAddressByChainId,
   getDefaultNetworkChainId, getEnabledNetworkByChainId, getAPIUrlByChainId, getWSUrlByChainId,
 } from '@services/network.service';
+import { getRewardContract } from '@services/contract.service';
+
 import api from '@services/api/api.service';
 import ws from '@services/api/ws.service';
 
 import { convertToEth } from '@helpers/price.helpers';
 import { STORAGE_IS_LOGGED_IN } from '@constants/storage.constants';
+
 
 class GlobalActions extends BaseActions {
 
@@ -95,7 +100,27 @@ class GlobalActions extends BaseActions {
   }
 
   setContractParams() {
-    return async (dispatch) => {
+    return async (dispatch, getState) => {
+
+      try {
+
+        const chainId = getState().global.get('chainId');
+        const address = getRewardContractAddressByChainId(chainId);
+        const rewardContract = await getRewardContract(address);
+
+        const [rewards, monaPerEth] = await Promise.all([
+          rewardContract.methods.parentRewards(moment().unix(), moment().add(1, 'days').unix()).call(),
+          rewardContract.methods.getMonaPerEth().call(),
+        ]);
+
+        dispatch(this.setValue('rewards', rewards));
+        dispatch(this.setValue('monaPerEth', monaPerEth));
+
+      } catch (e) {
+        console.error(e);
+        dispatch(this.setValue('rewards', 0));
+        dispatch(this.setValue('monaPerEth', 0));
+      }
 
       try {
 
