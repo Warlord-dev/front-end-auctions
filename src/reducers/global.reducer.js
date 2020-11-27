@@ -10,6 +10,8 @@ const DEFAULT_FIELDS = Map({
   minBidIncrement: 0,
   auctionContractAddress: null,
   bidWithdrawalLockTime: 0,
+  rewards: 0,
+  monaPerEth: 0,
 });
 
 export default createModule({

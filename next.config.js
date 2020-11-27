@@ -2,6 +2,7 @@ const {
   CLIENT_URL, BACKEND_API, STATIC_DOMAIN,
   IS_PROD, ENVIRONMENT, SENTRY_DSN, NETWORKS, EXPLORER_URLS,
   API_URLS, DEFAULT_NETWORK, EXCHANGE_API, IMGIX_URL,
+  REWARD_CONTRACT_ADDRESSES, DEFAULT_WEB3_URL,
 } = require('config');
 const withImages = require('next-images');
 
@@ -19,6 +20,8 @@ module.exports = withImages({
     DEFAULT_NETWORK,
     EXCHANGE_API,
     IMGIX_URL,
+    REWARD_CONTRACT_ADDRESSES,
+    DEFAULT_WEB3_URL,
   },
   trailingSlash: true,
   assetPrefix: './',

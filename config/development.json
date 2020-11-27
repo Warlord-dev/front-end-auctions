@@ -1,7 +1,3 @@
 {
-  "CLIENT_URL": "",
-  "BACKEND_API": "",
-  "STATIC_DOMAIN": "",
-  "SENTRY_DSN": "",
   "ENVIRONMENT": "development"
 }

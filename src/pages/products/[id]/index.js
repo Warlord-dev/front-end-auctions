@@ -31,6 +31,11 @@ const Products = () => {
   }, [chainId, id]);
 
   useSubscription({
+    request: wsApi.onAuctionsChange(),
+    next: (data) => dispatch(auctionActions.setValue('auctions', data.digitalaxGarmentAuctions)),
+  }, [chainId]);
+
+  useSubscription({
     request: wsApi.onAuctionsHistoryByIds([id]),
     next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
   }, [chainId, id]);

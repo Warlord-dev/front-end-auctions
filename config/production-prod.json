@@ -1,7 +1,4 @@
 {
-  "CLIENT_URL": "",
-  "BACKEND_API": "",
-  "STATIC_DOMAIN": "",
   "IS_PROD": true,
   "ENVIRONMENT": "prod"
 }
