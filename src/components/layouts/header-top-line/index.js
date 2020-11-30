@@ -36,7 +36,7 @@ const HeaderTopLine = ({
       <div className={styles.rightBox}>
         {isShowStaking && (
           <a
-            href="https://digitalax.gitbook.io/digitalax/tools-functionality/staking"
+            href="http://staking.digitalax.xyz/"
             className={styles.link}
             target="_blank"
             rel="noreferrer"
