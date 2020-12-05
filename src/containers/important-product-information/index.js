@@ -8,23 +8,38 @@ import Button from '@components/buttons/button';
 import TextButton from '@components/buttons/text-button';
 import Timer from '@components/timer';
 import {
-  openRaiseModal, openWithdrawModal, openPlaceBidModal, openConnectMetamaskModal,
+  openRaiseModal,
+  openWithdrawModal,
+  openPlaceBidModal,
+  openConnectMetamaskModal,
 } from '@actions/modals.actions';
-import { HISTORY_BID_PLACED_EVENT, HISTORY_BID_WITHDRAWN_EVENT } from '@constants/history.constants';
+import {
+  HISTORY_BID_PLACED_EVENT,
+  HISTORY_BID_WITHDRAWN_EVENT,
+} from '@constants/history.constants';
 import { convertToEth } from '@helpers/price.helpers';
 import { getAuctionById } from '@selectors/auction.selectors';
 import { getHistoryByTokenId } from '@selectors/history.selectors';
 import { getAccount } from '@selectors/user.selectors';
-import { getExchangeRateETH, getMinBidIncrement, getBidWithdrawalLockTime } from '@selectors/global.selectors';
+import {
+  getExchangeRateETH,
+  getMinBidIncrement,
+  getBidWithdrawalLockTime,
+} from '@selectors/global.selectors';
 import { useAPY } from '@hooks/apy.hooks';
 
 import styles from './styles.module.scss';
 
 const ImportantProductInformation = ({
-  clothesId, estimateApyText, buttonTextPlace, buttonTextRaise,
-  buttonTextWithdraw, expirationDateText, styleTypeBlock, hintText,
+  clothesId,
+  estimateApyText,
+  buttonTextPlace,
+  buttonTextRaise,
+  buttonTextWithdraw,
+  expirationDateText,
+  styleTypeBlock,
+  hintText,
 }) => {
-
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
 
@@ -46,11 +61,10 @@ const ImportantProductInformation = ({
   clearTimeout(timer.current);
   clearTimeout(timerToSoldButton.current);
 
-  useEffect(() => () => ((
-    clearTimeout(timer.current),
-    clearTimeout(timerToSoldButton.current)
-  )), []);
-
+  useEffect(() => {
+    clearTimeout(timer.current);
+    clearTimeout(timerToSoldButton.current);
+  }, []);
 
   if (!auction) {
     return null;
@@ -63,51 +77,65 @@ const ImportantProductInformation = ({
   const timeOut = new Date(expirationDate) - new Date() + 1000;
 
   if (timeOut > 0) {
-    timerToSoldButton.current = setTimeout(() => updateState(Date.now()), timeOut);
+    timerToSoldButton.current = setTimeout(
+      () => updateState(Date.now()),
+      timeOut,
+    );
   } else {
     showSoldButton = true;
   }
 
-  const sortedHistory = history.filter((item) => account
-  && item.bidder && [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT]
-    .includes(item.eventName))
+  const sortedHistory = history
+    .filter(
+      (item) => account
+        && item.bidder
+        && [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(
+          item.eventName,
+        ),
+    )
     .sort((a, b) => b.timestamp - a.timestamp);
 
   let isMakeBid = false;
   let withdrawValue = 0;
 
   if (!showSoldButton && sortedHistory.length) {
-
     const lastEvent = sortedHistory[0];
 
-    if (lastEvent.bidder.id.toLowerCase() === account.toLowerCase() && lastEvent.eventName === HISTORY_BID_PLACED_EVENT) {
-
+    if (
+      lastEvent.bidder.id.toLowerCase() === account.toLowerCase()
+      && lastEvent.eventName === HISTORY_BID_PLACED_EVENT
+    ) {
       const timeDiff = Date.now() - lastEvent.timestamp * 1000;
 
       if (timeDiff > 0 && timeDiff / 1000 >= bidWithdrawalLockTime) {
         canShowWithdrawBtn = true;
-      } else if ((bidWithdrawalLockTime - timeDiff / 1000) > 0) {
-        timer.current = setTimeout(() => updateState(Date.now()), (bidWithdrawalLockTime - timeDiff / 1000) * 1000);
+      } else if (bidWithdrawalLockTime - timeDiff / 1000 > 0) {
+        timer.current = setTimeout(
+          () => updateState(Date.now()),
+          (bidWithdrawalLockTime - timeDiff / 1000) * 1000,
+        );
       }
 
       withdrawValue = lastEvent.value;
     }
 
-    const mySortedHistory = sortedHistory
-      .filter((item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase());
+    const mySortedHistory = sortedHistory.filter(
+      (item) => account
+        && item.bidder
+        && item.bidder.id.toLowerCase() === account.toLowerCase(),
+    );
 
     if (mySortedHistory.length) {
-
       const myLastEvent = mySortedHistory[0];
 
-      isMakeBid = !!mySortedHistory.find((item) => item.eventName === HISTORY_BID_PLACED_EVENT);
+      isMakeBid = !!mySortedHistory.find(
+        (item) => item.eventName === HISTORY_BID_PLACED_EVENT,
+      );
 
       if (myLastEvent.eventName === HISTORY_BID_PLACED_EVENT) {
         withdrawValue = myLastEvent.value;
       }
-
     }
-
   }
 
   const handleClickPlaceBid = () => {
@@ -119,11 +147,22 @@ const ImportantProductInformation = ({
   };
 
   const handleClickRaiseBid = () => {
-    dispatch(openRaiseModal({ id: clothesId, priceEth, withdrawValue: convertToEth(withdrawValue) }));
+    dispatch(
+      openRaiseModal({
+        id: clothesId,
+        priceEth,
+        withdrawValue: convertToEth(withdrawValue),
+      }),
+    );
   };
 
   const handleClickWithdrawBid = () => {
-    dispatch(openWithdrawModal({ id: clothesId, withdrawValue: convertToEth(withdrawValue) }));
+    dispatch(
+      openWithdrawModal({
+        id: clothesId,
+        withdrawValue: convertToEth(withdrawValue),
+      }),
+    );
   };
 
   const getPriceUsd = (valueEth) => {
@@ -132,10 +171,11 @@ const ImportantProductInformation = ({
   };
 
   return (
-    <div className={cn({
-      [styles.smallWhite]: styleTypeBlock === 'smallWhite',
-      [styles.largeTransparent]: styleTypeBlock === 'largeTransparent',
-    })}
+    <div
+      className={cn({
+        [styles.smallWhite]: styleTypeBlock === 'smallWhite',
+        [styles.largeTransparent]: styleTypeBlock === 'largeTransparent',
+      })}
     >
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
@@ -163,17 +203,29 @@ const ImportantProductInformation = ({
         {!showSoldButton ? (
           <>
             {isMakeBid && priceEth > 0 ? (
-              <Button onClick={() => handleClickRaiseBid()} className={styles.button} background="black">
+              <Button
+                onClick={() => handleClickRaiseBid()}
+                className={styles.button}
+                background="black"
+              >
                 <span className={styles.buttonText}>{buttonTextRaise}</span>
                 {styleTypeBlock === 'largeTransparent' && (
-                  <span className={styles.buttonGray}>(need min {minBid.toString(10)}Ξ to compete)</span>
+                  <span className={styles.buttonGray}>
+                    (need min {minBid.toString(10)}Ξ to compete)
+                  </span>
                 )}
               </Button>
             ) : (
-              <Button onClick={() => handleClickPlaceBid()} className={styles.button} background="black">
+              <Button
+                onClick={() => handleClickPlaceBid()}
+                className={styles.button}
+                background="black"
+              >
                 <span className={styles.buttonText}>{buttonTextPlace}</span>
                 {styleTypeBlock === 'largeTransparent' && (
-                  <span className={styles.buttonGray}>(need min {minBid.toString(10)}Ξ to compete)</span>
+                  <span className={styles.buttonGray}>
+                    (need min {minBid.toString(10)}Ξ to compete)
+                  </span>
                 )}
               </Button>
             )}
@@ -194,7 +246,6 @@ const ImportantProductInformation = ({
     </div>
   );
 };
-
 
 ImportantProductInformation.propTypes = {
   clothesId: PropTypes.string.isRequired,
@@ -217,6 +268,5 @@ ImportantProductInformation.defaultProps = {
   hintText: `APY estimated based on the current total staked value across each of the $MONA 
   reward pools and current highest bid value of the NFT.`,
 };
-
 
 export default ImportantProductInformation;

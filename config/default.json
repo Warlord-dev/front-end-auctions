@@ -22,8 +22,12 @@
     "rinkeby": "https://rinkeby.etherscan.io/"
   },
   "REWARD_CONTRACT_ADDRESSES": {
-    "mainnet": "0x043334b2fEB0D695f5B6E77d8B33eC6507e30c9e",
+    "mainnet": "0xc0DF2B83725296d23C0C409C0759F3955b9fCC3A",
     "rinkeby": "0xb0DED58EF09929b0A0F2b10f48D42883df97466E"
+  },
+  "MONA_TOKEN_ADDRESSES": {
+    "mainnet": "0x275f5Ad03be0Fa221B4C6649B8AeE09a42D9412A",
+    "rinkeby": "0x"
   },
   "EXCHANGE_API": "https://api.coingecko.com/api/v3",
   "IMGIX_URL": "digitalax.imgix.net"
