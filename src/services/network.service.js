@@ -3,10 +3,11 @@ import config from '@utils/config';
 
 export const getEnabledNetworks = () => AVAILABLE_NETWORKS.filter((network) => config.NETWORKS.includes(network.alias));
 
-export const getEnabledNetworkByChainId = (chainId) => getEnabledNetworks().find((network) => Number(network.hex) === Number(chainId));
+export const getEnabledNetworkByChainId = (chainId) => getEnabledNetworks().find(
+  (network) => Number(network.hex) === Number(chainId),
+);
 
 export const getAPIUrlByChainId = (chainId) => {
-
   const network = getEnabledNetworkByChainId(chainId);
 
   if (!network || !config.API_URLS[network.alias]) {
@@ -14,7 +15,6 @@ export const getAPIUrlByChainId = (chainId) => {
   }
 
   return config.API_URLS[network.alias];
-
 };
 
 export const getExplorerUrlByChainId = (chainId) => {
@@ -23,7 +23,9 @@ export const getExplorerUrlByChainId = (chainId) => {
 };
 
 export const getDefaultNetworkChainId = () => {
-  const network = AVAILABLE_NETWORKS.find((net) => net.alias === config.DEFAULT_NETWORK);
+  const network = AVAILABLE_NETWORKS.find(
+    (net) => net.alias === config.DEFAULT_NETWORK,
+  );
 
   if (!network) {
     throw new Error('Invalid DEFAULT_NETWORK: getDefaultNetworkChainId');
@@ -32,9 +34,7 @@ export const getDefaultNetworkChainId = () => {
   return network.hex;
 };
 
-
 export const getWSUrlByChainId = (chainId) => {
-
   const url = getAPIUrlByChainId(chainId);
 
   if (!url) {
@@ -42,12 +42,15 @@ export const getWSUrlByChainId = (chainId) => {
   }
 
   return url.replace('http', 'ws');
-
 };
 export const getRewardContractAddressByChainId = (chainId) => {
-
   const network = getEnabledNetworkByChainId(chainId);
 
   return config.REWARD_CONTRACT_ADDRESSES[network.alias];
+};
 
+export const getMonaContractAddressByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.MONA_TOKEN_ADDRESSES[network.alias];
 };

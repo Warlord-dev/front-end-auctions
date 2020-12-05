@@ -1,7 +1,8 @@
-
 import Web3 from 'web3';
 import { isMetamaskInstalled } from '@services/metamask.service';
 import config from '@utils/config';
+import { providers as EthersProviders } from 'ethers';
+import { create as createUniswapPair } from '@helpers/uniswap.helpers';
 
 export const getContract = async (auctionContractAddress) => {
   const web3 = new Web3(window.ethereum);
@@ -34,19 +35,25 @@ export const getContract = async (auctionContractAddress) => {
     },
   ];
 
-  const contract = await new web3.eth.Contract(jsonInterface, auctionContractAddress);
+  const contract = await new web3.eth.Contract(
+    jsonInterface,
+    auctionContractAddress,
+  );
 
   return contract;
 };
 
 export const getRewardContract = async (contractAddress) => {
-
-  const web3 = new Web3(isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL);
+  const web3 = new Web3(
+    isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL,
+  );
 
   const jsonInterface = [
     {
-      inputs: [{ internalType: 'uint256', name: '_from', type: 'uint256' },
-        { internalType: 'uint256', name: '_to', type: 'uint256' }],
+      inputs: [
+        { internalType: 'uint256', name: '_from', type: 'uint256' },
+        { internalType: 'uint256', name: '_to', type: 'uint256' },
+      ],
       name: 'parentRewards',
       outputs: [{ internalType: 'uint256', name: 'rewards', type: 'uint256' }],
       stateMutability: 'view',
@@ -64,4 +71,19 @@ export const getRewardContract = async (contractAddress) => {
   const contract = await new web3.eth.Contract(jsonInterface, contractAddress);
 
   return contract;
+};
+
+export const getTokenPrice = async (contractAddress) => {
+  if (!contractAddress) return 0;
+
+  const provider = new EthersProviders.InfuraProvider(
+    'homestead',
+    '1321075b381b462cae2a4697658c1f08',
+  );
+
+  const monaToken = createUniswapPair(contractAddress, provider);
+
+  const price = await monaToken.getPrice();
+
+  return price;
 };
