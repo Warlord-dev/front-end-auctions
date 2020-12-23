@@ -10,12 +10,10 @@ class GarmentPageActions extends BaseActions {
 
   fetchGarmentByIds(ids) {
     return async (dispatch) => {
-
       const { digitalaxGarments } = await api.getGarmentsByIds(ids);
 
       dispatch(garmentActions.mapData(digitalaxGarments));
     };
-
   }
 
   reset() {

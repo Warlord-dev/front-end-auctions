@@ -1,4 +1,5 @@
-import React, { memo, useEffect } from 'react';
+import React, { memo, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import BigNumber from 'bignumber.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { convertToEth } from '@helpers/price.helpers';
@@ -20,7 +21,7 @@ import { useAPY } from '@hooks/apy.hooks';
 import GeneralInformation from './general-information';
 import CardList from './card-list';
 
-const PageProductsList = () => {
+const PageProductsList = ({ sold }) => {
   const dispatch = useDispatch();
   const auctions = useSelector(getAllAuctions);
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
@@ -28,6 +29,7 @@ const PageProductsList = () => {
   const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
   const chainId = useSelector(getChainId);
   const currentAuctions = auctions.toJS();
+  const [showGraphIds, setShowGraphIds] = useState([]);
 
   useSubscription(
     {
@@ -48,18 +50,20 @@ const PageProductsList = () => {
   useSubscription(
     {
       request: wsApi.onNFTGlobalStats(),
-      next: (data) => dispatch(
-        auctionPageActions.updateGlobalStats(
-          data.digitalaxGarmentNFTGlobalStats[0],
-        ),
-      ),
+      next: (data) => {
+        dispatch(
+          auctionPageActions.updateGlobalStats(
+            data.digitalaxGarmentNFTGlobalStats[0],
+          ),
+        );
+      },
     },
     [chainId],
   );
 
   useSubscription(
     {
-      request: wsApi.onAuctionsChange(),
+      request: wsApi.onAllAuctionsChange(),
       next: (data) => dispatch(
         auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions),
       ),
@@ -69,19 +73,21 @@ const PageProductsList = () => {
 
   useSubscription(
     {
-      request: wsApi.onAuctionsHistoryByIds(
-        currentAuctions.map((auction) => auction.id),
-      ),
+      request: wsApi.onAuctionsHistoryByIds(showGraphIds),
       next: (data) => dispatch(
-        auctionPageActions.udateHistory(data.digitalaxGarmentAuctionHistories),
+        auctionPageActions.updateHistory(
+          data.digitalaxGarmentAuctionHistories,
+        ),
       ),
     },
-    [chainId, JSON.stringify(currentAuctions.map((auction) => auction.id))],
+    [chainId, showGraphIds],
   );
 
   useEffect(
     () => () => {
-      dispatch(auctionPageActions.reset());
+      if (!auctions) {
+        dispatch(auctionPageActions.reset());
+      }
     },
     [],
   );
@@ -146,9 +152,22 @@ const PageProductsList = () => {
         timestamp={minTimestampAutcionTime}
         history={monthResultedAuctions}
       />
-      <CardList auctions={auctions} />
+      <CardList
+        auctions={auctions.filter((val) => sold === val.toJS().resulted)}
+        sold={sold}
+        showGraphIds={showGraphIds}
+        setShowGraphIds={setShowGraphIds}
+      />
     </>
   );
+};
+
+PageProductsList.propTypes = {
+  sold: PropTypes.bool.isRequired,
+};
+
+CardList.defaultProps = {
+  sold: false,
 };
 
 export default memo(PageProductsList);

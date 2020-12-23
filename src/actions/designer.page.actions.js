@@ -9,20 +9,20 @@ class DesignerPageActions extends BaseActions {
 
   update(designers) {
     return async (dispatch) => {
-
       if (!designers.length) {
         return;
       }
 
       const [designer] = designers;
 
-      const { digitalaxGarments } = await api.getGarmentsByDesignerIds([designer.id]);
+      const { digitalaxGarments } = await api.getGarmentsByDesignerIds([
+        designer.id,
+      ]);
 
       const designerGarmentIds = digitalaxGarments.map((garmet) => garmet.id);
       dispatch(this.setValue('designerGarmentIds', designerGarmentIds));
       dispatch(designerActions.mapData(designers));
       dispatch(garmentActions.mapData(digitalaxGarments));
-
     };
   }
 

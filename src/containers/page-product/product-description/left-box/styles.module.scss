@@ -1,6 +1,58 @@
+@import "../../../../assets/scss/helpers/variables.scss";
+@import "../../../../assets/scss/helpers/helpers.scss";
+
 .leftBox {
   width: 588px;
   margin-right: 85px;
   flex-shrink: 0;
   z-index: 2;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+}
+
+.tabContainer {
+  flex-grow: 1;
+  position: relative;
+
+  .tab {
+    @include reset-button();
+    @include active();
+    padding: 17px 25px 19px 25px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: $darkGray3;
+    border: 1px solid #e6e6e6;
+    min-height: 54px;
+    text-transform: uppercase;
+
+    &.active {
+      background-color: $lightGray1;
+      border: 0;
+      border: 1px solid transparent;
+      border-top: 2px solid $black;
+      color: $black;
+    }
+  }
+
+  .countTag {
+    background-image: url("../../../../../public/images/tag.svg");
+    position: absolute;
+    z-index: 4;
+    text-align: left;
+    padding: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 9px;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 85px;
+    right: 0;
+    top: 1px;
+  }
 }
