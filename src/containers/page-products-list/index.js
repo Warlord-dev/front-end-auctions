@@ -21,7 +21,7 @@ import { useAPY } from '@hooks/apy.hooks';
 import GeneralInformation from './general-information';
 import CardList from './card-list';
 
-const PageProductsList = ({ sold }) => {
+const PageProductsList = ({ sold, auctionId }) => {
   const dispatch = useDispatch();
   const auctions = useSelector(getAllAuctions);
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
@@ -153,7 +153,11 @@ const PageProductsList = ({ sold }) => {
         history={monthResultedAuctions}
       />
       <CardList
-        auctions={auctions.filter((val) => sold === val.toJS().resulted)}
+        auctions={auctions
+          .filter((val) => sold === val.toJS().resulted)
+          .filter((val) => (parseInt(val.toJS().id, 10) < 20
+            ? auctionId === '1'
+            : auctionId !== '1'))}
         sold={sold}
         showGraphIds={showGraphIds}
         setShowGraphIds={setShowGraphIds}
@@ -164,6 +168,7 @@ const PageProductsList = ({ sold }) => {
 
 PageProductsList.propTypes = {
   sold: PropTypes.bool.isRequired,
+  auctionId: PropTypes.string.isRequired,
 };
 
 CardList.defaultProps = {

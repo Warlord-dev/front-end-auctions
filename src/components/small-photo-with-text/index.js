@@ -17,20 +17,40 @@ const SmallPhotoWithText = ({
   children,
 }) => (
   <div className={cn(styles.designerPhotoWrapper, className)}>
-    {photo && !photoIsLink && <img className={styles.designerPhoto} src={photo} alt="" />}
+    {photo && !photoIsLink && (
+      <>
+        <img className={styles.designerPhoto} src={photo} alt="" />
+        <p className={cn(styles.designerName, styles.designerNameLink)}>
+          {name}
+        </p>
+      </>
+    )}
     {photo && photoIsLink && (
       <Link href={`${DESIGNERS}${id}`}>
         <a className={styles.photoLinkWrapper}>
-          <img className={cn(styles.designerPhoto, styles.designerPhotoLink)} src={photo} alt="" />
+          <img
+            className={cn(styles.designerPhoto, styles.designerPhotoLink)}
+            src={photo}
+            alt=""
+          />
         </a>
       </Link>
     )}
     {id && (
       <Link href={`${DESIGNERS}${id}`}>
-        <a className={cn(styles.designerName, styles.designerNameLink)}>{name}</a>
+        <a className={cn(styles.designerName, styles.designerNameLink)}>
+          {name}
+        </a>
       </Link>
     )}
-    {address && <p className={cn(styles.hashAddress, 'smallPhotoWithText__hashAddress')} title={address}>{address}</p>}
+    {address && (
+      <p
+        className={cn(styles.hashAddress, 'smallPhotoWithText__hashAddress')}
+        title={address}
+      >
+        {address}
+      </p>
+    )}
     {addressLink && (
       <a
         className={styles.hashAddress}

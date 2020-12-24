@@ -72,6 +72,14 @@ const HeaderTopLine = ({
             {linkText}
           </a>
         )}
+        <a
+          href="https://emmajane857686.typeform.com/to/WijilaK8"
+          className={styles.link}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Join Our Global Designer Network
+        </a>
         {account ? (
           <div className={styles.buttonWrapper}>
             <SmallPhotoWithText
