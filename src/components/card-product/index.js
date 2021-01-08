@@ -33,7 +33,7 @@ const CardProduct = ({
   }
 
   const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
-  const designerInfo = useSelector(getDesignerInfoById(garment.id));
+  const designerInfo = useSelector(getDesignerInfoById(garment.designer));
 
   const imageUrl = getImageForCardProduct(tokenInfo);
 
@@ -55,7 +55,8 @@ const CardProduct = ({
         <div className={styles.imageWrapper}>
           <Link href={`${PRODUCTS}${garment.id}`}>
             <a className={styles.clothesPhotoWrapper}>
-              {parseInt(garment.id, 10) >= 20 && parseInt(garment.id, 10) <= 28 && (
+              {parseInt(garment.id, 10) >= 20
+                && parseInt(garment.id, 10) <= 28 && (
                 <video autoPlay muted loop className={styles.clothesPhoto}>
                   <source src={`/video/${garment.id}.mp4`} type="video/mp4" />
                 </video>

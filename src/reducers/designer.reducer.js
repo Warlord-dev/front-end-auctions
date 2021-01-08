@@ -29,7 +29,7 @@ const DEFAULT_FIELDS = Map({
     {
       id: '7',
       designerName: '3dBehemoth',
-      designerPhoto: './images/3dBehemoth.jpeg',
+      designerPhoto: './images/3dBehemoth.png',
       descriptionDesigner: [
         'Diego is a 26 year old cloth artist from Alicante, on the east coast of Spain. He is addicted to video games and fashion, and that made him start in the 3D fashion industry less than a year ago',
         'He has always been the weird boy in his childhood, he’s always thought out of the box and had tastes that most people haven’t. His brand and designs are mostly based on that feeling of being weird, the feeling that he’s the only person who likes what he likes and that he’s ok with that.',
@@ -389,8 +389,8 @@ const DEFAULT_FIELDS = Map({
       designerName: 'Burak Dahan',
       designerPhoto: './images/burak photo.jpeg',
       descriptionDesigner: [
-        'Right after graduating from Chemistry in 2012, Burak took a distinct change and began studying Fashion Design, attending pattern making and garment construction courses.',
-        'He fell in love with this new world of design possibilities and started to build up a strong career in the industry, even becoming the ‘Gold Award Winner’ at the EURASIA REMIX 2016. Burak is currently working as Head of Design & 3D Design at the Asmara International-Turkey Office.',
+        'Right after graduating from Chemistry in 2012, Burak took a distinct change and followed his calling by studying Fashion Design and started to build up a strong career in the industry. His works were recognized by fashion authorities in many design competitions, where he even became the "Gold Award Winner" at the EURASIA REMIX 2016.',
+        'Years later when he was introduced to digital fashion, he fell in love with this new world of design possibilities and expanded his creativity to a new level by escaping from restrictions and norms of the physical world. His works reflect versatility and there is no limit when it comes to his source of inspiration. ',
       ],
       designerCountry: 'Turkey',
       designerCountryFlagIcon: './images/icons/turkey.png',

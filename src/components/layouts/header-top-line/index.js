@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import Link from 'next/link';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getAccount, getAccountPhoto } from '@selectors/user.selectors';
@@ -72,14 +73,9 @@ const HeaderTopLine = ({
             {linkText}
           </a>
         )}
-        <a
-          href="https://emmajane857686.typeform.com/to/WijilaK8"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Join Our Global Designer Network
-        </a>
+        <Link href="/global">
+          <a className={styles.link}>Global Designer Network</a>
+        </Link>
         {account ? (
           <div className={styles.buttonWrapper}>
             <SmallPhotoWithText
