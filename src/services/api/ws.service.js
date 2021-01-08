@@ -4,6 +4,8 @@ import { DEV_WS_NETWORK_URL } from '@constants/global.constants';
 import {
   onDaysChange,
   onAuctionsChange,
+  onPreviousAuctionsChange,
+  onAllAuctionsChange,
   onAuctionsChangeByIds,
   onDesignerByIds,
   onAuctionsHistoryByIds,
@@ -47,8 +49,19 @@ class WSService {
     return this.client.request({ query: onAuctionsChange });
   }
 
+  onPreviousAuctionsChange() {
+    return this.client.request({ query: onPreviousAuctionsChange });
+  }
+
+  onAllAuctionsChange() {
+    return this.client.request({ query: onAllAuctionsChange });
+  }
+
   onAuctionsChangeByIds(ids) {
-    return this.client.request({ query: onAuctionsChangeByIds, variables: { ids } });
+    return this.client.request({
+      query: onAuctionsChangeByIds,
+      variables: { ids },
+    });
   }
 
   onDesignerByIds(ids) {
@@ -56,11 +69,17 @@ class WSService {
   }
 
   onAuctionsHistoryByIds(ids) {
-    return this.client.request({ query: onAuctionsHistoryByIds, variables: { ids } });
+    return this.client.request({
+      query: onAuctionsHistoryByIds,
+      variables: { ids },
+    });
   }
 
   onResultedAuctionsByEndTimeGtAndIds(ids, endTime) {
-    return this.client.request({ query: onResultedAuctionsByEndTimeGtAndIds, variables: { endTime, ids } });
+    return this.client.request({
+      query: onResultedAuctionsByEndTimeGtAndIds,
+      variables: { endTime, ids },
+    });
   }
 
 }

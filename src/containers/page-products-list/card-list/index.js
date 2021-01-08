@@ -2,6 +2,7 @@ import React, { memo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { Dropdown } from 'semantic-ui-react';
 import CardProduct from '@components/card-product';
@@ -11,14 +12,22 @@ import { getAllGarmentsById } from '@selectors/garment.selectors';
 import { getAllHistoryByTokenId } from '@selectors/history.selectors';
 import { getAuctionsIsLoaded } from '@selectors/auction.page.selectors';
 import {
-  sortByLowestBid, sortByHighestBid, sortByHighestVolume, sortByLowestVolume,
+  sortByLowestBid,
+  sortByHighestBid,
+  sortByHighestVolume,
+  sortByLowestVolume,
 } from '@helpers/sort.helpers';
 import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
 
-const CardList = ({ auctions, className }) => {
-
+const CardList = ({
+  auctions,
+  className,
+  sold,
+  showGraphIds,
+  setShowGraphIds,
+}) => {
   const dropdownOptions = [
     { key: 1, text: 'Highest bid', value: 'highest_bid' },
     { key: 2, text: 'Lowest bid', value: 'lowest_bid' },
@@ -28,8 +37,9 @@ const CardList = ({ auctions, className }) => {
   const historyByTokenId = useSelector(getAllHistoryByTokenId);
   const garmentsById = useSelector(getAllGarmentsById);
   const auctionsIsLoaded = useSelector(getAuctionsIsLoaded);
-  const [dropdownActiveItem, setDropdownActiveItem] = useState(localStorage.getItem(STORAGE_SORT_BY));
-
+  const [dropdownActiveItem, setDropdownActiveItem] = useState(
+    localStorage.getItem(STORAGE_SORT_BY),
+  );
 
   switch (dropdownActiveItem) {
     case 'highest_bid':
@@ -68,36 +78,56 @@ const CardList = ({ auctions, className }) => {
       </div>
       {auctionsIsLoaded ? (
         <>
-          {auctions.toJS().length
-            ? (
-              <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
-                {auctions.map((auction) => {
-                  const garment = garmentsById.get(auction.get('id'));
-                  return (
-                    <CardProduct
-                      key={auction.get('id')}
-                      history={historyByTokenId.get(auction.get('id'))}
-                      garment={garment}
-                    />
-                  );
-                })}
-              </ul>
-            )
-            : <p className={styles.empty}>Data is empty</p>}
+          {auctions.toJS().length ? (
+            <ul
+              className={cn(
+                styles.list,
+                className,
+                'animate__animated animate__fadeIn',
+              )}
+            >
+              {auctions.map((auction) => {
+                const garment = garmentsById.get(auction.get('id'));
+                return (
+                  <CardProduct
+                    key={auction.get('id')}
+                    history={historyByTokenId.get(auction.get('id'))}
+                    garment={garment}
+                    showGraphIds={showGraphIds}
+                    setShowGraphIds={setShowGraphIds}
+                  />
+                );
+              })}
+            </ul>
+          ) : sold ? (
+            <Loader size="large" className={styles.loader} />
+          ) : (
+            <Link href="/sold">
+              <a className={styles.empty}>Check Previous Sold Items</a>
+            </Link>
+          )}
         </>
-      ) : <Loader size="large" className={styles.loader} /> }
+      ) : (
+        <Loader size="large" className={styles.loader} />
+      )}
     </>
   );
 };
 
 CardList.propTypes = {
-  auctions: ImmutablePropTypes.listOf(ImmutablePropTypes.contains({})).isRequired,
+  auctions: ImmutablePropTypes.listOf(ImmutablePropTypes.contains({}))
+    .isRequired,
   className: PropTypes.string,
+  showGraphIds: PropTypes.array,
+  setShowGraphIds: PropTypes.func,
+  sold: PropTypes.bool,
 };
 
 CardList.defaultProps = {
   className: '',
+  showGraphIds: [],
+  sold: false,
+  setShowGraphIds: () => {},
 };
-
 
 export default memo(CardList);

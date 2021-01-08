@@ -1,11 +1,6 @@
 {
   "name": "digitalax-front",
   "version": "0.1.1",
-  "repository": "git@gitlab.pixelplex.by:732-digitalax/frontend.git",
-  "author": {
-    "name": "PixelPlex Inc.",
-    "email": "dev@pixelplex.io"
-  },
   "scripts": {
     "dev": "next",
     "build": "next build",

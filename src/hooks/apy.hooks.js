@@ -43,11 +43,13 @@ export const useAPY = (topBid) => {
   const monaPerEthInUSDBN = monaPerEthBN.times(new BigNumber(exchangeRateETH));
   const reward = individualReward.times(monaPerEthInUSDBN);
 
-  const bidUSDBN = bidETHBN.times(new BigNumber(exchangeRateETH)); // step 4
+  const bidUSDBN = bidETHBN.times(new BigNumber(exchangeRateETH)); // step 4 C13
 
   if (bidUSDBN.gt(0) && reward.gt(0)) {
     const ROI = reward.dividedBy(bidUSDBN).times(100);
-    const APYInterval = ROI.times(TIME_INTERVAL).times(totalRatio);
+    const APYInterval = ROI.times(TIME_INTERVAL)
+      .times(totalRatio)
+      .dividedBy(new BigNumber('1000000000000000000'));
     return APYInterval.toFixed(2);
   }
 

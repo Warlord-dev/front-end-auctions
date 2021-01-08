@@ -1,4 +1,4 @@
-@import '../../assets/scss/helpers/helpers.scss';
+@import "../../assets/scss/helpers/helpers.scss";
 
 .wrapper {
   background-origin: border-box;
@@ -13,6 +13,8 @@
 
 .largeImgWrapper {
   min-height: 592px;
+  width: 100%;
+  height: auto;
 }
 
 .itemLargeImg {

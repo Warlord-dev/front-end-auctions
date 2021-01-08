@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 70px;
+
+  .photo {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 256px;
+    text-align: center;
+  }
+
+  .name {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .country {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    margin-top: 10px;
+
+    .flagIcon {
+      width: 27px;
+    }
+
+    .countryName {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-left: 11px;
+      font-weight: bold;
+    }
+  }
+
+  .social {
+    margin-top: 5px;
+  }
+}

@@ -26,14 +26,14 @@ const dataCenterList = [
   },
   {
     item: 'Project Overview',
-    href: 'https://digitalax.s3.us-east-2.amazonaws.com/DIGITALAX+Project+Overview+v1.2.pdf',
+    href:
+      'https://digitalax.s3.us-east-2.amazonaws.com/DIGITALAX+Project+Overview+v1.2.pdf',
   },
   {
-    item: 'We are Hiring!',
-    href: 'https://digitalax.s3.us-east-2.amazonaws.com/Careers+November+v1.pdf',
+    item: 'Join Our Global Designer Network',
+    href: 'https://emmajane857686.typeform.com/to/WijilaK8',
   },
 ];
-
 
 const Footer = ({ className, leftList, centerList }) => (
   <footer className={cn(className, styles.wrapper)}>
@@ -41,7 +41,13 @@ const Footer = ({ className, leftList, centerList }) => (
       {!!leftList.length && (
         <div>
           {leftList.map(({ item, href }) => (
-            <a className={styles.leftItem} key={item} href={href} target="_blank" rel="noreferrer">
+            <a
+              className={styles.leftItem}
+              key={item}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+            >
               {item}
             </a>
           ))}
@@ -49,7 +55,13 @@ const Footer = ({ className, leftList, centerList }) => (
       )}
       <div>
         {centerList.map(({ item, href }) => (
-          <a className={styles.centerItem} key={item} href={href} target="_blank" rel="noreferrer">
+          <a
+            className={styles.centerItem}
+            key={item}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+          >
             {item}
           </a>
         ))}

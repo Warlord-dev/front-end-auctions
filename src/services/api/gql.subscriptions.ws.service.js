@@ -1,4 +1,3 @@
-
 export const onDaysChange = `
   subscription onAuctionsChangeByIds($date: String!) {
     days(where: {id_gt: $date }) {
@@ -44,6 +43,77 @@ export const onAuctionsChange = `
     }
   }`;
 
+export const onAllAuctionsChange = `
+  subscription onAuctionsChange {
+    digitalaxGarmentAuctions {
+      id
+      reservePrice
+      endTime
+      startTime
+      resulted
+      topBidder {
+        id
+      }
+      topBid
+      lastBidTime
+      garment {
+        id
+        designer
+        primarySalePrice
+        tokenUri
+        children {
+          amount
+          tokenUri
+          id
+        }
+      }
+      designer {
+        id
+      }
+      contract {
+        id
+        minBidIncrement
+        bidWithdrawalLockTime
+      }
+    }
+  }`;
+
+export const onPreviousAuctionsChange = `
+  subscription onPreviousAuctionsChange {
+    digitalaxGarmentAuctions(where: {resulted_in: [true]}) {
+      id
+      resulted
+      reservePrice
+      startTime
+      endTime
+      resulted
+      resultedTime
+      topBidder {
+        id
+      }
+      topBid
+      lastBidTime
+      garment {
+        id
+        designer
+        primarySalePrice
+        tokenUri
+        children {
+          amount
+          tokenUri
+          id
+        }
+      }
+      designer {
+        id
+      }
+      contract {
+        id
+        minBidIncrement
+        bidWithdrawalLockTime
+      }
+    }
+  }`;
 
 export const onAuctionsChangeByIds = `
   subscription onAuctionsChangeByIds($ids: [ID!]) {
@@ -88,7 +158,7 @@ export const onDesignerByIds = `
 
 export const onAuctionsHistoryByIds = `
   subscription onAuctionsHistoryByIds($ids: [ID!]) {
-    digitalaxGarmentAuctionHistories(where: {token_in: $ids}) {
+    digitalaxGarmentAuctionHistories(where: {eventName: "BidPlaced", token_in: $ids}) {
       id
       eventName
       timestamp

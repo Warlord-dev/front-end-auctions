@@ -14,5 +14,10 @@
         "@actions/*": ["./src/actions/*"],
         "@hooks/*": ["./src/hooks/*"],
       }
-    }
+    },
+    "exclude": [
+      "node_modules",
+      "out",
+      ".next"
+    ]
   }

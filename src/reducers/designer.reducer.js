@@ -9,7 +9,7 @@ const DEFAULT_FIELDS = Map({
   designerGarmentIds: List([]),
   infoByDesignerId: List([
     {
-      id: '0x7cae538968727b73be60d01bd198a7a9613e6a4c',
+      id: '9',
       designerName: 'Christina Lalch',
       designerPhoto: './images/Christina-Lalch.jpeg',
       descriptionDesigner: [
@@ -27,9 +27,9 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0xcec711b7fa42683260ad8402247455c04d98c463',
+      id: '7',
       designerName: '3dBehemoth',
-      designerPhoto: './images/3dBehemoth.jpeg',
+      designerPhoto: './images/3dBehemoth.png',
       descriptionDesigner: [
         'Diego is a 26 year old cloth artist from Alicante, on the east coast of Spain. He is addicted to video games and fashion, and that made him start in the 3D fashion industry less than a year ago',
         'He has always been the weird boy in his childhood, he’s always thought out of the box and had tastes that most people haven’t. His brand and designs are mostly based on that feeling of being weird, the feeling that he’s the only person who likes what he likes and that he’s ok with that.',
@@ -45,7 +45,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x321e73dbf24f31b25c515e52b362185888d111b1',
+      id: '3',
       designerName: 'Edward Harber',
       designerPhoto: './images/Edward-Harber.jpeg',
       descriptionDesigner: [
@@ -63,10 +63,12 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x64caa1f61e012594e757c0ea7e1801ab18ef9285',
+      id: '6',
       designerName: 'HonoreHL',
       designerPhoto: './images/HonoreHL.jpeg',
-      descriptionDesigner: ['Hirwa Leon Honore is a 3d artist from Rwanda. He is most experienced with animation, modeling, and shading. His work inspires to simultaneously merge traditional and contemporary culture driven styles, that aim to paint a richly diverse and fantastical picture of digital clothing possibilities and bring about a minimal, yet fashion forward style.'],
+      descriptionDesigner: [
+        'Hirwa Leon Honore is a 3d artist from Rwanda. He is most experienced with animation, modeling, and shading. His work inspires to simultaneously merge traditional and contemporary culture driven styles, that aim to paint a richly diverse and fantastical picture of digital clothing possibilities and bring about a minimal, yet fashion forward style.',
+      ],
       designerCountryFlagIcon: './images/icons/rwanda.png',
       designerSocialMedia: List([
         {
@@ -76,10 +78,12 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0xa53cc97d140ba317bd6272a2af0f8d3eae4809bb',
+      id: '2',
       designerName: 'Lorena Bello',
       designerPhoto: './images/Lorena-Bellow.jpeg',
-      descriptionDesigner: ['Designer Paragraph: Lorena Bello is a Spanish 3D Fashion and Graphic Designer. Driven-by her passion for design, she turned her life 180º when in 2013 she decided to change her professional path by leaving her corporate career (She also has a Law Degree) to start completely afresh as a Digital Fashion Designer. From this moment she has followed her passion working in fashion in London, Milan and Madrid.'],
+      descriptionDesigner: [
+        'Designer Paragraph: Lorena Bello is a Spanish 3D Fashion and Graphic Designer. Driven-by her passion for design, she turned her life 180º when in 2013 she decided to change her professional path by leaving her corporate career (She also has a Law Degree) to start completely afresh as a Digital Fashion Designer. From this moment she has followed her passion working in fashion in London, Milan and Madrid.',
+      ],
       designerCountry: 'Spain',
       designerCountryFlagIcon: './images/icons/spain.png',
       designerSocialMedia: List([
@@ -94,27 +98,13 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x430e85c85f2324f4d3018f7c5c1d7bc12f6fa5e8',
-      designerName: 'Mar Guixa Studio',
-      designerPhoto: './images/Mar-Guixa-Studio.jpeg',
-      descriptionDesigner: ['Mar Guixa is the founder of Mar Guixa Studio studio— a design studio based in Barcelona. Mar is an emerging virtual fashion designer who loves the interaction of colors and shapes, quality rather than quantity and bringing unique creative concepts behind digitally constructed garments. She believes that the essence of the fashion industry lies in living constantly between reality and art. She is passionate about art, tech and the exploration of creative’s limit'],
-      designerCountry: 'Spain',
-      designerCountryFlagIcon: './images/icons/spain.png',
-      designerSocialMedia: List([
-        {
-          name: 'website',
-          href: 'https://www.marguixastudio.com/ ',
-        },
-      ]),
-    },
-    {
-      id: '0xA9185c81960e17a36792FF467e9866c7dd179E71',
+      id: '13',
       designerName: 'McAfee.Design',
       designerPhoto: './images/McAfee-Design.jpeg',
       descriptionDesigner: [
         'McAfee.Design is Michael McAfee - Designer and Artist with a background in video production',
         'His solo career consists of projects such as producing promotional visuals for grammy-nominated artist Tycho, and animating for the viral video Animation vs. Minecraft (200 million views). He regularly puts out personal artwork that blurs the line between traditional hand-drawn techniques and modern CGI tool sets - these projects, set within a psychedelic & cyberpunk universe, are released as a series titled "Mecha Ascent."',
-        'Before the inception of his solo career, McAfee worked as a designer at an ad agency called FCB. Highlights during his time at FCB include directing the inaugural episode of Ad Age Illustrated for AdAge.com, working on the City of Chicago\'s pitch to Amazon for HQ2, and executing visual effects on Jeep\'s 2018 Super Bowl ad. His work at FCB has been celebrated at Cannes, D&AD, and CommArts',
+        "Before the inception of his solo career, McAfee worked as a designer at an ad agency called FCB. Highlights during his time at FCB include directing the inaugural episode of Ad Age Illustrated for AdAge.com, working on the City of Chicago's pitch to Amazon for HQ2, and executing visual effects on Jeep's 2018 Super Bowl ad. His work at FCB has been celebrated at Cannes, D&AD, and CommArts",
       ],
       designerCountry: 'United States',
       designerCountryFlagIcon: './images/icons/usa.png',
@@ -126,7 +116,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0xff0c60609522fb053e58ac106ebb7d48ff3d0ccb',
+      id: '1',
       designerName: 'Msistema',
       designerPhoto: './images/msistema.jpeg',
       descriptionDesigner: [
@@ -148,7 +138,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x2456862a0b57814371287de31cc617ca22e096a8',
+      id: '12',
       designerName: 'Nina Doll',
       designerPhoto: './images/Nina-Doll.jpeg',
       descriptionDesigner: [
@@ -166,7 +156,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0xa336D3F47EC35517035a85eE8a0D09094801E2e7',
+      id: '10',
       designerName: 'Rendooo Lab',
       designerPhoto: './images/Rendooo-Lab.jpeg',
       descriptionDesigner: [
@@ -188,7 +178,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x2937f59bd9740f5cfd4d74e545f355bbd2fe0e90',
+      id: '8',
       designerName: 'Stanislav Mclygin',
       designerPhoto: './images/Stanislav Mclygin.jpeg',
       descriptionDesigner: [
@@ -206,7 +196,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x3c7558b416673aa01350fbfe1b63db477432c4cb',
+      id: '4',
       designerName: 'Vitaly Kovalev',
       designerPhoto: './images/Vitaly-Kovalev.jpeg',
       descriptionDesigner: [
@@ -224,7 +214,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x0E07940858070Ca27c380Ffc260186138046666F',
+      id: '15',
       designerName: 'Album Corvum',
       designerPhoto: './images/Album-Corvum.jpeg',
       descriptionDesigner: [
@@ -242,7 +232,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '0x29bd7bd73a6748acfc7c55f708de95deb042e9f3',
+      id: '5',
       designerName: 'Xander Smith',
       designerPhoto: './images/Xander-Designer.jpeg',
       descriptionDesigner: [
@@ -257,6 +247,157 @@ const DEFAULT_FIELDS = Map({
         {
           name: 'website',
           href: 'https://www.xandersmithdesign.com/',
+        },
+      ]),
+    },
+    {
+      id: '20',
+      designerName: 'Gwen Kim (JAK 3D)',
+      designerPhoto: './images/Gwen photo.jpeg',
+      descriptionDesigner: [
+        'Gwen aims to bring out minor cultural sensibilities and incorporate them into her fashion. It all started with her preference and interest in Asian visual culture. ',
+        'Her works have won her awards in illustrations and other design fields. She is now working with a variety of brands to further highlight her appearance as a digital designer, where she also collaborates regularly across projects in the gaming industry.',
+      ],
+      designerCountry: 'South Korea',
+      designerCountryFlagIcon: './images/icons/southkorea.png',
+      designerSocialMedia: List([
+        {
+          name: 'instagram',
+          href: 'https://www.instagram.com/jak_3d/',
+        },
+      ]),
+    },
+    {
+      id: '21',
+      designerName: 'Sasa3dimensions',
+      designerPhoto: './images/Elisa photo.jpeg',
+      descriptionDesigner: [
+        'Elisa is an Italian fashion designer who discovered in 3D, not only an innovative method of design, but a real means of communication.',
+        'In 3D she is able to achieve full self expression and create a whole world of meaning and detail around her creations— giving life to something completely new. When she was young she used to steal from her mother’s wardrobe some old forwards or tiny pieces of fabric in order to create the look of her imagination. Years later and nothing has changed. It has just evolved in a constant exchange of impressions and knowledge.',
+      ],
+      designerCountry: 'Italy',
+      designerCountryFlagIcon: './images/icons/italy.png',
+      designerSocialMedia: List([
+        {
+          name: 'instagram',
+          href: 'https://www.instagram.com/sasa3dimensions/',
+        },
+      ]),
+    },
+    {
+      id: '22',
+      designerName: 'Alyona Briukhanova',
+      designerPhoto: './images/alyona photo.jpeg',
+      descriptionDesigner: [
+        'Alyona is an independent fashion stylist and visual merchandiser who has been working in 3D innovative technologies and fashion since 2007.',
+        'She blends her international work experience with a BA degree in Fashion Styling. In September 2020 she launched a digital styling project — DGTL Stylist. She was also the the Digital-Only Fashion Contest 2020 Gran Prix Winner.',
+      ],
+      designerCountry: 'Ukraine',
+      designerCountryFlagIcon: './images/icons/ukraine.png',
+      designerSocialMedia: List([
+        {
+          name: 'instagram',
+          href: 'https://www.instagram.com/dgtl_stylist/',
+        },
+      ]),
+    },
+    {
+      id: '23',
+      designerName: 'Alexander Kurmanin',
+      designerPhoto: './images/alex photo.jpeg',
+      descriptionDesigner: [
+        'Alexander is a clothing designer who sees a future that is all about 3D and digital. His works focus on painting a unique picture of what our clothes might look like when the boundaries and limitations of the physical world are no longer present. He is certain that digital fashion is what will be worn in 20–30 years.',
+      ],
+      designerCountry: 'Russia',
+      designerCountryFlagIcon: './images/icons/russia.png',
+      designerSocialMedia: List([
+        {
+          name: 'instagram',
+          href: 'https://www.instagram.com/kurmanin_tailor/',
+        },
+      ]),
+    },
+    {
+      id: '24',
+      designerName: 'AVA3Ddesigners',
+      designerPhoto: './images/1_dZjpCBlRAwo02PM2evsDcQ.jpeg',
+      descriptionDesigner: [
+        'After years of Mina working and tutoring fashion design and dressmaking, and after years of her friend Pegah map-making and freelancing in fashion design, they decided to join forces as a team to create a new way of offering visual delicacies. They gave life to AVA3Ddesigners, mixing passion for artistic designs with advanced technological instruments, where the middle-eastern taste of colors and designs meets the new era of computer designing.',
+      ],
+      designerCountry: 'Australia',
+      designerCountryFlagIcon: './images/icons/au.png',
+      designerSocialMedia: List([
+        {
+          name: 'instagram',
+          href: 'https://www.instagram.com/ava3ddesigners/',
+        },
+      ]),
+    },
+    {
+      id: '25',
+      designerName: 'YeKaterina Burmatnova',
+      designerPhoto: './images/1_8-FRZqSRY877n84t9Ey7Cg.jpeg',
+      descriptionDesigner: [
+        'Yekaterina Burmatnova is a Russian transplant living in NYC. She uses her heritage and the city she lives in to drive and inspire her design aesthetic.',
+        'She is a dedicated knitwear and sweaters designer that found an escape from everyday life in 3D design. Besides work, here are a few of her favorite things: hanging out with her 2-year old fur baby, Mango, traveling, baking bread and getting tattoos.',
+      ],
+      designerCountry: 'United States',
+      designerCountryFlagIcon: './images/icons/usa.png',
+      designerSocialMedia: List([
+        {
+          name: 'instagram',
+          href: 'https://www.instagram.com/yekaterinab/',
+        },
+      ]),
+    },
+    {
+      id: '18',
+      designerName: 'Mar Guixa Studio',
+      designerPhoto: './images/Mar-Guixa-Studio.jpeg',
+      descriptionDesigner: [
+        'Mar Guixa is the founder of Mar Guixa Studio studio— a design studio based in Barcelona. Mar is an emerging virtual fashion designer who loves the interaction of colors and shapes, quality rather than quantity and bringing unique creative concepts behind digitally constructed garments. She believes that the essence of the fashion industry lies in living constantly between reality and art. She is passionate about art, tech and the exploration of creative’s limit',
+      ],
+      designerCountry: 'Spain',
+      designerCountryFlagIcon: './images/icons/spain.png',
+      designerSocialMedia: List([
+        {
+          name: 'website',
+          href: 'https://www.marguixastudio.com/',
+        },
+      ]),
+    },
+    {
+      id: '27',
+      designerName: 'María Ruano',
+      designerPhoto: './images/maria photo.jpeg',
+      descriptionDesigner: [
+        'Maria studied fashion at the IED Istituto Europeo de Madrid.',
+        'After finishing her studies, she was the winner of the international young talent competition “My Own Show”, where she was able to present her collections in Milan under the support of Franca Sozzani, Vogue Italia and Alberta Ferretti.',
+        'For 6 years she led the relaunch and rebranding of the iconic Spanish brand “Amarras”, before conducting the Hacer Virtual Fashion Project, where she creates collections of virtual garments under the Make brand and collaborates with various brands and fashion platforms, both physical and digital.',
+      ],
+      designerCountry: 'Spain',
+      designerCountryFlagIcon: './images/icons/spain.png',
+      designerSocialMedia: List([
+        {
+          name: 'instagram',
+          href: 'https://www.instagram.com/hacer_virtualfashion/',
+        },
+      ]),
+    },
+    {
+      id: '28',
+      designerName: 'Burak Dahan',
+      designerPhoto: './images/burak photo.jpeg',
+      descriptionDesigner: [
+        'Right after graduating from Chemistry in 2012, Burak took a distinct change and followed his calling by studying Fashion Design and started to build up a strong career in the industry. His works were recognized by fashion authorities in many design competitions, where he even became the "Gold Award Winner" at the EURASIA REMIX 2016.',
+        'Years later when he was introduced to digital fashion, he fell in love with this new world of design possibilities and expanded his creativity to a new level by escaping from restrictions and norms of the physical world. His works reflect versatility and there is no limit when it comes to his source of inspiration. ',
+      ],
+      designerCountry: 'Turkey',
+      designerCountryFlagIcon: './images/icons/turkey.png',
+      designerSocialMedia: List([
+        {
+          name: 'instagram',
+          href: 'https://www.instagram.com/burak.dahan/',
         },
       ]),
     },

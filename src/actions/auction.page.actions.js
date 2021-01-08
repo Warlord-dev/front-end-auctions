@@ -9,16 +9,26 @@ class AuctionPageActions extends BaseActions {
 
   updateAuctions(digitalaxGarmentAuctions) {
     return async (dispatch) => {
-      dispatch(designerActions.mapData(digitalaxGarmentAuctions.map((auction) => auction.designer)));
-      dispatch(garmentActions.mapData(digitalaxGarmentAuctions.map((auction) => auction.garment)));
+      dispatch(
+        designerActions.mapData(
+          digitalaxGarmentAuctions.map((auction) => auction.designer),
+        ),
+      );
+      dispatch(
+        garmentActions.mapData(
+          digitalaxGarmentAuctions.map((auction) => ({
+            ...auction.garment,
+            resulted: auction.resulted,
+          })),
+        ),
+      );
       dispatch(auctionActions.mapData(digitalaxGarmentAuctions));
       dispatch(auctionActions.setValue('auctions', digitalaxGarmentAuctions));
       dispatch(this.setValue('auctionsIsLoaded', true));
     };
-
   }
 
-  udateHistory(items) {
+  updateHistory(items) {
     return async (dispatch) => {
       dispatch(historyActions.mapData(items));
     };

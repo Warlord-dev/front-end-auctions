@@ -1,5 +1,5 @@
-@import '../../assets/scss/helpers/variables.scss';
-@import '../../assets/scss/helpers/helpers.scss';
+@import "../../assets/scss/helpers/variables.scss";
+@import "../../assets/scss/helpers/helpers.scss";
 
 .headerTitle {
   display: grid;
@@ -13,6 +13,10 @@
   color: $darkGray3;
   font-weight: 600;
   line-height: 24px;
+}
+
+.loading {
+  padding-top: 24px;
 }
 
 .body {
