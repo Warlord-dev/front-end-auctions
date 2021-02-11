@@ -8,11 +8,11 @@ import { buildClientSchema } from 'graphql';
 import styles from './styles.module.scss';
 
 const MaterialList = ({
-  clothesId, childNftsText, headerTitle, valueChildNfts,
+  clothesId, childNftsText, headerTitle, valueChildNfts, activeTab, semiRare, common,
 }) => {
 
   const garment = useSelector(getGarmentsById(clothesId));
-  if (!garment) {
+  if (!garment && activeTab === 0) {
     return buildClientSchema;
   }
 
@@ -30,7 +30,9 @@ const MaterialList = ({
         {headerTitle.map((item) => <p key={item} className={styles.headerTitleItem}>{item}</p>)}
       </div>
       <div className={styles.materialLine}>
-        {garment.children.map((item) => <MaterialLine key={item.id} item={item} />)}
+        {activeTab === 0 ? garment.children.map((item) => <MaterialLine key={item.id} item={item} clothesId={clothesId} />) : (
+          activeTab === 1 ? semiRare.children.map((item) => <MaterialLine key={item.id} item={item} clothesId={clothesId} />) : 
+          common.children.map((item) => <MaterialLine key={item.id} item={item} clothesId={clothesId} />))}
       </div>
 
     </div>
@@ -42,12 +44,18 @@ MaterialList.propTypes = {
   headerTitle: PropTypes.array,
   valueChildNfts: PropTypes.string,
   clothesId: PropTypes.string.isRequired,
+  activeTab: PropTypes.number,
+  semiRare: PropTypes.object,
+  common: PropTypes.object,
 };
 
 MaterialList.defaultProps = {
   childNftsText: 'Child NFTs:',
-  headerTitle: ['name', '', 'Price', 'Yield (estimates)'],
+  headerTitle: ['Name', '', 'Artist', 'D.O.E.'],
   valueChildNfts: '',
+  activeTab: 0,
+  semiRare: { children: [] },
+  common: { children: [] },
 };
 
 export default memo(MaterialList);

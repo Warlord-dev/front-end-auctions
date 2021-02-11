@@ -1,11 +1,11 @@
 import {
-  ChainId, Token, WETH, Fetcher, Route,
+  Token, WETH, Fetcher, Route,
 } from '@uniswap/sdk';
 
 export const create = (tokenAddress, provider) => {
-  const token = new Token(ChainId.MAINNET, tokenAddress, 18); // ChainId.MAINNET
+  const token = new Token(provider._network.chainId, tokenAddress, 18); // ChainId.MAINNET
 
-  const fetchPairData = () => Fetcher.fetchPairData(token, WETH[ChainId.MAINNET], provider);
+  const fetchPairData = () => Fetcher.fetchPairData(token, WETH[token.chainId], provider);
 
   const getPrice = async () => {
     const pair = await fetchPairData().catch(console.error);

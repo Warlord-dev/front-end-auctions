@@ -12,6 +12,7 @@ import {
 import wsApi from '@services/api/ws.service';
 import designerPageActions from '@actions/designer.page.actions';
 import historyActions from '@actions/history.actions';
+import collectionActions from '@actions/collection.actions';
 import auctionActions from '@actions/auction.actions';
 import { useSubscription } from '@hooks/subscription.hooks';
 
@@ -52,7 +53,37 @@ const Designers = () => {
       request: wsApi.onAuctionsHistoryByIds(ids),
       next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
     },
-    [chainId, JSON.stringify(designerGarmentIds)],
+    [chainId, ids],
+  );
+
+  useSubscription(
+    {
+      request: wsApi.getAllDigitalaxMarketplaceOffers(),
+      next: (data) => {
+        dispatch(
+          collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers),
+        );
+      },
+    },
+    [chainId],
+  );
+
+  useSubscription(
+    {
+      request: wsApi.onDigitalaxGarmentsCollectionChangeByIds(ids),
+      next: (data) => dispatch(collectionActions.mapData(data.digitalaxGarmentCollections)),
+    },
+    [chainId, ids],
+  );
+
+  useSubscription(
+    {
+      request: wsApi.onMarketplaceHistoryByIds(ids),
+      next: (data) => {
+        dispatch(historyActions.updateMarketplaceHistories(data.digitalaxMarketplacePurchaseHistories))
+      },
+    },
+    [chainId, ids],
   );
 
   const dateMonth = new Date();
@@ -84,7 +115,7 @@ const Designers = () => {
   return (
     <PageDesignerDescription
       designerName={id}
-      clothesIds={designerGarmentIds}
+      clothesIds={ids}
     />
   );
 };

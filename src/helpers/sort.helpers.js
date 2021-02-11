@@ -2,8 +2,8 @@ import BigNumber from 'bignumber.js';
 
 export const sortByLowestBid = (auctions) => auctions.sort((a, b) => {
 
-  const aBN = new BigNumber(a.get('topBid') ? a.get('topBid') : 0, 10);
-  const bBN = new BigNumber(b.get('topBid') ? b.get('topBid') : 0, 10);
+  const aBN = new BigNumber(a.topBid ? a.topBid : 0, 10);
+  const bBN = new BigNumber(b.topBid ? b.topBid : 0, 10);
 
   return aBN.comparedTo(bBN);
 
@@ -11,8 +11,8 @@ export const sortByLowestBid = (auctions) => auctions.sort((a, b) => {
 
 export const sortByHighestBid = (auctions) => auctions.sort((a, b) => {
 
-  const aBN = new BigNumber(a.get('topBid') ? a.get('topBid') : 0, 10);
-  const bBN = new BigNumber(b.get('topBid') ? b.get('topBid') : 0, 10);
+  const aBN = new BigNumber(a.topBid ? a.topBid : 0, 10);
+  const bBN = new BigNumber(b.topBid ? b.topBid : 0, 10);
 
   return bBN.comparedTo(aBN);
 
@@ -24,8 +24,8 @@ const getHistorySum = (history) => (history
 
 export const sortByHighestVolume = (auctions, historyByTokenId) => auctions.sort((a, b) => {
 
-  const aHistory = historyByTokenId.get(a.get('id'));
-  const bHistory = historyByTokenId.get(b.get('id'));
+  const aHistory = historyByTokenId.get(a.id);
+  const bHistory = historyByTokenId.get(b.id);
   const aSumHistory = getHistorySum(aHistory);
   const bSumHistory = getHistorySum(bHistory);
 
@@ -42,8 +42,8 @@ export const sortByHighestVolume = (auctions, historyByTokenId) => auctions.sort
 
 export const sortByLowestVolume = (auctions, historyByTokenId) => auctions.sort((a, b) => {
 
-  const aHistory = historyByTokenId.get(a.get('id'));
-  const bHistory = historyByTokenId.get(b.get('id'));
+  const aHistory = historyByTokenId.get(a.id);
+  const bHistory = historyByTokenId.get(b.id);
 
   const aSumHistory = getHistorySum(aHistory);
   const bSumHistory = getHistorySum(bHistory);

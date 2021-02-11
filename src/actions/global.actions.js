@@ -139,7 +139,8 @@ class GlobalActions extends BaseActions {
         dispatch(this.setValue('auctionContractAddress', id));
         dispatch(this.setValue('bidWithdrawalLockTime', bidWithdrawalLockTime));
       } catch (e) {
-        toast.error(`Set contract params error: ${JSON.stringify(e)}`);
+        // toast.error(`Set contract params error: ${JSON.stringify(e)}`);
+        console.error(e);
       }
     };
   }

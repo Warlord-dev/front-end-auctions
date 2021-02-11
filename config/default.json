@@ -5,7 +5,7 @@
   "TTL_STATIC": 3600000,
   "TTL_NO_STATIC": 600000,
   "IS_PROD": false,
-  "SENTRY_DSN": "",
+  "SENTRY_DSN": "https://efd721a5be464838a0166fa08f84d7ab@o484615.ingest.sentry.io/5538941",
   "ENVIRONMENT": "",
   "NETWORKS": [
     "rinkeby",
@@ -25,9 +25,13 @@
     "mainnet": "0xC155DDd8aA737aA53bBCea9EA62CAC0A3EEc942f",
     "rinkeby": "0xb0DED58EF09929b0A0F2b10f48D42883df97466E"
   },
+  "DIGITAL_MARKETPLACE_ADDRESSES": {
+    "mainnet": "0xCC48554581c17c2837C13B1685E0e784fADC1c3b",
+    "rinkeby": "0xAcA4eaf530085B062dB530634DA637e266a823C9"
+  },
   "MONA_TOKEN_ADDRESSES": {
     "mainnet": "0x275f5Ad03be0Fa221B4C6649B8AeE09a42D9412A",
-    "rinkeby": "0x"
+    "rinkeby": "0x13379fe0e6992180ed0ac5174a02479896f9c510"
   },
   "EXCHANGE_API": "https://api.coingecko.com/api/v3",
   "IMGIX_URL": "digitalax.imgix.net"

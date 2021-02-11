@@ -3,14 +3,37 @@
     margin-top: 48px;
     font-size: 12px;
     line-height: 15px;
+    letter-spacing: 1.5px;
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
+    text-align: center;
+
+    b {
+      font-size: 16px;
+    }
   }
+}
+
+.textCenter {
+  text-align: center;
 }
 
 .selectWrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+
+  span {
+    min-width: 200px;
+  }
 }
 
 .inputWithArrows {

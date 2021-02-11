@@ -8,7 +8,15 @@ export const createArrayForGallery = (tokenInfo) => {
     return clothesPhotos;
   }
 
-  if (tokenInfo.image) {
+  if (tokenInfo.animation_url) {
+    exceptImage = 'image';
+    clothesPhotos.push({
+      isMain: true,
+      isVideo: true,
+      video: tokenInfo.animation_url,
+      preview: tokenInfo.image,
+    });
+  } else if (tokenInfo.image) {
     exceptImage = 'image';
     clothesPhotos.push({
       isMain: true,
@@ -38,7 +46,7 @@ export const createArrayForGallery = (tokenInfo) => {
   }
 
   Object.keys(tokenInfo).forEach((objectKey) => {
-    if (objectKey.search(imagePrefixWithoutAnimation) !== -1 && tokenInfo[objectKey] && exceptImage !== objectKey) {
+    if (objectKey.search(imagePrefixWithoutAnimation) !== -1 && tokenInfo[objectKey] && exceptImage !== objectKey && objectKey !== 'animation_url') {
       clothesPhotos.push({
         image: tokenInfo[objectKey],
         preview: tokenInfo[objectKey],
@@ -52,11 +60,15 @@ export const createArrayForGallery = (tokenInfo) => {
 export const getImageForCardProduct = (tokenInfo) => {
 
   if (!tokenInfo) {
-    return null;
+    return [null, false];
   }
 
   if (tokenInfo.image_front_url) {
-    return tokenInfo.image_front_url;
+    return [tokenInfo.image_front_url, false];
+  }
+
+  if (tokenInfo.animation_url) {
+    return [tokenInfo.animation_url, true];
   }
 
   const imagePrefixWithoutAnimation = 'image_';
@@ -64,13 +76,13 @@ export const getImageForCardProduct = (tokenInfo) => {
     .find((objectKey) => objectKey.search(imagePrefixWithoutAnimation) !== -1 && tokenInfo[objectKey]);
 
   if (firstFoundImageKey) {
-    return tokenInfo[firstFoundImageKey];
+    return [tokenInfo[firstFoundImageKey], false];
   }
 
   if (tokenInfo.image) {
-    return tokenInfo.image;
+    return [tokenInfo.image, false];
   }
 
-  return null;
+  return [null, false];
 
 };

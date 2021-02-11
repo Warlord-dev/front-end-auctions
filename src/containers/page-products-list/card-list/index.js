@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import ImmutablePropTypes from 'react-immutable-proptypes';
 import { Dropdown } from 'semantic-ui-react';
 import CardProduct from '@components/card-product';
 import Loader from '@components/loader';
@@ -78,7 +77,7 @@ const CardList = ({
       </div>
       {auctionsIsLoaded ? (
         <>
-          {auctions.toJS().length ? (
+          {auctions && auctions.length ? (
             <ul
               className={cn(
                 styles.list,
@@ -87,11 +86,11 @@ const CardList = ({
               )}
             >
               {auctions.map((auction) => {
-                const garment = garmentsById.get(auction.get('id'));
+                const garment = garmentsById.get(auction.id);
                 return (
                   <CardProduct
-                    key={auction.get('id')}
-                    history={historyByTokenId.get(auction.get('id'))}
+                    key={auction.id}
+                    history={historyByTokenId.get(auction.id)}
                     garment={garment}
                     showGraphIds={showGraphIds}
                     setShowGraphIds={setShowGraphIds}
@@ -99,12 +98,8 @@ const CardList = ({
                 );
               })}
             </ul>
-          ) : sold ? (
-            <Loader size="large" className={styles.loader} />
           ) : (
-            <Link href="/sold">
-              <a className={styles.empty}>Check Previous Sold Items</a>
-            </Link>
+            <Loader size="large" className={styles.loader} />
           )}
         </>
       ) : (
@@ -115,8 +110,7 @@ const CardList = ({
 };
 
 CardList.propTypes = {
-  auctions: ImmutablePropTypes.listOf(ImmutablePropTypes.contains({}))
-    .isRequired,
+  auctions: PropTypes.array.isRequired,
   className: PropTypes.string,
   showGraphIds: PropTypes.array,
   setShowGraphIds: PropTypes.func,

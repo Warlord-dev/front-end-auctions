@@ -14,20 +14,21 @@ const ViewImages = ({
   className,
   clothesPhotos,
   clothesName,
-  // isSoldOut,
   clothesId,
 }) => {
-  const DEFAULT_LARGE_IMAGE = clothesPhotos.find(({ isMain }) => isMain)?.image;
+  const DEFAULT_LARGE_IMAGE = clothesPhotos.find(({ isMain }) => isMain);
   const [largeImage, setLargeImage] = useState(DEFAULT_LARGE_IMAGE);
-  const [isShowGif, setIsShowGif] = useState(true);
+  const [isShowGif, setIsShowGif] = useState(DEFAULT_LARGE_IMAGE ? DEFAULT_LARGE_IMAGE.isGif : false);
 
   const handleClick = (item, index) => {
-    setLargeImage(clothesPhotos[index]?.image);
+    setLargeImage(clothesPhotos[index]);
     setIsShowGif(!!item.isGif);
   };
 
   useEffect(() => {
-    setLargeImage(clothesPhotos.find(({ isMain }) => isMain)?.image);
+    const main = clothesPhotos.find(({ isMain }) => isMain);
+    setLargeImage(main);
+    setIsShowGif(main ? main.isGif : false);
   }, [clothesPhotos]);
 
   if (parseInt(clothesId, 10) >= 20 && parseInt(clothesId, 10) <= 28) {
@@ -47,41 +48,47 @@ const ViewImages = ({
       <div className={styles.itemLarge}>
         {largeImage && isShowGif ? (
           <a
-            href={largeImage}
+            href={largeImage.image}
             target="_blank"
             rel="noreferrer"
             className={styles.largeImgWrapper}
           >
             <img
               className={styles.itemLargeImg}
-              src={createGifURL(largeImage)}
+              src={createGifURL(largeImage.image)}
               alt={clothesName}
             />
           </a>
         ) : (
-          largeImage && (
-            <a
-              href={largeImage}
-              target="_blank"
-              rel="noreferrer"
-              className={styles.largeImgWrapper}
-            >
-              <ReactImageMagnify
-                className={styles.itemLargeImg}
-                LargeImageClassName={styles.itemLargeImgZoom}
-                {...{
-                  smallImage: {
-                    isFluidWidth: true,
-                    src: create2KURL(largeImage),
-                  },
-                  largeImage: {
-                    src: create2KURL(largeImage),
-                    width: 1176,
-                    height: 1176,
-                  },
-                }}
-              />
-            </a>
+          largeImage && (!largeImage.isVideo
+            ? (
+              <a
+                href={largeImage.image}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.largeImgWrapper}
+              >
+                <ReactImageMagnify
+                  className={styles.itemLargeImg}
+                  LargeImageClassName={styles.itemLargeImgZoom}
+                  {...{
+                    smallImage: {
+                      src: create2KURL(largeImage.image),
+                    },
+                    largeImage: {
+                      src: create2KURL(largeImage.image),
+                      width: 1176,
+                      height: 1176,
+                    },
+                    shouldUsePositiveSpaceLens: true,
+                  }}
+                />
+              </a>
+            ) : (
+              <video autoPlay muted loop className={styles.largeImgWrapper} key={largeImage.video}>
+                <source src={largeImage.video} type="video/mp4" />
+              </video>
+            )
           )
         )}
       </div>
@@ -114,7 +121,6 @@ ViewImages.propTypes = {
   className: PropTypes.string,
   clothesPhotos: PropTypes.array,
   clothesName: PropTypes.string,
-  isSoldOut: PropTypes.bool,
   clothesId: PropTypes.string,
 };
 
@@ -123,7 +129,6 @@ ViewImages.defaultProps = {
   clothesPhotos: [],
   clothesName: '',
   clothesId: '',
-  isSoldOut: false,
 };
 
 export default ViewImages;

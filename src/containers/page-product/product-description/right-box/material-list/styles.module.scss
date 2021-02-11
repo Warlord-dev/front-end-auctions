@@ -38,19 +38,6 @@
   font-weight: bold;
   padding-bottom: 9px;
   text-transform: uppercase;
-
-  &:nth-child(3) {
-    margin-left: auto;
-    min-width: 80px;
-    max-width: max-content;
-    text-align: center;
-  }
-
-  &:nth-child(4) {
-    min-width: 132px;
-    max-width: max-content;
-    text-align: center;
-  }
 }
 
 .materialLine {

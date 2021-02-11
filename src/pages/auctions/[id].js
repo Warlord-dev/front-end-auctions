@@ -8,7 +8,6 @@ const AuctionPage = () => {
 
   return (
     <PageProductsList
-      sold
       auctionId={id}
     />
   );

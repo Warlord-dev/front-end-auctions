@@ -11,12 +11,12 @@ const Trade = ({ clothesIds, tradeHistoryText }) => (
 );
 
 Trade.propTypes = {
-  clothesIds: PropTypes.object,
+  clothesIds: PropTypes.array,
   tradeHistoryText: PropTypes.string,
 };
 
 Trade.defaultProps = {
-  clothesIds: {},
+  clothesIds: [],
   tradeHistoryText: 'Trade history',
 };
 

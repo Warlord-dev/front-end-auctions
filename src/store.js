@@ -9,7 +9,7 @@ import {
 import { batchDispatchMiddleware } from 'redux-batched-actions';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import createSentryMiddleware from 'redux-sentry-middleware';
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import * as Sentry from '@sentry/browser';
 
 import reducers from './reducers';
@@ -22,7 +22,7 @@ export default function configureStore(preloadState) {
     composeWithDevTools(compose(
       applyMiddleware(thunk),
       applyMiddleware(batchDispatchMiddleware),
-      applyMiddleware(logger),
+      // applyMiddleware(logger),
       applyMiddleware(createSentryMiddleware(Sentry)),
     )),
   );

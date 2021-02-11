@@ -61,3 +61,10 @@ export const Discord = () => (
   </svg>
 
 );
+
+export const Youtube = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="24" height="24" fill="#999999" />
+    <path d="M8.62914 17.5083L8.62914 6.24997L18.3791 11.8791L8.62914 17.5083Z" fill="#FFFDFD" />
+  </svg>
+);

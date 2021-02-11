@@ -2,11 +2,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import BigNumber from 'bignumber.js';
 import Button from '@components/buttons/button';
 import TextButton from '@components/buttons/text-button';
 import Timer from '@components/timer';
+import { PRODUCTS } from '@constants/router-constants';
 import {
   openRaiseModal,
   openWithdrawModal,
@@ -75,6 +77,13 @@ const ImportantProductInformation = ({
   const expirationDate = auction.endTime * 1000;
 
   const timeOut = new Date(expirationDate) - new Date() + 1000;
+
+  const fullCollection = [
+    { id: '39', text: 'View All Collection' },
+    { id: '40', text: 'View All Collection' },
+    { id: '41', text: 'View All Collection' },
+    { id: '42', text: 'View All Collection' },
+  ];
 
   if (timeOut > 0) {
     timerToSoldButton.current = setTimeout(
@@ -197,6 +206,15 @@ const ImportantProductInformation = ({
           {isShowHint && <span className={styles.hint}>{hintText}</span>}
         </p>
       </div>
+      {styleTypeBlock === 'smallWhite' && (
+        <div className={styles.linkStyle}>
+          {fullCollection.find((link) => link.id === clothesId) ? (
+            <Link href={`${PRODUCTS}${clothesId}`}>
+              {fullCollection.find((link) => link.id === clothesId).text}
+            </Link>
+          ) : null}
+        </div>
+      )}
       <div className={styles.footerBoxRight}>
         <Timer className={styles.timer} expirationDate={expirationDate} />
         <p className={styles.expirationDateText}>{expirationDateText}</p>

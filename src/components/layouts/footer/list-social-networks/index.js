@@ -2,11 +2,15 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Twitter, Medium, Telegram, Instagram, Github, Discord,
+  Youtube, Twitter, Medium, Telegram, Instagram, Github, Discord,
 } from '@constants/icons-constants';
 import styles from './styles.module.scss';
 
 const SOCIAL_MEDIA = [
+  {
+    item: <Youtube />,
+    href: 'https://www.youtube.com/channel/UCE26XV44aaYe1zlPnDbiz5Q',
+  },
   {
     item: <Twitter />,
     href: 'https://twitter.com/DIGITALAX_',

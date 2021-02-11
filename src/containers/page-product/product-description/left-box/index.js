@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import ViewImages from '@components/view-images';
+import { EXCLUSIVE_RARITY, COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 import styles from './styles.module.scss';
 
 const LeftBox = ({
@@ -12,7 +13,7 @@ const LeftBox = ({
   setActiveTab,
   currentCounts,
 }) => {
-  const TABS = ['Exclusive', 'Semi-rare', 'Common'];
+  const TABS = [EXCLUSIVE_RARITY, SEMI_RARE_RARITY, COMMON_RARITY];
 
   return (
     <div className={cn(styles.leftBox, 'animate__animated animate__fadeIn')}>
@@ -24,15 +25,21 @@ const LeftBox = ({
               className={cn(styles.tab, {
                 [styles.active]: activeTab === index,
               })}
-              disabled={index > 0}
+              disabled={currentCounts[index].total === 0}
             >
               {item}
             </button>
-            {index > 0 && currentCounts[index].current > 0 && (
-              <span className={styles.countTag}>Coming Soon</span>
+            {index > 0 && currentCounts[index].total - currentCounts[index].sold > 0 && (
+              <span className={styles.countTag}>
+                <span className={styles.bannerText}>{currentCounts[index].sold + 1} OF {currentCounts[index].total}</span>
+                <span className={styles.gap} />
+              </span>
             )}
-            {currentCounts[index].current === 0 && (
-              <span className={styles.countTag}>SOLD OUT</span>
+            {currentCounts[index].total - currentCounts[index].sold === 0 && (
+              <span className={styles.countTag}>
+                <span className={styles.bannerText}>{currentCounts[index].total === 0 ? 'NOT AVAIlABLE' : 'SOLD OUT'}</span>
+                <span className={styles.gap} />
+              </span>
             )}
           </div>
         ))}

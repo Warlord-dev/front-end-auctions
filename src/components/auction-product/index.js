@@ -19,7 +19,7 @@ const CardProduct = ({ name, auction, auctionId }) => {
 
   const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
 
-  const imageUrl = getImageForCardProduct(tokenInfo);
+  const [imageUrl, isVideo] = getImageForCardProduct(tokenInfo);
 
   return (
     <li className={cn(styles.item)}>
@@ -35,19 +35,30 @@ const CardProduct = ({ name, auction, auctionId }) => {
         <div className={styles.imageWrapper}>
           <Link href={`/auctions/${auctionId}`}>
             <a className={styles.clothesPhotoWrapper}>
+              {/* {auctionId === 3 && (
+                <span className={styles.banner}>
+                  <span className={styles.bannerText}>Live Now</span>
+                  <span className={styles.gap} />
+                </span>
+              )} */}
               {parseInt(garment.id, 10) >= 20
                 && parseInt(garment.id, 10) <= 28 && (
                 <video autoPlay muted loop className={styles.clothesPhoto}>
                   <source src={`/video/${garment.id}.mp4`} type="video/mp4" />
                 </video>
               )}
-              {parseInt(garment.id, 10) < 20
-                && (tokenInfo && imageUrl ? (
+              {(parseInt(garment.id, 10) < 20 || parseInt(garment.id, 10) > 28)
+                && (tokenInfo && imageUrl ? (isVideo ? (
+                  <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
+                    <source src={imageUrl} type="video/mp4" />
+                  </video>
+                ) : (
                   <img
                     className={styles.clothesPhoto}
                     src={create2KURL(imageUrl)}
                     alt={garment.id}
                   />
+                )
                 ) : null)}
             </a>
           </Link>

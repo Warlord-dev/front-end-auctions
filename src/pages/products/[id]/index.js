@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import React, { memo, useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 import wsApi from '@services/api/ws.service';
@@ -6,8 +6,10 @@ import PageProduct from '@containers/page-product';
 import historyActions from '@actions/history.actions';
 import garmentPageActions from '@actions/garment.page.actions';
 import auctionActions from '@actions/auction.actions';
+import collectionActions from '@actions/collection.actions';
 import auctionPageActions from '@actions/auction.page.actions';
 import { getGarmentsById } from '@selectors/garment.selectors';
+import { getAllCollections, getAllMarketplaceOffers } from '@selectors/collection.selectors';
 import { getChainId } from '@selectors/global.selectors';
 import { useSubscription } from '@hooks/subscription.hooks';
 
@@ -17,21 +19,50 @@ const Products = () => {
 
   const dispatch = useDispatch();
   const garment = useSelector(getGarmentsById(id));
+  const collections = useSelector(getAllCollections);
+  const marketplaceOffers = useSelector(getAllMarketplaceOffers);
   const chainId = useSelector(getChainId);
 
-  // const fetchAdditionalData = () => {
-  //   dispatch(garmentPageActions.fetchGarmentByIds([id]));
-  // };
+  const currentCollections = useMemo(() => {
+    const jsCollection = collections.toJS();
+    return jsCollection.filter((val) => val.garmentAuctionID === id);
+  }, [collections]);
+
+  const currentMarketplaceOffers = useMemo(() => {
+    const jsOffers = marketplaceOffers.toJS();
+    return jsOffers.filter((val) => val.garmentCollection.garmentAuctionID === id);
+  }, [marketplaceOffers]);
 
   useSubscription(
     {
       request: wsApi.onAuctionsChangeByIds([id]),
       next: (data) => {
         dispatch(auctionActions.mapData(data.digitalaxGarmentAuctions));
-        // fetchAdditionalData();
       },
     },
     [chainId, id],
+  );
+
+  useSubscription(
+    {
+      request: wsApi.onDigitalaxGarmentsCollectionChange(id),
+      next: (data) => {
+        dispatch(collectionActions.mapData(data.digitalaxGarmentCollections));
+      },
+    },
+    [chainId, id],
+  );
+
+  useSubscription(
+    {
+      request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
+      next: (data) => {
+        dispatch(
+          collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers),
+        );
+      },
+    },
+    [chainId, currentCollections],
   );
 
   useSubscription(
@@ -54,6 +85,14 @@ const Products = () => {
     [chainId, id],
   );
 
+  useSubscription(
+    {
+      request: wsApi.onMarketplaceHistoryByIds([id]),
+      next: (data) => dispatch(historyActions.updateMarketplaceHistories(data.digitalaxMarketplacePurchaseHistories)),
+    },
+    [chainId, id],
+  );
+
   useEffect(
     () => () => {
       if (!garment) {
@@ -69,7 +108,7 @@ const Products = () => {
 
   const designerId = garment.designer;
 
-  return <PageProduct clothesId={garment.id} designerId={designerId} />;
+  return <PageProduct clothesId={garment.id} designerId={designerId} currentCollections={currentCollections} currentMarketplaceOffers={currentMarketplaceOffers} />;
 };
 
 export default memo(Products);

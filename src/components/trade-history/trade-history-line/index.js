@@ -10,7 +10,7 @@ import SmallPhotoWithText from '../../small-photo-with-text';
 import styles from './styles.module.scss';
 
 const TradeHistoryLine = ({
-  className, priceEth, date, sendersPhoto, sendersAddress, recipientAddress, recipientPhoto, eventName,
+  className, priceEth, date, sendersPhoto, sendersAddress, recipientAddress, recipientPhoto, eventName, isPaidWithMona, priceMona
 }) => {
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const chainId = useSelector(getChainId);
@@ -27,11 +27,18 @@ const TradeHistoryLine = ({
 
   return (
     <div className={cn(styles.item, className)}>
-      <div>
-        <span className={styles.priceEth}>{priceEth} Ξ</span>
-        <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
-        - {getDefaultText(eventName)}
-      </div>
+      {isPaidWithMona ?
+        (<div>
+          <span className={styles.priceEth}>{Math.round(parseFloat(priceMona) * 100) / 100} MONA</span>
+          <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
+          <span> - {getDefaultText(eventName)}</span>
+        </div>) : 
+        (<div>
+          <span className={styles.priceEth}>{priceEth} Ξ</span>
+          <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
+          <span> - {getDefaultText(eventName)}</span>
+        </div>)
+      }
       <SmallPhotoWithText
         addressLink={senderLink}
         addressText={sendersAddress}
@@ -50,17 +57,21 @@ const TradeHistoryLine = ({
 TradeHistoryLine.propTypes = {
   className: PropTypes.string,
   priceEth: PropTypes.string,
+  priceMona: PropTypes.string,
   date: PropTypes.number,
   sendersPhoto: PropTypes.string,
   sendersAddress: PropTypes.string,
   recipientPhoto: PropTypes.string,
   recipientAddress: PropTypes.string,
   eventName: PropTypes.string,
+  isPaidWithMona: PropTypes.bool,
 };
 
 TradeHistoryLine.defaultProps = {
   className: '',
   priceEth: null,
+  priceMona: null,
+  isPaidWithMona: false,
   date: '',
   sendersPhoto: '',
   sendersAddress: '',

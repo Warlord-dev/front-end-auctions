@@ -33,6 +33,13 @@
   object-fit: contain;
   max-width: 100%;
   margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.video {
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
 }
 
 .addressWrapper {
@@ -69,30 +76,39 @@
 
 .priceWrapper {
   margin-left: auto;
+  width: 100%;
+  cursor: pointer;
+}
+
+.twitterIcon {
+  margin-left: 5px;
 }
 
 .price, .estimate {
   font-size: 12px;
   line-height: 15px;
+  min-height: 35px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 400;
+  min-width: 125px;
+  max-width: 125px;
+  width: 125px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   border: 1px solid #E6E6E6;
   background-color: #fff;
-  min-width: 80px;
   padding: 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   font-weight: bold;
-  max-width: max-content;
 }
 
 .estimate {
-  min-width: 132px;
+  width: 100%;
 }
 
 .estimateInnerGray {
   color: $darkGray3;
   margin-right: 4px;
+  text-transform: uppercase;
 }
+

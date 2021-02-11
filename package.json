@@ -51,15 +51,11 @@
     "lodash.uniqby": "^4.7.0",
     "moment": "^2.29.1",
     "next": "10.0.0",
-    "next-cookies": "^2.0.3",
     "next-images": "^1.4.0",
     "next-redux-wrapper": "^5.0.0",
-    "next-seo": "^4.4.0",
     "prop-types": "^15.7.2",
     "qs": "^6.9.3",
-    "query-string": "^6.12.1",
     "react": "^16.13.1",
-    "react-autosuggest": "10.0.0",
     "react-dom": "^16.13.1",
     "react-image-magnify": "^2.7.4",
     "react-immutable-proptypes": "^2.2.0",
@@ -73,7 +69,6 @@
     "redux-modules-middleware": "^1.2.0",
     "redux-sentry-middleware": "^0.1.8",
     "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0",
     "sass": "^1.26.3",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.1",
@@ -89,13 +84,7 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0",
-    "husky": "^4.2.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint"
-    }
+    "eslint-plugin-react": "^7.7.0"
   },
   "browserslist": [
     ">0.3%",

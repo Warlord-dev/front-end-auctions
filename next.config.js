@@ -14,6 +14,7 @@ const {
   REWARD_CONTRACT_ADDRESSES,
   DEFAULT_WEB3_URL,
   MONA_TOKEN_ADDRESSES,
+  DIGITAL_MARKETPLACE_ADDRESSES,
 } = require('config');
 const withImages = require('next-images');
 
@@ -34,6 +35,7 @@ module.exports = withImages({
     REWARD_CONTRACT_ADDRESSES,
     DEFAULT_WEB3_URL,
     MONA_TOKEN_ADDRESSES,
+    DIGITAL_MARKETPLACE_ADDRESSES,
   },
   trailingSlash: true,
   assetPrefix: './',

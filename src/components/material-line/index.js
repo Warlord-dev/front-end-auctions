@@ -1,37 +1,121 @@
 /* eslint-disable react/no-array-index-key */
-import React, { memo } from 'react';
-import PropTypes from 'prop-types';
-import BigNumber from 'bignumber.js';
-import { convertToEth } from '@helpers/price.helpers';
-import { useTokenInfo } from '@hooks/token.info.hooks';
-import { createPreviewURL } from '@services/imgix.service';
-import { useAPY } from '@hooks/apy.hooks';
-import styles from './styles.module.scss';
+import React, { memo } from "react";
+import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { useTokenInfo } from "@hooks/token.info.hooks";
+import { createPreviewURL } from "@services/imgix.service";
+import { openPreviewMaterialModal } from "@actions/modals.actions";
+import styles from "./styles.module.scss";
 
-const MaterialLine = ({ className, item: { tokenUri, id, amount } }) => {
-
+const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
+  const dispatch = useDispatch();
   const tokenInfo = useTokenInfo(tokenUri, [tokenUri]);
-  const ETH = new BigNumber(convertToEth(amount)).toFixed(4);
-  const estimateApy = useAPY(amount || 0);
+
+  const doeField = ["Degree of Exclusivity", "Degrees of Exclusivity"];
+  const artistField = ["Artist"];
+
+  const artist = tokenInfo
+    ? (
+        tokenInfo.attributes.find(
+          (s) => artistField.findIndex((txt) => s.trait_type === txt) >= 0
+        ) || { value: "" }
+      ).value
+    : "";
+  const rarity = tokenInfo
+    ? (
+        tokenInfo.attributes.find(
+          (s) => doeField.findIndex((txt) => s.trait_type === txt) >= 0
+        ) || { value: "" }
+      ).value
+    : "";
+
+  const getArtistTwitter = (artist) => {
+    switch (artist) {
+      case "Defaced Studio":
+        return "https://twitter.com/Defacedstudio";
+      case "Emotionull":
+        return "https://twitter.com/em0tionull";
+      case "Jonathan Wolfe":
+        return "https://twitter.com/JonathanWWolfe";
+      case "Sturec":
+        return "https://twitter.com/sturec5";
+      case "Bryan Brinkman":
+        return "https://twitter.com/bryanbrinkman";
+      case "Odious":
+        return "https://twitter.com/todayodious";
+      case "GeorgeBoya":
+        return "https://twitter.com/boyageorge";
+      case "Vansdesign":
+        return "https://twitter.com/VansDesign_";
+      case "SamJ Studios":
+        return "https://twitter.com/samjstudios";
+    }
+    return "https://twitter.com/robnessofficial";
+  };
+
+  const isVideo = (info) => {
+    switch (info.name) {
+      case "KERO":
+      case "Stripes":
+      case "Rainbow Wiggle":
+      case "Waves":
+      case "Clouds":
+        return true;
+    }
+    return false;
+  };
 
   return (
     <ul className={className}>
       <li className={styles.item}>
         <div className={styles.imgWrapper}>
-          {tokenInfo && tokenInfo.image
-            ? <img className={styles.img} src={createPreviewURL(tokenInfo.image)} alt={tokenInfo && tokenInfo.name} /> : null}
+          {tokenInfo && tokenInfo.image ? (
+            isVideo(tokenInfo) ? (
+              <video
+                autoPlay
+                muted
+                loop
+                className={styles.video}
+                onClick={() =>
+                  dispatch(
+                    openPreviewMaterialModal({
+                      tokenImage: tokenInfo.image,
+                      isVideo: true,
+                    })
+                  )
+                }
+              >
+                <source src={tokenInfo.image} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                className={styles.img}
+                src={createPreviewURL(tokenInfo.image)}
+                alt={tokenInfo && tokenInfo.name}
+                onClick={() =>
+                  dispatch(
+                    openPreviewMaterialModal({ tokenImage: tokenInfo.image })
+                  )
+                }
+              />
+            )
+          ) : null}
           <span className={styles.textForImg}>{id}</span>
         </div>
         <div className={styles.addressWrapper}>
           <p className={styles.name}>{tokenInfo && tokenInfo.name}</p>
           <p className={styles.address}>{tokenInfo && tokenInfo.description}</p>
         </div>
-        <div className={styles.priceWrapper}>
-          <span className={styles.price}>{ETH} Ξ</span>
-        </div>
+        <a className={styles.priceWrapper} href={getArtistTwitter(artist)}>
+          <div className={styles.price}>
+            {artist || "ROBNΞSS"}
+            <img src="/images/twitter.svg" className={styles.twitterIcon} />
+          </div>
+        </a>
         <span className={styles.estimate}>
-          <span className={styles.estimateInnerGray}>~APY:</span>
-          {estimateApy}%
+          <div className={styles.estimateInnerGray}>
+            {rarity || "Exclusive"}
+          </div>
         </span>
       </li>
     </ul>
@@ -41,10 +125,12 @@ const MaterialLine = ({ className, item: { tokenUri, id, amount } }) => {
 MaterialLine.propTypes = {
   item: PropTypes.object.isRequired,
   className: PropTypes.string,
+  clothesId: PropTypes.string,
 };
 
 MaterialLine.defaultProps = {
-  className: '',
+  className: "",
+  clothesId: 1,
 };
 
 export default memo(MaterialLine);

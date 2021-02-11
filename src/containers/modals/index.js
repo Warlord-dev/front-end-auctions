@@ -4,12 +4,14 @@ import ModalConnectWallet from '@containers/modals/modal-connect-wallet';
 import ModalPlaceBid from '@containers/modals/modal-place-bid';
 import ModalRaiseBid from '@containers/modals/modal-raise-bid';
 import ModalWithdrawBid from '@containers/modals/modal-withdraw-bid';
+import BuyNow from '@containers/modals/buy-now';
+import PreviewMaterial from '@containers/modals/preview-material';
 
 
 const Modals = () => {
   const modals = useSelector((state) => state.modals.toJS());
   const {
-    isShowModalConnectMetamask, isShowModalPlaceBid, isShowModalRaiseBid, isShowModalWithdrawBid,
+    isShowModalConnectMetamask, isShowModalPlaceBid, isShowModalRaiseBid, isShowModalWithdrawBid, isShowBuyNow, isShowPreviewMaterial,
   } = modals;
 
   return (
@@ -18,6 +20,8 @@ const Modals = () => {
       {isShowModalPlaceBid && <ModalPlaceBid />}
       {isShowModalRaiseBid && <ModalRaiseBid />}
       {isShowModalWithdrawBid && <ModalWithdrawBid />}
+      {isShowBuyNow && <BuyNow />}
+      {isShowPreviewMaterial && <PreviewMaterial />}
     </>
   );
 };

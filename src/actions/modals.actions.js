@@ -42,5 +42,11 @@ export const closePlaceBidModal = () => (dispatch) => dispatch(closeModal('isSho
 export const openWithdrawModal = (params) => (dispatch) => dispatch(openModal('isShowModalWithdrawBid', 'hideScroll', params));
 export const closeWithdrawModal = () => (dispatch) => dispatch(closeModal('isShowModalWithdrawBid', 'addScroll'));
 
+export const openBuynowModal = (params) => (dispatch) => dispatch(openModal('isShowBuyNow', 'hideScroll', params));
+export const closeBuynowModal = () => (dispatch) => dispatch(closeModal('isShowBuyNow', 'addScroll'));
+
+export const openPreviewMaterialModal = (params) => (dispatch) => dispatch(openModal('isShowPreviewMaterial', 'hideScroll', params));
+export const closePreviewMaterialModal = () => (dispatch) => dispatch(closeModal('isShowPreviewMaterial', 'addScroll'));
+
 export const openRaiseModal = (params) => (dispatch) => dispatch(openModal('isShowModalRaiseBid', 'hideScroll', params));
 export const closeRaiseModal = () => (dispatch) => dispatch(closeModal('isShowModalRaiseBid', 'addScroll'));

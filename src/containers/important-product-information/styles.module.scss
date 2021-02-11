@@ -1,6 +1,17 @@
 @import '../../assets/scss/helpers/variables.scss';
 @import '../../assets/scss/helpers/helpers.scss';
 
+.linkStyle {
+  text-decoration: underline;
+  margin-top: 70px;
+  a {
+    color: darkblue;
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
 .smallWhite {
   margin: 0 12px 0 12px;
   background-color: #fff;
@@ -9,11 +20,6 @@
   justify-content: space-between;
   min-height: 160px;
   align-items: center;
-
-  .leftWrapper {
-    width: 260px;
-    max-width: 100%;
-  }
 
   .priceWrapper {
     margin-bottom: 20px;
@@ -120,11 +126,6 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-
-  .leftWrapper {
-    width: 260px;
-    max-width: 100%;
-  }
   
   .priceWrapper {
     margin-bottom: 40px;

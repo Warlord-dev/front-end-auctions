@@ -53,7 +53,7 @@ export const getDesignerChartOptions = (history) => {
   return options;
 };
 
-export const getMainPageChartOptions = (history) => {
+export const getMainPageChartOptions = (history, monaPerEth) => {
   const options = {
     time: {
       useUTC: false,
@@ -99,7 +99,7 @@ export const getMainPageChartOptions = (history) => {
       },
     },
     series: [{
-      data: prepareMainGraphStats(history),
+      data: prepareMainGraphStats(history, monaPerEth),
     }],
   };
   return options;

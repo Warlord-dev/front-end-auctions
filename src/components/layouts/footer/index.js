@@ -11,11 +11,11 @@ const dataLeftList = [
   },
   {
     item: 'Digital Fashion Auctions',
-    href: 'https://digitalax.gitbook.io/digitalax/tools-functionality/auction',
+    href: 'https://marketplace.digitalax.xyz/',
   },
   {
-    item: 'Staking Rewards',
-    href: 'https://digitalax.gitbook.io/digitalax/tools-functionality/staking',
+    item: 'Staking',
+    href: 'https://staking.digitalax.xyz',
   },
 ];
 
@@ -25,13 +25,9 @@ const dataCenterList = [
     href: 'https://digitalax.gitbook.io/digitalax/',
   },
   {
-    item: 'Project Overview',
+    item: 'Whitepaper',
     href:
-      'https://digitalax.s3.us-east-2.amazonaws.com/DIGITALAX+Project+Overview+v1.2.pdf',
-  },
-  {
-    item: 'Join Our Global Designer Network',
-    href: 'https://emmajane857686.typeform.com/to/WijilaK8',
+      'https://drive.google.com/file/d/1zG8h4GnodW7uWm_OsUY3g4I4RpOx6bMH/view?usp=sharing',
   },
 ];
 

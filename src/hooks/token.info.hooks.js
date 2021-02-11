@@ -35,7 +35,7 @@ export const useTokenInfo = (tokenUri, deps) => {
 
           dispatch(garmentActions.setGarmentInfo(tokenUri, jsonInfo));
         } catch (e) {
-          console.log('[INFO] Invalid tokenUri', tokenUri);
+          console.error('[INFO] Invalid tokenUri', tokenUri);
         }
       });
 

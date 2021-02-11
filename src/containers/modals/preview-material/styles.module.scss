@@ -1,0 +1,19 @@
+.footer {
+  padding: 15px;
+}
+
+.itemLargeImg {
+  width: 350px;
+  max-width: 350px;
+  min-width: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+.itemLargeImgZoom {
+  border: none;
+}
+
+.itemFitContent {
+  width: fit-content;
+}

@@ -51,14 +51,19 @@ export const prepareGraphAuctions = (auctions) => {
   return data;
 };
 
-export const prepareMainGraphStats = (items) => {
+export const prepareMainGraphStats = (items, monaPerEth) => {
 
+  const monaPerEthBN = new BigNumber(monaPerEth ? monaPerEth : 0);
   const sortedAuctions = items
     .filter((item) => item.totalBidValue !== null)
     .sort((a, b) => moment(a.id).unix() - moment(b.id).unix());
-
+  
   const data = sortedAuctions
-    .map((item) => [moment(item.id).valueOf(), Number(convertToEth(item.totalBidValue))]);
+    .map((item) => [moment(item.id).valueOf(), Number(convertToEth(
+      new BigNumber(item.totalBidValue)
+      .plus(new BigNumber(item.totalMarketplaceVolumeInETH))
+      .plus(new BigNumber(item.totalMarketplaceVolumeInMona).times(monaPerEthBN))
+    ))]);
 
   return data;
 };

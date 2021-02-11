@@ -5,6 +5,8 @@ export const onDaysChange = `
       totalBidValue
       totalWithdrawalValue
       totalNetBidActivity
+      totalMarketplaceVolumeInETH
+      totalMarketplaceVolumeInMona
     }
   }`;
 
@@ -156,6 +158,34 @@ export const onDesignerByIds = `
   }
 `;
 
+export const onMarketplaceHistoryByIds = `
+  subscription onMarketplaceHistoryByIds($ids: [ID!]) {
+    digitalaxMarketplacePurchaseHistories(where: {garmentAuctionId_in: $ids}) {
+      garmentAuctionId
+      eventName
+      timestamp
+      rarity
+      transactionHash
+      buyer
+      isPaidWithMona
+      monaTransferredAmount
+      platformFee
+      value
+      token {
+        id
+        owner
+        primarySalePrice
+        tokenUri
+        children {
+          id
+          amount
+          tokenUri
+        }
+      }
+    }
+  }
+`;
+
 export const onAuctionsHistoryByIds = `
   subscription onAuctionsHistoryByIds($ids: [ID!]) {
     digitalaxGarmentAuctionHistories(where: {eventName: "BidPlaced", token_in: $ids}) {
@@ -199,12 +229,124 @@ export const onResultedAuctionsByEndTimeGtAndIds = `
   }
 `;
 
+
+export const onDigitalaxGarmentsCollectionChange = `
+  subscription onDigitalaxGarmentsCollectionChange($garmentAuctionNFTId: BigInt!)
+  {
+    digitalaxGarmentCollections(where: { garmentAuctionID: $garmentAuctionNFTId }) {
+      id
+      garmentAuctionID
+      rarity
+      garments {
+        id
+        designer
+        owner
+        primarySalePrice
+        tokenUri
+        children {
+          id
+          amount
+          tokenUri
+        }
+      }
+    }
+  }
+`;
+
+export const onDigitalaxGarmentsCollectionChangeByIds = `
+  subscription onDigitalaxGarmentsCollectionChange($ids: [BigInt!])
+  {
+    digitalaxGarmentCollections(where: { garmentAuctionID_in: $ids }) {
+      id
+      garmentAuctionID
+      rarity
+      garments {
+        id
+        designer
+        owner
+        primarySalePrice
+        tokenUri
+        children {
+          id
+          amount
+          tokenUri
+        }
+      }
+    }
+  }
+`;
+
+export const getAllDigitalaxGarmentsCollections = `
+  subscription getAllDigitalaxGarmentsCollections
+  {
+    digitalaxGarmentCollections {
+      id
+      garmentAuctionID
+      rarity
+      garments {
+        id
+        designer
+        owner
+        primarySalePrice
+        tokenUri
+        children {
+          id
+          amount
+          tokenUri
+        }
+      }
+    }
+  }
+`;
+
+export const onDigitalaxMarketplaceOffers = `
+  subscription onDigitalaxMarketplaceOffers($ids: [ID!])
+  {
+    digitalaxMarketplaceOffers(where: { id_in: $ids }) {
+      id
+      primarySalePrice
+      garmentCollection {
+        id
+        garmentAuctionID
+        rarity
+      }
+      startTime
+      amountSold
+    }
+  }
+`;
+
+export const allDigitalaxMarketplaceOffers = `
+  subscription onDigitalaxMarketplaceOffers
+  {
+    digitalaxMarketplaceOffers {
+      id
+      primarySalePrice
+      garmentCollection {
+        id
+        garmentAuctionID
+        rarity
+        garments {
+          id
+          tokenUri
+        }
+      }
+      startTime
+      amountSold
+    }
+  }
+`;
+
+
 export const onNFTGlobalStats = `
   subscription onNFTGlobalStats {
     digitalaxGarmentNFTGlobalStats {
       id
       totalSalesValue
       totalActiveBidsValue
+      totalMarketplaceSalesInETH
+      totalMarketplaceSalesInMona
+      marketplacePlatformFee
     }
   }
 `;

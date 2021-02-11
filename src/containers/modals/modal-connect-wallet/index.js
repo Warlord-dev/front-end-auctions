@@ -2,7 +2,6 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import cn from 'classnames';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
 import Notification from '@components/notification';
@@ -28,7 +27,7 @@ const ModalConnectWallet = ({
   return (
     <>
       {createPortal(
-        <Modal onClose={() => handleClose()} title={title} className={cn(className, styles.modal)}>
+        <Modal onClose={() => handleClose()} title={title} className={className}>
           <div className={styles.modalItem}>
             <div className={styles.modalLeftBox}>
               <span className={styles.modalsTextForIcon}>{textForIcon}</span>

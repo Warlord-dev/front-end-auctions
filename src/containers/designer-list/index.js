@@ -13,7 +13,6 @@ const DesignerList = () => {
       .sort((a, b) => parseInt(a.id, 10) - parseInt(b.id, 10)),
     [designerList],
   );
-  console.log('sortedList', sortedList);
   return (
     <div className={cn(styles.wrapper)}>
       <h2 className={styles.title}>Global Designer Network</h2>

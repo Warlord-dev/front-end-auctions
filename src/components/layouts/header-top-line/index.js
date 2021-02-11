@@ -39,14 +39,14 @@ const HeaderTopLine = ({
         <Link href="/sold">
           <a className={styles.link}>Previously Sold</a>
         </Link> */}
-        <a
+        {/* <a
           href="https://pode.digitalax.xyz/"
           className={styles.link}
           target="_blank"
           rel="noreferrer"
         >
           PODE
-        </a>
+        </a> */}
         <a
           href="https://medium.com/@digitalax"
           className={styles.link}

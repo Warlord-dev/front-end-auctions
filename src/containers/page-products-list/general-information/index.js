@@ -4,8 +4,12 @@ import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import Timer from '@components/timer';
+import { useSelector } from 'react-redux';
 import { getMainPageChartOptions } from '@services/graph.service';
 import { MAIN_GRAPH_COUNT_DAYS } from '@constants/global.constants';
+import {
+  getMonaPerEth,
+} from '@selectors/global.selectors';
 import styles from './styles.module.scss';
 
 const HIGHEST_APY = 'Highest APY';
@@ -14,7 +18,8 @@ const GeneralInformation = ({
   title, timestamp, list, history,
 }) => {
 
-  const options = getMainPageChartOptions(history);
+  const monaPerEth = useSelector(getMonaPerEth);
+  const options = getMainPageChartOptions(history, monaPerEth);
 
   return (
     <div className={cn(styles.wrapper)}>

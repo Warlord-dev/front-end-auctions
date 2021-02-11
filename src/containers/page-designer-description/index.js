@@ -28,7 +28,7 @@ const PageDesignerDescription = ({
 
 PageDesignerDescription.propTypes = {
   designerName: PropTypes.string.isRequired,
-  clothesIds: PropTypes.object.isRequired,
+  clothesIds: PropTypes.array.isRequired,
 };
 
 PageDesignerDescription.defaultProps = {

@@ -4,13 +4,13 @@ import cn from 'classnames';
 import styles from './styles.module.scss';
 
 const Modal = ({
-  className, title, withCloseIcon, text, onClose, children,
+  className, title, withCloseIcon, text, onClose, children, titleStyle,
 }) => (
   <div className={styles.wrapper}>
     <div className={cn(styles.modal, className)}>
       {(title || withCloseIcon) && (
         <div className={styles.modalHeader}>
-          {title && <p className={styles.title}>{title}</p>}
+          {title && <p className={cn(styles.title, titleStyle)}>{title}</p>}
           {withCloseIcon && (
             <button
               onClick={onClose}
@@ -30,12 +30,13 @@ const Modal = ({
 );
 
 Modal.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.any,
   title: PropTypes.string,
   withCloseIcon: PropTypes.bool,
   text: PropTypes.array,
   onClose: PropTypes.func,
   children: PropTypes.any,
+  titleStyle: PropTypes.any,
 };
 
 Modal.defaultProps = {
@@ -45,6 +46,7 @@ Modal.defaultProps = {
   text: [],
   onClose: () => {},
   children: null,
+  titleStyle: {},
 };
 
 export default Modal;

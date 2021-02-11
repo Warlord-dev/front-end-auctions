@@ -1,4 +1,6 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, {
+  memo, useEffect, useState, useMemo,
+} from 'react';
 import PropTypes from 'prop-types';
 import BigNumber from 'bignumber.js';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,7 +23,7 @@ import { useAPY } from '@hooks/apy.hooks';
 import GeneralInformation from './general-information';
 import CardList from './card-list';
 
-const PageProductsList = ({ sold, auctionId }) => {
+const PageProductsList = ({ auctionId }) => {
   const dispatch = useDispatch();
   const auctions = useSelector(getAllAuctions);
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
@@ -53,7 +55,7 @@ const PageProductsList = ({ sold, auctionId }) => {
       next: (data) => {
         dispatch(
           auctionPageActions.updateGlobalStats(
-            data.digitalaxGarmentNFTGlobalStats[0],
+            data.digitalaxGarmentNFTGlobalStats.length > 0 ? data.digitalaxGarmentNFTGlobalStats[0] : [],
           ),
         );
       },
@@ -125,6 +127,28 @@ const PageProductsList = ({ sold, auctionId }) => {
     }
   });
 
+
+  const arrCurrentAuctions = useMemo(() => {
+    const rAuctions = [...new Array(3).fill([])];
+    const arrAcutions = auctions.toJS();
+
+    if (arrAcutions.length === 0) return [];
+
+    let i;
+    for (i = 0; i < arrAcutions.length; i += 1) {
+      const item = arrAcutions[i];
+      if (parseInt(item.id, 10) < 20) {
+        rAuctions[0] = [...rAuctions[0], item];
+      } else if (parseInt(item.id, 10) < 29) {
+        rAuctions[1] = [...rAuctions[1], item];
+      } else {
+        rAuctions[2] = [...rAuctions[2], item];
+      }
+    }
+
+    return rAuctions;
+  }, [auctions.toJS()]);
+
   const estimateApy = useAPY(highestBid.toString(10));
 
   const list = [
@@ -153,12 +177,9 @@ const PageProductsList = ({ sold, auctionId }) => {
         history={monthResultedAuctions}
       />
       <CardList
-        auctions={auctions
-          .filter((val) => sold === val.toJS().resulted)
-          .filter((val) => (parseInt(val.toJS().id, 10) < 20
-            ? auctionId === '1'
-            : auctionId !== '1'))}
-        sold={sold}
+        auctions={arrCurrentAuctions[parseInt(auctionId, 10) - 1] || []}
+        sold={parseInt(auctionId, 10) === 3}
+        auctionId={auctionId}
         showGraphIds={showGraphIds}
         setShowGraphIds={setShowGraphIds}
       />
@@ -167,12 +188,7 @@ const PageProductsList = ({ sold, auctionId }) => {
 };
 
 PageProductsList.propTypes = {
-  sold: PropTypes.bool.isRequired,
   auctionId: PropTypes.string.isRequired,
-};
-
-CardList.defaultProps = {
-  sold: false,
 };
 
 export default memo(PageProductsList);

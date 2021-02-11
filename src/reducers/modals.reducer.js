@@ -8,7 +8,8 @@ const DEFAULT_FIELDS = Map({
   isShowModalRaiseBid: false,
   isShowModalWithdrawBid: false,
   isShowNotificationConnectMetamask: false,
-
+  isShowBuyNow: false,
+  isShowPreviewMaterial: false,
   params: null,
 });
 
