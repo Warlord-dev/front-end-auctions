@@ -51,5 +51,5 @@ export const closePreviewMaterialModal = () => (dispatch) => dispatch(closeModal
 export const openRaiseModal = (params) => (dispatch) => dispatch(openModal('isShowModalRaiseBid', 'hideScroll', params));
 export const closeRaiseModal = () => (dispatch) => dispatch(closeModal('isShowModalRaiseBid', 'addScroll'));
 
-export const openSignupModal = () => (dispatch) => dispatch(openModal('isShowModalSignup', 'hideScroll'));
-export const closeSignupModal = () => (dispatch) => dispatch(openModal('isShowModalSignup', 'addScroll'));
+export const openSignupModal = (params) => (dispatch) => dispatch(openModal('isShowModalSignup', 'hideScroll', params));
+export const closeSignupModal = () => (dispatch) => dispatch(closeModal('isShowModalSignup', 'addScroll'));

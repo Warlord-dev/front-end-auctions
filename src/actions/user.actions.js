@@ -5,10 +5,8 @@ import { isMetamaskInstalled } from '@services/metamask.service';
 import BaseActions from './base-actions';
 
 class UserActions extends BaseActions {
-
   tryToLogin() {
     return async (dispatch) => {
-
       if (!isMetamaskInstalled()) {
         dispatch(openNotInstalledMetamask());
         return;
@@ -17,7 +15,9 @@ class UserActions extends BaseActions {
       const { ethereum } = window;
 
       try {
-        const [account] = await ethereum.request({ method: 'eth_requestAccounts' });
+        const [account] = await ethereum.request({
+          method: 'eth_requestAccounts',
+        });
 
         if (!account) {
           console.error('Account is epmty.');
@@ -31,11 +31,11 @@ class UserActions extends BaseActions {
       } catch (e) {
         console.error(e.message);
       }
-
     };
   }
 
   tryToSignup() {
+    return async (dispatch) => {};
   }
 
   logout() {
@@ -44,7 +44,6 @@ class UserActions extends BaseActions {
       dispatch(this.setValue('account', null));
     };
   }
-
 }
 
 export default new UserActions(userReducer);

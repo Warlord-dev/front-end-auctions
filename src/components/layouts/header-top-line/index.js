@@ -20,8 +20,6 @@ const HeaderTopLine = ({
   const accountPhoto = useSelector(getAccountPhoto);
   const chainId = useSelector(getChainId);
 
-  console.log(account, chainId);
-
   const handleClick = () => dispatch(openConnectMetamaskModal());
 
   const [isShowLogOut, setIsShowLogOut] = useState(false);
