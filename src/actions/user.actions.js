@@ -1,4 +1,4 @@
-import { closeConnectMetamaskModal, openNotInstalledMetamask } from '@actions/modals.actions';
+import { closeConnectMetamaskModal, openNotInstalledMetamask, openSignupModal } from '@actions/modals.actions';
 import { STORAGE_IS_LOGGED_IN } from '@constants/storage.constants';
 import userReducer from '@reducers/user.reducer';
 import { isMetamaskInstalled } from '@services/metamask.service';
@@ -27,11 +27,15 @@ class UserActions extends BaseActions {
         localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
         dispatch(this.setValue('account', account));
         dispatch(closeConnectMetamaskModal());
+        dispatch(openSignupModal());
       } catch (e) {
         console.error(e.message);
       }
 
     };
+  }
+
+  tryToSignup() {
   }
 
   logout() {
