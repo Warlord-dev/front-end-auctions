@@ -10,27 +10,26 @@ import { useAPY } from '@hooks/apy.hooks';
 import { getAccount } from '@selectors/user.selectors';
 import { convertToEth } from '@helpers/price.helpers';
 import Button from '@components/buttons/button';
-import {
-  openBuynowModal,
-  openConnectMetamaskModal,
-} from '@actions/modals.actions';
-import {
-  getExchangeRateETH,
-} from '@selectors/global.selectors';
+import { openBuynowModal, openConnectMetamaskModal } from '@actions/modals.actions';
+import { getExchangeRateETH } from '@selectors/global.selectors';
 import { COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 import AuctionInformation from './auction-information';
 import DesignInformation from './design-information';
 import MaterialList from './material-list';
 import styles from './styles.module.scss';
 
-
 const SHOW_FIRST_TAB = 0;
 const SHOW_SECOND_TAB = 1;
 
 const RightBox = ({
-  clothesId, currentClothesInfo, currentDesignersInfo, youReceiveText, activeTab, currentCounts, currentCollections,
+  clothesId,
+  currentClothesInfo,
+  currentDesignersInfo,
+  youReceiveText,
+  activeTab,
+  currentCounts,
+  currentCollections,
 }) => {
-
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
   const garment = useSelector(getGarmentsById(clothesId));
@@ -38,15 +37,30 @@ const RightBox = ({
   const [semiRare, common] = useMemo(() => {
     if (!currentCollections) return [{ children: [] }, { children: [] }];
 
-    const tSemiRare = currentCollections.find((collection) => collection.rarity === SEMI_RARE_RARITY);
+    const tSemiRare = currentCollections.find(
+      (collection) => collection.rarity === SEMI_RARE_RARITY
+    );
     const tCommon = currentCollections.find((collection) => collection.rarity === COMMON_RARITY);
-    return [tSemiRare ? tSemiRare.garments[0] : { children: [] }, tCommon ? tCommon.garments[0] : { children: [] }];
+    return [
+      tSemiRare ? tSemiRare.garments[0] : { children: [] },
+      tCommon ? tCommon.garments[0] : { children: [] },
+    ];
   }, [currentCollections]);
 
   const VALUE_NFT = useMemo(() => {
-    if (activeTab === 0) { return garment && garment.children.length > 0 ? `(${garment.children.length} NFT${garment.children.length > 1 ? 's': ''})` : ''; }
-    if (activeTab === 0) { return semiRare.children.length > 0 ? `(${semiRare.children.length} NFT${semiRare.children.length > 1 ? 's': ''})` : ''; }
-    return common.children.length > 0 ? `(${common.children.length} NFT${common.children.length > 1 ? 's': ''})` : '';
+    if (activeTab === 0) {
+      return garment && garment.children.length > 0
+        ? `(${garment.children.length} NFT${garment.children.length > 1 ? 's' : ''})`
+        : '';
+    }
+    if (activeTab === 0) {
+      return semiRare.children.length > 0
+        ? `(${semiRare.children.length} NFT${semiRare.children.length > 1 ? 's' : ''})`
+        : '';
+    }
+    return common.children.length > 0
+      ? `(${common.children.length} NFT${common.children.length > 1 ? 's' : ''})`
+      : '';
   }, [activeTab, semiRare, common]);
 
   const exchangeRateETH = useSelector(getExchangeRateETH);
@@ -56,26 +70,29 @@ const RightBox = ({
     return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
   };
 
-  
   const estimateAPY = useAPY(currentCounts[activeTab].basePrice);
 
-  const TABS = [activeTab === 0 ? 'Auction Information' : 'Design Information', `Material Composition ${VALUE_NFT}`];
+  const TABS = [
+    activeTab === 0 ? 'Auction Information' : 'Design Information',
+    `Material Composition ${VALUE_NFT}`,
+  ];
   const [activeItem, setActiveItem] = useState(SHOW_FIRST_TAB);
 
   const renderAuctionInfo = () => {
     if (activeItem === SHOW_FIRST_TAB) return <AuctionInformation {...currentClothesInfo} />;
     if (activeItem === SHOW_SECOND_TAB) {
       return (
-        <MaterialList
-          clothesId={clothesId}
-          valueChildNfts={currentClothesInfo?.valueChildNfts}
-        />
+        <MaterialList clothesId={clothesId} valueChildNfts={currentClothesInfo?.valueChildNfts} />
       );
-    } return null;
+    }
+    return null;
   };
 
   const renderCollectionInfo = () => {
-    if (activeItem === SHOW_FIRST_TAB) return <DesignInformation currentClothesInfo={currentClothesInfo} estimateAPY={estimateAPY} />;
+    if (activeItem === SHOW_FIRST_TAB)
+      return (
+        <DesignInformation currentClothesInfo={currentClothesInfo} estimateAPY={estimateAPY} />
+      );
     if (activeItem === SHOW_SECOND_TAB) {
       return (
         <MaterialList
@@ -86,12 +103,18 @@ const RightBox = ({
           valueChildNfts={currentClothesInfo?.valueChildNfts}
         />
       );
-    } return null;
+    }
+    return null;
   };
 
   const handleClickBuy = () => {
     if (account) {
-      dispatch(openBuynowModal({ id: currentCounts[activeTab].collectionId, priceEth: currentCounts[activeTab].basePrice }));
+      dispatch(
+        openBuynowModal({
+          id: currentCounts[activeTab].collectionId,
+          priceEth: currentCounts[activeTab].basePrice,
+        })
+      );
     } else {
       dispatch(openConnectMetamaskModal());
     }
@@ -110,18 +133,29 @@ const RightBox = ({
       {activeTab === 0 && (
         <>
           <p className={styles.description}>{currentClothesInfo?.description}</p>
-          {currentClothesInfo?.youReceive && <p className={styles.youReceiveText}>{youReceiveText}</p>}
+          {currentClothesInfo?.youReceive && (
+            <p className={styles.youReceiveText}>
+              {parseInt(clothesId, 10) > 43 ? 'What you receive' : youReceiveText}
+            </p>
+          )}
           <p className={styles.youReceive}>{currentClothesInfo?.youReceive}</p>
         </>
       )}
       {activeTab > 0 && (
         <>
           <p className={styles.priceWrapper}>
-            <span className={styles.priceEth}>{convertToEth(currentCounts[activeTab].basePrice)} Ξ</span>
-            <span className={styles.priceUsd}>(${getPriceUsd(convertToEth(currentCounts[activeTab].basePrice))})</span>
+            <span className={styles.priceEth}>
+              {convertToEth(currentCounts[activeTab].basePrice)} Ξ
+            </span>
+            <span className={styles.priceUsd}>
+              (${getPriceUsd(convertToEth(currentCounts[activeTab].basePrice))})
+            </span>
           </p>
           <p className={styles.countInfo}>
-            {currentCounts[activeTab].sold + 1 > currentCounts[activeTab].total ? currentCounts[activeTab].total : currentCounts[activeTab].sold + 1} of {currentCounts[activeTab].total}
+            {currentCounts[activeTab].sold + 1 > currentCounts[activeTab].total
+              ? currentCounts[activeTab].total
+              : currentCounts[activeTab].sold + 1}{' '}
+            of {currentCounts[activeTab].total}
           </p>
           <Button
             onClick={() => handleClickBuy()}
@@ -129,11 +163,13 @@ const RightBox = ({
             background="black"
             isDisabled={currentCounts[activeTab].sold === currentCounts[activeTab].total}
           >
-            <span className={styles.buttonText}>{currentCounts[activeTab].sold === currentCounts[activeTab].total ? 'Sold Out' : 'Buy Now'}</span>
+            <span className={styles.buttonText}>
+              {currentCounts[activeTab].sold === currentCounts[activeTab].total
+                ? 'Sold Out'
+                : 'Buy Now'}
+            </span>
             {currentCounts[activeTab].sold !== currentCounts[activeTab].total && (
-              <span className={styles.buttonGray}>
-                (Pay in ETH or $MONA)
-              </span>
+              <span className={styles.buttonGray}>(Pay in ETH or $MONA)</span>
             )}
           </Button>
         </>
@@ -144,7 +180,8 @@ const RightBox = ({
             onClick={() => setActiveItem(index)}
             className={cn(styles.tab, { [styles.active]: activeItem === index })}
             key={item}
-          >{item}
+          >
+            {item}
           </button>
         ))}
       </div>

@@ -401,6 +401,23 @@ const DEFAULT_FIELDS = Map({
         },
       ]),
     },
+    {
+      id: '29',
+      designerName: 'Rtfkt',
+      designerPhoto: './images/Rtfkt.jpeg',
+      descriptionDesigner: [
+        'RTFKT is a very eclectic, creator led organisation who built their reputation with unique Sneakers, such as the Cybersneaker or NZXT “Gaming Sneaker”.',
+        'Formed by three friends at the beginning of the COVID era, RTFKT was born on the metaverse, and this has defined its feel to this day.',
+      ],
+      designerCountry: 'United States',
+      designerCountryFlagIcon: './images/icons/usa.png',
+      designerSocialMedia: List([
+        {
+          name: 'twitter',
+          href: 'https://twitter.com/RTFKTstudios',
+        },
+      ]),
+    },
   ]),
 });
 

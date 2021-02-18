@@ -1,6 +1,6 @@
 export const onDaysChange = `
   subscription onAuctionsChangeByIds($date: String!) {
-    days(where: {id_gt: $date }) {
+    days(first: 1000, where: {id_gt: $date }) {
       id
       totalBidValue
       totalWithdrawalValue
@@ -12,7 +12,7 @@ export const onDaysChange = `
 
 export const onAuctionsChange = `
   subscription onAuctionsChange {
-    digitalaxGarmentAuctions(where:{resulted_not_in:[true]}) {
+    digitalaxGarmentAuctions(first: 1000, where:{resulted_not_in:[true]}) {
       id
       reservePrice
       endTime
@@ -47,7 +47,7 @@ export const onAuctionsChange = `
 
 export const onAllAuctionsChange = `
   subscription onAuctionsChange {
-    digitalaxGarmentAuctions {
+    digitalaxGarmentAuctions(first: 1000) {
       id
       reservePrice
       endTime
@@ -82,7 +82,7 @@ export const onAllAuctionsChange = `
 
 export const onPreviousAuctionsChange = `
   subscription onPreviousAuctionsChange {
-    digitalaxGarmentAuctions(where: {resulted_in: [true]}) {
+    digitalaxGarmentAuctions(first: 1000, where: {resulted_in: [true]}) {
       id
       resulted
       reservePrice
@@ -119,7 +119,7 @@ export const onPreviousAuctionsChange = `
 
 export const onAuctionsChangeByIds = `
   subscription onAuctionsChangeByIds($ids: [ID!]) {
-    digitalaxGarmentAuctions(where: {id_in: $ids}) {
+    digitalaxGarmentAuctions(first: 1000, where: {id_in: $ids}) {
       id
       reservePrice
       endTime
@@ -136,7 +136,7 @@ export const onAuctionsChangeByIds = `
 
 export const onDesignerByIds = `
   subscription onDesignerGarments($ids: [ID!]) {
-    digitalaxGarmentDesigners(where: { id_in: $ids }) {
+    digitalaxGarmentDesigners(first: 1000, where: { id_in: $ids }) {
       id
       listings {
         id
@@ -160,7 +160,7 @@ export const onDesignerByIds = `
 
 export const onMarketplaceHistoryByIds = `
   subscription onMarketplaceHistoryByIds($ids: [ID!]) {
-    digitalaxMarketplacePurchaseHistories(where: {garmentAuctionId_in: $ids}) {
+    digitalaxMarketplacePurchaseHistories(first: 1000, where: {garmentAuctionId_in: $ids}) {
       garmentAuctionId
       eventName
       timestamp
@@ -188,7 +188,7 @@ export const onMarketplaceHistoryByIds = `
 
 export const onAuctionsHistoryByIds = `
   subscription onAuctionsHistoryByIds($ids: [ID!]) {
-    digitalaxGarmentAuctionHistories(where: {eventName: "BidPlaced", token_in: $ids}) {
+    digitalaxGarmentAuctionHistories(first: 1000, where: {eventName: "BidPlaced", token_in: $ids}) {
       id
       eventName
       timestamp
@@ -229,11 +229,10 @@ export const onResultedAuctionsByEndTimeGtAndIds = `
   }
 `;
 
-
 export const onDigitalaxGarmentsCollectionChange = `
   subscription onDigitalaxGarmentsCollectionChange($garmentAuctionNFTId: BigInt!)
   {
-    digitalaxGarmentCollections(where: { garmentAuctionID: $garmentAuctionNFTId }) {
+    digitalaxGarmentCollections(first: 1000, where: { garmentAuctionID: $garmentAuctionNFTId }) {
       id
       garmentAuctionID
       rarity
@@ -256,7 +255,7 @@ export const onDigitalaxGarmentsCollectionChange = `
 export const onDigitalaxGarmentsCollectionChangeByIds = `
   subscription onDigitalaxGarmentsCollectionChange($ids: [BigInt!])
   {
-    digitalaxGarmentCollections(where: { garmentAuctionID_in: $ids }) {
+    digitalaxGarmentCollections(first: 1000, where: { garmentAuctionID_in: $ids }) {
       id
       garmentAuctionID
       rarity
@@ -279,7 +278,7 @@ export const onDigitalaxGarmentsCollectionChangeByIds = `
 export const getAllDigitalaxGarmentsCollections = `
   subscription getAllDigitalaxGarmentsCollections
   {
-    digitalaxGarmentCollections {
+    digitalaxGarmentCollections(first: 1000) {
       id
       garmentAuctionID
       rarity
@@ -302,7 +301,7 @@ export const getAllDigitalaxGarmentsCollections = `
 export const onDigitalaxMarketplaceOffers = `
   subscription onDigitalaxMarketplaceOffers($ids: [ID!])
   {
-    digitalaxMarketplaceOffers(where: { id_in: $ids }) {
+    digitalaxMarketplaceOffers(first: 1000, where: { id_in: $ids }) {
       id
       primarySalePrice
       garmentCollection {
@@ -319,7 +318,7 @@ export const onDigitalaxMarketplaceOffers = `
 export const allDigitalaxMarketplaceOffers = `
   subscription onDigitalaxMarketplaceOffers
   {
-    digitalaxMarketplaceOffers {
+    digitalaxMarketplaceOffers(first: 1000) {
       id
       primarySalePrice
       garmentCollection {
@@ -336,7 +335,6 @@ export const allDigitalaxMarketplaceOffers = `
     }
   }
 `;
-
 
 export const onNFTGlobalStats = `
   subscription onNFTGlobalStats {

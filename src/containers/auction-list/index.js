@@ -1,21 +1,14 @@
-import React, {
-  memo, useEffect, useMemo, useState,
-} from 'react';
+import React, { memo, useEffect, useMemo, useState } from 'react';
 import BigNumber from 'bignumber.js';
 import cn from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dropdown } from 'semantic-ui-react';
 import { convertToEth } from '@helpers/price.helpers';
 import auctionPageActions from '@actions/auction.page.actions';
-import {
-  MAIN_GRAPH_COUNT_DAYS,
-  TOTAL_VOLUME_DAYS,
-} from '@constants/global.constants';
+import { MAIN_GRAPH_COUNT_DAYS, TOTAL_VOLUME_DAYS } from '@constants/global.constants';
 import { STORAGE_SORT_BY_AUCTION } from '@constants/storage.constants';
 import { getChainId } from '@selectors/global.selectors';
-import {
-  getMonaPerEth,
-} from '@selectors/global.selectors';
+import { getMonaPerEth } from '@selectors/global.selectors';
 import collectionActions from '@actions/collection.actions';
 import { getAllCollections, getAllMarketplaceOffers } from '@selectors/collection.selectors';
 import {
@@ -41,6 +34,7 @@ const auctionNames = [
   },
   { id: 2, text: 'Auction02: Rush Corps' },
   { id: 3, text: 'Auction03: Fractional Garment Ownership' },
+  { id: 4, text: 'Auction04: THE METAJACKET: RTFKT' },
 ];
 const dropdownOptions = [
   { key: 1, text: 'Earliest Auction', value: 'earliest_auction' },
@@ -59,12 +53,12 @@ const PageAuctionList = () => {
   const marketplaceOffers = useSelector(getAllMarketplaceOffers).toJS();
   const chainId = useSelector(getChainId);
   const [dropdownActiveItem, setDropdownActiveItem] = useState(
-    localStorage.getItem(STORAGE_SORT_BY_AUCTION),
+    localStorage.getItem(STORAGE_SORT_BY_AUCTION)
   );
   const monaPerEth = useSelector(getMonaPerEth);
 
   const [currentAuctions, highestBid] = useMemo(() => {
-    const rAuctions = [...new Array(3).fill([])];
+    const rAuctions = [...new Array(4).fill([])];
     const arrAcutions = auctions.toJS();
     let highestBid = new BigNumber(0);
 
@@ -74,9 +68,9 @@ const PageAuctionList = () => {
       if (!auction.topBid) {
         return;
       }
-  
+
       const bid = new BigNumber(auction.topBid);
-  
+
       if (bid.gt(highestBid)) {
         highestBid = bid;
       }
@@ -90,8 +84,10 @@ const PageAuctionList = () => {
         rAuctions[0] = [...rAuctions[0], item];
       } else if (parseInt(item.id, 10) < 29) {
         rAuctions[1] = [...rAuctions[1], item];
-      } else {
+      } else if (parseInt(item.id, 10) < 43) {
         rAuctions[2] = [...rAuctions[2], item];
+      } else {
+        rAuctions[3] = [...rAuctions[3], item];
       }
     }
 
@@ -99,21 +95,33 @@ const PageAuctionList = () => {
       if (rAuctions[i].length === 0) continue;
 
       let sum = new BigNumber(rAuctions[i][0].topBid ? rAuctions[i][0].topBid : 0);
-      let auctionCollections = marketplaceOffers.filter(offer => offer.garmentCollection.garmentAuctionID === rAuctions[i][0].id);
+      let auctionCollections = marketplaceOffers.filter(
+        (offer) => offer.garmentCollection.garmentAuctionID === rAuctions[i][0].id
+      );
       if (auctionCollections.length > 0) {
-        auctionCollections.forEach((offer) => sum = sum.plus(new BigNumber(offer.primarySalePrice).times(new BigNumber(offer.amountSold))));
+        auctionCollections.forEach(
+          (offer) =>
+            (sum = sum.plus(
+              new BigNumber(offer.primarySalePrice).times(new BigNumber(offer.amountSold))
+            ))
+        );
       }
       let maxId = 0;
 
       for (j = 1; j < rAuctions[i].length; j += 1) {
         sum = sum.plus(new BigNumber(rAuctions[i][j].topBid ? rAuctions[i][j].topBid : 0));
-        auctionCollections = marketplaceOffers.filter(offer => offer.garmentCollection.garmentAuctionID === rAuctions[i][j].id);
+        auctionCollections = marketplaceOffers.filter(
+          (offer) => offer.garmentCollection.garmentAuctionID === rAuctions[i][j].id
+        );
         if (auctionCollections.length > 0) {
-          auctionCollections.forEach((offer) => sum = sum.plus(new BigNumber(offer.primarySalePrice).times(new BigNumber(offer.amountSold))));
+          auctionCollections.forEach(
+            (offer) =>
+              (sum = sum.plus(
+                new BigNumber(offer.primarySalePrice).times(new BigNumber(offer.amountSold))
+              ))
+          );
         }
-        if (
-          new BigNumber(rAuctions[i][maxId]).lt(new BigNumber(rAuctions[i][j]))
-        ) {
+        if (new BigNumber(rAuctions[i][maxId]).lt(new BigNumber(rAuctions[i][j]))) {
           maxId = j;
         }
       }
@@ -127,7 +135,7 @@ const PageAuctionList = () => {
     }
 
     const result = rAuctions.filter((auc) => auc.length === undefined);
-    return [result, highestBid]
+    return [result, highestBid];
   }, [auctions.toJS(), marketplaceOffers]);
 
   const sortedAuctions = useMemo(() => {
@@ -145,15 +153,13 @@ const PageAuctionList = () => {
 
       case 'lowest_volume':
         result.sort(
-          (a, b) => parseFloat(convertToEth(a.totalBids))
-            - parseFloat(convertToEth(b.totalBids)),
+          (a, b) => parseFloat(convertToEth(a.totalBids)) - parseFloat(convertToEth(b.totalBids))
         );
         break;
 
       case 'highest_volume':
         result.sort(
-          (b, a) => parseFloat(convertToEth(a.totalBids))
-            - parseFloat(convertToEth(b.totalBids)),
+          (b, a) => parseFloat(convertToEth(a.totalBids)) - parseFloat(convertToEth(b.totalBids))
         );
         break;
       default:
@@ -169,7 +175,7 @@ const PageAuctionList = () => {
       request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
       next: (data) => dispatch(auctionPageActions.updateMonthStats(data.days)),
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
@@ -177,7 +183,7 @@ const PageAuctionList = () => {
       request: wsApi.onDaysChange(TOTAL_VOLUME_DAYS),
       next: (data) => dispatch(auctionPageActions.updateWeekStats(data.days)),
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
@@ -186,22 +192,22 @@ const PageAuctionList = () => {
       next: (data) => {
         dispatch(
           auctionPageActions.updateGlobalStats(
-            data.digitalaxGarmentNFTGlobalStats.length > 0 ? data.digitalaxGarmentNFTGlobalStats[0] : [],
-          ),
+            data.digitalaxGarmentNFTGlobalStats.length > 0
+              ? data.digitalaxGarmentNFTGlobalStats[0]
+              : []
+          )
         );
       },
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
     {
       request: wsApi.onAllAuctionsChange(),
-      next: (data) => dispatch(
-        auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions),
-      ),
+      next: (data) => dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions)),
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
@@ -211,19 +217,17 @@ const PageAuctionList = () => {
         dispatch(collectionActions.mapData(data.digitalaxGarmentCollections));
       },
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
     {
       request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
       next: (data) => {
-        dispatch(
-          collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers),
-        );
+        dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
       },
     },
-    [chainId, currentCollections],
+    [chainId, currentCollections]
   );
 
   useEffect(
@@ -232,7 +236,7 @@ const PageAuctionList = () => {
         dispatch(auctionPageActions.reset());
       }
     },
-    [],
+    []
   );
 
   const nowTimestamp = Date.now();
@@ -245,13 +249,22 @@ const PageAuctionList = () => {
     ? Math.min(...filteredAuctionsTimes)
     : 0;
 
-  const sumTopBids = (items) => items.reduce(
-    (acc, auction) => (auction.totalNetBidActivity
-      ? acc.plus(new BigNumber(auction.totalNetBidActivity).plus(new BigNumber(auction.totalMarketplaceVolumeInETH))
-            .plus(new BigNumber(auction.totalMarketplaceVolumeInMona).times(new BigNumber(monaPerEth))))
-      : acc),
-    new BigNumber(0),
-  );
+  const sumTopBids = (items) =>
+    items.reduce(
+      (acc, auction) =>
+        auction.totalNetBidActivity
+          ? acc.plus(
+              new BigNumber(auction.totalNetBidActivity)
+                .plus(new BigNumber(auction.totalMarketplaceVolumeInETH))
+                .plus(
+                  new BigNumber(auction.totalMarketplaceVolumeInMona).times(
+                    new BigNumber(monaPerEth)
+                  )
+                )
+            )
+          : acc,
+      new BigNumber(0)
+    );
 
   const totalWeekValue = sumTopBids(weekResultedAuctions);
 
@@ -260,26 +273,31 @@ const PageAuctionList = () => {
   const list = useMemo(() => {
     let totalSum = new BigNumber(0);
     if (globalStats.totalSalesValue) {
-      totalSum = totalSum.plus(new BigNumber(globalStats.totalMarketplaceSalesInMona).times(new BigNumber(monaPerEth)));
+      totalSum = totalSum.plus(
+        new BigNumber(globalStats.totalMarketplaceSalesInMona).times(new BigNumber(monaPerEth))
+      );
       totalSum = totalSum.plus(new BigNumber(globalStats.totalMarketplaceSalesInETH));
       totalSum = totalSum.plus(new BigNumber(globalStats.totalSalesValue));
     }
     return [
       {
         description: 'Total NFT’s value',
-        value: Math.round(parseFloat(convertToEth(totalSum.integerValue())) * 100) / 100
+        value: Math.round(parseFloat(convertToEth(totalSum.integerValue())) * 100) / 100,
       },
       {
         description: `Total Vol ${TOTAL_VOLUME_DAYS} days`,
-        value: Math.round(parseFloat(convertToEth(
-          totalWeekValue.gte(0) ? totalWeekValue : totalWeekValue.times(-1),
-        )) * 100) / 100,
+        value:
+          Math.round(
+            parseFloat(
+              convertToEth(totalWeekValue.gte(0) ? totalWeekValue : totalWeekValue.times(-1))
+            ) * 100
+          ) / 100,
       },
       {
         description: 'Highest APY',
         value: estimateApy,
       },
-    ]
+    ];
   }, [globalStats, totalWeekValue, estimateApy]);
 
   const onHandleDropdownChange = (value) => {
@@ -311,9 +329,7 @@ const PageAuctionList = () => {
           {sortedAuctions.map((auction) => (
             <AuctionProduct
               key={`auction_${auction.auctionId}`}
-              name={
-                auctionNames.find((name) => name.id === auction.auctionId).text
-              }
+              name={auctionNames.find((name) => name.id === auction.auctionId).text}
               auction={auction}
               auctionId={auction.auctionId}
             />

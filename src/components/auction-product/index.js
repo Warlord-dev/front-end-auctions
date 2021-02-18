@@ -35,30 +35,30 @@ const CardProduct = ({ name, auction, auctionId }) => {
         <div className={styles.imageWrapper}>
           <Link href={`/auctions/${auctionId}`}>
             <a className={styles.clothesPhotoWrapper}>
-              {/* {auctionId === 3 && (
+              {auctionId === 4 && (
                 <span className={styles.banner}>
                   <span className={styles.bannerText}>Live Now</span>
                   <span className={styles.gap} />
                 </span>
-              )} */}
-              {parseInt(garment.id, 10) >= 20
-                && parseInt(garment.id, 10) <= 28 && (
+              )}
+              {parseInt(garment.id, 10) >= 20 && parseInt(garment.id, 10) <= 28 && (
                 <video autoPlay muted loop className={styles.clothesPhoto}>
                   <source src={`/video/${garment.id}.mp4`} type="video/mp4" />
                 </video>
               )}
-              {(parseInt(garment.id, 10) < 20 || parseInt(garment.id, 10) > 28)
-                && (tokenInfo && imageUrl ? (isVideo ? (
-                  <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
-                    <source src={imageUrl} type="video/mp4" />
-                  </video>
-                ) : (
-                  <img
-                    className={styles.clothesPhoto}
-                    src={create2KURL(imageUrl)}
-                    alt={garment.id}
-                  />
-                )
+              {(parseInt(garment.id, 10) < 20 || parseInt(garment.id, 10) > 28) &&
+                (tokenInfo && imageUrl ? (
+                  isVideo ? (
+                    <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
+                      <source src={imageUrl} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <img
+                      className={styles.clothesPhoto}
+                      src={create2KURL(imageUrl)}
+                      alt={garment.id}
+                    />
+                  )
                 ) : null)}
             </a>
           </Link>
