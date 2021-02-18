@@ -129,9 +129,8 @@ const PageProductsList = ({ auctionId }) => {
 
 
   const arrCurrentAuctions = useMemo(() => {
-    const rAuctions = [...new Array(3).fill([])];
+    const rAuctions = [...new Array(4).fill([])];
     const arrAcutions = auctions.toJS();
-
     if (arrAcutions.length === 0) return [];
 
     let i;
@@ -141,8 +140,10 @@ const PageProductsList = ({ auctionId }) => {
         rAuctions[0] = [...rAuctions[0], item];
       } else if (parseInt(item.id, 10) < 29) {
         rAuctions[1] = [...rAuctions[1], item];
-      } else {
+      } else if (parseInt(item.id, 10) < 42) { // Should double check it - 42
         rAuctions[2] = [...rAuctions[2], item];
+      } else {
+        rAuctions[3] = [...rAuctions[3], item];
       }
     }
 
