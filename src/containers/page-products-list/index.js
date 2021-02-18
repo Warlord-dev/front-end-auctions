@@ -1,15 +1,10 @@
-import React, {
-  memo, useEffect, useState, useMemo,
-} from 'react';
+import React, { memo, useEffect, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import BigNumber from 'bignumber.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { convertToEth } from '@helpers/price.helpers';
 import auctionPageActions from '@actions/auction.page.actions';
-import {
-  MAIN_GRAPH_COUNT_DAYS,
-  TOTAL_VOLUME_DAYS,
-} from '@constants/global.constants';
+import { MAIN_GRAPH_COUNT_DAYS, TOTAL_VOLUME_DAYS } from '@constants/global.constants';
 import { getChainId } from '@selectors/global.selectors';
 import {
   getAllAuctions,
@@ -38,7 +33,7 @@ const PageProductsList = ({ auctionId }) => {
       request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
       next: (data) => dispatch(auctionPageActions.updateMonthStats(data.days)),
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
@@ -46,7 +41,7 @@ const PageProductsList = ({ auctionId }) => {
       request: wsApi.onDaysChange(TOTAL_VOLUME_DAYS),
       next: (data) => dispatch(auctionPageActions.updateWeekStats(data.days)),
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
@@ -55,34 +50,31 @@ const PageProductsList = ({ auctionId }) => {
       next: (data) => {
         dispatch(
           auctionPageActions.updateGlobalStats(
-            data.digitalaxGarmentNFTGlobalStats.length > 0 ? data.digitalaxGarmentNFTGlobalStats[0] : [],
-          ),
+            data.digitalaxGarmentNFTGlobalStats.length > 0
+              ? data.digitalaxGarmentNFTGlobalStats[0]
+              : []
+          )
         );
       },
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
     {
       request: wsApi.onAllAuctionsChange(),
-      next: (data) => dispatch(
-        auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions),
-      ),
+      next: (data) => dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions)),
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
     {
       request: wsApi.onAuctionsHistoryByIds(showGraphIds),
-      next: (data) => dispatch(
-        auctionPageActions.updateHistory(
-          data.digitalaxGarmentAuctionHistories,
-        ),
-      ),
+      next: (data) =>
+        dispatch(auctionPageActions.updateHistory(data.digitalaxGarmentAuctionHistories)),
     },
-    [chainId, showGraphIds],
+    [chainId, showGraphIds]
   );
 
   useEffect(
@@ -91,7 +83,7 @@ const PageProductsList = ({ auctionId }) => {
         dispatch(auctionPageActions.reset());
       }
     },
-    [],
+    []
   );
 
   const nowTimestamp = Date.now();
@@ -104,12 +96,12 @@ const PageProductsList = ({ auctionId }) => {
     ? Math.min(...filteredAuctionsTimes)
     : 0;
 
-  const sumTopBids = (items) => items.reduce(
-    (acc, auction) => (auction.totalNetBidActivity
-      ? acc.plus(new BigNumber(auction.totalNetBidActivity))
-      : acc),
-    new BigNumber(0),
-  );
+  const sumTopBids = (items) =>
+    items.reduce(
+      (acc, auction) =>
+        auction.totalNetBidActivity ? acc.plus(new BigNumber(auction.totalNetBidActivity)) : acc,
+      new BigNumber(0)
+    );
 
   const totalWeekValue = sumTopBids(weekResultedAuctions);
 
@@ -127,7 +119,6 @@ const PageProductsList = ({ auctionId }) => {
     }
   });
 
-
   const arrCurrentAuctions = useMemo(() => {
     const rAuctions = [...new Array(4).fill([])];
     const arrAcutions = auctions.toJS();
@@ -140,7 +131,7 @@ const PageProductsList = ({ auctionId }) => {
         rAuctions[0] = [...rAuctions[0], item];
       } else if (parseInt(item.id, 10) < 29) {
         rAuctions[1] = [...rAuctions[1], item];
-      } else if (parseInt(item.id, 10) < 42) { // Should double check it - 42
+      } else if (parseInt(item.id, 10) < 43) {
         rAuctions[2] = [...rAuctions[2], item];
       } else {
         rAuctions[3] = [...rAuctions[3], item];
@@ -159,9 +150,7 @@ const PageProductsList = ({ auctionId }) => {
     },
     {
       description: `Total Vol ${TOTAL_VOLUME_DAYS} days`,
-      value: convertToEth(
-        totalWeekValue.gte(0) ? totalWeekValue : totalWeekValue.times(-1),
-      ),
+      value: convertToEth(totalWeekValue.gte(0) ? totalWeekValue : totalWeekValue.times(-1)),
     },
     {
       description: 'Highest APY',
@@ -179,7 +168,7 @@ const PageProductsList = ({ auctionId }) => {
       />
       <CardList
         auctions={arrCurrentAuctions[parseInt(auctionId, 10) - 1] || []}
-        sold={parseInt(auctionId, 10) === 3}
+        sold={parseInt(auctionId, 10) === 4}
         auctionId={auctionId}
         showGraphIds={showGraphIds}
         setShowGraphIds={setShowGraphIds}

@@ -1,9 +1,12 @@
 import { gql } from 'graphql-request';
-import { HISTORY_BID_PLACED_EVENT, HISTORY_BID_WITHDRAWN_EVENT } from '@constants/history.constants';
+import {
+  HISTORY_BID_PLACED_EVENT,
+  HISTORY_BID_WITHDRAWN_EVENT,
+} from '@constants/history.constants';
 
 export const getLiveAuctions = gql`
   {
-    digitalaxGarmentAuctions(where:{resulted_not_in:[true]}) {
+    digitalaxGarmentAuctions(first: 1000, where: { resulted_not_in: [true] }) {
       id
       reservePrice
       endTime
@@ -20,7 +23,7 @@ export const getLiveAuctions = gql`
 
 export const getAuctionsByIds = gql`
   query getAuctionsByIds($ids: [ID!]) {
-    digitalaxGarmentAuctions(where: {id_in: $ids}) {
+    digitalaxGarmentAuctions(first: 1000, where: { id_in: $ids }) {
       id
       reservePrice
       endTime
@@ -37,7 +40,7 @@ export const getAuctionsByIds = gql`
 
 export const getGarmentsByIds = gql`
   query getGarmentsByIds($ids: [ID!]) {
-    digitalaxGarments(where: {id_in: $ids}) {
+    digitalaxGarments(first: 1000, where: { id_in: $ids }) {
       id
       designer
       owner
@@ -54,7 +57,7 @@ export const getGarmentsByIds = gql`
 
 export const getDesignersByIds = gql`
   query getDesignersByIds($ids: [ID!]) {
-    digitalaxGarmentDesigners(where: {id_in: $ids}) {
+    digitalaxGarmentDesigners(first: 1000, where: { id_in: $ids }) {
       id
       garments {
         id
@@ -77,7 +80,7 @@ export const getDesignersByIds = gql`
 
 export const getGarmentsByDesignerId = gql`
   query getGarmentsByDesignerId($ids: [Bytes!]) {
-    digitalaxGarments(where: {designer_in: $ids}) {
+    digitalaxGarments(first: 1000, where: { designer_in: $ids }) {
       id
       designer
       owner
@@ -94,7 +97,7 @@ export const getGarmentsByDesignerId = gql`
 
 export const getAuctionsHistoryByIds = gql`
   query getAuctionsHistoryByIds($ids: [ID!]) {
-    digitalaxGarmentAuctionHistories(where: {token_in: $ids}) {
+    digitalaxGarmentAuctionHistories(first: 1000, where: { token_in: $ids }) {
       id
       eventName
       timestamp
@@ -120,7 +123,7 @@ export const getAuctionsHistoryByIds = gql`
 
 export const getAuctionsHistoryByTimestampGt = gql`
   query getAuctionsHistoryByTimestampGt($timestamp: BigInt!) {
-    digitalaxGarmentAuctionHistories(where: {
+    digitalaxGarmentAuctionHistories(first: 1000, where: {
       eventName_in: ["${HISTORY_BID_PLACED_EVENT}",
        "${HISTORY_BID_WITHDRAWN_EVENT}"], 
        timestamp_gt: $timestamp}) {
@@ -134,7 +137,7 @@ export const getAuctionsHistoryByTimestampGt = gql`
 
 export const getAuctionContracts = gql`
   {
-    digitalaxAuctionContracts {
+    digitalaxAuctionContracts(first: 1000) {
       id
       minBidIncrement
       bidWithdrawalLockTime
@@ -147,7 +150,10 @@ export const getAuctionContracts = gql`
 
 export const getResultedAuctionsByEndTimeGt = gql`
   query getAuctionsHistoryByTimestampGt($endTime: BigInt!) {
-    digitalaxGarmentAuctions(where: { resulted_not_in:[false], endTime_gt: $endTime }) {
+    digitalaxGarmentAuctions(
+      first: 1000
+      where: { resulted_not_in: [false], endTime_gt: $endTime }
+    ) {
       id
       reservePrice
       endTime
