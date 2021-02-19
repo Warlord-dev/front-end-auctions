@@ -1,8 +1,9 @@
 import React from 'react';
-import Button from "@components/buttons/button";
+import Router from 'next/router'
+import Button from '@components/buttons/button';
 import styles from './styles.module.scss';
 
-const Profile = (props) => {
+const Profile = ({ history }) => {
   const user = {
     id: 'David',
     email: 'david@email.com',
@@ -36,7 +37,7 @@ const Profile = (props) => {
           <span>Game Tags</span>
           <p>{getGameTags(user.gameTags)}</p>
         </div>
-        <Button className={styles.modalButton} background="black">
+        <Button className={styles.modalButton} background="black" onClick={() => Router.push('/profile/edit')}>
           Edit Profile
         </Button>
       </div>
