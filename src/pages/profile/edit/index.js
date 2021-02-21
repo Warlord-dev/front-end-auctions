@@ -9,7 +9,7 @@ const EditProfile = ({ history }) => {
     email: 'david@email.com',
     img: null,
     room: 0,
-    gameTags: 'fortunite, amoung us',
+    gameTags: 'fortnite, among us',
   };
 
   return (

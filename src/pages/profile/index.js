@@ -9,15 +9,15 @@ const Profile = ({ history }) => {
     email: 'david@email.com',
     img: null,
     room: 0,
-    gameTags: 'fortunite, amoung us',
+    gameTags: 'fortnite, among us',
   };
 
   const getGameTags = (str) => {
     let tags = str.split(', ');
     tags.sort();
     return tags.reduce((total, cur) => {
-      let captialize = cur.replace(/\w\S*/g, (w) => w.replace(/^\w/, (c) => c.toUpperCase()));
-      return `${total}#${captialize} `;
+      let capitalize = cur.replace(/\w\S*/g, (w) => w.replace(/^\w/, (c) => c.toUpperCase()));
+      return `${total}#${capitalize} `;
     }, '');
   };
 
