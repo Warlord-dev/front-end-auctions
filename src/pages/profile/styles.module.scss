@@ -1,0 +1,66 @@
+.profileWrapper {
+  display: flex;
+  padding: 120px 86px;
+}
+
+.leftSideWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatarIDSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 49px;
+  img {
+    width: 120px;
+    height: 120px;
+    margin-right: 24px;
+  }
+  span {
+    font-size: 48px;
+    font-weight: 900;
+  }
+}
+
+.email {
+  color: #999999;
+  font-size: 27px;
+  margin-bottom: 49px;
+}
+
+.roomWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 49px;
+  span {
+    color: #999999;
+    font-size: 27px;
+  }
+  p {
+    margin-top: 18px;
+    font-size: 33px;
+    font-weight: 900;
+  }
+}
+
+.gameTagWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 75px;
+  span {
+    color: #999999;
+    font-size: 27px;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 33px;
+    font-weight: 900;
+  }
+}
+
+.modalButton {
+  width: 154px;
+  font-size: 15px;
+  font-weight: bold;
+}

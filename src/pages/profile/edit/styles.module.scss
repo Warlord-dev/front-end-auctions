@@ -1,0 +1,65 @@
+.profileWrapper {
+  width: 929px;
+  height: 569px;
+  border: 1px solid #e6e6e6;
+  padding: 70px 115px 0px 135px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.avatarWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 40px;
+  }
+  span {
+    font-weight: 900;
+    font-size: 7px;
+    letter-spacing: 0.12em;
+    color: #b6b6b6;
+  }
+}
+
+.uploadButton {
+  width: 154px;
+  height: 41px;
+  font-size: 15px;
+  margin-bottom: 26px;
+}
+
+.detailsWrapper {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    color: #b6b6b6;
+    margin-bottom: 6px;
+  }
+  input {
+    width: 363px;
+    height: 44px;
+    border: 1px solid #e6e6e6;
+    padding-left: 12px;
+  }
+}
