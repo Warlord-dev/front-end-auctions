@@ -5,20 +5,16 @@ import cn from 'classnames';
 import Link from 'next/link';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-import { getAccount, getAccountPhoto } from '@selectors/user.selectors';
-import { getChainId } from '@selectors/global.selectors';
+import { getUser, getAccountPhoto } from '@selectors/user.selectors';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
 import styles from './styles.module.scss';
 
-const HeaderTopLine = ({
-  className, isShowStaking, buttonText, linkText,
-}) => {
+const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
-  const account = useSelector(getAccount);
+  const user = useSelector(getUser);
   const accountPhoto = useSelector(getAccountPhoto);
-  const chainId = useSelector(getChainId);
 
   const handleClick = () => dispatch(openConnectMetamaskModal());
 
@@ -48,39 +44,39 @@ const HeaderTopLine = ({
           PODE
         </a> */}
         <a
-          href="https://medium.com/@digitalax"
+          href='https://medium.com/@digitalax'
           className={styles.link}
-          target="_blank"
-          rel="noreferrer"
+          target='_blank'
+          rel='noreferrer'
         >
           Blog
         </a>
         <a
-          href="https://community.digitalax.xyz/"
+          href='https://community.digitalax.xyz/'
           className={styles.link}
-          target="_blank"
-          rel="noreferrer"
+          target='_blank'
+          rel='noreferrer'
         >
           Forum
         </a>
         {isShowStaking && (
           <a
-            href="http://staking.digitalax.xyz/"
+            href='http://staking.digitalax.xyz/'
             className={styles.link}
-            target="_blank"
-            rel="noreferrer"
+            target='_blank'
+            rel='noreferrer'
           >
             {linkText}
           </a>
         )}
-        <Link href="/global">
+        <Link href='/global'>
           <a className={styles.link}>Global Designer Network</a>
         </Link>
-        {account ? (
+        {user ? (
           <div className={styles.buttonWrapper}>
             <SmallPhotoWithText
               photo={accountPhoto}
-              address={`${account}(${chainId})`}
+              address={user.get('userName')}
               className={styles.hashAddress}
             >
               <button
@@ -89,8 +85,8 @@ const HeaderTopLine = ({
               >
                 <img
                   className={styles.arrowBottomImg}
-                  src="./images/icons/arrow-bottom.svg"
-                  alt="arrow-bottom"
+                  src='./images/icons/arrow-bottom.svg'
+                  alt='arrow-bottom'
                 />
               </button>
             </SmallPhotoWithText>
@@ -121,7 +117,7 @@ HeaderTopLine.propTypes = {
 HeaderTopLine.defaultProps = {
   className: '',
   isShowStaking: true,
-  buttonText: 'Connect Wallet',
+  buttonText: 'SIGN IN',
   linkText: 'Staking',
 };
 

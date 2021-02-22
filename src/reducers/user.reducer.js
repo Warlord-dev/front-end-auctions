@@ -5,6 +5,8 @@ import TransformModules from '../utils/transform-modules';
 
 const DEFAULT_FIELDS = Map({
   account: null,
+  user: null,
+  authToken: null,
   accountPhoto: './images/user-photo.svg',
   bids: List([]),
   activeProductInModal: Map({}),
