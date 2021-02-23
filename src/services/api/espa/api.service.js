@@ -12,7 +12,6 @@ class EspaApiService {
   }
 
   async handleSignUp(account, userName, email) {
-    // register - get string
     try {
       const message = await post('/register', {
         wallet: account,
@@ -26,13 +25,32 @@ class EspaApiService {
   }
 
   async fetchAuthToken(account) {
-    // is_exist - get string
-    // return checkUserNameExists(account) ? 'password' : undefined;
-    return undefined;
+    try {
+      const data = await post('/account-exists', {
+        wallet: account,
+      });
+      if (data === "0") {
+        return null;
+      }
+      return data;
+    } catch (e) {
+      return null;
+    }
   }
 
-  async handleAuthentication(account, signature) {
-    // authenticate
+  async handleAuthentication(userName, email, account, signMsg, signature) {
+    try {
+      const data = await post('/authenticate', {
+        username: userName,
+        email,
+        wallet: account,
+        randomString: signMsg,
+        signature,
+      });
+      return data;
+    } catch (e) {
+      return null;
+    }
     return {
       user: { userName: 'arthlino', email: 'arthur.lixiao@gmail.com' },
       authToken: 'asdfasdfasdf',
