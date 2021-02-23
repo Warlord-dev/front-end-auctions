@@ -10,6 +10,11 @@ require('es6-promise').polyfill();
 require('es6-object-assign').polyfill();
 
 const DEFAULT_OPTIONS = { withCredentials: true };
+const API_BASE_URL = 'https://7kuwlltzmc.execute-api.eu-central-1.amazonaws.com/latest';
+
+axios.defaults.baseURL = API_BASE_URL;
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+
 axiosRetry(axios, {
   retries: 1,
   retryCondition: (error) => !error.response,
@@ -25,17 +30,18 @@ axiosRetry(axios, {
  */
 function executeRequest(method, url, data, options = DEFAULT_OPTIONS) {
 
-  const params = [
+  const params = {
+    method,
     url,
-    ...data ? [data] : [],
-    {
+    data,
+    options: {
       ...options,
       ...DEFAULT_OPTIONS,
     },
-  ];
+  };
 
   return new Promise((resolve, reject) => {
-    axios[method](...params).then((response) => {
+    axios(params).then((response) => {
       resolve(response.data);
     }).catch((error) => {
       reject(error);

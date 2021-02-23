@@ -1,5 +1,5 @@
 import { STAGE_ESPA_BACKEND_URL } from '@constants/global.constants';
-
+import { post } from '@utils/api';
 // This service needs to be completed once backend is done
 
 class EspaApiService {
@@ -11,19 +11,28 @@ class EspaApiService {
     this.url = url;
   }
 
-  async checkUserNameExists(userName) {
-    return Math.random() > 0.7;
-  }
-
   async handleSignUp(account, userName, email) {
-    return 'password';
+    // register - get string
+    try {
+      const message = await post('/register', {
+        wallet: account,
+        username: userName,
+        email,
+      });
+      return message;
+    } catch (e) {
+      return null;
+    }
   }
 
   async fetchAuthToken(account) {
-    return Math.random() > 0.7 ? 'password' : undefined;
+    // is_exist - get string
+    // return checkUserNameExists(account) ? 'password' : undefined;
+    return undefined;
   }
 
   async handleAuthentication(account, signature) {
+    // authenticate
     return {
       user: { userName: 'arthlino', email: 'arthur.lixiao@gmail.com' },
       authToken: 'asdfasdfasdf',

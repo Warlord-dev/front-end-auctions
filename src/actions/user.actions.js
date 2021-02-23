@@ -6,12 +6,10 @@ import {
 } from '@actions/modals.actions';
 import { STORAGE_IS_LOGGED_IN } from '@constants/storage.constants';
 import userReducer from '@reducers/user.reducer';
-import {
-  handleSignMessage,
-  isMetamaskInstalled,
-} from '@services/metamask.service';
+import { handleSignMessage, isMetamaskInstalled } from '@services/metamask.service';
 import BaseActions from './base-actions';
 import api from '@services/api/espa/api.service';
+import { toast } from 'react-toastify';
 
 class UserActions extends BaseActions {
   tryToLogin() {
@@ -47,6 +45,10 @@ class UserActions extends BaseActions {
     return async (dispatch) => {
       if (!signMsg) {
         signMsg = await api.handleSignUp(account, userName, email);
+        if (!signMsg) {
+          toast.error('Sign Up is failed');
+          return;
+        }
       }
 
       const { signature } = await handleSignMessage({
