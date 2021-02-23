@@ -18,10 +18,13 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const handleClick = () => dispatch(openConnectMetamaskModal());
 
-  const [isShowLogOut, setIsShowLogOut] = useState(false);
+  const [isShowMenu, setIsShowMenu] = useState(false);
 
+  const handleProfileClick = () => {
+    setIsShowMenu(false);
+  };
   const handleLogoutClick = () => {
-    setIsShowLogOut(false);
+    setIsShowMenu(false);
     dispatch(accountActions.logout());
   };
 
@@ -43,60 +46,36 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         >
           PODE
         </a> */}
-        <a
-          href='https://medium.com/@digitalax'
-          className={styles.link}
-          target='_blank'
-          rel='noreferrer'
-        >
+        <a href="https://medium.com/@digitalax" className={styles.link} target="_blank" rel="noreferrer">
           Blog
         </a>
-        <a
-          href='https://community.digitalax.xyz/'
-          className={styles.link}
-          target='_blank'
-          rel='noreferrer'
-        >
+        <a href="https://community.digitalax.xyz/" className={styles.link} target="_blank" rel="noreferrer">
           Forum
         </a>
         {isShowStaking && (
-          <a
-            href='http://staking.digitalax.xyz/'
-            className={styles.link}
-            target='_blank'
-            rel='noreferrer'
-          >
+          <a href="http://staking.digitalax.xyz/" className={styles.link} target="_blank" rel="noreferrer">
             {linkText}
           </a>
         )}
-        <Link href='/global'>
+        <Link href="/global">
           <a className={styles.link}>Global Designer Network</a>
         </Link>
         {user ? (
           <div className={styles.buttonWrapper}>
-            <SmallPhotoWithText
-              photo={accountPhoto}
-              address={user.get('userName')}
-              className={styles.hashAddress}
-            >
-              <button
-                className={styles.arrowBottom}
-                onClick={() => setIsShowLogOut(!isShowLogOut)}
-              >
-                <img
-                  className={styles.arrowBottomImg}
-                  src='./images/icons/arrow-bottom.svg'
-                  alt='arrow-bottom'
-                />
+            <SmallPhotoWithText photo={accountPhoto} address={user.get('username')} className={styles.hashAddress}>
+              <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
+                <img className={styles.arrowBottomImg} src="./images/icons/arrow-bottom.svg" alt="arrow-bottom" />
               </button>
             </SmallPhotoWithText>
-            {isShowLogOut && (
-              <button
-                onClick={() => handleLogoutClick()}
-                className={styles.logOut}
-              >
-                Logout
-              </button>
+            {isShowMenu && (
+              <div className={styles.menuWrapper}>
+                <button onClick={() => handleProfileClick()} className={styles.menuButton}>
+                  <Link href="/profile">Profile</Link>
+                </button>
+                <button onClick={() => handleLogoutClick()} className={styles.menuButton}>
+                  Logout
+                </button>
+              </div>
             )}
           </div>
         ) : (

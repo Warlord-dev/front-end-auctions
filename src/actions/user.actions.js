@@ -64,7 +64,6 @@ class UserActions extends BaseActions {
     return async (dispatch) => {
       try {
         const data = await api.handleAuthentication(userName, email, account, signMsg, signature);
-
         if (data) {
           const { returnData, secret } = data;
           localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
