@@ -51,10 +51,6 @@ class EspaApiService {
     } catch (e) {
       return null;
     }
-    return {
-      user: { userName: 'arthlino', email: 'arthur.lixiao@gmail.com' },
-      authToken: 'asdfasdfasdf',
-    };
   }
 }
 
