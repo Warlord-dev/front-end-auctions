@@ -10,6 +10,7 @@ import { handleSignMessage, isMetamaskInstalled } from '@services/metamask.servi
 import BaseActions from './base-actions';
 import api from '@services/api/espa/api.service';
 import { toast } from 'react-toastify';
+import Router from 'next/router';
 
 class UserActions extends BaseActions {
   tryToLogin() {
@@ -86,6 +87,7 @@ class UserActions extends BaseActions {
       localStorage.removeItem(STORAGE_IS_LOGGED_IN);
       dispatch(this.setValue('user', null));
       dispatch(this.setValue('authToken', null));
+      Router.push('/');
     };
   }
 }

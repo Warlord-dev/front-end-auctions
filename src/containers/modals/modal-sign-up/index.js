@@ -40,7 +40,7 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
           <span>{`CURRENT ETH ADDRESS: ${
             account ? account : 'WALLET NOT CONNECTED'
           }`}</span>
-          {!signMsg && (
+          {!account && (
             <>
               <div className={styles.inputItem}>
                 <label>USER ID</label>
@@ -63,7 +63,7 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
             background='black'
             onClick={() => handleClick()}
           >
-            {signMsg ? 'SIGN IN' : 'SIGN UP'}
+            {account ? 'SIGN IN' : 'SIGN UP'}
           </Button>
         </Modal>,
         document.body

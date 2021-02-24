@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Router from 'next/router';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import Link from 'next/link';
@@ -22,6 +23,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const handleProfileClick = () => {
     setIsShowMenu(false);
+    Router.push('/profile');
   };
   const handleLogoutClick = () => {
     setIsShowMenu(false);
@@ -70,7 +72,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
             {isShowMenu && (
               <div className={styles.menuWrapper}>
                 <button onClick={() => handleProfileClick()} className={styles.menuButton}>
-                  <Link href="/profile">Profile</Link>
+                  Profile
                 </button>
                 <button onClick={() => handleLogoutClick()} className={styles.menuButton}>
                   Logout
