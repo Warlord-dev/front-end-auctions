@@ -1,11 +1,11 @@
 import { AVAILABLE_NETWORKS } from '@constants/networks.constants';
 import config from '@utils/config';
 
-export const getEnabledNetworks = () => AVAILABLE_NETWORKS.filter((network) => config.NETWORKS.includes(network.alias));
+export const getEnabledNetworks = () =>
+  AVAILABLE_NETWORKS.filter((network) => config.NETWORKS.includes(network.alias));
 
-export const getEnabledNetworkByChainId = (chainId) => getEnabledNetworks().find(
-  (network) => Number(network.hex) === Number(chainId),
-);
+export const getEnabledNetworkByChainId = (chainId) =>
+  getEnabledNetworks().find((network) => Number(network.hex) === Number(chainId));
 
 export const getAPIUrlByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
@@ -23,9 +23,7 @@ export const getExplorerUrlByChainId = (chainId) => {
 };
 
 export const getDefaultNetworkChainId = () => {
-  const network = AVAILABLE_NETWORKS.find(
-    (net) => net.alias === config.DEFAULT_NETWORK,
-  );
+  const network = AVAILABLE_NETWORKS.find((net) => net.alias === config.DEFAULT_NETWORK);
 
   if (!network) {
     throw new Error('Invalid DEFAULT_NETWORK: getDefaultNetworkChainId');

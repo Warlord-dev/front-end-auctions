@@ -27,7 +27,6 @@ if (config.SENTRY_DSN) {
 }
 
 const InitWrapper = (props) => {
-
   const dispatch = useDispatch();
   const isInitialized = useSelector(getIsInitialized);
 
@@ -43,7 +42,6 @@ const InitWrapper = (props) => {
 };
 
 const NetworkWrapper = (props) => {
-
   const chainId = useSelector(getChainId);
   const network = getEnabledNetworkByChainId(chainId);
 
@@ -52,13 +50,9 @@ const NetworkWrapper = (props) => {
   }
 
   return props.children;
-
 };
 
-const MyApp = ({
-  Component, pageProps, store, err,
-}) => {
-
+const MyApp = ({ Component, pageProps, store, err }) => {
   if (err) {
     Sentry.captureException(err, {
       extra: {},
@@ -110,11 +104,7 @@ const serializeWrapper = (value, cb) => {
   return value;
 };
 
-
-export default withRedux(
-  (initialState) => getOrCreateStore(initialState),
-  {
-    serializeState: (state = {}) => serializeWrapper(state, serialize),
-    deserializeState: (state = serialize({})) => serializeWrapper(state, deserialize),
-  },
-)(MyApp);
+export default withRedux((initialState) => getOrCreateStore(initialState), {
+  serializeState: (state = {}) => serializeWrapper(state, serialize),
+  deserializeState: (state = serialize({})) => serializeWrapper(state, deserialize),
+})(MyApp);

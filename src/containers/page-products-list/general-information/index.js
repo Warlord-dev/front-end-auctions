@@ -7,23 +7,18 @@ import Timer from '@components/timer';
 import { useSelector } from 'react-redux';
 import { getMainPageChartOptions } from '@services/graph.service';
 import { MAIN_GRAPH_COUNT_DAYS } from '@constants/global.constants';
-import {
-  getMonaPerEth,
-} from '@selectors/global.selectors';
+import { getMonaPerEth } from '@selectors/global.selectors';
 import styles from './styles.module.scss';
 
 const HIGHEST_APY = 'Highest APY';
 
-const GeneralInformation = ({
-  title, timestamp, list, history,
-}) => {
-
+const GeneralInformation = ({ title, timestamp, list, history }) => {
   const monaPerEth = useSelector(getMonaPerEth);
   const options = getMainPageChartOptions(history, monaPerEth);
 
   return (
     <div className={cn(styles.wrapper)}>
-      <h2 className={styles.title}>{ title }</h2>
+      <h2 className={styles.title}>{title}</h2>
       <section className={styles.info}>
         <div className={styles.leftSection}>
           <Timer expirationDate={timestamp} size="large" />
@@ -40,10 +35,7 @@ const GeneralInformation = ({
           </ul>
         </div>
         <div>
-          <HighchartsReact
-            highcharts={Highcharts}
-            options={options}
-          />
+          <HighchartsReact highcharts={Highcharts} options={options} />
           <p className={styles.chartBottomText}>{MAIN_GRAPH_COUNT_DAYS} days sales</p>
         </div>
       </section>
@@ -57,6 +49,5 @@ GeneralInformation.propTypes = {
   list: PropTypes.array.isRequired,
   history: PropTypes.array.isRequired,
 };
-
 
 export default memo(GeneralInformation);

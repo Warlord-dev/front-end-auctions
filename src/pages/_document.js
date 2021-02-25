@@ -1,8 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import Document, {
-  NextScript, Html, Main, Head,
-} from 'next/document';
+import Document, { NextScript, Html, Main, Head } from 'next/document';
 
 const scriptTxt = `
 (function () {
@@ -15,10 +13,18 @@ const scriptTxt = `
 `;
 
 class MyDocument extends Document {
-
   getPreloadFontsLinks() {
     const fontSizes = [400, 600, 700, 800, 900];
-    return fontSizes.map((size) => (<link rel="preload" key={size} as="font" href={`/fonts/inter-${size}.woff2`} type="font/woff2" crossOrigin="" />));
+    return fontSizes.map((size) => (
+      <link
+        rel="preload"
+        key={size}
+        as="font"
+        href={`/fonts/inter-${size}.woff2`}
+        type="font/woff2"
+        crossOrigin=""
+      />
+    ));
   }
 
   render() {
@@ -27,9 +33,10 @@ class MyDocument extends Document {
         <Head>
           <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
           {this.getPreloadFontsLinks()}
-          { /* ipfs next.js fix */ }
-          <style dangerouslySetInnerHTML={{
-            __html: `
+          {/* ipfs next.js fix */}
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
             @font-face {
               font-family: "inter";
               font-display: swap;
@@ -75,7 +82,7 @@ class MyDocument extends Document {
               font-style: normal;
             }
           `,
-          }}
+            }}
           />
         </Head>
         <body>
@@ -85,7 +92,6 @@ class MyDocument extends Document {
       </Html>
     );
   }
-
 }
 
 export default MyDocument;

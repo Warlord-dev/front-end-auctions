@@ -57,6 +57,14 @@ const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
         return 'https://twitter.com/visionofviii';
       case 'Retrocoin':
         return 'https://twitter.com/RETROCOlN';
+      case 'SphericalArt':
+        return 'https://twitter.com/spherical_art';
+      case 'yonFrula':
+        return 'https://twitter.com/botfrula';
+      case 'Osinachi':
+        return 'https://twitter.com/osinachiart';
+      case 'ManWithNoName':
+        return 'https://twitter.com/_Man_WithNoName';
     }
     return 'https://twitter.com/robnessofficial';
   };
@@ -68,10 +76,29 @@ const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
       case 'Rainbow Wiggle':
       case 'Waves':
       case 'Clouds':
+      case 'PRIMA FLORA':
+      case 'Saturn':
+      case 'Mars':
+      case 'Earth':
         return true;
     }
     return false;
   };
+
+  const renderArtistName = (name) => {
+    if (!name) return 'ROBNΞSS';
+    else {
+      switch (name) {
+        case 'SphericalArt':
+          return 'Spherical Art';
+        case 'ManWithNoName':
+          return 'ManWith NoName';
+      }
+      return name;
+    }
+  };
+
+  console.log('tokenInfo:', tokenInfo);
 
   return (
     <ul className={className}>
@@ -112,7 +139,7 @@ const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
         </div>
         <a className={styles.priceWrapper} href={getArtistTwitter(artist)}>
           <div className={styles.price}>
-            {artist || 'ROBNΞSS'}
+            <div className={styles.textCenter}>{renderArtistName(artist)}</div>
             <img src="/images/twitter.svg" className={styles.twitterIcon} />
           </div>
         </a>

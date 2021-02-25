@@ -14,8 +14,6 @@ const LeftBox = ({
   currentCounts,
 }) => {
   const TABS = [EXCLUSIVE_RARITY, SEMI_RARE_RARITY, COMMON_RARITY];
-  // Check if it's Auction4 - Hard Code
-  const isAuction4 = clothesId >= 42;
 
   return (
     <div className={cn(styles.leftBox, 'animate__animated animate__fadeIn')}>
@@ -23,7 +21,9 @@ const LeftBox = ({
         {TABS.map((item, index) => (
           <div key={item} className={styles.tabContainer}>
             <button
-              onClick={() => !isAuction4 && setActiveTab(index)}
+              onClick={() => {
+                setActiveTab(index);
+              }}
               className={cn(styles.tab, {
                 [styles.active]: activeTab === index,
               })}
@@ -42,9 +42,7 @@ const LeftBox = ({
             {currentCounts[index].total - currentCounts[index].sold === 0 && (
               <span className={styles.countTag}>
                 <span className={styles.bannerText}>
-                  {currentCounts[index].total === 0 || (index !== 0 && isAuction4)
-                    ? 'NOT AVAIlABLE'
-                    : 'SOLD OUT'}
+                  {currentCounts[index].total === 0 || index !== 0 ? 'NOT AVAIlABLE' : 'SOLD OUT'}
                 </span>
                 <span className={styles.gap} />
               </span>

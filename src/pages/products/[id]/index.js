@@ -40,7 +40,7 @@ const Products = () => {
         dispatch(auctionActions.mapData(data.digitalaxGarmentAuctions));
       },
     },
-    [chainId, id],
+    [chainId, id]
   );
 
   useSubscription(
@@ -50,31 +50,27 @@ const Products = () => {
         dispatch(collectionActions.mapData(data.digitalaxGarmentCollections));
       },
     },
-    [chainId, id],
+    [chainId, id]
   );
 
   useSubscription(
     {
       request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
       next: (data) => {
-        dispatch(
-          collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers),
-        );
+        dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
       },
     },
-    [chainId, currentCollections],
+    [chainId, currentCollections]
   );
 
   useSubscription(
     {
       request: wsApi.onAllAuctionsChange(),
       next: (data) => {
-        dispatch(
-          auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions),
-        );
+        dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions));
       },
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
@@ -82,15 +78,18 @@ const Products = () => {
       request: wsApi.onAuctionsHistoryByIds([id]),
       next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
     },
-    [chainId, id],
+    [chainId, id]
   );
 
   useSubscription(
     {
       request: wsApi.onMarketplaceHistoryByIds([id]),
-      next: (data) => dispatch(historyActions.updateMarketplaceHistories(data.digitalaxMarketplacePurchaseHistories)),
+      next: (data) =>
+        dispatch(
+          historyActions.updateMarketplaceHistories(data.digitalaxMarketplacePurchaseHistories)
+        ),
     },
-    [chainId, id],
+    [chainId, id]
   );
 
   useEffect(
@@ -99,7 +98,7 @@ const Products = () => {
         dispatch(garmentPageActions.reset());
       }
     },
-    [],
+    []
   );
 
   if (!garment) {
@@ -108,7 +107,14 @@ const Products = () => {
 
   const designerId = garment.designer;
 
-  return <PageProduct clothesId={garment.id} designerId={designerId} currentCollections={currentCollections} currentMarketplaceOffers={currentMarketplaceOffers} />;
+  return (
+    <PageProduct
+      clothesId={garment.id}
+      designerId={designerId}
+      currentCollections={currentCollections}
+      currentMarketplaceOffers={currentMarketplaceOffers}
+    />
+  );
 };
 
 export default memo(Products);
