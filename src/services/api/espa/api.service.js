@@ -29,7 +29,7 @@ class EspaApiService {
       const data = await post('/account-exists', {
         wallet: account,
       });
-      if (data === "0") {
+      if (data === '0') {
         return null;
       }
       return data;
@@ -38,16 +38,25 @@ class EspaApiService {
     }
   }
 
-  async handleAuthentication(userName, email, account, signMsg, signature) {
+  async handleAuthentication(account, signMsg, signature) {
     try {
       const data = await post('/authenticate', {
-        username: userName,
-        email,
         wallet: account,
         randomString: signMsg,
         signature,
       });
       return data;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  async checkUserName(username) {
+    try {
+      const isExist = await post('/username-available', {
+        username,
+      });
+      return isExist;
     } catch (e) {
       return null;
     }

@@ -11,59 +11,50 @@ import userActions from '@actions/user.actions';
 import { getAccount } from '@selectors/user.selectors';
 
 import styles from './styles.module.scss';
-import { useSignMessage } from '@hooks/espa/user.hooks';
+import { useSignMessage, useUserNameAvailable } from '@hooks/espa/user.hooks';
 
 const ModalSignUp = ({ className, title, textForIcon, icon }) => {
   const dispatch = useDispatch();
 
-  const account = useSelector(getAccount);
-  const signMsg = useSignMessage(account);
-
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
+
+  const account = useSelector(getAccount);
+  const signMsg = useSignMessage(account);
+  const isUserNameAvailable = useUserNameAvailable(userName);
 
   const handleClose = () => {
     dispatch(closeSignupModal());
   };
 
-  const handleClick = () =>
-    dispatch(userActions.tryToSignup(account, userName, email, signMsg));
+  const handleClick = () => dispatch(userActions.tryToSignup(account, userName, email, signMsg));
+
+  const userNameChanged = (username) => {
+    setUserName(username);
+  };
 
   return (
     <>
       {createPortal(
-        <Modal
-          onClose={() => handleClose()}
-          title={title}
-          className={(className, styles.modalWrapper)}
-        >
-          <span>{`CURRENT ETH ADDRESS: ${
-            account ? account : 'WALLET NOT CONNECTED'
-          }`}</span>
-          {!account && (
+        <Modal onClose={() => handleClose()} title={title} className={(className, styles.modalWrapper)}>
+          <span>{`CURRENT ETH ADDRESS: ${account ? account : 'WALLET NOT CONNECTED'}`}</span>
+          {!signMsg && (
             <>
               <div className={styles.inputItem}>
-                <label>USER ID</label>
-                <input
-                  value={userName}
-                  onChange={(e) => setUserName(e.target.value)}
-                />
+                <label>
+                  USER ID
+                </label>
+                <input value={userName} onChange={(e) => userNameChanged(e.target.value)} />
+                {!isUserNameAvailable && <p>That User ID is already taken. Please choose another one</p>}
               </div>
               <div className={styles.inputItem}>
                 <label>EMAIL</label>
-                <input
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+                <input value={email} onChange={(e) => setEmail(e.target.value)} />
               </div>
             </>
           )}
-          <Button
-            className={styles.modalButton}
-            background='black'
-            onClick={() => handleClick()}
-          >
-            {account ? 'SIGN IN' : 'SIGN UP'}
+          <Button className={styles.modalButton} background="black" onClick={() => handleClick()}>
+            {signMsg ? 'SIGN IN' : 'SIGN UP'}
           </Button>
         </Modal>,
         document.body

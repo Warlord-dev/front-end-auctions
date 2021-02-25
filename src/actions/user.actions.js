@@ -57,14 +57,14 @@ class UserActions extends BaseActions {
         signMsg,
       });
 
-      dispatch(this.tryAuthentication(userName, email, account, signMsg, signature));
+      dispatch(this.tryAuthentication(account, signMsg, signature));
     };
   }
 
-  tryAuthentication(userName, email, account, signMsg, signature) {
+  tryAuthentication(account, signMsg, signature) {
     return async (dispatch) => {
       try {
-        const data = await api.handleAuthentication(userName, email, account, signMsg, signature);
+        const data = await api.handleAuthentication(account, signMsg, signature);
         if (data) {
           const { returnData, secret } = data;
           localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);

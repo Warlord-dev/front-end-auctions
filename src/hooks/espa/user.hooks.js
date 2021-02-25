@@ -10,3 +10,15 @@ export function useSignMessage(account) {
 
   return signMsg;
 }
+
+export function useUserNameAvailable(username) {
+  const [isAvailable, setUserNameAvailable] = useState(true);
+
+  useEffect(() => {
+    if (username) {
+      api.checkUserName(username).then((isAvailable) => setUserNameAvailable(isAvailable));
+    }
+  }, [username]);
+
+  return isAvailable;
+}

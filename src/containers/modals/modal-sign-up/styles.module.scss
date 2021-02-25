@@ -26,8 +26,17 @@
   input {
     width: 268px;
     height: 44px;
-    border: 1px solid #E6E6E6;
+    border: 1px solid #e6e6e6;
     margin-bottom: 20px;
     padding-left: 12px;
+  }
+  p {
+    width: 268px;
+    white-space: nowrap;
+    position: absolute;
+    margin-top: 72px;
+    padding-left: 12px;
+    font-size: 12px;
+    color: red;
   }
 }
