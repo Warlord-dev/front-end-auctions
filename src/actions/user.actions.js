@@ -70,6 +70,7 @@ class UserActions extends BaseActions {
           localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
           dispatch(this.setValue('user', returnData));
           dispatch(this.setValue('authToken', secret));
+          Router.push('/profile');
         } else {
           dispatch(this.logout());
         }
