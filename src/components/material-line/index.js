@@ -65,6 +65,8 @@ const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
         return 'https://twitter.com/osinachiart';
       case 'ManWithNoName':
         return 'https://twitter.com/_Man_WithNoName';
+      case 'NASA':
+        return 'https://twitter.com/NASA';
     }
     return 'https://twitter.com/robnessofficial';
   };
