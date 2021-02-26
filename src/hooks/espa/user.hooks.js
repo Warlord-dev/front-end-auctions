@@ -22,3 +22,13 @@ export function useUserNameAvailable(username) {
 
   return isAvailable;
 }
+
+export function useNFTs(account) {
+  const [nfts, setNfts] = useState([]);
+
+  useEffect(() => {
+    api.fetchNfts(account).then((data) => setNfts(data));
+  }, [account]);
+
+  return nfts;
+}

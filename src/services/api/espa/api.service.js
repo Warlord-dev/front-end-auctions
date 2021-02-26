@@ -1,5 +1,5 @@
 import { STAGE_ESPA_BACKEND_URL } from '@constants/global.constants';
-import { post } from '@utils/api';
+import { get, post } from '@utils/api';
 // This service needs to be completed once backend is done
 
 class EspaApiService {
@@ -53,12 +53,23 @@ class EspaApiService {
 
   async checkUserName(username) {
     try {
-      const isExist = await post('/username-available', {
+      const isExist = await get('/username-available', {
         username,
       });
       return isExist;
     } catch (e) {
       return null;
+    }
+  }
+
+  async fetchNfts(account) {
+    try {
+      const ntfs = await get('/get-nfts', {
+        wallet: account,
+      });
+      return ntfs;
+    } catch (e) {
+      return [];
     }
   }
 }

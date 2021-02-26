@@ -3,10 +3,15 @@ import { useSelector } from 'react-redux';
 import Router from 'next/router';
 import Button from '@components/buttons/button';
 import { getUser } from '@selectors/user.selectors';
+import { getAccount } from '@selectors/user.selectors';
+import { useNFTs } from '@hooks/espa/user.hooks';
 import styles from './styles.module.scss';
 
 const Profile = ({ history }) => {
   const user = useSelector(getUser);
+  const account = useSelector(getAccount);
+  const nfts = useNFTs(account);
+  console.log('---nfts', nfts);
 
   const getGameTags = (str) => {
     if (!str) {
