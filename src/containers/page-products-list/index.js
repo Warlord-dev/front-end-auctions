@@ -120,7 +120,7 @@ const PageProductsList = ({ auctionId }) => {
   });
 
   const arrCurrentAuctions = useMemo(() => {
-    const rAuctions = [...new Array(4).fill([])];
+    const rAuctions = [...new Array(5).fill([])];
     const arrAcutions = auctions.toJS();
     if (arrAcutions.length === 0) return [];
 
@@ -133,6 +133,8 @@ const PageProductsList = ({ auctionId }) => {
         rAuctions[1] = [...rAuctions[1], item];
       } else if (parseInt(item.id, 10) < 43) {
         rAuctions[2] = [...rAuctions[2], item];
+      } else if (parseInt(item.id, 10) >= 94 && parseInt(item.id, 10) <= 103) {
+        rAuctions[4] = [...rAuctions[4], item];
       } else {
         rAuctions[3] = [...rAuctions[3], item];
       }
@@ -168,7 +170,7 @@ const PageProductsList = ({ auctionId }) => {
       />
       <CardList
         auctions={arrCurrentAuctions[parseInt(auctionId, 10) - 1] || []}
-        sold={parseInt(auctionId, 10) === 4}
+        sold={parseInt(auctionId, 10) === 5 || parseInt(auctionId, 10) === 4}
         auctionId={auctionId}
         showGraphIds={showGraphIds}
         setShowGraphIds={setShowGraphIds}

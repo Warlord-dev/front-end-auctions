@@ -1,4 +1,8 @@
-import { prepareMainGraphStats, prepareGraphAuctions, prepareGraphHistory } from '@helpers/graph.helpers';
+import {
+  prepareMainGraphStats,
+  prepareGraphAuctions,
+  prepareGraphHistory,
+} from '@helpers/graph.helpers';
 
 export const getDesignerChartOptions = (history) => {
   const options = {
@@ -45,9 +49,11 @@ export const getDesignerChartOptions = (history) => {
         },
       },
     },
-    series: [{
-      data: prepareGraphAuctions(history),
-    }],
+    series: [
+      {
+        data: prepareGraphAuctions(history),
+      },
+    ],
   };
 
   return options;
@@ -98,15 +104,16 @@ export const getMainPageChartOptions = (history, monaPerEth) => {
         },
       },
     },
-    series: [{
-      data: prepareMainGraphStats(history, monaPerEth),
-    }],
+    series: [
+      {
+        data: prepareMainGraphStats(history, monaPerEth),
+      },
+    ],
   };
   return options;
 };
 
 export const getAuctionInformationChartOptions = (history) => {
-
   const options = {
     time: {
       useUTC: false,
@@ -156,9 +163,11 @@ export const getAuctionInformationChartOptions = (history) => {
       gridLineWidth: 0,
       minorGridLineWidth: 0,
     },
-    series: [{
-      data: prepareGraphHistory(history),
-    }],
+    series: [
+      {
+        data: prepareGraphHistory(history),
+      },
+    ],
   };
   return options;
 };
@@ -216,9 +225,11 @@ export const getCardProductChartOptions = (history) => {
         },
       },
     },
-    series: [{
-      data: prepareGraphHistory(history),
-    }],
+    series: [
+      {
+        data: prepareGraphHistory(history),
+      },
+    ],
   };
   return options;
 };

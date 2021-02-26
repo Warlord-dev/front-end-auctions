@@ -418,6 +418,22 @@ const DEFAULT_FIELDS = Map({
         },
       ]),
     },
+    {
+      id: '30',
+      designerName: 'DressX',
+      designerPhoto: './images/_IHJ1RVX_200x200.jpg',
+      descriptionDesigner: [
+        "We strongly believe that the amount of clothing produced today is way greater than humanity needs. We share the beauty and excitement that physical fashion creates, but we believe that there are ways to produce less, to produce more sustainably, and not to produce at all. At a current stage of DressX development, we aim to show that some clothes can exist only in their digital versions. Don't shop less, shop digital fashion.",
+      ],
+      designerCountry: 'United States',
+      designerCountryFlagIcon: './images/icons/usa.png',
+      designerSocialMedia: List([
+        {
+          name: 'twitter',
+          href: 'https://twitter.com/dressxcom',
+        },
+      ]),
+    },
   ]),
 });
 

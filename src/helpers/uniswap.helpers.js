@@ -1,6 +1,4 @@
-import {
-  Token, WETH, Fetcher, Route,
-} from '@uniswap/sdk';
+import { Token, WETH, Fetcher, Route } from '@uniswap/sdk';
 
 export const create = (tokenAddress, provider) => {
   const token = new Token(provider._network.chainId, tokenAddress, 18); // ChainId.MAINNET

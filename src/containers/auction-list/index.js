@@ -35,6 +35,7 @@ const auctionNames = [
   { id: 2, text: 'Auction02: Rush Corps' },
   { id: 3, text: 'Auction03: Fractional Garment Ownership' },
   { id: 4, text: 'Auction04: THE METAJACKET: RTFKT' },
+  { id: 5, text: 'Auction05: Crypto Fashion Week x DressX' },
 ];
 const dropdownOptions = [
   { key: 1, text: 'Earliest Auction', value: 'earliest_auction' },
@@ -58,7 +59,7 @@ const PageAuctionList = () => {
   const monaPerEth = useSelector(getMonaPerEth);
 
   const [currentAuctions, highestBid] = useMemo(() => {
-    const rAuctions = [...new Array(4).fill([])];
+    const rAuctions = [...new Array(5).fill([])];
     const arrAcutions = auctions.toJS();
     let highestBid = new BigNumber(0);
 
@@ -86,6 +87,8 @@ const PageAuctionList = () => {
         rAuctions[1] = [...rAuctions[1], item];
       } else if (parseInt(item.id, 10) < 43) {
         rAuctions[2] = [...rAuctions[2], item];
+      } else if (parseInt(item.id, 10) >= 94 && parseInt(item.id, 10) <= 103) {
+        rAuctions[4] = [...rAuctions[4], item];
       } else {
         rAuctions[3] = [...rAuctions[3], item];
       }

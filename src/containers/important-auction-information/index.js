@@ -29,15 +29,13 @@ const ImportantAuctionInformation = ({ auction, auctionId }) => {
   }
 
   const priceEth = convertToEth(auction.totalBids);
+  console.log('auction', auction);
   const expirationDate = auction.endTime * 1000;
 
   const timeOut = new Date(expirationDate) - new Date() + 1000;
 
   if (timeOut > 0) {
-    timerToSoldButton.current = setTimeout(
-      () => updateState(Date.now()),
-      timeOut,
-    );
+    timerToSoldButton.current = setTimeout(() => updateState(Date.now()), timeOut);
   }
 
   const getPriceUsd = (valueEth) => {
@@ -57,11 +55,7 @@ const ImportantAuctionInformation = ({ auction, auctionId }) => {
       <div className={styles.footerBoxRight}>
         <Timer className={styles.timer} expirationDate={expirationDate} />
         <p className={styles.expirationDateText}>TIME LEFT</p>
-        <Link
-          href={`/auctions/${auctionId}`}
-          className={styles.buttonSold}
-          background="black"
-        >
+        <Link href={`/auctions/${auctionId}`} className={styles.buttonSold} background="black">
           <span>VIEW COLLECTION</span>
         </Link>
       </div>

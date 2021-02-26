@@ -5,10 +5,7 @@ import kebabCase from 'lodash.kebabcase';
 import PageDesignerDescription from '@containers/page-designer-description';
 import { getChainId } from '@selectors/global.selectors';
 import auctionPageActions from '@actions/auction.page.actions';
-import {
-  getDesignerGarmentIds,
-  getDesignerInfoByName,
-} from '@selectors/designer.selectors';
+import { getDesignerGarmentIds, getDesignerInfoByName } from '@selectors/designer.selectors';
 import wsApi from '@services/api/ws.service';
 import designerPageActions from '@actions/designer.page.actions';
 import historyActions from '@actions/history.actions';
@@ -23,9 +20,7 @@ const Designers = () => {
   const dispatch = useDispatch();
   const chainId = useSelector(getChainId);
   const currentDesigner = useSelector(getDesignerInfoByName(kebabCase(id)));
-  const designerGarmentIds = useSelector(
-    getDesignerGarmentIds(currentDesigner.id),
-  );
+  const designerGarmentIds = useSelector(getDesignerGarmentIds(currentDesigner.id));
   const ids = designerGarmentIds.toJS();
 
   useSubscription(
@@ -33,19 +28,17 @@ const Designers = () => {
       request: wsApi.onDesignerByIds([currentDesigner.id.toLowerCase()]),
       next: (data) => dispatch(designerPageActions.update(data.digitalaxGarmentDesigners)),
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
     {
       request: wsApi.onAllAuctionsChange(),
       next: (data) => {
-        dispatch(
-          auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions),
-        );
+        dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions));
       },
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
@@ -53,19 +46,17 @@ const Designers = () => {
       request: wsApi.onAuctionsHistoryByIds(ids),
       next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
     },
-    [chainId, ids],
+    [chainId, ids]
   );
 
   useSubscription(
     {
       request: wsApi.getAllDigitalaxMarketplaceOffers(),
       next: (data) => {
-        dispatch(
-          collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers),
-        );
+        dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
       },
     },
-    [chainId],
+    [chainId]
   );
 
   useSubscription(
@@ -73,17 +64,19 @@ const Designers = () => {
       request: wsApi.onDigitalaxGarmentsCollectionChangeByIds(ids),
       next: (data) => dispatch(collectionActions.mapData(data.digitalaxGarmentCollections)),
     },
-    [chainId, ids],
+    [chainId, ids]
   );
 
   useSubscription(
     {
       request: wsApi.onMarketplaceHistoryByIds(ids),
       next: (data) => {
-        dispatch(historyActions.updateMarketplaceHistories(data.digitalaxMarketplacePurchaseHistories))
+        dispatch(
+          historyActions.updateMarketplaceHistories(data.digitalaxMarketplacePurchaseHistories)
+        );
       },
     },
-    [chainId, ids],
+    [chainId, ids]
   );
 
   const dateMonth = new Date();
@@ -91,33 +84,23 @@ const Designers = () => {
 
   useSubscription(
     {
-      request: wsApi.onResultedAuctionsByEndTimeGtAndIds(
-        ids,
-        parseInt(dateMonth / 1000, 10),
-      ),
-      next: (data) => dispatch(
-        auctionActions.setValue(
-          'monthDesignerResultedAuctions',
-          data.digitalaxGarmentAuctions,
+      request: wsApi.onResultedAuctionsByEndTimeGtAndIds(ids, parseInt(dateMonth / 1000, 10)),
+      next: (data) =>
+        dispatch(
+          auctionActions.setValue('monthDesignerResultedAuctions', data.digitalaxGarmentAuctions)
         ),
-      ),
     },
-    [chainId, JSON.stringify(designerGarmentIds)],
+    [chainId, JSON.stringify(designerGarmentIds)]
   );
 
   useEffect(
     () => () => {
       dispatch(designerPageActions.reset());
     },
-    [],
+    []
   );
 
-  return (
-    <PageDesignerDescription
-      designerName={id}
-      clothesIds={ids}
-    />
-  );
+  return <PageDesignerDescription designerName={id} clothesIds={ids} />;
 };
 
 export default memo(Designers);

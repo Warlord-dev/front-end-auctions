@@ -16,7 +16,7 @@
     "rinkeby": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxropsten"
   },
   "DEFAULT_NETWORK": "mainnet",
-  "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/1321075b381b462cae2a4697658c1f08",
+  "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
   "EXPLORER_URLS": {
     "mainnet": "https://etherscan.io/",
     "rinkeby": "https://rinkeby.etherscan.io/"

@@ -2,7 +2,6 @@ import React, { memo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import { Dropdown } from 'semantic-ui-react';
 import CardProduct from '@components/card-product';
 import Loader from '@components/loader';
@@ -20,13 +19,7 @@ import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
 
-const CardList = ({
-  auctions,
-  className,
-  sold,
-  showGraphIds,
-  setShowGraphIds,
-}) => {
+const CardList = ({ auctions, className, sold, showGraphIds, setShowGraphIds }) => {
   const dropdownOptions = [
     { key: 1, text: 'Highest bid', value: 'highest_bid' },
     { key: 2, text: 'Lowest bid', value: 'lowest_bid' },
@@ -37,7 +30,7 @@ const CardList = ({
   const garmentsById = useSelector(getAllGarmentsById);
   const auctionsIsLoaded = useSelector(getAuctionsIsLoaded);
   const [dropdownActiveItem, setDropdownActiveItem] = useState(
-    localStorage.getItem(STORAGE_SORT_BY),
+    localStorage.getItem(STORAGE_SORT_BY)
   );
 
   switch (dropdownActiveItem) {
@@ -78,13 +71,7 @@ const CardList = ({
       {auctionsIsLoaded ? (
         <>
           {auctions && auctions.length ? (
-            <ul
-              className={cn(
-                styles.list,
-                className,
-                'animate__animated animate__fadeIn',
-              )}
-            >
+            <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
               {auctions.map((auction) => {
                 const garment = garmentsById.get(auction.id);
                 return (

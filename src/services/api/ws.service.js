@@ -16,11 +16,10 @@ import {
   onMarketplaceHistoryByIds,
   getAllDigitalaxGarmentsCollections,
   onDigitalaxGarmentsCollectionChangeByIds,
-  allDigitalaxMarketplaceOffers
+  allDigitalaxMarketplaceOffers,
 } from '@services/api/gql.subscriptions.ws.service';
 
 class WSService {
-
   constructor() {
     this.url = DEV_WS_NETWORK_URL;
     this.client = null;
@@ -80,7 +79,7 @@ class WSService {
       variables: { ids },
     });
   }
-  
+
   onMarketplaceHistoryByIds(ids) {
     return this.client.request({
       query: onMarketplaceHistoryByIds,
@@ -127,7 +126,6 @@ class WSService {
       variables: { ids },
     });
   }
-
 }
 
 export default new WSService();

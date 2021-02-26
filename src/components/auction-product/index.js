@@ -35,7 +35,7 @@ const CardProduct = ({ name, auction, auctionId }) => {
         <div className={styles.imageWrapper}>
           <Link href={`/auctions/${auctionId}`}>
             <a className={styles.clothesPhotoWrapper}>
-              {auctionId === 4 && (
+              {auctionId === 5 && (
                 <span className={styles.banner}>
                   <span className={styles.bannerText}>Live Now</span>
                   <span className={styles.gap} />

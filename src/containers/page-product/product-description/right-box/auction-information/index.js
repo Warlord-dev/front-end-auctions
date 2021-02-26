@@ -9,25 +9,16 @@ import { getHistoryByTokenId } from '@selectors/history.selectors';
 import { getAuctionInformationChartOptions } from '@services/graph.service';
 import styles from './styles.module.scss';
 
-const AuctionInformation = ({
-  clothesId,
-}) => {
-
+const AuctionInformation = ({ clothesId }) => {
   const history = useSelector(getHistoryByTokenId(clothesId));
   const options = getAuctionInformationChartOptions(history);
 
   return (
     <div className={cn(styles.wrapper, 'animate__animated animate__fadeIn')}>
       <div className={styles.chartWrapper}>
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={options}
-        />
+        <HighchartsReact highcharts={Highcharts} options={options} />
       </div>
-      <ImportantProductInformation
-        clothesId={clothesId}
-        styleTypeBlock="largeTransparent"
-      />
+      <ImportantProductInformation clothesId={clothesId} styleTypeBlock="largeTransparent" />
     </div>
   );
 };

@@ -26,15 +26,14 @@ export const useAPY = (topBid) => {
   const TIME_INTERVAL = 365;
   const totalBidsBN = auctions.reduce(
     (acc, item) => (item.topBid ? acc.plus(item.topBid) : acc),
-    new BigNumber(0),
+    new BigNumber(0)
   );
 
   const bidBN = new BigNumber(topBid || 0);
   const bidETHBN = new BigNumber(topBid ? convertToEth(topBid) : 0);
 
-  const totalRatio = bidBN.gt(0) && totalBidsBN.gt(0)
-    ? bidBN.dividedBy(totalBidsBN)
-    : new BigNumber(0); // step 1
+  const totalRatio =
+    bidBN.gt(0) && totalBidsBN.gt(0) ? bidBN.dividedBy(totalBidsBN) : new BigNumber(0); // step 1
 
   const individualReward = totalRatio.times(new BigNumber(rewards)); // step 2
 

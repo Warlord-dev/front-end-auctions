@@ -13,7 +13,7 @@ const Trade = ({ clothesIds, tradeHistoryText, activeTab }) => (
 Trade.propTypes = {
   clothesIds: PropTypes.array.isRequired,
   tradeHistoryText: PropTypes.string,
-  activeTab: PropTypes.number.isRequired
+  activeTab: PropTypes.number.isRequired,
 };
 
 Trade.defaultProps = {

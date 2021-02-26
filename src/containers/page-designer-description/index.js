@@ -9,10 +9,7 @@ import ExamplesList from './examples-list';
 import Trade from './trade';
 import styles from './styles.module.scss';
 
-
-const PageDesignerDescription = ({
-  designerName, clothesIds,
-}) => {
+const PageDesignerDescription = ({ designerName, clothesIds }) => {
   const designerInfo = useSelector(getDesignerInfoByName(designerName));
 
   return (
@@ -25,13 +22,11 @@ const PageDesignerDescription = ({
   );
 };
 
-
 PageDesignerDescription.propTypes = {
   designerName: PropTypes.string.isRequired,
   clothesIds: PropTypes.array.isRequired,
 };
 
-PageDesignerDescription.defaultProps = {
-};
+PageDesignerDescription.defaultProps = {};
 
 export default memo(PageDesignerDescription);
