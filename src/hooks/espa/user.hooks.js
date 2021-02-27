@@ -32,3 +32,13 @@ export function useNFTs(account) {
 
   return nfts;
 }
+
+export function useProfile() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    api.getProfile().then((data) => setUser(data));
+  }, []);
+
+  return user;
+}

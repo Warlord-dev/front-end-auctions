@@ -1,6 +1,7 @@
 import axios from 'axios';
 import qs from 'qs';
 import axiosRetry from 'axios-retry';
+import { getAuthToken } from '@helpers/user.helpers';
 
 import 'core-js/es/string';
 import 'core-js/es/number';
@@ -29,7 +30,7 @@ axiosRetry(axios, {
  * @returns {Promise<any>}
  */
 function executeRequest(method, url, data, options = DEFAULT_OPTIONS) {
-
+  console.log('---execute', method, url, data, options);
   const params = {
     method,
     url,
@@ -38,14 +39,19 @@ function executeRequest(method, url, data, options = DEFAULT_OPTIONS) {
       ...options,
       ...DEFAULT_OPTIONS,
     },
+    headers: {
+      Authorization: getAuthToken(),
+    },
   };
 
   return new Promise((resolve, reject) => {
-    axios(params).then((response) => {
-      resolve(response.data);
-    }).catch((error) => {
-      reject(error);
-    });
+    axios(params)
+      .then((response) => {
+        resolve(response.data);
+      })
+      .catch((error) => {
+        reject(error);
+      });
   });
 }
 
@@ -94,7 +100,6 @@ export function patch(url, data, options) {
 export function put(url, data, options) {
   return executeRequest('put', `${url}`, data, options);
 }
-
 
 /**
  * Delete method

@@ -6,7 +6,7 @@
 .leftSideWrapper {
   display: flex;
   flex-direction: column;
-  width: 464px;
+  flex: 1;
 }
 
 .avatarIDSection {
@@ -67,7 +67,7 @@
 }
 
 .rightSideWrapper {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -94,4 +94,14 @@
   row-gap: 68px;
   column-gap: 84px;
   margin-bottom: 100px;
+}
+
+.loader {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

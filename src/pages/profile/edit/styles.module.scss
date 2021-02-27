@@ -1,12 +1,16 @@
-.profileWrapper {
+.container {
   width: 929px;
   height: 569px;
   border: 1px solid #e6e6e6;
   padding: 70px 115px 0px 135px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin: auto;
   margin-top: 100px;
+}
+.profileWrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .avatarWrapper {
@@ -62,4 +66,12 @@
     border: 1px solid #e6e6e6;
     padding-left: 12px;
   }
+}
+
+.saveButton {
+  width: 154px;
+  height: 41px;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }

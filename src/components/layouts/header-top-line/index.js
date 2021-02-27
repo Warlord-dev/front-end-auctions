@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Router from 'next/router';
 import PropTypes from 'prop-types';
@@ -6,7 +6,7 @@ import cn from 'classnames';
 import Link from 'next/link';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-import { getUser, getAccountPhoto } from '@helpers/user.helpers';
+import { useProfile } from '@hooks/espa/user.hooks';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
@@ -14,8 +14,7 @@ import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
-  const user = getUser();
-  const accountPhoto = getAccountPhoto();
+  const user = useProfile();
 
   const handleClick = () => dispatch(openConnectMetamaskModal());
 
@@ -65,7 +64,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         {user ? (
           <div className={styles.buttonWrapper}>
             <SmallPhotoWithText
-              photo={accountPhoto ? accountPhoto : './images/user-photo.svg'}
+              photo={user.avatar ? user.avatar : './images/user-photo.svg'}
               address={user.username}
               className={styles.hashAddress}
             >

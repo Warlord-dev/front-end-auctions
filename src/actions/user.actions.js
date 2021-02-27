@@ -91,6 +91,19 @@ class UserActions extends BaseActions {
       Router.push('/');
     };
   }
+
+  updateProfile(user) {
+    return async (dispatch) => {
+      try {
+        const data = await api.updateProfile(user);
+        if (data) {
+          localStorage.setItem(STORAGE_USER, JSON.stringify(data));
+          toast('Profile is updated');
+        } else {
+        }
+      } catch (e) {}
+    };
+  }
 }
 
 export default new UserActions(userReducer);

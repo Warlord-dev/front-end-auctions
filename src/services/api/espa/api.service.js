@@ -1,5 +1,5 @@
 import { STAGE_ESPA_BACKEND_URL } from '@constants/global.constants';
-import { get, post } from '@utils/api';
+import { get, post, put } from '@utils/api';
 // This service needs to be completed once backend is done
 
 class EspaApiService {
@@ -70,6 +70,24 @@ class EspaApiService {
       return ntfs;
     } catch (e) {
       return [];
+    }
+  }
+
+  async getProfile() {
+    try {
+      const user = await get('/profile');
+      return user;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  async updateProfile(user) {
+    try {
+      const data = await put('/profile', user);
+      return data;
+    } catch (e) {
+      return null;
     }
   }
 }
