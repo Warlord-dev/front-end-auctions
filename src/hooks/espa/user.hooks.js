@@ -27,7 +27,7 @@ export function useNFTs(account) {
   const [nfts, setNfts] = useState([]);
 
   useEffect(() => {
-    api.fetchNfts(account).then((data) => setNfts(data));
+    api.fetchNfts(account).then((data) => setNfts(data.digitalaxCollectors[0].parentsOwned));
   }, [account]);
 
   return nfts;

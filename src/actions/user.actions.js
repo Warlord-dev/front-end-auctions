@@ -68,8 +68,8 @@ class UserActions extends BaseActions {
         if (data) {
           const { returnData, secret } = data;
           localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
-          dispatch(this.setValue('user', returnData));
-          dispatch(this.setValue('authToken', secret));
+          localStorage.setItem(STORAGE_USER, returnData);
+          localStorage.setItem(STORAGE_TOKEN, secret);
           Router.push('/profile');
         } else {
           dispatch(this.logout());
@@ -86,8 +86,8 @@ class UserActions extends BaseActions {
   logout() {
     return async (dispatch) => {
       localStorage.removeItem(STORAGE_IS_LOGGED_IN);
-      dispatch(this.setValue('user', null));
-      dispatch(this.setValue('authToken', null));
+      localStorage.removeItem(STORAGE_USER);
+      localStorage.removeItem(STORAGE_TOKEN);
       Router.push('/');
     };
   }

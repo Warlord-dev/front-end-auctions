@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Router from 'next/router';
+import NFTProduct from '@components/nft-product';
 import Button from '@components/buttons/button';
 import { getUser } from '@selectors/user.selectors';
 import { getAccount } from '@selectors/user.selectors';
@@ -10,8 +11,7 @@ import styles from './styles.module.scss';
 const Profile = ({ history }) => {
   const user = useSelector(getUser);
   const account = useSelector(getAccount);
-  const nfts = useNFTs(account);
-  console.log('---nfts', nfts);
+  const nfts = useNFTs('0x0edfe4beed72ae089cc11f179eb75dc9eb2278de'); // account
 
   const getGameTags = (str) => {
     if (!str) {
@@ -36,7 +36,7 @@ const Profile = ({ history }) => {
           <span className={styles.email}>{user.get('email')}</span>
           <div className={styles.roomWrapper}>
             <span>Changing Room</span>
-            <p>{user.get('room')}</p>
+            <p>{nfts.length}</p>
           </div>
           <div className={styles.gameTagWrapper}>
             <span>Game Tags</span>
@@ -47,6 +47,15 @@ const Profile = ({ history }) => {
           </Button>
         </div>
       )}
+      <div className={styles.rightSideWrapper}>
+        <p className={styles.titleWrapper}>CHANGING ROOM</p>
+        <div className={styles.divider} />
+        <ul className={styles.list}>
+          {nfts.map((nft) => (
+            <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={nft.id} />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

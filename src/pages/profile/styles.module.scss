@@ -6,6 +6,7 @@
 .leftSideWrapper {
   display: flex;
   flex-direction: column;
+  width: 464px;
 }
 
 .avatarIDSection {
@@ -63,4 +64,34 @@
   width: 154px;
   font-size: 15px;
   font-weight: bold;
+}
+
+.rightSideWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.titleWrapper {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  font-weight: bold;
+  color: #111111;
+}
+
+.divider {
+  width: 227px;
+  height: 2px;
+  background: #111111;
+  margin-top: 10px;
+  margin-bottom: 44px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 68px;
+  column-gap: 84px;
+  margin-bottom: 100px;
 }
