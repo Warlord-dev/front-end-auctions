@@ -6,7 +6,7 @@ import cn from 'classnames';
 import Link from 'next/link';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-import { getUser, getAccountPhoto } from '@selectors/user.selectors';
+import { getUser, getAccountPhoto } from '@helpers/user.helpers';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
@@ -14,8 +14,8 @@ import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
-  const user = useSelector(getUser);
-  const accountPhoto = useSelector(getAccountPhoto);
+  const user = getUser();
+  const accountPhoto = getAccountPhoto();
 
   const handleClick = () => dispatch(openConnectMetamaskModal());
 
@@ -64,7 +64,11 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         </Link>
         {user ? (
           <div className={styles.buttonWrapper}>
-            <SmallPhotoWithText photo={accountPhoto} address={user.get('username')} className={styles.hashAddress}>
+            <SmallPhotoWithText
+              photo={accountPhoto ? accountPhoto : './images/user-photo.svg'}
+              address={user.username}
+              className={styles.hashAddress}
+            >
               <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
                 <img className={styles.arrowBottomImg} src="./images/icons/arrow-bottom.svg" alt="arrow-bottom" />
               </button>

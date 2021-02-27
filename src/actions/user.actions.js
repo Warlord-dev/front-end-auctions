@@ -4,7 +4,7 @@ import {
   openNotInstalledMetamask,
   openSignupModal,
 } from '@actions/modals.actions';
-import { STORAGE_IS_LOGGED_IN } from '@constants/storage.constants';
+import { STORAGE_IS_LOGGED_IN, STORAGE_USER, STORAGE_TOKEN } from '@constants/storage.constants';
 import userReducer from '@reducers/user.reducer';
 import { handleSignMessage, isMetamaskInstalled } from '@services/metamask.service';
 import BaseActions from './base-actions';
@@ -68,7 +68,7 @@ class UserActions extends BaseActions {
         if (data) {
           const { returnData, secret } = data;
           localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
-          localStorage.setItem(STORAGE_USER, returnData);
+          localStorage.setItem(STORAGE_USER, JSON.stringify(returnData));
           localStorage.setItem(STORAGE_TOKEN, secret);
           Router.push('/profile');
         } else {

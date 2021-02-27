@@ -48,22 +48,14 @@ const ImportantNFTInformation = ({ nft, nftId }) => {
   return (
     <div className={styles.smallWhite}>
       <div className={styles.leftWrapper}>
-        <p className={styles.priceDescription}>Total Sold</p>
         <p className={styles.priceWrapper}>
           <span className={styles.priceEth}>{priceEth} Ξ</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
       </div>
       <div className={styles.footerBoxRight}>
+        <p className={styles.expirationDateText}>LISTED</p>
         <Timer className={styles.timer} expirationDate={expirationDate} />
-        <p className={styles.expirationDateText}>TIME LEFT</p>
-        <Link
-          href={`/nfts/${nftId}`}
-          className={styles.buttonSold}
-          background="black"
-        >
-          <span>VIEW COLLECTION</span>
-        </Link>
       </div>
     </div>
   );

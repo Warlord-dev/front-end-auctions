@@ -3,13 +3,14 @@ import { useSelector } from 'react-redux';
 import Router from 'next/router';
 import NFTProduct from '@components/nft-product';
 import Button from '@components/buttons/button';
-import { getUser } from '@selectors/user.selectors';
+import { getUser, getAccountPhoto } from '@helpers/user.helpers';
 import { getAccount } from '@selectors/user.selectors';
 import { useNFTs } from '@hooks/espa/user.hooks';
 import styles from './styles.module.scss';
 
 const Profile = ({ history }) => {
-  const user = useSelector(getUser);
+  const user = getUser();
+  const avatar = getAccountPhoto();
   const account = useSelector(getAccount);
   const nfts = useNFTs('0x0edfe4beed72ae089cc11f179eb75dc9eb2278de'); // account
 
@@ -30,17 +31,17 @@ const Profile = ({ history }) => {
       {user && (
         <div className={styles.leftSideWrapper}>
           <div className={styles.avatarIDSection}>
-            <img src={user.get('avatar') ? user.get('avatar') : '../../../images/user-photo.svg'} />
-            <span>{user.get('username')}</span>
+            <img src={avatar ? avatar : '../../../images/user-photo.svg'} />
+            <span>{user.username}</span>
           </div>
-          <span className={styles.email}>{user.get('email')}</span>
+          <span className={styles.email}>{user.email}</span>
           <div className={styles.roomWrapper}>
             <span>Changing Room</span>
             <p>{nfts.length}</p>
           </div>
           <div className={styles.gameTagWrapper}>
             <span>Game Tags</span>
-            <p>{getGameTags(user.get('gameTags'))}</p>
+            <p>{getGameTags(user.gameTags)}</p>
           </div>
           <Button className={styles.modalButton} background="black" onClick={() => Router.push('/profile/edit')}>
             Edit Profile
