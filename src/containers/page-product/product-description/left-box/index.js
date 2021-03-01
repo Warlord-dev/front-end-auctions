@@ -42,7 +42,7 @@ const LeftBox = ({
             {currentCounts[index].total - currentCounts[index].sold === 0 && (
               <span className={styles.countTag}>
                 <span className={styles.bannerText}>
-                  {currentCounts[index].total === 0 || index !== 0 ? 'NOT AVAIlABLE' : 'SOLD OUT'}
+                  {currentCounts[index].total === 0 ? 'NOT AVAIlABLE' : 'SOLD OUT'}
                 </span>
                 <span className={styles.gap} />
               </span>

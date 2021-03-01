@@ -35,12 +35,12 @@ const CardProduct = ({ name, auction, auctionId }) => {
         <div className={styles.imageWrapper}>
           <Link href={`/auctions/${auctionId}`}>
             <a className={styles.clothesPhotoWrapper}>
-              {auctionId === 5 && (
+              {/* {auctionId === 5 && (
                 <span className={styles.banner}>
                   <span className={styles.bannerText}>Live Now</span>
                   <span className={styles.gap} />
                 </span>
-              )}
+              )} */}
               {parseInt(garment.id, 10) >= 20 && parseInt(garment.id, 10) <= 28 && (
                 <video autoPlay muted loop className={styles.clothesPhoto}>
                   <source src={`/video/${garment.id}.mp4`} type="video/mp4" />
