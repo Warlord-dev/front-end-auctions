@@ -7,5 +7,7 @@ export const getDesignerGarmentIds = () => (state) => state.designer.get('design
 export const getDesignerInfoById = (id) => (state) =>
   state.designer.get('infoByDesignerId').find((item) => item.id.toLowerCase() === id.toLowerCase());
 export const getAllDesigners = () => (state) => state.designer.get('infoByDesignerId');
-export const getDesignerInfoByName = (name) => (state) =>
-  state.designer.get('infoByDesignerId').find((item) => kebabCase(item.designerName) === name);
+export const getDesignerInfoByName = (name, isEqualCheck = false) => (state) =>
+  state.designer
+    .get('infoByDesignerId')
+    .find((item) => (!isEqualCheck ? kebabCase(item.designerName) === name : item.designerName === name));

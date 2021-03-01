@@ -1,0 +1,108 @@
+.profileWrapper {
+  display: flex;
+  padding: 120px 86px;
+}
+
+.leftSideWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.avatarIDSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 49px;
+  img {
+    width: 120px;
+    height: 120px;
+    margin-right: 24px;
+    border-radius: 50%;
+  }
+  span {
+    font-size: 48px;
+    font-weight: 900;
+  }
+}
+
+.email {
+  color: #999999;
+  font-size: 27px;
+  margin-bottom: 49px;
+}
+
+.roomWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 49px;
+  span {
+    color: #999999;
+    font-size: 27px;
+  }
+  p {
+    margin-top: 18px;
+    font-size: 33px;
+    font-weight: 900;
+  }
+}
+
+.gameTagWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 75px;
+  span {
+    color: #999999;
+    font-size: 27px;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 33px;
+    font-weight: 900;
+  }
+}
+
+.modalButton {
+  width: 154px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.rightSideWrapper {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.titleWrapper {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  font-weight: bold;
+  color: #111111;
+}
+
+.divider {
+  width: 227px;
+  height: 2px;
+  background: #111111;
+  margin-top: 10px;
+  margin-bottom: 44px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 68px;
+  column-gap: 84px;
+  margin-bottom: 100px;
+}
+
+.loader {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import qs from 'qs';
 import axiosRetry from 'axios-retry';
+import { getAuthToken } from '@helpers/user.helpers';
 
 import 'core-js/es/string';
 import 'core-js/es/number';
@@ -10,6 +11,11 @@ require('es6-promise').polyfill();
 require('es6-object-assign').polyfill();
 
 const DEFAULT_OPTIONS = { withCredentials: true };
+const API_BASE_URL = 'https://7kuwlltzmc.execute-api.eu-central-1.amazonaws.com/latest';
+
+axios.defaults.baseURL = API_BASE_URL;
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+
 axiosRetry(axios, {
   retries: 1,
   retryCondition: (error) => !error.response,
@@ -23,23 +29,28 @@ axiosRetry(axios, {
  * @param {Object} options
  * @returns {Promise<any>}
  */
-function executeRequest(method, url, data, options = DEFAULT_OPTIONS) {
-
-  const params = [
+function executeRequest(method, url, data, options = DEFAULT_OPTIONS, headers = {}) {
+  const params = {
+    method,
     url,
-    ...data ? [data] : [],
-    {
+    data,
+    options: {
       ...options,
       ...DEFAULT_OPTIONS,
     },
-  ];
+    headers: {
+      Authorization: getAuthToken(),
+    },
+  };
 
   return new Promise((resolve, reject) => {
-    axios[method](...params).then((response) => {
-      resolve(response.data);
-    }).catch((error) => {
-      reject(error);
-    });
+    axios(params)
+      .then((response) => {
+        resolve(response.data);
+      })
+      .catch((error) => {
+        reject(error);
+      });
   });
 }
 
@@ -85,10 +96,9 @@ export function patch(url, data, options) {
  * @param {Object} options
  * @returns {Promise<any>}
  */
-export function put(url, data, options) {
+export function put(url, data, options, headers, ) {
   return executeRequest('put', `${url}`, data, options);
 }
-
 
 /**
  * Delete method
