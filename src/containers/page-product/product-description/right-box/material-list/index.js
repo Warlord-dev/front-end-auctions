@@ -8,9 +8,14 @@ import { buildClientSchema } from 'graphql';
 import styles from './styles.module.scss';
 
 const MaterialList = ({
-  clothesId, childNftsText, headerTitle, valueChildNfts, activeTab, semiRare, common,
+  clothesId,
+  childNftsText,
+  headerTitle,
+  valueChildNfts,
+  activeTab,
+  semiRare,
+  common,
 }) => {
-
   const garment = useSelector(getGarmentsById(clothesId));
   if (!garment && activeTab === 0) {
     return buildClientSchema;
@@ -27,14 +32,25 @@ const MaterialList = ({
         )}
       </p>
       <div className={styles.headerTitle}>
-        {headerTitle.map((item) => <p key={item} className={styles.headerTitleItem}>{item}</p>)}
+        {headerTitle.map((item) => (
+          <p key={item} className={styles.headerTitleItem}>
+            {item}
+          </p>
+        ))}
       </div>
       <div className={styles.materialLine}>
-        {activeTab === 0 ? garment.children.map((item) => <MaterialLine key={item.id} item={item} clothesId={clothesId} />) : (
-          activeTab === 1 ? semiRare.children.map((item) => <MaterialLine key={item.id} item={item} clothesId={clothesId} />) : 
-          common.children.map((item) => <MaterialLine key={item.id} item={item} clothesId={clothesId} />))}
+        {activeTab === 0
+          ? garment.children.map((item) => (
+              <MaterialLine key={item.id} item={item} clothesId={clothesId} />
+            ))
+          : activeTab === 1
+          ? semiRare.children.map((item) => (
+              <MaterialLine key={item.id} item={item} clothesId={clothesId} />
+            ))
+          : common.children.map((item) => (
+              <MaterialLine key={item.id} item={item} clothesId={clothesId} />
+            ))}
       </div>
-
     </div>
   );
 };

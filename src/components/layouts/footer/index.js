@@ -26,8 +26,11 @@ const dataCenterList = [
   },
   {
     item: 'Whitepaper',
-    href:
-      'https://drive.google.com/file/d/1zG8h4GnodW7uWm_OsUY3g4I4RpOx6bMH/view?usp=sharing',
+    href: 'https://drive.google.com/file/d/1zG8h4GnodW7uWm_OsUY3g4I4RpOx6bMH/view?usp=sharing',
+  },
+  {
+    item: 'Read About ESPA',
+    href: 'https://drive.google.com/file/d/1oFiBGBr_CN0-mUuuEp_g6wDBr-mNA0Uh/view?usp=sharing',
   },
 ];
 
@@ -37,13 +40,7 @@ const Footer = ({ className, leftList, centerList }) => (
       {!!leftList.length && (
         <div>
           {leftList.map(({ item, href }) => (
-            <a
-              className={styles.leftItem}
-              key={item}
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a className={styles.leftItem} key={item} href={href} target="_blank" rel="noreferrer">
               {item}
             </a>
           ))}
@@ -51,13 +48,7 @@ const Footer = ({ className, leftList, centerList }) => (
       )}
       <div>
         {centerList.map(({ item, href }) => (
-          <a
-            className={styles.centerItem}
-            key={item}
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className={styles.centerItem} key={item} href={href} target="_blank" rel="noreferrer">
             {item}
           </a>
         ))}

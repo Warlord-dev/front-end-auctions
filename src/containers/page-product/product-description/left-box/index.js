@@ -21,7 +21,9 @@ const LeftBox = ({
         {TABS.map((item, index) => (
           <div key={item} className={styles.tabContainer}>
             <button
-              onClick={() => setActiveTab(index)}
+              onClick={() => {
+                setActiveTab(index);
+              }}
               className={cn(styles.tab, {
                 [styles.active]: activeTab === index,
               })}
@@ -31,13 +33,17 @@ const LeftBox = ({
             </button>
             {index > 0 && currentCounts[index].total - currentCounts[index].sold > 0 && (
               <span className={styles.countTag}>
-                <span className={styles.bannerText}>{currentCounts[index].sold + 1} OF {currentCounts[index].total}</span>
+                <span className={styles.bannerText}>
+                  {currentCounts[index].sold + 1} OF {currentCounts[index].total}
+                </span>
                 <span className={styles.gap} />
               </span>
             )}
             {currentCounts[index].total - currentCounts[index].sold === 0 && (
               <span className={styles.countTag}>
-                <span className={styles.bannerText}>{currentCounts[index].total === 0 ? 'NOT AVAIlABLE' : 'SOLD OUT'}</span>
+                <span className={styles.bannerText}>
+                  {currentCounts[index].total === 0 || index !== 0 ? 'NOT AVAIlABLE' : 'SOLD OUT'}
+                </span>
                 <span className={styles.gap} />
               </span>
             )}

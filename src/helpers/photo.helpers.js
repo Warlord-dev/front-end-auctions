@@ -1,5 +1,4 @@
 export const createArrayForGallery = (tokenInfo) => {
-
   const clothesPhotos = [];
   const imagePrefixWithoutAnimation = 'image_';
   let exceptImage = '';
@@ -32,8 +31,9 @@ export const createArrayForGallery = (tokenInfo) => {
       preview: tokenInfo.image_front_url,
     });
   } else {
-    const firstFoundImageKey = Object.keys(tokenInfo)
-      .find((objectKey) => objectKey.search(imagePrefixWithoutAnimation) !== -1 && tokenInfo[objectKey]);
+    const firstFoundImageKey = Object.keys(tokenInfo).find(
+      (objectKey) => objectKey.search(imagePrefixWithoutAnimation) !== -1 && tokenInfo[objectKey]
+    );
 
     if (firstFoundImageKey) {
       exceptImage = firstFoundImageKey;
@@ -46,7 +46,12 @@ export const createArrayForGallery = (tokenInfo) => {
   }
 
   Object.keys(tokenInfo).forEach((objectKey) => {
-    if (objectKey.search(imagePrefixWithoutAnimation) !== -1 && tokenInfo[objectKey] && exceptImage !== objectKey && objectKey !== 'animation_url') {
+    if (
+      objectKey.search(imagePrefixWithoutAnimation) !== -1 &&
+      tokenInfo[objectKey] &&
+      exceptImage !== objectKey &&
+      objectKey !== 'animation_url'
+    ) {
       clothesPhotos.push({
         image: tokenInfo[objectKey],
         preview: tokenInfo[objectKey],
@@ -58,7 +63,6 @@ export const createArrayForGallery = (tokenInfo) => {
 };
 
 export const getImageForCardProduct = (tokenInfo) => {
-
   if (!tokenInfo) {
     return [null, false];
   }
@@ -72,8 +76,9 @@ export const getImageForCardProduct = (tokenInfo) => {
   }
 
   const imagePrefixWithoutAnimation = 'image_';
-  const firstFoundImageKey = Object.keys(tokenInfo)
-    .find((objectKey) => objectKey.search(imagePrefixWithoutAnimation) !== -1 && tokenInfo[objectKey]);
+  const firstFoundImageKey = Object.keys(tokenInfo).find(
+    (objectKey) => objectKey.search(imagePrefixWithoutAnimation) !== -1 && tokenInfo[objectKey]
+  );
 
   if (firstFoundImageKey) {
     return [tokenInfo[firstFoundImageKey], false];
@@ -84,7 +89,6 @@ export const getImageForCardProduct = (tokenInfo) => {
   }
 
   return [null, false];
-
 };
 
 export const getDesignerName = (tokenInfo) => {

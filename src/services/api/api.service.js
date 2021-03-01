@@ -13,9 +13,7 @@ import {
   getAuctionContracts,
 } from '@services/api/gql.queries.api.service';
 
-
 class APIService {
-
   constructor() {
     this.url = DEV_HTTP_NETWORK_URL;
   }
@@ -61,9 +59,10 @@ class APIService {
   }
 
   async getEthRate() {
-    return fetch(`${config.EXCHANGE_API}/simple/price?ids=ethereum&vs_currencies=usd`).then((response) => response.json());
+    return fetch(
+      `${config.EXCHANGE_API}/simple/price?ids=ethereum&vs_currencies=usd`
+    ).then((response) => response.json());
   }
-
 }
 
 export default new APIService();

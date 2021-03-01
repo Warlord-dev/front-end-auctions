@@ -1,1 +1,2 @@
-export const getGarmentsInfoById = (id) => (state) => (state.tokenURIInfo.getIn(['garmentsInfoById', id]));
+export const getGarmentsInfoById = (id) => (state) =>
+  state.tokenURIInfo.getIn(['garmentsInfoById', id]);

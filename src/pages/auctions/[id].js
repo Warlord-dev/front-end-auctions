@@ -6,11 +6,7 @@ const AuctionPage = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  return (
-    <PageProductsList
-      auctionId={id}
-    />
-  );
+  return <PageProductsList auctionId={id} />;
 };
 
 export default memo(AuctionPage);
