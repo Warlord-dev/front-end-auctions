@@ -13,6 +13,7 @@ import Logo from './logo';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
+  console.log('--rerendering');
   const dispatch = useDispatch();
   const user = useProfile();
 

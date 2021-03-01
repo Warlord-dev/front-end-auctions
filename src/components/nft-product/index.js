@@ -52,7 +52,7 @@ const NFTProduct = ({ name, nft, nftId }) => {
           </Link>
         </div>
 
-        <ImportantNFTInformation nft={nft} nftId={nftId} />
+        {/* <ImportantNFTInformation nft={nft} nftId={nftId} /> */}
       </div>
     </li>
   );
