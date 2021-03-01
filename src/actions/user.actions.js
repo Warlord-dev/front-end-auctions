@@ -7,6 +7,7 @@ import {
 import { STORAGE_IS_LOGGED_IN, STORAGE_USER, STORAGE_TOKEN } from '@constants/storage.constants';
 import userReducer from '@reducers/user.reducer';
 import { handleSignMessage, isMetamaskInstalled } from '@services/metamask.service';
+import { getUser, getAuthToken } from '@helpers/user.helpers';
 import BaseActions from './base-actions';
 import api from '@services/api/espa/api.service';
 import { toast } from 'react-toastify';
@@ -67,6 +68,7 @@ class UserActions extends BaseActions {
         const data = await api.handleAuthentication(account, signMsg, signature);
         if (data) {
           const { returnData, secret } = data;
+          dispatch(this.setValue('user', returnData));
           localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
           localStorage.setItem(STORAGE_USER, JSON.stringify(returnData));
           localStorage.setItem(STORAGE_TOKEN, secret);
@@ -85,6 +87,7 @@ class UserActions extends BaseActions {
 
   logout() {
     return async (dispatch) => {
+      dispatch(this.setValue('user', null));
       localStorage.removeItem(STORAGE_IS_LOGGED_IN);
       localStorage.removeItem(STORAGE_USER);
       localStorage.removeItem(STORAGE_TOKEN);
@@ -97,11 +100,23 @@ class UserActions extends BaseActions {
       try {
         const data = await api.updateProfile(user);
         if (data) {
+          dispatch(this.setValue('user', data));
           localStorage.setItem(STORAGE_USER, JSON.stringify(data));
           toast('Profile is updated');
         } else {
         }
       } catch (e) {}
+    };
+  }
+
+  checkStorageAuth() {
+    return async (dispatch) => {
+      const user = getUser();
+      const token = getAuthToken();
+      if (!user || !token) {
+        return;
+      }
+      dispatch(this.setValue('user', user));
     };
   }
 }

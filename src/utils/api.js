@@ -30,7 +30,6 @@ axiosRetry(axios, {
  * @returns {Promise<any>}
  */
 function executeRequest(method, url, data, options = DEFAULT_OPTIONS) {
-  console.log('---execute', method, url, data, options);
   const params = {
     method,
     url,

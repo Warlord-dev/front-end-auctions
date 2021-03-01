@@ -30,11 +30,11 @@ class EspaApiService {
         wallet: account,
       });
       if (data === '0') {
-        return null;
+        return '';
       }
       return data;
     } catch (e) {
-      return null;
+      return '';
     }
   }
 

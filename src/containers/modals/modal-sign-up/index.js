@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
+import Loader from '@components/loader';
 
 import { closeSignupModal } from '@actions/modals.actions';
 import userActions from '@actions/user.actions';
@@ -38,24 +39,28 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
       {createPortal(
         <Modal onClose={() => handleClose()} title={title} className={(className, styles.modalWrapper)}>
           <span>{`CURRENT ETH ADDRESS: ${account ? account : 'WALLET NOT CONNECTED'}`}</span>
-          {!signMsg && (
+          {signMsg === null ? (
+            <Loader size="large" className={styles.loader} />
+          ) : (
             <>
-              <div className={styles.inputItem}>
-                <label>
-                  USER ID
-                </label>
-                <input value={userName} onChange={(e) => userNameChanged(e.target.value)} />
-                {!isUserNameAvailable && <p>That User ID is already taken. Please choose another one</p>}
-              </div>
-              <div className={styles.inputItem}>
-                <label>EMAIL</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} />
-              </div>
+              {signMsg === '' && (
+                <>
+                  <div className={styles.inputItem}>
+                    <label>USER ID</label>
+                    <input value={userName} onChange={(e) => userNameChanged(e.target.value)} />
+                    {!isUserNameAvailable && <p>That User ID is already taken. Please choose another one</p>}
+                  </div>
+                  <div className={styles.inputItem}>
+                    <label>EMAIL</label>
+                    <input value={email} onChange={(e) => setEmail(e.target.value)} />
+                  </div>
+                </>
+              )}
+              <Button className={styles.modalButton} background="black" onClick={() => handleClick()}>
+                {signMsg ? 'SIGN IN' : 'SIGN UP'}
+              </Button>
             </>
           )}
-          <Button className={styles.modalButton} background="black" onClick={() => handleClick()}>
-            {signMsg ? 'SIGN IN' : 'SIGN UP'}
-          </Button>
         </Modal>,
         document.body
       )}

@@ -6,17 +6,19 @@ import cn from 'classnames';
 import Link from 'next/link';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-import { useProfile } from '@hooks/espa/user.hooks';
+import { getUser } from '@selectors/user.selectors'
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
-  console.log('--rerendering');
   const dispatch = useDispatch();
-  const user = useProfile();
-
+  const user = useSelector(getUser);
+  if (!user) {
+    dispatch(accountActions.checkStorageAuth());
+  }
+  
   const handleClick = () => dispatch(openConnectMetamaskModal());
 
   const [isShowMenu, setIsShowMenu] = useState(false);
@@ -65,8 +67,8 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         {user ? (
           <div className={styles.buttonWrapper}>
             <SmallPhotoWithText
-              photo={user.avatar ? user.avatar : './images/user-photo.svg'}
-              address={user.username}
+              photo={user.get('avatar') ? user.get('avatar') : './images/user-photo.svg'}
+              address={user.get('username')}
               className={styles.hashAddress}
             >
               <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
