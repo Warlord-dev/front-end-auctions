@@ -1,23 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import Router from 'next/router';
+import { useSelector, useDispatch } from 'react-redux';
 import Button from '@components/buttons/button';
-import { useProfile } from '@hooks/espa/user.hooks';
+import Loader from '@components/loader';
 import userActions from '@actions/user.actions';
+
+import { getUser, getIsLoading } from '@selectors/user.selectors';
 import styles from './styles.module.scss';
 
 const EditProfile = ({ history }) => {
-  const profile = useProfile();
-  const [user, setUser] = useState(null);
-
   const dispatch = useDispatch();
+  const [user, setUser] = useState(null);
+  const profile = useSelector(getUser);
+  const isLoading = useSelector(getIsLoading);
+
+  if (!profile) {
+    dispatch(userActions.checkStorageAuth());
+  }
 
   useEffect(() => {
-    setUser(profile);
+    if (!profile) {
+      return;
+    }
+    setUser({
+      wallet: profile.get('wallet'),
+      email: profile.get('email'),
+      username: profile.get('username'),
+      randomString: profile.get('randomString'),
+      avatar: profile.get('avatar'),
+    });
   }, [profile]);
 
   if (!user) {
-    return null;
+    return <Loader size="large" className={styles.loader} />;
   }
 
   const showBrowserForAvatar = () => {
@@ -25,11 +39,11 @@ const EditProfile = ({ history }) => {
   };
 
   const onChangeFile = (e) => {
-    let file = document.getElementById('avatar-upload').files;
-    if (file.length === 0) {
+    let files = e.target.files || e.dataTransfer.files;
+    if (files.length === 0) {
       return;
     }
-    file = file[0];
+    dispatch(userActions.uploadAvatar(files[0]));
   };
 
   const onChange = (e, key) => {
@@ -40,7 +54,7 @@ const EditProfile = ({ history }) => {
   };
 
   const saveProfile = () => {
-    dispatch(userActions.updateProfile(user))
+    dispatch(userActions.updateProfile(user));
   };
 
   return (
@@ -48,7 +62,7 @@ const EditProfile = ({ history }) => {
       <div className={styles.profileWrapper}>
         <div className={styles.avatarWrapper}>
           <img src={user.avatar ? user.avatar : '../../../images/user-photo.svg'} />
-          <input id="avatar-upload" type="file" onClick={onChangeFile} hidden />
+          <input id="avatar-upload" type="file" onChange={onChangeFile} hidden />
           <Button className={styles.uploadButton} background="black" onClick={showBrowserForAvatar}>
             UPLOAD
           </Button>
@@ -73,6 +87,7 @@ const EditProfile = ({ history }) => {
       <Button className={styles.saveButton} background="black" onClick={saveProfile}>
         SAVE
       </Button>
+      {isLoading && <Loader size="large" className={styles.pageLoader} />}
     </div>
   );
 };

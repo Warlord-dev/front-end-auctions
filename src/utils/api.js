@@ -29,7 +29,7 @@ axiosRetry(axios, {
  * @param {Object} options
  * @returns {Promise<any>}
  */
-function executeRequest(method, url, data, options = DEFAULT_OPTIONS) {
+function executeRequest(method, url, data, options = DEFAULT_OPTIONS, headers = {}) {
   const params = {
     method,
     url,
@@ -96,7 +96,7 @@ export function patch(url, data, options) {
  * @param {Object} options
  * @returns {Promise<any>}
  */
-export function put(url, data, options) {
+export function put(url, data, options, headers, ) {
   return executeRequest('put', `${url}`, data, options);
 }
 

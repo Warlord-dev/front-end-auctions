@@ -21,6 +21,7 @@
     width: 150px;
     height: 150px;
     margin-bottom: 40px;
+    border-radius: 50%;
   }
   span {
     font-weight: 900;
@@ -74,4 +75,20 @@
   font-size: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.pageLoader,
+.loader {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: auto;
+}
+
+.pageLoader {
+  padding-top: 20px;
 }

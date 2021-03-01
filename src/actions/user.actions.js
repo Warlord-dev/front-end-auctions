@@ -98,6 +98,7 @@ class UserActions extends BaseActions {
   updateProfile(user) {
     return async (dispatch) => {
       try {
+        dispatch(this.setValue('isLoading', true));
         const data = await api.updateProfile(user);
         if (data) {
           dispatch(this.setValue('user', data));
@@ -106,6 +107,7 @@ class UserActions extends BaseActions {
         } else {
         }
       } catch (e) {}
+      dispatch(this.setValue('isLoading', false));
     };
   }
 
@@ -117,6 +119,28 @@ class UserActions extends BaseActions {
         return;
       }
       dispatch(this.setValue('user', user));
+    };
+  }
+
+  uploadAvatar(file) {
+    return async (dispatch) => {
+      try {
+        dispatch(this.setValue('isLoading', true));
+        let url = await api.getPresignedUrl();
+        if (url) {
+          const result = await api.uploadImageToS3(url, file);
+          if (result) {
+            const user = getUser();
+            const queryIndex = url.indexOf('?');
+            if (queryIndex >= 0) {
+              url = url.slice(0, queryIndex);
+            }
+            user.avatar = url;
+            dispatch(this.updateProfile(user));
+          }
+        }
+      } catch (e) {}
+      dispatch(this.setValue('isLoading', false));
     };
   }
 }

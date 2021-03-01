@@ -1,6 +1,6 @@
 import { STAGE_ESPA_BACKEND_URL } from '@constants/global.constants';
 import { get, post, put } from '@utils/api';
-// This service needs to be completed once backend is done
+import axios from 'axios';
 
 class EspaApiService {
   constructor() {
@@ -88,6 +88,28 @@ class EspaApiService {
       return data;
     } catch (e) {
       return null;
+    }
+  }
+
+  async getPresignedUrl() {
+    try {
+      const data = await get('/presigned-url');
+      return data;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  async uploadImageToS3(url, file) {
+    try {
+      await axios.put(url, file, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      return true;
+    } catch (e) {
+      return false;
     }
   }
 }
