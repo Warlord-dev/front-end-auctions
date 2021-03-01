@@ -35,7 +35,12 @@
   position: relative;
 }
 
-.logOut {
+.menuWrapper {
+  position: absolute;
+  margin-top: 10px;
+}
+
+.menuButton {
   @include reset-button();
   @include active();
   border: 1px solid #E6E6E6;
@@ -44,8 +49,6 @@
   padding: 10px 16px;
   width: 100%;
   top: 100%;
-  margin-top: 10px;
-  position: absolute;
 }
 
 .hashAddress {

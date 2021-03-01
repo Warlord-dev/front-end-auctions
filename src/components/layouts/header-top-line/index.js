@@ -1,31 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Router from 'next/router';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import Link from 'next/link';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-import { getAccount, getAccountPhoto } from '@selectors/user.selectors';
-import { getChainId } from '@selectors/global.selectors';
+import { getUser } from '@selectors/user.selectors'
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
 import styles from './styles.module.scss';
 
-const HeaderTopLine = ({
-  className, isShowStaking, buttonText, linkText,
-}) => {
+const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
-  const account = useSelector(getAccount);
-  const accountPhoto = useSelector(getAccountPhoto);
-  const chainId = useSelector(getChainId);
-
+  const user = useSelector(getUser);
+  if (!user) {
+    dispatch(accountActions.checkStorageAuth());
+  }
+  
   const handleClick = () => dispatch(openConnectMetamaskModal());
 
-  const [isShowLogOut, setIsShowLogOut] = useState(false);
+  const [isShowMenu, setIsShowMenu] = useState(false);
 
+  const handleProfileClick = () => {
+    setIsShowMenu(false);
+    Router.push('/profile');
+  };
   const handleLogoutClick = () => {
-    setIsShowLogOut(false);
+    setIsShowMenu(false);
     dispatch(accountActions.logout());
   };
 
@@ -47,60 +50,40 @@ const HeaderTopLine = ({
         >
           PODE
         </a> */}
-        <a
-          href="https://medium.com/@digitalax"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://medium.com/@digitalax" className={styles.link} target="_blank" rel="noreferrer">
           Blog
         </a>
-        <a
-          href="https://community.digitalax.xyz/"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://community.digitalax.xyz/" className={styles.link} target="_blank" rel="noreferrer">
           Forum
         </a>
         {isShowStaking && (
-          <a
-            href="http://staking.digitalax.xyz/"
-            className={styles.link}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="http://staking.digitalax.xyz/" className={styles.link} target="_blank" rel="noreferrer">
             {linkText}
           </a>
         )}
         <Link href="/global">
           <a className={styles.link}>Global Designer Network</a>
         </Link>
-        {account ? (
+        {user ? (
           <div className={styles.buttonWrapper}>
             <SmallPhotoWithText
-              photo={accountPhoto}
-              address={`${account}(${chainId})`}
+              photo={user.get('avatar') ? user.get('avatar') : './images/user-photo.svg'}
+              address={user.get('username')}
               className={styles.hashAddress}
             >
-              <button
-                className={styles.arrowBottom}
-                onClick={() => setIsShowLogOut(!isShowLogOut)}
-              >
-                <img
-                  className={styles.arrowBottomImg}
-                  src="./images/icons/arrow-bottom.svg"
-                  alt="arrow-bottom"
-                />
+              <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
+                <img className={styles.arrowBottomImg} src="./images/icons/arrow-bottom.svg" alt="arrow-bottom" />
               </button>
             </SmallPhotoWithText>
-            {isShowLogOut && (
-              <button
-                onClick={() => handleLogoutClick()}
-                className={styles.logOut}
-              >
-                Logout
-              </button>
+            {isShowMenu && (
+              <div className={styles.menuWrapper}>
+                <button onClick={() => handleProfileClick()} className={styles.menuButton}>
+                  Profile
+                </button>
+                <button onClick={() => handleLogoutClick()} className={styles.menuButton}>
+                  Logout
+                </button>
+              </div>
             )}
           </div>
         ) : (
@@ -121,7 +104,7 @@ HeaderTopLine.propTypes = {
 HeaderTopLine.defaultProps = {
   className: '',
   isShowStaking: true,
-  buttonText: 'Connect Wallet',
+  buttonText: 'SIGN IN',
   linkText: 'Staking',
 };
 

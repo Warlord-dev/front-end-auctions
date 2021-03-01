@@ -90,3 +90,14 @@ export const getImageForCardProduct = (tokenInfo) => {
 
   return [null, false];
 };
+
+export const getDesignerName = (tokenInfo) => {
+  if (!tokenInfo || !tokenInfo.attributes) {
+    return '';
+  }
+  const designer = tokenInfo.attributes.find(item => item.trait_type === "Designer");
+  if (!designer) {
+    return '';
+  }
+  return designer.value;
+}
