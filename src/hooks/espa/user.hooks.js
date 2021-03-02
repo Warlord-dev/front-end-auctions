@@ -24,14 +24,15 @@ export function useUserNameAvailable(username) {
 }
 
 export function useNFTs(account) {
-  const [nfts, setNfts] = useState([]);
+  const [nfts, setNfts] = useState(null);
 
   useEffect(() => {
     api
       .fetchNfts(account)
       .then((data) =>
         setNfts(data.digitalaxCollectors.length ? data.digitalaxCollectors[0].parentsOwned : [])
-      );
+      )
+      .catch((e) => setNfts([]));
   }, [account]);
 
   return nfts;
