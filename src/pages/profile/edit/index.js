@@ -35,7 +35,7 @@ const EditProfile = ({ history }) => {
     });
   }, [profile]);
 
-  if (!user) {
+  if (!user || myIP === null) {
     return <Loader size="large" className={styles.loader} />;
   }
 
@@ -82,6 +82,10 @@ const EditProfile = ({ history }) => {
   };
 
   const onDetectIp = () => {
+    if (!myIP) {
+      toast('Cannot detect your IP');
+      return;
+    }
     setUser({
       ...user,
       ipAddrs: myIP,

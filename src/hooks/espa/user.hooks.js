@@ -49,7 +49,7 @@ export function useProfile() {
 }
 
 export function useMyIP() {
-  const [ip, setIp] = useState('');
+  const [ip, setIp] = useState(null);
 
   useEffect(() => {
     api.getMyIP().then((data) => setIp(data));
