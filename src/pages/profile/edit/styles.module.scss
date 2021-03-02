@@ -1,12 +1,10 @@
 .container {
   width: 929px;
-  height: 569px;
   border: 1px solid #e6e6e6;
-  padding: 70px 115px 0px 135px;
+  padding: 20px 115px 20px 135px;
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 100px;
 }
 .profileWrapper {
   display: flex;
@@ -47,7 +45,7 @@
 .inputSection {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   span {
     font-size: 12px;
     font-weight: bold;
@@ -90,5 +88,20 @@
 }
 
 .pageLoader {
-  padding-top: 20px;
+  // padding-top: 20px;
+  margin-top: -200px;
+}
+
+.ipInput {
+  display: flex;
+  input {
+    width: 250px;
+    margin-right: 12px;
+  }
+}
+
+.detectIpButton {
+  width: 100px;
+  height: 44px;
+  font-size: 15px;
 }

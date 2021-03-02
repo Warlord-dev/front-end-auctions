@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 import Button from '@components/buttons/button';
 import Loader from '@components/loader';
 import userActions from '@actions/user.actions';
 
 import { getUser, getIsLoading } from '@selectors/user.selectors';
 import styles from './styles.module.scss';
+import { useMyIP } from '@hooks/espa/user.hooks';
 
 const EditProfile = ({ history }) => {
   const dispatch = useDispatch();
   const [user, setUser] = useState(null);
   const profile = useSelector(getUser);
   const isLoading = useSelector(getIsLoading);
+  const myIP = useMyIP();
 
   if (!profile) {
     dispatch(userActions.checkStorageAuth());
@@ -27,6 +30,8 @@ const EditProfile = ({ history }) => {
       username: profile.get('username'),
       randomString: profile.get('randomString'),
       avatar: profile.get('avatar'),
+      gameTags: profile.get('gameTags'),
+      ipAddrs: profile.get('ipAddrs'),
     });
   }, [profile]);
 
@@ -53,8 +58,34 @@ const EditProfile = ({ history }) => {
     });
   };
 
+  const validateEmail = (email) => {
+    const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regEx.test(String(email).toLowerCase());
+  };
+
+  const validIp = (address) => {
+    console.log(address);
+    const regEx = /^(([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)$/;
+    return regEx.test(address);
+  };
+
   const saveProfile = () => {
+    if (!validateEmail(user.email)) {
+      toast('You have entered an invalid Email address!');
+      return;
+    }
+    if (!validIp(user.ipAddrs)) {
+      toast('You have entered an invalid IP address!');
+      return;
+    }
     dispatch(userActions.updateProfile(user));
+  };
+
+  const onDetectIp = () => {
+    setUser({
+      ...user,
+      ipAddrs: myIP,
+    });
   };
 
   return (
@@ -62,11 +93,17 @@ const EditProfile = ({ history }) => {
       <div className={styles.profileWrapper}>
         <div className={styles.avatarWrapper}>
           <img src={user.avatar ? user.avatar : '../../../images/user-photo.svg'} />
-          <input id="avatar-upload" type="file" onChange={onChangeFile} hidden />
+          <input
+            id="avatar-upload"
+            type="file"
+            onChange={onChangeFile}
+            hidden
+            accept=".jpg, .png, .gif"
+          />
           <Button className={styles.uploadButton} background="black" onClick={showBrowserForAvatar}>
             UPLOAD
           </Button>
-          <span>JPG, PNG. NO BIGGER THAN 5MB.</span>
+          <span>JPG, PNG, GIF. NO BIGGER THAN 5MB.</span>
         </div>
         <div className={styles.detailsWrapper}>
           <div className={styles.inputSection}>
@@ -80,7 +117,20 @@ const EditProfile = ({ history }) => {
           <div className={styles.inputSection}>
             <span>GAME TAGS</span>
             <p>LIST YOUR FAVOURITE GAMES. SEPARATE BY COMMAS.</p>
-            <input defaultValue={user.gameTags} />
+            <input value={user.gameTags} onChange={(e) => onChange(e, 'gameTags')} />
+          </div>
+          <div className={styles.inputSection}>
+            <span>IP ADDRESS</span>
+            <div className={styles.ipInput}>
+              <input
+                value={user.ipAddrs}
+                placeholder="xxx.xxx.xxx.xxx"
+                onChange={(e) => onChange(e, 'ipAddrs')}
+              />
+              <Button className={styles.detectIpButton} background="black" onClick={onDetectIp}>
+                DETECT IP
+              </Button>
+            </div>
           </div>
         </div>
       </div>

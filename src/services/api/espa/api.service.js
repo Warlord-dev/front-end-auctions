@@ -112,6 +112,16 @@ class EspaApiService {
       return false;
     }
   }
+
+  async getMyIP() {
+    try {
+      const url = 'https://api.ipify.org/?format=json';
+      const { data } = await axios.get(url);
+      return data.ip;
+    } catch (e) {
+      return '';
+    }
+  }
 }
 
 export default new EspaApiService();
