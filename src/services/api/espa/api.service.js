@@ -29,7 +29,7 @@ class EspaApiService {
       const data = await post('/account-exists', {
         wallet: account,
       });
-      if (data === '0') {
+      if (data === 0) {
         return '';
       }
       return data;

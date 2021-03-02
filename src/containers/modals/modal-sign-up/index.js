@@ -33,7 +33,7 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
   const userNameChanged = (username) => {
     setUserName(username);
   };
-
+  console.log('---hey', signMsg);
   return (
     <>
       {createPortal(
