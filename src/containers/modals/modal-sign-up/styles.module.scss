@@ -41,14 +41,13 @@
   }
 }
 
-
 .loader {
   margin-top: auto;
   margin-bottom: auto;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: auto;
+  min-width: auto !important;
 }
