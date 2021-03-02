@@ -74,7 +74,7 @@ const EditProfile = ({ history }) => {
       toast('You have entered an invalid Email address!');
       return;
     }
-    if (!validIp(user.ipAddrs)) {
+    if (user.ipAddrs && !validIp(user.ipAddrs)) {
       toast('You have entered an invalid IP address!');
       return;
     }
