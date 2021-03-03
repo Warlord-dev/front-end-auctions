@@ -47,3 +47,13 @@ export function useProfile() {
 
   return user;
 }
+
+export function useMyIP() {
+  const [ip, setIp] = useState(null);
+
+  useEffect(() => {
+    api.getMyIP().then((data) => setIp(data));
+  }, []);
+
+  return ip;
+}

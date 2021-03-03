@@ -23,7 +23,7 @@ const Profile = ({ history }) => {
     if (!str) {
       return '';
     }
-    let tags = str.split(', ');
+    let tags = str.replace(', ', ',').split(',');
     tags.sort();
     return tags.reduce((total, cur) => {
       let capitalize = cur.replace(/\w\S*/g, (w) => w.replace(/^\w/, (c) => c.toUpperCase()));
@@ -43,15 +43,23 @@ const Profile = ({ history }) => {
           <span>{user.get('username')}</span>
         </div>
         <span className={styles.email}>{user.get('email')}</span>
-        <div className={styles.roomWrapper}>
+        <div className={styles.inputItemwrapper}>
           <span>Changing Room</span>
           <p>{nfts.length}</p>
         </div>
-        <div className={styles.gameTagWrapper}>
+        <div className={styles.inputItemwrapper}>
           <span>Game Tags</span>
           <p>{getGameTags(user.get('gameTags'))}</p>
         </div>
-        <Button className={styles.modalButton} background="black" onClick={() => Router.push('/profile/edit')}>
+        <div className={styles.inputItemwrapper}>
+          <span>Whitelisted IP address</span>
+          <p>{user.get('ipAddrs')}</p>
+        </div>
+        <Button
+          className={styles.modalButton}
+          background="black"
+          onClick={() => Router.push('/profile/edit')}
+        >
           Edit Profile
         </Button>
       </div>

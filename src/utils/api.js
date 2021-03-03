@@ -96,7 +96,7 @@ export function patch(url, data, options) {
  * @param {Object} options
  * @returns {Promise<any>}
  */
-export function put(url, data, options, headers, ) {
+export function put(url, data, options) {
   return executeRequest('put', `${url}`, data, options);
 }
 
