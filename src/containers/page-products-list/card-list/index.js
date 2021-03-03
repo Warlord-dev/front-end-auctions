@@ -19,7 +19,7 @@ import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
 
-const CardList = ({ auctions, className, sold, showGraphIds, setShowGraphIds }) => {
+const CardList = ({ auctions, className, showGraphIds, setShowGraphIds }) => {
   const dropdownOptions = [
     { key: 1, text: 'Highest bid', value: 'highest_bid' },
     { key: 2, text: 'Lowest bid', value: 'lowest_bid' },
@@ -107,7 +107,6 @@ CardList.propTypes = {
 CardList.defaultProps = {
   className: '',
   showGraphIds: [],
-  sold: false,
   setShowGraphIds: () => {},
 };
 

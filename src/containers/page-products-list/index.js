@@ -18,7 +18,7 @@ import { useAPY } from '@hooks/apy.hooks';
 import GeneralInformation from './general-information';
 import CardList from './card-list';
 
-const PageProductsList = ({ auctionId }) => {
+const PageProductsList = () => {
   const dispatch = useDispatch();
   const auctions = useSelector(getAllAuctions);
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
@@ -119,30 +119,6 @@ const PageProductsList = ({ auctionId }) => {
     }
   });
 
-  const arrCurrentAuctions = useMemo(() => {
-    const rAuctions = [...new Array(5).fill([])];
-    const arrAcutions = auctions.toJS();
-    if (arrAcutions.length === 0) return [];
-
-    let i;
-    for (i = 0; i < arrAcutions.length; i += 1) {
-      const item = arrAcutions[i];
-      if (parseInt(item.id, 10) < 20) {
-        rAuctions[0] = [...rAuctions[0], item];
-      } else if (parseInt(item.id, 10) < 29) {
-        rAuctions[1] = [...rAuctions[1], item];
-      } else if (parseInt(item.id, 10) < 43) {
-        rAuctions[2] = [...rAuctions[2], item];
-      } else if (parseInt(item.id, 10) >= 94 && parseInt(item.id, 10) <= 103) {
-        rAuctions[4] = [...rAuctions[4], item];
-      } else {
-        rAuctions[3] = [...rAuctions[3], item];
-      }
-    }
-
-    return rAuctions;
-  }, [auctions.toJS()]);
-
   const estimateApy = useAPY(highestBid.toString(10));
 
   const list = [
@@ -169,9 +145,7 @@ const PageProductsList = ({ auctionId }) => {
         history={monthResultedAuctions}
       />
       <CardList
-        auctions={arrCurrentAuctions[parseInt(auctionId, 10) - 1] || []}
-        sold={parseInt(auctionId, 10) === 5 || parseInt(auctionId, 10) === 4}
-        auctionId={auctionId}
+        auctions={currentAuctions}
         showGraphIds={showGraphIds}
         setShowGraphIds={setShowGraphIds}
       />
@@ -179,8 +153,6 @@ const PageProductsList = ({ auctionId }) => {
   );
 };
 
-PageProductsList.propTypes = {
-  auctionId: PropTypes.string.isRequired,
-};
+PageProductsList.propTypes = {};
 
 export default memo(PageProductsList);

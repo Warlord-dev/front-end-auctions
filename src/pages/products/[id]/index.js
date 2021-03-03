@@ -22,17 +22,19 @@ const Products = () => {
   const collections = useSelector(getAllCollections);
   const marketplaceOffers = useSelector(getAllMarketplaceOffers);
   const chainId = useSelector(getChainId);
-
+  console.log('--garment', garment);
   const currentCollections = useMemo(() => {
     const jsCollection = collections.toJS();
+    console.log('--collections', jsCollection);
     return jsCollection.filter((val) => val.garmentAuctionID === id);
   }, [collections]);
 
   const currentMarketplaceOffers = useMemo(() => {
     const jsOffers = marketplaceOffers.toJS();
+    console.log('--current--marketplace', jsOffers);
     return jsOffers.filter((val) => val.garmentCollection.garmentAuctionID === id);
   }, [marketplaceOffers]);
-
+  
   useSubscription(
     {
       request: wsApi.onAuctionsChangeByIds([id]),
