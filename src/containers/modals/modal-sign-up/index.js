@@ -13,7 +13,7 @@ import userActions from '@actions/user.actions';
 import { getAccount, getIsLoading } from '@selectors/user.selectors';
 
 import styles from './styles.module.scss';
-import { useSignMessage, useUserNameAvailable } from '@hooks/espa/user.hooks';
+import { useSignMessage, useUserNameAvailable, useMyIP } from '@hooks/espa/user.hooks';
 
 const ModalSignUp = ({ className, title, textForIcon, icon }) => {
   const dispatch = useDispatch();
@@ -25,9 +25,16 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
   const isLoading = useSelector(getIsLoading);
   const signMsg = useSignMessage(account);
   const isUserNameAvailable = useUserNameAvailable(userName);
+  let myIP = null;
+  if (!signMsg) myIP = useMyIP();
 
   const handleClose = () => {
     dispatch(closeSignupModal());
+  };
+
+  const validateUserName = (username) => {
+    const regEx = /^[A-Za-z0-9]*$/;
+    return regEx.test(String(username));
   };
 
   const validateEmail = (email) => {
@@ -37,13 +44,17 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
 
   const handleClick = () => {
     if (!signMsg) {
+      if (!validateUserName(userName)) {
+        toast('User ID must contains letters and numbers only!');
+        return;
+      }
       if (!validateEmail(email)) {
         toast('You have entered an invalid Email address!');
         return;
       }
     }
-    dispatch(userActions.tryToSignup(account, userName, email, signMsg));
-  }
+    dispatch(userActions.tryToSignup(account, userName, email, signMsg, myIP));
+  };
 
   const userNameChanged = (username) => {
     setUserName(username);
@@ -62,21 +73,24 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
             <Loader size="large" className={styles.loader} />
           ) : (
             <>
-              {signMsg === '' && (
-                <>
-                  <div className={styles.inputItem}>
-                    <label>USER ID</label>
-                    <input value={userName} onChange={(e) => userNameChanged(e.target.value)} />
-                    {!isUserNameAvailable && (
-                      <p>That User ID is already taken. Please choose another one</p>
-                    )}
-                  </div>
-                  <div className={styles.inputItem}>
-                    <label>EMAIL</label>
-                    <input value={email} onChange={(e) => setEmail(e.target.value)} />
-                  </div>
-                </>
-              )}
+              {signMsg === '' &&
+                (myIP === null ? (
+                  <Loader size="large" className={styles.loader} />
+                ) : (
+                  <>
+                    <div className={styles.inputItem}>
+                      <label>USER ID</label>
+                      <input value={userName} onChange={(e) => userNameChanged(e.target.value)} />
+                      {!isUserNameAvailable && (
+                        <p>That User ID is already taken. Please choose another one</p>
+                      )}
+                    </div>
+                    <div className={styles.inputItem}>
+                      <label>EMAIL</label>
+                      <input value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                  </>
+                ))}
               {isLoading ? (
                 <Loader size="large" className={styles.loader} />
               ) : (

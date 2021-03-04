@@ -43,11 +43,11 @@ class UserActions extends BaseActions {
     };
   }
 
-  tryToSignup(account, userName, email, signMsg) {
+  tryToSignup(account, userName, email, signMsg, ip) {
     return async (dispatch) => {
       dispatch(this.setValue('isLoading', true));
       if (!signMsg) {
-        signMsg = await api.handleSignUp(account, userName, email);
+        signMsg = await api.handleSignUp(account, userName, email, ip);
         if (!signMsg) {
           toast.error('Sign Up is failed');
           dispatch(this.setValue('isLoading', false));
