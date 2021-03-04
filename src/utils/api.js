@@ -2,6 +2,7 @@ import axios from 'axios';
 import qs from 'qs';
 import axiosRetry from 'axios-retry';
 import { getAuthToken } from '@helpers/user.helpers';
+import { STAGE_ESPA_BACKEND_URL } from '@constants/global.constants';
 
 import 'core-js/es/string';
 import 'core-js/es/number';
@@ -11,9 +12,8 @@ require('es6-promise').polyfill();
 require('es6-object-assign').polyfill();
 
 const DEFAULT_OPTIONS = { withCredentials: true };
-const API_BASE_URL = 'https://7kuwlltzmc.execute-api.eu-central-1.amazonaws.com/latest';
 
-axios.defaults.baseURL = API_BASE_URL;
+axios.defaults.baseURL = STAGE_ESPA_BACKEND_URL;
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 axiosRetry(axios, {

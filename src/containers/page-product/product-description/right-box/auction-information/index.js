@@ -9,8 +9,8 @@ import { getHistoryByTokenId } from '@selectors/history.selectors';
 import { getAuctionInformationChartOptions } from '@services/graph.service';
 import styles from './styles.module.scss';
 
-const AuctionInformation = ({ clothesId }) => {
-  const history = useSelector(getHistoryByTokenId(clothesId));
+const AuctionInformation = ({ garment }) => {
+  const history = useSelector(getHistoryByTokenId(garment.id));
   const options = getAuctionInformationChartOptions(history);
 
   return (
@@ -18,17 +18,19 @@ const AuctionInformation = ({ clothesId }) => {
       <div className={styles.chartWrapper}>
         <HighchartsReact highcharts={Highcharts} options={options} />
       </div>
-      <ImportantProductInformation clothesId={clothesId} styleTypeBlock="largeTransparent" />
+      <ImportantProductInformation
+        garment={garment}
+        clothesId={garment.id}
+        styleTypeBlock="largeTransparent"
+      />
     </div>
   );
 };
 
 AuctionInformation.propTypes = {
-  clothesId: PropTypes.string,
+  garment: PropTypes.object.isRequired,
 };
 
-AuctionInformation.defaultProps = {
-  clothesId: '',
-};
+AuctionInformation.defaultProps = {};
 
 export default memo(AuctionInformation);

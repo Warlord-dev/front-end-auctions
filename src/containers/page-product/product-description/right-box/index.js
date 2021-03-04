@@ -53,7 +53,7 @@ const RightBox = ({
         ? `(${garment.children.length} NFT${garment.children.length > 1 ? 's' : ''})`
         : '';
     }
-    if (activeTab === 0) {
+    if (activeTab === 1) {
       return semiRare.children.length > 0
         ? `(${semiRare.children.length} NFT${semiRare.children.length > 1 ? 's' : ''})`
         : '';
@@ -79,7 +79,8 @@ const RightBox = ({
   const [activeItem, setActiveItem] = useState(SHOW_FIRST_TAB);
 
   const renderAuctionInfo = () => {
-    if (activeItem === SHOW_FIRST_TAB) return <AuctionInformation {...currentClothesInfo} />;
+    if (activeItem === SHOW_FIRST_TAB)
+      return <AuctionInformation garment={garment} />;
     if (activeItem === SHOW_SECOND_TAB) {
       return (
         <MaterialList clothesId={clothesId} valueChildNfts={currentClothesInfo?.valueChildNfts} />

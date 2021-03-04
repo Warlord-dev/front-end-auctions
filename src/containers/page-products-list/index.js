@@ -4,8 +4,10 @@ import BigNumber from 'bignumber.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { convertToEth } from '@helpers/price.helpers';
 import auctionPageActions from '@actions/auction.page.actions';
+import collectionActions from '@actions/collection.actions';
 import { MAIN_GRAPH_COUNT_DAYS, TOTAL_VOLUME_DAYS } from '@constants/global.constants';
 import { getChainId } from '@selectors/global.selectors';
+import { getAllCollections } from '@selectors/collection.selectors';
 import {
   getAllAuctions,
   getGlobalStats,
@@ -21,11 +23,13 @@ import CardList from './card-list';
 const PageProductsList = () => {
   const dispatch = useDispatch();
   const auctions = useSelector(getAllAuctions);
+  const collections = useSelector(getAllCollections);
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
   const globalStats = useSelector(getGlobalStats).toJS();
   const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
   const chainId = useSelector(getChainId);
   const currentAuctions = auctions.toJS();
+  const currentCollections = collections.toJS();
   const [showGraphIds, setShowGraphIds] = useState([]);
 
   useSubscription(
@@ -55,6 +59,16 @@ const PageProductsList = () => {
               : []
           )
         );
+      },
+    },
+    [chainId]
+  );
+
+  useSubscription(
+    {
+      request: wsApi.getAllDigitalaxGarmentsCollections(),
+      next: (data) => {
+        dispatch(collectionActions.mapData(data.digitalaxGarmentCollections));
       },
     },
     [chainId]
@@ -146,6 +160,7 @@ const PageProductsList = () => {
       />
       <CardList
         auctions={currentAuctions}
+        collections={currentCollections}
         showGraphIds={showGraphIds}
         setShowGraphIds={setShowGraphIds}
       />

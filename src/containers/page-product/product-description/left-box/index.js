@@ -14,42 +14,22 @@ const LeftBox = ({
   currentCounts,
 }) => {
   const TABS = [EXCLUSIVE_RARITY, SEMI_RARE_RARITY, COMMON_RARITY];
+  const item = TABS[activeTab];
 
   return (
     <div className={cn(styles.leftBox, 'animate__animated animate__fadeIn')}>
-      <div className={styles.tabs}>
-        {TABS.map((item, index) => (
-          <div key={item} className={styles.tabContainer}>
-            <button
-              onClick={() => {
-                setActiveTab(index);
-              }}
-              className={cn(styles.tab, {
-                [styles.active]: activeTab === index,
-              })}
-              disabled={currentCounts[index].total === 0}
-            >
-              {item}
-            </button>
-            {index > 0 && currentCounts[index].total - currentCounts[index].sold > 0 && (
-              <span className={styles.countTag}>
-                <span className={styles.bannerText}>
-                  {currentCounts[index].sold + 1} OF {currentCounts[index].total}
-                </span>
-                <span className={styles.gap} />
-              </span>
-            )}
-            {currentCounts[index].total - currentCounts[index].sold === 0 && (
-              <span className={styles.countTag}>
-                <span className={styles.bannerText}>
-                  {currentCounts[index].total === 0 ? 'NOT AVAIlABLE' : 'SOLD OUT'}
-                </span>
-                <span className={styles.gap} />
-              </span>
-            )}
-          </div>
-        ))}
-      </div>
+      <span className={styles.garmentTypeWrapper}>
+        <span className={styles.bannerText}>{TABS[activeTab]}</span>
+        <span className={styles.gap} />
+      </span>
+      <span className={styles.countTag}>
+        <span className={styles.bannerText}>
+          {currentCounts[activeTab].total - currentCounts[activeTab].sold > 0
+            ? `${currentCounts[activeTab].sold + 1} OF ${currentCounts[activeTab].total}`
+            : `${currentCounts[activeTab].total === 0 ? 'NOT AVAIlABLE' : 'SOLD OUT'}`}
+        </span>
+        <span className={styles.gap} />
+      </span>
       <ViewImages
         clothesId={clothesId}
         clothesPhotos={clothesPhotos}

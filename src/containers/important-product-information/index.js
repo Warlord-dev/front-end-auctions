@@ -33,7 +33,8 @@ import { useAPY } from '@hooks/apy.hooks';
 import styles from './styles.module.scss';
 
 const ImportantProductInformation = ({
-  clothesId,
+  auctionId,
+  garment,
   estimateApyText,
   buttonTextPlace,
   buttonTextRaise,
@@ -44,15 +45,16 @@ const ImportantProductInformation = ({
 }) => {
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
+  const clothesId = garment.id;
 
-  const auction = useSelector(getAuctionById(clothesId));
+  const auction = useSelector(getAuctionById(auctionId));
   const history = useSelector(getHistoryByTokenId(clothesId));
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
   const [isShowHint, setIsShowHint] = useState(false);
 
-  const estimateApy = useAPY(auction ? auction.topBid : 0);
+  const estimateApy = useAPY(garment.primarySalePrice);
 
   const [, updateState] = React.useState(0);
   const timer = useRef(null);
@@ -72,7 +74,7 @@ const ImportantProductInformation = ({
     return null;
   }
 
-  const priceEth = convertToEth(auction.topBid);
+  const priceEth = convertToEth(garment.primarySalePrice);
   const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
   const expirationDate = auction.endTime * 1000;
 
@@ -266,7 +268,8 @@ const ImportantProductInformation = ({
 };
 
 ImportantProductInformation.propTypes = {
-  clothesId: PropTypes.string.isRequired,
+  auctionId: PropTypes.string.isRequired,
+  garment: PropTypes.object.isRequired,
   estimateApyText: PropTypes.string,
   buttonTextPlace: PropTypes.string,
   buttonTextRaise: PropTypes.string,

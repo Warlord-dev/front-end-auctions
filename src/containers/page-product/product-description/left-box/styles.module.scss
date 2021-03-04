@@ -1,70 +1,68 @@
-@import "../../../../assets/scss/helpers/variables.scss";
-@import "../../../../assets/scss/helpers/helpers.scss";
+@import '../../../../assets/scss/helpers/variables.scss';
+@import '../../../../assets/scss/helpers/helpers.scss';
 
 .leftBox {
   width: 588px;
   margin-right: 85px;
   flex-shrink: 0;
   z-index: 2;
-}
-
-.tabs {
-  display: flex;
-  align-items: center;
-}
-
-.tabContainer {
-  flex-grow: 1;
   position: relative;
+}
 
-  .tab {
-    @include reset-button();
-    @include active();
-    padding: 17px 25px 19px 25px;
-    width: 100%;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    color: $darkGray3;
-    border: 1px solid #e6e6e6;
-    min-height: 54px;
-    text-transform: uppercase;
-
-    &.active {
-      background-color: $lightGray1;
-      border: 0;
-      border: 1px solid transparent;
-      border-top: 2px solid $black;
-      color: $black;
-    }
-  }
+.garmentTypeWrapper {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  color: #999999;
+  left: 0;
+  top: 11px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   .gap {
     width: 0;
     height: 0;
-    border-right: 18px solid transparent;
-    border-top: 18px solid orangered;
+    border-right: 51px solid transparent;
+    border-top: 51px solid #e5e5e5;
     display: block;
-  }
-  
-  .bannerText {
-    background-color: orangered;
-    display: block;
-    padding: 3px;
   }
 
-  .countTag {
-    position: absolute;
-    z-index: 4;
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 10px;
-    color: white;
-    // width: 105px;
-    right: 0;
-    top: 1px;
+  .bannerText {
+    background-color: #e5e5e5;
+    display: block;
+    padding: 16px 20px 16px 34px;
+  }
+}
+
+.countTag {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 10px;
+  color: white;
+  left: 0;
+  top: 11px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  .gap {
+    width: 0;
+    height: 0;
+    border-right: 16px solid transparent;
+    border-top: 16px solid #FD6553;
+    display: block;
+  }
+
+  .bannerText {
+    background-color: #FD6553;
+    display: block;
+    padding: 2px 0px 2px 4px;
   }
 }
