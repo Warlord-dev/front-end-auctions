@@ -20,7 +20,7 @@ const AuctionInformation = ({ garment }) => {
       </div>
       <ImportantProductInformation
         garment={garment}
-        clothesId={garment.id}
+        auctionId={garment.id}
         styleTypeBlock="largeTransparent"
       />
     </div>

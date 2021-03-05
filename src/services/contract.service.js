@@ -323,7 +323,6 @@ export const getTokenPrice = async (contractAddress) => {
   );
 
   const monaToken = createUniswapPair(contractAddress, provider);
-
   const price = await monaToken.getPrice();
 
   return price;

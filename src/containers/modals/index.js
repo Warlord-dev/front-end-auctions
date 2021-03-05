@@ -7,6 +7,7 @@ import ModalWithdrawBid from "@containers/modals/modal-withdraw-bid";
 import ModalSignup from "@containers/modals/modal-sign-up";
 import BuyNow from "@containers/modals/buy-now";
 import PreviewMaterial from "@containers/modals/preview-material";
+import ModalESPAReady from "./modal-espa-ready";
 
 const Modals = () => {
   const modals = useSelector((state) => state.modals.toJS());
@@ -18,6 +19,7 @@ const Modals = () => {
     isShowModalSignup,
     isShowBuyNow,
     isShowPreviewMaterial,
+    isShowModalESPAReady,
   } = modals;
 
   return (
@@ -27,6 +29,7 @@ const Modals = () => {
       {isShowModalRaiseBid && <ModalRaiseBid />}
       {isShowModalWithdrawBid && <ModalWithdrawBid />}
       {isShowModalSignup && <ModalSignup />}
+      {isShowModalESPAReady && <ModalESPAReady />}
       {isShowBuyNow && <BuyNow />}
       {isShowPreviewMaterial && <PreviewMaterial />}
     </>

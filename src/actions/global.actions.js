@@ -28,7 +28,6 @@ import { convertToEth } from '@helpers/price.helpers';
 import { STORAGE_IS_LOGGED_IN } from '@constants/storage.constants';
 
 class GlobalActions extends BaseActions {
-
   initApp() {
     return async (dispatch) => {
       /**
@@ -64,10 +63,7 @@ class GlobalActions extends BaseActions {
         }
       });
 
-      if (
-        ethereum.selectedAddress
-        && localStorage.getItem(STORAGE_IS_LOGGED_IN)
-      ) {
+      if (ethereum.selectedAddress && localStorage.getItem(STORAGE_IS_LOGGED_IN)) {
         dispatch(userActions.setValue('account', ethereum.selectedAddress));
       }
 
@@ -107,10 +103,7 @@ class GlobalActions extends BaseActions {
         const address = getRewardContractAddressByChainId(chainId);
         const rewardContract = await getRewardContract(address);
 
-        const monaContractAddress = await getMonaContractAddressByChainId(
-          chainId,
-        );
-
+        const monaContractAddress = await getMonaContractAddressByChainId(chainId);
         const [rewards, monaPerEth] = await Promise.all([
           rewardContract.methods
             .parentRewards(moment().unix(), moment().add(1, 'days').unix())
@@ -129,13 +122,9 @@ class GlobalActions extends BaseActions {
       try {
         const { digitalaxAuctionContracts } = await api.getAuctionContracts();
 
-        const [
-          { minBidIncrement, id, bidWithdrawalLockTime },
-        ] = digitalaxAuctionContracts;
+        const [{ minBidIncrement, id, bidWithdrawalLockTime }] = digitalaxAuctionContracts;
 
-        dispatch(
-          this.setValue('minBidIncrement', convertToEth(minBidIncrement)),
-        );
+        dispatch(this.setValue('minBidIncrement', convertToEth(minBidIncrement)));
         dispatch(this.setValue('auctionContractAddress', id));
         dispatch(this.setValue('bidWithdrawalLockTime', bidWithdrawalLockTime));
       } catch (e) {
@@ -163,7 +152,6 @@ class GlobalActions extends BaseActions {
       dispatch(this.setValue('chainId', chainId));
     };
   }
-
 }
 
 export default new GlobalActions(globalReducer);

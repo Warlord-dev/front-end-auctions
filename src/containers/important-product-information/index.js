@@ -88,21 +88,17 @@ const ImportantProductInformation = ({
   ];
 
   if (timeOut > 0) {
-    timerToSoldButton.current = setTimeout(
-      () => updateState(Date.now()),
-      timeOut,
-    );
+    timerToSoldButton.current = setTimeout(() => updateState(Date.now()), timeOut);
   } else {
     showSoldButton = true;
   }
 
   const sortedHistory = history
     .filter(
-      (item) => account
-        && item.bidder
-        && [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(
-          item.eventName,
-        ),
+      (item) =>
+        account &&
+        item.bidder &&
+        [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName)
     )
     .sort((a, b) => b.timestamp - a.timestamp);
 
@@ -113,8 +109,8 @@ const ImportantProductInformation = ({
     const lastEvent = sortedHistory[0];
 
     if (
-      lastEvent.bidder.id.toLowerCase() === account.toLowerCase()
-      && lastEvent.eventName === HISTORY_BID_PLACED_EVENT
+      lastEvent.bidder.id.toLowerCase() === account.toLowerCase() &&
+      lastEvent.eventName === HISTORY_BID_PLACED_EVENT
     ) {
       const timeDiff = Date.now() - lastEvent.timestamp * 1000;
 
@@ -123,7 +119,7 @@ const ImportantProductInformation = ({
       } else if (bidWithdrawalLockTime - timeDiff / 1000 > 0) {
         timer.current = setTimeout(
           () => updateState(Date.now()),
-          (bidWithdrawalLockTime - timeDiff / 1000) * 1000,
+          (bidWithdrawalLockTime - timeDiff / 1000) * 1000
         );
       }
 
@@ -131,17 +127,13 @@ const ImportantProductInformation = ({
     }
 
     const mySortedHistory = sortedHistory.filter(
-      (item) => account
-        && item.bidder
-        && item.bidder.id.toLowerCase() === account.toLowerCase(),
+      (item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase()
     );
 
     if (mySortedHistory.length) {
       const myLastEvent = mySortedHistory[0];
 
-      isMakeBid = !!mySortedHistory.find(
-        (item) => item.eventName === HISTORY_BID_PLACED_EVENT,
-      );
+      isMakeBid = !!mySortedHistory.find((item) => item.eventName === HISTORY_BID_PLACED_EVENT);
 
       if (myLastEvent.eventName === HISTORY_BID_PLACED_EVENT) {
         withdrawValue = myLastEvent.value;
@@ -163,7 +155,7 @@ const ImportantProductInformation = ({
         id: clothesId,
         priceEth,
         withdrawValue: convertToEth(withdrawValue),
-      }),
+      })
     );
   };
 
@@ -172,7 +164,7 @@ const ImportantProductInformation = ({
       openWithdrawModal({
         id: clothesId,
         withdrawValue: convertToEth(withdrawValue),
-      }),
+      })
     );
   };
 
@@ -229,7 +221,11 @@ const ImportantProductInformation = ({
                 background="black"
               >
                 <span className={styles.buttonText}>{buttonTextRaise}</span>
-                {styleTypeBlock === 'largeTransparent' && (
+                {styleTypeBlock === 'smallWhite' ? (
+                  <a className={styles.wearInGame} href="https://espa.digitalax.xyz/">
+                    WEAR IN GAME
+                  </a>
+                ) : (
                   <span className={styles.buttonGray}>
                     (need min {minBid.toString(10)}Ξ to compete)
                   </span>
@@ -242,7 +238,11 @@ const ImportantProductInformation = ({
                 background="black"
               >
                 <span className={styles.buttonText}>{buttonTextPlace}</span>
-                {styleTypeBlock === 'largeTransparent' && (
+                {styleTypeBlock === 'smallWhite' ? (
+                  <a className={styles.wearInGame} href="https://espa.digitalax.xyz/">
+                    WEAR IN GAME
+                  </a>
+                ) : (
                   <span className={styles.buttonGray}>
                     (need min {minBid.toString(10)}Ξ to compete)
                   </span>
@@ -260,6 +260,11 @@ const ImportantProductInformation = ({
         ) : (
           <Button className={styles.buttonSold} background="black">
             <span>SOLD</span>
+            {styleTypeBlock === 'smallWhite' && (
+              <a className={styles.wearInGame} href="https://espa.digitalax.xyz/">
+                WEAR IN GAME
+              </a>
+            )}
           </Button>
         )}
       </div>

@@ -26,17 +26,17 @@
     display: flex;
     align-items: center;
   }
-  
+
   .priceEth {
     font-size: 24px;
     line-height: 29px;
     margin-right: 12px;
     font-weight: 900;
   }
-  
+
   .priceUsd {
     font-size: 20px;
-    line-height: 24px;  
+    line-height: 24px;
     color: $darkGray3;
     font-weight: 400;
   }
@@ -51,12 +51,12 @@
     display: block;
     font-weight: 400;
   }
-  
+
   .estimateApyTextWrapper {
     display: flex;
     align-items: flex-end;
   }
-  
+
   .estimateApyText {
     color: $darkGray1;
     letter-spacing: 0.12em;
@@ -65,7 +65,7 @@
     line-height: 11px;
     font-weight: 900;
   }
-  
+
   .questionMark {
     width: 15px;
     height: 15px;
@@ -93,11 +93,13 @@
     top: -7px;
     right: -9px;
   }
-  
+
   .button {
     min-width: 188px;
+    display: flex;
+    flex-direction: column;
   }
-  
+
   .expirationDateText {
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -112,8 +114,11 @@
     min-width: 188px;
     opacity: 0.7;
     cursor: initial;
-  
-    &:hover, &:active  {
+    display: flex;
+    flex-direction: column;
+
+    &:hover,
+    &:active {
       opacity: 0.7;
       background-color: #111;
       color: #fff;
@@ -126,18 +131,18 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  
+
   .priceWrapper {
     margin-bottom: 40px;
   }
-  
+
   .priceEth {
     font-size: 36px;
     line-height: 44px;
     font-weight: 900;
     margin-right: 10px;
   }
-  
+
   .priceUsd {
     font-size: 20px;
     line-height: 24px;
@@ -157,7 +162,7 @@
     align-items: flex-end;
   }
 
-  .estimateApyText  {
+  .estimateApyText {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-size: 14px;
@@ -165,7 +170,7 @@
     font-weight: 400;
     margin-right: 5px;
   }
-  
+
   .estimateApy {
     font-size: 20px;
     line-height: 24px;
@@ -173,7 +178,7 @@
     margin-left: 12px;
     order: 1;
   }
-  
+
   .questionMark {
     width: 15px;
     height: 15px;
@@ -200,7 +205,7 @@
     font-size: 9px;
     line-height: 120%;
     top: -26px;
-    right: -48px;;
+    right: -48px;
   }
 
   .footerBoxRight {
@@ -213,8 +218,9 @@
       cursor: initial;
       order: 3;
       margin-top: 30px;
-    
-      &:hover, &:active  {
+
+      &:hover,
+      &:active {
         opacity: 0.7;
         background-color: #111;
         color: #fff;
@@ -222,7 +228,7 @@
       }
     }
   }
-  
+
   .expirationDateText {
     font-size: 9px;
     line-height: 11px;
@@ -236,7 +242,7 @@
   .timer {
     order: 2;
   }
-  
+
   .button {
     padding: 12px 0 10px 0;
     letter-spacing: 0.12em;
@@ -249,12 +255,12 @@
     flex-direction: column;
     order: 3;
   }
-  
+
   .buttonText {
     font-size: 12px;
     line-height: 15px;
   }
-  
+
   .buttonGray {
     color: $darkGray3;
     font-size: 9px;
@@ -267,4 +273,13 @@
   display: flex;
   justify-content: center;
   order: 4;
+}
+
+.wearInGame {
+  font-size: 9px;
+  color: #ae34e8;
+  &:hover {
+    color: #ae34e8;
+    opacity: 0.7;
+  }
 }

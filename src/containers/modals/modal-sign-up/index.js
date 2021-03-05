@@ -15,7 +15,7 @@ import { getAccount, getIsLoading } from '@selectors/user.selectors';
 import styles from './styles.module.scss';
 import { useSignMessage, useUserNameAvailable } from '@hooks/espa/user.hooks';
 
-const ModalSignUp = ({ className, title, textForIcon, icon }) => {
+const ModalSignUp = ({ className, title }) => {
   const dispatch = useDispatch();
 
   const [userName, setUserName] = useState('');
@@ -100,15 +100,11 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
 ModalSignUp.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
-  textForIcon: PropTypes.string,
-  icon: PropTypes.string,
 };
 
 ModalSignUp.defaultProps = {
   className: '',
   title: 'CREATE AN ACCOUNT',
-  textForIcon: 'Metamask',
-  icon: './images/icons/metamask.svg',
 };
 
 export default ModalSignUp;

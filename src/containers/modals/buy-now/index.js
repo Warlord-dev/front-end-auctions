@@ -2,21 +2,16 @@ import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { utils as ethersUtils } from 'ethers';
-import {
-  getMonaPerEth,
-} from '@selectors/global.selectors';
+import { getMonaPerEth } from '@selectors/global.selectors';
 import PropTypes from 'prop-types';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
-import { closeBuynowModal } from '@actions/modals.actions';
+import { closeBuynowModal, openESPAReadyModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
 import styles from './styles.module.scss';
 
-const BuyNow = ({
-  className, title, buttonText1, buttonText2,
-}) => {
-
+const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   const dispatch = useDispatch();
   const requests = useRef([]);
   const monaPerEth = useSelector(getMonaPerEth);
@@ -30,6 +25,7 @@ const BuyNow = ({
 
   const handleClose = () => {
     dispatch(closeBuynowModal());
+    dispatch(openESPAReadyModal());
   };
 
   const handleClick = (mode) => {
@@ -71,31 +67,41 @@ const BuyNow = ({
     };
   }, []);
 
-
   return (
     <>
       {createPortal(
-        <Modal onClose={() => handleClose()} title={title} titleStyle={styles.textCenter} className={className}>
+        <Modal
+          onClose={() => handleClose()}
+          title={title}
+          titleStyle={styles.textCenter}
+          className={className}
+        >
           <div className={styles.footer}>
             <p className={styles.footerCaption}>
-              <span>You can choose to make your purchase in either <b>$MONA</b> or <b>ETH</b>.</span>
+              <span>
+                Need to top up on $MONA? Get it <a>here.</a>
+              </span>
             </p>
             <div className={styles.selectWrapper}>
-              <span>{Math.round(parseFloat(ethersUtils.formatEther(priceEth)) / parseFloat(monaPerEth) * 100) / 100} $MONA</span>
-              <Button isDisabled={isDisabled} background="black" onClick={() => handleClick(0)} className={styles.button}>
+              <span>
+                {Math.round(
+                  (parseFloat(ethersUtils.formatEther(priceEth)) / parseFloat(monaPerEth)) * 100
+                ) / 100}{' '}
+                $MONA
+              </span>
+              <Button
+                isDisabled={isDisabled}
+                background="black"
+                onClick={() => handleClick(0)}
+                className={styles.button}
+              >
                 {approved ? buttonText1 : 'APPROVE $MONA'}
-              </Button>
-            </div>
-            <div className={styles.selectWrapper}>
-              <span>{Math.round(parseFloat(ethersUtils.formatEther(priceEth)) * 100) / 100} Ξ</span>
-              <Button isDisabled={isDisabled2} background="black" onClick={() => handleClick(1)} className={styles.button}>
-                {buttonText2}
               </Button>
             </div>
             {showError && <p className={styles.error}>{showError}</p>}
           </div>
         </Modal>,
-        document.body,
+        document.body
       )}
     </>
   );
