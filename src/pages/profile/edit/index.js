@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Router from 'next/router';
 import { toast } from 'react-toastify';
 import Button from '@components/buttons/button';
 import Loader from '@components/loader';
@@ -157,6 +158,13 @@ const EditProfile = ({ history }) => {
       </div>
       <Button className={styles.saveButton} background="black" onClick={saveProfile}>
         SAVE
+      </Button>
+      <Button
+        className={styles.backProfileButton}
+        background="black"
+        onClick={() => Router.push('/profile')}
+      >
+        BACK TO PROFILE
       </Button>
       {isLoading && <Loader size="large" className={styles.pageLoader} />}
     </div>
