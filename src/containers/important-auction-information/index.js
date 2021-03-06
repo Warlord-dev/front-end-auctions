@@ -29,7 +29,6 @@ const ImportantAuctionInformation = ({ auction, auctionId }) => {
   }
 
   const priceEth = convertToEth(auction.totalBids);
-  console.log('auction', auction);
   const expirationDate = auction.endTime * 1000;
 
   const timeOut = new Date(expirationDate) - new Date() + 1000;
