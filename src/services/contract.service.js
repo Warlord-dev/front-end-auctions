@@ -3,9 +3,11 @@ import { isMetamaskInstalled } from '@services/metamask.service';
 import config from '@utils/config';
 import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
+import { getArkaneProvider } from '@services/web3-provider.service';
 
 export const getMarketplaceContract = async (ContractAddress) => {
-  const web3 = new Web3(window.ethereum);
+  const provider = await getArkaneProvider();
+  const web3 = new Web3(provider);
   const jsonInterface = [
     {
       inputs: [
@@ -25,7 +27,8 @@ export const getMarketplaceContract = async (ContractAddress) => {
 };
 
 export const getMonaTokenContract = async (ContractAddress) => {
-  const web3 = new Web3(window.ethereum);
+  const provider = await getArkaneProvider();
+  const web3 = new Web3(provider);
   const jsonInterface = [
     {
       inputs: [
@@ -251,7 +254,8 @@ export const getMonaTokenContract = async (ContractAddress) => {
 };
 
 export const getContract = async (auctionContractAddress) => {
-  const web3 = new Web3(window.ethereum);
+  const provider = await getArkaneProvider();
+  const web3 = new Web3(provider);
   const jsonInterface = [
     {
       inputs: [
