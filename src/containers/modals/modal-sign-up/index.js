@@ -25,8 +25,7 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
   const isLoading = useSelector(getIsLoading);
   const signMsg = useSignMessage(account);
   const isUserNameAvailable = useUserNameAvailable(userName);
-  let myIP = null;
-  if (!signMsg) myIP = useMyIP();
+  let myIP = useMyIP();
 
   const handleClose = () => {
     dispatch(closeSignupModal());
