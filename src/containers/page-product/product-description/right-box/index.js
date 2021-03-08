@@ -9,7 +9,6 @@ import { getGarmentsById } from '@selectors/garment.selectors';
 import { useAPY } from '@hooks/apy.hooks';
 import { getAccount } from '@selectors/user.selectors';
 import { getAuctionById } from '@selectors/auction.selectors';
-import { convertToEth } from '@helpers/price.helpers';
 import Button from '@components/buttons/button';
 import Timer from '@components/timer';
 import { openBuynowModal, openConnectMetamaskModal } from '@actions/modals.actions';
@@ -17,7 +16,7 @@ import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import { COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 import AuctionInformation from './auction-information';
 import DesignInformation from './design-information';
-import MaterialList from './material-list';
+import GameList from './game-list';
 import styles from './styles.module.scss';
 
 const SHOW_FIRST_TAB = 0;
@@ -51,22 +50,6 @@ const RightBox = ({
     ];
   }, [currentCollections]);
 
-  const VALUE_NFT = useMemo(() => {
-    if (activeTab === 0) {
-      return garment && garment.children.length > 0
-        ? `(${garment.children.length} NFT${garment.children.length > 1 ? 's' : ''})`
-        : '';
-    }
-    if (activeTab === 1) {
-      return semiRare.children.length > 0
-        ? `(${semiRare.children.length} NFT${semiRare.children.length > 1 ? 's' : ''})`
-        : '';
-    }
-    return common.children.length > 0
-      ? `(${common.children.length} NFT${common.children.length > 1 ? 's' : ''})`
-      : '';
-  }, [activeTab, semiRare, common]);
-
   const exchangeRateETH = useSelector(getExchangeRateETH);
 
   const estimateAPY = useAPY(currentCounts[activeTab].basePrice);
@@ -77,9 +60,7 @@ const RightBox = ({
   const renderAuctionInfo = () => {
     if (activeItem === SHOW_FIRST_TAB) return <AuctionInformation garment={garment} />;
     if (activeItem === SHOW_SECOND_TAB) {
-      return (
-        <MaterialList clothesId={clothesId} valueChildNfts={currentClothesInfo?.valueChildNfts} />
-      );
+      return <GameList />;
     }
     return null;
   };
@@ -90,15 +71,7 @@ const RightBox = ({
         <DesignInformation currentClothesInfo={currentClothesInfo} estimateAPY={estimateAPY} />
       );
     if (activeItem === SHOW_SECOND_TAB) {
-      return (
-        <MaterialList
-          clothesId={clothesId}
-          activeTab={activeTab}
-          semiRare={semiRare}
-          common={common}
-          valueChildNfts={currentClothesInfo?.valueChildNfts}
-        />
-      );
+      return <GameList />;
     }
     return null;
   };

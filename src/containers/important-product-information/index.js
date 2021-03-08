@@ -27,8 +27,10 @@ import {
   getExchangeRateETH,
   getMinBidIncrement,
   getBidWithdrawalLockTime,
+  getMonaPerEth,
 } from '@selectors/global.selectors';
 import { useAPY } from '@hooks/apy.hooks';
+import { utils as ethersUtils } from 'ethers';
 
 import styles from './styles.module.scss';
 
@@ -52,6 +54,7 @@ const ImportantProductInformation = ({
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
+  const monaPerEth = useSelector(getMonaPerEth);
   const [isShowHint, setIsShowHint] = useState(false);
 
   const estimateApy = useAPY(garment.primarySalePrice);
@@ -182,7 +185,9 @@ const ImportantProductInformation = ({
     >
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{priceEth} Ξ</span>
+          <span className={styles.priceEth}>
+            {Math.round((priceEth / monaPerEth) * 100) / 100} $MONA
+          </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
         <p className={styles.estimateWrapper}>
