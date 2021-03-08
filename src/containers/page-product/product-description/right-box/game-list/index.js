@@ -45,7 +45,7 @@ const MaterialList = () => {
               <img src="/images/github.svg" className={styles.gitIcon} />
             </a>
             <a className={styles.col3} href="https://espa.digitalax.xyz">
-              START PLAYING
+              <span>START PLAYING</span>
             </a>
           </div>
         </div>
