@@ -28,7 +28,7 @@ const DEFAULT_FIELDS = Map({
     },
     {
       id: '7',
-      designerName: '3dBehemoth',
+      designerName: '3DBehemoth',
       designerPhoto: './images/3dBehemoth.png',
       descriptionDesigner: [
         'Diego is a 26 year old cloth artist from Alicante, on the east coast of Spain. He is addicted to video games and fashion, and that made him start in the 3D fashion industry less than a year ago',

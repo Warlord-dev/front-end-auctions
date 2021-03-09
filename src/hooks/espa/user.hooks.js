@@ -29,9 +29,19 @@ export function useNFTs(account) {
   useEffect(() => {
     api
       .fetchNfts(account)
-      .then((data) =>
-        setNfts(data.digitalaxCollectors.length ? data.digitalaxCollectors[0].parentsOwned : [])
-      )
+      .then((data) => {
+        let items = [];
+        if (data.digitalaxCollectors.length) {
+          items = data.digitalaxCollectors[0].parentsOwned;
+        }
+        for (let item of data.digitalaxGarments) {
+          if (!items.find((el) => el.id === item.id)) {
+            items = [...items, { ...item, isStaked: true }];
+          }
+        }
+
+        setNfts(items);
+      })
       .catch((e) => setNfts([]));
   }, [account]);
 

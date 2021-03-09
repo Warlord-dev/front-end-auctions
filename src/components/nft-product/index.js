@@ -26,8 +26,8 @@ const NFTProduct = ({ name, nft, nftId }) => {
 
   return (
     <li className={cn(styles.item)}>
-      <Link href="#">
-        <a className={styles.clothesName}>{nftName}</a>
+      <Link href={nft.isStaked ? 'http://staking.digitalax.xyz/' : '#'}>
+        <a className={styles.clothesName}>{`${nftName}${nft.isStaked ? ' - STAKED' : ''}`}</a>
       </Link>
       <SmallPhotoWithText
         className={styles.designerWrapper}
