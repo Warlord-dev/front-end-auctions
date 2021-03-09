@@ -36,6 +36,8 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
     return regEx.test(String(username));
   };
 
+  const isUserNameValid = validateUserName(userName);
+
   const validateEmail = (email) => {
     const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regEx.test(String(email).toLowerCase());
@@ -82,6 +84,9 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
                       <input value={userName} onChange={(e) => userNameChanged(e.target.value)} />
                       {!isUserNameAvailable && (
                         <p>That User ID is already taken. Please choose another one</p>
+                      )}
+                      {!isUserNameValid && (
+                        <p>No special characters. Only letters and numbers.</p>
                       )}
                     </div>
                     <div className={styles.inputItem}>

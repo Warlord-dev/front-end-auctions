@@ -64,6 +64,8 @@ const EditProfile = ({ history }) => {
     return regEx.test(String(username));
   };
 
+  const isUserNameValid = validateUserName(user ? user.username : '')
+
   const validateEmail = (email) => {
     const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regEx.test(String(email).toLowerCase());
@@ -123,6 +125,7 @@ const EditProfile = ({ history }) => {
           <div className={styles.inputSection}>
             <span>CHANGE USER ID</span>
             <input value={user.username} onChange={(e) => onChange(e, 'username')} />
+            {!isUserNameValid && <p className={styles.alert}>No special characters. Only letters and numbers.</p>}
           </div>
           <div className={styles.inputSection}>
             <span>CHANGE EMAIL</span>
