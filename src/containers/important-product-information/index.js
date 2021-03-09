@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import Router from 'next/router';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import BigNumber from 'bignumber.js';
@@ -36,6 +37,7 @@ import styles from './styles.module.scss';
 
 const ImportantProductInformation = ({
   auctionId,
+  tabIndex,
   garment,
   estimateApyText,
   buttonTextPlace,
@@ -263,7 +265,11 @@ const ImportantProductInformation = ({
             )}
           </>
         ) : (
-          <Button className={styles.buttonSold} background="black">
+          <Button
+            className={styles.buttonSold}
+            background="black"
+            onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
+          >
             <span>SOLD</span>
             {styleTypeBlock === 'smallWhite' && (
               <a className={styles.wearInGame} href="https://espa.digitalax.xyz/">
@@ -279,6 +285,7 @@ const ImportantProductInformation = ({
 
 ImportantProductInformation.propTypes = {
   auctionId: PropTypes.string.isRequired,
+  tabIndex: PropTypes.number,
   garment: PropTypes.object.isRequired,
   estimateApyText: PropTypes.string,
   buttonTextPlace: PropTypes.string,
@@ -290,6 +297,7 @@ ImportantProductInformation.propTypes = {
 };
 
 ImportantProductInformation.defaultProps = {
+  tabIndex: 0,
   estimateApyText: 'Estimate APY',
   buttonTextPlace: 'Place a Bid',
   buttonTextRaise: 'Raise a Bid',
