@@ -5,18 +5,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.modalLeftBox {
-  display: flex;
-  align-items: center;
+  box-shadow: 0 1px 3px 0px rgb(0 0 0 / 50%);
+  border-radius: 20px;
+  &:hover {
+    background: #EEEEEE;
+  }
 }
 
 .modalsTextForIcon {
   font-size: 16px;
   line-height: 19px;
   margin-right: 10px;
-  font-weight: 700;
+  font-weight: 400;
 
   img {
     width: 52px;

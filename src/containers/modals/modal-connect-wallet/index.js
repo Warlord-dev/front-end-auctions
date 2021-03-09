@@ -11,11 +11,11 @@ import userActions from '@actions/user.actions';
 
 import styles from './styles.module.scss';
 
-const ModalConnectWallet = ({
-  className, title, textForIcon, icon, buttonText,
-}) => {
+const ModalConnectWallet = ({ className, title }) => {
   const dispatch = useDispatch();
-  const isShowNotificationConnectMetamask = useSelector((state) => state.modals.get('isShowNotificationConnectMetamask'));
+  const isShowNotificationConnectMetamask = useSelector((state) =>
+    state.modals.get('isShowNotificationConnectMetamask')
+  );
 
   const handleClose = () => {
     dispatch(closeConnectMetamaskModal());
@@ -28,14 +28,9 @@ const ModalConnectWallet = ({
     <>
       {createPortal(
         <Modal onClose={() => handleClose()} title={title} className={className}>
-          <div className={styles.modalItem}>
-            <div className={styles.modalLeftBox}>
-              <span className={styles.modalsTextForIcon}>{textForIcon}</span>
-              <img className={styles.modalIcon} src={icon} alt="metamask" />
-            </div>
-            <Button className={styles.modalButton} background="black" onClick={() => handleClick()}>
-              {buttonText}
-            </Button>
+          <div className={styles.modalItem}>  
+            <span className={styles.modalsTextForIcon}>Metamask</span>
+            <img className={styles.modalIcon} src="/images/icons/metamask.svg" alt="metamask" />
             {isShowNotificationConnectMetamask && (
               <Notification
                 text={['You have to install the metamask extension.']}
@@ -44,28 +39,20 @@ const ModalConnectWallet = ({
             )}
           </div>
         </Modal>,
-        document.body,
+        document.body
       )}
     </>
   );
-
-
 };
 
 ModalConnectWallet.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
-  textForIcon: PropTypes.string,
-  icon: PropTypes.string,
-  buttonText: PropTypes.string,
 };
 
 ModalConnectWallet.defaultProps = {
   className: '',
-  title: 'Connect Metamask wallet',
-  textForIcon: 'Metamask',
-  icon: './images/icons/metamask.svg',
-  buttonText: 'Connect Wallet',
+  title: 'Connect Wallet',
 };
 
 export default ModalConnectWallet;
