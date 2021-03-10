@@ -1,12 +1,10 @@
 import Web3 from 'web3';
-import { isMetamaskInstalled } from '@services/metamask.service';
-import config from '@utils/config';
 import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
-import { getArkaneProvider } from '@services/web3-provider.service';
+import { getWeb3Provider } from '@services/web3-provider.service';
 
 export const getMarketplaceContract = async (ContractAddress) => {
-  const provider = await getArkaneProvider();
+  const provider = await getWeb3Provider();
   const web3 = new Web3(provider);
   const jsonInterface = [
     {
@@ -27,7 +25,7 @@ export const getMarketplaceContract = async (ContractAddress) => {
 };
 
 export const getMonaTokenContract = async (ContractAddress) => {
-  const provider = await getArkaneProvider();
+  const provider = await getWeb3Provider();
   const web3 = new Web3(provider);
   const jsonInterface = [
     {
@@ -254,7 +252,7 @@ export const getMonaTokenContract = async (ContractAddress) => {
 };
 
 export const getContract = async (auctionContractAddress) => {
-  const provider = await getArkaneProvider();
+  const provider = await getWeb3Provider();
   const web3 = new Web3(provider);
   const jsonInterface = [
     {
@@ -291,7 +289,8 @@ export const getContract = async (auctionContractAddress) => {
 };
 
 export const getRewardContract = async (contractAddress) => {
-  const web3 = new Web3(isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL);
+  const provider = await getWeb3Provider();
+  const web3 = new Web3(provider);
 
   const jsonInterface = [
     {

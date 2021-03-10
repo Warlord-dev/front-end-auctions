@@ -4,7 +4,8 @@ import {
   openNotInstalledMetamask,
   openSignupModal,
 } from '@actions/modals.actions';
-import { STORAGE_IS_LOGGED_IN, STORAGE_USER, STORAGE_TOKEN } from '@constants/storage.constants';
+import { STORAGE_IS_LOGGED_IN, STORAGE_USER, STORAGE_TOKEN, STORAGE_WALLET } from '@constants/storage.constants';
+import {WALLET_METAMASK, WALLET_ARKANE} from "@constants/global.constants"
 import userReducer from '@reducers/user.reducer';
 import { handleSignMessage, isMetamaskInstalled } from '@services/metamask.service';
 import { getUser, getAuthToken } from '@helpers/user.helpers';
@@ -14,31 +15,34 @@ import { toast } from 'react-toastify';
 import Router from 'next/router';
 
 class UserActions extends BaseActions {
-  tryToLogin() {
+  tryToLogin(source) {
     return async (dispatch) => {
-      if (!isMetamaskInstalled()) {
-        dispatch(openNotInstalledMetamask());
-        return;
-      }
-
-      const { ethereum } = window;
-
-      try {
-        const [account] = await ethereum.request({
-          method: 'eth_requestAccounts',
-        });
-
-        if (!account) {
-          console.error('Account is epmty.');
+      if (source === WALLET_METAMASK) {
+        if (!isMetamaskInstalled()) {
+          dispatch(openNotInstalledMetamask());
           return;
         }
 
-        localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
-        dispatch(this.setValue('account', account));
-        dispatch(closeConnectMetamaskModal());
-        dispatch(openSignupModal());
-      } catch (e) {
-        console.error(e.message);
+        const { ethereum } = window;
+
+        try {
+          const [account] = await ethereum.request({
+            method: 'eth_requestAccounts',
+          });
+
+          if (!account) {
+            console.error('Account is epmty.');
+            return;
+          }
+
+          localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
+          localStorage.setItem(STORAGE_WALLET, WALLET_METAMASK);
+          dispatch(this.setValue('account', account));
+          dispatch(closeConnectMetamaskModal());
+          dispatch(openSignupModal());
+        } catch (e) {
+          console.error(e.message);
+        }
       }
     };
   }

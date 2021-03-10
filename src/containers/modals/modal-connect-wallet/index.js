@@ -8,6 +8,7 @@ import Notification from '@components/notification';
 
 import { closeConnectMetamaskModal, closeNotInstalledMetamask } from '@actions/modals.actions';
 import userActions from '@actions/user.actions';
+import {WALLET_METAMASK, WALLET_ARKANE} from "@constants/global.constants"
 
 import styles from './styles.module.scss';
 
@@ -22,13 +23,15 @@ const ModalConnectWallet = ({ className, title }) => {
     dispatch(closeNotInstalledMetamask());
   };
 
-  const handleClick = () => dispatch(userActions.tryToLogin());
+  const handleClick = (source) => {
+    dispatch(userActions.tryToLogin(source));
+  }
 
   return (
     <>
       {createPortal(
         <Modal onClose={() => handleClose()} title={title} className={className}>
-          <div className={styles.modalItem}>  
+          <div className={styles.modalItem} onClick={() => handleClick(WALLET_METAMASK)}>
             <span className={styles.modalsTextForIcon}>Metamask</span>
             <img className={styles.modalIcon} src="/images/icons/metamask.svg" alt="metamask" />
             {isShowNotificationConnectMetamask && (
