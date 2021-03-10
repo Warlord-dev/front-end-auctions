@@ -11,15 +11,17 @@ import { closeSignupModal } from '@actions/modals.actions';
 import userActions from '@actions/user.actions';
 
 import { getAccount, getIsLoading } from '@selectors/user.selectors';
+import { getModalParams } from '@selectors/modal.selectors';
 
 import styles from './styles.module.scss';
 import { useSignMessage, useUserNameAvailable, useMyIP } from '@hooks/espa/user.hooks';
 
 const ModalSignUp = ({ className, title, textForIcon, icon }) => {
   const dispatch = useDispatch();
+  const params = useSelector(getModalParams);
 
   const [userName, setUserName] = useState('');
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(params?.email);
 
   const account = useSelector(getAccount);
   const isLoading = useSelector(getIsLoading);
@@ -86,7 +88,11 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
                     </div>
                     <div className={styles.inputItem}>
                       <label>EMAIL</label>
-                      <input value={email} onChange={(e) => setEmail(e.target.value)} />
+                      <input
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        disabled={params?.email}
+                      />
                     </div>
                   </>
                 ))}

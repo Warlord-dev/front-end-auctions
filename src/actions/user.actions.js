@@ -4,10 +4,16 @@ import {
   openNotInstalledMetamask,
   openSignupModal,
 } from '@actions/modals.actions';
-import { STORAGE_IS_LOGGED_IN, STORAGE_USER, STORAGE_TOKEN, STORAGE_WALLET } from '@constants/storage.constants';
-import {WALLET_METAMASK, WALLET_ARKANE} from "@constants/global.constants"
+import {
+  STORAGE_IS_LOGGED_IN,
+  STORAGE_USER,
+  STORAGE_TOKEN,
+  STORAGE_WALLET,
+} from '@constants/storage.constants';
+import { WALLET_METAMASK, WALLET_ARKANE } from '@constants/global.constants';
 import userReducer from '@reducers/user.reducer';
 import { handleSignMessage, isMetamaskInstalled } from '@services/metamask.service';
+import { setWeb3Provider } from '@services/web3-provider.service';
 import { getUser, getAuthToken } from '@helpers/user.helpers';
 import BaseActions from './base-actions';
 import api from '@services/api/espa/api.service';
@@ -15,8 +21,35 @@ import { toast } from 'react-toastify';
 import Router from 'next/router';
 
 class UserActions extends BaseActions {
+  handleWeb3Loaded() {
+    return async (dispatch) => {
+      try {
+        console.log(window.web3.version, 'web3 version');
+        window.web3.eth.getChainId().then((network) => {
+          console.log(network, 'ChainID');
+        });
+        const authResult = await Arkane.checkAuthenticated();
+        const {
+          auth: {
+            idTokenParsed: { email },
+          },
+        } = authResult;
+        const wallets = await window.web3.eth.getAccounts();
+        console.log(wallets, 'Wallets');
+        localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
+        dispatch(this.setValue('account', wallets[0]));
+        dispatch(closeConnectMetamaskModal());
+        dispatch(openSignupModal({ email }));
+      } catch (e) {
+        toast.error("Wallet Connect is failed");        
+      }
+    }
+  }
+
   tryToLogin(source) {
     return async (dispatch) => {
+      localStorage.setItem(STORAGE_WALLET, source);
+      await setWeb3Provider();
       if (source === WALLET_METAMASK) {
         if (!isMetamaskInstalled()) {
           dispatch(openNotInstalledMetamask());
@@ -36,13 +69,14 @@ class UserActions extends BaseActions {
           }
 
           localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
-          localStorage.setItem(STORAGE_WALLET, WALLET_METAMASK);
           dispatch(this.setValue('account', account));
           dispatch(closeConnectMetamaskModal());
           dispatch(openSignupModal());
         } catch (e) {
           console.error(e.message);
         }
+      } else if (source === WALLET_ARKANE) {
+        dispatch(this.handleWeb3Loaded());
       }
     };
   }
@@ -94,10 +128,15 @@ class UserActions extends BaseActions {
 
   logout() {
     return async (dispatch) => {
+      const WALLET = localStorage.getItem(STORAGE_WALLET);
+      if (WALLET === WALLET_ARKANE) {
+        Arkane.arkaneConnect().logout();
+      }
       dispatch(this.setValue('user', null));
       localStorage.removeItem(STORAGE_IS_LOGGED_IN);
       localStorage.removeItem(STORAGE_USER);
       localStorage.removeItem(STORAGE_TOKEN);
+      localStorage.removeItem(STORAGE_WALLET);
       Router.push('/');
     };
   }

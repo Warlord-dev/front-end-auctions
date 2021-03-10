@@ -1,11 +1,7 @@
-import Web3 from 'web3';
 import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
-import { getWeb3Provider } from '@services/web3-provider.service';
 
 export const getMarketplaceContract = async (ContractAddress) => {
-  const provider = await getWeb3Provider();
-  const web3 = new Web3(provider);
   const jsonInterface = [
     {
       inputs: [
@@ -19,14 +15,12 @@ export const getMarketplaceContract = async (ContractAddress) => {
     },
   ];
 
-  const contract = await new web3.eth.Contract(jsonInterface, ContractAddress);
+  const contract = await new window.web3.eth.Contract(jsonInterface, ContractAddress);
 
   return contract;
 };
 
 export const getMonaTokenContract = async (ContractAddress) => {
-  const provider = await getWeb3Provider();
-  const web3 = new Web3(provider);
   const jsonInterface = [
     {
       inputs: [
@@ -246,14 +240,12 @@ export const getMonaTokenContract = async (ContractAddress) => {
     },
   ];
 
-  const contract = await new web3.eth.Contract(jsonInterface, ContractAddress);
+  const contract = await new window.web3.eth.Contract(jsonInterface, ContractAddress);
 
   return contract;
 };
 
 export const getContract = async (auctionContractAddress) => {
-  const provider = await getWeb3Provider();
-  const web3 = new Web3(provider);
   const jsonInterface = [
     {
       inputs: [
@@ -283,15 +275,12 @@ export const getContract = async (auctionContractAddress) => {
     },
   ];
 
-  const contract = await new web3.eth.Contract(jsonInterface, auctionContractAddress);
+  const contract = await new window.web3.eth.Contract(jsonInterface, auctionContractAddress);
 
   return contract;
 };
 
 export const getRewardContract = async (contractAddress) => {
-  const provider = await getWeb3Provider();
-  const web3 = new Web3(provider);
-
   const jsonInterface = [
     {
       inputs: [
@@ -312,7 +301,7 @@ export const getRewardContract = async (contractAddress) => {
     },
   ];
 
-  const contract = await new web3.eth.Contract(jsonInterface, contractAddress);
+  const contract = await new window.web3.eth.Contract(jsonInterface, contractAddress);
 
   return contract;
 };

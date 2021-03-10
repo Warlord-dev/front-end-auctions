@@ -1,3 +1,4 @@
+import Web3 from 'web3';
 import { isMetamaskInstalled } from '@services/metamask.service';
 import config from '@utils/config';
 import { WALLET_METAMASK, WALLET_ARKANE } from '@constants/global.constants';
@@ -7,7 +8,7 @@ const options = {
   clientId: 'DIGITALAX',
   // rpcUrl: 'https://kovan.infura.io/v3/YOUR-PROJECT-ID', //optional
   environment: 'staging', //optional, production by default
-  // signMethod: 'POPUP', //optional, REDIRECT by default
+  signMethod: 'POPUP', //optional, REDIRECT by default
   // bearerTokenProvider: () => 'obtained_bearer_token', //optional, default undefined
   //optional: you can set an identity provider to be used when authenticating
   // authenticationOptions: {
@@ -16,11 +17,17 @@ const options = {
   secretType: 'ETHEREUM', //optional, ETHEREUM by default
 };
 
-export const getWeb3Provider = async () => {
+export const setWeb3Provider = async () => {
   const WALLET = localStorage.getItem(STORAGE_WALLET);
-  if (WALLET === WALLET_ARKANE) return await Arkane.createArkaneProviderEngine(options);
   if (WALLET === WALLET_METAMASK) {
-    return isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL;
+    const provider = isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL;
+    window.web3 = new Web3(provider);
+    return;
   }
-  return null;
+  if (WALLET === WALLET_ARKANE) {
+    console.log('--CALLING AGAIN');
+    const provider = await Arkane.createArkaneProviderEngine(options);
+    window.web3 = new Web3(provider);
+    return;
+  }
 };

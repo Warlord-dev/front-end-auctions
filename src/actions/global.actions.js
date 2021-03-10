@@ -1,5 +1,6 @@
 import { toast } from 'react-toastify';
 import moment from 'moment';
+import Web3 from 'web3';
 import BaseActions from '@actions/base-actions';
 import userActions from '@actions/user.actions';
 import auctionActions from '@actions/auction.actions';
@@ -34,7 +35,6 @@ class GlobalActions extends BaseActions {
       /**
        * Get eth/usd rate
        */
-
       try {
         const rateItem = await api.getEthRate();
         dispatch(this.setValue('exchangeRateETH', rateItem.ethereum.usd));
@@ -51,8 +51,8 @@ class GlobalActions extends BaseActions {
         dispatch(this.setValue('isInitialized', true));
         return;
       }
-
       const { ethereum } = window;
+      window.web3 = new Web3(ethereum);
       /**
        * Init subscribers
        */
@@ -117,7 +117,7 @@ class GlobalActions extends BaseActions {
             .call(),
           getTokenPrice(monaContractAddress),
         ]);
-
+        console.log('---rewards', rewards, monaPerEth);
         dispatch(this.setValue('rewards', rewards));
         dispatch(this.setValue('monaPerEth', monaPerEth));
       } catch (e) {

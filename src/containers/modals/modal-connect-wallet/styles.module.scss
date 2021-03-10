@@ -1,3 +1,6 @@
+.connectwallet {
+  width: 600px;
+}
 
 .modalItem {
   border: 1px solid #E6E6E6;
@@ -7,6 +10,7 @@
   justify-content: space-between;
   box-shadow: 0 1px 3px 0px rgb(0 0 0 / 50%);
   border-radius: 20px;
+  margin-bottom: 20px;
   &:hover {
     background: #EEEEEE;
   }
