@@ -32,6 +32,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
           {this.getPreloadFontsLinks()}
           {/* ipfs next.js fix */}
           <style

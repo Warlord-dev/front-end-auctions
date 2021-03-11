@@ -11,7 +11,6 @@ import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
 import styles from './styles.module.scss';
-import 'semantic-ui-css/components/icon.min.css';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
@@ -39,7 +38,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         <Logo />
         <a href="https://skins.digitalax.xyz/" className={styles.goToMaticButton}>
           <div className={styles.circle}>
-            <i className={cn("angle down icon", styles.animated)}></i>
+            <i className={cn("fa fa-angle-down", styles.animated)}></i>
           </div>
           Switch to Matic for ESPA
         </a>
