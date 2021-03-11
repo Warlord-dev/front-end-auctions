@@ -10,6 +10,34 @@
   align-items: center;
 }
 
+.leftBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backToMainNetButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 187px;
+  height: 32px;
+  background: #fd6553;
+  border: 1px solid #767676;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 40px;
+  margin-top: -20px;
+
+  &:hover {
+    color: white;
+    background: #ec978d;
+  }
+}
+
 .rightBox {
   min-height: 47px;
   display: flex;
@@ -43,7 +71,7 @@
 .menuButton {
   @include reset-button();
   @include active();
-  border: 1px solid #E6E6E6;
+  border: 1px solid #e6e6e6;
   border-radius: 0;
   box-shadow: none;
   padding: 10px 16px;

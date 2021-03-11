@@ -34,7 +34,10 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   return (
     <div className={cn(className, styles.wrapper)}>
-      <Logo />
+      <div className={styles.leftBox}>
+        <Logo />
+        <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>Switch to Eth Mainnet</a>
+      </div>
       <div className={styles.rightBox}>
         {/* <Link href="/">
           <a className={styles.link}>Auctions</a>
