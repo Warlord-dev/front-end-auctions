@@ -11,7 +11,7 @@ import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
 import styles from './styles.module.scss';
-import 'semantic-ui-css/components/icon.css';
+import 'semantic-ui-css/components/icon.min.css';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
