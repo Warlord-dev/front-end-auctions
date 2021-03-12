@@ -36,12 +36,12 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     <div className={cn(className, styles.wrapper)}>
       <div className={styles.leftBox}>
         <Logo />
-        <a href="https://skins.digitalax.xyz/" className={styles.goToMaticButton}>
+        {/* <a href="https://skins.digitalax.xyz/" className={styles.goToMaticButton}>
           <div className={styles.circle}>
             <i className={cn("fa fa-angle-down", styles.animated)}></i>
           </div>
           Switch to Matic for ESPA
-        </a>
+        </a> */}
       </div>
       <div className={styles.rightBox}>
         {/* <Link href="/">
