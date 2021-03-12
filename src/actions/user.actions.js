@@ -4,6 +4,7 @@ import {
   openNotInstalledMetamask,
   openSignupModal,
 } from '@actions/modals.actions';
+import globalActions from '@actions/global.actions';
 import {
   STORAGE_IS_LOGGED_IN,
   STORAGE_USER,
@@ -24,9 +25,8 @@ class UserActions extends BaseActions {
   handleWeb3Loaded() {
     return async (dispatch) => {
       try {
-        console.log(window.web3.version, 'web3 version');
         window.web3.eth.getChainId().then((network) => {
-          console.log(network, 'ChainID');
+          dispatch(globalActions.changeNetwork(network));
         });
         const authResult = await Arkane.checkAuthenticated();
         const {
@@ -35,7 +35,6 @@ class UserActions extends BaseActions {
           },
         } = authResult;
         const wallets = await window.web3.eth.getAccounts();
-        console.log(wallets, 'Wallets');
         localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
         dispatch(this.setValue('account', wallets[0]));
         dispatch(closeConnectMetamaskModal());

@@ -69,7 +69,6 @@ const EditProfile = ({ history }) => {
   };
 
   const validIp = (address) => {
-    console.log(address);
     const regEx = /^(([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)$/;
     return regEx.test(address);
   };

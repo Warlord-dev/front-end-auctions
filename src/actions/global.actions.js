@@ -117,7 +117,6 @@ class GlobalActions extends BaseActions {
             .call(),
           getTokenPrice(monaContractAddress),
         ]);
-        console.log('---rewards', rewards, monaPerEth);
         dispatch(this.setValue('rewards', rewards));
         dispatch(this.setValue('monaPerEth', monaPerEth));
       } catch (e) {
