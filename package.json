@@ -25,6 +25,7 @@
     "async-mutex": "^0.2.2",
     "axios": "^0.19.2",
     "axios-retry": "^3.1.8",
+    "bad-words": "^3.0.4",
     "bignumber.js": "^9.0.1",
     "cacheable-response": "^2.0.9",
     "classnames": "^2.2.6",

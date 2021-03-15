@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import BadWordsFilter from 'bad-words';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
 import Loader from '@components/loader';
@@ -14,6 +15,8 @@ import { getAccount, getIsLoading } from '@selectors/user.selectors';
 
 import styles from './styles.module.scss';
 import { useSignMessage, useUserNameAvailable, useMyIP } from '@hooks/espa/user.hooks';
+
+const profanitiesFilter = new BadWordsFilter();
 
 const ModalSignUp = ({ className, title, textForIcon, icon }) => {
   const dispatch = useDispatch();
@@ -45,6 +48,14 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
 
   const handleClick = () => {
     if (!signMsg) {
+      if (userName.length > 10) {
+        toast('User ID should not longer than 10 characters!');
+        return;
+      }
+      if (profanitiesFilter.isProfane(userName)) {
+        toast('You inputed the profanity username. Please input another username!');
+        return;
+      }
       if (!validateUserName(userName)) {
         toast('User ID must contains letters and numbers only!');
         return;
