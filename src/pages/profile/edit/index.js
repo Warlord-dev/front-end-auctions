@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Router from 'next/router';
 import { toast } from 'react-toastify';
-import BadWordsFilter from 'bad-words';
 import Button from '@components/buttons/button';
 import Loader from '@components/loader';
 import userActions from '@actions/user.actions';
@@ -10,8 +9,6 @@ import userActions from '@actions/user.actions';
 import { getUser, getIsLoading } from '@selectors/user.selectors';
 import styles from './styles.module.scss';
 import { useMyIP } from '@hooks/espa/user.hooks';
-
-const profanitiesFilter = new BadWordsFilter();
 
 const EditProfile = ({ history }) => {
   const dispatch = useDispatch();
@@ -81,14 +78,6 @@ const EditProfile = ({ history }) => {
   };
 
   const saveProfile = () => {
-    if (user.username.length > 10) {
-      toast('User ID should not longer than 10 characters!');
-      return;
-    }
-    if (profanitiesFilter.isProfane(user.username)) {
-      toast('You inputed the profanity username. Please input another username!');
-      return;
-    }
     if (!validateUserName(user.username)) {
       toast('User ID must contains letters and numbers only!');
       return;
