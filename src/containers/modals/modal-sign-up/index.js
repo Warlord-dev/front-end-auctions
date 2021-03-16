@@ -53,7 +53,7 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
         return;
       }
       if (profanitiesFilter.isProfane(userName)) {
-        toast('We detected profanity in the username, please input a different one. If you believe this is a mistake, please get in touch with on our support channels');
+        toast('You inputed the profanity username. Please input another username!');
         return;
       }
       if (!validateUserName(userName)) {
