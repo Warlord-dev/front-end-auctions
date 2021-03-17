@@ -45,6 +45,10 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
 
   const handleClick = () => {
     if (!signMsg) {
+      if (userName.length > 10) {
+        toast('Must not exceed 10 characters');
+        return;
+      }  
       if (!validateUserName(userName)) {
         toast('User ID must contains letters and numbers only!');
         return;
