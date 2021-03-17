@@ -123,6 +123,16 @@ class EspaApiService {
       return '';
     }
   }
+
+  async checkProfanity(username) {
+    try {
+      const url = `https://www.purgomalum.com/service/containsprofanity?text=${username}`;
+      const { data } = await axios.get(url);
+      return data;
+    } catch (e) {
+      return true;
+    }
+  }
 }
 
 export default new EspaApiService();
