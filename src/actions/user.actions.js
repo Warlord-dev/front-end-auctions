@@ -47,6 +47,12 @@ class UserActions extends BaseActions {
     return async (dispatch) => {
       dispatch(this.setValue('isLoading', true));
       if (!signMsg) {
+        const isProfanity = await api.checkProfanity(userName);
+        if (isProfanity) {
+          toast('We detected profanity in the username, please input a different one. If you believe this is a mistake, please get in touch with on our support channels');
+          dispatch(this.setValue('isLoading', false));
+          return;
+        }
         signMsg = await api.handleSignUp(account, userName, email, ip);
         if (!signMsg) {
           toast.error('Sign Up is failed');
@@ -102,6 +108,12 @@ class UserActions extends BaseActions {
     return async (dispatch) => {
       try {
         dispatch(this.setValue('isLoading', true));
+        const isProfanity = await api.checkProfanity(user.username);
+        if (isProfanity) {
+          toast('We detected profanity in the username, please input a different one. If you believe this is a mistake, please get in touch with on our support channels');
+          dispatch(this.setValue('isLoading', false));
+          return;
+        }
         const data = await api.updateProfile(user);
         if (data) {
           dispatch(this.setValue('user', data));
