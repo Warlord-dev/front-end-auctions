@@ -53,6 +53,12 @@ export const getMonaContractAddressByChainId = (chainId) => {
   return config.MONA_TOKEN_ADDRESSES[network.alias];
 };
 
+export const getUSDTAddressByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.USDT_ADDRESS[network.alias];
+};
+
 export const getMarketplaceContractAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 

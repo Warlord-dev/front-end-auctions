@@ -1,0 +1,79 @@
+.bridgeWrapper {
+  position: absolute;
+  background: #f7f7f7;
+  width: 650px;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  padding: 30px 150px 80px;
+  text-align: center;
+}
+
+.bridgeTitle {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 45px;
+}
+
+.helperText {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 9px;
+  line-height: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b6b6b6;
+}
+
+.amount {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  text-shadow: 1px 1px #000000;
+}
+
+.actionButton {
+  width: 100%;
+  height: 48px;
+  background: #111111;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.actionText {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 1px 1px #000000;
+  margin: auto;
+}
+
+.orText {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #999999;
+  text-shadow: 1px 1px #000000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ethColor {
+  color: #4f2dea;
+}
+
+.maticColor {
+  color: #ea882d;
+}
