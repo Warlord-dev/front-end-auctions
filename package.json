@@ -19,9 +19,12 @@
   },
   "dependencies": {
     "@arkane-network/web3-arkane-provider": "^0.21.0",
+    "@maticnetwork/maticjs": "^2.0.36",
+    "@maticnetwork/walletconnect-provider": "^0.0.1-beta.1",
     "@pinata/sdk": "^1.1.11",
     "@sentry/browser": "^5.18.0",
     "@uniswap/sdk": "^3.0.3",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "animate.css": "^4.1.1",
     "async-mutex": "^0.2.2",
     "axios": "^0.19.2",

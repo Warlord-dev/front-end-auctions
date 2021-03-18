@@ -6,7 +6,7 @@ import cn from 'classnames';
 import Link from 'next/link';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-import { getUser } from '@selectors/user.selectors'
+import { getUser } from '@selectors/user.selectors';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
@@ -18,7 +18,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }
-  
+
   const handleClick = () => dispatch(openConnectMetamaskModal());
 
   const [isShowMenu, setIsShowMenu] = useState(false);
@@ -53,19 +53,40 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         >
           PODE
         </a> */}
-        <a href="https://medium.com/@digitalax" className={styles.link} target="_blank" rel="noreferrer">
+        <a
+          href="https://medium.com/@digitalax"
+          className={styles.link}
+          target="_blank"
+          rel="noreferrer"
+        >
           Blog
         </a>
-        <a href="https://community.digitalax.xyz/" className={styles.link} target="_blank" rel="noreferrer">
+        <a
+          href="https://community.digitalax.xyz/"
+          className={styles.link}
+          target="_blank"
+          rel="noreferrer"
+        >
           Forum
         </a>
         {isShowStaking && (
-          <a href="http://staking.digitalax.xyz/" className={styles.link} target="_blank" rel="noreferrer">
+          <a
+            href="http://staking.digitalax.xyz/"
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer"
+          >
             {linkText}
           </a>
         )}
         <Link href="/global">
           <a className={styles.link}>Global Designer Network</a>
+        </Link>
+        <Link href="/bridge">
+          <a className={styles.link}>Matic-Eth Bridge</a>
+        </Link>
+        <Link href="/swap">
+          <a className={styles.link}>Token Swap</a>
         </Link>
         {user ? (
           <div className={styles.buttonWrapper}>
@@ -75,7 +96,11 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
               className={styles.hashAddress}
             >
               <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
-                <img className={styles.arrowBottomImg} src="./images/icons/arrow-bottom.svg" alt="arrow-bottom" />
+                <img
+                  className={styles.arrowBottomImg}
+                  src="./images/icons/arrow-bottom.svg"
+                  alt="arrow-bottom"
+                />
               </button>
             </SmallPhotoWithText>
             {isShowMenu && (
@@ -106,7 +131,7 @@ HeaderTopLine.propTypes = {
 
 HeaderTopLine.defaultProps = {
   className: '',
-  isShowStaking: true,
+  isShowStaking: false,
   buttonText: 'SIGN IN',
   linkText: 'Staking',
 };

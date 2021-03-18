@@ -1,4 +1,3 @@
-
 export const AVAILABLE_NETWORKS = [
   {
     alias: 'mainnet',
@@ -24,5 +23,10 @@ export const AVAILABLE_NETWORKS = [
     alias: 'kovan',
     hex: 0x2a,
     name: 'Kovan Test Network',
+  },
+  {
+    alias: 'mumbai',
+    hex: 0x13881,
+    name: 'Mumbai Test Network',
   },
 ];

@@ -7,32 +7,47 @@
   "IS_PROD": false,
   "SENTRY_DSN": "https://efd721a5be464838a0166fa08f84d7ab@o484615.ingest.sentry.io/5538941",
   "ENVIRONMENT": "",
-  "NETWORKS": [
-    "rinkeby",
-    "mainnet"
-  ],
+  "NETWORKS": ["rinkeby", "goerli", "mumbai", "mainnet"],
   "API_URLS": {
     "mainnet": "https://api.thegraph.com/subgraphs/name/digitalax/digitalax",
     "rinkeby": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxropsten"
   },
   "DEFAULT_NETWORK": "mainnet",
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
+  "WEB3_URLS": {
+    "GOERLI": "https://goerli.infura.io/v3/280e56393dd1469e8cadc4132a5ec37c",
+    "MUMBAI": "https://rpc-mumbai.matic.today"
+  },
   "EXPLORER_URLS": {
     "mainnet": "https://etherscan.io/",
-    "rinkeby": "https://rinkeby.etherscan.io/"
+    "rinkeby": "https://rinkeby.etherscan.io/",
+    "goerli": "https://goerli.etherscan.io/",
+    "mumbai": "https://mumbai-explorer.matic.today"
   },
   "REWARD_CONTRACT_ADDRESSES": {
     "mainnet": "0xC155DDd8aA737aA53bBCea9EA62CAC0A3EEc942f",
-    "rinkeby": "0xb0DED58EF09929b0A0F2b10f48D42883df97466E"
+    "rinkeby": "0xb0DED58EF09929b0A0F2b10f48D42883df97466E",
+    "goerli": "0xb0DED58EF09929b0A0F2b10f48D42883df97466E"
   },
   "DIGITAL_MARKETPLACE_ADDRESSES": {
     "mainnet": "0xCC48554581c17c2837C13B1685E0e784fADC1c3b",
-    "rinkeby": "0xAcA4eaf530085B062dB530634DA637e266a823C9"
+    "rinkeby": "0xAcA4eaf530085B062dB530634DA637e266a823C9",
+    "goerli": "0x655f2166b0709cd575202630952d71e2bb0d61af"
   },
   "MONA_TOKEN_ADDRESSES": {
     "mainnet": "0x275f5Ad03be0Fa221B4C6649B8AeE09a42D9412A",
-    "rinkeby": "0x13379fe0e6992180ed0ac5174a02479896f9c510"
+    "rinkeby": "0x13379fe0e6992180ed0ac5174a02479896f9c510",
+    "goerli": "0x0f04bD6A5987FaCD756431976c1D74743e3dcac7",
+    "mumbai": "0xa80d3d77Aece6ff14E6f2d7789581f5820374A13"
+  },
+  "USDT_ADDRESS": {
+    "mainnet": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "rinkeby": "0xfb1d709cb959ac0ea14cad0927eabc7832e65058",
+    "goerli": "0xba62bcfcaafc6622853cca2be6ac7d845bc0f2dc",
+    "mumbai": "0x3813e82e6f7098b9583FC0F33a962D02018B6803"
   },
   "EXCHANGE_API": "https://api.coingecko.com/api/v3",
-  "IMGIX_URL": "digitalax.imgix.net"
+  "IMGIX_URL": "digitalax.imgix.net",
+  "TIME_INTERVAL": 10000,
+  "QUICKSWAP_ROUTER": "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff"
 }

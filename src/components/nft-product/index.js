@@ -26,7 +26,7 @@ const NFTProduct = ({ name, nft, nftId }) => {
 
   return (
     <li className={cn(styles.item)}>
-      <Link href={`/nfts/${nftId}`}>
+      <Link href="#">
         <a className={styles.clothesName}>{nftName}</a>
       </Link>
       <SmallPhotoWithText
@@ -38,7 +38,7 @@ const NFTProduct = ({ name, nft, nftId }) => {
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link href={`/nfts/${nftId}`}>
+          <Link href="#">
             <a className={styles.clothesPhotoWrapper}>
               {imageUrl &&
                 (isVideo ? (

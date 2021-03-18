@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
+  position: relative;
 }
 .profileWrapper {
   display: flex;
@@ -106,7 +107,6 @@
   font-size: 15px;
 }
 
-
 .questionMark {
   width: 15px;
   height: 15px;
@@ -144,4 +144,14 @@
   display: flex;
   align-items: center;
   position: relative;
+}
+
+.backProfileButton {
+  width: 103px;
+  height: 22px;
+  font-size: 8px;
+  position: absolute;
+  bottom: 32px;
+  left: 39px;
+  white-space: nowrap;
 }

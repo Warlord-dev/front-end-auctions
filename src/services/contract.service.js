@@ -1,5 +1,7 @@
 import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
+import { getUSDTAddressByChainId } from './network.service';
+import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json';
 
 export const getMarketplaceContract = async (ContractAddress) => {
   const jsonInterface = [
@@ -245,6 +247,14 @@ export const getMonaTokenContract = async (ContractAddress) => {
   return contract;
 };
 
+export const getUSDTContract = async (chainId) => {
+  const web3 = new Web3(window.ethereum);
+  const address = await getUSDTAddressByChainId(chainId);
+  const contract = await new web3.eth.Contract(require('../constants/erc20_abi.json'), address);
+
+  return contract;
+};
+
 export const getContract = async (auctionContractAddress) => {
   const jsonInterface = [
     {
@@ -302,6 +312,14 @@ export const getRewardContract = async (contractAddress) => {
   ];
 
   const contract = await new window.web3.eth.Contract(jsonInterface, contractAddress);
+
+  return contract;
+};
+
+export const getQuickSwapRouterContract = async () => {
+  const web3 = new Web3(isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL);
+
+  const contract = await new web3.eth.Contract(IUniswapV2Router02ABI, config.QUICKSWAP_ROUTER);
 
   return contract;
 };

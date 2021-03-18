@@ -1,0 +1,32 @@
+.hintWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 15px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 9px;
+  line-height: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b6b6b6;
+  margin-right: 10px;
+}
+
+.hintText {
+  background: #ffffff;
+  border: 1px solid #000000;
+  padding: 10px;
+  width: 135px;
+
+  font-weight: 600;
+  font-size: 6px;
+  line-height: 6px;
+  text-align: center;
+
+  color: #000000;
+  margin-bottom: 5px;
+}
