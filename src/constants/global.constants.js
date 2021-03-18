@@ -10,3 +10,6 @@ export const STAGE_ESPA_BACKEND_URL = 'https://7kuwlltzmc.execute-api.eu-central
 export const COMMON_RARITY = 'Common';
 export const SEMI_RARE_RARITY = 'Semi-Rare';
 export const EXCLUSIVE_RARITY = 'Exclusive';
+
+export const WALLET_METAMASK = 'METAMASK';
+export const WALLET_ARKANE = 'ARKANE';

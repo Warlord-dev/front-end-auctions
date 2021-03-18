@@ -58,6 +58,11 @@ const EditProfile = ({ history }) => {
     });
   };
 
+  const validateUserName = (username) => {
+    const regEx = /^[A-Za-z0-9]*$/;
+    return regEx.test(String(username));
+  };
+
   const validateEmail = (email) => {
     const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regEx.test(String(email).toLowerCase());
@@ -69,6 +74,10 @@ const EditProfile = ({ history }) => {
   };
 
   const saveProfile = () => {
+    if (!validateUserName(user.username)) {
+      toast('User ID must contains letters and numbers only!');
+      return;
+    }
     if (!validateEmail(user.email)) {
       toast('You have entered an invalid Email address!');
       return;
@@ -123,7 +132,15 @@ const EditProfile = ({ history }) => {
             <input value={user.gameTags} onChange={(e) => onChange(e, 'gameTags')} />
           </div>
           <div className={styles.inputSection}>
-            <span>IP ADDRESS</span>
+            <div className={styles.ipAddrLabel}>
+              <span>IP ADDRESS</span>
+              <span className={styles.questionMark}>?</span>
+              <span className={styles.hint}>
+                DIGITALAX uses your IP Address as an extra authentication for anonymous game
+                environments. You must use the same IP Address in order to participate in certain
+                games.
+              </span>
+            </div>
             <div className={styles.ipInput}>
               <input
                 value={user.ipAddrs}

@@ -100,7 +100,6 @@ const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
     }
   };
 
-
   return (
     <ul className={className}>
       <li className={styles.item}>

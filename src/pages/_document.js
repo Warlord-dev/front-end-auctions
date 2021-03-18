@@ -31,6 +31,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <script src="/arkane-network/web3-arkane-provider.js"></script>
           <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
           {this.getPreloadFontsLinks()}
           {/* ipfs next.js fix */}

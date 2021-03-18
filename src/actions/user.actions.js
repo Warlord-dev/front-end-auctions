@@ -4,9 +4,17 @@ import {
   openNotInstalledMetamask,
   openSignupModal,
 } from '@actions/modals.actions';
-import { STORAGE_IS_LOGGED_IN, STORAGE_USER, STORAGE_TOKEN } from '@constants/storage.constants';
+import globalActions from '@actions/global.actions';
+import {
+  STORAGE_IS_LOGGED_IN,
+  STORAGE_USER,
+  STORAGE_TOKEN,
+  STORAGE_WALLET,
+} from '@constants/storage.constants';
+import { WALLET_METAMASK, WALLET_ARKANE } from '@constants/global.constants';
 import userReducer from '@reducers/user.reducer';
 import { handleSignMessage, isMetamaskInstalled } from '@services/metamask.service';
+import { setWeb3Provider } from '@services/web3-provider.service';
 import { getUser, getAuthToken } from '@helpers/user.helpers';
 import BaseActions from './base-actions';
 import api from '@services/api/espa/api.service';
@@ -14,40 +22,69 @@ import { toast } from 'react-toastify';
 import Router from 'next/router';
 
 class UserActions extends BaseActions {
-  tryToLogin() {
+  handleWeb3Loaded() {
     return async (dispatch) => {
-      if (!isMetamaskInstalled()) {
-        dispatch(openNotInstalledMetamask());
-        return;
-      }
-
-      const { ethereum } = window;
-
       try {
-        const [account] = await ethereum.request({
-          method: 'eth_requestAccounts',
+        window.web3.eth.getChainId().then((network) => {
+          dispatch(globalActions.changeNetwork(network));
         });
+        const authResult = await Arkane.checkAuthenticated();
+        const {
+          auth: {
+            idTokenParsed: { email },
+          },
+        } = authResult;
+        const wallets = await window.web3.eth.getAccounts();
+        localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
+        dispatch(this.setValue('account', wallets[0]));
+        dispatch(closeConnectMetamaskModal());
+        dispatch(openSignupModal({ email }));
+      } catch (e) {
+        toast.error("Wallet Connect is failed");        
+      }
+    }
+  }
 
-        if (!account) {
-          console.error('Account is epmty.');
+  tryToLogin(source) {
+    return async (dispatch) => {
+      localStorage.setItem(STORAGE_WALLET, source);
+      await setWeb3Provider();
+      if (source === WALLET_METAMASK) {
+        if (!isMetamaskInstalled()) {
+          dispatch(openNotInstalledMetamask());
           return;
         }
 
-        localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
-        dispatch(this.setValue('account', account));
-        dispatch(closeConnectMetamaskModal());
-        dispatch(openSignupModal());
-      } catch (e) {
-        console.error(e.message);
+        const { ethereum } = window;
+
+        try {
+          const [account] = await ethereum.request({
+            method: 'eth_requestAccounts',
+          });
+
+          if (!account) {
+            console.error('Account is epmty.');
+            return;
+          }
+
+          localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
+          dispatch(this.setValue('account', account));
+          dispatch(closeConnectMetamaskModal());
+          dispatch(openSignupModal());
+        } catch (e) {
+          console.error(e.message);
+        }
+      } else if (source === WALLET_ARKANE) {
+        dispatch(this.handleWeb3Loaded());
       }
     };
   }
 
-  tryToSignup(account, userName, email, signMsg) {
+  tryToSignup(account, userName, email, signMsg, ip) {
     return async (dispatch) => {
       dispatch(this.setValue('isLoading', true));
       if (!signMsg) {
-        signMsg = await api.handleSignUp(account, userName, email);
+        signMsg = await api.handleSignUp(account, userName, email, ip);
         if (!signMsg) {
           toast.error('Sign Up is failed');
           dispatch(this.setValue('isLoading', false));
@@ -90,10 +127,18 @@ class UserActions extends BaseActions {
 
   logout() {
     return async (dispatch) => {
+      const WALLET = localStorage.getItem(STORAGE_WALLET);
+      if (WALLET === WALLET_ARKANE) {
+        try {
+          Arkane.arkaneConnect().logout();
+        } catch (err) {
+        }
+      }
       dispatch(this.setValue('user', null));
       localStorage.removeItem(STORAGE_IS_LOGGED_IN);
       localStorage.removeItem(STORAGE_USER);
       localStorage.removeItem(STORAGE_TOKEN);
+      localStorage.removeItem(STORAGE_WALLET);
       Router.push('/');
     };
   }

@@ -11,12 +11,13 @@ class EspaApiService {
     this.url = url;
   }
 
-  async handleSignUp(account, userName, email) {
+  async handleSignUp(account, userName, email, ip) {
     try {
       const message = await post('/register', {
         wallet: account,
         username: userName,
         email,
+        ipAddrs: ip,
       });
       return message;
     } catch (e) {
