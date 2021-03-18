@@ -129,7 +129,10 @@ class UserActions extends BaseActions {
     return async (dispatch) => {
       const WALLET = localStorage.getItem(STORAGE_WALLET);
       if (WALLET === WALLET_ARKANE) {
-        Arkane.arkaneConnect().logout();
+        try {
+          Arkane.arkaneConnect().logout();
+        } catch (err) {
+        }
       }
       dispatch(this.setValue('user', null));
       localStorage.removeItem(STORAGE_IS_LOGGED_IN);
