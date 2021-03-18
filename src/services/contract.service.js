@@ -2,6 +2,7 @@ import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
 import { getUSDTAddressByChainId } from './network.service';
 import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json';
+import Web3 from 'web3';
 
 export const getMarketplaceContract = async (ContractAddress) => {
   const jsonInterface = [
