@@ -10,7 +10,8 @@
   "NETWORKS": ["rinkeby", "goerli", "mumbai", "mainnet"],
   "API_URLS": {
     "mainnet": "https://api.thegraph.com/subgraphs/name/digitalax/digitalax",
-    "rinkeby": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxropsten"
+    "rinkeby": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxropsten",
+    "mumbai": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxmumbai"
   },
   "DEFAULT_NETWORK": "mainnet",
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
@@ -27,7 +28,8 @@
   "REWARD_CONTRACT_ADDRESSES": {
     "mainnet": "0xC155DDd8aA737aA53bBCea9EA62CAC0A3EEc942f",
     "rinkeby": "0xb0DED58EF09929b0A0F2b10f48D42883df97466E",
-    "goerli": "0xb0DED58EF09929b0A0F2b10f48D42883df97466E"
+    "goerli": "0xb0DED58EF09929b0A0F2b10f48D42883df97466E",
+    "mumbai": "0xb0DED58EF09929b0A0F2b10f48D42883df97466E"
   },
   "DIGITAL_MARKETPLACE_ADDRESSES": {
     "mainnet": "0xCC48554581c17c2837C13B1685E0e784fADC1c3b",
