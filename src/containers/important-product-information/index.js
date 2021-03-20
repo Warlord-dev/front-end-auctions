@@ -234,7 +234,7 @@ const ImportantProductInformation = ({
                   </a>
                 ) : (
                   <span className={styles.buttonGray}>
-                    (need min {minBid.toString(10)}Ξ to compete)
+                    (need min {minBid.toString(10)}MONA to compete)
                   </span>
                 )}
               </Button>
@@ -247,7 +247,7 @@ const ImportantProductInformation = ({
                 <span className={styles.buttonText}>{buttonTextPlace}</span>
                 {styleTypeBlock !== 'smallWhite' &&
                   <span className={styles.buttonGray}>
-                    (need min {minBid.toString(10)}Ξ to compete)
+                    (need min {minBid.toString(10)}MONA to compete)
                   </span>
                 }
               </Button>

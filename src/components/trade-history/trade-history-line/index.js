@@ -34,7 +34,7 @@ const TradeHistoryLine = ({
           <span> - {getDefaultText(eventName)}</span>
         </div>) : 
         (<div>
-          <span className={styles.priceEth}>{priceEth} Ξ</span>
+          <span className={styles.priceEth}>{priceEth} MONA</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
           <span> - {getDefaultText(eventName)}</span>
         </div>)

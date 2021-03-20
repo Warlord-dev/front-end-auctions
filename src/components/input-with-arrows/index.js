@@ -62,7 +62,7 @@ InputWithArrows.propTypes = {
 InputWithArrows.defaultProps = {
   className: '',
   value: '',
-  currency: 'Ξ',
+  currency: 'MONA',
   iconUrl: './images/icons/arrow-bottom.svg',
 };
 

@@ -84,8 +84,8 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   const minutesText = minutes ? `${minutes} ${minutesTextPrefix}` : '';
 
   const text = [
-    `Your Ξ will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. 
-      If another bidder outbids you, your Ξ will be immediatley transferred back into your wallet.`,
+    `Your MONA will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. 
+      If another bidder outbids you, your MONA will be immediatley transferred back into your wallet.`,
     `After placing a bid, you will be unable to withdraw for ${hoursText} ${minutesText}`,
   ];
 
@@ -96,7 +96,7 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
           <div className={styles.footer}>
             <p className={styles.footerCaption}>
               <span>{textForSelect}</span>
-              <span> {minBid.toString(10)} Ξ</span>
+              <span> {minBid.toString(10)} MONA</span>
             </p>
             <div className={styles.selectWrapper}>
               <div>

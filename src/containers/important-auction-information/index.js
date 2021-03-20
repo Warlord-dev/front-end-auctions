@@ -47,7 +47,7 @@ const ImportantAuctionInformation = ({ auction, auctionId }) => {
       <div className={styles.leftWrapper}>
         <p className={styles.priceDescription}>Total Sold</p>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{priceEth} Ξ</span>
+          <span className={styles.priceEth}>{priceEth} MONA</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
       </div>

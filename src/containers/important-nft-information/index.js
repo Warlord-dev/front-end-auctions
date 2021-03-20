@@ -49,7 +49,7 @@ const ImportantNFTInformation = ({ nft, nftId }) => {
     <div className={styles.smallWhite}>
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{priceEth} Ξ</span>
+          <span className={styles.priceEth}>{priceEth} MONA</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
       </div>
