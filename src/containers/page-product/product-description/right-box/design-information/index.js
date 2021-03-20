@@ -19,8 +19,8 @@ const DesignInformation = ({ currentClothesInfo, estimateAPY }) => (
               Among Us Sheriff Mod
               <span>ESPA Tournaments</span>
             </div>
-            <span className={styles.col2}>4511</span>
-            <span className={styles.col3}>322</span>
+            <span className={styles.col2}>{currentClothesInfo?.skinId}</span>
+            <span className={styles.col3}>{currentClothesInfo?.hatId}</span>
           </div>
         </div>
       </div>

@@ -60,7 +60,7 @@ const RightBox = ({
   const renderAuctionInfo = () => {
     if (activeItem === SHOW_FIRST_TAB) return <AuctionInformation garment={garment} />;
     if (activeItem === SHOW_SECOND_TAB) {
-      return <GameList />;
+      return <GameList currentClothesInfo={currentClothesInfo} />;
     }
     return null;
   };
@@ -71,7 +71,7 @@ const RightBox = ({
         <DesignInformation currentClothesInfo={currentClothesInfo} estimateAPY={estimateAPY} />
       );
     if (activeItem === SHOW_SECOND_TAB) {
-      return <GameList />;
+      return <GameList currentClothesInfo={currentClothesInfo} />;
     }
     return null;
   };

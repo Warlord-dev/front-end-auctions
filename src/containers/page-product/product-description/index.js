@@ -69,7 +69,6 @@ const ProductDescription = ({
 
   // pull designer informations and cloth photos for all rare types
   // IMPORTANT relationships between nfts :(
-
   const currentClothesInfo = {
     clothesId,
     clothesName: tokenInfo && tokenInfo.name ? tokenInfo.name : `ID: ${clothesId}`,
@@ -82,7 +81,11 @@ const ProductDescription = ({
       : 'Graphic, FBX, Material Component',
     valueChildNfts: 'ERC1155',
     valueApy: '',
+    skinId: tokenInfo?.attributes[4]?.value,
+    hatId: tokenInfo?.attributes[5]?.value,
   };
+
+  console.log(tokenInfo, currentClothesInfo);
 
   return (
     <div className={styles.wrapper}>

@@ -1,8 +1,9 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
-const MaterialList = () => {
+const MaterialList = ({ currentClothesInfo }) => {
   return (
     <div className={cn(styles.wrapper, 'animate__animated animate__fadeIn')}>
       <p className={styles.titleWrapper}>
@@ -21,8 +22,8 @@ const MaterialList = () => {
               Among Us Sheriff Mod
               <span>ESPA Tournaments</span>
             </div>
-            <span className={styles.col2}>4511</span>
-            <span className={styles.col3}>322</span>
+            <span className={styles.col2}>{currentClothesInfo?.skinId}</span>
+            <span className={styles.col3}>{currentClothesInfo?.hatId}</span>
           </div>
         </div>
       </div>
@@ -54,8 +55,12 @@ const MaterialList = () => {
   );
 };
 
-MaterialList.propTypes = {};
+MaterialList.propTypes = {
+  currentClothesInfo: PropTypes.object,
+};
 
-MaterialList.defaultProps = {};
+MaterialList.defaultProps = {
+  currentClothesInfo: null,
+};
 
 export default memo(MaterialList);
