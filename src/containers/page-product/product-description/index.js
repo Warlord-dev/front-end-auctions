@@ -85,8 +85,6 @@ const ProductDescription = ({
     hatId: tokenInfo?.attributes[5]?.value,
   };
 
-  console.log(tokenInfo, currentClothesInfo);
-
   return (
     <div className={styles.wrapper}>
       <LeftBox
