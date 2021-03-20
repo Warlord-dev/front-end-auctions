@@ -5,12 +5,7 @@ const META = { name: `digitalax-${process.env.NODE_APP_INSTANCE ? process.env.NO
 const DST = path.resolve(`${__dirname}/../out`);
 
 const pin = async () => {
-  console.log(`Uploading...`);
   const result = await pinata.pinFromFS(DST, { pinataMetadata: META });
-  console.log(JSON.stringify(result));
-  console.log(`Pinned ${result.IpfsHash}`);
-  console.log(`https://ipfs.io/ipfs/${result.IpfsHash}`);
-  console.log(`https://gateway.pinata.cloud/ipfs/${result.IpfsHash}`);
   return result.IpfsHash;
 };
 
