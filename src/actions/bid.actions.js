@@ -20,7 +20,7 @@ class BidActions extends BaseActions {
       const auctionContractAddress = getState().global.get('auctionContractAddress');
       const contract = await getContract(auctionContractAddress);
       const weiValue = convertToWei(value);
-      const listener = contract.methods.placeBid(id).send({ from: account, value: weiValue });
+      const listener = contract.methods.placeBid(id, weiValue).send({ from: account });
       const promise = new Promise((resolve, reject) => {
         listener.on('error', (error) => reject(error));
         listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
