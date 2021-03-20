@@ -20,6 +20,30 @@ class BidActions extends BaseActions {
       const auctionContractAddress = getState().global.get('auctionContractAddress');
       const contract = await getContract(auctionContractAddress);
       const weiValue = convertToWei(value);
+      const chainId = getState().global.get('chainId');
+
+      const monaContractAddress = await getMonaContractAddressByChainId(chainId);
+      const monaContract = await getMonaTokenContract(monaContractAddress);
+      const allowedValue = await monaContract.methods
+        .allowance(account, auctionContractAddress)
+        .call({ from: account });
+      const jsAllowedValue = parseFloat(ethersUtils.formatEther(allowedValue));
+      if (jsAllowedValue < value) {
+        const listener = monaContract.methods
+          .approve(auctionContractAddress, weiValue)
+          .send({ from: account });
+        const promise = new Promise((resolve, reject) => {
+          listener.on('error', (error) => reject(error));
+          listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
+        });
+        return {
+          promise,
+          unsubscribe: () => {
+            listener.off('error');
+            listener.off('transactionHash');
+          },
+        };
+      }
       const listener = contract.methods.placeBid(id, weiValue).send({ from: account });
       const promise = new Promise((resolve, reject) => {
         listener.on('error', (error) => reject(error));
@@ -32,6 +56,20 @@ class BidActions extends BaseActions {
           listener.off('transactionHash');
         },
       };
+    };
+  }
+
+  getAllowanceForAcution() {
+    return async (_, getState) => {
+      const account = getState().user.get('account');
+      const chainId = getState().global.get('chainId');
+      const auctionContractAddress = getState().global.get('auctionContractAddress');
+      const monaContractAddress = await getMonaContractAddressByChainId(chainId);
+      const monaContract = await getMonaTokenContract(monaContractAddress);
+      const allowedValue = await monaContract.methods
+        .allowance(account, auctionContractAddress)
+        .call({ from: account });
+      return allowedValue;
     };
   }
 

@@ -9,13 +9,11 @@ import InputWithArrows from '@components/input-with-arrows';
 import { closePlaceBidModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
+import { convertToWei } from '@helpers/price.helpers';
 import { getMinBidIncrement, getBidWithdrawalLockTime } from '@selectors/global.selectors';
 import styles from './styles.module.scss';
 
-const ModalPlaceBid = ({
-  className, title, textForSelect, buttonText,
-}) => {
-
+const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   const dispatch = useDispatch();
   const requests = useRef([]);
 
@@ -28,13 +26,13 @@ const ModalPlaceBid = ({
   const [inputPriceEth, setInputPriceEth] = useState(minBid);
   const [isDisabled, setIsDisabled] = useState(false);
   const [showError, setShowError] = useState(null);
+  const [approved, setApproved] = useState(false);
 
   const handleClose = () => {
     dispatch(closePlaceBidModal());
   };
 
   const handleClick = () => {
-
     if (minBid.toNumber() > Number(inputPriceEth)) {
       setShowError(`You must bid at least ${minBidIncrement} higher than the current highest bid`);
       return;
@@ -44,19 +42,37 @@ const ModalPlaceBid = ({
     dispatch(bidActions.bid(id, inputPriceEth)).then((request) => {
       requests.current.push(request);
       request.promise
-        .then(() => handleClose())
+        .then(() => {
+          if (approved === false) {
+            setApproved(true);
+            setIsDisabled(false);
+          } else {
+            handleClose();
+          }
+        })
         .catch((e) => {
           setShowError(e.message);
           setIsDisabled(false);
         });
     });
   };
+  useEffect(() => {
+    function getMonaApproval() {
+      dispatch(bidActions.getAllowanceForAcution()).then((val) => {
+        const weiValue = convertToWei(inputPriceEth);
+        if (val < weiValue) setApproved(false);
+        else setApproved(true);
+      });
+    }
+    getMonaApproval();
+  }, [inputPriceEth]);
 
-  useEffect(() => () => {
-    requests.current.forEach((request) => request.unsubscribe());
-    requests.current = [];
+  useEffect(() => {
+    return () => {
+      requests.current.forEach((request) => request.unsubscribe());
+      requests.current = [];
+    };
   }, []);
-
 
   const hours = Math.trunc(bidWithdrawalLockTime / 60 / 60);
   const minutes = hours ? bidWithdrawalLockTime % 60 : Math.trunc(bidWithdrawalLockTime / 60);
@@ -92,13 +108,18 @@ const ModalPlaceBid = ({
                 />
                 {showError && <p className={styles.error}>{showError}</p>}
               </div>
-              <Button isDisabled={isDisabled} background="black" onClick={() => handleClick()} className={styles.button}>
-                {buttonText}
+              <Button
+                isDisabled={isDisabled}
+                background="black"
+                onClick={() => handleClick()}
+                className={styles.button}
+              >
+                {approved ? buttonText : 'APPROVE $MONA'}
               </Button>
             </div>
           </div>
         </Modal>,
-        document.body,
+        document.body
       )}
     </>
   );
