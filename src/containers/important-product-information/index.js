@@ -192,7 +192,7 @@ const ImportantProductInformation = ({
           </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
-        <p className={styles.estimateWrapper}>
+        {/* <p className={styles.estimateWrapper}>
           <span className={styles.estimateApy}>{estimateApy}%</span>
           <span className={styles.estimateApyTextWrapper}>
             <span className={styles.estimateApyText}>{estimateApyText}</span>
@@ -205,7 +205,7 @@ const ImportantProductInformation = ({
             </span>
           </span>
           {isShowHint && <span className={styles.hint}>{hintText}</span>}
-        </p>
+        </p> */}
       </div>
       {styleTypeBlock === 'smallWhite' && (
         <div className={styles.linkStyle}>
@@ -217,56 +217,64 @@ const ImportantProductInformation = ({
         </div>
       )}
       <div className={styles.footerBoxRight}>
-        <Timer className={styles.timer} expirationDate={expirationDate} />
-        <p className={styles.expirationDateText}>{expirationDateText}</p>
-        {!showSoldButton ? (
+        {tabIndex === 0 ? (
           <>
-            {isMakeBid && priceEth > 0 ? (
-              <Button
-                onClick={() => handleClickRaiseBid()}
-                className={styles.button}
-                background="black"
-              >
-                <span className={styles.buttonText}>{buttonTextRaise}</span>
-                {styleTypeBlock === 'smallWhite' ? (
-                  <a className={styles.wearInGame} href="https://espa.digitalax.xyz/">
-                    WEAR IN GAME
-                  </a>
+            <Timer className={styles.timer} expirationDate={expirationDate} />
+            <p className={styles.expirationDateText}>{expirationDateText}</p>
+            {!showSoldButton ? (
+              <>
+                {isMakeBid && priceEth > 0 ? (
+                  <Button
+                    onClick={() => handleClickRaiseBid()}
+                    className={styles.button}
+                    background="black"
+                  >
+                    <span className={styles.buttonText}>{buttonTextRaise}</span>
+                    {styleTypeBlock !== 'smallWhite' && (
+                      <span className={styles.buttonGray}>
+                        (need min {minBid.toString(10)}MONA to compete)
+                      </span>
+                    )}
+                  </Button>
                 ) : (
-                  <span className={styles.buttonGray}>
-                    (need min {minBid.toString(10)}MONA to compete)
-                  </span>
+                  <Button
+                    onClick={() => handleClickPlaceBid()}
+                    className={styles.button}
+                    background="black"
+                  >
+                    <span className={styles.buttonText}>{buttonTextPlace}</span>
+                    {styleTypeBlock !== 'smallWhite' && (
+                      <span className={styles.buttonGray}>
+                        (need min {minBid.toString(10)}MONA to compete)
+                      </span>
+                    )}
+                  </Button>
                 )}
-              </Button>
+                {canShowWithdrawBtn && (
+                  <div className={styles.wrapperButtonWithdraw}>
+                    <TextButton onClick={() => handleClickWithdrawBid()}>
+                      {buttonTextWithdraw}
+                    </TextButton>
+                  </div>
+                )}
+              </>
             ) : (
               <Button
-                onClick={() => handleClickPlaceBid()}
-                className={styles.button}
+                className={styles.buttonSold}
                 background="black"
+                onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
               >
-                <span className={styles.buttonText}>{buttonTextPlace}</span>
-                {styleTypeBlock !== 'smallWhite' &&
-                  <span className={styles.buttonGray}>
-                    (need min {minBid.toString(10)}MONA to compete)
-                  </span>
-                }
+                <span>SOLD</span>
               </Button>
-            )}
-            {canShowWithdrawBtn && (
-              <div className={styles.wrapperButtonWithdraw}>
-                <TextButton onClick={() => handleClickWithdrawBid()}>
-                  {buttonTextWithdraw}
-                </TextButton>
-              </div>
             )}
           </>
         ) : (
           <Button
-            className={styles.buttonSold}
+            className={styles.button}
             background="black"
             onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
           >
-            <span>SOLD</span>
+            <span>BUY NOW</span>
           </Button>
         )}
       </div>
