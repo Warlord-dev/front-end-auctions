@@ -81,8 +81,8 @@ const ProductDescription = ({
       : 'Graphic, FBX, Material Component',
     valueChildNfts: 'ERC1155',
     valueApy: '',
-    skinId: tokenInfo?.attributes[4]?.value,
-    hatId: tokenInfo?.attributes[5]?.value,
+    skinId: tokenInfo && tokenInfo.attributes[4] ? tokenInfo.attributes[4].value : '<empty>',
+    hatId: tokenInfo && tokenInfo.attributes[5] ? tokenInfo.attributes[5].value : '<empty>',
   };
 
   return (

@@ -434,6 +434,26 @@ const DEFAULT_FIELDS = Map({
         },
       ]),
     },
+    {
+      ids: ['108', '3', '10', '14', '4', '64', '57', '5', '74', '67', '6', '84', '77'],
+      designerName: 'Kodomodachi',
+      designerPhoto: './images/QmSfpPJJhS4MEEt912qB2fg8JdGj5VKrVUXDoEyGoQtAHk.png',
+      descriptionDesigner: [
+        'Kodomodachi, also know as Andressa Lara, is an artist who started her small career through poor financial conditions before turning into an adult, mainly drawing with a mouse. Her fantasy with games is vivid and creative to the point where she can combine different things that are almost impossible to work with. She believes that stories in arts can teach value to others, and that her work will do the same.',
+      ],
+      designerCountry: 'Brazil',
+      designerCountryFlagIcon: './images/icons/brazil.png',
+      designerSocialMedia: List([]),
+    },
+    {
+      ids: ['109'],
+      designerName: 'Digitalax',
+      designerPhoto: './images/logo.jpg',
+      descriptionDesigner: [''],
+      designerCountry: 'United States',
+      designerCountryFlagIcon: './images/icons/usa.png',
+      designerSocialMedia: List([]),
+    },
   ]),
 });
 

@@ -56,7 +56,7 @@ const ImportantProductInformation = ({
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
-  const monaPerEth = useSelector(getMonaPerEth);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
   const [isShowHint, setIsShowHint] = useState(false);
 
   const estimateApy = useAPY(garment.primarySalePrice);

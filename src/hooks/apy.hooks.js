@@ -15,7 +15,7 @@ export const useAPY = (topBid) => {
   const chainId = useSelector(getChainId);
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const auctions = useSelector(getAllAuctions).toJS();
-  const monaPerEth = useSelector(getMonaPerEth);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
   const rewards = useSelector(getRewards);
   const address = getRewardContractAddressByChainId(chainId);
 

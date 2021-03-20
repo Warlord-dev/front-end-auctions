@@ -101,7 +101,6 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
                     tabIndex: 2,
                   });
                 }
-
                 return (
                   <>
                     {garments.map(({garment, tabIndex}) => (
