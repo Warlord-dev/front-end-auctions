@@ -245,15 +245,11 @@ const ImportantProductInformation = ({
                 background="black"
               >
                 <span className={styles.buttonText}>{buttonTextPlace}</span>
-                {styleTypeBlock === 'smallWhite' ? (
-                  <a className={styles.wearInGame} href="https://espa.digitalax.xyz/">
-                    WEAR IN GAME
-                  </a>
-                ) : (
+                {styleTypeBlock !== 'smallWhite' &&
                   <span className={styles.buttonGray}>
                     (need min {minBid.toString(10)}Ξ to compete)
                   </span>
-                )}
+                }
               </Button>
             )}
             {canShowWithdrawBtn && (
@@ -271,11 +267,6 @@ const ImportantProductInformation = ({
             onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
           >
             <span>SOLD</span>
-            {styleTypeBlock === 'smallWhite' && (
-              <a className={styles.wearInGame} href="https://espa.digitalax.xyz/">
-                WEAR IN GAME
-              </a>
-            )}
           </Button>
         )}
       </div>
