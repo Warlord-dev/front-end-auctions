@@ -25,6 +25,8 @@ const TradeHistoryLine = ({
 
   const getDefaultText = (text) => text.split(/(?=[A-Z])/).join(' ');
 
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+
   return (
     <div className={cn(styles.item, className)}>
       {isPaidWithMona ?
@@ -34,7 +36,7 @@ const TradeHistoryLine = ({
           <span> - {getDefaultText(eventName)}</span>
         </div>) : 
         (<div>
-          <span className={styles.priceEth}>{priceEth} MONA</span>
+          <span className={styles.priceEth}>{Math.floor(priceEth * monaPerEth * 100) / 100} MONA</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
           <span> - {getDefaultText(eventName)}</span>
         </div>)

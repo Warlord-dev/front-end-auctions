@@ -28,7 +28,7 @@ const DesignInformation = ({ currentClothesInfo, estimateAPY }) => (
         <p className={styles.espaLink}>
           See more about ESPA&nbsp;<a href="https://espa.digitalax.xyz/">here.</a>
         </p>
-        <p className={styles.estimateWrapper}>
+        {/* <p className={styles.estimateWrapper}>
           <span className={styles.estimateApy}>{estimateAPY}%</span>
           <span className={styles.estimateApyTextWrapper}>
             <span className={styles.estimateApyText}>Estimate APY</span>
@@ -38,7 +38,7 @@ const DesignInformation = ({ currentClothesInfo, estimateAPY }) => (
               pools and current highest bid value of the NFT.
             </span>
           </span>
-        </p>
+        </p> */}
       </div>
     </div>
   </div>

@@ -21,9 +21,10 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
 
-  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 100) / 100).plus(new BigNumber(minBidIncrement));
 
-  const [inputPriceEth, setInputPriceEth] = useState(minBid);
+  const [inputPriceMona, setInputPriceMona] = useState(minBid);
   const [isDisabled, setIsDisabled] = useState(false);
   const [showError, setShowError] = useState(null);
   const [approved, setApproved] = useState(false);
@@ -33,13 +34,13 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   };
 
   const handleClick = () => {
-    if (minBid.toNumber() > Number(inputPriceEth)) {
+    if (minBid.toNumber() > Number(inputPriceMona)) {
       setShowError(`You must bid at least ${minBidIncrement} higher than the current highest bid`);
       return;
     }
     setShowError(null);
     setIsDisabled(true);
-    dispatch(bidActions.bid(id, inputPriceEth)).then((request) => {
+    dispatch(bidActions.bid(id, Number(inputPriceMona), monaPerEth)).then((request) => {
       requests.current.push(request);
       request.promise
         .then(() => {
@@ -59,13 +60,13 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   useEffect(() => {
     function getMonaApproval() {
       dispatch(bidActions.getAllowanceForAcution()).then((val) => {
-        const weiValue = convertToWei(inputPriceEth);
+        const weiValue = convertToWei(inputPriceMona / monaPerEth);
         if (val < weiValue) setApproved(false);
         else setApproved(true);
       });
     }
     getMonaApproval();
-  }, [inputPriceEth]);
+  }, [inputPriceMona]);
 
   useEffect(() => {
     return () => {
@@ -102,9 +103,9 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
               <div>
                 <InputWithArrows
                   minBidIncrement={minBidIncrement}
-                  onChange={setInputPriceEth}
+                  onChange={setInputPriceMona}
                   className={styles.inputWithArrows}
-                  value={inputPriceEth}
+                  value={inputPriceMona}
                 />
                 {showError && <p className={styles.error}>{showError}</p>}
               </div>

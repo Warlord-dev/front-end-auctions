@@ -21,6 +21,7 @@ const ModalWithdrawBid = ({
   const [showError, setShowError] = useState(null);
   const { id, withdrawValue } = useSelector(getModalParams);
   const [isDisabled, setIsDisabled] = useState(false);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
 
   const handleClose = () => {
     dispatch(closeWithdrawModal());
@@ -62,7 +63,7 @@ const ModalWithdrawBid = ({
               {buttonText}
             </Button>
             <p className={styles.caption}>{yourBidText}</p>
-            <p className={styles.value}>{withdrawValue} MONA</p>
+            <p className={styles.value}>{Math.floor(withdrawValue * monaPerEth * 100) / 100} MONA</p>
           </div>
           {showError && <p className={styles.error}>{showError}</p>}
         </Modal>,

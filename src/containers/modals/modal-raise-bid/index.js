@@ -21,8 +21,9 @@ const ModalRaiseBid = ({
   const requests = useRef([]);
   const { id, priceEth, withdrawValue } = useSelector(getModalParams);
   const minBidIncrement = useSelector(getMinBidIncrement);
-  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
-  const [inputPriceEth, setInputPriceEth] = useState(minBid);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 100) / 100).plus(new BigNumber(minBidIncrement));
+  const [inputPriceMona, setInputPriceMona] = useState(minBid);
   const [showError, setShowError] = useState(null);
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -32,7 +33,7 @@ const ModalRaiseBid = ({
 
   const handleClick = () => {
 
-    if (minBid.toNumber() > Number(inputPriceEth)) {
+    if (minBid.toNumber() > Number(inputPriceMona)) {
       setShowError(`You must bid at least ${minBidIncrement} higher than the current highest bid`);
       return;
     }
@@ -40,7 +41,7 @@ const ModalRaiseBid = ({
     setShowError(null);
     setIsDisabled(true);
 
-    dispatch(bidActions.bid(id, inputPriceEth)).then((request) => {
+    dispatch(bidActions.bid(id, Number(inputPriceMona), monaPerEth)).then((request) => {
       requests.current.push(request);
       request.promise
         .then(() => handleClose())
@@ -63,7 +64,7 @@ const ModalRaiseBid = ({
           <div className={styles.footer}>
             <p>
               <span className={styles.footerSubtitle}>{yourBidText}</span>
-              <span className={styles.footerSubtitleValue}>{withdrawValue} MONA</span>
+              <span className={styles.footerSubtitleValue}>{Math.floor(withdrawValue * monaPerEth * 100) / 100} MONA</span>
             </p>
             <p className={styles.caption}>
               <span>{textForSelect}</span>
@@ -73,9 +74,9 @@ const ModalRaiseBid = ({
               <div>
                 <InputWithArrows
                   minBidIncrement={minBidIncrement}
-                  onChange={setInputPriceEth}
+                  onChange={setInputPriceMona}
                   className={styles.inputWithArrows}
-                  value={inputPriceEth}
+                  value={inputPriceMona}
                 />
                 {showError && <p className={styles.error}>{showError}</p>}
               </div>

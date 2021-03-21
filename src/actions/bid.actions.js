@@ -14,12 +14,12 @@ import {
 } from '../services/contract.service';
 
 class BidActions extends BaseActions {
-  bid(id, value) {
+  bid(id, value, monaPerEth) {
     return async (_, getState) => {
       const account = getState().user.get('account');
       const auctionContractAddress = getState().global.get('auctionContractAddress');
       const contract = await getContract(auctionContractAddress);
-      const weiValue = convertToWei(value);
+      const weiValue = convertToWei(value / monaPerEth);
       const chainId = getState().global.get('chainId');
 
       const monaContractAddress = await getMonaContractAddressByChainId(chainId);
@@ -28,6 +28,7 @@ class BidActions extends BaseActions {
         .allowance(account, auctionContractAddress)
         .call({ from: account });
       const jsAllowedValue = parseFloat(ethersUtils.formatEther(allowedValue));
+      console.log('---bid', allowedValue, jsAllowedValue, value, weiValue);
       if (jsAllowedValue < value) {
         const listener = monaContract.methods
           .approve(auctionContractAddress, weiValue)
