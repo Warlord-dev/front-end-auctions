@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getUser } from '@selectors/user.selectors';
+import { getChainId } from '@selectors/global.selectors';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
@@ -15,6 +16,9 @@ import styles from './styles.module.scss';
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
   const user = useSelector(getUser);
+  const chainId = useSelector(getChainId);
+  let isMumbai = chainId === '0x13881';
+  console.log(isMumbai);
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }
@@ -34,9 +38,12 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   return (
     <div className={cn(className, styles.wrapper)}>
+      {!isMumbai && <p className={styles.notification}>You are not on Mumbai network</p>}
       <div className={styles.leftBox}>
         <Logo />
-        <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>Switch to Eth Mainnet</a>
+        <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
+          Switch to Eth Mainnet
+        </a>
       </div>
       <div className={styles.rightBox}>
         {/* <Link href="/">
