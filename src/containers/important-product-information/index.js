@@ -79,8 +79,6 @@ const ImportantProductInformation = ({
     return null;
   }
 
-  const priceEth = convertToEth(garment.primarySalePrice);
-  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
   const expirationDate = auction.endTime * 1000;
 
   const timeOut = new Date(expirationDate) - new Date() + 1000;
@@ -106,6 +104,11 @@ const ImportantProductInformation = ({
         [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName)
     )
     .sort((a, b) => b.timestamp - a.timestamp);
+
+  const priceEth = convertToEth(
+    sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
+  );
+  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
 
   let isMakeBid = false;
   let withdrawValue = 0;
