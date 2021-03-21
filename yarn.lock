@@ -9936,6 +9936,11 @@ react-required-if@1.0.1:
   resolved "https://registry.yarnpkg.com/react-required-if/-/react-required-if-1.0.1.tgz#f41d06bebb75346c206cd1de8dc0ef5b7c8f9abd"
   integrity sha1-9B0Gvrt1NGwgbNHejcDvW3yPmr0=
 
+react-timeago@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/react-timeago/-/react-timeago-5.2.0.tgz#d655d40aa55e4fe08a92234481a6aea7f656ab5d"
+  integrity sha512-wCEEDGQHMdFh/PLp+Hj5vk9ZoC4KjQ5u0u6+KrrY9rny5LqJ2gZvNNEAS4mhSZDV1i7JLgQI5VQTAux7f+vj2w==
+
 react-toastify@^6.1.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-6.2.0.tgz#f2d76747c70b9de91f71f253d9feae6b53dc836c"

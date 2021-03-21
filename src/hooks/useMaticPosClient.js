@@ -19,7 +19,6 @@ export default function useMaticPosClient() {
     if (account) {
       setPosClientParent(
         new MaticPOSClient({
-          maticProvider: isMainnet ? config.MUMBAI_WEB3_URL : config.MUMBAI_WEB3_URL,
           parentProvider: web3,
           parentDefaultOptions: { from: account },
           maticDefaultOptions: { from: account },
