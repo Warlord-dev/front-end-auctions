@@ -15,7 +15,7 @@ export const useUSDTBalance = () => {
     const usdtContract = await getUSDTContract(chainId);
     const usdtBalance = await usdtContract.methods.balanceOf(account).call({ from: account });
 
-    setBalance(ethersUtils.formatEther(usdtBalance));
+    setBalance(ethersUtils.formatUnits(usdtBalance, 6));
   }, [account, chainId]);
 
   usePollar(fetchUSDTBalance);
