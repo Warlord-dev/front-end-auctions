@@ -28,7 +28,6 @@ class BidActions extends BaseActions {
         .allowance(account, auctionContractAddress)
         .call({ from: account });
       const jsAllowedValue = parseFloat(ethersUtils.formatEther(allowedValue));
-      console.log('---bid', allowedValue, jsAllowedValue, value, weiValue);
       if (jsAllowedValue < value) {
         const listener = monaContract.methods
           .approve(auctionContractAddress, weiValue)

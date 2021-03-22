@@ -18,7 +18,6 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
   let isMumbai = chainId === '0x13881';
-  console.log(isMumbai);
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }

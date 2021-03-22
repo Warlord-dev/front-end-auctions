@@ -70,58 +70,54 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
         />
       </div>
       {auctionsIsLoaded ? (
-        <>
-          {auctions && auctions.length ? (
-            <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
-              {auctions.map((auction) => {
-                const garments = [];
-                const garment = garmentsById.get(auction.id);
-                const currentCollections = collections.filter(
-                  (item) => item.garmentAuctionID === auction.id
-                );
-                garments.push({
-                  garment,
-                  tabIndex: 0,
-                });
-                const t_semiRare = currentCollections.find(
-                  (collection) => collection.rarity === SEMI_RARE_RARITY
-                );
-                if (t_semiRare) {
-                  garments.push({
-                    garment: t_semiRare.garments[0],
-                    tabIndex: 1,
-                  });
-                }
-                const t_common = currentCollections.find(
-                  (collection) => collection.rarity === COMMON_RARITY
-                );
-                if (t_common) {
-                  garments.push({
-                    garment: t_common.garments[0],
-                    tabIndex: 2,
-                  });
-                }
-                return (
-                  <>
-                    {garments.map(({garment, tabIndex}) => (
-                      <CardProduct
-                        key={garment.id}
-                        history={historyByTokenId.get(garment.id)}
-                        auctionId={auction.id}
-                        garment={garment}
-                        showGraphIds={showGraphIds}
-                        setShowGraphIds={setShowGraphIds}
-                        tabIndex={tabIndex}
-                      />
-                    ))}
-                  </>
-                );
-              })}
-            </ul>
-          ) : (
-            <Loader size="large" className={styles.loader} />
-          )}
-        </>
+        <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
+          {auctions.map((auction) => {
+            const garment = garmentsById.get(auction.id);
+            return (
+              <CardProduct
+                key={garment.id}
+                history={historyByTokenId.get(garment.id)}
+                auctionId={auction.id}
+                garment={garment}
+                showGraphIds={showGraphIds}
+                setShowGraphIds={setShowGraphIds}
+                tabIndex={0}
+              />
+            );
+          })}
+          {collections
+            .filter((collection) => collection.rarity === SEMI_RARE_RARITY)
+            .map((collection) => {
+              const garment = collection.garments[0];
+              return (
+                <CardProduct
+                  key={garment.id}
+                  history={historyByTokenId.get(garment.id)}
+                  auctionId={garment.garmentAuctionID}
+                  garment={garment}
+                  showGraphIds={showGraphIds}
+                  setShowGraphIds={setShowGraphIds}
+                  tabIndex={1}
+                />
+              );
+            })}
+          {collections
+            .filter((collection) => collection.rarity === COMMON_RARITY)
+            .map((collection) => {
+              const garment = collection.garments[0];
+              return (
+                <CardProduct
+                  key={garment.id}
+                  history={historyByTokenId.get(garment.id)}
+                  auctionId={garment.garmentAuctionID}
+                  garment={garment}
+                  showGraphIds={showGraphIds}
+                  setShowGraphIds={setShowGraphIds}
+                  tabIndex={2}
+                />
+              );
+            })}{' '}
+        </ul>
       ) : (
         <Loader size="large" className={styles.loader} />
       )}
