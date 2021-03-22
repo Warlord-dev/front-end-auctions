@@ -28,13 +28,13 @@ class BidActions extends BaseActions {
         .allowance(account, auctionContractAddress)
         .call({ from: account });
       const jsAllowedValue = parseFloat(ethersUtils.formatEther(allowedValue));
-      if (jsAllowedValue < value) {
+      if (jsAllowedValue < 10000000000) {
         const listener = monaContract.methods
-          .approve(auctionContractAddress, weiValue)
+          .approve(auctionContractAddress, convertToWei(20000000000))
           .send({ from: account });
         const promise = new Promise((resolve, reject) => {
           listener.on('error', (error) => reject(error));
-          listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
+          listener.on('confirmation', (transactionHash) => resolve(transactionHash));
         });
         return {
           promise,
@@ -107,7 +107,7 @@ class BidActions extends BaseActions {
             .send({ from: account });
           const promise = new Promise((resolve, reject) => {
             listener.on('error', (error) => reject(error));
-            listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
+            listener.on('confirmation', (transactionHash) => resolve(transactionHash));
           });
           return {
             promise,
