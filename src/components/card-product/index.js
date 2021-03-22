@@ -44,7 +44,6 @@ const CardProduct = ({
 
   return (
     <li className={cn(styles.item, className)}>
-      {garment.id}
       <Link href={`${PRODUCTS}${auctionId}${tabIndex}`}>
         <a className={styles.clothesName}>
           {tokenInfo && tokenInfo.name ? tokenInfo.name : `ID:${garment.id}`}
