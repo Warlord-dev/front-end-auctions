@@ -124,7 +124,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
                 </button>
               </div>
             )}
-            <span>Mona Balance: {monaBalance}</span>
+            <span className={styles.monaBalance}>Mona Balance: {monaBalance}</span>
           </div>
         ) : (
           <Button onClick={() => handleClick()}>{buttonText}</Button>
