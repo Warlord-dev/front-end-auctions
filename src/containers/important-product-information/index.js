@@ -108,7 +108,7 @@ const ImportantProductInformation = ({
   const priceEth = convertToEth(
     sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
   );
-  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 100) / 100).plus(new BigNumber(minBidIncrement));
+  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(new BigNumber(minBidIncrement));
 
   let isMakeBid = false;
   let withdrawValue = 0;
@@ -178,7 +178,7 @@ const ImportantProductInformation = ({
 
   const getPriceUsd = (valueEth) => {
     const priceUsd = valueEth * exchangeRateETH;
-    return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
+    return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
   };
 
   return (
@@ -191,7 +191,7 @@ const ImportantProductInformation = ({
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
           <span className={styles.priceEth}>
-            {Math.round((priceEth * monaPerEth) * 100) / 100} $MONA
+            {Math.round((priceEth * monaPerEth) * 10000) / 10000} $MONA
           </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>

@@ -39,7 +39,7 @@ const ImportantAuctionInformation = ({ auction, auctionId }) => {
 
   const getPriceUsd = (valueEth) => {
     const priceUsd = valueEth * exchangeRateETH;
-    return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
+    return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
   };
 
   return (

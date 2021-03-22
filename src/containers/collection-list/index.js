@@ -35,7 +35,7 @@ const collections = [
   },
   {
     id: 2,
-    text: 'Digi bundle',
+    text: 'DIGI Bundle',
     designer: 'Digitalax',
     image: 'https://gateway.pinata.cloud/ipfs/QmQGuYKtqNUKqAqxmHkuYB4qCS9riKW6Eu1SNhBToBc4ry',
   },
@@ -158,7 +158,7 @@ const PageAuctionList = () => {
     return [
       {
         description: 'Total NFT’s value',
-        value: Math.round(parseFloat(convertToEth(totalSum.integerValue())) * 100) / 100,
+        value: Math.round(parseFloat(convertToEth(totalSum.integerValue())) * 10000) / 10000,
       },
       {
         description: `Total Vol ${TOTAL_VOLUME_DAYS} days`,

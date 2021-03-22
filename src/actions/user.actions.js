@@ -26,7 +26,8 @@ class UserActions extends BaseActions {
     return async (dispatch) => {
       try {
         window.web3.eth.getChainId().then((network) => {
-          dispatch(globalActions.changeNetwork(network));
+          // console.log('----network', network);
+          // dispatch(globalActions.changeNetwork(network));
         });
         const authResult = await Arkane.checkAuthenticated();
         const {

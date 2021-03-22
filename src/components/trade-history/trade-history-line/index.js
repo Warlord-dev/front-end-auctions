@@ -20,7 +20,7 @@ const TradeHistoryLine = ({
 
   const getPriceUsd = (valueEth) => {
     const priceUsd = valueEth * exchangeRateETH;
-    return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
+    return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
   };
 
   const getDefaultText = (text) => text.split(/(?=[A-Z])/).join(' ');
@@ -31,12 +31,12 @@ const TradeHistoryLine = ({
     <div className={cn(styles.item, className)}>
       {isPaidWithMona ?
         (<div>
-          <span className={styles.priceEth}>{Math.round(parseFloat(priceMona) * 100) / 100} MONA</span>
+          <span className={styles.priceEth}>{Math.round(parseFloat(priceMona) * 10000) / 10000} MONA</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
           <span> - {getDefaultText(eventName)}</span>
         </div>) : 
         (<div>
-          <span className={styles.priceEth}>{Math.floor(priceEth * monaPerEth * 100) / 100} MONA</span>
+          <span className={styles.priceEth}>{Math.floor(priceEth * monaPerEth * 10000) / 10000} MONA</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
           <span> - {getDefaultText(eventName)}</span>
         </div>)
