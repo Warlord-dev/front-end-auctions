@@ -54,7 +54,7 @@ const ImportantCollectionInformation = ({ collection }) => {
     [chainId]
   );
 
-  const digitalIds = ['2607', '2633', '2658', '2679'];
+  const digitalIds = ['2607', '2633', '2658', '2679', '3532', '773'];
   const filteredAuctions = collection.id === 1 ? currentAuctions : [];
   const filteredCollections =
     collection.id === 1

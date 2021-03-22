@@ -150,7 +150,7 @@ const PageProductsList = ({ collectionId }) => {
     },
   ];
 
-  const digitalIds = ['2607', '2633', '2658', '2679'];
+  const digitalIds = ['2607', '2633', '2658', '2679', '3532', '773'];
 
   return (
     <>

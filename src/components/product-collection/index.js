@@ -17,7 +17,8 @@ const CardProduct = ({ collection }) => {
   const tokenInfo = useTokenInfo(collection.image, [collection.image]);
   const designerInfo = useSelector(getDesignerInfoByName(collection.designer, true));
 
-  const [imageUrl, isVideo] = getImageForCardProduct(tokenInfo);
+  const [imageUrl, isVideo] =
+    collection.id === 2 ? [tokenInfo.animation, true] : getImageForCardProduct(tokenInfo);
   return (
     <li className={cn(styles.item)}>
       <Link href={`/collections/${collection.id}`}>
