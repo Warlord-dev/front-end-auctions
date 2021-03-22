@@ -59,7 +59,7 @@ export const getDesignersByIds = gql`
   query getDesignersByIds($ids: [ID!]) {
     digitalaxGarmentDesigners(first: 1000, where: { id_in: $ids }) {
       id
-      garments {
+      garments(first:1000) {
         id
         tokenUri
       }
