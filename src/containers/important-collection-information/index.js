@@ -68,7 +68,6 @@ const ImportantCollectionInformation = ({ collection }) => {
             collection.garments.length && digitalIds.includes(collection.garments[0].designer)
         )
       : currentCollections;
-  console.log('---product-collection', collection.id, filteredAuctions, filteredCollections);
   const priceEth = convertToEth(
     filteredAuctions
       .filter((auction) => auction.topBid)
@@ -76,11 +75,9 @@ const ImportantCollectionInformation = ({ collection }) => {
       .reduce((total, cur) => total + cur, 0)
   );
 
-  const expirationDate = filteredAuctions.length
-    ? Math.max(...filteredAuctions.map((auction) => parseInt(auction.endTime))) * 1000
-    : new Date();
+  const expirationDate = Math.max(...filteredAuctions.map((auction) => parseInt(auction.endTime))) * 1000;
 
-  const timeOut = new Date(expirationDate) - new Date() + 1000;
+  const timeOut = filteredAuctions.length ? new Date(expirationDate) - new Date() + 1000 : 0;
 
   if (timeOut > 0) {
     timerToSoldButton.current = setTimeout(() => updateState(Date.now()), timeOut);
