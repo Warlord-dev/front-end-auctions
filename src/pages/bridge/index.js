@@ -31,7 +31,9 @@ export default function Bridge() {
             title="DEPOSITS"
             hintText="IT TAKES UP TO 10 MINUTES FOR YOUR BALANCE TO BE REFLECTED ON MATIC, ONCE THE TRANSACTION IS CONFIRMED ON ETHEREUM."
           />
-          <div className={`${styles.amount} ${styles.ethColor}`}>{monaEthBalance} $MONA</div>
+          <div className={`${styles.amount} ${styles.ethColor}`}>
+            {parseFloat(monaEthBalance).toFixed(6)} $MONA
+          </div>
           <button className={styles.actionButton} onClick={() => Router.push('/bridge/deposit')}>
             <div className={styles.actionText}>DEPOSIT TO MATIC</div>
           </button>
@@ -44,7 +46,9 @@ export default function Bridge() {
             title="WITHDRAWALS"
             hintText="WITHDRAWING TO ETHEREUM CAN TAKE A COUPLE OF HOURS (~2-3 HOURS). YOU MUST ALSO CLICK “CLAIM ON ETHEREUM” AFTER THE WITHDRAWAL IS COMPLETE."
           />
-          <div className={`${styles.amount} ${styles.maticColor}`}>{monaMaticBalance} $MONA</div>
+          <div className={`${styles.amount} ${styles.maticColor}`}>
+            {parseFloat(monaMaticBalance).toFixed(6)} $MONA
+          </div>
           <button className={styles.actionButton} onClick={() => Router.push('/bridge/withdraw')}>
             <div className={styles.actionText}>WITHDRAW TO ETHERIUM</div>
           </button>

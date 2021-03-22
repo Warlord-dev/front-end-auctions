@@ -72,11 +72,15 @@
   @include reset-button();
   @include active();
   border: 1px solid #e6e6e6;
+  background: white;
   border-radius: 0;
   box-shadow: none;
   padding: 10px 16px;
   width: 100%;
   top: 100%;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .hashAddress {
@@ -96,4 +100,21 @@
   .arrowBottomImg {
     padding: 8px 0 8px 8px;
   }
+}
+
+.notification {
+  position: fixed;
+  top: 10px;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  color: red;
+}
+.monaBalance {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: fit-content;
+  height: 36px;
+  line-height: 36px;
 }

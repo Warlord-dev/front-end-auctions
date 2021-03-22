@@ -267,6 +267,11 @@ export const getContract = async (auctionContractAddress) => {
           name: '_garmentTokenId',
           type: 'uint256',
         },
+        {
+          internalType: 'uint256',
+          name: '_monaAmount',
+          type: 'uint256'
+        },
       ],
       name: 'placeBid',
       outputs: [],

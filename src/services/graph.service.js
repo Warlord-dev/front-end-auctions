@@ -45,7 +45,7 @@ export const getDesignerChartOptions = (history) => {
       title: '',
       labels: {
         formatter(params) {
-          return `${params.value} Ξ`;
+          return `${params.value} MONA`;
         },
       },
     },
@@ -100,7 +100,7 @@ export const getMainPageChartOptions = (history, monaPerEth) => {
       title: '',
       labels: {
         formatter(params) {
-          return `${params.value} Ξ`;
+          return `${params.value} MONA`;
         },
       },
     },
@@ -157,7 +157,7 @@ export const getAuctionInformationChartOptions = (history) => {
       title: '',
       labels: {
         formatter(params) {
-          return `${params.value} Ξ`;
+          return `${params.value} MONA`;
         },
       },
       gridLineWidth: 0,
@@ -216,7 +216,7 @@ export const getCardProductChartOptions = (history) => {
       title: '',
       labels: {
         formatter(params) {
-          return `${params.value} Ξ`;
+          return `${params.value} MONA`;
         },
         style: {
           color: '#111',

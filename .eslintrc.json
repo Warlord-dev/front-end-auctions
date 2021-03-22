@@ -4,11 +4,7 @@
     "browser": true,
     "jest": true
   },
-  "plugins": [
-    "react",
-    "jsx-a11y",
-    "import"
-  ],
+  "plugins": ["react", "jsx-a11y", "import"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
@@ -20,11 +16,8 @@
     }
   },
   "rules": {
-    "template-curly-spacing" : "off",
-    "arrow-parens": [
-      "error",
-      "always"
-    ],
+    "template-curly-spacing": "off",
+    "arrow-parens": ["error", "always"],
     "react/forbid-prop-types": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-indent": [2],
@@ -45,14 +38,9 @@
     "jsx-a11y/label-has-for": [
       2,
       {
-        "components": [
-          "label"
-        ],
+        "components": ["label"],
         "required": {
-          "some": [
-            "nesting",
-            "id"
-          ]
+          "some": ["nesting", "id"]
         },
         "allowChildren": false
       }
@@ -71,18 +59,18 @@
   "settings": {
     "import/resolver": {
       "alias": [
-          ["@components", "./src/components"],
-          ["@containers", "./src/containers"],
-          ["@constants", "./src/constants"],
-          ["@selectors", "./src/selectors"],
-          ["@reducers", "./src/reducers"],
-          ["@assets", "./src/assets"],
-          ["@helpers", "./src/helpers"],
-          ["@actions", "./src/actions"],
-          ["@services", "./src/services"],
-          ["@utils", "./src/utils"],
-          ["@hooks", "./src/hooks"]
+        ["@components", "./src/components"],
+        ["@containers", "./src/containers"],
+        ["@constants", "./src/constants"],
+        ["@selectors", "./src/selectors"],
+        ["@reducers", "./src/reducers"],
+        ["@assets", "./src/assets"],
+        ["@helpers", "./src/helpers"],
+        ["@actions", "./src/actions"],
+        ["@services", "./src/services"],
+        ["@utils", "./src/utils"],
+        ["@hooks", "./src/hooks"]
       ]
     }
-  } 
+  }
 }

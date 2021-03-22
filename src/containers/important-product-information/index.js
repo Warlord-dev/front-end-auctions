@@ -56,7 +56,7 @@ const ImportantProductInformation = ({
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
-  const monaPerEth = useSelector(getMonaPerEth);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
   const [isShowHint, setIsShowHint] = useState(false);
 
   const estimateApy = useAPY(garment.primarySalePrice);
@@ -79,8 +79,6 @@ const ImportantProductInformation = ({
     return null;
   }
 
-  const priceEth = convertToEth(garment.primarySalePrice);
-  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
   const expirationDate = auction.endTime * 1000;
 
   const timeOut = new Date(expirationDate) - new Date() + 1000;
@@ -106,6 +104,11 @@ const ImportantProductInformation = ({
         [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName)
     )
     .sort((a, b) => b.timestamp - a.timestamp);
+
+  const priceEth = convertToEth(
+    sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
+  );
+  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(new BigNumber(minBidIncrement));
 
   let isMakeBid = false;
   let withdrawValue = 0;
@@ -175,7 +178,7 @@ const ImportantProductInformation = ({
 
   const getPriceUsd = (valueEth) => {
     const priceUsd = valueEth * exchangeRateETH;
-    return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
+    return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
   };
 
   return (
@@ -188,11 +191,11 @@ const ImportantProductInformation = ({
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
           <span className={styles.priceEth}>
-            {Math.round((priceEth / monaPerEth) * 100) / 100} $MONA
+            {Math.round((priceEth * monaPerEth) * 10000) / 10000} $MONA
           </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
-        <p className={styles.estimateWrapper}>
+        {/* <p className={styles.estimateWrapper}>
           <span className={styles.estimateApy}>{estimateApy}%</span>
           <span className={styles.estimateApyTextWrapper}>
             <span className={styles.estimateApyText}>{estimateApyText}</span>
@@ -205,7 +208,7 @@ const ImportantProductInformation = ({
             </span>
           </span>
           {isShowHint && <span className={styles.hint}>{hintText}</span>}
-        </p>
+        </p> */}
       </div>
       {styleTypeBlock === 'smallWhite' && (
         <div className={styles.linkStyle}>
@@ -217,65 +220,64 @@ const ImportantProductInformation = ({
         </div>
       )}
       <div className={styles.footerBoxRight}>
-        <Timer className={styles.timer} expirationDate={expirationDate} />
-        <p className={styles.expirationDateText}>{expirationDateText}</p>
-        {!showSoldButton ? (
+        {tabIndex === 0 ? (
           <>
-            {isMakeBid && priceEth > 0 ? (
-              <Button
-                onClick={() => handleClickRaiseBid()}
-                className={styles.button}
-                background="black"
-              >
-                <span className={styles.buttonText}>{buttonTextRaise}</span>
-                {styleTypeBlock === 'smallWhite' ? (
-                  <a className={styles.wearInGame} href="https://espa.digitalax.xyz/">
-                    WEAR IN GAME
-                  </a>
+            <Timer className={styles.timer} expirationDate={expirationDate} />
+            <p className={styles.expirationDateText}>{expirationDateText}</p>
+            {!showSoldButton ? (
+              <>
+                {isMakeBid && priceEth > 0 ? (
+                  <Button
+                    onClick={() => handleClickRaiseBid()}
+                    className={styles.button}
+                    background="black"
+                  >
+                    <span className={styles.buttonText}>{buttonTextRaise}</span>
+                    {styleTypeBlock !== 'smallWhite' && (
+                      <span className={styles.buttonGray}>
+                        (need min {minBid.toString(10)}MONA to compete)
+                      </span>
+                    )}
+                  </Button>
                 ) : (
-                  <span className={styles.buttonGray}>
-                    (need min {minBid.toString(10)}Ξ to compete)
-                  </span>
+                  <Button
+                    onClick={() => handleClickPlaceBid()}
+                    className={styles.button}
+                    background="black"
+                  >
+                    <span className={styles.buttonText}>{buttonTextPlace}</span>
+                    {styleTypeBlock !== 'smallWhite' && (
+                      <span className={styles.buttonGray}>
+                        (need min {minBid.toString(10)}MONA to compete)
+                      </span>
+                    )}
+                  </Button>
                 )}
-              </Button>
+                {canShowWithdrawBtn && (
+                  <div className={styles.wrapperButtonWithdraw}>
+                    <TextButton onClick={() => handleClickWithdrawBid()}>
+                      {buttonTextWithdraw}
+                    </TextButton>
+                  </div>
+                )}
+              </>
             ) : (
               <Button
-                onClick={() => handleClickPlaceBid()}
-                className={styles.button}
+                className={styles.buttonSold}
                 background="black"
+                onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
               >
-                <span className={styles.buttonText}>{buttonTextPlace}</span>
-                {styleTypeBlock === 'smallWhite' ? (
-                  <a className={styles.wearInGame} href="https://espa.digitalax.xyz/">
-                    WEAR IN GAME
-                  </a>
-                ) : (
-                  <span className={styles.buttonGray}>
-                    (need min {minBid.toString(10)}Ξ to compete)
-                  </span>
-                )}
+                <span>SOLD</span>
               </Button>
-            )}
-            {canShowWithdrawBtn && (
-              <div className={styles.wrapperButtonWithdraw}>
-                <TextButton onClick={() => handleClickWithdrawBid()}>
-                  {buttonTextWithdraw}
-                </TextButton>
-              </div>
             )}
           </>
         ) : (
           <Button
-            className={styles.buttonSold}
+            className={styles.button}
             background="black"
             onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
           >
-            <span>SOLD</span>
-            {styleTypeBlock === 'smallWhite' && (
-              <a className={styles.wearInGame} href="https://espa.digitalax.xyz/">
-                WEAR IN GAME
-              </a>
-            )}
+            <span>BUY NOW</span>
           </Button>
         )}
       </div>

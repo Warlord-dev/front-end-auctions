@@ -20,7 +20,7 @@ import { useAPY } from '@hooks/apy.hooks';
 import GeneralInformation from './general-information';
 import CardList from './card-list';
 
-const PageProductsList = () => {
+const PageProductsList = ({ collectionId }) => {
   const dispatch = useDispatch();
   const auctions = useSelector(getAllAuctions);
   const collections = useSelector(getAllCollections);
@@ -149,7 +149,9 @@ const PageProductsList = () => {
       value: estimateApy,
     },
   ];
-
+  
+  const digitalIds = ['2607', '2633', '2658', '2679'];
+  
   return (
     <>
       <GeneralInformation
@@ -159,8 +161,18 @@ const PageProductsList = () => {
         history={monthResultedAuctions}
       />
       <CardList
-        auctions={currentAuctions}
-        collections={currentCollections}
+        auctions={collectionId === '1' ? currentAuctions : []}
+        collections={
+          collectionId === '1'
+            ? currentCollections.filter(
+                (collection) =>
+                  collection.garments.length && !digitalIds.includes(collection.garments[0].designer)
+              )
+            : currentCollections.filter(
+                (collection) =>
+                  collection.garments.length && digitalIds.includes(collection.garments[0].designer)
+              )
+        }
         showGraphIds={showGraphIds}
         setShowGraphIds={setShowGraphIds}
       />

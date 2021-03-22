@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
-import PageProductsList from '@containers/page-products-list';
+import CollectionList from '@containers/collection-list';
 
-const Index = () => <PageProductsList />;
+const Index = () => <CollectionList />;
 
 export default memo(Index);

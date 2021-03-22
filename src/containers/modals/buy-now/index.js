@@ -14,12 +14,11 @@ import styles from './styles.module.scss';
 const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   const dispatch = useDispatch();
   const requests = useRef([]);
-  const monaPerEth = useSelector(getMonaPerEth);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
 
   const { id, priceEth } = useSelector(getModalParams);
 
   const [isDisabled, setIsDisabled] = useState(false);
-  const [isDisabled2, setIsDisabled2] = useState(false);
   const [showError, setShowError] = useState(null);
   const [approved, setApproved] = useState(false);
 
@@ -31,7 +30,6 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   const handleClick = (mode) => {
     setShowError(null);
     setIsDisabled(true);
-    setIsDisabled2(true);
     dispatch(bidActions.buyNow(id, priceEth, mode === 0)).then((request) => {
       requests.current.push(request);
       request.promise
@@ -39,7 +37,6 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
           if (mode === 0 && approved === false) {
             setApproved(true);
             setIsDisabled(false);
-            setIsDisabled2(false);
           } else {
             handleClose();
           }
@@ -47,7 +44,6 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
         .catch((e) => {
           setShowError(e.message);
           setIsDisabled(false);
-          setIsDisabled2(false);
         });
     });
   };

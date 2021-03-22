@@ -35,7 +35,7 @@ const RightBox = ({
   const account = useSelector(getAccount);
   const garment = useSelector(getGarmentsById(clothesId));
   const auction = useSelector(getAuctionById(garment.id));
-  const monaPerEth = useSelector(getMonaPerEth);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
 
   const [semiRare, common] = useMemo(() => {
     if (!currentCollections) return [{ children: [] }, { children: [] }];
@@ -60,7 +60,7 @@ const RightBox = ({
   const renderAuctionInfo = () => {
     if (activeItem === SHOW_FIRST_TAB) return <AuctionInformation garment={garment} />;
     if (activeItem === SHOW_SECOND_TAB) {
-      return <GameList />;
+      return <GameList currentClothesInfo={currentClothesInfo} />;
     }
     return null;
   };
@@ -71,7 +71,7 @@ const RightBox = ({
         <DesignInformation currentClothesInfo={currentClothesInfo} estimateAPY={estimateAPY} />
       );
     if (activeItem === SHOW_SECOND_TAB) {
-      return <GameList />;
+      return <GameList currentClothesInfo={currentClothesInfo} />;
     }
     return null;
   };
