@@ -6,7 +6,7 @@ const ProductList = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  return <PageProductsList auctionId={id} />;
+  return <PageProductsList collectionId={id} />;
 }
 
 export default memo(ProductList);
