@@ -435,6 +435,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
+      id: '108',
       ids: ['108', '3', '10', '14', '4', '64', '57', '5', '74', '67', '6', '84', '77'],
       designerName: 'Kodomodachi',
       designerPhoto: './images/QmSfpPJJhS4MEEt912qB2fg8JdGj5VKrVUXDoEyGoQtAHk.png',
@@ -446,6 +447,7 @@ const DEFAULT_FIELDS = Map({
       designerSocialMedia: List([]),
     },
     {
+      id: '109',
       ids: ['109'],
       designerName: 'Digitalax',
       designerPhoto: './images/logo.jpg',
