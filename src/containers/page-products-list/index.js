@@ -151,7 +151,7 @@ const PageProductsList = ({ collectionId }) => {
   ];
   
   const digitalIds = ['2607', '2633', '2658', '2679'];
-  console.log(currentCollections);
+  
   return (
     <>
       <GeneralInformation
