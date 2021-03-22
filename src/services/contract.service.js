@@ -322,8 +322,6 @@ export const getRewardContract = async (contractAddress) => {
 export const getQuickSwapRouterContract = async () => {
   // const web3 = new Web3(isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL);
 
-  console.log('asdf', IUniswapV2Router02ABI);
-
   const contract = await new window.web3.eth.Contract(
     IUniswapV2Router02ABI,
     config.QUICKSWAP_ROUTER

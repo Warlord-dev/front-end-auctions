@@ -48,8 +48,10 @@ export default function useERC20Approve(amount, isMona) {
   useEffect(() => {
     if (parseFloat(allowance) > parseFloat(amount)) {
       setApproved(true);
+    } else {
+      setApproved(false);
     }
-  }, [amount, allowance]);
+  }, [amount, allowance, isMona]);
 
   const approveCallback = useCallback(async () => {
     if (account && chainId) {

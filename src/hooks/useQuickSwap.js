@@ -7,24 +7,25 @@ import { getAccount } from '@selectors/user.selectors';
 import { useCallback, useState } from 'react';
 import usePollar from './usePollar';
 import { convertToWei } from '@helpers/price.helpers';
-import { formatEther } from '@ethersproject/units';
+import { formatEther, formatUnits, parseUnits } from '@ethersproject/units';
 
 export function useRatio() {
   const path = [config.MONA_TOKEN_ADDRESSES.matic, config.USDT_ADDRESS.matic];
 
-  const [ratio, setRatio] = useState('0');
+  const [ratio, setRatio] = useState('1');
   const account = useSelector(getAccount);
 
   const fetchRatio = useCallback(async () => {
     const quickSwapRouter = await getQuickSwapRouterContract();
 
     setRatio(
-      formatEther(
+      parseUnits(
         (
           await quickSwapRouter.methods
-            .getAmountsOut(convertToWei('1'), path)
+            .getAmountsOut(ethers.utils.parseUnits('1', 10), path)
             .call({ from: account })
-        )[1]
+        )[1],
+        2
       )
     );
   });
@@ -32,6 +33,23 @@ export function useRatio() {
   usePollar(fetchRatio);
 
   return parseFloat(ratio);
+}
+
+export async function getAmountsOut(amountsIn, toMona, account) {
+  const quickSwapRouter = await getQuickSwapRouterContract();
+
+  const path = !toMona
+    ? [config.MONA_TOKEN_ADDRESSES.matic, config.USDT_ADDRESS.matic]
+    : [config.USDT_ADDRESS.matic, config.MONA_TOKEN_ADDRESSES.matic];
+
+  return formatUnits(
+    (
+      await quickSwapRouter.methods
+        .getAmountsOut(ethers.utils.parseUnits(amountsIn, toMona ? 6 : 18), path)
+        .call({ from: account })
+    )[1],
+    toMona ? 18 : 6
+  );
 }
 
 export function useQuickSwap() {
@@ -48,8 +66,11 @@ export function useQuickSwap() {
       // if (baseFirst) {
       quickSwapRouter.methods
         .swapExactTokensForTokens(
-          ethers.utils.parseUnits(firstAmount, 18),
-          ethers.utils.parseUnits((parseFloat(secondAmount) * (100 - slippage)) / 100 + '', 18),
+          ethers.utils.parseUnits(firstAmount, toMona ? 6 : 18),
+          ethers.utils.parseUnits(
+            (parseFloat(secondAmount) * (100 - slippage)) / 100 + '',
+            toMona ? 18 : 6
+          ),
           path,
           account,
           Math.floor(Date.now() / 500)
