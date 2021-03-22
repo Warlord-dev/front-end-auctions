@@ -149,7 +149,7 @@ const PageProductsList = ({ auctionId }) => {
       value: estimateApy,
     },
   ];
-
+  console.log(currentCollections);
   return (
     <>
       <GeneralInformation
@@ -162,7 +162,10 @@ const PageProductsList = ({ auctionId }) => {
         auctions={auctionId === '1' ? currentAuctions : []}
         collections={
           auctionId === '1'
-            ? currentCollections
+            ? currentCollections.filter(
+                (collection) =>
+                  collection.garments.length && collection.garments[0].designer !== '2607'
+              )
             : currentCollections.filter(
                 (collection) =>
                   collection.garments.length && collection.garments[0].designer === '2607'

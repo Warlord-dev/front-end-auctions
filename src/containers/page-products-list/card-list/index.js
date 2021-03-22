@@ -93,7 +93,7 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
                 <CardProduct
                   key={garment.id}
                   history={historyByTokenId.get(garment.id)}
-                  auctionId={garment.garmentAuctionID}
+                  auctionId={collection.garmentAuctionID}
                   garment={garment}
                   showGraphIds={showGraphIds}
                   setShowGraphIds={setShowGraphIds}
@@ -109,7 +109,7 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
                 <CardProduct
                   key={garment.id}
                   history={historyByTokenId.get(garment.id)}
-                  auctionId={garment.garmentAuctionID}
+                  auctionId={collection.garmentAuctionID}
                   garment={garment}
                   showGraphIds={showGraphIds}
                   setShowGraphIds={setShowGraphIds}
