@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Router from 'next/router';
+import Router, { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import Link from 'next/link';
@@ -19,7 +19,21 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
-  let isMumbai = chainId === '0x13881';
+
+
+  const router = useRouter();
+  const pathname = router.pathname;
+
+  console.log('---chainId', chainId, pathname);
+  const isOnRightNetwork =
+    pathname !== '/bridge' && pathname !== '/bridge/deposit'
+      ? chainId === '0x89'
+      : chainId === '0x1';
+
+  const wrongNetworkText =
+    pathname !== '/bridge' && pathname !== '/bridge/deposit'
+      ? 'Please switch to Matic Network'
+      : 'Please switch to Mainnet';
 
   const [_, monaBalance] = useMonaBalance();
 
@@ -42,7 +56,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   return (
     <div className={cn(className, styles.wrapper)}>
-      {!isMumbai && <p className={styles.notification}>You are not on Mumbai network</p>}
+      {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
         <Logo />
         <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>

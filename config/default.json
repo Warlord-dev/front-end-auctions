@@ -18,8 +18,8 @@
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
   "WEB3_URLS": {
     "GOERLI": "https://goerli.infura.io/v3/280e56393dd1469e8cadc4132a5ec37c",
-    "MUMBAI": "https://rpc-mumbai.matic.today",
-    "MATIC": "https://rpc-mainnet.maticvigil.com"
+    "MUMBAI": "https://rpc-mumbai.maticvigil.com/v1/1590d9f343d27b977aa149ac37ebd8f2aad7f68a",
+    "MATIC": "https://rpc-mainnet.maticvigil.com/v1/1590d9f343d27b977aa149ac37ebd8f2aad7f68a"
   },
   "EXPLORER_URLS": {
     "mainnet": "https://etherscan.io/",
@@ -43,7 +43,7 @@
     "matic": "0x13F564E90AF677d33a4232F269EeaEa30C7DBFF4"
   },
   "MONA_TOKEN_ADDRESSES": {
-    "mainnet": "0x275f5Ad03be0Fa221B4C6649B8AeE09a42D9412A",
+    "mainnet": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
     "rinkeby": "0x13379fe0e6992180ed0ac5174a02479896f9c510",
     "goerli": "0x8472ACaFc4C5c10a1762C7d6E74f13ED7B994f3d",
     "mumbai": "0xeFd3D060dDcFed7903806503440db1089031AF3A",

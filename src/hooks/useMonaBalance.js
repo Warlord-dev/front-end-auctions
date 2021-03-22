@@ -26,9 +26,7 @@ export function useMonaBalance() {
           parent: true,
         }
       );
-
       setMonaEthBalance(formatEther(ethBalance));
-
       const maticBalance = await posClientParent.balanceOfERC20(
         account,
         config.MONA_TOKEN_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
@@ -36,7 +34,6 @@ export function useMonaBalance() {
           parent: false,
         }
       );
-
       setMonaMaticBalance(formatEther(maticBalance));
     }
   }, [isMainnet, posClientParent, posClientChild]);
