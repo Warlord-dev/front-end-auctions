@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
-import AuctionList from '@containers/auction-list';
+import CollectionList from '@containers/collection-list';
 
-const Index = () => <AuctionList />;
+const Index = () => <CollectionList />;
 
 export default memo(Index);

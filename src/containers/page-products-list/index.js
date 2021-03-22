@@ -149,7 +149,7 @@ const PageProductsList = ({ auctionId }) => {
       value: estimateApy,
     },
   ];
-  console.log(currentCollections);
+
   return (
     <>
       <GeneralInformation
