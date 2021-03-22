@@ -20,6 +20,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
 
+
   const router = useRouter();
   const pathname = router.pathname;
 
