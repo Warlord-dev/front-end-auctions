@@ -29,4 +29,9 @@ export const AVAILABLE_NETWORKS = [
     hex: 0x13881,
     name: 'Mumbai Test Network',
   },
+  {
+    alias: 'matic',
+    hex: 0x89,
+    name: 'Matic Main Network',
+  },
 ];

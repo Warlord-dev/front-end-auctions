@@ -1,20 +1,41 @@
 import React, { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Router from 'next/router';
+import Router, { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import Link from 'next/link';
 import Button from '@components/buttons/button';
 import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getUser } from '@selectors/user.selectors';
+import { getChainId } from '@selectors/global.selectors';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
+
+import { useMonaBalance } from '@hooks/useMonaBalance';
 import Logo from './logo';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
   const user = useSelector(getUser);
+  const chainId = useSelector(getChainId);
+
+  const router = useRouter();
+  const pathname = router.pathname;
+
+  console.log('---chainId', chainId, pathname);
+  const isOnRightNetwork =
+    pathname !== '/bridge' && pathname !== '/bridge/deposit'
+      ? chainId === '0x89'
+      : chainId === '0x1';
+
+  const wrongNetworkText =
+    pathname !== '/bridge' && pathname !== '/bridge/deposit'
+      ? 'Please switch to Mainnet'
+      : 'Please switch to Matic Network';
+
+  const [_, monaBalance] = useMonaBalance();
+
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }
@@ -34,7 +55,13 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   return (
     <div className={cn(className, styles.wrapper)}>
-      <Logo />
+      {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
+      <div className={styles.leftBox}>
+        <Logo />
+        <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
+          Switch to Eth Mainnet
+        </a>
+      </div>
       <div className={styles.rightBox}>
         {/* <Link href="/">
           <a className={styles.link}>Auctions</a>
@@ -110,6 +137,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
                 </button>
               </div>
             )}
+            <span className={styles.monaBalance}>Mona Balance: {monaBalance}</span>
           </div>
         ) : (
           <Button onClick={() => handleClick()}>{buttonText}</Button>
@@ -128,7 +156,7 @@ HeaderTopLine.propTypes = {
 
 HeaderTopLine.defaultProps = {
   className: '',
-  isShowStaking: true,
+  isShowStaking: false,
   buttonText: 'SIGN IN',
   linkText: 'Staking',
 };

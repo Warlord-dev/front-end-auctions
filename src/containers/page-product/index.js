@@ -4,11 +4,17 @@ import ProductDescription from './product-description';
 import Trade from './trade';
 import styles from './styles.module.scss';
 
-const PageProduct = ({ clothesId, designerId, currentCollections, currentMarketplaceOffers }) => {
+const PageProduct = ({
+  clothesId,
+  tabIndex,
+  designerId,
+  currentCollections,
+  currentMarketplaceOffers,
+}) => {
   // const SHOW_EXCULSIVE_TAB = 0;
   // const SHOW_SEMIRARE_TAB = 1;
   // const SHOW_COMMON_TAB = 2;
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(tabIndex);
 
   return (
     <div className={styles.wrapper}>
@@ -27,6 +33,7 @@ const PageProduct = ({ clothesId, designerId, currentCollections, currentMarketp
 
 PageProduct.propTypes = {
   clothesId: PropTypes.string.isRequired,
+  tabIndex: PropTypes.number.isRequired,
   designerId: PropTypes.string.isRequired,
   currentCollections: PropTypes.array.isRequired,
   currentMarketplaceOffers: PropTypes.array.isRequired,

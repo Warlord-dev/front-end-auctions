@@ -10,6 +10,34 @@
   align-items: center;
 }
 
+.leftBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backToMainNetButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 187px;
+  height: 32px;
+  background: #fd6553;
+  border: 1px solid #767676;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 40px;
+  margin-top: -20px;
+
+  &:hover {
+    color: white;
+    background: #ec978d;
+  }
+}
+
 .rightBox {
   min-height: 47px;
   display: flex;
@@ -23,7 +51,7 @@
   line-height: 17px;
   color: $black;
   text-transform: uppercase;
-  margin-right: 62px;
+  margin-right: 52px;
 
   &:focus {
     outline: none;
@@ -43,12 +71,16 @@
 .menuButton {
   @include reset-button();
   @include active();
-  border: 1px solid #E6E6E6;
+  border: 1px solid #e6e6e6;
+  background: white;
   border-radius: 0;
   box-shadow: none;
   padding: 10px 16px;
   width: 100%;
   top: 100%;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .hashAddress {
@@ -68,4 +100,21 @@
   .arrowBottomImg {
     padding: 8px 0 8px 8px;
   }
+}
+
+.notification {
+  position: fixed;
+  top: 10px;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  color: red;
+}
+.monaBalance {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: fit-content;
+  height: 36px;
+  line-height: 36px;
 }

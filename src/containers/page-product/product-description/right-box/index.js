@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import BigNumber from 'bignumber.js';
+import { utils as ethersUtils } from 'ethers';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import kebabCase from 'lodash.kebabcase';
@@ -8,14 +8,15 @@ import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getGarmentsById } from '@selectors/garment.selectors';
 import { useAPY } from '@hooks/apy.hooks';
 import { getAccount } from '@selectors/user.selectors';
-import { convertToEth } from '@helpers/price.helpers';
+import { getAuctionById } from '@selectors/auction.selectors';
 import Button from '@components/buttons/button';
+import Timer from '@components/timer';
 import { openBuynowModal, openConnectMetamaskModal } from '@actions/modals.actions';
-import { getExchangeRateETH } from '@selectors/global.selectors';
+import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import { COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 import AuctionInformation from './auction-information';
 import DesignInformation from './design-information';
-import MaterialList from './material-list';
+import GameList from './game-list';
 import styles from './styles.module.scss';
 
 const SHOW_FIRST_TAB = 0;
@@ -25,14 +26,16 @@ const RightBox = ({
   clothesId,
   currentClothesInfo,
   currentDesignersInfo,
-  youReceiveText,
   activeTab,
   currentCounts,
   currentCollections,
+  expirationDateText,
 }) => {
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
   const garment = useSelector(getGarmentsById(clothesId));
+  const auction = useSelector(getAuctionById(garment.id));
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
 
   const [semiRare, common] = useMemo(() => {
     if (!currentCollections) return [{ children: [] }, { children: [] }];
@@ -47,43 +50,17 @@ const RightBox = ({
     ];
   }, [currentCollections]);
 
-  const VALUE_NFT = useMemo(() => {
-    if (activeTab === 0) {
-      return garment && garment.children.length > 0
-        ? `(${garment.children.length} NFT${garment.children.length > 1 ? 's' : ''})`
-        : '';
-    }
-    if (activeTab === 0) {
-      return semiRare.children.length > 0
-        ? `(${semiRare.children.length} NFT${semiRare.children.length > 1 ? 's' : ''})`
-        : '';
-    }
-    return common.children.length > 0
-      ? `(${common.children.length} NFT${common.children.length > 1 ? 's' : ''})`
-      : '';
-  }, [activeTab, semiRare, common]);
-
   const exchangeRateETH = useSelector(getExchangeRateETH);
-
-  const getPriceUsd = (valueEth) => {
-    const priceUsd = valueEth * exchangeRateETH;
-    return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
-  };
 
   const estimateAPY = useAPY(currentCounts[activeTab].basePrice);
 
-  const TABS = [
-    activeTab === 0 ? 'Auction Information' : 'Design Information',
-    `Material Composition ${VALUE_NFT}`,
-  ];
+  const TABS = [activeTab === 0 ? 'Auction Information' : 'Design Information', 'In-game details'];
   const [activeItem, setActiveItem] = useState(SHOW_FIRST_TAB);
 
   const renderAuctionInfo = () => {
-    if (activeItem === SHOW_FIRST_TAB) return <AuctionInformation {...currentClothesInfo} />;
+    if (activeItem === SHOW_FIRST_TAB) return <AuctionInformation garment={garment} />;
     if (activeItem === SHOW_SECOND_TAB) {
-      return (
-        <MaterialList clothesId={clothesId} valueChildNfts={currentClothesInfo?.valueChildNfts} />
-      );
+      return <GameList currentClothesInfo={currentClothesInfo} />;
     }
     return null;
   };
@@ -94,15 +71,7 @@ const RightBox = ({
         <DesignInformation currentClothesInfo={currentClothesInfo} estimateAPY={estimateAPY} />
       );
     if (activeItem === SHOW_SECOND_TAB) {
-      return (
-        <MaterialList
-          clothesId={clothesId}
-          activeTab={activeTab}
-          semiRare={semiRare}
-          common={common}
-          valueChildNfts={currentClothesInfo?.valueChildNfts}
-        />
-      );
+      return <GameList currentClothesInfo={currentClothesInfo} />;
     }
     return null;
   };
@@ -120,6 +89,8 @@ const RightBox = ({
     }
   };
 
+  const expirationDate = auction ? auction.endTime * 1000 : 0;
+
   return (
     <div className={cn('animate__animated animate__fadeIn', styles.fullWidth)}>
       <h2 className={styles.title}>{currentClothesInfo?.clothesName}</h2>
@@ -131,24 +102,30 @@ const RightBox = ({
         photoIsLink
       />
       {activeTab === 0 && (
-        <>
+        <div className={styles.garmentInformation}>
           <p className={styles.description}>{currentClothesInfo?.description}</p>
-          {currentClothesInfo?.youReceive && (
-            <p className={styles.youReceiveText}>
-              {parseInt(clothesId, 10) > 43 ? 'What you receive' : youReceiveText}
-            </p>
+          {activeItem === SHOW_SECOND_TAB && (
+            <div className={styles.timerWrapper}>
+              <p className={styles.expirationDateText}>{expirationDateText}</p>
+              <Timer className={styles.timer} expirationDate={expirationDate} />
+            </div>
           )}
-          <p className={styles.youReceive}>{currentClothesInfo?.youReceive}</p>
-        </>
+          <Button className={styles.buttonUtil} background="black">
+            <a href="https://espa.digitalax.xyz/">WEAR IN GAME</a>
+            <span className={styles.playESPA}>PLAY IN ESPA ESPORTS</span>
+          </Button>
+        </div>
       )}
       {activeTab > 0 && (
         <>
           <p className={styles.priceWrapper}>
-            <span className={styles.priceEth}>
-              {convertToEth(currentCounts[activeTab].basePrice)} Ξ
-            </span>
-            <span className={styles.priceUsd}>
-              (${getPriceUsd(convertToEth(currentCounts[activeTab].basePrice))})
+            <span className={styles.priceMono}>
+              {Math.round(
+                (parseFloat(ethersUtils.formatEther(currentCounts[activeTab].basePrice)) /
+                  parseFloat(monaPerEth)) *
+                  100
+              ) / 100}{' '}
+              $MONA
             </span>
           </p>
           <p className={styles.countInfo}>
@@ -157,21 +134,29 @@ const RightBox = ({
               : currentCounts[activeTab].sold + 1}{' '}
             of {currentCounts[activeTab].total}
           </p>
-          <Button
-            onClick={() => handleClickBuy()}
-            className={styles.button}
-            background="black"
-            isDisabled={currentCounts[activeTab].sold === currentCounts[activeTab].total}
-          >
-            <span className={styles.buttonText}>
-              {currentCounts[activeTab].sold === currentCounts[activeTab].total
-                ? 'Sold Out'
-                : 'Buy Now'}
-            </span>
-            {currentCounts[activeTab].sold !== currentCounts[activeTab].total && (
-              <span className={styles.buttonGray}>(Pay in ETH or $MONA)</span>
+          <div className={styles.buttons}>
+            <Button
+              onClick={() => handleClickBuy()}
+              className={styles.button}
+              background="black"
+              isDisabled={currentCounts[activeTab].sold === currentCounts[activeTab].total}
+            >
+              <span className={styles.buttonText}>
+                {currentCounts[activeTab].sold === currentCounts[activeTab].total
+                  ? 'Sold Out'
+                  : 'Buy Now'}
+              </span>
+              {currentCounts[activeTab].sold !== currentCounts[activeTab].total && (
+                <span className={styles.buttonGray}>(Pay in ETH or $MONA)</span>
+              )}
+            </Button>
+            {activeItem === SHOW_FIRST_TAB && (
+              <Button className={styles.buttonUtil} background="black">
+                <a href="https://espa.digitalax.xyz/">WEAR IN GAME</a>{' '}
+                <span className={styles.playESPA}>PLAY IN ESPA ESPORTS</span>
+              </Button>
             )}
-          </Button>
+          </div>
         </>
       )}
       <div className={styles.tabs}>
@@ -199,12 +184,14 @@ RightBox.propTypes = {
   currentCounts: PropTypes.array.isRequired,
   currentCollections: PropTypes.array.isRequired,
   activeTab: PropTypes.number.isRequired,
+  expirationDateText: PropTypes.string,
 };
 
 RightBox.defaultProps = {
   currentClothesInfo: null,
   currentDesignersInfo: null,
   youReceiveText: 'You will receive',
+  expirationDateText: 'Time left',
 };
 
 export default RightBox;

@@ -150,7 +150,7 @@ export const onDesignerByIds = `
         topBid
         lastBidTime
       }
-      garments {
+      garments(first:1000) {
         id
         tokenUri
       }
@@ -236,7 +236,7 @@ export const onDigitalaxGarmentsCollectionChange = `
       id
       garmentAuctionID
       rarity
-      garments {
+      garments(first:1000) {
         id
         designer
         owner
@@ -259,7 +259,7 @@ export const onDigitalaxGarmentsCollectionChangeByIds = `
       id
       garmentAuctionID
       rarity
-      garments {
+      garments(first: 1000) {
         id
         designer
         owner
@@ -282,7 +282,7 @@ export const getAllDigitalaxGarmentsCollections = `
       id
       garmentAuctionID
       rarity
-      garments {
+      garments(first: 1000) {
         id
         designer
         owner
@@ -325,7 +325,7 @@ export const allDigitalaxMarketplaceOffers = `
         id
         garmentAuctionID
         rarity
-        garments {
+        garments(first: 1000) {
           id
           tokenUri
         }

@@ -26,9 +26,7 @@
   justify-content: center;
 
   width: 618px;
-  height: 605px;
-  // padding: 45px;
-  padding: 15px 0;
+  // height: 605px;
 }
 
 .clothesPhoto {
@@ -104,4 +102,60 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.garmentTypeWrapper {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 17px;
+  color: white;
+  left: 0;
+  top: 11px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  .gap {
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #f86553;
+    display: block;
+  }
+
+  .bannerText {
+    background-color: #f86553;
+    display: block;
+    padding: 15px;
+  }
+
+  &.color1 {
+    .gap {
+      border-top: 50px solid #f86553;
+    }
+    .bannerText {
+      background-color: #f86553;
+    }
+  }
+
+  &.color2 {
+    .gap {
+      border-top: 50px solid #b63929;
+    }
+    .bannerText {
+      background-color: #b63929;
+    }
+  }
+
+  &.color3 {
+    .gap {
+      border-top: 50px solid #641c12;
+    }
+    .bannerText {
+      background-color: #641c12;
+    }
+  }
 }

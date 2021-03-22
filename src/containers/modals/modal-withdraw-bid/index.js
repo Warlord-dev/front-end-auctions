@@ -21,6 +21,7 @@ const ModalWithdrawBid = ({
   const [showError, setShowError] = useState(null);
   const { id, withdrawValue } = useSelector(getModalParams);
   const [isDisabled, setIsDisabled] = useState(false);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
 
   const handleClose = () => {
     dispatch(closeWithdrawModal());
@@ -62,7 +63,7 @@ const ModalWithdrawBid = ({
               {buttonText}
             </Button>
             <p className={styles.caption}>{yourBidText}</p>
-            <p className={styles.value}>{withdrawValue} Ξ</p>
+            <p className={styles.value}>{Math.floor(withdrawValue * monaPerEth * 10000) / 10000} MONA</p>
           </div>
           {showError && <p className={styles.error}>{showError}</p>}
         </Modal>,
@@ -83,7 +84,7 @@ ModalWithdrawBid.propTypes = {
 ModalWithdrawBid.defaultProps = {
   className: '',
   title: 'Withdraw a Bid',
-  text: ['Your Ξ will be withdrawn and your bid will no longer be active. You can place a new bid at anytime before the auction ends.'],
+  text: ['Your MONA will be withdrawn and your bid will no longer be active. You can place a new bid at anytime before the auction ends.'],
   yourBidText: 'Your Bid:',
   buttonText: 'WITHDRAW BID',
 };

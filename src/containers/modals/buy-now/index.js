@@ -2,40 +2,34 @@ import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { utils as ethersUtils } from 'ethers';
-import {
-  getMonaPerEth,
-} from '@selectors/global.selectors';
+import { getMonaPerEth } from '@selectors/global.selectors';
 import PropTypes from 'prop-types';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
-import { closeBuynowModal } from '@actions/modals.actions';
+import { closeBuynowModal, openESPAReadyModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
 import styles from './styles.module.scss';
 
-const BuyNow = ({
-  className, title, buttonText1, buttonText2,
-}) => {
-
+const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   const dispatch = useDispatch();
   const requests = useRef([]);
-  const monaPerEth = useSelector(getMonaPerEth);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
 
   const { id, priceEth } = useSelector(getModalParams);
 
   const [isDisabled, setIsDisabled] = useState(false);
-  const [isDisabled2, setIsDisabled2] = useState(false);
   const [showError, setShowError] = useState(null);
   const [approved, setApproved] = useState(false);
 
   const handleClose = () => {
     dispatch(closeBuynowModal());
+    dispatch(openESPAReadyModal());
   };
 
   const handleClick = (mode) => {
     setShowError(null);
     setIsDisabled(true);
-    setIsDisabled2(true);
     dispatch(bidActions.buyNow(id, priceEth, mode === 0)).then((request) => {
       requests.current.push(request);
       request.promise
@@ -43,7 +37,6 @@ const BuyNow = ({
           if (mode === 0 && approved === false) {
             setApproved(true);
             setIsDisabled(false);
-            setIsDisabled2(false);
           } else {
             handleClose();
           }
@@ -51,7 +44,6 @@ const BuyNow = ({
         .catch((e) => {
           setShowError(e.message);
           setIsDisabled(false);
-          setIsDisabled2(false);
         });
     });
   };
@@ -71,31 +63,41 @@ const BuyNow = ({
     };
   }, []);
 
-
   return (
     <>
       {createPortal(
-        <Modal onClose={() => handleClose()} title={title} titleStyle={styles.textCenter} className={className}>
+        <Modal
+          onClose={() => handleClose()}
+          title={title}
+          titleStyle={styles.textCenter}
+          className={className}
+        >
           <div className={styles.footer}>
             <p className={styles.footerCaption}>
-              <span>You can choose to make your purchase in either <b>$MONA</b> or <b>ETH</b>.</span>
+              <span>
+                Need to top up on $MONA? Get it <a>here.</a>
+              </span>
             </p>
             <div className={styles.selectWrapper}>
-              <span>{Math.round(parseFloat(ethersUtils.formatEther(priceEth)) / parseFloat(monaPerEth) * 100) / 100} $MONA</span>
-              <Button isDisabled={isDisabled} background="black" onClick={() => handleClick(0)} className={styles.button}>
+              <span>
+                {Math.round(
+                  (parseFloat(ethersUtils.formatEther(priceEth)) / parseFloat(monaPerEth)) * 100
+                ) / 100}{' '}
+                $MONA
+              </span>
+              <Button
+                isDisabled={isDisabled}
+                background="black"
+                onClick={() => handleClick(0)}
+                className={styles.button}
+              >
                 {approved ? buttonText1 : 'APPROVE $MONA'}
-              </Button>
-            </div>
-            <div className={styles.selectWrapper}>
-              <span>{Math.round(parseFloat(ethersUtils.formatEther(priceEth)) * 100) / 100} Ξ</span>
-              <Button isDisabled={isDisabled2} background="black" onClick={() => handleClick(1)} className={styles.button}>
-                {buttonText2}
               </Button>
             </div>
             {showError && <p className={styles.error}>{showError}</p>}
           </div>
         </Modal>,
-        document.body,
+        document.body
       )}
     </>
   );

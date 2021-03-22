@@ -1,0 +1,151 @@
+@import '../../../../../assets/scss/helpers/variables.scss';
+@import '../../../../../assets/scss/helpers/helpers.scss';
+
+.wrapper {
+  background-color: $lightGray1;
+  padding: 34px 18px;
+}
+
+.titleWrapper {
+  margin-bottom: 23px;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.titleValue {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 900;
+}
+
+.gameTable {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 23px;
+
+  .col1 {
+    flex: 4;
+  }
+
+  .col2 {
+    flex: 2;
+  }
+
+  .col3 {
+    flex: 4;
+  }
+
+  .header {
+    display: flex;
+    font-size: 10px;
+    font-weight: 700;
+    color: #999999;
+    line-height: 24px;
+    margin-bottom: 11px;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #111111;
+
+    .row {
+      display: flex;
+      .col1 {
+        display: flex;
+        flex-direction: column;
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.gameLinkTable {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 23px;
+
+  .col1 {
+    flex: 5;
+  }
+
+  .col2 {
+    flex: 2;
+  }
+
+  .col3 {
+    flex: 3;
+  }
+
+  .header {
+    display: flex;
+    font-size: 10px;
+    font-weight: 700;
+    color: #999999;
+    line-height: 24px;
+    margin-bottom: 13px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #111111;
+
+    .row {
+      display: flex;
+    }
+
+    img {
+      background-color: white;
+      width: 80px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #E6E6E6;
+      cursor: pointer;
+    }
+
+    .addressWrapper {
+      display: flex;
+      flex-direction: column;
+      margin-left: 12px;
+      .name {
+        font-size: 16px;
+        font-weight: 700;
+        color: #111111;
+      }
+    }
+
+    .col1 {
+      display: flex;
+      align-items: center;
+    }
+    .col3 span {
+      width: 132px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #111111;
+      border: 1px solid #E6E6E6;
+      cursor: pointer;
+    }
+  }
+}

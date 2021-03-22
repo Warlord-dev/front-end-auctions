@@ -1,5 +1,6 @@
 import { toast } from 'react-toastify';
 import moment from 'moment';
+import Web3 from 'web3';
 import BaseActions from '@actions/base-actions';
 import userActions from '@actions/user.actions';
 import auctionActions from '@actions/auction.actions';
@@ -28,13 +29,11 @@ import { convertToEth } from '@helpers/price.helpers';
 import { STORAGE_IS_LOGGED_IN } from '@constants/storage.constants';
 
 class GlobalActions extends BaseActions {
-
   initApp() {
     return async (dispatch) => {
       /**
        * Get eth/usd rate
        */
-
       try {
         const rateItem = await api.getEthRate();
         dispatch(this.setValue('exchangeRateETH', rateItem.ethereum.usd));
@@ -51,8 +50,8 @@ class GlobalActions extends BaseActions {
         dispatch(this.setValue('isInitialized', true));
         return;
       }
-
       const { ethereum } = window;
+      window.web3 = new Web3(ethereum);
       /**
        * Init subscribers
        */
@@ -64,10 +63,7 @@ class GlobalActions extends BaseActions {
         }
       });
 
-      if (
-        ethereum.selectedAddress
-        && localStorage.getItem(STORAGE_IS_LOGGED_IN)
-      ) {
+      if (ethereum.selectedAddress && localStorage.getItem(STORAGE_IS_LOGGED_IN)) {
         dispatch(userActions.setValue('account', ethereum.selectedAddress));
       }
 
@@ -107,17 +103,13 @@ class GlobalActions extends BaseActions {
         const address = getRewardContractAddressByChainId(chainId);
         const rewardContract = await getRewardContract(address);
 
-        const monaContractAddress = await getMonaContractAddressByChainId(
-          chainId,
-        );
-
+        const monaContractAddress = await getMonaContractAddressByChainId(chainId);
         const [rewards, monaPerEth] = await Promise.all([
           rewardContract.methods
             .parentRewards(moment().unix(), moment().add(1, 'days').unix())
             .call(),
           getTokenPrice(monaContractAddress),
         ]);
-
         dispatch(this.setValue('rewards', rewards));
         dispatch(this.setValue('monaPerEth', monaPerEth));
       } catch (e) {
@@ -129,13 +121,9 @@ class GlobalActions extends BaseActions {
       try {
         const { digitalaxAuctionContracts } = await api.getAuctionContracts();
 
-        const [
-          { minBidIncrement, id, bidWithdrawalLockTime },
-        ] = digitalaxAuctionContracts;
+        const [{ minBidIncrement, id, bidWithdrawalLockTime }] = digitalaxAuctionContracts;
 
-        dispatch(
-          this.setValue('minBidIncrement', convertToEth(minBidIncrement)),
-        );
+        dispatch(this.setValue('minBidIncrement', convertToEth(minBidIncrement)));
         dispatch(this.setValue('auctionContractAddress', id));
         dispatch(this.setValue('bidWithdrawalLockTime', bidWithdrawalLockTime));
       } catch (e) {
@@ -163,7 +151,6 @@ class GlobalActions extends BaseActions {
       dispatch(this.setValue('chainId', chainId));
     };
   }
-
 }
 
 export default new GlobalActions(globalReducer);

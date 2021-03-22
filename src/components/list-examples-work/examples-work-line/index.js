@@ -62,7 +62,7 @@ const ExamplesWorkLine = ({
         <p className={styles.clothesName}>{tokenInfo.name}</p>
         <p className={styles.clothesHashAddress}>{tokenInfo.description}</p>
       </div>
-      <p className={styles.boldText}>{convertToEth(amountSold ? primarySalePrice : topBid)} Ξ</p>
+      <p className={styles.boldText}>{convertToEth(amountSold ? primarySalePrice : topBid)} MONA</p>
       <p className={styles.boldText}>
         <span className={styles.boldTextGray}>~</span>%
       </p>

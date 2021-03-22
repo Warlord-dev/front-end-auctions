@@ -9,13 +9,11 @@ import InputWithArrows from '@components/input-with-arrows';
 import { closePlaceBidModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
+import { convertToWei } from '@helpers/price.helpers';
 import { getMinBidIncrement, getBidWithdrawalLockTime } from '@selectors/global.selectors';
 import styles from './styles.module.scss';
 
-const ModalPlaceBid = ({
-  className, title, textForSelect, buttonText,
-}) => {
-
+const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   const dispatch = useDispatch();
   const requests = useRef([]);
 
@@ -23,40 +21,59 @@ const ModalPlaceBid = ({
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
 
-  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(new BigNumber(minBidIncrement));
 
-  const [inputPriceEth, setInputPriceEth] = useState(minBid);
+  const [inputPriceMona, setInputPriceMona] = useState(minBid);
   const [isDisabled, setIsDisabled] = useState(false);
   const [showError, setShowError] = useState(null);
+  const [approved, setApproved] = useState(false);
 
   const handleClose = () => {
     dispatch(closePlaceBidModal());
   };
 
   const handleClick = () => {
-
-    if (minBid.toNumber() > Number(inputPriceEth)) {
+    if (minBid.toNumber() > Number(inputPriceMona)) {
       setShowError(`You must bid at least ${minBidIncrement} higher than the current highest bid`);
       return;
     }
     setShowError(null);
     setIsDisabled(true);
-    dispatch(bidActions.bid(id, inputPriceEth)).then((request) => {
+    dispatch(bidActions.bid(id, Number(inputPriceMona), monaPerEth)).then((request) => {
       requests.current.push(request);
       request.promise
-        .then(() => handleClose())
+        .then(() => {
+          if (approved === false) {
+            setApproved(true);
+            setIsDisabled(false);
+          } else {
+            handleClose();
+          }
+        })
         .catch((e) => {
           setShowError(e.message);
           setIsDisabled(false);
         });
     });
   };
+  useEffect(() => {
+    function getMonaApproval() {
+      dispatch(bidActions.getAllowanceForAcution()).then((val) => {
+        const weiValue = convertToWei(inputPriceMona / monaPerEth);
+        if (val < weiValue) setApproved(false);
+        else setApproved(true);
+      });
+    }
+    getMonaApproval();
+  }, [inputPriceMona]);
 
-  useEffect(() => () => {
-    requests.current.forEach((request) => request.unsubscribe());
-    requests.current = [];
+  useEffect(() => {
+    return () => {
+      requests.current.forEach((request) => request.unsubscribe());
+      requests.current = [];
+    };
   }, []);
-
 
   const hours = Math.trunc(bidWithdrawalLockTime / 60 / 60);
   const minutes = hours ? bidWithdrawalLockTime % 60 : Math.trunc(bidWithdrawalLockTime / 60);
@@ -68,8 +85,8 @@ const ModalPlaceBid = ({
   const minutesText = minutes ? `${minutes} ${minutesTextPrefix}` : '';
 
   const text = [
-    `Your Ξ will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. 
-      If another bidder outbids you, your Ξ will be immediatley transferred back into your wallet.`,
+    `Your MONA will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. 
+      If another bidder outbids you, your MONA will be immediatley transferred back into your wallet.`,
     `After placing a bid, you will be unable to withdraw for ${hoursText} ${minutesText}`,
   ];
 
@@ -80,25 +97,30 @@ const ModalPlaceBid = ({
           <div className={styles.footer}>
             <p className={styles.footerCaption}>
               <span>{textForSelect}</span>
-              <span> {minBid.toString(10)} Ξ</span>
+              <span> {minBid.toString(10)} MONA</span>
             </p>
             <div className={styles.selectWrapper}>
               <div>
                 <InputWithArrows
                   minBidIncrement={minBidIncrement}
-                  onChange={setInputPriceEth}
+                  onChange={setInputPriceMona}
                   className={styles.inputWithArrows}
-                  value={inputPriceEth}
+                  value={inputPriceMona}
                 />
                 {showError && <p className={styles.error}>{showError}</p>}
               </div>
-              <Button isDisabled={isDisabled} background="black" onClick={() => handleClick()} className={styles.button}>
-                {buttonText}
+              <Button
+                isDisabled={isDisabled}
+                background="black"
+                onClick={() => handleClick()}
+                className={styles.button}
+              >
+                {approved ? buttonText : 'APPROVE $MONA'}
               </Button>
             </div>
           </div>
         </Modal>,
-        document.body,
+        document.body
       )}
     </>
   );

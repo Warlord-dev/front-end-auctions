@@ -6,6 +6,7 @@ import { Dropdown } from 'semantic-ui-react';
 import CardProduct from '@components/card-product';
 import Loader from '@components/loader';
 import { STORAGE_SORT_BY } from '@constants/storage.constants';
+import { COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 import { getAllGarmentsById } from '@selectors/garment.selectors';
 import { getAllHistoryByTokenId } from '@selectors/history.selectors';
 import { getAuctionsIsLoaded } from '@selectors/auction.page.selectors';
@@ -19,7 +20,7 @@ import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
 
-const CardList = ({ auctions, className, sold, showGraphIds, setShowGraphIds }) => {
+const CardList = ({ auctions, collections, className, showGraphIds, setShowGraphIds }) => {
   const dropdownOptions = [
     { key: 1, text: 'Highest bid', value: 'highest_bid' },
     { key: 2, text: 'Lowest bid', value: 'lowest_bid' },
@@ -69,26 +70,54 @@ const CardList = ({ auctions, className, sold, showGraphIds, setShowGraphIds }) 
         />
       </div>
       {auctionsIsLoaded ? (
-        <>
-          {auctions && auctions.length ? (
-            <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
-              {auctions.map((auction) => {
-                const garment = garmentsById.get(auction.id);
-                return (
-                  <CardProduct
-                    key={auction.id}
-                    history={historyByTokenId.get(auction.id)}
-                    garment={garment}
-                    showGraphIds={showGraphIds}
-                    setShowGraphIds={setShowGraphIds}
-                  />
-                );
-              })}
-            </ul>
-          ) : (
-            <Loader size="large" className={styles.loader} />
-          )}
-        </>
+        <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
+          {auctions.map((auction) => {
+            const garment = garmentsById.get(auction.id);
+            return (
+              <CardProduct
+                key={garment.id}
+                history={historyByTokenId.get(garment.id)}
+                auctionId={auction.id}
+                garment={garment}
+                showGraphIds={showGraphIds}
+                setShowGraphIds={setShowGraphIds}
+                tabIndex={0}
+              />
+            );
+          })}
+          {collections
+            .filter((collection) => collection.rarity === SEMI_RARE_RARITY)
+            .map((collection) => {
+              const garment = collection.garments[0];
+              return (
+                <CardProduct
+                  key={garment.id}
+                  history={historyByTokenId.get(garment.id)}
+                  auctionId={collection.garmentAuctionID}
+                  garment={garment}
+                  showGraphIds={showGraphIds}
+                  setShowGraphIds={setShowGraphIds}
+                  tabIndex={1}
+                />
+              );
+            })}
+          {collections
+            .filter((collection) => collection.rarity === COMMON_RARITY)
+            .map((collection) => {
+              const garment = collection.garments[0];
+              return (
+                <CardProduct
+                  key={garment.id}
+                  history={historyByTokenId.get(garment.id)}
+                  auctionId={collection.garmentAuctionID}
+                  garment={garment}
+                  showGraphIds={showGraphIds}
+                  setShowGraphIds={setShowGraphIds}
+                  tabIndex={2}
+                />
+              );
+            })}{' '}
+        </ul>
       ) : (
         <Loader size="large" className={styles.loader} />
       )}
@@ -98,6 +127,7 @@ const CardList = ({ auctions, className, sold, showGraphIds, setShowGraphIds }) 
 
 CardList.propTypes = {
   auctions: PropTypes.array.isRequired,
+  collections: PropTypes.array.isRequired,
   className: PropTypes.string,
   showGraphIds: PropTypes.array,
   setShowGraphIds: PropTypes.func,
@@ -107,7 +137,6 @@ CardList.propTypes = {
 CardList.defaultProps = {
   className: '',
   showGraphIds: [],
-  sold: false,
   setShowGraphIds: () => {},
 };
 

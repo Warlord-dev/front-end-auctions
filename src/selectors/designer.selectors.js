@@ -5,7 +5,7 @@ export const getDesignerById = (id) => (state) =>
   state.designer.getIn(['designersById', id]) || null;
 export const getDesignerGarmentIds = () => (state) => state.designer.get('designerGarmentIds');
 export const getDesignerInfoById = (id) => (state) =>
-  state.designer.get('infoByDesignerId').find((item) => item.id.toLowerCase() === id.toLowerCase());
+  state.designer.get('infoByDesignerId').find((item) => item.ids && item.ids.find(itemId => itemId.toLowerCase() === id.toLowerCase()));
 export const getAllDesigners = () => (state) => state.designer.get('infoByDesignerId');
 export const getDesignerInfoByName = (name, isEqualCheck = false) => (state) =>
   state.designer

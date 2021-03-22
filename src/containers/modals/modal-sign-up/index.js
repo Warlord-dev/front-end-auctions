@@ -11,22 +11,23 @@ import { closeSignupModal } from '@actions/modals.actions';
 import userActions from '@actions/user.actions';
 
 import { getAccount, getIsLoading } from '@selectors/user.selectors';
+import { getModalParams } from '@selectors/modal.selectors';
 
 import styles from './styles.module.scss';
 import { useSignMessage, useUserNameAvailable, useMyIP } from '@hooks/espa/user.hooks';
 
-const ModalSignUp = ({ className, title, textForIcon, icon }) => {
+const ModalSignUp = ({ className, title }) => {
   const dispatch = useDispatch();
+  const params = useSelector(getModalParams);
 
   const [userName, setUserName] = useState('');
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(params?.email);
 
   const account = useSelector(getAccount);
   const isLoading = useSelector(getIsLoading);
   const signMsg = useSignMessage(account);
   const isUserNameAvailable = useUserNameAvailable(userName);
-  let myIP = null;
-  if (!signMsg) myIP = useMyIP();
+  let myIP = useMyIP();
 
   const handleClose = () => {
     dispatch(closeSignupModal());
@@ -87,7 +88,11 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
                     </div>
                     <div className={styles.inputItem}>
                       <label>EMAIL</label>
-                      <input value={email} onChange={(e) => setEmail(e.target.value)} />
+                      <input
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        disabled={params?.email}
+                      />
                     </div>
                   </>
                 ))}
@@ -114,15 +119,11 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
 ModalSignUp.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
-  textForIcon: PropTypes.string,
-  icon: PropTypes.string,
 };
 
 ModalSignUp.defaultProps = {
   className: '',
   title: 'CREATE AN ACCOUNT',
-  textForIcon: 'Metamask',
-  icon: './images/icons/metamask.svg',
 };
 
 export default ModalSignUp;

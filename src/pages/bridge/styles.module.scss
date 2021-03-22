@@ -1,11 +1,17 @@
+.bridgeContainer {
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
+}
+
 .bridgeWrapper {
   position: absolute;
   background: #f7f7f7;
   width: 650px;
   left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  padding: 30px 150px 80px;
+  top: 100px;
+  transform: translateX(-50%);
+  padding: 30px 150px 50px;
   text-align: center;
 }
 
@@ -76,4 +82,57 @@
 
 .maticColor {
   color: #ea882d;
+}
+
+.withdrawalWrapper {
+  position: absolute;
+  background: #f7f7f7;
+  width: 650px;
+  left: 50%;
+  top: 600px;
+  transform: translate3d(-50%, 0, 0);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.withdrawalRow {
+  display: flex;
+  height: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-style: none none dashed;
+  margin-top: 6px;
+}
+
+.withdrawalHeader {
+  display: flex;
+  color: #4f2dea;
+  height: 40px;
+}
+
+.withdrawalRowItem {
+  width: 25%;
+  text-align: center;
+}
+
+.withdrawButton {
+  width: 80%;
+  height: 24px;
+  background: #111111;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.withdrawText {
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 1px 1px #000000;
+  margin: auto;
 }

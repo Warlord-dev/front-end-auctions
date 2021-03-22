@@ -21,8 +21,9 @@ const ModalRaiseBid = ({
   const requests = useRef([]);
   const { id, priceEth, withdrawValue } = useSelector(getModalParams);
   const minBidIncrement = useSelector(getMinBidIncrement);
-  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
-  const [inputPriceEth, setInputPriceEth] = useState(minBid);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(new BigNumber(minBidIncrement));
+  const [inputPriceMona, setInputPriceMona] = useState(minBid);
   const [showError, setShowError] = useState(null);
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -32,7 +33,7 @@ const ModalRaiseBid = ({
 
   const handleClick = () => {
 
-    if (minBid.toNumber() > Number(inputPriceEth)) {
+    if (minBid.toNumber() > Number(inputPriceMona)) {
       setShowError(`You must bid at least ${minBidIncrement} higher than the current highest bid`);
       return;
     }
@@ -40,7 +41,7 @@ const ModalRaiseBid = ({
     setShowError(null);
     setIsDisabled(true);
 
-    dispatch(bidActions.bid(id, inputPriceEth)).then((request) => {
+    dispatch(bidActions.bid(id, Number(inputPriceMona), monaPerEth)).then((request) => {
       requests.current.push(request);
       request.promise
         .then(() => handleClose())
@@ -63,19 +64,19 @@ const ModalRaiseBid = ({
           <div className={styles.footer}>
             <p>
               <span className={styles.footerSubtitle}>{yourBidText}</span>
-              <span className={styles.footerSubtitleValue}>{withdrawValue} Ξ</span>
+              <span className={styles.footerSubtitleValue}>{Math.floor(withdrawValue * monaPerEth * 10000) / 10000} MONA</span>
             </p>
             <p className={styles.caption}>
               <span>{textForSelect}</span>
-              <span> {minBid.toString(10)} Ξ</span>
+              <span> {minBid.toString(10)} MONA</span>
             </p>
             <div className={styles.selectWrapper}>
               <div>
                 <InputWithArrows
                   minBidIncrement={minBidIncrement}
-                  onChange={setInputPriceEth}
+                  onChange={setInputPriceMona}
                   className={styles.inputWithArrows}
-                  value={inputPriceEth}
+                  value={inputPriceMona}
                 />
                 {showError && <p className={styles.error}>{showError}</p>}
               </div>
@@ -104,7 +105,7 @@ ModalRaiseBid.defaultProps = {
   className: '',
   title: 'Raise Bid',
   // eslint-disable-next-line max-len
-  text: ['Your Ξ will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. ', 'If you are successful in winning the auction (i.e. the highest bidder at auction end) then your bidded Ξ will be transferred to the designer’s account. If you are unsuccessful (i.e. not highest bidder at auction end) then they will be released back to your connected wallet.'],
+  text: ['Your MONA will be escrowed into a Smart Contract until the live auction ends or you choose to withdraw it. ', 'If you are successful in winning the auction (i.e. the highest bidder at auction end) then your bidded MONA will be transferred to the designer’s account. If you are unsuccessful (i.e. not highest bidder at auction end) then they will be released back to your connected wallet.'],
   yourBidText: 'Your Bid:',
   textForSelect: 'Minimum Bid:',
   buttonText: 'RAISE BID',

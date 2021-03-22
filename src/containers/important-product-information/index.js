@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import Router from 'next/router';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import BigNumber from 'bignumber.js';
@@ -27,13 +28,17 @@ import {
   getExchangeRateETH,
   getMinBidIncrement,
   getBidWithdrawalLockTime,
+  getMonaPerEth,
 } from '@selectors/global.selectors';
 import { useAPY } from '@hooks/apy.hooks';
+import { utils as ethersUtils } from 'ethers';
 
 import styles from './styles.module.scss';
 
 const ImportantProductInformation = ({
-  clothesId,
+  auctionId,
+  tabIndex,
+  garment,
   estimateApyText,
   buttonTextPlace,
   buttonTextRaise,
@@ -44,15 +49,17 @@ const ImportantProductInformation = ({
 }) => {
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
+  const clothesId = garment.id;
 
-  const auction = useSelector(getAuctionById(clothesId));
+  const auction = useSelector(getAuctionById(auctionId));
   const history = useSelector(getHistoryByTokenId(clothesId));
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
   const [isShowHint, setIsShowHint] = useState(false);
 
-  const estimateApy = useAPY(auction ? auction.topBid : 0);
+  const estimateApy = useAPY(garment.primarySalePrice);
 
   const [, updateState] = React.useState(0);
   const timer = useRef(null);
@@ -72,8 +79,6 @@ const ImportantProductInformation = ({
     return null;
   }
 
-  const priceEth = convertToEth(auction.topBid);
-  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
   const expirationDate = auction.endTime * 1000;
 
   const timeOut = new Date(expirationDate) - new Date() + 1000;
@@ -86,23 +91,24 @@ const ImportantProductInformation = ({
   ];
 
   if (timeOut > 0) {
-    timerToSoldButton.current = setTimeout(
-      () => updateState(Date.now()),
-      timeOut,
-    );
+    timerToSoldButton.current = setTimeout(() => updateState(Date.now()), timeOut);
   } else {
     showSoldButton = true;
   }
 
   const sortedHistory = history
     .filter(
-      (item) => account
-        && item.bidder
-        && [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(
-          item.eventName,
-        ),
+      (item) =>
+        account &&
+        item.bidder &&
+        [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName)
     )
     .sort((a, b) => b.timestamp - a.timestamp);
+
+  const priceEth = convertToEth(
+    sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
+  );
+  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(new BigNumber(minBidIncrement));
 
   let isMakeBid = false;
   let withdrawValue = 0;
@@ -111,8 +117,8 @@ const ImportantProductInformation = ({
     const lastEvent = sortedHistory[0];
 
     if (
-      lastEvent.bidder.id.toLowerCase() === account.toLowerCase()
-      && lastEvent.eventName === HISTORY_BID_PLACED_EVENT
+      lastEvent.bidder.id.toLowerCase() === account.toLowerCase() &&
+      lastEvent.eventName === HISTORY_BID_PLACED_EVENT
     ) {
       const timeDiff = Date.now() - lastEvent.timestamp * 1000;
 
@@ -121,7 +127,7 @@ const ImportantProductInformation = ({
       } else if (bidWithdrawalLockTime - timeDiff / 1000 > 0) {
         timer.current = setTimeout(
           () => updateState(Date.now()),
-          (bidWithdrawalLockTime - timeDiff / 1000) * 1000,
+          (bidWithdrawalLockTime - timeDiff / 1000) * 1000
         );
       }
 
@@ -129,17 +135,13 @@ const ImportantProductInformation = ({
     }
 
     const mySortedHistory = sortedHistory.filter(
-      (item) => account
-        && item.bidder
-        && item.bidder.id.toLowerCase() === account.toLowerCase(),
+      (item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase()
     );
 
     if (mySortedHistory.length) {
       const myLastEvent = mySortedHistory[0];
 
-      isMakeBid = !!mySortedHistory.find(
-        (item) => item.eventName === HISTORY_BID_PLACED_EVENT,
-      );
+      isMakeBid = !!mySortedHistory.find((item) => item.eventName === HISTORY_BID_PLACED_EVENT);
 
       if (myLastEvent.eventName === HISTORY_BID_PLACED_EVENT) {
         withdrawValue = myLastEvent.value;
@@ -161,7 +163,7 @@ const ImportantProductInformation = ({
         id: clothesId,
         priceEth,
         withdrawValue: convertToEth(withdrawValue),
-      }),
+      })
     );
   };
 
@@ -170,13 +172,13 @@ const ImportantProductInformation = ({
       openWithdrawModal({
         id: clothesId,
         withdrawValue: convertToEth(withdrawValue),
-      }),
+      })
     );
   };
 
   const getPriceUsd = (valueEth) => {
     const priceUsd = valueEth * exchangeRateETH;
-    return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
+    return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
   };
 
   return (
@@ -188,10 +190,12 @@ const ImportantProductInformation = ({
     >
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{priceEth} Ξ</span>
+          <span className={styles.priceEth}>
+            {Math.round((priceEth * monaPerEth) * 10000) / 10000} $MONA
+          </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
-        <p className={styles.estimateWrapper}>
+        {/* <p className={styles.estimateWrapper}>
           <span className={styles.estimateApy}>{estimateApy}%</span>
           <span className={styles.estimateApyTextWrapper}>
             <span className={styles.estimateApyText}>{estimateApyText}</span>
@@ -204,7 +208,7 @@ const ImportantProductInformation = ({
             </span>
           </span>
           {isShowHint && <span className={styles.hint}>{hintText}</span>}
-        </p>
+        </p> */}
       </div>
       {styleTypeBlock === 'smallWhite' && (
         <div className={styles.linkStyle}>
@@ -216,48 +220,64 @@ const ImportantProductInformation = ({
         </div>
       )}
       <div className={styles.footerBoxRight}>
-        <Timer className={styles.timer} expirationDate={expirationDate} />
-        <p className={styles.expirationDateText}>{expirationDateText}</p>
-        {!showSoldButton ? (
+        {tabIndex === 0 ? (
           <>
-            {isMakeBid && priceEth > 0 ? (
-              <Button
-                onClick={() => handleClickRaiseBid()}
-                className={styles.button}
-                background="black"
-              >
-                <span className={styles.buttonText}>{buttonTextRaise}</span>
-                {styleTypeBlock === 'largeTransparent' && (
-                  <span className={styles.buttonGray}>
-                    (need min {minBid.toString(10)}Ξ to compete)
-                  </span>
+            <Timer className={styles.timer} expirationDate={expirationDate} />
+            <p className={styles.expirationDateText}>{expirationDateText}</p>
+            {!showSoldButton ? (
+              <>
+                {isMakeBid && priceEth > 0 ? (
+                  <Button
+                    onClick={() => handleClickRaiseBid()}
+                    className={styles.button}
+                    background="black"
+                  >
+                    <span className={styles.buttonText}>{buttonTextRaise}</span>
+                    {styleTypeBlock !== 'smallWhite' && (
+                      <span className={styles.buttonGray}>
+                        (need min {minBid.toString(10)}MONA to compete)
+                      </span>
+                    )}
+                  </Button>
+                ) : (
+                  <Button
+                    onClick={() => handleClickPlaceBid()}
+                    className={styles.button}
+                    background="black"
+                  >
+                    <span className={styles.buttonText}>{buttonTextPlace}</span>
+                    {styleTypeBlock !== 'smallWhite' && (
+                      <span className={styles.buttonGray}>
+                        (need min {minBid.toString(10)}MONA to compete)
+                      </span>
+                    )}
+                  </Button>
                 )}
-              </Button>
+                {canShowWithdrawBtn && (
+                  <div className={styles.wrapperButtonWithdraw}>
+                    <TextButton onClick={() => handleClickWithdrawBid()}>
+                      {buttonTextWithdraw}
+                    </TextButton>
+                  </div>
+                )}
+              </>
             ) : (
               <Button
-                onClick={() => handleClickPlaceBid()}
-                className={styles.button}
+                className={styles.buttonSold}
                 background="black"
+                onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
               >
-                <span className={styles.buttonText}>{buttonTextPlace}</span>
-                {styleTypeBlock === 'largeTransparent' && (
-                  <span className={styles.buttonGray}>
-                    (need min {minBid.toString(10)}Ξ to compete)
-                  </span>
-                )}
+                <span>SOLD</span>
               </Button>
-            )}
-            {canShowWithdrawBtn && (
-              <div className={styles.wrapperButtonWithdraw}>
-                <TextButton onClick={() => handleClickWithdrawBid()}>
-                  {buttonTextWithdraw}
-                </TextButton>
-              </div>
             )}
           </>
         ) : (
-          <Button className={styles.buttonSold} background="black">
-            <span>SOLD</span>
+          <Button
+            className={styles.button}
+            background="black"
+            onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
+          >
+            <span>BUY NOW</span>
           </Button>
         )}
       </div>
@@ -266,7 +286,9 @@ const ImportantProductInformation = ({
 };
 
 ImportantProductInformation.propTypes = {
-  clothesId: PropTypes.string.isRequired,
+  auctionId: PropTypes.string.isRequired,
+  tabIndex: PropTypes.number,
+  garment: PropTypes.object.isRequired,
   estimateApyText: PropTypes.string,
   buttonTextPlace: PropTypes.string,
   buttonTextRaise: PropTypes.string,
@@ -277,6 +299,7 @@ ImportantProductInformation.propTypes = {
 };
 
 ImportantProductInformation.defaultProps = {
+  tabIndex: 0,
   estimateApyText: 'Estimate APY',
   buttonTextPlace: 'Place a Bid',
   buttonTextRaise: 'Raise a Bid',

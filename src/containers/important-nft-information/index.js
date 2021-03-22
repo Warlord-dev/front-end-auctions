@@ -42,14 +42,14 @@ const ImportantNFTInformation = ({ nft, nftId }) => {
 
   const getPriceUsd = (valueEth) => {
     const priceUsd = valueEth * exchangeRateETH;
-    return (Math.trunc(priceUsd * 100) / 100).toLocaleString('en');
+    return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
   };
 
   return (
     <div className={styles.smallWhite}>
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{priceEth} Ξ</span>
+          <span className={styles.priceEth}>{priceEth} MONA</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
       </div>

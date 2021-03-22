@@ -1,13 +1,12 @@
-import Web3 from 'web3';
-import { isMetamaskInstalled } from '@services/metamask.service';
-import config from '@utils/config';
 import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
 import { getUSDTAddressByChainId } from './network.service';
 import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json';
+import Web3 from 'web3';
+import { isMetamaskInstalled } from './metamask.service';
+import config from '@utils/config';
 
 export const getMarketplaceContract = async (ContractAddress) => {
-  const web3 = new Web3(window.ethereum);
   const jsonInterface = [
     {
       inputs: [
@@ -21,13 +20,12 @@ export const getMarketplaceContract = async (ContractAddress) => {
     },
   ];
 
-  const contract = await new web3.eth.Contract(jsonInterface, ContractAddress);
+  const contract = await new window.web3.eth.Contract(jsonInterface, ContractAddress);
 
   return contract;
 };
 
 export const getMonaTokenContract = async (ContractAddress) => {
-  const web3 = new Web3(window.ethereum);
   const jsonInterface = [
     {
       inputs: [
@@ -247,7 +245,7 @@ export const getMonaTokenContract = async (ContractAddress) => {
     },
   ];
 
-  const contract = await new web3.eth.Contract(jsonInterface, ContractAddress);
+  const contract = await new window.web3.eth.Contract(jsonInterface, ContractAddress);
 
   return contract;
 };
@@ -261,7 +259,6 @@ export const getUSDTContract = async (chainId) => {
 };
 
 export const getContract = async (auctionContractAddress) => {
-  const web3 = new Web3(window.ethereum);
   const jsonInterface = [
     {
       inputs: [
@@ -269,6 +266,11 @@ export const getContract = async (auctionContractAddress) => {
           internalType: 'uint256',
           name: '_garmentTokenId',
           type: 'uint256',
+        },
+        {
+          internalType: 'uint256',
+          name: '_monaAmount',
+          type: 'uint256'
         },
       ],
       name: 'placeBid',
@@ -291,14 +293,12 @@ export const getContract = async (auctionContractAddress) => {
     },
   ];
 
-  const contract = await new web3.eth.Contract(jsonInterface, auctionContractAddress);
+  const contract = await new window.web3.eth.Contract(jsonInterface, auctionContractAddress);
 
   return contract;
 };
 
 export const getRewardContract = async (contractAddress) => {
-  const web3 = new Web3(isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL);
-
   const jsonInterface = [
     {
       inputs: [
@@ -319,15 +319,18 @@ export const getRewardContract = async (contractAddress) => {
     },
   ];
 
-  const contract = await new web3.eth.Contract(jsonInterface, contractAddress);
+  const contract = await new window.web3.eth.Contract(jsonInterface, contractAddress);
 
   return contract;
 };
 
 export const getQuickSwapRouterContract = async () => {
-  const web3 = new Web3(isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL);
+  // const web3 = new Web3(isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL);
 
-  const contract = await new web3.eth.Contract(IUniswapV2Router02ABI, config.QUICKSWAP_ROUTER);
+  const contract = await new window.web3.eth.Contract(
+    IUniswapV2Router02ABI,
+    config.QUICKSWAP_ROUTER
+  );
 
   return contract;
 };
@@ -341,7 +344,6 @@ export const getTokenPrice = async (contractAddress) => {
   );
 
   const monaToken = createUniswapPair(contractAddress, provider);
-
   const price = await monaToken.getPrice();
 
   return price;

@@ -16,41 +16,46 @@ import { useSubscription } from '@hooks/subscription.hooks';
 const Products = () => {
   const router = useRouter();
   const { id } = router.query;
+  const garmentId = id.slice(0, id.length - 1);
+  const tabIndex = parseInt(id.slice(id.length - 1));
+
+  if (tabIndex > 2) {
+    return null;
+  }
 
   const dispatch = useDispatch();
-  const garment = useSelector(getGarmentsById(id));
+  const garment = useSelector(getGarmentsById(garmentId));
   const collections = useSelector(getAllCollections);
   const marketplaceOffers = useSelector(getAllMarketplaceOffers);
   const chainId = useSelector(getChainId);
-
   const currentCollections = useMemo(() => {
     const jsCollection = collections.toJS();
-    return jsCollection.filter((val) => val.garmentAuctionID === id);
+    return jsCollection.filter((val) => val.garmentAuctionID === garmentId);
   }, [collections]);
 
   const currentMarketplaceOffers = useMemo(() => {
     const jsOffers = marketplaceOffers.toJS();
-    return jsOffers.filter((val) => val.garmentCollection.garmentAuctionID === id);
+    return jsOffers.filter((val) => val.garmentCollection.garmentAuctionID === garmentId);
   }, [marketplaceOffers]);
-
+  
   useSubscription(
     {
-      request: wsApi.onAuctionsChangeByIds([id]),
+      request: wsApi.onAuctionsChangeByIds([garmentId]),
       next: (data) => {
         dispatch(auctionActions.mapData(data.digitalaxGarmentAuctions));
       },
     },
-    [chainId, id]
+    [chainId, garmentId]
   );
 
   useSubscription(
     {
-      request: wsApi.onDigitalaxGarmentsCollectionChange(id),
+      request: wsApi.onDigitalaxGarmentsCollectionChange(garmentId),
       next: (data) => {
         dispatch(collectionActions.mapData(data.digitalaxGarmentCollections));
       },
     },
-    [chainId, id]
+    [chainId, garmentId]
   );
 
   useSubscription(
@@ -75,21 +80,21 @@ const Products = () => {
 
   useSubscription(
     {
-      request: wsApi.onAuctionsHistoryByIds([id]),
+      request: wsApi.onAuctionsHistoryByIds([garmentId]),
       next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
     },
-    [chainId, id]
+    [chainId, garmentId]
   );
 
   useSubscription(
     {
-      request: wsApi.onMarketplaceHistoryByIds([id]),
+      request: wsApi.onMarketplaceHistoryByIds([garmentId]),
       next: (data) =>
         dispatch(
           historyActions.updateMarketplaceHistories(data.digitalaxMarketplacePurchaseHistories)
         ),
     },
-    [chainId, id]
+    [chainId, garmentId]
   );
 
   useEffect(
@@ -110,6 +115,7 @@ const Products = () => {
   return (
     <PageProduct
       clothesId={garment.id}
+      tabIndex={tabIndex}
       designerId={designerId}
       currentCollections={currentCollections}
       currentMarketplaceOffers={currentMarketplaceOffers}

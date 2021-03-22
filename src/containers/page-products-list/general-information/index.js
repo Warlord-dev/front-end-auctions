@@ -13,7 +13,7 @@ import styles from './styles.module.scss';
 const HIGHEST_APY = 'Highest APY';
 
 const GeneralInformation = ({ title, timestamp, list, history }) => {
-  const monaPerEth = useSelector(getMonaPerEth);
+  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
   const options = getMainPageChartOptions(history, monaPerEth);
 
   return (
@@ -28,7 +28,7 @@ const GeneralInformation = ({ title, timestamp, list, history }) => {
                 <span>{description}</span>
                 <span className={styles.value}>
                   {value.toLocaleString('en')}
-                  {description === HIGHEST_APY ? '%' : ' Ξ'}
+                  {description === HIGHEST_APY ? '%' : ' MONA'}
                 </span>
               </li>
             ))}

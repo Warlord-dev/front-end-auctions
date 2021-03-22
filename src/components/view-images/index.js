@@ -74,6 +74,7 @@ const ViewImages = ({
                   {...{
                     smallImage: {
                       src: create2KURL(largeImage.image),
+                      isFluidWidth: true,
                     },
                     largeImage: {
                       src: create2KURL(largeImage.image),

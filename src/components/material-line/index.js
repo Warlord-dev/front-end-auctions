@@ -88,7 +88,7 @@ const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
   };
 
   const renderArtistName = (name) => {
-    if (!name) return 'ROBNΞSS';
+    if (!name) return 'ROBNESS';
     else {
       switch (name) {
         case 'SphericalArt':
@@ -99,8 +99,6 @@ const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
       return name;
     }
   };
-
-  console.log('tokenInfo:', tokenInfo);
 
   return (
     <ul className={className}>
