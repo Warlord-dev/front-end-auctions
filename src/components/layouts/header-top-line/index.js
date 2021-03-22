@@ -10,6 +10,8 @@ import { getUser } from '@selectors/user.selectors';
 import { getChainId } from '@selectors/global.selectors';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
+
+import { useMonaBalance } from '@hooks/useMonaBalance';
 import Logo from './logo';
 import styles from './styles.module.scss';
 
@@ -18,6 +20,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
   let isMumbai = chainId === '0x13881';
+
+  const [_, monaBalance] = useMonaBalance();
+
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }
@@ -119,6 +124,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
                 </button>
               </div>
             )}
+            <span>Mona Balance: {monaBalance}</span>
           </div>
         ) : (
           <Button onClick={() => handleClick()}>{buttonText}</Button>
