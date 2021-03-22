@@ -68,7 +68,7 @@ export function useQuickSwap() {
         .swapExactTokensForTokens(
           ethers.utils.parseUnits(firstAmount, toMona ? 6 : 18),
           ethers.utils.parseUnits(
-            (parseFloat(secondAmount) * (100 - slippage)) / 100 + '',
+            ((parseFloat(secondAmount) * (100 - slippage)) / 100).toFixed(toMona ? 18 : 6) + '',
             toMona ? 18 : 6
           ),
           path,

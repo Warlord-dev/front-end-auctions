@@ -31,8 +31,8 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const wrongNetworkText =
     pathname !== '/bridge' && pathname !== '/bridge/deposit'
-      ? 'Please switch to Mainnet'
-      : 'Please switch to Matic Network';
+      ? 'Please switch to Matic Network'
+      : 'Please switch to Mainnet';
 
   const [_, monaBalance] = useMonaBalance();
 

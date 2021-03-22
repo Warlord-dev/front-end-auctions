@@ -58,6 +58,6 @@
   },
   "EXCHANGE_API": "https://api.coingecko.com/api/v3",
   "IMGIX_URL": "digitalax.imgix.net",
-  "TIME_INTERVAL": 10000,
+  "TIME_INTERVAL": 5000,
   "QUICKSWAP_ROUTER": "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff"
 }

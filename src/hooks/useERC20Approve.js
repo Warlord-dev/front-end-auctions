@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { MaxUint256 } from '@ethersproject/constants';
@@ -6,7 +6,6 @@ import { MaxUint256 } from '@ethersproject/constants';
 import { getAccount } from '@selectors/user.selectors';
 import config from '@utils/config';
 import { getChainId } from '@selectors/global.selectors';
-import { getEnabledNetworkByChainId } from '@services/network.service';
 import { getMonaTokenContract, getUSDTContract } from '@services/contract.service';
 import { useIsMainnet } from './useIsMainnet';
 import usePollar from './usePollar';
@@ -18,9 +17,12 @@ export function useTokenAllowance(isMona = true) {
   const isMainnet = useIsMainnet();
   const chainId = useSelector(getChainId);
 
+  const approveMonaRef = useRef(isMona);
+  approveMonaRef.current = isMona;
+
   const fetchAllowance = useCallback(async () => {
     if (account && chainId) {
-      const contract = isMona
+      const contract = approveMonaRef.current
         ? await getMonaTokenContract(config.MONA_TOKEN_ADDRESSES[isMainnet ? 'matic' : 'mumbai'])
         : await getUSDTContract(chainId);
 
@@ -53,9 +55,13 @@ export default function useERC20Approve(amount, isMona) {
     }
   }, [amount, allowance, isMona]);
 
+  const isMainnet = useIsMainnet();
+  const isMonaRef = useRef(isMona);
+  isMonaRef.current = isMona;
+
   const approveCallback = useCallback(async () => {
     if (account && chainId) {
-      const contract = isMona
+      const contract = isMonaRef.current
         ? await getMonaTokenContract(config.MONA_TOKEN_ADDRESSES[isMainnet ? 'matic' : 'mumbai'])
         : await getUSDTContract(chainId);
 
