@@ -72,11 +72,15 @@
   @include reset-button();
   @include active();
   border: 1px solid #e6e6e6;
+  background: white;
   border-radius: 0;
   box-shadow: none;
   padding: 10px 16px;
   width: 100%;
   top: 100%;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .hashAddress {
