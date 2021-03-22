@@ -34,7 +34,7 @@
 }
 
 .swapIcon {
-  margin: 20px;
+  margin: 10px;
 }
 
 .balance {
@@ -66,4 +66,10 @@
   color: #ffffff;
   text-shadow: 1px 1px #000000;
   margin: auto;
+}
+
+.exchangeButton {
+  height: 24px;
+  display: flex;
+  align-items: center;
 }

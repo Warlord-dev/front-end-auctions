@@ -19,8 +19,38 @@ export const useCheckInclusion = (txIds) => {
     );
     const web3 = new Web3(provider);
 
+    const chil_provider = new Web3.providers.HttpProvider(
+      isMainnet ? config.WEB3_URLS.MUMBAI : config.WEB3_URLS.MUMBAI
+    );
+    const child_web3 = new Web3(chil_provider);
+
     async function checkInclusion(txHash) {
-      const txDetails = await web3.eth.getTransactionReceipt(txHash);
+      const txDetails = await child_web3.eth.getTransactionReceipt(txHash);
+      console.log('tx details', txDetails);
+
+      web3.eth.subscribe(
+        'logs',
+        {
+          address: '0xBbD7cBFA79faee899Eaf900F13C9065bF03B1A74',
+        },
+        async (error, result) => {
+          if (error) {
+            console.error('error', error);
+          }
+
+          console.log('result', result);
+          if (result && result.data) {
+            let transaction = web3.eth.abi.decodeParameters(
+              ['uint256', 'uint256', 'bytes32'],
+              result.data
+            );
+            if (block <= transaction['1']) {
+              resolve(result);
+            }
+          }
+        }
+      );
+
       return !txDetails;
     }
 

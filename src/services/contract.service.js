@@ -3,6 +3,8 @@ import { create as createUniswapPair } from '@helpers/uniswap.helpers';
 import { getUSDTAddressByChainId } from './network.service';
 import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json';
 import Web3 from 'web3';
+import { isMetamaskInstalled } from './metamask.service';
+import config from '@utils/config';
 
 export const getMarketplaceContract = async (ContractAddress) => {
   const jsonInterface = [
@@ -318,9 +320,14 @@ export const getRewardContract = async (contractAddress) => {
 };
 
 export const getQuickSwapRouterContract = async () => {
-  const web3 = new Web3(isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL);
+  // const web3 = new Web3(isMetamaskInstalled() ? window.ethereum : config.DEFAULT_WEB3_URL);
 
-  const contract = await new web3.eth.Contract(IUniswapV2Router02ABI, config.QUICKSWAP_ROUTER);
+  console.log('asdf', IUniswapV2Router02ABI);
+
+  const contract = await new window.web3.eth.Contract(
+    IUniswapV2Router02ABI,
+    config.QUICKSWAP_ROUTER
+  );
 
   return contract;
 };

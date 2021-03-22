@@ -16,14 +16,14 @@ export default function Bridge() {
   const profile = useSelector(getUser);
   const withdrawalTxs = (profile?.withdrawalTxs || []).filter((p) => p.amount);
 
-  console.log(withdrawalTxs);
+  // console.log(withdrawalTxs);
 
-  const withdrawalStatuses = useCheckInclusion(withdrawalTxs.map((w) => w.txHash));
+  // const withdrawalStatuses = useCheckInclusion(withdrawalTxs.map((w) => w.txHash));
 
   const exitCallback = useExitFromMatic();
 
   return (
-    <>
+    <div classNam={styles.bridgeContainer}>
       <div className={styles.bridgeWrapper}>
         <div className={styles.bridgeTitle}>MATIC-ETH BRIDGE</div>
         <div>
@@ -59,16 +59,18 @@ export default function Bridge() {
           <div className={styles.withdrawalRowItem}>Status</div>
           <div className={styles.withdrawalRowItem}>Withdraw</div>
         </div>
-        {withdrawalTxs.map((tx, index) => (
+        {withdrawalTxs.map((tx) => (
           <div className={styles.withdrawalRow}>
             <div className={styles.withdrawalRowItem}>
               <TimeAgo date={new Date(tx.created)} />
             </div>
             <div className={styles.withdrawalRowItem}>{tx.amount}</div>
             <div className={styles.withdrawalRowItem}>
-              {withdrawalStatuses[index] ? 'Pending Withdrawal' : 'Processing'}
+              {Date.now() - new Date(tx.created).getTime() >= 10800
+                ? 'Pending Withdrawal'
+                : 'Processing'}
             </div>
-            {withdrawalStatuses[index] && (
+            {Date.now() - new Date(tx.created).getTime() >= 10800 && (
               <div className={styles.withdrawalRowItem}>
                 <button
                   className={styles.withdrawButton}
@@ -83,6 +85,6 @@ export default function Bridge() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }

@@ -1,9 +1,15 @@
+.bridgeContainer {
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
+}
+
 .bridgeWrapper {
   position: absolute;
   background: #f7f7f7;
   width: 650px;
   left: 50%;
-  top: 120px;
+  top: 100px;
   transform: translateX(-50%);
   padding: 30px 150px 50px;
   text-align: center;

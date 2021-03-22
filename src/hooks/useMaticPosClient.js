@@ -20,6 +20,9 @@ export default function useMaticPosClient() {
       setPosClientParent(
         new MaticPOSClient({
           parentProvider: web3,
+          maticProvider: new Web3.providers.HttpProvider(
+            isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI
+          ),
           parentDefaultOptions: { from: account },
           maticDefaultOptions: { from: account },
         })
