@@ -161,7 +161,7 @@ const PageProductsList = ({ collectionId }) => {
         history={monthResultedAuctions}
       />
       <CardList
-        auctions={collectionId === '2' ? currentAuctions : []}
+        auctions={collectionId === '1' ? currentAuctions : []}
         collections={
           collectionId === '1'
             ? currentCollections.filter(
