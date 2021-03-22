@@ -22,7 +22,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   let isMumbai = chainId === '0x13881';
 
   const [_, monaBalance] = useMonaBalance();
-  console.log(monaBalance);
+
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }

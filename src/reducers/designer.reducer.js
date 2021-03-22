@@ -436,7 +436,7 @@ const DEFAULT_FIELDS = Map({
     },
     {
       id: '108',
-      ids: ['108', '3', '10', '14', '4', '64', '57', '5', '74', '67', '6', '84', '77'],
+      ids: ['108', '1717', '1718', '1719', '1720', '1721', '1722', '1746', '1810', '2346', '2347', '2348', '2349', '2350', '2628', '2629', '2630', '2631', '2632', '3', '4', '5', '6', '1874', '1938', '2002', '2130', '2258', '2351', '2479'],
       designerName: 'Kodomodachi',
       designerPhoto: './images/QmSfpPJJhS4MEEt912qB2fg8JdGj5VKrVUXDoEyGoQtAHk.png',
       descriptionDesigner: [
@@ -447,8 +447,8 @@ const DEFAULT_FIELDS = Map({
       designerSocialMedia: List([]),
     },
     {
-      id: '109',
-      ids: ['109'],
+      id: '2607',
+      ids: ['2607'],
       designerName: 'Digitalax',
       designerPhoto: './images/logo.jpg',
       descriptionDesigner: [''],
