@@ -19,6 +19,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
+  console.log('---chainId', chainId);
   let isMumbai = chainId === '0x13881';
 
   const [_, monaBalance] = useMonaBalance();

@@ -22,7 +22,7 @@ const ModalRaiseBid = ({
   const { id, priceEth, withdrawValue } = useSelector(getModalParams);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const monaPerEth = 1.32; // useSelector(getMonaPerEth);
-  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 100) / 100).plus(new BigNumber(minBidIncrement));
+  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(new BigNumber(minBidIncrement));
   const [inputPriceMona, setInputPriceMona] = useState(minBid);
   const [showError, setShowError] = useState(null);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -64,7 +64,7 @@ const ModalRaiseBid = ({
           <div className={styles.footer}>
             <p>
               <span className={styles.footerSubtitle}>{yourBidText}</span>
-              <span className={styles.footerSubtitleValue}>{Math.floor(withdrawValue * monaPerEth * 100) / 100} MONA</span>
+              <span className={styles.footerSubtitleValue}>{Math.floor(withdrawValue * monaPerEth * 10000) / 10000} MONA</span>
             </p>
             <p className={styles.caption}>
               <span>{textForSelect}</span>
