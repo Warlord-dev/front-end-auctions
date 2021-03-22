@@ -21,24 +21,22 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   const [isDisabled, setIsDisabled] = useState(false);
   const [showError, setShowError] = useState(null);
   const [approved, setApproved] = useState(false);
-  const [mode, setMode] = useState(0);
 
   const handleClose = () => {
     dispatch(closeBuynowModal());
     dispatch(openESPAReadyModal());
   };
 
-  const handleClick = () => {
+  const handleClick = (mode) => {
     setShowError(null);
     setIsDisabled(true);
-    dispatch(bidActions.buyNow(id, priceEth, mode)).then((request) => {
+    dispatch(bidActions.buyNow(id, priceEth, mode === 0)).then((request) => {
       requests.current.push(request);
       request.promise
         .then(() => {
           if (mode === 0 && approved === false) {
             setApproved(true);
             setIsDisabled(false);
-            setMode(1);
           } else {
             handleClose();
           }
@@ -90,7 +88,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
               <Button
                 isDisabled={isDisabled}
                 background="black"
-                onClick={() => handleClick()}
+                onClick={() => handleClick(0)}
                 className={styles.button}
               >
                 {approved ? buttonText1 : 'APPROVE $MONA'}
