@@ -35,7 +35,7 @@ const collections = [
   },
   {
     id: 2,
-    text: 'Digi bundle',
+    text: 'DIGI Bundle',
     designer: 'Digitalax',
     image: 'https://gateway.pinata.cloud/ipfs/QmQGuYKtqNUKqAqxmHkuYB4qCS9riKW6Eu1SNhBToBc4ry',
   },

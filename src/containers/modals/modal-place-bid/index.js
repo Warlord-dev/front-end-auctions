@@ -9,7 +9,7 @@ import InputWithArrows from '@components/input-with-arrows';
 import { closePlaceBidModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
-import { convertToWei } from '@helpers/price.helpers';
+import { utils as ethersUtils } from 'ethers';
 import { getMinBidIncrement, getBidWithdrawalLockTime } from '@selectors/global.selectors';
 import styles from './styles.module.scss';
 
@@ -22,7 +22,9 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
 
   const monaPerEth = 1.32; // useSelector(getMonaPerEth);
-  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(new BigNumber(minBidIncrement));
+  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(
+    new BigNumber(minBidIncrement)
+  );
 
   const [inputPriceMona, setInputPriceMona] = useState(minBid);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -60,8 +62,8 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   useEffect(() => {
     function getMonaApproval() {
       dispatch(bidActions.getAllowanceForAcution()).then((val) => {
-        const weiValue = convertToWei(inputPriceMona / monaPerEth);
-        if (val < weiValue) setApproved(false);
+        const jsAllowedValue = parseFloat(ethersUtils.formatEther(val));
+        if (jsAllowedValue < 10000000000) setApproved(false);
         else setApproved(true);
       });
     }

@@ -9,7 +9,7 @@ import { create2KURL } from '@services/imgix.service';
 import { getImageForCardProduct } from '@helpers/photo.helpers';
 import { useTokenInfo } from '@hooks/token.info.hooks';
 import { getDesignerInfoByName } from '@selectors/designer.selectors';
-import ImportantAuctionInformation from '@containers/important-auction-information';
+import ImportantCollectionInformation from '@containers/important-collection-information';
 
 import styles from './styles.module.scss';
 
@@ -51,7 +51,7 @@ const CardProduct = ({ collection }) => {
           )}
         </div>
 
-        {/* <ImportantAuctionInformation auction={auction} auctionId={auctionId} /> */}
+        <ImportantCollectionInformation collection={collection} />
       </div>
     </li>
   );
