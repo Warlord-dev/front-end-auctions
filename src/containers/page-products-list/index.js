@@ -149,9 +149,9 @@ const PageProductsList = ({ collectionId }) => {
       value: estimateApy,
     },
   ];
-  
+
   const digitalIds = ['2607', '2633', '2658', '2679'];
-  
+
   return (
     <>
       <GeneralInformation
@@ -161,17 +161,20 @@ const PageProductsList = ({ collectionId }) => {
         history={monthResultedAuctions}
       />
       <CardList
-        auctions={collectionId === '1' ? currentAuctions : []}
+        auctions={collectionId === '2' ? currentAuctions : []}
         collections={
           collectionId === '1'
             ? currentCollections.filter(
                 (collection) =>
-                  collection.garments.length && !digitalIds.includes(collection.garments[0].designer)
+                  collection.garments.length &&
+                  !digitalIds.includes(collection.garments[0].designer)
               )
-            : currentCollections.filter(
+            : collectionId === '2'
+            ? currentCollections.filter(
                 (collection) =>
                   collection.garments.length && digitalIds.includes(collection.garments[0].designer)
               )
+            : currentCollections
         }
         showGraphIds={showGraphIds}
         setShowGraphIds={setShowGraphIds}
