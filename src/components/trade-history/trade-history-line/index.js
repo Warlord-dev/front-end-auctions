@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import moment from 'moment';
 import { useSelector } from 'react-redux';
-import { getExchangeRateETH, getChainId } from '@selectors/global.selectors';
+import { getExchangeRateETH, getChainId, getMonaPerEth } from '@selectors/global.selectors';
 import { getExplorerUrlByChainId } from '@services/network.service';
 import SmallPhotoWithText from '../../small-photo-with-text';
 import styles from './styles.module.scss';
