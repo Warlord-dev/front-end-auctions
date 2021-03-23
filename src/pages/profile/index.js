@@ -18,7 +18,7 @@ const Profile = ({ history }) => {
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }
-  const account = useSelector(getAccount);
+  const account = user.get('wallet');
   const nfts = useNFTs(account);
 
   const getGameTags = (str) => {
