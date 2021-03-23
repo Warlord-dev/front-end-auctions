@@ -39,7 +39,9 @@ export function useNFTs(account) {
             items = [...items, { ...item, isStaked: true }];
           }
         }
-        items = [...items, ...data.matic.digitalaxCollectors[0].parentsOwned];
+        if (data.matic.digitalaxCollectors.length) {
+          items = [...items, ...data.matic.digitalaxCollectors[0].parentsOwned];
+        }
         setNfts(items);
       })
       .catch((e) => setNfts([]));

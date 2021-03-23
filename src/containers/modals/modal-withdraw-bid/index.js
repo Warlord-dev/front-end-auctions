@@ -8,7 +8,7 @@ import Modal from '@components/modal';
 import { closeWithdrawModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
-import { getMonaPerEth } from '@selectors/global.selectors';
+import { getMonaPerEth, getChainId } from '@selectors/global.selectors';
 import styles from './styles.module.scss';
 
 const ModalWithdrawBid = ({ className, title, text, yourBidText, buttonText }) => {
@@ -18,6 +18,8 @@ const ModalWithdrawBid = ({ className, title, text, yourBidText, buttonText }) =
   const { id, withdrawValue } = useSelector(getModalParams);
   const [isDisabled, setIsDisabled] = useState(false);
   const monaPerEth = useSelector(getMonaPerEth);
+  const chainId = useSelector(getChainId);
+  const isMatic = chainId === '0x13881' || chainId === '0x89';
 
   const handleClose = () => {
     dispatch(closeWithdrawModal());
@@ -56,7 +58,7 @@ const ModalWithdrawBid = ({ className, title, text, yourBidText, buttonText }) =
         >
           <div className={styles.footer}>
             <Button
-              isDisabled={isDisabled}
+              isDisabled={isDisabled || !isMatic}
               className={styles.button}
               background="black"
               onClick={() => handleClick()}

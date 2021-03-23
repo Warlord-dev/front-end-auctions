@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { utils as ethersUtils } from 'ethers';
-import { getMonaPerEth } from '@selectors/global.selectors';
+import { getMonaPerEth, getChainId } from '@selectors/global.selectors';
 import PropTypes from 'prop-types';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
@@ -17,6 +17,8 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   const monaPerEth = useSelector(getMonaPerEth);
 
   const { id, priceEth } = useSelector(getModalParams);
+  const chainId = useSelector(getChainId);
+  const isMatic = chainId === '0x13881' || chainId === '0x89';
 
   const [isDisabled, setIsDisabled] = useState(false);
   const [showError, setShowError] = useState(null);
@@ -86,7 +88,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
                 $MONA
               </span>
               <Button
-                isDisabled={isDisabled}
+                isDisabled={isDisabled || !isMatic}
                 background="black"
                 onClick={() => handleClick(0)}
                 className={styles.button}

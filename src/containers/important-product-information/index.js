@@ -29,6 +29,7 @@ import {
   getMinBidIncrement,
   getBidWithdrawalLockTime,
   getMonaPerEth,
+  getChainId,
 } from '@selectors/global.selectors';
 import { useAPY } from '@hooks/apy.hooks';
 import { utils as ethersUtils } from 'ethers';
@@ -66,6 +67,9 @@ const ImportantProductInformation = ({
   const timerToSoldButton = useRef(null);
   let canShowWithdrawBtn = false;
   let showSoldButton = false;
+
+  const chainId = useSelector(getChainId);
+  const isMatic = chainId === '0x13881' || chainId === '0x89';
 
   clearTimeout(timer.current);
   clearTimeout(timerToSoldButton.current);
@@ -230,6 +234,7 @@ const ImportantProductInformation = ({
               <>
                 {isMakeBid && priceEth > 0 ? (
                   <Button
+                    isDisabled={!isMatic}
                     onClick={() => handleClickRaiseBid()}
                     className={styles.button}
                     background="black"
@@ -243,6 +248,7 @@ const ImportantProductInformation = ({
                   </Button>
                 ) : (
                   <Button
+                    isDisabled={!isMatic}
                     onClick={() => handleClickPlaceBid()}
                     className={styles.button}
                     background="black"
@@ -257,7 +263,7 @@ const ImportantProductInformation = ({
                 )}
                 {canShowWithdrawBtn && (
                   <div className={styles.wrapperButtonWithdraw}>
-                    <TextButton onClick={() => handleClickWithdrawBid()}>
+                    <TextButton isDisabled={!isMatic} onClick={() => handleClickWithdrawBid()}>
                       {buttonTextWithdraw}
                     </TextButton>
                   </div>
@@ -265,6 +271,7 @@ const ImportantProductInformation = ({
               </>
             ) : (
               <Button
+                isDisabled={!isMatic}
                 className={styles.buttonSold}
                 background="black"
                 onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
@@ -275,6 +282,7 @@ const ImportantProductInformation = ({
           </>
         ) : (
           <Button
+            isDisabled={!isMatic}
             className={styles.button}
             background="black"
             onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
