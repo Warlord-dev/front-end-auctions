@@ -1,16 +1,28 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Link from '@components/buttons/link';
 import Timer from '@components/timer';
 import { convertToEth } from '@helpers/price.helpers';
-import { getExchangeRateETH } from '@selectors/global.selectors';
+import auctionPageActions from '@actions/auction.page.actions';
+import collectionActions from '@actions/collection.actions';
+import { getAllAuctions } from '@selectors/auction.selectors';
+import { getAllCollections } from '@selectors/collection.selectors';
+import { getExchangeRateETH, getChainId } from '@selectors/global.selectors';
+import { useSubscription } from '@hooks/subscription.hooks';
+import wsApi from '@services/api/ws.service';
 
 import styles from './styles.module.scss';
 
-const ImportantAuctionInformation = ({ auction, auctionId }) => {
+const ImportantCollectionInformation = ({ collection }) => {
+  const dispatch = useDispatch();
   const exchangeRateETH = useSelector(getExchangeRateETH);
+  const auctions = useSelector(getAllAuctions);
+  const collections = useSelector(getAllCollections);
+  const currentAuctions = auctions.toJS();
+  const currentCollections = collections.toJS();
+  const chainId = useSelector(getChainId);
 
   const [, updateState] = React.useState(0);
   const timer = useRef(null);
@@ -24,14 +36,48 @@ const ImportantAuctionInformation = ({ auction, auctionId }) => {
     clearTimeout(timerToSoldButton.current);
   }, []);
 
-  if (!auction) {
-    return null;
-  }
+  useSubscription(
+    {
+      request: wsApi.getAllDigitalaxGarmentsCollections(),
+      next: (data) => {
+        dispatch(collectionActions.mapData(data.digitalaxGarmentCollections));
+      },
+    },
+    [chainId]
+  );
 
-  const priceEth = convertToEth(auction.totalBids);
-  const expirationDate = auction.endTime * 1000;
+  useSubscription(
+    {
+      request: wsApi.onAllAuctionsChange(),
+      next: (data) => dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions)),
+    },
+    [chainId]
+  );
 
-  const timeOut = new Date(expirationDate) - new Date() + 1000;
+  const digitalIds = ['2607', '2633', '2658', '2679', '3532', '773'];
+  const filteredAuctions = collection.id === 1 ? currentAuctions : [];
+  const filteredCollections =
+    collection.id === 1
+      ? currentCollections.filter(
+          (collection) =>
+            collection.garments.length && !digitalIds.includes(collection.garments[0].designer)
+        )
+      : collection.id === 2
+      ? currentCollections.filter(
+          (collection) =>
+            collection.garments.length && digitalIds.includes(collection.garments[0].designer)
+        )
+      : currentCollections;
+  const priceEth = convertToEth(
+    filteredAuctions
+      .filter((auction) => auction.topBid)
+      .map((auction) => parseInt(auction.topBid))
+      .reduce((total, cur) => total + cur, 0)
+  );
+
+  const expirationDate = Math.max(...filteredAuctions.map((auction) => parseInt(auction.endTime))) * 1000;
+
+  const timeOut = filteredAuctions.length ? new Date(expirationDate) - new Date() + 1000 : 0;
 
   if (timeOut > 0) {
     timerToSoldButton.current = setTimeout(() => updateState(Date.now()), timeOut);
@@ -47,14 +93,18 @@ const ImportantAuctionInformation = ({ auction, auctionId }) => {
       <div className={styles.leftWrapper}>
         <p className={styles.priceDescription}>Total Sold</p>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{priceEth} MONA</span>
+          <span className={styles.priceEth}>{Math.floor(priceEth * 10000) / 10000} MONA</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
       </div>
       <div className={styles.footerBoxRight}>
         <Timer className={styles.timer} expirationDate={expirationDate} />
         <p className={styles.expirationDateText}>TIME LEFT</p>
-        <Link href={`/auctions/${auctionId}`} className={styles.buttonSold} background="black">
+        <Link
+          href={`/collections/${collection.id}`}
+          className={styles.buttonSold}
+          background="black"
+        >
           <span>VIEW COLLECTION</span>
         </Link>
       </div>
@@ -62,13 +112,10 @@ const ImportantAuctionInformation = ({ auction, auctionId }) => {
   );
 };
 
-ImportantAuctionInformation.propTypes = {
-  auction: PropTypes.object.isRequired,
-  auctionId: PropTypes.number,
+ImportantCollectionInformation.propTypes = {
+  collection: PropTypes.object.isRequired,
 };
 
-ImportantAuctionInformation.defaultProps = {
-  auctionId: -1,
-};
+ImportantCollectionInformation.defaultProps = {};
 
-export default ImportantAuctionInformation;
+export default ImportantCollectionInformation;

@@ -9,7 +9,7 @@ const DEFAULT_FIELDS = Map({
   designerGarmentIds: List([]),
   infoByDesignerId: List([
     {
-      id: '9',
+      id: 'O-9',
       designerName: 'Christina Lalch',
       designerPhoto: './images/Christina-Lalch.jpeg',
       descriptionDesigner: [
@@ -27,7 +27,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '7',
+      id: 'O-7',
       designerName: '3dBehemoth',
       designerPhoto: './images/3dBehemoth.png',
       descriptionDesigner: [
@@ -45,7 +45,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '3',
+      id: 'O-3',
       designerName: 'Edward Harber',
       designerPhoto: './images/Edward-Harber.jpeg',
       descriptionDesigner: [
@@ -63,7 +63,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '6',
+      id: 'O-6',
       designerName: 'HonoreHL',
       designerPhoto: './images/HonoreHL.jpeg',
       descriptionDesigner: [
@@ -78,7 +78,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '2',
+      id: 'O-2',
       designerName: 'Lorena Bello',
       designerPhoto: './images/Lorena-Bellow.jpeg',
       descriptionDesigner: [
@@ -98,7 +98,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '13',
+      id: 'O-13',
       designerName: 'McAfee.Design',
       designerPhoto: './images/McAfee-Design.jpeg',
       descriptionDesigner: [
@@ -116,7 +116,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '1',
+      id: 'O-1',
       designerName: 'Msistema',
       designerPhoto: './images/msistema.jpeg',
       descriptionDesigner: [
@@ -138,7 +138,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '12',
+      id: 'O-12',
       designerName: 'Nina Doll',
       designerPhoto: './images/Nina-Doll.jpeg',
       descriptionDesigner: [
@@ -156,7 +156,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '10',
+      id: 'O-10',
       designerName: 'Rendooo Lab',
       designerPhoto: './images/Rendooo-Lab.jpeg',
       descriptionDesigner: [
@@ -178,7 +178,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '8',
+      id: 'O-8',
       designerName: 'Stanislav Mclygin',
       designerPhoto: './images/Stanislav Mclygin.jpeg',
       descriptionDesigner: [
@@ -196,7 +196,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '4',
+      id: 'O-4',
       designerName: 'Vitaly Kovalev',
       designerPhoto: './images/Vitaly-Kovalev.jpeg',
       descriptionDesigner: [
@@ -214,7 +214,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '15',
+      id: 'O-15',
       designerName: 'Album Corvum',
       designerPhoto: './images/Album-Corvum.jpeg',
       descriptionDesigner: [
@@ -251,7 +251,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '20',
+      id: 'O-20',
       designerName: 'Gwen Kim (JAK 3D)',
       designerPhoto: './images/Gwen photo.jpeg',
       descriptionDesigner: [
@@ -268,7 +268,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '21',
+      id: 'O-21',
       designerName: 'Sasa3dimensions',
       designerPhoto: './images/Elisa photo.jpeg',
       descriptionDesigner: [
@@ -285,7 +285,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '22',
+      id: 'O-22',
       designerName: 'Alyona Briukhanova',
       designerPhoto: './images/alyona photo.jpeg',
       descriptionDesigner: [
@@ -302,7 +302,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '23',
+      id: 'O-23',
       designerName: 'Alexander Kurmanin',
       designerPhoto: './images/alex photo.jpeg',
       descriptionDesigner: [
@@ -318,7 +318,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '24',
+      id: 'O-24',
       designerName: 'AVA3Ddesigners',
       designerPhoto: './images/1_dZjpCBlRAwo02PM2evsDcQ.jpeg',
       descriptionDesigner: [
@@ -334,7 +334,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '25',
+      id: 'O-25',
       designerName: 'YeKaterina Burmatnova',
       designerPhoto: './images/1_8-FRZqSRY877n84t9Ey7Cg.jpeg',
       descriptionDesigner: [
@@ -351,7 +351,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '18',
+      id: 'O-18',
       designerName: 'Mar Guixa Studio',
       designerPhoto: './images/Mar-Guixa-Studio.jpeg',
       descriptionDesigner: [
@@ -367,7 +367,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '27',
+      id: 'O-27',
       designerName: 'María Ruano',
       designerPhoto: './images/maria photo.jpeg',
       descriptionDesigner: [
@@ -385,7 +385,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '28',
+      id: 'O-28',
       designerName: 'Burak Dahan',
       designerPhoto: './images/burak photo.jpeg',
       descriptionDesigner: [
@@ -402,7 +402,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '29',
+      id: 'O-29',
       designerName: 'Rtfkt',
       designerPhoto: './images/Rtfkt.jpeg',
       descriptionDesigner: [
@@ -419,7 +419,7 @@ const DEFAULT_FIELDS = Map({
       ]),
     },
     {
-      id: '30',
+      id: 'O-30',
       designerName: 'DressX',
       designerPhoto: './images/_IHJ1RVX_200x200.jpg',
       descriptionDesigner: [
@@ -436,7 +436,7 @@ const DEFAULT_FIELDS = Map({
     },
     {
       id: '108',
-      ids: ['108', '1717', '1718', '1719', '1720', '1721', '1722', '1746', '1810', '2346', '2347', '2348', '2349', '2350', '2628', '2629', '2630', '2631', '2632', '3', '4', '5', '6', '1874', '1938', '2002', '2130', '2258', '2351', '2479', '3553', '2700', '2764', '2828', '2892', '2956', '3020', '3148', '3276', '3404'],
+      ids: ['108', '1717', '1718', '1719', '1720', '1721', '1722', '1746', '1810', '2346', '2347', '2348', '2349', '2350', '2628', '2629', '2630', '2631', '2632', '3', '4', '5', '6', '1874', '1938', '2002', '2130', '2258', '2351', '2479', '3553', '2700', '2764', '2828', '2892', '2956', '3020', '3148', '3276', '3404', '100', '133', '197', '261','389', '517', '645', '10', '1', '2'],
       designerName: 'Kodomodachi',
       designerPhoto: './images/QmSfpPJJhS4MEEt912qB2fg8JdGj5VKrVUXDoEyGoQtAHk.png',
       descriptionDesigner: [
@@ -448,7 +448,7 @@ const DEFAULT_FIELDS = Map({
     },
     {
       id: '2607',
-      ids: ['2607', '2633', '2658', '2679', '3532'],
+      ids: ['2607', '2633', '2658', '2679', '3532', '773'],
       designerName: 'Digitalax',
       designerPhoto: './images/logo.jpg',
       descriptionDesigner: [''],

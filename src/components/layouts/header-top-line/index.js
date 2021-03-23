@@ -24,7 +24,6 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const router = useRouter();
   const pathname = router.pathname;
 
-  console.log('---chainId', chainId, pathname);
   const isOnRightNetwork =
     pathname !== '/bridge' && pathname !== '/bridge/deposit'
       ? chainId === '0x89'

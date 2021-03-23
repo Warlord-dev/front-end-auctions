@@ -16,8 +16,11 @@ import styles from './styles.module.scss';
 const CardProduct = ({ collection }) => {
   const tokenInfo = useTokenInfo(collection.image, [collection.image]);
   const designerInfo = useSelector(getDesignerInfoByName(collection.designer, true));
-
-  const [imageUrl, isVideo] = getImageForCardProduct(tokenInfo);
+  console.log('---token', tokenInfo);
+  const [imageUrl, isVideo] =
+    collection.id === 2
+      ? [tokenInfo ? tokenInfo.animation : '', true]
+      : getImageForCardProduct(tokenInfo);
   return (
     <li className={cn(styles.item)}>
       <Link href={`/collections/${collection.id}`}>
