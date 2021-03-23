@@ -14,7 +14,8 @@ const LeftBox = ({
   currentCounts,
 }) => {
   const TABS = [EXCLUSIVE_RARITY, SEMI_RARE_RARITY, COMMON_RARITY];
-  const item = TABS[activeTab];
+  let item = TABS[activeTab];
+  if (activeTab === 3) item = TABS[1];
 
   return (
     <div className={cn(styles.leftBox, 'animate__animated animate__fadeIn')}>

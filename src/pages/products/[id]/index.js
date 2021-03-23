@@ -19,9 +19,9 @@ const Products = () => {
   const garmentId = id.slice(0, id.length - 1);
   const tabIndex = parseInt(id.slice(id.length - 1));
 
-  if (tabIndex > 2) {
+  if (tabIndex > 3) {
     return null;
-  }
+  } //hardcoded
 
   const dispatch = useDispatch();
   const garment = useSelector(getGarmentsById(garmentId));
@@ -37,7 +37,7 @@ const Products = () => {
     const jsOffers = marketplaceOffers.toJS();
     return jsOffers.filter((val) => val.garmentCollection.garmentAuctionID === garmentId);
   }, [marketplaceOffers]);
-  
+
   useSubscription(
     {
       request: wsApi.onAuctionsChangeByIds([garmentId]),
@@ -52,6 +52,7 @@ const Products = () => {
     {
       request: wsApi.onDigitalaxGarmentsCollectionChange(garmentId),
       next: (data) => {
+        console.log(data);
         dispatch(collectionActions.mapData(data.digitalaxGarmentCollections));
       },
     },

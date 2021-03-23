@@ -3,22 +3,15 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import ReactImageMagnify from 'react-image-magnify';
-import {
-  createGifURL,
-  create2KURL,
-  createPreviewURL,
-} from '@services/imgix.service';
+import { createGifURL, create2KURL, createPreviewURL } from '@services/imgix.service';
 import styles from './styles.module.scss';
 
-const ViewImages = ({
-  className,
-  clothesPhotos,
-  clothesName,
-  clothesId,
-}) => {
+const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
   const DEFAULT_LARGE_IMAGE = clothesPhotos.find(({ isMain }) => isMain);
   const [largeImage, setLargeImage] = useState(DEFAULT_LARGE_IMAGE);
-  const [isShowGif, setIsShowGif] = useState(DEFAULT_LARGE_IMAGE ? DEFAULT_LARGE_IMAGE.isGif : false);
+  const [isShowGif, setIsShowGif] = useState(
+    DEFAULT_LARGE_IMAGE ? DEFAULT_LARGE_IMAGE.isGif : false
+  );
 
   const handleClick = (item, index) => {
     setLargeImage(clothesPhotos[index]);
@@ -42,6 +35,7 @@ const ViewImages = ({
       </div>
     );
   }
+  console.log('clothid', clothesId);
 
   return (
     <div className={cn(styles.wrapper, className)}>
@@ -60,37 +54,36 @@ const ViewImages = ({
             />
           </a>
         ) : (
-          largeImage && (!largeImage.isVideo
-            ? (
-              <a
-                href={largeImage.image}
-                target="_blank"
-                rel="noreferrer"
-                className={styles.largeImgWrapper}
-              >
-                <ReactImageMagnify
-                  className={styles.itemLargeImg}
-                  LargeImageClassName={styles.itemLargeImgZoom}
-                  {...{
-                    smallImage: {
-                      src: create2KURL(largeImage.image),
-                      isFluidWidth: true,
-                    },
-                    largeImage: {
-                      src: create2KURL(largeImage.image),
-                      width: 1176,
-                      height: 1176,
-                    },
-                    shouldUsePositiveSpaceLens: true,
-                  }}
-                />
-              </a>
-            ) : (
-              <video autoPlay muted loop className={styles.largeImgWrapper} key={largeImage.video}>
-                <source src={largeImage.video} type="video/mp4" />
-              </video>
-            )
-          )
+          largeImage &&
+          (!largeImage.isVideo ? (
+            <a
+              href={largeImage.image}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.largeImgWrapper}
+            >
+              <ReactImageMagnify
+                className={styles.itemLargeImg}
+                LargeImageClassName={styles.itemLargeImgZoom}
+                {...{
+                  smallImage: {
+                    src: create2KURL(largeImage.image),
+                    isFluidWidth: true,
+                  },
+                  largeImage: {
+                    src: create2KURL(largeImage.image),
+                    width: 1176,
+                    height: 1176,
+                  },
+                  shouldUsePositiveSpaceLens: true,
+                }}
+              />
+            </a>
+          ) : (
+            <video autoPlay muted loop className={styles.largeImgWrapper} key={largeImage.video}>
+              <source src={largeImage.video} type="video/mp4" />
+            </video>
+          ))
         )}
       </div>
       <div>

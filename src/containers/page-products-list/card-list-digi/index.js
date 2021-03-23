@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 import { Dropdown } from 'semantic-ui-react';
-import CardProduct from '@components/card-product';
+import CardProductDigi from '@components/card-product-digi';
 import Loader from '@components/loader';
 import { STORAGE_SORT_BY } from '@constants/storage.constants';
 import { COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
@@ -20,7 +20,7 @@ import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
 
-const CardList = ({ auctions, collections, className, showGraphIds, setShowGraphIds }) => {
+const CardListDigi = ({ auctions, collections, className, showGraphIds, setShowGraphIds }) => {
   const dropdownOptions = [
     { key: 1, text: 'Highest bid', value: 'highest_bid' },
     { key: 2, text: 'Lowest bid', value: 'lowest_bid' },
@@ -72,26 +72,12 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
       </div>
       {auctionsIsLoaded ? (
         <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
-          {auctions.map((auction) => {
-            const garment = garmentsById.get(auction.id);
-            return (
-              <CardProduct
-                key={garment.id}
-                history={historyByTokenId.get(garment.id)}
-                auctionId={auction.id}
-                garment={garment}
-                showGraphIds={showGraphIds}
-                setShowGraphIds={setShowGraphIds}
-                tabIndex={0}
-              />
-            );
-          })}
           {collections
             .filter((collection) => collection.rarity === SEMI_RARE_RARITY)
             .map((collection) => {
               const garment = collection.garments[0];
               return (
-                <CardProduct
+                <CardProductDigi
                   key={garment.id}
                   history={historyByTokenId.get(garment.id)}
                   auctionId={collection.garmentAuctionID}
@@ -107,7 +93,7 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
             .map((collection) => {
               const garment = collection.garments[0];
               return (
-                <CardProduct
+                <CardProductDigi
                   key={garment.id}
                   history={historyByTokenId.get(garment.id)}
                   auctionId={collection.garmentAuctionID}
@@ -126,7 +112,7 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
   );
 };
 
-CardList.propTypes = {
+CardListDigi.propTypes = {
   auctions: PropTypes.array.isRequired,
   collections: PropTypes.array.isRequired,
   className: PropTypes.string,
@@ -135,10 +121,10 @@ CardList.propTypes = {
   sold: PropTypes.bool,
 };
 
-CardList.defaultProps = {
+CardListDigi.defaultProps = {
   className: '',
   showGraphIds: [],
   setShowGraphIds: () => {},
 };
 
-export default memo(CardList);
+export default memo(CardListDigi);
