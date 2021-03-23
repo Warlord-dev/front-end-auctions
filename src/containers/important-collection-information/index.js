@@ -74,8 +74,9 @@ const ImportantCollectionInformation = ({ collection }) => {
     .map((auction) => parseInt(auction.topBid))
     .reduce((total, cur) => total + cur, 0);
   const collectionPrice = filteredCollections
-    .filter((collection) => collection.garments.length)
-    .map((collection) => parseInt(collection.garments[0].primarySalePrice))
+    .map((collection) =>
+      collection.garments.reduce((total, cur) => total + parseInt(cur.primarySalePrice), 0)
+    )
     .reduce((total, cur) => total + cur, 0);
   const priceEth = convertToEth(auctionPrice + collectionPrice);
 
@@ -99,7 +100,9 @@ const ImportantCollectionInformation = ({ collection }) => {
       <div className={styles.leftWrapper}>
         <p className={styles.priceDescription}>Total Sold</p>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{Math.floor(priceEth / monaPerEth * 10000) / 10000} MONA</span>
+          <span className={styles.priceEth}>
+            {Math.floor((priceEth / monaPerEth) * 10000) / 10000} MONA
+          </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
       </div>
