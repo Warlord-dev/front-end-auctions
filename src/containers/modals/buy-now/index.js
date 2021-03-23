@@ -83,8 +83,8 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
             <div className={styles.selectWrapper}>
               <span>
                 {Math.round(
-                  (parseFloat(ethersUtils.formatEther(priceEth)) / parseFloat(monaPerEth)) * 100
-                ) / 100}{' '}
+                  (parseFloat(ethersUtils.formatEther(priceEth)) / parseFloat(monaPerEth)) * 10000
+                ) / 10000}{' '}
                 $MONA
               </span>
               <Button
