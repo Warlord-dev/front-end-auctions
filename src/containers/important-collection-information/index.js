@@ -101,7 +101,7 @@ const ImportantCollectionInformation = ({ collection }) => {
         <p className={styles.priceDescription}>Total Sold</p>
         <p className={styles.priceWrapper}>
           <span className={styles.priceEth}>
-            {Math.floor((priceEth / monaPerEth) * 10000) / 10000} MONA
+            {parseFloat(priceEth / monaPerEth).toFixed(2)} MONA
           </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
