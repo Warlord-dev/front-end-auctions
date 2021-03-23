@@ -9,6 +9,7 @@ import { closeWithdrawModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
 import styles from './styles.module.scss';
+import { getMonaPerEth } from '@selectors/global.selectors';
 
 const ModalWithdrawBid = ({ className, title, text, yourBidText, buttonText }) => {
   const dispatch = useDispatch();

@@ -6,8 +6,8 @@ import PageProductsList from '@containers/page-products-list';
 
 const Index = () => {
   const chainId = useSelector(getChainId);
-  let isMatic = chainId === '0x13881' || chainId === '0x89';
-  return isMatic ? <CollectionList /> : <PageProductsList />;
-}
+  // let isMatic = chainId === '0x13881' || chainId === '0x89';
+  return <CollectionList />;
+};
 
 export default memo(Index);

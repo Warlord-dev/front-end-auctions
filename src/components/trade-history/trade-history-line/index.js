@@ -8,6 +8,7 @@ import { getExchangeRateETH, getChainId } from '@selectors/global.selectors';
 import { getExplorerUrlByChainId } from '@services/network.service';
 import SmallPhotoWithText from '../../small-photo-with-text';
 import styles from './styles.module.scss';
+import { getMonaPerEth } from '@selectors/global.selectors';
 
 const TradeHistoryLine = ({
   className,
