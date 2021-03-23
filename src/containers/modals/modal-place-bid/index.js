@@ -14,6 +14,7 @@ import {
   getMinBidIncrement,
   getBidWithdrawalLockTime,
   getMonaPerEth,
+  getChainId,
 } from '@selectors/global.selectors';
 import styles from './styles.module.scss';
 
@@ -29,6 +30,8 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(
     new BigNumber(minBidIncrement)
   );
+  const chainId = useSelector(getChainId);
+  const isMatic = chainId === '0x13881' || chainId === '0x89';
 
   const [inputPriceMona, setInputPriceMona] = useState(minBid);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -116,7 +119,7 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
                 {showError && <p className={styles.error}>{showError}</p>}
               </div>
               <Button
-                isDisabled={isDisabled}
+                isDisabled={isDisabled || !isMatic}
                 background="black"
                 onClick={() => handleClick()}
                 className={styles.button}
