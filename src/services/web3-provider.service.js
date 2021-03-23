@@ -14,7 +14,7 @@ const options = {
   // authenticationOptions: {
   //   idpHint: 'google'
   // },
-  secretType: 'ETHEREUM', //optional, ETHEREUM by default
+  secretType: 'MATIC', //optional, ETHEREUM by default
 };
 
 export const setWeb3Provider = async () => {
