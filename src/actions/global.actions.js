@@ -107,17 +107,12 @@ class GlobalActions extends BaseActions {
   setContractParams() {
     return async (dispatch, getState) => {
       try {
-        const chainId = getState().global.get('chainId');
-        const address = getRewardContractAddressByChainId(chainId);
-        const marketplaceContractAdd = await getMarketplaceContractAddressByChainId(chainId);
-        const marketplaceContract = await getMarketplaceContract(marketplaceContractAdd);
-
-        const monaPerEth = await getTokenPriceMatic(marketplaceContract);
+        const monaPerEth = await getTokenPriceMatic();
         console.log('monaPerEth', monaPerEth);
         dispatch(this.setValue('monaPerEth', convertToEth(monaPerEth)));
       } catch (e) {
         console.error(e);
-        dispatch(this.setValue('monaPerEth', 0));
+        dispatch(this.setValue('monaPerEth', 1));
       }
 
       try {

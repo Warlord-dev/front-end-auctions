@@ -356,7 +356,7 @@ export const getTokenPrice = async (contractAddress) => {
   return price;
 };
 
-export const getTokenPriceMatic = async (marketplaceContract) => {
+export const getTokenPriceMatic = async () => {
   return new Promise(async (resolve) => {
     try {
       const jsonInterface = [
