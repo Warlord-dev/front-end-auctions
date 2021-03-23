@@ -8,8 +8,8 @@ import styles from './styles.module.scss';
 import { useMonaBalance } from '@hooks/useMonaBalance';
 import { useSelector } from 'react-redux';
 import { getUser } from '@helpers/user.helpers';
-import { useCheckInclusion } from '@hooks/useCheckInclusion';
 import useExitFromMatic from '@hooks/useExitFromMatic';
+// import { useCheckInclusion } from '@hooks/useCheckInclusion';
 
 export default function Bridge() {
   const [monaEthBalance, monaMaticBalance] = useMonaBalance();
@@ -23,7 +23,7 @@ export default function Bridge() {
   const exitCallback = useExitFromMatic();
 
   return (
-    <div classNam={styles.bridgeContainer}>
+    <div className={styles.bridge}>
       <div className={styles.bridgeWrapper}>
         <div className={styles.bridgeTitle}>MATIC-ETH BRIDGE</div>
         <div>
@@ -70,11 +70,11 @@ export default function Bridge() {
             </div>
             <div className={styles.withdrawalRowItem}>{tx.amount}</div>
             <div className={styles.withdrawalRowItem}>
-              {Date.now() - new Date(tx.created).getTime() >= 10800
+              {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800
                 ? 'Pending Withdrawal'
                 : 'Processing'}
             </div>
-            {Date.now() - new Date(tx.created).getTime() >= 10800 && (
+            {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800 && (
               <div className={styles.withdrawalRowItem}>
                 <button
                   className={styles.withdrawButton}
