@@ -25,11 +25,12 @@ class UserActions extends BaseActions {
   handleWeb3Loaded() {
     return async (dispatch) => {
       try {
-        window.web3.eth.getChainId().then((network) => {
-          // console.log('----network', network);
-          // dispatch(globalActions.changeNetwork(network));
+        window.web3.eth.getChainId().then(async (network) => {
+          console.log('----network', network);
+          await dispatch(globalActions.changeNetwork(network));
+          await dispatch(globalActions.setContractParams());
         });
-        const authResult = await Arkane.checkAuthenticated();
+        // const authResult = await Arkane.checkAuthenticated();
         const {
           auth: {
             idTokenParsed: { email },
