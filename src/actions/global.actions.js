@@ -26,7 +26,8 @@ import api from '@services/api/api.service';
 import ws from '@services/api/ws.service';
 
 import { convertToEth } from '@helpers/price.helpers';
-import { STORAGE_IS_LOGGED_IN } from '@constants/storage.constants';
+import { STORAGE_IS_LOGGED_IN, STORAGE_WALLET } from '@constants/storage.constants';
+import { WALLET_METAMASK, WALLET_ARKANE } from '@constants/global.constants';
 
 class GlobalActions extends BaseActions {
   initApp() {
@@ -39,6 +40,16 @@ class GlobalActions extends BaseActions {
         dispatch(this.setValue('exchangeRateETH', rateItem.ethereum.usd));
       } catch (e) {
         toast.error(`Set USD rate error: ${JSON.stringify(e)}`);
+      }
+
+      /*
+      Check if Arkane loggedIn
+      */
+      if (
+        localStorage.getItem(STORAGE_IS_LOGGED_IN) &&
+        localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE
+      ) {
+        return;
       }
 
       /**

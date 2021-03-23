@@ -22,15 +22,11 @@ import { toast } from 'react-toastify';
 import Router from 'next/router';
 
 class UserActions extends BaseActions {
-  handleWeb3Loaded() {
+  handleArkaneWeb3Load() {
     return async (dispatch) => {
       try {
-        window.web3.eth.getChainId().then(async (network) => {
-          console.log('----network', network);
-          await dispatch(globalActions.changeNetwork(network));
-          await dispatch(globalActions.setContractParams());
-        });
-        // const authResult = await Arkane.checkAuthenticated();
+        const chainId = await window.web3.eth.getChainId();
+        const authResult = await Arkane.checkAuthenticated();
         const {
           auth: {
             idTokenParsed: { email },
@@ -41,6 +37,8 @@ class UserActions extends BaseActions {
         dispatch(this.setValue('account', wallets[0]));
         dispatch(closeConnectMetamaskModal());
         dispatch(openSignupModal({ email }));
+        dispatch(globalActions.changeNetwork(chainId));
+        dispatch(globalActions.setContractParams());
       } catch (e) {
         toast.error('Wallet Connect is failed');
       }
@@ -75,11 +73,12 @@ class UserActions extends BaseActions {
           dispatch(this.setValue('account', account));
           dispatch(closeConnectMetamaskModal());
           dispatch(openSignupModal());
+          dispatch(globalActions.initApp());
         } catch (e) {
           console.error(e.message);
         }
       } else if (source === WALLET_ARKANE) {
-        dispatch(this.handleWeb3Loaded());
+        dispatch(this.handleArkaneWeb3Load());
       }
     };
   }
