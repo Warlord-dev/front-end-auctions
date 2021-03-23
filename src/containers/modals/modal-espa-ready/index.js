@@ -27,9 +27,11 @@ const ModalESPAReady = ({ className, title, buttonText }) => {
           <p className={styles.description}>
             Take Your Digital Fashion In-game. Compete in ESPA’s Casual Play to earn $MONA.
           </p>
-          <Button background="black" className={styles.button}>
-            <a href="https://espa.digitalax.xyz/">{buttonText}</a>
-          </Button>
+          <a href="https://espa.digitalax.xyz/">
+            <Button background="black" className={styles.button}>
+              {buttonText}
+            </Button>
+          </a>
         </Modal>,
         document.body
       )}
