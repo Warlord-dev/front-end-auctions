@@ -29,7 +29,7 @@ import styles from './styles.module.scss';
 const collections = [
   {
     id: 1,
-    text: 'Collection: Kodomodachi x Charli Cohen Among Us Sheriff Mod',
+    text: 'Collection: Kodomodachi x Charli Cohen',
     designer: 'Kodomodachi',
     image: 'https://gateway.pinata.cloud/ipfs/QmYvo2f6NfCD75nL49Gy5wi1jEYSh8z7wTHJjnJbV9KJt3',
   },
