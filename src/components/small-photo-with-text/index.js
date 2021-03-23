@@ -26,15 +26,15 @@ const SmallPhotoWithText = ({
       </>
     )}
     {photo && photoIsLink && (
-      <Link href={`${DESIGNERS}${id}`}>
-        <a className={styles.photoLinkWrapper}>
-          <img
-            className={cn(styles.designerPhoto, styles.designerPhotoLink)}
-            src={photo}
-            alt=""
-          />
-        </a>
-      </Link>
+      // <Link href={`${DESIGNERS}${id}`}>
+      <a className={styles.photoLinkWrapper}>
+        <img
+          className={cn(styles.designerPhoto, styles.designerPhotoLink)}
+          src={photo}
+          alt=""
+        />
+      </a>
+      // </Link>
     )}
     {id && (
       <Link href={`${DESIGNERS}${id}`}>
