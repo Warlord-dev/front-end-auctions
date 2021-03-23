@@ -10,7 +10,16 @@ import SmallPhotoWithText from '../../small-photo-with-text';
 import styles from './styles.module.scss';
 
 const TradeHistoryLine = ({
-  className, priceEth, date, sendersPhoto, sendersAddress, recipientAddress, recipientPhoto, eventName, isPaidWithMona, priceMona
+  className,
+  priceEth,
+  date,
+  sendersPhoto,
+  sendersAddress,
+  recipientAddress,
+  recipientPhoto,
+  eventName,
+  isPaidWithMona,
+  priceMona,
 }) => {
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const chainId = useSelector(getChainId);
@@ -29,18 +38,23 @@ const TradeHistoryLine = ({
 
   return (
     <div className={cn(styles.item, className)}>
-      {isPaidWithMona ?
-        (<div>
-          <span className={styles.priceEth}>{Math.round(parseFloat(priceMona) * 10000) / 10000} MONA</span>
+      {isPaidWithMona ? (
+        <div>
+          <span className={styles.priceEth}>
+            {Math.round(parseFloat(priceMona) * 10000) / 10000} MONA
+          </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
           <span> - {getDefaultText(eventName)}</span>
-        </div>) : 
-        (<div>
-          <span className={styles.priceEth}>{Math.floor(priceEth * monaPerEth * 10000) / 10000} MONA</span>
+        </div>
+      ) : (
+        <div>
+          <span className={styles.priceEth}>
+            {Math.floor(priceEth * monaPerEth * 10000) / 10000} MONA
+          </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
           <span> - {getDefaultText(eventName)}</span>
-        </div>)
-      }
+        </div>
+      )}
       <SmallPhotoWithText
         addressLink={senderLink}
         addressText={sendersAddress}
