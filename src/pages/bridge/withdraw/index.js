@@ -18,7 +18,7 @@ export default function Withdraw() {
   const withdrawCallback = useWithdrawFromMatic();
 
   return (
-    <div className={styles.bridgeWrapper}>
+    <div className={styles.depositWithdrawWrapper}>
       <div className={styles.bridgeTitle}>WITHDRAW $MONA TO ETHEREUM</div>
       <div>
         <div style={{ marginBottom: 15 }}>
@@ -30,7 +30,7 @@ export default function Withdraw() {
 
         <div style={{ marginBottom: 30 }}>
           <div className={`${styles.amount} ${parentStyles.maticColor}`}>
-            {maticMonaBalance} $MONA
+            {parseFloat(maticMonaBalance).toFixed(6)} $MONA
           </div>
         </div>
 

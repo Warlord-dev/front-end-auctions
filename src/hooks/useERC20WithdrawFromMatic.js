@@ -32,7 +32,6 @@ export default function useWithdrawFromMatic() {
             }
           )
           .then((res) => {
-            console.log('resp', res);
             dispatch(
               userActions.updateProfile({
                 withdrawalTxs: [
