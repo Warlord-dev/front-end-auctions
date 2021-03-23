@@ -13,7 +13,7 @@ import styles from './styles.module.scss';
 const HIGHEST_APY = 'Highest APY';
 
 const GeneralInformation = ({ title, timestamp, list, history }) => {
-  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const monaPerEth = useSelector(getMonaPerEth);
   const options = getMainPageChartOptions(history, monaPerEth);
 
   return (

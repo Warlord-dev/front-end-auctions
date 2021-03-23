@@ -106,7 +106,7 @@ class GlobalActions extends BaseActions {
 
         const monaPerEth = await getTokenPriceMatic(marketplaceContract);
         console.log('monaPerEth', monaPerEth);
-        dispatch(this.setValue('monaPerEth', monaPerEth));
+        dispatch(this.setValue('monaPerEth', convertToEth(monaPerEth)));
       } catch (e) {
         console.error(e);
         dispatch(this.setValue('monaPerEth', 0));

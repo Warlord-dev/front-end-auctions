@@ -78,7 +78,6 @@ class BidActions extends BaseActions {
       const account = getState().user.get('account');
       const chainId = getState().global.get('chainId');
       const marketplaceContract = await getMarketplaceContractAddressByChainId(chainId);
-      console.log(marketplaceContract);
       const monaContractAddress = await getMonaContractAddressByChainId(chainId);
       const monaContract = await getMonaTokenContract(monaContractAddress);
       const allowedValue = await monaContract.methods
@@ -94,7 +93,6 @@ class BidActions extends BaseActions {
       const account = getState().user.get('account');
       const chainId = getState().global.get('chainId');
       const marketplaceContract = await getMarketplaceContractAddressByChainId(chainId);
-      console.log(marketplaceContract);
       const contract = await getMarketplaceContract(marketplaceContract);
       if (isMona) {
         const monaContractAddress = await getMonaContractAddressByChainId(chainId);

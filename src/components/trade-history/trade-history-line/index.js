@@ -34,7 +34,7 @@ const TradeHistoryLine = ({
 
   const getDefaultText = (text) => text.split(/(?=[A-Z])/).join(' ');
 
-  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const monaPerEth = useSelector(getMonaPerEth);
 
   return (
     <div className={cn(styles.item, className)}>

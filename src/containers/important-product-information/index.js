@@ -56,7 +56,7 @@ const ImportantProductInformation = ({
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
-  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const monaPerEth = useSelector(getMonaPerEth);
   const [isShowHint, setIsShowHint] = useState(false);
 
   const estimateApy = useAPY(garment.primarySalePrice);
@@ -108,7 +108,9 @@ const ImportantProductInformation = ({
   const priceEth = convertToEth(
     sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
   );
-  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(new BigNumber(minBidIncrement));
+  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(
+    new BigNumber(minBidIncrement)
+  );
 
   let isMakeBid = false;
   let withdrawValue = 0;
@@ -191,7 +193,7 @@ const ImportantProductInformation = ({
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
           <span className={styles.priceEth}>
-            {Math.round((priceEth * monaPerEth) * 10000) / 10000} $MONA
+            {Math.round(priceEth * monaPerEth * 10000) / 10000} $MONA
           </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
