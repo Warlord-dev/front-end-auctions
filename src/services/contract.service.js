@@ -358,8 +358,12 @@ export const getTokenPrice = async (contractAddress) => {
 
 export const getTokenPriceMatic = async (marketplaceContract) => {
   return new Promise(async (resolve) => {
-    const value = await marketplaceContract.methods.lastOracleQuote().call();
-    console.log(value);
-    resolve(value);
+    try {
+      const value = await marketplaceContract.methods.lastOracleQuote().call();
+      console.log(value);
+      resolve(value);
+    } catch {
+      resolve(1);
+    }
   });
 };
