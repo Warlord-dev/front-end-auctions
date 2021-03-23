@@ -48,6 +48,8 @@ class GlobalActions extends BaseActions {
         dispatch(this.changeNetwork(getDefaultNetworkChainId()));
         await dispatch(this.setContractParams());
         dispatch(this.setValue('isInitialized', true));
+        console.log('METAMASK WAS NOT DETECTED ON init');
+        console.log('METAMASK WAS NOT DETECTED ON init');
         return;
       }
       const { ethereum } = window;

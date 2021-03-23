@@ -53,6 +53,8 @@ class UserActions extends BaseActions {
       if (source === WALLET_METAMASK) {
         if (!isMetamaskInstalled()) {
           dispatch(openNotInstalledMetamask());
+          console.log('METAMASK WAS NOT DETECTED ON TRY TO LOGIN');
+          console.log('METAMASK WAS NOT DETECTED ON TRY TO LOGIN');
           return;
         }
 
