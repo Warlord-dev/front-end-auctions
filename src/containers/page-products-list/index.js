@@ -174,6 +174,7 @@ const PageProductsList = ({ collectionId }) => {
         />
       ) : (
         <CardListDigi
+          auctions={currentAuctions}
           collections={
             collectionId === '2'
               ? currentCollections.filter(
