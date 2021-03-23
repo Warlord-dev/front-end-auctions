@@ -125,8 +125,8 @@ const RightBox = ({
               {Math.round(
                 (parseFloat(ethersUtils.formatEther(currentCounts[activeTab].basePrice)) /
                   parseFloat(monaPerEth)) *
-                  100
-              ) / 100}{' '}
+                  10000
+              ) / 10000}{' '}
               $MONA
             </span>
           </p>
