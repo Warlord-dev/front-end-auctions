@@ -9,7 +9,7 @@ import bidActions from '@actions/bid.actions';
 import InputWithArrows from '@components/input-with-arrows';
 import { closeRaiseModal } from '@actions/modals.actions';
 import { getModalParams } from '@selectors/modal.selectors';
-import { getMinBidIncrement } from '@selectors/global.selectors';
+import { getMinBidIncrement, getMonaPerEth } from '@selectors/global.selectors';
 
 import styles from './styles.module.scss';
 
