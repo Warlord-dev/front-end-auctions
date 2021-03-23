@@ -14,7 +14,7 @@ import styles from './styles.module.scss';
 const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   const dispatch = useDispatch();
   const requests = useRef([]);
-  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const monaPerEth = useSelector(getMonaPerEth);
 
   const { id, priceEth } = useSelector(getModalParams);
 
