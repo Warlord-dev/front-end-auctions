@@ -30,7 +30,7 @@ const CardProductDigi = ({
   const TABS = [EXCLUSIVE_RARITY, SEMI_RARE_RARITY, COMMON_RARITY];
   const COLORS = [styles.color1, styles.color2, styles.color3];
   const [isOpen, setIsOpen] = useState(false);
-  let tabIndexD = 2; // hardcoded
+  let tabIndexD = 3; // hardcoded
 
   const options = getCardProductChartOptions(history);
 

@@ -19,13 +19,12 @@ const Products = () => {
   const garmentId = id.slice(0, id.length - 1);
   const tabIndex = parseInt(id.slice(id.length - 1));
 
-  if (tabIndex > 2) {
+  if (tabIndex > 3) {
     return null;
-  }
+  } //hardcoded
 
   const dispatch = useDispatch();
   const garment = useSelector(getGarmentsById(garmentId));
-  console.log(garment);
   const collections = useSelector(getAllCollections);
   const marketplaceOffers = useSelector(getAllMarketplaceOffers);
   const chainId = useSelector(getChainId);

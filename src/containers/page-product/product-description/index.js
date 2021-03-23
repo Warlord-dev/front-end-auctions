@@ -28,7 +28,7 @@ const ProductDescription = ({
       );
       return t_semiRare ? t_semiRare.garments[0].tokenUri : '';
     }
-    if (activeTab === 2) {
+    if (activeTab === 3) {
       //hardcoded
       return 'https://gateway.pinata.cloud/ipfs/Qmam1Wj39rZbBbmyVmHLyBcwnLCr1eJbmSDJcCcUav5vXg';
     }
@@ -47,7 +47,7 @@ const ProductDescription = ({
     let t_common_offer = currentMarketplaceOffers.find(
       (offer) => offer.garmentCollection.rarity === COMMON_RARITY
     );
-    if (activeTab === 2) {
+    if (activeTab === 3) {
       //hardcoded
       t_semiRare_offer = currentMarketplaceOffers.find(
         (offer) => offer.garmentCollection.id === '8'
@@ -57,7 +57,7 @@ const ProductDescription = ({
     let t_semiRare = t_semiRare_offer
       ? currentCollections.find((collection) => collection.id === t_semiRare_offer.id)
       : null;
-    if (activeTab === 2) {
+    if (activeTab === 3) {
       //hardcoded
       t_semiRare = t_semiRare_offer
         ? currentCollections.find((collection) => collection.id == 8)
@@ -67,10 +67,16 @@ const ProductDescription = ({
       ? currentCollections.find((collection) => collection.id === t_common_offer.id)
       : null;
     console.log('eer', t_common, t_semiRare);
-    if (activeTab === 2) {
+    if (activeTab === 3) {
       //hardcoded
       return [
         { total: 1, sold: !garment.resulted ? 0 : 1 },
+        {
+          total: t_semiRare ? t_semiRare.garments.length : 0,
+          collectionId: t_semiRare ? t_semiRare.id : null,
+          basePrice: t_semiRare_offer ? t_semiRare_offer.primarySalePrice : '0',
+          sold: t_semiRare_offer ? parseInt(t_semiRare_offer.amountSold, 10) : 0,
+        },
         {
           total: t_common ? t_common.garments.length : 0,
           collectionId: t_common ? t_common.id : null,
@@ -101,7 +107,6 @@ const ProductDescription = ({
       },
     ];
   }, [currentCollections, currentMarketplaceOffers]);
-  console.log(currentCounts);
 
   // pull designer informations and cloth photos for all rare types
   // IMPORTANT relationships between nfts :(
