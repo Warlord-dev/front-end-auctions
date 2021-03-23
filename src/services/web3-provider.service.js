@@ -29,7 +29,7 @@ export const setWeb3Provider = async () => {
     console.log('The arkane provider is');
     window.web3 = new Web3(provider);
 
-    console.log(window.web3.eth.accounts.wallet);
+    console.log(window.web3.eth.getAccounts());
     return;
   }
 };
