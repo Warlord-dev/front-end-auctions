@@ -42,20 +42,15 @@ class GlobalActions extends BaseActions {
         toast.error(`Set USD rate error: ${JSON.stringify(e)}`);
       }
 
-      /*
-      Check if Arkane loggedIn
-      */
-      if (
-        localStorage.getItem(STORAGE_IS_LOGGED_IN) &&
-        localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE
-      ) {
-        return;
-      }
-
       /**
-       * Check installed Metamask
+       * Check installed Metamask or 
+      Check if Arkane loggedIn
        */
-      if (!isMetamaskInstalled()) {
+      if (
+        (localStorage.getItem(STORAGE_IS_LOGGED_IN) &&
+          localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) ||
+        !isMetamaskInstalled()
+      ) {
         dispatch(this.changeNetwork(getDefaultNetworkChainId()));
         await dispatch(this.setContractParams());
         dispatch(this.setValue('isInitialized', true));

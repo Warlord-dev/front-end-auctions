@@ -37,7 +37,7 @@ class UserActions extends BaseActions {
         dispatch(this.setValue('account', wallets[0]));
         dispatch(closeConnectMetamaskModal());
         dispatch(openSignupModal({ email }));
-        dispatch(globalActions.changeNetwork(chainId));
+        dispatch(globalActions.changeNetwork('0x' + chainId.toString(16)));
         dispatch(globalActions.setContractParams());
       } catch (e) {
         toast.error('Wallet Connect is failed');
