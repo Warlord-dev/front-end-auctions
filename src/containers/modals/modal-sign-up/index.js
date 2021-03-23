@@ -84,7 +84,14 @@ const ModalSignUp = ({ className, title }) => {
                 ) : (
                   <>
                     <div className={styles.inputItem}>
-                      <label>USER ID</label>
+                      <div className={styles.userIdRow}>
+                        <label>USER ID</label>
+                        <span className={styles.questionMark}>?</span>
+                        <span className={styles.hint}>
+                          Username must not exceed 10 characters. No special characters allowed,
+                          only numbers and letters.
+                        </span>
+                      </div>
                       <input value={userName} onChange={(e) => userNameChanged(e.target.value)} />
                       {!isUserNameAvailable && (
                         <p>That User ID is already taken. Please choose another one</p>

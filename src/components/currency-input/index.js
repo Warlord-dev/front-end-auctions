@@ -10,7 +10,12 @@ export default function CurrencyInput({ color, placeHolder, max, value, setValue
           type="number"
           value={value}
           onChange={(e) => {
-            setValue(e.target.value);
+            const value = e.target.value;
+            const decimalIndex = value.indexOf(".");
+            if (value.length - decimalIndex > 6) {
+              return;
+            }
+            setValue(value);
           }}
           className={styles.input}
         />

@@ -41,9 +41,9 @@ class UserActions extends BaseActions {
         dispatch(closeConnectMetamaskModal());
         dispatch(openSignupModal({ email }));
       } catch (e) {
-        toast.error("Wallet Connect is failed");        
+        toast.error('Wallet Connect is failed');
       }
-    }
+    };
   }
 
   tryToLogin(source) {
@@ -132,8 +132,7 @@ class UserActions extends BaseActions {
       if (WALLET === WALLET_ARKANE) {
         try {
           Arkane.arkaneConnect().logout();
-        } catch (err) {
-        }
+        } catch (err) {}
       }
       dispatch(this.setValue('user', null));
       localStorage.removeItem(STORAGE_IS_LOGGED_IN);

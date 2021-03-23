@@ -20,34 +20,23 @@ const SmallPhotoWithText = ({
     {photo && !photoIsLink && (
       <>
         <img className={styles.designerPhoto} src={photo} alt="" />
-        <p className={cn(styles.designerName, styles.designerNameLink)}>
-          {name}
-        </p>
+        <p className={cn(styles.designerName, styles.designerNameLink)}>{name}</p>
       </>
     )}
     {photo && photoIsLink && (
-      <Link href={`${DESIGNERS}${id}`}>
-        <a className={styles.photoLinkWrapper}>
-          <img
-            className={cn(styles.designerPhoto, styles.designerPhotoLink)}
-            src={photo}
-            alt=""
-          />
-        </a>
-      </Link>
+      // <Link href={`${DESIGNERS}${id}`}>
+      <a className={styles.photoLinkWrapper}>
+        <img className={cn(styles.designerPhoto, styles.designerPhotoLink)} src={photo} alt="" />
+      </a>
+      // </Link>
     )}
     {id && (
-      <Link href={`${DESIGNERS}${id}`}>
-        <a className={cn(styles.designerName, styles.designerNameLink)}>
-          {name}
-        </a>
-      </Link>
+      // <Link href={`${DESIGNERS}${id}`}>
+      <a className={cn(styles.designerName, styles.designerNameLink)}>{name}</a>
+      // </Link>
     )}
     {address && (
-      <p
-        className={cn(styles.hashAddress, 'smallPhotoWithText__hashAddress')}
-        title={address}
-      >
+      <p className={cn(styles.hashAddress, 'smallPhotoWithText__hashAddress')} title={address}>
         {address}
       </p>
     )}

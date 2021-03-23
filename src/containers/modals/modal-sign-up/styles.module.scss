@@ -51,3 +51,40 @@
   justify-content: center;
   min-width: auto !important;
 }
+
+.questionMark {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px !important;
+  line-height: 11px;
+  font-weight: 600;
+  background: #fff;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.hint {
+  display: none;
+  position: absolute;
+  width: 165px;
+  padding: 4px;
+  border: 0.5px solid #000000;
+  background: #fff;
+  font-size: 9px !important;
+  line-height: 120%;
+  top: 25px;
+  left: 75px;
+}
+
+.questionMark:hover + .hint {
+  display: block;
+}
+
+.userIdRow {
+  position: relative;
+}
