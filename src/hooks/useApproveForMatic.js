@@ -15,6 +15,10 @@ export default function useApproveForMatic(amount) {
   const [approved, setApproved] = useState(false);
 
   useEffect(() => {
+    console.log('what address what network?');
+    console.log(posClient);
+    console.log(account);
+    console.log(chainId);
     if (posClient && account && chainId) {
       const network = getEnabledNetworkByChainId(chainId);
       posClient
