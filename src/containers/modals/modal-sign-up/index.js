@@ -48,7 +48,7 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
       if (userName.length > 10) {
         toast('Must not exceed 10 characters');
         return;
-      }  
+      }
       if (!validateUserName(userName)) {
         toast('User ID must contains letters and numbers only!');
         return;
@@ -84,14 +84,19 @@ const ModalSignUp = ({ className, title, textForIcon, icon }) => {
                 ) : (
                   <>
                     <div className={styles.inputItem}>
-                      <label>USER ID</label>
+                      <div className={styles.userIdRow}>
+                        <label>USER ID</label>
+                        <span className={styles.questionMark}>?</span>
+                        <span className={styles.hint}>
+                          Username must not exceed 10 characters. No special characters allowed,
+                          only numbers and letters.
+                        </span>
+                      </div>
                       <input value={userName} onChange={(e) => userNameChanged(e.target.value)} />
                       {!isUserNameAvailable && (
                         <p>That User ID is already taken. Please choose another one</p>
                       )}
-                      {!isUserNameValid && (
-                        <p>No special characters. Only letters and numbers.</p>
-                      )}
+                      {!isUserNameValid && <p>No special characters. Only letters and numbers.</p>}
                     </div>
                     <div className={styles.inputItem}>
                       <label>EMAIL</label>
