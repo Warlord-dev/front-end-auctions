@@ -4,13 +4,22 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import moment from 'moment';
 import { useSelector } from 'react-redux';
-import { getExchangeRateETH, getChainId } from '@selectors/global.selectors';
+import { getExchangeRateETH, getChainId, getMonaPerEth } from '@selectors/global.selectors';
 import { getExplorerUrlByChainId } from '@services/network.service';
 import SmallPhotoWithText from '../../small-photo-with-text';
 import styles from './styles.module.scss';
 
 const TradeHistoryLine = ({
-  className, priceEth, date, sendersPhoto, sendersAddress, recipientAddress, recipientPhoto, eventName, isPaidWithMona, priceMona
+  className,
+  priceEth,
+  date,
+  sendersPhoto,
+  sendersAddress,
+  recipientAddress,
+  recipientPhoto,
+  eventName,
+  isPaidWithMona,
+  priceMona,
 }) => {
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const chainId = useSelector(getChainId);
@@ -25,22 +34,27 @@ const TradeHistoryLine = ({
 
   const getDefaultText = (text) => text.split(/(?=[A-Z])/).join(' ');
 
-  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const monaPerEth = useSelector(getMonaPerEth);
 
   return (
     <div className={cn(styles.item, className)}>
-      {isPaidWithMona ?
-        (<div>
-          <span className={styles.priceEth}>{Math.round(parseFloat(priceMona) * 10000) / 10000} MONA</span>
+      {isPaidWithMona ? (
+        <div>
+          <span className={styles.priceEth}>
+            {Math.round(parseFloat(priceMona) * 10000) / 10000} MONA
+          </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
           <span> - {getDefaultText(eventName)}</span>
-        </div>) : 
-        (<div>
-          <span className={styles.priceEth}>{Math.floor(priceEth * monaPerEth * 10000) / 10000} MONA</span>
+        </div>
+      ) : (
+        <div>
+          <span className={styles.priceEth}>
+            {Math.floor(priceEth * monaPerEth * 10000) / 10000} MONA
+          </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
           <span> - {getDefaultText(eventName)}</span>
-        </div>)
-      }
+        </div>
+      )}
       <SmallPhotoWithText
         addressLink={senderLink}
         addressText={sendersAddress}

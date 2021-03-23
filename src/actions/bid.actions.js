@@ -19,7 +19,7 @@ class BidActions extends BaseActions {
       const account = getState().user.get('account');
       const auctionContractAddress = getState().global.get('auctionContractAddress');
       const contract = await getContract(auctionContractAddress);
-      const weiValue = convertToWei(value / monaPerEth);
+      const weiValue = convertToWei(value);
       const chainId = getState().global.get('chainId');
 
       const monaContractAddress = await getMonaContractAddressByChainId(chainId);

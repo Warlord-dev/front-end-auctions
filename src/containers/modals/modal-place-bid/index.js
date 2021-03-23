@@ -10,7 +10,11 @@ import { closePlaceBidModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
 import { utils as ethersUtils } from 'ethers';
-import { getMinBidIncrement, getBidWithdrawalLockTime } from '@selectors/global.selectors';
+import {
+  getMinBidIncrement,
+  getBidWithdrawalLockTime,
+  getMonaPerEth,
+} from '@selectors/global.selectors';
 import styles from './styles.module.scss';
 
 const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
@@ -21,7 +25,7 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
 
-  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const monaPerEth = useSelector(getMonaPerEth);
   const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(
     new BigNumber(minBidIncrement)
   );

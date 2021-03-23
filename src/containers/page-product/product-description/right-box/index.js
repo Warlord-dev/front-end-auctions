@@ -35,7 +35,7 @@ const RightBox = ({
   const account = useSelector(getAccount);
   const garment = useSelector(getGarmentsById(clothesId));
   const auction = useSelector(getAuctionById(garment.id));
-  const monaPerEth = 1.32; // useSelector(getMonaPerEth);
+  const monaPerEth = useSelector(getMonaPerEth);
 
   const [semiRare, common] = useMemo(() => {
     if (!currentCollections) return [{ children: [] }, { children: [] }];

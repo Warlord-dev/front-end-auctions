@@ -18,6 +18,13 @@ export const getMarketplaceContract = async (ContractAddress) => {
       stateMutability: 'payable',
       type: 'function',
     },
+    {
+      inputs: [],
+      name: 'lastOracleQuote',
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
   ];
 
   const contract = await new window.web3.eth.Contract(jsonInterface, ContractAddress);
@@ -270,7 +277,7 @@ export const getContract = async (auctionContractAddress) => {
         {
           internalType: 'uint256',
           name: '_monaAmount',
-          type: 'uint256'
+          type: 'uint256',
         },
       ],
       name: 'placeBid',
@@ -347,4 +354,16 @@ export const getTokenPrice = async (contractAddress) => {
   const price = await monaToken.getPrice();
 
   return price;
+};
+
+export const getTokenPriceMatic = async (marketplaceContract) => {
+  return new Promise(async (resolve) => {
+    try {
+      const value = await marketplaceContract.methods.lastOracleQuote().call();
+      console.log(value);
+      resolve(value);
+    } catch {
+      resolve(1);
+    }
+  });
 };

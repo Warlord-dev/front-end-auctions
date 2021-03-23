@@ -13,8 +13,9 @@ export const getAPIUrlByChainId = (chainId) => {
   if (!network || !config.API_URLS[network.alias]) {
     return config.API_URLS[config.DEFAULT_NETWORK];
   }
+  if (network.alias === 'mumbai') return config.API_URLS[network.alias];
 
-  return config.API_URLS[network.alias];
+  return config.API_URLS[config.DEFAULT_NETWORK];
 };
 
 export const getExplorerUrlByChainId = (chainId) => {
