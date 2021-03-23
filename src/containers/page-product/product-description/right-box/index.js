@@ -12,7 +12,7 @@ import { getAuctionById } from '@selectors/auction.selectors';
 import Button from '@components/buttons/button';
 import Timer from '@components/timer';
 import { openBuynowModal, openConnectMetamaskModal } from '@actions/modals.actions';
-import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
+import { getExchangeRateETH, getMonaPerEth, getChainId } from '@selectors/global.selectors';
 import { COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 import AuctionInformation from './auction-information';
 import DesignInformation from './design-information';
@@ -36,6 +36,8 @@ const RightBox = ({
   const garment = useSelector(getGarmentsById(clothesId));
   const auction = useSelector(getAuctionById(garment.id));
   const monaPerEth = useSelector(getMonaPerEth);
+  const chainId = useSelector(getChainId);
+  const isMatic = chainId === '0x13881' || chainId === '0x89';
 
   const [semiRare, common] = useMemo(() => {
     if (!currentCollections) return [{ children: [] }, { children: [] }];
@@ -139,7 +141,9 @@ const RightBox = ({
               onClick={() => handleClickBuy()}
               className={styles.button}
               background="black"
-              isDisabled={currentCounts[activeTab].sold === currentCounts[activeTab].total}
+              isDisabled={
+                currentCounts[activeTab].sold === currentCounts[activeTab].total || !isMatic
+              }
             >
               <span className={styles.buttonText}>
                 {currentCounts[activeTab].sold === currentCounts[activeTab].total
