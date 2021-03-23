@@ -11,7 +11,6 @@ import { getChainId } from '@selectors/global.selectors';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 
-import { useMonaBalance } from '@hooks/useMonaBalance';
 import Logo from './logo';
 import styles from './styles.module.scss';
 
@@ -19,7 +18,6 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
-
 
   const router = useRouter();
   const pathname = router.pathname;
@@ -33,8 +31,6 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     pathname !== '/bridge' && pathname !== '/bridge/deposit'
       ? 'Please switch to Matic Network'
       : 'Please switch to Mainnet';
-
-  const [_, monaBalance] = useMonaBalance();
 
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
@@ -137,7 +133,6 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
                 </button>
               </div>
             )}
-            <span className={styles.monaBalance}>Mona Balance: {monaBalance}</span>
           </div>
         ) : (
           <Button onClick={() => handleClick()}>{buttonText}</Button>
