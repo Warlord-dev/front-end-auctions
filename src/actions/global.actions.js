@@ -112,7 +112,7 @@ class GlobalActions extends BaseActions {
         dispatch(this.setValue('monaPerEth', convertToEth(monaPerEth)));
       } catch (e) {
         console.error(e);
-        dispatch(this.setValue('monaPerEth', 0));
+        dispatch(this.setValue('monaPerEth', 1));
       }
 
       try {
