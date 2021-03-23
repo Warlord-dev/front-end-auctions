@@ -18,7 +18,7 @@ export default function Deposit() {
   const depositCallback = useDepositToMatic();
 
   return (
-    <div className={styles.bridgeWrapper}>
+    <div className={styles.depositWithdrawWrapper}>
       <div className={styles.bridgeTitle}>DEPOSIT $MONA TO MATIC</div>
       <div>
         <div style={{ marginBottom: 15 }}>
@@ -29,7 +29,9 @@ export default function Deposit() {
         </div>
 
         <div style={{ marginBottom: 30 }}>
-          <div className={`${styles.amount} ${parentStyles.ethColor}`}>{monaEthBalance} $MONA</div>
+          <div className={`${styles.amount} ${parentStyles.ethColor}`}>
+            {parseFloat(monaEthBalance).toFixed(6)} $MONA
+          </div>
         </div>
 
         <CurrencyInput

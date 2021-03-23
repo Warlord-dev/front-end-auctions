@@ -19,6 +19,8 @@ export default function useMaticPosClient() {
     if (account) {
       setPosClientParent(
         new MaticPOSClient({
+          network: isMainnet ? 'mainnet' : 'testnet',
+          version: isMainnet ? 'v1' : 'mumbai',
           parentProvider: web3,
           maticProvider: isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI,
           parentDefaultOptions: { from: account },
@@ -28,6 +30,8 @@ export default function useMaticPosClient() {
 
       setPosClientChild(
         new MaticPOSClient({
+          network: isMainnet ? 'mainnet' : 'testnet',
+          version: isMainnet ? 'v1' : 'mumbai',
           maticProvider: web3,
           parentProvider: isMainnet ? config.DEFAULT_WEB3_URL : config.WEB3_URLS.GOERLI,
           parentDefaultOptions: { from: account },
