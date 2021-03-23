@@ -109,9 +109,10 @@ const ImportantProductInformation = ({
     )
     .sort((a, b) => b.timestamp - a.timestamp);
 
-  const priceEth = convertToEth(
+  let priceEth = convertToEth(
     sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
   );
+  if (auctionId == '2' && tabIndex == '1') priceEth = convertToEth('57000000000000000');
   const minBid = new BigNumber(Math.floor((priceEth / monaPerEth) * 10000) / 10000).plus(
     new BigNumber(minBidIncrement)
   );
