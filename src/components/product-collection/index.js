@@ -16,7 +16,6 @@ import styles from './styles.module.scss';
 const CardProduct = ({ collection }) => {
   const tokenInfo = useTokenInfo(collection.image, [collection.image]);
   const designerInfo = useSelector(getDesignerInfoByName(collection.designer, true));
-  // console.log('---token', tokenInfo);
   const [imageUrl, isVideo] =
     collection.id === 2
       ? [tokenInfo ? tokenInfo.animation : '', true]

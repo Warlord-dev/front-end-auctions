@@ -75,6 +75,10 @@ const EditProfile = ({ history }) => {
   };
 
   const saveProfile = () => {
+    if (user.username.length > 10) {
+      toast('Must not exceed 10 characters');
+      return;
+    }
     if (!validateUserName(user.username)) {
       toast('User ID must contains letters and numbers only!');
       return;
