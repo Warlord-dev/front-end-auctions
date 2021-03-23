@@ -9,7 +9,7 @@ import auctionPageActions from '@actions/auction.page.actions';
 import collectionActions from '@actions/collection.actions';
 import { getAllAuctions } from '@selectors/auction.selectors';
 import { getAllCollections } from '@selectors/collection.selectors';
-import { getExchangeRateETH, getChainId } from '@selectors/global.selectors';
+import { getExchangeRateETH, getChainId, getMonaPerEth } from '@selectors/global.selectors';
 import { useSubscription } from '@hooks/subscription.hooks';
 import wsApi from '@services/api/ws.service';
 
@@ -23,6 +23,7 @@ const ImportantCollectionInformation = ({ collection }) => {
   const currentAuctions = auctions.toJS();
   const currentCollections = collections.toJS();
   const chainId = useSelector(getChainId);
+  const monaPerEth = useSelector(getMonaPerEth);
 
   const [, updateState] = React.useState(0);
   const timer = useRef(null);
@@ -68,12 +69,15 @@ const ImportantCollectionInformation = ({ collection }) => {
             collection.garments.length && digitalIds.includes(collection.garments[0].designer)
         )
       : currentCollections;
-  const priceEth = convertToEth(
-    filteredAuctions
-      .filter((auction) => auction.topBid)
-      .map((auction) => parseInt(auction.topBid))
-      .reduce((total, cur) => total + cur, 0)
-  );
+  const auctionPrice = filteredAuctions
+    .filter((auction) => auction.topBid)
+    .map((auction) => parseInt(auction.topBid))
+    .reduce((total, cur) => total + cur, 0);
+  const collectionPrice = filteredCollections
+    .filter((collection) => collection.garments.length)
+    .map((collection) => parseInt(collection.garments[0].primarySalePrice))
+    .reduce((total, cur) => total + cur, 0);
+  const priceEth = convertToEth(auctionPrice + collectionPrice);
 
   const expirationDate = filteredAuctions.length
     ? Math.max(...filteredAuctions.map((auction) => parseInt(auction.endTime))) * 1000
@@ -95,7 +99,7 @@ const ImportantCollectionInformation = ({ collection }) => {
       <div className={styles.leftWrapper}>
         <p className={styles.priceDescription}>Total Sold</p>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{Math.floor(priceEth * 10000) / 10000} MONA</span>
+          <span className={styles.priceEth}>{Math.floor(priceEth / monaPerEth * 10000) / 10000} MONA</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
       </div>
