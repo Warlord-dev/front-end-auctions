@@ -75,9 +75,11 @@ const ImportantCollectionInformation = ({ collection }) => {
       .reduce((total, cur) => total + cur, 0)
   );
 
-  const expirationDate = filteredAuctions.length ? Math.max(...filteredAuctions.map((auction) => parseInt(auction.endTime))) * 1000 : 0;
+  const expirationDate = filteredAuctions.length
+    ? Math.max(...filteredAuctions.map((auction) => parseInt(auction.endTime))) * 1000
+    : 0;
 
-  const timeOut = expirationDate ? new Date(expirationDate) - new Date() + 1000 : 0;
+  const timeOut = expirationDate ? new Date(expirationDate) - new Date() + 1000 : -1;
 
   if (timeOut > 0) {
     timerToSoldButton.current = setTimeout(() => updateState(Date.now()), timeOut);
@@ -98,8 +100,12 @@ const ImportantCollectionInformation = ({ collection }) => {
         </p>
       </div>
       <div className={styles.footerBoxRight}>
-        <Timer className={styles.timer} expirationDate={expirationDate} />
-        <p className={styles.expirationDateText}>TIME LEFT</p>
+        {timeOut >= 0 && (
+          <>
+            <Timer className={styles.timer} expirationDate={expirationDate} />
+            <p className={styles.expirationDateText}>TIME LEFT</p>
+          </>
+        )}
         <Link
           href={`/collections/${collection.id}`}
           className={styles.buttonSold}
