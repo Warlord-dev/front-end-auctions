@@ -93,3 +93,29 @@
   align-items: center;
   justify-content: center;
 }
+
+.walletAddress {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 49px;
+  span {
+    color: #999999;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #111111;
+    letter-spacing: 0.12em;
+    img {
+      margin-left: 5px;
+      cursor: pointer;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
