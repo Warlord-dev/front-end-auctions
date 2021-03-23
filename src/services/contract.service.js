@@ -359,7 +359,22 @@ export const getTokenPrice = async (contractAddress) => {
 export const getTokenPriceMatic = async (marketplaceContract) => {
   return new Promise(async (resolve) => {
     try {
-      const value = await marketplaceContract.methods.lastOracleQuote().call();
+      const jsonInterface = [
+        {
+          inputs: [],
+          name: 'lastOracleQuote',
+          outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
+          stateMutability: 'view',
+          type: 'function',
+        },
+      ];
+      const web3 = new Web3(new Web3.providers.HttpProvider('https://rpc-mainnet.matic.network/'));
+      const contract = await new web3.eth.Contract(
+        jsonInterface,
+        config.DIGITAL_MARKETPLACE_ADDRESSES['matic']
+      );
+
+      const value = await contract.methods.lastOracleQuote().call();
       console.log(value);
       resolve(value);
     } catch {
