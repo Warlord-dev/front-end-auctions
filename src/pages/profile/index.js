@@ -1,7 +1,9 @@
 import React from 'react';
 import cn from 'classnames';
+import copy from 'copy-to-clipboard';
 import { useSelector, useDispatch } from 'react-redux';
 import Router from 'next/router';
+import { toast } from 'react-toastify';
 import NFTProduct from '@components/nft-product';
 import Button from '@components/buttons/button';
 import { getUser, getAccount } from '@selectors/user.selectors';
@@ -31,6 +33,11 @@ const Profile = ({ history }) => {
     }, '');
   };
 
+  const onCopyWalletAddress = () => {
+    copy(account);
+    toast("Wallet Address is copied to the clipboard");
+  };
+
   if (!user || !nfts) {
     return <Loader size="large" className={styles.loader} />;
   }
@@ -54,6 +61,13 @@ const Profile = ({ history }) => {
         <div className={styles.inputItemwrapper}>
           <span>Whitelisted IP address</span>
           <p>{user.get('ipAddrs')}</p>
+        </div>
+        <div className={styles.walletAddress}>
+          <span>Connected Wallet Address</span>
+          <p>
+            {account}
+            <img src="/images/clipboard.png" onClick={onCopyWalletAddress} />
+          </p>
         </div>
         <Button
           className={styles.modalButton}

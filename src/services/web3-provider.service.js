@@ -26,8 +26,14 @@ export const setWeb3Provider = async () => {
   }
   if (WALLET === WALLET_ARKANE) {
     const provider = await Arkane.createArkaneProviderEngine(options);
+<<<<<<< HEAD
     console.log(provider);
+=======
+    console.log('The arkane provider is');
+>>>>>>> 9d2d61d6e5a7863ac6b656f2d30bd742c87ca6e1
     window.web3 = new Web3(provider);
+
+    console.log(window.web3.eth.getAccounts());
     return;
   }
 };

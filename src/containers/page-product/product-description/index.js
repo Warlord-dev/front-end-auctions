@@ -2,8 +2,8 @@ import React, { memo, useState, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useTokenInfo } from '@hooks/token.info.hooks';
-import { getGarmentsById, getGarmentsReceiveByName } from '@selectors/garment.selectors';
-import { getDesignerInfoById } from '@selectors/designer.selectors';
+import { getGarmentsById, getGarmentsReceiveByName, } from '@selectors/garment.selectors';
+import { getDesignerInfoById, getDesignerInfoByName } from '@selectors/designer.selectors';
 import { createArrayForGallery } from '@helpers/photo.helpers';
 import { COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 import LeftBox from './left-box';
@@ -37,7 +37,9 @@ const ProductDescription = ({
   }, [activeTab, currentCollections]);
   const tokenInfo = useTokenInfo(tokenUri, [tokenUri]);
   const clothesPhotos = useMemo(() => createArrayForGallery(tokenInfo), [tokenInfo]);
-  const currentDesignersInfo = useSelector(getDesignerInfoById(garment.designer));
+  const currentDesignersInfo = useSelector(
+    activeTab === 3 ? getDesignerInfoByName('Digitalax', true) : getDesignerInfoById(garment.designer)
+  );
   const receive = useSelector(getGarmentsReceiveByName(tokenInfo?.name));
 
   const currentCounts = useMemo(() => {
