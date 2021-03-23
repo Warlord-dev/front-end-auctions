@@ -44,7 +44,11 @@ class GlobalActions extends BaseActions {
       /**
        * Check installed Metamask
        */
-      if (!isMetamaskInstalled()) {
+
+      const { ethereum } = window;
+      window.web3 = new Web3(ethereum);
+
+      if (!window.web3) {
         dispatch(this.changeNetwork(getDefaultNetworkChainId()));
         await dispatch(this.setContractParams());
         dispatch(this.setValue('isInitialized', true));
@@ -52,8 +56,6 @@ class GlobalActions extends BaseActions {
         console.log('METAMASK WAS NOT DETECTED ON init');
         return;
       }
-      const { ethereum } = window;
-      window.web3 = new Web3(ethereum);
       /**
        * Init subscribers
        */
