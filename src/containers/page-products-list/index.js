@@ -19,6 +19,7 @@ import { useSubscription } from '@hooks/subscription.hooks';
 import { useAPY } from '@hooks/apy.hooks';
 import GeneralInformation from './general-information';
 import CardList from './card-list';
+import CardListDigi from './card-list-digi';
 
 const PageProductsList = ({ collectionId }) => {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ const PageProductsList = ({ collectionId }) => {
   const chainId = useSelector(getChainId);
   const currentAuctions = auctions.toJS();
   const currentCollections = collections.toJS();
+  console.log(currentCollections);
   const [showGraphIds, setShowGraphIds] = useState([]);
 
   useSubscription(
@@ -160,25 +162,31 @@ const PageProductsList = ({ collectionId }) => {
         timestamp={minTimestampAutcionTime}
         history={monthResultedAuctions}
       />
-      <CardList
-        auctions={collectionId === '1' ? currentAuctions : []}
-        collections={
-          collectionId === '1'
-            ? currentCollections.filter(
-                (collection) =>
-                  collection.garments.length &&
-                  !digitalIds.includes(collection.garments[0].designer)
-              )
-            : collectionId === '2'
-            ? currentCollections.filter(
-                (collection) =>
-                  collection.garments.length && digitalIds.includes(collection.garments[0].designer)
-              )
-            : currentCollections
-        }
-        showGraphIds={showGraphIds}
-        setShowGraphIds={setShowGraphIds}
-      />
+      {collectionId === '1' ? (
+        <CardList
+          auctions={currentAuctions}
+          collections={currentCollections.filter(
+            (collection) =>
+              collection.garments.length && !digitalIds.includes(collection.garments[0].designer)
+          )}
+          showGraphIds={showGraphIds}
+          setShowGraphIds={setShowGraphIds}
+        />
+      ) : (
+        <CardListDigi
+          collections={
+            collectionId === '2'
+              ? currentCollections.filter(
+                  (collection) =>
+                    collection.garments.length &&
+                    digitalIds.includes(collection.garments[0].designer)
+                )
+              : currentCollections
+          }
+          showGraphIds={showGraphIds}
+          setShowGraphIds={setShowGraphIds}
+        />
+      )}
     </>
   );
 };

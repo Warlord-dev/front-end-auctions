@@ -28,6 +28,10 @@ const ProductDescription = ({
       );
       return t_semiRare ? t_semiRare.garments[0].tokenUri : '';
     }
+    if (activeTab === 2) {
+      //hardcoded
+      return 'https://gateway.pinata.cloud/ipfs/Qmam1Wj39rZbBbmyVmHLyBcwnLCr1eJbmSDJcCcUav5vXg';
+    }
     const t_common = currentCollections.find((collection) => collection.rarity === COMMON_RARITY);
     return t_common ? t_common.garments[0].tokenUri : '';
   }, [activeTab, currentCollections]);
@@ -37,19 +41,50 @@ const ProductDescription = ({
   const receive = useSelector(getGarmentsReceiveByName(tokenInfo?.name));
 
   const currentCounts = useMemo(() => {
-    const t_semiRare_offer = currentMarketplaceOffers.find(
+    let t_semiRare_offer = currentMarketplaceOffers.find(
       (offer) => offer.garmentCollection.rarity === SEMI_RARE_RARITY
     );
-    const t_common_offer = currentMarketplaceOffers.find(
+    let t_common_offer = currentMarketplaceOffers.find(
       (offer) => offer.garmentCollection.rarity === COMMON_RARITY
     );
-    const t_semiRare = t_semiRare_offer
+    if (activeTab === 2) {
+      //hardcoded
+      t_semiRare_offer = currentMarketplaceOffers.find(
+        (offer) => offer.garmentCollection.id === '8'
+      );
+      t_common_offer = null;
+    }
+    let t_semiRare = t_semiRare_offer
       ? currentCollections.find((collection) => collection.id === t_semiRare_offer.id)
       : null;
+    if (activeTab === 2) {
+      //hardcoded
+      t_semiRare = t_semiRare_offer
+        ? currentCollections.find((collection) => collection.id == 8)
+        : null;
+    }
     const t_common = t_common_offer
       ? currentCollections.find((collection) => collection.id === t_common_offer.id)
       : null;
-
+    console.log('eer', t_common, t_semiRare);
+    if (activeTab === 2) {
+      //hardcoded
+      return [
+        { total: 1, sold: !garment.resulted ? 0 : 1 },
+        {
+          total: t_common ? t_common.garments.length : 0,
+          collectionId: t_common ? t_common.id : null,
+          basePrice: t_common_offer ? t_common_offer.primarySalePrice : '0',
+          sold: t_common_offer ? parseInt(t_common_offer.amountSold, 10) : 0,
+        },
+        {
+          total: t_semiRare ? t_semiRare.garments.length : 0,
+          collectionId: t_semiRare ? t_semiRare.id : null,
+          basePrice: t_semiRare_offer ? t_semiRare_offer.primarySalePrice : '0',
+          sold: t_semiRare_offer ? parseInt(t_semiRare_offer.amountSold, 10) : 0,
+        },
+      ];
+    }
     return [
       { total: 1, sold: !garment.resulted ? 0 : 1 },
       {
@@ -66,6 +101,7 @@ const ProductDescription = ({
       },
     ];
   }, [currentCollections, currentMarketplaceOffers]);
+  console.log(currentCounts);
 
   // pull designer informations and cloth photos for all rare types
   // IMPORTANT relationships between nfts :(

@@ -15,6 +15,14 @@ export const createArrayForGallery = (tokenInfo) => {
       video: tokenInfo.animation_url,
       preview: tokenInfo.image,
     });
+  } else if (tokenInfo.animation) {
+    exceptImage = 'image';
+    clothesPhotos.push({
+      isMain: true,
+      isVideo: true,
+      video: tokenInfo.animation,
+      preview: tokenInfo.image,
+    });
   } else if (tokenInfo.image) {
     exceptImage = 'image';
     clothesPhotos.push({
@@ -95,9 +103,9 @@ export const getDesignerName = (tokenInfo) => {
   if (!tokenInfo || !tokenInfo.attributes) {
     return '';
   }
-  const designer = tokenInfo.attributes.find(item => item.trait_type === "Designer");
+  const designer = tokenInfo.attributes.find((item) => item.trait_type === 'Designer');
   if (!designer) {
     return '';
   }
   return designer.value;
-}
+};
