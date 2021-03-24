@@ -31,7 +31,8 @@ const TradeHistory = ({ clothesIds, className, headerTitle, activeTab }) => {
         .map((item) => ({
           id: item.id,
           clothesId: item.token.id,
-          priceEth: convertToEth(item.value),
+          priceEth: 0,
+          priceMona: convertToEth(item.value),
           date: item.timestamp * 1000,
           sendersPhoto: './images/user-photo.svg',
           sendersAddress: item.bidder ? item.bidder.id : item.token.owner,
