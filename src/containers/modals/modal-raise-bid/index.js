@@ -19,9 +19,7 @@ const ModalRaiseBid = ({ className, title, text, textForSelect, buttonText, your
   const { id, priceEth, withdrawValue } = useSelector(getModalParams);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const monaPerEth = useSelector(getMonaPerEth);
-  const minBid = new BigNumber(Math.floor((priceEth / monaPerEth) * 10000) / 10000).plus(
-    new BigNumber(minBidIncrement)
-  );
+  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
   const chainId = useSelector(getChainId);
   const isMatic = chainId === '0x13881' || chainId === '0x89';
 
@@ -68,9 +66,7 @@ const ModalRaiseBid = ({ className, title, text, textForSelect, buttonText, your
           <div className={styles.footer}>
             <p>
               <span className={styles.footerSubtitle}>{yourBidText}</span>
-              <span className={styles.footerSubtitleValue}>
-                {Math.floor(withdrawValue * monaPerEth * 10000) / 10000} MONA
-              </span>
+              <span className={styles.footerSubtitleValue}>{withdrawValue} MONA</span>
             </p>
             <p className={styles.caption}>
               <span>{textForSelect}</span>

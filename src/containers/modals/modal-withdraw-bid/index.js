@@ -66,9 +66,7 @@ const ModalWithdrawBid = ({ className, title, text, yourBidText, buttonText }) =
               {buttonText}
             </Button>
             <p className={styles.caption}>{yourBidText}</p>
-            <p className={styles.value}>
-              {Math.floor(withdrawValue * monaPerEth * 10000) / 10000} MONA
-            </p>
+            <p className={styles.value}>{withdrawValue} MONA</p>
           </div>
           {showError && <p className={styles.error}>{showError}</p>}
         </Modal>,

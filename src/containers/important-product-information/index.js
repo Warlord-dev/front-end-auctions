@@ -141,17 +141,16 @@ const ImportantProductInformation = ({
         .sort((a, b) => b.timestamp - a.timestamp)
     : [];
   let priceEth;
+  console.log(history);
   if (tabIndex === 0) {
-    priceEth = convertToEth(
-      sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
-    );
+    priceEth = sortedHistory.length
+      ? convertToEth(sortedHistory[0].value)
+      : Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
   } else {
-    priceEth = convertToEth(garment.primarySalePrice);
+    priceEth = Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
   }
   if (auctionId == '2' && tabIndex == '1') priceEth = convertToEth('57000000000000000');
-  const minBid = new BigNumber(Math.floor((priceEth / monaPerEth) * 10000) / 10000).plus(
-    new BigNumber(minBidIncrement)
-  );
+  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
 
   let isMakeBid = false;
   let withdrawValue = 0;
@@ -234,9 +233,7 @@ const ImportantProductInformation = ({
     >
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>
-            {Math.round((priceEth / monaPerEth) * 10000) / 10000} $MONA
-          </span>
+          <span className={styles.priceEth}>{priceEth} $MONA</span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
         {collection?.garments && (

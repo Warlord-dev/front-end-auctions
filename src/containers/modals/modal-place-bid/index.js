@@ -27,9 +27,7 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
 
   const monaPerEth = useSelector(getMonaPerEth);
-  const minBid = new BigNumber(Math.floor((priceEth / monaPerEth) * 10000) / 10000).plus(
-    new BigNumber(minBidIncrement)
-  );
+  const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
   const chainId = useSelector(getChainId);
   const isMatic = chainId === '0x13881' || chainId === '0x89';
 
