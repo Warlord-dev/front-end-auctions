@@ -140,9 +140,14 @@ const ImportantProductInformation = ({
         )
         .sort((a, b) => b.timestamp - a.timestamp)
     : [];
-  let priceEth = convertToEth(
-    sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
-  );
+  let priceEth;
+  if (tabIndex === 0) {
+    priceEth = convertToEth(
+      sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
+    );
+  } else {
+    priceEth = convertToEth(garment.primarySalePrice);
+  }
   if (auctionId == '2' && tabIndex == '1') priceEth = convertToEth('57000000000000000');
   const minBid = new BigNumber(Math.floor((priceEth / monaPerEth) * 10000) / 10000).plus(
     new BigNumber(minBidIncrement)

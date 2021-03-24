@@ -38,7 +38,6 @@ export const useCheckInclusion = (txIds) => {
             console.error('error', error);
           }
 
-          console.log('result', result);
           if (result && result.data) {
             let transaction = web3.eth.abi.decodeParameters(
               ['uint256', 'uint256', 'bytes32'],

@@ -19,7 +19,7 @@ const ModalRaiseBid = ({ className, title, text, textForSelect, buttonText, your
   const { id, priceEth, withdrawValue } = useSelector(getModalParams);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const monaPerEth = useSelector(getMonaPerEth);
-  const minBid = new BigNumber(Math.floor(priceEth * monaPerEth * 10000) / 10000).plus(
+  const minBid = new BigNumber(Math.floor((priceEth / monaPerEth) * 10000) / 10000).plus(
     new BigNumber(minBidIncrement)
   );
   const chainId = useSelector(getChainId);

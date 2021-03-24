@@ -40,7 +40,6 @@ const CardProductDigi = ({
 
   const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
   const designerInfo = useSelector(getDesignerInfoById(garment.designer));
-  console.log(tokenInfo);
 
   const [imageUrl, isVideo] = [tokenInfo ? tokenInfo.animation : '', true];
 

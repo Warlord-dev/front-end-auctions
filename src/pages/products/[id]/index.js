@@ -52,7 +52,6 @@ const Products = () => {
     {
       request: wsApi.onDigitalaxGarmentsCollectionChange(garmentId),
       next: (data) => {
-        console.log(data);
         dispatch(collectionActions.mapData(data.digitalaxGarmentCollections));
       },
     },

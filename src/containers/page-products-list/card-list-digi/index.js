@@ -56,7 +56,6 @@ const CardListDigi = ({ auctions, collections, className, showGraphIds, setShowG
     setDropdownActiveItem(value);
     localStorage.setItem(STORAGE_SORT_BY, value);
   };
-  console.log(collections);
 
   return (
     <>

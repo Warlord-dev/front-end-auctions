@@ -35,7 +35,6 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
       </div>
     );
   }
-  console.log('clothid', clothesId);
 
   return (
     <div className={cn(styles.wrapper, className)}>

@@ -70,7 +70,6 @@ const ProductDescription = ({
     const t_common = t_common_offer
       ? currentCollections.find((collection) => collection.id === t_common_offer.id)
       : null;
-    console.log('eer', t_common, t_semiRare);
     if (activeTab === 3) {
       //hardcoded
       return [

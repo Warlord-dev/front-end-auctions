@@ -375,7 +375,6 @@ export const getTokenPriceMatic = async () => {
       );
 
       const value = await contract.methods.lastOracleQuote().call();
-      console.log(value);
       resolve(value);
     } catch {
       resolve(1);
