@@ -188,7 +188,7 @@ export const onMarketplaceHistoryByIds = `
 
 export const onAuctionsHistoryByIds = `
   subscription onAuctionsHistoryByIds($ids: [ID!]) {
-    digitalaxGarmentAuctionHistories(first: 1000, where: {eventName: "BidPlaced", token_in: $ids}) {
+    digitalaxGarmentAuctionHistories(first: 1000, where: {eventName_in: ["BidPlaced", "BidWithdrawn"], token_in: $ids}) {
       id
       eventName
       timestamp

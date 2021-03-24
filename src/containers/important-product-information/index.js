@@ -143,9 +143,10 @@ const ImportantProductInformation = ({
   let priceEth;
   console.log(history);
   if (tabIndex === 0) {
-    priceEth = sortedHistory.length
-      ? convertToEth(sortedHistory[0].value)
-      : Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
+    // priceEth = sortedHistory.length
+    //   ? convertToEth(sortedHistory[0].value)
+    //   : Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
+    priceEth = convertToEth(auction.topBid || 0);
   } else {
     priceEth = Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
   }

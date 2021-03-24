@@ -142,7 +142,7 @@ const TradeHistory = ({ clothesIds, className, headerTitle, activeTab }) => {
         );
     }
   }, [activeTab, history, commonHistory, semiRareHistory]);
-
+  console.log(tradeHistory);
   return (
     <div className={cn(styles.wrapper, className, 'animate__animated animate__fadeInUp')}>
       <div className={styles.headerTitle}>
