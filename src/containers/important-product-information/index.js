@@ -115,13 +115,12 @@ const ImportantProductInformation = ({
     ? history
         .filter(
           (item) =>
-            account &&
+            item &&
             item.bidder &&
             [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName)
         )
         .sort((a, b) => b.timestamp - a.timestamp)
     : [];
-
   let priceEth = convertToEth(
     sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
   );
@@ -137,6 +136,7 @@ const ImportantProductInformation = ({
     const lastEvent = sortedHistory[0];
 
     if (
+      account &&
       lastEvent.bidder.id.toLowerCase() === account.toLowerCase() &&
       lastEvent.eventName === HISTORY_BID_PLACED_EVENT
     ) {
