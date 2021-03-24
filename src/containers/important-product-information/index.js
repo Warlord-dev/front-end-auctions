@@ -16,12 +16,14 @@ import {
   openPlaceBidModal,
   openConnectMetamaskModal,
 } from '@actions/modals.actions';
+import historyActions from '@actions/history.actions';
 import {
   HISTORY_BID_PLACED_EVENT,
   HISTORY_BID_WITHDRAWN_EVENT,
 } from '@constants/history.constants';
 import { convertToEth } from '@helpers/price.helpers';
 import { getAuctionById } from '@selectors/auction.selectors';
+import { getAllHistoryByTokenId } from '@selectors/history.selectors';
 import { getAccount } from '@selectors/user.selectors';
 import {
   getExchangeRateETH,
@@ -30,7 +32,9 @@ import {
   getMonaPerEth,
   getChainId,
 } from '@selectors/global.selectors';
+import wsApi from '@services/api/ws.service';
 import { useAPY } from '@hooks/apy.hooks';
+import { useSubscription } from '@hooks/subscription.hooks';
 import { utils as ethersUtils } from 'ethers';
 
 import styles from './styles.module.scss';
@@ -39,7 +43,6 @@ const ImportantProductInformation = ({
   auctionId,
   tabIndex,
   garment,
-  history,
   estimateApyText,
   buttonTextPlace,
   buttonTextRaise,
@@ -53,6 +56,8 @@ const ImportantProductInformation = ({
   const clothesId = garment.id;
 
   const auction = useSelector(getAuctionById(auctionId));
+  const historyTokenId = useSelector(getAllHistoryByTokenId);
+  const history = historyTokenId.get(auctionId);
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
@@ -69,7 +74,6 @@ const ImportantProductInformation = ({
 
   const chainId = useSelector(getChainId);
   const isMatic = chainId === '0x13881' || chainId === '0x89';
-
   clearTimeout(timer.current);
   clearTimeout(timerToSoldButton.current);
 
@@ -77,6 +81,14 @@ const ImportantProductInformation = ({
     clearTimeout(timer.current);
     clearTimeout(timerToSoldButton.current);
   }, []);
+
+  useSubscription(
+    {
+      request: wsApi.onAuctionsHistoryByIds([auctionId]),
+      next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
+    },
+    [chainId, auctionId]
+  );
 
   if (!auction) {
     return null;
@@ -100,13 +112,15 @@ const ImportantProductInformation = ({
   }
 
   const sortedHistory = history
-    .filter(
-      (item) =>
-        account &&
-        item.bidder &&
-        [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName)
-    )
-    .sort((a, b) => b.timestamp - a.timestamp);
+    ? history
+        .filter(
+          (item) =>
+            account &&
+            item.bidder &&
+            [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName)
+        )
+        .sort((a, b) => b.timestamp - a.timestamp)
+    : [];
 
   let priceEth = convertToEth(
     sortedHistory.length ? sortedHistory[0].value : garment.primarySalePrice
