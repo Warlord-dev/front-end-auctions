@@ -16,14 +16,12 @@ import {
   openPlaceBidModal,
   openConnectMetamaskModal,
 } from '@actions/modals.actions';
-import historyActions from '@actions/history.actions';
 import {
   HISTORY_BID_PLACED_EVENT,
   HISTORY_BID_WITHDRAWN_EVENT,
 } from '@constants/history.constants';
 import { convertToEth } from '@helpers/price.helpers';
 import { getAuctionById } from '@selectors/auction.selectors';
-import { getHistoryByTokenId } from '@selectors/history.selectors';
 import { getAccount } from '@selectors/user.selectors';
 import {
   getExchangeRateETH,
@@ -32,9 +30,7 @@ import {
   getMonaPerEth,
   getChainId,
 } from '@selectors/global.selectors';
-import wsApi from '@services/api/ws.service';
 import { useAPY } from '@hooks/apy.hooks';
-import { useSubscription } from '@hooks/subscription.hooks';
 import { utils as ethersUtils } from 'ethers';
 
 import styles from './styles.module.scss';
@@ -43,6 +39,7 @@ const ImportantProductInformation = ({
   auctionId,
   tabIndex,
   garment,
+  history,
   estimateApyText,
   buttonTextPlace,
   buttonTextRaise,
@@ -56,7 +53,6 @@ const ImportantProductInformation = ({
   const clothesId = garment.id;
 
   const auction = useSelector(getAuctionById(auctionId));
-  const history = useSelector(getHistoryByTokenId(auctionId));
   const exchangeRateETH = useSelector(getExchangeRateETH);
   const minBidIncrement = useSelector(getMinBidIncrement);
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
@@ -81,14 +77,6 @@ const ImportantProductInformation = ({
     clearTimeout(timer.current);
     clearTimeout(timerToSoldButton.current);
   }, []);
-
-  useSubscription(
-    {
-      request: wsApi.onAuctionsHistoryByIds([auctionId]),
-      next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
-    },
-    [chainId, auctionId]
-  );
 
   if (!auction) {
     return null;

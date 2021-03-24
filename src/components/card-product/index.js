@@ -106,7 +106,7 @@ const CardProduct = ({
             </button>
           )}
         </div>
-        <ImportantProductInformation garment={garment} auctionId={auctionId} tabIndex={tabIndex} />
+        <ImportantProductInformation garment={garment} auctionId={auctionId} tabIndex={tabIndex} history={history} />
       </div>
     </li>
   );
