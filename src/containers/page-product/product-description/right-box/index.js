@@ -131,9 +131,9 @@ const RightBox = ({
             </span>
           </p>
           <p className={styles.countInfo}>
-            {currentCounts[activeTab].sold + 1 > currentCounts[activeTab].total
+            {currentCounts[activeTab].sold > currentCounts[activeTab].total
               ? currentCounts[activeTab].total
-              : currentCounts[activeTab].sold + 1}{' '}
+              : currentCounts[activeTab].sold}{' '}
             of {currentCounts[activeTab].total}
           </p>
           <div className={styles.buttons}>

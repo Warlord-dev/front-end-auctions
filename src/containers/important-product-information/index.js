@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import Router from 'next/router';
@@ -35,6 +35,8 @@ import { useAPY } from '@hooks/apy.hooks';
 import { utils as ethersUtils } from 'ethers';
 
 import styles from './styles.module.scss';
+import { getAllCollections, getAllMarketplaceOffers } from '@selectors/collection.selectors';
+import { COMMON_RARITY, EXCLUSIVE_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 
 const ImportantProductInformation = ({
   auctionId,
@@ -59,6 +61,23 @@ const ImportantProductInformation = ({
   const bidWithdrawalLockTime = useSelector(getBidWithdrawalLockTime);
   const monaPerEth = useSelector(getMonaPerEth);
   const [isShowHint, setIsShowHint] = useState(false);
+
+  const collections = useSelector(getAllCollections);
+  const offers = useSelector(getAllMarketplaceOffers);
+
+  const currentOffer = useMemo(() => {
+    const jsOffers = offers.toJS();
+    return jsOffers.find(
+      (val) =>
+        val.garmentCollection.garmentAuctionID === auctionId &&
+        val.garmentCollection.rarity ===
+          (tabIndex === 2 ? COMMON_RARITY : tabIndex === 1 ? SEMI_RARE_RARITY : EXCLUSIVE_RARITY)
+    );
+  }, [offers]);
+
+  let collection = currentOffer
+    ? collections.toJS().find((collection) => collection.id === currentOffer.id)
+    : null;
 
   const estimateApy = useAPY(garment.primarySalePrice);
 
@@ -201,6 +220,11 @@ const ImportantProductInformation = ({
           </span>
           <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
         </p>
+        {collection?.garments && (
+          <p>
+            {currentOffer?.amountSold} of {collection?.garments?.length}
+          </p>
+        )}
         {/* <p className={styles.estimateWrapper}>
           <span className={styles.estimateApy}>{estimateApy}%</span>
           <span className={styles.estimateApyTextWrapper}>
