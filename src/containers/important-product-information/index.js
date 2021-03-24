@@ -141,7 +141,6 @@ const ImportantProductInformation = ({
         .sort((a, b) => b.timestamp - a.timestamp)
     : [];
   let priceEth;
-  console.log(history);
   if (tabIndex === 0) {
     // priceEth = sortedHistory.length
     //   ? convertToEth(sortedHistory[0].value)

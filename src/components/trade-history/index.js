@@ -12,11 +12,13 @@ import {
 import { convertToEth } from '@helpers/price.helpers';
 import TradeHistoryLine from './trade-history-line';
 import styles from './styles.module.scss';
+import { getMonaPerEth } from '@selectors/global.selectors';
 
 const TradeHistory = ({ clothesIds, className, headerTitle, activeTab }) => {
   const history = useSelector(getHistoryByTokenIds(clothesIds));
   const commonHistory = useSelector(getCommonHistoryByTokenIds(clothesIds));
   const semiRareHistory = useSelector(getSemiRareHistoryByTokenIds(clothesIds));
+  const monaPerEth = useSelector(getMonaPerEth);
 
   const tradeHistory = useMemo(() => {
     if (activeTab === 0) {
@@ -31,7 +33,7 @@ const TradeHistory = ({ clothesIds, className, headerTitle, activeTab }) => {
         .map((item) => ({
           id: item.id,
           clothesId: item.token.id,
-          priceEth: 0,
+          priceEth: Math.round(convertToEth(item.value) * monaPerEth * 10000) / 10000,
           priceMona: convertToEth(item.value),
           date: item.timestamp * 1000,
           sendersPhoto: './images/user-photo.svg',
