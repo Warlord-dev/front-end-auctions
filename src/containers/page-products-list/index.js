@@ -31,7 +31,6 @@ const PageProductsList = ({ collectionId }) => {
   const chainId = useSelector(getChainId);
   const currentAuctions = auctions.toJS();
   const currentCollections = collections.toJS();
-  console.log(currentCollections);
   const [showGraphIds, setShowGraphIds] = useState([]);
 
   useSubscription(
