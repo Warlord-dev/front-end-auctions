@@ -150,7 +150,8 @@ const ImportantProductInformation = ({
   } else {
     priceEth = Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
   }
-  if (auctionId == '2' && tabIndex == '1') priceEth = convertToEth('57000000000000000');
+  if (auctionId == '2' && tabIndex == '1')
+    priceEth = Math.round((convertToEth('57000000000000000') / monaPerEth) * 10000) / 10000;
   const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
 
   let isMakeBid = false;
