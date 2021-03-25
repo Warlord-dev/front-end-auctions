@@ -3,7 +3,7 @@
 
 .title {
   font-weight: 900;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 48px;
   margin-bottom: 30px;
 }
@@ -17,14 +17,14 @@
 }
 
 .description {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 22px;
   font-weight: 400;
   margin-bottom: 35px;
 }
 
 .youReceiveText {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 17px;
   font-weight: 900;
   margin-bottom: 6px;
@@ -32,7 +32,7 @@
 }
 
 .youReceive {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   font-weight: 400;
   margin-bottom: 35px;
@@ -49,7 +49,7 @@
   padding: 17px 25px 19px 25px;
   flex-grow: 1;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   color: $darkGray3;
   border: 1px solid #E6E6E6;
@@ -71,21 +71,21 @@
 }
 
 .priceEth {
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 44px;
   font-weight: 900;
   margin-right: 10px;
 }
 
 .priceUsd {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 24px;
   font-weight: 400;
   color: $darkGray3;
 }
 
 .countInfo {
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 33px;
   color: $darkGray3;
 }
@@ -94,7 +94,7 @@
   padding: 12px 0 10px 0;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 11px;
   min-width: 265px;
   margin-top: 5px;
@@ -105,12 +105,12 @@
 }
 
 .buttonText {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 20px;
 }
 
 .buttonGray {
   color: $darkGray3;
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 11px;
 }

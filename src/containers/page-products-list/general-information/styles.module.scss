@@ -10,7 +10,7 @@
 .title {
   margin-bottom: 20px;
   font-weight: 900;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 58px;
 }
 
@@ -19,6 +19,12 @@
   padding: 35px 22px 22px 50px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+    .leftSection {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .leftSection {
@@ -42,7 +48,7 @@
 }
 
 .chartBottomText {
-  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 24px;
   display: flex;
   justify-content: center;

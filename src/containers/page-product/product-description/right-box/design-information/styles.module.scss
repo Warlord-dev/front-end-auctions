@@ -24,7 +24,7 @@
 }
 
 .youReceiveText {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 17px;
   font-weight: 900;
   margin-bottom: 6px;
@@ -32,7 +32,7 @@
 }
 
 .youReceive {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   font-weight: 400;
 }
@@ -52,14 +52,14 @@
 .estimateApyText  {
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 17px;
   font-weight: 400;
   margin-right: 5px;
 }
 
 .estimateApy {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 24px;
   font-weight: 400;
   margin-left: 12px;
@@ -74,7 +74,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 11px;
   font-weight: 600;
   transform: translateY(-9px);
@@ -89,7 +89,7 @@
   padding: 4px;
   border: 0.5px solid #000000;
   background: #fff;
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 120%;
   top: -47px;
 }

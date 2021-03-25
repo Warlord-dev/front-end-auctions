@@ -38,7 +38,7 @@ const Footer = ({ className, leftList, centerList }) => (
   <footer className={cn(className, styles.wrapper)}>
     <div className={styles.inner}>
       {!!leftList.length && (
-        <div>
+        <div style={{ marginBottom: '15px' }}>
           {leftList.map(({ item, href }) => (
             <a className={styles.leftItem} key={item} href={href} target="_blank" rel="noreferrer">
               {item}
@@ -46,7 +46,7 @@ const Footer = ({ className, leftList, centerList }) => (
           ))}
         </div>
       )}
-      <div>
+      <div style={{ marginBottom: '15px' }}>
         {centerList.map(({ item, href }) => (
           <a className={styles.centerItem} key={item} href={href} target="_blank" rel="noreferrer">
             {item}
