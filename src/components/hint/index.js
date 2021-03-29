@@ -7,7 +7,7 @@ export default function Hint({ title, hintText }) {
   return (
     <div className={styles.hintWrapper}>
       <div className={styles.title}>{title}</div>
-      <div style={{ display: 'flex', alignItems: 'flex-end' }}>
+      <div className={styles.hintArea}>
         <img
           src="images/question.svg"
           onMouseEnter={() => setHintTextShown(true)}
