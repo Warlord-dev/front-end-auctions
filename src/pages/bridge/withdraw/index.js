@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Router from 'next/router';
 
 import Hint from '@components/hint';
 import { useMonaBalance } from '@hooks/useMonaBalance';
@@ -6,6 +7,7 @@ import { useMonaBalance } from '@hooks/useMonaBalance';
 import styles from '../styles.module.scss';
 import parentStyles from '../styles.module.scss';
 import CurrencyInput from '@components/currency-input';
+import Button from '@components/buttons/button';
 import useApproveForMatic from '@hooks/useApproveForMatic';
 import useWithdrawFromMatic from '@hooks/useERC20WithdrawFromMatic';
 
@@ -21,7 +23,7 @@ export default function Withdraw() {
     <div className={styles.depositWithdrawWrapper}>
       <div className={styles.bridgeTitle}>WITHDRAW $MONA TO ETHEREUM</div>
       <div>
-        <div style={{ marginBottom: 15 }}>
+      <div style={{ marginBottom: 15, display: 'flex', justifyContent: 'center' }}>
           <Hint
             title="BALANCE"
             hintText="WITHDRAWING TO ETHEREUM CAN TAKE A COUPLE OF HOURS (~2-3 HOURS). YOU MUST ALSO CLICK “CLAIM ON ETHEREUM” AFTER THE WITHDRAWAL IS COMPLETE."
@@ -43,7 +45,7 @@ export default function Withdraw() {
         />
 
         <button
-          className={styles.actionButton}
+          className={styles.transferButton}
           onClick={() => {
             if (!approved) {
               approveCallback();
@@ -58,6 +60,9 @@ export default function Withdraw() {
           </div>
         </button>
       </div>
+      <Button className={styles.backButton} background="#777777" onClick={() => Router.push(`/bridge`)}>
+        <span>RETURN TO BRIDGE</span>
+      </Button>
     </div>
   );
 }
