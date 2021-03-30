@@ -164,8 +164,8 @@ export default function Bridge() {
               {nfts
                 .filter((item) => {
                   if (item.isStaked) return false;
-                  if (erc721TabIndex === 1 && !item.isEth) return true;
-                  if (erc721TabIndex === 2 && item.isEth) return true;
+                  if (erc721TabIndex === 1 && item.isEth) return true;
+                  if (erc721TabIndex === 2 && !item.isEth) return true;
                   return false;
                 })
                 .map((nft) => (
