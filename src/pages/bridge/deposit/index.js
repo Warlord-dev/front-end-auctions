@@ -8,6 +8,10 @@ import parentStyles from '../styles.module.scss';
 import CurrencyInput from '@components/currency-input';
 import useApproveForMatic from '@hooks/useApproveForMatic';
 import useDepositToMatic from '@hooks/useERC20DepositToMatic';
+import { STORAGE_WALLET } from '@constants/storage.constants';
+import { WALLET_ARKANE } from '@constants/global.constants';
+import { useSelector } from 'react-redux';
+import { getChainId } from '@selectors/global.selectors';
 
 export default function Deposit() {
   const [monaEthBalance] = useMonaBalance();
@@ -15,7 +19,17 @@ export default function Deposit() {
 
   const { approved, approveCallback } = useApproveForMatic(transferAmount);
 
+  const chainId = useSelector(getChainId);
+
   const depositCallback = useDepositToMatic();
+
+  if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
+    return (
+      <div className={styles.depositWithdrawWrapper}>
+        Please connect with metamask to use our bridge.
+      </div>
+    );
+  }
 
   return (
     <div className={styles.depositWithdrawWrapper}>
@@ -45,7 +59,9 @@ export default function Deposit() {
         <button
           className={styles.actionButton}
           onClick={() => {
-            if (!approved) {
+            if (chainId !== '0x1') {
+              window.alert('Please switch to Ethereum Mainnet');
+            } else if (!approved) {
               approveCallback();
             } else {
               depositCallback(transferAmount);

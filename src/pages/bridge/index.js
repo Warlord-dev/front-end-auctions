@@ -9,18 +9,26 @@ import { useMonaBalance } from '@hooks/useMonaBalance';
 import { useSelector } from 'react-redux';
 import { getUser } from '@helpers/user.helpers';
 import useExitFromMatic from '@hooks/useExitFromMatic';
+import { getChainId } from '@selectors/global.selectors';
+import { STORAGE_WALLET } from '@constants/storage.constants';
+import { WALLET_ARKANE } from '@constants/global.constants';
 // import { useCheckInclusion } from '@hooks/useCheckInclusion';
 
 export default function Bridge() {
   const [monaEthBalance, monaMaticBalance] = useMonaBalance();
   const profile = useSelector(getUser);
   const withdrawalTxs = (profile?.withdrawalTxs || []).filter((p) => p.amount);
-
-  // console.log(withdrawalTxs);
-
-  // const withdrawalStatuses = useCheckInclusion(withdrawalTxs.map((w) => w.txHash));
+  const chainId = useSelector(getChainId);
 
   const exitCallback = useExitFromMatic();
+
+  if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
+    return (
+      <div className={styles.bridge}>
+        <div className={styles.bridgeWrapper}>Please connect with metamask to use our bridge.</div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.bridge}>
@@ -79,7 +87,11 @@ export default function Bridge() {
                 <button
                   className={styles.withdrawButton}
                   onClick={() => {
-                    exitCallback(tx.txHash);
+                    if (chainId !== '0x1') {
+                      window.alert('Please switch to Ethereum Mainnet');
+                    } else {
+                      exitCallback(tx.txHash);
+                    }
                   }}
                 >
                   <div className={styles.withdrawText}>Withdraw</div>

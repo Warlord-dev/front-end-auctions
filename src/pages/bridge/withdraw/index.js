@@ -8,6 +8,10 @@ import parentStyles from '../styles.module.scss';
 import CurrencyInput from '@components/currency-input';
 import useApproveForMatic from '@hooks/useApproveForMatic';
 import useWithdrawFromMatic from '@hooks/useERC20WithdrawFromMatic';
+import { STORAGE_WALLET } from '@constants/storage.constants';
+import { WALLET_ARKANE } from '@constants/global.constants';
+import { useSelector } from 'react-redux';
+import { getChainId } from '@selectors/global.selectors';
 
 export default function Withdraw() {
   const [_, maticMonaBalance] = useMonaBalance();
@@ -16,6 +20,16 @@ export default function Withdraw() {
   const { approved, approveCallback } = useApproveForMatic(transferAmount);
 
   const withdrawCallback = useWithdrawFromMatic();
+
+  const chainId = useSelector(getChainId);
+
+  if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
+    return (
+      <div className={styles.depositWithdrawWrapper}>
+        Please connect with metamask to use our bridge.
+      </div>
+    );
+  }
 
   return (
     <div className={styles.depositWithdrawWrapper}>
@@ -45,7 +59,9 @@ export default function Withdraw() {
         <button
           className={styles.actionButton}
           onClick={() => {
-            if (!approved) {
+            if (chainId !== '0x89') {
+              window.alert('Please switch to Matic Mainnet');
+            } else if (!approved) {
               approveCallback();
             } else {
               withdrawCallback(transferAmount);
