@@ -14,6 +14,9 @@ import { useMonaBalance } from '@hooks/useMonaBalance';
 import { useSelector, useDispatch } from 'react-redux';
 import { getUser } from '@helpers/user.helpers';
 import useExitFromMatic from '@hooks/useExitFromMatic';
+import { getChainId } from '@selectors/global.selectors';
+import { STORAGE_WALLET } from '@constants/storage.constants';
+import { WALLET_ARKANE } from '@constants/global.constants';
 import { useNFTs } from '@hooks/espa/user.hooks';
 // import { useCheckInclusion } from '@hooks/useCheckInclusion';
 import { getChainId } from '@selectors/global.selectors';
@@ -31,6 +34,14 @@ export default function Bridge() {
   const nfts = useNFTs(account);
   const exitCallback = useExitFromMatic();
   const chainId = useSelector(getChainId);
+
+  if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
+    return (
+      <div className={styles.bridge}>
+        <div className={styles.bridgeWrapper}>Please connect with metamask to use our bridge.</div>
+      </div>
+    );
+  }
 
   if (!nfts) {
     return <Loader size="large" className={styles.loader} />;
@@ -77,6 +88,40 @@ export default function Bridge() {
               <div className={styles.actionText}>WITHDRAW TO ETHERIUM</div>
             </button>
           </div>
+        </div>
+        <div className={styles.withdrawalWrapper}>
+          <div className={styles.bridgeTitle}>Pending Withdrawals</div>
+          <div className={styles.withdrawalHeader}>
+            <div className={styles.withdrawalRowItem}>Created</div>
+            <div className={styles.withdrawalRowItem}>Amount</div>
+            <div className={styles.withdrawalRowItem}>Status</div>
+            <div className={styles.withdrawalRowItem}>Withdraw</div>
+          </div>
+          {withdrawalTxs.map((tx) => (
+            <div className={styles.withdrawalRow}>
+              <div className={styles.withdrawalRowItem}>
+                <TimeAgo date={new Date(tx.created)} />
+              </div>
+              <div className={styles.withdrawalRowItem}>{tx.amount}</div>
+              <div className={styles.withdrawalRowItem}>
+                {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800
+                  ? 'Pending Withdrawal'
+                  : 'Processing'}
+              </div>
+              {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800 && (
+                <div className={styles.withdrawalRowItem}>
+                  <button
+                    className={styles.withdrawButton}
+                    onClick={() => {
+                      exitCallback(tx.txHash);
+                    }}
+                  >
+                    <div className={styles.withdrawText}>Withdraw</div>
+                  </button>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
         {/* <div className={styles.withdrawalWrapper}>
           <div className={styles.bridgeTitle}>Pending Withdrawals</div>
@@ -163,7 +208,7 @@ export default function Bridge() {
                     <div className={styles.item}>
                       <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
                     </div>
-                    <span>{erc721TabIndex === 1 ? 'MATIC' : 'ETHEREUM'}</span>
+                    <span>{erc721TabIndex === 2 ? 'MATIC' : 'ETHEREUM'}</span>
                     <div className={styles.nftCheckWrapper}>
                       <CheckBox onChange={() => onToggleChecked(nft)} />
                     </div>
