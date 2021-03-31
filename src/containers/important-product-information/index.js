@@ -68,6 +68,7 @@ const ImportantProductInformation = ({
 
   const collections = useSelector(getAllCollections);
   const offers = useSelector(getAllMarketplaceOffers);
+  const currentCollections = collections.toJS();
 
   const currentOffer = useMemo(() => {
     const jsOffers = offers.toJS();
@@ -80,7 +81,7 @@ const ImportantProductInformation = ({
   }, [offers]);
 
   let collection = currentOffer
-    ? collections.toJS().find((collection) => collection.id === currentOffer.id)
+    ? currentCollections.find((collection) => collection.id === currentOffer.id)
     : null;
 
   const estimateApy = useAPY(garment.primarySalePrice);

@@ -77,6 +77,16 @@ const PageProductsList = ({ collectionId }) => {
 
   useSubscription(
     {
+      request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
+      next: (data) => {
+        dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
+      },
+    },
+    [chainId, currentCollections]
+  );
+
+  useSubscription(
+    {
       request: wsApi.onAllAuctionsChange(),
       next: (data) => dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions)),
     },
