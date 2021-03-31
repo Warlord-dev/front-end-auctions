@@ -61,6 +61,7 @@
     "next-redux-wrapper": "^5.0.0",
     "prop-types": "^15.7.2",
     "qs": "^6.9.3",
+    "rc-slider": "^9.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-image-magnify": "^2.7.4",
