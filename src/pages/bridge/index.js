@@ -23,7 +23,6 @@ import useERC721ApproveForMatic from '@hooks/useERC721ApproveForMatic';
 import useERC721DepositToMatic from '@hooks/useERC721DepositToMatic';
 import useERC721WithdrawFromMatic from '@hooks/useERC721WithdrawToEthereum';
 import useERC721ExitFromMatic from '@hooks/useERC721ExitFromMatic';
-// import { useCheckInclusion } from '@hooks/useCheckInclusion';
 
 export default function Bridge() {
   const [tabIndex, setTabIndex] = useState(0);
