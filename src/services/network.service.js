@@ -60,6 +60,12 @@ export const getUSDTAddressByChainId = (chainId) => {
   return config.USDT_ADDRESS[network.alias];
 };
 
+export const getDTXAddressByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.DTX_ADDRESSES[network.alias];
+};
+
 export const getMarketplaceContractAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 

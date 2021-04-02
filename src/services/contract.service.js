@@ -1,9 +1,8 @@
 import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
-import { getUSDTAddressByChainId } from './network.service';
+import { getDTXAddressByChainId, getUSDTAddressByChainId } from './network.service';
 import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json';
 import Web3 from 'web3';
-import { isMetamaskInstalled } from './metamask.service';
 import config from '@utils/config';
 
 export const getMarketplaceContract = async (ContractAddress) => {
@@ -253,6 +252,28 @@ export const getMonaTokenContract = async (ContractAddress) => {
   ];
 
   const contract = await new window.web3.eth.Contract(jsonInterface, ContractAddress);
+
+  return contract;
+};
+
+export const getDTXContract = async (isMainnet) => {
+  const provider = new Web3.providers.HttpProvider(
+    isMainnet ? config.DEFAULT_WEB3_URL : config.WEB3_URLS.GOERLI
+  );
+  const web3 = new Web3(provider);
+  const address = await getDTXAddressByChainId(isMainnet ? '0x1' : '0x5');
+  const contract = await new web3.eth.Contract(require('../constants/erc721_abi.json'), address);
+
+  return contract;
+};
+
+export const getDTXMaticContract = async (isMainnet) => {
+  const provider = new Web3.providers.HttpProvider(
+    isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI
+  );
+  const web3 = new Web3(provider);
+  const address = await getDTXAddressByChainId(isMainnet ? '0x89' : '0x13881');
+  const contract = await new web3.eth.Contract(require('../constants/erc721_abi.json'), address);
 
   return contract;
 };

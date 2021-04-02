@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Router from 'next/router';
 import cn from 'classnames';
 import TimeAgo from 'react-timeago';
@@ -18,6 +18,11 @@ import { getChainId } from '@selectors/global.selectors';
 import { STORAGE_WALLET } from '@constants/storage.constants';
 import { WALLET_ARKANE } from '@constants/global.constants';
 import { useNFTs } from '@hooks/espa/user.hooks';
+import { useEthMaticNFTs } from '@hooks/useEthMaticNFTs';
+import useERC721ApproveForMatic from '@hooks/useERC721ApproveForMatic';
+import useERC721DepositToMatic from '@hooks/useERC721DepositToMatic';
+import useERC721WithdrawFromMatic from '@hooks/useERC721WithdrawToEthereum';
+import useERC721ExitFromMatic from '@hooks/useERC721ExitFromMatic';
 // import { useCheckInclusion } from '@hooks/useCheckInclusion';
 
 export default function Bridge() {
@@ -32,7 +37,22 @@ export default function Bridge() {
   const account = profile.wallet;
   const nfts = useNFTs(account);
   const exitCallback = useExitFromMatic();
+  const erc721ExitCallback = useERC721ExitFromMatic();
   const chainId = useSelector(getChainId);
+
+  const [ethNfts, maticNfts] = useEthMaticNFTs();
+
+  const { approved, approveCallback } = useERC721ApproveForMatic();
+  const depositCallback = useERC721DepositToMatic();
+  const withdrawCallback = useERC721WithdrawFromMatic();
+
+  useEffect(() => {
+    if (erc721TabIndex === 2) {
+      if (chainId !== '0x13881' /*'0x89'*/) {
+        window.alert('Please switch to Matic Network');
+      }
+    }
+  }, [erc721TabIndex]);
 
   if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
     return (
@@ -88,40 +108,6 @@ export default function Bridge() {
             </button>
           </div>
         </div>
-        <div className={styles.withdrawalWrapper}>
-          <div className={styles.bridgeTitle}>Pending Withdrawals</div>
-          <div className={styles.withdrawalHeader}>
-            <div className={styles.withdrawalRowItem}>Created</div>
-            <div className={styles.withdrawalRowItem}>Amount</div>
-            <div className={styles.withdrawalRowItem}>Status</div>
-            <div className={styles.withdrawalRowItem}>Withdraw</div>
-          </div>
-          {withdrawalTxs.map((tx) => (
-            <div className={styles.withdrawalRow}>
-              <div className={styles.withdrawalRowItem}>
-                <TimeAgo date={new Date(tx.created)} />
-              </div>
-              <div className={styles.withdrawalRowItem}>{tx.amount}</div>
-              <div className={styles.withdrawalRowItem}>
-                {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800
-                  ? 'Pending Withdrawal'
-                  : 'Processing'}
-              </div>
-              {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800 && (
-                <div className={styles.withdrawalRowItem}>
-                  <button
-                    className={styles.withdrawButton}
-                    onClick={() => {
-                      exitCallback(tx.txHash);
-                    }}
-                  >
-                    <div className={styles.withdrawText}>Withdraw</div>
-                  </button>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
       </div>
     );
   };
@@ -161,28 +147,41 @@ export default function Bridge() {
             </div>
             <div className={styles.underline} />
             <div className={cn(styles.tableBody, styles.scroll)}>
-              {nfts
-                .filter((item) => {
-                  if (item.isStaked) return false;
-                  if (erc721TabIndex === 1 && item.isEth) return true;
-                  if (erc721TabIndex === 2 && !item.isEth) return true;
-                  return false;
-                })
-                .map((nft) => (
-                  <div className={styles.nftRow}>
-                    <div className={styles.item}>
-                      <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
-                    </div>
-                    <span>{erc721TabIndex === 1 ? 'MATIC' : 'ETHEREUM'}</span>
-                    <div className={styles.nftCheckWrapper}>
-                      <CheckBox onChange={() => onToggleChecked(nft)} />
-                    </div>
+              {(erc721TabIndex === 2 ? maticNfts : ethNfts).map((nft) => (
+                <div className={styles.nftRow}>
+                  <div className={styles.item}>
+                    <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
                   </div>
-                ))}
+                  <span>{erc721TabIndex === 1 ? 'MATIC' : 'ETHEREUM'}</span>
+                  <div className={styles.nftCheckWrapper}>
+                    <CheckBox onChange={() => onToggleChecked(nft)} />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          <Button className={styles.confirmButton721} background="black">
-            <span>{erc721TabIndex === 1 ? 'DEPOSIT TO MATIC' : 'WITHDRAW TO ETHEREUM'}</span>
+          <Button
+            className={styles.confirmButton721}
+            background="black"
+            onClick={() => {
+              if (!approved) {
+                approveCallback(nftIds[0]);
+              } else {
+                if (erc721TabIndex === 1) {
+                  depositCallback(nftIds[0]);
+                } else {
+                  withdrawCallback(nftIds[0]);
+                }
+              }
+            }}
+          >
+            <span>
+              {!approved
+                ? 'APPROVE'
+                : erc721TabIndex === 1
+                ? 'DEPOSIT TO MATIC'
+                : 'WITHDRAW TO ETHEREUM'}
+            </span>
           </Button>
           <Button
             className={styles.backButton}
@@ -204,6 +203,8 @@ export default function Bridge() {
     }
   };
 
+  console.log(ethNfts, maticNfts);
+
   return (
     <div className={styles.bridge}>
       <div className={styles.bridgeTitle}>MATIC-ETH BRIDGE</div>
@@ -220,6 +221,47 @@ export default function Bridge() {
           ))}
         </div>
         {tabIndex === 0 ? renderERC20Bridge() : tabIndex === 1 ? renderERC721Bridge() : ''}
+
+        <div className={styles.withdrawalWrapper}>
+          <div className={styles.bridgeTitle}>Pending Withdrawals</div>
+          <div className={styles.withdrawalHeader}>
+            <div className={styles.withdrawalRowItem}>Created</div>
+            <div className={styles.withdrawalRowItem}>{tabIndex === 0 ? 'Amount' : 'Token Id'}</div>
+            <div className={styles.withdrawalRowItem}>Status</div>
+            <div className={styles.withdrawalRowItem}>Withdraw</div>
+          </div>
+          {withdrawalTxs
+            .filter((tx) => tx.status === (tabIndex === 0 ? 'pending' : 'pending-721'))
+            .map((tx) => (
+              <div className={styles.withdrawalRow}>
+                <div className={styles.withdrawalRowItem}>
+                  <TimeAgo date={new Date(tx.created)} />
+                </div>
+                <div className={styles.withdrawalRowItem}>{tx.amount}</div>
+                <div className={styles.withdrawalRowItem}>
+                  {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800
+                    ? 'Pending Withdrawal'
+                    : 'Processing'}
+                </div>
+                {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800 && (
+                  <div className={styles.withdrawalRowItem}>
+                    <button
+                      className={styles.withdrawButton}
+                      onClick={() => {
+                        if (tabIndex === 0) {
+                          exitCallback(tx.txHash);
+                        } else {
+                          erc721ExitCallback(tx.txHash);
+                        }
+                      }}
+                    >
+                      <div className={styles.withdrawText}>Withdraw</div>
+                    </button>
+                  </div>
+                )}
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );

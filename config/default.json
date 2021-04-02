@@ -49,6 +49,13 @@
     "mumbai": "0xeFd3D060dDcFed7903806503440db1089031AF3A",
     "matic": "0x6968105460f67c3BF751bE7C15f92F5286Fd0CE5"
   },
+  "DTX_ADDRESSES": {
+    "mainnet": "0x275f5ad03be0fa221b4c6649b8aee09a42d9412a",
+    "rinkeby": "0x13379fe0e6992180ed0ac5174a02479896f9c510",
+    "goerli": "0x4A4888101cdc49EBf936C2e078d6d3f12FD3a9EB",
+    "mumbai": "0x4CB61C672ff26c187394a9aA59360FbB6F23e83f",
+    "matic": "0x728Af879c3212cEf7a51D7fC296b5e9b7c14dbf6"
+  },
   "USDT_ADDRESS": {
     "mainnet": "0xdac17f958d2ee523a2206206994597c13d831ec7",
     "rinkeby": "0xfb1d709cb959ac0ea14cad0927eabc7832e65058",
