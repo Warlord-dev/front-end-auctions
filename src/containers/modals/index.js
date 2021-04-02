@@ -8,6 +8,8 @@ import ModalSignup from "@containers/modals/modal-sign-up";
 import BuyNow from "@containers/modals/buy-now";
 import PreviewMaterial from "@containers/modals/preview-material";
 import ModalESPAReady from "./modal-espa-ready";
+import ModalSlowMode from "./modal-slow-mode";
+import ModalMaxOut from "./modal-max-out";
 
 const Modals = () => {
   const modals = useSelector((state) => state.modals.toJS());
@@ -20,6 +22,8 @@ const Modals = () => {
     isShowBuyNow,
     isShowPreviewMaterial,
     isShowModalESPAReady,
+    isShowModalSlowMode,
+    isShowModalMaxOut,
   } = modals;
 
   return (
@@ -30,6 +34,8 @@ const Modals = () => {
       {isShowModalWithdrawBid && <ModalWithdrawBid />}
       {isShowModalSignup && <ModalSignup />}
       {isShowModalESPAReady && <ModalESPAReady />}
+      {isShowModalSlowMode && <ModalSlowMode />}
+      {isShowModalMaxOut && <ModalMaxOut />}
       {isShowBuyNow && <BuyNow />}
       {isShowPreviewMaterial && <PreviewMaterial />}
     </>

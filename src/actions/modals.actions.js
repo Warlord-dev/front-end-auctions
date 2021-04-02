@@ -56,3 +56,9 @@ export const closeSignupModal = () => (dispatch) => dispatch(closeModal('isShowM
 
 export const openESPAReadyModal = (params) => (dispatch) => dispatch(openModal('isShowModalESPAReady', 'hideScroll', params));
 export const closeESPAReadyModal = () => (dispatch) => dispatch(closeModal('isShowModalESPAReady', 'addScroll'));
+
+export const openSlowModeModal = (params) => (dispatch) => dispatch(openModal('isShowModalSlowMode', 'hideScroll', params));
+export const closeSlowModeModal = () => (dispatch) => dispatch(closeModal('isShowModalSlowMode', 'addScroll'));
+
+export const openMaxOutModal = (params) => (dispatch) => dispatch(openModal('isShowModalMaxOut', 'hideScroll', params));
+export const closeMaxOutModal = () => (dispatch) => dispatch(closeModal('isShowModalMaxOut', 'addScroll'));
