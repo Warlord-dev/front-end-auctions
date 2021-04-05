@@ -10,6 +10,7 @@ import { getUser } from '@selectors/user.selectors';
 import { getChainId } from '@selectors/global.selectors';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
+import { getEnabledNetworkByChainId } from '@services/network.service';
 
 import Logo from './logo';
 import styles from './styles.module.scss';
@@ -18,6 +19,10 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
+  const network = useMemo(() => {
+    console.log(chainId);
+    return getEnabledNetworkByChainId(chainId);
+  }, [chainId]);
 
   const router = useRouter();
   const pathname = router.pathname;
@@ -28,8 +33,8 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
       : chainId === '0x1';
 
   const wrongNetworkText =
-    pathname !== '/bridge' && pathname !== '/bridge/deposit'
-      ? 'Please switch to Matic Network'
+    pathname !== '/bridge' && pathname !== '/bridge/deposit' 
+      ? network.alias !== 'matic'? 'Please switch to Matic Network': ''
       : 'Please switch to Mainnet';
 
   if (!user) {
