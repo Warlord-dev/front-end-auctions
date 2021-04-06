@@ -13,8 +13,8 @@ export default function useDepositToMatic() {
   const chainId = useSelector(getChainId);
   const isMainnet = useIsMainnet();
 
-  const depositCallback = useCallback(
-    (tokenId) => {
+  const depositCallback = (tokenId) => {
+    return new Promise((resolve, reject) => {
       if (posClient && account && chainId) {
         posClient
           .depositERC721ForUser(
@@ -27,11 +27,12 @@ export default function useDepositToMatic() {
           )
           .then((res) => {
             console.log('deposit resp', res);
-          });
-      }
-    },
-    [posClient, account]
-  );
+            resolve(res);
+          })
+          .catch((e) => reject(e));
+      } else reject('error');
+    });
+  };
 
   return depositCallback;
 }

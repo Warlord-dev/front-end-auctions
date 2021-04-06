@@ -29,7 +29,8 @@ export default function useDepositToMatic() {
           )
           .then((res) => {
             console.log('deposit resp', res);
-          });
+          })
+          .catch((e) => console.log(e));
       }
     },
     [posClient, account]

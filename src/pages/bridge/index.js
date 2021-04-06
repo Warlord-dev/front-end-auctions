@@ -8,6 +8,7 @@ import Button from '@components/buttons/button';
 import CheckBox from '@components/checkbox';
 import Loader from '@components/loader';
 import NFTProduct from '@components/nft-product';
+import Modal from '@components/modal';
 
 import styles from './styles.module.scss';
 import { useMonaBalance } from '@hooks/useMonaBalance';
@@ -28,6 +29,11 @@ export default function Bridge() {
   const [tabIndex, setTabIndex] = useState(0);
   const [erc721TabIndex, setERC721TabIndex] = useState(0);
   const [nftIds, setNftIds] = useState([]);
+
+  const [showModal, setShowModal] = useState(false);
+  const [modalTitle, setModalTitle] = useState('');
+  const [modalBody, setModalBody] = useState('');
+
   const [monaEthBalance, monaMaticBalance] = useMonaBalance();
   const profile = useSelector(getUser);
   const withdrawalTxs = (profile?.withdrawalTxs || []).filter((p) => p.amount);
@@ -44,6 +50,35 @@ export default function Bridge() {
   const { approved, approveCallback } = useERC721ApproveForMatic();
   const depositCallback = useERC721DepositToMatic();
   const withdrawCallback = useERC721WithdrawFromMatic();
+
+  const handleDepositNFT = async () => {
+    await depositCallback(nftIds[0])
+      .then(() => {
+        setModalTitle('Moving to Matic!');
+        setModalBody(
+          'Your token is on its way to Matic Network! Please check back in 10-15 minutes.'
+        );
+        setShowModal(true);
+      })
+      .catch(() => {
+        setModalTitle('Moving to Matic!');
+        setModalBody(
+          'Your token is on its way to Matic Network! Please check back in 10-15 minutes.'
+        );
+        setShowModal(true);
+      });
+  };
+  const handleWithdrawNFT = async () => {
+    await withdrawCallback(nftIds[0])
+      .then(() => {
+        setModalTitle('In Motion to Ethereum!  ');
+        setModalBody(
+          'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.'
+        );
+        setShowModal(true);
+      })
+      .catch(() => setShowModal(true));
+  };
 
   useEffect(() => {
     if (erc721TabIndex === 2) {
@@ -167,9 +202,9 @@ export default function Bridge() {
                 approveCallback(nftIds[0]);
               } else {
                 if (erc721TabIndex === 1) {
-                  depositCallback(nftIds[0]);
+                  handleDepositNFT();
                 } else {
-                  withdrawCallback(nftIds[0]);
+                  handleWithdrawNFT();
                 }
               }
             }}
@@ -202,7 +237,7 @@ export default function Bridge() {
     }
   };
 
-  console.log(ethNfts, maticNfts);
+  // console.log(ethNfts, maticNfts);
 
   return (
     <div className={styles.bridge}>
@@ -261,6 +296,12 @@ export default function Bridge() {
               </div>
             ))}
         </div>
+
+        {showModal && (
+          <Modal title={modalTitle} onClose={() => setShowModal(false)}>
+            <p>{modalBody}</p>
+          </Modal>
+        )}
       </div>
     </div>
   );
