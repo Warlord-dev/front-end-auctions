@@ -1,5 +1,17 @@
 @import '../../assets/scss/helpers/grid.scss';
 
 .wrapper {
-  @include wrapper()
+  @include wrapper();
+  @media only screen and (min-width: 0px) {
+    margin: 0px 20px;
+  }
+  @media only screen and (min-width: 640px) {
+    margin: 0px 30px;
+  }
+  @media only screen and (min-width: 980px) {
+    margin: 0px 50px;
+  }
+  @media only screen and (min-width: 1440px) {
+    margin: 0px 150px;
+  }
 }

@@ -26,17 +26,17 @@
     display: flex;
     align-items: center;
   }
-  
+
   .priceEth {
     font-size: 1.5rem;
     line-height: 29px;
     margin-right: 12px;
     font-weight: 900;
   }
-  
+
   .priceUsd {
     font-size: 1.25rem;
-    line-height: 24px;  
+    line-height: 24px;
     color: $darkGray3;
     font-weight: 400;
   }
@@ -51,12 +51,12 @@
     display: block;
     font-weight: 400;
   }
-  
+
   .estimateApyTextWrapper {
     display: flex;
     align-items: flex-end;
   }
-  
+
   .estimateApyText {
     color: $darkGray1;
     letter-spacing: 0.12em;
@@ -65,7 +65,7 @@
     line-height: 11px;
     font-weight: 900;
   }
-  
+
   .questionMark {
     width: 15px;
     height: 15px;
@@ -93,11 +93,11 @@
     top: -7px;
     right: -9px;
   }
-  
+
   .button {
     min-width: 188px;
   }
-  
+
   .expirationDateText {
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -112,8 +112,9 @@
     min-width: 188px;
     opacity: 0.7;
     cursor: initial;
-  
-    &:hover, &:active  {
+
+    &:hover,
+    &:active {
       opacity: 0.7;
       background-color: #111;
       color: #fff;
@@ -126,18 +127,26 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    .leftWrapper {
+      width: 100% !important;
+    }
+    .footerBoxRight {
+      width: 100%;
+    }
+  }
   .priceWrapper {
     margin-bottom: 40px;
   }
-  
+
   .priceEth {
     font-size: 2.25rem;
     line-height: 44px;
     font-weight: 900;
     margin-right: 10px;
   }
-  
+
   .priceUsd {
     font-size: 1.25rem;
     line-height: 24px;
@@ -157,7 +166,7 @@
     align-items: flex-end;
   }
 
-  .estimateApyText  {
+  .estimateApyText {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-size: 0.875rem;
@@ -165,7 +174,7 @@
     font-weight: 400;
     margin-right: 5px;
   }
-  
+
   .estimateApy {
     font-size: 1.25rem;
     line-height: 24px;
@@ -173,7 +182,7 @@
     margin-left: 12px;
     order: 1;
   }
-  
+
   .questionMark {
     width: 15px;
     height: 15px;
@@ -213,8 +222,9 @@
       cursor: initial;
       order: 3;
       margin-top: 30px;
-    
-      &:hover, &:active  {
+
+      &:hover,
+      &:active {
         opacity: 0.7;
         background-color: #111;
         color: #fff;
@@ -222,7 +232,7 @@
       }
     }
   }
-  
+
   .expirationDateText {
     font-size: 0.5625rem;
     line-height: 11px;
@@ -236,7 +246,7 @@
   .timer {
     order: 2;
   }
-  
+
   .button {
     padding: 12px 0 10px 0;
     letter-spacing: 0.12em;
@@ -249,12 +259,12 @@
     flex-direction: column;
     order: 3;
   }
-  
+
   .buttonText {
     font-size: 0.75rem;
     line-height: 15px;
   }
-  
+
   .buttonGray {
     color: $darkGray3;
     font-size: 0.5625rem;

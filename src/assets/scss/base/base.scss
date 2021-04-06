@@ -96,6 +96,12 @@ html {
 
 @media only screen and (max-width: 1024px) {
   .highcharts-container {
+    width: calc(100vw - 200px) !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .highcharts-container {
     width: calc(100vw - 100px) !important;
   }
 }

@@ -6,10 +6,18 @@
   flex-direction: column;
   margin: auto;
   position: relative;
+  @media only screen and (max-width: 980px) {
+    padding: 20px 30px;
+    margin-top: 20px;
+    width: calc(100% - 40px);
+  }
 }
 .profileWrapper {
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 980px) {
+    flex-direction: column;
+  }
 }
 
 .avatarWrapper {
@@ -65,6 +73,9 @@
     height: 44px;
     border: 1px solid #e6e6e6;
     padding-left: 12px;
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
   .alert {
     font-size: 0.5rem;
@@ -161,4 +172,8 @@
   bottom: 32px;
   left: 39px;
   white-space: nowrap;
+  @media only screen and (max-width: 480px) {
+    top: 10px;
+    left: 10px;
+  }
 }

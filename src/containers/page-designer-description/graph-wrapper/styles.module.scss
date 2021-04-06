@@ -6,7 +6,7 @@
 
 .title {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 2rem;;
   line-height: 34px;
   margin-bottom: 40px;
 }
@@ -14,10 +14,13 @@
 .chartWrapper {
   background-color: $lightGray2;
   padding: 35px 22px 22px 35px;
+  @media only screen and (max-width: 640px) {
+    padding: 0;
+  }
 }
 
 .chartBottomText {
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 24px;
   display: flex;
   justify-content: center;

@@ -2,4 +2,7 @@
 
 .wrapper {
   @include wrapper();
+  @media only screen and (max-width: 1200px) {
+    padding: 20px;
+  }
 }

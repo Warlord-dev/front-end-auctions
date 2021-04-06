@@ -2,10 +2,14 @@
 @import "../../../../assets/scss/helpers/helpers.scss";
 
 .leftBox {
-  width: 588px;
+  max-width: 588px;
   margin-right: 85px;
   flex-shrink: 0;
   z-index: 2;
+  flex: 1;
+  @media only screen and (max-width: 1200px) {
+    margin-right: 0;
+  }
 }
 
 .tabs {

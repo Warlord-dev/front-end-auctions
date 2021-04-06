@@ -74,7 +74,11 @@
 .list {
   @include wrapper();
   display: grid;
-  grid-template-columns: 618px 618px;
+  grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
   row-gap: 68px;
   column-gap: 84px;
   margin-bottom: 100px;
