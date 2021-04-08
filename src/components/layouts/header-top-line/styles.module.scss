@@ -27,7 +27,7 @@
   box-sizing: border-box;
   border-radius: 10px;
   color: white;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   margin-left: 40px;
   margin-top: -20px;
@@ -47,7 +47,7 @@
 .link {
   @include active();
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 17px;
   color: $black;
   text-transform: uppercase;
