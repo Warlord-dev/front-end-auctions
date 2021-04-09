@@ -9,8 +9,8 @@ import { useIsMainnet } from './useIsMainnet';
 import usePollar from './usePollar';
 
 export function useDTXBalance() {
-  const [monaEthBalance, setMonaEthBalance] = useState('0');
-  const [monaMaticBalance, setMonaMaticBalance] = useState('0');
+  const [garmentETHBalance, setGarmentETHBalance] = useState('0');
+  const [garmentMaticV1Balance, setGarmentMaticV1Balance] = useState('0');
 
   const account = useSelector(getAccount);
   const isMainnet = useIsMainnet();
@@ -27,7 +27,7 @@ export function useDTXBalance() {
         }
       );
 
-      setMonaEthBalance(ethBalance);
+      setGarmentETHBalance(ethBalance);
       const maticBalance = await posClientParent.balanceOfERC20(
         account,
         config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
@@ -35,11 +35,11 @@ export function useDTXBalance() {
           parent: false,
         }
       );
-      setMonaMaticBalance(maticBalance);
+      setGarmentMaticV1Balance(maticBalance);
     }
   }, [isMainnet, posClientParent, posClientChild]);
 
   usePollar(fetchMonaBalance);
 
-  return [monaEthBalance, monaMaticBalance];
+  return [garmentETHBalance, garmentMaticV1Balance];
 }

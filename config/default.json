@@ -56,6 +56,13 @@
     "mumbai": "0x4CB61C672ff26c187394a9aA59360FbB6F23e83f",
     "matic": "0x728Af879c3212cEf7a51D7fC296b5e9b7c14dbf6"
   },
+  "UPGRADER_ADDRESSES": {
+    "mainnet": "",
+    "rinkeby": "",
+    "goerli": "",
+    "mumbai": "0xa946AE5572aaD5830E23912ED54F33Ef59BC979D",
+    "matic": "0x988Dcb549CF62941Fe569aFe8Bbb6bCFe6Ed7C8c"
+  },
   "USDT_ADDRESS": {
     "mainnet": "0xdac17f958d2ee523a2206206994597c13d831ec7",
     "rinkeby": "0xfb1d709cb959ac0ea14cad0927eabc7832e65058",

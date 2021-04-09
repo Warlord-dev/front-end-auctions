@@ -9,6 +9,7 @@ import CheckBox from '@components/checkbox';
 import Loader from '@components/loader';
 import NFTProduct from '@components/nft-product';
 import Modal from '@components/modal';
+import UpgradeNFTModal from './UpgradeNFTModal';
 
 import styles from './styles.module.scss';
 import { useMonaBalance } from '@hooks/useMonaBalance';
@@ -30,9 +31,10 @@ export default function Bridge() {
   const [erc721TabIndex, setERC721TabIndex] = useState(0);
   const [nftIds, setNftIds] = useState([]);
 
-  const [showModal, setShowModal] = useState(false);
+  const [showTxConfirmModal, setShowTxConfirmModal] = useState(false);
   const [modalTitle, setModalTitle] = useState('');
   const [modalBody, setModalBody] = useState('');
+  const [showUpgradeNFTModal, setShowUpgradeNFTModal] = useState(false);
 
   const [monaEthBalance, monaMaticBalance] = useMonaBalance();
   const profile = useSelector(getUser);
@@ -58,15 +60,9 @@ export default function Bridge() {
         setModalBody(
           'Your token is on its way to Matic Network! Please check back in 10-15 minutes.'
         );
-        setShowModal(true);
+        setShowTxConfirmModal(true);
       })
-      .catch(() => {
-        setModalTitle('Moving to Matic!');
-        setModalBody(
-          'Your token is on its way to Matic Network! Please check back in 10-15 minutes.'
-        );
-        setShowModal(true);
-      });
+      .catch(() => {});
   };
   const handleWithdrawNFT = async () => {
     await withdrawCallback(nftIds[0])
@@ -75,9 +71,9 @@ export default function Bridge() {
         setModalBody(
           'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.'
         );
-        setShowModal(true);
+        setShowTxConfirmModal(true);
       })
-      .catch(() => setShowModal(true));
+      .catch(() => {});
   };
 
   useEffect(() => {
@@ -107,6 +103,7 @@ export default function Bridge() {
     setTabIndex(index);
     if (index === 1) {
       setERC721TabIndex(0);
+      setShowUpgradeNFTModal(true);
     }
   };
 
@@ -297,10 +294,13 @@ export default function Bridge() {
             ))}
         </div>
 
-        {showModal && (
-          <Modal title={modalTitle} onClose={() => setShowModal(false)}>
+        {showTxConfirmModal && (
+          <Modal title={modalTitle} onClose={() => setShowTxConfirmModal(false)}>
             <p>{modalBody}</p>
           </Modal>
+        )}
+        {showUpgradeNFTModal && (
+          <UpgradeNFTModal onClose={() => setShowUpgradeNFTModal(false)}></UpgradeNFTModal>
         )}
       </div>
     </div>
