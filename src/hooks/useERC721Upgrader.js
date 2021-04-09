@@ -18,12 +18,9 @@ export default function useERC721Upgrader() {
         try {
           const upgraderContract = await getUpgraderMaticContract(isMainnet);
           const maticDtxContract = await getDTXMaticContract(isMainnet);
-          console.log(account, maticDtxContract, upgraderContract._address);
           await maticDtxContract.methods
             .setApprovalForAll(upgraderContract._address, true)
-            .send({ from: account })
-            .then(console.log)
-            .catch(console.log);
+            .send({ from: account });
           await upgraderContract.methods.upgrade(tokenIds).send({ from: account });
         } catch (e) {
           console.log(e);

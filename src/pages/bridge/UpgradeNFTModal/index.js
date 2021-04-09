@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import Modal from '@components/modal';
 import { useDTXTokenIds } from '@hooks/useERC721TokenId';
@@ -12,6 +13,7 @@ export default function UpgradeNFTModal({ onClose }) {
   const upgraderCallback = useERC721Upgrader();
   const handleUpgrade = async () => {
     await upgraderCallback(maticDtxTokenIds);
+    onClose();
   };
 
   return (

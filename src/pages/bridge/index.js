@@ -17,6 +17,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getUser } from '@helpers/user.helpers';
 import useExitFromMatic from '@hooks/useExitFromMatic';
 import { getChainId } from '@selectors/global.selectors';
+import { getAccount } from '@selectors/user.selectors';
 import { STORAGE_WALLET } from '@constants/storage.constants';
 import { WALLET_ARKANE } from '@constants/global.constants';
 import { useNFTs } from '@hooks/espa/user.hooks';
@@ -25,6 +26,7 @@ import useERC721ApproveForMatic from '@hooks/useERC721ApproveForMatic';
 import useERC721DepositToMatic from '@hooks/useERC721DepositToMatic';
 import useERC721WithdrawFromMatic from '@hooks/useERC721WithdrawToEthereum';
 import useERC721ExitFromMatic from '@hooks/useERC721ExitFromMatic';
+import { useDTXTokenIds } from '@hooks/useERC721TokenId';
 
 export default function Bridge() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -41,7 +43,7 @@ export default function Bridge() {
   const withdrawalTxs = (profile?.withdrawalTxs || []).filter((p) => p.amount);
   const headers = ['bridge $mona erc-20', 'bridge erc-721 nfts', 'bridge erc-1155 nfts'];
   const dispatch = useDispatch();
-  const account = profile.wallet;
+  const account = useSelector(getAccount);
   const nfts = useNFTs(account);
   const exitCallback = useExitFromMatic();
   const erc721ExitCallback = useERC721ExitFromMatic();
@@ -52,6 +54,7 @@ export default function Bridge() {
   const { approved, approveCallback } = useERC721ApproveForMatic();
   const depositCallback = useERC721DepositToMatic();
   const withdrawCallback = useERC721WithdrawFromMatic();
+  const [_, maticDtxTokenIds] = useDTXTokenIds();
 
   const handleDepositNFT = async () => {
     await depositCallback(nftIds[0])
@@ -84,6 +87,10 @@ export default function Bridge() {
     }
   }, [erc721TabIndex]);
 
+  useEffect(() => {
+    if (maticDtxTokenIds.length) setShowUpgradeNFTModal(true);
+  }, [maticDtxTokenIds]);
+
   if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
     return (
       <div className={styles.bridge}>
@@ -103,7 +110,6 @@ export default function Bridge() {
     setTabIndex(index);
     if (index === 1) {
       setERC721TabIndex(0);
-      setShowUpgradeNFTModal(true);
     }
   };
 

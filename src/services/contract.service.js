@@ -9,6 +9,8 @@ import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUnisw
 import Web3 from 'web3';
 import config from '@utils/config';
 
+import UpgraderABI from '../constants/upgrader_abi.json';
+
 export const getMarketplaceContract = async (ContractAddress) => {
   const jsonInterface = [
     {
@@ -276,8 +278,8 @@ export const getDTXMaticContract = async (isMainnet) => {
     isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI
   );
   const web3 = new Web3(provider);
-  const address = await getDTXAddressByChainId(isMainnet ? '0x89' : '0x13881');
-  const contract = await new web3.eth.Contract(require('../constants/erc721_abi.json'), address);
+  const address = getDTXAddressByChainId(isMainnet ? '0x89' : '0x13881');
+  const contract = new window.web3.eth.Contract(require('../constants/erc721_abi.json'), address);
 
   return contract;
 };
@@ -286,9 +288,9 @@ export const getUpgraderMaticContract = async (isMainnet) => {
   const provider = new Web3.providers.HttpProvider(
     isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI
   );
-  const web3 = new Web3(provider);
-  const address = await getUpgraderAddressByChainId(isMainnet ? '0x89' : '0x13881');
-  const contract = await new web3.eth.Contract(require('../constants/upgrader_abi.json'), address);
+  const web3 = new Web3(window.ethereum);
+  const address = getUpgraderAddressByChainId(isMainnet ? '0x89' : '0x13881');
+  const contract = new web3.eth.Contract(UpgraderABI, address);
 
   return contract;
 };

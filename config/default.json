@@ -17,8 +17,8 @@
   "DEFAULT_NETWORK": "matic",
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
   "WEB3_URLS": {
-    "GOERLI": "https://goerli.infura.io/v3/280e56393dd1469e8cadc4132a5ec37c",
-    "MUMBAI": "https://rpc-mumbai.maticvigil.com/v1/1590d9f343d27b977aa149ac37ebd8f2aad7f68a",
+    "GOERLI": "https://goerli.infura.io/v3/7eeeaa3910dc441e8e7e5a16ffab265f",
+    "MUMBAI": "https://rpc-mumbai.maticvigil.com/v1/19980ab27e427799d3182fe28741341806f2deda",
     "MATIC": "https://rpc-mainnet.maticvigil.com/v1/1590d9f343d27b977aa149ac37ebd8f2aad7f68a"
   },
   "EXPLORER_URLS": {
