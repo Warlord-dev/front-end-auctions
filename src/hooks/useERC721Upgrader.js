@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { getAccount } from '@selectors/user.selectors';
 import { getChainId } from '@selectors/global.selectors';
 import { useIsMainnet } from './useIsMainnet';
-import { getUpgraderMaticContract, getDTXMaticContract } from '@services/contract.service';
+import {getUpgraderMaticContract, getDTXMaticContract, getDTXMaticV1Contract} from '@services/contract.service';
 
 export default function useERC721Upgrader() {
   const account = useSelector(getAccount);
@@ -17,7 +17,7 @@ export default function useERC721Upgrader() {
       if (account && chainId) {
         try {
           const upgraderContract = await getUpgraderMaticContract(isMainnet);
-          const maticDtxContract = await getDTXMaticContract(isMainnet);
+          const maticDtxContract = await getDTXMaticV1Contract(isMainnet);
           await maticDtxContract.methods
             .setApprovalForAll(upgraderContract._address, true)
             .send({ from: account });

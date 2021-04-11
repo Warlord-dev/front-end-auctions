@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import Modal from '@components/modal';
-import { useDTXTokenIds } from '@hooks/useERC721TokenId';
+import { useDTXV1TokenIds } from '@hooks/useERC721V1TokenId';
 import useERC721Upgrader from '@hooks/useERC721Upgrader';
 
 import styles from './styles.module.scss';
 import Button from '@components/buttons/button';
 
 export default function UpgradeNFTModal({ onClose }) {
-  const [_, maticDtxTokenIds] = useDTXTokenIds();
+  const [_, maticDtxTokenIds] = useDTXV1TokenIds();
+
   const upgraderCallback = useERC721Upgrader();
   const handleUpgrade = async () => {
     await upgraderCallback(maticDtxTokenIds);
@@ -21,7 +22,7 @@ export default function UpgradeNFTModal({ onClose }) {
       <p className={styles.text}>
         You have {maticDtxTokenIds.length} V1 NFTs. To stake your NFTs you must upgrade to V2.
       </p>
-      <Button onClick={handleUpgrade}>Upgrade</Button>
+      <Button onClick={handleUpgrade}>Approve and Upgrade All</Button>
     </Modal>
   );
 }

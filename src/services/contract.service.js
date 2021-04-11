@@ -2,6 +2,7 @@ import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
 import {
   getDTXAddressByChainId,
+  getDTXV1AddressByChainId,
   getUSDTAddressByChainId,
   getUpgraderAddressByChainId,
 } from './network.service';
@@ -279,6 +280,17 @@ export const getDTXMaticContract = async (isMainnet) => {
   );
   const web3 = new Web3(provider);
   const address = getDTXAddressByChainId(isMainnet ? '0x89' : '0x13881');
+  const contract = new window.web3.eth.Contract(require('../constants/erc721_abi.json'), address);
+
+  return contract;
+};
+
+export const getDTXMaticV1Contract = async (isMainnet) => {
+  const provider = new Web3.providers.HttpProvider(
+    isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI
+  );
+  const web3 = new Web3(provider);
+  const address = getDTXV1AddressByChainId(isMainnet ? '0x89' : '0x13881');
   const contract = new window.web3.eth.Contract(require('../constants/erc721_abi.json'), address);
 
   return contract;

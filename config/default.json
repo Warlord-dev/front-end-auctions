@@ -17,9 +17,9 @@
   "DEFAULT_NETWORK": "matic",
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
   "WEB3_URLS": {
-    "GOERLI": "https://goerli.infura.io/v3/7eeeaa3910dc441e8e7e5a16ffab265f",
-    "MUMBAI": "https://rpc-mumbai.maticvigil.com/v1/19980ab27e427799d3182fe28741341806f2deda",
-    "MATIC": "https://rpc-mainnet.maticvigil.com/v1/1590d9f343d27b977aa149ac37ebd8f2aad7f68a"
+    "GOERLI": "https://goerli.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
+    "MUMBAI": "https://rpc-mumbai.maticvigil.com/v1/b5abd2882f9370b08a2bd4a5cc8e8f60318a94da",
+    "MATIC": "https://rpc-mainnet.maticvigil.com/v1/b5abd2882f9370b08a2bd4a5cc8e8f60318a94da"
   },
   "EXPLORER_URLS": {
     "mainnet": "https://etherscan.io/",
@@ -53,6 +53,13 @@
     "mainnet": "0x275f5ad03be0fa221b4c6649b8aee09a42d9412a",
     "rinkeby": "0x13379fe0e6992180ed0ac5174a02479896f9c510",
     "goerli": "0x4A4888101cdc49EBf936C2e078d6d3f12FD3a9EB",
+    "mumbai": "0x8867D638862265F4CD4d48288E321525520b82C1",
+    "matic": "0x728Af879c3212cEf7a51D7fC296b5e9b7c14dbf6"
+  },
+  "DTXV1_ADDRESSES": {
+    "mainnet": "",
+    "rinkeby": "",
+    "goerli": "",
     "mumbai": "0x4CB61C672ff26c187394a9aA59360FbB6F23e83f",
     "matic": "0x728Af879c3212cEf7a51D7fC296b5e9b7c14dbf6"
   },

@@ -188,6 +188,7 @@ export default function Bridge() {
                 <div className={styles.nftRow}>
                   <div className={styles.item}>
                     <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
+                    <h4>Token ID is: {nft.id}</h4>
                   </div>
                   <span>{erc721TabIndex === 1 ? 'MATIC' : 'ETHEREUM'}</span>
                   <div className={styles.nftCheckWrapper}>
