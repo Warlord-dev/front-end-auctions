@@ -17,12 +17,12 @@ export default function UpgradeNFTModal({ onClose }) {
     onClose();
   };
 
-  return (
+  return maticDtxTokenIds?.length ? (
     <Modal title="NFT Upgrade Required  " onClose={onClose} className={styles.modal}>
       <p className={styles.text}>
         You have {maticDtxTokenIds.length} V1 NFTs. To stake your NFTs you must upgrade to V2.
       </p>
       <Button onClick={handleUpgrade}>Approve and Upgrade All</Button>
     </Modal>
-  );
+  ) : null;
 }
