@@ -5,6 +5,16 @@
   @include wrapper();
   margin-bottom: 25px;
   margin-top: 68px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 20px;
+  @media screen and (min-width: 1320px) {
+    max-width: 1320px;
+    min-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
 }
 
 .title {
@@ -19,6 +29,13 @@
   padding: 35px 22px 22px 50px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+    padding: 10px;
+    .leftSection {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .leftSection {

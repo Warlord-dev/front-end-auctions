@@ -5,14 +5,13 @@
 }
 
 .itemLarge {
-  width: 588px;
+  max-width: 588px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .largeImgWrapper {
-  min-height: 592px;
   width: 100%;
   height: auto;
 }

@@ -1,6 +1,10 @@
 .profileWrapper {
   display: flex;
   padding: 120px 86px;
+  @media only screen and (max-width: 980px) {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
 }
 
 .leftSideWrapper {
@@ -79,6 +83,10 @@
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
   row-gap: 68px;
   column-gap: 84px;
   margin-bottom: 100px;

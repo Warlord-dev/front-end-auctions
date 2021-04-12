@@ -33,8 +33,10 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
       : chainId === '0x1';
 
   const wrongNetworkText =
-    pathname !== '/bridge' && pathname !== '/bridge/deposit' 
-      ? network.alias !== 'matic'? 'Please switch to Matic Network': ''
+    pathname !== '/bridge' && pathname !== '/bridge/deposit'
+      ? network.alias !== 'matic'
+        ? 'Please switch to Matic Network'
+        : ''
       : 'Please switch to Mainnet';
 
   if (!user) {
@@ -64,13 +66,14 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         </a>
       </div>
       <div className={styles.rightBox}>
-        {/* <Link href="/">
+        <div className={styles.links}>
+          {/* <Link href="/">
           <a className={styles.link}>Auctions</a>
         </Link>
         <Link href="/sold">
           <a className={styles.link}>Previously Sold</a>
         </Link> */}
-        {/* <a
+          {/* <a
           href="https://pode.digitalax.xyz/"
           className={styles.link}
           target="_blank"
@@ -78,41 +81,42 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         >
           PODE
         </a> */}
-        <a
-          href="https://medium.com/@digitalax"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Blog
-        </a>
-        <a
-          href="https://community.digitalax.xyz/"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Forum
-        </a>
-        {isShowStaking && (
           <a
-            href="http://staking.digitalax.xyz/"
+            href="https://medium.com/@digitalax"
             className={styles.link}
             target="_blank"
             rel="noreferrer"
           >
-            {linkText}
+            Blog
           </a>
-        )}
-        <Link href="/global">
-          <a className={styles.link}>Global Designer Network</a>
-        </Link>
-        <Link href="/bridge">
-          <a className={styles.link}>Matic-Eth Bridge</a>
-        </Link>
-        <Link href="/swap">
-          <a className={styles.link}>Token Swap</a>
-        </Link>
+          <a
+            href="https://community.digitalax.xyz/"
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Forum
+          </a>
+          {isShowStaking && (
+            <a
+              href="http://staking.digitalax.xyz/"
+              className={styles.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {linkText}
+            </a>
+          )}
+          <Link href="/global">
+            <a className={styles.link}>Global Designer Network</a>
+          </Link>
+          <Link href="/bridge">
+            <a className={styles.link}>Matic-Eth Bridge</a>
+          </Link>
+          <Link href="/swap">
+            <a className={styles.link}>Token Swap</a>
+          </Link>
+        </div>
         {user ? (
           <div className={styles.buttonWrapper}>
             <SmallPhotoWithText

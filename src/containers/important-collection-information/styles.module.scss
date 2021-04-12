@@ -10,6 +10,16 @@
   min-height: 160px;
   align-items: center;
 
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    .leftWrapper {
+      width: 100% !important;
+    }
+    .footerBoxRight {
+      width: 100%;
+    }
+  }
+  
   .leftWrapper {
     width: 260px;
     max-width: 100%;

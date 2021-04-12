@@ -9,7 +9,11 @@
 }
 
 .fullWidth {
-  width: 100%;
+  flex: 1;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+    padding-top: 30px;
+  }
 }
 
 .smallPhotoWithText {
@@ -55,6 +59,10 @@
   border: 1px solid #e6e6e6;
   min-height: 54px;
   text-transform: uppercase;
+  
+  @media only screen and (max-width: 640px) {
+    padding: 0;
+  }
 
   &.active {
     background-color: $lightGray1;

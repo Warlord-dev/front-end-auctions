@@ -14,6 +14,9 @@
 .chartWrapper {
   background-color: $lightGray2;
   padding: 35px 22px 22px 35px;
+  @media only screen and (max-width: 640px) {
+    padding: 0;
+  }
 }
 
 .chartBottomText {

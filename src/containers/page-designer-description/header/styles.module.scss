@@ -2,6 +2,9 @@
   display: flex;
   margin-top: 68px;
   margin-bottom: 80px;
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+  }
 }
 
 .photo {
@@ -12,6 +15,9 @@
   flex-shrink: 0;
   margin-right: 155px;
   border-radius: 256px;
+  @media screen and (max-width: 1200px) {
+    margin-right: 50px;
+  }
 }
 
 .title {
@@ -28,6 +34,15 @@
 .titleWrapper {
   display: flex;
   align-items: flex-start;
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    .title {
+      margin-bottom: 0px;
+    }
+    .countryWrapper {
+      margin-left: 0px;
+    }
+  }
 }
 
 .descriptionWrapper {
