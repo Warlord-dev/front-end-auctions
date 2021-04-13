@@ -12,6 +12,14 @@ const scriptTxt = `
 })();
 `;
 
+const gaScriptTxt =`
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-194369113-3');
+`;
+
 class MyDocument extends Document {
   getPreloadFontsLinks() {
     const fontSizes = [400, 600, 700, 800, 900];
@@ -32,6 +40,8 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194369113-3"></script>
+          <script dangerouslySetInnerHTML={{ __html: gaScriptTxt }} />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
           {this.getPreloadFontsLinks()}
           {/* ipfs next.js fix */}
