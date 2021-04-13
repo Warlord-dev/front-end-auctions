@@ -12,6 +12,14 @@ const scriptTxt = `
 })();
 `;
 
+const gaScriptText =`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-194369113-2');
+`;
+
 class MyDocument extends Document {
   getPreloadFontsLinks() {
     const fontSizes = [400, 600, 700, 800, 900];
@@ -33,6 +41,8 @@ class MyDocument extends Document {
         <Head>
           <script src="/arkane-network/web3-arkane-provider.js"></script>
           <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194369113-2"></script>
+          <script dangerouslySetInnerHTML={{ __html: gaScriptText }} />
           {this.getPreloadFontsLinks()}
           {/* ipfs next.js fix */}
           <style
