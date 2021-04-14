@@ -10,6 +10,15 @@
     padding-bottom: 46px;
     border-bottom: 1px solid #e6e6e6;
   }
+
+  @media only screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    >div {
+      padding-bottom: 5px;
+    }
+  }
 }
 
 .imageWrapper {
@@ -33,7 +42,7 @@
 }
 
 .clothesName {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 22px;
   font-weight: bold;
   max-width: 320px;
@@ -44,7 +53,7 @@
 }
 
 .clothesHashAddress {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
   max-width: 320px;
   white-space: nowrap;
@@ -53,7 +62,7 @@
 }
 
 .boldText {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
   font-weight: bold;
 }

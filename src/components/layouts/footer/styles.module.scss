@@ -14,6 +14,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 980px) {
+    flex-direction: column;
+  }
+  a {
+    height: 20px;
+  }
 }
 
 .leftItem, .centerItem {
