@@ -45,49 +45,51 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         </div>
       </div>
       <div className={styles.rightBox}>
-        {/* <Link href="/">
-          <a className={styles.link}>Auctions</a>
-        </Link>
-        <Link href="/sold">
-          <a className={styles.link}>Previously Sold</a>
-        </Link> */}
-        {/* <a
-          href="https://pode.digitalax.xyz/"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          PODE
-        </a> */}
-        <a
-          href="https://medium.com/@digitalax"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Blog
-        </a>
-        <a
-          href="https://community.digitalax.xyz/"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Forum
-        </a>
-        {isShowStaking && (
-          <a
-            href="http://staking.digitalax.xyz/"
+        <div className={styles.links}>
+          {/* <Link href="/">
+            <a className={styles.link}>Auctions</a>
+          </Link>
+          <Link href="/sold">
+            <a className={styles.link}>Previously Sold</a>
+          </Link> */}
+          {/* <a
+            href="https://pode.digitalax.xyz/"
             className={styles.link}
             target="_blank"
             rel="noreferrer"
           >
-            {linkText}
+            PODE
+          </a> */}
+          <a
+            href="https://medium.com/@digitalax"
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Blog
           </a>
-        )}
-        <Link href="/global">
-          <a className={styles.link}>Global Designer Network</a>
-        </Link>
+          <a
+            href="https://community.digitalax.xyz/"
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Forum
+          </a>
+          {isShowStaking && (
+            <a
+              href="http://staking.digitalax.xyz/"
+              className={styles.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {linkText}
+            </a>
+          )}
+          <Link href="/global">
+            <a className={styles.link}>Global Designer Network</a>
+          </Link>
+        </div>
         {user ? (
           <div className={styles.buttonWrapper}>
             <SmallPhotoWithText

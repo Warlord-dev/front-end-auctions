@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   span {
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: -24px;
     margin-bottom: 15px;
   }
@@ -12,14 +12,14 @@
 .modalButton {
   width: 201px;
   height: 32px;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 22px;
 }
 .inputItem {
   display: flex;
   flex-direction: column;
   label {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
     margin-bottom: 9px;
   }
@@ -35,7 +35,7 @@
     white-space: nowrap;
     position: absolute;
     margin-top: 72px;
-    font-size: 8px;
+    font-size: 0.5rem;
     color: #999999;
   }
 }
@@ -59,7 +59,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 9px !important;
+  font-size: 0.5625rem !important;
   line-height: 11px;
   font-weight: 600;
   background: #fff;
@@ -74,7 +74,7 @@
   padding: 4px;
   border: 0.5px solid #000000;
   background: #fff;
-  font-size: 9px !important;
+  font-size: 0.5625rem !important;
   line-height: 120%;
   top: 25px;
   left: 75px;

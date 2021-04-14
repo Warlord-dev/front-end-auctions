@@ -9,14 +9,22 @@
   justify-content: space-between;
   min-height: 160px;
   align-items: center;
-
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    .leftWrapper {
+      width: 100% !important;
+    }
+    .footerBoxRight {
+      width: 100%;
+    }
+  }
   .leftWrapper {
     width: 260px;
     max-width: 100%;
   }
 
   .priceDescription {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 29px;
     margin-bottom: 8px;
     font-weight: 900;
@@ -29,14 +37,14 @@
   }
 
   .priceEth {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 29px;
     margin-right: 12px;
     font-weight: 900;
   }
 
   .priceUsd {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 24px;
     color: $darkGray3;
     font-weight: 400;
@@ -47,7 +55,7 @@
   }
 
   .estimateApy {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 29px;
     display: block;
     font-weight: 400;
@@ -62,7 +70,7 @@
     color: $darkGray1;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-size: 9px;
+    font-size: 0.5625rem;
     line-height: 11px;
     font-weight: 900;
   }
@@ -75,7 +83,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 9px;
+    font-size: 0.5625rem;
     line-height: 11px;
     font-weight: 600;
     margin-left: 2px;
@@ -89,7 +97,7 @@
     padding: 4px;
     border: 0.5px solid #000000;
     background: #fff;
-    font-size: 9px;
+    font-size: 0.5625rem;
     line-height: 120%;
     top: -7px;
     right: -9px;
@@ -103,7 +111,7 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: $darkGray1;
-    font-size: 9px;
+    font-size: 0.5625rem;
     line-height: 11px;
     margin-bottom: 12px;
     font-weight: 900;
@@ -136,14 +144,14 @@
   }
 
   .priceEth {
-    font-size: 36px;
+    font-size: 2.25rem;
     line-height: 44px;
     font-weight: 900;
     margin-right: 10px;
   }
 
   .priceUsd {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 24px;
     font-weight: 400;
     color: $darkGray3;
@@ -164,14 +172,14 @@
   .estimateApyText {
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 17px;
     font-weight: 400;
     margin-right: 5px;
   }
 
   .estimateApy {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 24px;
     font-weight: 400;
     margin-left: 12px;
@@ -186,7 +194,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 9px;
+    font-size: 0.5625rem;
     line-height: 11px;
     font-weight: 600;
     transform: translateY(-9px);
@@ -201,7 +209,7 @@
     padding: 4px;
     border: 0.5px solid #000000;
     background: #fff;
-    font-size: 9px;
+    font-size: 0.5625rem;
     line-height: 120%;
     top: -26px;
     right: -48px;
@@ -229,7 +237,7 @@
   }
 
   .expirationDateText {
-    font-size: 9px;
+    font-size: 0.5625rem;
     line-height: 11px;
     color: $darkGray1;
     text-transform: uppercase;
@@ -246,7 +254,7 @@
     padding: 12px 0 10px 0;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-size: 9px;
+    font-size: 0.5625rem;
     line-height: 11px;
     min-width: 265px;
     margin-top: 30px;
@@ -256,13 +264,13 @@
   }
 
   .buttonText {
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 15px;
   }
 
   .buttonGray {
     color: $darkGray3;
-    font-size: 9px;
+    font-size: 0.5625rem;
     line-height: 11px;
   }
 }

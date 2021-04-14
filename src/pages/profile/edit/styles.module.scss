@@ -6,10 +6,18 @@
   flex-direction: column;
   margin: auto;
   position: relative;
+  @media only screen and (max-width: 980px) {
+    padding: 20px 30px;
+    margin-top: 20px;
+    width: calc(100% - 40px);
+  }
 }
 .profileWrapper {
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 980px) {
+    flex-direction: column;
+  }
 }
 
 .avatarWrapper {
@@ -24,7 +32,7 @@
   }
   span {
     font-weight: 900;
-    font-size: 7px;
+    font-size: 0.4375rem;
     letter-spacing: 0.12em;
     color: #b6b6b6;
   }
@@ -33,7 +41,7 @@
 .uploadButton {
   width: 154px;
   height: 41px;
-  font-size: 15px;
+  font-size: 0.9375rem;
   margin-bottom: 26px;
 }
 
@@ -48,13 +56,13 @@
   flex-direction: column;
   margin-bottom: 24px;
   span {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
     color: #111111;
     margin-bottom: 10px;
   }
   p {
-    font-size: 9px;
+    font-size: 0.5625rem;
     font-weight: 900;
     letter-spacing: 0.12em;
     color: #b6b6b6;
@@ -65,9 +73,12 @@
     height: 44px;
     border: 1px solid #e6e6e6;
     padding-left: 12px;
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
   .alert {
-    font-size: 8px;
+    font-size: 0.5rem;
     font-weight: 400;
     color: #999999;
     margin-top: 2px;
@@ -78,7 +89,7 @@
 .saveButton {
   width: 154px;
   height: 41px;
-  font-size: 15px;
+  font-size: 0.9375rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -111,7 +122,7 @@
 .detectIpButton {
   width: 100px;
   height: 44px;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .questionMark {
@@ -122,7 +133,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 11px;
   font-weight: 600;
   background: #fff;
@@ -137,7 +148,7 @@
   padding: 4px;
   border: 0.5px solid #000000;
   background: #fff;
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 120%;
   top: 0px;
   left: 94px;
@@ -156,9 +167,13 @@
 .backProfileButton {
   width: 103px;
   height: 22px;
-  font-size: 8px;
+  font-size: 0.5rem;
   position: absolute;
   bottom: 32px;
   left: 39px;
   white-space: nowrap;
+  @media only screen and (max-width: 480px) {
+    top: 10px;
+    left: 10px;
+  }
 }

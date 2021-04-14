@@ -2,10 +2,14 @@
 @import "../../../../assets/scss/helpers/helpers.scss";
 
 .leftBox {
-  width: 588px;
+  max-width: 588px;
   margin-right: 85px;
   flex-shrink: 0;
   z-index: 2;
+  flex: 1;
+  @media only screen and (max-width: 1200px) {
+    margin-right: 0;
+  }
 }
 
 .tabs {
@@ -23,7 +27,7 @@
     padding: 17px 25px 19px 25px;
     width: 100%;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 0.75rem;
     letter-spacing: 0.12em;
     color: $darkGray3;
     border: 1px solid #e6e6e6;
@@ -61,7 +65,7 @@
     text-align: left;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 0.625rem;
     color: white;
     // width: 105px;
     right: 0;

@@ -8,6 +8,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 0 20px;
+
+  @media screen and (min-width: 1320px) {
+    max-width: 1320px;
+    min-width: 1320px;
+    padding: 0;
+  }
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: baseline;
+  }
 }
 
 .leftBox {
@@ -20,17 +32,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 187px;
+  padding: 0px 20px;
   height: 32px;
   background: #6eb2f1;
   border: 1px solid #767676;
   box-sizing: border-box;
   border-radius: 10px;
   color: white;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   margin-left: 40px;
   margin-top: -20px;
+  white-space: nowrap;
 
   &:hover {
     color: white;
@@ -45,6 +58,10 @@
 
 .arrow {
   margin-left: 4px;
+  @media screen and (max-width: 640px) {
+    margin-left: -130px;
+    margin-top: 50px;
+  }
   margin-top: 30px;
   position: relative;
   width: 60px;
@@ -55,7 +72,7 @@
 .arrowDesc {
   width: 155px;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: #843BFA;
   border: 0.3px solid #FFFFFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -64,28 +81,51 @@
   left: 54px;
 }
 
-.rightBox {
-  min-height: 47px;
+.links {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin: 0px 100px;
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-end;
+  }
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    margin: 0;
+  }  
+}
+
+.rightBox {
+  min-height: 47px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
 }
 
 .link {
   @include active();
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 17px;
   color: $black;
   text-transform: uppercase;
-  margin-right: 62px;
-
+  @media screen and (min-width: 1200px) {
+    margin-right: 62px;
+  }
   &:focus {
     outline: none;
+  }
+
+  @media screen and (max-width: 640px) {
+    text-align: center;
   }
 }
 
 .buttonWrapper {
-  min-width: 167px;
   position: relative;
 }
 

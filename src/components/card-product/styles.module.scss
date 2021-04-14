@@ -5,11 +5,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .clothesName {
   @include active();
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 24px;
   margin-bottom: 15px;
   font-weight: 900;
@@ -25,8 +26,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 618px;
-  height: 605px;
+  max-width: 618px;
+  // height: 605px;
   // padding: 45px;
   padding: 15px 0;
 }
@@ -43,7 +44,6 @@
   background: $lightGray1;
   margin-top: 16px;
   padding-bottom: 12px;
-  min-height: 795px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
