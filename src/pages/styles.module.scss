@@ -1,0 +1,179 @@
+.wrapper {
+  background-color: black;
+  position: relative;
+  color: white;
+  width: 100%;
+  font-family: "Inter";
+  display: table;
+
+  .navBack {
+    background-color: black;
+    margin-top: -65px;
+    position: relative;
+
+    video {
+      width: 100%;
+    }
+
+    .buttonWrapper {
+      position: absolute;
+      left: 0;
+      bottom: 46%;
+      width: 100%;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .promoteWrapper {
+    position: absolute;
+    top: 0;
+    padding: 4% 8%;
+    width: 100%;
+    font-weight: 800;
+    margin-bottom: 2%;
+    
+    h1 {
+      color: white;
+      font-family: "Gilroy";
+      font-size: 5.3vw;
+      line-height: 5.3vw;
+    }
+
+    img {
+      margin-left: 1vw;
+      margin-top: 0.55vw;
+      width: 4.2vw;
+      height: 4.2vw;
+    }
+
+    h2, h3, h4 {
+      color: #74A3F3;
+      font-family: "Inter";
+    }
+
+    h2 {
+      margin-top: 0.2vw;
+      font-size: 0.8vw;
+      line-height: 0.9vw;
+      letter-spacing: 0.1vw;
+    }
+
+    h5 {
+      margin-top: 1vw;
+      font-size: 1.3vw;
+      line-height: 2.2vw;
+      letter-spacing: 0.15vw;
+      color: white;
+    }
+  }
+
+  .descriptionWrapper {
+    position: absolute;
+    width: 40%;
+    right: 5%;
+    bottom: 15%;
+
+    h1 {
+      font-size: 1.1vw;
+      line-height: 2.2vw;
+      letter-spacing: 0.1vw;
+      margin-bottom: 2vw;
+    }
+
+    h2 {
+      font-size: 1.3vw;
+      line-height: 2.2vw;
+      letter-spacing: 0.1vw;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .wrapper {
+    .navBack {
+      margin-top: 0;
+      padding-top: 0;
+      display: table-footer-group;
+
+      .buttonWrapper {
+        bottom: 120px;
+
+        a {
+          font-size: 16px;
+          padding: 12px 7px;
+        }
+      }
+    }
+
+    .promoteWrapper, .descriptionWrapper {
+      display: none;
+    }
+
+    .mobilePromoteWrapper {
+      display: flex;
+      flex-direction: row;
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+          font-size: 32px;
+          font-family: "Gilroy";
+        }
+
+        h2 {
+          width: 80%;
+          font-size: 7px;
+          color: #74A3F3;
+          font-family: "Gilroy";
+        }
+      }
+      
+      img {
+        width: 73px;
+        height: 73px;
+      }
+
+      
+    }
+  
+    .fashionWrapper {
+      display: flex;
+
+      img {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .wrapper {
+    .navBack {
+      .buttonWrapper {
+        bottom: 100px;
+        a {
+          font-size: 14px;
+          padding: 12px 7px;
+        }
+      }
+    }
+
+    .mobilePromoteWrapper {
+      .title {
+        h1 {
+          font-size: 25px;
+        }
+      }
+
+      img {
+        width: 53px;
+        height: 53px;
+      }
+    }
+  }
+}
+

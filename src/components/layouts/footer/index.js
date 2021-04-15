@@ -1,8 +1,10 @@
 import React, { memo } from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 import ListSocialNetworks from './list-social-networks';
 import styles from './styles.module.scss';
+import LandingFooter from './landing';
 
 const dataLeftList = [
   {
@@ -34,7 +36,14 @@ const dataCenterList = [
   },
 ];
 
-const Footer = ({ className, leftList, centerList }) => (
+const Footer = ({ className, leftList, centerList }) => {
+  const router = useRouter();
+  const pathname = router.pathname;
+
+  const isLandingPage = pathname === '/';
+
+  return isLandingPage ? (<LandingFooter />)
+  : (
   <footer className={cn(className, styles.wrapper)}>
     <div className={styles.inner}>
       {!!leftList.length && (
@@ -56,7 +65,7 @@ const Footer = ({ className, leftList, centerList }) => (
       <ListSocialNetworks />
     </div>
   </footer>
-);
+)};
 
 Footer.propTypes = {
   className: PropTypes.string,

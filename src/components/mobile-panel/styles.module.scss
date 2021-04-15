@@ -1,0 +1,13 @@
+.wrapper {
+  display: none;
+}
+
+@media (max-width: 590px) {
+  .wrapper {
+    display: block;
+    padding: 35px 40px;
+    font-size: 14px;
+    font-family: 'Gilroy';
+    font-weight: 800;
+  }
+}
