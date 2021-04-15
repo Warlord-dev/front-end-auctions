@@ -79,6 +79,11 @@
     display: flex;
     flex-direction: column;
   }
+
+  @media (max-width: $sm-width) {
+    display: block;
+  }
+  
   row-gap: 68px;
   column-gap: 84px;
   margin-bottom: 100px;
