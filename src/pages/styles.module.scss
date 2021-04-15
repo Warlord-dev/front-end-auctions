@@ -1,0 +1,110 @@
+.wrapper {
+  background-color: black;
+  color: white;
+  width: 100%;
+  font-family: "Inter";
+
+  .navBack {
+    background-color: black;
+    margin-top: -65px;
+    position: relative;
+    padding-top: 80px;
+
+    .skinList {
+      display: none;
+      img {
+        width: 25%;
+      }
+    }
+
+    .espaSkins {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      h1 {
+        font-size: 4.5vw;
+        font-family: "Gilroy";
+        margin-bottom: 10px;
+      }
+    }
+
+    .espaSkinsMobile, .buttonForMobile {
+      display: none;
+    }
+  }
+
+  .promoteWrapper {
+    padding: 3% 10%;
+    width: 100%;
+    font-weight: 700;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    // grid-template-columns: auto auto auto;
+
+    h1 {
+      font-size: 1.5vw;
+      line-height: 1.6vw;
+      font-family: "Inter";
+    }
+  }
+
+  .videoWrapper {
+    video {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .wrapper {
+    .navBack {
+      margin-top: 0;
+      padding-top: 0;
+
+      .skinList {
+        display: block;
+        width: 100%;
+      }
+
+      .espaSkins {
+        display: none;
+      }
+
+      .espaSkinsMobile {
+        padding: 4vw 6vw 5vw 8vw;
+        display: block;
+
+        h1 {
+          font-family: 'Gilroy';
+          font-size: 7vw;
+        }
+        p {
+          font-family: 'Gilroy';
+          color: #74A3F3;
+          font-size: 2vw;
+        }
+      }
+
+      .buttonForMobile {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding-bottom: 10vw;
+      }
+    }
+    .promoteWrapper {
+      display: none;
+    }
+  
+    .videoWrapper {
+  
+    }
+  }
+}
+

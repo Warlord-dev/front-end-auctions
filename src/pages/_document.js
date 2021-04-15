@@ -82,6 +82,31 @@ class MyDocument extends Document {
               font-weight: 900;
               font-style: normal;
             }
+
+            @font-face {
+              font-family: "Internal Rainbows";
+              src: url("./fonts/Internal Rainbows.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Gilroy";
+              src: url("./fonts/Gilroy-Light.otf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: "Gilroy";
+              src: url("./fonts/Gilroy-ExtraBold.otf");
+              font-weight: 700;
+            }
+            
+            @font-face {
+              font-family: "Gilroy";
+              src: url("./fonts/Gilroy-ExtraBold.otf");
+              font-weight: 900;
+            }
+          
           `,
             }}
           />

@@ -13,6 +13,7 @@ import accountActions from '@actions/user.actions';
 import { getEnabledNetworkByChainId } from '@services/network.service';
 
 import Logo from './logo';
+import LandingHeader from './landing';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
@@ -26,6 +27,8 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const router = useRouter();
   const pathname = router.pathname;
+
+  const isLandingPage = pathname === '/';
 
   const isOnRightNetwork =
     pathname !== '/bridge' && pathname !== '/bridge/deposit'
@@ -54,7 +57,10 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     dispatch(accountActions.logout());
   };
 
-  return (
+  return isLandingPage ? (
+    <LandingHeader />
+  )
+  : (
     <div className={cn(className, styles.wrapper)}>
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
