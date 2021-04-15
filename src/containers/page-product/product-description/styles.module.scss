@@ -2,31 +2,10 @@
 
 .wrapper {
 	display: flex;
-	margin: auto;
 	margin-top: 50px;
 	margin-bottom: 84px;
 	@media only screen and (max-width: 1200px) {
 		flex-direction: column;
 		align-items: center;
-	}
-
-	@media (min-width: $xl-width) {
-		max-width: 1140px;
-	}
-
-	@media (min-width: $lg-width) and (max-width: $xl-width) {
-		max-width: 960px;
-	}
-
-	@media (min-width: $md-width) and (max-width: $lg-width) {
-		max-width: 720px;
-	}
-
-	@media (min-width: $sm-width) and (max-width: $md-width) {
-		max-width: 540px;
-	}
-
-	@media (max-width: $sm-width) {
-		max-width: 100%;
 	}
 }
