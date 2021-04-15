@@ -20,6 +20,14 @@
     flex-direction: column;
     align-items: baseline;
   }
+
+  @media (max-width: $sm-width) {
+    display: block!important;
+
+    .arrow {
+      display: none;
+    }
+  }
 }
 
 .leftBox {
