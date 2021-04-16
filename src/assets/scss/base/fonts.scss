@@ -42,3 +42,27 @@
     font-weight: 900;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: "Internal Rainbows";
+    src: url("./../../../../public/fonts/Internal Rainbows.otf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    src: url("./../../../../public/fonts/Gilroy-Light.otf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: "Gilroy";
+    src: url("./../../../../public/fonts/Gilroy-ExtraBold.otf");
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: "Gilroy";
+    src: url("./../../../../public/fonts/Gilroy-ExtraBold.otf");
+    font-weight: 900;
+  }
