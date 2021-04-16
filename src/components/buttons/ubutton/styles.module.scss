@@ -1,0 +1,27 @@
+.uButton {
+  width: fit-content;
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-family: "Inter";
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.5vw 2vw;
+  background: #3CC95B;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    transform: translateY(-5px);
+    background: #6fac7c;
+    box-shadow: 0px 15px 20px rgb(82, 82, 82);
+    color: #fff;
+  }
+
+  span.forMobile {
+    display: none;
+  }
+}
+

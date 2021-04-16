@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Router from 'next/router';
+import Router, { useRouter }  from 'next/router';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import Link from 'next/link';
@@ -10,6 +10,7 @@ import { getUser } from '@selectors/user.selectors';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
+import LandingHeader from './landing';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
@@ -23,6 +24,11 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const [isShowMenu, setIsShowMenu] = useState(false);
 
+  const router = useRouter();
+  const pathname = router.pathname;
+
+  const isLandingPage = pathname === '/';
+
   const handleProfileClick = () => {
     setIsShowMenu(false);
     Router.push('/profile');
@@ -32,17 +38,20 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     dispatch(accountActions.logout());
   };
 
-  return (
+  return isLandingPage ? (
+    <LandingHeader textColor={'#74A3F3'}/>
+  )
+  : (
     <div className={cn(className, styles.wrapper)}>
       <div className={styles.leftBox}>
         <Logo />
-        <a href="https://skins.digitalax.xyz/" className={styles.goToMaticButton}>
+        {/* <a href="https://skins.digitalax.xyz/" className={styles.goToMaticButton}>
           Switch to Matic for ESPA
-        </a>
-        <div className={styles.arrow}>
+        </a> */}
+        {/* <div className={styles.arrow}>
           <img src="images/arrow.svg"  />
           <span className={styles.arrowDesc}>Switch for ESPA and Among Us Mod Drop</span>
-        </div>
+        </div> */}
       </div>
       <div className={styles.rightBox}>
         <div className={styles.links}>
