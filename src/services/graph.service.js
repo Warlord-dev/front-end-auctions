@@ -122,7 +122,6 @@ export const getAuctionInformationChartOptions = (history) => {
       text: '',
     },
     chart: {
-      width: 490,
       height: 100,
     },
     credits: {

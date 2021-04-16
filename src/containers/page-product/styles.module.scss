@@ -1,17 +1,22 @@
 @import '../../assets/scss/helpers/grid.scss';
+@import "../../assets/scss/helpers/variables.scss";
 
 .wrapper {
-  @include wrapper();
-  @media only screen and (min-width: 0px) {
-    margin: 0px 20px;
-  }
-  @media only screen and (min-width: 640px) {
-    margin: 0px 30px;
-  }
-  @media only screen and (min-width: 980px) {
-    margin: 0px 50px;
-  }
-  @media only screen and (min-width: 1440px) {
-    margin: 0px 150px;
-  }
+  margin: auto;
+
+  @media (min-width: $lg-width) {
+		margin: 0 150px;
+	}
+
+	@media (min-width: $md-width) and (max-width: $lg-width) {
+		margin: 0 50px;
+	}
+
+	@media (min-width: $sm-width) and (max-width: $md-width) {
+		margin: 0 30px;
+	}
+
+	@media (max-width: $sm-width) {
+		margin: 0 1rem;
+	}
 }
