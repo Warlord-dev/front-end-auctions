@@ -4,6 +4,7 @@
 	display: flex;
 	margin-top: 50px;
 	margin-bottom: 84px;
+	flex-grow: 1;
 	@media only screen and (max-width: 1200px) {
 		flex-direction: column;
 		align-items: center;
