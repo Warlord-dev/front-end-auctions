@@ -4,25 +4,19 @@
 .wrapper {
   margin: auto;
 
-  @media (min-width: $xl-width) {
-		max-width: 1140px;
-	}
-
-	@media (min-width: $lg-width) and (max-width: $xl-width) {
-		max-width: 960px;
+  @media (min-width: $lg-width) {
+		margin: 0 150px;
 	}
 
 	@media (min-width: $md-width) and (max-width: $lg-width) {
-		max-width: 720px;
+		margin: 0 50px;
 	}
 
 	@media (min-width: $sm-width) and (max-width: $md-width) {
-		max-width: 540px;
+		margin: 0 30px;
 	}
 
 	@media (max-width: $sm-width) {
-		max-width: 100%;
-    margin-left: 1rem;
-    margin-right: 1rem;
+		margin: 0 1rem;
 	}
 }
