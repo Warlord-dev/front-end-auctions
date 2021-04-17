@@ -35,7 +35,7 @@ const ViewImages = ({
     return (
       <div className={cn(styles.wrapper, className)}>
         <div className={styles.itemLarge}>
-          <video autoPlay muted loop className={styles.largeImgWrapper}>
+          <video autoPlay muted loop playsInline className={styles.largeImgWrapper}>
             <source src={`/video/${clothesId}.mp4`} type="video/mp4" />
           </video>
         </div>
@@ -85,7 +85,7 @@ const ViewImages = ({
                 />
               </a>
             ) : (
-              <video autoPlay muted loop className={styles.largeImgWrapper} key={largeImage.video}>
+              <video autoPlay muted loop playsInline className={styles.largeImgWrapper} key={largeImage.video}>
                 <source src={largeImage.video} type="video/mp4" />
               </video>
             )

@@ -42,7 +42,7 @@ const NFTProduct = ({ name, nft, nftId }) => {
             <a className={styles.clothesPhotoWrapper}>
               {imageUrl &&
                 (isVideo ? (
-                  <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
+                  <video autoPlay muted loop playsInline className={styles.clothesPhoto} key={imageUrl}>
                     <source src={imageUrl} type="video/mp4" />
                   </video>
                 ) : (
