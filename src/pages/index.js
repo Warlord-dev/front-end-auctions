@@ -41,7 +41,7 @@ const LandingPage = () => {
         <h1>Suit up for Indie & Mod Esports.</h1>
       </div>
       <div className={styles.videoWrapper}>
-        <video autoPlay loop>
+        <video autoPlay loop muted>
           <source src={`/video/among-us.mp4`} type="video/mp4" />
         </video>
       </div>
