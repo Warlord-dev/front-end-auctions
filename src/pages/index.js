@@ -1,11 +1,54 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
+import Router from 'next/router';
+import Head from 'next/head';
 import styles from './styles.module.scss';
 import UButton from '@components/buttons/ubutton'
 import MobilePanel from '@components/mobile-panel'
 
 const LandingPage = () => {
+  useEffect(() => {
+    import('react-facebook-pixel')
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init('485692459240447');
+        ReactPixel.pageView();
+
+        Router.events.on('routeChangeComplete', () => {
+          ReactPixel.pageView();
+        });
+      });
+  }, []);
+
+  const structuredData = {
+    '@context': 'http://schema.org',
+    '@type': 'Skins Landing page',
+    title: 'Digitalax - The Digital Fashion Engine',
+    description:
+      'ESPA is the first casual esports platform that lets you take you & your skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game.',
+  };
+
   return (
     <div className={styles.wrapper}>
+      <Head>
+        <meta
+          name="description"
+          content="ESPA is the first casual esports platform that lets you take you & your skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game."
+        />
+        <meta property="og:title" content="Digitalax - The Digital Fashion Engine" />
+        <meta
+          property="og:description"
+          content="ESPA is the first casual esports platform that lets you take you & your skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game."
+        />
+        <meta property="og:url" content="https://marketplace.digitalax.xyz" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@ESPA4play" />
+        <meta name="twitter:title" content="Skins Landing page" />
+        <meta
+          name="twitter:description"
+          content="ESPA is the first casual esports platform that lets you take you & your skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game."
+        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      </Head>
       <div className={styles.navBack}>
         <div className={styles.espaSkinsMobile}>
           <h1>ESPA SKINS</h1>
