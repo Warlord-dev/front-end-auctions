@@ -1,11 +1,55 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
+import Router from 'next/router';
+import Head from 'next/head';
+
 import styles from './styles.module.scss';
 import UButton from '@components/buttons/ubutton'
 import MobilePanel from '@components/mobile-panel'
 
 const LandingPage = () => {
+  useEffect(() => {
+    import('react-facebook-pixel')
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init('886174625261983');
+        ReactPixel.pageView();
+
+        Router.events.on('routeChangeComplete', () => {
+          ReactPixel.pageView();
+        });
+      });
+  }, []);
+
+  const structuredData = {
+    '@context': 'http://schema.org',
+    '@type': 'Marketplace Landing page',
+    title: 'Digitalax - The Digital Fashion Engine',
+    description:
+      'DIGITALAX is the first NFT live digital fashion market, combining NFT staking and DeFi. We are pioneering Fractional Garment Ownership with ERC-721 and ERC-1155 NFTs. All designs are handmade by our Global Designer Network and infused with the special attention of our in house fashion studio. All NFTs are backed by the 3D File and all metadata is decentralised. ',
+  };
+
   return (
     <div className={styles.wrapper}>
+      <Head>
+        <meta
+          name="description"
+          content="DIGITALAX is the first NFT live digital fashion market, combining NFT staking and DeFi. We are pioneering Fractional Garment Ownership with ERC-721 and ERC-1155 NFTs. All designs are handmade by our Global Designer Network and infused with the special attention of our in house fashion studio. All NFTs are backed by the 3D File and all metadata is decentralised. "
+        />
+        <meta property="og:title" content="Digitalax - The Digital Fashion Engine" />
+        <meta
+          property="og:description"
+          content="DIGITALAX is the first NFT live digital fashion market, combining NFT staking and DeFi. We are pioneering Fractional Garment Ownership with ERC-721 and ERC-1155 NFTs. All designs are handmade by our Global Designer Network and infused with the special attention of our in house fashion studio. All NFTs are backed by the 3D File and all metadata is decentralised. "
+        />
+        <meta property="og:url" content="https://marketplace.digitalax.xyz" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@ESPA4play" />
+        <meta name="twitter:title" content="Marketplace Landing page" />
+        <meta
+          name="twitter:description"
+          content="DIGITALAX is the first NFT live digital fashion market, combining NFT staking and DeFi. We are pioneering Fractional Garment Ownership with ERC-721 and ERC-1155 NFTs. All designs are handmade by our Global Designer Network and infused with the special attention of our in house fashion studio. All NFTs are backed by the 3D File and all metadata is decentralised. "
+        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      </Head>
       <div className={styles.navBack}>
         <video autoPlay loop muted playsInline>
           <source src={`/video/BGVIDEO-MARKETPLACE.mp4`} type="video/mp4" />
