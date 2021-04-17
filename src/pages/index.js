@@ -24,7 +24,7 @@ const LandingPage = () => {
     '@type': 'Skins Landing page',
     title: 'Digitalax - The Digital Fashion Engine',
     description:
-      'ESPA is the first casual esports platform that lets you take you & your skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game.',
+      'Take your digital fashion skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game. ESPA is the first casual esports platform, with direct integration with DIGITALAX NFT skins on Matic Network. ',
   };
 
   return (
@@ -32,12 +32,12 @@ const LandingPage = () => {
       <Head>
         <meta
           name="description"
-          content="ESPA is the first casual esports platform that lets you take you & your skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game."
+          content="Take your digital fashion skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game. ESPA is the first casual esports platform, with direct integration with DIGITALAX NFT skins on Matic Network. "
         />
         <meta property="og:title" content="Digitalax - The Digital Fashion Engine" />
         <meta
           property="og:description"
-          content="ESPA is the first casual esports platform that lets you take you & your skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game."
+          content="Take your digital fashion skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game. ESPA is the first casual esports platform, with direct integration with DIGITALAX NFT skins on Matic Network. "
         />
         <meta property="og:url" content="https://marketplace.digitalax.xyz" />
         <meta name="twitter:card" content="summary" />
@@ -45,7 +45,7 @@ const LandingPage = () => {
         <meta name="twitter:title" content="Skins Landing page" />
         <meta
           name="twitter:description"
-          content="ESPA is the first casual esports platform that lets you take you & your skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game."
+          content="Take your digital fashion skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game. ESPA is the first casual esports platform, with direct integration with DIGITALAX NFT skins on Matic Network. "
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </Head>
