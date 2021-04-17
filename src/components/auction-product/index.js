@@ -42,14 +42,14 @@ const CardProduct = ({ name, auction, auctionId }) => {
                 </span>
               )} */}
               {parseInt(garment.id, 10) >= 20 && parseInt(garment.id, 10) <= 28 && (
-                <video autoPlay muted loop className={styles.clothesPhoto}>
+                <video autoPlay muted loop playsInline className={styles.clothesPhoto}>
                   <source src={`/video/${garment.id}.mp4`} type="video/mp4" />
                 </video>
               )}
               {(parseInt(garment.id, 10) < 20 || parseInt(garment.id, 10) > 28) &&
                 (tokenInfo && imageUrl ? (
                   isVideo ? (
-                    <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
+                    <video autoPlay muted loop playsInline className={styles.clothesPhoto} key={imageUrl}>
                       <source src={imageUrl} type="video/mp4" />
                     </video>
                   ) : (

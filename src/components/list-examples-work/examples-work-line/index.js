@@ -30,7 +30,7 @@ const ExamplesWorkLine = ({
   const renderThumbnail = () => {
     if (!amountSold && parseInt(clothesId, 10) >= 20 && parseInt(clothesId, 10) <= 28) {
       return (
-        <video autoPlay muted loop className={styles.img}>
+        <video autoPlay muted loop playsInline className={styles.img}>
           <source src={`/video/${clothesId}.mp4`} type="video/mp4" />
         </video>
       );
@@ -38,7 +38,7 @@ const ExamplesWorkLine = ({
 
     if (tokenInfo.animation_url) {
       return (
-        <video autoPlay muted loop className={styles.img}>
+        <video autoPlay muted loop playsInline className={styles.img}>
           <source src={tokenInfo.animation_url} type="video/mp4" />
         </video>
       );

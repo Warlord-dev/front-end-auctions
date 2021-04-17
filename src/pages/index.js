@@ -7,7 +7,7 @@ const LandingPage = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.navBack}>
-        <video autoPlay loop muted>
+        <video autoPlay loop muted playsInline>
           <source src={`/video/BGVIDEO-MARKETPLACE.mp4`} type="video/mp4" />
         </video>
         <div className={styles.buttonWrapper}>

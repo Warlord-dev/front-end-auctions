@@ -29,7 +29,7 @@ const PreviewMaterial = ({
         <Modal onClose={() => handleClose()} className={cn(className, styles.itemFitContent)}>
           <div className={styles.footer}>
             {isVideo ? 
-              <video autoPlay muted loop className={styles.itemLargeImg} >
+              <video autoPlay muted loop playsInline className={styles.itemLargeImg} >
                 <source src={tokenImage} type="video/mp4" />
               </video>
             : <ReactImageMagnify
