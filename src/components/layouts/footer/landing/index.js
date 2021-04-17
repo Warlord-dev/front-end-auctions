@@ -26,35 +26,38 @@ const LandingFooter = () => {
           <img src='/images/social-icons/white-logo.svg' alt='white-logo' className={styles.whiteLogo} />
           <div className={[styles.dFlex, styles.iconsLine].join(' ')}>
             <a href='https://www.facebook.com/digitalax1' target='_blank'>
-              <img src='/images/social-icons/facebook.svg' alt='' className={'facebook-icon'} />
+              <img src='/images/social-icons/facebook.svg' alt='facebook-icon' className={'facebook-icon'} />
             </a>
             <a href='https://twitter.com/DIGITALAX_' target='_blank'>
-              <img src='/images/social-icons/twitter.svg' alt='' className={'twitter-icon'} />
+              <img src='/images/social-icons/twitter.svg' alt='twitter-icon' className={'twitter-icon'} />
             </a>
             <a href='https://www.instagram.com/digitalax_' target='_blank'>
-              <img src='/images/social-icons/instagram.svg' alt='' className={'instagram-icon'} />
+              <img src='/images/social-icons/instagram.svg' alt='instagram-icon' className={'instagram-icon'} />
+            </a>
+            <a href='https://www.linkedin.com/company/digitalax-digital-fashion/' target='_blank'>
+              <img src='/images/social-icons/linkedin_logo.png' alt='linkedin-icon' className={styles.linkedinIcon} />
             </a>
             <a href='https://www.tiktok.com/@digitalax?' target='_blank'>
-              <img src='/images/social-icons/tiktok.svg' alt='' style={{
+              <img src='/images/social-icons/tiktok.svg' alt='tiktok-icon' style={{
                 marginRight: 20
               }} className={'tiktok-icon'} />
             </a>
             <a href='https://www.twitch.tv/digitalax' target='_blank'>
-              <img src='/images/social-icons/twitch.svg' alt='' style={{
+              <img src='/images/social-icons/twitch.svg' alt='twitch-icon' style={{
                 marginRight: 20
               }} className={'twitch-icon'} />
             </a>
             <a href='https://discord.com/invite/DKbSqRGtKv' target='_blank'>
-              <img src='/images/social-icons/discord.svg' alt='' className='discord-icon' />
+              <img src='/images/social-icons/discord.svg' alt='discord-icon' className='discord-icon' />
             </a>
             <a href='https://www.reddit.com/r/DIGITALAX/' target='_blank'>
-              <img src='/images/social-icons/reddit.svg' alt='' className='reddit-icon' />
+              <img src='/images/social-icons/reddit.svg' alt='reddit-icon' className='reddit-icon' />
             </a>
             <a href='https://www.youtube.com/channel/UCE26XV44aaYe1zlPnDbiz5Q' target='_blank'>
-              <img src='/images/social-icons/youtube.svg' alt='' className={styles.youtubeIcon} />
+              <img src='/images/social-icons/youtube.svg' alt='youtube-icon' className={styles.youtubeIcon} />
             </a>
             <a href='https://digitalax.medium.com/' target='_blank'>
-              <img src='/images/social-icons/medium-small.png' alt='' className={styles.mediumIcon} />
+              <img src='/images/social-icons/medium-small.png' alt='medium-icon' className={styles.mediumIcon} />
             </a>
             </div>
           
