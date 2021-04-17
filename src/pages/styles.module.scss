@@ -8,7 +8,7 @@
 
   .navBack {
     background-color: black;
-    margin-top: -65px;
+    margin-top: -75px;
     position: relative;
 
     video {
@@ -18,11 +18,14 @@
     .buttonWrapper {
       position: absolute;
       left: 0;
-      bottom: 46%;
+      bottom: 58%;
       width: 100%;
       z-index: 1;
       display: flex;
       justify-content: center;
+      @media (max-width: 1000px) {
+        bottom: 53%;
+      }
     }
   }
 

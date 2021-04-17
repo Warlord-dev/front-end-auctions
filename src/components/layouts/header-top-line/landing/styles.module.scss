@@ -39,7 +39,7 @@ $fw-black: 900;
 .navigationBar {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px;
   padding-left: 50px;
   z-index: 1;
 
@@ -95,7 +95,7 @@ $fw-black: 900;
           font-size: 16px;
           color: #74A3F3;
           border-bottom: thin solid #74A3F3;
-          padding-bottom: 2px;
+          // padding-bottom: 2px;
         }
       }
     }
@@ -125,6 +125,7 @@ $fw-black: 900;
   .navigationBar {
     padding: 2px 0 0 14px !important;
     .branding {
+      height: 35px;
       .brand {
         font-size: 10px !important;
         line-height: 12px;
@@ -142,12 +143,27 @@ $fw-black: 900;
       display: flex;
       flex-direction: row;
       align-items: flex-end;
+      margin-right: 5px;
+
       ul {
+        line-height: 30px;
         li {
+          margin-right: 10px;
           a {
             font-size: 8px;
             color: #74A3F3 !important;
             border-bottom: thin solid #74A3F3 !important;
+          }
+        }
+      }
+
+      @media (max-width: 340px) {
+        margin-right: 0;
+        ul {
+          li {
+            a {
+              font-size: 8px;
+            }
           }
         }
       }

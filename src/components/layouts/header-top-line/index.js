@@ -39,7 +39,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   };
 
   return isLandingPage ? (
-    <LandingHeader />
+    <LandingHeader textColor={'#74A3F3'}/>
   )
   : (
     <div className={cn(className, styles.wrapper)}>

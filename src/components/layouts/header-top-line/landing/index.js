@@ -35,14 +35,14 @@ const LandingHeader = props => {
           </li>
           <li>
             <a style={linkStyle}
-            href="https://drive.google.com/file/d/1zG8h4GnodW7uWm_OsUY3g4I4RpOx6bMH/view?usp=sharing" target="_blank">
-              WhitePaper
+            href="https://staking.digitalax.xyz" target="_blank">
+              Staking
             </a>
           </li>
           <li>
             <a style={linkStyle}
-            href="https://staking.digitalax.xyz" target="_blank">
-              Staking
+            href="https://espa.digitalax.xyz" target="_blank">
+              Esports Platform
             </a>
           </li>
         </ul>
