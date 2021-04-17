@@ -67,9 +67,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
         <Logo />
-        <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
+        {/* <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
           Switch to Eth Mainnet
-        </a>
+        </a> */}
       </div>
       <div className={styles.rightBox}>
         <div className={styles.links}>
