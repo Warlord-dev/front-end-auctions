@@ -81,7 +81,9 @@ const LandingPage = () => {
       <div className={styles.promoteWrapper}>
         <h1>Get Winning Streaks & Earn $MONA.</h1>
         <h1>Matic Layer 2 Sustainability. </h1>
-        <h1>Suit up for Indie & Mod Esports.</h1>
+        <h1 style={{
+          marginRight: '5%'
+        }}>Suit up for Indie & Mod Esports.</h1>
       </div>
       <div className={styles.videoWrapper}>
         <video autoPlay loop muted playsInline>
