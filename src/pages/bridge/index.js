@@ -63,7 +63,7 @@ export default function Bridge() {
       .then(() => {
         setModalTitle('Moving to Matic!');
         setModalBody(
-          'Your token is on its way to Matic Network! Please check back in 10-15 minutes.'
+          'Your token is on its way to Matic Network! Please check back in 10-15 minutes.',
         );
         setShowTxConfirmModal(true);
       })
@@ -71,11 +71,14 @@ export default function Bridge() {
   };
   const handleWithdrawNFT = async () => {
     if (nftIds[0] > 100001) {
+      setModalTitle('Sending NFT to Root!');
+      setModalTitle('Please wait');
+
       await sendNTFsToRoot([nftIds[0]])
         .then((res) => {
           console.log('RES - ', res);
-          setModalTitle('Sending NFT to Root!  ');
-          setModalBody('Please wait');
+          setModalTitle('Congrats!');
+          setModalBody('Sent NFT to Root successfully.');
           setShowTxConfirmModal(true);
         })
         .catch(() => {});
@@ -84,7 +87,7 @@ export default function Bridge() {
         .then(() => {
           setModalTitle('In Motion to Ethereum!  ');
           setModalBody(
-            'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.'
+            'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
           );
           setShowTxConfirmModal(true);
         })
