@@ -278,13 +278,9 @@ export const getDTXContract = (isMainnet) => {
   return contract;
 };
 
-export const getDTXMaticContract = async (isMainnet) => {
-  const provider = new Web3.providers.HttpProvider(
-    isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI,
-  );
-  const web3 = new Web3(provider);
+export const getDTXMaticContract = (isMainnet) => {
   const address = getDTXAddressByChainId(isMainnet ? '0x89' : '0x13881');
-  const contract = new web3.eth.Contract(ERC721ABI, address);
+  const contract = new window.web3.eth.Contract(ERC721ABI, address);
 
   return contract;
 };
