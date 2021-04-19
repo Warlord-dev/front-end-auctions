@@ -299,6 +299,19 @@
     "type": "function"
   },
   {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "sendNFTsToRoot",
+    "inputs": [{ "type": "uint256[]", "name": "_tokenIds", "internalType": "uint256[]" }]
+  },
+  {
+    "type": "event",
+    "name": "MessageSent",
+    "inputs": [{ "type": "bytes", "name": "message", "internalType": "bytes", "indexed": false }],
+    "anonymous": false
+  },
+  {
     "inputs": [
       { "internalType": "address", "name": "operator", "type": "address" },
       { "internalType": "bool", "name": "approved", "type": "bool" }

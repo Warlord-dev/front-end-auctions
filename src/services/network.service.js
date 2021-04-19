@@ -72,6 +72,12 @@ export const getDTXV1AddressByChainId = (chainId) => {
   return config.DTXV1_ADDRESSES[network.alias];
 };
 
+export const getDigiMaterialV2AddressByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.DIGI_MATERIALS_V2[network.alias];
+};
+
 export const getUpgraderAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
