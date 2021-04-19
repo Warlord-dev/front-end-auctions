@@ -26,6 +26,7 @@ import useERC721WithdrawFromMatic from '@hooks/useERC721WithdrawToEthereum';
 import useERC721ExitFromMatic from '@hooks/useERC721ExitFromMatic';
 import { useDTXTokenIds } from '@hooks/useERC721TokenId';
 import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot.hooks';
+import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
 import UpgradeNFTModal from './UpgradeNFTModal';
 
@@ -73,15 +74,31 @@ export default function Bridge() {
     if (nftIds[0] > 100001) {
       setModalTitle('Sending NFT to Root!');
       setModalTitle('Please wait');
+      setShowTxConfirmModal(true);
 
       await sendNTFsToRoot([nftIds[0]])
         .then((res) => {
-          console.log('RES - ', res);
           setModalTitle('Congrats!');
           setModalBody('Sent NFT to Root successfully.');
           setShowTxConfirmModal(true);
+          dispatch(
+            userActions.updateProfile({
+              withdrawalTxs: [
+                {
+                  txHash: res.result.transactionHash,
+                  amount: nftIds[0],
+                  status: 'completed',
+                  created: new Date(),
+                  sendNftsToRootBytes: res.result.events.MessageSent.returnValues.message,
+                  sendNftsToRootTokenIds: [nftIds[0]],
+                },
+              ],
+            }),
+          );
         })
-        .catch(() => {});
+        .catch((err) => {
+          console.log('Send NFT To Root Failed - ', err);
+        });
     } else {
       await withdrawCallback(nftIds[0])
         .then(() => {
