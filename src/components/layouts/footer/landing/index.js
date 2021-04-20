@@ -74,9 +74,9 @@ const LandingFooter = () => {
           </div>
         </div>
       </div>
-      <div className={styles.textHiring}>
+      {/* <div className={styles.textHiring}>
         <a href='https://www.digitalax.xyz/careers'>WE ARE HIRING!</a>
-      </div>
+      </div> */}
     </footer>
   )
 }
