@@ -77,8 +77,7 @@ const ViewImages = ({
                     },
                     largeImage: {
                       src: create2KURL(largeImage.image),
-                      width: 1176,
-                      height: 1176,
+                      width: 588
                     },
                     shouldUsePositiveSpaceLens: true,
                   }}
