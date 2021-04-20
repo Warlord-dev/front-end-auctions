@@ -1,3 +1,11 @@
+.swapContainer{
+  position: relative;
+  height: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  min-height: 500px;
+}
+
 .wrapper {
   position: absolute;
   background: #f7f7f7;
@@ -7,6 +15,10 @@
   transform: translate3d(-50%, -50%, 0);
   padding: 30px 70px 80px;
   text-align: center;
+
+  @media (max-width: 540px){
+    width: 350px;
+  }
 }
 
 .swapTitle {
@@ -31,6 +43,10 @@
   align-items: center;
   justify-content: space-around;
   margin-top: 60px;
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
 }
 
 .swapIcon {
