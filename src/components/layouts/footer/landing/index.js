@@ -14,7 +14,7 @@ const LandingFooter = () => {
         <div className={styles.centerWrapper}>
           <div className={[styles.dFlex, styles.aboutLine].join(' ')}>
             <a href='https://drive.google.com/file/d/1zG8h4GnodW7uWm_OsUY3g4I4RpOx6bMH/view?usp=sharing'>
-              ABOUT DIGITALAX
+              DIGITALAX UPDATES
             </a>
             <a href='https://digitalax.gitbook.io/digitalax/' target='_blank'>
               DOCUMENTATION

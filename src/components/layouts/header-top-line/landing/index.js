@@ -4,8 +4,8 @@ import styles from './styles.module.scss';
 const LandingHeader = props => {
   const { textColor } = props
   const linkStyle = {
-    color: textColor || 'white',
-    borderBottomColor: textColor || 'white'
+    color: textColor || '#74a3f3',
+    borderBottomColor: textColor || '#74a3f3'
   }
   return (
     <div className={styles.navigationBar}>
@@ -13,7 +13,7 @@ const LandingHeader = props => {
         <a href="https://www.digitalax.xyz/homepage">
           <span className={styles.brand}
           style={{
-            color: textColor || 'white'
+            color: textColor || '#74a3f3'
           }}>Digitalax </span>
           <span className={styles.subBrand}>The Digital Fashion Engine</span>
         </a>
