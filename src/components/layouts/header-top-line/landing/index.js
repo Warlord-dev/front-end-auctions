@@ -23,14 +23,20 @@ const LandingHeader = props => {
         <ul>
           <li>
             <a style={linkStyle}
-            href="https://www.digitalax.xyz/whitepaper">
-              R&D
+            href="https://blog.digitalax.xyz/">
+              Blog Updates
             </a>
           </li>
           <li>
             <a style={linkStyle}
             href="https://www.digitalax.xyz/marketplace">
               Marketplace
+            </a>
+          </li>
+          <li>
+            <a style={linkStyle}
+            href="https://www.digitalax.xyz/whitepaper">
+              R&D
             </a>
           </li>
           <li>
