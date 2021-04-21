@@ -78,6 +78,12 @@ export const getDigiMaterialV2AddressByChainId = (chainId) => {
   return config.DIGI_MATERIALS_V2[network.alias];
 };
 
+export const getDigiRootTunnelAddressByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.ROOT_TUNNEL_ADDRESS[network.alias];
+};
+
 export const getUpgraderAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
