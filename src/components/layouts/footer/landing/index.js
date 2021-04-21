@@ -65,7 +65,7 @@ const LandingFooter = () => {
             <a href='https://digitalax.gitbook.io/digitalax/faq' target='_blank'>
               FAQs
             </a>
-            <a href='https://marketplace.digitalax.xyz/' target='_blank'>
+            <a href='https://www.digitalax.xyz/marketplace' target='_blank'>
               Digital Fashion Auctions
             </a>
             <a href='https://staking.digitalax.xyz' target='_blank'>
