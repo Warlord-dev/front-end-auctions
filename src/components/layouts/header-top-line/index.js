@@ -1,7 +1,8 @@
-import React, { useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Router, { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
+import throttle from 'lodash.throttle';
 import cn from 'classnames';
 import Link from 'next/link';
 import Button from '@components/buttons/button';
@@ -17,6 +18,27 @@ import LandingHeader from './landing';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
+  
+  const [hasScrolled, setHasScrolled] = useState(false)
+  const [isCollapse, setIsCollapse] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = throttle(() => {
+      const offset = 0
+      const { scrollTop } = document.documentElement
+      const scrolled = scrollTop > offset
+
+      if (hasScrolled !== scrolled) {
+        setHasScrolled(scrolled)
+      }
+    }, 200)
+
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [hasScrolled])
+
   const dispatch = useDispatch();
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
@@ -47,6 +69,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   }
 
   const handleClick = () => dispatch(openConnectMetamaskModal());
+  const onIconHander = () => {
+    setIsCollapse(!isCollapse);
+  };
 
   const [isShowMenu, setIsShowMenu] = useState(false);
 
@@ -63,7 +88,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     <LandingHeader />
   )
   : (
-    <div className={cn(className, styles.wrapper)}>
+    <div className={cn(className, styles.wrapper, hasScrolled?styles.floatingNav:'')}>
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
         <Logo />
@@ -72,21 +97,21 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         </a> */}
       </div>
       <div className={styles.rightBox}>
-        <div className={styles.links}>
+        <div className={cn(styles.links, isCollapse?styles.expandedMenu:'')}>
           {/* <Link href="/">
           <a className={styles.link}>Auctions</a>
         </Link>
         <Link href="/sold">
           <a className={styles.link}>Previously Sold</a>
-        </Link> */}
-          {/* <a
+        </Link> 
+        <a
           href="https://pode.digitalax.xyz/"
           className={styles.link}
           target="_blank"
           rel="noreferrer"
         >
           PODE
-        </a> */}
+        </a> 
           <a
             href="https://medium.com/@digitalax"
             className={styles.link}
@@ -112,46 +137,59 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
             >
               {linkText}
             </a>
-          )}
+          )}*/}
+          <Link href="https://marketplace.digitalax.xyz">
+            <a className={styles.link} target="_blank">
+              REP YOUR STLE IRL 
+            </a>
+          </Link>
+          <Link href="https://marketplace.digitalax.xyz">
+            <a className={styles.link} target="_blank">
+              OG MARKETPLACE
+            </a>
+          </Link>
           <Link href="/global">
             <a className={styles.link}>Global Designer Network</a>
-          </Link>
-          <Link href="/bridge">
-            <a className={styles.link}>Matic-Eth Bridge</a>
           </Link>
           <Link href="/swap">
             <a className={styles.link}>Token Swap</a>
           </Link>
-        </div>
-        {user ? (
-          <div className={styles.buttonWrapper}>
-            <SmallPhotoWithText
-              photo={user.get('avatar') ? user.get('avatar') : './images/user-photo.svg'}
-              address={user.get('username')}
-              className={styles.hashAddress}
-            >
-              <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
-                <img
-                  className={styles.arrowBottomImg}
-                  src="./images/icons/arrow-bottom.svg"
-                  alt="arrow-bottom"
-                />
-              </button>
-            </SmallPhotoWithText>
-            {isShowMenu && (
-              <div className={styles.menuWrapper}>
-                <button onClick={() => handleProfileClick()} className={styles.menuButton}>
-                  Profile
-                </button>
-                <button onClick={() => handleLogoutClick()} className={styles.menuButton}>
-                  Logout
-                </button>
+          <Link href="/bridge">
+            <a className={styles.link}>Matic-Eth Bridge</a>
+          </Link>
+          <div className={styles.signBtn}>
+            {user ? (
+              <div className={styles.buttonWrapper}>
+                <SmallPhotoWithText
+                  photo={user.get('avatar') ? user.get('avatar') : './images/user-photo.svg'}
+                  address={user.get('username')}
+                  className={styles.hashAddress}
+                >
+                  <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
+                    <img
+                      className={styles.arrowBottomImg}
+                      src="./images/icons/arrow-bottom.svg"
+                      alt="arrow-bottom"
+                    />
+                  </button>
+                </SmallPhotoWithText>
+                {isShowMenu && (
+                  <div className={styles.menuWrapper}>
+                    <button onClick={() => handleProfileClick()} className={styles.menuButton}>
+                      Profile
+                    </button>
+                    <button onClick={() => handleLogoutClick()} className={styles.menuButton}>
+                      Logout
+                    </button>
+                  </div>
+                )}
               </div>
+            ) : (
+              <Button onClick={() => handleClick()}>{buttonText}</Button>
             )}
           </div>
-        ) : (
-          <Button onClick={() => handleClick()}>{buttonText}</Button>
-        )}
+          <a href="javascript:void(0);" className={styles.collapseIcon} onClick={onIconHander}>&#9776;</a>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,63 @@
+@import "../../../assets/scss/helpers/grid.scss";
+@import "../../../assets/scss/helpers/variables.scss";
+
+.textContentContainer{
+    max-width: 1320px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.title{
+    font-family: "Animosa";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 84px;
+    text-align: center;
+    max-width: 980px;
+    margin: auto;
+
+    @media (max-width: 540px) {
+        font-size: 40px;
+        line-height: 54px;
+    }
+
+}
+
+.subtitleBar{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 68px;
+}
+
+.subtitle{
+    font-family: "Animosa";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    /* identical to box height */
+    text-align: center; 
+    @media (max-width: 540px) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+.smsubtitle{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 50px;
+    margin-top: 20px;   
+}
+
+.text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 50px;
+    margin-top: 20px;   
+}
