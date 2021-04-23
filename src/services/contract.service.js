@@ -5,6 +5,7 @@ import Web3 from 'web3';
 import config from '@utils/config';
 import {
   getDigiMaterialV2AddressByChainId,
+  getDigiRootTunnelAddressByChainId,
   getDTXAddressByChainId,
   getDTXV1AddressByChainId,
   getUSDTAddressByChainId,
@@ -12,6 +13,7 @@ import {
 } from './network.service';
 
 import DigiMaterialV2ABI from '../constants/digi_material_v2_abi.json';
+import DigiRootTunnelABI from '../constants/digi_root_tunnel_abi.json';
 import ERC20ABI from '../constants/erc20_abi.json';
 import ERC721ABI from '../constants/erc721_abi.json';
 import UpgraderABI from '../constants/upgrader_abi.json';
@@ -292,6 +294,17 @@ export const getDigiMaterialV2Contract = (isMainnet) => {
   const web3 = new Web3(provider);
   const address = getDigiMaterialV2AddressByChainId(isMainnet ? '0x89' : '0x13881');
   const contract = new web3.eth.Contract(DigiMaterialV2ABI, address);
+
+  return contract;
+};
+
+export const getDitiRootTunnelContract = (isMainnet) => {
+  const provider = new Web3.providers.HttpProvider(
+    isMainnet ? config.DEFAULT_WEB3_URL : config.WEB3_URLS.GOERLI,
+  );
+  const web3 = new Web3(provider);
+  const address = getDigiRootTunnelAddressByChainId(isMainnet ? '0x1' : '0x5');
+  const contract = new web3.eth.Contract(DigiRootTunnelABI, address);
 
   return contract;
 };
