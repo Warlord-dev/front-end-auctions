@@ -1,6 +1,11 @@
 @import "../../assets/scss/helpers/grid.scss";
 @import "../../assets/scss/helpers/variables.scss";
 
+.textContent{
+  padding-top: 99px;
+  padding-bottom: 99px;
+}
+
 .dropdown {
   @include wrapper();
   display: flex;

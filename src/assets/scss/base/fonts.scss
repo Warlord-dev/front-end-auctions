@@ -66,3 +66,16 @@
     src: url("./../../../../public/fonts/Gilroy-ExtraBold.otf");
     font-weight: 900;
   }
+
+  @font-face {
+    font-family: Armata-Regular;
+    src: url("./../../../../public/fonts/Armata-Regular.ttf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Animosa";
+    src: url("./../../../../public/fonts/Animosa-Regular.otf");
+    font-weight: 400;
+    font-display: swap;
+  }

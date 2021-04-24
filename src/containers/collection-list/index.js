@@ -21,6 +21,7 @@ import { useAPY } from '@hooks/apy.hooks';
 import wsApi from '@services/api/ws.service';
 import { useSubscription } from '@hooks/subscription.hooks';
 import GeneralInformation from '@containers/page-products-list/general-information';
+import TextContent from '@containers/page-products-list/text-content';
 import ProductCollection from '@components/product-collection';
 import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
@@ -178,12 +179,16 @@ const PageAuctionList = () => {
 
   return (
     <>
-      <GeneralInformation
+      {/* <GeneralInformation
         title="All Bids"
         list={list}
         timestamp={minTimestampAutcionTime}
         history={monthResultedAuctions}
-      />
+      /> */}
+      <div className={styles.textContent}>
+        <TextContent/>
+      </div>
+      
       <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
         {collections.map((collection) => (
           <ProductCollection key={collection.id} collection={collection} />
