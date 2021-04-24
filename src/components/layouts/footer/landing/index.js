@@ -62,7 +62,7 @@ const LandingFooter = () => {
             </div>
           
           <div className={[styles.dFlex, styles.faqLine].join(' ')}>
-            <a href='https://digitalax.gitbook.io/digitalax/faq' target='_blank'>
+            <a href='https://blog.digitalax.xyz' target='_blank'>
               FAQs
             </a>
             <a href='https://www.digitalax.xyz/marketplace' target='_blank'>
