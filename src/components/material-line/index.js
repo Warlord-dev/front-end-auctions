@@ -138,12 +138,6 @@ const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
           <p className={styles.name}>{tokenInfo && tokenInfo.name}</p>
           <p className={styles.address}>{tokenInfo && tokenInfo.description}</p>
         </div>
-        <a className={styles.priceWrapper} href={getArtistTwitter(artist)}>
-          <div className={styles.price}>
-            <div className={styles.textCenter}>{renderArtistName(artist)}</div>
-            <img src="/images/twitter.svg" className={styles.twitterIcon} />
-          </div>
-        </a>
         <span className={styles.estimate}>
           <div className={styles.estimateInnerGray}>{rarity || 'Exclusive'}</div>
         </span>

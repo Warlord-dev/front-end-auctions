@@ -67,7 +67,7 @@ MaterialList.propTypes = {
 
 MaterialList.defaultProps = {
   childNftsText: 'Child NFTs:',
-  headerTitle: ['Name', '', 'Artist', 'D.O.E.'],
+  headerTitle: ['Name', '', 'D.O.E.'],
   valueChildNfts: '',
   activeTab: 0,
   semiRare: { children: [] },
