@@ -59,8 +59,8 @@
   "DTX_ADDRESSES": {
     "mainnet": "0x275f5ad03be0fa221b4c6649b8aee09a42d9412a",
     "rinkeby": "0x13379fe0e6992180ed0ac5174a02479896f9c510",
-    "goerli": "0x9bd08679fdc4ba412a429b470599f8072e17e83d",
-    "mumbai": "0xFb5b58c5D536F42f15484f7ecf5814C028b42A4a",
+    "goerli": "0x9bd08679fdc4ba412a429b470599f8072e17e83d",// v0 (same as mainnet)
+    "mumbai": "0xa715d6005a6EFBA3cA2546B67a296Fe1f06b3aB5", // v2 new one
     "matic": "0x728Af879c3212cEf7a51D7fC296b5e9b7c14dbf6"
   },
   "DIGI_MATERIALS_V2": {
@@ -71,8 +71,8 @@
     "mainnet": "",
     "rinkeby": "",
     "goerli": "",
-    "mumbai": "0x4CB61C672ff26c187394a9aA59360FbB6F23e83f",
-    "matic": "0x728Af879c3212cEf7a51D7fC296b5e9b7c14dbf6"
+    "mumbai": "0x4CB61C672ff26c187394a9aA59360FbB6F23e83f", // this is test token for v1
+    "matic": "0x728Af879c3212cEf7a51D7fC296b5e9b7c14dbf6" // This is the bad token that is live
   },
   "UPGRADER_ADDRESSES": {
     "mainnet": "",

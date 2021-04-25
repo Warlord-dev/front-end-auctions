@@ -1,3 +1,6 @@
+import ERC721ABIv0 from '@constants/erc721_abi_V0.json';
+import ERC721ABIv1 from '@constants/erc721_abi_V1.json';
+import ERC721ABIv2 from '@constants/erc721_abi_V2.json';
 import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
 import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json';
@@ -15,7 +18,6 @@ import {
 import DigiMaterialV2ABI from '../constants/digi_material_v2_abi.json';
 import DigiRootTunnelABI from '../constants/digi_root_tunnel_abi.json';
 import ERC20ABI from '../constants/erc20_abi.json';
-import ERC721ABI from '../constants/erc721_abi.json';
 import UpgraderABI from '../constants/upgrader_abi.json';
 
 export const getMarketplaceContract = async (ContractAddress) => {
@@ -275,14 +277,14 @@ export const getDTXContract = (isMainnet) => {
   );
   const web3 = new Web3(provider);
   const address = getDTXAddressByChainId(isMainnet ? '0x1' : '0x5');
-  const contract = new web3.eth.Contract(ERC721ABI, address);
+  const contract = new web3.eth.Contract(ERC721ABIv0, address);
 
   return contract;
 };
 
 export const getDTXMaticContract = (isMainnet) => {
   const address = getDTXAddressByChainId(isMainnet ? '0x89' : '0x13881');
-  const contract = new window.web3.eth.Contract(ERC721ABI, address);
+  const contract = new window.web3.eth.Contract(ERC721ABIv2, address);
 
   return contract;
 };
@@ -315,7 +317,7 @@ export const getDTXMaticV1Contract = async (isMainnet) => {
   );
   const web3 = new Web3(provider);
   const address = getDTXV1AddressByChainId(isMainnet ? '0x89' : '0x13881');
-  const contract = new web3.eth.Contract(ERC721ABI, address);
+  const contract = new web3.eth.Contract(ERC721ABIv1, address);
 
   return contract;
 };
