@@ -9,7 +9,7 @@ import styles from './styles.module.scss';
 import Button from '@components/buttons/button';
 
 export default function UpgradeNFTModal({ onClose }) {
-  const [_, maticDtxTokenIds] = useDTXV1TokenIds();
+  const [ maticDtxTokenIds] = useDTXV1TokenIds();
 
   const upgraderCallback = useERC721Upgrader();
   const handleUpgrade = async () => {

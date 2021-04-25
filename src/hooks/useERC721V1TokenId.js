@@ -10,7 +10,6 @@ import usePollar from './usePollar';
 import { useDTXV1Balance } from "./useERC721V1Balance";
 
 export function useDTXV1TokenIds() {
-  const [dtxEthIds, setDtxEthIds] = useState([]);
   const [dtxV1MaticIds, setDtxV1MaticIds] = useState([]);
 
   const account = useSelector(getAccount);
@@ -22,18 +21,6 @@ export function useDTXV1TokenIds() {
 
   const fetchDtxIds = useCallback(async () => {
     if (account && posClientParent && posClientChild) {
-      const ethIds = await Promise.all(
-        [...Array(parseInt(dtxEthBalance)).keys()].map((i) =>
-          posClientChild.tokenOfOwnerByIndexERC721(
-            account,
-            config.DTX_ADDRESSES[isMainnet ? 'mainnet' : 'goerli'],
-            i,
-            { parent: true }
-          )
-        )
-      );
-
-      setDtxEthIds(ethIds);
 
       const maticIds = await Promise.all(
         [...Array(parseInt(dtxMaticBalance)).keys()].map((i) =>
@@ -52,5 +39,5 @@ export function useDTXV1TokenIds() {
 
   usePollar(fetchDtxIds);
 
-  return [dtxEthIds, dtxV1MaticIds];
+  return [dtxV1MaticIds];
 }
