@@ -7,6 +7,7 @@ import { useIsMainnet } from './useIsMainnet';
 import usePollar from './usePollar';
 import { useDTXTokenIds } from './useERC721TokenId';
 import { getDTXContract, getDTXMaticContract } from '@services/contract.service';
+import { closeNotInstalledMetamask } from '@actions/modals.actions';
 
 export function useEthMaticNFTs() {
   const [ethDtxTokenIds, maticDtxTokenIds] = useDTXTokenIds();
@@ -23,18 +24,18 @@ export function useEthMaticNFTs() {
       const dtxContract = await getDTXContract(isMainnet);
 
       const ethNftTokenUris = await Promise.all(
-        ethDtxTokenIds.map((i) => dtxContract.methods.tokenURI(parseInt(i)).call({ from: account }))
+        ethDtxTokenIds.map((i) =>
+          dtxContract.methods.tokenURI(parseInt(i)).call({ from: account }),
+        ),
       );
 
       setEthNfts(ethNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: ethDtxTokenIds[i] })));
 
       const maticDtxContract = await getDTXMaticContract(isMainnet);
 
-      const maticNftTokenUris = await Promise.all(
-        maticDtxTokenIds.map((i) =>
-          maticDtxContract.methods.tokenURI(parseInt(i)).call({ from: account })
-        )
-      );
+      const maticNftTokenUris = await maticDtxContract.methods
+        .batchTokenURI(maticDtxTokenIds)
+        .call({ from: account });
 
       setMaticNfts(maticNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: maticDtxTokenIds[i] })));
     }
