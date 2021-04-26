@@ -16,6 +16,7 @@ const ProductDescription = ({
   currentMarketplaceOffers,
   activeTab,
   setActiveTab,
+  isInCollectionOne
 }) => {
   const garment = useSelector(getGarmentsById(clothesId));
   const tokenUri = useMemo(() => {
@@ -95,6 +96,7 @@ const ProductDescription = ({
       />
       <RightBox
         clothesId={clothesId}
+        isInCollectionOne={isInCollectionOne}
         currentCounts={currentCounts}
         currentClothesInfo={currentClothesInfo}
         currentDesignersInfo={currentDesignersInfo}

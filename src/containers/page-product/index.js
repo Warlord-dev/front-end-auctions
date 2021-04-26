@@ -4,7 +4,7 @@ import ProductDescription from './product-description';
 import Trade from './trade';
 import styles from './styles.module.scss';
 
-const PageProduct = ({ clothesId, designerId, currentCollections, currentMarketplaceOffers }) => {
+const PageProduct = ({ clothesId, designerId, currentCollections, currentMarketplaceOffers, isInCollectionOne }) => {
   // const SHOW_EXCULSIVE_TAB = 0;
   // const SHOW_SEMIRARE_TAB = 1;
   // const SHOW_COMMON_TAB = 2;
@@ -14,6 +14,7 @@ const PageProduct = ({ clothesId, designerId, currentCollections, currentMarketp
     <div className={styles.wrapper}>
       <ProductDescription
         activeTab={activeTab}
+        isInCollectionOne={isInCollectionOne}
         setActiveTab={setActiveTab}
         clothesId={clothesId}
         designerId={designerId}

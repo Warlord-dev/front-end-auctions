@@ -7,7 +7,7 @@ import { createPreviewURL } from '@services/imgix.service';
 import { openPreviewMaterialModal } from '@actions/modals.actions';
 import styles from './styles.module.scss';
 
-const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
+const MaterialLine = ({ className, clothesId, item: { tokenUri, id }, headerTitle }) => {
   const dispatch = useDispatch();
   const tokenInfo = useTokenInfo(tokenUri, [tokenUri]);
 
@@ -138,6 +138,14 @@ const MaterialLine = ({ className, clothesId, item: { tokenUri, id } }) => {
           <p className={styles.name}>{tokenInfo && tokenInfo.name}</p>
           <p className={styles.address}>{tokenInfo && tokenInfo.description}</p>
         </div>
+        {headerTitle.includes('Artist') && (
+          <a className={styles.priceWrapper} href={getArtistTwitter(artist)}>
+            <div className={styles.price}>
+              <div className={styles.textCenter}>{renderArtistName(artist)}</div>
+              <img src="/images/twitter.svg" className={styles.twitterIcon} />
+            </div>
+          </a>
+        )}
         <span className={styles.estimate}>
           <div className={styles.estimateInnerGray}>{rarity || 'Exclusive'}</div>
         </span>
@@ -150,6 +158,7 @@ MaterialLine.propTypes = {
   item: PropTypes.object.isRequired,
   className: PropTypes.string,
   clothesId: PropTypes.string,
+  headerTitle: PropTypes.array
 };
 
 MaterialLine.defaultProps = {
