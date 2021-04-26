@@ -29,6 +29,7 @@ const RightBox = ({
   activeTab,
   currentCounts,
   currentCollections,
+  isInCollectionOne
 }) => {
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
@@ -82,7 +83,7 @@ const RightBox = ({
     if (activeItem === SHOW_FIRST_TAB) return <AuctionInformation {...currentClothesInfo} />;
     if (activeItem === SHOW_SECOND_TAB) {
       return (
-        <MaterialList clothesId={clothesId} valueChildNfts={currentClothesInfo?.valueChildNfts} />
+        <MaterialList headerTitle={isInCollectionOne ? ['Name', '', 'D.O.E']: ['Name', '', 'Artist', 'D.O.E.']} clothesId={clothesId} valueChildNfts={currentClothesInfo?.valueChildNfts} />
       );
     }
     return null;
@@ -96,6 +97,7 @@ const RightBox = ({
     if (activeItem === SHOW_SECOND_TAB) {
       return (
         <MaterialList
+          headerTitle={isInCollectionOne ? ['Name', '', 'D.O.E']: ['Name', '', 'Artist', 'D.O.E.']}
           clothesId={clothesId}
           activeTab={activeTab}
           semiRare={semiRare}

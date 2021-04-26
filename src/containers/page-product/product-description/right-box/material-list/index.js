@@ -41,14 +41,14 @@ const MaterialList = ({
       <div className={styles.materialLine}>
         {activeTab === 0
           ? garment.children.map((item) => (
-              <MaterialLine key={item.id} item={item} clothesId={clothesId} />
+              <MaterialLine key={item.id} headerTitle={headerTitle} item={item} clothesId={clothesId} />
             ))
           : activeTab === 1
           ? semiRare.children.map((item) => (
-              <MaterialLine key={item.id} item={item} clothesId={clothesId} />
+              <MaterialLine key={item.id} headerTitle={headerTitle}  item={item} clothesId={clothesId} />
             ))
           : common.children.map((item) => (
-              <MaterialLine key={item.id} item={item} clothesId={clothesId} />
+              <MaterialLine key={item.id} headerTitle={headerTitle}  item={item} clothesId={clothesId} />
             ))}
       </div>
     </div>
@@ -67,7 +67,7 @@ MaterialList.propTypes = {
 
 MaterialList.defaultProps = {
   childNftsText: 'Child NFTs:',
-  headerTitle: ['Name', '', 'D.O.E.'],
+  headerTitle: ['Name', '', 'Artist', 'D.O.E.'],
   valueChildNfts: '',
   activeTab: 0,
   semiRare: { children: [] },
