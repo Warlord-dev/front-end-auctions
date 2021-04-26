@@ -17,12 +17,9 @@ export function useEthMaticNFTs() {
   const account = useSelector(getAccount);
   const isMainnet = useIsMainnet();
 
-  const [posClientParent, posClientChild] = useMaticPosClient();
-
-  const fetchNfts = useCallback(async () => {
-    if (account && posClientParent && posClientChild) {
+  const fetchEthNfts = useCallback(async () => {
+    if (account) {
       const dtxContract = await getDTXContract(isMainnet);
-
       const ethNftTokenUris = await Promise.all(
         ethDtxTokenIds.map((i) =>
           dtxContract.methods.tokenURI(parseInt(i)).call({ from: account }),
@@ -30,7 +27,11 @@ export function useEthMaticNFTs() {
       );
 
       setEthNfts(ethNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: ethDtxTokenIds[i] })));
+    }
+  }, [account, isMainnet, ethDtxTokenIds]);
 
+  const fetchNfts = useCallback(async () => {
+    if (account) {
       const maticDtxContract = await getDTXMaticContract(isMainnet);
 
       const maticNftTokenUris = await maticDtxContract.methods
@@ -39,9 +40,10 @@ export function useEthMaticNFTs() {
 
       setMaticNfts(maticNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: maticDtxTokenIds[i] })));
     }
-  }, [isMainnet, ethDtxTokenIds, maticDtxTokenIds]);
+  }, [account, isMainnet, maticDtxTokenIds]);
 
   usePollar(fetchNfts);
+  usePollar(fetchEthNfts);
 
   return [ethNfts, maticNfts];
 }

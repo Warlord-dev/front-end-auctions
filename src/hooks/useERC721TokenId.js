@@ -26,7 +26,7 @@ export function useDTXTokenIds() {
 
   const [dtxEthBalance, dtxMaticBalance] = useDTXBalance();
 
-  const fetchDtxIds = useCallback(async () => {
+  const fetchDtxEthIds = useCallback(async () => {
     if (account && posClientChild) {
       const ethIds = await Promise.all(
         [...Array(parseInt(dtxEthBalance)).keys()].map((i) =>
@@ -38,26 +38,27 @@ export function useDTXTokenIds() {
           ),
         ),
       );
-
       setDtxEthIds(ethIds);
+    }
+  }, [isMainnet, account, posClientChild, dtxEthBalance]);
 
+  const fetchDtxIds = useCallback(async () => {
+    if (account) {
       const erc721MaticContract = getERC721TokenContract(
         isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI,
-        // config.WEB3_URLS.MUMBAI,
         config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
-        // '0xa715d6005a6EFBA3cA2546B67a296Fe1f06b3aB5',
       );
       const batchTokensOfOwnerMatic = erc721MaticContract.methods['batchTokensOfOwner'].apply(
         null,
         [account],
       );
       const maticIds = await batchTokensOfOwnerMatic.call({});
-
       setDtxMaticIds(maticIds);
     }
-  }, [isMainnet, account, dtxEthBalance, dtxMaticBalance, posClientChild]);
+  }, [isMainnet, account]);
 
   usePollar(fetchDtxIds);
+  usePollar(fetchDtxEthIds);
 
   return [dtxEthIds, dtxMaticIds];
 }

@@ -78,26 +78,31 @@ export default function Bridge() {
 
       await sendNTFsToRoot([nftIds[0]])
         .then((res) => {
-          setModalTitle('Congrats!');
-          setModalBody('Sent NFT to Root successfully.');
-          setShowTxConfirmModal(true);
-         
-          dispatch(
-            userActions.updateProfile({
-              withdrawalTxs: [
-                {
-                  txHash: res.result.transactionHash,
-                  amount: nftIds[0],
-                  status: 'completed',
-                  created: new Date(),
-                  sendNftsToRootBytes: res.result.events.MessageSent.returnValues.message,
-                  sendNftsToRootTokenIds: [nftIds[0]],
-                },
-              ],
-            }),
-          );
+          if (res.success) {
+            setModalTitle('Congrats!');
+            setModalBody('Sent NFT to Root successfully.');
+            setShowTxConfirmModal(true);
+
+            dispatch(
+              userActions.updateProfile({
+                withdrawalTxs: [
+                  {
+                    txHash: res.result.transactionHash,
+                    amount: nftIds[0],
+                    status: 'completed',
+                    created: new Date(),
+                    sendNftsToRootBytes: res.result.events.MessageSent.returnValues.message,
+                    sendNftsToRootTokenIds: [nftIds[0]],
+                  },
+                ],
+              }),
+            );
+          }
         })
         .catch((err) => {
+          setModalTitle('Error!');
+          setModalBody(`Send NFT To Root Failed - ${err}`);
+          setShowTxConfirmModal(true);
           console.log('Send NFT To Root Failed - ', err);
         });
     } else {
