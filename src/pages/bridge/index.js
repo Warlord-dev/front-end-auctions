@@ -71,7 +71,7 @@ export default function Bridge() {
       .catch(() => {});
   };
   const handleWithdrawNFT = async () => {
-    if (nftIds[0] > 100000) {
+    if (nftIds[0] < 100000) {
       setModalTitle('Sending NFT to Root!');
       setModalTitle('Please wait');
       setShowTxConfirmModal(true);
