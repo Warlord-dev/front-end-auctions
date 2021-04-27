@@ -328,7 +328,13 @@ export default function Bridge() {
                         if (tabIndex === 0) {
                           exitCallback(tx.txHash);
                         } else {
+                          // TODO here need to check the token id
+                          // TODO If token id < 100,000 need to use below method
                           erc721ExitCallback(tx.txHash);
+                          // TODO If token id > 100,000 need to use "receive message"
+                          // TODO receive message argument, instead of tx hash is sendNftsToRootBytes
+                          // TODO Something like this below, where we will use digitalaxRootTunnel.receiveMessage
+                          // erc721ReceiveMessageExitCallback(tx.sendNftsToRootBytes);
                         }
                       }}
                     >
