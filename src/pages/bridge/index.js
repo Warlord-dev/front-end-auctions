@@ -29,6 +29,7 @@ import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot.hooks';
 import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
 import UpgradeNFTModal from './UpgradeNFTModal';
+import useDigitalaxRootTunnel from '@hooks/useDigitalaxRootTunnel';
 
 export default function Bridge() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -50,6 +51,7 @@ export default function Bridge() {
   const nfts = useNFTs(account);
   const exitCallback = useExitFromMatic();
   const erc721ExitCallback = useERC721ExitFromMatic();
+  const digitalaxRootTunnel = useDigitalaxRootTunnel();
   const chainId = useSelector(getChainId);
 
   const [ethNfts, maticNfts] = useEthMaticNFTs(erc721TabIndex);
@@ -58,6 +60,7 @@ export default function Bridge() {
   const depositCallback = useERC721DepositToMatic();
   const withdrawCallback = useERC721WithdrawFromMatic();
   const [_, maticDtxTokenIds] = useDTXTokenIds();
+  console.log('this is withdrawlTxs', withdrawalTxs);
 
   const handleDepositNFT = async () => {
     await depositCallback(nftIds[0])
@@ -116,6 +119,20 @@ export default function Bridge() {
         })
         .catch(() => {});
     }
+  };
+
+  const handleDigitalaxRootTunnel = async (bytes) => {
+    await digitalaxRootTunnel(bytes)
+      .then((res) => {
+        setModalTitle('Success!');
+        setModalBody('Please check out your mainnet wallet');
+        setShowTxConfirmModal(true);
+      })
+      .catch((e) => {
+        setModalTitle('Error!');
+        setModalBoday(`${err}`);
+        setShowTxConfirmModal(true);
+      });
   };
 
   useEffect(() => {
@@ -328,13 +345,11 @@ export default function Bridge() {
                         if (tabIndex === 0) {
                           exitCallback(tx.txHash);
                         } else {
-                          // TODO here need to check the token id
-                          // TODO If token id < 100,000 need to use below method
-                          erc721ExitCallback(tx.txHash);
-                          // TODO If token id > 100,000 need to use "receive message"
-                          // TODO receive message argument, instead of tx hash is sendNftsToRootBytes
-                          // TODO Something like this below, where we will use digitalaxRootTunnel.receiveMessage
-                          // erc721ReceiveMessageExitCallback(tx.sendNftsToRootBytes);
+                          if (nftIds[0] < 100000) {
+                            erc721ExitCallback(tx.txHash);
+                          } else if (nftIds[0] > 100000) {
+                            handleDigitalaxRootTunnel(tx.sendNftsToRootBytes);
+                          }
                         }
                       }}
                     >
