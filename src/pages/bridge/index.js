@@ -52,7 +52,7 @@ export default function Bridge() {
   const erc721ExitCallback = useERC721ExitFromMatic();
   const chainId = useSelector(getChainId);
 
-  const [ethNfts, maticNfts] = useEthMaticNFTs();
+  const [ethNfts, maticNfts] = useEthMaticNFTs(erc721TabIndex);
 
   const { approved, approveCallback } = useERC721ApproveForMatic();
   const depositCallback = useERC721DepositToMatic();
@@ -196,14 +196,18 @@ export default function Bridge() {
             <Button
               className={styles.actionButton721}
               background="black"
-              onClick={() => setERC721TabIndex(1)}
+              onClick={() => {
+                setERC721TabIndex(1);
+              }}
             >
               <span>DEPOSIT TO MATIC</span>
             </Button>
             <Button
               className={styles.actionButton721}
               background="black"
-              onClick={() => setERC721TabIndex(2)}
+              onClick={() => {
+                setERC721TabIndex(2);
+              }}
             >
               <span>WITHDRAW TO ETHEREUM</span>
             </Button>
@@ -221,8 +225,8 @@ export default function Bridge() {
           </div>
           <div className={styles.underline} />
           <div className={cn(styles.tableBody, styles.scroll)}>
-            {(erc721TabIndex === 2 ? maticNfts : ethNfts).map((nft) => (
-              <div className={styles.nftRow}>
+            {(erc721TabIndex === 1 ? maticNfts : ethNfts).map((nft, index) => (
+              <div className={styles.nftRow} key={`${nft}${index}`}>
                 <div className={styles.item}>
                   <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
                   <h4>Token ID is: {nft.id}</h4>
@@ -258,7 +262,7 @@ export default function Bridge() {
         </Button>
         <Button
           className={styles.backButton}
-          background="#777777"
+          // background="#777777"
           onClick={() => setERC721TabIndex(0)}
         >
           <span>RETURN TO BRIDGE</span>
@@ -286,6 +290,7 @@ export default function Bridge() {
             <div
               className={index === tabIndex ? styles.active : ''}
               onClick={() => onClickTab(index)}
+              key={`${header}${index}`}
             >
               {header}
               {index === 2 && <span>Coming soon</span>}

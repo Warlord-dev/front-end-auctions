@@ -76,7 +76,7 @@ export default function Deposit() {
           </div>
         </button>
       </div>
-      <Button className={styles.backButton} background="#777777" onClick={() => Router.push(`/bridge`)}>
+      <Button className={styles.backButton} onClick={() => Router.push(`/bridge`)}>
         <span>RETURN TO BRIDGE</span>
       </Button>
     </div>

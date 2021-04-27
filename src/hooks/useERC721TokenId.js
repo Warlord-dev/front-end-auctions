@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Web3 from 'web3';
 
@@ -28,34 +28,48 @@ export function useDTXTokenIds() {
 
   const fetchDtxEthIds = useCallback(async () => {
     if (account && posClientChild) {
-      const ethIds = await Promise.all(
-        [...Array(parseInt(dtxEthBalance)).keys()].map((i) =>
-          posClientChild.tokenOfOwnerByIndexERC721(
-            account,
-            config.DTX_ADDRESSES[isMainnet ? 'mainnet' : 'goerli'],
-            i,
-            { parent: true },
+      try {
+        const ethIds = await Promise.all(
+          [...Array(parseInt(dtxEthBalance)).keys()].map((i) =>
+            posClientChild.tokenOfOwnerByIndexERC721(
+              account,
+              config.DTX_ADDRESSES[isMainnet ? 'mainnet' : 'goerli'],
+              i,
+              { parent: true },
+            ),
           ),
-        ),
-      );
-      setDtxEthIds(ethIds);
+        );
+        setDtxEthIds(ethIds);
+      } catch (e) {
+        console.log(e);
+      }
     }
   }, [isMainnet, account, posClientChild, dtxEthBalance]);
 
   const fetchDtxIds = useCallback(async () => {
     if (account) {
-      const erc721MaticContract = getERC721TokenContract(
-        isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI,
-        config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
-      );
-      const batchTokensOfOwnerMatic = erc721MaticContract.methods['batchTokensOfOwner'].apply(
-        null,
-        [account],
-      );
-      const maticIds = await batchTokensOfOwnerMatic.call({});
-      setDtxMaticIds(maticIds);
+      try {
+        const erc721MaticContract = getERC721TokenContract(
+          isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI,
+          config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
+        );
+        const batchTokensOfOwnerMatic = erc721MaticContract.methods[
+          'batchTokensOfOwner'
+        ].apply(null, [account]);
+        const maticIds = await batchTokensOfOwnerMatic.call({});
+        setDtxMaticIds(maticIds);
+      } catch (e) {
+        console.log(e);
+      }
     }
   }, [isMainnet, account]);
+
+  useEffect(() => {
+    if (account && posClientChild) {
+      fetchDtxEthIds();
+      fetchDtxIds();
+    }
+  }, [posClientChild, posClientParent, account, isMainnet, dtxEthBalance]);
 
   usePollar(fetchDtxIds);
   usePollar(fetchDtxEthIds);

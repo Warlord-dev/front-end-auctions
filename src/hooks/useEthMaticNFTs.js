@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getAccount } from '@selectors/user.selectors';
@@ -19,28 +19,44 @@ export function useEthMaticNFTs() {
 
   const fetchEthNfts = useCallback(async () => {
     if (account) {
-      const dtxContract = await getDTXContract(isMainnet);
-      const ethNftTokenUris = await Promise.all(
-        ethDtxTokenIds.map((i) =>
-          dtxContract.methods.tokenURI(parseInt(i)).call({ from: account }),
-        ),
-      );
+      try {
+        const dtxContract = await getDTXContract(isMainnet);
+        const ethNftTokenUris = await Promise.all(
+          ethDtxTokenIds.map((i) =>
+            dtxContract.methods.tokenURI(parseInt(i)).call({ from: account }),
+          ),
+        );
 
-      setEthNfts(ethNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: ethDtxTokenIds[i] })));
+        setEthNfts(ethNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: ethDtxTokenIds[i] })));
+      } catch (e) {
+        console.log(e);
+      }
     }
   }, [account, isMainnet, ethDtxTokenIds]);
 
   const fetchNfts = useCallback(async () => {
     if (account) {
-      const maticDtxContract = await getDTXMaticContract(isMainnet);
+      try {
+        const maticDtxContract = await getDTXMaticContract(isMainnet);
 
-      const maticNftTokenUris = await maticDtxContract.methods
-        .batchTokenURI(maticDtxTokenIds)
-        .call({ from: account });
-
-      setMaticNfts(maticNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: maticDtxTokenIds[i] })));
+        const maticNftTokenUris = await maticDtxContract.methods
+          .batchTokenURI(maticDtxTokenIds)
+          .call({ from: account });
+        setMaticNfts(
+          maticNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: maticDtxTokenIds[i] })),
+        );
+      } catch (e) {
+        console.log(e);
+      }
     }
   }, [account, isMainnet, maticDtxTokenIds]);
+
+  useEffect(() => {
+    if (account) {
+      fetchEthNfts();
+      fetchNfts();
+    }
+  }, [account, isMainnet, maticDtxTokenIds, ethDtxTokenIds]);
 
   usePollar(fetchNfts);
   usePollar(fetchEthNfts);
