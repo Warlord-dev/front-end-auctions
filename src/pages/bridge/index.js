@@ -225,7 +225,7 @@ export default function Bridge() {
           </div>
           <div className={styles.underline} />
           <div className={cn(styles.tableBody, styles.scroll)}>
-            {(erc721TabIndex === 1 ? maticNfts : ethNfts).map((nft, index) => (
+            {(erc721TabIndex === 2 ? maticNfts : ethNfts).map((nft, index) => (
               <div className={styles.nftRow} key={`${nft}${index}`}>
                 <div className={styles.item}>
                   <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
