@@ -18,8 +18,8 @@
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
   "WEB3_URLS": {
     "GOERLI": "https://goerli.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
-    "MUMBAI": "https://rpc-mumbai.maticvigil.com/v1/19decf293d3dd2614121969e15c2b8b978700329",
-    "MATIC": "https://rpc-mainnet.maticvigil.com/v1/19decf293d3dd2614121969e15c2b8b978700329"
+    "MUMBAI": "https://rpc-mumbai.maticvigil.com/v1/3ac018f01672ed340929e860f1287dde6fa00d75",
+    "MATIC": "https://rpc-mainnet.maticvigil.com/v1/3ac018f01672ed340929e860f1287dde6fa00d75"
   },
   "EXPLORER_URLS": {
     "mainnet": "https://etherscan.io/",
@@ -46,7 +46,7 @@
     "mainnet": "0x194202479730987db2b1a9d61083333d7336b3fb",
     "rinkeby": "",
     "goerli": "0x194202479730987db2b1a9d61083333d7336b3fb",
-    "mumbai": "",
+    "mumbai": "0x194202479730987db2b1a9d61083333d7336b3fb",
     "matic": ""
   },
   "MONA_TOKEN_ADDRESSES": {
