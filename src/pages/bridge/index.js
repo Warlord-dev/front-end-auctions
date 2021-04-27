@@ -10,6 +10,8 @@ import Loader from '@components/loader';
 import NFTProduct from '@components/nft-product';
 import Modal from '@components/modal';
 
+import useMaticExitManager from '@hooks/useMaticExitManager';
+
 import { useMonaBalance } from '@hooks/useMonaBalance';
 import { useSelector, useDispatch } from 'react-redux';
 import { getUser } from '@helpers/user.helpers';
@@ -82,7 +84,11 @@ export default function Bridge() {
             setModalTitle('Congrats!');
             setModalBody('Sent NFT to Root successfully.');
             setShowTxConfirmModal(true);
-
+            const [exitMgr] = useMaticExitManager;
+            const sendNftsToRootBytes = exitMgr.buildPayloadForExit(
+              res.result.transactionHash,
+              '0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036',
+            );
             dispatch(
               userActions.updateProfile({
                 withdrawalTxs: [
@@ -91,7 +97,7 @@ export default function Bridge() {
                     amount: nftIds[0],
                     status: 'completed',
                     created: new Date(),
-                    sendNftsToRootBytes: res.result.events.MessageSent.returnValues.message,
+                    sendNftsToRootBytes,
                     sendNftsToRootTokenIds: [nftIds[0]],
                   },
                 ],
