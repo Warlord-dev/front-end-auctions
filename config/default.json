@@ -60,7 +60,7 @@
     "mainnet": "0x275f5ad03be0fa221b4c6649b8aee09a42d9412a",
     "rinkeby": "0x13379fe0e6992180ed0ac5174a02479896f9c510",
     "goerli": "0xc9c3704a65fE2D4f1F94A02480b25DbFA5764332",// v0 (same as mainnet)
-    "mumbai": "0x04d882Cb70764aD24D36C98C37Ae03a798bdeE55", // v2 new one
+    "mumbai": "0x1Bc6D640710759Be37E5DCD1b23B322250353751", // v2 new one
     "matic": "0x728Af879c3212cEf7a51D7fC296b5e9b7c14dbf6"
   },
   "DIGI_MATERIALS_V2": {
