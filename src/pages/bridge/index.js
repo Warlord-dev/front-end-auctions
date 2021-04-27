@@ -50,6 +50,7 @@ export default function Bridge() {
   const nfts = useNFTs(account);
   const exitCallback = useExitFromMatic();
   const erc721ExitCallback = useERC721ExitFromMatic();
+  const digitalaxRootTunnel = useDigitalaxRootTunnel(dataInBytes);
   const chainId = useSelector(getChainId);
 
   const [ethNfts, maticNfts] = useEthMaticNFTs(erc721TabIndex);
@@ -225,7 +226,7 @@ export default function Bridge() {
           </div>
           <div className={styles.underline} />
           <div className={cn(styles.tableBody, styles.scroll)}>
-            {(erc721TabIndex === 1 ? maticNfts : ethNfts).map((nft, index) => (
+            {(erc721TabIndex === 2 ? maticNfts : ethNfts).map((nft, index) => (
               <div className={styles.nftRow} key={`${nft}${index}`}>
                 <div className={styles.item}>
                   <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
@@ -328,7 +329,11 @@ export default function Bridge() {
                         if (tabIndex === 0) {
                           exitCallback(tx.txHash);
                         } else {
-                          erc721ExitCallback(tx.txHash);
+                          if (nftIds[0] < 100000) {
+                            erc721ExitCallback(tx.txHash);
+                          } else if (nftIds[0] > 100000) {
+                            digitalaxRootTunnel(tx.sendNftsToRootBytes);
+                          }
                         }
                       }}
                     >
