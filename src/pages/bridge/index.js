@@ -135,7 +135,7 @@ export default function Bridge() {
       })
       .catch((e) => {
         setModalTitle('Error!');
-        setModalBody(`${err}`);
+        setModalBody(`${e}`);
         setShowTxConfirmModal(true);
       });
   };
@@ -253,7 +253,7 @@ export default function Bridge() {
                   <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
                   <h4>Token ID is: {nft.id}</h4>
                 </div>
-                <span>{erc721TabIndex === 1 ? 'MATIC' : 'ETHEREUM'}</span>
+                <span>{erc721TabIndex === 2 ? 'MATIC' : 'ETHEREUM'}</span>
                 <div className={styles.nftCheckWrapper}>
                   <CheckBox onChange={() => onToggleChecked(nft)} />
                 </div>
