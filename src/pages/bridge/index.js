@@ -84,7 +84,9 @@ export default function Bridge() {
         .then((res) => {
           if (res.success) {
             setModalTitle('Congrats!');
-            setModalBody('Sent NFT to Root successfully.');
+            setModalBody(
+              'Sent NFT to Root successfully. Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
+            );
             setShowTxConfirmModal(true);
 
             // const sendNftsToRootBytes = exitMgr.buildPayloadForExit(
@@ -255,7 +257,7 @@ export default function Bridge() {
                 </div>
                 <span>{erc721TabIndex === 2 ? 'MATIC' : 'ETHEREUM'}</span>
                 <div className={styles.nftCheckWrapper}>
-                  <CheckBox onChange={() => onToggleChecked(nft)} />
+                  <CheckBox checked={nftIds[0] === nft.id} onChange={() => onToggleChecked(nft)} />
                 </div>
               </div>
             ))}
@@ -297,7 +299,7 @@ export default function Bridge() {
     if (nftIds.includes(nft.id)) {
       setNftIds(nftIds.filter((id) => id !== nft.id));
     } else {
-      setNftIds([...nftIds, nft.id]);
+      setNftIds([nft.id]);
     }
   };
 

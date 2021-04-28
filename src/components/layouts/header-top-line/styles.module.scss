@@ -3,11 +3,62 @@
 @import '../../../assets/scss/helpers/helpers.scss';
 
 .wrapper {
-  @include wrapper();
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  
+  .navWrapper {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+  }
+
+  .navWrapperHieght {
+    height: 100vh;
+  }
+
+  .hamburgerButton {
+    border: none;
+    background: none;
+    outline: none;
+    img {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    z-index: 100;
+    flex-direction: column;
+
+    .rightBox {
+      display: none;
+    }
+
+    .mobileRightBox {
+      display: block;
+    }
+
+    .mobileMenu {
+      position: absolute;
+      width: 100vw;
+      height: calc(100vh - 60px);
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      background-color: white;
+
+      .link {
+        margin: 1rem;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .mobileRightBox {
+      display: none;
+    }
+  }
 }
 
 .leftBox {
@@ -35,6 +86,10 @@
   &:hover {
     color: white;
     background: #ec978d;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 
@@ -104,11 +159,9 @@
 }
 
 .notification {
-  position: fixed;
-  top: 10px;
   text-align: center;
   width: 100%;
-  left: 0;
+  padding: .5rem;
   color: red;
 }
 .monaBalance {
