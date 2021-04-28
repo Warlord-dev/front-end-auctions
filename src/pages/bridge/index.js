@@ -56,7 +56,6 @@ export default function Bridge() {
   const erc721ExitCallback = useERC721ExitFromMatic();
   const digitalaxRootTunnelReceiveMessage = useDigitalaxRootTunnelReceiveMessage();
   const chainId = useSelector(getChainId);
-  const [exitMgr] = useMaticExitManager();
 
   const [ethNfts, maticNfts] = useEthMaticNFTs(erc721TabIndex);
 

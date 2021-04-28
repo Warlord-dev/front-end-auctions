@@ -50,13 +50,18 @@ export default function useMaticExitManager() {
     const web3 = new Web3(window.ethereum);
 
     if (account) {
+
+      // Some info found here for mumbai
+      // TODO https://github.com/maticnetwork/static/blob/master/network/testnet/mumbai/index.json
       const options = {
         network: isMainnet ? 'mainnet' : 'testnet',
         version: isMainnet ? 'v1' : 'mumbai',
         parentProvider: web3,
         maticProvider: isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI,
-        parentDefaultOptions: { from: account },
-        maticDefaultOptions: { from: account },
+        posRootChainManager: '0xBbD7cBFA79faee899Eaf900F13C9065bF03B1A74',
+        posERC721Predicate: '0x74D83801586E9D3C4dc45FfCD30B54eA9C88cf9b',
+        posERC1155Predicate: '0xB19a86ba1b50f0A395BfdC3557608789ee184dC8',
+
       };
       const client = new MaticPOSClient(options);
       const mgr = new ExitManager(RootChain, options, client);
