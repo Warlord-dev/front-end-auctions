@@ -10,6 +10,7 @@ import Loader from '@components/loader';
 import NFTProduct from '@components/nft-product';
 import Modal from '@components/modal';
 
+// import useMaticExitManager from '@hooks/useMaticExitManager';
 import { useMonaBalance } from '@hooks/useMonaBalance';
 import { useSelector, useDispatch } from 'react-redux';
 import { getUser } from '@helpers/user.helpers';
@@ -29,6 +30,7 @@ import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot.hooks';
 import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
 import UpgradeNFTModal from './UpgradeNFTModal';
+import useDigitalaxRootTunnelReceiveMessage from '@hooks/useDigitalaxRootTunnelReceiveMessage';
 
 export default function Bridge() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -50,9 +52,11 @@ export default function Bridge() {
   const nfts = useNFTs(account);
   const exitCallback = useExitFromMatic();
   const erc721ExitCallback = useERC721ExitFromMatic();
+  const digitalaxRootTunnelReceiveMessage = useDigitalaxRootTunnelReceiveMessage();
   const chainId = useSelector(getChainId);
+  // const [exitMgr] = useMaticExitManager();
 
-  const [ethNfts, maticNfts] = useEthMaticNFTs();
+  const [ethNfts, maticNfts] = useEthMaticNFTs(erc721TabIndex);
 
   const { approved, approveCallback } = useERC721ApproveForMatic();
   const depositCallback = useERC721DepositToMatic();
@@ -71,32 +75,42 @@ export default function Bridge() {
       .catch(() => {});
   };
   const handleWithdrawNFT = async () => {
-    if (nftIds[0] > 100001) {
+    if (nftIds[0] > 100000) {
       setModalTitle('Sending NFT to Root!');
       setModalTitle('Please wait');
       setShowTxConfirmModal(true);
 
       await sendNTFsToRoot([nftIds[0]])
         .then((res) => {
-          setModalTitle('Congrats!');
-          setModalBody('Sent NFT to Root successfully.');
-          setShowTxConfirmModal(true);
-          dispatch(
-            userActions.updateProfile({
-              withdrawalTxs: [
-                {
-                  txHash: res.result.transactionHash,
-                  amount: nftIds[0],
-                  status: 'completed',
-                  created: new Date(),
-                  sendNftsToRootBytes: res.result.events.MessageSent.returnValues.message,
-                  sendNftsToRootTokenIds: [nftIds[0]],
-                },
-              ],
-            }),
-          );
+          if (res.success) {
+            setModalTitle('Congrats!');
+            setModalBody('Sent NFT to Root successfully.');
+            setShowTxConfirmModal(true);
+
+            // const sendNftsToRootBytes = exitMgr.buildPayloadForExit(
+            //   res.result.transactionHash,
+            //   '0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036',
+            // );
+            dispatch(
+              userActions.updateProfile({
+                withdrawalTxs: [
+                  {
+                    txHash: res.result.transactionHash,
+                    amount: nftIds[0],
+                    status: 'pending-721',
+                    created: new Date(),
+                    sendNftsToRootBytes: res.result.events.MessageSent.returnValues.message,
+                    sendNftsToRootTokenIds: [nftIds[0]],
+                  },
+                ],
+              }),
+            );
+          }
         })
         .catch((err) => {
+          setModalTitle('Error!');
+          setModalBody(`Send NFT To Root Failed - ${err}`);
+          setShowTxConfirmModal(true);
           console.log('Send NFT To Root Failed - ', err);
         });
     } else {
@@ -110,6 +124,20 @@ export default function Bridge() {
         })
         .catch(() => {});
     }
+  };
+
+  const handleDigitalaxRootTunnelReceiveMessage = (bytes) => {
+    digitalaxRootTunnelReceiveMessage(bytes)
+      .then((res) => {
+        setModalTitle('Success!');
+        setModalBody('Please check out your mainnet wallet');
+        setShowTxConfirmModal(true);
+      })
+      .catch((e) => {
+        setModalTitle('Error!');
+        setModalBody(`${e}`);
+        setShowTxConfirmModal(true);
+      });
   };
 
   useEffect(() => {
@@ -190,14 +218,18 @@ export default function Bridge() {
             <Button
               className={styles.actionButton721}
               background="black"
-              onClick={() => setERC721TabIndex(1)}
+              onClick={() => {
+                setERC721TabIndex(1);
+              }}
             >
               <span>DEPOSIT TO MATIC</span>
             </Button>
             <Button
               className={styles.actionButton721}
               background="black"
-              onClick={() => setERC721TabIndex(2)}
+              onClick={() => {
+                setERC721TabIndex(2);
+              }}
             >
               <span>WITHDRAW TO ETHEREUM</span>
             </Button>
@@ -215,13 +247,13 @@ export default function Bridge() {
           </div>
           <div className={styles.underline} />
           <div className={cn(styles.tableBody, styles.scroll)}>
-            {(erc721TabIndex === 2 ? maticNfts : ethNfts).map((nft) => (
-              <div className={styles.nftRow}>
+            {(erc721TabIndex === 2 ? maticNfts : ethNfts).map((nft, index) => (
+              <div className={styles.nftRow} key={`${nft}${index}`}>
                 <div className={styles.item}>
                   <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
                   <h4>Token ID is: {nft.id}</h4>
                 </div>
-                <span>{erc721TabIndex === 1 ? 'MATIC' : 'ETHEREUM'}</span>
+                <span>{erc721TabIndex === 2 ? 'MATIC' : 'ETHEREUM'}</span>
                 <div className={styles.nftCheckWrapper}>
                   <CheckBox onChange={() => onToggleChecked(nft)} />
                 </div>
@@ -252,7 +284,7 @@ export default function Bridge() {
         </Button>
         <Button
           className={styles.backButton}
-          background="#777777"
+          // background="#777777"
           onClick={() => setERC721TabIndex(0)}
         >
           <span>RETURN TO BRIDGE</span>
@@ -280,6 +312,7 @@ export default function Bridge() {
             <div
               className={index === tabIndex ? styles.active : ''}
               onClick={() => onClickTab(index)}
+              key={`${header}${index}`}
             >
               {header}
               {index === 2 && <span>Coming soon</span>}
@@ -317,7 +350,11 @@ export default function Bridge() {
                         if (tabIndex === 0) {
                           exitCallback(tx.txHash);
                         } else {
-                          erc721ExitCallback(tx.txHash);
+                          if (tx.amount < 100000) {
+                            erc721ExitCallback(tx.txHash);
+                          } else if (tx.amount > 100000) {
+                            handleDigitalaxRootTunnelReceiveMessage(tx.sendNftsToRootBytes);
+                          }
                         }
                       }}
                     >

@@ -29,8 +29,6 @@ export default function useERC721WithdrawFromMatic() {
               from: account,
             })
             .then((res) => {
-              console.log('res', res);
-
               dispatch(
                 userActions.updateProfile({
                   withdrawalTxs: [
@@ -42,7 +40,7 @@ export default function useERC721WithdrawFromMatic() {
                       created: new Date(),
                     },
                   ],
-                })
+                }),
               );
               resolve(res);
             })
@@ -50,7 +48,7 @@ export default function useERC721WithdrawFromMatic() {
         } else reject('error');
       });
     },
-    [posClient, account]
+    [posClient, account],
   );
 
   return withdrawCallback;

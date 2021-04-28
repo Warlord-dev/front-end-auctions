@@ -18,7 +18,7 @@ const useSendNFTsToRoot = () => {
           .send({ from: account });
         return { success: true, result: res };
       } catch (e) {
-        return { success: false, result: e };
+        throw e;
       }
     },
     [getDTXMaticContract, account],

@@ -283,7 +283,10 @@ export const getDTXContract = (isMainnet) => {
 };
 
 export const getDTXMaticContract = (isMainnet) => {
+ // const web3 = new Web3(isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI);
   const address = getDTXAddressByChainId(isMainnet ? '0x89' : '0x13881');
+  // const web3 = new Web3(config.WEB3_URLS.MUMBAI);
+ // const contract = new web3.eth.Contract(ERC721ABIv2, address);
   const contract = new window.web3.eth.Contract(ERC721ABIv2, address);
 
   return contract;

@@ -18,8 +18,8 @@
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
   "WEB3_URLS": {
     "GOERLI": "https://goerli.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
-    "MUMBAI": "https://rpc-mumbai.maticvigil.com/v1/b5abd2882f9370b08a2bd4a5cc8e8f60318a94da",
-    "MATIC": "https://rpc-mainnet.maticvigil.com/v1/b5abd2882f9370b08a2bd4a5cc8e8f60318a94da"
+    "MUMBAI": "https://rpc-mumbai.maticvigil.com/v1/3ac018f01672ed340929e860f1287dde6fa00d75",
+    "MATIC": "https://rpc-mainnet.maticvigil.com/v1/3ac018f01672ed340929e860f1287dde6fa00d75"
   },
   "EXPLORER_URLS": {
     "mainnet": "https://etherscan.io/",
@@ -43,10 +43,10 @@
     "matic": "0xB0b0859117512410Ec1a6Da6E012Ff35E65543D7"
   },
   "ROOT_TUNNEL_ADDRESS": {
-    "mainnet": "0x5561de832d7bb7ffd38f190c44f847862960aa3e",
+    "mainnet": "0x194202479730987db2b1a9d61083333d7336b3fb",
     "rinkeby": "",
-    "goerli": "0x5561de832d7bb7ffd38f190c44f847862960aa3e",
-    "mumbai": "",
+    "goerli": "0x194202479730987db2b1a9d61083333d7336b3fb",
+    "mumbai": "0x194202479730987db2b1a9d61083333d7336b3fb",
     "matic": ""
   },
   "MONA_TOKEN_ADDRESSES": {
@@ -59,13 +59,13 @@
   "DTX_ADDRESSES": {
     "mainnet": "0x275f5ad03be0fa221b4c6649b8aee09a42d9412a",
     "rinkeby": "0x13379fe0e6992180ed0ac5174a02479896f9c510",
-    "goerli": "0x9bd08679fdc4ba412a429b470599f8072e17e83d",// v0 (same as mainnet)
-    "mumbai": "0xa715d6005a6EFBA3cA2546B67a296Fe1f06b3aB5", // v2 new one
+    "goerli": "0xc9c3704a65fE2D4f1F94A02480b25DbFA5764332",// v0 (same as mainnet)
+    "mumbai": "0x1Bc6D640710759Be37E5DCD1b23B322250353751", // v2 new one
     "matic": "0x728Af879c3212cEf7a51D7fC296b5e9b7c14dbf6"
   },
   "DIGI_MATERIALS_V2": {
-    "mumbai": "0x1065dD37A2aD348b94E5DF106FB2bf7C4F5f33C4",
-    "matic": "0x1065dD37A2aD348b94E5DF106FB2bf7C4F5f33C4"
+    "mumbai": "0x632914B69B11DCa3b391B62FB2812f5Eee36A626",
+    "matic": "0x632914B69B11DCa3b391B62FB2812f5Eee36A626"
   },
   "DTXV1_ADDRESSES": {
     "mainnet": "",
@@ -78,8 +78,8 @@
     "mainnet": "",
     "rinkeby": "",
     "goerli": "",
-    "mumbai": "0xa946AE5572aaD5830E23912ED54F33Ef59BC979D",
-    "matic": "0x988Dcb549CF62941Fe569aFe8Bbb6bCFe6Ed7C8c"
+    "mumbai": "0xEf4e6e823F73773Fc7a14A7b270b2A184419cc84",
+    "matic": "0xEf4e6e823F73773Fc7a14A7b270b2A184419cc84"
   },
   "USDT_ADDRESS": {
     "mainnet": "0xdac17f958d2ee523a2206206994597c13d831ec7",

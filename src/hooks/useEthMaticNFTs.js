@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getAccount } from '@selectors/user.selectors';
@@ -7,6 +7,7 @@ import { useIsMainnet } from './useIsMainnet';
 import usePollar from './usePollar';
 import { useDTXTokenIds } from './useERC721TokenId';
 import { getDTXContract, getDTXMaticContract } from '@services/contract.service';
+import { closeNotInstalledMetamask } from '@actions/modals.actions';
 
 export function useEthMaticNFTs() {
   const [ethDtxTokenIds, maticDtxTokenIds] = useDTXTokenIds();
@@ -16,31 +17,49 @@ export function useEthMaticNFTs() {
   const account = useSelector(getAccount);
   const isMainnet = useIsMainnet();
 
-  const [posClientParent, posClientChild] = useMaticPosClient();
+  const fetchEthNfts = useCallback(async () => {
+    if (account) {
+      try {
+        const dtxContract = await getDTXContract(isMainnet);
+        const ethNftTokenUris = await Promise.all(
+          ethDtxTokenIds.map((i) =>
+            dtxContract.methods.tokenURI(parseInt(i)).call({ from: account }),
+          ),
+        );
+
+        setEthNfts(ethNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: ethDtxTokenIds[i] })));
+      } catch (e) {
+        console.log(e);
+      }
+    }
+  }, [account, isMainnet, ethDtxTokenIds]);
 
   const fetchNfts = useCallback(async () => {
-    if (account && posClientParent && posClientChild) {
-      const dtxContract = await getDTXContract(isMainnet);
+    if (account) {
+      try {
+        const maticDtxContract = await getDTXMaticContract(isMainnet);
 
-      const ethNftTokenUris = await Promise.all(
-        ethDtxTokenIds.map((i) => dtxContract.methods.tokenURI(parseInt(i)).call({ from: account }))
-      );
-
-      setEthNfts(ethNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: ethDtxTokenIds[i] })));
-
-      const maticDtxContract = await getDTXMaticContract(isMainnet);
-
-      const maticNftTokenUris = await Promise.all(
-        maticDtxTokenIds.map((i) =>
-          maticDtxContract.methods.tokenURI(parseInt(i)).call({ from: account })
-        )
-      );
-
-      setMaticNfts(maticNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: maticDtxTokenIds[i] })));
+        const maticNftTokenUris = await maticDtxContract.methods
+          .batchTokenURI(maticDtxTokenIds)
+          .call({ from: account });
+        setMaticNfts(
+          maticNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: maticDtxTokenIds[i] })),
+        );
+      } catch (e) {
+        console.log(e);
+      }
     }
-  }, [isMainnet, ethDtxTokenIds, maticDtxTokenIds]);
+  }, [account, isMainnet, maticDtxTokenIds]);
+
+  useEffect(() => {
+    if (account) {
+      fetchEthNfts();
+      fetchNfts();
+    }
+  }, [account, isMainnet, maticDtxTokenIds, ethDtxTokenIds]);
 
   usePollar(fetchNfts);
+  usePollar(fetchEthNfts);
 
   return [ethNfts, maticNfts];
 }

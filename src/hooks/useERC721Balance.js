@@ -17,29 +17,35 @@ export function useDTXBalance() {
 
   const [posClientParent, posClientChild] = useMaticPosClient();
 
-  const fetchMonaBalance = useCallback(async () => {
+  const fetchMonaETHBalance = useCallback(async () => {
     if (account && posClientParent && posClientChild) {
       const ethBalance = await posClientChild.balanceOfERC721(
         account,
         config.DTX_ADDRESSES[isMainnet ? 'mainnet' : 'goerli'],
         {
           parent: true,
-        }
+        },
       );
 
       setGarmentETHBalance(ethBalance);
+    }
+  }, [isMainnet, posClientChild]);
+
+  const fetchMonaMaticBalance = useCallback(async () => {
+    if (isMainnet && posClientParent) {
       const maticBalance = await posClientParent.balanceOfERC20(
         account,
         config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
         {
           parent: false,
-        }
+        },
       );
       setGarmentMaticV1Balance(maticBalance);
     }
-  }, [isMainnet, posClientParent, posClientChild]);
+  }, [isMainnet, posClientParent]);
 
-  usePollar(fetchMonaBalance);
+  usePollar(fetchMonaETHBalance);
+  usePollar(fetchMonaMaticBalance);
 
   return [garmentETHBalance, garmentMaticV1Balance];
 }
