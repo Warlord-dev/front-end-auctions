@@ -10,7 +10,7 @@ import Loader from '@components/loader';
 import NFTProduct from '@components/nft-product';
 import Modal from '@components/modal';
 
-import { useMaticExitManager } from '@hooks/useMaticExitManager';
+import useMaticExitManager from '@hooks/useMaticExitManager';
 
 import { useMonaBalance } from '@hooks/useMonaBalance';
 import { useSelector, useDispatch } from 'react-redux';
