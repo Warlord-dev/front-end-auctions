@@ -10,6 +10,7 @@ import Loader from '@components/loader';
 import NFTProduct from '@components/nft-product';
 import Modal from '@components/modal';
 
+// import useMaticExitManager from '@hooks/useMaticExitManager';
 import { useMonaBalance } from '@hooks/useMonaBalance';
 import { useSelector, useDispatch } from 'react-redux';
 import { getUser } from '@helpers/user.helpers';
@@ -29,7 +30,7 @@ import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot.hooks';
 import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
 import UpgradeNFTModal from './UpgradeNFTModal';
-import useDigitalaxRootTunnel from '@hooks/useDigitalaxRootTunnel';
+import useDigitalaxRootTunnelReceiveMessage from '@hooks/useDigitalaxRootTunnelReceiveMessage';
 
 export default function Bridge() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -51,8 +52,9 @@ export default function Bridge() {
   const nfts = useNFTs(account);
   const exitCallback = useExitFromMatic();
   const erc721ExitCallback = useERC721ExitFromMatic();
-  const digitalaxRootTunnel = useDigitalaxRootTunnel();
+  const digitalaxRootTunnelReceiveMessage = useDigitalaxRootTunnelReceiveMessage();
   const chainId = useSelector(getChainId);
+  // const [exitMgr] = useMaticExitManager();
 
   const [ethNfts, maticNfts] = useEthMaticNFTs(erc721TabIndex);
 
@@ -60,7 +62,6 @@ export default function Bridge() {
   const depositCallback = useERC721DepositToMatic();
   const withdrawCallback = useERC721WithdrawFromMatic();
   const [_, maticDtxTokenIds] = useDTXTokenIds();
-  console.log('this is withdrawlTxs', withdrawalTxs);
 
   const handleDepositNFT = async () => {
     await depositCallback(nftIds[0])
@@ -74,7 +75,7 @@ export default function Bridge() {
       .catch(() => {});
   };
   const handleWithdrawNFT = async () => {
-    if (nftIds[0] < 100000) {
+    if (nftIds[0] > 100000) {
       setModalTitle('Sending NFT to Root!');
       setModalTitle('Please wait');
       setShowTxConfirmModal(true);
@@ -86,13 +87,17 @@ export default function Bridge() {
             setModalBody('Sent NFT to Root successfully.');
             setShowTxConfirmModal(true);
 
+            // const sendNftsToRootBytes = exitMgr.buildPayloadForExit(
+            //   res.result.transactionHash,
+            //   '0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036',
+            // );
             dispatch(
               userActions.updateProfile({
                 withdrawalTxs: [
                   {
                     txHash: res.result.transactionHash,
                     amount: nftIds[0],
-                    status: 'completed',
+                    status: 'pending-721',
                     created: new Date(),
                     sendNftsToRootBytes: res.result.events.MessageSent.returnValues.message,
                     sendNftsToRootTokenIds: [nftIds[0]],
@@ -121,8 +126,8 @@ export default function Bridge() {
     }
   };
 
-  const handleDigitalaxRootTunnel = async (bytes) => {
-    await digitalaxRootTunnel(bytes)
+  const handleDigitalaxRootTunnelReceiveMessage = (bytes) => {
+    digitalaxRootTunnelReceiveMessage(bytes)
       .then((res) => {
         setModalTitle('Success!');
         setModalBody('Please check out your mainnet wallet');
@@ -130,7 +135,7 @@ export default function Bridge() {
       })
       .catch((e) => {
         setModalTitle('Error!');
-        setModalBoday(`${err}`);
+        setModalBody(`${err}`);
         setShowTxConfirmModal(true);
       });
   };
@@ -345,10 +350,10 @@ export default function Bridge() {
                         if (tabIndex === 0) {
                           exitCallback(tx.txHash);
                         } else {
-                          if (nftIds[0] < 100000) {
+                          if (tx.amount < 100000) {
                             erc721ExitCallback(tx.txHash);
-                          } else if (nftIds[0] > 100000) {
-                            handleDigitalaxRootTunnel(tx.sendNftsToRootBytes);
+                          } else if (tx.amount > 100000) {
+                            handleDigitalaxRootTunnelReceiveMessage(tx.sendNftsToRootBytes);
                           }
                         }
                       }}
