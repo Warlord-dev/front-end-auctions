@@ -18,6 +18,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
+  const [hamburger, setHamburger] = useState(false);
 
   const router = useRouter();
   const pathname = router.pathname;
@@ -52,92 +53,171 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   return (
     <div className={cn(className, styles.wrapper)}>
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
-      <div className={styles.leftBox}>
-        <Logo />
-        <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
-          Switch to Eth Mainnet
-        </a>
-      </div>
-      <div className={styles.rightBox}>
-        {/* <Link href="/">
-          <a className={styles.link}>Auctions</a>
-        </Link>
-        <Link href="/sold">
-          <a className={styles.link}>Previously Sold</a>
-        </Link> */}
-        {/* <a
-          href="https://pode.digitalax.xyz/"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          PODE
-        </a> */}
-        <a
-          href="https://medium.com/@digitalax"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Blog
-        </a>
-        <a
-          href="https://community.digitalax.xyz/"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Forum
-        </a>
-        {isShowStaking && (
-          <a
-            href="http://staking.digitalax.xyz/"
+      <div className={styles.navWrapper}>
+        <div className={styles.leftBox}>
+          <Logo />
+          <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
+            Switch to Eth Mainnet
+          </a>
+        </div>
+        <div className={styles.rightBox}>
+          {/* <Link href="/">
+            <a className={styles.link}>Auctions</a>
+          </Link>
+          <Link href="/sold">
+            <a className={styles.link}>Previously Sold</a>
+          </Link> */}
+          {/* <a
+            href="https://pode.digitalax.xyz/"
             className={styles.link}
             target="_blank"
             rel="noreferrer"
           >
-            {linkText}
+            PODE
+          </a> */}
+          <a
+            href="https://medium.com/@digitalax"
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Blog
           </a>
-        )}
-        <Link href="/global">
-          <a className={styles.link}>Global Designer Network</a>
-        </Link>
-        <Link href="/bridge">
-          <a className={styles.link}>Matic-Eth Bridge</a>
-        </Link>
-        <Link href="/swap">
-          <a className={styles.link}>Token Swap</a>
-        </Link>
-        {user ? (
-          <div className={styles.buttonWrapper}>
-            <SmallPhotoWithText
-              photo={user.get('avatar') ? user.get('avatar') : './images/user-photo.svg'}
-              address={user.get('username')}
-              className={styles.hashAddress}
+          <a
+            href="https://community.digitalax.xyz/"
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Forum
+          </a>
+          {isShowStaking && (
+            <a
+              href="http://staking.digitalax.xyz/"
+              className={styles.link}
+              target="_blank"
+              rel="noreferrer"
             >
-              <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
-                <img
-                  className={styles.arrowBottomImg}
-                  src="./images/icons/arrow-bottom.svg"
-                  alt="arrow-bottom"
-                />
-              </button>
-            </SmallPhotoWithText>
-            {isShowMenu && (
-              <div className={styles.menuWrapper}>
-                <button onClick={() => handleProfileClick()} className={styles.menuButton}>
-                  Profile
+              {linkText}
+            </a>
+          )}
+          <Link href="/global">
+            <a className={styles.link}>Global Designer Network</a>
+          </Link>
+          <Link href="/bridge">
+            <a className={styles.link}>Matic-Eth Bridge</a>
+          </Link>
+          <Link href="/swap">
+            <a className={styles.link}>Token Swap</a>
+          </Link>
+          {user ? (
+            <div className={styles.buttonWrapper}>
+              <SmallPhotoWithText
+                photo={user.get('avatar') ? user.get('avatar') : './images/user-photo.svg'}
+                address={user.get('username')}
+                className={styles.hashAddress}
+              >
+                <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
+                  <img
+                    className={styles.arrowBottomImg}
+                    src="./images/icons/arrow-bottom.svg"
+                    alt="arrow-bottom"
+                  />
                 </button>
-                <button onClick={() => handleLogoutClick()} className={styles.menuButton}>
-                  Logout
-                </button>
-              </div>
-            )}
-          </div>
-        ) : (
-          <Button onClick={() => handleClick()}>{buttonText}</Button>
-        )}
+              </SmallPhotoWithText>
+              {isShowMenu && (
+                <div className={styles.menuWrapper}>
+                  <button onClick={() => handleProfileClick()} className={styles.menuButton}>
+                    Profile
+                  </button>
+                  <button onClick={() => handleLogoutClick()} className={styles.menuButton}>
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <Button onClick={() => handleClick()}>{buttonText}</Button>
+          )}
+        </div>
+        <div className={styles.mobileRightBox}>
+          <button
+            className={styles.hamburgerButton}
+            type="button"
+            onClick={() => setHamburger(!hamburger)}
+          >
+            <img src="/images/hamburger.png" />
+          </button>
+        </div>
       </div>
+      {hamburger ? (
+        <div className={styles.mobileMenu}>
+          {user ? (
+            <div className={styles.buttonWrapper}>
+              <SmallPhotoWithText
+                photo={user.get('avatar') ? user.get('avatar') : './images/user-photo.svg'}
+                address={user.get('username')}
+                className={styles.hashAddress}
+              >
+                <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
+                  <img
+                    className={styles.arrowBottomImg}
+                    src="./images/icons/arrow-bottom.svg"
+                    alt="arrow-bottom"
+                  />
+                </button>
+              </SmallPhotoWithText>
+              {isShowMenu && (
+                <div className={styles.menuWrapper}>
+                  <button onClick={() => handleProfileClick()} className={styles.menuButton}>
+                    Profile
+                  </button>
+                  <button onClick={() => handleLogoutClick()} className={styles.menuButton}>
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <Button onClick={() => handleClick()}>{buttonText}</Button>
+          )}
+          <a
+            href="https://medium.com/@digitalax"
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Blog
+          </a>
+          <a
+            href="https://community.digitalax.xyz/"
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Forum
+          </a>
+          {isShowStaking && (
+            <a
+              href="http://staking.digitalax.xyz/"
+              className={styles.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {linkText}
+            </a>
+          )}
+          <Link href="/global">
+            <a className={styles.link}>Global Designer Network</a>
+          </Link>
+          <Link href="/bridge">
+            <a className={styles.link}>Matic-Eth Bridge</a>
+          </Link>
+          <Link href="/swap">
+            <a className={styles.link}>Token Swap</a>
+          </Link>
+        </div>
+      ) : null}
     </div>
   );
 };

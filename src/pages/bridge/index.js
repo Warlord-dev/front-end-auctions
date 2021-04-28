@@ -10,6 +10,7 @@ import Loader from '@components/loader';
 import NFTProduct from '@components/nft-product';
 import Modal from '@components/modal';
 
+
 import useMaticExitManager from '@hooks/useMaticExitManager';
 
 import { useMonaBalance } from '@hooks/useMonaBalance';
@@ -31,6 +32,7 @@ import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot.hooks';
 import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
 import UpgradeNFTModal from './UpgradeNFTModal';
+import useDigitalaxRootTunnelReceiveMessage from '@hooks/useDigitalaxRootTunnelReceiveMessage';
 
 export default function Bridge() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -52,7 +54,9 @@ export default function Bridge() {
   const nfts = useNFTs(account);
   const exitCallback = useExitFromMatic();
   const erc721ExitCallback = useERC721ExitFromMatic();
+  const digitalaxRootTunnelReceiveMessage = useDigitalaxRootTunnelReceiveMessage();
   const chainId = useSelector(getChainId);
+  const [exitMgr] = useMaticExitManager();
 
   const [ethNfts, maticNfts] = useEthMaticNFTs(erc721TabIndex);
 
@@ -84,22 +88,26 @@ export default function Bridge() {
         .then(async (res) => {
           if (res.success) {
             setModalTitle('Congrats!');
-            setModalBody('Sent NFT to Root successfully.');
+            setModalBody(
+              'Sent NFT to Root successfully. Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
+            );
             setShowTxConfirmModal(true);
+
             console.log('Starting the call to build pay load')
             const sendNftsToRootBytes = await posExitManager.buildPayloadForExit(
               res.result.transactionHash,
               '0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036',
             );
-            console.log("bytes message");
+            console.log('bytes message');
             console.log(sendNftsToRootBytes);
+
             dispatch(
               userActions.updateProfile({
                 withdrawalTxs: [
                   {
                     txHash: res.result.transactionHash,
                     amount: nftIds[0],
-                    status: 'completed',
+                    status: 'pending-721',
                     created: new Date(),
                     sendNftsToRootBytes,
                     sendNftsToRootTokenIds: [nftIds[0]],
@@ -126,6 +134,20 @@ export default function Bridge() {
         })
         .catch(() => {});
     }
+  };
+
+  const handleDigitalaxRootTunnelReceiveMessage = (bytes) => {
+    digitalaxRootTunnelReceiveMessage(bytes)
+      .then((res) => {
+        setModalTitle('Success!');
+        setModalBody('Please check out your mainnet wallet');
+        setShowTxConfirmModal(true);
+      })
+      .catch((e) => {
+        setModalTitle('Error!');
+        setModalBody(`${e}`);
+        setShowTxConfirmModal(true);
+      });
   };
 
   useEffect(() => {
@@ -241,9 +263,9 @@ export default function Bridge() {
                   <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
                   <h4>Token ID is: {nft.id}</h4>
                 </div>
-                <span>{erc721TabIndex === 1 ? 'MATIC' : 'ETHEREUM'}</span>
+                <span>{erc721TabIndex === 2 ? 'MATIC' : 'ETHEREUM'}</span>
                 <div className={styles.nftCheckWrapper}>
-                  <CheckBox onChange={() => onToggleChecked(nft)} />
+                  <CheckBox checked={nftIds[0] === nft.id} onChange={() => onToggleChecked(nft)} />
                 </div>
               </div>
             ))}
@@ -285,7 +307,7 @@ export default function Bridge() {
     if (nftIds.includes(nft.id)) {
       setNftIds(nftIds.filter((id) => id !== nft.id));
     } else {
-      setNftIds([...nftIds, nft.id]);
+      setNftIds([nft.id]);
     }
   };
 
@@ -338,7 +360,11 @@ export default function Bridge() {
                         if (tabIndex === 0) {
                           exitCallback(tx.txHash);
                         } else {
-                          erc721ExitCallback(tx.txHash);
+                          if (tx.amount < 100000) {
+                            erc721ExitCallback(tx.txHash);
+                          } else if (tx.amount > 100000) {
+                            handleDigitalaxRootTunnelReceiveMessage(tx.sendNftsToRootBytes);
+                          }
                         }
                       }}
                     >

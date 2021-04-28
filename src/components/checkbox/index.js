@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
-const CheckBox = ({
-  className, label, onChange, isDisabled,
-}) => (
+const CheckBox = ({ className, label, onChange, isDisabled, checked }) => (
   <label className={cn(styles.container, className)}>
     {label}
-    <input type="checkbox" disabled={isDisabled} onChange={onChange} />
+    <input type="checkbox" checked={checked} disabled={isDisabled} onChange={onChange} />
     <span className={styles.checkmark}></span>
   </label>
 );

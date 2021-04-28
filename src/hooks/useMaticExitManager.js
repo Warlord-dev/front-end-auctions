@@ -61,9 +61,7 @@ export default function useMaticExitManager() {
       const client = new MaticPOSClient(options);
       const mgr = new ExitManager(RootChain, options, client);
       const temp = mgr.web3Client.posRootChainManager.exitManager;
-      setPosExitManager(
-        temp,
-      );
+      setPosExitManager(temp);
     }
   }, [account, isMainnet]);
 
