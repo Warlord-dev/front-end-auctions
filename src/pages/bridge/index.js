@@ -10,7 +10,7 @@ import Loader from '@components/loader';
 import NFTProduct from '@components/nft-product';
 import Modal from '@components/modal';
 
-import useMaticExitManager from '@hooks/useMaticExitManager';
+import { useMaticExitManager } from '@hooks/useMaticExitManager';
 
 import { useMonaBalance } from '@hooks/useMonaBalance';
 import { useSelector, useDispatch } from 'react-redux';
@@ -61,6 +61,8 @@ export default function Bridge() {
   const withdrawCallback = useERC721WithdrawFromMatic();
   const [_, maticDtxTokenIds] = useDTXTokenIds();
 
+  const [posExitManager] = useMaticExitManager();
+
   const handleDepositNFT = async () => {
     await depositCallback(nftIds[0])
       .then(() => {
@@ -79,16 +81,18 @@ export default function Bridge() {
       setShowTxConfirmModal(true);
 
       await sendNTFsToRoot([nftIds[0]])
-        .then((res) => {
+        .then(async (res) => {
           if (res.success) {
             setModalTitle('Congrats!');
             setModalBody('Sent NFT to Root successfully.');
             setShowTxConfirmModal(true);
-            const [exitMgr] = useMaticExitManager;
-            const sendNftsToRootBytes = exitMgr.buildPayloadForExit(
+            console.log('Starting the call to build pay load')
+            const sendNftsToRootBytes = await posExitManager.buildPayloadForExit(
               res.result.transactionHash,
               '0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036',
             );
+            console.log("bytes message");
+            console.log(sendNftsToRootBytes);
             dispatch(
               userActions.updateProfile({
                 withdrawalTxs: [

@@ -40,7 +40,7 @@ import { useIsMainnet } from './useIsMainnet';
 // }
 // exec()
 
-export default function useMaticExitManager() {
+export function useMaticExitManager() {
   const account = useSelector(getAccount);
   const isMainnet = useIsMainnet();
 
