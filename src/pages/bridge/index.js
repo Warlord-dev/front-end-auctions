@@ -31,7 +31,7 @@ import { useDTXTokenIds } from '@hooks/useERC721TokenId';
 import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot.hooks';
 import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
-import UpgradeNFTModal from './UpgradeNFTModal';
+// import UpgradeNFTModal from './UpgradeNFTModal';
 import useDigitalaxRootTunnelReceiveMessage from '@hooks/useDigitalaxRootTunnelReceiveMessage';
 
 export default function Bridge() {
@@ -43,7 +43,7 @@ export default function Bridge() {
   const [modalTitle, setModalTitle] = useState('');
   const [modalBody, setModalBody] = useState('');
   const sendNTFsToRoot = useSendNFTsToRoot();
-  const [showUpgradeNFTModal, setShowUpgradeNFTModal] = useState(false);
+  // const [showUpgradeNFTModal, setShowUpgradeNFTModal] = useState(false);
 
   const [monaEthBalance, monaMaticBalance] = useMonaBalance();
   const profile = useSelector(getUser);
@@ -157,9 +157,9 @@ export default function Bridge() {
     }
   }, [erc721TabIndex]);
 
-  useEffect(() => {
-    if (maticDtxTokenIds.length) setShowUpgradeNFTModal(true);
-  }, [maticDtxTokenIds]);
+  // useEffect(() => {
+  //   if (maticDtxTokenIds.length) setShowUpgradeNFTModal(true);
+  // }, [maticDtxTokenIds]);
 
   if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
     return (
@@ -380,7 +380,7 @@ export default function Bridge() {
             <p>{modalBody}</p>
           </Modal>
         )}
-        {showUpgradeNFTModal && <UpgradeNFTModal onClose={() => setShowUpgradeNFTModal(false)} />}
+
       </div>
     </div>
   );
