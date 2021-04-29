@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Router from 'next/router';
 import cn from 'classnames';
+import axios from 'axios';
 import TimeAgo from 'react-timeago';
 
 import Hint from '@components/hint';
@@ -105,7 +106,7 @@ export default function Bridge() {
                     amount: nftIds[0],
                     status: 'pending-721',
                     created: new Date(),
-                    sendNftsToRootBytes: res.result.events.MessageSent.returnValues.message,
+                    // sendNftsToRootBytes: ,
                     sendNftsToRootTokenIds: [nftIds[0]],
                   },
                 ],
@@ -136,21 +137,30 @@ export default function Bridge() {
     }
   };
 
-  const handleDigitalaxRootTunnelReceiveMessage = (bytes) => {
+  const handleDigitalaxRootTunnelReceiveMessage = (hash) => {
     setLoading(true);
-    digitalaxRootTunnelReceiveMessage(bytes)
+    axios
+      .get(
+        `https://apis.matic.network/api/v1/mumbai/exit-payload/${hash}?eventSignature=0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036`,
+      )
       .then((res) => {
-        setLoading(false);
-        setModalTitle('Success!');
-        setModalBody('Please check out your mainnet wallet');
-        setShowTxConfirmModal(true);
+        const { data } = res;
+        console.log('this is res', res);
+        digitalaxRootTunnelReceiveMessage(data.result)
+          .then((res) => {
+            setLoading(false);
+            setModalTitle('Success!');
+            setModalBody('Please check out your mainnet wallet');
+            setShowTxConfirmModal(true);
+          })
+          .catch((e) => {
+            setLoading(false);
+            setModalTitle('Error!');
+            setModalBody(`${e}`);
+            setShowTxConfirmModal(true);
+          });
       })
-      .catch((e) => {
-        setLoading(false);
-        setModalTitle('Error!');
-        setModalBody(`${e}`);
-        setShowTxConfirmModal(true);
-      });
+      .catch(() => {});
   };
 
   useEffect(() => {
@@ -366,7 +376,7 @@ export default function Bridge() {
                             if (tx.amount < 100000) {
                               erc721ExitCallback(tx.txHash);
                             } else if (tx.amount > 100000) {
-                              handleDigitalaxRootTunnelReceiveMessage(tx.sendNftsToRootBytes);
+                              handleDigitalaxRootTunnelReceiveMessage(tx.txHash);
                             }
                           }
                         }}
