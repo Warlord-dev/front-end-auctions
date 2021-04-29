@@ -52,14 +52,9 @@ export function useEthMaticNFTs() {
   }, [account, isMainnet, maticDtxTokenIds]);
 
   useEffect(() => {
-    if (account) {
-      fetchEthNfts();
-      fetchNfts();
-    }
-  }, [account, isMainnet, maticDtxTokenIds, ethDtxTokenIds]);
-
-  usePollar(fetchNfts);
-  usePollar(fetchEthNfts);
+    fetchNfts();
+    fetchEthNfts();
+  }, [maticDtxTokenIds, ethDtxTokenIds]);
 
   return [ethNfts, maticNfts];
 }
