@@ -54,6 +54,7 @@ export default function Bridge() {
   const erc721ExitCallback = useERC721ExitFromMatic();
   const digitalaxRootTunnelReceiveMessage = useDigitalaxRootTunnelReceiveMessage();
   const chainId = useSelector(getChainId);
+  const [loading, setLoading] = useState(false);
   // const [exitMgr] = useMaticExitManager();
 
   const [ethNfts, maticNfts] = useEthMaticNFTs(erc721TabIndex);
@@ -64,24 +65,26 @@ export default function Bridge() {
   const [_, maticDtxTokenIds] = useDTXTokenIds();
 
   const handleDepositNFT = async () => {
+    setLoading(true);
     await depositCallback(nftIds[0])
       .then(() => {
+        setLoading(false);
         setModalTitle('Moving to Matic!');
         setModalBody(
           'Your token is on its way to Matic Network! Please check back in 10-15 minutes.',
         );
         setShowTxConfirmModal(true);
       })
-      .catch(() => {});
+      .catch(() => {
+        setLoading(false);
+      });
   };
   const handleWithdrawNFT = async () => {
+    setLoading(true);
     if (nftIds[0] > 100000) {
-      setModalTitle('Sending NFT to Root!');
-      setModalTitle('Please wait');
-      setShowTxConfirmModal(true);
-
       await sendNTFsToRoot([nftIds[0]])
         .then((res) => {
+          setLoading(false);
           if (res.success) {
             setModalTitle('Congrats!');
             setModalBody(
@@ -96,6 +99,7 @@ export default function Bridge() {
             dispatch(
               userActions.updateProfile({
                 withdrawalTxs: [
+                  ...withdrawalTxs,
                   {
                     txHash: res.result.transactionHash,
                     amount: nftIds[0],
@@ -110,6 +114,7 @@ export default function Bridge() {
           }
         })
         .catch((err) => {
+          setLoading(false);
           setModalTitle('Error!');
           setModalBody(`Send NFT To Root Failed - ${err}`);
           setShowTxConfirmModal(true);
@@ -118,24 +123,30 @@ export default function Bridge() {
     } else {
       await withdrawCallback(nftIds[0])
         .then(() => {
+          setLoading(false);
           setModalTitle('In Motion to Ethereum!  ');
           setModalBody(
             'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
           );
           setShowTxConfirmModal(true);
         })
-        .catch(() => {});
+        .catch(() => {
+          setLoading(false);
+        });
     }
   };
 
   const handleDigitalaxRootTunnelReceiveMessage = (bytes) => {
+    setLoading(true);
     digitalaxRootTunnelReceiveMessage(bytes)
       .then((res) => {
+        setLoading(false);
         setModalTitle('Success!');
         setModalBody('Please check out your mainnet wallet');
         setShowTxConfirmModal(true);
       })
       .catch((e) => {
+        setLoading(false);
         setModalTitle('Error!');
         setModalBody(`${e}`);
         setShowTxConfirmModal(true);
@@ -160,10 +171,6 @@ export default function Bridge() {
         <div className={styles.bridgeWrapper}>Please connect with metamask to use our bridge.</div>
       </div>
     );
-  }
-
-  if (!nfts) {
-    return <Loader size="large" className={styles.loader} />;
   }
 
   const onClickTab = (index) => {
@@ -306,75 +313,80 @@ export default function Bridge() {
   // console.log(ethNfts, maticNfts);
 
   return (
-    <div className={styles.bridge}>
-      <div className={styles.bridgeTitle}>MATIC-ETH BRIDGE</div>
-      <div className={styles.container}>
-        <div className={styles.headers}>
-          {headers.map((header, index) => (
-            <div
-              className={index === tabIndex ? styles.active : ''}
-              onClick={() => onClickTab(index)}
-              key={`${header}${index}`}
-            >
-              {header}
-              {index === 2 && <span>Coming soon</span>}
-            </div>
-          ))}
-        </div>
-        {tabIndex === 0 ? renderERC20Bridge() : tabIndex === 1 ? renderERC721Bridge() : ''}
-
-        <div className={styles.withdrawalWrapper}>
-          <div className={styles.bridgeTitle}>Pending Withdrawals</div>
-          <div className={styles.withdrawalHeader}>
-            <div className={styles.withdrawalRowItem}>Created</div>
-            <div className={styles.withdrawalRowItem}>{tabIndex === 0 ? 'Amount' : 'Token Id'}</div>
-            <div className={styles.withdrawalRowItem}>Status</div>
-            <div className={styles.withdrawalRowItem}>Withdraw</div>
-          </div>
-          {withdrawalTxs
-            .filter((tx) => tx.status === (tabIndex === 0 ? 'pending' : 'pending-721'))
-            .map((tx) => (
-              <div className={styles.withdrawalRow}>
-                <div className={styles.withdrawalRowItem}>
-                  <TimeAgo date={new Date(tx.created)} />
-                </div>
-                <div className={styles.withdrawalRowItem}>{tx.amount}</div>
-                <div className={styles.withdrawalRowItem}>
-                  {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800
-                    ? 'Pending Withdrawal'
-                    : 'Processing'}
-                </div>
-                {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800 && (
-                  <div className={styles.withdrawalRowItem}>
-                    <button
-                      className={styles.withdrawButton}
-                      onClick={() => {
-                        if (tabIndex === 0) {
-                          exitCallback(tx.txHash);
-                        } else {
-                          if (tx.amount < 100000) {
-                            erc721ExitCallback(tx.txHash);
-                          } else if (tx.amount > 100000) {
-                            handleDigitalaxRootTunnelReceiveMessage(tx.sendNftsToRootBytes);
-                          }
-                        }
-                      }}
-                    >
-                      <div className={styles.withdrawText}>Withdraw</div>
-                    </button>
-                  </div>
-                )}
+    <>
+      {!nfts || loading ? <Loader size="large" className={styles.loader} /> : null}
+      <div className={styles.bridge}>
+        <div className={styles.bridgeTitle}>MATIC-ETH BRIDGE</div>
+        <div className={styles.container}>
+          <div className={styles.headers}>
+            {headers.map((header, index) => (
+              <div
+                className={index === tabIndex ? styles.active : ''}
+                onClick={() => onClickTab(index)}
+                key={`${header}${index}`}
+              >
+                {header}
+                {index === 2 && <span>Coming soon</span>}
               </div>
             ))}
-        </div>
+          </div>
+          {tabIndex === 0 ? renderERC20Bridge() : tabIndex === 1 ? renderERC721Bridge() : ''}
 
-        {showTxConfirmModal && (
-          <Modal title={modalTitle} onClose={() => setShowTxConfirmModal(false)}>
-            <p>{modalBody}</p>
-          </Modal>
-        )}
-        {showUpgradeNFTModal && <UpgradeNFTModal onClose={() => setShowUpgradeNFTModal(false)} />}
+          <div className={styles.withdrawalWrapper}>
+            <div className={styles.bridgeTitle}>Pending Withdrawals</div>
+            <div className={styles.withdrawalHeader}>
+              <div className={styles.withdrawalRowItem}>Created</div>
+              <div className={styles.withdrawalRowItem}>
+                {tabIndex === 0 ? 'Amount' : 'Token Id'}
+              </div>
+              <div className={styles.withdrawalRowItem}>Status</div>
+              <div className={styles.withdrawalRowItem}>Withdraw</div>
+            </div>
+            {withdrawalTxs
+              .filter((tx) => tx.status === (tabIndex === 0 ? 'pending' : 'pending-721'))
+              .map((tx) => (
+                <div className={styles.withdrawalRow}>
+                  <div className={styles.withdrawalRowItem}>
+                    <TimeAgo date={new Date(tx.created)} />
+                  </div>
+                  <div className={styles.withdrawalRowItem}>{tx.amount}</div>
+                  <div className={styles.withdrawalRowItem}>
+                    {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800
+                      ? 'Pending Withdrawal'
+                      : 'Processing'}
+                  </div>
+                  {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800 && (
+                    <div className={styles.withdrawalRowItem}>
+                      <button
+                        className={styles.withdrawButton}
+                        onClick={() => {
+                          if (tabIndex === 0) {
+                            exitCallback(tx.txHash);
+                          } else {
+                            if (tx.amount < 100000) {
+                              erc721ExitCallback(tx.txHash);
+                            } else if (tx.amount > 100000) {
+                              handleDigitalaxRootTunnelReceiveMessage(tx.sendNftsToRootBytes);
+                            }
+                          }
+                        }}
+                      >
+                        <div className={styles.withdrawText}>Withdraw</div>
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ))}
+          </div>
+
+          {showTxConfirmModal && (
+            <Modal title={modalTitle} onClose={() => setShowTxConfirmModal(false)}>
+              <p>{modalBody}</p>
+            </Modal>
+          )}
+          {showUpgradeNFTModal && <UpgradeNFTModal onClose={() => setShowUpgradeNFTModal(false)} />}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
