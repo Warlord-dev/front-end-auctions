@@ -283,10 +283,10 @@ export const getDTXContract = (isMainnet) => {
 };
 
 export const getDTXMaticContract = (isMainnet) => {
- // const web3 = new Web3(isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI);
+  // const web3 = new Web3(isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI);
   const address = getDTXAddressByChainId(isMainnet ? '0x89' : '0x13881');
   // const web3 = new Web3(config.WEB3_URLS.MUMBAI);
- // const contract = new web3.eth.Contract(ERC721ABIv2, address);
+  // const contract = new web3.eth.Contract(ERC721ABIv2, address);
   const contract = new window.web3.eth.Contract(ERC721ABIv2, address);
 
   return contract;
@@ -304,12 +304,8 @@ export const getDigiMaterialV2Contract = (isMainnet) => {
 };
 
 export const getDitiRootTunnelContract = (isMainnet) => {
-  const provider = new Web3.providers.HttpProvider(
-    isMainnet ? config.DEFAULT_WEB3_URL : config.WEB3_URLS.GOERLI,
-  );
-  const web3 = new Web3(provider);
   const address = getDigiRootTunnelAddressByChainId(isMainnet ? '0x1' : '0x5');
-  const contract = new web3.eth.Contract(DigiRootTunnelABI, address);
+  const contract = new window.web3.eth.Contract(DigiRootTunnelABI, address);
 
   return contract;
 };
