@@ -1,7 +1,11 @@
 @import '../../assets/scss/helpers/grid.scss';
 
 .wrapper {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  z-index: 10000;
   @include wrapper();
 }
 
