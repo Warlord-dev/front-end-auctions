@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { formatEther } from '@ethersproject/units';
@@ -18,7 +18,7 @@ export function useDTXBalance() {
   const [posClientParent, posClientChild] = useMaticPosClient();
 
   const fetchMonaETHBalance = useCallback(async () => {
-    if (account && posClientParent && posClientChild) {
+    if (posClientChild) {
       const ethBalance = await posClientChild.balanceOfERC721(
         account,
         config.DTX_ADDRESSES[isMainnet ? 'mainnet' : 'goerli'],
@@ -26,13 +26,12 @@ export function useDTXBalance() {
           parent: true,
         },
       );
-
-      setGarmentETHBalance(ethBalance);
+      setGarmentETHBalance(() => ethBalance);
     }
   }, [isMainnet, posClientChild]);
 
   const fetchMonaMaticBalance = useCallback(async () => {
-    if (isMainnet && posClientParent) {
+    if (posClientParent) {
       const maticBalance = await posClientParent.balanceOfERC20(
         account,
         config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
@@ -40,7 +39,7 @@ export function useDTXBalance() {
           parent: false,
         },
       );
-      setGarmentMaticV1Balance(maticBalance);
+      setGarmentMaticV1Balance((va) => maticBalance);
     }
   }, [isMainnet, posClientParent]);
 

@@ -44,7 +44,7 @@ export function useDTXTokenIds() {
         console.log(e);
       }
     }
-  }, [isMainnet, account, posClientChild, dtxEthBalance]);
+  }, [dtxEthBalance]);
 
   const fetchDtxIds = useCallback(async () => {
     if (account) {
@@ -62,17 +62,12 @@ export function useDTXTokenIds() {
         console.log(e);
       }
     }
-  }, [isMainnet, account]);
+  }, [dtxMaticBalance]);
 
   useEffect(() => {
-    if (account && posClientChild) {
-      fetchDtxEthIds();
-      fetchDtxIds();
-    }
-  }, [posClientChild, posClientParent, account, isMainnet, dtxEthBalance]);
-
-  usePollar(fetchDtxIds);
-  usePollar(fetchDtxEthIds);
+    fetchDtxIds();
+    fetchDtxEthIds();
+  }, [dtxMaticBalance, dtxEthBalance]);
 
   return [dtxEthIds, dtxMaticIds];
 }
