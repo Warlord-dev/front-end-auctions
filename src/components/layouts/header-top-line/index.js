@@ -11,7 +11,7 @@ import { getUser } from '@selectors/user.selectors';
 import { getChainId } from '@selectors/global.selectors';
 import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
-import { getEnabledNetworkByChainId } from '@services/network.service';
+import { getEnabledNetworkByChainId, requestSwitchNetwork } from '@services/network.service';
 
 import Logo from './logo';
 import LandingHeader from './landing';
@@ -63,6 +63,11 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         ? 'Please switch to Matic Network'
         : ''
       : 'Please switch to Mainnet';
+
+  const switchNetwork = async () => {
+    const res = await requestSwitchNetwork();
+    return res;
+  }
 
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
@@ -157,6 +162,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           <Link href="/bridge">
             <a className={styles.link}>Matic-Eth Bridge</a>
           </Link>
+          {network.alias !== 'matic' ? (
+            <Button onClick={() => switchNetwork()}>Switch Network</Button>
+          ) : null}
           <div className={styles.signBtn}>
             {user ? (
               <div className={styles.buttonWrapper}>
