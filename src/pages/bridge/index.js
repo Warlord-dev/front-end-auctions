@@ -10,7 +10,6 @@ import Loader from '@components/loader';
 import NFTProduct from '@components/nft-product';
 import Modal from '@components/modal';
 
-
 import useMaticExitManager from '@hooks/useMaticExitManager';
 
 import { useMonaBalance } from '@hooks/useMonaBalance';
@@ -31,7 +30,7 @@ import { useDTXTokenIds } from '@hooks/useERC721TokenId';
 import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot.hooks';
 import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
-// import UpgradeNFTModal from './UpgradeNFTModal';
+import UpgradeNFTModal from './UpgradeNFTModal';
 import useDigitalaxRootTunnelReceiveMessage from '@hooks/useDigitalaxRootTunnelReceiveMessage';
 
 export default function Bridge() {
@@ -43,7 +42,7 @@ export default function Bridge() {
   const [modalTitle, setModalTitle] = useState('');
   const [modalBody, setModalBody] = useState('');
   const sendNTFsToRoot = useSendNFTsToRoot();
-  // const [showUpgradeNFTModal, setShowUpgradeNFTModal] = useState(false);
+  const [showUpgradeNFTModal, setShowUpgradeNFTModal] = useState(false);
 
   const [monaEthBalance, monaMaticBalance] = useMonaBalance();
   const profile = useSelector(getUser);
@@ -92,7 +91,7 @@ export default function Bridge() {
             );
             setShowTxConfirmModal(true);
 
-            console.log('Starting the call to build pay load')
+            console.log('Starting the call to build pay load');
             const sendNftsToRootBytes = await posExitManager.buildPayloadForExit(
               res.result.transactionHash,
               '0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036',
@@ -157,9 +156,9 @@ export default function Bridge() {
     }
   }, [erc721TabIndex]);
 
-  // useEffect(() => {
-  //   if (maticDtxTokenIds.length) setShowUpgradeNFTModal(true);
-  // }, [maticDtxTokenIds]);
+  useEffect(() => {
+    if (maticDtxTokenIds.length) setShowUpgradeNFTModal(true);
+  }, [maticDtxTokenIds.length]);
 
   if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
     return (
@@ -380,7 +379,7 @@ export default function Bridge() {
             <p>{modalBody}</p>
           </Modal>
         )}
-
+        {showUpgradeNFTModal && <UpgradeNFTModal onClose={() => setShowUpgradeNFTModal(false)} />}
       </div>
     </div>
   );
