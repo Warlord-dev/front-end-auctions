@@ -306,6 +306,7 @@ export default function Bridge() {
         <Button
           className={styles.confirmButton721}
           background="black"
+          isDisabled={!nftIds.length}
           onClick={() => {
             if (!approved) {
               approveCallback(nftIds[0]);
