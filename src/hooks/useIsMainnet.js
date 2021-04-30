@@ -4,13 +4,15 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 export function useIsMainnet() {
-  const [isMainnet, setIsMainnet] = useState(true);
   const chainId = useSelector(getChainId);
+  const network = getEnabledNetworkByChainId(chainId);
+  const [isMainnet, setIsMainnet] = useState(
+    network.alias === 'mainnet' || network.alias === 'matic' ? true : false,
+  );
 
   useEffect(() => {
-    const network = getEnabledNetworkByChainId(chainId);
     setIsMainnet(network.alias === 'mainnet' || network.alias === 'matic' ? true : false);
-  }, [chainId]);
+  }, [network]);
 
   return isMainnet;
 }
