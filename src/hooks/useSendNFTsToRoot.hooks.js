@@ -3,9 +3,10 @@ import { useSelector } from 'react-redux';
 
 import { getAccount } from '@selectors/user.selectors';
 import { getDTXMaticContract } from '@services/contract.service';
+import { useIsMainnet } from './useIsMainnet';
 
 const useSendNFTsToRoot = () => {
-  const isMainnet = process.env.NODE_ENV === 'production';
+  const isMainnet = useIsMainnet();
   const account = useSelector(getAccount);
 
   const sendNTFsToRoot = useCallback(
