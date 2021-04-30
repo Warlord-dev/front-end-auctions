@@ -70,74 +70,82 @@ export default function Bridge() {
   const [_, maticDtxTokenIds] = useDTXTokenIds();
 
   const handleDepositNFT = async () => {
-    setLoading(true);
-    await depositCallback(nftIds[0])
-      .then(() => {
-        setLoading(false);
-        setModalTitle('Moving to Matic!');
-        setModalBody(
-          'Your token is on its way to Matic Network! Please check back in 10-15 minutes.',
-        );
-        setShowTxConfirmModal(true);
-      })
-      .catch(() => {
-        setLoading(false);
-      });
-  };
-  const handleWithdrawNFT = async () => {
-    setLoading(true);
-    if (nftIds[0] > 100000) {
-      await sendNTFsToRoot([nftIds[0]])
-        .then((res) => {
-          setLoading(false);
-          if (res.success) {
-            setModalTitle('Congrats!');
-            setModalBody(
-              'Sent NFT to Root successfully. Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
-            );
-            setShowTxConfirmModal(true);
-
-            // const sendNftsToRootBytes = exitMgr.buildPayloadForExit(
-            //   res.result.transactionHash,
-            //   '0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036',
-            // );
-            dispatch(
-              userActions.updateProfile({
-                withdrawalTxs: [
-                  ...withdrawalTxs,
-                  {
-                    txHash: res.result.transactionHash,
-                    amount: nftIds[0],
-                    status: 'pending-721',
-                    created: new Date(),
-                    // sendNftsToRootBytes: ,
-                    sendNftsToRootTokenIds: [nftIds[0]],
-                  },
-                ],
-              }),
-            );
-          }
-        })
-        .catch((err) => {
-          setLoading(false);
-          setModalTitle('Error!');
-          setModalBody(`Send NFT To Root Failed - ${err}`);
-          setShowTxConfirmModal(true);
-          console.log('Send NFT To Root Failed - ', err);
-        });
-    } else {
-      await withdrawCallback(nftIds[0])
+    if (network.alias === (isMainnet ? 'mainnet' : 'goerli')) {
+      setLoading(true);
+      await depositCallback(nftIds[0])
         .then(() => {
           setLoading(false);
-          setModalTitle('In Motion to Ethereum!  ');
+          setModalTitle('Moving to Matic!');
           setModalBody(
-            'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
+            'Your token is on its way to Matic Network! Please check back in 10-15 minutes.',
           );
           setShowTxConfirmModal(true);
         })
         .catch(() => {
           setLoading(false);
         });
+    } else {
+      window.alert('Please change to mainnet network!');
+    }
+  };
+  const handleWithdrawNFT = async () => {
+    if (network.alias === (isMainnet ? 'matic' : 'mumbai')) {
+      setLoading(true);
+      if (nftIds[0] > 100000) {
+        await sendNTFsToRoot([nftIds[0]])
+          .then((res) => {
+            setLoading(false);
+            if (res.success) {
+              setModalTitle('Congrats!');
+              setModalBody(
+                'Sent NFT to Root successfully. Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
+              );
+              setShowTxConfirmModal(true);
+
+              // const sendNftsToRootBytes = exitMgr.buildPayloadForExit(
+              //   res.result.transactionHash,
+              //   '0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036',
+              // );
+              dispatch(
+                userActions.updateProfile({
+                  withdrawalTxs: [
+                    ...withdrawalTxs,
+                    {
+                      txHash: res.result.transactionHash,
+                      amount: nftIds[0],
+                      status: 'pending-721',
+                      created: new Date(),
+                      // sendNftsToRootBytes: ,
+                      sendNftsToRootTokenIds: [nftIds[0]],
+                    },
+                  ],
+                }),
+              );
+            }
+          })
+          .catch((err) => {
+            setLoading(false);
+            setModalTitle('Error!');
+            setModalBody(`Send NFT To Root Failed - ${err}`);
+            setShowTxConfirmModal(true);
+            console.log('Send NFT To Root Failed - ', err);
+          });
+      } else {
+        await withdrawCallback(nftIds[0])
+          .then(() => {
+            setLoading(false);
+            setModalTitle('In Motion to Ethereum!  ');
+            setModalBody(
+              'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
+            );
+            setShowTxConfirmModal(true);
+          })
+          .catch(() => {
+            setLoading(false);
+          });
+      }
+    } else {
+      window.alert('Please change to matic network!');
     }
   };
 
@@ -389,7 +397,11 @@ export default function Bridge() {
                             exitCallback(tx.txHash);
                           } else {
                             if (tx.amount < 100000) {
-                              erc721ExitCallback(tx.txHash);
+                              if (network.alias != (isMainnet ? 'matic' : 'mumbai')) {
+                                window.alert('Please switch to matic network!');
+                              } else {
+                                erc721ExitCallback(tx.txHash);
+                              }
                             } else if (tx.amount > 100000) {
                               if (network.alias != (isMainnet ? 'mainnet' : 'goerli')) {
                                 window.alert('Please switch to mainnet network!');
