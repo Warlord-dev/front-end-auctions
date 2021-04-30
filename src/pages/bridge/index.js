@@ -397,13 +397,13 @@ export default function Bridge() {
                             exitCallback(tx.txHash);
                           } else {
                             if (tx.amount < 100000) {
-                              if (network.alias != (isMainnet ? 'matic' : 'mumbai')) {
+                              if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
                                 window.alert('Please switch to matic network!');
                               } else {
                                 erc721ExitCallback(tx.txHash);
                               }
                             } else if (tx.amount > 100000) {
-                              if (network.alias != (isMainnet ? 'mainnet' : 'goerli')) {
+                              if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
                                 window.alert('Please switch to mainnet network!');
                               } else {
                                 handleDigitalaxRootTunnelReceiveMessage(tx.txHash);
