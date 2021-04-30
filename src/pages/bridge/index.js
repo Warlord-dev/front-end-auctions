@@ -145,12 +145,23 @@ export default function Bridge() {
       )
       .then((res) => {
         const { data } = res;
-        console.log('this is res', res);
         digitalaxRootTunnelReceiveMessage(data.result)
           .then((res) => {
             setLoading(false);
             setModalTitle('Success!');
             setModalBody('Please check out your mainnet wallet');
+
+            const updatedWithdrawals = [...withdrawalTxs];
+            for (let i = 0; i < updatedWithdrawals.length; i += 1) {
+              if (updatedWithdrawals[i].txHash === hash) {
+                updatedWithdrawals[i].status = 'complete';
+              }
+            }
+            dispatch(
+              userActions.updateProfile({
+                withdrawalTxs: updatedWithdrawals,
+              }),
+            );
             setShowTxConfirmModal(true);
           })
           .catch((e) => {
