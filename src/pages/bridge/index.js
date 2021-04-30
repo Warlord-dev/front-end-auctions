@@ -32,6 +32,8 @@ import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
 import UpgradeNFTModal from './UpgradeNFTModal';
 import useDigitalaxRootTunnelReceiveMessage from '@hooks/useDigitalaxRootTunnelReceiveMessage';
+import { getEnabledNetworkByChainId } from '@services/network.service';
+import { useIsMainnet } from '@hooks/useIsMainnet';
 
 export default function Bridge() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -55,6 +57,8 @@ export default function Bridge() {
   const erc721ExitCallback = useERC721ExitFromMatic();
   const digitalaxRootTunnelReceiveMessage = useDigitalaxRootTunnelReceiveMessage();
   const chainId = useSelector(getChainId);
+  const network = getEnabledNetworkByChainId(chainId);
+  const isMainnet = useIsMainnet();
   const [loading, setLoading] = useState(false);
   // const [exitMgr] = useMaticExitManager();
 
@@ -387,7 +391,11 @@ export default function Bridge() {
                             if (tx.amount < 100000) {
                               erc721ExitCallback(tx.txHash);
                             } else if (tx.amount > 100000) {
-                              handleDigitalaxRootTunnelReceiveMessage(tx.txHash);
+                              if (network.alias != (isMainnet ? 'mainnet' : 'goerli')) {
+                                window.alert('Please switch to mainnet network!');
+                              } else {
+                                handleDigitalaxRootTunnelReceiveMessage(tx.txHash);
+                              }
                             }
                           }
                         }}
