@@ -9,18 +9,18 @@ import styles from './styles.module.scss';
 import Button from '@components/buttons/button';
 
 export default function UpgradeNFTModal({ onClose }) {
-  const [ maticDtxTokenIds] = useDTXV1TokenIds();
+  const [ dtxV1MaticIds] = useDTXV1TokenIds();
 
   const upgraderCallback = useERC721Upgrader();
   const handleUpgrade = async () => {
-    await upgraderCallback(maticDtxTokenIds);
+    await upgraderCallback(dtxV1MaticIds);
     onClose();
   };
 
-  return maticDtxTokenIds?.length ? (
+  return dtxV1MaticIds?.length ? (
     <Modal title="NFT Upgrade Required  " onClose={onClose} className={styles.modal}>
       <p className={styles.text}>
-        You have {maticDtxTokenIds.length} V1 NFTs. To stake your NFTs you must upgrade to V2.
+        You have {dtxV1MaticIds.length} V1 NFTs. To stake your NFTs you must upgrade to V2.
       </p>
       <Button onClick={handleUpgrade}>Approve and Upgrade All</Button>
     </Modal>

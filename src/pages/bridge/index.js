@@ -27,6 +27,7 @@ import useERC721DepositToMatic from '@hooks/useERC721DepositToMatic';
 import useERC721WithdrawFromMatic from '@hooks/useERC721WithdrawToEthereum';
 import useERC721ExitFromMatic from '@hooks/useERC721ExitFromMatic';
 import { useDTXTokenIds } from '@hooks/useERC721TokenId';
+import { useDTXV1TokenIds } from '@hooks/useERC721V1TokenId';
 import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot.hooks';
 import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
@@ -68,6 +69,8 @@ export default function Bridge() {
   const depositCallback = useERC721DepositToMatic();
   const withdrawCallback = useERC721WithdrawFromMatic();
   const [_, maticDtxTokenIds] = useDTXTokenIds();
+ // const [_, maticDtxTokenIds] = useDTXTokenIds();
+  const [dtxV1MaticIds] = useDTXV1TokenIds();
 
   const handleDepositNFT = async () => {
     if (network.alias === (isMainnet ? 'mainnet' : 'goerli')) {
@@ -151,9 +154,10 @@ export default function Bridge() {
 
   const handleDigitalaxRootTunnelReceiveMessage = (hash) => {
     setLoading(true);
+    const network = isMainnet ? 'matic' : 'mumbai';
     axios
       .get(
-        `https://apis.matic.network/api/v1/mumbai/exit-payload/${hash}?eventSignature=0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036`,
+        `https://apis.matic.network/api/v1/${network}/exit-payload/${hash}/?eventSignature=0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036`,
       )
       .then((res) => {
         const { data } = res;
@@ -195,8 +199,8 @@ export default function Bridge() {
   }, [erc721TabIndex]);
 
   useEffect(() => {
-    if (maticDtxTokenIds.length) setShowUpgradeNFTModal(true);
-  }, [maticDtxTokenIds]);
+    if (dtxV1MaticIds.length) setShowUpgradeNFTModal(true);
+  }, [dtxV1MaticIds]);
 
   if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
     return (

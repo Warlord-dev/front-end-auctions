@@ -7,7 +7,7 @@ import useMaticPosClient from './useMaticPosClient';
 import { useIsMainnet } from './useIsMainnet';
 import usePollar from './usePollar';
 
-import { useDTXV1Balance } from "./useERC721V1Balance";
+import { useDTXV1Balance } from './useERC721V1Balance';
 
 export function useDTXV1TokenIds() {
   const [dtxV1MaticIds, setDtxV1MaticIds] = useState([]);
@@ -17,13 +17,14 @@ export function useDTXV1TokenIds() {
 
   const [posClientParent, posClientChild] = useMaticPosClient();
 
-  const [dtxEthBalance, dtxMaticBalance] = useDTXV1Balance();
-
+  const [garmentMaticV1Balance] = useDTXV1Balance();
+    console.log('v1 balance is');
+    console.log(garmentMaticV1Balance);
   const fetchDtxIds = useCallback(async () => {
     if (account && posClientParent && posClientChild) {
-
+console.log('checking these v1 ids');
       const maticIds = await Promise.all(
-        [...Array(parseInt(dtxMaticBalance)).keys()].map((i) =>
+        [...Array(parseInt(garmentMaticV1Balance)).keys()].map((i) =>
           posClientParent.tokenOfOwnerByIndexERC721(
             account,
             config.DTXV1_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
@@ -33,9 +34,13 @@ export function useDTXV1TokenIds() {
         )
       );
 
+      console.log('v1 token ids'
+      );
+      console.log(maticIds);
+
       setDtxV1MaticIds(maticIds);
     }
-  }, [isMainnet, posClientParent, posClientChild, dtxEthBalance, dtxMaticBalance]);
+  }, [isMainnet, posClientParent, posClientChild, garmentMaticV1Balance]);
 
   usePollar(fetchDtxIds);
 
