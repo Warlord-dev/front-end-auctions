@@ -8,24 +8,26 @@ export const getEnabledNetworkByChainId = (chainId) =>
   getEnabledNetworks().find((network) => Number(network.hex) === Number(chainId));
 
 export const requestSwitchNetwork = () => {
-  window.ethereum.request({
-    method: 'wallet_addEthereumChain',
-    params: [
-      {
-        chainId: '0x89',
-        chainName: 'Matic Main Network',
-        rpcUrls: ['https://rpc-mainnet.maticvigil.com'],
-        blockExplorerUrls: ['https://explorer-mainnet.maticvigil.com']
-      }
-    ]
-  }).then((res) => {
-    console.log(res);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-}
-  
+  window.ethereum
+    .request({
+      method: 'wallet_addEthereumChain',
+      params: [
+        {
+          chainId: '0x89',
+          chainName: 'Matic Main Network',
+          rpcUrls: ['https://matic-mainnet.chainstacklabs.com'],
+          blockExplorerUrls: ['https://explorer-mainnet.maticvigil.com'],
+        },
+      ],
+    })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
 export const getAPIUrlByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
