@@ -344,7 +344,7 @@ export default function Bridge() {
 
   return (
     <>
-      {!nfts || loading ? <Loader size="large" className={styles.loader} /> : null}
+      {loading ? <Loader size="large" className={styles.loader} /> : null}
       <div className={styles.bridge}>
         <div className={styles.bridgeTitle}>MATIC-ETH BRIDGE</div>
         <div className={styles.container}>
@@ -426,9 +426,8 @@ export default function Bridge() {
             <UpgradeNFTModal
               onClose={() => {
                 setShowUpgradeNFTModal(false);
-                setLoading(false);
               }}
-              onClick={(value) => setLoading(value)}
+              onLoading={(value) => setLoading(value)}
             />
           )}
         </div>
