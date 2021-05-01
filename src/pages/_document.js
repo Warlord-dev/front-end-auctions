@@ -116,6 +116,16 @@ class MyDocument extends Document {
               src: url("./fonts/Gilroy-ExtraBold.otf");
               font-weight: 900;
             }
+            @font-face {
+              font-family: "Armata-Regular";
+              src: url("./fonts/Armata-Regular.ttf");
+              font-weight: 400;
+            }
+            @font-face {
+              font-family: "Animosa";
+              src: url("./fonts/Animosa-Regular.otf");
+              font-weight: 400;
+            }
           `,
             }}
           />

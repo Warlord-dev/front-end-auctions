@@ -1,6 +1,24 @@
 @import "../../assets/scss/helpers/grid.scss";
 @import "../../assets/scss/helpers/variables.scss";
 
+.textContent{
+  padding-top: 99px;
+  padding-bottom: 99px;
+}
+
+.dropdownContainer{
+  max-width: 1320px;
+  width: 100%;
+  margin: auto;
+  @media screen and (max-width: 1400px){
+    width: 90%;
+  }
+  @media screen and (max-width: 1200px){
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .dropdown {
   @include wrapper();
   display: flex;
@@ -113,3 +131,4 @@
   margin-left: auto;
   margin-right: auto;
 }
+

@@ -21,6 +21,7 @@ import { useAPY } from '@hooks/apy.hooks';
 import wsApi from '@services/api/ws.service';
 import { useSubscription } from '@hooks/subscription.hooks';
 import GeneralInformation from '@containers/page-products-list/general-information';
+import TextContent from '@containers/page-products-list/text-content';
 import AuctionProduct from '@components/auction-product';
 import Loader from '@components/loader';
 import 'semantic-ui-css/components/dropdown.css';
@@ -310,23 +311,29 @@ const PageAuctionList = () => {
 
   return (
     <>
-      <GeneralInformation
+      {/* <GeneralInformation
         title="All Bids"
         list={list}
         timestamp={minTimestampAutcionTime}
         history={monthResultedAuctions}
-      />
-
-      <div className={styles.dropdown}>
-        <span className={styles.caption}>Sort by</span>
-        <Dropdown
-          onChange={(event, data) => onHandleDropdownChange(data.value)}
-          placeholder="Sort by"
-          options={dropdownOptions}
-          selection
-          value={dropdownActiveItem}
-        />
+      /> */}
+      <div className={styles.textContent}>
+        <TextContent/>
       </div>
+      
+      <div className={styles.dropdownContainer}>
+        <div className={styles.dropdown}>
+          <span className={styles.caption}>Sort by</span>
+          <Dropdown
+            onChange={(event, data) => onHandleDropdownChange(data.value)}
+            placeholder="Sort by"
+            options={dropdownOptions}
+            selection
+            value={dropdownActiveItem}
+          />
+        </div>
+      </div>
+      
       {sortedAuctions.length > 0 ? (
         <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
           {sortedAuctions.map((auction) => (
