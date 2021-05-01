@@ -129,7 +129,7 @@ export default function Bridge() {
           .catch((err) => {
             setLoading(false);
             setModalTitle('Error!');
-            setModalBody(`Send NFT To Root Failed - ${err}`);
+            setModalBody(`Send NFT To Root Failed - ${err.message ? err.message : err}`);
             setShowTxConfirmModal(true);
             console.log('Send NFT To Root Failed - ', err);
           });
@@ -183,7 +183,7 @@ export default function Bridge() {
           .catch((e) => {
             setLoading(false);
             setModalTitle('Error!');
-            setModalBody(`${e}`);
+            setModalBody(`${e.message ? e.message : e}`);
             setShowTxConfirmModal(true);
           });
       })
@@ -422,7 +422,15 @@ export default function Bridge() {
               <p>{modalBody}</p>
             </Modal>
           )}
-          {showUpgradeNFTModal && <UpgradeNFTModal onClose={() => setShowUpgradeNFTModal(false)} />}
+          {showUpgradeNFTModal && (
+            <UpgradeNFTModal
+              onClose={() => {
+                setShowUpgradeNFTModal(false);
+                setLoading(false);
+              }}
+              onClick={(value) => setLoading(value)}
+            />
+          )}
         </div>
       </div>
     </>

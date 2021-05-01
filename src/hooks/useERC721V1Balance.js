@@ -19,19 +19,22 @@ export function useDTXV1Balance() {
 
   const fetchMonaBalance = useCallback(async () => {
     if (account && posClientParent && posClientChild) {
-      console.log('checking v1 balance'
-      );
+      console.log('checking v1 balance');
       console.log(config.DTXV1_ADDRESSES[isMainnet ? 'matic' : 'mumbai']);
-      const maticBalance = await posClientChild.balanceOfERC721(
-        account,
-        config.DTXV1_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
-        {
-          parent: false,
-        }
-      );
-      console.log('v1 matic balance');
-      console.log(maticBalance);
-      setGarmentMaticV1Balance(maticBalance);
+      try {
+        const maticBalance = await posClientChild.balanceOfERC721(
+          account,
+          config.DTXV1_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
+          {
+            parent: false,
+          },
+        );
+        console.log('v1 matic balance');
+        console.log(maticBalance);
+        setGarmentMaticV1Balance(maticBalance);
+      } catch (e) {
+        console.log(e);
+      }
     }
   }, [isMainnet, posClientParent, posClientChild]);
 
