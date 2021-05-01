@@ -63,13 +63,13 @@ export default function Bridge() {
   const [loading, setLoading] = useState(false);
   // const [exitMgr] = useMaticExitManager();
 
-  const [ethNfts, maticNfts] = useEthMaticNFTs(erc721TabIndex);
+  const [ethNfts, maticNfts] = useEthMaticNFTs();
 
   const { approved, approveCallback } = useERC721ApproveForMatic();
   const depositCallback = useERC721DepositToMatic();
   const withdrawCallback = useERC721WithdrawFromMatic();
   const [_, maticDtxTokenIds] = useDTXTokenIds();
- // const [_, maticDtxTokenIds] = useDTXTokenIds();
+  // const [_, maticDtxTokenIds] = useDTXTokenIds();
   const [dtxV1MaticIds] = useDTXV1TokenIds();
 
   const handleDepositNFT = async () => {
@@ -191,16 +191,8 @@ export default function Bridge() {
   };
 
   useEffect(() => {
-    if (erc721TabIndex === 2) {
-      if (chainId !== '0x13881' /* '0x89' */) {
-        window.alert('Please switch to Matic Network');
-      }
-    }
-  }, [erc721TabIndex]);
-
-  useEffect(() => {
     if (dtxV1MaticIds.length) setShowUpgradeNFTModal(true);
-  }, [dtxV1MaticIds]);
+  }, [dtxV1MaticIds.length]);
 
   if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
     return (

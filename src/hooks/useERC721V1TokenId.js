@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getAccount } from '@selectors/user.selectors';
@@ -18,31 +18,32 @@ export function useDTXV1TokenIds() {
   const [posClientParent, posClientChild] = useMaticPosClient();
 
   const [garmentMaticV1Balance] = useDTXV1Balance();
-    console.log('v1 balance is');
-    console.log(garmentMaticV1Balance);
   const fetchDtxIds = useCallback(async () => {
     if (account && posClientParent && posClientChild) {
-console.log('checking these v1 ids');
+      console.log('checking these v1 ids');
       const maticIds = await Promise.all(
         [...Array(parseInt(garmentMaticV1Balance)).keys()].map((i) =>
           posClientParent.tokenOfOwnerByIndexERC721(
             account,
             config.DTXV1_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
             i,
-            { parent: false }
-          )
-        )
+            { parent: false },
+          ),
+        ),
       );
 
-      console.log('v1 token ids'
-      );
+      console.log('v1 token ids');
       console.log(maticIds);
 
       setDtxV1MaticIds(maticIds);
     }
   }, [isMainnet, posClientParent, posClientChild, garmentMaticV1Balance]);
 
-  usePollar(fetchDtxIds);
+  useEffect(() => {
+    fetchDtxIds();
+  }, [garmentMaticV1Balance]);
+
+  // usePollar(fetchDtxIds);
 
   return [dtxV1MaticIds];
 }
