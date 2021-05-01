@@ -10,7 +10,7 @@ import usePollar from './usePollar';
 
 export function useDTXBalance() {
   const [garmentETHBalance, setGarmentETHBalance] = useState('0');
-  const [garmentMaticV1Balance, setGarmentMaticV1Balance] = useState('0');
+//  const [garmentMaticV1Balance, setGarmentMaticV1Balance] = useState('0');
 
   const account = useSelector(getAccount);
   const isMainnet = useIsMainnet();
@@ -30,21 +30,23 @@ export function useDTXBalance() {
     }
   }, [isMainnet, posClientChild]);
 
-  const fetchMonaMaticBalance = useCallback(async () => {
-    if (posClientParent) {
-      const maticBalance = await posClientParent.balanceOfERC20(
-        account,
-        config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
-        {
-          parent: false,
-        },
-      );
-      setGarmentMaticV1Balance((va) => maticBalance);
-    }
-  }, [isMainnet, posClientParent]);
+  //
+  // const fetchMonaMaticBalance = useCallback(async () => {
+  //   if (posClientParent) {
+  //     const maticBalance = await posClientParent.balanceOfERC20(
+  //       account,
+  //       config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
+  //       {
+  //         parent: false,
+  //       },
+  //     );
+  //     setGarmentMaticV1Balance((va) => maticBalance);
+  //   }
+  // }, [isMainnet, posClientParent]);
 
   usePollar(fetchMonaETHBalance);
-  usePollar(fetchMonaMaticBalance);
+  // usePollar(fetchMonaMaticBalance);
 
-  return [garmentETHBalance, garmentMaticV1Balance];
+  return [garmentETHBalance];
+ // return [garmentETHBalance, garmentMaticV1Balance];
 }

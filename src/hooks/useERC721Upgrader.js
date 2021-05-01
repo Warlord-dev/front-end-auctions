@@ -4,7 +4,11 @@ import { useSelector } from 'react-redux';
 import { getAccount } from '@selectors/user.selectors';
 import { getChainId } from '@selectors/global.selectors';
 import { useIsMainnet } from './useIsMainnet';
-import {getUpgraderMaticContract, getDTXMaticContract, getDTXMaticV1Contract} from '@services/contract.service';
+import {
+  getUpgraderMaticContract,
+  getDTXMaticContract,
+  getDTXMaticV1Contract,
+} from '@services/contract.service';
 
 export default function useERC721Upgrader() {
   const account = useSelector(getAccount);
@@ -21,7 +25,7 @@ export default function useERC721Upgrader() {
           await maticDtxContract.methods
             .setApprovalForAll(upgraderContract._address, true)
             .send({ from: account });
-          await upgraderContract.methods.upgrade(tokenIds).send({ from: account });
+          const res = await upgraderContract.methods.upgrade(tokenIds).send({ from: account });
         } catch (e) {
           console.log(e);
           // reject(e);
@@ -29,7 +33,7 @@ export default function useERC721Upgrader() {
       }
       // });
     },
-    [account, isMainnet, chainId]
+    [account, isMainnet, chainId],
   );
 
   return upgradeCallback;
