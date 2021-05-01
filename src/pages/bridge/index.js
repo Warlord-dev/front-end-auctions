@@ -27,6 +27,7 @@ import useERC721DepositToMatic from '@hooks/useERC721DepositToMatic';
 import useERC721WithdrawFromMatic from '@hooks/useERC721WithdrawToEthereum';
 import useERC721ExitFromMatic from '@hooks/useERC721ExitFromMatic';
 import { useDTXTokenIds } from '@hooks/useERC721TokenId';
+import { useDTXV1TokenIds } from '@hooks/useERC721V1TokenId';
 import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot.hooks';
 import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
@@ -62,12 +63,14 @@ export default function Bridge() {
   const [loading, setLoading] = useState(false);
   // const [exitMgr] = useMaticExitManager();
 
-  const [ethNfts, maticNfts] = useEthMaticNFTs(erc721TabIndex);
+  const [ethNfts, maticNfts] = useEthMaticNFTs();
 
   const { approved, approveCallback } = useERC721ApproveForMatic();
   const depositCallback = useERC721DepositToMatic();
   const withdrawCallback = useERC721WithdrawFromMatic();
   const [_, maticDtxTokenIds] = useDTXTokenIds();
+  // const [_, maticDtxTokenIds] = useDTXTokenIds();
+  const [dtxV1MaticIds] = useDTXV1TokenIds();
 
   const handleDepositNFT = async () => {
     if (network.alias === (isMainnet ? 'mainnet' : 'goerli')) {
@@ -126,7 +129,7 @@ export default function Bridge() {
           .catch((err) => {
             setLoading(false);
             setModalTitle('Error!');
-            setModalBody(`Send NFT To Root Failed - ${err}`);
+            setModalBody(`Send NFT To Root Failed - ${err.message ? err.message : err}`);
             setShowTxConfirmModal(true);
             console.log('Send NFT To Root Failed - ', err);
           });
@@ -151,9 +154,10 @@ export default function Bridge() {
 
   const handleDigitalaxRootTunnelReceiveMessage = (hash) => {
     setLoading(true);
+    const network = isMainnet ? 'matic' : 'mumbai';
     axios
       .get(
-        `https://apis.matic.network/api/v1/mumbai/exit-payload/${hash}?eventSignature=0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036`,
+        `https://apis.matic.network/api/v1/${network}/exit-payload/${hash}/?eventSignature=0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036`,
       )
       .then((res) => {
         const { data } = res;
@@ -179,7 +183,7 @@ export default function Bridge() {
           .catch((e) => {
             setLoading(false);
             setModalTitle('Error!');
-            setModalBody(`${e}`);
+            setModalBody(`${e.message ? e.message : e}`);
             setShowTxConfirmModal(true);
           });
       })
@@ -187,16 +191,8 @@ export default function Bridge() {
   };
 
   useEffect(() => {
-    if (erc721TabIndex === 2) {
-      if (chainId !== '0x13881' /* '0x89' */) {
-        window.alert('Please switch to Matic Network');
-      }
-    }
-  }, [erc721TabIndex]);
-
-  useEffect(() => {
-    if (maticDtxTokenIds.length) setShowUpgradeNFTModal(true);
-  }, [maticDtxTokenIds]);
+    if (dtxV1MaticIds.length) setShowUpgradeNFTModal(true);
+  }, [dtxV1MaticIds.length]);
 
   if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
     return (
@@ -426,7 +422,15 @@ export default function Bridge() {
               <p>{modalBody}</p>
             </Modal>
           )}
-          {showUpgradeNFTModal && <UpgradeNFTModal onClose={() => setShowUpgradeNFTModal(false)} />}
+          {showUpgradeNFTModal && (
+            <UpgradeNFTModal
+              onClose={() => {
+                setShowUpgradeNFTModal(false);
+                setLoading(false);
+              }}
+              onClick={(value) => setLoading(value)}
+            />
+          )}
         </div>
       </div>
     </>
