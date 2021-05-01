@@ -10,9 +10,9 @@ const TextContent = () => {
         MOD YOUR WAY INTO METAVERSE FASHION & GAMING{' '}
       </h1>
       <div className={styles.subtitleBar}>
-        <h3 className={styles.subtitle}>CROSS DIGI-FIZZY REALMS</h3>
-        <h3 className={styles.subtitle}>HYBRID FASHION NFTs </h3>
-        <h3 className={styles.subtitle}>UNLOCKABLE CONTENT</h3>
+        <h3 className={styles.subtitle}>SKINS IN THE GAME</h3>
+        <h3 className={styles.subtitle}>ESPA ESPORTS FOR $MONA</h3>
+        <h3 className={styles.subtitle}>MATIC LAYER 2 SUSTAINABILITY</h3>
       </div>
     </div>
   )
