@@ -13,12 +13,16 @@ import accountActions from '@actions/user.actions';
 
 import Logo from './logo';
 import styles from './styles.module.scss';
+import { getEnabledNetworkByChainId, requestSwitchNetwork } from '@services/network.service';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const dispatch = useDispatch();
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
   const [hamburger, setHamburger] = useState(false);
+  const network = useMemo(() => {
+    return getEnabledNetworkByChainId(chainId);
+  }, [chainId]);
 
   const router = useRouter();
   const pathname = router.pathname;
@@ -35,6 +39,11 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
+  }
+
+  const switchNetwork = async () => {
+    const res = await requestSwitchNetwork();
+    return res;
   }
 
   const handleClick = () => dispatch(openConnectMetamaskModal());
@@ -110,6 +119,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           <Link href="/swap">
             <a className={styles.link}>Token Swap</a>
           </Link>
+          {network.alias !== 'matic' ? (
+            <Button onClick={() => switchNetwork()}>Switch Network</Button>
+          ) : null}
           {user ? (
             <div className={styles.buttonWrapper}>
               <SmallPhotoWithText
