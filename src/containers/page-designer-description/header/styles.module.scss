@@ -2,6 +2,9 @@
   display: flex;
   margin-top: 68px;
   margin-bottom: 80px;
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+  }
 }
 
 .photo {
@@ -12,12 +15,15 @@
   flex-shrink: 0;
   margin-right: 155px;
   border-radius: 256px;
+  @media screen and (max-width: 1200px) {
+    margin-right: 50px;
+  }
 }
 
 .title {
   font-weight: 800;
   margin-bottom: 26px;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 52px;
   max-width: 600px;
   white-space: nowrap;
@@ -28,6 +34,15 @@
 .titleWrapper {
   display: flex;
   align-items: flex-start;
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    .title {
+      margin-bottom: 0px;
+    }
+    .countryWrapper {
+      margin-left: 0px;
+    }
+  }
 }
 
 .descriptionWrapper {
@@ -36,7 +51,7 @@
 }
 
 .descriptionItem {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   font-weight: 400;
 
@@ -63,7 +78,7 @@
 }
 
 .designerCountry {
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 15px;
   letter-spacing: 0.12em;
   text-transform: uppercase;

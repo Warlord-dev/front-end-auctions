@@ -3,13 +3,17 @@
 
 .title {
   font-weight: 900;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 48px;
   margin-bottom: 30px;
 }
 
 .fullWidth {
-  width: 100%;
+  flex: 1;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+    padding-top: 30px;
+  }
 }
 
 .smallPhotoWithText {
@@ -17,14 +21,14 @@
 }
 
 .description {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 22px;
   font-weight: 400;
   margin-bottom: 119px;
 }
 
 .youReceiveText {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 17px;
   font-weight: 900;
   margin-bottom: 6px;
@@ -32,7 +36,7 @@
 }
 
 .youReceive {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   font-weight: 400;
   margin-bottom: 35px;
@@ -49,12 +53,16 @@
   padding: 17px 25px 19px 25px;
   flex-grow: 1;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   color: $darkGray3;
   border: 1px solid #e6e6e6;
   min-height: 54px;
   text-transform: uppercase;
+  
+  @media only screen and (max-width: 640px) {
+    padding: 0;
+  }
 
   &.active {
     background-color: $lightGray1;
@@ -71,14 +79,14 @@
 }
 
 .priceMono {
-  font-size: 33px;
+  font-size: 2.0625rem;
   line-height: 44px;
   font-weight: 900;
   margin-right: 10px;
 }
 
 .countInfo {
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 33px;
   color: $darkGray3;
 }
@@ -87,7 +95,7 @@
   padding: 12px 0 10px 0;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 11px;
   width: 265px;
   margin-bottom: 30px;
@@ -99,13 +107,13 @@
 }
 
 .buttonText {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 20px;
 }
 
 .buttonGray {
   color: $darkGray3;
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 11px;
 }
 
@@ -122,18 +130,18 @@
   border: 1px solid #E6E6E6;
   background: transparent;
   color: black;
-  font-size: 17px;
+  font-size: 1.0625rem;
   margin-bottom: 31px;
   order: 3;
 
   .playESPA {
-    font-size: 9px;
+    font-size: 0.5625rem;
     color: #ae34e8;
   }
 }
 
 .expirationDateText {
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 11px;
   color: $darkGray1;
   text-transform: uppercase;

@@ -34,77 +34,32 @@
 }
 
 .bridge {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 100%;
 }
 
 .bridgeWrapper {
-  width: 648px;
-  height: 417px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: #f7f7f7;
+  width: 650px;
+  padding: 30px 150px 50px;
   text-align: center;
-  padding-top: 3rem;
-  position: relative;
 
-  @media (max-width: 768pax) and (min-width: 568px) {
-    width: 400px!important;
-  }
-
-  @media (max-width: 568px) {
-    width: 100% !important;
-  }
-
-  > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .tabTitle {
-    font-weight: 600;
-    font-size: 11px;
-    color: #999999;
-  }
-  .underline {
-    width: 478px;
-    height: 1px;
-    background: #e6e6e6;
-    margin-top: 11px;
-    margin-bottom: 48px;
-  }
-  .flexRow {
-    display: flex;
-    flex-direction: row;
-    .actionButton721 {
-      height: 36px;
-      font-size: 10px;
-      &:first-child {
-        margin-right: 40px;
-      }
-    }
-  }
-  .bridgeTable {
-    .header {
-      display: flex;
-      justify-content: space-between;
-      padding-right: 15px;
-      width: 478px;
-      color: #999999;
-      font-size: 11px;
-      span:first-child {
-        margin-right: 90px;
-      }
-    }
+  @media (max-width:540px) {
+    width: 350px;
+    margin-top: 100px;
+    padding: 20px 50px 30px;
   }
 }
 
 .bridgeTitle {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 29px;
   margin-bottom: 20px;
 }
@@ -112,7 +67,7 @@
 .helperText {
   font-style: normal;
   font-weight: 900;
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -122,7 +77,7 @@
 .amount {
   font-style: normal;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 39px;
   text-align: center;
 }
@@ -147,7 +102,8 @@
 
 .actionText {
   font-weight: bold;
-  font-size: 9px;
+  font-size: 0.75rem;
+  line-height: 15px;
   text-align: center;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -158,7 +114,7 @@
 
 .orText {
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 24px;
   text-transform: uppercase;
   color: #999999;
@@ -175,8 +131,14 @@
 }
 
 .withdrawalWrapper {
+  background: #f7f7f7;
+  width: 650px;
   padding: 30px 20px;
   text-align: center;
+  @media (max-width:540px) {
+    width: 350px;
+    margin-bottom: 110px;
+  }
 }
 
 .withdrawalRow {
@@ -211,7 +173,8 @@
 
 .withdrawText {
   font-weight: bold;
-  font-size: 9px;
+  font-size: 0.625rem;
+  line-height: 15px;
   text-align: center;
   letter-spacing: 0.12em;
   text-transform: uppercase;

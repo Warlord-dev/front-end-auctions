@@ -9,7 +9,7 @@
 
 .clothesName {
   @include active();
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 24px;
   margin-bottom: 15px;
   font-weight: 900;
@@ -25,7 +25,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 15px;
-  width: 618px;
+  max-width: 618px;
   // height: 605px;
 }
 
@@ -112,7 +112,7 @@
   text-align: left;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: white;
   left: 0;
   top: 11px;

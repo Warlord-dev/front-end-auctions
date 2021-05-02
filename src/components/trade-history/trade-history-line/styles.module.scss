@@ -9,15 +9,23 @@
   &:last-child {
     border-bottom: 0;
   }
+
+  @media only screen and (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    >div {
+      padding-bottom: 5px;
+    }
+  }
 }
 
 .priceEth {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
   font-weight: bold;
   margin-right: 4px;
 }
 
 .priceUsd {
-  font-size: 16px;
+  font-size: 1rem;
 }
