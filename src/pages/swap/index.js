@@ -46,77 +46,79 @@ export default function Swap() {
   const { approved, approveCallback } = useERC20Approve(toMona ? usdtValue : monaValue, !toMona);
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.swapTitle}>USDT &lt;&gt; $MONA</div>
-      <div className={styles.swapText}>
-        IF YOU HAVE AN ARKANE WALLET SWAP YOUR USDT TO $MONA HERE. if you are using metamask you can
-        also go directly to quickswap to swap for $mona against other tokens on matic.
-      </div>
-      <div className={styles.inputContainer}>
-        {toMona ? (
-          <div>
-            <div className={styles.balance}>Balance: {parseFloat(usdtBalance).toFixed(6)}</div>
-            <CurrencyInput
-              placeHolder={<img src="images/usdtLogo.svg" />}
-              max={usdtBalance}
-              value={usdtValue}
-              setValue={changeUSDTValue}
-            />
-          </div>
-        ) : (
-          <div>
-            <div className={styles.balance}>Balance: {parseFloat(monaBalance).toFixed(6)}</div>
-            <CurrencyInput
-              placeHolder={<img src="images/xLogo.svg" />}
-              value={monaValue}
-              setValue={changeMonaValue}
-              max={monaBalance}
-            />
-          </div>
-        )}
-        <button className={styles.exchangeButton} onClick={() => setToMona(!toMona)}>
-          <img src="images/swap.svg" className={styles.swapIcon} />
-        </button>
-        {!toMona ? (
-          <div>
-            <div className={styles.balance}>Balance: {parseFloat(usdtBalance).toFixed(6)}</div>
-            <CurrencyInput
-              placeHolder={<img src="images/usdtLogo.svg" />}
-              max={usdtBalance}
-              value={usdtValue}
-              setValue={changeUSDTValue}
-            />
-          </div>
-        ) : (
-          <div>
-            <div className={styles.balance}>Balance: {parseFloat(monaBalance).toFixed(6)}</div>
-            <CurrencyInput
-              placeHolder={<img src="images/xLogo.svg" />}
-              value={monaValue}
-              setValue={changeMonaValue}
-              max={monaBalance}
-            />
-          </div>
-        )}
-      </div>
-      <div>
-        <button
-          className={styles.actionButton}
-          onClick={() => {
-            if (approved) {
-              swapCallback(
-                toMona ? usdtValue : monaValue,
-                toMona ? monaValue : usdtValue,
-                toMona,
-                firstBased
-              );
-            } else {
-              approveCallback();
-            }
-          }}
-        >
-          <div className={styles.actionText}>{approved ? 'SWAP' : 'APPROVE'}</div>
-        </button>
+    <div className={styles.swapContainer}>    
+      <div className={styles.wrapper}>
+        <div className={styles.swapTitle}>USDT &lt;&gt; $MONA</div>
+        <div className={styles.swapText}>
+          IF YOU HAVE AN ARKANE WALLET SWAP YOUR USDT TO $MONA HERE. if you are using metamask you can
+          also go directly to quickswap to swap for $mona against other tokens on matic.
+        </div>
+        <div className={styles.inputContainer}>
+          {toMona ? (
+            <div>
+              <div className={styles.balance}>Balance: {parseFloat(usdtBalance).toFixed(6)}</div>
+              <CurrencyInput
+                placeHolder={<img src="images/usdtLogo.svg" />}
+                max={usdtBalance}
+                value={usdtValue}
+                setValue={changeUSDTValue}
+              />
+            </div>
+          ) : (
+            <div>
+              <div className={styles.balance}>Balance: {parseFloat(monaBalance).toFixed(6)}</div>
+              <CurrencyInput
+                placeHolder={<img src="images/xLogo.svg" />}
+                value={monaValue}
+                setValue={changeMonaValue}
+                max={monaBalance}
+              />
+            </div>
+          )}
+          <button className={styles.exchangeButton} onClick={() => setToMona(!toMona)}>
+            <img src="images/swap.svg" className={styles.swapIcon} />
+          </button>
+          {!toMona ? (
+            <div>
+              <div className={styles.balance}>Balance: {parseFloat(usdtBalance).toFixed(6)}</div>
+              <CurrencyInput
+                placeHolder={<img src="images/usdtLogo.svg" />}
+                max={usdtBalance}
+                value={usdtValue}
+                setValue={changeUSDTValue}
+              />
+            </div>
+          ) : (
+            <div>
+              <div className={styles.balance}>Balance: {parseFloat(monaBalance).toFixed(6)}</div>
+              <CurrencyInput
+                placeHolder={<img src="images/xLogo.svg" />}
+                value={monaValue}
+                setValue={changeMonaValue}
+                max={monaBalance}
+              />
+            </div>
+          )}
+        </div>
+        <div>
+          <button
+            className={styles.actionButton}
+            onClick={() => {
+              if (approved) {
+                swapCallback(
+                  toMona ? usdtValue : monaValue,
+                  toMona ? monaValue : usdtValue,
+                  toMona,
+                  firstBased
+                );
+              } else {
+                approveCallback();
+              }
+            }}
+          >
+            <div className={styles.actionText}>{approved ? 'SWAP' : 'APPROVE'}</div>
+          </button>
+        </div>
       </div>
     </div>
   );

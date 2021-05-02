@@ -11,7 +11,11 @@ import { getAccount } from '@selectors/user.selectors';
 import { getAuctionById } from '@selectors/auction.selectors';
 import Button from '@components/buttons/button';
 import Timer from '@components/timer';
-import { openBuynowModal, openConnectMetamaskModal } from '@actions/modals.actions';
+import {
+  openBuynowModal,
+  openConnectMetamaskModal,
+  openConnectMaticModal,
+} from '@actions/modals.actions';
 import { getExchangeRateETH, getMonaPerEth, getChainId } from '@selectors/global.selectors';
 import { COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 import AuctionInformation from './auction-information';
@@ -79,6 +83,10 @@ const RightBox = ({
   };
 
   const handleClickBuy = () => {
+    if (!isMatic) {
+      dispatch(openConnectMaticModal());
+      return;
+    }
     if (account) {
       dispatch(
         openBuynowModal({
@@ -141,9 +149,7 @@ const RightBox = ({
               onClick={() => handleClickBuy()}
               className={styles.button}
               background="black"
-              isDisabled={
-                currentCounts[activeTab].sold === currentCounts[activeTab].total || !isMatic
-              }
+              isDisabled={currentCounts[activeTab].sold === currentCounts[activeTab].total}
             >
               <span className={styles.buttonText}>
                 {currentCounts[activeTab].sold === currentCounts[activeTab].total

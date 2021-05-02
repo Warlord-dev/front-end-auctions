@@ -19,6 +19,10 @@
       fill: #eee!important;
     }
   }
+
+  @media only screen and (max-width: 640px) {
+    padding: 0;
+  }
 }
 
 .chart {

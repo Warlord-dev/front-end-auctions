@@ -15,6 +15,7 @@ import {
   openWithdrawModal,
   openPlaceBidModal,
   openConnectMetamaskModal,
+  openConnectMaticModal,
 } from '@actions/modals.actions';
 import historyActions from '@actions/history.actions';
 import {
@@ -195,6 +196,10 @@ const ImportantProductInformation = ({
   }
 
   const handleClickPlaceBid = () => {
+    if (!isMatic) {
+      dispatch(openConnectMaticModal());
+      return;
+    }
     if (account) {
       dispatch(openPlaceBidModal({ id: clothesId, priceEth }));
     } else {
@@ -203,6 +208,10 @@ const ImportantProductInformation = ({
   };
 
   const handleClickRaiseBid = () => {
+    if (!isMatic) {
+      dispatch(openConnectMaticModal());
+      return;
+    }
     dispatch(
       openRaiseModal({
         id: clothesId,
@@ -213,6 +222,10 @@ const ImportantProductInformation = ({
   };
 
   const handleClickWithdrawBid = () => {
+    if (!isMatic) {
+      dispatch(openConnectMaticModal());
+      return;
+    }
     dispatch(
       openWithdrawModal({
         id: clothesId,
@@ -276,7 +289,6 @@ const ImportantProductInformation = ({
               <>
                 {isMakeBid && priceEth > 0 ? (
                   <Button
-                    isDisabled={!isMatic}
                     onClick={() => handleClickRaiseBid()}
                     className={styles.button}
                     background="black"
@@ -290,7 +302,6 @@ const ImportantProductInformation = ({
                   </Button>
                 ) : (
                   <Button
-                    isDisabled={!isMatic}
                     onClick={() => handleClickPlaceBid()}
                     className={styles.button}
                     background="black"
@@ -305,7 +316,7 @@ const ImportantProductInformation = ({
                 )}
                 {canShowWithdrawBtn && (
                   <div className={styles.wrapperButtonWithdraw}>
-                    <TextButton isDisabled={!isMatic} onClick={() => handleClickWithdrawBid()}>
+                    <TextButton onClick={() => handleClickWithdrawBid()}>
                       {buttonTextWithdraw}
                     </TextButton>
                   </div>

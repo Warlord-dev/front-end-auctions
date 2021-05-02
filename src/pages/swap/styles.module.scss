@@ -1,3 +1,11 @@
+.swapContainer{
+  position: relative;
+  height: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  min-height: 500px;
+}
+
 .wrapper {
   position: absolute;
   background: #f7f7f7;
@@ -7,18 +15,22 @@
   transform: translate3d(-50%, -50%, 0);
   padding: 30px 70px 80px;
   text-align: center;
+
+  @media (max-width: 540px){
+    width: 350px;
+  }
 }
 
 .swapTitle {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 29px;
   margin-bottom: 45px;
 }
 
 .swapText {
   font-weight: 900;
-  font-size: 9px;
+  font-size: 0.5625rem;
   line-height: 11px;
   text-align: center;
   letter-spacing: 0.12em;
@@ -31,6 +43,10 @@
   align-items: center;
   justify-content: space-around;
   margin-top: 60px;
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
 }
 
 .swapIcon {
@@ -58,7 +74,7 @@
 
 .actionText {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 15px;
   text-align: center;
   letter-spacing: 0.12em;

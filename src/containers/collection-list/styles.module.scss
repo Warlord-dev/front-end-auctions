@@ -1,6 +1,11 @@
 @import "../../assets/scss/helpers/grid.scss";
 @import "../../assets/scss/helpers/variables.scss";
 
+.textContent{
+  padding-top: 99px;
+  padding-bottom: 99px;
+}
+
 .dropdown {
   @include wrapper();
   display: flex;
@@ -16,7 +21,7 @@
       min-width: 164px;
 
       .divider.text {
-        font-size: 14px;
+        font-size: 0.875rem;
         color: $black;
       }
 
@@ -64,7 +69,7 @@
 
 .caption {
   margin-right: 16px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 15px;
   font-weight: 700;
   color: $darkGray3;
@@ -74,7 +79,16 @@
 .list {
   @include wrapper();
   display: grid;
-  grid-template-columns: 618px 618px;
+  grid-template-columns: 1fr 1fr;
+  @media screen and (min-width: 1320px) {
+    max-width: 1320px;
+    min-width: 1320px;
+    padding: 0;
+  }
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
   row-gap: 68px;
   column-gap: 84px;
   margin-bottom: 100px;
@@ -94,7 +108,7 @@
   text-align: center;
   margin-top: 60px;
   margin-bottom: 60px;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-decoration: underline;
   width: fit-content;
   margin-left: auto;
