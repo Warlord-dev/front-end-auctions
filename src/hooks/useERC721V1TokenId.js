@@ -16,7 +16,6 @@ export function useDTXV1TokenIds() {
   const isMainnet = useIsMainnet();
 
   const [posClientParent, posClientChild] = useMaticPosClient();
-
   const [garmentMaticV1Balance] = useDTXV1Balance();
   const fetchDtxIds = useCallback(async () => {
     if (account && posClientParent && posClientChild) {
@@ -42,8 +41,6 @@ export function useDTXV1TokenIds() {
   useEffect(() => {
     fetchDtxIds();
   }, [garmentMaticV1Balance]);
-
-  // usePollar(fetchDtxIds);
 
   return [dtxV1MaticIds];
 }

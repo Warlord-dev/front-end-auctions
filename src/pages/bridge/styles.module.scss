@@ -31,6 +31,26 @@
       background: #e4e4e4;
     }
   }
+
+  .header {
+    position: relative;
+
+    .tooltip {
+      position: absolute;
+      display: none;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 5px;
+      border-radius: 6px;
+      top: 2rem;
+    }
+
+    &:hover .tooltip{
+      display: block!important;
+    }
+  }
+
 }
 
 .bridge {

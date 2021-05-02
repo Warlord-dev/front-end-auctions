@@ -35,6 +35,7 @@ import UpgradeNFTModal from './UpgradeNFTModal';
 import useDigitalaxRootTunnelReceiveMessage from '@hooks/useDigitalaxRootTunnelReceiveMessage';
 import { getEnabledNetworkByChainId } from '@services/network.service';
 import { useIsMainnet } from '@hooks/useIsMainnet';
+import { useDTXV1Balance } from '@hooks/useERC721V1Balance';
 
 export default function Bridge() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -50,7 +51,7 @@ export default function Bridge() {
   const [monaEthBalance, monaMaticBalance] = useMonaBalance();
   const profile = useSelector(getUser);
   const withdrawalTxs = (profile?.withdrawalTxs || []).filter((p) => p.amount);
-  const headers = ['bridge $mona erc-20', 'bridge erc-721 nfts', 'bridge erc-1155 nfts'];
+  const headers = ['bridge $mona erc-20', 'bridge 721 or 998 nfts', 'bridge erc-1155 nfts'];
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
   const nfts = useNFTs(account);
@@ -70,7 +71,7 @@ export default function Bridge() {
   const withdrawCallback = useERC721WithdrawFromMatic();
   const [_, maticDtxTokenIds] = useDTXTokenIds();
   // const [_, maticDtxTokenIds] = useDTXTokenIds();
-  const [dtxV1MaticIds] = useDTXV1TokenIds();
+  const [garmentMaticV1Balance] = useDTXV1Balance();
 
   const handleDepositNFT = async () => {
     if (network.alias === (isMainnet ? 'mainnet' : 'goerli')) {
@@ -191,8 +192,10 @@ export default function Bridge() {
   };
 
   useEffect(() => {
-    if (dtxV1MaticIds.length) setShowUpgradeNFTModal(true);
-  }, [dtxV1MaticIds.length]);
+    if (parseInt(garmentMaticV1Balance) > 0) {
+      setShowUpgradeNFTModal(true);
+    }
+  }, [garmentMaticV1Balance]);
 
   if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
     return (
@@ -351,12 +354,15 @@ export default function Bridge() {
           <div className={styles.headers}>
             {headers.map((header, index) => (
               <div
-                className={index === tabIndex ? styles.active : ''}
+                className={`${index === tabIndex ? styles.active : ''} ${styles.header}`}
                 onClick={() => onClickTab(index)}
                 key={`${header}${index}`}
               >
                 {header}
                 {index === 2 && <span>Coming soon</span>}
+                {index === 1 && (
+                  <span className={styles.tooltip}>First Ever Multi-Token Bridge</span>
+                )}
               </div>
             ))}
           </div>
@@ -424,6 +430,7 @@ export default function Bridge() {
           )}
           {showUpgradeNFTModal && (
             <UpgradeNFTModal
+              garmentMaticV1Balance={garmentMaticV1Balance}
               onClose={() => {
                 setShowUpgradeNFTModal(false);
               }}

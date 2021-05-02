@@ -177,15 +177,11 @@
 
 .notification {
   position: fixed;
-  top: 90px;
+  top: 0px;
   text-align: center;
   width: 100%;
   left: 0;
   color: red;
-
-  @media screen and (max-width: 640px) {
-    top: 70px;
-  }
 }
 .monaBalance {
   position: absolute;
