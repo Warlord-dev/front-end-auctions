@@ -405,7 +405,7 @@ export default function Bridge() {
                           } else {
                             if (tx.amount < 100000) {
                               if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
-                                window.alert('Please switch to matic network!');
+                                window.alert('Please switch to mainnet network!');
                               } else {
                                 erc721ExitCallback(tx.txHash);
                               }
