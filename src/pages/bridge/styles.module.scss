@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   background: #f7f7f7;
-  overflow: hidden;
+  overflow: overlay;
 
   @media (max-width: 576px) {
     width: calc(100vw - 2rem);
@@ -45,15 +45,63 @@
 }
 
 .bridgeWrapper {
-  background: #f7f7f7;
-  width: 650px;
-  padding: 30px 150px 50px;
+  width: 648px;
+  height: 417px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding-top: 3rem;
+  position: relative;
 
-  @media (max-width:540px) {
-    width: 350px;
-    margin-top: 100px;
-    padding: 20px 50px 30px;
+  @media (max-width: 768pax) and (min-width: 568px) {
+    width: 400px!important;
+  }
+
+  @media (max-width: 568px) {
+    width: 100% !important;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tabTitle {
+    font-weight: 600;
+    font-size: 11px;
+    color: #999999;
+  }
+  .underline {
+    width: 478px;
+    height: 1px;
+    background: #e6e6e6;
+    margin-top: 11px;
+    margin-bottom: 48px;
+  }
+  .flexRow {
+    display: flex;
+    flex-direction: row;
+    .actionButton721 {
+      height: 36px;
+      font-size: 10px;
+      &:first-child {
+        margin-right: 40px;
+      }
+    }
+  }
+  .bridgeTable {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 15px;
+      width: 478px;
+      color: #999999;
+      font-size: 11px;
+      span:first-child {
+        margin-right: 90px;
+      }
+    }
   }
 }
 

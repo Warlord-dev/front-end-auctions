@@ -16,7 +16,6 @@ import { getEnabledNetworkByChainId, requestSwitchNetwork } from '@services/netw
 import Logo from './logo';
 import LandingHeader from './landing';
 import styles from './styles.module.scss';
-import { getEnabledNetworkByChainId, requestSwitchNetwork } from '@services/network.service';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   
@@ -73,11 +72,6 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
-  }
-
-  const switchNetwork = async () => {
-    const res = await requestSwitchNetwork();
-    return res;
   }
 
   const handleClick = () => dispatch(openConnectMetamaskModal());
