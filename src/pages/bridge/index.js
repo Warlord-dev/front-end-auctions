@@ -35,6 +35,7 @@ import UpgradeNFTModal from './UpgradeNFTModal';
 import useDigitalaxRootTunnelReceiveMessage from '@hooks/useDigitalaxRootTunnelReceiveMessage';
 import { getEnabledNetworkByChainId } from '@services/network.service';
 import { useIsMainnet } from '@hooks/useIsMainnet';
+import { useDTXV1Balance } from '@hooks/useERC721V1Balance';
 
 export default function Bridge() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -70,7 +71,7 @@ export default function Bridge() {
   const withdrawCallback = useERC721WithdrawFromMatic();
   const [_, maticDtxTokenIds] = useDTXTokenIds();
   // const [_, maticDtxTokenIds] = useDTXTokenIds();
-  const [dtxV1MaticIds] = useDTXV1TokenIds();
+  const [garmentMaticV1Balance] = useDTXV1Balance();
 
   const handleDepositNFT = async () => {
     if (network.alias === (isMainnet ? 'mainnet' : 'goerli')) {
@@ -191,12 +192,10 @@ export default function Bridge() {
   };
 
   useEffect(() => {
-    const upgradeShow = window.localStorage.getItem('v1_upgrade');
-    if (dtxV1MaticIds.length && upgradeShow) {
+    if (parseInt(garmentMaticV1Balance) > 0) {
       setShowUpgradeNFTModal(true);
-      window.localStorage.setItem('v1_upgrade', false);
     }
-  }, [dtxV1MaticIds.length]);
+  }, [garmentMaticV1Balance]);
 
   if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
     return (
@@ -431,6 +430,7 @@ export default function Bridge() {
           )}
           {showUpgradeNFTModal && (
             <UpgradeNFTModal
+              garmentMaticV1Balance={garmentMaticV1Balance}
               onClose={() => {
                 setShowUpgradeNFTModal(false);
               }}
