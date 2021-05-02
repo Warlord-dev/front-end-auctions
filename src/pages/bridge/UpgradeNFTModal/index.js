@@ -22,6 +22,7 @@ export default function UpgradeNFTModal({ onClose, onLoading }) {
     if (network.alias === (isMainnet ? 'matic' : 'mumbai')) {
       onLoading(true);
       await upgraderCallback(dtxV1MaticIds);
+      onLoading(false);
       onClose();
     } else {
       window.alert('Please change to Matic network!');

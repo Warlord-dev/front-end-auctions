@@ -50,7 +50,7 @@ export default function Bridge() {
   const [monaEthBalance, monaMaticBalance] = useMonaBalance();
   const profile = useSelector(getUser);
   const withdrawalTxs = (profile?.withdrawalTxs || []).filter((p) => p.amount);
-  const headers = ['bridge $mona erc-20', 'bridge erc-721 nfts', 'bridge erc-1155 nfts'];
+  const headers = ['bridge $mona erc-20', 'bridge 721 or 998 nfts', 'bridge erc-1155 nfts'];
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
   const nfts = useNFTs(account);
@@ -191,7 +191,11 @@ export default function Bridge() {
   };
 
   useEffect(() => {
-    if (dtxV1MaticIds.length) setShowUpgradeNFTModal(true);
+    const upgradeShow = window.localStorage.getItem('v1_upgrade');
+    if (dtxV1MaticIds.length && upgradeShow) {
+      setShowUpgradeNFTModal(true);
+      window.localStorage.setItem('v1_upgrade', false);
+    }
   }, [dtxV1MaticIds.length]);
 
   if (localStorage.getItem(STORAGE_WALLET) === WALLET_ARKANE) {
@@ -351,12 +355,15 @@ export default function Bridge() {
           <div className={styles.headers}>
             {headers.map((header, index) => (
               <div
-                className={index === tabIndex ? styles.active : ''}
+                className={`${index === tabIndex ? styles.active : ''} ${styles.header}`}
                 onClick={() => onClickTab(index)}
                 key={`${header}${index}`}
               >
                 {header}
                 {index === 2 && <span>Coming soon</span>}
+                {index === 1 && (
+                  <span className={styles.tooltip}>First Ever Multi-Token Bridge</span>
+                )}
               </div>
             ))}
           </div>
