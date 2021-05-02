@@ -142,7 +142,7 @@ export default function Bridge() {
         await withdrawCallback(nftIds[0])
           .then(() => {
             setLoading(false);
-            setModalTitle('In Motion to Etherium!  ');
+            setModalTitle('In Motion to Ethereum!  ');
             setModalBody(
               'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
             );
@@ -225,7 +225,7 @@ export default function Bridge() {
         <div>
           <Hint
             title="DEPOSITS"
-            hintText="IT TAKES UP TO 10 MINUTES FOR YOUR BALANCE TO BE REFLECTED ON MATIC, ONCE THE TRANSACTION IS CONFIRMED ON ETHERIUM."
+            hintText="IT TAKES UP TO 10 MINUTES FOR YOUR BALANCE TO BE REFLECTED ON MATIC, ONCE THE TRANSACTION IS CONFIRMED ON ETHEREUM."
           />
           <div className={`${styles.amount} ${styles.ethColor}`}>
             {parseFloat(monaEthBalance).toFixed(6)} $MONA
@@ -240,13 +240,13 @@ export default function Bridge() {
         <div>
           <Hint
             title="WITHDRAWALS"
-            hintText="WITHDRAWING TO ETHERIUM CAN TAKE A COUPLE OF HOURS (~2-3 HOURS). YOU MUST ALSO CLICK “CLAIM ON ETHERIUM” AFTER THE WITHDRAWAL IS COMPLETE."
+            hintText="WITHDRAWING TO ETHEREUM CAN TAKE A COUPLE OF HOURS (~2-3 HOURS). YOU MUST ALSO CLICK “CLAIM ON ETHEREUM” AFTER THE WITHDRAWAL IS COMPLETE."
           />
           <div className={`${styles.amount} ${styles.maticColor}`}>
             {parseFloat(monaMaticBalance).toFixed(6)} $MONA
           </div>
           <button className={styles.actionButton} onClick={() => Router.push('/bridge/withdraw')}>
-            <div className={styles.actionText}>WITHDRAW TO ETHERIUM</div>
+            <div className={styles.actionText}>WITHDRAW TO ETHEREUM</div>
           </button>
         </div>
       </div>
@@ -276,7 +276,7 @@ export default function Bridge() {
                 setERC721TabIndex(2);
               }}
             >
-              <span>WITHDRAW TO ETHERIUM</span>
+              <span>WITHDRAW TO ETHEREUM</span>
             </Button>
           </div>
         </div>
@@ -298,7 +298,7 @@ export default function Bridge() {
                   <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
                   <h4>Token ID is: {nft.id}</h4>
                 </div>
-                <span>{erc721TabIndex === 2 ? 'MATIC' : 'ETHERIUM'}</span>
+                <span>{erc721TabIndex === 2 ? 'MATIC' : 'ETHEREUM'}</span>
                 <div className={styles.nftCheckWrapper}>
                   <CheckBox checked={nftIds[0] === nft.id} onChange={() => onToggleChecked(nft)} />
                 </div>
@@ -325,7 +325,7 @@ export default function Bridge() {
               ? 'APPROVE'
               : erc721TabIndex === 1
               ? 'DEPOSIT TO MATIC'
-              : 'WITHDRAW TO ETHERIUM'}
+              : 'WITHDRAW TO ETHEREUM'}
           </span>
         </Button>
         <Button
