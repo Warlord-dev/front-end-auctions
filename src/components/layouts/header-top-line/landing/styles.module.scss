@@ -42,6 +42,8 @@ $fw-black: 900;
   padding: 15px;
   padding-left: 50px;
   z-index: 1;
+  position: fixed;
+  width: 100%;
 
   .branding {
     display: flex;

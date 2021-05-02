@@ -84,10 +84,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     dispatch(accountActions.logout());
   };
 
-  return isLandingPage ? (
-    <LandingHeader />
-  )
-  : (
+  return (
     <div className={cn(className, styles.wrapper, hasScrolled?styles.floatingNav:'')}>
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
@@ -138,24 +135,14 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
               {linkText}
             </a>
           )}*/}
-          <Link href="https://marketplace.digitalax.xyz">
-            <a className={styles.link} target="_blank">
-              REP YOUR STLE IRL 
-            </a>
-          </Link>
-          <Link href="https://marketplace.digitalax.xyz">
-            <a className={styles.link} target="_blank">
-              OG MARKETPLACE
-            </a>
-          </Link>
           <Link href="/global">
-            <a className={styles.link}>Global Designer Network</a>
+            <a className={styles.link}>All Issues</a>
           </Link>
           <Link href="/swap">
-            <a className={styles.link}>Token Swap</a>
+            <a className={styles.link}>Contact</a>
           </Link>
-          <Link href="/bridge">
-            <a className={styles.link}>Matic-Eth Bridge</a>
+          <Link href="/unlockable">
+            <a className={styles.link}>Unlockable nft drops</a>
           </Link>
           <div className={styles.signBtn}>
             {user ? (
