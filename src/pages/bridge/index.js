@@ -51,7 +51,11 @@ export default function Bridge() {
   const [monaEthBalance, monaMaticBalance] = useMonaBalance();
   const profile = useSelector(getUser);
   const withdrawalTxs = (profile?.withdrawalTxs || []).filter((p) => p.amount);
-  const headers = ['bridge $mona erc-20', 'bridge 721 or 998 nfts', 'bridge erc-1155 nfts'];
+  const headers = [
+    'bridge $mona erc-20',
+    'Bridge ERC-721 NFTs (ERC-998 Compatible)',
+    'bridge erc-1155 nfts',
+  ];
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
   const nfts = useNFTs(account);
@@ -242,7 +246,7 @@ export default function Bridge() {
             {parseFloat(monaMaticBalance).toFixed(6)} $MONA
           </div>
           <button className={styles.actionButton} onClick={() => Router.push('/bridge/withdraw')}>
-            <div className={styles.actionText}>WITHDRAW TO ETHERIUM</div>
+            <div className={styles.actionText}>WITHDRAW TO ETHEREUM</div>
           </button>
         </div>
       </div>
