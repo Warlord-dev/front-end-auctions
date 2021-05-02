@@ -20,12 +20,12 @@ const Designers = () => {
   const dispatch = useDispatch();
   const chainId = useSelector(getChainId);
   const currentDesigner = useSelector(getDesignerInfoByName(kebabCase(id)));
-  const designerGarmentIds = useSelector(getDesignerGarmentIds(currentDesigner.id));
+  const designerGarmentIds = useSelector(getDesignerGarmentIds());
   const ids = designerGarmentIds.toJS();
 
   useSubscription(
     {
-      request: wsApi.onDesignerByIds([currentDesigner.id.toLowerCase()]),
+      request: wsApi.onDesignerByIds(currentDesigner.ids),
       next: (data) => dispatch(designerPageActions.update(data.digitalaxGarmentDesigners)),
     },
     [chainId]

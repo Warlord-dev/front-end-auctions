@@ -1,0 +1,214 @@
+.footer {
+  background: black;
+  position: relative;
+
+  a {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+
+  .textHiring {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+
+    a {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 36px;
+      color: #FF5555;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .textHiring {
+      width: 100%;
+      bottom: 20px;
+      left: 0px;
+      text-align: center;
+
+      a {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+.footerWrapper {
+  color: white;
+  background: black;
+  max-width: 1300px;
+  margin: auto;
+  padding-top: 57px;
+  padding-bottom: 82px;
+
+  @media (max-width: 1440px) {
+      max-width: 90%;
+  }
+
+  .heading {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 37px;
+    line-height: 45px;
+  }
+
+  .description {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .centerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+
+    .dFlex {
+      display: flex;
+    }
+
+    .aboutLine {
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 24px;
+
+      a {
+        padding-left: 34px;
+        padding-right: 34px;
+      }
+    }
+
+    .iconsLine {
+      align-items: center;
+      img {
+        margin-right: 10px;
+      }
+      .mediumIcon {
+          margin-left: 10px;
+        }
+    }
+
+    .faqLine {
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 24px;
+      /* identical to box height */
+      text-decoration-line: underline;
+
+      :not(:last-child) {
+        margin-right: 30px;
+      }
+
+      @media (max-width: 600px) {
+        :not(:last-child) {
+          margin-right: 2vw;
+        }
+      }
+    }
+  }
+
+  .whiteLogo {
+    width: 40px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 1440px) {
+    .heading {
+      font-size: 37px;
+      line-height: 45px;
+    }
+  }
+  @media (max-width: 780px) {
+    .heading {
+      font-size: 35px;
+      line-height: 40px;
+      text-align: center;
+    }
+    .description {
+      font-size: 15px;
+      line-height: 19px;
+      text-align: center;
+    }
+    .centerWrapper {
+      .aboutLine {
+        font-size: 13px;
+        line-height: 15px;
+        a{
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+      .iconsLine {
+        img {
+          height: 25px;
+          margin-right: 10px;
+        }
+
+        .mediumIcon{
+          height: 25px;
+          margin-left: 5px;
+        }
+
+        .youtubeIcon{
+          height: 20px;
+        }
+      }
+      .faqLine {
+        padding-top: 20px;
+        font-size: 13px;
+        line-height: 15px;
+      }
+    }
+  }
+  @media (max-width: 420px) {
+    .heading {
+      font-size: 30px;
+      line-height: 40px;
+      text-align: center;
+    }
+    .description {
+      font-size: 12px;
+      line-height: 17px;
+      text-align: center;
+    }
+    .centerWrapper {
+      .aboutLine {
+        font-size: 10px;
+        line-height: 12px;
+        a {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+      .iconsLine {
+        img{
+          height: 25px;
+          margin-right: 5px;
+        }
+      }
+      .faqLine {
+        padding-top: 20px;
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
+}
+
+.linkedinIcon {
+  width: 35px;
+}

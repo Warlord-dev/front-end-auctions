@@ -12,6 +12,14 @@ const scriptTxt = `
 })();
 `;
 
+const gaScriptText =`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-194369113-2');
+`;
+
 class MyDocument extends Document {
   getPreloadFontsLinks() {
     const fontSizes = [400, 600, 700, 800, 900];
@@ -33,6 +41,8 @@ class MyDocument extends Document {
         <Head>
           <script src="/arkane-network/web3-arkane-provider.js"></script>
           <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194369113-2"></script>
+          <script dangerouslySetInnerHTML={{ __html: gaScriptText }} />
           {this.getPreloadFontsLinks()}
           {/* ipfs next.js fix */}
           <style
@@ -82,6 +92,41 @@ class MyDocument extends Document {
               font-weight: 900;
               font-style: normal;
             }
+
+            @font-face {
+              font-family: "Internal Rainbows";
+              src: url("./fonts/Internal Rainbows.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Gilroy";
+              src: url("./fonts/Gilroy-Light.otf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: "Gilroy";
+              src: url("./fonts/Gilroy-ExtraBold.otf");
+              font-weight: 700;
+            }
+            
+            @font-face {
+              font-family: "Gilroy";
+              src: url("./fonts/Gilroy-ExtraBold.otf");
+              font-weight: 900;
+            }
+            @font-face {
+              font-family: "Armata-Regular";
+              src: url("./fonts/Armata-Regular.ttf");
+              font-weight: 400;
+            }
+            @font-face {
+              font-family: "Animosa";
+              src: url("./fonts/Animosa-Regular.otf");
+              font-weight: 400;
+            }
+          
           `,
             }}
           />

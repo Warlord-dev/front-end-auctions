@@ -51,7 +51,7 @@
 }
 
 .textForImg {
-  font-size: 8px;
+  font-size: 0.5rem;
   font-weight: 700;
   max-width: 57px;
   white-space: nowrap;
@@ -61,7 +61,7 @@
 
 .name {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
   white-space: nowrap;
   overflow: hidden;
@@ -70,7 +70,7 @@
 }
 
 .address {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 17px;
   font-weight: 400;
   white-space: nowrap;
@@ -89,7 +89,7 @@
 }
 
 .price, .estimate {
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 15px;
   min-height: 35px;
   letter-spacing: 0.12em;

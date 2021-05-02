@@ -2,11 +2,38 @@
 
 html {
   box-sizing: border-box;
-  font-size: 14px;
   height: 100%;
 
   h1, h2, h3, h4, h5, body, button, input, optgroup, select, textarea {
     font-family: $primary-font;
+  }
+
+  @media only screen and (min-width: 0px) {
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 640px) {
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 750px) {
+    font-size: 13px;
+  }
+  @media only screen and (min-width: 768px) {
+    font-size: 13px;
+  }
+  @media only screen and (min-width: 980px) {
+    font-size: 14px;
+  }
+  @media only screen and (min-width: 1024px) {
+    font-size: 15px;
+  }
+  @media only screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+  @media only screen and (min-width: 1440px) {
+    font-size: 16px;
+  }
+  @media only screen and (min-width: 1920px) {
+    font-size: 16px;
   }
 
   body {
@@ -66,4 +93,16 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 1024px) {
+  .highcharts-container {
+    width: calc(100vw - 200px) !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .highcharts-container {
+    width: calc(100vw - 100px) !important;
+  }
 }

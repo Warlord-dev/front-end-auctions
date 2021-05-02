@@ -5,12 +5,22 @@
   @include wrapper();
   margin-bottom: 25px;
   margin-top: 68px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 20px;
+  @media screen and (min-width: 1320px) {
+    max-width: 1320px;
+    min-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
 }
 
 .title {
   margin-bottom: 20px;
   font-weight: 900;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 58px;
 }
 
@@ -19,6 +29,13 @@
   padding: 35px 22px 22px 50px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+    padding: 10px;
+    .leftSection {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .leftSection {
@@ -42,7 +59,7 @@
 }
 
 .chartBottomText {
-  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 24px;
   display: flex;
   justify-content: center;

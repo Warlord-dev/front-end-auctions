@@ -59,6 +59,7 @@ const MyApp = ({ Component, pageProps, store, err }) => {
     });
     return <Component {...pageProps} />;
   }
+
   return (
     <Provider store={store}>
       <Head>

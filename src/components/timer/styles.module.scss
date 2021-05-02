@@ -1,7 +1,7 @@
 @import '@assets/scss/helpers/variables.scss';
 
 .isDefault {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 29px;
   font-weight: 900;
 
@@ -13,7 +13,7 @@
 
 .isLarge {
   font-weight: 400;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 58px;
 
   .item {
@@ -32,7 +32,7 @@
 }
 
 .isSmall {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
   font-weight: bold;
 }
