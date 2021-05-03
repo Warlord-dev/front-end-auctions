@@ -226,11 +226,13 @@
 
 .withdrawalRowItem {
   width: 25%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .withdrawButton {
-  width: 168px;
+  width: 123px;
   height: 28px;
   background: #111111;
   border: 1px solid #000000;
