@@ -21,11 +21,11 @@ export default function useERC721WithdrawFromMatic() {
   const existingTxs = profile?.withdrawalTxs || [];
 
   const withdrawCallback = useCallback(
-    (tokenId) => {
+    (tokenIds) => {
       return new Promise((resolve, reject) => {
         if (posClient && account && chainId) {
           posClient
-            .burnERC721(config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'], tokenId, {
+            .burnBatchERC721(config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'], tokenIds, {
               from: account,
             })
             .then((res) => {
@@ -33,12 +33,12 @@ export default function useERC721WithdrawFromMatic() {
                 userActions.updateProfile({
                   withdrawalTxs: [
                     ...existingTxs,
-                    {
+                    ...tokenIds.map((tokenId) => ({
                       txHash: res.transactionHash,
                       amount: tokenId,
                       status: 'pending-721',
                       created: new Date(),
-                    },
+                    })),
                   ],
                 }),
               );
