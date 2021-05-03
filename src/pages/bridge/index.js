@@ -441,7 +441,6 @@ export default function Bridge() {
           )}
           {showUpgradeNFTModal && (
             <UpgradeNFTModal
-              garmentMaticV1Balance={garmentMaticV1Balance}
               onClose={() => {
                 setShowUpgradeNFTModal(false);
               }}
