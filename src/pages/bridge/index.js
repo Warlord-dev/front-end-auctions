@@ -80,12 +80,13 @@ export default function Bridge() {
   const handleDepositNFT = async () => {
     if (network.alias === (isMainnet ? 'mainnet' : 'goerli')) {
       setLoading(true);
-      await depositCallback(nftIds[0])
+      await depositCallback(nftIds)
         .then(() => {
           setLoading(false);
+          setNftIds([]);
           setModalTitle('Moving to Matic!');
           setModalBody(
-            'Your token is on its way to Matic Network! Please check back in 10-15 minutes.',
+            `Your ${nftIds.length} token(s) are on its way to Matic Network! Please check back in 10-15 minutes.`,
           );
           setShowTxConfirmModal(true);
         })
@@ -103,6 +104,7 @@ export default function Bridge() {
         await sendNTFsToRoot([nftIds[0]])
           .then((res) => {
             setLoading(false);
+            setNftIds([]);
             if (res.success) {
               setModalTitle('Congrats!');
               setModalBody(
@@ -300,7 +302,10 @@ export default function Bridge() {
                 </div>
                 <span>{erc721TabIndex === 2 ? 'MATIC' : 'ETHEREUM'}</span>
                 <div className={styles.nftCheckWrapper}>
-                  <CheckBox checked={nftIds[0] === nft.id} onChange={() => onToggleChecked(nft)} />
+                  <CheckBox
+                    checked={nftIds.filter((nftId) => nftId === nft.id).length}
+                    onChange={() => onToggleChecked(nft)}
+                  />
                 </div>
               </div>
             ))}
@@ -312,7 +317,7 @@ export default function Bridge() {
           isDisabled={!nftIds.length}
           onClick={() => {
             if (!approved) {
-              approveCallback(nftIds[0]);
+              approveCallback();
             } else if (erc721TabIndex === 1) {
               handleDepositNFT();
             } else {
@@ -343,7 +348,7 @@ export default function Bridge() {
     if (nftIds.includes(nft.id)) {
       setNftIds(nftIds.filter((id) => id !== nft.id));
     } else {
-      setNftIds([nft.id]);
+      setNftIds([...nftIds, nft.id]);
     }
   };
 

@@ -27,22 +27,19 @@ export default function useERC721ApproveForMatic(tokenId) {
     }
   }, [account, posClient, chainId, tokenId]);
 
-  const approveCallback = useCallback(
-    (tokenId) => {
-      if (posClient && account && chainId) {
-        const network = getEnabledNetworkByChainId(chainId);
-        posClient
-          .approveAllERC721ForDeposit(config.DTX_ADDRESSES[network.alias], {
-            from: account,
-          })
-          .then((res) => {
-            console.log('approve resp', res);
-            setApproved(true);
-          });
-      }
-    },
-    [posClient, account]
-  );
+  const approveCallback = useCallback(() => {
+    if (posClient && account && chainId) {
+      const network = getEnabledNetworkByChainId(chainId);
+      posClient
+        .approveAllERC721ForDeposit(config.DTX_ADDRESSES[network.alias], {
+          from: account,
+        })
+        .then((res) => {
+          console.log('approve resp', res);
+          setApproved(true);
+        });
+    }
+  }, [posClient, account]);
 
   return { approved, approveCallback };
 }
