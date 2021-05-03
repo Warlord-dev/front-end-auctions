@@ -353,7 +353,7 @@ export default function Bridge() {
     <>
       {loading ? <Loader size="large" className={styles.loader} /> : null}
       <div className={styles.bridge}>
-        <div className={styles.bridgeTitle}>MATIC-ETH BRIDGE</div>
+        <div className={styles.bridgeTitle}> MATIC-ETH BRIDGE </div>
         <div className={styles.container}>
           <div className={styles.headers}>
             {headers.map((header, index) => (
