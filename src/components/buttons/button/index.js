@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
-const Button = ({
-  className, background, onClick, children, isDisabled,
-}) => (
+const Button = ({ className, background, onClick, children, isDisabled }) => (
   <button
     className={cn(
       styles.button,

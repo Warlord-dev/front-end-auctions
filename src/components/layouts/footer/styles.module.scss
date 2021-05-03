@@ -14,11 +14,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media only screen and (max-width: 980px) {
+
+  @media (max-width: 576px) {
     flex-direction: column;
-  }
-  a {
-    height: 20px;
+
+    &>div {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  // @media only screen and (max-width: 980px) {
+  //   flex-direction: column;
+  // }
+  // a {
+  //   height: 20px;
   }
 }
 

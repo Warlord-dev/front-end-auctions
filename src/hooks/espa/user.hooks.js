@@ -32,7 +32,12 @@ export function useNFTs(account) {
       .then((data) => {
         let items = [];
         if (data.digitalaxCollectors.length) {
-          items = data.digitalaxCollectors[0].parentsOwned;
+          items = data.digitalaxCollectors[0].parentsOwned.map((item) => {
+            return {
+              ...item,
+              isEth: true,
+            };
+          });
         }
         for (let item of data.digitalaxGarments) {
           if (!items.find((el) => el.id === item.id)) {

@@ -1,8 +1,12 @@
 @import '../../assets/scss/helpers/grid.scss';
 
 .wrapper {
-  width: 100%;
-  @include wrapper();
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  // @include wrapper();
 }
 
 @keyframes spin {

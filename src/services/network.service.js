@@ -8,23 +8,25 @@ export const getEnabledNetworkByChainId = (chainId) =>
   getEnabledNetworks().find((network) => Number(network.hex) === Number(chainId));
 
 export const requestSwitchNetwork = () => {
-  window.ethereum.request({
-    method: 'wallet_addEthereumChain',
-    params: [
-      {
-        chainId: '0x89',
-        chainName: 'Matic Main Network',
-        rpcUrls: ['https://rpc-mainnet.maticvigil.com'],
-        blockExplorerUrls: ['https://explorer-mainnet.maticvigil.com']
-      }
-    ]
-  }).then((res) => {
-    console.log(res);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-}
+  window.ethereum
+    .request({
+      method: 'wallet_addEthereumChain',
+      params: [
+        {
+          chainId: '0x89',
+          chainName: 'Matic Main Network',
+          rpcUrls: ['https://matic-mainnet.chainstacklabs.com'],
+          blockExplorerUrls: ['https://explorer-mainnet.maticvigil.com'],
+        },
+      ],
+    })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
 
 export const getAPIUrlByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
@@ -77,6 +79,36 @@ export const getUSDTAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
   return config.USDT_ADDRESS[network.alias];
+};
+
+export const getDTXAddressByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.DTX_ADDRESSES[network.alias];
+};
+
+export const getDTXV1AddressByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.DTXV1_ADDRESSES[network.alias];
+};
+
+export const getDigiMaterialV2AddressByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.DIGI_MATERIALS_V2[network.alias];
+};
+
+export const getDigiRootTunnelAddressByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.ROOT_TUNNEL_ADDRESS[network.alias];
+};
+
+export const getUpgraderAddressByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.UPGRADER_ADDRESSES[network.alias];
 };
 
 export const getMarketplaceContractAddressByChainId = (chainId) => {
