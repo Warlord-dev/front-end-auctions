@@ -77,6 +77,13 @@ export default function Bridge() {
   // const [_, maticDtxTokenIds] = useDTXTokenIds();
   const [garmentMaticV1Balance] = useDTXV1Balance();
 
+  useEffect(() => {
+    if (typeof window.web3 === 'undefined') {
+      window.alert('Please install metamask on your browser!');
+      Router.push('/');
+    }
+  }, []);
+
   const handleDepositNFT = async () => {
     if (network.alias === (isMainnet ? 'mainnet' : 'goerli')) {
       setLoading(true);

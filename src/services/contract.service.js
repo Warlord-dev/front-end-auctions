@@ -305,9 +305,10 @@ export const getDigiMaterialV2Contract = (isMainnet) => {
 
 export const getDitiRootTunnelContract = (isMainnet) => {
   const address = getDigiRootTunnelAddressByChainId(isMainnet ? '0x1' : '0x5');
-  const contract = new window.web3.eth.Contract(DigiRootTunnelABI, address);
-
-  return contract;
+  if (window.web3) {
+    const contract = new window.web3.eth.Contract(DigiRootTunnelABI, address);
+    return contract;
+  }
 };
 
 export const getDTXMaticV1Contract = async (isMainnet) => {
