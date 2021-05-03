@@ -77,6 +77,13 @@ export default function Bridge() {
   // const [_, maticDtxTokenIds] = useDTXTokenIds();
   const [garmentMaticV1Balance] = useDTXV1Balance();
 
+  useEffect(() => {
+    if (typeof window.web3 === 'undefined') {
+      window.alert('Please install metamask on your browser!');
+      Router.push('/');
+    }
+  }, []);
+
   const handleDepositNFT = async () => {
     if (network.alias === (isMainnet ? 'mainnet' : 'goerli')) {
       setLoading(true);
@@ -358,7 +365,7 @@ export default function Bridge() {
     <>
       {loading ? <Loader size="large" className={styles.loader} /> : null}
       <div className={styles.bridge}>
-        <div className={styles.bridgeTitle}>MATIC-ETH BRIDGE</div>
+        <div className={styles.bridgeTitle}> MATIC-ETH BRIDGE </div>
         <div className={styles.container}>
           <div className={styles.headers}>
             {headers.map((header, index) => (
@@ -439,7 +446,6 @@ export default function Bridge() {
           )}
           {showUpgradeNFTModal && (
             <UpgradeNFTModal
-              garmentMaticV1Balance={garmentMaticV1Balance}
               onClose={() => {
                 setShowUpgradeNFTModal(false);
               }}

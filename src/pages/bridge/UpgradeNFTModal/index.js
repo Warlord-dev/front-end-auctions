@@ -10,8 +10,9 @@ import Button from '@components/buttons/button';
 import { getEnabledNetworkByChainId } from '@services/network.service';
 import { getChainId } from '@selectors/global.selectors';
 import { useIsMainnet } from '@hooks/useIsMainnet';
+import Loader from '@components/loader';
 
-export default function UpgradeNFTModal({ garmentMaticV1Balance, onClose, onLoading }) {
+export default function UpgradeNFTModal({ onClose, onLoading }) {
   const [dtxV1MaticIds] = useDTXV1TokenIds();
   const isMainnet = useIsMainnet();
   const chainId = useSelector(getChainId);
@@ -29,15 +30,21 @@ export default function UpgradeNFTModal({ garmentMaticV1Balance, onClose, onLoad
     }
   };
 
-  return garmentMaticV1Balance ? (
+  return (
     <Modal title="NFT Upgrade Required  " onClose={onClose} className={styles.modal}>
-      <p className={styles.text}>
-        You have {garmentMaticV1Balance} V1 NFTs. To stake your NFTs you must upgrade to V2.Please
-        confirm your {garmentMaticV1Balance} transactions in metamask to approve the upgrader and
-        perform the upgrade. Afterwards you may need to refresh the page to see your new balance
-        reflected.
-      </p>
-      <Button onClick={handleUpgrade}>Approve and Upgrade All</Button>
+      {dtxV1MaticIds.length ? (
+        <>
+          <p className={styles.text}>
+            You have {dtxV1MaticIds.length} V1 NFTs. To stake your NFTs you must upgrade to
+            V2.Please confirm your {dtxV1MaticIds.length} transactions in metamask to approve the
+            upgrader and perform the upgrade. Afterwards you may need to refresh the page to see
+            your new balance reflected.
+          </p>
+          <Button onClick={handleUpgrade}>Approve and Upgrade All</Button>
+        </>
+      ) : (
+        <Loader size="large" />
+      )}
     </Modal>
-  ) : null;
+  );
 }
