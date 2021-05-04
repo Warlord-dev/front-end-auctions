@@ -87,19 +87,31 @@ export default function Bridge() {
   const handleDepositNFT = async () => {
     if (network.alias === (isMainnet ? 'mainnet' : 'goerli')) {
       setLoading(true);
-      await depositCallback(nftIds)
-        .then(() => {
-          setLoading(false);
-          setNftIds([]);
-          setModalTitle('Moving to Matic!');
-          setModalBody(
-            `Your ${nftIds.length} token(s) are on its way to Matic Network! Please check back in 10-15 minutes.`,
-          );
-          setShowTxConfirmModal(true);
-        })
-        .catch(() => {
-          setLoading(false);
-        });
+      let nftDepositIds = [...nftIds],
+        success = true;
+      while (1) {
+        const nodeItems = nftDepositIds.splice(0, 10);
+        await depositCallback(nodeItems)
+          .then(() => {})
+          .catch((err) => {
+            setLoading(false);
+            success = false;
+            setModalTitle('Error!');
+            setModalBody(`Deposit Failed - ${err.message ? err.message : err}`);
+            setShowTxConfirmModal(true);
+            setNftIds([]);
+          });
+        if (!nftDepositIds.length) break;
+      }
+      if (success) {
+        setLoading(false);
+        setNftIds([]);
+        setModalTitle('Moving to Matic!');
+        setModalBody(
+          `Your ${nftIds.length} token(s) are on its way to Matic Network! Please check back in 10-15 minutes.`,
+        );
+        setShowTxConfirmModal(true);
+      }
     } else {
       window.alert('Please change to mainnet network!');
     }
@@ -112,18 +124,17 @@ export default function Bridge() {
       let success = true;
 
       while (1) {
-        const nodeItems = nftRootIds.splice(0, 25);
+        const nodeItems = nftRootIds.splice(0, 10);
         if (nodeItems.length) {
           await sendNTFsToRoot(nodeItems)
             .then((res) => {
-              setLoading(false);
               if (res.success) {
                 const olderIds = [...nodeItems];
                 dispatch(
                   userActions.updateProfile({
                     withdrawalTxs: [
                       ...withdrawalTxs,
-                      ...olderIds.map((nftId) => ({
+                      ...olderIds.map((nftId, index) => ({
                         txHash: res.result.transactionHash,
                         amount: nftId,
                         status: 'pending-721',
@@ -150,7 +161,7 @@ export default function Bridge() {
       }
 
       while (1) {
-        const nodeItems = nftWithdrawIds.splice(0, 25);
+        const nodeItems = nftWithdrawIds.splice(0, 10);
         if (nodeItems.length) {
           await withdrawCallback(nodeItems)
             .then(() => {})
@@ -215,6 +226,25 @@ export default function Bridge() {
           });
       })
       .catch(() => {});
+  };
+
+  const getWithdrawals = (withdrawals) => {
+    const pending = withdrawals.filter(
+      (tx) => tx.status === (tabIndex === 0 ? 'pending' : 'pending-721'),
+    );
+    const result = [];
+    let node = [];
+    let previousHash = '';
+    for (let i = 0; i < pending.length; i += 1) {
+      node.push(pending[i]);
+      if (previousHash !== pending[i].txHash) {
+        result.push(node);
+        node = [];
+      }
+      previousHash = pending[i].txHash;
+    }
+    if (node.length) result.push(node);
+    return result;
   };
 
   useEffect(() => {
@@ -413,49 +443,55 @@ export default function Bridge() {
               <div className={styles.withdrawalRowItem}>Status</div>
               <div className={styles.withdrawalRowItem}>Withdraw</div>
             </div>
-            {withdrawalTxs
-              .filter((tx) => tx.status === (tabIndex === 0 ? 'pending' : 'pending-721'))
-              .map((tx) => (
-                <div className={styles.withdrawalRow}>
-                  <div className={styles.withdrawalRowItem}>
-                    <TimeAgo date={new Date(tx.created)} />
-                  </div>
-                  <div className={styles.withdrawalRowItem}>{tx.amount}</div>
-                  <div className={styles.withdrawalRowItem}>
-                    {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800
-                      ? 'Pending Withdrawal'
-                      : 'Processing'}
-                  </div>
-                  {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800 && (
-                    <div className={styles.withdrawalRowItem}>
-                      <button
-                        className={styles.withdrawButton}
-                        onClick={() => {
-                          if (tabIndex === 0) {
-                            exitCallback(tx.txHash);
-                          } else {
-                            if (tx.amount < 100000) {
-                              if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
-                                window.alert('Please switch to mainnet network!');
-                              } else {
-                                erc721ExitCallback(tx.txHash);
-                              }
-                            } else if (tx.amount > 100000) {
-                              if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
-                                window.alert('Please switch to mainnet network!');
-                              } else {
-                                handleDigitalaxRootTunnelReceiveMessage(tx.txHash);
-                              }
-                            }
-                          }
-                        }}
-                      >
-                        <div className={styles.withdrawText}>Withdraw</div>
-                      </button>
-                    </div>
-                  )}
+            {getWithdrawals(withdrawalTxs).map((result) => (
+              <>
+                <div className={styles.withdrawalRowWrapper}>
+                  {result.map((tx, txIndex) => (
+                    <>
+                      <div className={styles.withdrawalRow}>
+                        <div className={styles.withdrawalRowItem}>
+                          <TimeAgo date={new Date(tx.created)} />
+                        </div>
+                        <div className={styles.withdrawalRowItem}>{tx.amount}</div>
+                        <div className={styles.withdrawalRowItem}>
+                          {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800
+                            ? 'Pending Withdrawal'
+                            : 'Processing'}
+                        </div>
+                        {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800 && !txIndex && (
+                          <div className={styles.withdrawalRowItem}>
+                            <button
+                              className={styles.withdrawButton}
+                              onClick={() => {
+                                if (tabIndex === 0) {
+                                  exitCallback(tx.txHash);
+                                } else {
+                                  if (tx.amount < 100000) {
+                                    if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
+                                      window.alert('Please switch to mainnet network!');
+                                    } else {
+                                      erc721ExitCallback(tx.txHash);
+                                    }
+                                  } else if (tx.amount > 100000) {
+                                    if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
+                                      window.alert('Please switch to mainnet network!');
+                                    } else {
+                                      handleDigitalaxRootTunnelReceiveMessage(tx.txHash);
+                                    }
+                                  }
+                                }
+                              }}
+                            >
+                              <div className={styles.withdrawText}>Withdraw</div>
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    </>
+                  ))}
                 </div>
-              ))}
+              </>
+            ))}
           </div>
 
           {showTxConfirmModal && (

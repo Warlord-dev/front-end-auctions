@@ -210,12 +210,17 @@
   }
 }
 
+.withdrawalRowWrapper {
+  border-bottom: 1px solid black;
+}
+
 .withdrawalRow {
   display: flex;
   height: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   border-style: none none dashed;
   margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .withdrawalHeader {
