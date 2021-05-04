@@ -70,6 +70,7 @@
     "react-facebook-pixel": "^1.0.4",
     "react-image-magnify": "^2.7.4",
     "react-immutable-proptypes": "^2.2.0",
+    "react-pageflip": "^2.0.3",
     "react-redux": "^7.2.0",
     "react-responsive-carousel": "^3.2.18",
     "react-timeago": "^5.2.0",
