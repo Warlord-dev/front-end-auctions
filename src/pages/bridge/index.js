@@ -107,59 +107,68 @@ export default function Bridge() {
   const handleWithdrawNFT = async () => {
     if (network.alias === (isMainnet ? 'matic' : 'mumbai')) {
       setLoading(true);
-      const nftRootIds = nftIds.filter((id) => id > 100000);
-      const nftWithdrawIds = nftIds.filter((id) => id < 100000);
+      let nftRootIds = nftIds.filter((id) => id > 100000);
+      let nftWithdrawIds = nftIds.filter((id) => id < 100000);
       let success = true;
 
-      if (nftRootIds.length) {
-        await sendNTFsToRoot(nftIds)
-          .then((res) => {
-            setLoading(false);
-            if (res.success) {
-              const olderIds = [...nftIds];
-              dispatch(
-                userActions.updateProfile({
-                  withdrawalTxs: [
-                    ...withdrawalTxs,
-                    ...olderIds.map((nftId) => ({
-                      txHash: res.result.transactionHash,
-                      amount: nftId,
-                      status: 'pending-721',
-                      created: new Date(),
-                      // sendNftsToRootBytes: ,
-                      sendNftsToRootTokenIds: olderIds,
-                    })),
-                  ],
-                }),
-              );
-            }
-          })
-          .catch((err) => {
-            success = false;
-            setLoading(false);
-            setModalTitle('Error!');
-            setModalBody(`Send NFT To Root Failed - ${err.message ? err.message : err}`);
-            setShowTxConfirmModal(true);
-            setNftIds([]);
-            console.log('Send NFT To Root Failed - ', err);
-          });
+      while (1) {
+        const nodeItems = nftRootIds.splice(0, 25);
+        if (nodeItems.length) {
+          await sendNTFsToRoot(nodeItems)
+            .then((res) => {
+              setLoading(false);
+              if (res.success) {
+                const olderIds = [...nodeItems];
+                dispatch(
+                  userActions.updateProfile({
+                    withdrawalTxs: [
+                      ...withdrawalTxs,
+                      ...olderIds.map((nftId) => ({
+                        txHash: res.result.transactionHash,
+                        amount: nftId,
+                        status: 'pending-721',
+                        created: new Date(),
+                        // sendNftsToRootBytes: ,
+                        sendNftsToRootTokenIds: olderIds,
+                      })),
+                    ],
+                  }),
+                );
+              }
+            })
+            .catch((err) => {
+              success = false;
+              setLoading(false);
+              setModalTitle('Error!');
+              setModalBody(`Send NFT To Root Failed - ${err.message ? err.message : err}`);
+              setShowTxConfirmModal(true);
+              setNftIds([]);
+              console.log('Send NFT To Root Failed - ', err);
+            });
+        }
+        if (!nftRootIds.length) break;
       }
-      if (nftWithdrawIds.length) {
-        await withdrawCallback(nftIds)
-          .then(() => {})
-          .catch(() => {
-            success = false;
-            setModalTitle('Error!');
-            setModalBody(`Send NFT To Root Failed - ${err.message ? err.message : err}`);
-            setShowTxConfirmModal(true);
-            setLoading(false);
-            setNftIds([]);
-          });
+
+      while (1) {
+        const nodeItems = nftWithdrawIds.splice(0, 25);
+        if (nodeItems.length) {
+          await withdrawCallback(nodeItems)
+            .then(() => {})
+            .catch(() => {
+              success = false;
+              setModalTitle('Error!');
+              setModalBody(`Send NFT To Root Failed - ${err.message ? err.message : err}`);
+              setShowTxConfirmModal(true);
+              setLoading(false);
+              setNftIds([]);
+            });
+        }
+        if (!nftWithdrawIds.length) break;
       }
       if (success) {
         setLoading(false);
         setNftIds([]);
-        setModalTitle('Congrates!  ');
+        setModalTitle('Congrates!');
         setModalBody(
           'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
         );
@@ -297,6 +306,12 @@ export default function Bridge() {
     }
     return (
       <div className={cn(styles.bridgeWrapper, styles.erc721Wrapper)}>
+        {erc721TabIndex === 2 ? (
+          <p style={{ padding: '.5rem', color: 'red' }}>
+            {' '}
+            Warning! the second transaction has a high gas fee on ethereum.{' '}
+          </p>
+        ) : null}
         <div className={styles.bridgeTable}>
           <div className={styles.header}>
             <span>NFTS</span>
