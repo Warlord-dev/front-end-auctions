@@ -172,7 +172,7 @@ export default function Bridge() {
         if (updatedIds.length) {
           dispatch(
             userActions.updateProfile({
-              withdrawalTxs: [...withdrawalTxs, updatedIds],
+              withdrawalTxs: [...withdrawalTxs, ...updatedIds],
             }),
           );
         }
@@ -233,13 +233,13 @@ export default function Bridge() {
     );
     const result = [];
     let node = [];
-    let previousHash = '';
+    let previousHash = pending[0].txHash;
     for (let i = 0; i < pending.length; i += 1) {
-      node.push(pending[i]);
       if (previousHash !== pending[i].txHash) {
         result.push(node);
         node = [];
       }
+      node.push(pending[i]);
       previousHash = pending[i].txHash;
     }
     if (node.length) result.push(node);
