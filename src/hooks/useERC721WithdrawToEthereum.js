@@ -53,13 +53,7 @@ export default function useERC721WithdrawFromMatic() {
           }
         }
         if (success) {
-          if (updatedIds.length) {
-            dispatch(
-              userActions.updateProfile({
-                withdrawalTxs: [...existingTxs, ...updatedIds],
-              }),
-            );
-          }
+          return updatedIds;
         }
       }
     },

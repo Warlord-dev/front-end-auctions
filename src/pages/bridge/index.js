@@ -158,7 +158,9 @@ export default function Bridge() {
 
       if (nftWithdrawIds.length) {
         await withdrawCallback(nftWithdrawIds)
-          .then(() => {})
+          .then((res) => {
+            updatedIds = [...updatedIds, ...res];
+          })
           .catch((err) => {
             success = false;
             setModalTitle('Error!');
