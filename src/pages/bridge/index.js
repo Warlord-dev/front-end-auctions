@@ -122,6 +122,7 @@ export default function Bridge() {
       let nftRootIds = nftIds.filter((id) => id > 100000);
       let nftWithdrawIds = nftIds.filter((id) => id < 100000);
       let success = true;
+      let updatedIds = [];
 
       while (1) {
         const nodeItems = nftRootIds.splice(0, 10);
@@ -130,21 +131,16 @@ export default function Bridge() {
             .then((res) => {
               if (res.success) {
                 const olderIds = [...nodeItems];
-                dispatch(
-                  userActions.updateProfile({
-                    withdrawalTxs: [
-                      ...withdrawalTxs,
-                      ...olderIds.map((nftId, index) => ({
-                        txHash: res.result.transactionHash,
-                        amount: nftId,
-                        status: 'pending-721',
-                        created: new Date(),
-                        // sendNftsToRootBytes: ,
-                        sendNftsToRootTokenIds: olderIds,
-                      })),
-                    ],
-                  }),
-                );
+                updatedIds = [
+                  ...updatedIds,
+                  ...olderIds.map((nftId, index) => ({
+                    txHash: res.result.transactionHash,
+                    amount: nftId,
+                    status: 'pending-721',
+                    created: new Date(),
+                    sendNftsToRootTokenIds: olderIds,
+                  })),
+                ];
               }
             })
             .catch((err) => {
@@ -160,23 +156,26 @@ export default function Bridge() {
         if (!nftRootIds.length) break;
       }
 
-      while (1) {
-        const nodeItems = nftWithdrawIds.splice(0, 10);
-        if (nodeItems.length) {
-          await withdrawCallback(nodeItems)
-            .then(() => {})
-            .catch(() => {
-              success = false;
-              setModalTitle('Error!');
-              setModalBody(`Send NFT To Root Failed - ${err.message ? err.message : err}`);
-              setShowTxConfirmModal(true);
-              setLoading(false);
-              setNftIds([]);
-            });
-        }
-        if (!nftWithdrawIds.length) break;
+      if (nftWithdrawIds.length) {
+        await withdrawCallback(nftWithdrawIds)
+          .then(() => {})
+          .catch((err) => {
+            success = false;
+            setModalTitle('Error!');
+            setModalBody(`Send NFT To Root Failed - ${err.message ? err.message : err}`);
+            setShowTxConfirmModal(true);
+            setLoading(false);
+            setNftIds([]);
+          });
       }
       if (success) {
+        if (updatedIds.length) {
+          dispatch(
+            userActions.updateProfile({
+              withdrawalTxs: [...withdrawalTxs, updatedIds],
+            }),
+          );
+        }
         setLoading(false);
         setNftIds([]);
         setModalTitle('Congrates!');
