@@ -24,7 +24,7 @@ export default function useERC721WithdrawFromMatic() {
     async (tokenIds) => {
       if (posClient && account && chainId) {
         let success = true;
-        const updatedIds = [];
+        let updatedIds = [];
         while (1) {
           const nodeItems = tokenIds.splice(0, 10);
           const res = await posClient
