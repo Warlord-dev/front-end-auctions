@@ -21,32 +21,41 @@ export default function useERC721WithdrawFromMatic() {
   const existingTxs = profile?.withdrawalTxs || [];
 
   const withdrawCallback = useCallback(
-    (tokenId) => {
-      return new Promise((resolve, reject) => {
-        if (posClient && account && chainId) {
-          posClient
-            .burnERC721(config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'], tokenId, {
+    async (tokenIds) => {
+      if (posClient && account && chainId) {
+        let success = true;
+        let updatedIds = [];
+        while (1) {
+          const nodeItems = tokenIds.splice(0, 10);
+          const res = await posClient
+            .burnBatchERC721(config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'], nodeItems, {
               from: account,
             })
             .then((res) => {
-              dispatch(
-                userActions.updateProfile({
-                  withdrawalTxs: [
-                    ...existingTxs,
-                    {
-                      txHash: res.transactionHash,
-                      amount: tokenId,
-                      status: 'pending-721',
-                      created: new Date(),
-                    },
-                  ],
-                }),
-              );
-              resolve(res);
+              updatedIds = [
+                ...updatedIds,
+                ...nodeItems.map((tokenId) => ({
+                  txHash: res.transactionHash,
+                  amount: tokenId,
+                  status: 'pending-721',
+                  created: new Date(),
+                })),
+              ];
+              return res;
             })
-            .catch((e) => reject(e));
-        } else reject('error');
-      });
+            .catch((e) => {
+              success = false;
+              return e;
+            });
+          if (!tokenIds.length) break;
+          if (!success) {
+            throw res;
+          }
+        }
+        if (success) {
+          return updatedIds;
+        }
+      }
     },
     [posClient, account],
   );

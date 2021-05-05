@@ -210,12 +210,17 @@
   }
 }
 
+.withdrawalRowWrapper {
+  border-bottom: 1px solid black;
+}
+
 .withdrawalRow {
   display: flex;
   height: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   border-style: none none dashed;
   margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .withdrawalHeader {
@@ -302,6 +307,14 @@
   position: relative;
   .item {
     transform: translate(calc(-50% + 52px), calc(-50% + 27px)) scale(0.26, 0.28);
+
+    h4 {
+      font-size: 2.5rem;
+    }
+
+    &>li>a {
+      font-size: 2.5rem;
+    }
   }
   span:nth-child(2) {
     position: absolute;

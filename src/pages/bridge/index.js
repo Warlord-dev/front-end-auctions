@@ -87,18 +87,31 @@ export default function Bridge() {
   const handleDepositNFT = async () => {
     if (network.alias === (isMainnet ? 'mainnet' : 'goerli')) {
       setLoading(true);
-      await depositCallback(nftIds[0])
-        .then(() => {
-          setLoading(false);
-          setModalTitle('Moving to Matic!');
-          setModalBody(
-            'Your token is on its way to Matic Network! Please check back in 10-15 minutes.',
-          );
-          setShowTxConfirmModal(true);
-        })
-        .catch(() => {
-          setLoading(false);
-        });
+      let nftDepositIds = [...nftIds],
+        success = true;
+      while (1) {
+        const nodeItems = nftDepositIds.splice(0, 10);
+        await depositCallback(nodeItems)
+          .then(() => {})
+          .catch((err) => {
+            setLoading(false);
+            success = false;
+            setModalTitle('Error!');
+            setModalBody(`Deposit Failed - ${err.message ? err.message : err}`);
+            setShowTxConfirmModal(true);
+            setNftIds([]);
+          });
+        if (!nftDepositIds.length) break;
+      }
+      if (success) {
+        setLoading(false);
+        setNftIds([]);
+        setModalTitle('Moving to Matic!');
+        setModalBody(
+          `Your ${nftIds.length} token(s) are on its way to Matic Network! Please check back in 10-15 minutes.`,
+        );
+        setShowTxConfirmModal(true);
+      }
     } else {
       window.alert('Please change to mainnet network!');
     }
@@ -106,58 +119,72 @@ export default function Bridge() {
   const handleWithdrawNFT = async () => {
     if (network.alias === (isMainnet ? 'matic' : 'mumbai')) {
       setLoading(true);
-      if (nftIds[0] > 100000) {
-        await sendNTFsToRoot([nftIds[0]])
-          .then((res) => {
-            setLoading(false);
-            if (res.success) {
-              setModalTitle('Congrats!');
-              setModalBody(
-                'Sent NFT to Root successfully. Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
-              );
-              setShowTxConfirmModal(true);
+      let nftRootIds = nftIds.filter((id) => id > 100000);
+      let nftWithdrawIds = nftIds.filter((id) => id < 100000);
+      let success = true;
+      let updatedIds = [];
 
-              // const sendNftsToRootBytes = exitMgr.buildPayloadForExit(
-              //   res.result.transactionHash,
-              //   '0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036',
-              // );
-              dispatch(
-                userActions.updateProfile({
-                  withdrawalTxs: [
-                    ...withdrawalTxs,
-                    {
-                      txHash: res.result.transactionHash,
-                      amount: nftIds[0],
-                      status: 'pending-721',
-                      created: new Date(),
-                      // sendNftsToRootBytes: ,
-                      sendNftsToRootTokenIds: [nftIds[0]],
-                    },
-                  ],
-                }),
-              );
-            }
+      while (1) {
+        const nodeItems = nftRootIds.splice(0, 10);
+        if (nodeItems.length) {
+          await sendNTFsToRoot(nodeItems)
+            .then((res) => {
+              if (res.success) {
+                const olderIds = [...nodeItems];
+                updatedIds = [
+                  ...updatedIds,
+                  ...olderIds.map((nftId, index) => ({
+                    txHash: res.result.transactionHash,
+                    amount: nftId,
+                    status: 'pending-721',
+                    created: new Date(),
+                    sendNftsToRootTokenIds: olderIds,
+                  })),
+                ];
+              }
+            })
+            .catch((err) => {
+              success = false;
+              setLoading(false);
+              setModalTitle('Error!');
+              setModalBody(`Send NFT To Root Failed - ${err.message ? err.message : err}`);
+              setShowTxConfirmModal(true);
+              setNftIds([]);
+              console.log('Send NFT To Root Failed - ', err);
+            });
+        }
+        if (!nftRootIds.length) break;
+      }
+
+      if (nftWithdrawIds.length) {
+        await withdrawCallback(nftWithdrawIds)
+          .then((res) => {
+            updatedIds = [...updatedIds, ...res];
           })
           .catch((err) => {
-            setLoading(false);
+            success = false;
             setModalTitle('Error!');
             setModalBody(`Send NFT To Root Failed - ${err.message ? err.message : err}`);
             setShowTxConfirmModal(true);
-            console.log('Send NFT To Root Failed - ', err);
-          });
-      } else {
-        await withdrawCallback(nftIds[0])
-          .then(() => {
             setLoading(false);
-            setModalTitle('In Motion to Ethereum!  ');
-            setModalBody(
-              'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
-            );
-            setShowTxConfirmModal(true);
-          })
-          .catch(() => {
-            setLoading(false);
+            setNftIds([]);
           });
+      }
+      if (success) {
+        if (updatedIds.length) {
+          dispatch(
+            userActions.updateProfile({
+              withdrawalTxs: [...withdrawalTxs, ...updatedIds],
+            }),
+          );
+        }
+        setLoading(false);
+        setNftIds([]);
+        setModalTitle('Congrates!');
+        setModalBody(
+          'Your withdrawal will be available to exit onto the main network in approximately 3 hours. Please check back then to initiate the final transaction.',
+        );
+        setShowTxConfirmModal(true);
       }
     } else {
       window.alert('Please change to matic network!');
@@ -200,6 +227,26 @@ export default function Bridge() {
           });
       })
       .catch(() => {});
+  };
+
+  const getWithdrawals = (withdrawals) => {
+    const pending = withdrawals.filter(
+      (tx) => tx.status === (tabIndex === 0 ? 'pending' : 'pending-721'),
+    );
+    if (!pending.length) return [];
+    const result = [];
+    let node = [];
+    let previousHash = pending[0].txHash;
+    for (let i = 0; i < pending.length; i += 1) {
+      if (previousHash !== pending[i].txHash) {
+        result.push(node);
+        node = [];
+      }
+      node.push(pending[i]);
+      previousHash = pending[i].txHash;
+    }
+    if (node.length) result.push(node);
+    return result;
   };
 
   useEffect(() => {
@@ -291,6 +338,12 @@ export default function Bridge() {
     }
     return (
       <div className={cn(styles.bridgeWrapper, styles.erc721Wrapper)}>
+        {erc721TabIndex === 2 ? (
+          <p style={{ padding: '.5rem', color: 'red' }}>
+            {' '}
+            Warning! the second transaction has a high gas fee on ethereum.{' '}
+          </p>
+        ) : null}
         <div className={styles.bridgeTable}>
           <div className={styles.header}>
             <span>NFTS</span>
@@ -307,7 +360,10 @@ export default function Bridge() {
                 </div>
                 <span>{erc721TabIndex === 2 ? 'MATIC' : 'ETHEREUM'}</span>
                 <div className={styles.nftCheckWrapper}>
-                  <CheckBox checked={nftIds[0] === nft.id} onChange={() => onToggleChecked(nft)} />
+                  <CheckBox
+                    checked={nftIds.filter((nftId) => nftId === nft.id).length}
+                    onChange={() => onToggleChecked(nft)}
+                  />
                 </div>
               </div>
             ))}
@@ -319,7 +375,7 @@ export default function Bridge() {
           isDisabled={!nftIds.length}
           onClick={() => {
             if (!approved) {
-              approveCallback(nftIds[0]);
+              approveCallback();
             } else if (erc721TabIndex === 1) {
               handleDepositNFT();
             } else {
@@ -350,7 +406,7 @@ export default function Bridge() {
     if (nftIds.includes(nft.id)) {
       setNftIds(nftIds.filter((id) => id !== nft.id));
     } else {
-      setNftIds([nft.id]);
+      setNftIds([...nftIds, nft.id]);
     }
   };
 
@@ -389,49 +445,55 @@ export default function Bridge() {
               <div className={styles.withdrawalRowItem}>Status</div>
               <div className={styles.withdrawalRowItem}>Withdraw</div>
             </div>
-            {withdrawalTxs
-              .filter((tx) => tx.status === (tabIndex === 0 ? 'pending' : 'pending-721'))
-              .map((tx) => (
-                <div className={styles.withdrawalRow}>
-                  <div className={styles.withdrawalRowItem}>
-                    <TimeAgo date={new Date(tx.created)} />
-                  </div>
-                  <div className={styles.withdrawalRowItem}>{tx.amount}</div>
-                  <div className={styles.withdrawalRowItem}>
-                    {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800
-                      ? 'Pending Withdrawal'
-                      : 'Processing'}
-                  </div>
-                  {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800 && (
-                    <div className={styles.withdrawalRowItem}>
-                      <button
-                        className={styles.withdrawButton}
-                        onClick={() => {
-                          if (tabIndex === 0) {
-                            exitCallback(tx.txHash);
-                          } else {
-                            if (tx.amount < 100000) {
-                              if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
-                                window.alert('Please switch to mainnet network!');
-                              } else {
-                                erc721ExitCallback(tx.txHash);
-                              }
-                            } else if (tx.amount > 100000) {
-                              if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
-                                window.alert('Please switch to mainnet network!');
-                              } else {
-                                handleDigitalaxRootTunnelReceiveMessage(tx.txHash);
-                              }
-                            }
-                          }
-                        }}
-                      >
-                        <div className={styles.withdrawText}>Withdraw</div>
-                      </button>
-                    </div>
-                  )}
+            {getWithdrawals(withdrawalTxs).map((result) => (
+              <>
+                <div className={styles.withdrawalRowWrapper}>
+                  {result.map((tx, txIndex) => (
+                    <>
+                      <div className={styles.withdrawalRow}>
+                        <div className={styles.withdrawalRowItem}>
+                          <TimeAgo date={new Date(tx.created)} />
+                        </div>
+                        <div className={styles.withdrawalRowItem}>{tx.amount}</div>
+                        <div className={styles.withdrawalRowItem}>
+                          {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800
+                            ? 'Pending Withdrawal'
+                            : 'Processing'}
+                        </div>
+                        {(Date.now() - new Date(tx.created).getTime()) / 1000 >= 10800 && !txIndex && (
+                          <div className={styles.withdrawalRowItem}>
+                            <button
+                              className={styles.withdrawButton}
+                              onClick={() => {
+                                if (tabIndex === 0) {
+                                  exitCallback(tx.txHash);
+                                } else {
+                                  if (tx.amount < 100000) {
+                                    if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
+                                      window.alert('Please switch to mainnet network!');
+                                    } else {
+                                      erc721ExitCallback(tx.txHash);
+                                    }
+                                  } else if (tx.amount > 100000) {
+                                    if (network.alias !== (isMainnet ? 'mainnet' : 'goerli')) {
+                                      window.alert('Please switch to mainnet network!');
+                                    } else {
+                                      handleDigitalaxRootTunnelReceiveMessage(tx.txHash);
+                                    }
+                                  }
+                                }
+                              }}
+                            >
+                              <div className={styles.withdrawText}>Withdraw</div>
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    </>
+                  ))}
                 </div>
-              ))}
+              </>
+            ))}
           </div>
 
           {showTxConfirmModal && (

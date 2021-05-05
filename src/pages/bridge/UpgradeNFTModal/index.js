@@ -31,7 +31,7 @@ export default function UpgradeNFTModal({ onClose, onLoading }) {
   };
 
   return (
-    <Modal title="NFT Upgrade Required  " onClose={onClose} className={styles.modal}>
+    <Modal title="NFT Upgrade Required" onClose={onClose} className={styles.modal}>
       {dtxV1MaticIds.length ? (
         <>
           <p className={styles.text}>
@@ -43,7 +43,7 @@ export default function UpgradeNFTModal({ onClose, onLoading }) {
           <Button onClick={handleUpgrade}>Approve and Upgrade All</Button>
         </>
       ) : (
-        <Loader size="large" />
+        <div className={styles.text}>Loading ...</div>
       )}
     </Modal>
   );

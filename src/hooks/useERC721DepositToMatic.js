@@ -13,17 +13,17 @@ export default function useDepositToMatic() {
   const chainId = useSelector(getChainId);
   const isMainnet = useIsMainnet();
 
-  const depositCallback = (tokenId) => {
+  const depositCallback = (tokenIds) => {
     return new Promise((resolve, reject) => {
       if (posClient && account && chainId) {
         posClient
-          .depositERC721ForUser(
+          .depositBatchERC721ForUser(
             config.DTX_ADDRESSES[isMainnet ? 'mainnet' : 'goerli'],
             account,
-            tokenId,
+            tokenIds,
             {
               from: account,
-            }
+            },
           )
           .then((res) => {
             console.log('deposit resp', res);

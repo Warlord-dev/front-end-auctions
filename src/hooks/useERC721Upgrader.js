@@ -25,7 +25,11 @@ export default function useERC721Upgrader() {
           await maticDtxContract.methods
             .setApprovalForAll(upgraderContract._address, true)
             .send({ from: account });
-          const res = await upgraderContract.methods.upgrade(tokenIds).send({ from: account });
+          while (1) {
+            const nodeIds = tokenIds.splice(0, 25);
+            const res = await upgraderContract.methods.upgrade(nodeIds).send({ from: account });
+            if (!tokenIds.length) break;
+          }
         } catch (e) {
           console.log(e);
           // reject(e);
