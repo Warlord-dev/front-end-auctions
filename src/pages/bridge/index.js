@@ -231,6 +231,7 @@ export default function Bridge() {
     const pending = withdrawals.filter(
       (tx) => tx.status === (tabIndex === 0 ? 'pending' : 'pending-721'),
     );
+    if (!pending.length) return [];
     const result = [];
     let node = [];
     let previousHash = pending[0].txHash;
