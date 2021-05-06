@@ -126,6 +126,12 @@ class MyDocument extends Document {
               src: url("./fonts/Animosa-Regular.otf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: "A DAY WITHOUT SUN";
+              src: url("./fonts/A DAY WITHOUT SUN.otf");
+              font-weight: 400;
+            }
           
           `,
             }}

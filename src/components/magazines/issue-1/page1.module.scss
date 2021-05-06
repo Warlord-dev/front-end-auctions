@@ -1,0 +1,41 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  padding: 2.7vw;
+  display: flex;
+  position: relative;
+
+  h1 {
+    font-family: A DAY WITHOUT SUN;
+    font-size: 99vw;
+    font-weight: normal;
+  }
+
+  h2 {
+    position: absolute;
+    right: 0;
+    bottom: 1%;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+    font-family: A DAY WITHOUT SUN;
+    font-size: 25vw;
+  }
+
+  h3 {
+    position: absolute;
+    width: 54.21vw;
+    height: 3.07vw;
+    left: 2.65vw;
+    bottom: 0;
+    font-family: Abel;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.04vw;
+    line-height: 25px;
+    transform: rotate(270deg);
+    transform-origin: 0 0;
+  }
+}

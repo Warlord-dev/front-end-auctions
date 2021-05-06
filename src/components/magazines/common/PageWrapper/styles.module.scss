@@ -1,0 +1,11 @@
+.magazinePageWrapper {
+  width: 960px;
+  height: 1497px;
+  overflow: hidden;
+  .contentWrapper {
+    width: 1920px;
+    &.secondPart {
+      margin-left: -100%;
+    }
+  }
+}

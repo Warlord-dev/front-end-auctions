@@ -1,31 +1,34 @@
 import React, { memo, useEffect } from 'react'
-import { useRouter } from 'next/router'
 import HTMLFlipBook from 'react-pageflip'
-import CoverPage from '../../../components/magazines/issue-1/CoverPage'
-import Page from '../../../components/magazines/common/Page'
+import CoverPage from '../../components/magazines/issue-1/CoverPage'
+import Page1 from '../../components/magazines/issue-1/Page1'
+import PageWrapper from '../../components/magazines/common/PageWrapper'
 
-
-const MagazinePage = props => {
-  const router = useRouter()
-  const slug = router.query.slug || []
-  const issueId = slug[0]
-  const pageNum = slug.length > 1 ? slug[1] : -1
-  console.log('pageNum: ', pageNum)
+const MagazineViewer = props => {
+  const {
+    issueId,
+    pageNumber,
+    children
+  } = props
   return (
     <div style={{
       flex: 1,
       background: 'green',
-      marginTop: 100
+      marginTop: 100,
+      display: 'flex',
+      justifyContent: 'center',
     }}>
       <div style={{
+        width: '80%',
         borderWidth: 1,
         borderColor: 'black',
         borderStyle: 'solid',
         background: 'gray',
+        // transform: 'scale(0.5)'
       }}>
         <HTMLFlipBook 
-          width={550}
-          height={733}
+          width={960}
+          height={1497}
           size="stretch"
           minWidth={315}
           maxWidth={1000}
@@ -40,11 +43,13 @@ const MagazinePage = props => {
           className="demo-book"
           // ref={(el) => (this.flipBook = el)}
         >
-          <CoverPage>test</CoverPage>
-          <Page><a href='https://google.com'>google</a></Page>
-          <Page>test123</Page>
-          <Page>test123123123</Page>
-          <CoverPage>test</CoverPage>
+          <CoverPage></CoverPage>
+          <PageWrapper><Page1 /></PageWrapper>
+          <PageWrapper secondPart><Page1 /></PageWrapper>
+          <PageWrapper>test123123123</PageWrapper>
+          <PageWrapper>test123123123</PageWrapper>
+          <PageWrapper>test123123123</PageWrapper>
+          {/* <CoverPage>test</CoverPage> */}
           {/* <Page1></Page1> */}
           {/* <div className="demoPage">Page 3</div>
           <div className="demoPage">Page 4</div> */}
@@ -54,4 +59,4 @@ const MagazinePage = props => {
   )
 }
 
-export default MagazinePage
+export default MagazineViewer
