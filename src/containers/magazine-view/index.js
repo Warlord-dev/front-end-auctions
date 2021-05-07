@@ -27,11 +27,7 @@ const MagazineViewer = props => {
           maxShadowOpacity={0.5}
           showCover={true}
           mobileScrollSupport={true}
-          // onFlip={this.onPage}
-          // onChangeOrientation={this.onChangeOrientation}
-          // onChangeState={this.onChangeState}
           className="demo-book"
-          // ref={(el) => (this.flipBook = el)}
         >
           <MagazinePageWrapper><CoverPage /></MagazinePageWrapper>
           <MagazinePageWrapper><Page12 /></MagazinePageWrapper>

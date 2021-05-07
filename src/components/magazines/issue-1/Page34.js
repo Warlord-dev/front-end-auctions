@@ -4,7 +4,7 @@ import styles from './page34.module.scss'
 const Page34 = () => {
   return (
     <div className={styles.wrapper}>
-      <img className={styles.paintImage} src='./images/magazine/1/pINT 2.png' />
+      <img className={styles.paintImage} src='./magazine/1/images/pINT 2.png' />
       <h1>
         Stay <span style={{color: 'white'}}>Hungry. Sta</span>y Foolish, Continued.
       </h1>
@@ -17,7 +17,7 @@ const Page34 = () => {
 
         I designed a majority of the pages in DigiFizzy myself, in the hope that you too might gain just enough of what you need to take a similar leap. Not everyone can become a great creator; but, a great creator can come from anywhere. And a metaverse built on web3 truly enables that. 
       </p>
-      <img className={styles.backgroundImage} src='./images/magazine/1/ezgif-frame-038_auto_x2 1.jpg' />
+      <img className={styles.backgroundImage} src='./magazine/1/images/ezgif-frame-038_auto_x2 1.jpg' />
       <h2>
         contributors
       </h2>

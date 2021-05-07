@@ -45,7 +45,7 @@ const MapViewer = forwardRef((props, ref) => {
   return (
     <div className={styles.mapViewerWrapper}>
       <div className={styles.contentWrapper}>
-        <img src='./images/magazine/digi_fizzy_map.jpg' alt='map-background' className={styles.mapImage}/>
+        <img src='./magazine/digi_fizzy_map.jpg' alt='map-background' className={styles.mapImage}/>
         {
           currentMap && currentMap.content && 
           currentMap.content.map((item, index) => {

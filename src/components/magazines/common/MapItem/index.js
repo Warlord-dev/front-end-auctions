@@ -19,7 +19,7 @@ const MapItem = props => {
     >
       <img
         className={styles.mapItem} 
-        src={`./images/magazine/${issueId}/${itemData.image}`} 
+        src={`./magazine/${issueId}/images/${itemData.image}`} 
         style={{
          
           transform: `rotate(${itemData.rotate}deg)`

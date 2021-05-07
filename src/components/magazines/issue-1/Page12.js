@@ -9,6 +9,9 @@ const Page12 = () => {
         We can set the foundation for that in starting with how to interpret a magazine visually.</h3>
       <h1>META</h1>
       <h2>VERSE</h2>
+      <video autoPlay muted loop >
+        <source src='./magazine/1/videos/moshed-05-01-9-54-15.mp4' type="video/mp4" />
+      </video>
     </div>
   )
 }

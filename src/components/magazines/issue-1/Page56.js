@@ -4,7 +4,7 @@ import styles from './page56.module.scss'
 const Page56 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='./images/magazine/1/The Metaverse Step 1 Clouds JPEG 1.jpg' />
+      <img src='./magazine/1/images/The Metaverse Step 1 Clouds JPEG 1.jpg' />
       <a href='https://Linktr.ee/chaimholtjer'>Art by Chaimholtjer<br /><span>Linktr.ee/chaimholtjer</span></a>
     </div>
   )
