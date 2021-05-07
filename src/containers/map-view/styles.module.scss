@@ -1,10 +1,14 @@
 .mapViewerWrapper {
   margin-top: 90px;
+  flex: auto;
+  justify-self: center;
+  background-color: black;
   
   @media (max-width: 640px)  {
     overflow-x: scroll;
-    height: fit-content;
+    min-height: 500px;
   }
+
   width: 100vw;
 
   position: relative;

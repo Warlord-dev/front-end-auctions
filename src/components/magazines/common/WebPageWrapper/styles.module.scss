@@ -4,9 +4,9 @@
   border-color: red;
   overflow: hidden;
 
-  width: 160px;
-  min-width: 160px;
-  height: calc(1497px * 320 / 1920);
+  width: 320px;
+  min-width: 320px;
+  height: calc(1497px * 640 / 1920);
 
   @media (min-width: 1481px) {
     width: 700px;
@@ -36,7 +36,7 @@
     width: 1920px;
     height: 1497px;
     transform-origin: 0 0;
-    transform: scale(calc(320 / 1920));
+    transform: scale(calc(640 / 1920));
 
     &.secondPart {
       margin-left: -100%;

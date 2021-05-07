@@ -6,8 +6,9 @@
   margin-top: 90px;
   width: 100%;
   overflow-x: scroll;
+  background-color: black;
 
-  min-height: calc(1497px * 320 / 1920 + 20px);
+  min-height: calc(1497px * 640 / 1920 + 20px);
 
   @media (min-width: 1481px) {
     min-height: calc(1497px * 1400 / 1920 + 20px);
