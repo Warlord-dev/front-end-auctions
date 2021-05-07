@@ -2,13 +2,16 @@
 @import "../../../../assets/scss/helpers/helpers.scss";
 
 .leftBox {
-  max-width: 588px;
+  min-width: 618px;
   margin-right: 85px;
+  flex-basis: 50%;
   flex-shrink: 0;
   z-index: 2;
   flex-grow: 1;
   @media only screen and (max-width: 1200px) {
     margin-right: 0;
+    min-width: 0px;
+    max-width: 618px;
   }
 }
 

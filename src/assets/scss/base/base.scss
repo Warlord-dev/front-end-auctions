@@ -94,6 +94,12 @@ html {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 1490px) {
+  .highcharts-container {
+    width: 420px !important;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .highcharts-container {
     width: calc(100vw - 200px) !important;
