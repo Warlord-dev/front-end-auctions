@@ -7,6 +7,7 @@
   width: 100%;
   overflow-x: scroll;
   background-color: black;
+  position: relative;
 
   min-height: calc(1497px * 640 / 1920 + 20px);
 
@@ -26,10 +27,16 @@
     min-height: calc(1497px * 640 / 1920 + 20px);
   }
 
-
   .contentWrapper {
     display: flex;
     width: fit-content;
     justify-content: center;
+  }
+
+  .zoomViewer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: red;
   }
 }
