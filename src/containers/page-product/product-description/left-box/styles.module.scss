@@ -18,7 +18,7 @@
 .tabs {
   display: flex;
   align-items: center;
-  width: 588px;
+  width: 618px;
 
   @media (max-width: $sm-width) {
     width: calc(100vw - 2rem);
