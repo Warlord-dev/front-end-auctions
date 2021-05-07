@@ -9,10 +9,10 @@ const PageWrapper = forwardRef((props, ref) => {
   return (
     <div ref={ref} className={styles.magazinePageWrapper}>
       <div className={[styles.contentWrapper, secondPart && styles.secondPart].join(' ')}
-        style={{
-          transformOrigin: '0 0',
-          transform: 'scale(1)'
-        }}
+        // style={{
+        //   transformOrigin: '0 0',
+        //   transform: 'scale(1)'
+        // }}
       >
       { props.children }
       </div>

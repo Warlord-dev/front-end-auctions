@@ -1,8 +1,11 @@
 import React, { memo, useEffect } from 'react'
 import HTMLFlipBook from 'react-pageflip'
 import CoverPage from '../../components/magazines/issue-1/CoverPage'
-import Page1 from '../../components/magazines/issue-1/Page1'
+import Page12 from '../../components/magazines/issue-1/Page12'
+import Page34 from '../../components/magazines/issue-1/Page34'
+import Page56 from '../../components/magazines/issue-1/Page56'
 import PageWrapper from '../../components/magazines/common/PageWrapper'
+import styles from './styles.module.scss'
 
 const MagazineViewer = props => {
   const {
@@ -11,21 +14,8 @@ const MagazineViewer = props => {
     children
   } = props
   return (
-    <div style={{
-      flex: 1,
-      background: 'green',
-      marginTop: 100,
-      display: 'flex',
-      justifyContent: 'center',
-    }}>
-      <div style={{
-        width: '80%',
-        borderWidth: 1,
-        borderColor: 'black',
-        borderStyle: 'solid',
-        background: 'gray',
-        // transform: 'scale(0.5)'
-      }}>
+    <div className={styles.magazineViewerWrapper}>
+      <div className={styles.contentWrapper}>
         <HTMLFlipBook 
           width={960}
           height={1497}
@@ -44,15 +34,12 @@ const MagazineViewer = props => {
           // ref={(el) => (this.flipBook = el)}
         >
           <CoverPage></CoverPage>
-          <PageWrapper><Page1 /></PageWrapper>
-          <PageWrapper secondPart><Page1 /></PageWrapper>
-          <PageWrapper>test123123123</PageWrapper>
-          <PageWrapper>test123123123</PageWrapper>
-          <PageWrapper>test123123123</PageWrapper>
-          {/* <CoverPage>test</CoverPage> */}
-          {/* <Page1></Page1> */}
-          {/* <div className="demoPage">Page 3</div>
-          <div className="demoPage">Page 4</div> */}
+          <PageWrapper><Page12 /></PageWrapper>
+          <PageWrapper secondPart><Page12 /></PageWrapper>
+          <PageWrapper><Page34 /></PageWrapper>
+          <PageWrapper secondPart><Page34 /></PageWrapper>
+          <PageWrapper><Page56 /></PageWrapper>
+          <PageWrapper secondPart><Page56 /></PageWrapper>
         </HTMLFlipBook>
       </div>
     </div>

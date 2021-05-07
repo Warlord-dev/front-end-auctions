@@ -4,14 +4,17 @@
   @include magazineWrapper();
   background-color: black;
   color: white;
-  padding: 2.7vw;
   display: flex;
   position: relative;
 
   h1 {
+    position: absolute;
+    left: 100px;
+    top: 100px;
     font-family: A DAY WITHOUT SUN;
-    font-size: 99vw;
+    font-size: 1920px;
     font-weight: normal;
+    line-height: 2000px;
   }
 
   h2 {
@@ -21,19 +24,24 @@
     transform-origin: 0 0;
     transform: rotate(270deg);
     font-family: A DAY WITHOUT SUN;
-    font-size: 25vw;
+    font-size: 300px;
+    line-height: 374.4px;
+    width: 341px;
+    height: 316px;
+    top: 1469px;
+    left: 1643px;
   }
 
   h3 {
     position: absolute;
-    width: 54.21vw;
-    height: 3.07vw;
-    left: 2.65vw;
-    bottom: 0;
+    width: 1041px;
+    height: 59px;
+    left: 52px;
+    top: 1451px;
     font-family: Abel;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.04vw;
+    font-size: 20px;
     line-height: 25px;
     transform: rotate(270deg);
     transform-origin: 0 0;

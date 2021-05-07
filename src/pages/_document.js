@@ -132,6 +132,36 @@ class MyDocument extends Document {
               src: url("./fonts/A DAY WITHOUT SUN.otf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: "Abel";
+              src: url("./fonts/Abel-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Nella Sue Demo';
+              src: url("./fonts/NellaSueDEMO.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Sweetly Broken';
+              src: url("./fonts/Sweetly Broken.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Sweetly Broken';
+              src: url("./fonts/Sweetly Broken SemiBold.ttf");
+              font-weight: 700;
+            }
+
+            @font-face {
+              font-family: 'Sweetly Broken';
+              src: url("./fonts/Sweetly Broken Bold.ttf");
+              font-weight: 900;
+            }
           
           `,
             }}

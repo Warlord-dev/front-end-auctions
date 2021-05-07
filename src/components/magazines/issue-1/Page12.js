@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react'
-import styles from './page1.module.scss'
+import React from 'react'
+import styles from './page12.module.scss'
 
-const Page1 = props => {
+const Page12 = () => {
   return (
     <div className={styles.wrapper}>
       <h3>Interrobang | The essence of the metaverse is that it’s multimodal. 
@@ -13,4 +13,4 @@ const Page1 = props => {
   )
 }
 
-export default Page1
+export default Page12

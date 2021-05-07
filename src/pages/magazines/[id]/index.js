@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import HTMLFlipBook from 'react-pageflip'
-import CoverPage from '../../../components/magazines/issue-1/CoverPage'
-import Page1 from '../../../components/magazines/issue-1/Page1'
-import Page from '../../../components/magazines/common/PageWrapper'
 import WebViewer from '../../../containers/web-view'
 import MagazineViewer from '../../../containers/magazine-view'
 import MapViewer from '../../../containers/map-view'
@@ -14,13 +10,11 @@ const MagazinePages = props => {
 
   const [viewMethod, setViewMethod] = useState('mapview')
   
-
   if (viewMethod === 'webview') {
     return (
       <WebViewer
         issueId={id}
       >
-
       </WebViewer>
     )
   } else if (viewMethod === 'magazineview') {
@@ -36,7 +30,7 @@ const MagazinePages = props => {
     <MapViewer
       issueId={id}
       onClickItem={pageNumber => {
-        setViewMethod('webview')
+        setViewMethod('magazineview')
       }}
     >
 
