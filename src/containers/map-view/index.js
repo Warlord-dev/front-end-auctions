@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import windowSize from 'react-window-size'
 import styles from './styles.module.scss'
 import MapItem from '../../components/magazines/common/MapItem'
@@ -39,7 +39,7 @@ const mapList = [
   }
 ]
 
-const MapViewer = props => {
+const MapViewer = forwardRef((props, ref) => {
   const { issueId, windowWidth, onClickItem } = props
   const currentMap = mapList.find(item => item.issueId === issueId)
   return (
@@ -51,6 +51,7 @@ const MapViewer = props => {
           currentMap.content.map((item, index) => {
             return (
               <MapItem
+                key={index}
                 windowWidth={windowWidth}
                 itemData={item}
                 issueId={issueId}
@@ -64,6 +65,6 @@ const MapViewer = props => {
       </div>
     </div>
   )
-}
+})
 
 export default windowSize(MapViewer)

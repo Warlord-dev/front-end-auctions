@@ -1,10 +1,12 @@
-import React, { forwardRef } from 'react'
-const CoverPage = forwardRef((props, ref) => {
+import React from 'react'
+import styles from './coverpage.module.scss'
+
+const CoverPage = () => {
   return (
-    <div ref={ref} data-density="hard">
-      <img src='/images/magazine/1/cover.jpg' width='100%'/>
+    <div className={styles.wrapper}>
+      <img src='/images/magazine/1/cover.jpg' width='960'/>
     </div>
   )
-})
+}
 
 export default CoverPage
