@@ -1,15 +1,23 @@
 import React from 'react';
 import cn from 'classnames';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from './styles.module.scss';
 
 const BottomLine = (props) => {
+  const items = [
+    'Skins',
+    'Mona price',
+    'Digitalax new post title',
+    'Drop product title',
+    'Digifizzy feature'
+  ];
+
   return (
-    <div className={cn(styles.bottomLine, props.transparent ? styles.transparent : '')}>
-      <div>skins</div>
-      <div>mona price</div>
-      <div>digitalax new post title</div>
-      <div>drip product title</div>
-      <div>digifizzy feature</div>
+    <div className={styles.bottomLine}>
+      <Carousel centerMode centerSlidePercentage={30} autoPlay showThumbs={false} showArrows={false} showStatus={false} showIndicators={false}>
+        {items.map((item, index) => <div className={styles.bottomItem} key={index}>{item}</div>)}
+      </Carousel>
     </div>
   );
 };

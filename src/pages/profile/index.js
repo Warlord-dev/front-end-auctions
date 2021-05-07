@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 import copy from 'copy-to-clipboard';
 import { useSelector, useDispatch } from 'react-redux';
@@ -15,6 +15,7 @@ import styles from './styles.module.scss';
 const Profile = ({ history }) => {
   const user = useSelector(getUser);
   const dispatch = useDispatch();
+  const [activeTab, setActiveTab] = useState(0);
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }
@@ -35,7 +36,7 @@ const Profile = ({ history }) => {
 
   const onCopyWalletAddress = () => {
     copy(account);
-    toast("Wallet Address is copied to the clipboard");
+    toast('Wallet Address is copied to the clipboard');
   };
 
   if (!user || !nfts) {
@@ -78,13 +79,29 @@ const Profile = ({ history }) => {
         </Button>
       </div>
       <div className={styles.rightSideWrapper}>
-        <p className={styles.titleWrapper}>CHANGING ROOM</p>
-        <div className={styles.divider} />
-        <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
-          {nfts.map((nft) => (
-            <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
-          ))}
-        </ul>
+        <div className={styles.rightSideTab}>
+          <div
+            className={`${styles.tabItem} ${activeTab === 0 && styles.active}`}
+            onClick={() => setActiveTab(0)}
+          >
+            <p className={styles.titleWrapper}>CHANGING ROOM</p>
+          </div>
+          <div
+            className={`${styles.tabItem} ${activeTab === 1 && styles.active}`}
+            onClick={() => setActiveTab(1)}
+          >
+            <p className={styles.titleWrapper}>ISSUE COLLECTION</p>
+          </div>
+        </div>
+        <div className={styles.tabBody}>
+          {activeTab === 0 ? (
+            <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
+              {nfts.map((nft) => (
+                <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
+              ))}
+            </ul>
+          ) : null}
+        </div>
       </div>
     </div>
   );

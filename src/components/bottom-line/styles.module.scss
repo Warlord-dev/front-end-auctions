@@ -1,17 +1,15 @@
 .bottomLine {
-  text-transform: uppercase;
-  display: flex;
-  background: #E5E5E5;
-  font-family: "Inter";
-  color: black;
-  font-size: 16px;
-  height: 105px;
-  padding: 24px 64px;
-  justify-content: space-between;
-	align-items: center;
+  width: 100%;
+  border: 2px solid black ;
+}
 
-	&.transparent {
-		background: transparent;
-		border: 2px solid black;
-	}
+.bottomItem {
+  padding: 1rem 0;
+  background: transparent;
+  color: black;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+
 }

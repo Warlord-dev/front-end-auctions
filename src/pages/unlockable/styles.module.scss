@@ -20,12 +20,43 @@
         margin-bottom: 350px;
         width: 30%;
         height: 600px;
+
+        .overlay {
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+
+          button {
+            display: none;
+            color: bloack;
+            background: white;
+            font-weight: 600;
+            padding: 1rem;
+            border: 2px solid grey;
+
+            &:hover {
+              opacity: .8;
+            }
+          }
+        }
+
+        &:hover {
+          .overlay {
+            background: linear-gradient(0deg, rgba(255, 39, 39, 0.77), rgba(255, 39, 39, 0.77)), #F7F7F7;
+
+            button {
+              display: block;
+            }
+          }
+        }
       }
     }
 
     .unlockable {
       position: absolute;
-      top: 0;
+      top: 50px;
       left: 50%;
       transform: translate(-50%, -30%);
       width: calc(100% - 200px);

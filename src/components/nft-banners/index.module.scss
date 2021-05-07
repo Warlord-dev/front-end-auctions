@@ -1,0 +1,17 @@
+.bannerWrapper {
+    padding-top: 100px;
+
+    .videoItem {
+        position: relative;
+        overflow: hidden;
+    
+        .gif {
+            position: absolute;
+            right: 20%;
+            width: fit-content;
+            object-fit: contain;
+            transform: rotate(-15deg);
+            height: 100%;
+        }
+    }
+}

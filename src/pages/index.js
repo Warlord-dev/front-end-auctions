@@ -20,16 +20,14 @@ const LandingPage = () => {
   return (
     <>
       <div className={styles.wrapper}>
-        <img className={styles.header} src="/images/homepage_header.png" alt="homepage header" />
-        <div className={styles.title}>
-          <span>Mod the metaverse</span>
+        <div className={styles.bodyWrapper}>
+          <img className={styles.header} src="/images/nft/homepage_header.png" alt="homepage header" />
+          <img className={styles.subTitle} src="/images/nft/homepage_sub_title.png" alt="homepage new" />
+          <div className={styles.panel}>
+          </div>
         </div>
-        <div className={styles.panel}>
-          <img className={styles.new} src="/images/homepage_new.png" alt="homepage new" />
-          <img className={styles.meta} src="/images/homepage_meta.png" alt="homepage meta" />
-        </div>
+        <BottomLine transparent={false} />
       </div>
-      <BottomLine transparent={false} />
     </>
   );
 };
