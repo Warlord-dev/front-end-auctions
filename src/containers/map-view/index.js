@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react'
 import windowSize from 'react-window-size'
 import styles from './styles.module.scss'
 import MapItem from '../../components/magazines/common/MapItem'
+import ViewerSwitch from '../../components/magazines/common/ViewerSwitch'
 
 const mapList = [
   {
@@ -40,30 +41,37 @@ const mapList = [
 ]
 
 const MapViewer = forwardRef((props, ref) => {
-  const { issueId, windowWidth, onClickItem } = props
+  const { issueId, windowWidth, onClickItem, onSwitchViewer } = props
   const currentMap = mapList.find(item => item.issueId === issueId)
   return (
-    <div className={styles.mapViewerWrapper}>
-      <div className={styles.contentWrapper}>
-        <img src='./magazine/digi_fizzy_map.jpg' alt='map-background' className={styles.mapImage}/>
-        {
-          currentMap && currentMap.content && 
-          currentMap.content.map((item, index) => {
-            return (
-              <MapItem
-                key={index}
-                windowWidth={windowWidth}
-                itemData={item}
-                issueId={issueId}
-                onClick={() => {
-                  onClickItem(item.pageNum)
-                }}
-              />
-            )
-          })
-        }
+    <>
+      <div className={styles.mapViewerWrapper}>
+        <div className={styles.contentWrapper}>
+          <img src='./magazine/digi_fizzy_map.jpg' alt='map-background' className={styles.mapImage}/>
+          {
+            currentMap && currentMap.content && 
+            currentMap.content.map((item, index) => {
+              return (
+                <MapItem
+                  key={index}
+                  windowWidth={windowWidth}
+                  itemData={item}
+                  issueId={issueId}
+                  onClick={() => {
+                    onClickItem(item.pageNum)
+                  }}
+                />
+              )
+            })
+          }
+        </div>
       </div>
-    </div>
+      <ViewerSwitch 
+        mapSwitch
+        viewers={['webview', 'magazineview']}
+        onSwitchViewer={onSwitchViewer}
+      />
+    </>
   )
 })
 

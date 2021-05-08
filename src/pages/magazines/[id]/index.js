@@ -14,6 +14,11 @@ const MagazinePages = props => {
     return (
       <WebViewer
         issueId={id}
+        onSwitchViewer={
+          viewer => {
+            setViewMethod(viewer)
+          }
+        }
       >
       </WebViewer>
     )
@@ -21,6 +26,11 @@ const MagazinePages = props => {
     return (
       <MagazineViewer
         issueId={id}
+        onSwitchViewer={
+          viewer => {
+            setViewMethod(viewer)
+          }
+        }
       >
       </MagazineViewer>
     )
@@ -32,6 +42,11 @@ const MagazinePages = props => {
       onClickItem={pageNumber => {
         setViewMethod('webview')
       }}
+      onSwitchViewer={
+        viewer => {
+          setViewMethod(viewer)
+        }
+      }
     >
     </MapViewer>
   )

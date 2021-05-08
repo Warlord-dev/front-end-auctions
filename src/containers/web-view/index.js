@@ -7,6 +7,7 @@ import Page12 from '../../components/magazines/issue-1/Page12'
 import Page34 from '../../components/magazines/issue-1/Page34'
 import Page56 from '../../components/magazines/issue-1/Page56'
 import WebPageWrapper from '../../components/magazines/common/WebPageWrapper'
+import ViewerSwitch from '../../components/magazines/common/ViewerSwitch'
 import styles from './styles.module.scss'
 
 const KeyboardEventHandler = dynamic(() => import('react-keyboard-event-handler'), {
@@ -14,6 +15,7 @@ const KeyboardEventHandler = dynamic(() => import('react-keyboard-event-handler'
 })
 
 const WebViewer = props => {
+  const { onSwitchViewer } = props
   const [zoom, setZoom] = useState(1)
 
   const zoomList = [0.05, 0.1, 0.25, 0.5, 0.75, 1]
@@ -33,25 +35,31 @@ const WebViewer = props => {
     }
   }
   return (
-    <div className={styles.webViewerWrapper}>
-      <div className={styles.contentWrapper}>
-       <WebPageWrapper zoom={zoom}><CoverPage /></WebPageWrapper>
-        <WebPageWrapper zoom={zoom}><Page12 /></WebPageWrapper>
-        <WebPageWrapper secondPart zoom={zoom}><Page12 /></WebPageWrapper>
-        <WebPageWrapper zoom={zoom}><Page34 /></WebPageWrapper>
-        <WebPageWrapper secondPart zoom={zoom}><Page34 /></WebPageWrapper>
-        <WebPageWrapper zoom={zoom}><Page56 /></WebPageWrapper>
-        <WebPageWrapper secondPart zoom={zoom}><Page56 /></WebPageWrapper>
+    <>
+      <div className={styles.webViewerWrapper}>
+        <div className={styles.contentWrapper}>
+        <WebPageWrapper zoom={zoom}><CoverPage /></WebPageWrapper>
+          <WebPageWrapper zoom={zoom}><Page12 /></WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}><Page12 /></WebPageWrapper>
+          <WebPageWrapper zoom={zoom}><Page34 /></WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}><Page34 /></WebPageWrapper>
+          <WebPageWrapper zoom={zoom}><Page56 /></WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}><Page56 /></WebPageWrapper>
+        </div>
+        <div className={styles.zoomViewer}>
+          {
+            zoom * 100 + '%'
+          }
+        </div>
+        <KeyboardEventHandler
+          handleKeys={['-', '=']}
+          onKeyEvent={handleAnswerChange} />
       </div>
-      <div className={styles.zoomViewer}>
-        {
-          zoom * 100 + '%'
-        }
-      </div>
-      <KeyboardEventHandler
-        handleKeys={['-', '=']}
-        onKeyEvent={handleAnswerChange} />
-    </div>
+      <ViewerSwitch 
+        viewers={['magazineview', 'mapview']}
+        onSwitchViewer={onSwitchViewer}
+      />
+    </>
   )
 }
 
