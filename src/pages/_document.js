@@ -162,7 +162,114 @@ class MyDocument extends Document {
               src: url("./fonts/Sweetly Broken Bold.ttf");
               font-weight: 900;
             }
-          
+
+            @font-face {
+              font-family: 'Artisual Deco DEMO';
+              src: url("./fonts/ArtisualDeco-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Mad Galaxy Demo';
+              src: url("./fonts/MadGalaxyDemoRegular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Archie Websters';
+              src: url("./fonts/Archie Websters.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Rugrats';
+              src: url("./fonts/RugratS.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Rugsnatcher DEMO';
+              src: url("./fonts/rugsnatcher DEMO.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Beth Ellen';
+              src: url("./fonts/Beth-Ellen-2.0.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Jockey One';
+              src: url("./fonts/JockeyOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Jacques Francois';
+              src: url("./fonts/JacquesFrancois-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Lexend Tera';
+              src: url("./fonts/LexendTera-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Medula One';
+              src: url("./fonts/MedulaOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Aldrich';
+              src: url("./fonts/Aldrich-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Cool Chaos';
+              src: url("./fonts/Cool Chaos.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Heaven Wanders DEMO';
+              src: url("./fonts/Heaven_Wanders_DEMO.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Comics Tricks';
+              src: url("./fonts/Comics Tricks.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Habbo';
+              src: url("./fonts/HabboFont.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Ayuthaya';
+              src: url("./fonts/ayuthaya-webfont.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Arima Madurai';
+              src: url("./fonts/ArimaMadurai-Bold.ttf");
+              font-weight: 700;
+            }
+
+            @font-face {
+              font-family: 'Mada';
+              src: url("./fonts/Mada-Regular.ttf");
+              font-weight: 400;
+            }
           `,
             }}
           />

@@ -1,0 +1,95 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  video {
+    position: absolute;
+    width: 1941px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    object-fit: fill;
+  }
+
+  .backImage {
+    position: absolute;
+    width: 971px;
+    height: 892px;
+    left: 0px;
+    top: 757px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 1331px;
+    height: 400px;
+    left: 294px;
+    top: 591px;
+
+    font-family: Heaven Wanders DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 100%;
+    /* or 200px */
+
+    text-align: center;
+  }
+
+  h2 {
+    position: absolute;
+    width: 743px;
+    height: 80px;
+    left: -62px;
+    top: 57px;
+
+    font-family: Habbo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+    text-align: center;
+  }
+
+  h3 {
+    position: absolute;
+    width: 743px;
+    height: 90px;
+    left: 1098px;
+    top: 85px;
+
+    font-family: Comics Tricks;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 100%;
+    /* or 45px */
+
+    text-align: right;
+  }
+
+  .introText {
+    position: absolute;
+    width: 618.39px;
+    height: 199.21px;
+    left: 298px;
+    top: 169.36px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+    text-align: center;
+    transform: rotate(-3deg);
+  }
+}

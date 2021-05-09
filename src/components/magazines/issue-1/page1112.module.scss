@@ -1,0 +1,44 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .pageBack1 {
+    position: absolute;
+    width: 883px;
+    height: 1420px;
+    left: 38px;
+    top: 38px;
+    background: #DBCF95;
+  }
+
+  .pathImage {
+    position: absolute;
+    width: 581px;
+    height: 454px;
+    left: 94px;
+    top: -49px;
+  }
+  
+  .manImage {
+    position: absolute;
+    width: 651px;
+    height: 806px;
+    left: 137px;
+    top: 154px;
+  }
+
+  .pageBack2 {
+    position: absolute;
+    width: 883px;
+    height: 1420px;
+    left: 999px;
+    top: 38px;
+
+    background: #DBCF95;
+  }
+}

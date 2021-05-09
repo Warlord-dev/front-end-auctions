@@ -1,0 +1,47 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+  
+  .backImage1 {
+    position: absolute;
+    width: 960px;
+    height: 1519px;
+    left: 0px;
+    top: -22px;
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 808px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .leftSideFrame {
+    position: absolute;
+    width: 149px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(0 249 58);
+    border-left: 15px solid black;
+    border-right: 15px solid black;
+  }
+
+  .rightSideFrame {
+    position: absolute;
+    width: 152px;
+    height: 1497px;
+    left: 1768px;
+    top: 0px;
+    background-color: rgb(0 249 58);
+    border-left: 15px solid black;
+    border-right: 15px solid black;
+  }
+}

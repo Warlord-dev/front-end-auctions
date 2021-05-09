@@ -40,33 +40,3 @@
     color: red;
   }
 }
-
-.switchViewerWrapper {
-  display: flex;
-  position: absolute;
-  right: 0;
-  top: calc(1497px * 640 / 1920 + 20px);
-
-  @media (min-width: 1481px) {
-    top: calc(1497px * 1400 / 1920 + 20px);
-  }
-
-  @media (min-width: 1281px) and (max-width: 1480px) {
-    top: calc(1497px * 1200 / 1920 + 20px);
-  }
-
-  @media (min-width: 961px) and (max-width: 1280px) {
-    top: calc(1497px * 850 / 1920 + 20px);
-  }
-
-  @media (min-width: 641px) and (max-width: 960px) {
-    top: calc(1497px * 640 / 1920 + 20px);
-  }
-
-  button {
-    background-color: gray;
-    color: black;
-    padding: 20px 10px;
-    margin-right: 10px;
-  }
-}
