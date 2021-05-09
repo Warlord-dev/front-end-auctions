@@ -21,6 +21,7 @@ import Page3132 from '../../components/magazines/issue-1/Page3132'
 import Page3334 from '../../components/magazines/issue-1/Page3334'
 import Page3536 from '../../components/magazines/issue-1/Page3536'
 import Page3738 from '../../components/magazines/issue-1/Page3738'
+import Page3940 from '@components/magazines/issue-1/Page3940'
 import Page4142 from '@components/magazines/issue-1/Page4142'
 import Page4344 from '@components/magazines/issue-1/Page4344'
 import Page4546 from '../../components/magazines/issue-1/Page4546'
@@ -30,10 +31,19 @@ import Page5152 from '@components/magazines/issue-1/Page5152'
 import Page5354 from '@components/magazines/issue-1/Page5354'
 import Page5556 from '@components/magazines/issue-1/Page5556'
 import Page5758 from '@components/magazines/issue-1/Page5758'
+import Page5960 from '@components/magazines/issue-1/Page5960'
 import Page6162 from '@components/magazines/issue-1/Page6162'
+import Page6364 from '@components/magazines/issue-1/Page6364'
+import Page6566 from '@components/magazines/issue-1/Page6566'
+import Page6768 from '@components/magazines/issue-1/Page6768'
 import Page6970 from '@components/magazines/issue-1/Page6970'
 import Page7172 from '@components/magazines/issue-1/Page7172'
+import Page7374 from '@components/magazines/issue-1/Page7374'
+import Page7576 from '@components/magazines/issue-1/Page7576'
 import Page7778 from '@components/magazines/issue-1/Page7778'
+import Page7980 from '@components/magazines/issue-1/Page7980'
+import Page8182 from '@components/magazines/issue-1/Page8182'
+import Page8384 from '@components/magazines/issue-1/Page8384'
 import Page8586 from '@components/magazines/issue-1/Page8586'
 import Page8788 from '@components/magazines/issue-1/Page8788'
 import Backcover from '@components/magazines/issue-1/Backcover'
@@ -108,7 +118,8 @@ const WebViewer = (props) => {
           <WebPageWrapper secondPart zoom={zoom}><Page3536 /></WebPageWrapper>
           <WebPageWrapper zoom={zoom}><Page3738 /></WebPageWrapper>
           <WebPageWrapper secondPart zoom={zoom}><Page3738 /></WebPageWrapper>
-
+          <WebPageWrapper zoom={zoom}><Page3940 /></WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}><Page3940 /></WebPageWrapper>
           <WebPageWrapper zoom={zoom}><Page4142 /></WebPageWrapper>
           <WebPageWrapper secondPart zoom={zoom}>
             <Page4142 />
@@ -162,10 +173,34 @@ const WebViewer = (props) => {
             <Page5758 />
           </WebPageWrapper>
           <WebPageWrapper zoom={zoom}>
+            <Page5960 />
+          </WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}>
+            <Page5960 />
+          </WebPageWrapper>
+          <WebPageWrapper zoom={zoom}>
             <Page6162 />
           </WebPageWrapper>
           <WebPageWrapper secondPart zoom={zoom}>
             <Page6162 />
+          </WebPageWrapper>
+          <WebPageWrapper zoom={zoom}>
+            <Page6364 />
+          </WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}>
+            <Page6364 />
+          </WebPageWrapper>
+          <WebPageWrapper zoom={zoom}>
+            <Page6566 />
+          </WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}>
+            <Page6566 />
+          </WebPageWrapper>
+          <WebPageWrapper zoom={zoom}>
+            <Page6768 />
+          </WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}>
+            <Page6768 />
           </WebPageWrapper>
           <WebPageWrapper zoom={zoom}>
             <Page6970 />
@@ -180,10 +215,40 @@ const WebViewer = (props) => {
             <Page7172 />
           </WebPageWrapper>
           <WebPageWrapper zoom={zoom}>
+            <Page7374 />
+          </WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}>
+            <Page7374 />
+          </WebPageWrapper>
+          <WebPageWrapper zoom={zoom}>
+            <Page7576 />
+          </WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}>
+            <Page7576 />
+          </WebPageWrapper>
+          <WebPageWrapper zoom={zoom}>
             <Page7778 />
           </WebPageWrapper>
           <WebPageWrapper secondPart zoom={zoom}>
             <Page7778 />
+          </WebPageWrapper>
+          <WebPageWrapper zoom={zoom}>
+            <Page7980 />
+          </WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}>
+            <Page7980 />
+          </WebPageWrapper>
+          <WebPageWrapper zoom={zoom}>
+            <Page8182 />
+          </WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}>
+            <Page8182 />
+          </WebPageWrapper>
+          <WebPageWrapper zoom={zoom}>
+            <Page8384 />
+          </WebPageWrapper>
+          <WebPageWrapper secondPart zoom={zoom}>
+            <Page8384 />
           </WebPageWrapper>
           <WebPageWrapper zoom={zoom}>
             <Page8586 />
