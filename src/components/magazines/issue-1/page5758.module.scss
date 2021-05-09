@@ -1,0 +1,103 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();  
+    
+    .left {
+        position: absolute;
+        width: 960px;
+        height: 1304px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .right {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+    }
+
+    .leftDiv {
+        position: absolute;
+        width: 960px;
+        height: 229px;
+        left: 0px;
+        top: 1268px;
+
+        background: #8BE0FF;
+    }
+
+    .leftText {
+        position: absolute;
+        width: 862px;
+        height: 121px;
+        left: 38px;
+        top: 1290px;
+
+        font-family: Sen;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 110%;
+        /* or 17px */
+
+
+        color: #DB00FF;
+    }
+
+    .leftSubText {
+        position: absolute;
+        width: 432px;
+        height: 32px;
+        left: 38px;
+        top: 1431px;
+
+        font-family: Digital Dare;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 110%;
+        /* or 33px */
+
+
+        color: #FF00F5;
+    }
+
+    .rightText {
+        position: absolute;
+        width: 432px;
+        height: 32px;
+        left: 1394px;
+        top: 36px;
+
+        font-family: Didot;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 110%;
+        /* or 39px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rightSecondText {
+        position: absolute;
+        width: 432px;
+        height: 198px;
+        left: 1394px;
+        top: 82px;
+
+        font-family: Dhurjati;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* or 22px */
+
+
+        color: #FFA959;
+    }
+}
