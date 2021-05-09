@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 
-import CoverPage from '../../components/magazines/issue-1/CoverPage'
-import Page12 from '../../components/magazines/issue-1/Page12'
-import Page34 from '../../components/magazines/issue-1/Page34'
-import Page56 from '../../components/magazines/issue-1/Page56'
-import Page78 from '../../components/magazines/issue-1/Page78'
-import Page910 from '../../components/magazines/issue-1/Page910'
-import Page1112 from '../../components/magazines/issue-1/Page1112'
-import Page1314 from '../../components/magazines/issue-1/Page1314'
-import Page1516 from '../../components/magazines/issue-1/Page1516'
-import Page1718 from '../../components/magazines/issue-1/Page1718'
-import Page1920 from '../../components/magazines/issue-1/Page1920'
-import Page2122 from '../../components/magazines/issue-1/Page2122'
-import Page2324 from '../../components/magazines/issue-1/Page2324'
-import Page2526 from '../../components/magazines/issue-1/Page2526'
-import Page2728 from '../../components/magazines/issue-1/Page2728'
-import Page2930 from '../../components/magazines/issue-1/Page2930'
-import Page3132 from '../../components/magazines/issue-1/Page3132'
-import Page3334 from '../../components/magazines/issue-1/Page3334'
-import Page3536 from '../../components/magazines/issue-1/Page3536'
-import Page3738 from '../../components/magazines/issue-1/Page3738'
+import CoverPage from '@components/magazines/issue-1/CoverPage'
+import Page12 from '@components/magazines/issue-1/Page12'
+import Page34 from '@components/magazines/issue-1/Page34'
+import Page56 from '@components/magazines/issue-1/Page56'
+import Page78 from '@components/magazines/issue-1/Page78'
+import Page910 from '@components/magazines/issue-1/Page910'
+import Page1112 from '@components/magazines/issue-1/Page1112'
+import Page1314 from '@components/magazines/issue-1/Page1314'
+import Page1516 from '@components/magazines/issue-1/Page1516'
+import Page1718 from '@components/magazines/issue-1/Page1718'
+import Page1920 from '@components/magazines/issue-1/Page1920'
+import Page2122 from '@components/magazines/issue-1/Page2122'
+import Page2324 from '@components/magazines/issue-1/Page2324'
+import Page2526 from '@components/magazines/issue-1/Page2526'
+import Page2728 from '@components/magazines/issue-1/Page2728'
+import Page2930 from '@components/magazines/issue-1/Page2930'
+import Page3132 from '@components/magazines/issue-1/Page3132'
+import Page3334 from '@components/magazines/issue-1/Page3334'
+import Page3536 from '@components/magazines/issue-1/Page3536'
+import Page3738 from '@components/magazines/issue-1/Page3738'
 import Page3940 from '@components/magazines/issue-1/Page3940'
 import Page4142 from '@components/magazines/issue-1/Page4142'
 import Page4344 from '@components/magazines/issue-1/Page4344'
-import Page4546 from '../../components/magazines/issue-1/Page4546'
+import Page4546 from '@components/magazines/issue-1/Page4546'
 import Page4748 from '@components/magazines/issue-1/Page4748'
 import Page4950 from '@components/magazines/issue-1/Page4950'
 import Page5152 from '@components/magazines/issue-1/Page5152'
@@ -48,8 +48,8 @@ import Page8586 from '@components/magazines/issue-1/Page8586'
 import Page8788 from '@components/magazines/issue-1/Page8788'
 import Backcover from '@components/magazines/issue-1/Backcover'
 
-import WebPageWrapper from '../../components/magazines/common/WebPageWrapper'
-import ViewerSwitch from '../../components/magazines/common/ViewerSwitch'
+import WebPageWrapper from '@components/magazines/common/WebPageWrapper'
+import ViewerSwitch from '@components/magazines/common/ViewerSwitch'
 import styles from './styles.module.scss'
 
 const KeyboardEventHandler = dynamic(() => import('react-keyboard-event-handler'), {
@@ -266,7 +266,7 @@ const WebViewer = (props) => {
             <Backcover />
           </WebPageWrapper>
         </div>
-        <div className={styles.zoomViewer}>{zoom * 100 + '%'}</div>
+        {/* <div className={styles.zoomViewer}>{zoom * 100 + '%'}</div> */}
         <KeyboardEventHandler handleKeys={['-', '=']} onKeyEvent={handleAnswerChange} />
       </div>
       <ViewerSwitch viewers={['magazineview', 'mapview']} onSwitchViewer={onSwitchViewer} />
