@@ -52,6 +52,31 @@
     line-height: 35px;
     text-align: center;
     transform: rotate(3deg);
+
+    &.shadow1 {
+      position: absolute;
+      height: 432.95px;
+      left: 6.18%;
+      right: 55.02%;
+      top: calc(50% - 432.95px/2 + 244.97px);
+      color: #F90498;
+    }
+
+    &.shadow2 {
+      height: 432.95px;
+      left: 6.39%;
+      right: 54.81%;
+      top: calc(50% - 432.95px/2 + 244.97px);
+      color: #F90498;
+    }
+
+    &.shadow3 {
+      height: 432.95px;
+      left: 6.65%;
+      right: 54.55%;
+      top: calc(50% - 432.95px/2 + 244.97px);
+      color: #F90498;
+    }
   }
 
   .section2 {

@@ -169,6 +169,12 @@
     src: url("./../../../../public/fonts/LexendTera-Regular.ttf");
     font-weight: 400;
   }
+  
+  @font-face {
+    font-family: 'Lexend Zetta';
+    src: url("./../../../../public/fonts/LexendZetta-Regular.ttf");
+    font-weight: 400;
+  }
 
   @font-face {
     font-family: 'Medula One';
@@ -219,7 +225,25 @@
   }
   
   @font-face {
-    font-family: 'Arima Madurai';
+    font-family: 'Mada';
     src: url("./../../../../public/fonts/Mada-Regular.ttf");
-    font-weight: 700;
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Mervale Script';
+    src: url("./../../../../public/fonts/MervaleScript-Regular.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'PLAYPULL';
+    src: url("./../../../../public/fonts/PLAYPULL_Demo.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Acme';
+    src: url("./../../../../public/fonts/Acme-Regular.ttf");
+    font-weight: 400;
   }

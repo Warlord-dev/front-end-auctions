@@ -24,6 +24,15 @@ const Page1718 = () => {
         Stimulus check number two was worth $600 per person with another $600 per qualifying child. 
         But given that economic recovery is not an overnight result, US President Joe Biden is also proposing to continue issuing checks worth $300 per child for 12 months.
       </p>
+      <h1 className={styles.shadow1}>
+        While the plan looks promising, the distribution of the checks is ripe with concerns. Identifying the rightful number of recipients might be challenging without an updated list of residents in an area. Likewise, releasing it through a government agency adds another gateway which leads to distribution delays. Crowds will also gather at check releasing sites, making it contradicting to social distancing guidelines.
+      </h1>
+      <h1 className={styles.shadow2}>
+        While the plan looks promising, the distribution of the checks is ripe with concerns. Identifying the rightful number of recipients might be challenging without an updated list of residents in an area. Likewise, releasing it through a government agency adds another gateway which leads to distribution delays. Crowds will also gather at check releasing sites, making it contradicting to social distancing guidelines.
+      </h1>
+      <h1 className={styles.shadow3}>
+        While the plan looks promising, the distribution of the checks is ripe with concerns. Identifying the rightful number of recipients might be challenging without an updated list of residents in an area. Likewise, releasing it through a government agency adds another gateway which leads to distribution delays. Crowds will also gather at check releasing sites, making it contradicting to social distancing guidelines.
+      </h1>
       <h1>
         While the plan looks promising, the distribution of the checks is ripe with concerns. Identifying the rightful number of recipients might be challenging without an updated list of residents in an area. Likewise, releasing it through a government agency adds another gateway which leads to distribution delays. Crowds will also gather at check releasing sites, making it contradicting to social distancing guidelines.
       </h1>

@@ -216,6 +216,12 @@ class MyDocument extends Document {
               src: url("./fonts/LexendTera-Regular.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: 'Lexend Zetta';
+              src: url("./fonts/LexendZetta-Regular.ttf");
+              font-weight: 400;
+            }
             
             @font-face {
               font-family: 'Medula One';
@@ -268,6 +274,24 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Mada';
               src: url("./fonts/Mada-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Mervale Script';
+              src: url("./fonts/MervaleScript-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'PLAYPULL';
+              src: url("./fonts/PLAYPULL_Demo.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Acme';
+              src: url("./fonts/Acme-Regular.ttf");
               font-weight: 400;
             }
           `,
