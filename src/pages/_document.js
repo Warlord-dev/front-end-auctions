@@ -574,6 +574,18 @@ class MyDocument extends Document {
               src: url("./fonts/SingleDay-Regular.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: 'Joti One';
+              src: url("./fonts/JotiOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'THE AMAZING SPIDER-MAN';
+              src: url("./fonts/The Amazing Spider-Man.ttf");
+              font-weight: 400;
+            }
           `,
             }}
           />
