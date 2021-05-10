@@ -12,7 +12,7 @@ const scriptTxt = `
 })();
 `;
 
-const gaScriptText =`
+const gaScriptText = `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -293,6 +293,216 @@ class MyDocument extends Document {
               font-family: 'Acme';
               src: url("./fonts/Acme-Regular.ttf");
               font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Rochester';
+              src: url("./fonts/Rochester-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Nunito Sans';
+              src: url("./fonts/NunitoSans-Regular.ttf");
+              font-weight: 400;
+              font-family: 'Blacker Display';
+              src: url("./fonts/Blacker-Display-Regular-trial.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Arapey';
+              src: url("./fonts/Arapey-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'EB Garamond';
+              src: url("./fonts/EBGaramond-VariableFont_wght.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Julietta Messie Demo';
+              src: url("./fonts/FontsFree-Net-Julietta-Messie-Demo.ttf");
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Asdonuts';
+              src: url("./fonts/Asdonuts.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Olivia & Kevin';
+              src: url("./fonts/Olivia & Kevin.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Knife Princess';
+              src: url("./fonts/Knife Princess.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Sen';
+              src: url("./fonts/Sen-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Digital Dare';
+              src: url("./fonts/Digital Dare.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Didot';
+              src: url("./fonts/GFSDidot-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Dhurjati';
+              src: url("./fonts/Dhurjati-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Bahiana';
+              src: url("./fonts/Bahiana-Regular.ttf");
+            }
+            
+            @font-face {
+              font-family: 'DM Mono';
+              src: url("./fonts/DMMono-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Masterblast';
+              src: url("./fonts/Masterblast.otf");
+            }
+            
+            @font-face {
+              font-family: 'Carter One';
+              src: url("./fonts/CarterOne-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Baloo Tamma 2';
+              src: url("./fonts/BalooTamma2-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Covered By Your Grace';
+              src: url("./fonts/CoveredByYourGrace-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Boldfinger';
+              src: url("./fonts/Boldfinger.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Crafty Girls';
+              src: url("./fonts/CraftyGirls-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Cinzel Decorative';
+              src: url("./fonts/CinzelDecorative-Regular.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Trocchi';
+              src: url("./fonts/Trocchi-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Fresca';
+              src: url("./fonts/Fresca-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Empirez';
+              src: url("./fonts/Empirez.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Mouse Deco';
+              src: url("./fonts/Mouse_Deco.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Neucha';
+              src: url("./fonts/Neucha-Regular.ttf");
+            }
+          
+            @font-face {
+              font-family: 'Neon Nanoborg';
+              src: url("./fonts/Neon Nanoborg.otf");
+            }
+            
+            @font-face {
+              font-family: 'Rose Cake-Personal Use';
+              src: url("./fonts/Rose Cake - Personal Use.woff");
+            }
+            
+            @font-face {
+              font-family: 'Courier Prime';
+              src: url("./fonts/CourierPrime-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Minecrafter';
+              src: url("./fonts/Minecrafter.Reg.ttf");
+            }
+            
+            @font-face {
+              font-family: 'ZCOOL KuaiLe';
+              src: url("./fonts/ZCOOLKuaiLe-Regular.ttf");
+            }
+              
+            @font-face {
+              font-family: 'Finger Paint';
+              src: url("./fonts/FingerPaint-Regular.ttf");
+            }
+               
+            @font-face {
+              font-family: 'Finger Paint';
+              src: url("./fonts/FingerPaint-Regular.ttf");
+            }
+              
+            @font-face {
+              font-family: 'B612 Mono';
+              src: url("./fonts/B612Mono-Regular.ttf");
+            }
+                
+            @font-face {
+              font-family: 'Biryani';
+              src: url("./fonts/Biryani-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Capriola';
+              src: url("./fonts/Capriola-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Barlow';
+              src: url("./fonts/Barlow-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'FresHot_DEMO';
+              src: url("./fonts/FresHot_DEMO.ttf");
+            }
+
+            @font-face {
+              font-family: 'Jura';
+              src: url("./fonts/Jura-VariableFont_wght.ttf");
+            }
+
+            @font-face {
+              font-family: 'Parabolic';
+              src: url("./fonts/Parabolic.ttf");
+            }
+
+            @font-face {
+              font-family: 'Days One';
+              src: url("./fonts/DaysOne-Regular.ttf");
             }
           `,
             }}
