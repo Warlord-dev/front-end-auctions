@@ -19,7 +19,7 @@ const Page5758 = () => {
         state to another. Late Night Walker is sorrow in motion, trying to move freely in space in
         an extravagant fashion.
       </div>
-      <a href="https://instagram.com/veletagram" className={styles.leftSubText}>
+      <a href="https://instagram.com/veletagram" className={styles.leftSubText} target="_blank">
         DOMINGO BETTE ENCOUR
       </a>
       <div className={styles.rightText}>ERICK STOW</div>
