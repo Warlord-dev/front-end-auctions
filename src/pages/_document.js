@@ -599,6 +599,12 @@ class MyDocument extends Document {
               src: url("./fonts/Aclonica-Regular.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: 'Bahianita';
+              src: url("./fonts/Bahianita-Regular.ttf");
+              font-weight: 400;
+            }
           `,
             }}
           />
