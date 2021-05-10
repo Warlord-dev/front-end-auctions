@@ -47,7 +47,7 @@ const Page7172 = () => {
         physical or digital notwithstanding.
       </div>
       <div className={styles.rightDiv}></div>
-      <img src="./magazine/71_72/image 417.png" className={styles.rightImage1} />
+      <img src="./magazine/1/71_72/image 417.png" className={styles.rightImage1} />
       <div className={styles.rightText1}>New Talent.</div>
       <div className={styles.rightText2}>New Talent.</div>
       <div className={styles.rightText3}>AREZ</div>
@@ -84,7 +84,7 @@ const Page7172 = () => {
         target="_blank"
       >
         <video autoPlay muted loop>
-          <source src="./magazine/71_72/Bloodmoon.mp4" type="video/mp4" />
+          <source src="./magazine/1/71_72/Bloodmoon.mp4" type="video/mp4" />
         </video>
       </a>
       <a
@@ -92,14 +92,14 @@ const Page7172 = () => {
         className={styles.link2}
         target="_blank"
       >
-        <img src="./magazine/71_72/image 419.png" />
+        <img src="./magazine/1/71_72/image 419.png" />
       </a>
       <a
         href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/23506943164233084642049435454199598140929559050782904913842283787905727987713"
         className={styles.link3}
         target="_blank"
       >
-        <img src="./magazine/71_72/image 418.png" />
+        <img src="./magazine/1/71_72/image 418.png" />
       </a>
     </div>
   );
