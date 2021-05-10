@@ -52,7 +52,7 @@ const HiddenContent2 = () => {
             </div>
           </div>
         </div>
-        <BottomLine />
+        <BottomLine borderWhite={false} />
       </div>
     </>
   );

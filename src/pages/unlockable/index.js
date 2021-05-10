@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo, useCallback, useEffect, useState } from 'react';
 import BottomLine from '@components/bottom-line';
 import styles from './styles.module.scss';
 import { useRouter } from 'next/router';
@@ -6,6 +6,7 @@ import NftBanners from '@components/nft-banners';
 import api from '@services/api/api.service';
 import { useSelector } from 'react-redux';
 import { getAccount } from '@selectors/user.selectors';
+import details from '@constants/nft_subscription_issue1';
 
 const Unlockable = () => {
   const router = useRouter();
@@ -20,7 +21,6 @@ const Unlockable = () => {
     const fetchSubscriptionStatus = async () => {
       const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
       const ids = [];
-      console.log(digitalaxSubscriptionCollectors);
       for (let i = 0; i < digitalaxSubscriptionCollectors.length; i += 1) {
         for (let j = 0; j < digitalaxSubscriptionCollectors[i].parentsOwned.length; j += 1) {
           const {
@@ -39,10 +39,14 @@ const Unlockable = () => {
   }, []);
 
   const onUnlock = (id) => {
-    if (!collectionIds.filter((collectionId) => parseInt(collectionId) === id).length) {
-      onUnlockableDetails(id);
+    if (account) {
+      if (!collectionIds.filter((collectionId) => parseInt(collectionId) === id).length) {
+        onUnlockableDetails(id);
+      } else {
+        window.alert('This item is already puchased.');
+      }
     } else {
-      window.alert('This item is already puchased.');
+      window.alert('You should sign in to purchase items.');
     }
   };
 
@@ -55,6 +59,8 @@ const Unlockable = () => {
         </div>
         <div className={styles.panels}>
           <div className={styles.panel}>
+            <video loop autoPlay muted className={styles.thumbnail} src={details[0].url}>
+            </video>
             <div className={styles.overlay}>
               <button type="button" onClick={() => onUnlock(1)}>
                 {' '}
@@ -63,6 +69,8 @@ const Unlockable = () => {
             </div>
           </div>
           <div className={styles.panel}>
+            <video loop autoPlay muted className={styles.thumbnail} src={details[1].url}>
+            </video>
             <div className={styles.overlay}>
               <button type="button" onClick={() => onUnlock(2)}>
                 {' '}
@@ -71,6 +79,8 @@ const Unlockable = () => {
             </div>
           </div>
           <div className={styles.panel}>
+            <video loop autoPlay muted className={styles.thumbnail} src={details[2].url}>
+            </video>
             <div className={styles.overlay}>
               <button type="button" onClick={() => onUnlock(3)}>
                 {' '}

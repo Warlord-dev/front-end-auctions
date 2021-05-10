@@ -87,6 +87,13 @@
   }
   .tabBody {
     padding-top: 3rem;
+
+    .subscriptionWrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 }
 

@@ -3,12 +3,12 @@ import LeftBox from './LeftBox';
 import RightBox from './RightBox';
 import styles from './styles.module.scss';
 
-const UnlockableDetail = ({ images, id, details }) => {
+const UnlockableDetail = ({ id, details }) => {
   const state = 1;
 
   return (
     <div className={styles.wrapper}>
-      <LeftBox images={images} />
+      <LeftBox details={details} />
       <RightBox details={details} id={id} />
     </div>
   )
