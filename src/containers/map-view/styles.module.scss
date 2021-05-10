@@ -1,0 +1,35 @@
+.mapViewerWrapper {
+  margin-top: 90px;
+  flex: auto;
+  justify-self: center;
+  background-color: black;
+  
+  @media (max-width: 640px)  {
+    overflow-x: scroll;
+    min-height: 500px;
+  }
+
+  width: 100vw;
+
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  .contentWrapper {
+    position: relative;
+    display: flex;
+    left: 0;
+    top: 0;
+
+    img.mapImage {
+      width: 100%;
+      @media (max-width: 640px)  {
+        width: 1200px;
+      }
+    }
+  }
+}

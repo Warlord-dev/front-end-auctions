@@ -1,0 +1,112 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    background: #E5E5E5;
+
+    .background {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .defiGems {
+        position: absolute;
+        width: 599px;
+        height: 132px;
+        left: 15px;
+        top: 136px;
+
+        font-family: Empirez;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 120px;
+        line-height: 110%;
+        /* identical to box height, or 132px */
+    }
+
+    .diamond2 {
+        position: absolute;
+        width: 152px;
+        height: 152px;
+        left: 462px;
+        top: 16px;
+    }
+
+    .diamond4 {
+        position: absolute;
+        width: 346px;
+        height: 346px;
+        left: 579px;
+        top: 16px;
+    }
+
+    .diamond1 {
+        position: absolute;
+        width: 96px;
+        height: 96px;
+        left: 859px;
+        top: 0px;
+    }
+
+    .text {
+        position: absolute;
+        width: 688.12px;
+        height: 670.18px;
+        left: 90px;
+        top: 327.97px;
+
+        font-family: Cool Chaos;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* or 22px */
+
+
+        color: #FAD3F0;
+
+        transform: rotate(-5deg);
+    }
+
+    .diamond3 {
+        position: absolute;
+        width: 443px;
+        height: 418px;
+        left: 355px;
+        top: 1057px;
+    }
+
+    .diamondHa {
+        position: absolute;
+        left: 596px;
+        top: 1387px;
+
+        font-family: Empirez;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 110%;
+        /* identical to box height, or 88px */
+    }
+
+    .rightText {
+        position: absolute;
+        width: 512px;
+        height: 66px;
+        left: 1306px;
+        top: 378px;
+
+        font-family: Blacker Display;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 110%;
+        /* identical to box height, or 66px */
+
+
+        color: #000000;
+    }
+}
