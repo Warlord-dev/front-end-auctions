@@ -346,7 +346,14 @@
 
   @font-face {
     font-family: 'Cinzel Decorative';
+    font-weight: 400;
     src: url("./../../../../public/fonts/CinzelDecorative-Regular.ttf");
+  }
+ 
+  @font-face {
+    font-family: 'Cinzel Decorative';
+    font-weight: 900;
+    src: url("./../../../../public/fonts/CinzelDecorative-Black.ttf");
   }
   
   @font-face {
@@ -540,5 +547,11 @@
   @font-face {
     font-family: 'THE AMAZING SPIDER-MAN';
     src: url("./../../../../public/fonts/The Amazing Spider-Man.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Aclonica';
+    src: url("./../../../../public/fonts/Aclonica-Regular.ttf");
     font-weight: 400;
   }

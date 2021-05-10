@@ -402,7 +402,14 @@ class MyDocument extends Document {
           
             @font-face {
               font-family: 'Cinzel Decorative';
+              font-weight: 400;
               src: url("./fonts/CinzelDecorative-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Cinzel Decorative';
+              font-weight: 900;
+              src: url("./fonts/CinzelDecorative-Black.ttf");
             }
             
             @font-face {
@@ -584,6 +591,12 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'THE AMAZING SPIDER-MAN';
               src: url("./fonts/The Amazing Spider-Man.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Aclonica';
+              src: url("./fonts/Aclonica-Regular.ttf");
               font-weight: 400;
             }
           `,
