@@ -1,0 +1,51 @@
+.magazineViewerWrapper {
+  flex: content;
+  background-color: gray;
+  margin-top: 100px;
+  display: inline-flex;
+  justify-content: center;
+
+  @media only screen and (max-width: 768px){
+    .contentWrapper {
+      width: 768px;
+      border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      background-color: gray;
+    }
+  }
+  @media only screen and (max-width: 425px){
+    .contentWrapper {
+      width: 425px;
+      border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      background-color: gray;
+    }
+  }
+  @media only screen and (max-width: 375px){
+    .contentWrapper {
+      width: 375px;
+      border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      background-color: gray;
+    }
+  }
+
+  @media only screen and (max-width: 320px){
+    .contentWrapper {
+      width: 320px;
+      border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      background-color: gray;
+    }
+  }
+
+  .switchViewerWrapper {
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+  }
+}

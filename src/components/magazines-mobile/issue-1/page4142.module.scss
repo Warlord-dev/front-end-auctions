@@ -1,0 +1,11 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    
+    img {
+        position: absolute;
+        width: 1920px;
+        height: 1511px;
+    }
+}

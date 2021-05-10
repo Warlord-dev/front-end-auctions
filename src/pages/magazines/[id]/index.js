@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import WebViewer from '../../../containers/web-view'
 import MagazineViewer from '../../../containers/magazine-view'
+import MagazineMobile from '../../../containers/magazine-mobile'
 import MapViewer from '../../../containers/map-view'
 
 const MagazinePages = props => {
@@ -9,6 +10,7 @@ const MagazinePages = props => {
   const { id } = router.query;
 
   const [viewMethod, setViewMethod] = useState('mapview')
+  const width = window.innerWidth
   
   if (viewMethod === 'webview') {
     return (
@@ -23,17 +25,31 @@ const MagazinePages = props => {
       </WebViewer>
     )
   } else if (viewMethod === 'magazineview') {
-    return (
-      <MagazineViewer
-        issueId={id}
-        onSwitchViewer={
-          viewer => {
-            setViewMethod(viewer)
+    if(width > 768) {
+      return (
+        <MagazineViewer
+          issueId={id}
+          onSwitchViewer={
+            viewer => {
+              setViewMethod(viewer)
+            }
           }
-        }
-      >
-      </MagazineViewer>
-    )
+        >
+        </MagazineViewer>
+      )
+    }else {
+      return (
+        <MagazineMobile
+          issueId={id}
+          onSwitchViewer={
+            viewer => {
+              setViewMethod(viewer)
+            }
+          }
+        >
+        </MagazineMobile>
+      )
+    }
   }
 
   return (

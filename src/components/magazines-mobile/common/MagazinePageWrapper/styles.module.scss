@@ -1,0 +1,65 @@
+
+
+@media only screen and (max-width: 768px) {
+  .magazinePageWrapper {
+    width: 768px;
+    height: 100vh;
+    overflow: hidden;
+    display: inline-block;
+    
+    .contentWrapper {
+      overflow-y: scroll;
+      width: 768px;
+      height: 100vh;
+      transform-origin: 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .magazinePageWrapper {
+    width: 425px;
+    height: 100vh;
+    overflow: hidden;
+    display: inline-block;
+    
+    .contentWrapper {
+      overflow-y: scroll;
+      width: 425px;
+      height: 100vh;
+      transform-origin: 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .magazinePageWrapper {
+    width: 375px;
+    height: 100vh;
+    overflow: hidden;
+    display: inline-block;
+    
+    .contentWrapper {
+      overflow-y: scroll;
+      width: 375px;
+      height: 100vh;
+      transform-origin: 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .magazinePageWrapper {
+    width: 320px;
+    height: 100vh;
+    overflow: hidden;
+    display: inline-block;
+    
+    .contentWrapper {
+      overflow-y: scroll;
+      width: 320px;
+      height: 100vh;
+      transform-origin: 0 0;
+    }
+  }
+}
