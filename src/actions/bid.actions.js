@@ -3,14 +3,18 @@ import { utils as ethersUtils } from 'ethers';
 import { convertToWei } from '@helpers/price.helpers';
 import {
   getMarketplaceContractAddressByChainId,
+  getMarketplaceContractNFTAddressByChainId,
   getMonaContractAddressByChainId,
+  getMonaContractNFTAddressByChainId,
 } from '@services/network.service';
 
 import auctionReducer from '../reducers/auction.reducer';
 import {
   getContract,
   getMarketplaceContract,
+  getMarketplaceNFTContract,
   getMonaTokenContract,
+  getMonaTokenNFTContract,
 } from '../services/contract.service';
 
 class BidActions extends BaseActions {
@@ -122,6 +126,53 @@ class BidActions extends BaseActions {
       const listener = contract.methods
         .buyOffer(id, isMona)
         .send({ from: account, value: isMona ? 0 : value });
+      const promise = new Promise((resolve, reject) => {
+        listener.on('error', (error) => reject(error));
+        listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
+      });
+      return {
+        promise,
+        unsubscribe: () => {
+          listener.off('error');
+          listener.off('transactionHash');
+        },
+      };
+    };
+  }
+
+  buyNowNftSubscription(id, value, isMona) {
+    return async (_, getState) => {
+      const account = getState().user.get('account');
+      const chainId = getState().global.get('chainId');
+      const marketplaceContract = await getMarketplaceContractNFTAddressByChainId(chainId);
+      const contract = await getMarketplaceNFTContract(marketplaceContract);
+      if (isMona) {
+        const monaContractAddress = await getMonaContractAddressByChainId(chainId);
+        const monaContract = await getMonaTokenContract(monaContractAddress);
+        const allowedValue = 10000;
+        const jsAllowedValue = parseFloat(ethersUtils.formatEther(allowedValue));
+        if (jsAllowedValue < 10000000000) {
+          console.log('this is marketplacecontract address', marketplaceContract);
+          const listener = monaContract.methods
+            .approve(marketplaceContract, convertToWei(20000000000))
+            .send({ from: account });
+          const promise = new Promise((resolve, reject) => {
+            listener.on('error', (error) => reject(error));
+            listener.on('confirmation', (transactionHash) => resolve(transactionHash));
+          });
+          return {
+            promise,
+            unsubscribe: () => {
+              listener.off('error');
+              listener.off('transactionHash');
+            },
+          };
+        }
+      }
+
+      const listener = contract.methods
+        .buyOffer(id)
+        .send({ from: account });
       const promise = new Promise((resolve, reject) => {
         listener.on('error', (error) => reject(error));
         listener.on('transactionHash', (transactionHash) => resolve(transactionHash));

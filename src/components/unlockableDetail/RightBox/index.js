@@ -1,4 +1,4 @@
-import { openBuynowModal, openConnectMaticModal, openConnectMetamaskModal } from '@actions/modals.actions';
+import { openBuynowNftSubscriptionModal, openConnectMaticModal, openConnectMetamaskModal } from '@actions/modals.actions';
 import { getChainId } from '@selectors/global.selectors';
 import { getAccount } from '@selectors/user.selectors';
 import Link from 'next/link';
@@ -20,11 +20,12 @@ const RightBox = ({ details, id }) => {
     }
     if (account) {
       dispatch(
-        openBuynowModal({
+        openBuynowNftSubscriptionModal({
           id: id,
-          priceEth: 123,
+          priceEth: details.price,
         })
       );
+      setShowHidden(true);
     } else {
       dispatch(openConnectMetamaskModal());
     }
@@ -34,10 +35,10 @@ const RightBox = ({ details, id }) => {
     <div className={styles.wrapper}>
       <div className={styles.title}>{details.title}</div>
       <div className={styles.body}>{details.body}</div>
-      <div className={styles.price}>{details.price}</div>
+      <div className={styles.price}>{details.price} $MONA</div>
       <div className={styles.actionGroup}>
         <button type="button" className={styles.unlockButton} onClick={onUnlock}>UNLOCK</button>
-        {!showHidden ? (
+        {showHidden ? (
           <Link type="button" href={`/paywall/hidden_content_1/${id}`}>
             <a className={styles.showHiddenButton}>
               SEE HIDDEN CONTENT

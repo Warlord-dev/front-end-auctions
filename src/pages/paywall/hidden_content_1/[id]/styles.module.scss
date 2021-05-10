@@ -1,6 +1,7 @@
 .wrapper {
-  background: url("/images/blue_sky.png");
-
+  background: url("/images/nft/ejml13 hires 1.png");
+  background-size: cover;
+  
   .bodyWrapper {
 
     color: white;
@@ -33,6 +34,13 @@
       font-weight: 600;
       font-style: italic;
       text-align: center;
+    }
+    
+    .flexDiv {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
     }
   
     .panel {

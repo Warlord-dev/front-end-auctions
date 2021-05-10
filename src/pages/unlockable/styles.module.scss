@@ -1,6 +1,7 @@
 .mainWrapper {
   padding-top: 80px;
-  background: url("/images/blue_sky.png");
+  background: url("/images/nft/ejml13 hires 1.png");
+  background-size: cover;
 
   .wrapper {
     color: white;
@@ -9,6 +10,25 @@
     margin-top: 225px;
     padding: 64px;
     position: relative;
+
+    .mainText {
+      width: 1657px;
+      height: 132px;
+      margin: auto;
+
+      font-family: Internal Rainbows;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 120px;
+      line-height: 110%;
+      /* identical to box height, or 132px */
+
+      text-align: center;
+
+      color: #FFFFFF;
+
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 
     .panels {
       display: flex;

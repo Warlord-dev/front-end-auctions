@@ -1,6 +1,35 @@
 .bannerWrapper {
     padding-top: 100px;
 
+    .firstBanner {
+        position: relative;
+
+        .viewBundles {
+            position: absolute;
+            width: 334px;
+            height: 84px;
+            top: 150px;
+            right: 50px;
+            padding: .45rem;
+
+            border: 5px solid #FF7A00;
+            box-sizing: border-box;
+
+            font-family: Heebo;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 59px;
+            text-align: center;
+
+            color: #FF7A00;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
     .videoItem {
         position: relative;
         overflow: hidden;
