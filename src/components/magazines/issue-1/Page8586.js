@@ -21,8 +21,8 @@ const Page8586 = () => {
       <a href="https://www.instagram.com/dgtl_stylist/" className={styles.text5}>
         Alyona Briukhanova
       </a>
-      <video autoPlay muted loop className={styles.video} src="./magazine/85_86/hat_360.mov">
-        {/* <source src="./magazine/85_86/hat_360.mov" type="video/mp4" /> */}
+      <video autoPlay muted loop className={styles.video}>
+        <source src="./magazine/85_86/hat_360.mp4" type="video/mp4" />
       </video>
     </div>
   );
