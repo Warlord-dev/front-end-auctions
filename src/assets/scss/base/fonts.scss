@@ -346,7 +346,14 @@
 
   @font-face {
     font-family: 'Cinzel Decorative';
+    font-weight: 400;
     src: url("./../../../../public/fonts/CinzelDecorative-Regular.ttf");
+  }
+ 
+  @font-face {
+    font-family: 'Cinzel Decorative';
+    font-weight: 900;
+    src: url("./../../../../public/fonts/CinzelDecorative-Black.ttf");
   }
   
   @font-face {
@@ -458,5 +465,99 @@
   @font-face {
     font-family: 'Nunito Sans';
     src: url("./../../../../public/fonts/NunitoSans-Regular.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Rockabye';
+    src: url("./../../../../public/fonts/Rockabye-Regular.otf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Sanchez';
+    src: url("./../../../../public/fonts/Sanchez-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Sanchez';
+    font-style: italic;
+    src: url("./../../../../public/fonts/Sanchez-Italic.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Rosario';
+    src: url("./../../../../public/fonts/Rosario-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Rosario';
+    font-style: italic;
+    src: url("./../../../../public/fonts/Rosario-Italic.ttf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'B612';
+    src: url("./../../../../public/fonts/B612-Regular.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Miama';
+    src: url("./../../../../public/fonts/Miama.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'THIS FONT IS EMPTY1';
+    src: url("./../../../../public/fonts/THIS FONT IS EMPTY1.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'DigitalRiver';
+    src: url("./../../../../public/fonts/DigitalRiver.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Damion';
+    src: url("./../../../../public/fonts/Damion-Regular.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Single Day';
+    src: url("./../../../../public/fonts/SingleDay-Regular.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Joti One';
+    src: url("./../../../../public/fonts/JotiOne-Regular.ttf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'THE AMAZING SPIDER-MAN';
+    src: url("./../../../../public/fonts/The Amazing Spider-Man.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Aclonica';
+    src: url("./../../../../public/fonts/Aclonica-Regular.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Bahianita';
+    src: url("./../../../../public/fonts/Bahianita-Regular.ttf");
     font-weight: 400;
   }

@@ -4,9 +4,9 @@ import styles from './page5556.module.scss';
 const Page5556 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/55_56/Space Grave 1.png" className={styles.left} />
-      <img src="./magazine/55_56/Zhora'sKaftan_2 1.png" className={styles.right} />
-      <img src="./magazine/55_56/RachelFurCoat_4 1.png" className={styles.small} />
+      <img src="./magazine/1/55_56/Space Grave 1.png" className={styles.left} />
+      <img src="./magazine/1/55_56/Zhora'sKaftan_2 1.png" className={styles.right} />
+      <img src="./magazine/1/55_56/RachelFurCoat_4 1.png" className={styles.small} />
       <div className={styles.text1}> BLADE RUNWAY </div>
       <div className={styles.text2}> BLADE RUNWAY </div>
       <div className={styles.text3}> BLADE RUNWAY </div>

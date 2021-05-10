@@ -25,6 +25,9 @@ const Page3738 = () => {
       <p className={styles.section4}>
         I was excited by the intersection of crypto and the metaverse – digital worlds layered on top of our physical reality. All these connections led me to want to build an Indian digital fashion collection, which is something I had never seen before. But this is more than about digital fashion – it’s about creating culturally inclusive spaces in the metaverse. It’s about inspiring more metaverse artists from all backgrounds, from Africa, to South America, to India, Pakistan and Bangladesh.
       </p>
+      <div className={styles.name1}>
+        -Ravi Singh
+      </div>
       <p className={styles.section5}>
         The collection was inspired by Ravi, 3D modelled by Lorena and all scenes, animation and renders composed by DIGITALAX.
       </p>
@@ -33,6 +36,9 @@ const Page3738 = () => {
         <br /><br />
         Not having a strong background in Indian Culture myself allowed me to work without preconceptions. After many virtual coffees NYC-Madrid I worked experimentally to best present the first cultural crossover into digital fashion.
       </p>
+      <div className={styles.name2}>
+        -Lorena Bello
+      </div>
       <video autoPlay muted loop className={styles.indiaNecklaceVideo}>
         <source src='./magazine/1/videos/indiaNecklace.mp4' type="video/mp4" />
       </video>
