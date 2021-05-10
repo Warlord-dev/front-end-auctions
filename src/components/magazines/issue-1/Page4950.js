@@ -4,11 +4,11 @@ import styles from './page4950.module.scss';
 const Page4950 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/49_50/Artboard 3.png" className={styles.background} />
-      <img src="./magazine/49_50/DEFI GEMS.png" className={styles.defiGems} />
-      <img src="./magazine/49_50/diamond 2.png" className={styles.diamond2} />
-      <img src="./magazine/49_50/diamond 4.png" className={styles.diamond4} />
-      <img src="./magazine/49_50/diamond 1.png" className={styles.diamond1} />
+      <img src="./magazine/1/49_50/Artboard 3.png" className={styles.background} />
+      <img src="./magazine/1/49_50/DEFI GEMS.png" className={styles.defiGems} />
+      <img src="./magazine/1/49_50/diamond 2.png" className={styles.diamond2} />
+      <img src="./magazine/1/49_50/diamond 4.png" className={styles.diamond4} />
+      <img src="./magazine/1/49_50/diamond 1.png" className={styles.diamond1} />
       <div className={styles.text}>
         A few projects in the NFT field I am excited about:
         <br />
@@ -57,8 +57,8 @@ const Page4950 = () => {
         integrating digital fashion NFTs into non block-chain native games, VR and other 3D
         applications."
       </div>
-      <img src="./magazine/49_50/diamond ha.png" className={styles.diamondHa} />
-      <img src="./magazine/49_50/diamond 3.png" className={styles.diamond3} />
+      <img src="./magazine/1/49_50/diamond ha.png" className={styles.diamondHa} />
+      <img src="./magazine/1/49_50/diamond 3.png" className={styles.diamond3} />
       <div className={styles.rightText}>Meme artist</div>
     </div>
   );

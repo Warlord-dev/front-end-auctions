@@ -5,7 +5,7 @@ const Page8586 = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.mainText}>yekaterina</div>
-      <img src="./magazine/85_86/Group 1184.png" className={styles.right} />
+      <img src="./magazine/1/85_86/Group 1184.png" className={styles.right} />
       <a href="https://www.instagram.com/dgtl_stylist/" className={styles.text1} target="_blank">
         Alyona Briukhanova
       </a>
@@ -22,7 +22,7 @@ const Page8586 = () => {
         Alyona Briukhanova
       </a>
       <video autoPlay muted loop className={styles.video}>
-        <source src="./magazine/85_86/hat_360.mp4" type="video/mp4" />
+        <source src="./magazine/1/85_86/hat_360.mp4" type="video/mp4" />
       </video>
     </div>
   );

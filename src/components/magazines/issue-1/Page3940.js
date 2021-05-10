@@ -4,10 +4,10 @@ import styles from './page3940.module.scss';
 const Page3940 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/39_40/Group 1185.png" className={styles.left} />
-      <img src="./magazine/39_40/right4.png" className={styles.right} />
-      <img src="./magazine/39_40/Group 1181 (8).png" className={styles.leftBack} />
-      <img src="./magazine/39_40/Group 1184 (1).png" className={styles.leftCarousel} />
+      <img src="./magazine/1/39_40/Group 1185.png" className={styles.left} />
+      <img src="./magazine/1/39_40/right4.png" className={styles.right} />
+      <img src="./magazine/1/39_40/Group 1181 (8).png" className={styles.leftBack} />
+      <img src="./magazine/1/39_40/Group 1184 (1).png" className={styles.leftCarousel} />
       <div className={styles.leftText1}>ESPA</div>
       <div className={styles.leftText2}>CASUAL ESPORTS</div>
       <div className={styles.leftText3}>MINECRAFT ESPORTS with ESPA</div>
@@ -153,13 +153,13 @@ const Page3940 = () => {
         own their content. Coinvise will be an open platform, enabling other platforms and
         communities to integrate parts of what we built.
       </div>
-      <a href="" className={styles.twitter} target="_blank">
-        <img src="./magazine/39_40/23681.png" />
+      <a href="" className={styles.twitter}>
+        <img src="./magazine/1/39_40/23681.png" />
       </a>
-      <a href="" className={styles.discord} target="_blank">
-        <img src="./magazine/39_40/disc.png" />
+      <a href="" className={styles.discord}>
+        <img src="./magazine/1/39_40/disc.png" />
       </a>
-      <img src="./magazine/39_40/Group 1185 (2).png" className={styles.rightArrow} />
+      <img src="./magazine/1/39_40/Group 1185 (2).png" className={styles.rightArrow} />
     </div>
   );
 };

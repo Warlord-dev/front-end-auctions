@@ -4,10 +4,10 @@ import styles from './page4546.module.scss';
 const Page4546 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/45_46/left.png" className={styles.left} />
-      <img src="./magazine/45_46/right.png" className={styles.right} />
-      <img src="./magazine/45_46/mosh_left.png" className={styles.leftMosh} />
-      <img src="./magazine/45_46/mosh_right.png" className={styles.rightMosh} />
+      <img src="./magazine/1/45_46/left.png" className={styles.left} />
+      <img src="./magazine/1/45_46/right.png" className={styles.right} />
+      <img src="./magazine/1/45_46/mosh_left.png" className={styles.leftMosh} />
+      <img src="./magazine/1/45_46/mosh_right.png" className={styles.rightMosh} />
       <div className={styles.firstParagraph} />
       <div className={styles.firstText}>
         And, as the internet moves towards an open, trustless, and permissionless model — a prelude

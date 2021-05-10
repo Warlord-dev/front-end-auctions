@@ -4,10 +4,10 @@ import styles from './page8182.module.scss';
 const Page8182 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/81_82/left2.png" className={styles.left} />
-      <img src="./magazine/81_82/Group 1181 (4).png" className={styles.right} />
+      <img src="./magazine/1/81_82/left2.png" className={styles.left} />
+      <img src="./magazine/1/81_82/Group 1181 (4).png" className={styles.right} />
       <video className={styles.leftLink1} muted autoPlay loop>
-        <source src="./magazine/81_82/Untitled (11).mp4" type="video/mp4" />
+        <source src="./magazine/1/81_82/Untitled (11).mp4" type="video/mp4" />
       </video>
       <a href="https://www.marguixastudio.com/" className={styles.leftLink2} target="_blank">
         MAR GUIXA STUDIO
@@ -65,9 +65,9 @@ const Page8182 = () => {
         designers / brands by providing them digital storefront space.
       </div>
       <video className={styles.video1} muted loop autoPlay>
-        <source src="./magazine/81_82/Singularity.mp4" type="video/mp4" />
+        <source src="./magazine/1/81_82/Singularity.mp4" type="video/mp4" />
       </video>
-      <img src="./magazine/81_82/image 321.png" className={styles.arrow1} />
+      <img src="./magazine/1/81_82/image 321.png" className={styles.arrow1} />
       <div className={styles.rightText11}>
         The Singularity sweater is an early XENOTECH 3D garment—a prelude to the official first
         collection releasing soon. It speaks to the concept of an approaching technological
@@ -76,9 +76,9 @@ const Page8182 = () => {
         interfaces.
       </div>
       <video className={styles.video2} muted loop autoPlay>
-        <source src="./magazine/81_82/Untitled (12).mp4" type="video/mp4" />
+        <source src="./magazine/1/81_82/Untitled (12).mp4" type="video/mp4" />
       </video>
-      <img src="./magazine/81_82/image 320.png" className={styles.arrow2} />
+      <img src="./magazine/1/81_82/image 320.png" className={styles.arrow2} />
       <div className={styles.rightText12}>
         This is the prototype of the 3D city that I built out to help visualize the way I imagine
         the XENOTECH Metaverse to look. Everything was modeled from scratch using Marvelous Designer

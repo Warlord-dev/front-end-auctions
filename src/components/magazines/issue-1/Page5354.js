@@ -5,7 +5,7 @@ const Page5354 = () => {
   return (
     <div className={styles.wrapper}>
       <img
-        src="./magazine/53_54/The Lady by the Pond - Series - Solitude 1.png"
+        src="./magazine/1/53_54/The Lady by the Pond - Series - Solitude 1.png"
         className={styles.brakcground}
       />
       <a href="https://twitter.com/rudeoolph" className={styles.link} target="_blank">

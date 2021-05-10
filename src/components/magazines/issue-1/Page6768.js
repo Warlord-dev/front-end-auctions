@@ -4,8 +4,8 @@ import styles from './page6768.module.scss';
 const Page6768 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/67_68/Group 1182 (2).png" className={styles.left} />
-      <img src="./magazine/67_68/Group 1182 (1).png" className={styles.right} />
+      <img src="./magazine/1/67_68/Group 1182 (2).png" className={styles.left} />
+      <img src="./magazine/1/67_68/Group 1182 (1).png" className={styles.right} />
       <div className={styles.text1}>
         The modding community is the backbone to the gaming and esports industries. The modders have
         built the castles for the OG game content that so many of us identify with, supporting

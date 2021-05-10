@@ -4,7 +4,7 @@ import styles from './page7172.module.scss';
 const Page7172 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/71_72/BG 3 Original 1.png" className={styles.background} />
+      <img src="./magazine/1/71_72/BG 3 Original 1.png" className={styles.background} />
       <div className={styles.leftDiv} />
       <div className={styles.leftText}>
         GDP per capita ranking is no longer the gold standard of economic prosperity that we've all

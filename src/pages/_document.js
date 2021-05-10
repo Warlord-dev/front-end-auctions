@@ -296,6 +296,15 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Rochester';
+              src: url("./fonts/Rochester-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Nunito Sans';
+              src: url("./fonts/NunitoSans-Regular.ttf");
+              font-weight: 400;
               font-family: 'Blacker Display';
               src: url("./fonts/Blacker-Display-Regular-trial.ttf");
             }
@@ -393,7 +402,14 @@ class MyDocument extends Document {
           
             @font-face {
               font-family: 'Cinzel Decorative';
+              font-weight: 400;
               src: url("./fonts/CinzelDecorative-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Cinzel Decorative';
+              font-weight: 900;
+              src: url("./fonts/CinzelDecorative-Black.ttf");
             }
             
             @font-face {
@@ -524,6 +540,163 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Fasthand';
               src: url("./fonts/Fasthand-Regular.ttf");
+              font-family: 'Rockabye';
+              src: url("./fonts/Rockabye-Regular.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Sanchez';
+              src: url("./fonts/Sanchez-Regular.ttf");
+              font-style: normal;
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Sanchez';
+              font-style: italic;
+              src: url("./fonts/Sanchez-Italic.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Rosario';
+              src: url("./fonts/Rosario-Regular.ttf");
+              font-style: normal;
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Rosario';
+              font-style: italic;
+              src: url("./fonts/Rosario-Italic.ttf");
+              font-weight: 400;
+            }
+           
+            @font-face {
+              font-family: 'B612';
+              src: url("./fonts/B612-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Miama';
+              src: url("./fonts/Miama.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'THIS FONT IS EMPTY1';
+              src: url("./fonts/THIS FONT IS EMPTY1.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'DigitalRiver';
+              src: url("./fonts/DigitalRiver.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Damion';
+              src: url("./fonts/Damion-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Single Day';
+              src: url("./fonts/SingleDay-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Joti One';
+              src: url("./fonts/JotiOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'THE AMAZING SPIDER-MAN';
+              src: url("./fonts/The Amazing Spider-Man.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Aclonica';
+              src: url("./fonts/Aclonica-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Bahianita';
+              src: url("./fonts/Bahianita-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Artypa';
+              src: url("./fonts/Artypa-Regular.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'The ART';
+              src: url("./fonts/THE ART.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Arthure';
+              src: url("./fonts/Arthure.ttf");
+            }
+
+            @font-face {
+              font-family: 'Baloo Paaji 2';
+              src: url("./fonts/BalooPaaji2-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Baloo Paaji 2';
+              src: url("./fonts/BalooPaaji2-Bold.ttf");
+              font-weight: 700;
+            }
+
+            @font-face {
+              font-family: 'Pixel Berry 08/84 Ltd.Edition';
+              src: url("./fonts/Pixel_Berry_08_84_Ltd.Edition.TTF");
+            }
+
+            @font-face {
+              font-family: 'TS Block';
+              src: url("./fonts/TS Block Bold.ttf");
+            }
+
+            @font-face {
+              font-family: 'Montserrat';
+              src: url("./fonts/Montserrat-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Montserrat';
+              src: url("./fonts/Montserrat-Bold.ttf");
+              font-weight: 700;
+            }
+            
+            @font-face {
+              font-family: 'Haarlem Deco DEMO';
+              src: url("./fonts/Haarlem Deco DEMO.ttf");
+            }
+
+            @font-face {
+              font-family: 'Delius';
+              src: url("./fonts/Delius-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Maker Van';
+              src: url("./fonts/MakerVan-Regular.ttf");
             }
           `,
             }}

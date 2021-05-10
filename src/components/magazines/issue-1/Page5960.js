@@ -4,12 +4,12 @@ import styles from './page5960.module.scss';
 const Page5960 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/59_60/Group 1180.png" className={styles.left} />
-      <img src="./magazine/59_60/moshed-05-03-23-19-7 1.png" className={styles.right} />
-      <img src="./magazine/59_60/moshed-05-07-12-41-45 1.png" className={styles.rightMosh1} />
-      <img src="./magazine/59_60/moshed-05-07-12-26-50 1.png" className={styles.rightMosh2} />
-      <img src="./magazine/59_60/moshed-05-07-12-29-20 1.png" className={styles.rightMosh3} />
-      <img src="./magazine/59_60/Group 1165.png" className={styles.rightText1} />
+      <img src="./magazine/1/59_60/Group 1180.png" className={styles.left} />
+      <img src="./magazine/1/59_60/moshed-05-03-23-19-7 1.png" className={styles.right} />
+      <img src="./magazine/1/59_60/moshed-05-07-12-41-45 1.png" className={styles.rightMosh1} />
+      <img src="./magazine/1/59_60/moshed-05-07-12-26-50 1.png" className={styles.rightMosh2} />
+      <img src="./magazine/1/59_60/moshed-05-07-12-29-20 1.png" className={styles.rightMosh3} />
+      <img src="./magazine/1/59_60/Group 1165.png" className={styles.rightText1} />
       <div className={styles.text1}>E-SPORTS PLAYER OF THE MONTH</div>
       <div className={styles.text2}>
         Sentinel’s TenZ becomes the first player to reach the highest rank in Valorant’s competitive

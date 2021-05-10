@@ -4,7 +4,7 @@ import styles from './page6364.module.scss';
 const Page6364 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/63_64/left5.png" className={styles.left} />
+      <img src="./magazine/1/63_64/left5.png" className={styles.left} />
       <div className={styles.leftText1}>Raw Thoughts.</div>
       <div className={styles.leftText2}>Hvdson</div>
       <div className={styles.leftText3}>
@@ -130,17 +130,17 @@ const Page6364 = () => {
         want to get into the web3/nft space as a music artists? reach out to matt and songcamp!
       </div>
       <div className={styles.right} />
-      <a href="https://twitter.com/songcampdotband" className={styles.twitter} target="_blank">
-        <img src="./magazine/63_64/twitter (1) 1.png" />
+      <a href="https://twitter.com/songcampdotband" className={styles.twitter}>
+        <img src="./magazine/1/63_64/twitter (1) 1.png" />
       </a>
-      <img src="./magazine/63_64/image 395.png" className={styles.rightImage1} />
-      <img src="./magazine/63_64/image 396.png" className={styles.rightImage2} />
-      <img src="./magazine/63_64/moshed-05-07-15-2-41.gif" className={styles.rightImage3} />
+      <img src="./magazine/1/63_64/image 395.png" className={styles.rightImage1} />
+      <img src="./magazine/1/63_64/image 396.png" className={styles.rightImage2} />
+      <img src="./magazine/1/63_64/moshed-05-07-15-2-41 1.png" className={styles.rightImage3} />
       <div className={styles.rightText1}>SONGCAMP MUSIC NFT AUCTION.</div>
       <div className={styles.rightText1_2}>9 MUSIC ARTISTS. 10 ETH TOTAL SALES.</div>
-      <img src="./magazine/63_64/moshed-05-07-14-35-1.gif" className={styles.rightImage4} />
-      <a
-        href="https://songcamp.mirror.xyz/xVIye95frUFrZ4RbfYPFNhfi1emI7kvXCcxJOTbcBlM"
+      <img src="./magazine/1/63_64/moshed-05-07-14-35-1.gif" className={styles.rightImage4} />
+      <img
+        src="./magazine/1/63_64/Screen Shot 2021-05-07 at 1.04 1.png"
         className={styles.rightImage5}
         target="_blank"
       >
@@ -148,7 +148,7 @@ const Page6364 = () => {
       </a>
       <div className={styles.rightText14}>HOLD ON HOPE.</div>
       <div className={styles.rightText15}>Rowan. Kevin Paris. Gavin Slate.</div>
-      <img src="./magazine/63_64/Group 1189.png" className={styles.play1} />
+      <img src="./magazine/1/63_64/Group 1189.png" className={styles.play1} />
       <div className={styles.rightText2}>FRESH</div>
       <div className={styles.rightText3}>FRESH</div>
       <div className={styles.rightText4}>FRESH</div>
@@ -181,13 +181,13 @@ const Page6364 = () => {
         incredibly catchy melody, forming a unique blend of uplifting sounds guaranteed to bring
         your spirits up!
       </div>
-      <img src="./magazine/63_64/Group 1188.png" className={styles.rightImage6} />
+      <img src="./magazine/1/63_64/Group 1188.png" className={styles.rightImage6} />
       <div className={styles.rightText16}>PARABOLIC DREAMS</div>
       <div className={styles.rightText17}>PARABOLIC DREAMS</div>
       <div className={styles.rightText18}>PARABOLIC DREAMS</div>
-      <img src="./magazine/63_64/Group 1190.png" className={styles.play2} />
-      <img src="./magazine/63_64/Group 1190.png" className={styles.play3} />
-      <img src="./magazine/63_64/Group 1190.png" className={styles.play4} />
+      <img src="./magazine/1/63_64/Group 1190.png" className={styles.play2} />
+      <img src="./magazine/1/63_64/Group 1190.png" className={styles.play3} />
+      <img src="./magazine/1/63_64/Group 1190.png" className={styles.play4} />
     </div>
   );
 };

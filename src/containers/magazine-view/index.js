@@ -116,8 +116,6 @@ const MagazineViewer = props => {
             <MagazinePageWrapper><Page3738 /></MagazinePageWrapper>
             <MagazinePageWrapper secondPart><Page3738 /></MagazinePageWrapper>
 
-            <MagazinePageWrapper><Page3738 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page3738 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page3940 /></MagazinePageWrapper>
             <MagazinePageWrapper secondPart><Page3940 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page4142 /></MagazinePageWrapper>

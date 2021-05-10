@@ -4,8 +4,8 @@ import styles from './page7980.module.scss';
 const Page7980 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/79_80/Group 1179.png" className={styles.left} />
-      <img src="./magazine/79_80/right2.png" className={styles.right} />
+      <img src="./magazine/1/79_80/Group 1179.png" className={styles.left} />
+      <img src="./magazine/1/79_80/right2.png" className={styles.right} />
       <div className={styles.text1}>Andrea Nieto</div>
       <div className={styles.text2}>
         Andrea is a multidisciplinary designer and innovator originally from Colombia. Andrea’s
