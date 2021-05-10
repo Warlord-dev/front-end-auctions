@@ -6,7 +6,7 @@ const Page8384 = () => {
     <div className={styles.wrapper}>
       <img src="./magazine/83_84/left3.png" className={styles.left} />
       <img src="./magazine/83_84/right3.png" className={styles.right} />
-      <a href="https://twitter.com/pixls_dot_eth" className={styles.link}>
+      <a href="https://twitter.com/pixls_dot_eth" className={styles.link} target="_blank">
         <img src="./magazine/83_84/PIXLS.png" />
       </a>
     </div>

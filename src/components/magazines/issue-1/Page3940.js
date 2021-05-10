@@ -45,6 +45,8 @@ const Page3940 = () => {
       <div className={styles.rightText1}> FRESH </div>
       <div className={styles.rightText2}> UPCOMING </div>
       <div className={styles.rightText3}> INTRODUCING </div>
+      <img src="./magazine/39_40/image 355.png" className={styles.rightArrow2} />
+      <div className={styles.rightText11}>Hanging with Jenil & Coinvise Crew</div>
       <div className={styles.rightText4}>
         I started out my career in the web3 space in college where I ultimately wanted to pursue a
         PhD in crypto economics. In my sophomore year, I got a job as a research assistant under Dr.
@@ -151,10 +153,10 @@ const Page3940 = () => {
         own their content. Coinvise will be an open platform, enabling other platforms and
         communities to integrate parts of what we built.
       </div>
-      <a href="" className={styles.twitter}>
+      <a href="" className={styles.twitter} target="_blank">
         <img src="./magazine/39_40/23681.png" />
       </a>
-      <a href="" className={styles.discord}>
+      <a href="" className={styles.discord} target="_blank">
         <img src="./magazine/39_40/disc.png" />
       </a>
       <img src="./magazine/39_40/Group 1185 (2).png" className={styles.rightArrow} />

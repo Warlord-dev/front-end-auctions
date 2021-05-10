@@ -9,7 +9,7 @@ const Page8182 = () => {
       <video className={styles.leftLink1} muted autoPlay loop>
         <source src="./magazine/81_82/Untitled (11).mp4" type="video/mp4" />
       </video>
-      <a href="https://www.marguixastudio.com/" className={styles.leftLink2}>
+      <a href="https://www.marguixastudio.com/" className={styles.leftLink2} target="_blank">
         MAR GUIXA STUDIO
       </a>
       <div className={styles.leftText}>BLACK DECO TRENCH COAT</div>

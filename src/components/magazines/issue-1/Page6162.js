@@ -23,8 +23,11 @@ const Page6162 = () => {
       </div>
       <div className={styles.textDiv}></div>
       <div className={styles.text4}>
-        <a href="https://tenshigirl.io">TenshiGirl.io</a> is a new crypto trading platform and NFT
-        collectible trading card project, built on Ethereum.
+        <a href="https://tenshigirl.io" target="_blank">
+          TenshiGirl.io
+        </a>{' '}
+        is a new crypto trading platform and NFT collectible trading card project, built on
+        Ethereum.
         <br />
         <br />
         They are bridging world renowned artists to create the world of Vestrian— a narrative filled

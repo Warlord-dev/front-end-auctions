@@ -495,6 +495,36 @@ class MyDocument extends Document {
               font-family: 'Days One';
               src: url("./fonts/DaysOne-Regular.ttf");
             }
+
+            @font-face {
+              font-family: 'Basic';
+              src: url("./fonts/Basic-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'NATS';
+              src: url("./fonts/NATS-Regular.woff");
+            }
+
+            @font-face {
+              font-family: 'Noto Sans Armenian';
+              src: url("./fonts/NotoSans-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Kite One';
+              src: url("./fonts/KiteOne-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Karla';
+              src: url("./fonts/Karla-VariableFont_wght.ttf");
+            }
+
+            @font-face {
+              font-family: 'Fasthand';
+              src: url("./fonts/Fasthand-Regular.ttf");
+            }
           `,
             }}
           />

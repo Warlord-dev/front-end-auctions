@@ -5,7 +5,7 @@ const Page7778 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/77_78/The Metaverse Revealed PNG 1.png" className={styles.background} />
-      <a href="https://Linktr.ee/chaimholtjer  " className={styles.link}>
+      <a href="https://Linktr.ee/chaimholtjer" className={styles.link} target="_blank">
         Art by Chaimholtjer
         <br />
         Linktr.ee/chaimholtjer

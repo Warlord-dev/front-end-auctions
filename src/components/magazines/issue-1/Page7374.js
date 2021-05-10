@@ -6,7 +6,7 @@ const Page7374 = () => {
     <div className={styles.wrapper}>
       <img src="./magazine/73_74/Group 1182 (3).png" className={styles.left} />
       <img src="./magazine/73_74/plane_00000 1.png" className={styles.right} />
-      <div className={styles.text1}>WEB3 WHITE HATS</div>
+      <div className={styles.text1}>WEB3 WIZARDS</div>
       <div className={styles.text2}>
         Developing in web3, Ethereum, crypto, NFTs and everything that it encompasses is no easy
         feat. It’s a constant engagement between building on the bleeding edge, writing code that
@@ -22,23 +22,23 @@ const Page7374 = () => {
       </div>
       <div className={styles.text3}>Layer 2 Trailblazers.</div>
       <div className={styles.text4}>
-        For the genesis of Web3 White Hats we are championing the DIGITALAX Engineering Team. A
-        group of metaverse engineers. These devs have successfully deployed the first ever
+        For the genesis of Web3 White Hats we are championing the DIGITALAX Engineering Team.{' '}
+        <b>A group of metaverse engineers.</b> These devs have successfully deployed the first ever
         MultiToken Bridge between Layer 1 Ethereum Mainnet and Layer 2 Polygon (Previously Matic
         Network), supporting the ERC-998 standard and variants. It’s all open sourced.
       </div>
       <div className={styles.text5}>Victor.</div>
-      <div className={styles.text6}>Project: sdsd. Specialises in Web3SDDS</div>
-      <img src="./magazine/73_74/image 403.png" className={styles.person1} />
+      <div className={styles.text6}>Project: DIGITALAX</div>
+      <img src="./magazine/73_74/VICtor 1.png" className={styles.person1} />
       <div className={styles.text7}>Haruto.</div>
-      <div className={styles.text8}>Project: sdsd. Specialises in Web3SDDS</div>
-      <img src="./magazine/73_74/image 403.png" className={styles.person2} />
+      <div className={styles.text8}>Project: DIGITALAX</div>
+      <img src="./magazine/73_74/HARUTO (1) 1.png" className={styles.person2} />
       <div className={styles.text9}>Cameron.</div>
-      <div className={styles.text10}>Project: sdsd. Specialises in Web3SDDS</div>
-      <img src="./magazine/73_74/image 403.png" className={styles.person3} />
+      <div className={styles.text10}>Project: DIGITALAX</div>
+      <img src="./magazine/73_74/Cameron (1) 1.png" className={styles.person3} />
       <div className={styles.text11}>James.</div>
-      <div className={styles.text12}>Project: sdsd. Specialises in Web3SDDS</div>
-      <img src="./magazine/73_74/image 403.png" className={styles.person4} />
+      <div className={styles.text12}>Project: DIGITALAX</div>
+      <img src="./magazine/73_74/James (1) 1.png" className={styles.person4} />
 
       <div className={styles.rightText1}>MUST TRYS OF THE METAVERSE</div>
       <div className={styles.rightText2}>#DivingIntoCryptovoxels</div>

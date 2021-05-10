@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import styles from './page7576.module.scss';
 
@@ -5,7 +6,10 @@ const Page7576 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/75_76/left1.png" className={styles.left} />
-      <img src="./magazine/75_76/right1.png" className={styles.right} />
+      <img src="./magazine/75_76/RIGHT5.png" className={styles.right} />
+      <Link href="/unlockable">
+        <a className={styles.seeMoreLink}>SEE MORE</a>
+      </Link>
       <div className={styles.text1}>
         Through DIGIFIZZY we are proving out a new publishing model with NFT based decentralised
         subscriptions. All of the content is free to read, and, people can subscribe to NFT bundles
