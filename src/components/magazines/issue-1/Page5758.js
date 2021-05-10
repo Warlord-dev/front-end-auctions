@@ -4,8 +4,8 @@ import styles from './page5758.module.scss';
 const Page5758 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/57_58/DIGITALAX DOMINGO BETA 1.png" className={styles.left} />
-      <img src="./magazine/57_58/image0 1.png" className={styles.right} />
+      <img src="./magazine/1/57_58/DIGITALAX DOMINGO BETA 1.png" className={styles.left} />
+      <img src="./magazine/1/57_58/image0 1.png" className={styles.right} />
       <div className={styles.leftDiv} />
       <div className={styles.leftText}>
         Domingo Beta is a Graphic designer and digital artist from Medellín Colombia.

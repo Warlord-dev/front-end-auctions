@@ -4,7 +4,7 @@ import styles from './page6162.module.scss';
 const Page6162 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/61_62/girl-and-panda 1.png" className={styles.right} />
+      <img src="./magazine/1/61_62/girl-and-panda 1.png" className={styles.right} />
       <div className={styles.text1}>
         COMIC WITH
         <br /> PIZZA GAME
@@ -40,7 +40,7 @@ const Page6162 = () => {
         their cards as they move from through the narrative.
       </div>
       <img
-        src="./magazine/61_62/Tenshigirl Main Logo RGB Light Background 1.png"
+        src="./magazine/1/61_62/Tenshigirl Main Logo RGB Light Background 1.png"
         className={styles.logo}
       />
     </div>

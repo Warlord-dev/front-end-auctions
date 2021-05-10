@@ -4,10 +4,10 @@ import styles from './page4344.module.scss';
 const Page4344 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/43_44/left.png" className={styles.left} />
-      <img src="./magazine/43_44/right.png" className={styles.right} />
-      <img src="./magazine/43_44/meshed.png" className={styles.mesh} />
-      <img src="./magazine/43_44/title.png" className={styles.title} />
+      <img src="./magazine/1/43_44/left.png" className={styles.left} />
+      <img src="./magazine/1/43_44/right.png" className={styles.right} />
+      <img src="./magazine/1/43_44/meshed.png" className={styles.mesh} />
+      <img src="./magazine/1/43_44/title.png" className={styles.title} />
       <div className={styles.subTitle}> Written by N.M Trin </div>
       <div className={styles.firstParagraph}></div>
       <div className={styles.firstText}>

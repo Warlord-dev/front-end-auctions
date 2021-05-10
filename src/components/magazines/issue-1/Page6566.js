@@ -4,9 +4,9 @@ import styles from './page6566.module.scss';
 const Page6566 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/65_66/Group 1142.png" className={styles.left} />
-      <img src="./magazine/65_66/right.png" className={styles.right} />
-      <img src="./magazine/65_66/movie.gif" className={styles.movie} />
+      <img src="./magazine/1/65_66/Group 1142.png" className={styles.left} />
+      <img src="./magazine/1/65_66/right.png" className={styles.right} />
+      <img src="./magazine/1/65_66/movie.gif" className={styles.movie} />
       <a href="https://gamebanana.com/mods/185093" className={styles.link1} target="_blank">
         SEE MODS
       </a>
