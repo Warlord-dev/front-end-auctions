@@ -1,0 +1,130 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    background: #E5E5E5;
+
+    .mainText {
+        position: absolute;
+        width: 836px;
+        height: 100px;
+        left: 71px;
+        top: 398px;
+
+        font-family: EB Garamond;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 100px;
+        line-height: 100%;
+        /* identical to box height, or 100px */
+
+
+        color: #000000;
+    }
+
+    .right {
+        position: absolute;
+        width: 960;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+    }
+
+    .text1 {
+        position: absolute;
+        width: 441px;
+        height: 87px;
+        left: 999px;
+        top: 1134px;
+
+        font-family: Rose Cake - Personal Use;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 100%;
+        /* or 80px */
+
+
+        color: #FFFFFF;
+    }
+
+    .text2 {
+        position: absolute;
+        width: 441px;
+        height: 87px;
+        left: 999px;
+        top: 1195px;
+
+        font-family: Rose Cake - Personal Use;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 100%;
+        /* or 80px */
+
+
+        color: #FFFFFF;
+    }
+
+    .text3 {
+        position: absolute;
+        width: 441px;
+        height: 87px;
+        left: 999px;
+        top: 1256px;
+
+        font-family: Rose Cake - Personal Use;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 100%;
+        /* or 80px */
+
+
+        color: #FFFFFF;
+    }
+
+    .text4 {
+        position: absolute;
+        width: 441px;
+        height: 87px;
+        left: 999px;
+        top: 1317px;
+
+        font-family: Rose Cake - Personal Use;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 100%;
+        /* or 80px */
+
+
+        color: #FFFFFF;
+    }
+
+    .text5 {
+        position: absolute;
+        width: 441px;
+        height: 87px;
+        left: 999px;
+        top: 1382px;
+
+        font-family: Rose Cake - Personal Use;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 100%;
+        /* or 80px */
+
+
+        color: #FFFFFF;
+    }
+
+    .video {
+        position: absolute;
+        width: 463px;
+        height: 462px;
+        left: 1456px;
+        top: 1035px;
+    }
+}

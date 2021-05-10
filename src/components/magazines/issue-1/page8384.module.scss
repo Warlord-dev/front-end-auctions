@@ -1,0 +1,33 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .left {
+    position: absolute;
+    width: 961px;
+    height: 1498px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .right {
+    position: absolute;
+    width: 961px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;    
+  }
+
+  .link {
+    position: absolute;
+    width: 452px;
+    height: 120px;
+    left: 1485px;
+    top: 1377px;
+
+    &:hover {
+        border-bottom: 1px solid black;
+    }
+  }
+}

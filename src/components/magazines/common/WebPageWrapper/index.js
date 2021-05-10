@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 import styled from 'styled-components'
 
 const WebPageWrapperDiv = styled.div`
-  background-color: green;
+  background-color: black;
   border-color: red;
   overflow: hidden;
 
