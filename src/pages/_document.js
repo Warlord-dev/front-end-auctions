@@ -716,6 +716,11 @@ class MyDocument extends Document {
               src: url("./fonts/Cinzel-Black.ttf");
               font-weight: 900;
             }
+
+            @font-face {
+              font-family: 'Decovar Alpha';
+              src: url("./fonts/DecovarAlpha-VF.ttf");
+            }
           
           `,
             }}
