@@ -1,6 +1,6 @@
 import { request } from 'graphql-request';
 import config from '@utils/config';
-import { DEV_HTTP_NETWORK_URL } from '@constants/global.constants';
+import { DEV_HTTP_NETWORK_URL, DEV_HTTP_NFT_NETWORK_URL } from '@constants/global.constants';
 import {
   getAuctionsByIds,
   getAuctionsHistoryByTimestampGt,
@@ -11,6 +11,8 @@ import {
   getDesignersByIds,
   getAuctionsHistoryByIds,
   getAuctionContracts,
+  getDigitalaxSubscriptionCollectorSimple,
+  getDigitalaxSubscriptionPurchaseHistory,
 } from '@services/api/gql.queries.api.service';
 
 class APIService {
@@ -24,6 +26,14 @@ class APIService {
 
   async getResultedAuctionsByEndTimeGt(endTime) {
     return request(this.url, getResultedAuctionsByEndTimeGt, { endTime });
+  }
+
+  async getSubscriptionNftStatus(address) {
+    return request(DEV_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionCollectorSimple, { address });
+  }
+
+  async getDigitalaxSubscriptionPurchase(tokenId) {
+    return request(DEV_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionPurchaseHistory, { tokenId });
   }
 
   async getAuctionsHistoryByTimestampGt(timestamp) {

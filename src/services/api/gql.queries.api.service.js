@@ -167,3 +167,26 @@ export const getResultedAuctionsByEndTimeGt = gql`
     }
   }
 `;
+
+export const getDigitalaxSubscriptionCollectorSimple = gql`
+    query digitalaxSubscriptionCollectors($address: ID!) {
+    digitalaxSubscriptionCollectors(where: {id: $address}) {
+     id
+     parentsOwned {
+        id
+        primarySalePrice
+        tokenUri
+        designer
+      }
+    }
+ }
+`;
+
+export const getDigitalaxSubscriptionPurchaseHistory = gql`
+query digitalaxSubscriptionPurchaseHistory($tokenId: ID!) {
+  digitalaxSubscriptionPurchaseHistory(id: $tokenId){
+    id
+    bundleId
+  }
+}
+`;
