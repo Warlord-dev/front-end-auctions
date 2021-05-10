@@ -113,7 +113,36 @@
       height: 169px;
       left: 560px;
       top: 1180px;
+      text-align: right;
     }
+  }
+
+  .name1 {
+    position: absolute;
+    width: 115px;
+    height: 18px;
+    left: 830px;
+    top: 1070px;
+    
+    font-family: Miama;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 120%;
+  }
+
+  .name2 {
+    position: absolute;
+    width: 115px;
+    height: 18px;
+    left: 838px;
+    top: 1430px;
+    
+    font-family: Miama;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 120%;    
   }
 
   .indiaNecklaceVideo {
