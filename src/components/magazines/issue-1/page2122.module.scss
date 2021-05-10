@@ -7,35 +7,78 @@
   display: flex;
   position: relative;
 
-  img {
+  .backImage {
     position: absolute;
+    left: 0;
+    top: 0;
     width: 1920px;
-    height: 1536px;
-    left: 0px;
-    top: -19px;
+    height: 1497px;
   }
 
-  a {
+  .pathImage {
     position: absolute;
-    width: 231px;
-    height: 66px;
-    left: 1599px;
-    top: 1461px;
+    left: 0;
+    top: 0;
+  }
 
-    font-family: Gayathri;
+  .text1 {
+    position: absolute;
+    width: 1190px;
+    height: 151px;
+    left: -34px;
+    top: 15px;
+
+    font-family: Artypa;
     font-style: normal;
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 150%;
-    /* or 15px */
-    color: #0044F3; 
-    border-bottom: 1px solid;
-    span {
-      text-decoration: underline;
-    }
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 104px;
+    text-align: center;
+  }
 
-    &:hover {
-      color: #0044F3;
-    }
+  .text2 {
+    position: absolute;
+    width: 398px;
+    height: 141px;
+    left: 110px;
+    top: 101px;
+
+    font-family: The ART;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 115px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 333px;
+    height: 178px;
+    left: 474px;
+    top: 103px;
+
+    font-family: Arthure;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 266px;
+  }
+
+  .blueRect {
+    position: absolute;
+    width: 173px;
+    height: 256px;
+    left: 1353px;
+    top: 0;
+    background: #50F4FF;
+  }
+  
+  .orangeRect {
+    position: absolute;
+    width: 313px;
+    height: 297px;
+    left: -1px;
+    top: 254px;
+    background: #FF6F50;
   }
 }

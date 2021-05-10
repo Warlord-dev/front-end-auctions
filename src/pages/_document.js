@@ -605,6 +605,72 @@ class MyDocument extends Document {
               src: url("./fonts/Bahianita-Regular.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: 'Artypa';
+              src: url("./fonts/Artypa-Regular.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'The ART';
+              src: url("./fonts/THE ART.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Arthure';
+              src: url("./fonts/Arthure.ttf");
+            }
+
+            @font-face {
+              font-family: 'Baloo Paaji 2';
+              src: url("./fonts/BalooPaaji2-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Baloo Paaji 2';
+              src: url("./fonts/BalooPaaji2-Bold.ttf");
+              font-weight: 700;
+            }
+
+            @font-face {
+              font-family: 'Pixel Berry 08/84 Ltd.Edition';
+              src: url("./fonts/Pixel_Berry_08_84_Ltd.Edition.TTF");
+            }
+
+            @font-face {
+              font-family: 'TS Block';
+              src: url("./fonts/TS Block Bold.ttf");
+            }
+
+            @font-face {
+              font-family: 'Montserrat';
+              src: url("./fonts/Montserrat-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Montserrat';
+              src: url("./fonts/Montserrat-Bold.ttf");
+              font-weight: 700;
+            }
+            
+            @font-face {
+              font-family: 'Haarlem Deco DEMO';
+              src: url("./fonts/Haarlem Deco DEMO.ttf");
+            }
+
+            @font-face {
+              font-family: 'Delius';
+              src: url("./fonts/Delius-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Maker Van';
+              src: url("./fonts/MakerVan-Regular.ttf");
+            }
           `,
             }}
           />
