@@ -700,6 +700,11 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Reenie Beanie';
+              src: url("./fonts/ReenieBeanie-Regular.ttf");
+            }
+            
+            @font-face {
               font-family: 'Atures 900 PERSONAL USE ONLY';
               src: url("./fonts/Atures-900_PERSONAL_USE.ttf");
             }

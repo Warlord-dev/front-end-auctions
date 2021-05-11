@@ -4,7 +4,11 @@ import styles from './page8586.module.scss';
 const Page8586 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.mainText}>yekaterina</div>
+      <img src="./magazine/1/85_86/Group 1190 (1).png" className={styles.left} />
+      <a href="https://www.instagram.com/yekaterinab/" className={styles.link}>
+        {' '}
+        YeKaterina Burmatnova{' '}
+      </a>
       <img src="./magazine/1/85_86/Group 1184.png" className={styles.right} />
       <a href="https://www.instagram.com/dgtl_stylist/" className={styles.text1} target="_blank">
         Alyona Briukhanova

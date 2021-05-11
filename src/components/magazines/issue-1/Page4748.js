@@ -4,14 +4,8 @@ import styles from './page4748.module.scss';
 const Page4748 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.firstText}>Metahumans</div>
-      <div className={styles.secondText}>Metahumans</div>
-      <div className={styles.backDiv} />
-      <div className={styles.thirdText}>
-        dont build page yet!
-        <br /> Both pages will be
-        <br /> JPEG images
-      </div>
+      <img src="./magazine/1/47_48/meta_01 1.png" className={styles.left} />
+      <img src="./magazine/1/47_48/meta_02 1.png" className={styles.right} />
     </div>
   );
 };
