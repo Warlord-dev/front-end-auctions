@@ -8,7 +8,7 @@ const Page5354 = () => {
         src="./magazine/1/53_54/The Lady by the Pond - Series - Solitude 1.png"
         className={styles.brakcground}
       />
-      <a href="https://twitter.com/rudeoolph" className={styles.link}>
+      <a href="https://twitter.com/rudeoolph" className={styles.link} target="_blank">
         Rudeolph{' '}
       </a>
       <div className={styles.text}>

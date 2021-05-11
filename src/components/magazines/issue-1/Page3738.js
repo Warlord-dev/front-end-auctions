@@ -55,7 +55,7 @@ const Page3738 = () => {
         <source src='./magazine/1/videos/indiaSuit.mp4' type="video/mp4" />
       </video>
       <video autoPlay muted loop className={styles.indiaSuit2Video}>
-        <source src='./magazine/1/videos/indiaNecklace.mp4' type="video/mp4" />
+        <source src='./magazine/1/videos/IndiaDress.mp4' type="video/mp4" />
       </video>
       <img src='./magazine/1/images/Group 1187.png' className={styles.circleImg3} />
       <div className={styles.circleText3}>

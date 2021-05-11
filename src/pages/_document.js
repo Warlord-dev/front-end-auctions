@@ -513,6 +513,33 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Basic';
+              src: url("./fonts/Basic-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'NATS';
+              src: url("./fonts/NATS-Regular.woff");
+            }
+
+            @font-face {
+              font-family: 'Noto Sans Armenian';
+              src: url("./fonts/NotoSans-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Kite One';
+              src: url("./fonts/KiteOne-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Karla';
+              src: url("./fonts/Karla-VariableFont_wght.ttf");
+            }
+
+            @font-face {
+              font-family: 'Fasthand';
+              src: url("./fonts/Fasthand-Regular.ttf");
               font-family: 'Rockabye';
               src: url("./fonts/Rockabye-Regular.otf");
               font-weight: 400;
@@ -605,6 +632,128 @@ class MyDocument extends Document {
               src: url("./fonts/Bahianita-Regular.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: 'Artypa';
+              src: url("./fonts/Artypa-Regular.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'The ART';
+              src: url("./fonts/THE ART.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Arthure';
+              src: url("./fonts/Arthure.ttf");
+            }
+
+            @font-face {
+              font-family: 'Baloo Paaji 2';
+              src: url("./fonts/BalooPaaji2-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Baloo Paaji 2';
+              src: url("./fonts/BalooPaaji2-Bold.ttf");
+              font-weight: 700;
+            }
+
+            @font-face {
+              font-family: 'Pixel Berry 08/84 Ltd.Edition';
+              src: url("./fonts/Pixel_Berry_08_84_Ltd.Edition.TTF");
+            }
+
+            @font-face {
+              font-family: 'TS Block';
+              src: url("./fonts/TS Block Bold.ttf");
+            }
+
+            @font-face {
+              font-family: 'Montserrat';
+              src: url("./fonts/Montserrat-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Montserrat';
+              src: url("./fonts/Montserrat-Bold.ttf");
+              font-weight: 700;
+            }
+            
+            @font-face {
+              font-family: 'Haarlem Deco DEMO';
+              src: url("./fonts/Haarlem Deco DEMO.ttf");
+            }
+
+            @font-face {
+              font-family: 'Delius';
+              src: url("./fonts/Delius-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Maker Van';
+              src: url("./fonts/MakerVan-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Reenie Beanie';
+              src: url("./fonts/ReenieBeanie-Regular.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Atures 900 PERSONAL USE ONLY';
+              src: url("./fonts/Atures-900_PERSONAL_USE.ttf");
+            }
+
+            @font-face {
+              font-family: 'Burst My Bubble';
+              src: url("./fonts/BurstMyBubbleBold.ttf");
+              font-weight: 700;
+            }
+
+            @font-face {
+              font-family: 'Burst My Bubble';
+              src: url("./fonts/BurstMyBubble.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Corben';
+              src: url("./fonts/Corben-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Corben';
+              src: url("./fonts/Corben-Bold.ttf");
+              font-weight: 700;
+            }
+            
+            @font-face {
+              font-family: 'Carme';
+              src: url("./fonts/Carme-Regular.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Neon Lights';
+              src: url("./fonts/neon2.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Cinzel';
+              src: url("./fonts/Cinzel-Black.ttf");
+              font-weight: 900;
+            }
+
+            @font-face {
+              font-family: 'Decovar Alpha';
+              src: url("./fonts/DecovarAlpha-VF.ttf");
+            }
+          
           `,
             }}
           />

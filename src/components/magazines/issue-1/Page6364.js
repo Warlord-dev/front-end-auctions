@@ -135,14 +135,17 @@ const Page6364 = () => {
       </a>
       <img src="./magazine/1/63_64/image 395.png" className={styles.rightImage1} />
       <img src="./magazine/1/63_64/image 396.png" className={styles.rightImage2} />
-      <img src="./magazine/1/63_64/moshed-05-07-15-2-41 1.png" className={styles.rightImage3} />
+      <img src="./magazine/1/63_64/moshed-05-07-15-2-41.gif" className={styles.rightImage3} />
       <div className={styles.rightText1}>SONGCAMP MUSIC NFT AUCTION.</div>
       <div className={styles.rightText1_2}>9 MUSIC ARTISTS. 10 ETH TOTAL SALES.</div>
       <img src="./magazine/1/63_64/moshed-05-07-14-35-1.gif" className={styles.rightImage4} />
-      <img
-        src="./magazine/1/63_64/Screen Shot 2021-05-07 at 1.04 1.png"
+      <a
+        href="https://songcamp.mirror.xyz/xVIye95frUFrZ4RbfYPFNhfi1emI7kvXCcxJOTbcBlM"
         className={styles.rightImage5}
-      />
+        target="_blank"
+      >
+        <img src="./magazine/1/63_64/Screen Shot 2021-05-07 at 1.04 1.png" />
+      </a>
       <div className={styles.rightText14}>HOLD ON HOPE.</div>
       <div className={styles.rightText15}>Rowan. Kevin Paris. Gavin Slate.</div>
       <img src="./magazine/1/63_64/Group 1189.png" className={styles.play1} />
@@ -152,7 +155,7 @@ const Page6364 = () => {
       <div className={styles.rightText5}>FRESH</div>
       <div className={styles.rightText6}>FRESH</div>
       <div className={styles.rightText7}>FRESH</div>
-      <a href="https://www.facebook.com/JKIND.SF" className={styles.rightText8}>
+      <a href="https://www.facebook.com/JKIND.SF" className={styles.rightText8} target="_blank">
         J-KIND
       </a>
       <div className={styles.rightText9}>
