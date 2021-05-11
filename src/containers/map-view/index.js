@@ -9,32 +9,64 @@ const mapList = [
     issueId: '1',
     content: [
       {
-        pageNum: 0,
-        image: 'cover.jpg',
+        pageNum: 7,
         x: '10',
         y: '20',
         rotate: '10',
       },
       {
-        pageNum: 1,
-        image: 'cover.jpg',
-        x: '20',
-        y: '20',
+        pageNum: 21,
+        x: '30',
+        y: '10',
         rotate: '0',
       },
       {
-        pageNum: 3,
-        image: 'cover.jpg',
-        x: '10',
-        y: '40',
+        pageNum: 29,
+        x: '44',
+        y: '20',
         rotate: '-10',
       },
       {
-        pageNum: 5,
-        image: 'cover.jpg',
-        x: '20',
+        pageNum: 35,
+        x: '57',
+        y: '30',
+        rotate: '20',
+      },
+      {
+        pageNum: 43,
+        x: '80',
+        y: '25',
+        rotate: '-16',
+      },
+      {
+        pageNum: 57,
+        x: '18',
+        y: '60',
+        rotate: '-10',
+      },
+      {
+        pageNum: 69,
+        x: '23',
         y: '40',
         rotate: '20',
+      },
+      {
+        pageNum: 73,
+        x: '32',
+        y: '72',
+        rotate: '-20',
+      },
+      {
+        pageNum: 79,
+        x: '45',
+        y: '50',
+        rotate: '10',
+      },
+      {
+        pageNum: 87,
+        x: '70',
+        y: '60',
+        rotate: '-15',
       }
     ]
   }
