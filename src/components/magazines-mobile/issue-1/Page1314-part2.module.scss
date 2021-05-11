@@ -2,7 +2,7 @@
 
 .wrapper {
   width: 320px;
-  height: 3200px;
+  height: 3400px;
   background-color: white;
   color: black;
   display: flex;
@@ -13,14 +13,14 @@
     width: 320px;
     height: 3200px;
     left: 0px;
-    top: -22px;
+    top: 100px;
   }
 
   .backImage2 {
     position: absolute;
-    width: 320px;
+    width: 808px;
     height: 1497px;
-    left: 0px;
+    left: 960px;
     top: 0px;
   }
 
@@ -60,61 +60,6 @@
     bottom: 30px;
   }
 
-  h1 {
-    font-family: Lusitana;
-    font-style: normal;
-    font-weight: bold;
-    white-space: normal;
-    font-size: 15px;
-    margin-bottom: 100px;
-  }
-
-  h2 {
-    font-family: Medula One;
-    font-style: normal;
-    font-weight: normal;
-    white-space: normal;
-    font-size: 24px;
-    width: 260px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-bottom: 40px;
-  }
-
-  .innerWrapper {
-    position: absolute;
-    top: 300px;
-    width: 320px;
-    z-index: 1000;
-    text-align: center;
-  }
-
-  p {
-    font-family: Lexend Zetta;
-    font-style: normal;
-    font-weight: normal;
-    white-space: normal;
-    font-size: 12px;
-    display: block;
-    margin-bottom: 30px;
-    
-  }
-
-  .artby {
-    position: absolute;
-    width: 260px;
-    height: 18px;
-    left: 1472px;
-    top: 1084px;
-
-    font-family: Aldrich;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 21px;
-    line-height: 150%;
-    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
-  }
 }
 
 @media only screen and (max-width: 768px){

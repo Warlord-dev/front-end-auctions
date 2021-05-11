@@ -3,12 +3,18 @@ import SwipePage from '../../components/swipe'
 import CoverPage from '@components/magazines-mobile/issue-1/CoverPage'
 import Page12 from '@components/magazines-mobile/issue-1/Page12'
 import Page34 from '@components/magazines-mobile/issue-1/Page34'
+import Page34Part2 from '@components/magazines-mobile/issue-1/Page34-part2'
 import Page56 from '@components/magazines-mobile/issue-1/Page56'
 import Page78 from '@components/magazines-mobile/issue-1/Page78'
+import Page78Part2 from '@components/magazines-mobile/issue-1/Page78-part2'
 import Page910 from '@components/magazines-mobile/issue-1/Page910'
+import Page910Part2 from '@components/magazines-mobile/issue-1/Page910-part2'
 import Page1112 from '@components/magazines-mobile/issue-1/Page1112'
+import Page1112Part2 from '@components/magazines-mobile/issue-1/Page1112-part2'
 import Page1314 from '@components/magazines-mobile/issue-1/Page1314'
+import Page1314Part2 from '@components/magazines-mobile/issue-1/Page1314-part2'
 import Page1516 from '@components/magazines-mobile/issue-1/Page1516'
+import Page1516Part2 from '@components/magazines-mobile/issue-1/Page1516-part2'
 import Page1718 from '@components/magazines-mobile/issue-1/Page1718'
 import Page1920 from '@components/magazines-mobile/issue-1/Page1920'
 import Page2122 from '@components/magazines-mobile/issue-1/Page2122'
@@ -68,14 +74,20 @@ const MagazineViewer = props => {
           >
             <MagazinePageWrapper><CoverPage /></MagazinePageWrapper>
             <MagazinePageWrapper><Page12 /></MagazinePageWrapper>
-            {/* <MagazinePageWrapper><Page34 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page34 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page34Part2 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page56 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page78 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page78Part2 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page910 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page910Part2 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page1112 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page1112Part2 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page1314 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page1314Part2 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page1516 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1718 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page1516Part2 /></MagazinePageWrapper>
+            {/*<MagazinePageWrapper><Page1718 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page1920 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page2122 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page2324 /></MagazinePageWrapper>

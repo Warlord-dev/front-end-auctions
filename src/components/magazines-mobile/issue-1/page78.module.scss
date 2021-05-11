@@ -1,255 +1,168 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper();
+  height: 100vh;
   background-color: white;
   color: black;
   display: flex;
   position: relative;
 
-  .firstPartWrapper {
-    width: 960px;
-    height: 1497px;
-    overflow: hidden;
-    position: relative;
-    color: #000000;
-
-    .backImage1 {
+  .secondWrapper {
+    position: absolute;
+    top: 300px;
+    height: 1570px;
+    width: 320px;
+    background-color: white;
+    img {
       position: absolute;
-      width: 361px;
-      height: 1497px;
-      left: 0px;
-      top: 0px;
-    }
-  
-    .backImage2 {
-      position: absolute;
-      width: 599px;
-      height: 1737px;
-      left: 362px;
-      top: -240px;
-      transform-origin: 0 0;
-      transform: scale(1.65, 2.4);
-    }
-  
-    .whiteOpacity {
-      position: absolute;
-      width: 599px;
-      height: 1497px;
-      left: 362px;
-      top: 0px;
-      background-color: rgba(255, 255, 255, 0.8);
-    }
-
-    h1 {
-      position: absolute;
-      width: 401px;
-      height: 387px;
-      left: 416px;
-      top: 0px;
-
-      font-family: Artisual Deco DEMO;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 100px;
-      line-height: 110%;
-
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-      span {
-        font-size: 37px;
-        line-height: 0;
-      }
-    }
-
-    h2 {
-      position: absolute;
-      width: 401px;
-      height: 22px;
-      left: 426px;
-      top: 434px;
-
-      font-family: Artisual Deco DEMO;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 20px;
-      line-height: 110%;
-    }
-
-    h3 {
-      position: absolute;
-      width: 401px;
-      height: 17px;
-      left: 426px;
-      top: 462px;
-
-      font-family: Arima Madurai;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 15px;
-      line-height: 110%;
-    }
-
-    p {
-      position: absolute;
-      width: 453px;
-      height: 897px;
-      left: 416px;
-      top: 508px;
-
-      font-family: Inter;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 150%;
-
-      color: #000000;
-
-      span.italicText {
-        font-style: italic;
-      }
+      top: -85px;
+      bottom: 0;
+      width: 320px;
+      height: fit-content;
     }
   }
 
-  .backOrange {
+  .backImage1 {
     position: absolute;
-    width: 1141px;
-    height: 1497px;
-    left: 960px;
-    top: 0px;
-
-    background: rgba(255, 122, 0, 0.49);
-  }
-
-  .rightImage1 {
-    position: absolute;
-    width: 1044px;
-    height: 1497px;
-    left: 1035px;
+    width: 320px;
+    left: 0px;
     top: 0px;
   }
 
-  .rightImage2 {
+  h1 {
     position: absolute;
-    width: 532px;
-    height: 1497px;
-    left: 1346px;
-    top: 0px;
-  }
-
-  .rightImage3 {
-    position: absolute;
-    width: 308px;
-    height: 1497px;
-    left: 1612px;
+    left: 20px;
     top: 0px;
 
-    mix-blend-mode: color-burn;
-  }
-
-  .rightImage4 {
-    position: absolute;
-    width: 432px;
-    height: 576px;
-    left: 910px;
-    top: 960px;
-
-    transform: rotate(-20deg);
-  }
-
-  .logo_t {
-    position: absolute;
-    width: 126px;
-    height: 675px;
-    left: 1013px;
-    top: 203px;
-
-    font-family: Inter;
+    font-family: Artisual Deco DEMO;
     font-style: normal;
-    font-weight: bold;
-    font-size: 450px;
-    line-height: 150%;
-    /* identical to box height, or 675px */
-
-
-    color: #FFFFFF;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    span {
+      font-size: 37px;
+      line-height: 0;
+    }
+  }
+
+  h2 {
+    position: absolute;
+    left: 10px;
+    top: 434px;
+    width: 300px;
+    font-family: Artisual Deco DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  h3 {
+    position: absolute;
+    left: 10px;
+    top: 462px;
+    width: 300px;
+
+    font-family: Arima Madurai;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 110%;
   }
 
   p {
-    color: #FFFFFF;
-  }
-
-  .section1 {
     position: absolute;
-    width: 803px;
-    height: 306px;
-    left: 1035px;
-    top: 71px;
+    left: 10px;
+    width: 300px;
+    top: 508px;
+    white-space: normal;
 
     font-family: Inter;
-    font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 150%;
-    /* or 22px */
 
+    color: #000000;
 
-    color: #FFFFFF;
+    span.italicText {
+      font-style: italic;
+    }
   }
+  
+}
 
-  .section2 {
-    position: absolute;
-    width: 500px;
-    height: 293px;
-    left: 1346px;
-    top: 373px;
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 150%;
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    .secondWrapper {
+      width: 768px;
+      img {
+        width: 768px;
+        top: 1px;
+      }
+    }
+    p {
+      width: 748px;
+    }
+    .backImage1 {
+      width: 768px;
+    }
   }
+}
 
-  .section3 {
-    position: absolute;
-    width: 803px;
-    height: 230px;
-    left: 1035px;
-    top: 748px;
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 150%;
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    .secondWrapper {
+      width: 425px;
+      img {
+        width: 425px;
+        top: -15px;
+      }
+    }
+    p {
+      width: 405px;
+    }
+    .backImage1 {
+      width: 425px;
+    }
   }
+}
 
-  .section4 {
-    position: absolute;
-    width: 611px;
-    height: 184px;
-    left: 1226px;
-    top: 985px;
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 150%;
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    .secondWrapper {
+      width: 375px;
+      img {
+        width: 375px;
+        top: -49px;
+      }
+    }
+    p {
+      width: 355px;
+    }
+    .backImage1 {
+      width: 375px;
+    }
   }
+}
 
-  .section5 {
-    position: absolute;
-    width: 531px;
-    height: 161px;
-    left: 1299px;
-    top: 1198px;
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 150%;
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    .secondWrapper {
+      width: 320px;
+      img {
+        width: 320px;
+        top: -85px;
+      }
+    }
+    p {
+      width: 300px;
+    }
+    .backImage1 {
+      width: 320px;
+    }
   }
 }

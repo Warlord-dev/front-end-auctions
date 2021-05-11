@@ -1,55 +1,74 @@
 @import './styles.module.scss';
 
 .wrapper {
+  overflow-x: hidden;
   width: 320px;
-  height: 1497px;
+  height: 3708px;
+  background-image: url('/magazine/1/images/mobile/oasis-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: white;
   color: black;
   display: flex;
   position: relative;
 
-  .firstPartWrapper {
+  .backImage2 {
+    position: absolute;
     width: 320px;
     height: 1497px;
-    overflow: scroll;
-    position: relative;
-    color: #000000;
-    padding-top: 100px;
+    left: 0px;
+    top: 0px;
+  }
 
+  h1 {
+    position: absolute;
+    left: 60px;
+    top: 93px;
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    /* or 143px */
+    color: #FFFFFF;
+  }
 
-    .backImage1 {
-      position: absolute;
-      width: 320px;
-      height: 1717px;
-      left: 0px;
-      top: -220px;
-      transform-origin: 0 0;
-      transform: scale(1.05, 2.4);
+  .imageLeft {
+    margin-right: 14px;
+  }
+
+  .imageRight {
+    margin-left: 14px;
+  }
+
+  .innerWrapper {
+    width: 260px;
+    left: 20px;
+    position: absolute;
+    top: 400px;
+  }
+
+  .flex {
+    display: flex;
+    .section {
+      width: 200px;
     }
+  }
 
-    p {
-      font-family: Inter;
-      font-style: normal;
-      font-weight: normal;
-      white-space: normal;
-      font-size: 15px;
-      line-height: 160%;
-      width: 280px;
-      margin-left: auto;
-      margin-right: auto;
-      span {
-        font-weight: 700;
-      }
-    }
+  img {
+    width: 60px;
+    height: 60px;
   }
 
   .section {
     font-family: Mada;
     font-style: normal;
     font-weight: normal;
+    white-space: normal;
     font-size: 15px;
-    line-height: 110%;
     color: #FFFFFF;
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 300px;
 
     span {
       font-family: Mad Galaxy Demo;
@@ -57,25 +76,36 @@
     }
   }
 
+  .fullImage {
+    width: 80px;
+    height: auto;
+  }
+
+  .footerImage {
+    position: relative;
+    img {
+      position: absolute;
+      bottom: -95px;
+      width: 160px;
+    }
+  }
+
+  .imageLarge {
+    width: 80px;
+    height: 80px;
+  }
+
   h2 {
-    position: absolute;
-    width: 700px;
-    height: 66px;
     font-family: Archie Websters;
     font-style: normal;
     font-weight: normal;
-    font-size: 100px;
-    line-height: 110%;
+    font-size: 80px;
     color: white;
-
     &.first {
-      left: 1025px;
-      top: 1199px;
+      margin-bottom: 30px;
     }
-
     &.second {
-      left: 1025px;
-      top: 1316px;
+      margin-bottom: 100px;
     }
   }
 
@@ -102,11 +132,8 @@
 @media only screen and (max-width: 768px){
   .wrapper {
     width: 768px;
-    .firstPartWrapper {
+    .innerWrapper {
       width: 768px;
-      .backImage1 {
-        width: 768px;
-      }
     }
   }
 }
@@ -114,11 +141,8 @@
 @media only screen and (max-width: 425px){
   .wrapper {
     width: 425px;
-    .firstPartWrapper {
+    .innerWrapper {
       width: 425px;
-      .backImage1 {
-        width: 425px;
-      }
     }
   }
 }
@@ -126,11 +150,8 @@
 @media only screen and (max-width: 375px){
   .wrapper {
     width: 375px;
-    .firstPartWrapper {
+    .innerWrapper {
       width: 375px;
-      .backImage1 {
-        width: 375px;
-      }
     }
   }
 }
@@ -138,11 +159,8 @@
 @media only screen and (max-width: 320px){
   .wrapper {
     width: 320px;
-    .firstPartWrapper {
+    .innerWrapper {
       width: 320px;
-      .backImage1 {
-        width: 320px;
-      }
     }
   }
 }

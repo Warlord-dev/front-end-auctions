@@ -4,12 +4,12 @@ import styles from './page1314.module.scss'
 const Page1314 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='./magazine/1/images/Rectangle 786.jpg' className={styles.backImage1}/>
-      <img src='./magazine/1/images/Collage 1.jpg' className={styles.backImage2}/>
-      <div className={styles.leftSideFrame}></div>
-      <img src='./magazine/1/images/howtogetintext 2.png' className={styles.leftTextImage}/>
-      <div className={styles.rightSideFrame}></div>
-      <img src='./magazine/1/images/howtogetintext 1.png' className={styles.rightTextImage}/>
+      <img src='./magazine/1/images/mobile/Rectangle 786.png' className={styles.backImage1}/>
+      <div className={styles.topSideFrame}></div>
+      <img src='./magazine/1/images/mobile/howtogetintext.png' className={styles.topTextImage}/>
+      <div className={styles.bottomSideFrame}></div>
+      <img src='./magazine/1/images/mobile/howtogetintext.png' className={styles.bottomTextImage}/>
+      <div className={styles.innerWrapper}>
       <h1>
         Starting with 3D// Interview with Stan McGylin, Pipeline Manager and Creative Director at DIGITALAX, on the 3D Content Creation process.
       </h1>
@@ -77,8 +77,6 @@ const Page1314 = () => {
         make teamwork your priority and make decisions together. It’s important to set defined roles and responsibilities for each contribution to the project, 
         and streamline the entire pipeline. Also, just start giving the software a go! Try and learn as much as you can, stay agnostic! 
       </p>
-      <div className={styles.artby}>
-        Art by Charbakd
       </div>
     </div>
   )
