@@ -62,7 +62,7 @@ const WebViewer = (props) => {
 
   const zoomList = [0.05, 0.1, 0.25, 0.5, 0.75, 1];
 
-  const handleAnswerChange = (key, e) => {
+  const handleZoom = (key, e) => {
     const zoomIndex = zoomList.indexOf(zoom);
     if (key === '=') {
       if (zoomIndex < 0 || zoomIndex >= zoomList.length - 1) {
@@ -350,8 +350,7 @@ const WebViewer = (props) => {
             <Backcover />
           </WebPageWrapper>
         </div>
-        {/* <div className={styles.zoomViewer}>{zoom * 100 + '%'}</div> */}
-        <KeyboardEventHandler handleKeys={['-', '=']} onKeyEvent={handleAnswerChange} />
+        <KeyboardEventHandler handleKeys={['-', '=']} onKeyEvent={handleZoom} />
       </div>
       <ViewerSwitch viewers={['magazineview', 'mapview']} onSwitchViewer={onSwitchViewer} />
     </>

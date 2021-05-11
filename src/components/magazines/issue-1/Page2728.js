@@ -43,6 +43,10 @@ const Page2728 = () => {
           isPlaying ? pauseAudio() : startAudio()
         }}
       >
+        {
+          <img src={`./magazine/1/images/${isPlaying ? 'PauseButton' : 'PlayButton'}.png`} />
+        }
+        
       </button>
 
       <audio ref={audioRef} loop>
