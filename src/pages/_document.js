@@ -698,6 +698,11 @@ class MyDocument extends Document {
               font-family: 'Maker Van';
               src: url("./fonts/MakerVan-Regular.ttf");
             }
+
+            @font-face {
+              font-family: 'Reenie Beanie';
+              src: url("./fonts/ReenieBeanie-Regular.ttf");
+            }
           `,
             }}
           />

@@ -4,22 +4,32 @@
     @include magazineWrapper();    
     background: #E5E5E5;
 
-    .mainText {
+    .left {
         position: absolute;
-        width: 836px;
-        height: 100px;
-        left: 71px;
-        top: 398px;
+        left: 0;
+        top: 0px;
+    }
 
-        font-family: EB Garamond;
+    .link {
+        position: absolute;
+        width: 319px;
+        height: 153px;
+        left: 17px;
+        top: 35px;
+
+        font-family: Reenie Beanie;
         font-style: normal;
-        font-weight: bold;
-        font-size: 100px;
-        line-height: 100%;
-        /* identical to box height, or 100px */
+        font-weight: 500;
+        font-size: 75px;
+        line-height: 90%;
+        /* or 67px */
 
 
-        color: #000000;
+        color: #E57EFF;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .right {
