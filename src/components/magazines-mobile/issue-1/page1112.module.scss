@@ -20,7 +20,7 @@
 
   .pathImage {
     position: absolute;
-    width: 400px;
+    width: 400px !important;
     height: auto;
     left: -10px;
     top: 0px;
@@ -28,7 +28,7 @@
   
   .manImage {
     position: absolute;
-    width: 600px;
+    width: 600px !important;
     height: auto;
     left: -180px;
     top: 200px;

@@ -1,7 +1,8 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper();
+  width: 320px;
+  height: 3600px;
   background-color: black;
   color: white;
   display: flex;
@@ -9,8 +10,8 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
   .backImage {
-    width: 960px;
-    height: 1497px;
+    width: 320px;
+    height: 3600px;
     left: 0px;
     top: 0px;
   }
@@ -18,21 +19,21 @@
   .backImage2 {
     position: absolute;
     width: 960px;
-    height: 1497px;
+    height: 3300px;
     left: 960px;
     top: 0px;
   }
 
   .section1 {
     position: absolute;
-    width: 789px;
-    height: 651px;
-    left: 83px;
+    width: 260px;
+    left: 30px;
     top: 68px;
 
     font-family: Aldrich;
     font-style: normal;
     font-weight: normal;
+    white-space: normal;
     font-size: 20px;
     line-height: 150%;
     text-align: center;
@@ -40,15 +41,16 @@
 
   h1 {
     position: absolute;
-    height: 443.05px;
-    left: 6.42%;
+    width: 260px;
+    left: 30px;
     right: 54.78%;
-    top: calc(50% - 443.05px/2 + 250.03px);
+    top: 2000px;
 
     font-family: Internal Rainbows;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    white-space: normal;
+    font-size: 26px;
     line-height: 35px;
     text-align: center;
     transform: rotate(3deg);
@@ -56,39 +58,39 @@
     &.shadow1 {
       position: absolute;
       height: 432.95px;
-      left: 6.18%;
+      left: 11.18%;
       right: 55.02%;
-      top: calc(50% - 432.95px/2 + 244.97px);
+      top: 2000px;
       color: #F90498;
     }
 
     &.shadow2 {
       height: 432.95px;
-      left: 6.39%;
+      left: 12.39%;
       right: 54.81%;
-      top: calc(50% - 432.95px/2 + 244.97px);
+      top: 2000px;
       color: #F90498;
     }
 
     &.shadow3 {
       height: 432.95px;
-      left: 6.65%;
+      left: 13.65%;
       right: 54.55%;
-      top: calc(50% - 432.95px/2 + 244.97px);
+      top: 2000px;
       color: #F90498;
     }
   }
 
   .section2 {
     position: absolute;
-    width: 789px;
-    height: 178px;
-    left: 78px;
-    top: 1266px;
+    width: 300px;
+    left: 10px;
+    top: 3200px;
 
     font-family: Aldrich;
     font-style: normal;
     font-weight: normal;
+    white-space: normal;
     font-size: 20px;
     line-height: 150%;
     text-align: center;
@@ -96,13 +98,14 @@
 
   .section3 {
     position: absolute;
-    width: 851px;
+    width: 300px;
     height: 160.35px;
-    left: 930px;
-    top: 118.17px;
+    left: 10px;
+    top: 1700px;
 
     font-style: normal;
     font-weight: normal;
+    white-space: normal;
     font-family: Aldrich;
     font-size: 20px;
     line-height: 150%;
@@ -127,5 +130,53 @@
     font-size: 20px;
     line-height: 150%;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    .innerWrapper {
+      width: 708px;
+    }
+    .backImage, .backImage2 {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    .innerWrapper {
+      width: 465px;
+    }
+    .backImage, .backImage2 {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    .innerWrapper {
+      width: 315px;
+    }
+    .backImage, .backImage2 {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    .innerWrapper {
+      width: 260px;
+    }
+    .backImage, .backImage2 {
+      width: 320px;
+    }
   }
 }

@@ -1,95 +1,99 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
-  @include magazineWrapper();
+  height: 100vh;
+  overflow: scroll;
   background-color: white;
-  color: black;
+  color: white;
   display: flex;
   position: relative;
+  white-space: normal;
+  text-align: left;
 
-  video {
+  .innerWrapper {
     position: absolute;
-    width: 1941px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
-    object-fit: fill;
-  }
-
-  .backImage {
-    position: absolute;
-    width: 971px;
-    height: 892px;
-    left: 0px;
-    top: 757px;
+    top: 0x;
+    left: 0;
+    width: 100%;
+    img {
+      position: absolute;
+      width: 100%;
+      left: 0px;
+      top: 10px;
+    }
   }
 
   h1 {
-    position: absolute;
-    width: 1331px;
-    height: 400px;
-    left: 294px;
-    top: 591px;
-
-    font-family: Heaven Wanders DEMO;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 200px;
-    line-height: 100%;
-    /* or 200px */
-
-    text-align: center;
+    font-family: Aldrich, sans-serif;
+    margin-top: 200px;
+    margin-left: 20px;
   }
 
   h2 {
-    position: absolute;
-    width: 743px;
-    height: 80px;
-    left: -62px;
-    top: 57px;
-
-    font-family: Habbo;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 100%;
-    /* or 40px */
-
-    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 140px;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'Aclonica', sans-serif;
   }
 
-  h3 {
-    position: absolute;
-    width: 743px;
-    height: 90px;
-    left: 1098px;
-    top: 85px;
-
-    font-family: Comics Tricks;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 45px;
-    line-height: 100%;
-    /* or 45px */
-
-    text-align: right;
+  .textContainer {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Aldrich, sans-serif;
+    width: 260px;
+    font-size: 16px;
+    line-height: 24px;
+    p {
+      margin-bottom: 40px;
+    }
   }
+  
 
-  .introText {
+  .backImage1 {
     position: absolute;
-    width: 618.39px;
-    height: 199.21px;
-    left: 298px;
-    top: 169.36px;
+    width: 100%;
+    height: 1600px;
+    left: 0px;
+    top: 0px;
+  }
+}
 
-    font-family: Ayuthaya;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 150%;
-    /* or 25px */
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    .backImage1 {
+      width: 768px;
+    }
+  }
+}
 
-    text-align: center;
-    transform: rotate(-3deg);
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    .backImage1 {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    .backImage1 {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    .backImage1 {
+      width: 320px;
+    }
   }
 }

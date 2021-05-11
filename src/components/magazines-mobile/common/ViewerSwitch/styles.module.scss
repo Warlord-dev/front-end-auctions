@@ -26,6 +26,15 @@
     padding: 20px 10px;
     margin-right: 10px;
   }
+
+  @media only screen and (max-width: 768px) {
+    button {
+      background-color: #ddd;
+      color: black;
+      padding: 10px 6px;
+      margin-right: 10px;
+    }
+  }
 }
 
 .switchViewerWrapperForMap {
@@ -37,11 +46,20 @@
   @media (max-width: 640px) {
     top: 520px;
   }
-
+  
   button {
     background-color: #ddd;
     color: black;
     padding: 20px 10px;
     margin-right: 10px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    button {
+      background-color: #ddd;
+      color: black;
+      padding: 10px 6px;
+      margin-right: 10px;
+    }
   }
 }

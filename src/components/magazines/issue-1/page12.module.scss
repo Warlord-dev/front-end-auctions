@@ -3,11 +3,12 @@
 .wrapper {
   @include magazineWrapper();
   background-color: black;
+  overflow: scroll;
   color: white;
   display: flex;
   position: relative;
 
-  h1 {
+  h1.desktop {
     position: absolute;
     left: 100px;
     top: 100px;
@@ -15,6 +16,46 @@
     font-size: 1920px;
     font-weight: normal;
     line-height: 2000px;
+  }
+
+  .mobile h1:nth-child(1) {
+    position: absolute;
+    left: 400px;
+    top: 200px;
+    font-family: A DAY WITHOUT SUN;
+    font-size: 600px;
+    font-weight: normal;
+    line-height: 1000px;
+  }
+
+  .mobile h1:nth-child(2) {
+    position: absolute;
+    left: 400px;
+    top: 700px;
+    font-family: A DAY WITHOUT SUN;
+    font-size: 600px;
+    font-weight: normal;
+    line-height: 1000px;
+  }
+
+  .mobile h1:nth-child(3) {
+    position: absolute;
+    left: 400px;
+    top: 1200px;
+    font-family: A DAY WITHOUT SUN;
+    font-size: 600px;
+    font-weight: normal;
+    line-height: 1000px;
+  }
+
+  .mobile h1:nth-child(4) {
+    position: absolute;
+    left: 400px;
+    top: 1700px;
+    font-family: A DAY WITHOUT SUN;
+    font-size: 600px;
+    font-weight: normal;
+    line-height: 1000px;
   }
 
   video {
@@ -38,5 +79,31 @@
     line-height: 25px;
     transform: rotate(270deg);
     transform-origin: 0 0;
+  }
+}
+
+.desktop {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .wrapper {
+    video {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      top: 2400px;
+      left: 250px;
+      transform: rotate(90deg);
+    }
   }
 }

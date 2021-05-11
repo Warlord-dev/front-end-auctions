@@ -1,41 +1,90 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
-  @include magazineWrapper();
+  height: 100vh;
+  overflow: scroll;
   background-color: white;
-  color: black;
+  color: white;
   display: flex;
   position: relative;
+  white-space: normal;
+  text-align: left;
 
-  img {
+  .innerWrapper {
     position: absolute;
-    width: 1920px;
-    height: 1536px;
-    left: 0px;
-    top: -19px;
+    height: 4600px;
+    top: 0x;
+    left: 0;
+    width: 100%;
   }
 
-  a {
+  .image {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    margin-top: 160px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .image1 {
     position: absolute;
-    width: 231px;
-    height: 66px;
-    left: 1599px;
-    top: 1461px;
+    top: 0;
+    left: 0;
+  }
 
-    font-family: Gayathri;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 150%;
-    /* or 15px */
-    color: #0044F3; 
-    border-bottom: 1px solid;
-    span {
-      text-decoration: underline;
+  .image2 {
+    margin: 20px 0;
+  }
+
+  .image3 {
+    margin-top: -19px;
+    margin-bottom: 20px;
+  }
+
+  .image4 {
+    margin-top: -152px;
+    margin-bottom: 40px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
     }
+  }
+}
 
-    &:hover {
-      color: #0044F3;
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
     }
   }
 }
