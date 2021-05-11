@@ -8,7 +8,7 @@ const MagazinePages = props => {
   const router = useRouter()
   const { id } = router.query;
 
-  const [viewMethod, setViewMethod] = useState('mapview')
+  const [viewMethod, setViewMethod] = useState('magazineview')
   
   if (viewMethod === 'webview') {
     return (
