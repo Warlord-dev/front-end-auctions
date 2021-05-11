@@ -5,7 +5,7 @@ const Page2324 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='./magazine/1/images/The Metaverse Step 2 Clouds JPEG 1.jpg' />
-      <a href='https://Linktr.ee/chaimholtjer'>Art by Chaimholtjer<br /><span>Linktr.ee/chaimholtjer</span></a>
+      <a href='https://Linktr.ee/chaimholtjer' target='_blank'>Art by Chaimholtjer<br /><span>Linktr.ee/chaimholtjer</span></a>
     </div>
   )
 }
