@@ -15,6 +15,8 @@ import globalActions from '@actions/global.actions';
 import { getIsInitialized, getChainId } from '@selectors/global.selectors';
 import { getEnabledNetworkByChainId } from '@services/network.service';
 import getOrCreateStore from '../lib/with-redux-store';
+import { useRouter } from 'next/router';
+
 
 import config from '../utils/config';
 import '../assets/scss/global.scss';
@@ -53,6 +55,10 @@ const NetworkWrapper = (props) => {
 };
 
 const MyApp = ({ Component, pageProps, store, err }) => {
+  const router = useRouter();
+  const pathname = router.pathname;
+  const isMagazineContents = pathname.substr(0, 10) === '/magazines'
+  
   if (err) {
     Sentry.captureException(err, {
       extra: {},
@@ -67,12 +73,12 @@ const MyApp = ({ Component, pageProps, store, err }) => {
         <link rel="icon" type="image/png" href="/images/icons/favicon-digitalax.ico" />
       </Head>
       <InitWrapper>
-        <HeaderTopLine />
+        {!isMagazineContents && <HeaderTopLine /> }
         <Modals />
         <NetworkWrapper>
           <Component {...pageProps} />
         </NetworkWrapper>
-        <Footer />
+        {!isMagazineContents && <Footer /> }
       </InitWrapper>
       <ToastContainer />
     </Provider>

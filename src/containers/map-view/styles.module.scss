@@ -1,7 +1,7 @@
 .mapViewerWrapper {
-  margin-top: 90px;
   flex: auto;
-  justify-self: center;
+  display: flex;
+  align-items: center;
   background-color: black;
   
   @media (max-width: 640px)  {
@@ -21,7 +21,7 @@
 
   .contentWrapper {
     position: relative;
-    display: flex;
+    // display: flex;
     left: 0;
     top: 0;
 
