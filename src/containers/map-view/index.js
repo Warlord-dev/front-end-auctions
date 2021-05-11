@@ -9,10 +9,22 @@ const mapList = [
     issueId: '1',
     content: [
       {
+        pageNum: 0,
+        x: '65',
+        y: '5',
+        rotate: '30',
+      },
+      {
         pageNum: 7,
         x: '10',
         y: '20',
         rotate: '10',
+      },
+      {
+        pageNum: 13,
+        x: '5',
+        y: '70',
+        rotate: '5',
       },
       {
         pageNum: 21,
@@ -39,9 +51,27 @@ const mapList = [
         rotate: '-16',
       },
       {
+        pageNum: 49,
+        x: '55',
+        y: '75',
+        rotate: '0',
+      },
+      {
+        pageNum: 51,
+        x: '70',
+        y: '39',
+        rotate: '-50',
+      },
+      {
         pageNum: 57,
         x: '18',
         y: '60',
+        rotate: '-10',
+      },
+      {
+        pageNum: 63,
+        x: '88',
+        y: '7',
         rotate: '-10',
       },
       {
@@ -60,6 +90,12 @@ const mapList = [
         pageNum: 79,
         x: '45',
         y: '50',
+        rotate: '10',
+      },
+      {
+        pageNum: 81,
+        x: '85',
+        y: '70',
         rotate: '10',
       },
       {

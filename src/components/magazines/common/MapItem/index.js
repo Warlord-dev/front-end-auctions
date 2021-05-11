@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion"
 import styles from './styles.module.scss'
 
+import CoverPage from '@components/magazines/issue-1/CoverPage';
 import Page12 from '@components/magazines/issue-1/Page12';
 import Page34 from '@components/magazines/issue-1/Page34';
 import Page56 from '@components/magazines/issue-1/Page56';
@@ -48,9 +49,11 @@ import Page8586 from '@components/magazines/issue-1/Page8586';
 import Page8788 from '@components/magazines/issue-1/Page8788';
 
 import WebPageWrapper from '@components/magazines/common/WebPageWrapper';
+import { Pointer } from 'highcharts';
 
 
 const pages = [
+  <CoverPage />,
   <Page12 />,
   <Page34 />,
   <Page56 />,
@@ -100,8 +103,8 @@ const pages = [
 const getPagePreview = (issueId, pageNum) => {
   if (issueId !== '1') return <></>
   return (
-    <WebPageWrapper secondPart={(pageNum + 1) % 2} zoom={0.15}>
-      {pages[(pageNum / 2) | 0]}
+    <WebPageWrapper secondPart={(pageNum + (pageNum > 0)) % 2} zoom={0.15}>
+      {pages[((pageNum + 1) / 2) | 0]}
     </WebPageWrapper>
   )
 }
@@ -116,6 +119,7 @@ const MapItem = props => {
       rotate: -itemData.rotate }}
       whileTap={{ scale: 0.9 }}
       style={{
+        cursor: 'pointer',
         left: windowWidth > 640 ? `${itemData.x}%` : `${1200*(itemData.x/100)}px`,
         top: windowWidth > 640 ? `${itemData.y}%` : `${750*(itemData.y/100)}px`,
       }}
