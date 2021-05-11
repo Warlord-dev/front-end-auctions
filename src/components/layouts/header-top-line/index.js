@@ -135,7 +135,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
               {linkText}
             </a>
           )}*/}
-          <Link href="/global">
+          <Link href="/all-issues">
             <a className={styles.link}>All Issues</a>
           </Link>
           <Link href="/swap">

@@ -84,6 +84,7 @@ const Page6768 = () => {
       <a
         href="https://devilmaycry.org/forums/threads/crossover-vergil-john-wick.25137/"
         className={styles.link1}
+        target="_blank"
       >
         {' '}
         CROSSOVER: VeRGIL WICK{' '}
@@ -91,6 +92,7 @@ const Page6768 = () => {
       <a
         href="https://devilmaycry.org/forums/threads/dark-dante-red-coat-v2.25126/"
         className={styles.link2}
+        target="_blank"
       >
         {' '}
         DARK DANTE V2{' '}
@@ -98,6 +100,7 @@ const Page6768 = () => {
       <a
         href="https://devilmaycry.org/forums/threads/advanced-per-stab-vergil.23704/"
         className={styles.link3}
+        target="_blank"
       >
         {' '}
         Advanced Per-Stab Vergil{' '}
@@ -105,6 +108,7 @@ const Page6768 = () => {
       <a
         href="https://devilmaycry.org/forums/threads/powerful-per-stab-project-glow.25147/ "
         className={styles.link4}
+        target="_blank"
       >
         {' '}
         PROJECT GLOW{' '}

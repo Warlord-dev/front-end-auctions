@@ -4,7 +4,7 @@ import styles from './page6970.module.scss';
 const Page6970 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/69_70/BG 3 Original 1.png" className={styles.background} />
+      <img src="./magazine/1/69_70/BG 3 Original 1.png" className={styles.background} />
       <div className={styles.mainText}>
         Is the metaverse <br /> already broken?
       </div>

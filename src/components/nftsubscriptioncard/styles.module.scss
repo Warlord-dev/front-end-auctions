@@ -1,0 +1,59 @@
+.wrapper {
+    background: #F7F7F7;
+    padding: 10px;
+
+    .thumbnail {
+        width: 304px;
+        height: 342px;
+        object-fit: cover;
+    }
+
+    .actions {
+        background: #FFFFFF;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 24px;
+            /* identical to box height */
+
+
+            color: #111111;
+        }
+
+        .details {
+            .issueIndex {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 9px;
+                line-height: 11px;
+                /* identical to box height */
+
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+
+                color: #B6B6B6;
+            }
+
+            .hiddenLink {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 10px;
+                line-height: 12px;
+                /* identical to box height */
+
+                text-decoration-line: underline;
+
+                color: #111111;
+            }
+        }
+    }
+}

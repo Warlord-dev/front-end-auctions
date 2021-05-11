@@ -1,0 +1,69 @@
+.wrapper {
+  background: url("/images/nft/ejml13 hires 1.png");
+  background-size: cover;
+  
+  .bodyWrapper {
+
+    color: white;
+    width: 100%;
+    font-family: "Inter";
+    padding-top: 75px;
+    padding: 64px;
+  
+    .header {
+      padding-top: 50px;
+      width: 60%;
+      max-width: 1040px;
+    }
+  
+    .subTitleWrapper {
+      display: flex;
+      justify-content: flex-end;
+    
+      .subTitle {
+        width: 90%;
+        margin-bottom: 50px;
+      }
+    }
+  
+    .title {
+      margin-bottom: 82px;
+      color: #ff0000;
+      line-height: 48px;
+      font-size: 40px;
+      font-weight: 600;
+      font-style: italic;
+      text-align: center;
+    }
+    
+    .flexDiv {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+  
+    .panel {
+      background: #F7F7F7;
+      height: 1145px;
+      position: relative;
+      margin-bottom: 350px;
+  
+      .new {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-25%, -25%);
+        width: 250px
+      }
+  
+      .meta {
+        position: absolute;
+        bottom: 0;
+        right: 16px;
+        width: 50%;
+        transform: translate(0, 50%);
+      }
+    }
+  }
+}

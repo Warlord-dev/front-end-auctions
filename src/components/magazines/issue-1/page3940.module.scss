@@ -61,7 +61,7 @@
     width: 376.18px;
     height: 35.67px;
     left: -54px;
-    top: 139.66px;
+    top: 71.66px;
 
     font-family: ZCOOL KuaiLe;
     font-style: normal;
@@ -560,6 +560,36 @@
     height: 29.26px;
     left: 1039px;
     top: 1417px;
+    z-index: 1;
+  }
+
+  .rightArrow2 {
+    position: absolute;
+    width: 324.99px;
+    left: 1219.5px;
+    top: -16.7px;
+
+    // transform: matrix(-0.5, 0.87, 0.87, 0.5, 0, 0);
+    z-index: 1;
+  }
+
+  .rightText11 {
+    position: absolute;
+    width: 114px;
+    height: 40px;
+    left: 1351px;
+    top: 76px;
+
+    font-family: Finger Paint;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    /* or 14px */
+
+    text-align: center;
+
+    color: #FFFFFF;
     z-index: 1;
   }
 }

@@ -10,6 +10,7 @@ const DEFAULT_FIELDS = Map({
   isShowModalSignup: false,
   isShowNotificationConnectMetamask: false,
   isShowBuyNow: false,
+  isShowBuyNowNftSubscription: false,
   isShowPreviewMaterial: false,
   params: null,
 });

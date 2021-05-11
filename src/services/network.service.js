@@ -65,3 +65,19 @@ export const getMarketplaceContractAddressByChainId = (chainId) => {
 
   return config.DIGITAL_MARKETPLACE_ADDRESSES[network.alias];
 };
+
+export const getMarketplaceContractNFTAddressByChainId = (chainId) => {
+  // const network = getEnabledNetworkByChainId(chainId);
+
+  // return config.DIGITAL_MARKETPLACE_ADDRESSES[network.alias];
+  // return config.DigitalaxSubscriptionMarketplaceAddress;
+  return "0xb7e04a24934bFfEbB2687e3015fA4F00B858A543";
+};
+
+export const getMonaContractNFTAddressByChainId = (chainId) => {
+  // const network = getEnabledNetworkByChainId(chainId);
+
+  // return config.MONA_TOKEN_ADDRESSES[network.alias];
+  // return config.DigitalaxSubscriptionNFTAddress;
+  return "0xD309F477dbA416E5C123Bd0215e6d1eA0a6A81A6";
+};
