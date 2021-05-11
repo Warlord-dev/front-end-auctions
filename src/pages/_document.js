@@ -703,6 +703,57 @@ class MyDocument extends Document {
               font-family: 'Reenie Beanie';
               src: url("./fonts/ReenieBeanie-Regular.ttf");
             }
+            
+            @font-face {
+              font-family: 'Atures 900 PERSONAL USE ONLY';
+              src: url("./fonts/Atures-900_PERSONAL_USE.ttf");
+            }
+
+            @font-face {
+              font-family: 'Burst My Bubble';
+              src: url("./fonts/BurstMyBubbleBold.ttf");
+              font-weight: 700;
+            }
+
+            @font-face {
+              font-family: 'Burst My Bubble';
+              src: url("./fonts/BurstMyBubble.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Corben';
+              src: url("./fonts/Corben-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Corben';
+              src: url("./fonts/Corben-Bold.ttf");
+              font-weight: 700;
+            }
+            
+            @font-face {
+              font-family: 'Carme';
+              src: url("./fonts/Carme-Regular.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Neon Lights';
+              src: url("./fonts/neon2.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Cinzel';
+              src: url("./fonts/Cinzel-Black.ttf");
+              font-weight: 900;
+            }
+
+            @font-face {
+              font-family: 'Decovar Alpha';
+              src: url("./fonts/DecovarAlpha-VF.ttf");
+            }
+          
           `,
             }}
           />

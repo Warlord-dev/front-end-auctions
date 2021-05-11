@@ -2,6 +2,7 @@ import React, { memo, useEffect } from 'react';
 import Router from 'next/router';
 import styles from './styles.module.scss';
 import BottomLine from '@components/bottom-line';
+import Link from 'next/link';
 
 const LandingPage = () => {
   useEffect(() => {
@@ -20,16 +21,19 @@ const LandingPage = () => {
   return (
     <>
       <div className={styles.wrapper}>
-        <img className={styles.header} src="/images/homepage_header.png" alt="homepage header" />
-        <div className={styles.title}>
-          <span>Mod the metaverse</span>
+        <div className={styles.bodyWrapper}>
+          <img className={styles.header} src="/images/nft/homepage_header.png" alt="homepage header" />
+          <img className={styles.subTitle} src="/images/nft/homepage_sub_title.png" alt="homepage new" />
+          <div className={styles.flexDiv}>
+            <Link href="/magazines/1">
+              <a>
+                <img className={styles.mainMagazine} src="/images/nft/main_magazine.png" />
+              </a>
+            </Link>
+          </div>
         </div>
-        <div className={styles.panel}>
-          <img className={styles.new} src="/images/homepage_new.png" alt="homepage new" />
-          <img className={styles.meta} src="/images/homepage_meta.png" alt="homepage meta" />
-        </div>
+        <BottomLine transparent={false} />
       </div>
-      <BottomLine transparent={false} />
     </>
   );
 };

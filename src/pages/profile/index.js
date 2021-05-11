@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 import copy from 'copy-to-clipboard';
 import { useSelector, useDispatch } from 'react-redux';
@@ -9,17 +9,44 @@ import Button from '@components/buttons/button';
 import { getUser, getAccount } from '@selectors/user.selectors';
 import { useProfile, useNFTs } from '@hooks/espa/user.hooks';
 import accountActions from '@actions/user.actions';
+import api from '@services/api/api.service';
 import Loader from '@components/loader';
 import styles from './styles.module.scss';
+import details from '@constants/nft_subscription_issue1'
+import NftSubscriptionCard from '@components/nftsubscriptioncard';
 
 const Profile = ({ history }) => {
   const user = useSelector(getUser);
   const dispatch = useDispatch();
+  const [activeTab, setActiveTab] = useState(0);
+  const [nftCollectionIds, setNftCollectionIds] = useState([]);
+
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }
   const account = user.get('wallet');
   const nfts = useNFTs(account);
+  
+  useEffect(() => {
+    const fetchSubscriptionStatus = async () => {
+      const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
+      const ids = [];
+      for (let i = 0; i < digitalaxSubscriptionCollectors.length; i += 1) {
+        for (let j = 0; j < digitalaxSubscriptionCollectors[i].parentsOwned.length; j += 1) {
+          const {
+            digitalaxSubscriptionPurchaseHistory,
+          } = await api.getDigitalaxSubscriptionPurchase(
+            digitalaxSubscriptionCollectors[i].parentsOwned[j].id
+          );
+          if (!ids.includes(digitalaxSubscriptionPurchaseHistory.bundleId))
+            ids.push(digitalaxSubscriptionPurchaseHistory.bundleId);
+        }
+      }
+      setNftCollectionIds(ids);
+    };
+
+    fetchSubscriptionStatus();
+  }, []);
 
   const getGameTags = (str) => {
     if (!str) {
@@ -35,7 +62,7 @@ const Profile = ({ history }) => {
 
   const onCopyWalletAddress = () => {
     copy(account);
-    toast("Wallet Address is copied to the clipboard");
+    toast('Wallet Address is copied to the clipboard');
   };
 
   if (!user || !nfts) {
@@ -78,13 +105,35 @@ const Profile = ({ history }) => {
         </Button>
       </div>
       <div className={styles.rightSideWrapper}>
-        <p className={styles.titleWrapper}>CHANGING ROOM</p>
-        <div className={styles.divider} />
-        <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
-          {nfts.map((nft) => (
-            <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
-          ))}
-        </ul>
+        <div className={styles.rightSideTab}>
+          <div
+            className={`${styles.tabItem} ${activeTab === 0 && styles.active}`}
+            onClick={() => setActiveTab(0)}
+          >
+            <p className={styles.titleWrapper}>CHANGING ROOM</p>
+          </div>
+          <div
+            className={`${styles.tabItem} ${activeTab === 1 && styles.active}`}
+            onClick={() => setActiveTab(1)}
+          >
+            <p className={styles.titleWrapper}>ISSUE COLLECTION</p>
+          </div>
+        </div>
+        <div className={styles.tabBody}>
+          {activeTab === 0 ? (
+            <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
+              {nfts.map((nft) => (
+                <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
+              ))}
+            </ul>
+          ) : (
+            <div className={styles.subscriptionWrapper}>
+              {nftCollectionIds.map((nftId) => (
+                <NftSubscriptionCard key={`nft_subscription_${nftId}`} id={parseInt(nftId)} details={details[parseInt(nftId) - 1]} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

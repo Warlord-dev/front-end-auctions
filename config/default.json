@@ -21,6 +21,8 @@
     "MUMBAI": "https://rpc-mumbai.maticvigil.com/v1/1590d9f343d27b977aa149ac37ebd8f2aad7f68a",
     "MATIC": "https://rpc-mainnet.maticvigil.com/v1/1590d9f343d27b977aa149ac37ebd8f2aad7f68a"
   },
+  "DigitalaxSubscriptionNFTAddress": "0xD309F477dbA416E5C123Bd0215e6d1eA0a6A81A6",
+  "DigitalaxSubscriptionMarketplaceAddress": "0xb7e04a24934bFfEbB2687e3015fA4F00B858A543",
   "EXPLORER_URLS": {
     "mainnet": "https://etherscan.io/",
     "rinkeby": "https://rinkeby.etherscan.io/",

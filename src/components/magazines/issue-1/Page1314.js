@@ -7,9 +7,19 @@ const Page1314 = () => {
       <img src='./magazine/1/images/Rectangle 786.jpg' className={styles.backImage1}/>
       <img src='./magazine/1/images/Collage 1.jpg' className={styles.backImage2}/>
       <div className={styles.leftSideFrame}></div>
-      <img src='./magazine/1/images/howtogetintext 2.png' className={styles.leftTextImage}/>
+      <div className={[styles.animationFrame, styles.leftSideImageWrapper].join(' ')}>
+        <img src='./magazine/1/images/howtogetintext 2.png'/>
+        <img src='./magazine/1/images/howtogetintext 2.png'/>
+        <img src='./magazine/1/images/howtogetintext 2.png'/>
+        <img src='./magazine/1/images/howtogetintext 2.png'/>
+      </div>
       <div className={styles.rightSideFrame}></div>
-      <img src='./magazine/1/images/howtogetintext 1.png' className={styles.rightTextImage}/>
+      <div className={[styles.animationFrame, styles.rightSideImageWrapper].join(' ')}>
+        <img src='./magazine/1/images/howtogetintext 1.png' />
+        <img src='./magazine/1/images/howtogetintext 1.png' />
+        <img src='./magazine/1/images/howtogetintext 1.png' />
+        <img src='./magazine/1/images/howtogetintext 1.png' />
+      </div>
       <h1>
         Starting with 3D// Interview with Stan McGylin, Pipeline Manager and Creative Director at DIGITALAX, on the 3D Content Creation process.
       </h1>
