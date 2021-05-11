@@ -146,7 +146,9 @@ const Page2122 = () => {
         <img src='./magazine/1/images/21-06.png' className={styles.image6} />
       </a>
       <a href="https://foundation.app/lorem/burst-two-1725" target='_blank'>
-        <img src='./magazine/1/images/21-07.jpg' className={styles.image7} />
+        <video autoPlay muted loop className={styles.nftVideo2}>
+          <source src={`./magazine/1/videos/NFT2.mp4`} type="video/mp4" />
+        </video>
       </a>
       <a href="https://foundation.app/jeff.kraus/bom-dia-05-1442" target='_blank'>
         <video autoPlay muted loop className={styles.nftVideo}>
