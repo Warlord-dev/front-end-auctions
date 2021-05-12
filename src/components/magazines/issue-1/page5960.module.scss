@@ -139,7 +139,7 @@
     line-height: 100%;
     /* or 30px */
     
-    
+    @include stroke(1px, #0009EA);
     color: #FFFFFF;
   }
 
@@ -175,7 +175,7 @@
     line-height: 100%;
     /* or 30px */
     
-    
+    @include stroke(1px, #BB00EA);
     color: #FFFFFF;
   }
 
@@ -211,7 +211,7 @@
     line-height: 100%;
     /* or 30px */
     
-    
+    @include stroke(1px, #009220);
     color: #FFFFFF;
   }
 
@@ -319,7 +319,7 @@
     line-height: 100%;
     /* or 30px */
     
-    
+    @include stroke(1px, #FF002E);
     color: #FFFFFF;
   }
 
@@ -355,7 +355,7 @@
     line-height: 100%;
     /* or 30px */
     
-    
+    @include stroke(1px, #00FFF0);
     color: #FFFFFF;
   }
 

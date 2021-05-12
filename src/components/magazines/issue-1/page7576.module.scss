@@ -33,6 +33,9 @@
     line-height: 90%;
     /* or 72px */
 
+    &:hover {
+      text-decoration: underline;
+    }
 
     color: #00FFF0;
   }

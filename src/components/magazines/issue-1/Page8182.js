@@ -5,7 +5,7 @@ const Page8182 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/81_82/left2.png" className={styles.left} />
-      <img src="./magazine/1/81_82/Group 1181 (4).png" className={styles.right} />
+      <img src="./magazine/1/81_82/Group 1190 (3).png" className={styles.right} />
       <video className={styles.leftLink1} muted autoPlay loop>
         <source src="./magazine/1/81_82/Untitled (11).mp4" type="video/mp4" />
       </video>
@@ -13,6 +13,18 @@ const Page8182 = () => {
         MAR GUIXA STUDIO
       </a>
       <div className={styles.leftText}>BLACK DECO TRENCH COAT</div>
+      <a href="https://www.instagram.com/prizecard/?hl=en" className={styles.link1} target="_blank">
+        {' '}
+        XENOTECH{' '}
+      </a>
+      <a href="https://www.instagram.com/prizecard/?hl=en" className={styles.link2} target="_blank">
+        {' '}
+        XENOTECH{' '}
+      </a>
+      <a href="https://www.instagram.com/prizecard/?hl=en" className={styles.link3} target="_blank">
+        {' '}
+        XENOTECH{' '}
+      </a>
       <div className={styles.rightText1}>
         23 yr old art and design student based in NYC at The New School, with an international
         upbringing, from Japan, NYC, Rome, and Abu Dhabi.

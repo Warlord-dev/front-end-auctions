@@ -77,6 +77,35 @@
     color: #FFFFFF;
   }
 
+  .rightBottomText {
+    position: absolute;
+    width: 266px;
+    height: 133px;
+    left: 1620px;
+    top: 1247px;
+
+    font-family: Carter One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 120%;
+    /* or 36px */
+
+    text-align: center;
+    text-shadow: -4px -3px 0px #7F00E2;
+
+    a {
+      color: white;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    color: #FFFFFF;
+  }
+
   .link3 {
     position: absolute;
     width: 266px;

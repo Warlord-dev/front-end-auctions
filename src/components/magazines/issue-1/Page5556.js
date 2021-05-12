@@ -7,11 +7,26 @@ const Page5556 = () => {
       <img src="./magazine/1/55_56/Space Grave 1.png" className={styles.left} />
       <img src="./magazine/1/55_56/Zhora'sKaftan_2 1.png" className={styles.right} />
       <img src="./magazine/1/55_56/RachelFurCoat_4 1.png" className={styles.small} />
-      <div className={styles.text1}> BLADE RUNWAY </div>
-      <div className={styles.text2}> BLADE RUNWAY </div>
-      <div className={styles.text3}> BLADE RUNWAY </div>
-      <div className={styles.text4}> BLADE RUNWAY </div>
-      <div className={styles.text5}> BLADE RUNWAY </div>
+      <a href="https://twitter.com/BladeRunway" className={styles.text1} target="_blank">
+        {' '}
+        BLADE RUNWAY{' '}
+      </a>
+      <a href="https://twitter.com/BladeRunway" className={styles.text2} target="_blank">
+        {' '}
+        BLADE RUNWAY{' '}
+      </a>
+      <a href="https://twitter.com/BladeRunway" className={styles.text3} target="_blank">
+        {' '}
+        BLADE RUNWAY{' '}
+      </a>
+      <a href="https://twitter.com/BladeRunway" className={styles.text4} target="_blank">
+        {' '}
+        BLADE RUNWAY{' '}
+      </a>
+      <a href="https://twitter.com/BladeRunway" className={styles.text5} target="_blank">
+        {' '}
+        BLADE RUNWAY{' '}
+      </a>
       <div className={styles.subText}>
         Blade Runway is the first Digital Couture Fashion House in Italy. Founded by designers Greta
         Meacci and Alan Aronica, the project was launched to bring the high quality and know-how of

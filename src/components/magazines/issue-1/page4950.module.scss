@@ -12,6 +12,14 @@
         top: 0px;
     }
 
+    .right {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+    }
+
     .defiGems {
         position: absolute;
         width: 599px;
@@ -53,22 +61,51 @@
 
     .text {
         position: absolute;
-        width: 688.12px;
-        height: 670.18px;
-        left: 90px;
-        top: 327.97px;
-
-        font-family: Cool Chaos;
+        width: 564.71px;
+        height: 857.49px;
+        left: 161px;
+        top: 317.22px;
+        
+        // font-family: Think Thick;
         font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
+        font-weight: 100;
+        font-size: 13px;
         line-height: 110%;
-        /* or 22px */
-
-
+        /* or 33px */
+        
+        
         color: #FAD3F0;
 
+        .textTitle {
+            font-size: 30px;
+            font-family: Cool Chaos;
+        }
+
+        
         transform: rotate(-5deg);
+    }
+    .twitter1 {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        left: 261px;
+        top: 321px;
+    }
+
+    .twitter2 {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        left: 336px;
+        top: 581px;
+    }
+
+    .twitter3 {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        left: 273px;
+        top: 840px;
     }
 
     .diamond3 {
@@ -94,19 +131,78 @@
 
     .rightText {
         position: absolute;
-        width: 512px;
-        height: 66px;
-        left: 1306px;
-        top: 378px;
+        width: 851px;
+        height: 116px;
+        left: 1069px;
+        top: 36px;
 
-        font-family: Blacker Display;
+        font-family: DIN Alternate;
         font-style: normal;
-        font-weight: 900;
-        font-size: 60px;
+        font-weight: bold;
+        font-size: 105px;
         line-height: 110%;
-        /* identical to box height, or 66px */
+        /* identical to box height, or 116px */
+        @include stroke(5px, black);
+
+        color: #FFFFFF;
+    }
+
+    .rightText1 {
+        position: absolute;
+        width: 392px;
+        height: 792px;
+        left: 1007px;
+        top: 179px;
+
+        font-family: DIN Alternate;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 110%;
+        /* or 18px */
+
+        color: #FFFFFF;
+    }
+
+    .rightText2 {
+        position: absolute;
+        width: 396px;
+        height: 68.22px;
+        left: 1484.95px;
+        top: 200px;
+
+        font-family: Bungee Inline;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 110%;
+        /* or 33px */
 
 
-        color: #000000;
+        color: #6900BC;
+        @include stroke(1px, #6900BC);
+
+        box-sizing: border-box;
+        transform: rotate(5deg);
+    }
+
+    .rightText3 {
+        position: absolute;
+        width: 392px;
+        height: 486px;
+        left: 1482.36px;
+        top: 277px;
+
+        font-family: DIN Alternate;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 110%;
+        /* or 18px */
+
+
+        color: #FFFFFF;
+
+        transform: rotate(5deg);
     }
 }

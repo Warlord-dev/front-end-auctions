@@ -753,7 +753,16 @@ class MyDocument extends Document {
               font-family: 'Decovar Alpha';
               src: url("./fonts/DecovarAlpha-VF.ttf");
             }
-          
+   
+            @font-face {
+              font-family: 'DIN Alternate';
+              src: url("./fonts/DINAlternate-Bold.woff");
+            }
+             
+            @font-face {
+              font-family: 'Think Thick';
+              src: url("./fonts/Think Thick.ttf");
+            }
           `,
             }}
           />

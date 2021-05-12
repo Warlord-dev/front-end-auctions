@@ -6,7 +6,9 @@ const Page7980 = () => {
     <div className={styles.wrapper}>
       <img src="./magazine/1/79_80/Group 1179.png" className={styles.left} />
       <img src="./magazine/1/79_80/right2.png" className={styles.right} />
-      <div className={styles.text1}>Andrea Nieto</div>
+      <a href="https://www.instagram.com/pragmatik0/" className={styles.text1} target="_blank">
+        Andrea Nieto
+      </a>
       <div className={styles.text2}>
         Andrea is a multidisciplinary designer and innovator originally from Colombia. Andrea’s
         background is in apparel and textile design but her work has expanded to include the areas

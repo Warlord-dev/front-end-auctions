@@ -31,7 +31,9 @@
     line-height: 100%;
     /* identical to box height, or 40px */
     
-    
+    &:hover {
+      text-decoration: underline;
+    }
     color: #FFB115;
   }
 

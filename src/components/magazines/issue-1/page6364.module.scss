@@ -143,8 +143,16 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 110%;
+    word-break: break-word;
     /* or 13px */
 
+    a {
+      color: white;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     color: #FFFFFF;
   }
@@ -635,6 +643,7 @@
     height: 32px;
     left: 1230px;
     top: 472px;
+    z-index: 1;
   }
 
   .play2 {
@@ -643,6 +652,7 @@
     height: 49px;
     left: 1206px;
     top: 801px;
+    z-index: 1
   }
 
   .play3 {
@@ -651,6 +661,7 @@
     height: 49px;
     left: 1808px;
     top: 853px;
+    z-index: 1;
   }
 
   .play4 {
@@ -659,5 +670,10 @@
     height: 49px;
     left: 1683px;
     top: 1213px;
+    z-index: 1;
+  }
+
+  .audio {
+    visibility: hidden;
   }
 }
