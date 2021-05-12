@@ -17,7 +17,6 @@ const LeftBox = ({ details }) => {
           <video
             loop
             autoPlay
-            muted
             className={styles.activeImage}
             src={details.url[activeImage]}
           ></video>
