@@ -7,7 +7,7 @@ import s from "./index.module.scss";
 const NftBanners = () => {
     return (
     <div className={s.bannerWrapper}>
-        <Carousel showThumbs={false} showArrows={false} showStatus={false} infiniteLoop>
+        <Carousel autoPlay showThumbs={false} stopOnHover={false} showArrows={false} showStatus={false} infiniteLoop>
             <div className={s.firstBanner}>
                 <img src="images/nft/Group 1187.png" />
                 <Link href="/unlockable/">

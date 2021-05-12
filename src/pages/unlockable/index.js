@@ -39,14 +39,10 @@ const Unlockable = () => {
   }, []);
 
   const onUnlock = (id) => {
-    if (account) {
-      if (!collectionIds.filter((collectionId) => parseInt(collectionId) === id).length) {
-        onUnlockableDetails(id);
-      } else {
-        window.alert('This item is already puchased.');
-      }
+    if (!collectionIds.filter((collectionId) => parseInt(collectionId) === id).length) {
+      onUnlockableDetails(id);
     } else {
-      window.alert('You should sign in to purchase items.');
+      window.alert('This item is already puchased.');
     }
   };
 
@@ -61,7 +57,7 @@ const Unlockable = () => {
           <div className={styles.panel}>
             <video loop autoPlay muted className={styles.thumbnail} src={details[0].url}>
             </video>
-            <div className={styles.overlay}>
+            <div className={`${styles.overlay} ${styles.overlay1}`}>
               <button type="button" onClick={() => onUnlock(1)}>
                 {' '}
                 COMMON UNLOCK{' '}
@@ -71,7 +67,7 @@ const Unlockable = () => {
           <div className={styles.panel}>
             <video loop autoPlay muted className={styles.thumbnail} src={details[1].url}>
             </video>
-            <div className={styles.overlay}>
+            <div className={`${styles.overlay} ${styles.overlay2}`}>
               <button type="button" onClick={() => onUnlock(2)}>
                 {' '}
                 SEMI-RARE UNLOCK{' '}
@@ -81,7 +77,7 @@ const Unlockable = () => {
           <div className={styles.panel}>
             <video loop autoPlay muted className={styles.thumbnail} src={details[2].url}>
             </video>
-            <div className={styles.overlay}>
+            <div className={`${styles.overlay} ${styles.overlay3}`}>
               <button type="button" onClick={() => onUnlock(3)}>
                 {' '}
                 EXCLUSIVE UNLOCK{' '}

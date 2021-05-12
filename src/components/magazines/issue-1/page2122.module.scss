@@ -455,7 +455,7 @@
     
     color: #000000;
     transform-origin: 0 0;
-    transform: rotate(-90deg);    
+    transform: rotate(-90deg);
   }
 
   .blueRect {
@@ -483,7 +483,7 @@
     left: 321px;
     top: 553px;
     
-    background: #5350FF;    
+    background: #5350FF;
   }
 
   .image1 {
@@ -516,7 +516,7 @@
     width: 297px;
     height: 283px;
     left: 8px;
-    top: 621px;    
+    top: 621px;
   }
 
   .image5 {
@@ -524,7 +524,7 @@
     left: 7px;
     top: 930px;
     width: 299px;
-    height: 407px;    
+    height: 407px;
   }
 
   .image6 {
@@ -532,15 +532,16 @@
     left: 260px;
     top: 988px;
     width: 428px;
-    height: 487px;   
+    height: 487px;
   }
 
-  .image7 {
+  .nftVideo2 {
     position: absolute;
     width: 474px;
     height: 494px;
     left: 1284px;
-    top: 553px;    
+    top: 553px;
+    object-fit: cover;
   }
 
   .nftVideo {

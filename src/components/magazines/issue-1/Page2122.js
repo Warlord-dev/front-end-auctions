@@ -139,14 +139,16 @@ const Page2122 = () => {
       <a href="https://foundation.app/IY/creative-block-6168" target='_blank'>
         <img src='./magazine/1/images/21-04.jpg' className={styles.image4} />
       </a>
-      <a href="https://foundation.app/IY/creative-block-6168" target='_blank'>
+      <a href="https://superrare.co/artwork-v2/the-ethertales---acrophobia-19306" target='_blank'>
         <img src='./magazine/1/images/21-05.jpg' className={styles.image5} />
       </a>
       <a href="https://superrare.co/artwork-v2/let-go-16947" target='_blank'>
         <img src='./magazine/1/images/21-06.png' className={styles.image6} />
       </a>
       <a href="https://foundation.app/lorem/burst-two-1725" target='_blank'>
-        <img src='./magazine/1/images/21-07.jpg' className={styles.image7} />
+        <video autoPlay muted loop className={styles.nftVideo2}>
+          <source src={`./magazine/1/videos/NFT2.mp4`} type="video/mp4" />
+        </video>
       </a>
       <a href="https://foundation.app/jeff.kraus/bom-dia-05-1442" target='_blank'>
         <video autoPlay muted loop className={styles.nftVideo}>

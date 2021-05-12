@@ -38,8 +38,8 @@
       font-family: Inter;
       font-style: normal;
       font-weight: normal;
-      font-size: 15px;
-      line-height: 160%;
+      font-size: 14px;
+      line-height: 21px;
       position: absolute;
 
       &.leftPart {
@@ -171,12 +171,13 @@
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 110%;
+    line-height: 16.5px;
     color: #FFFFFF;
 
     span {
       font-family: Mad Galaxy Demo;
       font-size: 17px;
+      line-height: 18.7px;
     }
   }
 
@@ -220,4 +221,44 @@
 
     color: #FFFFFF;
   }
+
+  .logoImage1 {
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    left: 1025px;
+    top: 334px;    
+  }
+
+  .logoImage2 {
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    left: 1439px;
+    top: 682px;   
+  }
+
+  .logoImage3 {
+    position: absolute;
+    width: 89px;
+    height: 89px;
+    left: 1022px;
+    top: 907px;  
+  }
+
+  .logoImage4 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 1749px;
+    top: 508px;    
+  }
+
+  .logoImage5 {
+    position: absolute;
+    width: 209px;
+    left: 1624px;
+    top: 1322px;    
+  }
+
 }
