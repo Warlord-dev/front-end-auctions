@@ -139,7 +139,7 @@
     line-height: 100%;
     /* or 30px */
     
-    @include stroke(1px, #0009EA);
+    text-shadow: -1px -1px 0 #0009ea, -1px 0px 0 #0009ea, -1px 1px 0 #0009ea, 0px -1px 0 #0009ea, 0px 0px 0 #0009ea, 0px 1px 0 #0009ea, 1px -1px 0 #0009ea, 1px 0px 0 #0009ea, 1px 1px 0 #0009ea;
     color: #FFFFFF;
   }
 
@@ -175,7 +175,7 @@
     line-height: 100%;
     /* or 30px */
     
-    @include stroke(1px, #BB00EA);
+    text-shadow: -1px -1px 0 #bb00ea, -1px 0px 0 #bb00ea, -1px 1px 0 #bb00ea, 0px -1px 0 #bb00ea, 0px 0px 0 #bb00ea, 0px 1px 0 #bb00ea, 1px -1px 0 #bb00ea, 1px 0px 0 #bb00ea, 1px 1px 0 #bb00ea;
     color: #FFFFFF;
   }
 
@@ -211,7 +211,7 @@
     line-height: 100%;
     /* or 30px */
     
-    @include stroke(1px, #009220);
+    text-shadow: -1px -1px 0 #009220, -1px 0px 0 #009220, -1px 1px 0 #009220, 0px -1px 0 #009220, 0px 0px 0 #009220, 0px 1px 0 #009220, 1px -1px 0 #009220, 1px 0px 0 #009220, 1px 1px 0 #009220;
     color: #FFFFFF;
   }
 
@@ -319,7 +319,7 @@
     line-height: 100%;
     /* or 30px */
     
-    @include stroke(1px, #FF002E);
+    text-shadow: -1px -1px 0 #ff002e, -1px 0px 0 #ff002e, -1px 1px 0 #ff002e, 0px -1px 0 #ff002e, 0px 0px 0 #ff002e, 0px 1px 0 #ff002e, 1px -1px 0 #ff002e, 1px 0px 0 #ff002e, 1px 1px 0 #ff002e;
     color: #FFFFFF;
   }
 
@@ -355,7 +355,7 @@
     line-height: 100%;
     /* or 30px */
     
-    @include stroke(1px, #00FFF0);
+    text-shadow: -1px -1px 0 #00fff0, -1px 0px 0 #00fff0, -1px 1px 0 #00fff0, 0px -1px 0 #00fff0, 0px 0px 0 #00fff0, 0px 1px 0 #00fff0, 1px -1px 0 #00fff0, 1px 0px 0 #00fff0, 1px 1px 0 #00fff0;
     color: #FFFFFF;
   }
 
