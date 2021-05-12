@@ -103,10 +103,10 @@
     top: 276.33px;
     background: transparent;
     border: none;
-    background-image: url('../../../../public/magazine/1/images/PlayButton.png');
-
-    &.isPlaying {
-      background-image: url('../../../../public/magazine/1/images/PauseButton.png');
+    
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
