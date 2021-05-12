@@ -14,20 +14,24 @@ const RightBox = ({ details, id }) => {
   const isMatic = chainId === '0x13881' || chainId === '0x89';
 
   const onUnlock = () => {
-    if (!isMatic) {
-      dispatch(openConnectMaticModal());
-      return;
-    }
     if (account) {
-      dispatch(
-        openBuynowNftSubscriptionModal({
-          id: id,
-          priceEth: details.price,
-        })
-      );
-      setShowHidden(true);
+      if (!isMatic) {
+        dispatch(openConnectMaticModal());
+        return;
+      }
+      if (account) {
+        dispatch(
+          openBuynowNftSubscriptionModal({
+            id: id,
+            priceEth: details.price,
+          })
+        );
+        setShowHidden(true);
+      } else {
+        dispatch(openConnectMetamaskModal());
+      }
     } else {
-      dispatch(openConnectMetamaskModal());
+      window.alert('Please sign in to purchase this item!');
     }
   }
 

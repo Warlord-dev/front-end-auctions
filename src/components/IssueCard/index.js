@@ -5,7 +5,9 @@ import styles from './styles.module.scss';
 const IssueCard = ({ image, id, title }) => {
   return (
     <div className={styles.wrapper}>
-      <img src={image} className={styles.thumbnail} />
+      <Link href="/magazines/1">
+        <a><img src={image} className={styles.thumbnail} /></a>
+      </Link>
       <div className={styles.actions}>
         <div className={styles.titles}>
           <div className={styles.issueIdTitle}>ISSUE {id}</div>
