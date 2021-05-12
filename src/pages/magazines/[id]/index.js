@@ -5,7 +5,7 @@ import MagazineViewer from '../../../containers/magazine-view'
 import MagazineMobile from '../../../containers/magazine-mobile'
 import MapViewer from '../../../containers/map-view'
 
-const MagazinePages = () => {
+const MagazinePages = props => {
   const router = useRouter()
   const { id } = router.query;
 
@@ -16,15 +16,9 @@ const MagazinePages = () => {
     return (
       <WebViewer
         issueId={id}
-        initPage={currentPage}
         onSwitchViewer={
           viewer => {
             setViewMethod(viewer)
-          }
-        }
-        onChangePageNumber={
-          number => {
-            setCurrentPage(number)
           }
         }
       >
@@ -62,7 +56,6 @@ const MagazinePages = () => {
     <MapViewer
       issueId={id}
       onClickItem={pageNumber => {
-        setCurrentPage(pageNumber)
         setViewMethod('webview')
       }}
       onSwitchViewer={

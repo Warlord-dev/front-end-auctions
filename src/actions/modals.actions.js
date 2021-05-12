@@ -57,9 +57,6 @@ export const closeSignupModal = () => (dispatch) => dispatch(closeModal('isShowM
 export const openESPAReadyModal = (params) => (dispatch) => dispatch(openModal('isShowModalESPAReady', 'hideScroll', params));
 export const closeESPAReadyModal = () => (dispatch) => dispatch(closeModal('isShowModalESPAReady', 'addScroll'));
 
-export const openNftSubscriptionReadyModal = (params) => (dispatch) => dispatch(openModal('isNftSubscriptionReady', 'hideScroll', params));
-export const closeNftSubscriptionReadyModal = () => (dispatch) => dispatch(closeModal('isNftSubscriptionReady', 'addScroll'));
-
 export const openConnectMaticModal = (params) => (dispatch) => dispatch(openModal('isShowModalConnectMatic', 'hideScroll', params));
 export const closeConnectMaticModal = () => (dispatch) => dispatch(closeModal('isShowModalConnectMatic', 'addScroll'));
 

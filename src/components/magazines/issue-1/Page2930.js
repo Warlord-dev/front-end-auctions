@@ -17,7 +17,7 @@ const Page2930 = () => {
         Fashion is Evolving Towards Extended Reality — And That's a Good Thing
       </h2>
       <p className={styles.section1}>
-        The coronavirus pandemic has gone from conquest to conquest, leaving entire industries devastated in their wake and forcing them to rethink their position in the "new normal" we've all been required to accept. A new normal rife with lockdowns, flight restrictions, store closures, social distancing, and global disruption on a scale we haven't experienced as a species since World War II.
+        The coronavirus pandemic has gone from conquest to conquest, leaving entire industries devastated in its wake and forcing them to rethink their position in the "new normal" we've all been forced to accept. A new normal rife with lockdowns, flight restrictions, store closures, social distancing, and global disruption on a scale we haven't experienced as a species since World War II.
         <br /><br />
         For better or worse, COVID-19 became the catalyst for widespread acceleration across all aspects of commerce, and the trillion-dollar fashion industry is no exception.
         <br /><br />
@@ -25,7 +25,8 @@ const Page2930 = () => {
         <br /><br />
         If there's anything the industry ever taught us, it is this: nothing is too big to fail. And no industry is resistant to change.
         <br /><br />
-        Fashion’s major retailers are losing their grip on the industry. On the other hand, e-commerce is booming as physical stores and showrooms, fast-fashion or haute couture notwithstanding, have faced scores of shutdowns worldwide. Employees across the supply chain have been furloughed or laid off. Meanwhile, everyone, including their grandmother — and that's not an understatement — has literally had to move their lives online.        
+        The fashion industry's major retailers are losing their grip on the industry. On the other hand, e-commerce is booming as physical stores and showrooms, fast-fashion or haute couture notwithstanding, have faced scores of shutdowns worldwide. Employees across the supply chain have been furloughed or laid off. Meanwhile, everyone, including their grandmother — and that's not an understatement — has literally had to move their lives online. 
+        
       </p>
       <p className={styles.section2}>
         We're in the midst of a full-blown fashion revolution. And the emergence of several immersive technologies representing the vast realities in virtual environments that come in all sorts of acronyms is proof positive of this ongoing transformation: virtual reality (VR) and augmented reality (AR), which brands have employed to create bespoke customer experiences that their physical stores used to deliver, as well as mixed reality (MR), which combines both elements of the latter.
@@ -47,7 +48,7 @@ const Page2930 = () => {
         <br /><br />
         Legacy brands LVMH (parent organization of Louis Vuitton), Prada, and Richemont are partnering to realize those lofty goals by founding the Aura Blockchain Consortium — a platform with the ability to track luxury items with a unique digital identifier based on NFTs. Built on the Ethereum blockchain, Aura will be able to trace the exact origins of each piece of material, creating a narrative and history of each individual item, apart from being able to track who is buying what at which point of sale, all the way to the secondary market.
         <br /><br />
-        The immutability of ownership upheld by the blockchain makes counterfeiting ridiculously harder than it used to — when every piece of the breadcrumb trail is out there for all the world to see. Hublot, Bulgari and Louis Vuitton are already on Aura, and it's not hard to foresee other brands joining the platform in the near future as we pivot towards a digitalized industry with high customer expectations that demand the utmost transparency.
+        The immutability of ownership upheld by the blockchain makes counterfeiting ridiculously harder than it used to — when every piece of the breadcrumb trail is out there for all the world to see. Hublot, Bulgari and Louis Vuitton are already on Aura, and it's not hard to foresee other brands joining the platform in the near future as we pivot towards a digitalized industry with high customer expectations that demand the utmost transparency. 
       </p>
     </div>
   )

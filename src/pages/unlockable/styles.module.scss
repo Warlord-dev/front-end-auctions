@@ -7,7 +7,7 @@
     color: white;
     width: 100%;
     font-family: "Inter";
-    margin-top: 50px;
+    margin-top: 225px;
     padding: 64px;
     position: relative;
 
@@ -61,11 +61,11 @@
 
           button {
             display: none;
-            color: #111111;
+            color: bloack;
             background: white;
-            font-weight: bold;
+            font-weight: 600;
             padding: 1rem;
-            border: 5px solid #C4C4C4;
+            border: 2px solid grey;
 
             &:hover {
               opacity: .8;
@@ -74,24 +74,8 @@
         }
 
         &:hover {
-          .overlay1 {
-            background: #B57A90;
-
-            button {
-              display: block;
-            }
-          }
-
-          .overlay2 {
-            background: #AC4B80;
-
-            button {
-              display: block;
-            }
-          }
-
-          .overlay3 {
-            background: #C49094;
+          .overlay {
+            background: linear-gradient(0deg, #B57A90, #B57A90), #F7F7F7;;
 
             button {
               display: block;

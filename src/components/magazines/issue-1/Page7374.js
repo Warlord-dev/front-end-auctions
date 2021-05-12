@@ -17,12 +17,12 @@ const Page7374 = () => {
         <br />
         <br />
         To pay homeage to the often overlooked lionhearts within the web3 community— the devs— we
-        are introducing Web3 Wizards; an ongoing series of on-chain NFT web3 dev characteristaions;
-        spotlighting new devs every issue.
+        are introducing Web3 White Hats; an ongoing series of on-chain NFT web3 dev
+        characteristaions; spotlighting new devs every issue.
       </div>
       <div className={styles.text3}>Layer 2 Trailblazers.</div>
       <div className={styles.text4}>
-        For the genesis of Web3 Wizards we are championing the DIGITALAX Engineering Team.{' '}
+        For the genesis of Web3 White Hats we are championing the DIGITALAX Engineering Team.{' '}
         <i className={styles.text4Sub}>A group of metaverse engineers.</i> These devs have
         successfully deployed the first ever MultiToken Bridge between Layer 1 Ethereum Mainnet and
         Layer 2 Polygon (Previously Matic Network), supporting the ERC-998 standard and variants.
