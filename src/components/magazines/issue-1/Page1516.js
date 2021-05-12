@@ -33,25 +33,27 @@ const Page1516 = () => {
       </p>
       <p className={styles.section2}>
         Even before the COVID-19 pandemic, the divide was already prominent. 
-        The 2020 World Global Inequality Data by the World Inequality Lab highlights that Latin America and the Middle East are the most imbalanced regions for wealth distribution. 
+        The 2020 World Global Inequality Data by the World Inequality Lab highlights that 
+        Latin America and the Middle East are the most imbalanced regions for wealth distribution. 
         In these areas, the top ten wealthiest individuals make up 54 and 56 percent of the average national income, respectively.
       </p>
       <p className={styles.section3}>
-        In Africa, the top ten percent own half of the national income. However, 
-        the divide is more prominent in nations that experienced European colonization and racial injustice, 
+        In Africa, the top ten percent own half of the national income. 
+        However, the divide is more prominent in nations that experienced European colonization and racial injustice, 
         partly because of outdated taxation systems and the absence of land reform. 
-        The Asian region saw the wealthiest possess close to 60 percent of income share, especially in India, wherein the difference in classes emerge even more.
+        The Asian region saw the wealthiest possess close to 60 percent of income share, especially in India, 
+        wherein the difference in classes emerge even more.
       </p>
 
       <img src='./magazine/1/images/moshed-05-01-16-16-24.jpg' className={styles.backImage2}/>
       <p className={styles.section4}>
-        Finally, the United States displayed a rapid rise in income for the rich. In 1980, the top ten wealthiest Americans compensated for just 34 percent of the country’s wealth. But that number jumps to 45 percent in 2019. The fortunes of the top five US billionaires grew by 26%, or $102 billion, from April to June 2020. Overall, the combined wealth of the richest grew from $637 billion to $3.6 billion in the same period.
+        Finally, the United States displayed a rapid rise in income for the rich. In 1980, the top ten wealthiest Americans compensated for just 34 percent of the country’s wealth. But that number jumps to 45 percent in 2019. The fortunes of the top five US billionaires grew by 26%, or $102 billion, from April to June 2020. Overall, the combined wealth of the richest grew dramatically in the same period.
         <br /><br />
-        Yet, as alarming as those figures are, the pandemic gave those who have less a slower recovery curve. Blue-collar workers lost their capacity to earn due to the social distancing protocols. The tourism and hospitality industries received a devastating blow to their livelihood due to a nosedive in tourist activities. Even those who work in the health sector cannot engage in a second job because they must render long hours. Worse, they might get sick that eliminates their capacity to make a living.
+        Yet, as alarming as those figures are, the pandemic gave those who have less a slower recovery curve. Blue-collar workers lost their capacity to earn due to the social distancing protocols. The tourism and hospitality industries received a devastating blow to their livelihood due to a nosedive in tourist activities. Even those who work in the health sector cannot engage in a second job because they must render long hours. Worse, they might get sick, which eliminates their capacity to make a living.
         <br /><br />
         Unsurprisingly, some Americans had no choice but to seek assistance from food lines for the first time in their lives. Those who live in impoverished communities suffer even more. It is during these trying times that Universal Basic Income can be the lifeline that the helpless need. But even that ideal situation of giving equal money comes with several caveats due to existing bureaucracies.
         <br /><br />
-        <span>Benefits and Issues with UBI Distribution</span><br />
+        <span>Benefits and Issues with UBI distribution</span><br />
         The concept of Universal Basic Income isn’t new anymore. Personalities such as Thomas Paine, Martin Luther King Jr., and Stephen Hawking support this initiative. But it came into the limelight once more when former Democratic presidential candidate Andrew Yang became a staunch advocate of the approach. As an overview, individuals get a fixed amount regardless of age, profession, or socioeconomic status. The money is provided regularly (usually monthly) and directly to a person’s bank account.
         <br /><br />
         Inequality and poverty are two pressing matters that UBI aims to address. Instead of giving food stamps, the government doles out cash to give people the ability to buy necessities. However, even a slight financial windfall of a monthly monetary reward will provide people with more buying power or invest in initiatives to help them reach their dreams.

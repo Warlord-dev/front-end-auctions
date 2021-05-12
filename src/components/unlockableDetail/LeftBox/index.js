@@ -5,22 +5,44 @@ const LeftBox = ({ details }) => {
   const [activeImage, setActiveImage] = useState(0);
   const image = details.url;
 
+  const isVideo = (url) => {
+    if (url.includes('mp4')) return true;
+    return false;
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.activeImageWrapper}>
-        <video loop autoPlay muted className={styles.activeImage} src={image}>
-        </video>
-        {/* <img src={image} className={styles.activeImage} /> */}
+        {isVideo(details.url[activeImage]) ? (
+          <video
+            loop
+            autoPlay
+            className={styles.activeImage}
+            src={details.url[activeImage]}
+          ></video>
+        ) : (
+          <img src={details.url[activeImage]} className={styles.activeImage} />
+        )}
       </div>
       <div className={styles.previewImageWrapper}>
-        {/* {images.map((image, index) => (
-          <img
-            src={image.url}
-            key={image.id}
-            className={styles.previewImage}
-            onClick={() => setActiveImage(index)}
-          />
-        ))} */}
+        {details.url.map((image, index) => (
+          <>
+          {index !== activeImage && (
+            <>
+              {isVideo(image) ? (
+                <video loop autoPlay muted className={styles.previewImage} src={image} onClick={() => setActiveImage(index)}></video>
+              ) : (
+                <img
+                  src={image}
+                  key={`image-${index}`}
+                  className={styles.previewImage}
+                  onClick={() => setActiveImage(index)}
+                />
+              )}
+            </>
+          )}
+          </>
+        ))}
       </div>
     </div>
   );
