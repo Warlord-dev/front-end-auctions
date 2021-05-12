@@ -11,56 +11,59 @@
   white-space: normal;
   text-align: left;
 
+  .backImage {
+    position: absolute;
+    width: 100%;
+    height: 3000px;
+    left: 0px;
+    top: 0px;
+  }
+
   .innerWrapper {
     position: absolute;
-    top: 60px;
+    top: 46px;
     left: 20px;
     width: 260px;
     text-align: center;
     h1 {
-        font-family: Comics Tricks, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 38px;
-        /* or 200px */
-        text-align: right;
-      }
-    
-      h2 {
-        font-family: Inter;
+        font-family: Damion;
         font-style: normal;
         font-weight: normal;
         font-size: 40px;
         line-height: 100%;
-        margin-bottom: 40px;
-        font-weight: bold;
-        /* or 40px */
-        text-align: center;
-      }
-    
-      p {
-        font-size: 17px;
-        line-height: 150%;
+        text-align: left;
+        color: #8308FE;
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-family: Digital Dare;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 54px;
+        line-height: 100%;
+        color: #000000;
+        margin-bottom: 13px;
+    }
+    h5 {
+        font-family: DigitalRiver;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 100%;
+        text-align: right;
+        color: #8308FE;
+        margin-bottom: 20px;
+    }
+    p {
+        font-family: Single Day;
+        font-size: 20px;
+        font-style: normal;
         font-weight: 400;
-        text-align: center;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: right;
         margin-bottom: 30px;
-        &.alignLeft {
-          font-family: Inter;
-          text-align: left;
-        }
-        &.alignRight {
-          font-family: Joti One;
-          text-align: right;
-        }
-      }
-  }
-  
-  .backImage {
-    position: absolute;
-    width: 100%;
-    height: 3300px;
-    left: 0px;
-    top: 0px;
+    }
   }
 }
 

@@ -2,8 +2,8 @@ import React from 'react'
 import SwipePage from '../../components/swipe'
 import CoverPage from '@components/magazines-mobile/issue-1/CoverPage'
 import Page12 from '@components/magazines-mobile/issue-1/Page12'
-import Page34 from '@components/magazines-mobile/issue-1/Page34'
-import Page34Part2 from '@components/magazines-mobile/issue-1/Page34-part2'
+import Page3 from '@components/magazines-mobile/issue-1/Page3'
+import Page4 from '@components/magazines-mobile/issue-1/Page4'
 import Page56 from '@components/magazines-mobile/issue-1/Page56'
 import Page78 from '@components/magazines-mobile/issue-1/Page78'
 import Page78Part2 from '@components/magazines-mobile/issue-1/Page78-part2'
@@ -27,34 +27,12 @@ import Page2728 from '@components/magazines-mobile/issue-1/Page2728'
 import Page2930 from '@components/magazines-mobile/issue-1/Page2930'
 import Page3132 from '@components/magazines-mobile/issue-1/Page3132'
 import Page3334 from '@components/magazines-mobile/issue-1/Page3334'
-import Page3536 from '@components/magazines-mobile/issue-1/Page3536'
-import Page3738 from '@components/magazines-mobile/issue-1/Page3738'
-import Page3940 from '@components/magazines-mobile/issue-1/Page3940'
-import Page4142 from '@components/magazines-mobile/issue-1/Page4142'
-import Page4344 from '@components/magazines-mobile/issue-1/Page4344'
-import Page4546 from '@components/magazines-mobile/issue-1/Page4546'
-import Page4748 from '@components/magazines-mobile/issue-1/Page4748'
-import Page4950 from '@components/magazines-mobile/issue-1/Page4950'
-import Page5152 from '@components/magazines-mobile/issue-1/Page5152'
-import Page5354 from '@components/magazines-mobile/issue-1/Page5354'
-import Page5556 from '@components/magazines-mobile/issue-1/Page5556'
-import Page5758 from '@components/magazines-mobile/issue-1/Page5758'
-import Page5960 from '@components/magazines-mobile/issue-1/Page5960'
-import Page6162 from '@components/magazines-mobile/issue-1/Page6162'
-import Page6364 from '@components/magazines-mobile/issue-1/Page6364'
-import Page6566 from '@components/magazines-mobile/issue-1/Page6566'
-import Page6768 from '@components/magazines-mobile/issue-1/Page6768'
-import Page6970 from '@components/magazines-mobile/issue-1/Page6970'
-import Page7172 from '@components/magazines-mobile/issue-1/Page7172'
-import Page7374 from '@components/magazines-mobile/issue-1/Page7374'
-import Page7576 from '@components/magazines-mobile/issue-1/Page7576'
-import Page7778 from '@components/magazines-mobile/issue-1/Page7778'
-import Page7980 from '@components/magazines-mobile/issue-1/Page7980'
-import Page8182 from '@components/magazines-mobile/issue-1/Page8182'
-import Page8384 from '@components/magazines-mobile/issue-1/Page8384'
-import Page8586 from '@components/magazines-mobile/issue-1/Page8586'
-import Page8788 from '@components/magazines-mobile/issue-1/Page8788'
-import Backcover from '@components/magazines-mobile/issue-1/Backcover'
+import Page33 from '@components/magazines-mobile/issue-1/Page33'
+import Page34 from '@components/magazines-mobile/issue-1/Page34'
+import Page35 from '@components/magazines-mobile/issue-1/Page35'
+import Page36 from '@components/magazines-mobile/issue-1/Page36'
+import Page37 from '@components/magazines-mobile/issue-1/Page37'
+import Page38 from '@components/magazines-mobile/issue-1/Page38'
 
 import MagazinePageWrapper from '@components/magazines-mobile/common/MagazinePageWrapper'
 import ViewerSwitch from '@components/magazines-mobile/common/ViewerSwitch'
@@ -77,8 +55,8 @@ const MagazineViewer = props => {
           >
             <MagazinePageWrapper><CoverPage /></MagazinePageWrapper>
             <MagazinePageWrapper><Page12 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page34 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page34Part2 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page3 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page4 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page56 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page78 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page78Part2 /></MagazinePageWrapper>
@@ -102,36 +80,12 @@ const MagazineViewer = props => {
             <MagazinePageWrapper><Page2930 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page3132 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page3334 /></MagazinePageWrapper>
-            {/*<MagazinePageWrapper><Page3536 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page3738 /></MagazinePageWrapper>
-
-            <MagazinePageWrapper><Page3738 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page3940 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4142 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4344 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4546 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4748 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4950 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5152 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5354 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5556 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5758 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5960 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6162 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6364 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6566 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6768 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6970 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7172 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7374 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7576 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7778 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7980 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page8182 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page8384 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page8586 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page8788 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Backcover /></MagazinePageWrapper> */}
+            <MagazinePageWrapper><Page33 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page34 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page35 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page36 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page37 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page38 /></MagazinePageWrapper>
 
           </SwipePage>
         </div>
