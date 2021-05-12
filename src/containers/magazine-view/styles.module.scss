@@ -1,7 +1,6 @@
 .magazineViewerWrapper {
   flex: content;
-  background-color: gray;
-  margin-top: 100px;
+  background-color: #555;
   display: flex;
   justify-content: center;
 
@@ -10,7 +9,7 @@
     border-width: 1px;
     border-color: black;
     border-style: solid;
-    background-color: gray;
+    background-color: black;
 
     @media (min-width: 1481px) {
       width: 1400px;

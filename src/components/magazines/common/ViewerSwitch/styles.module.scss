@@ -2,28 +2,33 @@
   display: flex;
   position: absolute;
   right: 0;
-  top: calc(1497px * 640 / 1920 + 20px);
+  bottom: 10px;
+  // top: calc(1497px * 640 / 1920 );
 
-  @media (min-width: 1481px) {
-    top: calc(1497px * 1400 / 1920 + 20px);
-  }
+  // @media (min-width: 1481px) {
+  //   top: calc(1497px * 1400 / 1920 );
+  // }
 
-  @media (min-width: 1281px) and (max-width: 1480px) {
-    top: calc(1497px * 1200 / 1920 + 20px);
-  }
+  // @media (min-width: 1281px) and (max-width: 1480px) {
+  //   top: calc(1497px * 1200 / 1920 );
+  // }
 
-  @media (min-width: 961px) and (max-width: 1280px) {
-    top: calc(1497px * 850 / 1920 + 20px);
-  }
+  // @media (min-width: 961px) and (max-width: 1280px) {
+  //   top: calc(1497px * 850 / 1920 );
+  // }
 
-  @media (min-width: 641px) and (max-width: 960px) {
-    top: calc(1497px * 640 / 1920 + 20px);
-  }
-  
+  // @media (min-width: 641px) and (max-width: 960px) {
+  //   top: calc(1497px * 640 / 1920 );
+  // }
+
   button {
-    background-color: #ddd;
-    color: black;
-    padding: 20px 10px;
+    font-family: 'Decovar Alpha';
+    font-size: 20px;
+    background: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    border: none;
+    padding: 10px 30px;
     margin-right: 10px;
   }
 
@@ -42,17 +47,26 @@
   display: flex;
   position: absolute;
   right: 0;
-  top: calc(64vw);
+  top: calc(55.5vw);
 
   @media (max-width: 640px) {
-    top: 520px;
+    top: unset;
+    bottom: 20px;
   }
 
   button {
-    background-color: #ddd;
-    color: black;
-    padding: 20px 10px;
+    font-family: 'Decovar Alpha';
+    font-size: 30px;
+    background: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    border: none;
+    padding: 20px 40px;
     margin-right: 10px;
+    @media (max-width: 640px) {
+      font-size: 10px;
+      padding: 10px 20px;
+    }
   }
 
   @media only screen and (max-width: 768px) {

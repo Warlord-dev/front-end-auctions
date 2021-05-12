@@ -1,0 +1,65 @@
+.wrapper {
+    width: 100%;
+    
+    .thumbnail {
+        box-shadow: 0px 4px 10px rgba(22, 0, 108, 0.25), 0px 4px 10px rgba(255, 19, 19, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: 10px solid #AB4A7F;
+        width: 411px;
+        margin-bottom: 1.5rem;
+    }
+
+    .actions {
+        background: #AB4A7F;
+        box-shadow: 0px 4px 10px rgba(22, 0, 108, 0.25), 0px 4px 10px rgba(255, 19, 19, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 1rem;
+
+        .titles {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+
+            .issueIdTitle {
+                font-size: 9px;
+                color: #B6B6B6;
+                letter-spacing: 0.12em;
+                line-height: 11px;
+                font-family: Inter;
+                font-style: normal;
+            }
+
+            .actionTitle {
+                font-family: Sarala;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 110%;
+                /* or 13px */
+
+                color: #FFFFFF;
+            }
+        }
+
+        .contents {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .issueTitle {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 28px;
+                line-height: 34px;
+                color: #FFFFFF;
+            }
+
+            .button {
+                color: white;
+                background: #111111;
+                padding: .5rem 2rem;
+                border: none;
+            }
+        }
+    }
+}

@@ -4,8 +4,8 @@ import styles from './page5758.module.scss';
 const Page5758 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/57_58/DIGITALAX DOMINGO BETA 1.png" className={styles.left} />
-      <img src="./magazine/57_58/image0 1.png" className={styles.right} />
+      <img src="./magazine/1/57_58/DIGITALAX DOMINGO BETA 1.png" className={styles.left} />
+      <img src="./magazine/1/57_58/image0 1.png" className={styles.right} />
       <div className={styles.leftDiv} />
       <div className={styles.leftText}>
         Domingo Beta is a Graphic designer and digital artist from Medellín Colombia.
@@ -19,10 +19,12 @@ const Page5758 = () => {
         state to another. Late Night Walker is sorrow in motion, trying to move freely in space in
         an extravagant fashion.
       </div>
-      <a href="https://instagram.com/veletagram" className={styles.leftSubText}>
+      <a href="https://instagram.com/veletagram" className={styles.leftSubText} target="_blank">
         DOMINGO BETTE ENCOUR
       </a>
-      <div className={styles.rightText}>ERICK STOW</div>
+      <a href="https://www.erickstow.com/" className={styles.rightText} target="_blank">
+        ERICK STOW
+      </a>
       <div className={styles.rightSecondText}>
         Erick Stow is a Canadian-born artist from Saskatoon, Saskatchewan. He grew up in Lubbock,
         Texas where he received his Bachelor of Arts degree in mass visual communications from Texas

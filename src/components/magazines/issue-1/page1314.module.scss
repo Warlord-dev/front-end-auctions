@@ -1,5 +1,10 @@
 @import './styles.module.scss';
 
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-602px); }
+}
+
 .wrapper {
   @include magazineWrapper();
   background-color: white;
@@ -23,6 +28,7 @@
     top: 0px;
   }
 
+
   .leftSideFrame {
     position: absolute;
     width: 149px;
@@ -45,15 +51,19 @@
     border-right: 10px solid black;
   }
 
-  .leftTextImage {
+  .animationFrame {
+    animation: scrolling 4s linear infinite;
+  }
+
+
+  .leftSideImageWrapper {
     position: absolute;
     width: 92.28px;
-    height: 1660px;
     left: 31px;
     top: 36px;
   }
 
-  .rightTextImage {
+  .rightSideImageWrapper {
     position: absolute;
     width: 83px;
     height: 1660px;

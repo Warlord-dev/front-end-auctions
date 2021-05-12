@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HTMLFlipBook from 'react-pageflip'
 import CoverPage from '@components/magazines/issue-1/CoverPage'
 import Page12 from '@components/magazines/issue-1/Page12'
@@ -48,6 +48,7 @@ import Page8788 from '@components/magazines/issue-1/Page8788'
 import Backcover from '@components/magazines/issue-1/Backcover'
 
 import MagazinePageWrapper from '@components/magazines/common/MagazinePageWrapper'
+import getPageList from '@components/magazines/PageList'
 import ViewerSwitch from '@components/magazines/common/ViewerSwitch'
 
 import styles from './styles.module.scss'
@@ -59,6 +60,28 @@ const MagazineViewer = props => {
     children,
     onSwitchViewer
   } = props
+
+  const [zoom, setZoom] = useState(1)
+  const pageList = getPageList(issueId)
+
+  const getChildrenList = () => {
+    return pageList.map((item, index) => {
+      return (
+        <React.Fragment key={index}>
+          <MagazinePageWrapper zoom={zoom}>
+            {item}
+          </MagazinePageWrapper>
+          {
+            index > 0 && index < pageList.length - 1 &&
+            <MagazinePageWrapper secondPart zoom={zoom}>
+              {item}
+            </MagazinePageWrapper>
+          }
+        </React.Fragment>
+      )
+    })
+  }
+
   return (
     <>
       <div className={styles.magazineViewerWrapper}>
@@ -74,7 +97,6 @@ const MagazineViewer = props => {
             maxShadowOpacity={0.5}
             showCover={true}
             mobileScrollSupport={true}
-            className="demo-book"
           >
             <MagazinePageWrapper><CoverPage /></MagazinePageWrapper>
             <MagazinePageWrapper><Page12 /></MagazinePageWrapper>
@@ -116,8 +138,6 @@ const MagazineViewer = props => {
             <MagazinePageWrapper><Page3738 /></MagazinePageWrapper>
             <MagazinePageWrapper secondPart><Page3738 /></MagazinePageWrapper>
 
-            <MagazinePageWrapper><Page3738 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page3738 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page3940 /></MagazinePageWrapper>
             <MagazinePageWrapper secondPart><Page3940 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page4142 /></MagazinePageWrapper>
@@ -168,8 +188,7 @@ const MagazineViewer = props => {
             <MagazinePageWrapper secondPart><Page8586 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page8788 /></MagazinePageWrapper>
             <MagazinePageWrapper secondPart><Page8788 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Backcover /></MagazinePageWrapper>
-
+            <MagazinePageWrapper><Backcover /></MagazinePageWrapper> 
           </HTMLFlipBook>
         </div>
       </div>

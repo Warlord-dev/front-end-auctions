@@ -1,31 +1,34 @@
 @import './styles.module.scss';
 
 .wrapper {
-    @include magazineWrapper();    
+  @include magazineWrapper();    
 
-    .background {
-        position: absolute;
-        width: 1920px;
-        height: 1497px;
-        left: 0px;
-        top: 0px;
+  .background {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  a {
+    position: absolute;
+    width: 231px;
+    height: 66px;
+    left: 405px;
+    top: 1385px;
+
+    font-family: Gayathri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 15px;
+    color: #0044F3; 
+    span {
+      text-decoration: underline;
     }
-
-    .link {
-        position: absolute;
-        width: 108px;
-        height: 33px;
-        bottom: 100px;
-        right: 50px;
-
-        font-family: Gayathri;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 10px;
-        line-height: 150%;
-        /* or 15px */
-
-
-        color: #0044F3;
+    &:hover {
+      color: #0044F3;
     }
+  }
 }

@@ -7,9 +7,9 @@
     .right {
         position: absolute;
         width: 960px;
-        height: 1492px;
+        height: 1497px;
         left: 960px;
-        top: 5px;
+        top: 0px;
     }
 
     .text1 {
@@ -64,7 +64,7 @@
         height: 120px;
         left: 994px;
         top: 35px;
-
+ 
         font-family: Days One;
         font-style: normal;
         font-weight: normal;
@@ -76,12 +76,22 @@
         color: #FFFFFF;
     }
 
+    .textDiv {
+        position: absolute;
+        width: 960px;
+        height: 330px;
+        left: 960px;
+        top: 1167px;
+
+        background: rgba(15, 16, 39, 0.54);
+    }
+
     .text4 {
         position: absolute;
-        width: 388px;
-        height: 120px;
-        left: 1017px;
-        top: 1002px;
+        width: 840px;
+        height: 40px;
+        left: 1011px;
+        top: 1209px;
 
         font-family: Days One;
         font-style: normal;
@@ -90,7 +100,10 @@
         line-height: 100%;
         /* or 20px */
 
-
+        a {
+            text-decoration: underline;
+            color: white;
+        }
         color: #FFFFFF;
     }
 

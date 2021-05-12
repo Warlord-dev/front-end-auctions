@@ -59,3 +59,6 @@ export const closeESPAReadyModal = () => (dispatch) => dispatch(closeModal('isSh
 
 export const openConnectMaticModal = (params) => (dispatch) => dispatch(openModal('isShowModalConnectMatic', 'hideScroll', params));
 export const closeConnectMaticModal = () => (dispatch) => dispatch(closeModal('isShowModalConnectMatic', 'addScroll'));
+
+export const openBuynowNftSubscriptionModal = (params) => (dispatch) => dispatch(openModal('isShowBuyNowNftSubscription', 'hideScroll', params));
+export const closeBuynowNftSubscriptionModal = () => (dispatch) => dispatch(closeModal('isShowBuyNowNftSubscription', 'addScroll'));

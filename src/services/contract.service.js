@@ -1,7 +1,9 @@
-import { providers as EthersProviders } from 'ethers';
+import { Contract, providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
 import { getUSDTAddressByChainId } from './network.service';
 import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json';
+import digitalaxSubscriptionNftAbi from '../constants/DigitalaxSubscriptionNFT_abi.json';
+import digitalaxSubscriptionMarketplaceAbi from '../constants/DigitalaxSubscrpitionMarketplace_abi.json';
 import Web3 from 'web3';
 import { isMetamaskInstalled } from './metamask.service';
 import config from '@utils/config';
@@ -31,6 +33,14 @@ export const getMarketplaceContract = async (ContractAddress) => {
 
   return contract;
 };
+
+export const getMarketplaceNFTContract = async (ContractAddress) => {
+  return await new window.web3.eth.Contract(digitalaxSubscriptionMarketplaceAbi, ContractAddress);
+}
+
+export const getMonaTokenNFTContract = async (ContractAddress) => {
+  return await new window.web3.eth.Contract(digitalaxSubscriptionNftAbi, ContractAddress);
+}
 
 export const getMonaTokenContract = async (ContractAddress) => {
   const jsonInterface = [

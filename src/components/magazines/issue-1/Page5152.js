@@ -4,8 +4,9 @@ import styles from './page5152.module.scss';
 const Page5152 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/51_52/UntilWeFallApart (1) 1.png" className={styles.rightBackground} />
-      <img src="./magazine/51_52/Group 1176.png" className={styles.firstText} />
+      <img src="./magazine/1/51_52/UntilWeFallApart (1) 1.png" className={styles.rightBackground} />
+      <img src="./magazine/1/51_52/Group 1176.png" className={styles.firstText} />
+      <img src="./magazine/1/51_52/moshed-05-08-19-17-58 (1) copy.gif" className={styles.gif} />
       <div className={styles.secondText}>Throughout the Metaverse</div>
       <div className={styles.thirdText}>Mona Vir</div>
       <div className={styles.fourthText}>Native to the Ethereum blockchain. Digital Only.</div>

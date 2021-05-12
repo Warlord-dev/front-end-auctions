@@ -29,12 +29,13 @@
         color: #FFFFFF;
 
         mix-blend-mode: normal;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     .leftDiv {
         position: absolute;
         width: 829px;
-        height: 1048px;
+        height: 1085px;
         left: 61px;
         top: 340px;
 
@@ -44,9 +45,9 @@
     .leftText {
         position: absolute;
         width: 633px;
-        height: 946px;
+        height: 1034px;
         left: 159px;
-        top: 391px;
+        top: 386px;
 
         font-family: Crafty Girls;
         font-style: normal;
@@ -62,7 +63,7 @@
     .rightDiv {
         position: absolute;
         width: 829px;
-        height: 1324px;
+        height: 1361px;
         left: 1030px;
         top: 64px;
 
@@ -72,10 +73,10 @@
     .rightText {
         position: absolute;
         width: 633px;
-        height: 1254px;
+        height: 1210px;
         left: 1128px;
-        top: 94px;
-
+        top: 135px;
+        
         font-family: Crafty Girls;
         font-style: normal;
         font-weight: normal;

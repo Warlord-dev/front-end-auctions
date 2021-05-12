@@ -4,10 +4,9 @@ import styles from './page4546.module.scss';
 const Page4546 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/45_46/left.png" className={styles.left} />
-      <img src="./magazine/45_46/right.png" className={styles.right} />
-      <img src="./magazine/45_46/mosh_left.png" className={styles.leftMosh} />
-      <img src="./magazine/45_46/mosh_right.png" className={styles.rightMosh} />
+      <img src="./magazine/1/45_46/left.png" className={styles.left} />
+      <img src="./magazine/1/45_46/Group 1191.png" className={styles.right} />
+      <img src="./magazine/1/45_46/mosh_left.png" className={styles.leftMosh} />
       <div className={styles.firstParagraph} />
       <div className={styles.firstText}>
         And, as the internet moves towards an open, trustless, and permissionless model — a prelude
@@ -88,16 +87,15 @@ const Page4546 = () => {
         The outcome will determine whether Fortnite will ever make a comeback to iOS devices,
         whether Epic can continue to access the Unreal Engine on iOS platforms, and lastly, whether
         third-party app stores can launch on iOS devices or otherwise. If Epic can prove Apple's
-        monopoly, any game publisher can create their app store on iOS devices, opening the door for
-        games to be playable on iOS.
+        monopoly, any game publisher can create their app store on iOS devices, opening a huge door
+        for new value that is not controlled by Apple.
       </div>
       <div className={styles.rightSecondParagraph} />
       <div className={styles.rightSecondText}>
         The heat is on as industry secrets are about to be dragged out in the public arena —
         something Apple keeps under close lock and key. The trial is shaping up to be an opportunity
-        to get a rare look at Apple’s walled garden and the magic that happens behind it. The main
-        point of contention is the inherent 70%-30% revenue scheme on the App Store, with Apple
-        obviously taking the lion’s share of the profits. Epic is framing that arrangement as unfair
+        to get a rare look behind the walled garden of Apple. The main point of contention is the
+        inherent 70%-30% revenue scheme on the App Store. Epic is framing that arrangement as unfair
         and one-sided, while Apple has been painting the latter as a disingenuous, avaricious
         partner — as the tech giant faces its biggest legal threat in recent memory.
         <br />
