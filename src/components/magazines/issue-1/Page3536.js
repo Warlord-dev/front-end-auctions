@@ -30,6 +30,9 @@ const Page3536 = () => {
       <h5>
         (prev matic network)
       </h5>
+      <h6>
+        Illustration by Toothless.
+      </h6>
       <p className={styles.section1}>
         Polygon (Previously Matic Network) is without doubt the current leader in the Layer 2 space, absolutely exploding in marketcap since January and providing a much needed alternative for so many projects struggling against the ever-rising congestion on Ethereum. But how did they get here and where are they going? 
         <br /><br />

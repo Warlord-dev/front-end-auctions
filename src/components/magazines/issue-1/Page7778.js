@@ -8,11 +8,7 @@ const Page7778 = () => {
         src="./magazine/1/77_78/The Metaverse Revealed PNG 1.png"
         className={styles.background}
       />
-      <a href="https://Linktr.ee/chaimholtjer  " className={styles.link}>
-        Art by Chaimholtjer
-        <br />
-        Linktr.ee/chaimholtjer
-      </a>
+      <a href='https://Linktr.ee/chaimholtjer' target='_blank'>Art by Chaimholtjer<br /><span>Linktr.ee/chaimholtjer</span></a>
     </div>
   );
 };

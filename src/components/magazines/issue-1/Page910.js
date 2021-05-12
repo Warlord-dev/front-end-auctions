@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion"
 import styles from './page910.module.scss'
 
 const Page910 = () => {
@@ -118,6 +119,52 @@ const Page910 = () => {
       <h3>
         Open Web
       </h3>
+      
+      <motion.div
+        className={styles.logoImage1}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <a href='https://nimbus.team/' target='_blank'>
+          <img src='./magazine/1/images/10_logo_1.png' />
+        </a>
+      </motion.div>
+      <motion.div
+        className={styles.logoImage2}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <a href='https://mooni.tech/' target='_blank'>
+          <img src='./magazine/1/images/10_logo_2.png' />
+        </a>
+      </motion.div>
+      <motion.div
+        className={styles.logoImage3}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <a href='https://beyondnft.io/' target='_blank'>
+        <img src='./magazine/1/images/10_logo_3.png' />
+      </a>
+      </motion.div>
+      <motion.div
+        className={styles.logoImage4}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <a href='https://www.idena.io/' target='_blank'>
+          <img src='./magazine/1/images/10_logo_4.png' />
+        </a>
+      </motion.div>
+      <motion.div
+        className={styles.logoImage5}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <a href='https://fungyproof.com/' target='_blank'>
+          <img src='./magazine/1/images/10_logo_5.png' />
+        </a>
+      </motion.div>
     </div>
   )
 }
