@@ -1,16 +1,27 @@
 @import './styles.module.scss';
 
+@keyframes scrollingLeft {
+  0% { transform: translateX(-1199px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes scrollingRight {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(-1199px); }
+}
+
 .wrapper {
   @include magazineWrapper();
-  background-color: white;
+  background-color: black;
   color: black;
   
   .left {
     position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
+    width: 798px;
+    height: 1119px;
+    left: 128px;
+    top: 159px;
+    z-index: 1;
   }
 
   .right {
@@ -20,6 +31,14 @@
     left: 960px;
     top: 0px;
     z-index: 1;
+  }
+
+  .video {
+    position: absolute;
+    width: 347px;
+    height: 349px;
+    left: 595px;
+    top: 17px;
   }
 
   .leftBack {
@@ -36,6 +55,62 @@
     height: 636px;
     left: -245px;
     top: 521px;
+  }
+
+  .animationFrame {
+    position: absolute;
+    left: -132px;
+    top: 517px;
+    display: flex;
+    align-items: center;
+
+    div {
+      align-items: center;
+      display: flex;
+
+      img {
+        margin: 0 1rem;
+      }
+    }
+
+    animation: scrollingLeft 5s linear infinite;
+  }
+
+  .animationFrame1 {
+    position: absolute;
+    left: -132px;
+    top: 747px;
+    display: flex;
+    
+    div {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin: 0 1rem;
+      }
+    }
+
+    animation: scrollingRight 6s linear infinite;
+  }
+
+  .animationFrame2 {
+    position: absolute;
+    left: -132px;
+    top: 972px;
+    display: flex;
+    align-items: center;
+
+    div {
+      align-items: center;
+      display: flex;
+
+      img {
+        margin: 0 1rem;
+      }
+    }
+
+    animation: scrollingLeft 7s linear infinite;
   }
 
   .leftText1 {

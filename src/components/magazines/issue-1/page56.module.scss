@@ -19,21 +19,18 @@
     position: absolute;
     width: 231px;
     height: 66px;
-    left: 1599px;
-    top: 1461px;
+    left: 405px;
+    top: 1385px;
 
     font-family: Gayathri;
     font-style: normal;
     font-weight: bold;
     font-size: 10px;
-    line-height: 150%;
-    /* or 15px */
+    line-height: 15px;
     color: #0044F3; 
-    border-bottom: 1px solid;
     span {
       text-decoration: underline;
     }
-
     &:hover {
       color: #0044F3;
     }

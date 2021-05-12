@@ -23,9 +23,10 @@ const Page7374 = () => {
       <div className={styles.text3}>Layer 2 Trailblazers.</div>
       <div className={styles.text4}>
         For the genesis of Web3 White Hats we are championing the DIGITALAX Engineering Team.{' '}
-        <b>A group of metaverse engineers.</b> These devs have successfully deployed the first ever
-        MultiToken Bridge between Layer 1 Ethereum Mainnet and Layer 2 Polygon (Previously Matic
-        Network), supporting the ERC-998 standard and variants. It’s all open sourced.
+        <i className={styles.text4Sub}>A group of metaverse engineers.</i> These devs have
+        successfully deployed the first ever MultiToken Bridge between Layer 1 Ethereum Mainnet and
+        Layer 2 Polygon (Previously Matic Network), supporting the ERC-998 standard and variants.
+        It’s all open sourced.
       </div>
       <div className={styles.text5}>Victor.</div>
       <div className={styles.text6}>Project: DIGITALAX</div>

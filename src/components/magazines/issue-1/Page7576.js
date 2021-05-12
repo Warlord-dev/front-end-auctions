@@ -8,7 +8,9 @@ const Page7576 = () => {
       <img src="./magazine/1/75_76/left1.png" className={styles.left} />
       <img src="./magazine/1/75_76/RIGHT5.png" className={styles.right} />
       <Link href="/unlockable">
-        <a className={styles.seeMoreLink}>SEE MORE</a>
+        <a className={styles.seeMoreLink} target="_blank">
+          SEE MORE
+        </a>
       </Link>
       <div className={styles.text1}>
         Through DIGIFIZZY we are proving out a new publishing model with NFT based decentralised

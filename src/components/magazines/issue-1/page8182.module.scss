@@ -19,6 +19,66 @@
     top: 0px;
   }
 
+  .link1 {
+    position: absolute;
+    width: 617px;
+    height: 137px;
+    left: 1255px;
+    top: 24px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 137px;
+    text-align: right;
+
+    color: #9E00FF;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .link2 {
+    position: absolute;
+    width: 617px;
+    height: 137px;
+    left: 1267px;
+    top: 40px;
+    
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 137px;
+    text-align: right;
+    
+    color: #FF7A00;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .link3 {
+    position: absolute;
+    width: 617px;
+    height: 137px;
+    left: 1280px;
+    top: 64px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 137px;
+    text-align: right;
+
+    color: #FFFFFF;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .leftLink1 {
     position: absolute;
     width: 355px;
