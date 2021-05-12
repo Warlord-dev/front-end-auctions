@@ -14,9 +14,20 @@ const BottomLine = ({borderWhite = true}) => {
 
   return (
     <div className={styles.bottomLine} style={{borderColor: borderWhite ? 'white' : 'black'}}>
-      <Carousel centerMode centerSlidePercentage={30} autoPlay showThumbs={false} showArrows={false} showStatus={false} showIndicators={false} infiniteLoop>
-        {items.map((item, index) => <div className={styles.bottomItem} key={index} style={{color: borderWhite ? 'white' : 'black'}}>{item}</div>)}
-      </Carousel>
+      <div className={styles.animationForm}>
+        <div className={styles.node}>
+          {items.map((item, index) => <div className={styles.bottomItem} key={index} style={{color: borderWhite ? 'white' : 'black'}}>{item}</div>)}
+        </div>
+        <div className={styles.node}>
+          {items.map((item, index) => <div className={styles.bottomItem} key={index} style={{color: borderWhite ? 'white' : 'black'}}>{item}</div>)}
+        </div>
+        <div className={styles.node}>
+          {items.map((item, index) => <div className={styles.bottomItem} key={index} style={{color: borderWhite ? 'white' : 'black'}}>{item}</div>)}
+        </div>
+        <div className={styles.node}>
+          {items.map((item, index) => <div className={styles.bottomItem} key={index} style={{color: borderWhite ? 'white' : 'black'}}>{item}</div>)}
+        </div>
+      </div>
     </div>
   );
 };
