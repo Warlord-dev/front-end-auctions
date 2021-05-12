@@ -8,7 +8,7 @@ const Page1920 = () => {
       <img src='./magazine/1/images/moshed-05-01-16-16-24.jpg' className={styles.backImage2}/>
       <p className={styles.section1}>
         During its initial allocation last March 2021, Kleros minted 10 million UBI tokens, 
-        with twenty percent of which going the early contributors who contributed to Democracy Earth’s HOUR token. 
+        with twenty percent going to early supporters who contributed to Democracy Earth’s HOUR token. 
         The other forty percent is for their Liquidity Mining program, while the remaining forty goes to the community treasury for future UBI DAO initiatives.
       </p>
       <p className={styles.section2}>
@@ -16,12 +16,14 @@ const Page1920 = () => {
         Two factors determine the value of $UBI coin: time and population. As the population increases, its value goes up as well. 
         In effect, an investor is buying someone’s time with $UBI, and it’s the only cryptocurrency that puts an exact value on time.
         <br/><br/>
-        Beyond blockchain, Proof of Humanity is an excellent way for institutions to keep their databases accurate in real-time because users vouch for each other’s authenticity. 
-        Anyone can validate the people they know and challenge the identity of suspicious users. 
+        Beyond blockchain, Proof of Humanity is an excellent way for institutions to keep their databases accurate in real-time 
+        because users vouch for each other’s authenticity. Anyone can validate the people they know and challenge the identity of suspicious users. 
         Any submitted registration challenge will undergo Kleros’ ERC 792 compliant dispute resolution system.
         <br/><br/>
-        Meanwhile, the UBI token’s initial liquidity mining went live on March 12, 2021, and will target the Uniswap V2 pools of UBI/ETH and UBI/BTC. 
-        The mining will last for a year and will allocate 2,000,000 UBI per pool. That figure boils down to 5,481 daily UBI per pool. 
+        Meanwhile, the UBI token’s initial liquidity mining went live on March 12, 2021, 
+        and will target the Uniswap V2 pools of UBI/ETH and UBI/BTC. 
+        The mining will last for a year and will allocate 2,000,000 UBI per pool. 
+        That figure boils down to 5,481 daily UBI per pool. 
       </p>
       <p className={styles.section3}>
         <span>Critiquing the Criticism Against Blockchain for UBI</span>
@@ -29,7 +31,7 @@ const Page1920 = () => {
         Environmental concerns always come to the surface during discussions about blockchain, cryptocurrency, and non-fungible tokens. 
         Those in staunch opposition of Bitcoin, Ethereum, and other digital coins point out 
         that the energy used to mine virtual currency is equal or greater than the consumption of entire countries. 
-        However, this is a flawed argument because of incorrect comparison.        
+        However, this is a flawed argument because of incorrect comparison.
       </p>
       <p className={styles.section4}>
         It’s hard to compare the energy consumption of one country to a global financial system because they are two different sets. 
@@ -57,10 +59,12 @@ const Page1920 = () => {
         which will help them account for the atmospheric carbon footprint properly. 
         Each artwork comes with a unique token that corresponds to carbon credits from a Peruvian deforestation registry.
         <br/><br/>
-        The time comes when most mining operations will use clean and renewable energy. 
-        When that scenario becomes attainable, the naysayers will remain quiet because their arguments became obsolete. 
-        When it finally arrives, those who are part of the universal basic income initiatives through Circles, GoodDollar,  
-        $UBI will be proud of providing a system that is both morally and environmentally rewarding. This revolution is just around the corner.
+        The time comes when most mining operations will use clean and renewable energy, 
+        and even moreso Ethereum’s upgrade to Ethereum2.0 will introduce the new and highly environmentally efficient Proof of Stake consensus, 
+        almost eliminating energy output. 
+        When that scenario becomes attainable, the naysayers will remain quiet because their arguments become obsolete. 
+        When it finally arrives, those who are part of the universal basic income initiatives through Circles, GoodDollar, $UBI, or something else, 
+        will be proud of providing a system that is both morally and environmentally rewarding. This revolution is just around the corner.
       </p>
       <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign1}/>
       <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign2}/>
