@@ -7,28 +7,11 @@
   overflow-x: scroll;
   background-color: black;
   position: relative;
-  // min-height: 90%;
-  min-height: calc(1497px * 640 / 1920 + 10px);
-
-  @media (min-width: 1481px) {
-    min-height: calc(1497px * 1400 / 1920 + 10px);
-  }
-
-  @media (min-width: 1281px) and (max-width: 1480px) {
-    min-height: calc(1497px * 1200 / 1920 + 10px);
-  }
-
-  @media (min-width: 961px) and (max-width: 1280px) {
-    min-height: calc(1497px * 850 / 1920 + 10px);
-  }
-
-  @media (min-width: 641px) and (max-width: 960px) {
-    min-height: calc(1497px * 640 / 1920 + 10px);
-  }
+  min-height: 100%;
 
   .contentWrapper {
+    padding: 0;
     display: flex;
-    width: fit-content;
     justify-content: center;
   }
 
