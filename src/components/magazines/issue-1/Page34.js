@@ -75,6 +75,7 @@ const Page34 = () => {
         Gregory Gordon<br />
         Tenshi Girl<br />
         FlowersWithPowers<br />
+        Blade Runway<br />
       </h3>
       <h3 className={styles.content6}>
         Aditya<br />
@@ -91,13 +92,15 @@ const Page34 = () => {
         Lorena Bello<br />
         Rafi 0x<br />
         Yu<br />
+        Alyona Briukhanova<br />
       </h3>
       <h3 className={styles.content8}>
         Xenotech<br />
         Pixls<br />
         Harrison Kugler<br />
         Cleora<br />
-        HYPERREAALIYAH
+        HYPERREAALIYAH<br />
+        Singe
       </h3>
       <h3 className={styles.content9}>
         Micha Almeda<br />
@@ -105,7 +108,8 @@ const Page34 = () => {
         Miriam McGovern<br />
         EzinCrypto<br />
         Rizzle<br />
-        Annissa
+        Annissa<br />
+        YeKaterina Burmatnova 
       </h3>
     </div>
   )
