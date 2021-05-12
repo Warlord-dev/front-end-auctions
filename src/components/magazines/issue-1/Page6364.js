@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './page6364.module.scss';
 
 const Page6364 = () => {
+  const [play1, setPlay1] = useState('./magazine/1/63_64/Group 1189');
+  const [play2, setPlay2] = useState('./magazine/1/63_64/Group 1190');
+  const [play3, setPlay3] = useState('./magazine/1/63_64/Group 1190');
+  const [play4, setPlay4] = useState('./magazine/1/63_64/Group 1190');
+  const audio1 = useRef();
+  const audio2 = useRef();
+  const audio3 = useRef();
+  const audio4 = useRef();
+
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/63_64/left5.png" className={styles.left} />
@@ -85,17 +94,25 @@ const Page6364 = () => {
         <br />
         <br />
         Here’s a project i released back right as covid hit called “In Security”
-        https://ffm.to/bk5rxjp.owe
+        <a href="https://ffm.to/bk5rxjp.owe" target="_blank">
+          https://ffm.to/bk5rxjp.owe{' '}
+        </a>
         <br />
         <br />
-        and my website https://www.hvdson.com/
+        and my website{' '}
+        <a href="https://www.hvdson.com/" target="_blank">
+          https://www.hvdson.com/
+        </a>
         <br />
         <br />
         here’s a teaser which uses a snippet from The Lunar Veil (the group i’m in)
-        https://www.dropbox.com/s/58k9ul71fk5utgc/TEASER%20TWO.mp4?dl=0
+        <a href="https://www.dropbox.com/s/58k9ul71fk5utgc/TEASER%20TWO.mp4?dl=0">
+          https://www.dropbox.com/s/58k9ul71fk5utgc/TEASER%20TWO.mp4?dl=0
+        </a>
         <br />
         <br />
-        all info can be found here :) https://songcamp.mirror.xyz/
+        all info can be found here :){' '}
+        <a href="https://songcamp.mirror.xyz/">https://songcamp.mirror.xyz/</a>
       </div>
       <div className={styles.div} />
       <div className={styles.leftText8}>QUICK CHAT WITH MATT.</div>
@@ -148,7 +165,22 @@ const Page6364 = () => {
       </a>
       <div className={styles.rightText14}>HOLD ON HOPE.</div>
       <div className={styles.rightText15}>Rowan. Kevin Paris. Gavin Slate.</div>
-      <img src="./magazine/1/63_64/Group 1189.png" className={styles.play1} />
+      <img
+        src={`${play1}.png`}
+        className={styles.play1}
+        onClick={() => {
+          if (!play1.includes('pause')) {
+            setPlay1(play1 + '-pause');
+            audio1.current.play();
+          } else {
+            setPlay1(play1.split('-pause')[0]);
+            audio1.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} ref={audio1} controls>
+        <source src="./magazine/1/63_64/1.wav" type="audio/wav" />
+      </audio>
       <div className={styles.rightText2}>FRESH</div>
       <div className={styles.rightText3}>FRESH</div>
       <div className={styles.rightText4}>FRESH</div>
@@ -167,27 +199,78 @@ const Page6364 = () => {
       </div>
       <div className={styles.rightText10}>Gregory Gordon</div>
       <div className={styles.rightText11}>
-        An incredible melodic journey through a positive energy field - this latest hit by San
-        Francisco’s most sought-after tech house DJ, J-KIND will make you smile and think about the
-        good times shared with friends on the dance floor. A raspy growling synth underlays an
-        incredibly catchy melody, forming a unique blend of uplifting sounds guaranteed to bring
-        your spirits up!
+        A San Francisco music and video game industry veteran. He is the founder & CEO of Pyramind
+        Music & Audio Production Institute and a 30-year voting member of The Recording Academy (The
+        Grammys). He produces and performs under the monikers G2 and Solsage. Solsage, invites the
+        listener on a mystical journey filled with ethnic instrumentation and infused with
+        arpeggiating synth bass lines, driving dance floor grooves and psychedelic overtones. The
+        chanting female vocal and invocation tells us “Drink Me Like A Sweet Sol Potion”. Sol Potion
+        seeks to reveal both the dark and the light in each of us and the ultimate acknowledgment
+        that the elixir of happiness can only be found within.
       </div>
-      <div className={styles.rightText12}>J-KIND</div>
+      <div className={styles.rightText12}>Singe</div>
       <div className={styles.rightText13}>
-        An incredible melodic journey through a positive energy field - this latest hit by San
-        Francisco’s most sought-after tech house DJ, J-KIND will make you smile and think about the
-        good times shared with friends on the dance floor. A raspy growling synth underlays an
-        incredibly catchy melody, forming a unique blend of uplifting sounds guaranteed to bring
-        your spirits up!
+        A San Francisco music and video game industry veteran. He is the founder & CEO of Pyramind
+        Music & Audio Production Institute and a 30-year voting member of The Recording Academy (The
+        Grammys). He produces and performs under the monikers G2 and Solsage. Solsage, invites the
+        listener on a mystical journey filled with ethnic instrumentation and infused with
+        arpeggiating synth bass lines, driving dance floor grooves and psychedelic overtones. The
+        chanting female vocal and invocation tells us “Drink Me Like A Sweet Sol Potion”. Sol Potion
+        seeks to reveal both the dark and the light in each of us and the ultimate acknowledgment
+        that the elixir of happiness can only be found within.
       </div>
       <img src="./magazine/1/63_64/Group 1188.png" className={styles.rightImage6} />
       <div className={styles.rightText16}>PARABOLIC DREAMS</div>
-      <div className={styles.rightText17}>PARABOLIC DREAMS</div>
-      <div className={styles.rightText18}>PARABOLIC DREAMS</div>
-      <img src="./magazine/1/63_64/Group 1190.png" className={styles.play2} />
-      <img src="./magazine/1/63_64/Group 1190.png" className={styles.play3} />
-      <img src="./magazine/1/63_64/Group 1190.png" className={styles.play4} />
+      <div className={styles.rightText17}>Sol Potion</div>
+      <div className={styles.rightText18}>FIFTH MERCHANTS</div>
+      <img
+        src={`${play2}.png`}
+        className={styles.play2}
+        onClick={() => {
+          if (!play2.includes('pause')) {
+            setPlay2(play2 + '-pause');
+            audio2.current.play();
+          } else {
+            setPlay2(play2.split('-pause')[0]);
+            audio2.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} ref={audio2} controls>
+        <source src="./magazine/1/63_64/2.mp3" type="audio/mp3" />
+      </audio>
+      <img
+        src={`${play3}.png`}
+        className={styles.play3}
+        onClick={() => {
+          if (!play3.includes('pause')) {
+            setPlay3(play3 + '-pause');
+            audio3.current.play();
+          } else {
+            setPlay3(play3.split('-pause')[0]);
+            audio3.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} ref={audio3} controls>
+        <source src="./magazine/1/63_64/3.mp3" type="audio/mp3" />
+      </audio>
+      <img
+        src={`${play4}.png`}
+        className={styles.play4}
+        onClick={() => {
+          if (!play4.includes('pause')) {
+            setPlay4(play4 + '-pause');
+            audio4.current.play();
+          } else {
+            setPlay4(play4.split('-pause')[0]);
+            audio4.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} ref={audio4} controls>
+        <source src="./magazine/1/63_64/4.mp3" type="audio/mp3" />
+      </audio>
     </div>
   );
 };

@@ -4,10 +4,79 @@ import styles from './page3940.module.scss';
 const Page3940 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/39_40/Group 1185.png" className={styles.left} />
+      <img src="./magazine/1/39_40/Group 1190 (6).png" className={styles.left} />
       <img src="./magazine/1/39_40/right4.png" className={styles.right} />
+      <video muted autoPlay loop className={styles.video}>
+        <source src="./magazine/1/39_40/Untitled (20).mp4" type="video/mp4" />
+      </video>
       <img src="./magazine/1/39_40/Group 1181 (8).png" className={styles.leftBack} />
-      <img src="./magazine/1/39_40/Group 1184 (1).png" className={styles.leftCarousel} />
+      <img src="./magazine/1/39_40/moshed-05-02-18-35-38.png" className={styles.leftCarousel} />
+      <div className={styles.animationFrame}>
+        <div>
+          <img src="./magazine/1/39_40/image 316 (1).png" className={styles.image1} />
+          <img src="./magazine/1/39_40/2021-04-27_12.56.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/2021-04-27_12.19.png" className={styles.image3} />
+        </div>
+        <div>
+          <img src="./magazine/1/39_40/image 316 (1).png" className={styles.image1} />
+          <img src="./magazine/1/39_40/2021-04-27_12.56.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/2021-04-27_12.19.png" className={styles.image3} />
+        </div>
+        <div>
+          <img src="./magazine/1/39_40/image 316 (1).png" className={styles.image1} />
+          <img src="./magazine/1/39_40/2021-04-27_12.56.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/2021-04-27_12.19.png" className={styles.image3} />
+        </div>
+        <div>
+          <img src="./magazine/1/39_40/image 316 (1).png" className={styles.image1} />
+          <img src="./magazine/1/39_40/2021-04-27_12.56.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/2021-04-27_12.19.png" className={styles.image3} />
+        </div>
+      </div>
+      <div className={styles.animationFrame1}>
+        <div>
+          <img src="./magazine/1/39_40/image 314 (1).png" className={styles.image1} />
+          <img src="./magazine/1/39_40/image 315.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/unknown8.png" className={styles.image3} />
+        </div>
+        <div>
+          <img src="./magazine/1/39_40/image 314 (1).png" className={styles.image1} />
+          <img src="./magazine/1/39_40/image 315.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/unknown8.png" className={styles.image3} />
+        </div>
+        <div>
+          <img src="./magazine/1/39_40/image 314 (1).png" className={styles.image1} />
+          <img src="./magazine/1/39_40/image 315.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/unknown8.png" className={styles.image3} />
+        </div>
+        <div>
+          <img src="./magazine/1/39_40/image 314 (1).png" className={styles.image1} />
+          <img src="./magazine/1/39_40/image 315.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/unknown8.png" className={styles.image3} />
+        </div>
+      </div>
+      <div className={styles.animationFrame2}>
+        <div>
+          <img src="./magazine/1/39_40/unknown3.png" className={styles.image1} />
+          <img src="./magazine/1/39_40/image 317.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/image 319 (1).png" className={styles.image3} />
+        </div>
+        <div>
+          <img src="./magazine/1/39_40/unknown3.png" className={styles.image1} />
+          <img src="./magazine/1/39_40/image 317.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/image 319 (1).png" className={styles.image3} />
+        </div>
+        <div>
+          <img src="./magazine/1/39_40/unknown3.png" className={styles.image1} />
+          <img src="./magazine/1/39_40/image 317.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/image 319 (1).png" className={styles.image3} />
+        </div>
+        <div>
+          <img src="./magazine/1/39_40/unknown3.png" className={styles.image1} />
+          <img src="./magazine/1/39_40/image 317.png" className={styles.image2} />
+          <img src="./magazine/1/39_40/image 319 (1).png" className={styles.image3} />
+        </div>
+      </div>
       <div className={styles.leftText1}>ESPA</div>
       <div className={styles.leftText2}>CASUAL ESPORTS</div>
       <div className={styles.leftText3}>MINECRAFT ESPORTS with ESPA</div>
@@ -153,10 +222,10 @@ const Page3940 = () => {
         own their content. Coinvise will be an open platform, enabling other platforms and
         communities to integrate parts of what we built.
       </div>
-      <a href="" className={styles.twitter}>
+      <a href="https://twitter.com/CoinviseCo" className={styles.twitter} target="_blank">
         <img src="./magazine/1/39_40/23681.png" />
       </a>
-      <a href="" className={styles.discord}>
+      <a href="https://discord.com/invite/xxwUfR8hb9" className={styles.discord} target="_blank">
         <img src="./magazine/1/39_40/disc.png" />
       </a>
       <img src="./magazine/1/39_40/Group 1185 (2).png" className={styles.rightArrow} />

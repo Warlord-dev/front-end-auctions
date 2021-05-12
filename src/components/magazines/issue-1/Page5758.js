@@ -22,7 +22,9 @@ const Page5758 = () => {
       <a href="https://instagram.com/veletagram" className={styles.leftSubText} target="_blank">
         DOMINGO BETTE ENCOUR
       </a>
-      <div className={styles.rightText}>ERICK STOW</div>
+      <a href="https://www.erickstow.com/" className={styles.rightText} target="_blank">
+        ERICK STOW
+      </a>
       <div className={styles.rightSecondText}>
         Erick Stow is a Canadian-born artist from Saskatoon, Saskatchewan. He grew up in Lubbock,
         Texas where he received his Bachelor of Arts degree in mass visual communications from Texas
