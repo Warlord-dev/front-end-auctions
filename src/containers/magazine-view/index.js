@@ -97,6 +97,8 @@ const MagazineViewer = props => {
             maxShadowOpacity={0.5}
             showCover={true}
             mobileScrollSupport={true}
+            disableFlipByClick={true}
+            swipeDistance={100}
           >
             <MagazinePageWrapper><CoverPage /></MagazinePageWrapper>
             <MagazinePageWrapper><Page12 /></MagazinePageWrapper>

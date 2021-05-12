@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react'
-import styles from './styles.module.scss'
 import styled from 'styled-components'
 
 const WebPageWrapperDiv = styled.div`
@@ -69,7 +68,6 @@ const WebPageWrapper = forwardRef((props, ref) => {
   } = props
 
   return (
-    // <div ref={ref} className={styles.webPageWrapper}>
     <WebPageWrapperDiv zoom={zoom || 1} ref={ref} >
       <ContentWrapperDiv
         zoom={zoom || 1}
