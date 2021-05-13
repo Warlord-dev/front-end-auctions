@@ -813,6 +813,11 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Neon Vortex';
+              src: url("./fonts/Neon Vortex.ttf");
+            }
+
+            @font-face {
               font-family: 'Lexend Giga';
               src: url("./fonts/LexendGiga-Regular.ttf");
               font-weight: 400;
