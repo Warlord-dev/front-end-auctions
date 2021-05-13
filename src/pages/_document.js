@@ -811,6 +811,12 @@ class MyDocument extends Document {
               src: url("./fonts/Chivo-Regular.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: 'Neon Vortex';
+              src: url("./fonts/Neon Vortex.ttf");
+              font-weight: 400;
+            }
           `,
             }}
           />
