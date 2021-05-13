@@ -93,7 +93,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           Switch to Eth Mainnet
         </a> */}
       </div>
-      <div className={styles.rightBox}>
+      <div className={cn(styles.rightBox, pathname.includes('purchase')?styles.blackWrapper:styles.whiteWrapper)}>
         <div className={cn(styles.links, isCollapse?styles.expandedMenu:'')}>
           {/* <Link href="/">
           <a className={styles.link}>Auctions</a>
@@ -148,7 +148,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
             {user ? (
               <div className={styles.buttonWrapper}>
                 <SmallPhotoWithText
-                  photo={user.get('avatar') ? user.get('avatar') : './images/user-photo.svg'}
+                  photo={user.get('avatar') ? user.get('avatar') : './images/image.png'}
                   address={user.get('username')}
                   className={styles.hashAddress}
                 >

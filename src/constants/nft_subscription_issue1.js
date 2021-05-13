@@ -46,7 +46,8 @@ const details = [
         '/images/nft/exc/James (1).png',
         '/images/nft/exc/Project Name (3).mp4',
         '/images/nft/exc/Untitled (15).mp4',
-        '/images/nft/exc/VICtor.png'
+        '/images/nft/exc/VICtor.png',
+        '/images/nft/exc/3.gif',
       ],
       body: `Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides! Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!
 
