@@ -13,6 +13,10 @@ const viewerList = [
   {
     id: 'webview',
     caption: 'Web View'
+  },
+  {
+    id: 'exit',
+    caption: 'Way Out'
   }
 ]
 

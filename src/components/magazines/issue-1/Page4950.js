@@ -62,6 +62,10 @@ const Page4950 = () => {
         no-coiner friend that they can go from fiat to USD stablecoins on curve/yearn earning
         15%-20% APYs with a few clicks, and without ever needing to get exposure to more volatile
         crypto assets!? This is how we get the next wave of #DeFi adoption.
+        <br />
+        <br />
+        <br />
+        <div className={styles.textTitle}>- RAFI_0X</div>
       </div>
       <a
         href="https://twitter.com/Rafi_0x/status/1374464243311943690"
@@ -82,6 +86,9 @@ const Page4950 = () => {
         className={styles.twitter3}
         target="_blank"
       >
+        <img src="./magazine/1/49_50/twitter 2.png" />
+      </a>
+      <a href="https://twitter.com/Rafi_0x" className={styles.twitter4} target="_blank">
         <img src="./magazine/1/49_50/twitter 2.png" />
       </a>
       <img src="./magazine/1/49_50/diamond ha.png" className={styles.diamondHa} />
