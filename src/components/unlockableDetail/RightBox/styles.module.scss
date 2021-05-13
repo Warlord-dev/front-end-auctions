@@ -26,6 +26,7 @@
     }
 
     .actionGroup {
+        display: flex;
         button, .showHiddenButton {
             background: black;
             border: none;
@@ -34,6 +35,10 @@
             font-weight: 600;
             font-size: 23px;
             margin-right: 1rem;
+        }
+
+        .showHiddenButton:hover {
+            opacity: 0.7;
         }
 
     }

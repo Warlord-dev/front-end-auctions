@@ -187,6 +187,7 @@ export const getDigitalaxSubscriptionPurchaseHistory = gql`
     digitalaxSubscriptionPurchaseHistory(id: $tokenId) {
       id
       bundleId
+      timestamp
     }
   }
 `;
