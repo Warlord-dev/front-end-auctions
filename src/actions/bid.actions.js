@@ -140,7 +140,7 @@ class BidActions extends BaseActions {
     };
   }
 
-  buyNowNftSubscription(id, value, isMona) {
+  buyNowNftSubscription(id, isMona) {
     return async (_, getState) => {
       const account = getState().user.get('account');
       const chainId = getState().global.get('chainId');
@@ -152,7 +152,6 @@ class BidActions extends BaseActions {
         const allowedValue = 10000;
         const jsAllowedValue = parseFloat(ethersUtils.formatEther(allowedValue));
         if (jsAllowedValue < 10000000000) {
-          console.log('this is marketplacecontract address', marketplaceContract);
           const listener = monaContract.methods
             .approve(marketplaceContract, convertToWei(20000000000))
             .send({ from: account });
@@ -168,22 +167,22 @@ class BidActions extends BaseActions {
             },
           };
         }
+      } else {
+        const listener = contract.methods
+          .buyOffer(id)
+          .send({ from: account });
+        const promise = new Promise((resolve, reject) => {
+          listener.on('error', (error) => reject(error));
+          listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
+        });
+        return {
+          promise,
+          unsubscribe: () => {
+            listener.off('error');
+            listener.off('transactionHash');
+          },
+        };
       }
-
-      const listener = contract.methods
-        .buyOffer(id)
-        .send({ from: account });
-      const promise = new Promise((resolve, reject) => {
-        listener.on('error', (error) => reject(error));
-        listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
-      });
-      return {
-        promise,
-        unsubscribe: () => {
-          listener.off('error');
-          listener.off('transactionHash');
-        },
-      };
     };
   }
 
