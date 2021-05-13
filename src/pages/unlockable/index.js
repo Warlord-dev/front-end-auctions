@@ -3,9 +3,6 @@ import BottomLine from '@components/bottom-line';
 import styles from './styles.module.scss';
 import { useRouter } from 'next/router';
 import NftBanners from '@components/nft-banners';
-import api from '@services/api/api.service';
-import { useSelector } from 'react-redux';
-import { getAccount } from '@selectors/user.selectors';
 import details from '@constants/nft_subscription_issue1';
 
 const Unlockable = () => {

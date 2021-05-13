@@ -2,9 +2,7 @@ import React from 'react';
 import BottomLine from '@components/bottom-line';
 import styles from './styles.module.scss';
 
-const HiddenContent2 = () => {
-  const state = 1;
-
+const Contact = () => {
   return (
     <>
       <div className={styles.wrapper}>
@@ -58,4 +56,4 @@ const HiddenContent2 = () => {
   );
 };
 
-export default HiddenContent2;
+export default Contact;

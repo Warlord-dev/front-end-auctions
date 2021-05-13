@@ -1,6 +1,7 @@
 @import '../../../assets/scss/helpers/grid.scss';
 @import '../../../assets/scss/helpers/variables.scss';
 @import '../../../assets/scss/helpers/helpers.scss';
+@import "../../../assets/scss/base/responsive.scss";
 
 .wrapper {
   @include wrapper();
@@ -21,6 +22,7 @@
   @media (max-width: $sm-width) {
     padding: 20px 20px;
     flex-direction: column;
+    background-color: white;
   }
 }
 
@@ -92,12 +94,15 @@
   width: 100%;
   display: flex;
   flex: 1;
-  align-items: center;
-  justify-content: space-between;
   padding-right: 20px;
+
+  @include media-sm {
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
-.whiteWrapper, .whiteWrapper *,  {
+.whiteWrapper, .whiteWrapper *  {
   color: white!important;
 }
 
@@ -117,9 +122,8 @@
     outline: none;
   }
 
-
   @media screen and (max-width: 640px) {
-    text-align: center;
+    text-align: left!important;
     line-height: 30px;
   }
 }
@@ -215,6 +219,7 @@
 .expandedMenu{
   display: block;
   margin-top: 30px;
+  height: 100vh;
   a {
     float: none;
     display: block;

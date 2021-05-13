@@ -1,3 +1,5 @@
+@import "../../assets/scss/base/responsive.scss";
+
 .mainWrapper {
   padding-top: 80px;
   background: url("/images/nft/ejml13 hires 1.png");
@@ -7,38 +9,72 @@
     color: white;
     width: 100%;
     font-family: "Inter";
-    margin-top: 50px;
     padding: 64px;
     position: relative;
+
+    @include media-md {
+      margin-top: 50px;
+    }
 
     .mainText {
       margin: auto;
 
+      @include media-xs {
+        font-size: 30px;
+      }
+
+      @include media-sm {
+        font-size: 50px;
+      }
+
+      @include media-md {
+        font-size: 70px;
+      }
+
+      @include media-lg {
+        font-size: 90px;
+      }
+
+      @include media-xl {
+        font-size: 120px;
+      }
+
+
       font-family: Internal Rainbows;
       font-style: normal;
       font-weight: normal;
-      font-size: 120px;
       line-height: 110%;
       /* identical to box height, or 132px */
 
       text-align: center;
 
       color: #FFFFFF;
-
+      
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-
+    
     .panels {
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
+      margin-bottom: 50px;
+
+      @include media-md {
+        flex-direction: row;
+        margin-bottom: 300px;
+      }
 
       .panel {
         position: relative;
         background: #F7F7F7;
-        height: 1145px;
-        margin-bottom: 350px;
-        width: 30%;
-        height: 600px;
+        width: 100%;
+        margin-bottom: 3rem;
+        height: 400px;
+
+        @include media-md {
+          width: 30%;
+          height: 600px;
+        }
 
         .thumbnail {
           width: 100%;
