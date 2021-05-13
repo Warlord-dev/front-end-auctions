@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { forwardRef, useState, useEffect } from 'react'
 import HTMLFlipBook from 'react-pageflip'
 import CoverPage from '@components/magazines/issue-1/CoverPage'
 import Page12 from '@components/magazines/issue-1/Page12'
@@ -50,30 +50,32 @@ import Backcover from '@components/magazines/issue-1/Backcover'
 import MagazinePageWrapper from '@components/magazines/common/MagazinePageWrapper'
 import getPageList from '@components/magazines/PageList'
 import ViewerSwitch from '@components/magazines/common/ViewerSwitch'
-
+import windowSize from 'react-window-size'
 import styles from './styles.module.scss'
 
-const MagazineViewer = props => {
+const MagazineViewer = forwardRef((props, refs) => {
   const {
     issueId,
-    pageNumber,
+    initPage,
     children,
-    onSwitchViewer
+    onSwitchViewer,
+    // windowHeight
   } = props
 
   const [zoom, setZoom] = useState(1)
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
   const pageList = getPageList(issueId)
 
   const getChildrenList = () => {
     return pageList.map((item, index) => {
       return (
         <React.Fragment key={index}>
-          <MagazinePageWrapper zoom={zoom}>
+          <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} zoom={zoom} windowHeight={windowHeight}>
             {item}
           </MagazinePageWrapper>
           {
             index > 0 && index < pageList.length - 1 &&
-            <MagazinePageWrapper secondPart zoom={zoom}>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart zoom={zoom} windowHeight={windowHeight}>
               {item}
             </MagazinePageWrapper>
           }
@@ -82,115 +84,128 @@ const MagazineViewer = props => {
     })
   }
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+ 
+
   return (
     <>
       <div className={styles.magazineViewerWrapper}>
-        <div className={styles.contentWrapper}>
+        <div className={styles.contentWrapper}
+          style={{
+            width: `${zoom * (windowHeight - 20) / 1497 * 1920}px`
+          }}
+        >
           <HTMLFlipBook 
             width={960}
             height={1497}
             size="stretch"
-            minWidth={315}
-            maxWidth={1000}
-            minHeight={400}
-            maxHeight={1533}
+            startPage={initPage}
             maxShadowOpacity={0.5}
             showCover={true}
             mobileScrollSupport={true}
             disableFlipByClick={true}
             swipeDistance={100}
           >
-            <MagazinePageWrapper><CoverPage /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page12 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page12 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page34 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page34 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page56 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page56 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page78 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page78 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page910 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page910 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1112 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page1112 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1314 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page1314 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1516 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page1516 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1718 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page1718 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1920 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page1920 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2122 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page2122 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2324 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page2324 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2526 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page2526 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2728 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page2728 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2930 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page2930 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page3132 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page3132 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page3334 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page3334 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page3536 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page3536 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page3738 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page3738 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><CoverPage /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page12 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page12 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page34 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page34 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page56 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page56 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page78 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page78 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page910 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page910 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page1112 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page1112 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page1314 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page1314 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page1516 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page1516 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page1718 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page1718 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page1920 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page1920 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page2122 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page2122 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page2324 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page2324 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page2526 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page2526 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page2728 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page2728 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page2930 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page2930 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page3132 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page3132 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page3334 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page3334 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page3536 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page3536 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page3738 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page3738 /></MagazinePageWrapper>
 
-            <MagazinePageWrapper><Page3940 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page3940 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4142 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page4142 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4344 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page4344 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4546 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page4546 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4748 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page4748 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4950 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page4950 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5152 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page5152 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5354 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page5354 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5556 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page5556 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5758 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page5758 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5960 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page5960 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6162 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page6162 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6364 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page6364 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6566 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page6566 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6768 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page6768 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6970 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page6970 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7172 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page7172 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7374 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page7374 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7576 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page7576 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7778 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page7778 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7980 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page7980 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page8182 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page8182 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page8384 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page8384 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page8586 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page8586 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page8788 /></MagazinePageWrapper>
-            <MagazinePageWrapper secondPart><Page8788 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Backcover /></MagazinePageWrapper> 
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page3940 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page3940 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page4142 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page4142 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page4344 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page4344 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page4546 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page4546 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page4748 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page4748 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page4950 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page4950 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page5152 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page5152 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page5354 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page5354 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page5556 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page5556 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page5758 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page5758 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page5960 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page5960 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page6162 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page6162 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page6364 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page6364 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page6566 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page6566 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page6768 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page6768 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page6970 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page6970 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page7172 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page7172 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page7374 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page7374 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page7576 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page7576 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page7778 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page7778 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page7980 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page7980 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page8182 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page8182 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page8384 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page8384 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page8586 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page8586 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Page8788 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart><Page8788 /></MagazinePageWrapper>
+            <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight}><Backcover /></MagazinePageWrapper> 
           </HTMLFlipBook>
         </div>
       </div>
@@ -200,6 +215,6 @@ const MagazineViewer = props => {
       />
     </>
   )
-}
+})
 
 export default MagazineViewer

@@ -37,6 +37,7 @@ const MagazinePages = () => {
     return (
       <MagazineViewer
         issueId={id}
+        initPage={currentPage}
         onSwitchViewer={switchViewer}
       >
       </MagazineViewer>
