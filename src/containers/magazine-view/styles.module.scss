@@ -3,29 +3,16 @@
   background-color: #201D1D;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  height: 100%;
 
   .contentWrapper {
-    width: 320px;
+    margin: auto;
     border-width: 1px;
     border-color: black;
     border-style: solid;
     background-color: black;
-
-    @media (min-width: 1481px) {
-      width: 1400px;
-    }
-
-    @media (min-width: 1281px) and (max-width: 1480px) {
-      width: 1200px;
-    }
-
-    @media (min-width: 961px) and (max-width: 1280px) {
-      width: 850px;
-    }
-
-    @media (min-width: 641px) and (max-width: 960px) {
-      width: 640px;
-    }
+    height: fit-content;
   }
 
   .switchViewerWrapper {
