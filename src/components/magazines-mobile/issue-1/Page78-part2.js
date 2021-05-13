@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './page78-part2.module.scss'
 
-const Page78 = () => {
+const Page78Part2 = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.backOrange}>
@@ -36,4 +36,4 @@ const Page78 = () => {
   )
 }
 
-export default Page78
+export default Page78Part2

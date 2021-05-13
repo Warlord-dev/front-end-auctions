@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './page1516-part2.module.scss'
 
-const Page1516 = () => {
+const Page1516Part2 = () => {
   return (
     <div className={styles.wrapper}> 
 
@@ -24,4 +24,4 @@ const Page1516 = () => {
   )
 }
 
-export default Page1516
+export default Page1516Part2

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './page1718-part2.module.scss'
 
-const Page1718 = () => {
+const Page1718Part2 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='./magazine/1/images/mobile/moshed-2.png' className={styles.backImage}/>
@@ -42,4 +42,4 @@ const Page1718 = () => {
   )
 }
 
-export default Page1718
+export default Page1718Part2
