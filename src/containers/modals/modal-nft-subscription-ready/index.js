@@ -7,6 +7,7 @@ import Button from '@components/buttons/button';
 import Modal from '@components/modal';
 import { closeNftSubscriptionReadyModal } from '@actions/modals.actions';
 import styles from './styles.module.scss';
+import Link from 'next/link';
 
 const ModalNftSubscriptionAReady = ({ className, title, buttonText }) => {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const ModalNftSubscriptionAReady = ({ className, title, buttonText }) => {
             DIGIFIZZY Bundles Are Highlighting Well Known and Unseen Creators Across the Metaverse. These are the Gatemakers.
           </p>
           <Link href={`/paywall/hidden_content_1/1`}>
-            <Button background="black" className={styles.button}>
+            <Button background="black" onClick={() => handleClose()} className={styles.button}>
               {buttonText}
             </Button>
           </Link>
