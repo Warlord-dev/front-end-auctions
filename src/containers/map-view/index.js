@@ -136,7 +136,7 @@ const MapViewer = forwardRef((props, ref) => {
       </div>
       <ViewerSwitch 
         mapSwitch
-        viewers={['webview', 'magazineview']}
+        viewers={['webview', 'magazineview', 'exit']}
         onSwitchViewer={onSwitchViewer}
       />
     </>

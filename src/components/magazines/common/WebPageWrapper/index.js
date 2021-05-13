@@ -1,76 +1,39 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useState } from 'react'
 import styled from 'styled-components'
+import windowSize from 'react-window-size'
 
 const WebPageWrapperDiv = styled.div`
   background-color: black;
   border-color: red;
   overflow: hidden;
 
-  width: ${props => `calc(320px * ${props.zoom})`};
-  min-width: ${props => `calc(320px * ${props.zoom})`};
-  height: ${props => `calc(1497px * 640 / 1920 * ${props.zoom})`};
-
-  @media (min-width: 1481px) {
-    width: ${props => `calc(700px * ${props.zoom})`};
-    min-width: ${props => `calc(700px * ${props.zoom})`};
-    height: ${props => `calc(1497px * 1400 / 1920 * ${props.zoom})`};
-  }
-
-  @media (min-width: 1281px) and (max-width: 1480px) {
-    width: ${props => `calc(600px * ${props.zoom})`};
-    min-width: ${props => `calc(600px * ${props.zoom})`};
-    height: ${props => `calc(1497px * 1200 / 1920 * ${props.zoom})`};
-  }
-
-  @media (min-width: 961px) and (max-width: 1280px) {
-    width: ${props => `calc(425px * ${props.zoom})`};
-    min-width: ${props => `calc(425px * ${props.zoom})`};
-    height: ${props => `calc(1497px * 850 / 1920 * ${props.zoom})`};
-  }
-
-  @media (min-width: 641px) and (max-width: 960px) {
-    width: ${props => `calc(320px * ${props.zoom})`};
-    min-width: ${props => `calc(320px * ${props.zoom})`};
-    height: ${props => `calc(1497px * 640 / 1920 * ${props.zoom})`};
-  }
+  width: ${props => `${props.zoom * props.windowHeight / 1497 * 960}px`};
+  min-width: ${props => `${props.zoom * props.windowHeight / 1497 * 960}px`};
+  max-width: ${props => `${props.zoom * props.windowHeight / 1497 * 960}px`};
+  height: ${props => `${props.zoom * props.windowHeight }px`};
 `
 
 const ContentWrapperDiv = styled.div`
   width: 1920px;
   height: 1497px;
   transform-origin: 0 0;
-  transform: ${props => `scale(calc(640 / 1920 * ${props.zoom}))`};
+  transform: ${props => `scale(${props.zoom * props.windowHeight / 1497})`};
 
   margin-left: ${props => props.secondPart ? '-100%' : '0'};
-
-  @media (min-width: 1481px) {
-    transform: ${props => `scale(calc(1400 / 1920 * ${props.zoom}))`};
-  }
-
-  @media (min-width: 1281px) and (max-width: 1480px) {
-    transform: ${props => `scale(calc(1200 / 1920 * ${props.zoom}))`};
-  }
-
-  @media (min-width: 961px) and (max-width: 1280px) {
-    transform: ${props => `scale(calc(850 / 1920 * ${props.zoom}))`};
-  }
-
-  @media (min-width: 641px) and (max-width: 960px) {
-    transform: ${props => `scale(calc(640 / 1920 * ${props.zoom}))`};
-  }
 `
-
 
 const WebPageWrapper = forwardRef((props, ref) => {
   const {
     zoom,
-    secondPart
+    secondPart,
+    windowHeight
   } = props
 
   return (
-    <WebPageWrapperDiv zoom={zoom || 1} ref={ref} >
+    <WebPageWrapperDiv zoom={zoom || 1} ref={ref} windowHeight={windowHeight - 20}>
       <ContentWrapperDiv
         zoom={zoom || 1}
+        windowHeight={windowHeight - 20}
         secondPart={secondPart}
       >
       { props.children }
@@ -79,4 +42,4 @@ const WebPageWrapper = forwardRef((props, ref) => {
   )
 })
 
-export default WebPageWrapper
+export default windowSize(WebPageWrapper)
