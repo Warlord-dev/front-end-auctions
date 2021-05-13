@@ -1,7 +1,6 @@
 import React, { forwardRef, useState, useEffect, useRef } from 'react'
 import dynamic from 'next/dynamic'
 import WebPageWrapper from '@components/magazines/common/WebPageWrapper'
-import windowSize from 'react-window-size'
 import ViewerSwitch from '@components/magazines/common/ViewerSwitch'
 import getPageList from '@components/magazines/PageList'
 import styles from './styles.module.scss'
@@ -46,13 +45,10 @@ const WebViewer = forwardRef((props, refs) => {
   const handleMouseWeel = e => {
     if (e.ctrlKey) {
       if (e.deltaY < 0) {
-        console.log('====')
         handleZoom('=')
       } else if (e.deltaY > 0) {
-        console.log('-----')
         handleZoom('-')
       }
-      console.log('e: ', e)
     }
   }
 
@@ -63,13 +59,9 @@ const WebViewer = forwardRef((props, refs) => {
       viewerWrapperRef.current.scrollLeft = ((initPage) * getPageWidth(window.innerHeight) | 0) + 1
     }
 
-    
-
-    // window.addEventListener('mousewheel', handleMouseWeel)
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
-      // window.removeEventListener('mousewheel', handleMouseWeel)
     }
   }, [])
 
