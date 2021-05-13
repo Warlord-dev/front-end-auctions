@@ -43,6 +43,12 @@ import Page8182 from './Page8182'
 import Page8384 from './Page8384'
 import Page8586 from './Page8586'
 import Page8788 from './Page8788'
+// Hidden Pages
+import Page8990 from './Page8990'
+import Page9192 from './Page9192'
+import Page9394 from './Page9394'
+import Page9596 from './Page9596'
+import Page9798 from './Page9798'
 import Backcover from './Backcover'
 
 const PageList = [
@@ -91,6 +97,13 @@ const PageList = [
     <Page8384 />,
     <Page8586 />,
     <Page8788 />,
+
+    <Page8990 />,
+    <Page9192 />,
+    <Page9394 />,
+    <Page9596 />,
+    <Page9798 />,
+    
     <Backcover />
   ]
 

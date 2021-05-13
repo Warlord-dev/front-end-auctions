@@ -1,9 +1,9 @@
 import React, { forwardRef, useState, useEffect, useRef } from 'react'
 import dynamic from 'next/dynamic'
 import WebPageWrapper from '@components/magazines/common/WebPageWrapper'
-import windowSize from 'react-window-size'
 import ViewerSwitch from '@components/magazines/common/ViewerSwitch'
 import getPageList from '@components/magazines/PageList'
+import magazineIssues from '@constants/magazines'
 import styles from './styles.module.scss'
 
 const KeyboardEventHandler = dynamic(() => import('react-keyboard-event-handler'), {
@@ -15,12 +15,15 @@ const WebViewer = forwardRef((props, refs) => {
   const [zoom, setZoom] = useState(1)
   const [currentPage, setCurrentPage] = useState(0)
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+
+  const currentIssue = magazineIssues.find(item => item.issueId === issueId) || magazineIssues[0]
+  const contentUnlocked = false // This should be updated with real value. - Cameron
   
   const zoomList = [0.05, 0.1, 0.25, 0.5, 0.75, 1]
   const viewerWrapperRef = useRef()
   const contentWrapperRef = useRef()
   const pageList = getPageList(issueId)
-  const totalPageCount = (pageList.length - 1) * 2
+  const totalPageCount = currentIssue.freePageCount + 2
 
    const handleZoom = (key, e) => {
     const zoomIndex = zoomList.indexOf(zoom)
@@ -46,13 +49,10 @@ const WebViewer = forwardRef((props, refs) => {
   const handleMouseWeel = e => {
     if (e.ctrlKey) {
       if (e.deltaY < 0) {
-        console.log('====')
         handleZoom('=')
       } else if (e.deltaY > 0) {
-        console.log('-----')
         handleZoom('-')
       }
-      console.log('e: ', e)
     }
   }
 
@@ -63,13 +63,9 @@ const WebViewer = forwardRef((props, refs) => {
       viewerWrapperRef.current.scrollLeft = ((initPage) * getPageWidth(window.innerHeight) | 0) + 1
     }
 
-    
-
-    // window.addEventListener('mousewheel', handleMouseWeel)
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
-      // window.removeEventListener('mousewheel', handleMouseWeel)
     }
   }, [])
 
@@ -82,27 +78,46 @@ const WebViewer = forwardRef((props, refs) => {
     }
     handleResize()
   }, [windowHeight])
+
+  const getChildrenList = () => {
+    const childrenList = []
+    let realPageNum = 0
+
+    pageList.forEach((item, index) => {  
+      if (realPageNum > currentIssue.freePageCount && !contentUnlocked && index < pageList.length - 1) return
+      childrenList.push(
+        <WebPageWrapper
+          key={realPageNum}
+          zoom={zoom}
+        >
+          {item}
+        </WebPageWrapper>
+      )
+      realPageNum++
+
+      if (index > 0 && index < pageList.length - 1) {
+        childrenList.push(
+          <WebPageWrapper
+            zoom={zoom}
+            secondPart
+            key={realPageNum}
+          >
+            {item}
+          </WebPageWrapper>
+        )
+        realPageNum++
+      }
+    })
+    return childrenList
+  }
+
   return (
     <>
       <div className={styles.webViewerWrapper} ref={viewerWrapperRef} onScroll={onScrollWrapper} onWheel={handleMouseWeel}>
         <div className={styles.contentWrapper} ref={contentWrapperRef} 
           style={{width: `${getPageWidth(windowHeight) * totalPageCount}px`}}>
           {
-            pageList.map((item, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <WebPageWrapper zoom={zoom}>
-                    {item}
-                  </WebPageWrapper>
-                  {
-                    index > 0 && index < pageList.length - 1 &&
-                    <WebPageWrapper secondPart zoom={zoom}>
-                      {item}
-                    </WebPageWrapper>
-                  }
-                </React.Fragment>
-              )
-            })
+            getChildrenList()
           }
         </div>
         <KeyboardEventHandler handleKeys={['-', '=']} onKeyEvent={handleZoom} />

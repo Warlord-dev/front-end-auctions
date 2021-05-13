@@ -1,11 +1,14 @@
-import React from 'react';
-import styles from './page8788.module.scss';
+import React from 'react'
+import UnlockPage from '../common/UnlockPage'
+import styles from './page8788.module.scss'
+
 
 const Page8788 = () => {
+  const contentUnlocked = false // it should be modified with real data - Cameron
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/87_88/pINT 2.png" className={styles.line} />
-      <img src="./magazine/1/87_88/ejml13 hires 1.png" className={styles.rightBack} />
+      <img src="./magazine/1/images/last-page.jpg" className={styles.rightBack} />
       <div className={styles.mainTitle}>Mod the Metaverse.</div>
       <div className={styles.text}>
         DIGIFIZZY is for the dreamers, the creators, the players, the technologists, the developers,
@@ -41,6 +44,7 @@ const Page8788 = () => {
         To be continued.
       </div>
       <div className={styles.bottomText}>- Emma-Jane MacKinnon-Lee</div>
+      {!contentUnlocked && <UnlockPage />}
     </div>
   );
 };
