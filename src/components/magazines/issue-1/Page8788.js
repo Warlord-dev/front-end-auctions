@@ -5,7 +5,7 @@ const Page8788 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/87_88/pINT 2.png" className={styles.line} />
-      <img src="./magazine/1/87_88/ejml13 hires 1.png" className={styles.rightBack} />
+      <img src="./magazine/1/images/last-page.jpg" className={styles.rightBack} />
       <div className={styles.mainTitle}>Mod the Metaverse.</div>
       <div className={styles.text}>
         DIGIFIZZY is for the dreamers, the creators, the players, the technologists, the developers,

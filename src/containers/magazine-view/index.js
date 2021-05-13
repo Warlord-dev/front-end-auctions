@@ -66,6 +66,8 @@ const MagazineViewer = forwardRef((props, refs) => {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
   const pageList = getPageList(issueId)
 
+  console.log('init page number: ', initPage)
+
   const getChildrenList = () => {
     return pageList.map((item, index) => {
       return (
