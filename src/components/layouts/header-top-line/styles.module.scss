@@ -97,12 +97,19 @@
   padding-right: 20px;
 }
 
+.whiteWrapper, .whiteWrapper *,  {
+  color: white!important;
+}
+
+.blackWrapper, .blackWrapper * {
+  color: black!important;
+}
+
 .link {
   @include active();
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 17px;
-  color: white;
   text-transform: uppercase;
   margin-right: 26px;
 
@@ -110,9 +117,6 @@
     outline: none;
   }
 
-  &:hover {
-    color: white;
-  }
 
   @media screen and (max-width: 640px) {
     text-align: center;
