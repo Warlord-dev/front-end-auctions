@@ -27,14 +27,8 @@
 
     .actionGroup {
         display: flex;
-        button, .showHiddenButton {
-            background: black;
-            border: none;
-            color: white;
-            padding: .5rem 2.5rem;
-            font-weight: 600;
-            font-size: 23px;
-            margin-right: 1rem;
+        .showHiddenButton {
+            margin-left: 1rem;
         }
 
         .showHiddenButton:hover {

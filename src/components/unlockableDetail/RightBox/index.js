@@ -120,9 +120,9 @@ const RightBox = ({ details, id }) => {
         </Button>
         {showHidden ? (
           <Link href={`/paywall/hidden_content_1/${id}`}>
-            <button type="button" className={styles.showHiddenButton}>
+            <Button background="black" className={styles.showHiddenButton}>
               SEE HIDDEN CONTENT
-            </button>
+            </Button>
           </Link>
         ) : null}
       </div>
