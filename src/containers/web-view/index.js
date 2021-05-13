@@ -24,6 +24,7 @@ const WebViewer = forwardRef((props, refs) => {
 
    const handleZoom = (key, e) => {
     const zoomIndex = zoomList.indexOf(zoom)
+    console.log('zoom: ', zoom)
     if (key === '=') {
       if (zoomIndex < 0 || zoomIndex >= zoomList.length - 1) {
         if (zoom >= 16) return
@@ -42,6 +43,19 @@ const WebViewer = forwardRef((props, refs) => {
     onChangePageNumber && onChangePageNumber(pageNumber)
   }
 
+  const handleMouseWeel = e => {
+    if (e.ctrlKey) {
+      if (e.deltaY < 0) {
+        console.log('====')
+        handleZoom('=')
+      } else if (e.deltaY > 0) {
+        console.log('-----')
+        handleZoom('-')
+      }
+      console.log('e: ', e)
+    }
+  }
+
   useEffect(() => {
     const handleResize = () => {
       setWindowHeight(window.innerHeight)
@@ -49,9 +63,13 @@ const WebViewer = forwardRef((props, refs) => {
       viewerWrapperRef.current.scrollLeft = ((initPage) * getPageWidth(window.innerHeight) | 0) + 1
     }
 
+    
+
+    // window.addEventListener('mousewheel', handleMouseWeel)
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
+      // window.removeEventListener('mousewheel', handleMouseWeel)
     }
   }, [])
 
@@ -66,7 +84,7 @@ const WebViewer = forwardRef((props, refs) => {
   }, [windowHeight])
   return (
     <>
-      <div className={styles.webViewerWrapper} ref={viewerWrapperRef} onScroll={onScrollWrapper}>
+      <div className={styles.webViewerWrapper} ref={viewerWrapperRef} onScroll={onScrollWrapper} onWheel={handleMouseWeel}>
         <div className={styles.contentWrapper} ref={contentWrapperRef} 
           style={{width: `${getPageWidth(windowHeight) * totalPageCount}px`}}>
           {
