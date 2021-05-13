@@ -763,6 +763,54 @@ class MyDocument extends Document {
               font-family: 'Think Thick';
               src: url("./fonts/Think Thick.ttf");
             }
+
+            @font-face {
+              font-family: 'Homenaje';
+              src: url("./fonts/Homenaje-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Antonio';
+              src: url("./fonts/Antonio-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Antonio';
+              src: url("./fonts/Antonio-Light.ttf");
+              font-weight: 300;
+            }
+          
+            @font-face {
+              font-family: 'Anton';
+              src: url("./fonts/Anton-Regular.ttf");
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Antic Didone';
+              src: url("./fonts/AnticDidone-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Monoton';
+              src: url("./fonts/Monoton-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Chilanka';
+              src: url("./fonts/Chilanka-Regular.ttf");
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Chivo';
+              src: url("./fonts/Chivo-Regular.ttf");
+              font-weight: 400;
+            }
           `,
             }}
           />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useRouter } from 'next/router'
+import Router, { useRouter } from 'next/router'
 import WebViewer from '../../../containers/web-view'
 import MagazineViewer from '../../../containers/magazine-view'
 import MagazineMobile from '../../../containers/magazine-mobile'
@@ -9,16 +9,27 @@ const MagazinePages = props => {
   const router = useRouter()
   const { id } = router.query;
 
-  const [viewMethod, setViewMethod] = useState('mapview')
+  const [viewMethod, setViewMethod] = useState('magazineview')
+  const [currentPage, setCurrentPage] = useState(0)
   const width = window.innerWidth
+
+  const switchViewer = viewer => {
+    if (viewer === 'exit') {
+      Router.push('/')
+      return;
+    }
+    setViewMethod(viewer)
+  }
   
   if (viewMethod === 'webview') {
     return (
       <WebViewer
         issueId={id}
-        onSwitchViewer={
-          viewer => {
-            setViewMethod(viewer)
+        initPage={currentPage}
+        onSwitchViewer={switchViewer}
+        onChangePageNumber={
+          number => {
+            setCurrentPage(number)
           }
         }
       >
@@ -28,26 +39,20 @@ const MagazinePages = props => {
     if(width > 768) {
       return (
         <MagazineViewer
-          issueId={id}
-          onSwitchViewer={
-            viewer => {
-              setViewMethod(viewer)
-            }
-          }
-        >
-        </MagazineViewer>
-      )
+        issueId={id}
+        initPage={currentPage}
+        onSwitchViewer={switchViewer}
+      >
+      </MagazineViewer>
+      );
     }else {
       return (
         <MagazineMobile
-          issueId={id}
-          onSwitchViewer={
-            viewer => {
-              setViewMethod(viewer)
-            }
-          }
-        >
-        </MagazineMobile>
+        issueId={id}
+        initPage={currentPage}
+        onSwitchViewer={switchViewer}
+      >
+      </MagazineMobile>
       )
     }
   }
@@ -58,11 +63,7 @@ const MagazinePages = props => {
       onClickItem={pageNumber => {
         setViewMethod('webview')
       }}
-      onSwitchViewer={
-        viewer => {
-          setViewMethod(viewer)
-        }
-      }
+      onSwitchViewer={switchViewer}
     >
     </MapViewer>
   )

@@ -39,15 +39,7 @@ const Unlockable = () => {
   }, []);
 
   const onUnlock = (id) => {
-    if (account) {
-      if (!collectionIds.filter((collectionId) => parseInt(collectionId) === id).length) {
-        onUnlockableDetails(id);
-      } else {
-        window.alert('This item is already puchased.');
-      }
-    } else {
-      window.alert('You should sign in to purchase items.');
-    }
+    onUnlockableDetails(id);
   };
 
   return (
