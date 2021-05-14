@@ -52,8 +52,7 @@ const Page1314 = () => {
         work - Blender, Maya, Softimage, Modo, etc.
       </p>
       <h2 className={styles.section4}>
-        You were instrumental to pulling off DIGITALAX’s first auction. What were the biggest
-        challenges encoutered!
+        You were instrumental to pulling off DIGITALAX’s first auction. What were the biggest challenges encountered!
       </h2>
       <p className={styles.section4}>
         The theme of the first auction was Crypto memes, it was a lot of fun to turn that into
@@ -76,14 +75,10 @@ const Page1314 = () => {
         supply chain can be tracked sustainably. No web2 solutions can even begin to achieve this.
       </p>
       <h2 className={styles.section6}>
-        How are you preparing for the future collaborations and projects that DIGITALAX has in
-        store?
+        How are you preparing for the future collaborations and projects that DIGITALAX has in store?
       </h2>
       <p className={styles.section6}>
-        Well there is no preparing for all of them! Some of the most exciting ones are at the heart
-        of the modding communities, particularly content like Minecraft, CS:GO and DMC. I am a gamer
-        myself, however, I did find it a challenge to work with the MC skins and come up with new
-        ideas around what could work best in highlighting them in higher fidelity 3D!
+        Well there is no preparing for all of them! Some of the most exciting ones are at the heart of the modding communities, particularly content like Minecraft, CS:GO and DMC. I am a gamer myself, however, I did find it a challenge to work with the MC skins and come up with new ideas around what could work best in highlighting them in higher fidelity 3D!
       </p>
       <h2 className={styles.section7}>
         You’ve been doing this work for a while now, correct? How would you recommend getting to

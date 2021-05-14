@@ -123,10 +123,10 @@ const WebViewer = forwardRef((props, refs) => {
   return (
     <>
       <div className={styles.webViewerWrapper} ref={viewerWrapperRef} onScroll={onScrollWrapper} onWheel={handleMouseWeel}>
-        <div className={styles.contentWrapper} ref={contentWrapperRef}
+        <div className={[styles.contentWrapper, zoom < 1 ? styles.center: ''].join(' ')} ref={contentWrapperRef}
           style={{
             width: `${getPageWidth(windowHeight) * totalPageCount}px`,
-            height: `${windowHeight * zoom}px`
+            height: `${(windowHeight - 20) * zoom}px`
           }}>
           {
             getChildrenList()

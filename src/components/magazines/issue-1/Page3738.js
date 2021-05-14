@@ -8,16 +8,17 @@ const Page3738 = () => {
       <h1>The Long Thread of Textile History Continues</h1>
       <h2>India Embraces Digital Fashion</h2>
       <p className={styles.section1}>
-        We owe a lot of what constitutes the fashion industry, as we know of it today, to India. In
-        fact, our earliest knowledge about the origins and use of cotton can be dated back to a
-        series of famous Indian poems written in 600BC. And, even Alexander the Great is recorded
-        wearing cotton clothes after invading India with his troops. The nation has contributed a
-        whole threadline of rich history to fashion globally, with about 1/3 of India’s textile
-        production export orientated, and the US standing as the biggest importer of Indian textile.
+        We owe a lot of what constitutes the fashion industry, as we know of it today, to India. In 
+        fact, our earliest knowledge about the origins and use of cotton can be dated back to a 
+        series of famous Indian poems written in 600BC. And, even Alexander the Great is recorded 
+        wearing cotton clothes after invading India with his troops. The nation has contributed a 
+        whole threadline of rich history to fashion globally, with about 1/3 of India’s textile 
+        production export orientated, and the US standing as the biggest importer of Indian 
+        textile.
         <br />
         <br />
-        Thus, it only seems fated that the region is now embracing the new world of fashiontech,
-        which has been propelled over the past few months with the rise in relevance of NFTs and
+        Thus, it only seems fated that the region is now embracing the new world of fashiontech, 
+        which has been propelled over the past few months with the rise in relevance of NFTs and 
         their harmonious affinity for finally bridging value and authenticity to digital fashion.
       </p>
       <p className={styles.section2}>
