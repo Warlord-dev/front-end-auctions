@@ -1,12 +1,28 @@
+@import "../../../assets/scss/base/responsive.scss";
+
 .wrapper {
-    width: 580px;
-    margin-right: 85px;
+    width: 90%;
+    margin: auto;
+
+    @include media-md {
+        width: 580px;
+    }
+
+    @include media-xl {
+        margin-right: 85px!important;
+    }
 
     .activeImageWrapper {
+        width: 100%;
         margin-bottom: 1rem;
 
         .activeImage {
-            width: 580px;
+            width: 100%;
+            height: 450px;
+
+            @include media-md {
+                height: 650px;
+            }
             object-fit: cover;
         }
     }

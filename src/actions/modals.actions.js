@@ -65,3 +65,9 @@ export const closeConnectMaticModal = () => (dispatch) => dispatch(closeModal('i
 
 export const openBuynowNftSubscriptionModal = (params) => (dispatch) => dispatch(openModal('isShowBuyNowNftSubscription', 'hideScroll', params));
 export const closeBuynowNftSubscriptionModal = () => (dispatch) => dispatch(closeModal('isShowBuyNowNftSubscription', 'addScroll'));
+
+export const openBuynowNftCoolDownModal = (params) => (dispatch) => dispatch(openModal('isShowBuyNowNftCooldown', 'hideScroll', params));
+export const closeBuynowNftCoolDownModal = () => (dispatch) => dispatch(closeModal('isShowBuyNowNftCooldown', 'addScroll'));
+
+export const openBuynowNftLimitModal = (params) => (dispatch) => dispatch(openModal('isShowBuyNowNftLimit', 'hideScroll', params));
+export const closeBuynowNftLimitModal = () => (dispatch) => dispatch(closeModal('isShowBuyNowNftLimit', 'addScroll'));

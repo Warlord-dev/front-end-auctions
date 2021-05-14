@@ -11,6 +11,8 @@ import ModalESPAReady from "./modal-espa-ready";
 import ModalConnectMatic from "./modal-connect-matic";
 import BuyNowNftSubscription from './buy-now-nft-subscription';
 import ModalNftSubscriptionAReady from './modal-nft-subscription-ready';
+import BuyNowNftCooldown from './buy-now-nft-cooldown';
+import BuyNowNftLimit from './buy-now-nft-limit';
 
 const Modals = () => {
   const modals = useSelector((state) => state.modals.toJS());
@@ -26,6 +28,8 @@ const Modals = () => {
     isShowPreviewMaterial,
     isShowModalESPAReady,
     isNftSubscriptionReady,
+    isShowBuyNowNftCooldown,
+    isShowBuyNowNftLimit
   } = modals;
 
   return (
@@ -41,6 +45,8 @@ const Modals = () => {
       {isShowPreviewMaterial && <PreviewMaterial />}
       {isShowBuyNowNftSubscription && <BuyNowNftSubscription />}
       {isNftSubscriptionReady && <ModalNftSubscriptionAReady />}
+      {isShowBuyNowNftCooldown && <BuyNowNftCooldown />}
+      {isShowBuyNowNftLimit && <BuyNowNftLimit />}
     </>
   );
 };

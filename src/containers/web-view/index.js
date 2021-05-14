@@ -11,13 +11,12 @@ const KeyboardEventHandler = dynamic(() => import('react-keyboard-event-handler'
 })
 
 const WebViewer = forwardRef((props, refs) => {
-  const { onSwitchViewer, initPage, issueId, onChangePageNumber } = props
+  const { onSwitchViewer, initPage, issueId, onChangePageNumber, contentUnlocked } = props
   const [zoom, setZoom] = useState(1)
   const [currentPage, setCurrentPage] = useState(0)
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
 
   const currentIssue = magazineIssues.find(item => item.issueId === issueId) || magazineIssues[0]
-  const contentUnlocked = false // This should be updated with real value. - Cameron
   
   const zoomList = [0.05, 0.1, 0.25, 0.5, 0.75, 1]
   const viewerWrapperRef = useRef()

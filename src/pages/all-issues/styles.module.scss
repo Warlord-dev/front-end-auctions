@@ -1,20 +1,56 @@
+@import "../../assets/scss/base/responsive.scss";
+
 .wrapper {
     padding-top: 80px;
     background: url("/images/nft/ejml13 hires 1.png");
     background-size: cover;
 
     .bodyWrapper {
-        padding: 150px;
+        
+        @include media-xs {
+            padding: 1rem;
+        }
+
+        @include media-sm {
+            padding: 2rem;
+        }
+
+        @include media-md {
+            padding: 5rem;
+        }
+
+        @include media-lg {
+            padding: 7.5rem;
+        }
         
         .mainText {
 
             font-family: Internal Rainbows;
             font-style: normal;
             font-weight: normal;
-            font-size: 150px;
             line-height: 110%;
             margin-bottom: 25px;
             /* identical to box height, or 165px */
+
+            @include media-xs {
+                font-size: 30px;
+            }
+        
+            @include media-sm {
+                font-size: 50px;
+            }
+    
+            @include media-md {
+                font-size: 70px;
+            }
+    
+            @include media-lg {
+                font-size: 90px;
+            }
+    
+            @include media-xl {
+                font-size: 120px;
+            }        
 
 
             color: #FFFFFF;
@@ -27,10 +63,29 @@
             font-family: Nella Sue Demo;
             font-style: normal;
             font-weight: normal;
-            font-size: 90px;
             line-height: 110%;
             margin-bottom: 50px;
             /* identical to box height, or 99px */
+
+            @include media-xs {
+                font-size: 20px;
+            }
+        
+            @include media-sm {
+                font-size: 40px;
+            }
+    
+            @include media-md {
+                font-size: 60px;
+            }
+    
+            @include media-lg {
+                font-size: 70px;
+            }
+    
+            @include media-xl {
+                font-size: 90px;
+            }        
 
 
             color: #FFFFFF;
@@ -42,11 +97,6 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-
-            // .issue {
-            //     width: 33.3333%;
-            //     padding: 1rem;
-            // }
         }
     }
 }

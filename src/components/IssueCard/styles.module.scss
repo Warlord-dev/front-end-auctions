@@ -1,3 +1,5 @@
+@import "../../assets/scss/base/responsive.scss";
+
 .wrapper {
     width: 100%;
     
@@ -5,6 +7,15 @@
         box-shadow: 0px 4px 10px rgba(22, 0, 108, 0.25), 0px 4px 10px rgba(255, 19, 19, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
         border: 10px solid #AB4A7F;
         width: 411px;
+
+        @include media-xs {
+            width: 100%;
+        }
+
+        @include media-sm {
+            width: 411px;
+        }
+
         margin-bottom: 1.5rem;
     }
 

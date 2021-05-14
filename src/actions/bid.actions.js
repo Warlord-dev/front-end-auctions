@@ -173,7 +173,7 @@ class BidActions extends BaseActions {
           .send({ from: account });
         const promise = new Promise((resolve, reject) => {
           listener.on('error', (error) => reject(error));
-          listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
+          listener.on('confirmation', (transactionHash) => resolve(transactionHash));
         });
         return {
           promise,

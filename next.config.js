@@ -19,6 +19,8 @@ const {
   TIME_INTERVAL,
   USDT_ADDRESS,
   QUICKSWAP_ROUTER,
+  DIGITALAX_SUBSCRIPTION_MARKETPLACE,
+  DIGITALAX_SUBSCRIPTION_NFT
 } = require('config');
 const withImages = require('next-images');
 
@@ -44,6 +46,8 @@ module.exports = withImages({
     TIME_INTERVAL,
     USDT_ADDRESS,
     QUICKSWAP_ROUTER,
+    DIGITALAX_SUBSCRIPTION_NFT,
+    DIGITALAX_SUBSCRIPTION_MARKETPLACE
   },
   trailingSlash: true,
   assetPrefix: './',

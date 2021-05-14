@@ -11,6 +11,7 @@ const MagazineViewer = forwardRef((props, refs) => {
     issueId,
     initPage,
     onSwitchViewer,
+    contentUnlocked
   } = props
 
   const [zoom, setZoom] = useState(1)
@@ -18,7 +19,6 @@ const MagazineViewer = forwardRef((props, refs) => {
   const pageList = getPageList(issueId)
 
   const currentIssue = magazineIssues.find(item => item.issueId === issueId) || magazineIssues[0]
-  const contentUnlocked = false // This should be updated with real value. - Cameron
 
   const getChildrenList = () => {
     const childrenList = []

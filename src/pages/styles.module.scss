@@ -1,3 +1,5 @@
+@import "../assets/scss/base/responsive.scss";
+
 .wrapper {
   background: url("/images/nft/ejml13 hires 1.png");
   background-size: cover;
@@ -8,17 +10,77 @@
     font-family: "Inter";
     padding-top: 75px;
     padding: 64px;
+
+    @include media-xs {
+      padding: 1rem;
+      padding-top: 3rem;
+    }
   
     .header {
       padding-top: 50px;
-      width: 60%;
-      max-width: 1040px;
+      font-family: Internal Rainbows;
+      font-style: normal;
+      font-weight: normal;
+
+      @include media-xs {
+        font-size: 45px;
+      }
+
+      @include media-sm {
+        font-size: 60px;
+      }
+
+      @include media-md {
+        font-size: 80px;
+      }
+
+      @include media-lg {
+        font-size: 100px;
+      }
+
+      @include media-xl {
+        font-size: 160px;
+      }
+
+      line-height: 110%;
+      /* identical to box height, or 50px */
+
+      margin-bottom: 30px;
+      color: #FFFFFF;
+
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   
     .subTitle {
-      width: 50%;
-      margin-left: 250px;
-      margin-bottom: 50px;
+      font-family: Nella Sue Demo;
+      font-style: normal;
+      font-weight: normal;
+
+      @include media-xs {
+        font-size: 30px;
+      }
+
+      @include media-sm {
+        font-size: 50px;
+      }
+
+      @include media-md {
+        font-size: 70px;
+      }
+
+      @include media-lg {
+        font-size: 90px;
+      }
+
+      @include media-xl {
+        font-size: 120px;
+      }
+
+      line-height: 110%;
+      text-align: center;
+      margin-bottom: 30px;
+
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
   
     .title {
@@ -31,10 +93,32 @@
       text-align: center;
     }
 
-    .flexDiv {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .magazineWrapper {
+      width: 100%;
+      text-align: center;        
+
+      @media (max-width: 768px) {
+        .mainMagazine {
+          width: 80%;
+        }
+      }
+      .mainMagazine {
+        @include media-xs {
+          width: 80%;
+        }
+  
+        @include media-sm {
+          width: 80%;
+        }
+  
+        @include media-md {
+          width: 80%;
+        }
+  
+        @include media-lg {
+          width: unset;
+        }
+      }
 
     }
   
