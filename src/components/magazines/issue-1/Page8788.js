@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { useSelector } from 'react-redux';
-import UnlockPage from '../common/UnlockPage'
-import styles from './page8788.module.scss'
-
+import UnlockPage from '../common/UnlockPage';
+import styles from './page8788.module.scss';
 
 const Page8788 = () => {
-  const contentUnlocked = useSelector(state => state.global.toJS());
+  const { contentUnlocked } = useSelector((state) => state.global.toJS());
 
   return (
     <div className={styles.wrapper}>
