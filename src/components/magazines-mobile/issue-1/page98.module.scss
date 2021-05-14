@@ -1,0 +1,20 @@
+.wrapper {
+    background-image: url('../../../../public/magazine/1/images/98_back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15rem 2rem;
+
+    .text {
+        font-family: Lexend Giga;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 120.53%;
+        /* or 24px */
+
+        text-align: center;
+
+        color: #FFFFFF;
+        white-space: normal;
+    }
+}
