@@ -43,7 +43,45 @@ class MyDocument extends Document {
           <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194369113-2"></script>
           <script dangerouslySetInnerHTML={{ __html: gaScriptText }} />
-          {this.getPreloadFontsLinks()}
+          {/* {this.getPreloadFontsLinks()} */}
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Rosarivo"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Bungee Inline"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=News Cycle"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Bellota Text"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lexend Giga"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Abel"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Beth Ellen"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Jockey One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Jacques Francois"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Chivo"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Chilanka"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Monoton"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Antic Didone"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Anton"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Antonio"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Homenaje"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Cinzel"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Carme"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Corben"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -134,12 +172,6 @@ class MyDocument extends Document {
             }
 
             @font-face {
-              font-family: "Abel";
-              src: url("./fonts/Abel-Regular.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
               font-family: 'Nella Sue Demo';
               src: url("./fonts/NellaSueDEMO.ttf");
               font-weight: 400;
@@ -190,24 +222,6 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Rugsnatcher DEMO';
               src: url("./fonts/rugsnatcher DEMO.otf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: 'Beth Ellen';
-              src: url("./fonts/Beth-Ellen-2.0.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: 'Jockey One';
-              src: url("./fonts/JockeyOne-Regular.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: 'Jacques Francois';
-              src: url("./fonts/JacquesFrancois-Regular.ttf");
               font-weight: 400;
             }
 
@@ -720,18 +734,6 @@ class MyDocument extends Document {
               src: url("./fonts/BurstMyBubble.ttf");
               font-weight: 400;
             }
-
-            @font-face {
-              font-family: 'Corben';
-              src: url("./fonts/Corben-Regular.ttf");
-              font-weight: 400;
-            }
-            
-            @font-face {
-              font-family: 'Corben';
-              src: url("./fonts/Corben-Bold.ttf");
-              font-weight: 700;
-            }
             
             @font-face {
               font-family: 'Carme';
@@ -743,12 +745,6 @@ class MyDocument extends Document {
               src: url("./fonts/neon2.ttf");
             }
             
-            @font-face {
-              font-family: 'Cinzel';
-              src: url("./fonts/Cinzel-Black.ttf");
-              font-weight: 900;
-            }
-
             @font-face {
               font-family: 'Decovar Alpha';
               src: url("./fonts/DecovarAlpha-VF.ttf");
@@ -787,64 +783,10 @@ class MyDocument extends Document {
               src: url("./fonts/Anton-Regular.ttf");
               font-weight: 400;
             }
-          
-            @font-face {
-              font-family: 'Antic Didone';
-              src: url("./fonts/AnticDidone-Regular.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: 'Monoton';
-              src: url("./fonts/Monoton-Regular.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: 'Chilanka';
-              src: url("./fonts/Chilanka-Regular.ttf");
-              font-weight: 400;
-            }
-          
-            @font-face {
-              font-family: 'Chivo';
-              src: url("./fonts/Chivo-Regular.ttf");
-              font-weight: 400;
-            }
 
             @font-face {
               font-family: 'Neon Vortex';
               src: url("./fonts/Neon Vortex.ttf");
-            }
-
-            @font-face {
-              font-family: 'Lexend Giga';
-              src: url("./fonts/LexendGiga-Regular.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: 'Bungee Inline';
-              src: url("./fonts/BungeeInline-Regular.ttf");
-              font-weight: 400;
-            }
-          
-            @font-face {
-              font-family: 'Bellota Text';
-              src: url("./fonts/BellotaText-Bold.ttf");
-              font-weight: 700;
-            }
-          
-            @font-face {
-              font-family: 'News Cycle';
-              src: url("./fonts/NewsCycle-Bold.ttf");
-              font-weight: 400;
-            }
-          
-            @font-face {
-              font-family: 'Rosarivo';
-              src: url("./fonts/Rosarivo-Regular.ttf");
-              font-weight: 400;
             }
           `,
             }}
