@@ -17,8 +17,8 @@ const Page7374 = () => {
         <br />
         <br />
         To pay homeage to the often overlooked lionhearts within the web3 community— the devs— we
-        are introducing Web3 Wizards; an ongoing series of on-chain NFT web3 dev characteristaions;
-        spotlighting new devs every issue.
+        are introducing Web3 Wizards; an ongoing series of on-chain NFT web3 dev characterisations;
+        spotlighting new devs every issue, all designed and minted in-house by DIGITALAX.
       </div>
       <div className={styles.text3}>Layer 2 Trailblazers.</div>
       <div className={styles.text4}>
@@ -40,7 +40,6 @@ const Page7374 = () => {
       <div className={styles.text11}>James.</div>
       <div className={styles.text12}>Project: DIGITALAX</div>
       <img src="./magazine/1/73_74/James (1) 1.png" className={styles.person4} />
-
       <div className={styles.rightText1}>MUST TRYS OF THE METAVERSE</div>
       <div className={styles.rightText2}>#DivingIntoCryptovoxels</div>
       <a

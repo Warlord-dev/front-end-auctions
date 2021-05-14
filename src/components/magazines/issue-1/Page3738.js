@@ -23,7 +23,7 @@ const Page3738 = () => {
       </p>
       <p className={styles.section2}>
         We sat down with Ravi Singh, a newcomer to digital fashion yet avid supporter of inspiring
-        traditional cultural inclusivity in the industry, and 3D desginer, Lorena Bello, to discuss
+        traditional cultural inclusivity in the industry, and 3D designer, Lorena Bello, to discuss
         their collaboration alongside DIGITALAX, on the world’s first Indian digital fashion
         collection.
       </p>
@@ -48,7 +48,7 @@ const Page3738 = () => {
       </p>
       <div className={styles.name1}>-Ravi Singh</div>
       <p className={styles.section5}>
-        The collection was inspired by Ravi, 3D modelled by Lorena and all scenes, animation and
+        The collection was inspired by Ravi, 3D modeled by Lorena and all scenes, animation and
         renders composed by DIGITALAX.
       </p>
       <p className={styles.section6}>
