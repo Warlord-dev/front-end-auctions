@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Router, { useRouter } from 'next/router'
 import WebViewer from '@containers/web-view'
 import MagazineViewer from '@containers/magazine-view'
@@ -7,32 +7,37 @@ import magazineIssues from '@constants/magazines'
 
 const MagazinePages = () => {
   const router = useRouter()
+  const [viewMethod, setViewMethod] = useState('magazineview')
   const { slug } = router.query;
+  const [currentPage, setCurrentPage] = useState(-1)
 
   const issueId = slug && slug.length > 0
-    ? slug[0] : magazineIssues[0].issueId
+  ? slug[0] : magazineIssues[0].issueId
 
-  const issueIndex = magazineIssues.findIndex(item => item.issueId === issueId)
-  if (issueIndex < 0) {
-    Router.push(`/magazines/${magazineIssues[0].issueId}`)
-    return <></>
-  }
+  useEffect(() => {
+    const issueIndex = magazineIssues.findIndex(item => item.issueId === issueId)
+    if (issueIndex < 0) {
+      Router.push(`/magazines/${magazineIssues[0].issueId}`)
+    }
 
-  const pageNumber = slug.length > 1 
-    ? slug[1] === 'hidden' 
-      ? magazineIssues[issueIndex].freePageCount + 1
-      : parseInt(slug[1])
-    : 0
-  const contentUnlocked = false // it needs to be updated with real data - Cameron
-  if (pageNumber > magazineIssues[issueIndex].freePageCount && !contentUnlocked) {
-    Router.push(`/magazines/${issueId}/${magazineIssues[issueIndex].freePageCount}`)
-    return <></>
-  }
+    const pageNumber = slug.length > 1 
+      ? slug[1] === 'hidden' 
+        ? magazineIssues[issueIndex].freePageCount + 1
+        : parseInt(slug[1])
+      : 0
 
-  const [viewMethod, setViewMethod] = useState('magazineview')
-  const [currentPage, setCurrentPage] = useState(pageNumber)
+    const contentUnlocked = false // it needs to be updated with real data - Cameron
+    if (pageNumber > magazineIssues[issueIndex].freePageCount && !contentUnlocked) {
+      console.log('redirecting... to : ', magazineIssues[issueIndex].freePageCount)
+      Router.push(`/magazines/${issueId}/${magazineIssues[issueIndex].freePageCount}`)
+    } else {
+      console.log('pageNumber: ', pageNumber)
+      setCurrentPage(pageNumber)
 
-  console.log(currentPage)
+    }
+
+    
+  }, [slug])
   
 
   const switchViewer = viewer => {
@@ -41,6 +46,10 @@ const MagazinePages = () => {
       return
     }
     setViewMethod(viewer)
+  }
+
+  if (currentPage < 0) {
+    return <></>
   }
   
   if (viewMethod === 'webview') {
