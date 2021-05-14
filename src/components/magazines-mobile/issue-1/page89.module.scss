@@ -1,0 +1,93 @@
+
+.wrapper {
+    position: relative;
+    background-image: url("../../../../public/magazine/1/images/89_back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1rem;
+    text-align: left;
+    
+    .header {
+        width: 278px!important;
+    }
+
+    .subHeader {
+        font-family: Antonio;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        padding: 1rem;
+        line-height: 150%;
+        /* identical to box height, or 30px */
+
+        text-align: left;
+
+        color: #FFFFFF;
+    }
+
+    .title1 {
+        text-align: center;
+
+        font-family: Anton;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 150%;
+        /* identical to box height, or 30px */
+
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    .text1 {
+        padding: 2rem;
+        box-sizing: border-box;
+
+        font-family: Antic Didone;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 150%;
+        white-space: normal;
+        /* or 28px */
+
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    .title2 {
+        text-align: center;
+
+        font-family: Anton;
+        white-space: normal;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 150%;
+        /* identical to box height, or 30px */
+
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    .text2 {
+        padding: 2rem;
+        box-sizing: border-box;
+
+        font-family: Antic Didone;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 150%;
+        white-space: normal;
+        /* or 28px */
+
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+}
