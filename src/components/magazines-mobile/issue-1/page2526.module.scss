@@ -1,0 +1,75 @@
+@import './styles.module.scss';
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  a {
+    position: absolute;
+    width: 231px;
+    height: 66px;
+    left: 0px;
+    top: 10px;
+
+    font-family: Gayathri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 150%;
+    /* or 15px */
+    color: #0044F3; 
+    border-bottom: 1px solid;
+    span {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: #0044F3;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
+    }
+  }
+}

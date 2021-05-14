@@ -1,0 +1,92 @@
+@import './styles.module.scss';
+
+.wrapper {
+  overflow: scroll;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+  .paintImage {
+    height: auto;
+    position: absolute;
+  }
+  
+  h1 {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+
+    font-family: Courier;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: normal;
+  }
+
+  .content {
+    position: absolute;
+    white-space: normal;
+    height: 1100px;
+    left: 10px;
+    top: 200px;
+
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120.53%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 768px;
+    .paintImage {
+      width: 768px;
+    }
+    .content {
+      width: 748px;
+      left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .wrapper {
+    width: 425px;
+    .paintImage {
+      width: 425px;
+    }
+    .content {
+      width: 405px;
+      left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .wrapper {
+    width: 375px;
+    .paintImage {
+      width: 375px;
+    }
+    .content {
+      width: 355px;
+      left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .wrapper {
+    width: 320px;
+    .paintImage {
+      width: 320px;
+    }
+    .content {
+      width: 300px;
+      left: 10px;
+    }
+  }
+}

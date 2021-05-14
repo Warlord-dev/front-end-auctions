@@ -6,7 +6,7 @@ import { getMonaPerEth, getChainId } from '@selectors/global.selectors';
 import PropTypes from 'prop-types';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
-import { closeBuynowNftSubscriptionModal, openNftSubscriptionReadyModal } from '@actions/modals.actions';
+import { closeBuynowNftSubscriptionModal, openESPAReadyModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
 import styles from './styles.module.scss';

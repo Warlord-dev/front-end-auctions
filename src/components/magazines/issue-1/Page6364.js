@@ -26,9 +26,12 @@ const Page6364 = () => {
         that wasn’t so boomer and here we are with web3.
         <br />
         <br />
-        {
-          'as for my music style, i’ve been all over the place - picked up a bunch of instruments as a kid but didn’t have anyone to play with so i thought i’d just learn enough to record for a band, found electronic music and realized i could do all that in the computer, <stuff about the process that no one cares about cause they only want the result and event> COVID happened - quit music for a bit and went to work as a software engineer, crypto go up, and now here somehow 🚀'
-        }
+        as for my music style, i’ve been all over the place - picked up a bunch of instruments as a
+        kid but didn’t have anyone to play with so i thought i’d just learn enough to record for a
+        band, found electronic music and realized i could do all that in the computer, stuff about
+        the process that no one cares about cause they only want the result and event COVID happened
+        - quit music for a bit and went to work as a software engineer, crypto go up, and now here
+        somehow 🚀
       </div>
       <div className={styles.leftText4}>
         I first found out about Bitcoin back 2013, mined maybe about ~10 on my shitty laptop on the

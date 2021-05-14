@@ -185,11 +185,139 @@
     line-height: 14px;
 
     color: #FFFFFF;
-
+    
+    }
+    
     a {
       color: #FFFFFF;
       text-decoration: underline;
     }
+
+    .defiGems {
+        position: absolute;
+        width: 599px;
+        height: 132px;
+        left: 15px;
+        top: 136px;
+
+        font-family: Empirez;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 120px;
+        line-height: 110%;
+        /* identical to box height, or 132px */
+    }
+
+    .diamond2 {
+        position: absolute;
+        width: 152px;
+        height: 152px;
+        left: 462px;
+        top: 16px;
+    }
+
+    .diamond4 {
+        position: absolute;
+        width: 346px;
+        height: 346px;
+        left: 579px;
+        top: 16px;
+    }
+
+    .diamond1 {
+        position: absolute;
+        width: 96px;
+        height: 96px;
+        left: 859px;
+        top: 0px;
+    }
+
+    .text {
+        position: absolute;
+        width: 564.71px;
+        height: 857.49px;
+        left: 161px;
+        top: 317.22px;
+        
+        // font-family: Think Thick;
+        font-style: normal;
+        font-weight: 100;
+        font-size: 13px;
+        line-height: 110%;
+        /* or 33px */
+        
+        
+        color: #FAD3F0;
+
+        .textTitle {
+            font-size: 30px;
+            font-family: Cool Chaos;
+        }
+
+        
+        transform: rotate(-5deg);
+    }
+    .twitter1 {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        left: 261px;
+        top: 321px;
+    }
+
+    .twitter2 {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        left: 336px;
+        top: 581px;
+    }
+
+    .twitter3 {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        left: 273px;
+        top: 840px;
+    }
+
+    .diamond3 {
+        position: absolute;
+        width: 443px;
+        height: 418px;
+        left: 355px;
+        top: 1057px;
+    }
+
+    .diamondHa {
+        position: absolute;
+        left: 596px;
+        top: 1387px;
+
+        font-family: Empirez;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 110%;
+        /* identical to box height, or 88px */
+    }
+
+    .rightText {
+        position: absolute;
+        width: 851px;
+        height: 116px;
+        left: 1069px;
+        top: 36px;
+
+        font-family: DIN Alternate;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 105px;
+        line-height: 110%;
+        /* identical to box height, or 116px */
+        text-shadow: -5px -5px 0 black, -5px -4px 0 black, -5px -3px 0 black, -5px -2px 0 black, -5px -1px 0 black, -5px 0px 0 black, -5px 1px 0 black, -5px 2px 0 black, -5px 3px 0 black, -5px 4px 0 black, -5px 5px 0 black, -4px -5px 0 black, -4px -4px 0 black, -4px -3px 0 black, -4px -2px 0 black, -4px -1px 0 black, -4px 0px 0 black, -4px 1px 0 black, -4px 2px 0 black, -4px 3px 0 black, -4px 4px 0 black, -4px 5px 0 black, -3px -5px 0 black, -3px -4px 0 black, -3px -3px 0 black, -3px -2px 0 black, -3px -1px 0 black, -3px 0px 0 black, -3px 1px 0 black, -3px 2px 0 black, -3px 3px 0 black, -3px 4px 0 black, -3px 5px 0 black, -2px -5px 0 black, -2px -4px 0 black, -2px -3px 0 black, -2px -2px 0 black, -2px -1px 0 black, -2px 0px 0 black, -2px 1px 0 black, -2px 2px 0 black, -2px 3px 0 black, -2px 4px 0 black, -2px 5px 0 black, -1px -5px 0 black, -1px -4px 0 black, -1px -3px 0 black, -1px -2px 0 black, -1px -1px 0 black, -1px 0px 0 black, -1px 1px 0 black, -1px 2px 0 black, -1px 3px 0 black, -1px 4px 0 black, -1px 5px 0 black, 0px -5px 0 black, 0px -4px 0 black, 0px -3px 0 black, 0px -2px 0 black, 0px -1px 0 black, 0px 0px 0 black, 0px 1px 0 black, 0px 2px 0 black, 0px 3px 0 black, 0px 4px 0 black, 0px 5px 0 black, 1px -5px 0 black, 1px -4px 0 black, 1px -3px 0 black, 1px -2px 0 black, 1px -1px 0 black, 1px 0px 0 black, 1px 1px 0 black, 1px 2px 0 black, 1px 3px 0 black, 1px 4px 0 black, 1px 5px 0 black, 2px -5px 0 black, 2px -4px 0 black, 2px -3px 0 black, 2px -2px 0 black, 2px -1px 0 black, 2px 0px 0 black, 2px 1px 0 black, 2px 2px 0 black, 2px 3px 0 black, 2px 4px 0 black, 2px 5px 0 black, 3px -5px 0 black, 3px -4px 0 black, 3px -3px 0 black, 3px -2px 0 black, 3px -1px 0 black, 3px 0px 0 black, 3px 1px 0 black, 3px 2px 0 black, 3px 3px 0 black, 3px 4px 0 black, 3px 5px 0 black, 4px -5px 0 black, 4px -4px 0 black, 4px -3px 0 black, 4px -2px 0 black, 4px -1px 0 black, 4px 0px 0 black, 4px 1px 0 black, 4px 2px 0 black, 4px 3px 0 black, 4px 4px 0 black, 4px 5px 0 black, 5px -5px 0 black, 5px -4px 0 black, 5px -3px 0 black, 5px -2px 0 black, 5px -1px 0 black, 5px 0px 0 black, 5px 1px 0 black, 5px 2px 0 black, 5px 3px 0 black, 5px 4px 0 black, 5px 5px 0 black;
+
+        color: #FFFFFF;
   }
 
   .rightText2 {

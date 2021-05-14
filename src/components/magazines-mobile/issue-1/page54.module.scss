@@ -1,0 +1,82 @@
+@import './styles.module.scss';
+
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    height: 100vh;
+    min-height: 580px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .innerWrapper {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      width: 220px;
+      text-align: left;
+      h1 {
+        font-family: Asdonuts;
+        font-style: normal;
+        font-weight: normal;
+        white-space: normal;
+        font-size: 30px;
+        line-height: 110%;
+        color: #CA8886;
+        margin-bottom: 20px;
+      }
+      p {
+        font-family: Olivia & Kevin;
+        font-style: normal;
+        font-weight: normal;
+        white-space: normal;
+        font-size: 9px;
+        line-height: 110%;
+        color: #D79B99;
+      }
+      
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
+    }
+  }
+}

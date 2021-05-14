@@ -158,12 +158,13 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 150%;
+    /* or 30px */
+
     text-align: center;
 
     span {
       font-size: 23px;
-      line-height: 34.5px;
     }
   }
 }

@@ -1,0 +1,42 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    background: #E5E5E5;
+
+    .text1 {
+        position: absolute;
+        width: 836px;
+        height: 100px;
+        left: 71px;
+        top: 398px;
+
+        font-family: EB Garamond;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 100px;
+        line-height: 100%;
+        /* identical to box height, or 100px */
+
+
+        color: #000000;
+    }
+
+    .text2 {
+        position: absolute;
+        width: 836px;
+        height: 100px;
+        left: 1013px;
+        top: 398px;
+
+        font-family: EB Garamond;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 100px;
+        line-height: 100%;
+        /* identical to box height, or 100px */
+
+
+        color: #000000;
+    }
+}
