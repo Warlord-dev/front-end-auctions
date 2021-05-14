@@ -822,6 +822,30 @@ class MyDocument extends Document {
               src: url("./fonts/LexendGiga-Regular.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: 'Bungee Inline';
+              src: url("./fonts/BungeeInline-Regular.ttf");
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Bellota Text';
+              src: url("./fonts/BellotaText-Bold.ttf");
+              font-weight: 700;
+            }
+          
+            @font-face {
+              font-family: 'News Cycle';
+              src: url("./fonts/NewsCycle-Bold.ttf");
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Rosarivo';
+              src: url("./fonts/Rosarivo-Regular.ttf");
+              font-weight: 400;
+            }
           `,
             }}
           />
