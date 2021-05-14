@@ -1,7 +1,10 @@
-import React from 'react';
-import styles from './page8788.module.scss';
+import React from 'react'
+import UnlockPage from '../common/UnlockPage'
+import styles from './page8788.module.scss'
+
 
 const Page8788 = () => {
+  const contentUnlocked = false // it should be modified with real data - Cameron
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/87_88/pINT 2.png" className={styles.line} />
@@ -41,6 +44,7 @@ const Page8788 = () => {
         To be continued.
       </div>
       <div className={styles.bottomText}>- Emma-Jane MacKinnon-Lee</div>
+      {!contentUnlocked && <UnlockPage />}
     </div>
   );
 };

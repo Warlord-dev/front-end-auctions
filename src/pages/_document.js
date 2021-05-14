@@ -814,7 +814,7 @@ class MyDocument extends Document {
 
             @font-face {
               font-family: 'Lexend Giga';
-              src: url("./fonts/LexendGiga-Regular");
+              src: url("./fonts/LexendGiga-Regular.ttf");
               font-weight: 400;
             }
           `,
