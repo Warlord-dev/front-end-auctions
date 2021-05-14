@@ -18,8 +18,10 @@ import wsApi from '@services/api/ws.service';
 import { useSubscription } from '@hooks/subscription.hooks';
 import { useAPY } from '@hooks/apy.hooks';
 import GeneralInformation from './general-information';
+import TextContent from '@containers/page-products-list/text-content';
 import CardList from './card-list';
 import CardListDigi from './card-list-digi';
+import styles from './styles.module.scss';
 
 const PageProductsList = ({ collectionId }) => {
   const dispatch = useDispatch();
@@ -165,12 +167,9 @@ const PageProductsList = ({ collectionId }) => {
 
   return (
     <>
-      <GeneralInformation
-        title="All Bids"
-        list={list}
-        timestamp={minTimestampAutcionTime}
-        history={monthResultedAuctions}
-      />
+      <div className={styles.textContent}>
+        <TextContent/>
+      </div>
       {collectionId === '1' ? (
         <CardList
           auctions={currentAuctions}
