@@ -28,7 +28,7 @@ const ModalNftSubscriptionAReady = ({ className, title, buttonText }) => {
           <p className={styles.description}>
             DIGIFIZZY Bundles Are Highlighting Well Known and Unseen Creators Across the Metaverse. These are the Gatemakers.
           </p>
-          <Link href={`/paywall/hidden_content_1/1`}>
+          <Link href={`/magazines/1/hidden`}>
             <Button background="black" onClick={() => handleClose()} className={styles.button}>
               {buttonText}
             </Button>
