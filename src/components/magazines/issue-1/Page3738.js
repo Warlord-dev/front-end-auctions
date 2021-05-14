@@ -13,13 +13,12 @@ const Page3738 = () => {
         series of famous Indian poems written in 600BC. And, even Alexander the Great is recorded
         wearing cotton clothes after invading India with his troops. The nation has contributed a
         whole threadline of rich history to fashion globally, with about 1/3 of India’s textile
-        production exported orientated, and the US standing as the biggest importer of Indian
-        textile.
+        production export orientated, and the US standing as the biggest importer of Indian textile.
         <br />
         <br />
         Thus, it only seems fated that the region is now embracing the new world of fashiontech,
         which has been propelled over the past few months with the rise in relevance of NFTs and
-        their harmonous affinity for finally bridging value and authenticity to digital fashion.
+        their harmonious affinity for finally bridging value and authenticity to digital fashion.
       </p>
       <p className={styles.section2}>
         We sat down with Ravi Singh, a newcomer to digital fashion yet avid supporter of inspiring
