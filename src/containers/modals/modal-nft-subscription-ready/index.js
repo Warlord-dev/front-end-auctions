@@ -6,12 +6,14 @@ import PropTypes from 'prop-types';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
 import { closeNftSubscriptionReadyModal } from '@actions/modals.actions';
+import global from '@actions/global.actions';
 import styles from './styles.module.scss';
 import Link from 'next/link';
 
 const ModalNftSubscriptionAReady = ({ className, title, buttonText }) => {
   const dispatch = useDispatch();
   const handleClose = () => {
+    dispatch(global.setContentUnlocked(true));
     dispatch(closeNftSubscriptionReadyModal());
   };
 
@@ -26,7 +28,8 @@ const ModalNftSubscriptionAReady = ({ className, title, buttonText }) => {
         >
           <p className={styles.subTitle}>Content Unlocked!</p>
           <p className={styles.description}>
-            DIGIFIZZY Bundles Are Highlighting Well Known and Unseen Creators Across the Metaverse. These are the Gatemakers.
+            DIGIFIZZY Bundles Are Highlighting Well Known and Unseen Creators Across the Metaverse.
+            These are the Gatemakers.
           </p>
           <Link href={`/magazines/1/hidden`}>
             <Button background="black" onClick={() => handleClose()} className={styles.button}>
