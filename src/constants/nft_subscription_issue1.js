@@ -27,7 +27,8 @@ const details = [
         '/images/nft/semi/Angel-with-rose.jpg',
         '/images/nft/semi/Project Name (1).mp4',
         '/images/nft/semi/Untitled (4).mp4',
-        '/images/nft/semi/Untitled (27).mp4'
+        '/images/nft/semi/Untitled (27).mp4',
+        '/images/nft/semi/1.gif'
       ],
       body: `Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides! Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!
 
@@ -50,7 +51,7 @@ const details = [
         '/images/nft/exc/Untitled (15).mp4',
         '/images/nft/exc/VICtor.png',
         '/images/nft/exc/3.gif',
-        '/images/nft/exc/Untitled (26)'
+        '/images/nft/exc/Untitled (26).mp4'
       ],
       body: `Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides! Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!
 
