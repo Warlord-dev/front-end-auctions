@@ -5,6 +5,8 @@ const Page8788 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/images/93_back.jpg" className={styles.backImage} />
+      <img src="./magazine/1/images/last-page.jpg" className={styles.backImage2} />
+      <div className={[styles.blackBack, styles.backImage2].join(' ')}></div>
       <div className={styles.textBack1}></div>
       <div className={styles.textBack2}></div>
       <p className={styles.text1}>
@@ -23,6 +25,15 @@ const Page8788 = () => {
         Have faith in yourself. Everything is a leap of faith. It takes profound faith to painstakingly create a piece of artwork, hoping that a collector out there might notice. It takes faith to believe in yourself. But before you go all Pollyanna with the unbridled positivity, it's critical to note that the latter can be a two-edged sword. Positivity and motivation are finite resources — it's the discipline of honing your art, capability, and knowledge that will see you through the low times of being a creator, not to mention the right marketing and a positive yet realistic mental attitude toward your craft and industry. A healthy dose of realism and pragmatism is necessary to deal with the challenges of working in such a frenetic industry. If it were all rainbows and butterflies, then everyone would be doing it.
         <br /><br />
         The NFT industry is always in motion — and you can't be neutral on a moving train. You're right where you need to be. Rise.
+      </p>
+      <p className={styles.text3}>
+        Your hidden content doesn’t stop here! 
+        <br /><br />
+        It will be dynamically updated over the month with airdrops from new artists and content creators! 
+        <br /><br />
+        All holders of our unlockable NFT content will receive access to this additional dynamic hidden content and NFT airdrops! 
+        <br /><br />
+        More updates, insights, creative works being sent your way through the realms! 
       </p>
     </div>
   );

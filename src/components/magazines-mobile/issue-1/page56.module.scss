@@ -4,38 +4,40 @@
   height: 100vh;
   overflow: scroll;
   background-color: white;
-  color: black;
+  color: white;
   display: flex;
   position: relative;
 
-  img {
+  .backImage {
     position: absolute;
+    height: 720px;
     left: 0px;
     top: 0px;
   }
 
-  a {
-    position: absolute;
-    width: 231px;
-    height: 66px;
-    left: 0px;
-    top: 10px;
-
-    font-family: Gayathri;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 150%;
-    /* or 15px */
-    color: #0044F3; 
-    border-bottom: 1px solid;
-    span {
-      text-decoration: underline;
-    }
-
-    &:hover {
-      color: #0044F3;
-    }
+  .innerWrapper {
+      position: absolute;
+      right: 20px;
+      top: 30px;
+      width: 280px;
+      text-align: left;
+      div {
+        width: 180px;
+        margin-left: auto;
+        margin-bottom: 50px;
+        p {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            white-space: normal;
+            font-size: 12px;
+            line-height: 110%;
+            margin-bottom: 20px;
+        }
+      }
+      img {
+          width: 180px;
+      }
   }
 }
 

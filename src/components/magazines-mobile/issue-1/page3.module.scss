@@ -1,150 +1,92 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
-  height: 100vh;
   overflow: scroll;
+  height: 100vh;
   background-color: white;
   color: black;
   display: flex;
   position: relative;
-  white-space: normal;
-  text-align: left;
-
-  .innerWrapper {
+  .paintImage {
+    height: auto;
     position: absolute;
-    top: 60px;
-    left: 20px;
-    width: 260px;
-    h1 {
-        font-family: Heaven Wanders DEMO;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 60px;
-        line-height: 100%;
-        /* or 200px */
-        text-align: center;
-      }
-    
-      h2 {
-        font-family: Habbo;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 40px;
-        line-height: 100%;
-        margin-bottom: 40px;
-        /* or 40px */
-        text-align: center;
-      }
-    
-      h3 {
-        font-family: Comics Tricks;
-        font-style: normal;
-        font-weight: normal;
-        width: 200px;
-        font-size: 30px;
-        line-height: 100%;
-        /* or 45px */
-    
-        text-align: right;
-      }
-    
-      h4 {
-        font-family: THE AMAZING SPIDER-MAN;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 100px;
-        line-height: 100%;
-        text-align: center;
-        color: #515151;
-      }
-    
-      h5 {    
-        font-family: Inter;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 150%;
-    
-        text-align: center;
-      }
-    
-      .ellipseImage {
-        position: absolute;
-        width: 373px;
-        height: 373px;
-        left: 43px;
-        top: 10px;
-      }
-    
-    
-      .ellipseImage2 {
-        position: absolute;
-        width: 855px;
-        height: 1355px;
-        left: 1065px;
-        top: 206px;
-      }
-      
-      .borderImage {
-        position: absolute;    
-        width: 116px;
-        height: 1497px;
-        left: 903px;
-        top: 0px;
-      }
-    
-      p {
-        font-family: B612;
-        font-size: 17px;
-        line-height: 150%;
-        text-align: center;
-        transform: rotate(-3deg);
-        margin-bottom: 30px;
-      }
   }
   
-  .backImage {
+  h1 {
     position: absolute;
-    width: 100%;
-    height: 3600px;
-    left: 0px;
-    top: 0px;
+    left: 10px;
+    top: 80px;
+
+    font-family: Courier;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: normal;
+  }
+
+  .content {
+    position: absolute;
+    white-space: normal;
+    height: 1100px;
+    left: 10px;
+    top: 200px;
+
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120.53%;
   }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .wrapper {
     width: 768px;
-    .backImage {
+    .paintImage {
       width: 768px;
     }
+    .content {
+      width: 748px;
+      left: 10px;
+    }
   }
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 425px) {
   .wrapper {
     width: 425px;
-    .backImage {
+    .paintImage {
       width: 425px;
     }
-  }
-}
-
-@media only screen and (max-width: 375px){
-  .wrapper {
-    width: 375px;
-    .backImage {
-      width: 375px;
+    .content {
+      width: 405px;
+      left: 10px;
     }
   }
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 375px) {
+  .wrapper {
+    width: 375px;
+    .paintImage {
+      width: 375px;
+    }
+    .content {
+      width: 355px;
+      left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
   .wrapper {
     width: 320px;
-    .backImage {
+    .paintImage {
       width: 320px;
+    }
+    .content {
+      width: 300px;
+      left: 10px;
     }
   }
 }

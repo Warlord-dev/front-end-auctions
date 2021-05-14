@@ -1,0 +1,96 @@
+@import './styles.module.scss';
+
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    height: 2400px;
+    object-fit: cover;
+    object-position: left;
+    left: 0px;
+    top: 0px;
+  }
+
+  .innerWrapper {
+    position: absolute;
+    top: 100px;
+    width: 260px;
+    left: 30px;
+    font-style: normal;
+    font-weight: normal;
+    white-space: normal;
+    text-align: left;
+    img {
+        margin-bottom: 40px;
+    }
+    p {
+        font-family: 'DIN Alternate';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 110%;
+        margin-bottom: 30px;
+        text-decoration-line: underline;
+    }
+    .section1 {
+        transform: rotate(5deg);
+        width: 220px;
+        margin: 0 auto;
+        h4 {
+            font-family: 'DIN Alternate';
+            font-style: normal;
+            font-size: 15px;
+            line-height: 110%;
+            color: #6900BC;
+        }
+        p {
+            font-family: 'DIN Alternate';
+            font-style: normal;
+            font-size: 15px;
+            line-height: 110%;
+        }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
+    }
+  }
+}

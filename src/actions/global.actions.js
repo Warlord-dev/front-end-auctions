@@ -148,6 +148,12 @@ class GlobalActions extends BaseActions {
       dispatch(this.setValue('chainId', chainId));
     };
   }
+
+  setContentUnlocked(value) {
+    return async (dispatch) => {
+      dispatch(this.setValue('contentUnlocked', value));
+    }
+  }
 }
 
 export default new GlobalActions(globalReducer);

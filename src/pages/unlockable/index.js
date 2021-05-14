@@ -3,40 +3,14 @@ import BottomLine from '@components/bottom-line';
 import styles from './styles.module.scss';
 import { useRouter } from 'next/router';
 import NftBanners from '@components/nft-banners';
-import api from '@services/api/api.service';
-import { useSelector } from 'react-redux';
-import { getAccount } from '@selectors/user.selectors';
 import details from '@constants/nft_subscription_issue1';
 
 const Unlockable = () => {
   const router = useRouter();
-  const account = useSelector(getAccount);
-  const [collectionIds, setCollectionIds] = useState([]);
 
   const onUnlockableDetails = (id) => {
     router.push(`/purchase/${id}`);
   };
-
-  useEffect(() => {
-    const fetchSubscriptionStatus = async () => {
-      const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
-      const ids = [];
-      for (let i = 0; i < digitalaxSubscriptionCollectors.length; i += 1) {
-        for (let j = 0; j < digitalaxSubscriptionCollectors[i].parentsOwned.length; j += 1) {
-          const {
-            digitalaxSubscriptionPurchaseHistory,
-          } = await api.getDigitalaxSubscriptionPurchase(
-            digitalaxSubscriptionCollectors[i].parentsOwned[j].id
-          );
-          if (!ids.includes(digitalaxSubscriptionPurchaseHistory.bundleId))
-            ids.push(digitalaxSubscriptionPurchaseHistory.bundleId);
-        }
-      }
-      setCollectionIds(ids);
-    };
-
-    fetchSubscriptionStatus();
-  }, []);
 
   const onUnlock = (id) => {
     onUnlockableDetails(id);

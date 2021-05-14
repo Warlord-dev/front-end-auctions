@@ -26,7 +26,6 @@ const ModalNftSubscriptionAReady = ({ className, title, buttonText }) => {
         >
           <p className={styles.subTitle}>Content Unlocked!</p>
           <p className={styles.description}>
-            Burn Your 721 to Access the 1155 Treasures Within!
             DIGIFIZZY Bundles Are Highlighting Well Known and Unseen Creators Across the Metaverse. These are the Gatemakers.
           </p>
           <Link href={`/paywall/hidden_content_1/1`}>
@@ -50,7 +49,7 @@ ModalNftSubscriptionAReady.propTypes = {
 
 ModalNftSubscriptionAReady.defaultProps = {
   className: styles.espamodal,
-  title: 'Are you ready to try it on?',
+  title: 'Burn Your 721 to Access the 1155 Treasures Within!',
   buttonText: 'See Hidden Content',
 };
 

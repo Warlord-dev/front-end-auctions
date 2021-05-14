@@ -93,7 +93,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           Switch to Eth Mainnet
         </a> */}
       </div>
-      <div className={cn(styles.rightBox, pathname.includes('purchase') || pathname.includes('contact')?styles.blackWrapper:styles.whiteWrapper)}>
+      <div className={cn(styles.rightBox, pathname.includes('purchase') || pathname.includes('contact') || pathname.includes('profile')?styles.blackWrapper:styles.whiteWrapper)}>
         <div className={cn(styles.links, isCollapse?styles.expandedMenu:'')}>
           {/* <Link href="/">
           <a className={styles.link}>Auctions</a>

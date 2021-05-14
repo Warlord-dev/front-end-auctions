@@ -4,7 +4,7 @@ import CoverPage from '@components/magazines-mobile/issue-1/CoverPage'
 import Page12 from '@components/magazines-mobile/issue-1/Page12'
 import Page3 from '@components/magazines-mobile/issue-1/Page3'
 import Page4 from '@components/magazines-mobile/issue-1/Page4'
-import Page56 from '@components/magazines-mobile/issue-1/Page56'
+import Page5 from '@components/magazines-mobile/issue-1/Page5'
 import Page78 from '@components/magazines-mobile/issue-1/Page78'
 import Page78Part2 from '@components/magazines-mobile/issue-1/Page78-part2'
 import Page910 from '@components/magazines-mobile/issue-1/Page910'
@@ -33,6 +33,26 @@ import Page35 from '@components/magazines-mobile/issue-1/Page35'
 import Page36 from '@components/magazines-mobile/issue-1/Page36'
 import Page37 from '@components/magazines-mobile/issue-1/Page37'
 import Page38 from '@components/magazines-mobile/issue-1/Page38'
+import Page39 from '@components/magazines-mobile/issue-1/Page39'
+import Page40 from '@components/magazines-mobile/issue-1/Page40'
+import Page41 from '@components/magazines-mobile/issue-1/Page41'
+import Page43 from '@components/magazines-mobile/issue-1/Page43'
+import Page44 from '@components/magazines-mobile/issue-1/Page44'
+import Page45 from '@components/magazines-mobile/issue-1/Page45'
+import Page46 from '@components/magazines-mobile/issue-1/Page46'
+import Page47 from '@components/magazines-mobile/issue-1/Page47'
+import Page48 from '@components/magazines-mobile/issue-1/Page48'
+import Page49 from '@components/magazines-mobile/issue-1/Page49'
+import Page50 from '@components/magazines-mobile/issue-1/Page50'
+import Page51 from '@components/magazines-mobile/issue-1/Page51'
+import Page52 from '@components/magazines-mobile/issue-1/Page52'
+import Page53 from '@components/magazines-mobile/issue-1/Page53'
+import Page54 from '@components/magazines-mobile/issue-1/Page54'
+import Page55 from '@components/magazines-mobile/issue-1/Page55'
+import Page56 from '@components/magazines-mobile/issue-1/Page56'
+import Page57 from '@components/magazines-mobile/issue-1/Page57'
+import Page58 from '@components/magazines-mobile/issue-1/Page58'
+import Page59 from '@components/magazines-mobile/issue-1/Page59'
 
 import MagazinePageWrapper from '@components/magazines-mobile/common/MagazinePageWrapper'
 import ViewerSwitch from '@components/magazines-mobile/common/ViewerSwitch'
@@ -57,7 +77,7 @@ const MagazineViewer = props => {
             <MagazinePageWrapper><Page12 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page3 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page4 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page56 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page5 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page78 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page78Part2 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page910 /></MagazinePageWrapper>
@@ -86,6 +106,26 @@ const MagazineViewer = props => {
             <MagazinePageWrapper><Page36 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page37 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page38 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page39 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page40 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page41 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page43 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page44 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page45 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page46 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page47 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page48 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page49 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page50 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page51 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page52 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page53 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page54 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page55 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page56 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page57 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page58 /></MagazinePageWrapper>
+            <MagazinePageWrapper><Page59 /></MagazinePageWrapper>
 
           </SwipePage>
         </div>

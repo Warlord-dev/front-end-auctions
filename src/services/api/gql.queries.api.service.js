@@ -183,10 +183,12 @@ export const getDigitalaxSubscriptionCollectorSimple = gql`
 `;
 
 export const getDigitalaxSubscriptionPurchaseHistory = gql`
-query digitalaxSubscriptionPurchaseHistory($tokenId: ID!) {
-  digitalaxSubscriptionPurchaseHistory(id: $tokenId){
-    id
-    bundleId
+  query digitalaxSubscriptionPurchaseHistory($tokenId: ID!) {
+    digitalaxSubscriptionPurchaseHistory(id: $tokenId) {
+      id
+      bundleId
+      timestamp
+    }
   }
 }
 `;

@@ -12,6 +12,18 @@
     top: 0px;
   }
 
+  .backImage2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .blackBack {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
   .textBack1 {
     position: absolute;
     width: 816px;
@@ -58,6 +70,17 @@
       height: 908px;
       left: 148px;
       top: 497px;
+    }
+
+    &.text3 {
+      width: 539px;
+      height: 336px;
+      top: 228px;
+      left: 1178px;
+
+      font-family: 'Lexend Giga';
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 

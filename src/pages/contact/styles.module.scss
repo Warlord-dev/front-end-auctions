@@ -1,32 +1,49 @@
+@import "../../assets/scss/base/responsive.scss";
+
 .wrapper {
   background: url("/images/hidden_content_background.png");
   background-size: cover;
   
   .bodyWrapper {
-
     width: 100%;
-    padding: 64px;
-    padding-top: 175px;
+    padding: 30px;
+    padding-top: 100px;
+
+    @include media-md {
+      padding: 64px;
+      padding-top: 175px;
+    }
   
     .panel {
       background: #F7F7F7;
-      // height: 1145px;
       position: relative;
-      margin-bottom: 350px;
       text-align: center;
-      padding: 75px;
+      padding: 2rem;
+      
+      @include media-md {
+        padding: 75px;
+        margin-bottom: 350px;
+      }
   
       .mediumTitle {
         font: 'Inner';
         font-weight: 900;
-        font-size: 25px;
+        font-size: 15px;
         margin-bottom: 1rem;
+
+        @include media-md {
+          font-size: 25px;
+        }
       }
   
       .largeTitle {
         font: 'Inner';
         font-weight: 900;
-        font-size: 40px;
+        font-size: 25px;
+
+        @include media-md {
+          font-size: 40px;
+        }
       }
   
       .smallTitle {

@@ -55,8 +55,8 @@
   }
 
   img {
-    width: 60px;
-    height: 60px;
+    width: 60px !important;
+    height: 60px !important;
   }
 
   .section {
@@ -77,22 +77,22 @@
   }
 
   .fullImage {
-    width: 80px;
-    height: auto;
+    width: 80px !important;
+    height: auto !important;
   }
 
   .footerImage {
     position: relative;
     img {
       position: absolute;
-      bottom: -95px;
+      bottom: -108px;
       width: 160px;
     }
   }
 
   .imageLarge {
-    width: 80px;
-    height: 80px;
+    width: 80px !important;
+    height: 80px !important;
   }
 
   h2 {

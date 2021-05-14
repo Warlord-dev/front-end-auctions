@@ -26,8 +26,12 @@ const BuyNowNftSubscription = ({ className, title, buttonText1, buttonText2 }) =
 
   const handleClose = () => {
     dispatch(closeBuynowNftSubscriptionModal());
-    dispatch(openESPAReadyModal());
   };
+  
+  const handleCloseSuccess = () => {
+    handleClose();
+    dispatch(openNftSubscriptionReadyModal());
+  }
 
   const handleClick = (mode) => {
     setShowError(null);
@@ -40,7 +44,7 @@ const BuyNowNftSubscription = ({ className, title, buttonText1, buttonText2 }) =
             setApproved(true);
             setIsDisabled(false);
           } else {
-            handleClose();
+            handleCloseSuccess();
           }
         })
         .catch((e) => {

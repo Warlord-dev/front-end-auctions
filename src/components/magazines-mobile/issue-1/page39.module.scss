@@ -1,0 +1,212 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .innerWrapper {
+    position: absolute;
+    height: 2400px;
+    background-image: url('/magazine/1/images/mobile/page39-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    top: 0;
+    img {
+        width: 100%;
+        margin-bottom: 26px;
+    }
+    .section1 {
+        margin-top: 37px;
+        width: 300px;
+        margin-left: 10px;
+        h1 {
+            font-family: Minecrafter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 60px;
+            line-height: 110%;
+        }
+
+        h2 {
+            margin-top: -26px;
+            margin-left: -80px;
+            font-family: ZCOOL KuaiLe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            line-height: 110%;
+            text-align: center;
+            transform: rotate(-20deg);
+            margin-bottom: 80px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-family: Mad Galaxy Demo;
+            font-style: normal;
+            font-weight: normal;
+            width: 270px;
+            margin-left: auto;
+            font-size: 15px;
+            line-height: 110%;
+            text-align: right;
+        }
+    }
+    .section2 {
+        position: relative;
+        width: 300px;
+        margin-left: 10px;
+        .arrowTop {
+            position: absolute;
+            top: -142px;
+            width: 200px;
+        }
+        .arrowBottom {
+            position: absolute;
+            top: 160px;
+            left: -20px;
+            width: 200px;
+        }
+        h1 {
+            font-family: ZCOOL KuaiLe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            width: 200px;
+            margin-top: 100px;
+            margin-left: auto;
+            line-height: 110%;
+            text-align: center;
+        }
+        h3 {
+            font-family: Mad Galaxy Demo;
+            font-style: normal;
+            font-weight: normal;
+            width: 148px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            font-size: 15px;
+            line-height: 110%;
+            text-align: right;
+        }
+
+        h4 {
+            font-family: Finger Paint;
+            font-style: normal;
+            font-weight: normal;
+            width: 194px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 110%;
+            text-align: center;
+        }
+
+        h5 {
+            font-family: Finger Paint;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 110%;
+            text-align: center;
+
+            color: #FF1818;
+        }
+    }
+    .section3 {
+        position: relative;
+        margin-top: 30px;
+        img {
+            object-fit: cover;
+            height: 190px;
+            z-index: 10;
+        }
+        img:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: -150px;
+        }
+        img:nth-child(2) {
+            position: absolute;
+            top: 0;
+            right: -180px;
+        }
+    }
+    .section4 {
+        margin-top: 280px;
+        position: relative;
+        img {
+            object-fit: cover;
+            height: 190px;
+            z-index: 10;
+        }
+        img:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: -150px;
+        }
+        img:nth-child(2) {
+            position: absolute;
+            top: 0;
+            right: -180px;
+        }
+    }
+    .section5 {
+        margin-top: 560px;
+        h1 {
+            font-family: Minecrafter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            line-height: 110%;
+            color: #0904FF;
+        }
+        h2 {
+            font-family: Minecrafter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 100px;
+            line-height: 100%;
+            color: #2F1276;
+        }
+        p {
+            font-family: B612 Mono;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 120.53%;
+            text-align: right;
+        }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+  }
+}
