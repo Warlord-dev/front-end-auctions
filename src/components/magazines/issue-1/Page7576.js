@@ -30,7 +30,10 @@ const Page7576 = () => {
       <img src="./magazine/1/75_76/Screen Shot 2021-05-12 at 3.14 1.png" className={styles.img4} />
       <img src="./magazine/1/75_76/Screen Shot 2021-05-12 at 12.08 1.png" className={styles.img5} />
       <div className={styles.text6}>HYPERREAALIYAH FIRST DROP.</div>
-
+      <img src="./magazine/1/75_76/Screen Shot 2021-05-13 at 5.46.png" className={styles.img11} />
+      <img src="./magazine/1/75_76/Screen Shot 2021-05-13 at 5.46 (2).png" className={styles.img12} />
+      <img src="./magazine/1/75_76/Screen Shot 2021-05-13 at 5.46 (1).png" className={styles.img13} />
+      
       <div className={styles.text7}>Tenshi girl cards.</div>
       <img src="./magazine/1/75_76/Group 1166.png" className={styles.img6} />
       <div className={styles.text8}>ESPA MINECRAFT SKINS.</div>

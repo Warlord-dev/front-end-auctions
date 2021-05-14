@@ -1,10 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import UnlockPage from '../common/UnlockPage'
 import styles from './page8788.module.scss'
 
 
 const Page8788 = () => {
-  const contentUnlocked = false // it should be modified with real data - Cameron
+  const contentUnlocked = useSelector(state => state.global.toJS());
+
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/87_88/pINT 2.png" className={styles.line} />
