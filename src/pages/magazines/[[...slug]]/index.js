@@ -5,18 +5,13 @@ import WebViewer from '@containers/web-view'
 import MagazineViewer from '@containers/magazine-view'
 import MapViewer from '@containers/map-view'
 import magazineIssues from '@constants/magazines'
-import api from '@services/api/api.service';
-import { getAccount } from '@selectors/user.selectors'
-import globalActions from '@actions/global.actions';
 
 const MagazinePages = () => {
   const router = useRouter()
-  const dispatch = useDispatch();
   const [viewMethod, setViewMethod] = useState('magazineview')
   const { slug } = router.query;
   const [currentPage, setCurrentPage] = useState(-1)
-  const account = useSelector(getAccount);
-  const contentUnlocked = useSelector(state => state.global.toJS());
+  const { contentUnlocked } = useSelector(state => state.global.toJS());
 
   const issueId = slug && slug.length > 0
   ? slug[0] : magazineIssues[0].issueId
@@ -44,19 +39,6 @@ const MagazinePages = () => {
 
     }
   }, [slug])
-
-  
-  useEffect(() => {
-    const fetchDigitalaxSubscriptionCollectors = async () => {
-      const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
-      if (digitalaxSubscriptionCollectors[0] && digitalaxSubscriptionCollectors[0].parentsOwned.length) {
-        dispatch(globalActions.setContentUnlocked(true));
-      }
-    }
-
-    fetchDigitalaxSubscriptionCollectors();
-  }, []);
-  
 
   const switchViewer = viewer => {
     if (viewer === 'exit') {
