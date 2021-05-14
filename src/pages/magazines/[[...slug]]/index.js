@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Router, { useRouter } from 'next/router'
 import WebViewer from '@containers/web-view'
 import MagazineViewer from '@containers/magazine-view'
@@ -7,14 +7,16 @@ import MapViewer from '@containers/map-view'
 import magazineIssues from '@constants/magazines'
 import api from '@services/api/api.service';
 import { getAccount } from '@selectors/user.selectors'
+import globalActions from '@actions/global.actions';
 
 const MagazinePages = () => {
   const router = useRouter()
+  const dispatch = useDispatch();
   const [viewMethod, setViewMethod] = useState('magazineview')
   const { slug } = router.query;
   const [currentPage, setCurrentPage] = useState(-1)
   const account = useSelector(getAccount);
-  const [contentUnlocked, setContentUnlocked] = useState(false);
+  const contentUnlocked = useSelector(state => state.global.toJS());
 
   const issueId = slug && slug.length > 0
   ? slug[0] : magazineIssues[0].issueId
@@ -32,7 +34,6 @@ const MagazinePages = () => {
         : parseInt(slug[1])
       : 0
 
-    const contentUnlocked = false // it needs to be updated with real data - Cameron
     if (pageNumber > magazineIssues[issueIndex].freePageCount && !contentUnlocked) {
       console.log('redirecting... to : ', magazineIssues[issueIndex].freePageCount)
       Router.push(`/magazines/${issueId}/${magazineIssues[issueIndex].freePageCount}`)
@@ -42,8 +43,6 @@ const MagazinePages = () => {
       setCurrentPage(pageNumber)
 
     }
-
-    
   }, [slug])
 
   
@@ -51,7 +50,7 @@ const MagazinePages = () => {
     const fetchDigitalaxSubscriptionCollectors = async () => {
       const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
       if (digitalaxSubscriptionCollectors[0] && digitalaxSubscriptionCollectors[0].parentsOwned.length) {
-        setContentUnlocked(true);
+        dispatch(globalActions.setContentUnlocked(true));
       }
     }
 
@@ -77,7 +76,6 @@ const MagazinePages = () => {
         issueId={issueId}
         initPage={currentPage}
         onSwitchViewer={switchViewer}
-        contentUnlocked={contentUnlocked}
         onChangePageNumber={
           number => {
             setCurrentPage(number)
@@ -92,7 +90,6 @@ const MagazinePages = () => {
         issueId={issueId}
         initPage={currentPage}
         onSwitchViewer={switchViewer}
-        contentUnlocked={contentUnlocked}
       >
       </MagazineViewer>
     )

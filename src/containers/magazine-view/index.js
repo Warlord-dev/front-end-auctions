@@ -5,15 +5,16 @@ import getPageList from '@components/magazines/PageList'
 import ViewerSwitch from '@components/magazines/common/ViewerSwitch'
 import magazineIssues from '@constants/magazines'
 import styles from './styles.module.scss'
+import { useSelector } from 'react-redux'
 
 const MagazineViewer = forwardRef((props, refs) => {
   const {
     issueId,
     initPage,
-    onSwitchViewer,
-    contentUnlocked
+    onSwitchViewer
   } = props
 
+  const contentUnlocked = useSelector(state => state.global.toJS());
   const [zoom, setZoom] = useState(1)
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
   const pageList = getPageList(issueId)

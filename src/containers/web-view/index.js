@@ -5,13 +5,15 @@ import ViewerSwitch from '@components/magazines/common/ViewerSwitch'
 import getPageList from '@components/magazines/PageList'
 import magazineIssues from '@constants/magazines'
 import styles from './styles.module.scss'
+import { useSelector } from 'react-redux'
 
 const KeyboardEventHandler = dynamic(() => import('react-keyboard-event-handler'), {
   ssr: false,
 })
 
 const WebViewer = forwardRef((props, refs) => {
-  const { onSwitchViewer, initPage, issueId, onChangePageNumber, contentUnlocked } = props
+  const { onSwitchViewer, initPage, issueId, onChangePageNumber } = props
+  const contentUnlocked = useSelector(state => state.global.toJS());
   const [zoom, setZoom] = useState(1)
   const [currentPage, setCurrentPage] = useState(0)
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
