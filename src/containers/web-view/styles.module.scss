@@ -1,8 +1,6 @@
 .webViewerWrapper {
-  display: flex;
   flex: auto;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   overflow-x: scroll;
   background-color: black;
@@ -13,6 +11,15 @@
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 
   .zoomViewer {

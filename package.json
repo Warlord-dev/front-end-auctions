@@ -21,6 +21,7 @@
   "dependencies": {
     "@arkane-network/web3-arkane-provider": "^0.21.0",
     "@biconomy/mexa": "^2.0.6",
+    "@loadable/component": "^5.15.0",
     "@maticnetwork/maticjs": "^2.0.37",
     "@maticnetwork/walletconnect-provider": "^0.0.1-beta.1",
     "@pinata/sdk": "^1.1.11",

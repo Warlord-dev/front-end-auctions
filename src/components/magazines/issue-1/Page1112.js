@@ -17,7 +17,9 @@ const Page1112 = () => {
         <span className={styles.impact2}>&</span>
         <span className={styles.impact3}> SCAMS</span>
       </h1>
-      <h2>Who really owns your keys?</h2>
+      <h2>
+        Who really owns your keys?
+      </h2>
       <h3>
         Fully enjoying financial freedom means having full ownership of your funds. It isn’t about
         outsourcing your crypto’s security or having it at someone else’s mercy.
@@ -38,30 +40,13 @@ const Page1112 = () => {
         complaints are even acknowledged.
       </h5>
       <p className={styles.leftSideText}>
-        Not to say that Coinbase, or any other non-scammy overly regulated centralised crypto
-        exchange and custody provider, hasn’t immensely helped in moving the entire industry forward
-        and bringing the world’s attention to just how revolutionary web3 and digital money is— but,
-        for each case, there are huge caveats in the way that they currently operate that really
-        should be actively addressed and moved forward towards resolution.
-        <br />
-        <br />
-        One of the biggest of these caveats all comes down to custody. For a lot of these
-        centralised wallet providers your crypto isn’t actually yours. It operates simliar to a bank
-        where your money isn’t really sitting in your account, it’s rather just a ledger on a
-        screen, appearing in your possession through the UI, but actually, it’s being most likely
-        leveraged up and rehypothecated for growing someone else’s balance sheet.
-        <br />
-        <br />
-        If you don’t fully own your private keys (That 12-24 secret key phrase), then the crypto is
-        not in your custody. Your experience and your money exist at the whims of non-existent
-        customer support, opaque company policies, risk mitigating lawyers and faulty UI where dev
-        teams have no stake to make sure to align with the urgency of your agency and ownership.
-        They pretty much own you.
-        <br />
-        <br />
-        This might sound likey hyperbole, but, actually it’s painfully real. Imagine you own a
-        substantial amount of a crypto asset and want to keep it somewhere reliable and secure— say,
-        for example, your Coinbase wallet.
+        Not to say that Coinbase, or any other non-scammy overly regulated centralised crypto exchange and custody provider, hasn’t immensely helped in moving the entire industry forward and bringing the world’s attention to just how revolutionary web3 and digital money is— but, for each case, there are huge caveats in the way that they currently operate that really should be actively addressed and moved forward towards resolution. 
+        <br /><br />
+        One of the biggest of all these caveats comes down to custody. For a lot of these centralised wallet providers, your crypto isn’t actually yours. It operates similar to a bank where your money isn’t really sitting in your account. It’s rather just a ledger on a screen, appearing in your possession through the UI but in reality, it’s most likely being leveraged up and rehypothecated for growing someone else’s balance sheet.
+        <br /><br />
+        If you don’t fully own your private keys (That 12-24 secret key phrase), then the crypto is not in your custody. Your experience and your money exist at the whims of non-existent customer support, opaque company policies, risk mitigating lawyers and faulty UI where dev teams have no stake to make sure to align with the urgency of your agency and ownership. They pretty much own you. 
+        <br /><br />
+        This might sound likey hyperbole, but, actually it’s painfully real. Imagine you own a substantial amount of a crypto asset and want to keep it somewhere reliable and secure— say, for example, your Coinbase wallet. 
       </p>
       <p className={styles.rightSideText}>
         This is exactly what happened to a San Francisco based tech enthusiast back in 2018. They
