@@ -1,6 +1,6 @@
 import { request } from 'graphql-request';
 import config from '@utils/config';
-import { DEV_HTTP_NETWORK_URL, DEV_HTTP_NFT_NETWORK_URL } from '@constants/global.constants';
+import { DEV_HTTP_NETWORK_URL, MATIC_HTTP_NFT_NETWORK_URL } from '@constants/global.constants';
 import {
   getAuctionsByIds,
   getAuctionsHistoryByTimestampGt,
@@ -30,11 +30,11 @@ class APIService {
   }
 
   async getSubscriptionNftStatus(address) {
-    return request(DEV_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionCollectorSimple, { address });
+    return request(MATIC_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionCollectorSimple, { address });
   }
 
   async getDigitalaxSubscriptionPurchase(tokenId) {
-    return request(DEV_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionPurchaseHistory, { tokenId });
+    return request(MATIC_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionPurchaseHistory, { tokenId });
   }
 
   async getAuctionsHistoryByTimestampGt(timestamp) {
@@ -42,7 +42,7 @@ class APIService {
   }
 
   async getDigitalaxSubscriptionOffer(tokenId) {
-    return request(DEV_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionMarketplaceOffer, { tokenId });
+    return request(MATIC_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionMarketplaceOffer, { tokenId });
   }
 
   async getLiveAuctions() {
