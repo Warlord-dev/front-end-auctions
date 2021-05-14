@@ -1,11 +1,18 @@
 import React, { memo, useEffect } from 'react';
+import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
 import styles from './styles.module.scss';
 import BottomLine from '@components/bottom-line';
-import Link from 'next/link';
+import api from '@services/api/api.service';
+import { getAccount } from '@selectors/user.selectors'
+import globalActions from '@actions/global.actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 const LandingPage = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
+  const account = useSelector(getAccount);
+
   useEffect(() => {
     import('react-facebook-pixel')
       .then((x) => x.default)
@@ -17,6 +24,17 @@ const LandingPage = () => {
           ReactPixel.pageView();
         });
       });
+  }, []);
+ 
+  useEffect(() => {
+    const fetchDigitalaxSubscriptionCollectors = async () => {
+      const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
+      if (digitalaxSubscriptionCollectors[0] && digitalaxSubscriptionCollectors[0].parentsOwned.length) {
+        dispatch(globalActions.setContentUnlocked(true));
+      }
+    }
+
+    fetchDigitalaxSubscriptionCollectors();
   }, []);
 
   return (

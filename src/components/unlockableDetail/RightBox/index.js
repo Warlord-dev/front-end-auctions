@@ -11,8 +11,7 @@ import Button from '@components/buttons/button';
 
 const RightBox = ({ details, id }) => {
   const dispatch = useDispatch();
-  const [showHidden, setShowHidden] = useState(false);
-  const [amountSold, setAmountSold] = useState(null);
+  const [amountSold, setAmountSold] = useState(0);
   const [buyAvailable, setBuyAvailable] = useState(true);
   const account = useSelector(getAccount);
   const chainId = useSelector(getChainId);
@@ -21,6 +20,7 @@ const RightBox = ({ details, id }) => {
   const isMatic = chainId === '0x13881' || chainId === '0x89';
   const modals = useSelector((state) => state.modals.toJS());
   const { isShowBuyNowNftSubscription } = modals;
+  const { contentUnlocked } = useSelector((state) => state.global.toJS());
 
   useEffect(() => {
     const fetchSubscriptionOffer = async () => {
@@ -67,7 +67,6 @@ const RightBox = ({ details, id }) => {
 
   const checkLastPurchasedTime = (id) => {
     const now = new Date();
-    console.log(lastPurchasedTime, now.getTime() / 1000);
     return parseInt(lastPurchasedTime) + 60 < now.getTime() / 1000;
   }
 
@@ -95,7 +94,6 @@ const RightBox = ({ details, id }) => {
               priceEth: details.price,
             })
           );
-          setShowHidden(true);
         } else {
           dispatch(openConnectMetamaskModal());
         }
@@ -118,8 +116,8 @@ const RightBox = ({ details, id }) => {
         >
           UNLOCK
         </Button>
-        {showHidden ? (
-          <Link href={`/paywall/hidden_content_1/${id}`}>
+        {contentUnlocked ? (
+          <Link href={`/magazines/1/hidden`}>
             <Button background="black" className={styles.showHiddenButton}>
               SEE HIDDEN CONTENT
             </Button>
