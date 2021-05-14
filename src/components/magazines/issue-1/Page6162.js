@@ -33,7 +33,7 @@ const Page6162 = () => {
         <br />
         <br />
         Each trading card also has in-game functionality and dynamic scarcity— holders can level up
-        their cards as they move from through the narrative.
+        their cards as they move through the narrative.
       </div>
       <img
         src="./magazine/1/61_62/Tenshigirl Main Logo RGB Light Background 1.png"

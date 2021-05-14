@@ -33,14 +33,14 @@
     "rinkeby": "",
     "goerli": "",
     "mumbai": "0xb7e04a24934bFfEbB2687e3015fA4F00B858A543",
-    "matic": "0x64ab7E63c32a910947B2c1D9287f4483531843CE"
+    "matic": "0x3E11cA9933D1236710d4606aEC4a5e3da28aeBcB"
   },
   "DIGITALAX_SUBSCRIPTION_NFT": {
     "mainnet": "",
     "rinkeby": "",
     "goerli": "",
     "mumbai": "0xD309F477dbA416E5C123Bd0215e6d1eA0a6A81A6",
-    "matic": "0xEAd0C5b55C0ec9D08A1666DC0A5Dc91cf404c8e3"
+    "matic": "0xCED3335378896671C71D6d632a16A474A70A2F38"
   },
   "REWARD_CONTRACT_ADDRESSES": {
     "mainnet": "0xC155DDd8aA737aA53bBCea9EA62CAC0A3EEc942f",

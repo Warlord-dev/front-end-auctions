@@ -10,14 +10,15 @@ const WebPageWrapperDiv = styled.div`
   width: ${props => `${props.zoom * props.windowHeight / 1497 * 960}px`};
   min-width: ${props => `${props.zoom * props.windowHeight / 1497 * 960}px`};
   max-width: ${props => `${props.zoom * props.windowHeight / 1497 * 960}px`};
-  height: ${props => `${props.zoom * props.windowHeight }px`};
+  height: ${props => `${props.zoom * props.windowHeight}px`};
+  min-height: ${props => `${props.zoom * props.windowHeight}px`};
+  max-height: ${props => `${props.zoom * props.windowHeight}px`};
 `
-
 const ContentWrapperDiv = styled.div`
   width: 1920px;
   height: 1497px;
   transform-origin: 0 0;
-  transform: ${props => `scale(${props.zoom * props.windowHeight / 1497})`};
+  transform: ${props => `scale(${props.zoom * props.windowHeight / 1497}, ${props.zoom * props.windowHeight / 1497})`};
 
   margin-left: ${props => props.secondPart ? '-100%' : '0'};
 `

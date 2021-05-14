@@ -49,6 +49,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const router = useRouter();
   const pathname = router.pathname;
+  const isMobile = window.innerWidth>768? false: true;
 
   const isLandingPage = pathname === '/';
 
@@ -85,10 +86,10 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   };
 
   return (
-    <div className={cn(className, styles.wrapper, hasScrolled?styles.floatingNav:'')}>
+    <div className={cn(className, styles.wrapper, isMobile?styles.mobileNav:'', hasScrolled?styles.floatingNav:'')}>
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
-        <Logo />
+        <Logo isMobile={isMobile}/>
         {/* <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
           Switch to Eth Mainnet
         </a> */}
