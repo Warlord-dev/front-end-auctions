@@ -24,7 +24,7 @@ const Page6162 = () => {
         <br />
         <br />
         They are bridging world renowned artists to create the world of Vestrian— a narrative filled
-        with rich characters, storylines and battle between factions.
+        with rich characters, storylines and battles between factions.
         <br />
         <br />
         Each artwork is presented in a collection of ERC721 NFT packs on Ethereum Mainnet. You can
@@ -32,7 +32,7 @@ const Page6162 = () => {
         TenshiGirl.io.
         <br />
         <br />
-        Each trading card also has in-game functionality and dynamic scarcicty— holders can level up
+        Each trading card also has in-game functionality and dynamic scarcity— holders can level up
         their cards as they move from through the narrative.
       </div>
       <img
