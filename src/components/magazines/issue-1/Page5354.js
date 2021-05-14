@@ -25,7 +25,7 @@ const Page5354 = () => {
         limited to your imagination and creativity.”
         <br />
         <br />
-        Through 3D, Sasmitha discovered the NFT space, where she minted here genesis NFT on
+        Through 3D, Sasmitha discovered the NFT space, where she minted her genesis NFT on
         NFTshowroom, built on the HIVE blockchain. She also just launched on Foundation!
       </div>
     </div>

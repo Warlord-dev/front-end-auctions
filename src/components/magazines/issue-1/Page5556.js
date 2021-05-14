@@ -31,8 +31,8 @@ const Page5556 = () => {
         Blade Runway is the first Digital Couture Fashion House in Italy. Founded by designers Greta
         Meacci and Alan Aronica, the project was launched to bring the high quality and know-how of
         traditional Italian haute couture into the digital world. Their ambition is to shape the
-        aesthetic paradigms of tomorrow by influencing the collective imagination and contribute in
-        writing the future of fashion.
+        aesthetic paradigms of tomorrow by influencing the collective imagination and contributing
+        in writing the future of fashion.
         <br />
         <br />
         Unbound by any kind of physical limitation Blade Runway’s creative vision is projected
