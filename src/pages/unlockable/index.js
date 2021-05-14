@@ -28,7 +28,7 @@ const Unlockable = () => {
             <video loop autoPlay muted className={styles.thumbnail} src={details[0].url[0]}>
             </video>
             <div className={`${styles.overlay} ${styles.overlay1}`}>
-              <button type="button" onClick={() => onUnlock(1)}>
+              <button type="button" onClick={() => onUnlock(13)}>
                 {' '}
                 COMMON UNLOCK{' '}
               </button>
@@ -38,7 +38,7 @@ const Unlockable = () => {
             <video loop autoPlay muted className={styles.thumbnail} src={details[1].url[0]}>
             </video>
             <div className={`${styles.overlay} ${styles.overlay2}`}>
-              <button type="button" onClick={() => onUnlock(2)}>
+              <button type="button" onClick={() => onUnlock(14)}>
                 {' '}
                 SEMI-RARE UNLOCK{' '}
               </button>
@@ -48,7 +48,7 @@ const Unlockable = () => {
             <video loop autoPlay muted className={styles.thumbnail} src={details[2].url[0]}>
             </video>
             <div className={`${styles.overlay} ${styles.overlay3}`}>
-              <button type="button" onClick={() => onUnlock(3)}>
+              <button type="button" onClick={() => onUnlock(15)}>
                 {' '}
                 EXCLUSIVE UNLOCK{' '}
               </button>
