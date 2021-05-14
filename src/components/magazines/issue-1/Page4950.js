@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 import styles from './page4950.module.scss';
 
 const Page4950 = () => {
@@ -56,16 +57,12 @@ const Page4950 = () => {
         in transaction costs and speed— a strategy that would usually involve 3 or 4 gas hungry txs
         on ETH L1, will now involve two simpler bridging txs (to get in and out of the xDAI
         sidechain) and all the remaining complex txs will happen on xDAI. An example of DeFi Flow
-        would be: swap ETH for DAI -> deposit DAI into Curve to get yCRV -> deposit yCRV into yearn
+        would be: swap ETH for DAI -&gt; deposit DAI into Curve to get yCRV -&gt; deposit yCRV into yearn
         to get yUSD. Doing all this in a single, low-fee wrapped tx will not only save a lot of gas
         fees, but will also make the whole process a lot more user friendly. Imagine showing a
         no-coiner friend that they can go from fiat to USD stablecoins on curve/yearn earning
         15%-20% APYs with a few clicks, and without ever needing to get exposure to more volatile
         crypto assets!? This is how we get the next wave of #DeFi adoption.
-        <br />
-        <br />
-        <br />
-        <div className={styles.textTitle}>- RAFI_0X</div>
       </div>
       <a
         href="https://twitter.com/Rafi_0x/status/1374464243311943690"
@@ -88,67 +85,90 @@ const Page4950 = () => {
       >
         <img src="./magazine/1/49_50/twitter 2.png" />
       </a>
-      <a href="https://twitter.com/Rafi_0x" className={styles.twitter4} target="_blank">
-        <img src="./magazine/1/49_50/twitter 2.png" />
-      </a>
       <img src="./magazine/1/49_50/diamond ha.png" className={styles.diamondHa} />
       <img src="./magazine/1/49_50/diamond 3.png" className={styles.diamond3} />
+      <div className={styles.rightTextCopy}>HYPERREAALIYAH</div>
       <div className={styles.rightText}>HYPERREAALIYAH</div>
+            
       <div className={styles.rightText1}>
-        HYPERREAALIYAH was founded in 2014 through a process that involved the writings of Jean
-        Baudrillard, one (1) bitcoin worth of acid in that day’s exchange rate, and a handful of
-        people. Since the beginning, HYPERREAALIYAH has existed as a simulation of an artist, born
-        again for each new project through the collaborators of said project. Sometimes for clarity
-        HYPERREAALIYAH is referred to as a collective, although it has no formal membership but
-        becomes realised through projects for which a new team is always formed. Both professional
-        artists and non-artists have participated in the production of works of HYPERREAALIYAH.
-        <br />
-        <br />
-        The name HYPERREAALIYAH consists of two parts; (1) hyperreal which translates to “more real
-        than real”. This is a category often experienced in a mediated world where the
-        representation of a thing becomes more real than the thing itself. For example, a news story
-        about a hurricane on the other side of the globe is more real to its reader than the
-        hurricane itself; and (2) aaliyah which is a judaic concept meaning a return to the holy
-        land. Thus, HYPERREAALIYAH is a more real than real return to the holy lands of, in this
-        case, meaning.
-        <br />
-        <br />
-        The premise for HYPERREAALIYAH, the reason for its existence is the argument that as
-        hyperreality has become an everyday phenomenon, we are all in diaspora from meaning.
-        HYPERREAALIYAH is always looking for a way to return to meaning, but never quite seems to
-        get there.
-        <br />
-        <br />
-        Throughout the past years, HYPERREAALIYAH has produced multiple different projects ranging
-        from video works to performances and artivistic interventions in public, semi-public and
-        private spaces both online and offline. HYPERREAALIYAH's works have been screened, performed
-        or featured in Amos Rex, Institute of Contemporary Art London, Kaiku, Oksasenkatu 11,
-        POLARIZED! festival, Pixelache, Socialinis Centras Emma, Visio festival and XI20, among
-        others. HYPERREAALIYAH has researched and produced works about memes and memetics in
-        particular and works critiquing neoliberal ideology and fascistic societal movements in
-        general.
+        <a href='http://hyperreaaliyah.com/' target='_blank'>HYPERREAALIYAH</a> was founded in 2014 through a process 
+        that involved the writings of Jean Baudrillard, 
+        one (1) BTC worth of acid in the day’s exchange rate, and a handful of people. Since then, 
+        HYPERREAALIYAH has existed as a simulation of an artist, 
+        born again for each new project through the collaborators of that project. 
+        Sometimes for clarity HYPERREAALIYAH is referred to as a collective, 
+        yet it has no formal membership and only becomes realised through projects for which a new team is always formed. 
+        Both professional artists and non-artists have participated in the production of works of HYPERREAALIYAH.
+        <br /><br />
+        Since its inception, HYPERREAALIYAH has considered everything in existence as material to be moulded into new forms. 
+        This creative process has embodied a commentary on the structure of mediated reality as a surface 
+        which can be used to create new meaning although it is sometimes controlled by copyrights and trademarks. 
+        HYPERREAALIYAH’s argument has been that if the meaning of a work that uses existing material is new or, say, original, 
+        the material loses its meaning and gains a new one. 
+        <br /><br />
+        The name HYPERREAALIYAH consists of two parts; (1) hyperreal which translates to more real than real. 
+        This is a category often experienced in a mediated world where the representation becomes experienced as more real 
+        than the original. For example, a news story about a hurricane on the other side of the globe is more real to its reader 
+        than the hurricane itself; and (2) aaliyah which is a judaic concept meaning a return to the holy land. Thus, 
+        HYPERREAALIYAH becomes a more real than real return to the holy lands of, in this case, meaning.
+        <br /><br />
+        The premise for HYPERREAALIYAH, the reason for its existence is the argument 
+        that as hyperreality has become an everyday phenomenon, we are all in diaspora from meaning. 
+        HYPERREAALIYAH is always looking for new ways to return to meaning, yet never quite seems to get there.
       </div>
       <div className={styles.rightText2}>HYPERREAALIYAH’s First NFT Series</div>
       <div className={styles.rightText3}>
-        Since the beginning, HYPERREAALIYAH has considered everything in existence as material to be
-        moulded into new forms. This creative process has embodied a commentary on the structure of
-        mediated reality as a surface which can be used to create new meaning although it is
-        sometimes controlled by copyright. HYPERREAALIYAH’s argument has been that if the meaning of
-        a work that uses copyrighted material is new or, say, original, the copyrighted material
-        loses its meaning and gains a new one.
-        <br />
-        <br />
-        Their first NFT drop will consist of three 3D pieces, sculptured objects. Each of them has a
-        unique form but the surface of the objects will be made of copyrighted material – colours,
-        patterns, characters, nothing in the surface will be copyright free but as a new totality it
-        will be, according to our argument and also the Fair Use doctrine.
-        <br />
-        <br />A theme within a theme is the transition from web2 to web3. The rarest piece of the
-        three will hold a conversation about the future of the internet as a structure with the
-        potential of upholding and proliferating human rights, among other things. The form of this
-        conversation is still under construction – it might be embodied in the object itself or be
-        located in a point referred to by the object, depending on the final narration.
+        This NFT drop is unlockable <a href="/unlockable" target='_blank'>here</a> and was created during the congregation of HYPERREAALIYAH in early May, 2021, in and around Helsinki, Finland.  We minted these pieces on the Day of Ascension with the help of Digitalax in Silicon Valley, US. This collaboration is thanks to the initiative and vision of Emma-Jane MacKinnon-Lee who we owe all the kudos.
+        <br /><br />
+        <span>Genesis Objects: Astral Travels Special Edition</span><br />
+        The series consists of three multimedia 3d objects existing in various modes of rarity. The so-called common object is a wearable ring that we've named Trivial Perseption. The semi-rare object is a digitally kinetic sculpture called Bodysattvax. The rarest object is Allegory of Meta, which is an unnatural formation from a beach of your dreams with a video and sound emitting and floating crystal inside. 
+        <br /><br />
+        The rarest form of this series is a participatory performance called Joint Paean by Jenna Jauhiainen where they will join you inside Allegory of Meta for a discussion about hopes and dreams related to transitioning from web2 to web3. This performance includes a homage to the floating crystal with a specially choreographed dance. 
+        <br /><br />
+        Most of the visual and sound material attributed to these objects is derived from existing material, yet the shape of each object is unique. Among other things, the objects include trademarked and copyrighted colors, logos, images, songs and videos. The three objects all have a common source of origin that will be revealed in 40 months, approximately 3,3 years. In the meantime, we will be upgrading the objects as to their compatibility and interoperability aspects, perfecting these pieces until the final revelation of their source.
       </div>
+      <div className={styles.rightText4}>
+        604753_Allegory_of_Meta
+      </div>
+      <div className={styles.plusSign}>
+        +
+      </div>
+      <div className={styles.rightText5}>
+        604753_Joint_Paean
+      </div>
+      <div className={styles.rightText6}>
+        The Allegory of Meta is an unnatural formation, created as a space to spend time in pondering, dancing, holding out the rain or perhaps inhabiting it as a caveperson of the metaverse. It alludes to Plato's cave in embodying an unreal reality, with shadows and reflections with only a transitory relation to the real. On its surface, Allegory of Meta is embedded with a unique texture made out of copyrighted and trademarked colors, logos and 
+      </div>
+      <div className={styles.rightText7}>
+        images. Inside the formation a floating, video displaying crystal emits a soundscape inspired by the forever rising, never dropping glory. Outside, the soundscape is calm like a sea-breeze. The owners of Allegory of Meta can unlock an ultra-rare feature where the artist and researcher Jenna Jauhiainen will join them inside the formation placed in the virtual environment of their choosing. The performance includes a discussion about hopes and dreams related to transitioning from web2 to web3, and a homage to the floating crystal with a specially choreographed dance. The details of the performance are negotiated with the owner of this ultra-rare NFT. For example, it is possible to enjoy this performance as a one-on-one encounter or invite an audience to join. 
+      </div>
+      <div className={styles.rightText8}>
+        604753_Bodysattvax
+      </div>
+      <div className={styles.rightText9}>
+        The Bodysattvax is a statue, a totem for XD, the international symbol of ecstatic laughter. This statue pays homage to mediatization, to hyperreality and simulacrum. Bodysattvax can be placed inside or outside, creating a tranquil yet tense ambience with shivers of shock and awe. The video on the background is what's embedded into the statue's texture. The soundscape emitted by Bodysattvax is inspired by MGS2 which explores themes such as memetics, social engineering, existentialism, postmodernism, virtual reality and the internal struggle of political liberty and freedom of thought.
+      </div>
+      <div className={styles.rightText10}>
+        The Trivial Perseption is a ring is inspired by the treacherous wallflowerness of random elements around us, the kind with apparent naturalness to the sensory overload they cause and contextual burden they carry. The video you see on the background of the ring is what's embedded into the ring's texture. The soundscape emitted by the forever orbiting and pulsating glass jewel is inspired by Sting suing Juice WRLD and Metallica ruining Napster.
+      </div>
+      <div className={styles.rightText11}>
+        604753_Trivial_Perseption
+      </div>
+
+      <div className={styles.videoFrame1}></div>
+      <video autoPlay muted loop className={styles.video1}>
+        <source src="./magazine/1/videos/50_1.mp4" type="video/mp4" />
+      </video>
+
+      <div className={styles.videoFrame2}></div>
+      <video autoPlay muted loop className={styles.video2}>
+        <source src="./magazine/1/videos/50_2.mp4" type="video/mp4" />
+      </video>
+
+      <div className={styles.videoFrame3}></div>
+      <video autoPlay muted loop className={styles.video3}>
+        <source src="./magazine/1/videos/50_3.mp4" type="video/mp4" />
+      </video>
     </div>
   );
 };

@@ -102,6 +102,10 @@
       line-height: 150%;
 
       color: #000000;
+
+      span.italicText {
+        font-style: italic;
+      }
     }
   }
 
@@ -186,7 +190,10 @@
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 22.5px;
+    line-height: 150%;
+    /* or 22px */
+
+
     color: #FFFFFF;
   }
 
@@ -219,7 +226,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 22.5px;
+    line-height: 150%;
   }
 
   .section4 {
@@ -233,7 +240,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 22.5px;
+    line-height: 150%;
   }
 
   .section5 {
@@ -247,6 +254,6 @@
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 22.5px;
+    line-height: 150%;
   }
 }

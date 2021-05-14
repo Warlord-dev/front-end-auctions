@@ -4,8 +4,15 @@ import styles from './page6162.module.scss';
 const Page6162 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/61_62/Group 1193.png" className={styles.left} />
       <img src="./magazine/1/61_62/girl-and-panda 1.png" className={styles.right} />
+      <div className={styles.text1}>
+        COMIC WITH
+        <br /> PIZZA GAME
+      </div>
+      <div className={styles.leftDiv}></div>
+      <div className={styles.text2}>
+        Page <br /> will be a <br /> jpeg <br /> image
+      </div>
       <div className={styles.text3}>
         First TenshiGirl Collection on the
         <br /> blockchain. Featuring 50

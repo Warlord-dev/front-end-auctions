@@ -38,8 +38,8 @@
       font-family: Inter;
       font-style: normal;
       font-weight: normal;
-      font-size: 14px;
-      line-height: 21px;
+      font-size: 15px;
+      line-height: 160%;
       position: absolute;
 
       &.leftPart {
@@ -171,13 +171,12 @@
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 16.5px;
+    line-height: 110%;
     color: #FFFFFF;
 
     span {
       font-family: Mad Galaxy Demo;
       font-size: 17px;
-      line-height: 18.7px;
     }
   }
 

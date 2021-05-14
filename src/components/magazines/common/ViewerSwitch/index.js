@@ -22,6 +22,7 @@ const viewerList = [
 
 const ViewerSwitch = props => {
   const { viewers, onSwitchViewer, mapSwitch } = props
+  const width = window.innerWidth
   const selectedViewers = viewerList.filter(
     item => 
       viewers.findIndex(
@@ -37,16 +38,18 @@ const ViewerSwitch = props => {
     >
       {
         selectedViewers.map((item, index) => {
-          return (
-            <button
-              key={index}
-              onClick={() => onSwitchViewer(item.id)}
-            >
-              {
-                item.caption
-              }
-            </button>
-          )
+          if(!(item.id === 'webview' && width < 768)) {
+            return (
+              <button
+                key={index}
+                onClick={() => onSwitchViewer(item.id)}
+              >
+                {
+                  item.caption
+                }
+              </button>
+            )
+          }
         })
       }
     </div>

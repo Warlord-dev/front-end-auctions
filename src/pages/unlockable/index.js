@@ -25,7 +25,7 @@ const Unlockable = () => {
         </div>
         <div className={styles.panels}>
           <div className={styles.panel}>
-            <video loop autoPlay muted className={styles.thumbnail} src={details[0].url[0]}>
+            <video loop autoPlay muted className={styles.thumbnail} src={details[0].url}>
             </video>
             <div className={`${styles.overlay} ${styles.overlay1}`}>
               <button type="button" onClick={() => onUnlock(13)}>
@@ -35,7 +35,7 @@ const Unlockable = () => {
             </div>
           </div>
           <div className={styles.panel}>
-            <video loop autoPlay muted className={styles.thumbnail} src={details[1].url[0]}>
+            <video loop autoPlay muted className={styles.thumbnail} src={details[1].url}>
             </video>
             <div className={`${styles.overlay} ${styles.overlay2}`}>
               <button type="button" onClick={() => onUnlock(14)}>
@@ -45,7 +45,7 @@ const Unlockable = () => {
             </div>
           </div>
           <div className={styles.panel}>
-            <video loop autoPlay muted className={styles.thumbnail} src={details[2].url[0]}>
+            <video loop autoPlay muted className={styles.thumbnail} src={details[2].url}>
             </video>
             <div className={`${styles.overlay} ${styles.overlay3}`}>
               <button type="button" onClick={() => onUnlock(15)}>

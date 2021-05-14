@@ -14,7 +14,7 @@ const Purchase = () => {
 		<div className={styles.mainWrapper}>
 			<NftBanners />
 			<div className={styles.wrapper}>
-        		<UnlockableDetail id={id} details={details[id - 1]} />
+        <UnlockableDetail id={id} details={details[id - 1]} />
 			</div>
 			<BottomLine borderWhite={false} />
 		</div>

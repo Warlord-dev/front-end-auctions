@@ -1,0 +1,156 @@
+@import './styles.module.scss';
+
+.wrapper {
+  width: 320px;
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .backOrange {
+    width: 320px;
+    height: 2800px;
+    background-image: url('/magazine/1/images/mobile/page78-part2-bg.png');
+  }
+
+  .rightImage4 {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    top: 2400px;
+    z-index:0;
+  }
+
+  .logo_t {
+    position: absolute;
+    width: 126px;
+    height: 675px;
+    left: 100px;
+    top: 500px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 180px;
+    /* identical to box height, or 675px */
+
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  p {
+    color: #FFFFFF;
+  }
+
+  .section1 {
+    position: absolute;
+    white-space: normal;
+    width: 300px;
+    left: 10px;
+    top: 71px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
+  }
+
+  .section2 {
+    position: absolute;
+    white-space: normal;
+    width: 300px;
+    left: 10px;
+    top: 700px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 150%;
+  }
+
+  .section3 {
+    position: absolute;
+    white-space: normal;
+    width: 300px;
+    left: 10px;
+    top: 1200px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+  }
+
+  .section4 {
+    position: absolute;
+    white-space: normal;
+    width: 300px;
+    left: 10px;
+    top: 1700px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+  }
+
+  .section5 {
+    position: absolute;
+    white-space: normal;
+    width: 300px;
+    left: 10px;
+    top: 2100px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    .backOrange {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    .backOrange {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    .backOrange {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    .backOrange {
+      width: 320px;
+    }
+  }
+}

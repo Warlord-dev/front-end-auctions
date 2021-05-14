@@ -59,7 +59,7 @@ export const getDesignersByIds = gql`
   query getDesignersByIds($ids: [ID!]) {
     digitalaxGarmentDesigners(first: 1000, where: { id_in: $ids }) {
       id
-      garments(first: 1000) {
+      garments(first:1000) {
         id
         tokenUri
       }
@@ -169,17 +169,17 @@ export const getResultedAuctionsByEndTimeGt = gql`
 `;
 
 export const getDigitalaxSubscriptionCollectorSimple = gql`
-  query digitalaxSubscriptionCollectors($address: ID!) {
-    digitalaxSubscriptionCollectors(where: { id: $address }) {
-      id
-      parentsOwned {
+    query digitalaxSubscriptionCollectors($address: ID!) {
+    digitalaxSubscriptionCollectors(where: {id: $address}) {
+     id
+     parentsOwned {
         id
         primarySalePrice
         tokenUri
         designer
       }
     }
-  }
+ }
 `;
 
 export const getDigitalaxSubscriptionPurchaseHistory = gql`
@@ -190,17 +190,5 @@ export const getDigitalaxSubscriptionPurchaseHistory = gql`
       timestamp
     }
   }
-`;
-
-export const getDigitalaxSubscriptionMarketplaceOffer = gql`
-  query digitalaxSubscriptionMarketplaceOffer($tokenId: ID!) {
-    digitalaxSubscriptionMarketplaceOffer(id: $tokenId) {
-      id
-      amountSold
-      primarySalePrice
-      amountSold
-      startTime
-      endTime
-    }
-  }
+}
 `;

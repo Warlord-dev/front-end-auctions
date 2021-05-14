@@ -13,7 +13,6 @@ import {
   getAuctionContracts,
   getDigitalaxSubscriptionCollectorSimple,
   getDigitalaxSubscriptionPurchaseHistory,
-  getDigitalaxSubscriptionMarketplaceOffer
 } from '@services/api/gql.queries.api.service';
 
 class APIService {
@@ -39,10 +38,6 @@ class APIService {
 
   async getAuctionsHistoryByTimestampGt(timestamp) {
     return request(this.url, getAuctionsHistoryByTimestampGt, { timestamp });
-  }
-
-  async getDigitalaxSubscriptionOffer(tokenId) {
-    return request(DEV_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionMarketplaceOffer, { tokenId });
   }
 
   async getLiveAuctions() {
