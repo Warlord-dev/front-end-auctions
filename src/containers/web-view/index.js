@@ -24,7 +24,9 @@ const WebViewer = forwardRef((props, refs) => {
   const viewerWrapperRef = useRef()
   const contentWrapperRef = useRef()
   const pageList = getPageList(issueId)
-  const totalPageCount = currentIssue.freePageCount + 2
+  const totalPageCount = contentUnlocked
+    ? (pageList.length - 1) * 2 
+    : currentIssue.freePageCount + 2
 
    const handleZoom = (key, e) => {
     const zoomIndex = zoomList.indexOf(zoom)
@@ -57,6 +59,12 @@ const WebViewer = forwardRef((props, refs) => {
     }
   }
 
+  const updatePagePosition = pageNumber => {
+    console.log('current Page: ', pageNumber)
+    setCurrentPage(pageNumber)
+    viewerWrapperRef.current.scrollLeft = ((pageNumber) * getPageWidth(windowHeight) | 0) + 1
+  }
+
   useEffect(() => {
     const handleResize = () => {
       setWindowHeight(window.innerHeight)
@@ -70,14 +78,14 @@ const WebViewer = forwardRef((props, refs) => {
     }
   }, [])
 
+  useEffect(() => {
+    updatePagePosition(currentPage)
+  }, [zoom])
+
   const getPageWidth = height => zoom * (height - 20) / 1497 * 960
 
   useEffect(() => {
-    const handleResize = () => {
-      setCurrentPage(initPage)
-      viewerWrapperRef.current.scrollLeft = ((initPage) * getPageWidth(windowHeight) | 0) + 1
-    }
-    handleResize()
+    updatePagePosition(initPage)
   }, [windowHeight])
 
   const getChildrenList = () => {
@@ -115,8 +123,11 @@ const WebViewer = forwardRef((props, refs) => {
   return (
     <>
       <div className={styles.webViewerWrapper} ref={viewerWrapperRef} onScroll={onScrollWrapper} onWheel={handleMouseWeel}>
-        <div className={styles.contentWrapper} ref={contentWrapperRef} 
-          style={{width: `${getPageWidth(windowHeight) * totalPageCount}px`}}>
+        <div className={styles.contentWrapper} ref={contentWrapperRef}
+          style={{
+            width: `${getPageWidth(windowHeight) * totalPageCount}px`,
+            height: `${windowHeight * zoom}px`
+          }}>
           {
             getChildrenList()
           }
