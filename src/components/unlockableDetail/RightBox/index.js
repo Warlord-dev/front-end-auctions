@@ -32,30 +32,43 @@ const RightBox = ({ details, id }) => {
 
   useEffect(() => {
     const fetchSubscriptionOffer = async () => {
-      const { digitalaxSubscriptionMarketplaceOffer } = await api.getDigitalaxSubscriptionOffer(id);
-      setAmountSold(digitalaxSubscriptionMarketplaceOffer.amountSold);
+      try {
+        const { digitalaxSubscriptionMarketplaceOffer } = await api.getDigitalaxSubscriptionOffer(id);
+        setAmountSold(digitalaxSubscriptionMarketplaceOffer.amountSold);
+      } catch (e) {
+        console.log('error happend on fetching: ', e);
+      }
     };
 
     const fetchSubscriptionStatus = async () => {
-      const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
       const ids = [];
-      for (let i = 0; i < digitalaxSubscriptionCollectors.length; i += 1) {
-        for (let j = 0; j < digitalaxSubscriptionCollectors[i].parentsOwned.length; j += 1) {
-          const { digitalaxSubscriptionPurchaseHistory } =
-            await api.getDigitalaxSubscriptionPurchase(
-              digitalaxSubscriptionCollectors[i].parentsOwned[j].id
-            );
-          if (digitalaxSubscriptionPurchaseHistory.bundleId === id) {
-            ids.push(digitalaxSubscriptionPurchaseHistory);
-            if (lastPurchasedTime < parseInt(digitalaxSubscriptionPurchaseHistory.timestamp)) {
-              setLastPurchasedTime(parseInt(digitalaxSubscriptionPurchaseHistory.timestamp));
+
+      try {
+        const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
+        
+        for (let i = 0; i < digitalaxSubscriptionCollectors.length; i += 1) {
+          for (let j = 0; j < digitalaxSubscriptionCollectors[i].parentsOwned.length; j += 1) {
+            const { digitalaxSubscriptionPurchaseHistory } =
+              await api.getDigitalaxSubscriptionPurchase(
+                digitalaxSubscriptionCollectors[i].parentsOwned[j].id
+              );
+            if (digitalaxSubscriptionPurchaseHistory.bundleId === id) {
+              ids.push(digitalaxSubscriptionPurchaseHistory);
+              if (lastPurchasedTime < parseInt(digitalaxSubscriptionPurchaseHistory.timestamp)) {
+                setLastPurchasedTime(parseInt(digitalaxSubscriptionPurchaseHistory.timestamp));
+              }
             }
           }
         }
+
+      } catch (e) {
+        console.log('getSubscriptionNftStatus error: ', e)
       }
+
       setCollectionIds(ids);
       setBuyAvailable(true);
     };
+
     if (!isShowBuyNowNftSubscription) {
       setBuyAvailable(false);
       fetchSubscriptionOffer();
