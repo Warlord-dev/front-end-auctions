@@ -29,7 +29,7 @@ const Page8182 = () => {
         23 yr old art and design student based in NYC at The New School, with an international
         upbringing, from Japan, NYC, Rome, and Abu Dhabi.
       </div>
-      <div className={styles.rightText2}>Desiging for the Metaverse.</div>
+      <div className={styles.rightText2}>Designing for the Metaverse</div>
       <div className={styles.rightText3}>What has been your digital fashion journey?</div>
       <div className={styles.rightText4}>
         My digital creative work started when I was in elementary school, living in Abu Dhabi. I was
