@@ -11,7 +11,7 @@ const Page34 = () => {
       <p className={styles.content}>
         In many ways, it is easy to come into a new market, or at least look at it from the outside, 
         and short it for what seems lacking when you start from a false premise. 
-        here is substantially less risk in placing the safe bet and adopting a conventional view that mocks or diminishes any genuine risk taking pioneers. 
+        There is substantially less risk in placing the safe bet and adopting a conventional view that mocks or diminishes any genuine risk taking pioneers. 
         But, the truth is, that even the least or the most off target results gained from a more deliberate 
         and discerning effort at exploring the uncharted areas of a field have more value than the hot takes of paradigmatic short sellers. 
         There are times when a well placed risk transforms every constraint that governs our lives. Grand pronouncements about humanity aside, 
