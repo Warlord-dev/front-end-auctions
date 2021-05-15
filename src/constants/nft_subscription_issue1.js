@@ -10,11 +10,7 @@ const details = [
         '/images/nft/common/Untitled (2).mp4',
         '/images/nft/common/Untitled (28).mp4',
       ],
-      body: `Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides! Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!
-
-      Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!
-      
-      Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!`,
+      body: `DIGIFIZZY is the first of its kind. It’s architected for the metaverse, bringing together creators, anarchists, risk takers and dreamers across web3, fashion, gaming, art, music, crypto and NFTs, to prove out a completely new publishing distribution model. DIGIFIZZY is for the gatemakers. For the common unlockable ERC-998 bundle you can burn your 721 NFT to receive 1155 NFT treasures; Tenshi Girl gamer trading card, ESPA in-game cyber minecraft skin, first traditional Indian digital fashion jewellery collectible, electronic bass audio tune from top San Francisco based music artist Singe, a unique 3D modeled artwork by collaborative project HYPERREAALIYAH + HIDDEN content and additional NFT airdrops! We are here to mod the metaverse.`,
       price: 0.5,
       amountAvailable: 700
     },
@@ -30,11 +26,7 @@ const details = [
         '/images/nft/semi/Untitled (27).mp4',
         '/images/nft/semi/1.gif'
       ],
-      body: `Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides! Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!
-
-      Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!
-      
-      Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!`,
+      body: `DIGIFIZZY is the first of its kind. It’s architected for the metaverse, bringing together creators, anarchists, risk takers and dreamers across web3, fashion, gaming, art, music, crypto and NFTs, to prove out a completely new publishing distribution model. DIGIFIZZY is for the gatemakers. For the semi-rare unlockable ERC-998 bundle you can burn your 721 NFT to receive 1155 NFT treasures; Tenshi Girl angel trading card, ESPA in-game cyber minecraft skin, first traditional Indian digital fashion collectible male outfit, melodic audio  tune from top San Francisco based DJ J-Kind, physical DIGITALAX DRIP fashion item with on-chain utility, a unique 3D modeled artwork by collaborative project HYPERREAALIYAH + HIDDEN content and additional NFT airdrops! We are here to mod the metaverse.`,
       price: 1,
       amountAvailable: 200,
     },
@@ -53,11 +45,7 @@ const details = [
         '/images/nft/exc/3.gif',
         '/images/nft/exc/Untitled (26).mp4'
       ],
-      body: `Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides! Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!
-
-      Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!
-      
-      Like your sleeves a little longer? Our Don't Take It Personal Dress has a sheer bodice, a shirred high neckline, full length sleeves and a stretchy shirred panel on the skirt. We love wearing ours with a bronze glow and platform slides!`,
+      body: `DIGIFIZZY is the first of its kind. It’s architected for the metaverse, bringing together creators, anarchists, risk takers and dreamers across web3, fashion, gaming, art, music, crypto and NFTs, to prove out a completely new publishing distribution model. DIGIFIZZY is for the gatemakers. For the exclusive unlockable ERC-998 bundle you can burn your 721 NFT to receive 1155 NFT treasures; Tenshi Girl rare trading card, ESPA in-game cyber minecraft skin, first traditional Indian digital fashion collectible female outfit, synth audio tune from renowned San Francisco based music veteran Gregory Gordon, physical DIGITALAX DRIP fashion item with on-chain utility, Web3 Wizards Genesis collection, a unique 3D modeled artwork by collaborative project HYPERREAALIYAH + HIDDEN content and additional NFT airdrops! We are here to mod the metaverse.`,
       price: 2,
       amountAvailable: 50
     },
