@@ -16,7 +16,7 @@ const Page6162 = () => {
       </div>
       <div className={styles.textDiv}></div>
       <div className={styles.text4}>
-        <a href="https://tenshigirl.io" target="_blank">
+        <a href="https://share.tenshigirl.io/ad8a23" target="_blank">
           TenshiGirl.io
         </a>{' '}
         is a new crypto trading platform and NFT collectible trading card project, built on
