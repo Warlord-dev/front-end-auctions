@@ -7,7 +7,7 @@ const Page8384 = () => {
       <img src="./magazine/1/83_84/left7.png" className={styles.left} />
       <img src="./magazine/1/83_84/right8.png" className={styles.right} />
       <img src="./magazine/1/83_84/moshed-05-08-3-49-8 (1) (1).gif" className={styles.gif} />
-      <a href="https://edwardharber.com/" className={styles.link1} target="_blank">
+      <a href="https://www.instagram.com/edward_harber/?hl=en" className={styles.link1} target="_blank">
         {' '}
         Edward Harber{' '}
       </a>
