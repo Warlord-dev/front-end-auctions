@@ -77,7 +77,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
           <div className={styles.footer}>
             <p className={styles.footerCaption}>
               <span>
-                Need to top up on $MONA? Get it <a>here.</a>
+                Need to top up on $MONA? Get it <a href="https://skins.digitalax.xyz/swap/" target="_blank">here.</a>
               </span>
             </p>
             <div className={styles.selectWrapper}>

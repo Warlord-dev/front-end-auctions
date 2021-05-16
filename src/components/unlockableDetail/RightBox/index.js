@@ -119,7 +119,8 @@ const RightBox = ({ details, id }) => {
       <div className={styles.title}>{details.title}</div>
       <div className={styles.body}>{details.body}</div>
       <div className={styles.price}>
-        {details.price} $MONA <span>{`${amountSold} of ${details.amountAvailable}`}</span>{' '}
+        {details.price} $MONA 
+          {/* <span>{`${amountSold} of ${details.amountAvailable}`}</span>{' '} */}
       </div>
       <div className={styles.actionGroup}>
         <Button isDisabled={!buyAvailable} background="black" onClick={onUnlock}>
