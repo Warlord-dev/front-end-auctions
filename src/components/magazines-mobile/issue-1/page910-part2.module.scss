@@ -1,0 +1,167 @@
+@import './styles.module.scss';
+
+.wrapper {
+  overflow-x: hidden;
+  width: 320px;
+  height: 3708px;
+  background-image: url('/magazine/1/images/mobile/oasis-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .backImage2 {
+    position: absolute;
+    width: 320px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 230px;
+    left: calc((100vw - 230px) / 2);
+    top: 93px;
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    /* or 143px */
+    color: #FFFFFF;
+  }
+
+  .imageLeft {
+    margin-right: 14px;
+  }
+
+  .imageRight {
+    margin-left: 14px;
+  }
+
+  .innerWrapper {
+    width: 260px;
+    left: 20px;
+    position: absolute;
+    top: 400px;
+  }
+
+  .flex {
+    display: flex;
+    .section {
+      width: 200px;
+    }
+  }
+
+  img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .section {
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 15px;
+    color: #FFFFFF;
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 300px;
+
+    span {
+      font-family: Mad Galaxy Demo;
+      font-size: 17px;
+    }
+  }
+
+  .fullImage {
+    width: 80px !important;
+    height: auto !important;
+  }
+
+  .footerImage {
+    position: relative;
+    img {
+      position: absolute;
+      bottom: -108px;
+      width: 160px;
+    }
+  }
+
+  .imageLarge {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  h2 {
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    color: white;
+    &.first {
+      margin-bottom: 30px;
+    }
+    &.second {
+      margin-bottom: 100px;
+    }
+  }
+
+  h3 {
+    position: absolute;
+    word-wrap: break-word;
+    width: 23px;
+    height: 630px;
+    left: 1572px;
+    top: 620px;
+
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+    /* or 88px */
+
+
+    color: #FFFFFF;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    .innerWrapper {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    .innerWrapper {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    .innerWrapper {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    .innerWrapper {
+      width: 320px;
+    }
+  }
+}

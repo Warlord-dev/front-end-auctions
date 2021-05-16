@@ -1,0 +1,196 @@
+@import './styles.module.scss';
+
+.wrapper {
+  width: 320px;
+  height: 3300px;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .pathImage {
+    position: absolute;
+    width: 581px;
+    height: 454px;
+    left: 94px;
+    top: -49px;
+  }
+  
+  .manImage {
+    position: absolute;
+    width: 651px;
+    height: 806px;
+    left: 137px;
+    top: 154px;
+  }
+
+  .textDiv1 {
+    position: absolute;
+    width: 321px;
+    height: 68px;
+    left: 586px;
+    top: 303px;
+
+    font-family: Nella Sue Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 120.53%;
+
+    color: #FFFFFF;
+  }
+
+  .pageBack2 {
+    position: absolute;
+    width: 260px;
+    height: 3220px;
+    left: 30px;
+    top: 38px;
+
+    background: #DBCF95;
+  }
+
+  h1 {
+    position: absolute;
+    width: 1051px;
+    height: 259px;
+    left: -52px;
+    top: 892px;
+
+    font-family: PLAYPULL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 130px;
+    line-height: 150%;
+    text-align: center;
+    color: #EC761D;
+
+    .impact1 {
+      font-family: Rugsnatcher DEMO;
+      color: #DA283E;
+    }
+
+    .impact2 {
+      color: #DA283E;
+    }
+
+    .impact3 {
+      font-family: Rugrats;
+      color: #F28C27;
+    }
+  }
+
+  h2 {
+    position: absolute;
+    width: 657px;
+    height: 52px;
+    left: 38px;
+    top: 1057px;
+    font-family: Mervale Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 150%;
+    text-align: center;
+    color: #000000;
+  }
+
+  h3 {
+    position: absolute;
+    width: 466px;
+    height: 120px;
+    left: 417px;
+    top: 1265px;
+
+    font-family: Beth Ellen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+  }
+
+  h4 {
+    position: absolute;
+    width: 200px;
+    left: calc((100vw - 200px) / 2);
+    top: 97px;
+    text-align: center;
+
+    font-family: Nella Sue Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+  }
+
+  h5 {
+    position: absolute;
+    left: calc((100vw - 230px) / 2);
+    width: 230px;
+    top: 400px;
+    
+    font-family: Jockey One;
+    font-style: normal;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 14px;
+    /* or 30px */
+    
+    text-align: center;
+  }
+
+  p {
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 15px;
+
+  }
+
+  .textContainer {
+    position: absolute;
+    top: 800px;
+    left: calc((100vw - 200px) / 2);
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    .pageBack2 {
+      width: 708px;
+      left: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    .pageBack2 {
+      width: 365px;
+      left: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    .pageBack2 {
+      width: 315px;
+      left: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    .pageBack2 {
+      width: 260px;
+      left: 30px;
+    }
+  }
+}
