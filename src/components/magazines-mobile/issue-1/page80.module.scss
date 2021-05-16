@@ -17,7 +17,7 @@
   .innerWrapper {
     position: absolute;
     overflow-x: hidden;
-    top: 100px;
+    top: 60px;
     left: calc((100vw - 300px) / 2);
     width: 300px;
     padding: 0 10px;
@@ -34,9 +34,10 @@
       font-weight: normal;
       font-size: 30px;
       line-height: 21px;
+      margin-top: -58px;
     }
     & > p {
-      margin-top: 40px;
+      margin-top: 80px;
       width: 240px;
       font-family: Neucha;
       font-style: normal;
@@ -47,7 +48,7 @@
     }
 
     .section1 {
-      margin-top: 40px;
+      margin-top: 80px;
       h1 {
         font-family: Neon Nanoborg;
         font-style: normal;

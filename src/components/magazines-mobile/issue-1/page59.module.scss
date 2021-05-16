@@ -10,7 +10,8 @@
 
   .backImage {
     position: absolute;
-    height: 720px;
+    min-height: 720px;
+    height: 100vh;
     left: 0px;
     top: 0px;
   }

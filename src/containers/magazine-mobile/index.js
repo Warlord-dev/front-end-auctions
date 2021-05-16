@@ -189,7 +189,7 @@ const MagazineViewer = props => {
         </div>
       </div>
       <ViewerSwitch 
-        viewers={['webview', 'mapview']}
+        viewers={['exit', 'mapview']}
         onSwitchViewer={onSwitchViewer}
       />
     </>
