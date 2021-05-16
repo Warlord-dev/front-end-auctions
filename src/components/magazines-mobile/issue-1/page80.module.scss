@@ -10,18 +10,23 @@
 
   .backImage {
     position: absolute;
-    height: 3400px;
+    height: 3600px;
     left: 0px;
     top: 0px;
   }
   .innerWrapper {
     position: absolute;
     overflow-x: hidden;
-    top: 130px;
-    left: calc((100vw - 280px) / 2);
-    width: 280px;
+    top: 100px;
+    left: calc((100vw - 300px) / 2);
+    width: 300px;
+    padding: 0 10px;
     white-space: normal;
     text-align: left;
+    .xenotech {
+      width: 300px;
+      margin-left: -20px;
+    }
     & > h1 {
       text-align: right;
       font-family: Neon Nanoborg;

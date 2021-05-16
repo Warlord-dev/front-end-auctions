@@ -17,8 +17,9 @@
 
   h2 {
     position: absolute;
-    left: 30px;
+    left: calc((100vw - 270px) / 2);
     top: 40px;
+    width: 270px;
     font-family: Nella Sue Demo;
     font-style: normal;
     font-weight: normal;

@@ -13,7 +13,7 @@
     width: 280px;
     position: absolute;
     top: 100px;
-    left: 20px;
+    left: calc((100vw - 280px) / 2);
   }
   .backImage {
     width: 100%;
@@ -21,6 +21,7 @@
     position: absolute;
   }
   p {
+    width: 300px;
     font-family: Aldrich;
     font-style: normal;
     font-weight: normal;
@@ -31,7 +32,7 @@
     margin-bottom: 40px;
 
     &.section1 {
-   
+      width: 280px;
       transform: rotate(5deg);
     }
 
@@ -45,9 +46,11 @@
   }
 
   .dollarSign {
-    width: 100%;
-    height: auto;
+    width: 200px !important;
     display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
   }
 
@@ -56,27 +59,21 @@
 @media only screen and (max-width: 768px){
   .wrapper {
     width: 768px;
-    .innerWrapper {
-      width: 728px;
-    }
+ 
   }
 }
 
 @media only screen and (max-width: 425px){
   .wrapper {
     width: 425px;
-    .innerWrapper {
-      width: 485px;
-    }
+   
   }
 }
 
 @media only screen and (max-width: 375px){
   .wrapper {
     width: 375px;
-    .innerWrapper {
-      width: 335px;
-    }
+ 
   
   }
 }
@@ -84,8 +81,6 @@
 @media only screen and (max-width: 320px){
   .wrapper {
     width: 320px;
-    .innerWrapper {
-      width: 280px;
-    }
+  
   }
 }

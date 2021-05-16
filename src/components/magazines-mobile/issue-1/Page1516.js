@@ -5,22 +5,24 @@ const Page1516 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='./magazine/1/images/mobile/moshed.png' className={styles.backImage}/>
-      <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign}/>
+      <div className={styles.innerWrapper}>
+      <div className={styles.shadow}>
+        <h1 className={styles.shadow1}>
+          If life is a game, it’s not played under fair rules.
+        </h1>
+        <h1 className={styles.shadow2}>
+          If life is a game, it’s not played under fair rules.
+        </h1>
+        <h1 className={styles.shadow3}>
+          If life is a game, it’s not played under fair rules.
+        </h1>
+        <h1>
+          If life is a game, it’s not played under fair rules.
+        </h1>
+      </div>
       <div className={styles.lawrence}>
         Lawrence.
       </div>
-      <h1 className={styles.shadow1}>
-        If life is a game, it’s not played under fair rules.
-      </h1>
-      <h1 className={styles.shadow2}>
-        If life is a game, it’s not played under fair rules.
-      </h1>
-      <h1 className={styles.shadow3}>
-        If life is a game, it’s not played under fair rules.
-      </h1>
-      <h1>
-        If life is a game, it’s not played under fair rules.
-      </h1>
       <p className={styles.section1}>
         If life is a game, it’s not played under fair rules. 
         The rich are getting more while the struggling ones continue to feel the brunt of the suffering. 
@@ -28,6 +30,7 @@ const Page1516 = () => {
         the cards are stacked unfavorably with no easy way out. It’s not that the underprivileged are lazy. 
         Instead, the well-off have a considerable head start.
       </p>
+      <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign}/>
       <div className={styles.textWrapper}>
       <p className={styles.section2}>
         Even before the COVID-19 pandemic, the divide was already prominent. 
@@ -40,6 +43,7 @@ const Page1516 = () => {
         partly because of outdated taxation systems and the absence of land reform. 
         The Asian region saw the wealthiest possess close to 60 percent of income share, especially in India, wherein the difference in classes emerge even more.
       </p>
+      </div>
       </div>
     </div>
   )

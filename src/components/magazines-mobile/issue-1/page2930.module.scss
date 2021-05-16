@@ -13,7 +13,7 @@
 
   .innerWrapper {
     position: absolute;
-    top: 0x;
+    top: 0;
     left: 0;
     width: 100%;
     img {
@@ -25,8 +25,12 @@
   }
 
   h1 {
-    font-family: Aldrich, sans-serif;
-    margin-top: 200px;
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 150%;
+    margin-top: calc((100vw + 100px) / 2);
     margin-left: 20px;
   }
 

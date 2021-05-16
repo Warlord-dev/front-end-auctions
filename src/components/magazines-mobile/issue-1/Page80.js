@@ -4,8 +4,9 @@ import styles from './page80.module.scss'
 const Page80 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page80-bg.png" className={styles.backImage} />
+      <img src="./magazine/1/images/mobile/page80-bg.png?v=2" className={styles.backImage} />
       <div className={styles.innerWrapper}>
+      <img src="./magazine/1/images/mobile/xenotech.png" className={styles.xenotech} />
         <h1>Desiging for the Metaverse.</h1>
         <p>23 yr old  art and design student based in NYC at The New School, with an international upbringing, from Japan, NYC, Rome, and Abu Dhabi. </p>
         <div className={styles.section1}>

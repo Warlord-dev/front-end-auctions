@@ -62,7 +62,8 @@
 
   h1 {
     position: absolute;
-    left: 70px;
+    left: calc((100vw - 170px) / 2);
+    width: 170px;
     top: 892px;
 
     font-family: PLAYPULL;
@@ -89,7 +90,8 @@
 
   h2 {
     position: absolute;
-    left: 60px;
+    left: calc((100vw - 200px)/ 2);
+    width: 200px;
     top: 1057px;
     font-family: Mervale Script;
     font-style: normal;
@@ -101,7 +103,8 @@
 
   h3 {
     position: absolute;
-    left: 60px;
+    left: calc((100vw - 200px)/ 2);
+    width: 200px;
     top: 1100px;
     width: 200px;
     font-family: Beth Ellen;

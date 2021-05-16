@@ -11,7 +11,7 @@
 
   .backImage {
     position: absolute;
-    height: 940px;
+    min-height: 940px;
     left: 0px;
     top: 0px;
   }
@@ -20,7 +20,7 @@
       position: absolute;
       width: 160% !important;
       left: -80px;
-      bottom: -440px;
+      bottom: -150vw;
   }
 }
 

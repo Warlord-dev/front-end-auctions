@@ -11,7 +11,7 @@
 
   .backImage {
     position: absolute;
-    height: 3000px;
+    height: 2900px;
     left: 0px;
     top: 0px;
   }
@@ -51,6 +51,10 @@
       line-height: 110%;
       margin-top: 60px;
       margin-bottom: 10px;
+      .playImage {
+        width: 30px;
+        height: 30px;
+      }
     }
     h5 {
       font-family: Barlow;

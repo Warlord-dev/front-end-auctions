@@ -13,6 +13,13 @@
     height: 1570px;
     width: 320px;
     background-color: white;
+    text-align: left;
+    .innerWrapper {
+      position: absolute;
+      width: 280px;
+      top: 0;
+      left: calc((100vw - 280px) / 2);
+    }
     img {
       position: absolute;
       top: -85px;
@@ -31,15 +38,13 @@
   }
 
   h1 {
-    position: absolute;
-    left: 20px;
-    top: 0px;
 
     font-family: Artisual Deco DEMO;
     font-style: normal;
     font-weight: normal;
     font-size: 60px;
     line-height: 110%;
+    margin-bottom: 30px;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     span {
@@ -49,36 +54,25 @@
   }
 
   h2 {
-    position: absolute;
-    left: 10px;
-    top: 434px;
-    width: 300px;
     font-family: Artisual Deco DEMO;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
+    margin-bottom: 8px;
   }
 
   h3 {
-    position: absolute;
-    left: 10px;
-    top: 462px;
-    width: 300px;
 
     font-family: Arima Madurai;
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
     line-height: 110%;
+    margin-bottom: 20px;
   }
 
   p {
-    position: absolute;
-    left: 10px;
-    width: 300px;
-    top: 508px;
     white-space: normal;
-
     font-family: Inter;
     font-weight: normal;
     font-size: 15px;
@@ -102,9 +96,6 @@
         top: 1px;
       }
     }
-    p {
-      width: 748px;
-    }
     .backImage1 {
       width: 768px;
     }
@@ -120,9 +111,6 @@
         width: 425px;
         top: -15px;
       }
-    }
-    p {
-      width: 405px;
     }
     .backImage1 {
       width: 425px;
@@ -140,9 +128,6 @@
         top: -49px;
       }
     }
-    p {
-      width: 355px;
-    }
     .backImage1 {
       width: 375px;
     }
@@ -158,9 +143,6 @@
         width: 320px;
         top: -85px;
       }
-    }
-    p {
-      width: 300px;
     }
     .backImage1 {
       width: 320px;

@@ -28,7 +28,7 @@
   .section4 {
     position: absolute;
     width: 280px;
-    left: 20px;
+    left: calc((100vw - 280px)/ 2);
     top: 95px;
 
     font-family: Aldrich;

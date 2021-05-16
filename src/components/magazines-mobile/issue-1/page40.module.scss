@@ -45,11 +45,11 @@
             position: absolute;
             width: 100px;
             right: 40px;
-            top: calc(100vh - 350px);
+            top: calc(100vw - 170px);
         }
         h5 {
             position: absolute;
-            top: calc(100vh - 340px);
+            top: calc(100vw - 160px);
             right: 120px;
             width: 110px;
             font-family: Finger Paint;
@@ -62,8 +62,8 @@
 
         .arrow {
             position: absolute;
-            top: 140px;
-            left: 40px;
+            top: calc(100vw - 180px);
+            left: calc(100vw - 300px);
             width: 160px;
             transform: rotate(90deg);
         }

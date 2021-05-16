@@ -29,7 +29,8 @@
       font-size: 70px;
       line-height: 100%;
       color: #00FFF0;
-      margin-left: 20px;
+      width: 300px;
+      margin-left: calc((100vw - 300px) / 2);
     }
     .description {
       font-family: Muna;

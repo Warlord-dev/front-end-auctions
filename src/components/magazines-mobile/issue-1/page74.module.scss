@@ -54,6 +54,9 @@
         font-family: Fresca;
         font-style: normal;
         font-weight: normal;
+        width: 260px;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 50px;
         line-height: 100%;
         margin-top: 20px;
@@ -78,6 +81,7 @@
         text-align: right;
         margin-top: 20px;
         margin-bottom: 20px;
+        margin-right: 20px;
       }
       img {
         display: block;
@@ -125,6 +129,7 @@
       }
     }
     .section5 {
+      padding: 0 20px;
       margin-bottom: 100px;
       h1 {
         font-family: Fresca;

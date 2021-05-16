@@ -12,7 +12,7 @@ const Page64 = () => {
         </div>
         <img src="./magazine/1/images/mobile/the unlock.png" />
         <div className={styles.container}>
-          <h4>HOLD ON HOPE.</h4>
+          <h4>HOLD ON HOPE.  <img src="./magazine/1/images/mobile/play.png" className={styles.playImage} /></h4>
           <h5>Rowan. Kevin Paris. Gavin Slate.</h5>
         </div>
         <img src="./magazine/1/images/mobile/sound.gif" />
