@@ -1,0 +1,50 @@
+
+.wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .wrapper {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 768px;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .wrapper {
+        width: 425px;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .wrapper {
+        width: 375px;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .wrapper {
+        width: 320px;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        position: relative;
+    }
+}

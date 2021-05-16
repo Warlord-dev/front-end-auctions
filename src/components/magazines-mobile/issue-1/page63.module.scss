@@ -1,0 +1,141 @@
+@import './styles.module.scss';
+
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    height: 3400px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .innerWrapper {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    .container {
+      width: 280px;
+      margin: auto;
+    }
+    h1 {
+      font-family: Biryani;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 110%;
+      -webkit-text-stroke: 1px black;
+    }
+    h2 {
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 75px;
+      line-height: 110%;
+      text-align: center;
+      color: #0038FF;
+    }
+    p {
+      font-family: Capriola;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 110%;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-family: Barlow;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 110%;
+    }
+    a {
+      white-space: normal;
+      display: block;
+      word-break: break-all;
+      width: 200px;
+      color: white;
+    }
+    .section1 {
+      position: relative;
+      margin-top: 30px;
+      h1 {
+        width: 100px;
+        font-family: Habbo;
+        font-style: normal;
+        font-weight: normal;
+        white-space: normal;
+        font-size: 80px;
+        line-height: 110%;
+        text-align: center;
+        color: #8F00FF;
+        transform: rotate(-10deg);
+      }
+    }
+    .section2 {
+      width: 300px;
+      padding: 30px;
+      margin-left: auto;
+      background: rgba(0, 0, 0, 0.6);
+      h1 {
+        font-family: Sniglet;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        color: #5869FF;
+        -webkit-text-stroke: unset;
+      }
+      p {
+        font-family: SNOWBREAK;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
+    }
+  }
+}

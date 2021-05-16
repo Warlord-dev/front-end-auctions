@@ -1,0 +1,88 @@
+@import './styles.module.scss';
+
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    height: 720px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .innerWrapper {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      div {
+        background-color: #8BE0FF;
+        margin-top: -8px;
+        padding: 24px 16px;
+        text-align: left;
+        p {
+          font-family: Sen;
+          font-style: normal;
+          font-weight: normal;
+          white-space: normal;
+          line-height: 110%;
+          color: #DB00FF;
+          margin-bottom: 20px;
+        }
+        h1 {
+          font-family: Digital Dare;
+          font-style: normal;
+          font-weight: normal;
+          white-space: normal;
+          font-size: 20px;
+          line-height: 110%;
+          color: #FF00F5;
+        }
+      }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
+    }
+  }
+}

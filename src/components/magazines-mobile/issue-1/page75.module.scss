@@ -1,0 +1,146 @@
+@import './styles.module.scss';
+
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    height: 9600px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .innerWrapper {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    .title {
+      font-family: Neon Lights;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 70px;
+      line-height: 100%;
+      color: #00FFF0;
+      margin-left: 20px;
+    }
+    .description {
+      font-family: Muna;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 110%;
+      width: 260px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 60px;
+    }
+    .section1 {
+      width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 100px;
+      h1 {
+        font-family: Neon Vortex;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 110%;
+      }
+      p {
+        font-family: NATS;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 110%;
+      }
+    }
+    .section2 {
+      width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+      h1 {
+        font-family: Noto Sans Armenian;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 90%;
+        color: #00FFF0;
+        margin-bottom: 60px;
+      }
+      h2 {
+        font-family: Neon Vortex;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      img {
+        width: 280px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .card {
+      width: 280px;
+      margin: 80px auto;
+      h1 {
+        font-family: Neon Vortex;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
+    }
+  }
+}

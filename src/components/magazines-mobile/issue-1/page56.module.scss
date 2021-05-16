@@ -1,0 +1,78 @@
+@import './styles.module.scss';
+
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    height: 720px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .innerWrapper {
+      position: absolute;
+      right: 20px;
+      top: 30px;
+      width: 280px;
+      text-align: left;
+      div {
+        width: 180px;
+        margin-left: auto;
+        margin-bottom: 50px;
+        p {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            white-space: normal;
+            font-size: 12px;
+            line-height: 110%;
+            margin-bottom: 20px;
+        }
+      }
+      img {
+          width: 180px;
+      }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
+    }
+  }
+}

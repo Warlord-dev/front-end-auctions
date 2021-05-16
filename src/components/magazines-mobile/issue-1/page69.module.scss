@@ -1,0 +1,87 @@
+@import './styles.module.scss';
+
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    height: 2500px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .innerWrapper {
+    position: absolute;
+    top: 60px;
+    left: calc((100vw - 280px) / 2);
+    width: 280px;
+    white-space: normal;
+    text-align: left;
+    h1 {
+      font-family: Cinzel Decorative;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 120.53%;
+      color: #FFFFFF;
+      mix-blend-mode: normal;
+      -webkit-text-stroke: 0.1px #FFFFFF;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-bottom: 40px;
+    }
+    div {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      p {
+        font-family: Crafty Girls;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
+    }
+  }
+}

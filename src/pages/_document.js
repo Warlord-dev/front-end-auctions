@@ -172,6 +172,12 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: "Abel";
+              src: url("./fonts/Abel-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
               font-family: 'Nella Sue Demo';
               src: url("./fonts/NellaSueDEMO.ttf");
               font-weight: 400;
@@ -222,6 +228,24 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Rugsnatcher DEMO';
               src: url("./fonts/rugsnatcher DEMO.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Beth Ellen';
+              src: url("./fonts/Beth-Ellen-2.0.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Jockey One';
+              src: url("./fonts/JockeyOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Jacques Francois';
+              src: url("./fonts/JacquesFrancois-Regular.ttf");
               font-weight: 400;
             }
 
@@ -734,6 +758,18 @@ class MyDocument extends Document {
               src: url("./fonts/BurstMyBubble.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: 'Corben';
+              src: url("./fonts/Corben-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Corben';
+              src: url("./fonts/Corben-Bold.ttf");
+              font-weight: 700;
+            }
             
             @font-face {
               font-family: 'Carme';
@@ -745,6 +781,12 @@ class MyDocument extends Document {
               src: url("./fonts/neon2.ttf");
             }
             
+            @font-face {
+              font-family: 'Cinzel';
+              src: url("./fonts/Cinzel-Black.ttf");
+              font-weight: 900;
+            }
+
             @font-face {
               font-family: 'Decovar Alpha';
               src: url("./fonts/DecovarAlpha-VF.ttf");
@@ -783,10 +825,64 @@ class MyDocument extends Document {
               src: url("./fonts/Anton-Regular.ttf");
               font-weight: 400;
             }
+          
+            @font-face {
+              font-family: 'Antic Didone';
+              src: url("./fonts/AnticDidone-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Monoton';
+              src: url("./fonts/Monoton-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Chilanka';
+              src: url("./fonts/Chilanka-Regular.ttf");
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Chivo';
+              src: url("./fonts/Chivo-Regular.ttf");
+              font-weight: 400;
+            }
 
             @font-face {
               font-family: 'Neon Vortex';
               src: url("./fonts/Neon Vortex.ttf");
+            }
+
+            @font-face {
+              font-family: 'Lexend Giga';
+              src: url("./fonts/LexendGiga-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Bungee Inline';
+              src: url("./fonts/BungeeInline-Regular.ttf");
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Bellota Text';
+              src: url("./fonts/BellotaText-Bold.ttf");
+              font-weight: 700;
+            }
+          
+            @font-face {
+              font-family: 'News Cycle';
+              src: url("./fonts/NewsCycle-Bold.ttf");
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Rosarivo';
+              src: url("./fonts/Rosarivo-Regular.ttf");
+              font-weight: 400;
             }
           `,
             }}

@@ -1,0 +1,160 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    
+    .left {
+        position: absolute;
+        width: 955px;
+        height: 1497px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .right {
+        background: url('../../../../public/magazine/1/43_44/right.png');
+        position: absolute;
+        width: 1036px;
+        height: 2209px;
+        left: 960px;
+        top: -712px;
+        mix-blend-mode: screen;
+    }
+
+    .mesh {
+        position: absolute;
+        width: 1036px;
+        height: 2209px;
+        left: 960px;
+        top: -712px;
+    }
+
+    .title {
+        position: absolute;
+        // width: 755px;
+        height: 56px;
+        left: 1036px;
+        top: 87px;
+
+        font-family: Blacker Display;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 110%;
+        /* identical to box height, or 66px */
+
+
+        color: #FFFFFF;
+    }
+
+    .subTitle {
+        position: absolute;
+        width: 151px;
+        height: 17px;
+        left: 1036px;
+        top: 157px;
+
+        font-family: Arima Madurai;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 110%;
+        /* identical to box height, or 17px */
+
+
+        color: #000000;
+    }
+
+    .firstParagraph {
+        position: absolute;
+        width: 697px;
+        height: 314px;
+        left: 1108px;
+        top: 193px;
+
+        background: rgba(255, 255, 255, 0.7);
+
+    }
+    .firstText {
+        position: absolute;
+        width: 583px;
+        height: 262px;
+        left: 1165px;
+        top: 233px;
+
+        font-family: Arapey;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 110%;
+        /* or 18px */
+
+        text-align: center;
+
+        color: #000000;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .secondParagraph {
+        position: absolute;
+        width: 697px;
+        height: 377px;
+        left: 1108px;
+        top: 519px;
+
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .secondText {
+        position: absolute;
+        width: 583px;
+        height: 262px;
+        left: 1165px;
+        top: 552px;
+
+        font-family: Arapey;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 110%;
+        /* or 18px */
+
+        text-align: center;
+
+        color: #000000;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .thirdParagraph {
+        position: absolute;
+        width: 697px;
+        height: 480px;
+        left: 1108px;
+        top: 908px;
+
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .thirdText {
+        position: absolute;
+        width: 583px;
+        height: 221px;
+        left: 1164px;
+        top: 941px;
+
+        font-family: Arapey;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 110%;
+        /* or 18px */
+
+        text-align: center;
+
+        color: #000000;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}

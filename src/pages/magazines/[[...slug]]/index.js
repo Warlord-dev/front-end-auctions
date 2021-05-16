@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Router, { useRouter } from 'next/router'
 import WebViewer from '@containers/web-view'
 import MagazineViewer from '@containers/magazine-view'
+import MagazineMobile from '../../../containers/magazine-mobile'
 import MapViewer from '@containers/map-view'
 import magazineIssues from '@constants/magazines'
 
@@ -12,6 +13,7 @@ const MagazinePages = () => {
   const { slug } = router.query;
   const [currentPage, setCurrentPage] = useState(-1)
   const { contentUnlocked } = useSelector(state => state.global.toJS());
+  const width = window.innerWidth
 
   const issueId = slug && slug.length > 0
   ? slug[0] : magazineIssues[0].issueId
@@ -67,14 +69,25 @@ const MagazinePages = () => {
       </WebViewer>
     )
   } else if (viewMethod === 'magazineview') {
-    return (
-      <MagazineViewer
+    if(width > 768) {
+      return (
+        <MagazineViewer
         issueId={issueId}
         initPage={currentPage}
         onSwitchViewer={switchViewer}
       >
       </MagazineViewer>
-    )
+      );
+    }else {
+      return (
+        <MagazineMobile
+        issueId={issueId}
+        initPage={currentPage}
+        onSwitchViewer={switchViewer}
+      >
+      </MagazineMobile>
+      )
+    }
   }
 
   return (

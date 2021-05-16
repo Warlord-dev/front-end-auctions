@@ -1,0 +1,139 @@
+@import './styles.module.scss';
+
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    height: 4000px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .innerWrapper {
+    position: absolute;
+    top: 60px;
+    left: calc((100vw - 280px) / 2);
+    width: 280px;
+    white-space: normal;
+    h1 {
+      font-family: Covered By Your Grace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 35px;
+      line-height: 110%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: Covered By Your Grace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 110%;
+      margin-bottom: 30px;
+    }
+    .section1 {
+      display: flex;
+      justify-content: space-between;
+      .titleSpacing {
+        padding: 30px;
+        display: inline-block;
+      }
+      h1 {
+        font-family: Blacker Display;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 110%;
+        text-align: center;
+        width: 40px;
+        word-break: break-all;
+      }
+      h2 {
+        margin-top: 120px;
+        font-family: Blacker Display;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 110%;
+        text-align: center;
+        width: 40px;
+        word-break: break-all;
+        color: #2FA8FF;
+      }
+      h3 {
+        font-family: Blacker Display;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 110%;
+        text-align: center;
+        width: 40px;
+        word-break: break-all;
+        color: #FF3939;
+      }
+    }
+    .section2 {
+      margin-top: 100px;
+    }
+    .section3 {
+      margin-top: 80px;
+      transform: rotate(-5deg);
+    }
+    .section4 {
+      margin-top: 80px;
+      transform: rotate(5deg);
+    }
+    .section5 {
+      margin-top: 80px;
+      transform: rotate(-5deg);
+    }
+    .section6 {
+      margin-top: 80px;
+      transform: rotate(5deg);
+    }
+  }
+
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
+    }
+  }
+}

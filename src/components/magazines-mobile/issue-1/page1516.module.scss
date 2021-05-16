@@ -1,0 +1,167 @@
+@import './styles.module.scss';
+
+.wrapper {
+  width: 320px;
+  height: 2300px;
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  .backImage {
+    position: absolute;
+    width: 320px;
+    height: 2300px;
+    left: 0px;
+    top: 0;
+  }
+  
+  .dollarSign {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0px;
+    top: 900px;
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .lawrence {
+    position: absolute;
+    width: 144px;
+    height: 18px;
+    left: 40px;
+    top: 400px;
+
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 150%;
+  }
+
+  h1 {
+    position: absolute;
+    left: 1.39%;
+    right: 73.69%;
+    top: 200px;
+    width: 300px;
+
+    font-family: Internal Rainbows;
+    font-style: normal;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 26px;
+    line-height: 35px;
+    text-align: center;
+    transform: rotate(3deg);
+
+    &.shadow1 {
+      position: absolute;
+      left: -2.49%;
+      right: 73.23%;
+      top: 200px;
+      color: #F90498;
+    }
+
+    &.shadow2 {
+      position: absolute;
+      left: -1.18%;
+      right: 73.02%;
+      top: 200px;
+      color: #F90498;
+    }
+
+    &.shadow3 {
+      position: absolute;
+      left: -0.02%;
+      right: 72.76%;
+      top: 200px;
+      color: #F90498;
+    }
+
+  }
+  .section1 {
+    position: absolute;
+    width: 300px;
+    left: 10px;
+    top: 500px;
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 21px;
+    text-align: center;
+    transform: rotate(-3deg);
+  }
+  .textWrapper {
+    position: absolute;
+    top: 1300px;
+    width: 300px;
+  }
+
+  .section2 {
+    width: 260px;
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 21px;
+    text-align: center;
+  }
+
+  .section3 {
+    margin-top: 80px;
+    width: 260px;
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 23px;
+    text-align: center;
+    transform: rotate(7deg);
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    .backImage, .backImage2 {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    .backImage, .backImage2 {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    .backImage, .backImage2 {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    .backImage, .backImage2 {
+      width: 320px;
+    }
+  }
+}

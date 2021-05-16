@@ -1,0 +1,169 @@
+@import './styles.module.scss';
+
+.wrapper {
+  height: 100vh;
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .secondWrapper {
+    position: absolute;
+    top: 300px;
+    height: 1570px;
+    width: 320px;
+    background-color: white;
+    img {
+      position: absolute;
+      top: -85px;
+      left: 0;
+      bottom: 0;
+      width: 320px;
+      height: fit-content;
+    }
+  }
+
+  .backImage1 {
+    position: absolute;
+    width: 320px;
+    left: 0px;
+    top: 0px;
+  }
+
+  h1 {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+
+    font-family: Artisual Deco DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    span {
+      font-size: 37px;
+      line-height: 0;
+    }
+  }
+
+  h2 {
+    position: absolute;
+    left: 10px;
+    top: 434px;
+    width: 300px;
+    font-family: Artisual Deco DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  h3 {
+    position: absolute;
+    left: 10px;
+    top: 462px;
+    width: 300px;
+
+    font-family: Arima Madurai;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 110%;
+  }
+
+  p {
+    position: absolute;
+    left: 10px;
+    width: 300px;
+    top: 508px;
+    white-space: normal;
+
+    font-family: Inter;
+    font-weight: normal;
+    font-size: 15px;
+
+    color: #000000;
+
+    span.italicText {
+      font-style: italic;
+    }
+  }
+  
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    .secondWrapper {
+      width: 768px;
+      img {
+        width: 768px;
+        top: 1px;
+      }
+    }
+    p {
+      width: 748px;
+    }
+    .backImage1 {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    .secondWrapper {
+      width: 425px;
+      img {
+        width: 425px;
+        top: -15px;
+      }
+    }
+    p {
+      width: 405px;
+    }
+    .backImage1 {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    .secondWrapper {
+      width: 375px;
+      img {
+        width: 375px;
+        top: -49px;
+      }
+    }
+    p {
+      width: 355px;
+    }
+    .backImage1 {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    .secondWrapper {
+      width: 320px;
+      img {
+        width: 320px;
+        top: -85px;
+      }
+    }
+    p {
+      width: 300px;
+    }
+    .backImage1 {
+      width: 320px;
+    }
+  }
+}
