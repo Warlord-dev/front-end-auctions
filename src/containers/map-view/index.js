@@ -3,6 +3,7 @@ import windowSize from 'react-window-size'
 import styles from './styles.module.scss'
 import MapItem from '../../components/magazines/common/MapItem'
 import ViewerSwitch from '../../components/magazines/common/ViewerSwitch'
+import ViewerSwitchMobile from '@components/magazines-mobile/common/ViewerSwitch'
 
 const mapList = [
   {
@@ -111,6 +112,7 @@ const mapList = [
 const MapViewer = forwardRef((props, ref) => {
   const { issueId, windowWidth, onClickItem, onSwitchViewer } = props
   const currentMap = mapList.find(item => item.issueId === issueId)
+  const width = window.innerWidth
   return (
     <>
       <div className={styles.mapViewerWrapper}>
@@ -134,11 +136,19 @@ const MapViewer = forwardRef((props, ref) => {
           }
         </div>
       </div>
-      <ViewerSwitch 
-        mapSwitch
-        viewers={['webview', 'magazineview', 'exit']}
-        onSwitchViewer={onSwitchViewer}
-      />
+      {
+        width < 768 ?
+        <ViewerSwitchMobile 
+          mapSwitch
+          viewers={['webview', 'magazineview', 'exit']}
+          onSwitchViewer={onSwitchViewer}
+        /> :
+          <ViewerSwitch 
+          mapSwitch
+          viewers={['webview', 'magazineview', 'exit']}
+          onSwitchViewer={onSwitchViewer}
+        />
+      }
     </>
   )
 })

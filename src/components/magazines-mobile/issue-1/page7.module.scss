@@ -7,10 +7,11 @@
   color: black;
   display: flex;
   position: relative;
+  text-align: left;
 
   .backOrange {
     width: 320px;
-    height: 3000px;
+    height: 2900px;
     background-size: cover;
     background-image: url('/magazine/1/images/mobile/page78-part2-bg.png');
   }
@@ -23,14 +24,15 @@
     top: 2400px;
     z-index:0;
   }
+  .innerWrapper {
+    position: absolute;
+    top: 60px;
+    width: 280px;
+    left: calc((100vw - 280px) / 2);
+  }
 
   .logo_t {
-    position: absolute;
     width: 126px;
-    height: 675px;
-    left: 100px;
-    top: 500px;
-
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
@@ -48,77 +50,65 @@
   }
 
   .section1 {
-    position: absolute;
-    white-space: normal;
-    width: 300px;
-    left: calc((100vw - 300px) / 2);
-    top: 71px;
-
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
+    white-space: normal;
     font-size: 15px;
     line-height: 150%;
-    /* or 22px */
-
-
     color: #FFFFFF;
+    p {
+      margin-bottom: 20px;
+    }
   }
 
   .section2 {
-    position: absolute;
     white-space: normal;
-    width: 300px;
-    left: calc((100vw - 300px) / 2);
-    top: 700px;
-
     font-family: Inter;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 15px;
     line-height: 150%;
+    span {
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 20px;
+    }
   }
 
   .section3 {
-    position: absolute;
     white-space: normal;
-    width: 300px;
-    left: calc((100vw - 300px) / 2);
-    top: 1200px;
-
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 150%;
+    p {
+      margin-bottom: 20px;
+    }
   }
 
   .section4 {
-    position: absolute;
     white-space: normal;
     width: 300px;
-    left: calc((100vw - 300px) / 2);
-    top: 1700px;
-
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 150%;
+    margin-bottom: 20px;
   }
 
   .section5 {
-    position: absolute;
     white-space: normal;
     width: 300px;
-    left: calc((100vw - 300px) / 2);
-    top: 2100px;
-
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 150%;
+    margin-bottom: 20px;
   }
 }
 

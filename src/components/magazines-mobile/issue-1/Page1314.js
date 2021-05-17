@@ -11,7 +11,7 @@ const Page1314 = () => {
       <img src='./magazine/1/images/mobile/howtogetintext.png' className={styles.bottomTextImage}/>
       <div className={styles.innerWrapper}>
       <h1>
-        Starting with 3D// Interview with Stan McGylin, Pipeline Manager and Creative Director at DIGITALAX, on the 3D Content Creation process.
+      Starting with 3D// Interview with Stan McGylin, Pipeline Manager and Creative Director at DIGITALAX, on the 3D Content Creation process. 
       </h1>
       <h2 className={styles.section1}>
         How did you begin working with DIGITALAX?

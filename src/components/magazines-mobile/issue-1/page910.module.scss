@@ -7,6 +7,7 @@
   color: black;
   display: flex;
   position: relative;
+  text-align: left;
 
   .firstPartWrapper {
     width: 320px;
@@ -20,7 +21,7 @@
     .backImage1 {
       position: absolute;
       width: 320px;
-      height: 1600px;
+      height: 1500px;
       left: 0px;
       top: 0;
       transform-origin: 0 0;
