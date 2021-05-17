@@ -33,6 +33,7 @@
   color: white;
   display: flex;
   position: relative;
+  padding-bottom: 50px;
 
   h1:nth-child(1) {
     position: absolute;
@@ -100,11 +101,12 @@
   .wrapper {
     video {
       position: absolute;
-      width: 120px;
+      width: 170px;
       height: auto;
       top: 1700px;
       left: calc((768px - 120px) / 2);
       transform: rotate(90deg);
+      padding-right: 50px;
     }
   }
 }
@@ -113,11 +115,12 @@
   .wrapper {
     video {
       position: absolute;
-      width: 120px;
+      width: 170px;
       height: auto;
       top: 1700px;
       left: calc((425px - 120px) / 2);
       transform: rotate(90deg);
+      padding-right: 50px;
     }
   }
 }
@@ -126,11 +129,13 @@
   .wrapper {
     video {
       position: absolute;
-      width: 120px;
+      width: 170px;
       height: auto;
       top: 1700px;
       left: calc((375px - 120px) / 2);
       transform: rotate(90deg);
+      margin-bottom: 50px;
+      padding-right: 50px;
     }
   }
 }
