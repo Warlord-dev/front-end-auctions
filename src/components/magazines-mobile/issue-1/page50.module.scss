@@ -10,7 +10,7 @@
 
   .backImage {
     position: absolute;
-    height: 2400px;
+    height: 4800px;
     object-fit: cover;
     object-position: left;
     left: 0px;
@@ -28,6 +28,54 @@
     text-align: left;
     img {
         margin-bottom: 40px;
+    }
+    .sections {
+      img {
+        margin-bottom: 20px;
+      }
+      h1 {
+        margin-bottom: 10px;
+        font-family: News Cycle;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 150%;
+        -webkit-text-stroke: 0.2px #000000;
+        text-align: left;
+      }
+      span {
+        font-family: News Cycle;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 150%;
+        -webkit-text-stroke: 0.2px #000000;
+        text-align: left;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+      }
+      p {
+        font-family: Rosarivo;
+        font-style: normal;
+        font-weight: normal;
+        white-space: normal;
+        font-size: 12px;
+        line-height: 150%;
+        text-align: left;
+        text-decoration: none;
+      }
+      h2 {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-family: News Cycle;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 150%;
+        -webkit-text-stroke: 0.2px #000000;
+        text-align: right;
+      }
     }
     p {
         font-family: 'DIN Alternate';

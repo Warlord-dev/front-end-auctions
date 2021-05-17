@@ -27,15 +27,21 @@
   .content {
     position: absolute;
     white-space: normal;
-    height: 1100px;
-    left: 10px;
+    height: 1900px;
+    width: 290px;
+    left: calc((100vw - 290px) / 2);
     top: 200px;
 
     font-family: Courier New;
     font-style: normal;
     font-weight: normal;
+    text-align: left;
     font-size: 18px;
     line-height: 120.53%;
+    p:nth-child(2) {
+      text-align: center;
+      margin-top: 20px;
+    }
   }
 }
 
@@ -44,10 +50,6 @@
     width: 768px;
     .paintImage {
       width: 768px;
-    }
-    .content {
-      width: 748px;
-      left: 10px;
     }
   }
 }
@@ -58,10 +60,6 @@
     .paintImage {
       width: 425px;
     }
-    .content {
-      width: 405px;
-      left: 10px;
-    }
   }
 }
 
@@ -71,10 +69,6 @@
     .paintImage {
       width: 375px;
     }
-    .content {
-      width: 355px;
-      left: 10px;
-    }
   }
 }
 
@@ -83,10 +77,6 @@
     width: 320px;
     .paintImage {
       width: 320px;
-    }
-    .content {
-      width: 300px;
-      left: 10px;
     }
   }
 }

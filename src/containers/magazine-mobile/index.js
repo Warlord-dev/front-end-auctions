@@ -81,7 +81,6 @@ import Page84 from '@components/magazines-mobile/issue-1/Page84'
 import Page85 from '@components/magazines-mobile/issue-1/Page85'
 import Page86 from '@components/magazines-mobile/issue-1/Page86'
 import Page87 from '@components/magazines-mobile/issue-1/Page87'
-import Page88 from '@components/magazines-mobile/issue-1/Page88'
 
 import MagazinePageWrapper from '@components/magazines-mobile/common/MagazinePageWrapper'
 import ViewerSwitch from '@components/magazines-mobile/common/ViewerSwitch'
@@ -183,7 +182,6 @@ const MagazineViewer = props => {
             <MagazinePageWrapper><Page85 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page86 /></MagazinePageWrapper>
             <MagazinePageWrapper><Page87 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page88 /></MagazinePageWrapper>
 
           </SwipePage>
         </div>

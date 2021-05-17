@@ -2,6 +2,7 @@
 
 .wrapper {
   width: 320px;
+  overflow-x: hidden;
   background-color: white;
   color: black;
   display: flex;
@@ -15,6 +16,7 @@
   }
 
   .rightImage4 {
+    transform: rotate(-20deg);
     position: absolute;
     width: 300px;
     height: auto;

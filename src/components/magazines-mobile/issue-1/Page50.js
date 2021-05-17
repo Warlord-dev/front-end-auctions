@@ -20,6 +20,24 @@ const Page50 = () => {
           <p>The rarest form of this series is a participatory performance called Joint Paean by Jenna Jauhiainen where they will join you inside Allegory of Meta for a discussion about hopes and dreams related to transitioning from web2 to web3. This performance includes a homage to the floating crystal with a specially choreographed dance. </p>
           <p>Most of the visual and sound material attributed to these objects is derived from existing material, yet the shape of each object is unique. Among other things, the objects include trademarked and copyrighted colors, logos, images, songs and videos. The three objects all have a common source of origin that will be revealed in 40 months, approximately 3,3 years. In the meantime, we will be upgrading the objects as to their compatibility and interoperability aspects, perfecting these pieces until the final revelation of their source.</p>
         </div>
+        <div className={styles.sections}>
+          <img src="./magazine/1/images/mobile/page50/image1.png" />
+          <h1>604753_Allegory_of_Meta</h1>
+          <span>+</span>
+          <h2>604753_Joint_Paean</h2>
+          <p>The Allegory of Meta is an unnatural formation, created as a space to spend time in pondering, dancing, holding out the rain or perhaps inhabiting it as a caveperson of the metaverse. It alludes to Plato's cave in embodying an unreal reality, with shadows and reflections with only a transitory relation to the real. On its surface, Allegory of Meta is embedded with a unique texture made out of copyrighted and trademarked colors, logos and </p>
+          <p>images. Inside the formation a floating, video displaying crystal emits a soundscape inspired by the forever rising, never dropping glory. Outside, the soundscape is calm like a sea-breeze. The owners of Allegory of Meta can unlock an ultra-rare feature where the artist and researcher Jenna Jauhiainen will join them inside the formation placed in the virtual environment of their choosing. The performance includes a discussion about hopes and dreams related to transitioning from web2 to web3, and a homage to the floating crystal with a specially choreographed dance. The details of the performance are negotiated with the owner of this ultra-rare NFT. For example, it is possible to enjoy this performance as a one-on-one encounter or invite an audience to join. </p>
+        </div>
+        <div className={styles.sections}>
+          <h1>604753_Bodysattvax</h1>
+          <img src="./magazine/1/images/mobile/page50/image2.png" />
+          <p>The Bodysattvax is a statue, a totem for XD, the international symbol of ecstatic laughter. This statue pays homage to mediatization, to hyperreality and simulacrum. Bodysattvax can be placed inside or outside, creating a tranquil yet tense ambience with shivers of shock and awe. The video on the background is what's embedded into the statue's texture. The soundscape emitted by Bodysattvax is inspired by MGS2 which explores themes such as memetics, social engineering, existentialism, postmodernism, virtual reality and the internal struggle of political liberty and freedom of thought.</p>
+        </div>
+        <div className={styles.sections}>
+          <h1>604753_Trivial_Perseption</h1>
+          <img src="./magazine/1/images/mobile/page50/image3.png" />
+          <p>The Trivial Perseption is a ring is inspired by the treacherous wallflowerness of random elements around us, the kind with apparent naturalness to the sensory overload they cause and contextual burden they carry. The video you see on the background of the ring is what's embedded into the ring's texture. The soundscape emitted by the forever orbiting and pulsating glass jewel is inspired by Sting suing Juice WRLD and Metallica ruining Napster.</p>
+        </div>
       </div>
     </div>
   )

@@ -53,12 +53,12 @@
     font-size: 26px;
     line-height: 35px;
     text-align: center;
-    transform: rotate(3deg);
+    transform: skewY(10deg);
 
     &.shadow1 {
       position: absolute;
       height: 432.95px;
-      left: 11.18%;
+      left: 8.4%;
       right: 55.02%;
       top: 2000px;
       color: #F90498;
@@ -66,7 +66,7 @@
 
     &.shadow2 {
       height: 432.95px;
-      left: 12.39%;
+      left: 8.39%;
       right: 54.81%;
       top: 2000px;
       color: #F90498;
@@ -74,7 +74,7 @@
 
     &.shadow3 {
       height: 432.95px;
-      left: 13.65%;
+      left: 10.65%;
       right: 54.55%;
       top: 2000px;
       color: #F90498;
