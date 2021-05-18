@@ -1,9 +1,10 @@
-import React from 'react'
-import SwipePage from '../../components/swipe'
+import React, { useState } from 'react'
+import SwipePage from '@components/swipe'
+import getPageList from '@components/magazines-mobile/PageList'
 import CoverPage from '@components/magazines-mobile/issue-1/CoverPage'
-import Page12 from '@components/magazines-mobile/issue-1/Page12'
-import Page3 from '@components/magazines-mobile/issue-1/Page3'
-import Page4 from '@components/magazines-mobile/issue-1/Page4'
+import Page12 from '@components/magazines-mobile/issue-1/Page1'
+import Page3 from '@components/magazines-mobile/issue-1/Page2'
+import Page4 from '@components/magazines-mobile/issue-1/Page3'
 import Page5 from '@components/magazines-mobile/issue-1/Page5'
 import Page6 from '@components/magazines-mobile/issue-1/Page6'
 import Page7 from '@components/magazines-mobile/issue-1/Page7'
@@ -82,116 +83,142 @@ import Page85 from '@components/magazines-mobile/issue-1/Page85'
 import Page86 from '@components/magazines-mobile/issue-1/Page86'
 import Page87 from '@components/magazines-mobile/issue-1/Page87'
 
-import MagazinePageWrapper from '@components/magazines-mobile/common/MagazinePageWrapper'
+import MobilePageWrapper from '@components/magazines-mobile/common/MobilePageWrapper'
 import ViewerSwitch from '@components/magazines-mobile/common/ViewerSwitch'
 
 import styles from './styles.module.scss'
 
-const MagazineViewer = props => {
+const MobileViewer = props => {
   const {
     issueId,
     pageNumber,
     children,
     onSwitchViewer
   } = props
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  const pageList = getPageList(issueId)
+
+  const getChildrenList = () => {
+    const childrenList = []
+
+    pageList.forEach((item, index) => {
+      childrenList.push(
+        <MobilePageWrapper>
+          {item}
+        </MobilePageWrapper>
+      )
+    })
+    return childrenList
+  }
+
   return (
     <>
-      <div className={styles.magazineViewerWrapper}>
-        <div className={styles.contentWrapper}>
+      <div className={styles.mobileViewerWrapper}>
+        <ViewerSwitch 
+          viewers={['exit', 'mapview']}
+          onSwitchViewer={onSwitchViewer}
+        />
+        <div 
+          className={styles.contentWrapper}
+          style={{
+            width: '100%',
+          }}
+        >
           <SwipePage 
-            
           >
-            <MagazinePageWrapper><CoverPage /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page12 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page3 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page4 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page5 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page6 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page7 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page910 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page910Part2 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1112 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1112Part2 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1314 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1314Part2 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1516 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1516Part2 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1718 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1718Part2 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1920 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page1920Part2 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2021 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2122 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2324 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2526 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2728 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page2930 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page3132 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page3334 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page33 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page34 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page35 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page36 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page37 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page38 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page39 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page40 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page41 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page43 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page44 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page45 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page46 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page47 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page48 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page49 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page50 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page51 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page52 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page53 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page54 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page55 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page56 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page57 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page58 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page59 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page60 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page61 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page62 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page63 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page64 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page65 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page66 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page67 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page68 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page69 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page70 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page71 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page72 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page73 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page74 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page75 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page76 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page77 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page78 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page79 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page80 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page81 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page82 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page83 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page84 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page85 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page86 /></MagazinePageWrapper>
-            <MagazinePageWrapper><Page87 /></MagazinePageWrapper>
-
+            {
+              getChildrenList()
+            }
+            {/*
+            <MobilePageWrapper><CoverPage /></MobilePageWrapper>
+            <MobilePageWrapper><Page12 /></MobilePageWrapper>
+            <MobilePageWrapper><Page3 /></MobilePageWrapper>
+            <MobilePageWrapper><Page4 /></MobilePageWrapper>
+            <MobilePageWrapper><Page5 /></MobilePageWrapper>
+            <MobilePageWrapper><Page6 /></MobilePageWrapper>
+            <MobilePageWrapper><Page7 /></MobilePageWrapper>
+            <MobilePageWrapper><Page910 /></MobilePageWrapper>
+            <MobilePageWrapper><Page910Part2 /></MobilePageWrapper>
+            <MobilePageWrapper><Page1112 /></MobilePageWrapper>
+            <MobilePageWrapper><Page1112Part2 /></MobilePageWrapper>
+            <MobilePageWrapper><Page1314 /></MobilePageWrapper>
+            <MobilePageWrapper><Page1314Part2 /></MobilePageWrapper>
+            <MobilePageWrapper><Page1516 /></MobilePageWrapper>
+            <MobilePageWrapper><Page1516Part2 /></MobilePageWrapper>
+            <MobilePageWrapper><Page1718 /></MobilePageWrapper>
+            <MobilePageWrapper><Page1718Part2 /></MobilePageWrapper>
+            <MobilePageWrapper><Page1920 /></MobilePageWrapper>
+            <MobilePageWrapper><Page1920Part2 /></MobilePageWrapper>
+            <MobilePageWrapper><Page2021 /></MobilePageWrapper>
+            <MobilePageWrapper><Page2122 /></MobilePageWrapper>
+            <MobilePageWrapper><Page2324 /></MobilePageWrapper>
+            <MobilePageWrapper><Page2526 /></MobilePageWrapper>
+            <MobilePageWrapper><Page2728 /></MobilePageWrapper>
+            <MobilePageWrapper><Page2930 /></MobilePageWrapper>
+            <MobilePageWrapper><Page3132 /></MobilePageWrapper>
+            <MobilePageWrapper><Page3334 /></MobilePageWrapper>
+            <MobilePageWrapper><Page33 /></MobilePageWrapper>
+            <MobilePageWrapper><Page34 /></MobilePageWrapper>
+            <MobilePageWrapper><Page35 /></MobilePageWrapper>
+            <MobilePageWrapper><Page36 /></MobilePageWrapper>
+            <MobilePageWrapper><Page37 /></MobilePageWrapper>
+            <MobilePageWrapper><Page38 /></MobilePageWrapper>
+            <MobilePageWrapper><Page39 /></MobilePageWrapper>
+            <MobilePageWrapper><Page40 /></MobilePageWrapper>
+            <MobilePageWrapper><Page41 /></MobilePageWrapper>
+            <MobilePageWrapper><Page43 /></MobilePageWrapper>
+            <MobilePageWrapper><Page44 /></MobilePageWrapper>
+            <MobilePageWrapper><Page45 /></MobilePageWrapper>
+            <MobilePageWrapper><Page46 /></MobilePageWrapper>
+            <MobilePageWrapper><Page47 /></MobilePageWrapper>
+            <MobilePageWrapper><Page48 /></MobilePageWrapper>
+            <MobilePageWrapper><Page49 /></MobilePageWrapper>
+            <MobilePageWrapper><Page50 /></MobilePageWrapper>
+            <MobilePageWrapper><Page51 /></MobilePageWrapper>
+            <MobilePageWrapper><Page52 /></MobilePageWrapper>
+            <MobilePageWrapper><Page53 /></MobilePageWrapper>
+            <MobilePageWrapper><Page54 /></MobilePageWrapper>
+            <MobilePageWrapper><Page55 /></MobilePageWrapper>
+            <MobilePageWrapper><Page56 /></MobilePageWrapper>
+            <MobilePageWrapper><Page57 /></MobilePageWrapper>
+            <MobilePageWrapper><Page58 /></MobilePageWrapper>
+            <MobilePageWrapper><Page59 /></MobilePageWrapper>
+            <MobilePageWrapper><Page60 /></MobilePageWrapper>
+            <MobilePageWrapper><Page61 /></MobilePageWrapper>
+            <MobilePageWrapper><Page62 /></MobilePageWrapper>
+            <MobilePageWrapper><Page63 /></MobilePageWrapper>
+            <MobilePageWrapper><Page64 /></MobilePageWrapper>
+            <MobilePageWrapper><Page65 /></MobilePageWrapper>
+            <MobilePageWrapper><Page66 /></MobilePageWrapper>
+            <MobilePageWrapper><Page67 /></MobilePageWrapper>
+            <MobilePageWrapper><Page68 /></MobilePageWrapper>
+            <MobilePageWrapper><Page69 /></MobilePageWrapper>
+            <MobilePageWrapper><Page70 /></MobilePageWrapper>
+            <MobilePageWrapper><Page71 /></MobilePageWrapper>
+            <MobilePageWrapper><Page72 /></MobilePageWrapper>
+            <MobilePageWrapper><Page73 /></MobilePageWrapper>
+            <MobilePageWrapper><Page74 /></MobilePageWrapper>
+            <MobilePageWrapper><Page75 /></MobilePageWrapper>
+            <MobilePageWrapper><Page76 /></MobilePageWrapper>
+            <MobilePageWrapper><Page77 /></MobilePageWrapper>
+            <MobilePageWrapper><Page78 /></MobilePageWrapper>
+            <MobilePageWrapper><Page79 /></MobilePageWrapper>
+            <MobilePageWrapper><Page80 /></MobilePageWrapper>
+            <MobilePageWrapper><Page81 /></MobilePageWrapper>
+            <MobilePageWrapper><Page82 /></MobilePageWrapper>
+            <MobilePageWrapper><Page83 /></MobilePageWrapper>
+            <MobilePageWrapper><Page84 /></MobilePageWrapper>
+            <MobilePageWrapper><Page85 /></MobilePageWrapper>
+            <MobilePageWrapper><Page86 /></MobilePageWrapper>
+            <MobilePageWrapper><Page87 /></MobilePageWrapper> */}
           </SwipePage>
         </div>
+
       </div>
-      <ViewerSwitch 
-        viewers={['exit', 'mapview']}
-        onSwitchViewer={onSwitchViewer}
-      />
+
     </>
   )
 }
 
-export default MagazineViewer
+export default MobileViewer

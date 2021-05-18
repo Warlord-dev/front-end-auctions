@@ -69,7 +69,7 @@ const MagazinePages = () => {
       </WebViewer>
     )
   } else if (viewMethod === 'magazineview') {
-    if(width > 768) {
+    if (width > 768) {
       return (
         <MagazineViewer
         issueId={issueId}
@@ -78,14 +78,14 @@ const MagazinePages = () => {
       >
       </MagazineViewer>
       );
-    }else {
+    } else {
       return (
         <MagazineMobile
-        issueId={issueId}
-        initPage={currentPage}
-        onSwitchViewer={switchViewer}
-      >
-      </MagazineMobile>
+          issueId={issueId}
+          initPage={currentPage}
+          onSwitchViewer={switchViewer}
+        >
+        </MagazineMobile>
       )
     }
   }

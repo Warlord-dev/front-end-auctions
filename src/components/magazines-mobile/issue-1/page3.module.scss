@@ -1,82 +1,113 @@
 @import './styles.module.scss';
 
 .wrapper {
-  overflow: scroll;
-  height: 100vh;
+  @include magazineWrapper();
+  height: 977px;
   background-color: white;
   color: black;
-  display: flex;
   position: relative;
-  .paintImage {
-    height: auto;
-    position: absolute;
-  }
-  
-  h1 {
-    position: absolute;
-    left: 10px;
-    top: 80px;
+  overflow: hidden;
 
-    font-family: Courier;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    white-space: normal;
+  .backgroundImage {
+    position: absolute;
+    width: 375px;
+    height: 1070px;
+    left: 0px;
+    top: 0px;
   }
 
-  .content {
+  .innerWrapper {
     position: absolute;
-    white-space: normal;
-    height: 1900px;
-    width: 290px;
-    left: calc((100vw - 290px) / 2);
+    width: 90%;
+    left: 5%;
     top: 200px;
+  }
 
-    font-family: Courier New;
+  .flex {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h2 {
+    position: absolute;
+    width: 270px;
+    height: 72px;
+    left: 77px;
+    top: 61px;
+
+    font-family: Nella Sue Demo;
     font-style: normal;
     font-weight: normal;
-    text-align: left;
-    font-size: 18px;
+    font-size: 60px;
     line-height: 120.53%;
-    p:nth-child(2) {
-      text-align: center;
-      margin-top: 20px;
-    }
+    color: #FFFFFF;
   }
-}
 
-@media only screen and (max-width: 768px) {
-  .wrapper {
-    width: 768px;
-    .paintImage {
-      width: 768px;
+  h3 {
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;    
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+
+    &.content1 {
+      width: 387px;
+      height: 168px;
+      left: -83px;
+      top: 170px;
     }
-  }
-}
 
-@media only screen and (max-width: 425px) {
-  .wrapper {
-    width: 425px;
-    .paintImage {
-      width: 425px;
+    &.content2 {
+      width: 387px;
+      height: 192px;
+      left: 97px;
+      top: 170px;
     }
-  }
-}
 
-@media only screen and (max-width: 375px) {
-  .wrapper {
-    width: 375px;
-    .paintImage {
-      width: 375px;
+    &.content3 {
+      width: 387px;
+      height: 192px;
+      left: -85px;
+      top: 391px;      
     }
-  }
-}
 
-@media only screen and (max-width: 320px) {
-  .wrapper {
-    width: 320px;
-    .paintImage {
-      width: 320px;
+    &.content4 {
+      width: 387px;
+      height: 168px;
+      left: 92px;
+      top: 398px;      
+    }
+
+    &.content5 {
+      width: 387px;
+      height: 120px;
+      left: -96px;
+      top: 583px;
+    }
+
+    &.content6 {
+      width: 387px;
+      height: 168px;
+      left: 92px;
+      top: 580px;      
+    }
+
+    &.content7 {
+      width: 387px;
+      height: 144px;
+      left: -96px;
+      top: 748px;      
+    }
+
+    &.content8 {
+      width: 387px;
+      height: 192px;
+      left: 94px;
+      top: 755px;      
     }
   }
 }

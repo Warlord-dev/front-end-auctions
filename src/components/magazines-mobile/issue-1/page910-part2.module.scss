@@ -1,6 +1,8 @@
 @import './styles.module.scss';
 
 .wrapper {
+  @include magazineWrapper();
+
   overflow-x: hidden;
   width: 320px;
   height: 3708px;
@@ -127,41 +129,5 @@
 
 
     color: #FFFFFF;
-  }
-}
-
-@media only screen and (max-width: 768px){
-  .wrapper {
-    width: 768px;
-    .innerWrapper {
-      width: 768px;
-    }
-  }
-}
-
-@media only screen and (max-width: 425px){
-  .wrapper {
-    width: 425px;
-    .innerWrapper {
-      width: 425px;
-    }
-  }
-}
-
-@media only screen and (max-width: 375px){
-  .wrapper {
-    width: 375px;
-    .innerWrapper {
-      width: 375px;
-    }
-  }
-}
-
-@media only screen and (max-width: 320px){
-  .wrapper {
-    width: 320px;
-    .innerWrapper {
-      width: 320px;
-    }
   }
 }

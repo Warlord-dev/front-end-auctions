@@ -1,6 +1,8 @@
 @import './styles.module.scss';
 
 .wrapper {
+  @include magazineWrapper();
+
   height: 100vh;
   background-color: white;
   color: black;
@@ -84,68 +86,4 @@
     }
   }
   
-}
-
-@media only screen and (max-width: 768px){
-  .wrapper {
-    width: 768px;
-    .secondWrapper {
-      width: 768px;
-      img {
-        width: 768px;
-        top: 1px;
-      }
-    }
-    .backImage1 {
-      width: 768px;
-    }
-  }
-}
-
-@media only screen and (max-width: 425px){
-  .wrapper {
-    width: 425px;
-    .secondWrapper {
-      width: 425px;
-      img {
-        width: 425px;
-        top: -15px;
-      }
-    }
-    .backImage1 {
-      width: 425px;
-    }
-  }
-}
-
-@media only screen and (max-width: 375px){
-  .wrapper {
-    width: 375px;
-    .secondWrapper {
-      width: 375px;
-      img {
-        width: 375px;
-        top: -49px;
-      }
-    }
-    .backImage1 {
-      width: 375px;
-    }
-  }
-}
-
-@media only screen and (max-width: 320px){
-  .wrapper {
-    width: 320px;
-    .secondWrapper {
-      width: 320px;
-      img {
-        width: 320px;
-        top: -85px;
-      }
-    }
-    .backImage1 {
-      width: 320px;
-    }
-  }
 }

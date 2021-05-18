@@ -1,6 +1,8 @@
 @import './styles.module.scss';
 
 .wrapper {
+  @include magazineWrapper();
+
   width: 320px;
   height: 3300px;
   background-color: white;
@@ -152,45 +154,5 @@
     top: 800px;
     left: calc((100vw - 200px) / 2);
     width: 200px;
-  }
-}
-
-@media only screen and (max-width: 768px){
-  .wrapper {
-    width: 768px;
-    .pageBack2 {
-      width: 708px;
-      left: 30px;
-    }
-  }
-}
-
-@media only screen and (max-width: 425px){
-  .wrapper {
-    width: 425px;
-    .pageBack2 {
-      width: 365px;
-      left: 30px;
-    }
-  }
-}
-
-@media only screen and (max-width: 375px){
-  .wrapper {
-    width: 375px;
-    .pageBack2 {
-      width: 315px;
-      left: 30px;
-    }
-  }
-}
-
-@media only screen and (max-width: 320px){
-  .wrapper {
-    width: 320px;
-    .pageBack2 {
-      width: 260px;
-      left: 30px;
-    }
   }
 }

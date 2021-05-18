@@ -1,25 +1,25 @@
-import React, { forwardRef, useState, useEffect } from 'react';
-import HTMLFlipBook from 'react-pageflip';
-import MagazinePageWrapper from '@components/magazines/common/MagazinePageWrapper';
-import getPageList from '@components/magazines/PageList';
-import ViewerSwitch from '@components/magazines/common/ViewerSwitch';
-import magazineIssues from '@constants/magazines';
-import styles from './styles.module.scss';
-import { useSelector } from 'react-redux';
+import React, { forwardRef, useState, useEffect } from 'react'
+import HTMLFlipBook from 'react-pageflip'
+import MagazinePageWrapper from '@components/magazines/common/MagazinePageWrapper'
+import getPageList from '@components/magazines/PageList'
+import ViewerSwitch from '@components/magazines/common/ViewerSwitch'
+import magazineIssues from '@constants/magazines'
+import styles from './styles.module.scss'
+import { useSelector } from 'react-redux'
 
 const MagazineViewer = forwardRef((props, refs) => {
-  const { issueId, initPage, onSwitchViewer } = props;
+  const { issueId, initPage, onSwitchViewer } = props
 
-  const { contentUnlocked } = useSelector((state) => state.global.toJS());
-  const [zoom, setZoom] = useState(1);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-  const pageList = getPageList(issueId);
+  const { contentUnlocked } = useSelector((state) => state.global.toJS())
+  const [zoom, setZoom] = useState(1)
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+  const pageList = getPageList(issueId)
 
-  const currentIssue = magazineIssues.find((item) => item.issueId === issueId) || magazineIssues[0];
+  const currentIssue = magazineIssues.find((item) => item.issueId === issueId) || magazineIssues[0]
 
   const getChildrenList = () => {
-    const childrenList = [];
-    let realPageNum = 0;
+    const childrenList = []
+    let realPageNum = 0
 
     pageList.forEach((item, index) => {
       if (
@@ -27,36 +27,36 @@ const MagazineViewer = forwardRef((props, refs) => {
         !contentUnlocked &&
         index < pageList.length - 1
       )
-        return;
+        return
       childrenList.push(
         <MagazinePageWrapper key={realPageNum} zoom={zoom} windowHeight={windowHeight}>
           {item}
         </MagazinePageWrapper>
-      );
-      realPageNum++;
+      )
+      realPageNum++
 
       if (index > 0 && index < pageList.length - 1) {
         childrenList.push(
           <MagazinePageWrapper zoom={zoom} windowHeight={windowHeight} secondPart key={realPageNum}>
             {item}
           </MagazinePageWrapper>
-        );
-        realPageNum++;
+        )
+        realPageNum++
       }
-    });
-    return childrenList;
-  };
+    })
+    return childrenList
+  }
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowHeight(window.innerHeight);
-    };
+      setWindowHeight(window.innerHeight)
+    }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <>
@@ -84,7 +84,7 @@ const MagazineViewer = forwardRef((props, refs) => {
       </div>
       <ViewerSwitch viewers={['webview', 'mapview', 'exit']} onSwitchViewer={onSwitchViewer} />
     </>
-  );
-});
+  )
+})
 
-export default MagazineViewer;
+export default MagazineViewer

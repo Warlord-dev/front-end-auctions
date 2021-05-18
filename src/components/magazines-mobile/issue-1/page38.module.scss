@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
+  @include magazineWrapper();
+
   height: 100vh;
   overflow: scroll;
   background-color: white;
@@ -18,29 +20,5 @@
         width: 100%;
         margin-bottom: 26px;
     }
-  }
-}
-
-@media only screen and (max-width: 768px){
-  .wrapper {
-    width: 768px;
-  }
-}
-
-@media only screen and (max-width: 425px){
-  .wrapper {
-    width: 425px;
-  }
-}
-
-@media only screen and (max-width: 375px){
-  .wrapper {
-    width: 375px;
-  }
-}
-
-@media only screen and (max-width: 320px){
-  .wrapper {
-    width: 320px;
   }
 }
