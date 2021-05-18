@@ -3,6 +3,8 @@ const CoverPage = loadable(() => import ('./CoverPage'))
 const Page1 = loadable(() => import ('./Page1'))
 const Page2 = loadable(() => import ('./Page2'))
 const Page3 = loadable(() => import ('./Page3'))
+const Page4 = loadable(() => import ('./Page4'))
+const Page5 = loadable(() => import ('./Page5'))
 // const Page12 = loadable(() => import ('./Page12'))
 // const Page34 = loadable(() => import ('./Page34'))
 // const Page56 = loadable(() => import ('./Page56'))
@@ -62,6 +64,8 @@ const PageList = [
     <Page1 />,
     <Page2 />,
     <Page3 />,
+    <Page4 />,
+    <Page5 />,
     // <Page56 />,
     // <Page78 />,
     // <Page910 />,
