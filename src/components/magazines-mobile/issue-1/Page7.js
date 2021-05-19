@@ -4,36 +4,37 @@ import styles from './page7.module.scss'
 const Page7 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.backOrange}>
-      </div>
-      <div className={styles.innerWrapper}>
-        <div className={styles.section1}>
-          <p>It's only elementary that people would be shocked to find out when acclaimed auction house Christie's sold a piece of digital NFT artwork for $69 million — for a piece of art that doesn't physically exist. </p>
-
-          <p>The shock was mainly because most people find it hard to reconcile the value of a digital piece of art, whose production costs are next to nothing compared to the price it went for, and whose value is more closely tied to its scarcity (perceived or otherwise) than its actual utility.</p>
-
-          <p>The same is happening for the real estate boom that's happening right under the collective industry's nose, and it's happening in the corners of the metaverse—the virtual worlds where not only digital art, real estate, avatars, and fashion can be bought and sold as NFTs. The world where digital natives and their avatars can explore, socialize, play, and live.</p>
-        </div>
-        <div className={styles.logo_t}>T</div>
-        <div className={styles.section2}>
-          <p><span>he Value of Virtual Real Estate.</span> Everybody gets digital art, but virtual real estate is a different thing. Why should anyone spend money on a virtual piece of real estate that doesn't exist in real life? What makes pixelated parcels of land on a virtual world accessible through a website a real, tangible asset?</p>
-
-          <p>This requires a bit more context. That said, if you've ever played a video game — doesn't matter if it's on the Atari or the NES, or if it's Super Mario, FIFA, Final Fantasy, Fortnite, or Call of Duty — then you would know that as your character explores the virtual world, you'd be spending oodles and oodles of time roaming through the vast expanses of the countless artificial universes these games offer.</p>
-        </div>
-        <div className={styles.section3}>
-          <p>And the virtually limitless expanses of virtual worlds provide opportunities for brands to market, advertise, or engage with the emerging digital population. In-game advertising, after all, is a multi-billion-dollar industry that needs no further introduction.</p>
-
-          <p>Furthermore, virtual real estate presents an opportunity for companies to purchase virtual parcels of land within the metaverses that they form part of — and the possibilities are endless. Companies can build entire cityscapes within those metaverses and monetize them as they see fit— such as putting up a building and leasing out ad and store space, create living spaces that they can rent out, or any revenue-generating venture, for that matter. The possibilities are endless.</p>
-        </div>
-        
-        <p className={styles.section4}>
-          Case in point: Beeple's $69 million NFT artwork entitled "Everydays: the First 5000 Days" was purchased by NFT fund founder and investor who goes by the pseudonym Metakovan. And based on his estimation, $69 million is a pittance compared to the value of what could be this generation's definitive piece of art, pegging its value at a staggering $1 billion. That's not a typo, and neither is it beyond the realm of imagination. Eventually, the crypto investor intends to create a virtual museum — yet another piece of virtual real estate — with which to display his vast collection of rare NFTs in the emergent metaverse. 
-        </p>
-        <p className={styles.section5}>
-          Think of how someone holding the NFT rights to the high-resolution video of Michael Jordan hitting the iconic game-winning shot over Bryon Russell in Game 6 of the 1998 NBA Finals to win his sixth and last NBA Championship. The holder can then put it up for display within a virtual world where individuals can view it using their VR headset for a fee. It sounds like something out of a sci-fi plotline — but the technology is already here. 
-        </p>
-        <img src='./magazine/1/images/moshed-05-07-17-22-22 (1).gif' className={styles.rightImage4} />
-      </div>
+      <img src='./magazine/1/images/mobile/05-02.png' className={styles.backImage1} />
+      <p className={styles.section1}>
+        Each portion of this digital piece of real estate is an NFT. These assets are non-fungible; hence they cannot be duplicated. Furthermore, the unique digital identifiers on NFTs serve as immutable proof of ownership of the underlying digital asset — in this case, digital real estate. In essence, digital real estate is another iteration of NFTs like Beeple's record-breaking artwork that possess inherent transferability, and like artwork, can be bought from primary and secondary sales. Games allow players to purchase digital ownership rights — virtual title deeds, as it were — in the form of an NFT. Digital real estate is unbound by building codes, restrictions, and the tricky nature of real estate ownership and dealing with government agencies. And thanks to the power of the blockchain's decentralized ledger, the integrity of these assets is secured. 
+        <br /><br />
+        <span>The Metaverse Emerges</span>
+        <br />
+        As the metaverse starts taking shape, virtual worlds are no longer just the realm of the younger set, considering entirely new metaverses are being created for adults for them to inhabit. Furthermore, these virtual worlds are built on the Ethereum blockchain, which means that the transactions taking place in those worlds use cryptocurrency.
+        <br /><br />
+        Existing virtual worlds, including Decentraland, The Sandbox, Cryptovoxels, and Somnium Space are experiencing record high purchases in virtual assets like land, building, art, and others. have seen new highs on prices of land, images, and others — and the virtual economy that supports them is thriving. That hasn't gone unnoticed by industry leaders looking to expand into the metaverse.
+        <br /><br />
+        Decentraland, one of the first metaverses that came into being, has cleared over $55 million in sales as of the end of April 2021, and its partnerships are heating up. Gaming giant Atari recently signed a two-year lease for prime parcels in Decentraland, where they will soon build the first crypto casino of the metaverse. At a time where physical casino and sports betting establishments have faced widespread closures due to the coronavirus pandemic, players will be able to walk into a virtual casino with their avatar, socialize, and play their favorite games. It's the next logical evolution for live dealer casinos, and it's going to launch this May.
+        <br /><br />
+        <span>Limitless Marketing Potential</span>
+        <br />
+        As the metaverse grows, so does its user base. And there lies massive, unbound advertising potential for companies to promote their products and services in an immersive, truly unique customer experience. High-traffic areas in the metaverse will also become the digital equivalents of Shibuya Crossing or Times Square.
+      </p>
+      <p className={styles.section2}>
+        Once droves of new users start inhabiting the metaverse in numbers that are more than just a drop in the bucket, marketing physical products to people's individual avatars in the virtual realms becomes a breeze.
+        <br /><br />
+        Big companies opening virtual stores in virtual worlds is a natural progression, and they are already starting to do so.
+        <br /><br />
+        We're at the conflux of two trends — the fact that people have been forced to stay home and live virtual lives in front of a computer screen on the internet for over a year, as well as a new audience of individuals who grew up playing the Sims, Roblox, or Minecraft. Companies taking advantage of this emergent metaverse are advertising right where they live. 
+        <br /><br />
+        There will come a day of reckoning when every brand understands that they need their piece of land in the metaverse that offers this unbridled potential — much in the same way they need a Facebook page or a website.
+        <br /><br />
+        Speculators betting on scarcity can be understood as far as capital appreciation is concerned. A 10x is a 10x in any market, no matter how or where you get it—end of.
+        <br /><br />
+        But the designers, creators, and players who are technically proficient enough to build on the platform have even greater opportunities to monetize. Think of the casinos, museums, art galleries, pubs, and clubs they can build and charge entrance or rent out for advertising. The beauty of the metaverse is that their developers look at them as a platform — a blank canvas, as it were — to build creative structures and assets on them and attract the throngs of new potential users at an unprecedented time where humans need more connection than ever.
+        <br /><br />
+        Regardless, the virtual real estate industry is already taking giant steps. Skyrocketing NFT and digital real estate prices are potentially just a fraction of what they might be worth in the near future once adoption takes hold. If a digital piece of artwork can be worth $69 million, who's to say virtual real estate can't be worth the same — if not even more?
+      </p>
     </div>
   )
 }

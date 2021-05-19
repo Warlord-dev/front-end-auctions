@@ -1,0 +1,20 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .backImage {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0px;
+    top: 0px;
+  }
+}

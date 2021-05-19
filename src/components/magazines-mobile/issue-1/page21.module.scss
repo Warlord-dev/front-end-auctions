@@ -1,0 +1,89 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  position: relative;
+  text-align: left;
+
+  .innerWrapper {
+    position: absolute;
+    height: 4600px;
+    top: 0x;
+    left: 0;
+    width: 100%;
+  }
+
+  .image {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    margin-top: 160px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .image1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .image2 {
+    margin: 20px 0;
+  }
+
+  .image3 {
+    margin-top: -19px;
+    margin-bottom: 20px;
+  }
+
+  .image4 {
+    margin-top: -152px;
+    margin-bottom: 40px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .wrapper {
+    width: 768px;
+    img {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .wrapper {
+    width: 425px;
+    img {
+      width: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .wrapper {
+    width: 375px;
+    img {
+      width: 375px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .wrapper {
+    width: 320px;
+    img {
+      width: 320px;
+    }
+  }
+}
