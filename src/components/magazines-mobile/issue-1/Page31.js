@@ -4,17 +4,32 @@ import styles from './page31.module.scss'
 const Page31 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='./magazine/1/images/mobile/page36-bg.png' className={styles.backImage} />
-      <div className={styles.innerWrapper}>
-        <h1>The Execution layer for the metaverse.</h1>
-        <h2>polygon. </h2>
-        <h5>(prev matic network)</h5>
-        <p>Polygon (Previously Matic Network) is without doubt the current leader in the Layer 2 space, absolutely exploding in marketcap since January and providing a much needed alternative for so many projects struggling against the ever-rising congestion on Ethereum. But how did they get here and where are they going?</p>
-        <p>For those that don’t know, India’s crypto scene hasn’t had an easy ride, with India’s authorities publically taking on cryptocurrencies in 2018, introducing a proposal that would jail anyone for up to 10 years if they held  digital currencies. Although this was overturned last year, the community is still not in the clear—recent announcements suggest the same hostile chapter is about to be re-opened in this ongoing saga. The Indian government is mulling another ban on private cryptocurrencies. We won’t hash out all of the weeds here, but there’s a strong argument that this so called new ban is surrounded by a lot of FUD, even potentially being unconsistutional.</p>
-        <p>The Matic/Polygon team started 4 years ago with 3 co-founders fashioning away at a scaling solution for Ethereum, extending from a paper released by Vitalik in 2017 and working on both Plasma and PoS chains. It’s easy to define this project as a solution to most of the temporary problems faced by Ethereum today; whether that be large energy output, slow transactions, high gas fees etc. However, as one considers more deeply the Polygon Master Plan, it’s much more comprehensive than a temp fix. In fact, it’s Ethereum natural scaling partner and Ace up the sleeve.</p>
-        <p>Polygon is architected as a entire ecosystem for accomodating greater throughput, capacity and flexibility for the metaverse. They achieve this by setting up the ability for anyone to migrate between different scaling solutions and adapt across a multitude of decentralised and customisable use cases. The metaverse is all about optionality and reducing the barriers between people and the environments that we choose to explore. Polygon actually helps us deliver on that promise, whilst at the same time, what’s really special about this is that it all folds back into supporting the growth of Ethereum as a Layer 1 and it’s evolution to Ethereum 2.0</p>
-        <p>Ultimately, the future looks really bright as the number of projects able to build on scalable and sustainable infrastructure, underpinned by Ethereum, grows at an astonishing speed everyday. It just brings us one step closer to a world where decentralisation, web3 and a metaverse built out of that can be understood and experienced by the masses.  </p>
-      </div>
+      <img src='./magazine/1/images/mobile/page37-bg.png' className={styles.backImage} />
+      <h1>The Long Thread of Textile History Continues</h1>
+      <p className={styles.text1}>
+        We owe a lot of what constitutes the fashion industry, as we know of it today, to India. In fact, our earliest knowledge about the origins and use of cotton can be dated back to a series of famous Indian poems written in 600BC. And, even Alexander the Great is recorded wearing cotton clothes after invading India with his troops. The nation has contributed a whole threadline of rich history to fashion globally, with about 1/3 of India’s textile production exported orientated, and the US standing as the biggest importer of Indian textile.
+        <br/><br/>
+        Thus, it only seems fated that the region is now embracing the new world of fashiontech, which has been propelled over the past few months with the rise in relevance of NFTs and their harmonous affinity for finally bridging value and authenticity to digital fashion. 
+      </p>
+      <p className={styles.text2}>
+        We sat down with Ravi Singh, a newcomer to digital fashion yet avid supporter of inspiring traditional cultural inclusivity in the industry, and 3D desginer, Lorena Bello, to discuss their collaboration alongside DIGITALAX, on the world’s first Indian digital fashion collection. 
+      </p>
+      <p className={styles.text3}>
+        Last year, if you had told me that I’d be writing for the world’s first metaverse magazine about my Indian digital fashion collection, designed in collaboration with Lorena Bello, a world-renowned 3d fashion designer, I would have said you were confusing me for a character in a Marvel movie. After being on Indian Matchmaking on Netflix in 2020, I started to connect with South Asian influencers and artists around the world. Through an Indian streetwear brand, I attended New York Fashion Week, which inspired me to explore how to fuse South Asian culture with American identity. This spring, I learned about DIGITALAX, the world’s first digital fashion operating system, and how it’s designed to liberate gaming and fashion mods from gatekeepers to the masses. 
+      </p>
+      <p className={styles.text4}>
+        I was excited by the intersection of crypto and the metaverse – digital worlds layered on top of our physical reality. All these connections led me to want to build an Indian digital fashion collection, which is something I had never seen before. But this is more than about digital fashion – it’s about creating culturally inclusive spaces in the metaverse. It’s about inspiring more metaverse artists from all backgrounds, from Africa, to South America, to India, Pakistan and Bangladesh.        
+      </p>
+      <img src='./magazine/1/images/mobile/31-01.png' className={styles.image1} />
+      <p className={styles.text5}>
+        The collection was inspired by Ravi, 3D modelled by Lorena and all scenes, animation and renders composed by DIGITALAX.
+      </p>
+      <p className={styles.text6}>
+        From my first conversation with Ravi, I was completely behind the idea of bridging traditional culture into digital fashion. The opportunity to be a part of the world’s first digital fashion line based on Indian culture + make a disruptive point in South Asian fashion culture and open a new frontier in the digital fashion space.... to help bear Indian fashion into the Metaverse... I absolutely wanted to be involved! 
+        <br /><br />
+        Not having a strong background in Indian Culture myself allowed me to work without preconceptions. After many virtual coffees NYC-Madrid I worked experimentally to best present the first cultural crossover into digital fashion.
+      </p>            
+      <img src='./magazine/1/images/mobile/31-02.png' className={styles.image2} />
     </div>
   )
 }

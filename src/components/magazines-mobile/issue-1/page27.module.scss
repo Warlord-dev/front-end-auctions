@@ -1,49 +1,135 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
   background-color: white;
   color: black;
   position: relative;
+  white-space: normal;
+  text-align: center;
 
-  .blackBack {
-    background-color: black;
+  .innerWrapper {
     position: absolute;
-    width: 960px;
-    height: 1497px;
+    overflow-x: hidden;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    h1 {
+      font-family: Heaven Wanders DEMO;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 60px;
+      line-height: 100%;
+      /* or 200px */
+      text-align: center;
+    }
+    
+    h2 {
+      font-family: Habbo;
+      font-style: normal;
+      font-weight: normal;
+      width: 260px;
+      margin-left: auto;
+      font-size: 30px;
+      line-height: 100%;
+      margin-bottom: 40px;
+      /* or 40px */
+      text-align: center;
+    }
+  
+    h3 {
+      font-family: Comics Tricks;
+      font-style: normal;
+      font-weight: normal;
+      width: 200px;
+      font-size: 30px;
+      line-height: 100%;
+      /* or 45px */
+  
+      text-align: right;
+    }
+    img {
+      width: 260px;
+      display: block;
+      margin-left: 0;
+    }
+  
+    h4 {
+      font-family: THE AMAZING SPIDER-MAN;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 58px;
+      line-height: 100%;
+      text-align: center;
+      color: #515151;
+      margin-bottom: 14px;
+    }
+    .layer1 {
+      width: 300px;
+      margin-left: calc((100vw - 350px));
+    }
+    .layer2 {
+      margin-right: calc((300px - 100vw));
+    }
+    .layer3 {
+      margin-bottom: 30px;
+      margin-right: calc((200px - 100vw));
+    }
+  
+    h5 {    
+      font-family: Inter;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 150%;
+  
+      text-align: center;
+    }
+  
+    .ellipseImage {
+      position: absolute;
+      width: 373px;
+      height: 373px;
+      left: 43px;
+      top: 10px;
+    }
+  
+  
+    .ellipseImage2 {
+      position: absolute;
+      width: 855px;
+      height: 1355px;
+      left: 1065px;
+      top: 206px;
+    }
+    
+    .borderImage {
+      position: absolute;    
+      width: 116px;
+      height: 1497px;
+      left: 903px;
+      top: 0px;
+    }
+  
+    p {
+      font-family: B612;
+      font-size: 17px;
+      line-height: 150%;
+      width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      transform: rotate(-3deg);
+      margin-bottom: 30px;
+    }
+  }
+  
+  .backImage {
+    position: absolute;
+    width: 100%;
+    height: 3800px;
     left: 0px;
     top: 0px;
-  }
-
-  .leftImage {
-    position: absolute;
-    width: 262px;
-    height: 1640px;
-    left: -48px;
-    top: -2px;
-  }
-
-  video {
-    position: absolute;
-    width: 858px;
-    height: 871.25px;
-    left: 21px;
-    top: -369px;
-  }
-
-  .palaceImage {
-    position: absolute;
-    width: 1353px;
-    height: 966px;
-    left: 284px;
-    top: 692px;
-  }
-
-  .rightImage {
-    position: absolute;
-    width: 950px;
-    height: 793px;
-    left: 1073px;
-    top: 702px;
   }
 }

@@ -3,104 +3,148 @@
 
 .wrapper {
   @include magazineWrapper();
-  overflow: hidden;
+  height: 2315px;
   background-color: white;
   color: white;
   position: relative;
   white-space: normal;
   text-align: left;
 
-  .backImage {
+  .box1 {
     position: absolute;
-    width: 100%;
-    height: 2900px;
+    width: 375.15px;
+    height: 372px;
     left: 0px;
     top: 0px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);        
   }
 
-  .innerWrapper {
+  .indiaNecklaceVideo {
     position: absolute;
-    top: 236px;
+    width: 336.61px;
+    height: 339.75px;
+    left: 18.87px;
+    top: 15.73px;    
+  }
+
+  .circleImg1 {
+    position: absolute;
+    width: 357.12px;
+    height: 349px;
+    left: 9px;
+    top: 398px;
+
+    border-radius: 231px;
+  }
+
+  .circleText1 {
+    position: absolute;
+    width: 264.15px;
+    height: 126.91px;
+    left: 56px;
+    top: 514px;
+
+    font-family: Rochester;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 120%;
     text-align: center;
-    h1 {
-      margin-left: 20px;
-      margin-right: 20px;
-      font-family: Rockabye;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 68px;
-      line-height: 80%;
-      color: #B1223B;
-      margin-bottom: 57px;
-      text-shadow: 0px 4px 4px rgba(255, 187, 232, 0.53), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
 
-    img {
-      width: 200px;
-    }
+    color: #FFFFFF;
+  }
 
-    h4 {
-      margin-left: 20px;
-      margin-right: 20px;
-      font-family: Rosario;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 120%;
-      color: #E19CE9;
-      box-sizing: border-box;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      margin-bottom: 36px;
-    }
-    .flex {
-      display: flex;
-      .justifyRight {
-        justify-content: right;
-      }
+  .box2 {
+    position: absolute;
+    width: 375.15px;
+    height: 372px;
+    left: 0px;
+    top: 773px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);    
+  }
+  .indiaSuitVideo {
+    position: absolute;
+    width: 336.61px;
+    height: 339.75px;
+    left: 18.88px;
+    top: 788.73px;    
+  }  
 
-      .justifyLeft {
-        justify-content: left;
-      }
-    }
-    p {
-      margin-left: 20px;
-      margin-right: 20px;
-      text-align: left;
-      margin-bottom: 30px;
-      &.text1 {
-        font-family: Sanchez;
-        font-style: italic;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 120%;
-        font-style: normal;
-      }
-      &.text2 {
-        font-family: B612;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 120%;
-      }
-      &.text3 {
-        font-family: Nunito Sans;
-        font-style: italic;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 120%;
-      }
-      &.text4 {
-        font-family: Nunito Sans;
-        font-style: italic;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 120%;
-        text-align: right;
-      }
-    }
-    .image1 {
-      margin-left: auto;
-      margin-bottom: 57px;
-    }
+  .circleImg2 {
+    position: absolute;
+    width: 357.12px;
+    height: 349px;
+    left: 8px;
+    top: 1166px;
+    
+    border-radius: 246px;
+  }
+
+  .circleText2 {
+    position: absolute;
+    width: 264.15px;
+    height: 192.58px;
+    left: 54.48px;
+    top: 1257.49px;
+    
+    font-family: Rochester;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .box3 {
+    position: absolute;
+    width: 375.15px;
+    height: 372px;
+    left: 0px;
+    top: 1541px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .indiaSuit2Video {
+    position: absolute;
+    width: 336.61px;
+    height: 339.75px;
+    left: 18.88px;
+    top: 1547.29px;
+  }
+
+  .circleImg3 {
+    position: absolute;
+    width: 355.65px;
+    height: 349px;
+    left: 9px;
+    top: 1939px;
+    border-radius: 237px;
+  }
+
+  .circleText3 {
+    position: absolute;
+    width: 241.02px;
+    height: 258.44px;
+    left: 67.79px;
+    top: 1989.07px;
+    
+    font-family: Rochester;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
   }
 }

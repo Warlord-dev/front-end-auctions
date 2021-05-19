@@ -3,63 +3,71 @@
 
 .wrapper {
   @include magazineWrapper();
-  overflow: hidden;
-
-  background-color: white;
-  color: black;
+  height: 2505px;
+  background-color: black;
   position: relative;
   white-space: normal;
   text-align: left;
 
-  .innerWrapper {
+  video {
     position: absolute;
-    top: 60px;
-    left: calc((100vw - 260px) / 2);
-    width: 260px;
-    text-align: center;
-    h1 {
-        font-family: Comics Tricks, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 38px;
-        /* or 200px */
-        text-align: right;
-      }
-    
-      h2 {
-        font-family: Inter;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 40px;
-        line-height: 100%;
-        margin-bottom: 40px;
-        font-weight: bold;
-        /* or 40px */
-        text-align: center;
-      }
-    
-      p {
-        font-size: 17px;
-        line-height: 150%;
-        font-weight: 400;
-        text-align: center;
-        margin-bottom: 30px;
-        &.alignLeft {
-          font-family: Inter;
-          text-align: left;
-        }
-        &.alignRight {
-          font-family: Joti One;
-          text-align: right;
-        }
-      }
+    width: 858px;
+    height: 871.25px;
+    left: -333px;
+    top: -356px;    
   }
-  
-  .backImage {
+
+  .leftImage {
     position: absolute;
-    width: 100%;
-    height: 3300px;
-    left: 0px;
-    top: 0px;
+    width: 230px;
+    height: 1481px;
+    left: -25px;
+    top: 556px;    
+  }
+
+  .palaceImage {
+    position: absolute;
+    width: 602px;
+    height: 430px;
+    left: -114px;
+    top: 2076px;    
+  }
+
+  h1 {
+    position: absolute;
+    width: 718px;
+    height: 185px;
+    left: 324px;
+    top: 549px;
+    
+    font-family: 'THIS FONT IS EMPTY1';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+    /* or 80px */
+    
+    
+    color: #FFFFFF;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+  }
+
+  h2 {
+    position: absolute;
+    width: 149px;
+    height: 611px;
+    left: 250px;
+    top: 1500px;
+    font-family: 'THIS FONT IS EMPTY1';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 100%;
+    color: #E55329;
+    // border: 3px solid #F19737;
+    text-shadow: -4px 0 #F19737, 0 4px #F19737, 4px 0 #F19737, 0 -4px #F19737;
+    // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: blur(2px);
   }
 }

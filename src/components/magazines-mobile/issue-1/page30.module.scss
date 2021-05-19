@@ -3,8 +3,8 @@
 
 .wrapper {
   @include magazineWrapper();
-  overflow: hidden;
   background-color: white;
+  height: 2436px;
   color: black;
   position: relative;
   white-space: normal;
@@ -12,9 +12,94 @@
 
   .backImage {
     position: absolute;
-    width: 100%;
-    height: auto;
+    width: 375px;
+    height: 2436px;
     left: 0px;
     top: 0px;
   }
+
+  h1 {
+    position: absolute;
+    width: 247px;
+    height: 120px;
+    left: 25px;
+    top: 52px;
+
+    font-family: Damion;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+
+    color: #8308FE;
+  }
+  h2 {
+    position: absolute;
+    width: 435px;
+    height: 60px;
+    left: 27px;
+    top: 197px;
+    
+    font-family: Digital Dare;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    color: #000000;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  }
+  h3 {
+    position: absolute;
+    width: 183px;
+    height: 20px;
+    left: 192px;
+    top: 270px;
+    
+    font-family: DigitalRiver;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+    
+    
+    color: #8308FE;
+  }
+  p {
+    position: absolute;
+    font-family: Single Day;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    text-align: right;
+    
+    color: #000000;
+
+    &.text1 {
+      width: 320px;
+      height: 381px;
+      left: 24px;
+      top: 309px;
+    }
+
+    &.text2 {
+      width: 320px;
+      height: 150px;
+      left: 21px;
+      top: 1208px;   
+    }
+
+    &.text3 {
+      width: 320px;
+      height: 196px;
+      left: 18px;
+      top: 1580px;  
+    }
+  }
+
 }
+

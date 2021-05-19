@@ -3,26 +3,12 @@
 
 .wrapper {
   @include magazineWrapper();
-  overflow: hidden;
   
   background-color: white;
   color: white;
   position: relative;
   white-space: normal;
   text-align: left;
-
-  .innerWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    img {
-      position: absolute;
-      width: 100%;
-      left: 0px;
-      top: 10px;
-    }
-  }
 
   h1 {
     font-family: Aldrich;
@@ -59,45 +45,9 @@
 
   .backImage1 {
     position: absolute;
-    width: 100%;
+    width: 375px;
     height: 3400px;
     left: 0px;
     top: 0px;
-  }
-}
-
-@media only screen and (max-width: 768px){
-  .wrapper {
-    width: 768px;
-    .backImage1 {
-      width: 768px;
-    }
-  }
-}
-
-@media only screen and (max-width: 425px){
-  .wrapper {
-    width: 425px;
-    .backImage1 {
-      width: 425px;
-    }
-  }
-}
-
-@media only screen and (max-width: 375px){
-  .wrapper {
-    width: 375px;
-    .backImage1 {
-      width: 375px;
-    }
-  }
-}
-
-@media only screen and (max-width: 320px){
-  .wrapper {
-    width: 320px;
-    .backImage1 {
-      width: 320px;
-    }
   }
 }
