@@ -17,7 +17,7 @@ const gaScriptText = `
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-186428363');
+  gtag('config', 'G-Y06VSWY6VY');
 `;
 
 class MyDocument extends Document {
