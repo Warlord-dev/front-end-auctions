@@ -1,0 +1,55 @@
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bridgeModal {
+        border-radius: 25px;
+        margin: auto;
+        filter: drop-shadow(0px 4px 10px rgba(255, 255, 255, 0.38));
+        overflow: hidden;
+        background: black;
+    
+        .header {
+            background: linear-gradient(180deg, #1B1B1B 0%, #3F3F3F 100%);
+            text-transform: uppercase;
+            padding: 2rem 0;
+            text-align: center;
+            color: white;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .body {
+            padding: 2rem;
+        }
+       
+    }
+    .mode-0 {
+        border: 2px solid #8B8B8B;
+    
+        .header {
+            border-bottom: 2px solid #8B8B8B;
+        }
+    }
+    
+    .mode-1 {
+        border: 2px solid #EA882D;
+    
+        .header {
+            border-bottom: 2px solid #EA882D;
+        }
+    }
+    
+    .mode-2 {
+        border: 2px solid #4F2DEA;
+    
+        .header {
+            border-bottom: 2px solid #4F2DEA;
+        }
+    }
+}

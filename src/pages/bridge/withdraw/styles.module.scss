@@ -1,0 +1,177 @@
+.wrapper {
+    hr {
+        border-color: rgba(223, 198, 174, 0.38);
+    }
+
+    .erc20ModalWrapper {
+        .priceLabel {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 24px;
+            text-transform: uppercase;
+            /* or 185% */
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #CECECE;
+        }
+
+        .price {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 23px;
+            line-height: 28px;
+            text-transform: uppercase;
+            /* identical to box height */
+
+            text-align: center;
+            margin: 2rem 0;
+            color: #EA882D;
+        }
+
+        .amountLabel {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 24px;
+            text-transform: uppercase;
+            /* or 185% */
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #CECECE;
+            margin: 2rem 0;
+        }
+
+        .bodyWrapper {
+            width: 460px;
+            margin: 0 3rem;
+            margin-bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+
+            .amountWrapper {
+                background: #111111;
+                border: 1px solid #EA882D;
+                box-sizing: border-box;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                height: 39px;
+                padding: 1rem;
+    
+                .amountPrefix {
+                    color: white;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-transform: uppercase;
+                }
+    
+                .amount {
+                    border: none;
+                    outline: none;
+                    color: white;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    background: transparent;
+                    text-align: right;
+                    flex-grow: 1;
+                    margin-left: .5rem;
+                }
+            }
+    
+            .amountMax {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 15px;
+                /* identical to box height */
+    
+                text-align: right;
+                margin: .3rem 0;
+    
+                /* 2 */
+    
+                color: #999999;
+            }
+    
+            .btnGroup {
+                display: flex;
+                align-items: center;
+
+                .btnRightMar {
+                    margin-right: .5rem;
+                }
+
+                .btnLeftMar {
+                    margin-left: .5rem;
+                }
+
+                .btn {
+                    background: #111111;
+                    border: 1px solid #EA882D;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    height: 39px;
+                    text-transform: uppercase;
+                    color: white;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 13px;
+                    line-height: 16px;
+                    text-align: center;
+                    letter-spacing: 0.12em;
+                    text-transform: uppercase;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+        
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        .actions {
+            padding: 1rem 0;
+            display: flex;
+            justify-content: flex-end;
+
+            .return {
+                padding: .5rem 1rem;
+                text-transform: uppercase;
+                color: white;
+                background: #111111;
+                border-radius: 5px;
+                font-weight: bold;
+                font-family: "Inter";
+                border: 1px solid #EA882D;
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+
+    }
+
+    .espaNftModalWrapper {
+
+    }
+}

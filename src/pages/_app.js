@@ -18,6 +18,7 @@ import getOrCreateStore from '../lib/with-redux-store';
 
 import config from '../utils/config';
 import '../assets/scss/global.scss';
+import Particles from '@components/particles';
 
 if (config.SENTRY_DSN) {
   Sentry.init({
@@ -65,11 +66,13 @@ const MyApp = ({ Component, pageProps, store, err }) => {
       <Head>
         <title>Digitalax - The Digital Fashion Engine</title>
         <link rel="icon" type="image/png" href="/images/icons/favicon-digitalax.ico" />
+        <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
       </Head>
       <InitWrapper>
         <HeaderTopLine />
         <Modals />
         <NetworkWrapper>
+          <Particles />
           <Component {...pageProps} />
         </NetworkWrapper>
         <Footer />

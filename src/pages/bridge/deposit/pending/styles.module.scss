@@ -1,0 +1,27 @@
+
+.wrapper {
+    hr {
+        border-color: rgba(223, 198, 174, 0.38);
+    }
+
+    .actions {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: flex-end;
+
+        .return {
+            padding: .5rem 1rem;
+            text-transform: uppercase;
+            color: white;
+            background: #111111;
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: "Inter";
+            border: 1px solid #4F2DEA;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}
