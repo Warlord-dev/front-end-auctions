@@ -2,17 +2,16 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2300px;
+  height: 3191px;
   background-color: black;
   color: white;
-  display: flex;
   position: relative;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
   .backImage {
     position: absolute;
-    width: 320px;
-    height: 2400px;
+    width: 375px;
+    height: 3190px;
     left: 0px;
     top: 0;
   }
@@ -24,24 +23,35 @@
   }
   
   .dollarSign {
-    width: 100%;
-    height: auto;
+    position: absolute;
+    width: 403px;
+    height: 413px;
+    left: -33px;
+    top: 1206px;
   }
 
   .lawrence {
+    position: absolute;
+    width: 154px;
+    height: 18px;
+    left: 36px;
+    top: 460px;
+    
     font-family: Aldrich;
     font-style: normal;
     font-weight: normal;
-    text-align: left;
-    margin-left: 30px;
     font-size: 21px;
     line-height: 150%;
-    margin-bottom: 60px;
+
+    color: #FFFFFF;
+    
   }
   .shadow {
+    width: 341px;
+    height: 114.6px;
+    left: 2px;
+    top: 300px;
     position: relative;
-    height: 200px;
-    margin-top: 60px;
   }
   h1 {
     position: absolute;
@@ -85,79 +95,63 @@
 
   }
   .section1 {
-    width: 300px;
+    position: absolute;
+    width: 261.83px;
+    height: 292px;
+    left: 34px;
+    top: 552.7px;
+    
     font-family: Aldrich;
     font-style: normal;
     font-weight: normal;
-    white-space: normal;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 21px;
+    line-height: 150%;
+
     text-align: center;
+    
+    color: #FFFFFF;
+    transform-origin: 0 0;
     transform: rotate(-3deg);
-    margin-bottom: 50px;
   }
 
   .section2 {
-    margin-top: 70px;
-    width: 254px;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    width: 261.83px;
+    height: 321px;
+    left: 42px;
+    top: 1706px;
+    
     font-family: Aldrich;
     font-style: normal;
     font-weight: normal;
-    white-space: normal;
     font-size: 21px;
+    line-height: 150%;
+    /* or 31px */
+    
     text-align: center;
+    
+    color: #FFFFFF;
   }
 
   .section3 {
-    margin-top: 80px;
-    width: 260px;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    width: 261.83px;
+    height: 275px;
+    left: 103.52px;
+    top: 2331px;
+    
     font-family: Aldrich;
     font-style: normal;
     font-weight: normal;
-    white-space: normal;
     font-size: 23px;
+    line-height: 150%;
+    /* or 34px */
+    
     text-align: center;
+    
+    color: #FFFFFF;
+    
+    transform-origin: 0 0;
     transform: rotate(7deg);
-  }
-}
-
-@media only screen and (max-width: 768px){
-  .wrapper {
-    width: 768px;
-    .backImage, .backImage2 {
-      width: 768px;
-    }
-  }
-}
-
-@media only screen and (max-width: 425px){
-  .wrapper {
-    width: 425px;
-    .backImage, .backImage2 {
-      width: 425px;
-    }
-  }
-}
-
-@media only screen and (max-width: 375px){
-  .wrapper {
-    width: 375px;
-    .backImage, .backImage2 {
-      width: 375px;
-    }
-  }
-}
-
-@media only screen and (max-width: 320px){
-  .wrapper {
-    width: 320px;
-    .backImage, .backImage2 {
-      width: 320px;
-    }
   }
 }

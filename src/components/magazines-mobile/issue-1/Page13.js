@@ -5,7 +5,6 @@ const Page13 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='./magazine/1/images/mobile/moshed.png' className={styles.backImage}/>
-      <div className={styles.innerWrapper}>
       <div className={styles.shadow}>
         <h1 className={styles.shadow1}>
           If life is a game, it’s not played under fair rules.
@@ -43,7 +42,6 @@ const Page13 = () => {
         partly because of outdated taxation systems and the absence of land reform. 
         The Asian region saw the wealthiest possess close to 60 percent of income share, especially in India, wherein the difference in classes emerge even more.
       </p>
-      </div>
       </div>
     </div>
   )

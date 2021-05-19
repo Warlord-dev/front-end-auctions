@@ -2,7 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3318px;
+  height: 3799px;
   background-color: white;
   color: black;
   position: relative;
@@ -10,50 +10,15 @@
   
   .backImage1 {
     position: absolute;
-    width: 320px;
-    height: 3200px;
+    width: 375px;
+    height: 3403px;
     left: 0px;
-    top: -22px;
+    top: 197px;
   }
-
-  .backImage2 {
-    position: absolute;
-    width: 320px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
-  }
-  .section1 {
-    margin-top: 40px;
-    text-align: left;
-    h2 {
-      font-family: Medula One;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 25px;
-      line-height: 150%;
-    }
-  }
-  .section2 {
-    text-align: right;
-  }
-  .section3 {
-    text-align: left;
-  }
-  .section4 {
-    text-align: right;
-  }
-  .section5 {
-    text-align: left;
-  }
-  .section6 {
-    text-align: right;
-  }
-
   .topSideFrame {
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 197px;
     left: 0px;
     top: 0px;
     background-color: rgb(0 249 58);
@@ -64,7 +29,7 @@
   .bottomSideFrame {
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 197px;
     left: 0px;
     bottom: 0px;
     background-color: rgb(0 249 58);
@@ -87,6 +52,12 @@
   }
 
   h1 {
+    position: absolute;
+    width: 283px;
+    height: 75px;
+    left: 46px;
+    top: 300px;
+    
     font-family: Lusitana;
     font-style: normal;
     font-weight: bold;
@@ -95,85 +66,129 @@
   }
 
   h2 {
+    position: absolute;
     font-family: Medula One;
     font-style: normal;
     font-weight: normal;
-    white-space: normal;
-    font-size: 24px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-bottom: 40px;
+    font-size: 25px;
+    line-height: 150%;
+    color: #000000;
+
+    &.section1 {
+      width: 272px;
+      height: 38px;
+      left: 46px;
+      top: 447px;      
+    }
+
+    &.section2 {
+      position: absolute;
+      width: 279px;
+      height: 90px;
+      left: 42px;
+      top: 757px;
+      text-align: right;      
+    }
+
+    &.section3 {
+      width: 271px;
+      height: 76px;
+      left: 46px;
+      top: 1196px;      
+    }
+
+    &.section4 {
+      width: 275px;
+      height: 90px;
+      left: 46px;
+      top: 1534px;
+      text-align: right;      
+    }
+
+    &.section5 {
+      width: 270px;
+      height: 152px;
+      left: 51px;
+      top: 2000px;      
+    }
+
+    &.section6 {
+      width: 245px;
+      height: 90px;
+      left: 80px;
+      top: 2640px;
+      text-align: right;      
+    }
+
+    &.section7 {
+      width: 264px;
+      height: 123px;
+      left: 54px;
+      top: 3048px;
+            
+    }
   }
 
-  .innerWrapper {
-    position: absolute;
-    top: 200px;
-    width: 320px;
-    left: calc((100vw - 320px) / 2);
-    z-index: 1000;
-    text-align: center;
-  }
 
   p {
+    position: absolute;
     font-family: Lexend Zetta;
     font-style: normal;
     font-weight: normal;
-    white-space: normal;
     font-size: 12px;
-    display: block;
-    margin-bottom: 30px;
-    
-  }
-
-  .artby {
-    position: absolute;
-    width: 260px;
-    height: 18px;
-    left: 1472px;
-    top: 1084px;
-
-    font-family: Aldrich;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 21px;
     line-height: 150%;
-    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
-  }
-}
+    color: #000000;
 
-@media only screen and (max-width: 768px){
-  .wrapper {
-    width: 768px;
-    .backImage1, .backImage2 {
-      width: 768px;
+    &.section1 {
+      width: 287px;
+      height: 356px;
+      left: 46px;
+      top: 485px;      
     }
-  }
-}
 
-@media only screen and (max-width: 425px){
-  .wrapper {
-    width: 425px;
-    .backImage1, .backImage2 {
-      width: 425px;
+    &.section2 {
+      width: 287px;
+      height: 141px;
+      left: 37px;
+      top: 867px; 
+      text-align: right;   
     }
-  }
-}
 
-@media only screen and (max-width: 375px){
-  .wrapper {
-    width: 375px;
-    .backImage1, .backImage2 {
-      width: 375px;
+    &.section3 {
+      width: 287px;
+      height: 135px;
+      left: 46px;
+      top: 1278px;  
     }
-  }
-}
 
-@media only screen and (max-width: 320px){
-  .wrapper {
-    width: 320px;
-    .backImage1, .backImage2 {
-      width: 320px;
+    &.section4 {
+      width: 271px;
+      height: 153px;
+      left: 54px;
+      top: 1660px;
+      text-align: right;
+    }
+
+    &.section5 {
+      width: 287px;
+      height: 271px;
+      left: 54px;
+      top: 2170px;
+    }
+
+    &.section6 {
+      width: 287px;
+      height: 327px;
+      left: 40px;
+      top: 2780px;
+      text-align: right;
+    }
+
+    &.section7 {
+      width: 287px;
+      height: 141px;
+      left: 54px;
+      top: 3180px;      
     }
   }
 }

@@ -9,9 +9,8 @@ const Page11 = () => {
       <img src='./magazine/1/images/mobile/howtogetintext.png' className={styles.topTextImage}/>
       <div className={styles.bottomSideFrame}></div>
       <img src='./magazine/1/images/mobile/howtogetintext.png' className={styles.bottomTextImage}/>
-      <div className={styles.innerWrapper}>
       <h1>
-      Starting with 3D// Interview with Stan McGylin, Pipeline Manager and Creative Director at DIGITALAX, on the 3D Content Creation process. 
+        Starting with 3D// Interview with Stan McGylin, Pipeline Manager and Creative Director at DIGITALAX, on the 3D Content Creation process. 
       </h1>
       <h2 className={styles.section1}>
         How did you begin working with DIGITALAX?
@@ -59,14 +58,10 @@ const Page11 = () => {
         No web2 solutions can even begin to achieve this. 
       </p>
       <h2 className={styles.section6}>
-        You were instrumental to pulling off DIGITALAX’s first auction. 
-        What were the biggest challenges encoutered! 
+        How are you preparing for the future collaborations and projects that DIGITALAX has in store?
       </h2>
       <p className={styles.section6}>
-        The theme of the first auction was Crypto memes, it was a lot of fun to turn that into garments! 
-        I remember one annoying moment when we were transferring fur from one software to another, 
-        the fastest way to solve it was to rebuild the garment from scratch at the final stage in the look development software. 
-        We had a very tough deadline so we worked for 18-20 hours a day then slept 2-3 hours to get back to work!
+        Well there is no preparing for all of them! Some of the most exciting ones are at the heart of the modding communities, particularly content like Minecraft, CS:GO and DMC. I am a gamer myself, however, I did find it a challenge to work with the MC skins and come up with new ideas around what could work best in highlighting them in higher fidelity 3D!
       </p>
       <h2 className={styles.section7}>
         You’ve been doing this work for a while now, correct? How would you recommend getting to where you are now?
@@ -77,7 +72,6 @@ const Page11 = () => {
         make teamwork your priority and make decisions together. It’s important to set defined roles and responsibilities for each contribution to the project, 
         and streamline the entire pipeline. Also, just start giving the software a go! Try and learn as much as you can, stay agnostic! 
       </p>
-      </div>
     </div>
   )
 }

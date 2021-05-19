@@ -5,7 +5,7 @@ const Page14 = () => {
   return (
     <div className={styles.wrapper}> 
 
-      <img src='./magazine/1/images/mobile/moshed-2.png' className={styles.backImage2}/>
+      <img src='./magazine/1/images/mobile/moshed-2.png' className={styles.backImage}/>
       <p className={styles.section4}>
         Finally, the United States displayed a rapid rise in income for the rich. In 1980, the top ten wealthiest Americans compensated for just 34 percent of the country’s wealth. But that number jumps to 45 percent in 2019. The fortunes of the top five US billionaires grew by 26%, or $102 billion, from April to June 2020. Overall, the combined wealth of the richest grew from $637 billion to $3.6 billion in the same period.
         <br /><br />

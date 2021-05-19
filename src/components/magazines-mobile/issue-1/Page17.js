@@ -5,7 +5,6 @@ const Page17 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='./magazine/1/images/mobile/moshed-2.png' className={styles.backImage}/>
-      <div className={styles.innerWrapper}>
       <p className={styles.section1}>
         During its initial allocation last March 2021, Kleros minted 10 million UBI tokens, 
         with twenty percent of which going the early contributors who contributed to Democracy Earth’s HOUR token. 
@@ -23,9 +22,9 @@ const Page17 = () => {
         Meanwhile, the UBI token’s initial liquidity mining went live on March 12, 2021, and will target the Uniswap V2 pools of UBI/ETH and UBI/BTC. 
         The mining will last for a year and will allocate 2,000,000 UBI per pool. That figure boils down to 5,481 daily UBI per pool. 
       </p>
-      <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign}/>
-      <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign}/>
-      <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign}/>
+      <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign1}/>
+      <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign2}/>
+      <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign3}/>
       <p className={styles.section3}>
         <span>Critiquing the Criticism Against Blockchain for UBI</span>
         <br/>
@@ -34,7 +33,6 @@ const Page17 = () => {
         that the energy used to mine virtual currency is equal or greater than the consumption of entire countries. 
         However, this is a flawed argument because of incorrect comparison.        
       </p>
-      </div>
     </div>
   )
 }

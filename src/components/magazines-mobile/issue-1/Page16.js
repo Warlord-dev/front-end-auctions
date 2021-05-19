@@ -5,7 +5,6 @@ const Page16 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='./magazine/1/images/mobile/moshed-2.png' className={styles.backImage}/>
-      <div className={styles.innerWrapper}>
       <p className={styles.section3}>
         <span>UBI in Blockchain</span><br />
         The emergence of global blockchain networks bolstered UBI’s viability because of creating new and accessible financial applications that are available online. 
@@ -37,7 +36,6 @@ const Page16 = () => {
         Without stringent verification, attackers can create bogus accounts to disrupt the UBI coin. 
         The process uses reverse Turing tests to determine whether a registered user is real or dicey.
       </p>
-      </div>
     </div>
   )
 }
