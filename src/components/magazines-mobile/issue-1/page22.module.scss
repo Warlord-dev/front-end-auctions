@@ -1,37 +1,45 @@
 @import './styles.module.scss';
 .wrapper {
   @include magazineWrapper();
+  height: 2505px;
   background-color: white;
   color: black;
   position: relative;
 
-  img {
+  .backImage {
     position: absolute;
     left: 0px;
     top: 0px;
+    width: 375px;
+    height: 2505px;
   }
 
-  a {
+  h1 {
     position: absolute;
-    width: 231px;
-    height: 66px;
-    left: 0px;
-    top: 10px;
-
-    font-family: Gayathri;
+    width: 302px;
+    height: 435px;
+    left: 36px;
+    top: 64px;
+    
+    font-family: Bahianita;
     font-style: normal;
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 150%;
-    /* or 15px */
-    color: #0044F3; 
-    border-bottom: 1px solid;
-    span {
-      text-decoration: underline;
-    }
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 120.53%;    
+  }
 
-    &:hover {
-      color: #0044F3;
+  .playButton {
+    position: absolute;
+    width: 117px;
+    height: 117px;
+    left: 220px;
+    top: 585.67px;
+    background: transparent;
+    border: none;
+    
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }

@@ -5,10 +5,20 @@ const Page12 = () => {
   return (
     <div className={styles.wrapper}>
        <img src='./magazine/1/images/mobile/page1314-bg.png' className={styles.backImage1}/>
-      <div className={styles.topSideFrame}></div>
-      <img src='./magazine/1/images/mobile/howtogetintext.png' className={styles.topTextImage}/>
-      <div className={styles.bottomSideFrame}></div>
-      <img src='./magazine/1/images/mobile/howtogetintext.png' className={styles.bottomTextImage}/>
+       <div className={styles.topSideFrame}></div>
+        <div className={[styles.animationFrame, styles.topSideImageWrapper].join(' ')}>
+          <img src="./magazine/1/images/mobile/howtogetintext.png" />
+          <img src="./magazine/1/images/mobile/howtogetintext.png" />
+          <img src="./magazine/1/images/mobile/howtogetintext.png" />
+          <img src="./magazine/1/images/mobile/howtogetintext.png" /> 
+        </div>
+        <div className={styles.bottomSideFrame}></div>
+        <div className={[styles.animationFrame, styles.bottomSideImageWrapper].join(' ')}>
+          <img src="./magazine/1/images/mobile/howtogetintext.png" />
+          <img src="./magazine/1/images/mobile/howtogetintext.png" />
+          <img src="./magazine/1/images/mobile/howtogetintext.png" />
+          <img src="./magazine/1/images/mobile/howtogetintext.png" />
+        </div>
     
     </div>
   )

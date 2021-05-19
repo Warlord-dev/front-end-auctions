@@ -130,7 +130,7 @@ const Page2122 = () => {
       <a href="https://foundation.app/iartsometimes/improperly-processed-emotions-229" target='_blank'>
         <img src='./magazine/1/images/21-01.jpg' className={styles.image1} />
       </a>
-      <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:512984 " target='_blank'>
+      <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:512984" target='_blank'>
         <img src='./magazine/1/images/21-02.jpg' className={styles.image2} />
       </a>
       <a href="https://foundation.app/frickltd/chaos-19373" target='_blank'>

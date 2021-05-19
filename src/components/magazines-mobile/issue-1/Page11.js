@@ -4,11 +4,22 @@ import styles from './page11.module.scss'
 const Page11 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='./magazine/1/images/mobile/Rectangle 786.png' className={styles.backImage1}/>
       <div className={styles.topSideFrame}></div>
-      <img src='./magazine/1/images/mobile/howtogetintext.png' className={styles.topTextImage}/>
+      <div className={[styles.animationFrame, styles.topSideImageWrapper].join(' ')}>
+        <img src="./magazine/1/images/mobile/howtogetintext.png" />
+        <img src="./magazine/1/images/mobile/howtogetintext.png" />
+        <img src="./magazine/1/images/mobile/howtogetintext.png" />
+        <img src="./magazine/1/images/mobile/howtogetintext.png" /> 
+      </div>
       <div className={styles.bottomSideFrame}></div>
-      <img src='./magazine/1/images/mobile/howtogetintext.png' className={styles.bottomTextImage}/>
+      <div className={[styles.animationFrame, styles.bottomSideImageWrapper].join(' ')}>
+        <img src="./magazine/1/images/mobile/howtogetintext.png" />
+        <img src="./magazine/1/images/mobile/howtogetintext.png" />
+        <img src="./magazine/1/images/mobile/howtogetintext.png" />
+        <img src="./magazine/1/images/mobile/howtogetintext.png" />
+      </div>
+
+      <img src='./magazine/1/images/mobile/Rectangle 786.png' className={styles.backImage1}/>
       <h1>
         Starting with 3D// Interview with Stan McGylin, Pipeline Manager and Creative Director at DIGITALAX, on the 3D Content Creation process. 
       </h1>

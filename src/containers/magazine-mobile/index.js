@@ -33,6 +33,8 @@ const MobileViewer = props => {
   return (
     <>
       <div className={styles.mobileViewerWrapper}>
+        <div className={styles.leftLine}></div>
+        <div className={styles.rightLine}></div>
         <ViewerSwitch 
           viewers={['exit', 'mapview']}
           onSwitchViewer={onSwitchViewer}

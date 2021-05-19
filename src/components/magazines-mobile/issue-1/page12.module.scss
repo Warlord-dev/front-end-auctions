@@ -1,5 +1,11 @@
 @import './styles.module.scss';
 
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-605px); }
+}
+
+
 .wrapper {
   @include magazineWrapper();
   height: 4415px;
@@ -37,18 +43,26 @@
     border-bottom: 10px solid black;
   }
 
-  .topTextImage {
-    position: absolute;
-    width: 320px;
-    left: 0px;
-    top: 30px;
+  .animationFrame {
+    animation: scrolling 4s linear infinite;
   }
 
-  .bottomTextImage {
+  .topSideImageWrapper {
     position: absolute;
-    width: 320px;
     left: 0px;
-    bottom: 30px;
+    top: 68px;
+    width: 2400px;
+    height: 47px;
+    display: flex;
+  }
+
+  .bottomSideImageWrapper {
+    position: absolute;
+    left: 0px;
+    width: 2400px;
+    top: 4290px;
+    height: 47px;
+    display: flex;
   }
 
 }

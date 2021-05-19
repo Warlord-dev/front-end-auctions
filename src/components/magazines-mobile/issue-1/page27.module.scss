@@ -3,133 +3,155 @@
 
 .wrapper {
   @include magazineWrapper();
+  height: 3302px;
   background-color: white;
   color: black;
   position: relative;
   white-space: normal;
   text-align: center;
 
-  .innerWrapper {
+  video {
     position: absolute;
-    overflow-x: hidden;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    h1 {
-      font-family: Heaven Wanders DEMO;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 60px;
-      line-height: 100%;
-      /* or 200px */
-      text-align: center;
-    }
-    
-    h2 {
-      font-family: Habbo;
-      font-style: normal;
-      font-weight: normal;
-      width: 260px;
-      margin-left: auto;
-      font-size: 30px;
-      line-height: 100%;
-      margin-bottom: 40px;
-      /* or 40px */
-      text-align: center;
-    }
-  
-    h3 {
-      font-family: Comics Tricks;
-      font-style: normal;
-      font-weight: normal;
-      width: 200px;
-      font-size: 30px;
-      line-height: 100%;
-      /* or 45px */
-  
-      text-align: right;
-    }
-    img {
-      width: 260px;
-      display: block;
-      margin-left: 0;
-    }
-  
-    h4 {
-      font-family: THE AMAZING SPIDER-MAN;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 58px;
-      line-height: 100%;
-      text-align: center;
-      color: #515151;
-      margin-bottom: 14px;
-    }
-    .layer1 {
-      width: 300px;
-      margin-left: calc((100vw - 350px));
-    }
-    .layer2 {
-      margin-right: calc((300px - 100vw));
-    }
-    .layer3 {
-      margin-bottom: 30px;
-      margin-right: calc((200px - 100vw));
-    }
-  
-    h5 {    
-      font-family: Inter;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 40px;
-      line-height: 150%;
-  
-      text-align: center;
-    }
-  
-    .ellipseImage {
-      position: absolute;
-      width: 373px;
-      height: 373px;
-      left: 43px;
-      top: 10px;
-    }
-  
-  
-    .ellipseImage2 {
-      position: absolute;
-      width: 855px;
-      height: 1355px;
-      left: 1065px;
-      top: 206px;
-    }
-    
-    .borderImage {
-      position: absolute;    
-      width: 116px;
-      height: 1497px;
-      left: 903px;
-      top: 0px;
-    }
-  
-    p {
-      font-family: B612;
-      font-size: 17px;
-      line-height: 150%;
-      width: 280px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      transform: rotate(-3deg);
-      margin-bottom: 30px;
-    }
+    left: 500px;
+    top: 3500px;
+    width: 4000px;
+    height: 500px;
+    object-fit: cover;
+    object-position:bottom;
+    transform-origin: 0 500px;
+    transform: rotate(-90deg);
+  }
+
+  h1 {
+    position: absolute;
+    width: 346px;
+    height: 150px;
+    left: 14px;
+    top: 63px;
+
+    font-family: Heaven Wanders DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 75px;
+    line-height: 100%;
+    /* or 75px */
+
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .timPhoto {
+    position: absolute;
+    width: 305px;
+    height: 322px;
+    left: -30px;
+    top: 200px;
   }
   
-  .backImage {
+  h2 {
     position: absolute;
-    width: 100%;
-    height: 3800px;
-    left: 0px;
-    top: 0px;
+    width: 274px;
+    height: 120px;
+    left: 86px;
+    top: 527px;
+    
+    font-family: Habbo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #000000;    
+  }
+
+  h4 {
+    position: absolute;
+    font-family: THE AMAZING SPIDER-MAN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    text-align: center;
+    color: #515151;
+
+    &.layer1 {
+      width: 578px;
+      height: 99px;
+      left: -119px;
+      top: 1089px;
+    }
+
+    &.layer2 {
+      width: 1331px;
+      height: 70px;
+      left: -461px;
+      top: 1163px;      
+    }
+
+    &.layer3 {
+      width: 1331px;
+      height: 70px;
+      left: -423px;
+      top: 1250px;      
+    }
+  }
+
+  .ellipseImage {
+    position: absolute;
+    width: 373px;
+    height: 373px;
+    left: 51px;
+    top: 228px;
+  }
+
+  p {
+    position: absolute;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    line-height: 150%;
+    transform-origin: 0 0;
+    transform: rotate(-3deg);
+    color: #000000;
+
+    &.text1 {
+      width: 291.17px;
+      height: 199.21px;
+      left: 36px;
+      top: 677.24px;
+      
+      font-family: Ayuthaya;
+      font-size: 15px;
+    }
+
+    &.text2 {
+      position: absolute;
+      width: 272.17px;
+      height: 700.22px;
+      left: 29px;
+      top: 1349.24px;
+      
+      font-family: B612;
+      font-size: 17px;
+    }
+
+    &.text3 {
+      width: 307.97px;
+      height: 461.43px;
+      left: 17px;
+      top: 2321.12px; 
+      font-family: B612;
+      font-size: 17px;     
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 116px;
+    height: 423px;
+    left: 125px;
+    top: 2894px;
   }
 }
