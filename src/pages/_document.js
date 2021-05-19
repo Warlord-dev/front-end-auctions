@@ -41,7 +41,7 @@ class MyDocument extends Document {
         <Head>
           <script src="/arkane-network/web3-arkane-provider.js"></script>
           <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194369113-2"></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y06VSWY6VY"></script>
           <script dangerouslySetInnerHTML={{ __html: gaScriptText }} />
           {/* {this.getPreloadFontsLinks()} */}
           <link rel="stylesheet"
