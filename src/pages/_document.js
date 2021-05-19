@@ -527,7 +527,20 @@ class MyDocument extends Document {
 
             @font-face {
               font-family: 'Barlow';
+              font-weight: 400;
               src: url("./fonts/Barlow-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Barlow';
+              font-weight: 700;
+              src: url("./fonts/Barlow-Bold.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Barlow';
+              font-weight: 900;
+              src: url("./fonts/Barlow-Black.ttf");
             }
 
             @font-face {
@@ -882,6 +895,12 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Rosarivo';
               src: url("./fonts/Rosarivo-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Ceviche One";
+              src: url("./fonts/CevicheOne-Regular.ttf");
               font-weight: 400;
             }
           `,

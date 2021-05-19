@@ -12,93 +12,143 @@
 
   .backImage {
     position: absolute;
-    height: 4000px;
+    height: 2100px;
     left: 0px;
     top: 0px;
   }
 
   .innerWrapper {
     position: absolute;
-    top: 60px;
-    left: calc((100vw - 280px) / 2);
-    width: 280px;
+    top: 10px;
+    left: 0;
+    width: 100%;
     white-space: normal;
-    h1 {
-      font-family: Covered By Your Grace;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 35px;
-      line-height: 110%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    p {
-      font-family: Covered By Your Grace;
+    text-align: left;
+    .title {
+      font-family: Fresca;
       font-style: normal;
       font-weight: normal;
       font-size: 20px;
-      line-height: 110%;
+      line-height: 100%;
+      margin-left: 20px;
+    }
+    .titleImage {
+      display: block;
+      width: 280px;
+      margin-top: 60px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .subtitle {
+      margin-top: 20px;
       margin-bottom: 30px;
+      font-family: Trocchi;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 100%;
+      text-align: center;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     .section1 {
-      display: flex;
-      justify-content: space-between;
-      .titleSpacing {
-        padding: 30px;
-        display: inline-block;
-      }
+      margin-bottom: 100px;
       h1 {
-        font-family: Blacker Display;
+        font-family: Fresca;
         font-style: normal;
-        font-weight: 900;
-        font-size: 60px;
-        line-height: 110%;
-        text-align: center;
-        width: 40px;
-        word-break: break-all;
+        font-weight: normal;
+        width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 50px;
+        line-height: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
-      h2 {
-        margin-top: 120px;
-        font-family: Blacker Display;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 40px;
-        line-height: 110%;
-        text-align: center;
-        width: 40px;
-        word-break: break-all;
-        color: #2FA8FF;
-      }
-      h3 {
-        font-family: Blacker Display;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 60px;
-        line-height: 110%;
-        text-align: center;
-        width: 40px;
-        word-break: break-all;
-        color: #FF3939;
+      img {
+        display: block;
+        border: 2px solid #FFFFFF;
+        width: 260px;
+        margin-right: auto;
+        margin-left: auto;
       }
     }
     .section2 {
-      margin-top: 100px;
+      margin-bottom: 100px;
+      h1 {
+        font-family: Fresca;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 100%;
+        text-align: right;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+      }
+      img {
+        display: block;
+        border: 2px solid #FFFFFF;
+        width: 260px;
+        margin-left: auto;
+      }
     }
     .section3 {
-      margin-top: 80px;
-      transform: rotate(-5deg);
+      margin-bottom: 100px;
+      margin-left: 10px;
+      h1 {
+        font-family: Fresca;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      img {
+        display: block;
+        border: 2px solid #FFFFFF;
+        width: 260px;
+      }
     }
     .section4 {
-      margin-top: 80px;
-      transform: rotate(5deg);
+      margin-bottom: 100px;
+      margin-right: 20px;
+      h1 {
+        font-family: Fresca;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 100%;
+        text-align: right;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      img {
+        display: block;
+        border: 2px solid #FFFFFF;
+        width: 260px;
+        margin-left: auto;
+      }
     }
     .section5 {
-      margin-top: 80px;
-      transform: rotate(-5deg);
-    }
-    .section6 {
-      margin-top: 80px;
-      transform: rotate(5deg);
+      padding: 0 20px;
+      margin-bottom: 100px;
+      h1 {
+        font-family: Fresca;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 100%;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      img {
+        display: block;
+        border: 2px solid #FFFFFF;
+        width: 260px;
+        margin-right: auto;
+      }
     }
   }
 

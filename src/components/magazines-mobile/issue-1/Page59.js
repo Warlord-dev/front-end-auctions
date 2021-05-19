@@ -4,7 +4,7 @@ import styles from './page59.module.scss'
 const Page59 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page59-bg.png" className={styles.backImage} />
+      <img src="./magazine/1/images/mobile/page66-bg.png" className={styles.backImage} />
     </div>
   )
 }

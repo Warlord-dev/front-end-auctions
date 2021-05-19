@@ -1,186 +1,48 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap');
 
 .wrapper {
   @include magazineWrapper();
 
-  height: 100vh;
-  overflow: scroll;
+  height: 3163px;
+  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
 
-  .backImage {
+  .img1{
     position: absolute;
-    height: 2900px;
+    width: 375px;
+    height: 3257px;
     left: 0px;
     top: 0px;
   }
 
-  .innerWrapper {
+  .img2{
     position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    white-space: normal;
-    text-align: left;
-    .playImage {
-      width: 50px;
-      height: 50px;
-    }
-    h1 {
-      font-family: Barlow;
-      font-weight: 900;
-      font-style: normal;
-      font-size: 50px;
-      line-height: 55px;
-      margin-bottom: 30px;
-    }
-    h2 {
-      font-family: Barlow;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 30px;
-      line-height: 33px;
-      margin-bottom: 60px;
-    }
-    h4 {
-      font-family: Barlow;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 30px;
-      line-height: 110%;
-      margin-top: 60px;
-      margin-bottom: 10px;
-      .playImage {
-        width: 30px;
-        height: 30px;
-      }
-    }
-    h5 {
-      font-family: Barlow;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 20px;
-      line-height: 110%;
-      color: #7F43FF;
-    }
-    .title1 {
-      font-family: FresHot_DEMO;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 300px;
-      line-height: 110%;
-      margin: 0;
-    }
-    .section1 {
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-      margin-bottom: 40px;
-      .playImage {
-        position: absolute;
-        right: 60px;
-        top: 200px;
-      }
-      .arrowDown {
-        position: absolute;
-        right: 50px;
-        top: 270px;
-        width: 140px;
-        transform: rotateY(180deg) rotateZ(12deg);
-      }
-      h1 {
-        font-family: DIN Alternate;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 50px;
-        line-height: 110%;
-        text-decoration-line: underline;
-      }
-      p {
-        width: 180px;
-        font-family: Jura;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 110%;
-      }
-      h4 {
-        position: absolute;
-        right: 30px;
-        top: 80px;
-        width: 100px;
-        font-family: Parabolic;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 25px;
-        line-height: 110%;
-        text-align: center;
-        color: #0094FF;
-        transform: rotate(-10deg);
-      }
-    }
-    .section2 {
-      width: 280px;
-      margin-left: auto;
-      text-align: right;
-      margin-right: 20px;
-      margin-top: 40px;
-      h1 {
-        font-family: Parabolic;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 25px;
-        line-height: 110%;
-        text-align: center;
-        color: #0094FF;
-        transform: rotate(-10deg);
-        margin-bottom: 10px;
-      }
-      h4 {
-        margin-top: 20px;
-        font-family: DIN Alternate;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 110%;
-        text-decoration-line: underline;
-      }
-      p {
-        font-family: Jura;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 110%;
-        margin-bottom: 50px;
-      }
-    }
-    .section3 {
-      width: 290px;
-      margin-left: auto;
-      margin-right: auto;
-      h1 {
-        font-family: DIN Alternate;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 50px;
-        line-height: 110%;
-        text-decoration-line: underline;
-      }
-      p {
-        font-family: Jura;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 110%;
-      }
-    }
+    width: 313px;
+    height: 3005px;
+    left: 31px;
+    top: 78px;
   }
-  .container {
-    width: 80%;
-    margin: auto;
+
+  p{
+    position: absolute;
+    width: 235px;
+    height: 2904px;
+    left: 70px;
+    top: 128px;
+
+    font-family: Crafty Girls;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 110%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
   }
+
+   
 }
