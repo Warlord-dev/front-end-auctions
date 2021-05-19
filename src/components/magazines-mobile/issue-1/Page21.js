@@ -52,6 +52,7 @@ const Page21 = () => {
         MAR-23-2021
       </div>
       <div className={styles.line3}></div>
+      <div className={styles.line8}></div>
       <div className={styles.line4}></div>
       <a href="https://www.hicetnunc.xyz/objkt/6757"  target='_blank'>
         <img src="./magazine/1/images/QmSq8Us82AbEKzNU7W6BTsmC16KXJ7NLWYCG1HU78BCCho.gif" className={styles.image6} />
