@@ -18,7 +18,24 @@
     top: 0px;
   }
 
-  .title1{
+  .title1_copy {
+    position: absolute;
+    width: 324px;
+    height: 44px;
+    left: 25.35px;
+    top: 76px;
+
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 110%;
+    
+    text-shadow: -5px -5px 0 black, -5px -4px 0 black, -5px -3px 0 black, -5px -2px 0 black, -5px -1px 0 black, -5px 0px 0 black, -5px 1px 0 black, -5px 2px 0 black, -5px 3px 0 black, -5px 4px 0 black, -5px 5px 0 black, -4px -5px 0 black, -4px -4px 0 black, -4px -3px 0 black, -4px -2px 0 black, -4px -1px 0 black, -4px 0px 0 black, -4px 1px 0 black, -4px 2px 0 black, -4px 3px 0 black, -4px 4px 0 black, -4px 5px 0 black, -3px -5px 0 black, -3px -4px 0 black, -3px -3px 0 black, -3px -2px 0 black, -3px -1px 0 black, -3px 0px 0 black, -3px 1px 0 black, -3px 2px 0 black, -3px 3px 0 black, -3px 4px 0 black, -3px 5px 0 black, -2px -5px 0 black, -2px -4px 0 black, -2px -3px 0 black, -2px -2px 0 black, -2px -1px 0 black, -2px 0px 0 black, -2px 1px 0 black, -2px 2px 0 black, -2px 3px 0 black, -2px 4px 0 black, -2px 5px 0 black, -1px -5px 0 black, -1px -4px 0 black, -1px -3px 0 black, -1px -2px 0 black, -1px -1px 0 black, -1px 0px 0 black, -1px 1px 0 black, -1px 2px 0 black, -1px 3px 0 black, -1px 4px 0 black, -1px 5px 0 black, 0px -5px 0 black, 0px -4px 0 black, 0px -3px 0 black, 0px -2px 0 black, 0px -1px 0 black, 0px 0px 0 black, 0px 1px 0 black, 0px 2px 0 black, 0px 3px 0 black, 0px 4px 0 black, 0px 5px 0 black, 1px -5px 0 black, 1px -4px 0 black, 1px -3px 0 black, 1px -2px 0 black, 1px -1px 0 black, 1px 0px 0 black, 1px 1px 0 black, 1px 2px 0 black, 1px 3px 0 black, 1px 4px 0 black, 1px 5px 0 black, 2px -5px 0 black, 2px -4px 0 black, 2px -3px 0 black, 2px -2px 0 black, 2px -1px 0 black, 2px 0px 0 black, 2px 1px 0 black, 2px 2px 0 black, 2px 3px 0 black, 2px 4px 0 black, 2px 5px 0 black, 3px -5px 0 black, 3px -4px 0 black, 3px -3px 0 black, 3px -2px 0 black, 3px -1px 0 black, 3px 0px 0 black, 3px 1px 0 black, 3px 2px 0 black, 3px 3px 0 black, 3px 4px 0 black, 3px 5px 0 black, 4px -5px 0 black, 4px -4px 0 black, 4px -3px 0 black, 4px -2px 0 black, 4px -1px 0 black, 4px 0px 0 black, 4px 1px 0 black, 4px 2px 0 black, 4px 3px 0 black, 4px 4px 0 black, 4px 5px 0 black, 5px -5px 0 black, 5px -4px 0 black, 5px -3px 0 black, 5px -2px 0 black, 5px -1px 0 black, 5px 0px 0 black, 5px 1px 0 black, 5px 2px 0 black, 5px 3px 0 black, 5px 4px 0 black, 5px 5px 0 black;
+    transform: rotate(-5deg);
+  }
+
+  .title1 {
     position: absolute;
     width: 324px;
     height: 44px;
@@ -30,10 +47,8 @@
     font-weight: bold;
     font-size: 40px;
     line-height: 110%;
-    /* identical to box height, or 44px */
-    color: #FFFFFF;
-    
-    text-shadow: -5px 0 #000000, 0 5px #000000, 5px 0 #000000, 0 -5px #000000;
+
+    text-shadow: -5px -5px 0 black, -5px -4px 0 black, -5px -3px 0 black, -5px -2px 0 black, -5px -1px 0 black, -5px 0px 0 black, -5px 1px 0 black, -5px 2px 0 black, -5px 3px 0 black, -5px 4px 0 black, -5px 5px 0 black, -4px -5px 0 black, -4px -4px 0 black, -4px -3px 0 black, -4px -2px 0 black, -4px -1px 0 black, -4px 0px 0 black, -4px 1px 0 black, -4px 2px 0 black, -4px 3px 0 black, -4px 4px 0 black, -4px 5px 0 black, -3px -5px 0 black, -3px -4px 0 black, -3px -3px 0 black, -3px -2px 0 black, -3px -1px 0 black, -3px 0px 0 black, -3px 1px 0 black, -3px 2px 0 black, -3px 3px 0 black, -3px 4px 0 black, -3px 5px 0 black, -2px -5px 0 black, -2px -4px 0 black, -2px -3px 0 black, -2px -2px 0 black, -2px -1px 0 black, -2px 0px 0 black, -2px 1px 0 black, -2px 2px 0 black, -2px 3px 0 black, -2px 4px 0 black, -2px 5px 0 black, -1px -5px 0 black, -1px -4px 0 black, -1px -3px 0 black, -1px -2px 0 black, -1px -1px 0 black, -1px 0px 0 black, -1px 1px 0 black, -1px 2px 0 black, -1px 3px 0 black, -1px 4px 0 black, -1px 5px 0 black, 0px -5px 0 black, 0px -4px 0 black, 0px -3px 0 black, 0px -2px 0 black, 0px -1px 0 black, 0px 0px 0 black, 0px 1px 0 black, 0px 2px 0 black, 0px 3px 0 black, 0px 4px 0 black, 0px 5px 0 black, 1px -5px 0 black, 1px -4px 0 black, 1px -3px 0 black, 1px -2px 0 black, 1px -1px 0 black, 1px 0px 0 black, 1px 1px 0 black, 1px 2px 0 black, 1px 3px 0 black, 1px 4px 0 black, 1px 5px 0 black, 2px -5px 0 black, 2px -4px 0 black, 2px -3px 0 black, 2px -2px 0 black, 2px -1px 0 black, 2px 0px 0 black, 2px 1px 0 black, 2px 2px 0 black, 2px 3px 0 black, 2px 4px 0 black, 2px 5px 0 black, 3px -5px 0 black, 3px -4px 0 black, 3px -3px 0 black, 3px -2px 0 black, 3px -1px 0 black, 3px 0px 0 black, 3px 1px 0 black, 3px 2px 0 black, 3px 3px 0 black, 3px 4px 0 black, 3px 5px 0 black, 4px -5px 0 black, 4px -4px 0 black, 4px -3px 0 black, 4px -2px 0 black, 4px -1px 0 black, 4px 0px 0 black, 4px 1px 0 black, 4px 2px 0 black, 4px 3px 0 black, 4px 4px 0 black, 4px 5px 0 black, 5px -5px 0 black, 5px -4px 0 black, 5px -3px 0 black, 5px -2px 0 black, 5px -1px 0 black, 5px 0px 0 black, 5px 1px 0 black, 5px 2px 0 black, 5px 3px 0 black, 5px 4px 0 black, 5px 5px 0 black;
     transform: rotate(-5deg);
   }
 
@@ -53,6 +68,8 @@
     color: #6900BC;
  
     text-shadow: -0.3px 0 #FA00FF, 0 0.3px #FA00FF, 0.3px 0 #FA00FF, 0 -0.3px #FA00FF;
+    -webkit-text-stroke: 0.8px #FA00FF;
+    -webkit-text-fill-color: #6900BC;
     box-sizing: border-box;
     transform-origin: 0 0;
     transform: rotate(5deg);
@@ -76,10 +93,12 @@
     font-size: 16px;
     line-height: 110%;
     /* or 18px */
-    
-    text-decoration-line: underline;
-    
     color: #FFFFFF;
+
+    a {
+      color: #FFFFFF;
+      text-decoration-line: underline;
+    }
   }
 
   .section2{
@@ -157,7 +176,7 @@
   }
  
 
-  .image1{
+  .video1{
     position: absolute;
     width: 253.79px;
     height: 252px;
@@ -165,7 +184,7 @@
     top: 2248px;
   }
   
-  .image2{
+  .video2{
     position: absolute;
     width: 250.57px;
     height: 252px;
@@ -173,12 +192,69 @@
     top: 3235px;
   }
 
-  .image3{
+  .video3{
     position: absolute;
     width: 254.57px;
     height: 252px;
     left: 60px;
     top: 3868px;     
+  }
+
+  .videoFrame1 {
+    position: absolute;
+    width: 281px;
+    height: 274px;
+    left: 47px;
+    top: 2237px;
+    
+    background: #680099;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);    
+  }
+
+  .videoFrame2 {
+    position: absolute;
+    width: 281px;
+    height: 274px;
+    left: 43px;
+    top: 3224px;
+
+    background: #DD94FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .videoFrame3 {
+    position: absolute;
+    width: 281px;
+    height: 274px;
+    left: 47px;
+    top: 3856px;
+    
+    background: #AD00FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);  
+  }
+
+  .play1 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 47px;
+    top: 2200px;  
+  }
+
+  .play2 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 50px;
+    top: 3185px;
+  }
+
+  .play3 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 45px;
+    top: 3818px;
   }
 
   .number1{

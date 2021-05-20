@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './page43.module.scss'
 
 const Page43 = () => {
+  const [video1, setVideo1] = useState(true);
+  const [video2, setVideo2] = useState(true);
+  const [video3, setVideo3] = useState(true);
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/images/mobile/page50-bg.png" className={styles.backImage} />      
+      <h1 className={styles.title1_copy}>HYPERREAALIYAH</h1>
       <h1 className={styles.title1}>HYPERREAALIYAH</h1>
       <p className={styles.section1}>
-        HYPERREAALIYAH was founded in 2014 through a process that involved the writings of Jean Baudrillard, one (1) BTC worth of acid in the day’s exchange rate, and a handful of people. Since then, HYPERREAALIYAH has existed as a simulation of an artist, born again for each new project through the collaborators of that project. Sometimes for clarity HYPERREAALIYAH is referred to as a collective, yet it has no formal membership and only becomes realised through projects for which a new team is always formed. Both professional artists and non-artists have participated in the production of works of HYPERREAALIYAH.
+        <a href="http://hyperreaaliyah.com/" target='_blank'>HYPERREAALIYAH</a> was founded in 2014 through a process that involved the writings of Jean Baudrillard, one (1) BTC worth of acid in the day’s exchange rate, and a handful of people. Since then, HYPERREAALIYAH has existed as a simulation of an artist, born again for each new project through the collaborators of that project. Sometimes for clarity HYPERREAALIYAH is referred to as a collective, yet it has no formal membership and only becomes realised through projects for which a new team is always formed. Both professional artists and non-artists have participated in the production of works of HYPERREAALIYAH.
         <br/><br/>        
         Since its inception, HYPERREAALIYAH has considered everything in existence as material to be moulded into new forms. This creative process has embodied a commentary on the structure of mediated reality as a surface which can be used to create new meaning although it is sometimes controlled by copyrights and trademarks. HYPERREAALIYAH’s argument has been that if the meaning of a work that uses existing material is new or, say, original, the material loses its meaning and gains a new one. 
         <br/><br/>
@@ -25,7 +29,7 @@ const Page43 = () => {
         <br/><br/>
         Most of the visual and sound material attributed to these objects is derived from existing material, yet the shape of each object is unique. Among other things, the objects include trademarked and copyrighted colors, logos, images, songs and videos. The three objects all have a common source of origin that will be revealed in 40 months, approximately 3,3 years. In the meantime, we will be upgrading the objects as to their compatibility and interoperability aspects, perfecting these pieces until the final revelation of their source.
       </p>
-      <img src="./magazine/1/images/mobile/page50/image1.png" className={styles.image1} />              
+      {/* <img src="./magazine/1/images/mobile/page50/image1.png" className={styles.image1} />               */}
       <h1 className={styles.number1}>604753_Allegory_of_Meta</h1>
       <span className={styles.plus}>+</span>
       <h2 className={styles.number2}>604753_Joint_Paean</h2>
@@ -35,12 +39,43 @@ const Page43 = () => {
       </p>
       
       <h1 className={styles.number3}>604753_Bodysattvax</h1>
-      <img src="./magazine/1/images/mobile/page50/image2.png"  className={styles.image2}/>
+      {/* <img src="./magazine/1/images/mobile/page50/image2.png"  className={styles.image2}/> */}
       <p className={styles.section4}>The Bodysattvax is a statue, a totem for XD, the international symbol of ecstatic laughter. This statue pays homage to mediatization, to hyperreality and simulacrum. Bodysattvax can be placed inside or outside, creating a tranquil yet tense ambience with shivers of shock and awe. The video on the background is what's embedded into the statue's texture. The soundscape emitted by Bodysattvax is inspired by MGS2 which explores themes such as memetics, social engineering, existentialism, postmodernism, virtual reality and the internal struggle of political liberty and freedom of thought.</p>
   
       <h1 className={styles.number4}>604753_Trivial_Perseption</h1>
-      <img src="./magazine/1/images/mobile/page50/image3.png"  className={styles.image3}/>
+      {/* <img src="./magazine/1/images/mobile/page50/image3.png"  className={styles.image3}/> */}
       <p  className={styles.section5}>The Trivial Perseption is a ring is inspired by the treacherous wallflowerness of random elements around us, the kind with apparent naturalness to the sensory overload they cause and contextual burden they carry. The video you see on the background of the ring is what's embedded into the ring's texture. The soundscape emitted by the forever orbiting and pulsating glass jewel is inspired by Sting suing Juice WRLD and Metallica ruining Napster.</p>
+
+      <img
+        src={`./magazine/1/49_50/${video1 ? 'Group 1200' : 'Group 1201'}.png`}
+        onClick={() => setVideo1(!video1)}
+        className={styles.play1}
+      />
+      <img
+        src={`./magazine/1/49_50/${video2 ? 'Group 1200' : 'Group 1201'}.png`}
+        onClick={() => setVideo2(!video2)}
+        className={styles.play2}
+      />
+      <img
+        src={`./magazine/1/49_50/${video3 ? 'Group 1200' : 'Group 1201'}.png`}
+        onClick={() => setVideo3(!video3)}
+        className={styles.play3}
+      />
+
+      <div className={styles.videoFrame1}></div>
+      <video autoPlay muted={video1} loop className={styles.video1}>
+        <source src="./magazine/1/videos/50_1.mp4" type="video/mp4" />
+      </video>
+
+      <div className={styles.videoFrame2}></div>
+      <video autoPlay muted={video2} loop className={styles.video2}>
+        <source src="./magazine/1/videos/50_2.mp4" type="video/mp4" />
+      </video>
+
+      <div className={styles.videoFrame3}></div>
+      <video autoPlay muted={video3} loop className={styles.video3}>
+        <source src="./magazine/1/videos/50_3.mp4" type="video/mp4" />
+      </video>
      
     </div>
   )
