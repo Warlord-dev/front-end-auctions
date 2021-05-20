@@ -110,55 +110,53 @@
       text-shadow: -3px 0 #43A5FF, 0 3px #43A5FF, 3px 0 #43A5FF, 0 -3px #43A5FF;
       box-sizing: border-box;
     }
- 
-    .arrow1{
-      position: absolute;
-      width: 18px;
-      height: 16px;
-      left: 272px;
-      top: 798px;
-      
-      background:transparent;
-      transform-origin: 0 0;
-      transform: rotate(90deg);
-    }
-
-    .arrow2{
-      position: absolute;
-      width: 27px;
-      height: 25px;
-      left: 288px;
-      top: 1406px;
-
-      background:transparent;
-      transform-origin: 0 0;
-      transform: rotate(90deg);
-    }
-
-    .arrow3{
-      position: absolute;
-      width: 27px;
-      height: 25px;
-      left: 346px;
-      top: 2041px;
-      
-      background:transparent;
-      transform-origin: 0 0;
-      transform: rotate(90deg);
-    }
-
-    .arrow4{
-      position: absolute;
-      width: 27px;
-      height: 25px;
-      left: 233px;
-      top: 2441px;
-      
-      background:transparent;
-      transform-origin: 0 0;
-      transform: rotate(90deg);
-    }
+  
     
+  }
+
+  
+  .play1 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 246px;
+    top: 794px;     
+    background:transparent;    
+    z-index: 100;   
+  }
+
+  .play2 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 265px;
+    top: 1407px;
+    background:transparent;   
+    z-index: 100;   
+  }
+
+  .play3 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 323px;
+    top: 2042px;
+    background:transparent;
+    z-index: 100; 
+  }
+
+  .play4 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 211px;
+    top: 2443px;
+    background:transparent;
+    z-index: 100; 
+  }
+
+  .audio {
+    visibility: hidden;
   }
 
   .title_section {

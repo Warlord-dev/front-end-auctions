@@ -3,7 +3,7 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 533px;
+  height: 100vh;
   overflow: hidden;
   background-color: white;
   color: white;
