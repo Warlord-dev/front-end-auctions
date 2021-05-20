@@ -14,10 +14,18 @@ const Page61 = () => {
       <h1 className={styles.title1}>Do you have any opinions about the future of modding? Do you think larger developers/game studios will shut down the modding communities and industry?</h1>
       <h1 className={styles.title2}>What is your advice to people wanting to start modding? Where should they go? Where do they start learning?</h1>
       <h2 className={styles.title3}>CHECK OUT SOME OF DARK PRINCE’S MODS </h2>
-      <h2 className={styles.title4}>CROSSOVER: VeRGIL WICK</h2>
-      <h2 className={styles.title5}>DARK DANTE V2</h2>
-      <h2 className={styles.title6}>Advanced Per-Stab Vergil</h2>
-      <h2 className={styles.title7}>PROJECT GLOW</h2>
+      <a href="https://devilmaycry.org/forums/threads/crossover-vergil-john-wick.25137/" target='_blank'>
+        <h2 className={styles.title4}>CROSSOVER: VeRGIL WICK</h2>
+      </a>
+      <a href="https://devilmaycry.org/forums/threads/dark-dante-red-coat-v2.25126/" target='_blank'>
+        <h2 className={styles.title5}>DARK DANTE V2</h2>
+      </a>
+      <a href="https://devilmaycry.org/forums/threads/advanced-per-stab-vergil.23704/" target='_blank'>
+        <h2 className={styles.title6}>Advanced Per-Stab Vergil</h2>
+      </a>
+      <a href="https://devilmaycry.org/forums/threads/powerful-per-stab-project-glow.25147/" target='_blank'>
+        <h2 className={styles.title7}>PROJECT GLOW</h2>
+      </a>
       <p className={styles.text1}>They simply can not shut our community down..
         <br/><br/>
         Some game companies don't like their games get modded, they prefer to maintain complete control, keep everything behind a walled garden. But, modding is what keeps the game industry alive. It is what gives the devs and studios huge benefits, it’s what ensures that their games don’t die! 

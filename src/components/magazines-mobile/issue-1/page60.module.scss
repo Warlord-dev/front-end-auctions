@@ -206,7 +206,8 @@
     width: 231px;
     height: 176px;
     left: 85.34px;
-    top: 2799px;    
+    top: 2799px;
+    transform-origin: 0 0;
     transform: rotate(5deg);
   }
 
@@ -216,6 +217,7 @@
     height: 117.48px;
     left: 60px;
     top: 3247.6px;
+    transform-origin: 0 0;
     transform: rotate(-5deg);
   }
 
@@ -226,11 +228,11 @@
     left: 63.9px;
     top: 3656.57px;
     text-align: right;
+    transform-origin: 0 0;
     transform: rotate(5deg);
   }
   
-  h2{
-    
+  h2 {
     font-family: Covered By Your Grace;
     font-style: normal;
     font-weight: normal;
@@ -246,6 +248,7 @@
     height: 78px;
     left: 20px;
     top: 2358.83px;
+    transform-origin: 0 0;
     transform: rotate(-4deg);
   }
 
@@ -255,6 +258,7 @@
     height: 78px;
     left: 69.8px;
     top: 2711px;
+    transform-origin: 0 0;
     transform: rotate(5deg);
   }
 
@@ -264,6 +268,7 @@
     height: 234px;
     left: 41px;
     top: 2999.59px;
+    transform-origin: 0 0;
     transform: rotate(-5deg);
   }
 
@@ -273,6 +278,8 @@
     height: 117px;
     left: 22.2px;
     top: 3513px;
+    text-align: right;
+    transform-origin: 0 0;
     transform: rotate(5deg);
   }
 

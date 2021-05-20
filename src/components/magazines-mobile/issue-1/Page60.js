@@ -36,7 +36,7 @@ const Page60 = () => {
       From what I can remember I always played games without mods and I wasn’t even aware that there was a modding community out there! But, after installing DMC I suddenly became more curious in modding scene, and the rest was history... I started my hobby as a modder.  
       </p>
       <p className={styles.text6}>
-      I'm not a “special person” or anything but when I came across the modding community I realised that this is a place where I can really let my imagination run wild. There truly are no limits. You inspire the narrative.
+        I'm not a “special person” or anything but when I came across the modding community I realised that this is a place where I can really let my imagination run wild. There truly are no limits. You inspire the narrative.
       <br/><br/>
       Spider-Man games finally have more suits! A version of a game can have exclusive content that isn’t originally provided to PC players! With mods, PC players can experience the same content as exclusive players of the same platform— Marvel Ultimate Alliance can be remastered with mods to the latest version. It’s pretty amazing. 
       </p>

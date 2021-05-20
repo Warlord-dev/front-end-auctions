@@ -2,9 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-
   height: 3163px;
-  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
