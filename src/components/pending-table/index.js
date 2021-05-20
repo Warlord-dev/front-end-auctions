@@ -1,9 +1,29 @@
 import React from 'react';
 import classnames from 'classnames';
+import TimeAgo from 'react-timeago';
 import styles from './styles.module.scss';
 import StatusBar from './status-bar';
 
-const PendingTable = ({ data, mode }) => {
+const PendingTable = ({ data, mode, id }) => {
+  const tokenTypes = ['ERC-20', 'NFT SKINS', 'ERC-998', 'ERC-1155'];
+
+  const getStatusNumber = (status) => {
+    switch (status) {
+      case 'pending':
+        return 3;
+      case 'success':
+        return 4;
+      case 'processing':
+        return 2;
+      case 'initiated':
+        return 1;
+    }
+  };
+
+  const shortenHash = (hash) => {
+    return hash.slice(0, 4) + '...' + hash.slice(hash.length - 5, hash.length - 1);
+  };
+
   return (
     <div className={classnames(styles.pendingWrapper, styles[`mode-${mode}`])}>
       <div className={styles.toolbar}>
@@ -43,90 +63,38 @@ const PendingTable = ({ data, mode }) => {
           ) : null}
         </div>
         <div className={styles.body}>
-          <div className={styles.tr}>
-            <div className={styles.info}>
-              <div className={styles.td} style={{ width: 150 }}>
-                0x43...DEF5
-              </div>
-              <div className={styles.td} style={{ width: 130 }}>
-                ERC-20
-              </div>
-              <div className={styles.td} style={{ width: 130 }}>
-                8 hours
-              </div>
-              <div className={styles.td} style={{ width: 100 }}>
-                pending
-              </div>
-              {mode === 1 ? (
-                <div className={styles.td} style={{ width: 150 }}>
-                  {' '}
-                  <button type="button" className={styles.withdrawBtn}>
-                    {' '}
-                    withdraw{' '}
-                  </button>{' '}
+          {data.map((row, index) => {
+            return (
+              <div className={styles.tr} key={row.txHash}>
+                <div className={styles.info}>
+                  <div className={styles.td} style={{ width: 150 }}>
+                    {shortenHash(row.txHash)}
+                  </div>
+                  <div className={styles.td} style={{ width: 130 }}>
+                    {tokenTypes[id - 1]}
+                  </div>
+                  <div className={styles.td} style={{ width: 130 }}>
+                    <TimeAgo date={new Date(row.created)} />
+                  </div>
+                  <div className={styles.td} style={{ width: 100 }}>
+                    {row.status}
+                  </div>
+                  {mode === 1 ? (
+                    <div className={styles.td} style={{ width: 150 }}>
+                      {' '}
+                      <button type="button" className={styles.withdrawBtn}>
+                        {' '}
+                        withdraw{' '}
+                      </button>{' '}
+                    </div>
+                  ) : null}
                 </div>
-              ) : null}
-            </div>
-            <div className={styles.statusBar}>
-              <StatusBar mode={mode} status={2} />
-            </div>
-          </div>
-          <div className={styles.tr}>
-            <div className={styles.info}>
-              <div className={styles.td} style={{ width: 150 }}>
-                0x43...DEF5
-              </div>
-              <div className={styles.td} style={{ width: 130 }}>
-                ERC-20
-              </div>
-              <div className={styles.td} style={{ width: 130 }}>
-                8 hours
-              </div>
-              <div className={styles.td} style={{ width: 100 }}>
-                pending
-              </div>
-              {mode === 1 ? (
-                <div className={styles.td} style={{ width: 150 }}>
-                  {' '}
-                  <button type="button" className={styles.withdrawBtn}>
-                    {' '}
-                    withdraw{' '}
-                  </button>{' '}
+                <div className={styles.statusBar}>
+                  <StatusBar mode={mode} status={getStatusNumber(row.status)} />
                 </div>
-              ) : null}
-            </div>
-            <div className={styles.statusBar}>
-              <StatusBar mode={mode} status={3} />
-            </div>
-          </div>
-          <div className={styles.tr}>
-            <div className={styles.info}>
-              <div className={styles.td} style={{ width: 150 }}>
-                0x43...DEF5
               </div>
-              <div className={styles.td} style={{ width: 130 }}>
-                ERC-20
-              </div>
-              <div className={styles.td} style={{ width: 130 }}>
-                8 hours
-              </div>
-              <div className={styles.td} style={{ width: 100 }}>
-                pending
-              </div>
-              {mode === 1 ? (
-                <div className={styles.td} style={{ width: 150 }}>
-                  {' '}
-                  <button type="button" className={styles.withdrawBtn}>
-                    {' '}
-                    withdraw{' '}
-                  </button>{' '}
-                </div>
-              ) : null}
-            </div>
-            <div className={styles.statusBar}>
-              <StatusBar mode={mode} status={4} />
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>
