@@ -37,7 +37,7 @@ export default function Withdraw() {
     <div className={styles.depositWithdrawWrapper}>
       <div className={styles.bridgeTitle}>WITHDRAW $MONA TO ETHEREUM</div>
       <div>
-      <div style={{ marginBottom: 15, display: 'flex', justifyContent: 'center' }}>
+        <div style={{ marginBottom: 15, display: 'flex', justifyContent: 'center' }}>
           <Hint
             title="BALANCE"
             hintText="WITHDRAWING TO ETHEREUM CAN TAKE A COUPLE OF HOURS (~2-3 HOURS). YOU MUST ALSO CLICK “CLAIM ON ETHEREUM” AFTER THE WITHDRAWAL IS COMPLETE."
@@ -76,7 +76,11 @@ export default function Withdraw() {
           </div>
         </button>
       </div>
-      <Button className={styles.backButton} background="#777777" onClick={() => Router.push(`/bridge`)}>
+      <Button
+        className={styles.backButton}
+        background="#777777"
+        onClick={() => Router.push(`/bridge`)}
+      >
         <span>RETURN TO BRIDGE</span>
       </Button>
     </div>

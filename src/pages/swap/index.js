@@ -46,12 +46,12 @@ export default function Swap() {
   const { approved, approveCallback } = useERC20Approve(toMona ? usdtValue : monaValue, !toMona);
 
   return (
-    <div className={styles.swapContainer}>    
+    <div className={styles.swapContainer}>
       <div className={styles.wrapper}>
         <div className={styles.swapTitle}>USDT &lt;&gt; $MONA</div>
         <div className={styles.swapText}>
-          IF YOU HAVE AN ARKANE WALLET SWAP YOUR USDT TO $MONA HERE. if you are using metamask you can
-          also go directly to quickswap to swap for $mona against other tokens on matic.
+          IF YOU HAVE AN ARKANE WALLET SWAP YOUR USDT TO $MONA HERE. if you are using metamask you
+          can also go directly to quickswap to swap for $mona against other tokens on matic.
         </div>
         <div className={styles.inputContainer}>
           {toMona ? (
@@ -109,7 +109,7 @@ export default function Swap() {
                   toMona ? usdtValue : monaValue,
                   toMona ? monaValue : usdtValue,
                   toMona,
-                  firstBased
+                  firstBased,
                 );
               } else {
                 approveCallback();

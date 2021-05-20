@@ -93,19 +93,19 @@
             }
     
             .amountMax {
-                font-family: Inter;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 12px;
-                line-height: 15px;
-                /* identical to box height */
-    
                 text-align: right;
-                margin: .3rem 0;
-    
-                /* 2 */
-    
-                color: #999999;
+                margin: .3rem 0;                
+                
+                button {
+                    border: none;
+                    background: transparent;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #999999;
+                }
             }
     
             .btnGroup {
