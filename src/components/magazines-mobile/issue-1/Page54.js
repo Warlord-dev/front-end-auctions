@@ -4,12 +4,16 @@ import styles from './page54.module.scss'
 const Page54 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page54-bg.png" className={styles.backImage} />
-      <div className={styles.innerWrapper}>
-        <h1>Rudeolph</h1>
-        <p>Sasmitha Janindu is an undergraduate in BA (hons) in Fashion Design, who aslo goes under the alias “Rudeolph”. She learned 3D software during the lockdown, exploring all kinds of visual techniques like that of creating virtual garments, surreal landscapes, simulations and simple animations. Most of her works are constructed with limited resources, limited computing power and limited knowledge of 3D software— her determination supersedes any supposed barriers.</p>
-        <p>Her advice; anyone can start in 3D.  “There are numerous tutorials available online, basically for free which will teach you fundamentals of 3D graphics. The rest is only limited to your imagination and creativity.”</p>
-        <p>Through 3D, Sasmitha discovered the NFT space, where she minted here genesis NFT on NFTshowroom, built on the HIVE blockchain. She also just launched on Foundation!</p>
+      <div className={styles.section}>
+        <img src="./magazine/1/images/mobile/page54/bg-1.png" className={styles.backImage1} />
+        <img src="./magazine/1/images/mobile/page54/bg-2.png" className={styles.backImage2} />
+        <img src="./magazine/1/images/mobile/page54/bg-3.png" className={styles.backImage3} />
+        <img src="./magazine/1/images/mobile/page54/bg-4.png" className={styles.backImage4} />
+        <img src="./magazine/1/images/mobile/page54/bg-5.png" className={styles.backImage5} />
+        <img src="./magazine/1/images/mobile/page54/bg-6.png" className={styles.backImage6} />
+        <img src="./magazine/1/images/mobile/page54/bg-7.png" className={styles.backImage7} />
+        <h1 className={styles.text1}>Ana Rivera</h1>
+        <h1 className={styles.text2}>The Glitch Face King. Pizza Draw.</h1>
       </div>
     </div>
   )

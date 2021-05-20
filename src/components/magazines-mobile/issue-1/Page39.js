@@ -4,43 +4,20 @@ import styles from './page39.module.scss'
 const Page39 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page39-bg.png" className={styles.backImage} />
-      <div className={styles.innerWrapper}>
-        <div className={styles.section1}>
-          <h1>ESPA</h1>
-          <h2>CASUAL ESPORTS </h2>
-          <p>ESPA is the first indie and modded eesports platform. Established to liberate the gaming industry, allowing any player, dev, designer to go from amateur to pro and level up through web3 based casual esports.</p>
-          <p>it started with among us mods and now we are moving onto minecraft! espa will be launching mc casual esports battles this month. players wear unique erc-721 nft skins in-game to be authenticated for winning streaks.</p>
-          <p>check out the unlockable nft subscriptions for an espa compatible mc nft skin! </p>
-          <img src="./magazine/1/images/mobile/lego.png" />
-        </div>
-        <div className={styles.section2}>
-          <img src="./magazine/1/images/mobile/arrow-top.png" className={styles.arrowTop} />
-          <h3>SKINS BY CLEORA AND ANIMATION BY DIGITALAX IN-HOUSE FASHION DESIGN STUDIO </h3>
-          <h4>eRC-721 NFT THAT CAN BE TAKEN INTO MineCraft FOR SCORING WINNING STREAKS IN THE ESPA TOURNAMENTS AND EARNING $MONA CRYPTO INCOME STREAMS. </h4>
-          <h5>UNLOCKABLE MC NFT SKIN! 3 DEGREES OF RARITY! </h5>
-          <img src="./magazine/1/images/mobile/arrow-down.png" className={styles.arrowBottom} />
-          <h1>MINECRAFT ESPORTS with ESPA</h1>
-        </div>
-        <div className={styles.section3}>
-          <img src="./magazine/1/images/mobile/image 316.png" />
-          <img src="./magazine/1/images/mobile/2021-04-27_12.56.png" />
-        </div>
-        <div className={styles.section4}>
-        <img src="./magazine/1/images/mobile/image 314.png" />
-        <img src="./magazine/1/images/mobile/image 315.png" />
-        </div>
-        <div className={styles.section5}>
-          <img src="./magazine/1/images/mobile/unknown3.png" />
-          <h1>MINECRAFT INDIA</h1>
-          <h2>INMC</h2>
-          <p>BEDWARS.</p>
-          <p>SKYWARS.DUELS.</p>
-          <p>SURVIVAL.FACTIONS.</p>
-          <p>SKYBLOCK.</p>
-        </div>
-        
-      </div>
+      <img src='./magazine/1/images/mobile/page46-bg.png' />
+      <div className={styles.textBack1}></div>
+      <div className={styles.textBack2}></div>
+      <p className={styles.section1}>
+        The outcome will determine whether Fortnite will ever make a comeback to iOS devices, whether Epic can continue to access the Unreal Engine on iOS platforms, and lastly, whether third-party app stores can launch on iOS devices or otherwise. If Epic can prove Apple's monopoly, any game publisher can create their app store on iOS devices, opening the door for games to be playable on iOS.
+      </p>
+      <p className={styles.section2}>
+        The heat is on as industry secrets are about to be dragged out in the public arena — something Apple keeps under close lock and key. The trial is shaping up to be an opportunity to get a rare look at Apple’s walled garden and the magic that happens behind it. The main point of contention is the inherent 70%-30% revenue scheme on the App Store, with Apple obviously taking the lion’s share of the profits. Epic is framing that arrangement as unfair and one-sided, while Apple has been painting the latter as a disingenuous, avaricious partner — as the tech giant faces its biggest legal threat in recent memory. 
+        <br/><br/>
+        It’s going to be a tooth and nail fight that may change the way the gaming industry — and in the bigger picture — how the metaverse evolves, and we should be paying more attention to this skirmish because of the far-ranging consequences it poses for the fledgling layer of reality that’s emerging right beneath our collective noses.
+        <br/><br/>
+        We can all chalk it up to the growing pains of the metaverse — Sweeney's stand against the walled gardens exemplified by the fight against Apple is just what we need to plot out the future of the metaverse and progress to the next stage of the paradigm shift. Are we going to see a dramatic rearranging of the metaverse’s cosmology? Time will tell. Sooner or later.
+
+      </p>
     </div>
   )
 }

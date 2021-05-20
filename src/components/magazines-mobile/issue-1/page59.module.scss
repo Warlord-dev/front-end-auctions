@@ -3,18 +3,20 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 100vh;
-  overflow: scroll;
+  height: 3332px;
+  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
 
   .backImage {
+    object-fit: fill;
     position: absolute;
-    min-height: 720px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     left: 0px;
     top: 0px;
   }
+
 }

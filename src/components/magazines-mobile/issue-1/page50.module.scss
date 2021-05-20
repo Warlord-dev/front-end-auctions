@@ -4,7 +4,7 @@
   @include magazineWrapper();
 
   height: 100vh;
-  overflow: scroll;
+  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
@@ -12,99 +12,43 @@
 
   .backImage {
     position: absolute;
-    height: 4800px;
-    object-fit: cover;
-    object-position: left;
+    height: 720px;
     left: 0px;
     top: 0px;
   }
 
   .innerWrapper {
-    position: absolute;
-    top: 100px;
-    width: 260px;
-    left: calc((100vw - 260px) / 2);
-    font-style: normal;
-    font-weight: normal;
-    white-space: normal;
-    text-align: left;
-    img {
-        margin-bottom: 40px;
-    }
-    .sections {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
       img {
-        margin-bottom: 20px;
+        width: 100%;
+        height: auto;
       }
-      h1 {
-        margin-bottom: 10px;
-        font-family: News Cycle;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 150%;
-        -webkit-text-stroke: 0.2px #000000;
+      div {
+        background-color: #8BE0FF;
+        margin-top: -8px;
+        padding: 24px 24px;
         text-align: left;
-      }
-      span {
-        font-family: News Cycle;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 150%;
-        -webkit-text-stroke: 0.2px #000000;
-        text-align: left;
-        width: 50%;
-        display: block;
-        margin-left: auto;
-      }
-      p {
-        font-family: Rosarivo;
-        font-style: normal;
-        font-weight: normal;
-        white-space: normal;
-        font-size: 12px;
-        line-height: 150%;
-        text-align: left;
-        text-decoration: none;
-      }
-      h2 {
-        margin-top: 20px;
-        margin-bottom: 15px;
-        font-family: News Cycle;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 150%;
-        -webkit-text-stroke: 0.2px #000000;
-        text-align: right;
-      }
-    }
-    p {
-        font-family: 'DIN Alternate';
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 110%;
-        margin-bottom: 30px;
-        text-decoration-line: underline;
-    }
-    .section1 {
-        transform: rotate(5deg);
-        width: 220px;
-        margin: 0 auto;
-        h4 {
-            font-family: 'DIN Alternate';
-            font-style: normal;
-            font-size: 15px;
-            line-height: 110%;
-            color: #6900BC;
-        }
         p {
-            font-family: 'DIN Alternate';
-            font-style: normal;
-            font-size: 15px;
-            line-height: 110%;
+          font-family: Sen;
+          font-style: normal;
+          font-weight: normal;
+          white-space: normal;
+          line-height: 110%;
+          color: #DB00FF;
+          margin-bottom: 20px;
         }
-    }
+        h1 {
+          font-family: Digital Dare;
+          font-style: normal;
+          font-weight: normal;
+          white-space: normal;
+          font-size: 20px;
+          line-height: 110%;
+          color: #FF00F5;
+        }
+      }
   }
 }

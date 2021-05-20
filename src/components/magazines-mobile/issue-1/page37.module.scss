@@ -1,0 +1,119 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  overflow: hidden;
+  height: 2535px;
+  background-color: white;
+  color: black;
+  position: relative;
+
+  img {
+    position: absolute;
+    height: 2600px;
+    left: 0px;
+    top: 0px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 755px;
+    height: 39px;
+    left: 31px;
+    top: 79px;
+
+    font-family: Blacker Display;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 110%;
+    /* identical to box height, or 39px */
+    color: #FFFFFF;
+    text-shadow: -1px 0 #128100, 0 1px #128100, 1px 0 #128100, 0 -1px #128100;
+  }
+
+  h4 {
+    position: absolute;
+    width: 151px;
+    height: 17px;
+    left: 41px;
+    top: 118px;
+    
+    font-family: Arapey;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 110%;
+    /* or 18px */
+    
+    text-align: center;    
+    color: #000000;    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .textBack1 {
+    position: absolute;
+    width: 331px;
+    height: 594px;
+    left: 22px;
+    top: 146px;
+
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .textBack2 {
+    position: absolute;
+    width: 331px;
+    height: 718px;
+    left: 22px;
+    top: 751px;
+    
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .textBack3 {
+    position: absolute;
+    width: 331px;
+    height: 965px;
+    left: 22px;
+    top: 1494px;
+    
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  p {
+    position: absolute;
+    font-family: Arapey;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 110%;
+    /* or 18px */
+
+    text-align: center;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &.section1 {
+      width: 258px;
+      height: 262px;
+      left: 58px;
+      top: 186px;
+    }
+
+    &.section2 {
+      width: 258px;
+      height: 262px;
+      left: 58px;
+      top: 791px;
+    }
+
+    &.section3 {
+      width: 258px;
+      height: 262px;
+      left: 58px;
+      top: 1534px;
+    }
+  }
+  
+}

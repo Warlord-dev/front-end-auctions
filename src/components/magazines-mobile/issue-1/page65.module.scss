@@ -5,16 +5,126 @@
 
   height: 100vh;
   overflow: scroll;
-  background-color: white;
+  background-color: black;
   color: white;
   display: flex;
   position: relative;
 
   .backImage {
     position: absolute;
-    height: 1600px;
+    height: 2500px;
     left: 0px;
     top: 0px;
+  }
+
+  .innerWrapper {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    overflow-x: hidden;
+    .talent1 {
+      font-family: Kite One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 60px;
+      line-height: 100%;
+      color: #26D9F9;
+      text-align: right;
+      margin-right: 20px;
+    }
+    .talent2 {
+      font-family: Kite One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 60px;
+      line-height: 100%;
+      color: #2654F9;
+      text-align: left;
+      margin-left: 20px;
+    }
+    .talent3 {
+      font-family: Kite One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 60px;
+      line-height: 100%;
+      color: #26F9D3;
+      text-align: right;
+      margin-right: 20px;
+    }
+    h2 {
+      font-family: Karla;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 120px;
+      line-height: 100%;
+      color: #FFC42D;
+      -webkit-text-stroke: 0.1px #FF0000;
+      box-sizing: border-box;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+    .section1 {
+      font-family: Kite One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 19px;
+      line-height: 110%;
+      width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+      transform: rotate(-3deg);
+      p {
+        margin-bottom: 30px;
+      }
+    }
+    .section2 {
+      margin-top: 40px;
+      width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+      p {
+        font-family: Karla;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 110%;
+        transform: rotate(3deg);
+        margin-bottom: 40px;
+      }
+      h1 {
+        font-family: Fasthand;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 100%;
+        color: #FFC42D;
+        -webkit-text-stroke: 1px #FF0000;
+        margin-bottom: 30px;
+      }
+    }
+    .image1 {
+      margin-right: 30px;
+      width: 300px;
+      display: block;
+    }
+    .image2 {
+      width: 200px;
+      height: auto;
+      display: block;
+      margin-top: 50px;
+      margin-right: auto;
+    }
+    .image3 {
+      margin-top: 30px;
+      width: 200px;
+      display: block;
+      margin-left: auto;
+    }
   }
 
 }

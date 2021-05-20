@@ -3,63 +3,57 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 100vh;
-  overflow: scroll;
+  height: 629px;
+  overflow: hidden;
   background-color: white;
-  color: black;
+  color: white;
   display: flex;
   position: relative;
 
-  img {
+  .backImage {
+    object-fit: fill;
     position: absolute;
-    height: 2600px;
+    width: 100%;
+    height: 100%;
     left: 0px;
     top: 0px;
   }
 
-  .innerWrapper {
-      position: absolute;
-      top: 100px;
-      width: 280px;
-      left: calc((100vw - 280px) / 2);
-      img {
-          width: 100%;
-          height: auto;
-          position: unset;
-      }
-      h1 {
-        font-family: Blacker Display;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 35px;
-        line-height: 110%;
-        color: #128100;
-      }
-      h4 {
-        font-family: Arima Madurai;
-        font-style: normal;
-        font-weight: bold;
-        text-align: left;
-        font-size: 15px;
-        line-height: 110%;
-        margin-bottom: 20px;
-      }
-      div {
-            display: block;
-            position: unset;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 30px;
-            margin-bottom: 30px;
-        p {
-            font-family: Arapey;
-            font-style: normal;
-            font-weight: normal;
-            white-space: normal;
-            font-size: 16px;
-            line-height: 110%;
-            text-align: center;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-      }
+  .title{
+    position: absolute;
+    width: 206px;
+    height: 99px;
+    left: 179px;
+    top: 31px;
+    
+    font-family: Blacker Display;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
+    
+    
+    color: #FFFFFF;
+
   }
+
+  .text{
+    position: absolute;
+    width: 155px;
+    height: 60px;
+    left: 179px;
+    top: 137px;
+
+    font-family: Blacker Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 110%;
+    /* or 12px */
+
+
+    color: #FFFFFF;
+  }
+  
 }
