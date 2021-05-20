@@ -3,153 +3,55 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 100vh;
-  overflow: scroll;
+  height: 3193px;
+  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-
-  .backImage {
+  .img1{
     position: absolute;
-    height: 2100px;
-    left: 0px;
-    top: 0px;
-  }
-
-  .innerWrapper {
-    position: absolute;
-    top: 10px;
-    left: 0;
     width: 100%;
-    white-space: normal;
-    text-align: left;
-    .title {
-      font-family: Fresca;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 20px;
-      line-height: 100%;
-      margin-left: 20px;
-    }
-    .titleImage {
-      display: block;
-      width: 280px;
-      margin-top: 60px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .subtitle {
-      margin-top: 20px;
-      margin-bottom: 30px;
-      font-family: Trocchi;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 25px;
-      line-height: 100%;
-      text-align: center;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .section1 {
-      margin-bottom: 100px;
-      h1 {
-        font-family: Fresca;
-        font-style: normal;
-        font-weight: normal;
-        width: 260px;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 50px;
-        line-height: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      img {
-        display: block;
-        border: 2px solid #FFFFFF;
-        width: 260px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-    }
-    .section2 {
-      margin-bottom: 100px;
-      h1 {
-        font-family: Fresca;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 50px;
-        line-height: 100%;
-        text-align: right;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-right: 20px;
-      }
-      img {
-        display: block;
-        border: 2px solid #FFFFFF;
-        width: 260px;
-        margin-left: auto;
-      }
-    }
-    .section3 {
-      margin-bottom: 100px;
-      margin-left: 10px;
-      h1 {
-        font-family: Fresca;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 50px;
-        line-height: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      img {
-        display: block;
-        border: 2px solid #FFFFFF;
-        width: 260px;
-      }
-    }
-    .section4 {
-      margin-bottom: 100px;
-      margin-right: 20px;
-      h1 {
-        font-family: Fresca;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 50px;
-        line-height: 100%;
-        text-align: right;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      img {
-        display: block;
-        border: 2px solid #FFFFFF;
-        width: 260px;
-        margin-left: auto;
-      }
-    }
-    .section5 {
-      padding: 0 20px;
-      margin-bottom: 100px;
-      h1 {
-        font-family: Fresca;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 50px;
-        line-height: 100%;
-        text-align: left;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      img {
-        display: block;
-        border: 2px solid #FFFFFF;
-        width: 260px;
-        margin-right: auto;
-      }
-    }
+    height: 3193px;    
   }
-
+  .img2{
+    position: absolute;
+    width: 498px;
+    height: 498px;
+    left: -62px;
+    top: 51px;
+ 
+    border-radius: 429px;
+  }
+  .img3{
+    position: absolute;
+    width: 100%;
+    height: 984.68px;
+     
+    top: 512px;
+    
+  }
+  .img4{
+    position: absolute;
+    width: 464px;
+    height: 1080px;
+    left: -62px;
+    top: 1596px;
+  }
+  .img5{
+    position: absolute;
+    width: 238px;
+    height: 529px;
+    left: 140.86px;
+    top: 2315px;
+     
+    transform: rotate(10deg);
+  }
+  .img6{
+    position: absolute;
+    width: 100%;
+    height: 345px;
+    
+    top: 2848px;
+  }
 }

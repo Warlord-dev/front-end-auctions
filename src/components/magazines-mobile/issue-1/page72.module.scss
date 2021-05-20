@@ -3,153 +3,110 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 100vh;
-  overflow: scroll;
+  height: 2621px;
+  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-
-  .backImage {
+  
+  .img1{
     position: absolute;
-    height: 2100px;
+    width: 960px;
+    height: 2123px;
+    left: -105px;
+    top: 498px;
+  }
+
+  .img2{
+    position: absolute;
+    width: 881px;
+    height: 375px;
     left: 0px;
+    top: 881px;
+
+  }
+
+  .img3{
+    position: absolute;
+    width: 478px;
+    height: 498px;
+    left: -50px;
     top: 0px;
   }
 
-  .innerWrapper {
+  .img4{
     position: absolute;
-    top: 10px;
-    left: 0;
-    width: 100%;
-    white-space: normal;
-    text-align: left;
-    .title {
-      font-family: Fresca;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 20px;
-      line-height: 100%;
-      margin-left: 20px;
-    }
-    .titleImage {
-      display: block;
-      width: 280px;
-      margin-top: 60px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .subtitle {
-      margin-top: 20px;
-      margin-bottom: 30px;
-      font-family: Trocchi;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 25px;
-      line-height: 100%;
-      text-align: center;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .section1 {
-      margin-bottom: 100px;
-      h1 {
-        font-family: Fresca;
-        font-style: normal;
-        font-weight: normal;
-        width: 260px;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 50px;
-        line-height: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      img {
-        display: block;
-        border: 2px solid #FFFFFF;
-        width: 260px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-    }
-    .section2 {
-      margin-bottom: 100px;
-      h1 {
-        font-family: Fresca;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 50px;
-        line-height: 100%;
-        text-align: right;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-right: 20px;
-      }
-      img {
-        display: block;
-        border: 2px solid #FFFFFF;
-        width: 260px;
-        margin-left: auto;
-      }
-    }
-    .section3 {
-      margin-bottom: 100px;
-      margin-left: 10px;
-      h1 {
-        font-family: Fresca;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 50px;
-        line-height: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      img {
-        display: block;
-        border: 2px solid #FFFFFF;
-        width: 260px;
-      }
-    }
-    .section4 {
-      margin-bottom: 100px;
-      margin-right: 20px;
-      h1 {
-        font-family: Fresca;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 50px;
-        line-height: 100%;
-        text-align: right;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      img {
-        display: block;
-        border: 2px solid #FFFFFF;
-        width: 260px;
-        margin-left: auto;
-      }
-    }
-    .section5 {
-      padding: 0 20px;
-      margin-bottom: 100px;
-      h1 {
-        font-family: Fresca;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 50px;
-        line-height: 100%;
-        text-align: left;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      img {
-        display: block;
-        border: 2px solid #FFFFFF;
-        width: 260px;
-        margin-right: auto;
-      }
-    }
+    width: 355px;
+    height: 493px;
+    left: 10px;
+    top: 550px;
+     
+    border: 10px solid #4D3B24;
+    box-sizing: border-box;  
   }
 
+  .img5{
+    position: absolute;
+    width: 431.92px;
+    height: 492.37px;
+    left: 42.91px;
+    top: 1164px;
+    transform: rotate(5deg);
+  }
+
+  .img6{
+    position: absolute;
+    width: 525px;
+    height: 590px;
+    left: -146px;
+    top: 1538.76px;
+ 
+    transform: rotate(-5deg);
+  }
+
+  .img7{
+    position: absolute;
+    width: 408px;
+    height: 463px;
+    left: 62.35px;
+    top: 1994px;
+ 
+    transform: rotate(5deg);
+  }
+  h1{
+    position: absolute;
+    width: 345px;
+    height: 188px;
+    left: 6px;
+    top: 1058px;
+
+    font-family: Mouse Deco;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+
+
+    color: #41662C;
+  }
+
+  h2{
+    position: absolute;
+    width: 288px;
+    height: 188px;
+    left: 45px;
+    top: 2397px;
+
+    font-family: Cardo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+
+
+    color: #FFFFFF;
+  }
 }

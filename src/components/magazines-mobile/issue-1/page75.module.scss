@@ -3,111 +3,129 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 100vh;
-  overflow: scroll;
+  height: 1812px;
+  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-
-  .backImage {
+ 
+  .img1{
     position: absolute;
-    height: 9600px;
-    left: 0px;
+    width: 100%;
+    height: 3193px;    
+  }
+
+  .img2{
+    position: absolute;
+    width: 100%;
+    height: 869px;  
     top: 0px;
   }
 
-  .innerWrapper {
+  .img3{
     position: absolute;
-    top: 60px;
-    left: 0;
     width: 100%;
-    white-space: normal;
-    text-align: left;
-    .title {
-      font-family: Neon Lights;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 70px;
-      line-height: 100%;
-      color: #00FFF0;
-      width: 300px;
-      margin-left: calc((100vw - 300px) / 2);
-    }
-    .description {
-      font-family: Muna;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 110%;
-      width: 260px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 60px;
-    }
-    .section1 {
-      width: 280px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 100px;
-      h1 {
-        font-family: Neon Vortex;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 40px;
-        line-height: 110%;
-      }
-      p {
-        font-family: NATS;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 110%;
-      }
-    }
-    .section2 {
-      width: 280px;
-      margin-left: auto;
-      margin-right: auto;
-      h1 {
-        font-family: Noto Sans Armenian;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 60px;
-        line-height: 90%;
-        color: #00FFF0;
-        margin-bottom: 60px;
-      }
-      h2 {
-        font-family: Neon Vortex;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 110%;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      img {
-        width: 280px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-    .card {
-      width: 280px;
-      margin: 80px auto;
-      h1 {
-        font-family: Neon Vortex;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 110%;
-        color: white;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-    }
+    height: 1002px;
+     
+    top: 749px;
+  }
+  .img4{
+    position: absolute;
+    width: 582px;
+    height: 444px;
+    left: -141px;
+    top: 840px;
+
   }
 
+  h1{
+    font-family: "Pixel Berry 08/84 Ltd.Edition";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 100%;
+    
+  }
+  .title1{
+    position: absolute;
+    width: 1431px;
+    height: 120px;
+    left: -300px;
+    top: 727px;         
+    color: #CE479C;
+  }
+
+  .title2{
+    position: absolute;
+    width: 1431px;
+    height: 120px;
+    left: -334px;
+    top: 1110px;
+ 
+    color: #D29033;
+  }
+
+  .title3{
+    position: absolute;
+    width: 1431px;
+    height: 120px;
+    left: 68px;
+    top: 1397px; 
+
+    color: #62B744;
+  }
+
+  h2{
+    
+    font-family: "Pixel Berry 08/84 Ltd.Edition";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .title4{
+    position: absolute;
+    width: 452px;
+    height: 120px;
+    left: -158px;
+    top: 358px;
+  }
+  .title5{
+    position: absolute;
+    width: 452px;
+    height: 120px;
+    left: -141px;
+    top: 1758px;
+  }
+  .title6{
+    position: absolute;
+    width: 452px;
+    height: 120px;
+    left: -37px;
+    top: 689px;
+  }
+  .title7{
+    position: absolute;
+    width: 452px;
+    height: 120px;
+    left: 486px;
+    top: 869px;
+  }
+  .title8{
+    position: absolute;
+    width: 452px;
+    height: 120px;
+    left: 164px;
+    top: 1537px;
+  }
+  .title9{
+    position: absolute;
+    width: 452px;
+    height: 120px;
+    left: -37px;
+    top: 111px;
+  }
 }
