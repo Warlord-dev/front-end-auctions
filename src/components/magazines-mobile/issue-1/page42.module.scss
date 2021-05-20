@@ -2,9 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-
   height: 2443px;
-  overflow: hidden;
   background-color: white;
   color: black;
   display: flex;
@@ -21,9 +19,7 @@
     font-weight: normal;
     font-size: 70px;
     line-height: 110%;
-    /* identical to box height, or 77px */
-    
-    
+
     color: #3A6B6B;
     text-shadow: -3px 0 #FFFFFF, 0 3px #FFFFFF, 3px 0 #FFFFFF, 0 -3px #FFFFFF;     
   }
@@ -167,7 +163,7 @@
     width: 28px;
     height: 28px;
     left: 173px;
-    top: 509px;
+    top: 500px;
   }
 
   .twitter_2{
@@ -175,7 +171,7 @@
     width: 28px;
     height: 28px;
     left: 254px;
-    top: 1087px;
+    top: 1075px;
 
   }
 
@@ -184,15 +180,15 @@
     width: 28px;
     height: 28px;
     left: 201px;
-    top: 1620px;
+    top: 1612px;
   }
 
   .twitter_4{
     position: absolute;
-    width: 20.15px;
-    height: 20.15px;
-    left: 286.76px;
-    top: 2101px;
+    width: 28px;
+    height: 28px;
+    left: 250px;
+    top: 2085px;
 
 
     transform: rotate(5deg);

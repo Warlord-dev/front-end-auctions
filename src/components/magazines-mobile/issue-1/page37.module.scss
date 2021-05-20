@@ -2,7 +2,6 @@
 
 .wrapper {
   @include magazineWrapper();
-  overflow: hidden;
   height: 2535px;
   background-color: white;
   color: black;
