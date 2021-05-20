@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './styles.module.scss';
 
-const NftSubscriptionCard = ({ details, id }) => {
+const NftSubscriptionCard = ({ details, id, url }) => {
   const isVideo = (url) => {
     if (url.includes('mp4')) return true;
     return false;
@@ -11,10 +11,10 @@ const NftSubscriptionCard = ({ details, id }) => {
   return (
     <div className={styles.wrapper}>
       {/* <img src={details?.img} className={styles.thumbnail} /> */}
-      {isVideo(details.url[0]) ? (
-        <video loop autoPlay muted className={styles.thumbnail} src={details?.url[0]}></video>
+      {isVideo(url) ? (
+        <video loop autoPlay muted className={styles.thumbnail} src={url}></video>
       ) : (
-        <img src={details?.url[0]} className={styles.thumbnail} />
+        <img src={url} className={styles.thumbnail} />
       )}
       <div className={styles.actions}>
         <div className={styles.title}> {details.title} </div>
