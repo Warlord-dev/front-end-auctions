@@ -5,3 +5,6 @@ export const getMinBidIncrement = (state) => state.global.get('minBidIncrement')
 export const getBidWithdrawalLockTime = (state) => state.global.get('bidWithdrawalLockTime');
 export const getRewards = (state) => state.global.get('rewards');
 export const getMonaPerEth = (state) => state.global.get('monaPerEth');
+export const getMonaMaticBalance = (state) => state.global.get('monaMaticBalance');
+export const getMonaEthBalance = (state) => state.global.get('monaEthBalance');
+export const getIsLoading = (state) => state.global.get('isLoading');

@@ -12,6 +12,9 @@ const DEFAULT_FIELDS = Map({
   bidWithdrawalLockTime: 0,
   rewards: 0,
   monaPerEth: 0,
+  monaMaticBalance: 0,
+  monaEthBalance: 0,
+  isLoading: false,
 });
 
 export default createModule({

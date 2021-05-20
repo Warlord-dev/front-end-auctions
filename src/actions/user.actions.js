@@ -148,16 +148,16 @@ class UserActions extends BaseActions {
   updateProfile(user) {
     return async (dispatch) => {
       try {
-        dispatch(this.setValue('isLoading', true));
         const data = await api.updateProfile(user);
+        dispatch(globalActions.setIsLoading(false));
         if (data) {
           dispatch(this.setValue('user', data));
           localStorage.setItem(STORAGE_USER, JSON.stringify(data));
-          toast('Profile is updated');
+          toast.success('Profile is updated');
         } else {
         }
       } catch (e) {}
-      dispatch(this.setValue('isLoading', false));
+      // dispatch(this.setValue('isLoading', false));
     };
   }
 

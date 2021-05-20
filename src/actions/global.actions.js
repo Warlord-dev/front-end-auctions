@@ -148,6 +148,24 @@ class GlobalActions extends BaseActions {
       dispatch(this.setValue('chainId', chainId));
     };
   }
+
+  setMonaMaticBalance(value) {
+    return (dispatch) => {
+      dispatch(this.setValue('monaMaticBalance', value));
+    };
+  }
+
+  setMonaEthBalance(value) {
+    return (dispatch) => {
+      dispatch(this.setValue('monaEthBalance', value));
+    };
+  }
+
+  setIsLoading(value) {
+    return (dispatch) => {
+      dispatch(this.setValue('isLoading', value));
+    };
+  }
 }
 
 export default new GlobalActions(globalReducer);
