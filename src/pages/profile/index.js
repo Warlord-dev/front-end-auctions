@@ -130,8 +130,8 @@ const Profile = ({ history }) => {
             <div className={styles.subscriptionWrapper}>
               {nftCollectionIds.map((nftId) => (
                 <>
-                  {details[parseInt(nftId) - 1].urls.map((url) => (
-                    <NftSubscriptionCard key={`nft_subscription_${nftId}`} id={parseInt(nftId)} details={details[parseInt(nftId) - 1]} url={url} />
+                  {details[parseInt(nftId) - 1].url.map((img) => (
+                    <NftSubscriptionCard key={`nft_subscription_${nftId}`} id={parseInt(nftId)} details={details[parseInt(nftId) - 1]} url={img} />
                   ))}
                 </>
               ))}
