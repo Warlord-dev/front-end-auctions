@@ -1,0 +1,74 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2589px;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+  .section{
+    position: absolute;
+    width: 375px;
+    height: 342px;
+    left: 0px;
+    .backImage1 {                
+      top: 0px;
+    }
+    .backImage2 {                
+      top: 342px;
+    }
+    .backImage3 {                 
+      top: 684px;
+    }
+    .backImage4 {                
+      top: 1045px;
+    }
+    .backImage5 {                
+      top: 1414px;
+    }
+    .backImage6 {               
+      top: 1824px;
+    }
+    .backImage7 {                
+      top: 2268px;
+    }
+
+    .text1{
+      position: absolute;
+      width: 60px;
+      height: 30px;
+      left: 12px;
+      top: 304px;
+      
+      font-family: A DAY WITHOUT SUN;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 100%;
+      /* identical to box height, or 30px */
+      
+      
+      color: #FF0000;
+    }
+
+    .text2{
+      position: absolute;
+      width: 227px;
+      height: 40px;
+      left: 15px;
+      top: 2535px;
+
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 100%;
+      /* or 20px */
+
+
+      color: #FF0000;
+    }
+  }
+  
+}

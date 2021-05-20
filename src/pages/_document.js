@@ -82,6 +82,8 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css?family=Carme"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Corben"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Sniglet"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -226,6 +228,24 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Beth Ellen';
+              src: url("./fonts/Beth-Ellen-2.0.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Jockey One';
+              src: url("./fonts/JockeyOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Jacques Francois';
+              src: url("./fonts/JacquesFrancois-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
               font-family: 'Lexend Tera';
               src: url("./fonts/LexendTera-Regular.ttf");
               font-weight: 400;
@@ -319,8 +339,18 @@ class MyDocument extends Document {
               font-family: 'Nunito Sans';
               src: url("./fonts/NunitoSans-Regular.ttf");
               font-weight: 400;
+            }
+
+            @font-face {
               font-family: 'Blacker Display';
+              font-weight: 400;
               src: url("./fonts/Blacker-Display-Regular-trial.ttf");
+            }
+
+            @font-face {
+              font-family: 'Blacker Display';
+              font-weight: 700;
+              src: url("./fonts/Blacker-Display-Bold-trial.ttf");
             }
           
             @font-face {
@@ -503,7 +533,20 @@ class MyDocument extends Document {
 
             @font-face {
               font-family: 'Barlow';
+              font-weight: 400;
               src: url("./fonts/Barlow-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'Barlow';
+              font-weight: 700;
+              src: url("./fonts/Barlow-Bold.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Barlow';
+              font-weight: 900;
+              src: url("./fonts/Barlow-Black.ttf");
             }
 
             @font-face {
@@ -734,6 +777,18 @@ class MyDocument extends Document {
               src: url("./fonts/BurstMyBubble.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: 'Corben';
+              src: url("./fonts/Corben-Regular.ttf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: 'Corben';
+              src: url("./fonts/Corben-Bold.ttf");
+              font-weight: 700;
+            }
             
             @font-face {
               font-family: 'Carme';
@@ -745,6 +800,12 @@ class MyDocument extends Document {
               src: url("./fonts/neon2.ttf");
             }
             
+            @font-face {
+              font-family: 'Cinzel';
+              src: url("./fonts/Cinzel-Black.ttf");
+              font-weight: 900;
+            }
+
             @font-face {
               font-family: 'Decovar Alpha';
               src: url("./fonts/DecovarAlpha-VF.ttf");
@@ -783,10 +844,52 @@ class MyDocument extends Document {
               src: url("./fonts/Anton-Regular.ttf");
               font-weight: 400;
             }
+          
+            @font-face {
+              font-family: 'Antic Didone';
+              src: url("./fonts/AnticDidone-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Chivo';
+              src: url("./fonts/Chivo-Regular.ttf");
+              font-weight: 400;
+            }
 
             @font-face {
               font-family: 'Neon Vortex';
               src: url("./fonts/Neon Vortex.ttf");
+            }
+
+            @font-face {
+              font-family: 'Lexend Giga';
+              src: url("./fonts/LexendGiga-Regular.ttf");
+              font-weight: 400;
+            }
+          
+            @font-face {
+              font-family: 'Bellota Text';
+              src: url("./fonts/BellotaText-Bold.ttf");
+              font-weight: 700;
+            }
+          
+            @font-face {
+              font-family: 'News Cycle';
+              src: url("./fonts/NewsCycle-Bold.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Ceviche One";
+              src: url("./fonts/CevicheOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "SNOWBREAK";
+              src: url("./fonts/SNOWBREAK.ttf");
+              font-weight: 400;
             }
           `,
             }}

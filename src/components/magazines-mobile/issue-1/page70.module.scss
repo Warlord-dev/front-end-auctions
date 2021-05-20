@@ -1,0 +1,91 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 881px;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+ 
+  .img1{
+    position: absolute;
+    position: absolute;
+    width: 100%;
+  }
+
+  .img2{
+    position: absolute;
+    width: 375px;
+    height: 881px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .img3{
+    position: absolute;
+    width: 881px;
+    height: 375px;
+    left: 0px;
+    top: 881px;
+  }
+
+  h1{
+    
+    font-family: Rose Cake - Personal Use;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 100%;
+    /* or 80px */
+
+
+    color: #FFFFFF;
+  }
+  .title1{
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 199px;
+    top: 282px;
+    
+  }
+
+  .title2{
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: -83px;
+    top: 202px;
+  }
+
+  .title3{
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 65px;
+    top: 51px;
+  }
+
+  .title4{
+    position: absolute;
+    width: 266px;
+    height: 163px;
+    left: 20px;
+    top: 693px;
+
+    font-family: CF Punk Fashion PERSONAL;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+
+    color: #FFFFFF;
+  }
+
+  
+}
