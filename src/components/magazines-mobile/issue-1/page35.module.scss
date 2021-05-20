@@ -2,24 +2,17 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 100vh;
   background-color: white;
-  color: white;
   display: flex;
+  height: 100vh;
   position: relative;
 
-  .backImage {
+  img {
+    object-fit: fill;
     position: absolute;
-    min-height: 940px;
+    width: 100%;
+    height: 100%;
     left: 0px;
     top: 0px;
-  }
-
-  .gif {
-      position: absolute;
-      width: 160% !important;
-      left: -80px;
-      top: 474px;
   }
 }
