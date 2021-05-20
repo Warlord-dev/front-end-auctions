@@ -5,7 +5,7 @@ const Page51 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/images/mobile/page58-bg.png" className={styles.backImage} />       
-      <h1 className={styles.title}>ERICK STOW</h1>
+      <a href="https://www.erickstow.com/" target='_blank'><h1 className={styles.title}>ERICK STOW</h1></a>
       <p className={styles.section}>
         Erick Stow is a Canadian-born artist from Saskatoon, Saskatchewan. He grew up in Lubbock, Texas where he received his Bachelor of Arts degree in mass visual communications from Texas Tech University.
         <br/><br/>

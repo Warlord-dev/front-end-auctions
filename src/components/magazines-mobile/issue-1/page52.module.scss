@@ -3,8 +3,7 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 100vh;
-  overflow: scroll;
+  height: 629px;
   background-color: white;
   color: white;
   display: flex;

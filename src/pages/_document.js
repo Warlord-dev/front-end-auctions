@@ -82,6 +82,8 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css?family=Carme"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Corben"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Sniglet"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -168,12 +170,6 @@ class MyDocument extends Document {
             @font-face {
               font-family: "A DAY WITHOUT SUN";
               src: url("./fonts/A DAY WITHOUT SUN.otf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: "Abel";
-              src: url("./fonts/Abel-Regular.ttf");
               font-weight: 400;
             }
 
@@ -856,18 +852,6 @@ class MyDocument extends Document {
             }
 
             @font-face {
-              font-family: 'Monoton';
-              src: url("./fonts/Monoton-Regular.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: 'Chilanka';
-              src: url("./fonts/Chilanka-Regular.ttf");
-              font-weight: 400;
-            }
-          
-            @font-face {
               font-family: 'Chivo';
               src: url("./fonts/Chivo-Regular.ttf");
               font-weight: 400;
@@ -883,12 +867,6 @@ class MyDocument extends Document {
               src: url("./fonts/LexendGiga-Regular.ttf");
               font-weight: 400;
             }
-
-            @font-face {
-              font-family: 'Bungee Inline';
-              src: url("./fonts/BungeeInline-Regular.ttf");
-              font-weight: 400;
-            }
           
             @font-face {
               font-family: 'Bellota Text';
@@ -901,16 +879,16 @@ class MyDocument extends Document {
               src: url("./fonts/NewsCycle-Bold.ttf");
               font-weight: 400;
             }
-          
-            @font-face {
-              font-family: 'Rosarivo';
-              src: url("./fonts/Rosarivo-Regular.ttf");
-              font-weight: 400;
-            }
 
             @font-face {
               font-family: "Ceviche One";
               src: url("./fonts/CevicheOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "SNOWBREAK";
+              src: url("./fonts/SNOWBREAK.ttf");
               font-weight: 400;
             }
           `,

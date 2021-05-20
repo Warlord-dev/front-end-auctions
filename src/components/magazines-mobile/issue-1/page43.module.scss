@@ -2,11 +2,9 @@
 
 .wrapper {
   @include magazineWrapper();
-
   height: 4515px;
   background-color: white;
   color: white;
-  display: flex;
   position: relative;
 
   .backImage {

@@ -5,7 +5,9 @@ const Page47 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/images/mobile/page54-bg.png" className={styles.backImage} />       
-      <h1 className={styles.title}>Rudeolph</h1>
+      <a href='https://twitter.com/rudeoolph' target='_blank'>
+        <h1 className={styles.title}>Rudeolph</h1>
+      </a>
       <p className={styles.text}>
       Sasmitha Janindu is an undergraduate in BA (hons) in Fashion Design, who aslo goes under the alias “Rudeolph”. She learned 3D software during the lockdown, exploring all kinds of visual techniques like that of creating virtual garments, surreal landscapes, simulations and simple animations. Most of her works are constructed with limited resources, limited computing power and limited knowledge of 3D software— her determination supersedes any supposed barriers.
       <br /><br />

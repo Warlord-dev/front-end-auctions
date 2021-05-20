@@ -41,17 +41,20 @@ const Page56 = () => {
           <br/><br/>
           i’m excited to see what the future holds when technology advances and the tools develop to the state of where we are now in web2. 
           <br/><br/>
-          Here’s a project i released back right as covid hit called “In Security”
-          https://ffm.to/bk5rxjp.owe
+          Here’s a project i released back right as covid hit called “In Security”<br/>
+          <a href='https://ffm.to/bk5rxjp.owe' target='_blank'>https://ffm.to/bk5rxjp.owe</a>
           <br/><br/>
-          and my website
-          https://www.hvdson.com/
+          and my website<br/>
+          <a href='https://www.hvdson.com/' target='_blank'>https://www.hvdson.com/</a>
           <br/><br/>
-          here’s a teaser which uses a snippet from The Lunar Veil (the group i’m in) 
-          https://www.dropbox.com/s/58k9ul71fk5utgc/TEASER%20TWO.mp4?dl=0
+          here’s a teaser which uses a snippet from The Lunar Veil (the group i’m in) <br/>
+          <a href='https://www.dropbox.com/s/58k9ul71fk5utgc/TEASER%20TWO.mp4?dl=0' target='_blank'>
+            https://www.dropbox.com/s/58k9ul71fk5utgc/TEASER%20TWO.mp4?dl=0
+          </a>
+          
           <br/><br/>
-          all info can be found here :)
-          https://songcamp.mirror.xyz/
+          all info can be found here :)<br/>
+          <a href='https://songcamp.mirror.xyz/' target='_blank'>https://songcamp.mirror.xyz/</a>
         </p>
         <h2 className={styles.header1}>SONG CAMP</h2>
         <h2 className={styles.header2}>SONG CAMP</h2>
@@ -67,7 +70,9 @@ const Page56 = () => {
         <p className={styles.text5}>
           want to get into the web3/nft space as a music artists? reach out to matt and songcamp!
         </p>
-        <img src="./magazine/1/images/mobile/twitter (1) 1.png" className={styles.backImage3} />
+        <a href="https://twitter.com/songcampdotband" target='_blank'>
+          <img src="./magazine/1/images/mobile/twitter (1) 1.png" className={styles.backImage3} />
+        </a>
       </div>
     </div>
   )

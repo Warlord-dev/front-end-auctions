@@ -4,12 +4,14 @@ import styles  from './page49.module.scss'
 const Page49 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page56-bg.png" className={styles.backImage} />             
-       <p  className={styles.title1}>BLADE RUNWAY</p>
-       <p  className={styles.title2}>BLADE RUNWAY</p>
-       <p  className={styles.title3}>BLADE RUNWAY</p>
-       <p  className={styles.title4}>BLADE RUNWAY</p>
-       <p  className={styles.title5}>BLADE RUNWAY</p>
+      <img src="./magazine/1/images/mobile/page56-bg.png" className={styles.backImage} /> 
+      <a href='https://twitter.com/BladeRunway' target='_blank'>
+       <p className={styles.title1}>BLADE RUNWAY</p>
+       <p className={styles.title2}>BLADE RUNWAY</p>
+       <p className={styles.title3}>BLADE RUNWAY</p>
+       <p className={styles.title4}>BLADE RUNWAY</p>
+       <p className={styles.title5}>BLADE RUNWAY</p>
+      </a>
       <p className={styles.section1}>
         Blade Runway is the first Digital Couture Fashion House in Italy. Founded by designers Greta Meacci and Alan Aronica, the project was launched to bring the high quality and know-how of traditional Italian haute couture into the digital world. Their ambition is to shape the aesthetic paradigms of tomorrow by influencing the collective imagination and contribute in writing the future of fashion.
         <br/><br/>

@@ -2,13 +2,12 @@
 
 .wrapper {
   @include magazineWrapper();
-
   height: 629px;
-  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
+  justify-content: center;
 
   .backImage {
     object-fit: fill;
