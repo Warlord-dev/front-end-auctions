@@ -2,9 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 100vh;
-  overflow: scroll;
+  height: 1454px;
   background-color: white;
   color: white;
   display: flex;
@@ -12,7 +10,7 @@
 
   .backImage {
     position: absolute;
-    height: 2600px;
+    height: 1454px;
     left: 0px;
     top: 0px;
   }

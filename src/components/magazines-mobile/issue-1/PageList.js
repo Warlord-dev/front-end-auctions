@@ -79,7 +79,7 @@ const Page76 = loadable(() => import ('./Page76'))
 const Page77 = loadable(() => import ('./Page77'))
 const Page78 = loadable(() => import ('./Page78'))
 const Page79 = loadable(() => import ('./Page79'))
-const Page80 = loadable(() => import ('./Page80'))
+// const Page80 = loadable(() => import ('./Page80'))
 // const Page81 = loadable(() => import ('./Page81'))
 // const Page82 = loadable(() => import ('./Page82'))
 // const Page83 = loadable(() => import ('./Page83'))
@@ -172,7 +172,7 @@ const PageList = [
   <Page77 />,
   <Page78 />,
   <Page79 />,
-  <Page80 />,
+  // <Page80 />,
   // <Page81 />,
   // <Page82 />,
   // <Page83 />,
