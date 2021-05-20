@@ -8,7 +8,9 @@ const Page76 = () => {
       <img src="./magazine/1/images/mobile/page76/YB FINAL RENDERS_Custom_View_2 1.png" className={styles.img2} />
       <img src="./magazine/1/images/mobile/page76/image 420.png" className={styles.img3} />
       <img src="./magazine/1/images/mobile/page76/9_SWEATER DRESS_Yekaterina B_Custom_View_3 2.png" className={styles.img4} />
-      <h1>YeKaterina Burmatnova</h1>     
+      <a href="https://www.instagram.com/yekaterinab/" target='_blank'>
+        <h1>YeKaterina Burmatnova</h1>
+      </a>
     </div>
   )
 }

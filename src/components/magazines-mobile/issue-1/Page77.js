@@ -9,10 +9,14 @@ const Page77 = () => {
       <img src="./magazine/1/images/mobile/page77/neofuturo_sweatshirt_01_Custom_View_2 1.png" className={styles.img3} />
       <img src="./magazine/1/images/mobile/page77/OceanSky_render 1.png" className={styles.img4} />
       <img src="./magazine/1/images/mobile/page77/Magentic_coat 1.png" className={styles.img5} />
-      <img src="./magazine/1/images/mobile/page77/Screen Shot 2021-05-08 at 2.52 1.png" className={styles.img6} />
-      <h1 className={styles.title1}>Alyona Briukhanova</h1>
-      <h1 className={styles.title2}>Alyona Briukhanova</h1>
-      <h1 className={styles.title3}>Alyona Briukhanova</h1>
+      <video autoPlay muted loop className={styles.video}>
+        <source src="./magazine/1/85_86/hat_360.mp4" type="video/mp4" />
+      </video>
+      <a href="https://www.instagram.com/dgtl_stylist/" target='_blank'>
+        <h1 className={styles.title1}>Alyona Briukhanova</h1>
+        <h1 className={styles.title2}>Alyona Briukhanova</h1>
+        <h1 className={styles.title3}>Alyona Briukhanova</h1>
+      </a>
       <h2 className={styles.title4}>PIXLS</h2>
     </div>
   )

@@ -25,7 +25,7 @@
 
   }
 
-  .img3{
+  .video1 {
     position: absolute;
     width: 243px;
     height: 247px;
@@ -33,7 +33,7 @@
     top: 2013px;
   }
 
-  .img4{
+  .video2 {
     position: absolute;
     width: 379.92px;
     height: 247px;
@@ -41,16 +41,17 @@
     top: 2495px;
   }
 
-  .img5{
+  .img3 {
     position: absolute;
-    width: 320px;
-    height: 84.95px;
-    left: 452.6px;
-    top: 2121px; 
-  
+    width: 242px;
+    height: 234px;
+    left: 133px;
+    top: 1956px;
+    transform-origin: 0 0;
+    z-index: 2;
   }
 
-  .img6{
+  .img4 {
     position: absolute;
     width: 320px;
     height: 137px;

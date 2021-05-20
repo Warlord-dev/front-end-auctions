@@ -6,14 +6,23 @@ const Page73 = () => {
     <div className={styles.wrapper}>
         <img src="./magazine/1/images/mobile/page73/moshed-05-08-22-31-8 1.png" className={styles.img1} />    
         <img src="./magazine/1/images/mobile/page73/Rectangle 1140.png" className={styles.img2} />    
-        <img src="./magazine/1/images/mobile/page73/Screen Shot 2021-05-08 at 2.01 1.png" className={styles.img3} />    
-        <img src="./magazine/1/images/mobile/page73/Screen Shot 2021-05-08 at 2.00 1.png" className={styles.img4} />    
-        <img src="./magazine/1/images/mobile/page73/image 321.png" className={styles.img5} />    
-        <img src="./magazine/1/images/mobile/page73/image 320.png" className={styles.img6} />
-           
-        <h1 className={styles.title3}>XENOTECH</h1>
-        <h1 className={styles.title2}>XENOTECH</h1>       
-        <h1 className={styles.title1}>XENOTECH</h1>
+
+        <video className={styles.video1} muted loop autoPlay>
+          <source src="./magazine/1/81_82/Singularity.mp4" type="video/mp4" />
+        </video>
+        <video className={styles.video2} muted loop autoPlay>
+          <source src="./magazine/1/81_82/Untitled (12).mp4" type="video/mp4" />
+        </video>
+
+        <img src="./magazine/1/images/mobile/page73/image 321.png" className={styles.img3} />    
+        <img src="./magazine/1/images/mobile/page73/image 320.png" className={styles.img4} /> 
+
+        
+        <a href="https://www.instagram.com/prizecard/?hl=en" target='_blank'>
+          <h1 className={styles.title3}>XENOTECH</h1>
+          <h1 className={styles.title2}>XENOTECH</h1>       
+          <h1 className={styles.title1}>XENOTECH</h1>
+        </a>
         <h2 className={styles.title4}>What has been your digital fashion journey?</h2>
         <h2 className={styles.title5}>Do you have a preferred set of software that you like to use?</h2>
         <h2 className={styles.title6}>What is XENOTECH?</h2>
