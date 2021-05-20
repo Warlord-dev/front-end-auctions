@@ -8,8 +8,10 @@ const Page71 = () => {
      <img src="./magazine/1/images/mobile/page71/The Metaverse Revealed PNG 2.png" className={styles.img2} />  
      <img src="./magazine/1/images/mobile/page71/mouseonesienew2 1.png" className={styles.img4} />  
      <img src="./magazine/1/images/mobile/page71/mouseonesie3 1.png" className={styles.img3} />       
-     <img src="./magazine/1/images/mobile/page71/mouseonesienew3 1.png" className={styles.img5} />  
-     <h1>Andrea Nieto </h1>
+     <img src="./magazine/1/images/mobile/page71/mouseonesienew3 1.png" className={styles.img5} />
+     <a href="https://www.instagram.com/pragmatik0/" target='_blank'>
+      <h1>Andrea Nieto </h1>
+     </a>
      <p>
       Andrea is a multidisciplinary designer and innovator originally from Colombia. Andrea’s background is in apparel and textile design but her work has expanded to include the areas of footwear design and digital experiences. Now Andrea leads from a design perspective projects across those different competencies at Adidas’s innovation team - Future. 
       <br/><br/>

@@ -35,12 +35,13 @@
     top: 0px;
   }
 
-  .img4{
+  .video1 {
     position: absolute;
     width: 355px;
     height: 493px;
     left: 10px;
     top: 550px;
+    object-fit: fill;
      
     border: 10px solid #4D3B24;
     box-sizing: border-box;  
