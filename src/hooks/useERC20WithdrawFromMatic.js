@@ -10,6 +10,7 @@ import { convertToWei } from '@helpers/price.helpers';
 import { useIsMainnet } from './useIsMainnet';
 import userActions from '@actions/user.actions';
 import { getUser } from '@helpers/user.helpers';
+import globalActions from '@actions/global.actions';
 
 export default function useWithdrawFromMatic() {
   const [_, posClient] = useMaticPosClient();
@@ -20,36 +21,39 @@ export default function useWithdrawFromMatic() {
   const profile = useSelector(getUser);
   const existingTxs = profile?.withdrawalTxs || [];
 
-  const withdrawCallback = useCallback(
-    (amount) => {
-      if (posClient && account && chainId) {
-        posClient
-          .burnERC20(
-            config.MONA_TOKEN_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
-            convertToWei(amount),
-            {
-              from: account,
-            }
-          )
-          .then((res) => {
-            dispatch(
-              userActions.updateProfile({
-                withdrawalTxs: [
-                  ...existingTxs,
-                  {
-                    txHash: res.transactionHash,
-                    amount: parseFloat(amount),
-                    status: 'pending',
-                    created: new Date(),
-                  },
-                ],
-              })
-            );
-          });
-      }
-    },
-    [posClient, account]
-  );
+  const withdrawCallback = (amount) => {
+    if (posClient && account && chainId) {
+      dispatch(globalActions.setIsLoading(true));
+      return posClient
+        .burnERC20(
+          config.MONA_TOKEN_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
+          convertToWei(amount),
+          {
+            from: account,
+          },
+        )
+        .then((res) => {
+          dispatch(
+            userActions.updateProfile({
+              withdrawalTxs: [
+                ...existingTxs,
+                {
+                  txHash: res.transactionHash,
+                  amount: parseFloat(amount),
+                  status: 'pending',
+                  created: new Date(),
+                },
+              ],
+            }),
+          );
+          return res;
+        })
+        .catch((err) => {
+          dispatch(globalActions.setIsLoading(false));
+          throw err;
+        });
+    }
+  };
 
   return withdrawCallback;
 }

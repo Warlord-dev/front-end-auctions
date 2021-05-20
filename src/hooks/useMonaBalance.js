@@ -1,54 +1,59 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { formatEther } from '@ethersproject/units';
 import { getAccount } from '@selectors/user.selectors';
 import config from '@utils/config';
 import useMaticPosClient from './useMaticPosClient';
 import { useIsMainnet } from './useIsMainnet';
-import usePollar from './usePollar';
+import globalActions from '@actions/global.actions';
+import { getMonaEthBalance, getMonaMaticBalance } from '@selectors/global.selectors';
+import { getUser } from '@helpers/user.helpers';
 
 export function useMonaBalance() {
-  const [monaEthBalance, setMonaEthBalance] = useState('0');
-  const [monaMaticBalance, setMonaMaticBalance] = useState('0');
+  const dispatch = useDispatch();
+  const monaMaticBalance = useSelector(getMonaMaticBalance);
+  const monaEthBalance = useSelector(getMonaEthBalance);
+  const user = useSelector(getUser);
 
   const account = useSelector(getAccount);
   const isMainnet = useIsMainnet();
 
   const [posClientParent, posClientChild] = useMaticPosClient();
 
-  const fetchMonaBalance = useCallback(async () => {
-    if (account && posClientParent && posClientChild) {
-      try {
-        const ethBalance = await posClientChild.balanceOfERC20(
-          account,
-          config.MONA_TOKEN_ADDRESSES[isMainnet ? 'mainnet' : 'goerli'],
-          {
-            parent: true,
-          },
-        );
-        setMonaEthBalance(formatEther(ethBalance));
-        const maticBalance = await posClientParent.balanceOfERC20(
-          account,
-          config.MONA_TOKEN_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
-          {
-            parent: false,
-          },
-        );
-        setMonaMaticBalance(formatEther(maticBalance));
-      } catch (e) {
-        console.log(e);
+  const fetchMonaBalance = async () => {
+    try {
+      const ethBalance = await posClientChild.balanceOfERC20(
+        account,
+        config.MONA_TOKEN_ADDRESSES[isMainnet ? 'mainnet' : 'goerli'],
+        {
+          parent: true,
+        },
+      );
+      const maticBalance = await posClientParent.balanceOfERC20(
+        account,
+        config.MONA_TOKEN_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
+        {
+          parent: false,
+        },
+      );
+      if (monaEthBalance !== formatEther(ethBalance)) {
+        dispatch(globalActions.setMonaEthBalance(formatEther(ethBalance)));
       }
+      if (monaMaticBalance !== formatEther(maticBalance)) {
+        dispatch(globalActions.setMonaMaticBalance(formatEther(maticBalance)));
+      }
+    } catch (e) {
+      console.log(e);
     }
-  }, [isMainnet, posClientParent, posClientChild]);
+  };
 
   useEffect(() => {
     if (account && posClientParent && posClientChild) {
+      console.log('this is fetch mona balance');
       fetchMonaBalance();
     }
-  }, [posClientChild, posClientParent, account, isMainnet]);
-
-  usePollar(fetchMonaBalance, 60000);
+  }, [isMainnet, posClientChild, posClientParent, user]);
 
   return [monaEthBalance, monaMaticBalance];
 }
