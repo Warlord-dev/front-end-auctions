@@ -12,13 +12,14 @@ import Modals from '@containers/modals/index';
 import Footer from '@components/layouts/footer';
 import HeaderTopLine from '@components/layouts/header-top-line';
 import globalActions from '@actions/global.actions';
-import { getIsInitialized, getChainId } from '@selectors/global.selectors';
+import { getIsInitialized, getChainId, getIsLoading } from '@selectors/global.selectors';
 import { getEnabledNetworkByChainId } from '@services/network.service';
 import getOrCreateStore from '../lib/with-redux-store';
 
 import config from '../utils/config';
 import '../assets/scss/global.scss';
 import Particles from '@components/particles';
+import LoadingOverlay from 'react-loading-overlay';
 
 if (config.SENTRY_DSN) {
   Sentry.init({
@@ -53,6 +54,16 @@ const NetworkWrapper = (props) => {
   return props.children;
 };
 
+const LoadingWrapper = ({ children }) => {
+  const isLoading = useSelector(getIsLoading);
+
+  return (
+    <LoadingOverlay active={isLoading} spinner>
+      {children}
+    </LoadingOverlay>
+  );
+};
+
 const MyApp = ({ Component, pageProps, store, err }) => {
   if (err) {
     Sentry.captureException(err, {
@@ -72,8 +83,10 @@ const MyApp = ({ Component, pageProps, store, err }) => {
         <HeaderTopLine />
         <Modals />
         <NetworkWrapper>
-          <Particles />
-          <Component {...pageProps} />
+          <LoadingWrapper>
+            <Particles />
+            <Component {...pageProps} />
+          </LoadingWrapper>
         </NetworkWrapper>
         <Footer />
       </InitWrapper>
