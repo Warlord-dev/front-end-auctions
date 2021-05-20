@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './page57.module.scss'
 
 const Page57 = () => {
+  const [play1, setPlay1] = useState('./magazine/1/63_64/Group 1189');
+  const [play2, setPlay2] = useState('./magazine/1/63_64/Group 1190');
+  const [play3, setPlay3] = useState('./magazine/1/63_64/Group 1190');
+  const [play4, setPlay4] = useState('./magazine/1/63_64/Group 1190');
+  const audio1 = useRef();
+  const audio2 = useRef();
+  const audio3 = useRef();
+  const audio4 = useRef();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.bg_section}>
@@ -11,15 +20,71 @@ const Page57 = () => {
         <img src="./magazine/1/images/mobile/page57/w-bg-3.png" className={styles.backImage5} />
         <img src="./magazine/1/images/mobile/page57/img-1.png" className={styles.img1} />
         <img src="./magazine/1/images/mobile/page57/img-2.png" className={styles.img2} />
-        <img src="./magazine/1/images/mobile/sound.gif" className={styles.sound}/>
-        <img src="./magazine/1/images/mobile/page57/ep-1.png" className={styles.ep1}/>
-        <img src="./magazine/1/images/mobile/page57/play-1.png" className={styles.arrow1}/>
-        <img src="./magazine/1/images/mobile/page57/ep-2.png" className={styles.ep2}/>
-        <img src="./magazine/1/images/mobile/page57/play-2.png" className={styles.arrow2}/>
-        <img src="./magazine/1/images/mobile/page57/ep-2.png" className={styles.ep3}/>
-        <img src="./magazine/1/images/mobile/page57/play-2.png" className={styles.arrow3}/>
-        <img src="./magazine/1/images/mobile/page57/ep-2.png" className={styles.ep4}/>
-        <img src="./magazine/1/images/mobile/page57/play-2.png" className={styles.arrow4}/>
+        <img src="./magazine/1/images/mobile/sound.gif" className={styles.sound}/>        
+        <img
+          src={`${play1}.png`}
+          className={styles.play1}
+          onClick={() => {
+            if (!play1.includes('pause')) {
+              setPlay1(play1 + '-pause');
+              audio1.current.play();
+            } else {
+              setPlay1(play1.split('-pause')[0]);
+              audio1.current.pause();
+            }
+          }}
+        />
+        <audio className={styles.audio} ref={audio1} controls>
+          <source src="./magazine/1/63_64/1.wav" type="audio/wav" />
+        </audio>
+        <img
+        src={`${play2}.png`}
+        className={styles.play2}
+        onClick={() => {
+          if (!play2.includes('pause')) {
+            setPlay2(play2 + '-pause');
+            audio2.current.play();
+          } else {
+            setPlay2(play2.split('-pause')[0]);
+            audio2.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} ref={audio2} controls>
+        <source src="./magazine/1/63_64/2.mp3" type="audio/mp3" />
+      </audio>
+      <img
+        src={`${play3}.png`}
+        className={styles.play3}
+        onClick={() => {
+          if (!play3.includes('pause')) {
+            setPlay3(play3 + '-pause');
+            audio3.current.play();
+          } else {
+            setPlay3(play3.split('-pause')[0]);
+            audio3.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} ref={audio3} controls>
+        <source src="./magazine/1/63_64/3.mp3" type="audio/mp3" />
+      </audio>
+      <img
+        src={`${play4}.png`}
+        className={styles.play4}
+        onClick={() => {
+          if (!play4.includes('pause')) {
+            setPlay4(play4 + '-pause');
+            audio4.current.play();
+          } else {
+            setPlay4(play4.split('-pause')[0]);
+            audio4.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} ref={audio4} controls>
+        <source src="./magazine/1/63_64/4.mp3" type="audio/mp3" />
+      </audio>
       </div>
       <div className={styles.title_section}>
         <h1 className={styles.title1}>

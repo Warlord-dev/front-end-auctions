@@ -4,13 +4,11 @@ import styles from './page66.module.scss'
 const Page66 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page66/moshed-05-06-13-14-55 1.png" className={styles.img1} />
-      <img src="./magazine/1/images/mobile/page66/moshed-05-07-16-5-22 1.png" className={styles.img2} />
-      <img src="./magazine/1/images/mobile/page66/Rectangle 1117.png" className={styles.img3} />       
+      <img src="./magazine/1/images/mobile/page66/Group_1206.png" className={styles.img1} />         
       <img src="./magazine/1/images/mobile/victor.png"  className={styles.img4} />    
       <img src="./magazine/1/images/mobile/haruto.png"  className={styles.img5} />   
-      <img src="./magazine/1/images/mobile/cameron.png"  className={styles.img6} />    
-      <img src="./magazine/1/images/mobile/james.png"  className={styles.img7} />    
+      <img src="./magazine/1/images/mobile/cameron.png"  className={styles.img7} />    
+      <img src="./magazine/1/images/mobile/james.png"  className={styles.img6} />    
       <h1>WEB3 WIZARDS</h1>  
       <p className={styles.text1}>
         Developing in web3, Ethereum, crypto, NFTs and everything that it encompasses is no easy feat. It’s a constant engagement between building on the bleeding edge, writing code that has never been written before, and, at the same time, navigating to best defend, safeguard against and better embrace the constantly evolving hostilities that an open bazaar evironment naturally cultivates; whether that be security vulnerabilites, terrible UX or just the almost complete inflexibility for errors.
