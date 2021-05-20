@@ -343,8 +343,18 @@ class MyDocument extends Document {
               font-family: 'Nunito Sans';
               src: url("./fonts/NunitoSans-Regular.ttf");
               font-weight: 400;
+            }
+
+            @font-face {
               font-family: 'Blacker Display';
+              font-weight: 400;
               src: url("./fonts/Blacker-Display-Regular-trial.ttf");
+            }
+
+            @font-face {
+              font-family: 'Blacker Display';
+              font-weight: 700;
+              src: url("./fonts/Blacker-Display-Bold-trial.ttf");
             }
           
             @font-face {
