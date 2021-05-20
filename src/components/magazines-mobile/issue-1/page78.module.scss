@@ -3,42 +3,75 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 100vh;
-  overflow: scroll;
+  height: 2017px;
+  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-
-  .backImage {
+  
+  .img1{
     position: absolute;
-    height: 2000px;
-    left: 0px;
-    top: 0px;
+    width: 100%;
+    height: 1194px;    
+    top: 71px;
   }
-  .innerWrapper {
+
+  h1{
     position: absolute;
-    top: 30px;
-    left: calc((100vw - 280px) / 2);
-    width: 280px;
-    white-space: normal;
-    text-align: left;
-    h1 {
-      font-family: Empirez;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 40px;
-      line-height: 100%;
-      color: #FFB115;
-      margin-bottom: 20px;
+    width: 303px;
+    height: 34px;
+    left: 50px;
+    top: 81px;
+
+    font-family: Courier;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 120.53%;
+    /* identical to box height, or 34px */
+
+
+    color: #000000;
+  }
+
+  p{
+    position: absolute;
+    width: 272px;
+    height: 1738px;
+    left: 50px;
+    top: 140px;
+
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120.53%;
+    /* or 22px */
+
+
+    color: #000000;
+
+    span{
+      font-weight: 700;
     }
-    p {
-      font-family: EB Garamond;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 100%;
-      margin-bottom: 30px;
-    }
+  }
+
+  h2{
+    position: absolute;
+    width: 288px;
+    height: 22px;
+    left: 62px;
+    top: 1871px;
+
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120.53%;
+    /* identical to box height, or 22px */
+
+
+    color: #000000;
   }
 }
