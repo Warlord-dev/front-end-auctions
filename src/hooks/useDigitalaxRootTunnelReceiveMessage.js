@@ -14,7 +14,7 @@ const useDigitalaxRootTunnelReceiveMessage = () => {
   const digitalaxRootTunnel = async (bytes) => {
     if (bytes) {
       try {
-        const res = await rootTunnelContract.methods.receiveMessage(bytes).send({
+        const res = await rootTunnelContract.methods.recereiveMessage(bytes).send({
           from: account,
         });
         return res;
