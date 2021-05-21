@@ -17,6 +17,25 @@ export const getLiveAuctions = gql`
       }
       topBid
       lastBidTime
+      garment {
+        id
+        designer
+        primarySalePrice
+        tokenUri
+        children {
+          amount
+          tokenUri
+          id
+        }
+      }
+      designer {
+        id
+      }
+      contract {
+        id
+        minBidIncrement
+        bidWithdrawalLockTime
+      }
     }
   }
 `;

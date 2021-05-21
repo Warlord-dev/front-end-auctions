@@ -28,6 +28,9 @@ const {
 const withImages = require('next-images');
 
 module.exports = withImages({
+  images: {
+    domains: ['digitalax.imgix.net']
+  },
   publicRuntimeConfig: {
     BACKEND_API,
     STATIC_DOMAIN,

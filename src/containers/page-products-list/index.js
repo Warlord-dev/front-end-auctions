@@ -22,6 +22,7 @@ import TextContent from '@containers/page-products-list/text-content';
 import CardList from './card-list';
 import CardListDigi from './card-list-digi';
 import styles from './styles.module.scss';
+import apiService from '@services/api/api.service';
 
 const PageProductsList = ({ collectionId }) => {
   const dispatch = useDispatch();
@@ -112,6 +113,15 @@ const PageProductsList = ({ collectionId }) => {
     },
     []
   );
+
+  useEffect(() => {
+    const fetchInitialAuctions = async () => {
+      const { digitalaxGarmentAuctions } = await apiService.getLiveAuctions();
+      dispatch(auctionPageActions.updateAuctions(digitalaxGarmentAuctions));
+    }
+    fetchInitialAuctions();
+  }, []);
+
 
   const nowTimestamp = Date.now();
 

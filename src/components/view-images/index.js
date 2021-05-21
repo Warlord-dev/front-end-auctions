@@ -1,6 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import cn from 'classnames';
 import ReactImageMagnify from 'react-image-magnify';
 import { createGifURL, create2KURL, createPreviewURL } from '@services/imgix.service';
@@ -46,7 +47,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
             rel="noreferrer"
             className={styles.largeImgWrapper}
           >
-            <img
+            <Image
               className={styles.itemLargeImg}
               src={createGifURL(largeImage.image)}
               alt={clothesName}
@@ -95,7 +96,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
                 onClick={() => handleClick(item, index)}
               >
                 {item && item.preview ? (
-                  <img
+                  <Image
                     className={styles.itemSmallImg}
                     src={createPreviewURL(item?.preview)}
                     alt={clothesName}
