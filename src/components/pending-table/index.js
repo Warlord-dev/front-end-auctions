@@ -4,20 +4,33 @@ import TimeAgo from 'react-timeago';
 import styles from './styles.module.scss';
 import StatusBar from './status-bar';
 
-const PendingTable = ({ data, mode, id }) => {
+const PendingTable = ({ data, mode, id, onWithdraw }) => {
   const tokenTypes = ['ERC-20', 'NFT SKINS', 'ERC-998', 'ERC-1155'];
 
-  const getStatusNumber = (status) => {
-    switch (status) {
-      case 'pending':
+  const getStatusNumber = (row) => {
+    if (mode === 1) {
+      if ((Date.now() - new Date(row.created).getTime()) / 1000 >= 10800) {
         return 3;
-      case 'success':
-        return 4;
-      case 'processing':
+      } else {
         return 2;
-      case 'initiated':
-        return 1;
+      }
+    } else {
+      if ((Date.now() - new Date(row.created).getTime()) / 1000 >= 900) {
+        return 3;
+      } else {
+        return 2;
+      }
     }
+    // switch (row.status) {
+    //   case 'pending':
+    //     return 3;
+    //   case 'success':
+    //     return 4;
+    //   case 'processing':
+    //     return 2;
+    //   case 'initiated':
+    //     return 1;
+    // }
   };
 
   const shortenHash = (hash) => {
@@ -82,7 +95,11 @@ const PendingTable = ({ data, mode, id }) => {
                   {mode === 1 ? (
                     <div className={styles.td} style={{ width: 150 }}>
                       {' '}
-                      <button type="button" className={styles.withdrawBtn}>
+                      <button
+                        type="button"
+                        onClick={() => onWithdraw(row)}
+                        className={styles.withdrawBtn}
+                      >
                         {' '}
                         withdraw{' '}
                       </button>{' '}
@@ -90,7 +107,7 @@ const PendingTable = ({ data, mode, id }) => {
                   ) : null}
                 </div>
                 <div className={styles.statusBar}>
-                  <StatusBar mode={mode} status={getStatusNumber(row.status)} />
+                  <StatusBar mode={mode} status={getStatusNumber(row)} />
                 </div>
               </div>
             );

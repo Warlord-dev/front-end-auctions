@@ -19,7 +19,15 @@ const Withdraw = () => {
   const { approved, setApproved, approveCallback } = useApproveForMatic(amount);
   const [_, monaMaticBalance] = useMonaBalance();
   const withdrawCallback = useWithdrawFromMatic();
-  const pendingWithdrawals = user.withdrawalTxs.filter((tx) => tx.status === 'pending');
+  const [pendingWithdrawals, setPendingWithdrawals] = useState([]);
+
+  useEffect(() => {
+    if (user) {
+      const pendings = user.withdrawalTxs.filter((tx) => tx.status === 'pending');
+      setPendingWithdrawals(pendings);
+    }
+  }, [user]);
+
   const titles = ['$MONA ERC-20', 'ESPA NFT SKINS', 'DIGIFIZZY ERC-998 BUNDLE', 'ERC-1155 NFTs'];
 
   const onBridge = async () => {
@@ -70,13 +78,11 @@ const Withdraw = () => {
           >
             {approved ? 'Bridge' : 'Approve'}
           </button>
-          <Link href={`/bridge/withdraw/pending/${id}`}>
-            <a
-              className={classnames(styles.btn, { [styles.btnLeftMar]: pendingWithdrawals.length })}
-            >
-              Pending Withdrawals
-            </a>
-          </Link>
+          {pendingWithdrawals.length ? (
+            <Link href={`/bridge/withdraw/pending/${id}`}>
+              <a className={classnames(styles.btn, styles.btnLeftMar)}>Pending Withdrawals</a>
+            </Link>
+          ) : null}
         </div>
       </div>
       <hr />
