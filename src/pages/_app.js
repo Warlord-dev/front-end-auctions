@@ -69,7 +69,8 @@ const MyApp = ({ Component, pageProps, store, err }) => {
   return (
     <Provider store={store}>
       <Head>
-        <title>Digitalax - The Digital Fashion Engine</title>
+        <title>First In-Depth NFT Metaverse Magazine</title>
+        <meta name="description" content="DIGIFIZZY is the first in-depth Metaverse Magazine bringing together top voices and creators across digital fashion, gaming, modding, NFTs, web3, crypto, DeFi, music, art. We are proving out an entirely new publishing model through decentralized NFT unlockable content drops."></meta>
         <link rel="icon" type="image/png" href="/images/icons/favicon-digitalax.ico" />
       </Head>
       <InitWrapper>
