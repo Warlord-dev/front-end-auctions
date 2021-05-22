@@ -83,6 +83,10 @@ export const getImageForCardProduct = (tokenInfo) => {
     return [tokenInfo.animation_url, true];
   }
 
+  if (tokenInfo.animation) {
+    return [tokenInfo.animation, true];
+  }
+
   const imagePrefixWithoutAnimation = 'image_';
   const firstFoundImageKey = Object.keys(tokenInfo).find(
     (objectKey) => objectKey.search(imagePrefixWithoutAnimation) !== -1 && tokenInfo[objectKey]

@@ -28,6 +28,8 @@ export const onAuctionsChange = `
         designer
         primarySalePrice
         tokenUri
+        image
+        animation
         children {
           amount
           tokenUri

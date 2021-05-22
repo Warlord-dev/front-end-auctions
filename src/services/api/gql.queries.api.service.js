@@ -22,6 +22,8 @@ export const getLiveAuctions = gql`
         designer
         primarySalePrice
         tokenUri
+        image
+        animation
         children {
           amount
           tokenUri

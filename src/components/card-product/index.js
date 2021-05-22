@@ -38,10 +38,11 @@ const CardProduct = ({
     return null;
   }
 
-  const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
+  // const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
+  const tokenInfo = null;
   const designerInfo = useSelector(getDesignerInfoById(garment.designer));
 
-  const [imageUrl, isVideo] = getImageForCardProduct(tokenInfo);
+  const [imageUrl, isVideo] = getImageForCardProduct(garment);
 
   return (
     <li className={cn(styles.item, className)}>
@@ -71,7 +72,7 @@ const CardProduct = ({
                 </video>
               )}
               {(parseInt(garment.id, 10) < 20 || parseInt(garment.id, 10) > 28) &&
-                (tokenInfo && imageUrl ? (
+                (imageUrl ? (
                   isVideo ? (
                     <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
                       <source src={imageUrl} type="video/mp4" />
