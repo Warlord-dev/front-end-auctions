@@ -31,6 +31,7 @@ export default function useExitFromMatic() {
         })
         .catch((err) => {
           dispatch(globalActions.setIsLoading(false));
+          console.log('this is error', err);
           throw err;
         });
     }

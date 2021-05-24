@@ -10,16 +10,19 @@ import useApproveForMatic from '@hooks/useApproveForMatic';
 import useWithdrawFromMatic from '@hooks/useERC20WithdrawFromMatic';
 import { useSelector } from 'react-redux';
 import { getUser } from '@helpers/user.helpers';
+import NftTable from '@components/nft-table';
+import { useEthMaticNFTs } from '@hooks/useEthMaticNFTs';
 
 const Withdraw = () => {
   const router = useRouter();
   const id = parseInt(router.query.id);
+  const [pendingWithdrawals, setPendingWithdrawals] = useState([]);
   const [amount, setAmount] = useState('0');
   const user = useSelector(getUser);
   const { approved, setApproved, approveCallback } = useApproveForMatic(amount);
-  const [_, monaMaticBalance] = useMonaBalance();
   const withdrawCallback = useWithdrawFromMatic();
-  const [pendingWithdrawals, setPendingWithdrawals] = useState([]);
+  const [_, monaMaticBalance] = useMonaBalance();
+  const [__, maticNfts] = useEthMaticNFTs();
 
   useEffect(() => {
     if (user) {
@@ -30,7 +33,7 @@ const Withdraw = () => {
 
   const titles = ['$MONA ERC-20', 'ESPA NFT SKINS', 'DIGIFIZZY ERC-998 BUNDLE', 'ERC-1155 NFTs'];
 
-  const onBridge = async () => {
+  const onBridgeErc20 = async () => {
     if (!approved) {
       try {
         const res = await approveCallback();
@@ -74,7 +77,7 @@ const Withdraw = () => {
           <button
             type="button"
             className={classnames(styles.btn, { [styles.btnRightMar]: pendingWithdrawals.length })}
-            onClick={onBridge}
+            onClick={onBridgeErc20}
           >
             {approved ? 'Bridge' : 'Approve'}
           </button>
@@ -94,12 +97,23 @@ const Withdraw = () => {
     </div>
   );
 
-  const espaNft = <div className={styles.espaNftModalWrapper}></div>;
+  const espaNft = (
+    <div className={styles.espaNftModalWrapper}>
+      <NftTable data={maticNfts} mode={1} />
+      <hr />
+      <div className={styles.actions}>
+        <Link href="/bridge">
+          <a className={styles.return}>return</a>
+        </Link>
+      </div>
+    </div>
+  );
 
   return (
     <div className={styles.wrapper}>
       <BridgeModal title={`withdraw ${titles[id - 1]}`} mode={1}>
-        {erc20}
+        {id === 1 && erc20}
+        {id === 2 && espaNft}
       </BridgeModal>
     </div>
   );

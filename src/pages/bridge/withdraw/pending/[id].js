@@ -18,18 +18,24 @@ const Pending = () => {
   // const erc20Exit = useERC20Exit();
   const erc20ExitCallback = useExitFromMatic();
   const [pendingWithdrawals, setPendingWithdrawals] = useState([]);
+  const [filter, setFilter] = useState('');
+  const [sort, setSort] = useState('1');
   // let pendingWithdrawals = user.withdrawalTxs.filter((tx) => tx.status === 'pending');
 
   useEffect(() => {
-    console.log('this is user change');
     if (user.withdrawalTxs && user.withdrawalTxs.length) {
       console.log('this is user change -- inside', user.withdrawalTxs);
       setPendingWithdrawals(user.withdrawalTxs.filter((tx) => tx.status === 'pending'));
     }
   }, [user]);
 
+  useEffect(() => {
+    if (pendingWithdrawals.length) {
+      console.log('this is pendingWithdrawals', pendingWithdrawals);
+    }
+  }, [pendingWithdrawals]);
+
   const onWithdraw = async (data) => {
-    console.log('this is on withdraw', data);
     if (id === 1) {
       try {
         await erc20ExitCallback(data.txHash);
@@ -43,10 +49,40 @@ const Pending = () => {
     // }
   };
 
+  const filterSortWithdrawals = () => {
+    const withdrawals = [...pendingWithdrawals];
+    withdrawals.sort((a, b) => {
+      if (sort === 1) {
+        const date1 = new Date(a.created),
+          date2 = new Date(b.created);
+        if (date1 > date2) return 1;
+        if (date1 === date2) return 0;
+        if (date1 < date2) return -1;
+      } else {
+        if (a.status > b.status) return 1;
+        if (a.status === b.status) return 0;
+        return -1;
+      }
+    });
+    if (!filter.length) return withdrawals;
+    return withdrawals.filter((tx) => {
+      return tx.txHash.includes(filter) || tx.status.includes(filter);
+    });
+  };
+
   return (
     <div className={styles.wrapper}>
       <BridgeModal title="Pending Withdrawals" mode={1}>
-        <PendingTable data={pendingWithdrawals} id={id} mode={1} onWithdraw={onWithdraw} />
+        <PendingTable
+          filter={filter}
+          filterChanged={(e) => setFilter(e.target.value)}
+          sort={sort}
+          sortChanged={(e) => setSort(e.target.value)}
+          data={filterSortWithdrawals()}
+          id={id}
+          mode={1}
+          onWithdraw={onWithdraw}
+        />
         <hr />
         <div className={styles.actions}>
           <Link href="/bridge">

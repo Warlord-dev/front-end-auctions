@@ -166,6 +166,30 @@ class GlobalActions extends BaseActions {
       dispatch(this.setValue('isLoading', value));
     };
   }
+
+  setDtxEthIds(values) {
+    return (dispatch) => {
+      dispatch(this.setValue('dtxEthIds', values));
+    };
+  }
+
+  setDtxMaticIds(values) {
+    return (dispatch) => {
+      dispatch(this.setValue('dtxMaticIds', values));
+    };
+  }
+
+  setEthNfts(values) {
+    return (dispatch) => {
+      dispatch(this.setValue('ethNfts', values));
+    };
+  }
+
+  setMaticNfts(values) {
+    return (dispatch) => {
+      dispatch(this.setValue('maticNfts', values));
+    };
+  }
 }
 
 export default new GlobalActions(globalReducer);

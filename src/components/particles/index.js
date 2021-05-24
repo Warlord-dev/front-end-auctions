@@ -116,6 +116,7 @@ const ParticlesWrapper = () => {
           },
           retina_detect: true,
         }}
+        height={`100vh`}
       />
     </div>
   );

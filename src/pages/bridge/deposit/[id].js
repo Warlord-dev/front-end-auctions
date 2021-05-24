@@ -10,6 +10,8 @@ import styles from './styles.module.scss';
 import useApproveForMatic from '@hooks/useApproveForMatic';
 import useDepositToMatic from '@hooks/useERC20DepositToMatic';
 import { useMonaBalance } from '@hooks/useMonaBalance';
+import { useEthMaticNFTs } from '@hooks/useEthMaticNFTs';
+import NftTable from '@components/nft-table';
 
 const Deposite = () => {
   const router = useRouter();
@@ -21,6 +23,7 @@ const Deposite = () => {
   const depositCallback = useDepositToMatic();
   const pendingDeposits = (user.depositTxs || []).filter((tx) => tx.status === 'pending');
   const titles = ['$MONA ERC-20', 'ESPA NFT SKINS', 'DIGIFIZZY ERC-998 BUNDLE', 'ERC-1155 NFTs'];
+  const [ethNfts, __] = useEthMaticNFTs();
 
   const onDeposit = async () => {
     if (!approved) {
@@ -88,12 +91,23 @@ const Deposite = () => {
     </div>
   );
 
-  const espaNft = <div className={styles.espaNftModalWrapper}></div>;
+  const espaNft = (
+    <div className={styles.espaNftModalWrapper}>
+      <NftTable data={ethNfts} mode={2} />
+      <hr />
+      <div className={styles.actions}>
+        <Link href="/bridge">
+          <a className={styles.return}>return</a>
+        </Link>
+      </div>
+    </div>
+  );
 
   return (
     <div className={styles.wrapper}>
       <BridgeModal title={`deposite ${titles[id - 1]}`} mode={2}>
-        {erc20}
+        {id === 1 && erc20}
+        {id === 2 && espaNft}
       </BridgeModal>
     </div>
   );

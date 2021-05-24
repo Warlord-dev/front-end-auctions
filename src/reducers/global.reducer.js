@@ -15,6 +15,10 @@ const DEFAULT_FIELDS = Map({
   monaMaticBalance: 0,
   monaEthBalance: 0,
   isLoading: false,
+  dtxEthIds: [],
+  dtxMaticIds: [],
+  ethNfts: [],
+  maticNfts: [],
 });
 
 export default createModule({

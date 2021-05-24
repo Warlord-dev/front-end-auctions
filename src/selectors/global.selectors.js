@@ -8,3 +8,7 @@ export const getMonaPerEth = (state) => state.global.get('monaPerEth');
 export const getMonaMaticBalance = (state) => state.global.get('monaMaticBalance');
 export const getMonaEthBalance = (state) => state.global.get('monaEthBalance');
 export const getIsLoading = (state) => state.global.get('isLoading');
+export const getDtxEthIds = (state) => state.global.get('dtxEthIds');
+export const getDtxMaticIds = (state) => state.global.get('dtxMaticIds');
+export const getEthNfts = (state) => state.global.get('ethNfts');
+export const getMaticNfts = (state) => state.global.get('maticNfts');

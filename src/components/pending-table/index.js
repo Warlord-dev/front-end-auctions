@@ -4,7 +4,7 @@ import TimeAgo from 'react-timeago';
 import styles from './styles.module.scss';
 import StatusBar from './status-bar';
 
-const PendingTable = ({ data, mode, id, onWithdraw }) => {
+const PendingTable = ({ data, mode, id, onWithdraw, filter, filterChanged, sort, sortChanged }) => {
   const tokenTypes = ['ERC-20', 'NFT SKINS', 'ERC-998', 'ERC-1155'];
 
   const getStatusNumber = (row) => {
@@ -16,9 +16,9 @@ const PendingTable = ({ data, mode, id, onWithdraw }) => {
       }
     } else {
       if ((Date.now() - new Date(row.created).getTime()) / 1000 >= 900) {
-        return 3;
+        return 4;
       } else {
-        return 2;
+        return 3;
       }
     }
     // switch (row.status) {
@@ -42,11 +42,16 @@ const PendingTable = ({ data, mode, id, onWithdraw }) => {
       <div className={styles.toolbar}>
         <div className={styles.filterLabel}> filter </div>
         <div className={styles.filterWrapper}>
-          <input type="text" className={styles.filterInput} />
+          <input
+            type="text"
+            className={styles.filterInput}
+            value={filter}
+            onChange={filterChanged}
+          />
           <img src="/images/filter.png" className={styles.filterIcon} />
         </div>
         <div className={styles.sortLabel}> sort by </div>
-        <select className={styles.sortSelect}>
+        <select className={styles.sortSelect} onChange={sortChanged} value={sort}>
           <option value="1"> Time Lapsed </option>
           <option value="2"> Status </option>
         </select>
@@ -89,10 +94,23 @@ const PendingTable = ({ data, mode, id, onWithdraw }) => {
                   <div className={styles.td} style={{ width: 130 }}>
                     <TimeAgo date={new Date(row.created)} />
                   </div>
-                  <div className={styles.td} style={{ width: 100 }}>
-                    {row.status}
-                  </div>
-                  {mode === 1 ? (
+                  {mode === 1 && (
+                    <div className={styles.td} style={{ width: 100 }}>
+                      {row.status === 'success'
+                        ? row.status
+                        : (Date.now() - new Date(row.created).getTime()) / 1000 >= 10800
+                        ? 'pending'
+                        : 'processing'}
+                    </div>
+                  )}
+                  {mode === 2 && (
+                    <div className={styles.td} style={{ width: 100 }}>
+                      {(Date.now() - new Date(row.created).getTime()) / 1000 >= 900
+                        ? 'success'
+                        : 'pending'}
+                    </div>
+                  )}
+                  {mode === 1 && (Date.now() - new Date(row.created).getTime()) / 1000 >= 10800 ? (
                     <div className={styles.td} style={{ width: 150 }}>
                       {' '}
                       <button

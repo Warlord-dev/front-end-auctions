@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Web3 from 'web3';
 
 import { getAccount } from '@selectors/user.selectors';
@@ -9,6 +9,8 @@ import { useIsMainnet } from './useIsMainnet';
 import usePollar from './usePollar';
 import { useDTXBalance } from './useERC721Balance';
 import erc721_abi from '@constants/erc721_abi_V2.json';
+import { getDtxEthIds, getDtxMaticIds } from '@selectors/global.selectors';
+import globalActions from '@actions/global.actions';
 
 const getERC721TokenContract = (provider, token) => {
   const web3 = new Web3(provider);
@@ -16,8 +18,9 @@ const getERC721TokenContract = (provider, token) => {
 };
 
 export function useDTXTokenIds() {
-  const [dtxEthIds, setDtxEthIds] = useState([]);
-  const [dtxMaticIds, setDtxMaticIds] = useState([]);
+  const dispatch = useDispatch();
+  const dtxEthIds = useSelector(getDtxEthIds);
+  const dtxMaticIds = useSelector(getDtxMaticIds);
 
   const account = useSelector(getAccount);
   const isMainnet = useIsMainnet();
@@ -26,7 +29,7 @@ export function useDTXTokenIds() {
 
   const [dtxEthBalance, dtxMaticBalance] = useDTXBalance();
 
-  const fetchDtxEthIds = useCallback(async () => {
+  const fetchDtxEthIds = async () => {
     if (account && posClientChild) {
       try {
         const ethIds = await Promise.all(
@@ -39,30 +42,31 @@ export function useDTXTokenIds() {
             ),
           ),
         );
-        setDtxEthIds(ethIds);
+        dispatch(globalActions.setDtxEthIds(ethIds));
       } catch (e) {
         console.log(e);
       }
     }
-  }, [dtxEthBalance]);
+  };
 
-  const fetchDtxIds = useCallback(async () => {
+  const fetchDtxIds = async () => {
     if (account) {
       try {
         const erc721MaticContract = getERC721TokenContract(
           isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI,
           config.DTX_ADDRESSES[isMainnet ? 'matic' : 'mumbai'],
         );
-        const batchTokensOfOwnerMatic = erc721MaticContract.methods[
-          'batchTokensOfOwner'
-        ].apply(null, [account]);
+        const batchTokensOfOwnerMatic = erc721MaticContract.methods['batchTokensOfOwner'].apply(
+          null,
+          [account],
+        );
         const maticIds = await batchTokensOfOwnerMatic.call({});
-        setDtxMaticIds(maticIds);
+        dispatch(globalActions.setDtxMaticIds(maticIds));
       } catch (e) {
         console.log(e);
       }
     }
-  }, [dtxMaticBalance]);
+  };
 
   useEffect(() => {
     fetchDtxIds();

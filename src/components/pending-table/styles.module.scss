@@ -73,6 +73,9 @@
         }
         
         .body {
+            max-height: 50vh;
+            overflow: auto;
+            
             .tr {
                 .info {
                     display: flex;
