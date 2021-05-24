@@ -56,7 +56,7 @@ const ImportantCollectionInformation = ({ collection }) => {
   );
 
   const digitalIds = ['2607', '2633', '2658', '2679', '3532', '773'];
-  const filteredAuctions = collection.id === 1 ? currentAuctions : [];
+  const filteredAuctions = currentAuctions;
   const filteredCollections =
     collection.id === 1
       ? currentCollections.filter(
@@ -101,9 +101,9 @@ const ImportantCollectionInformation = ({ collection }) => {
         <p className={styles.priceDescription}>Total Sold</p>
         <p className={styles.priceWrapper}>
           <span className={styles.priceEth}>
-            {parseFloat(priceEth / monaPerEth).toFixed(2)} $MONA
+            {collection.id === 1 ? parseFloat(priceEth / monaPerEth).toFixed(2) : 40} $MONA
           </span>
-          <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
+          <span className={styles.priceUsd}>(${getPriceUsd(collection.id === 1 ? priceEth : 40 * monaPerEth)})</span>
         </p>
       </div>
       <div className={styles.footerBoxRight}>
