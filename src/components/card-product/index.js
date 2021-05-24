@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import Link from 'next/link';
+import LazyLoad from 'react-lazyload';
 import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import kebabCase from 'lodash.kebabcase';
@@ -74,13 +75,15 @@ const CardProduct = ({
               {(parseInt(garment.id, 10) < 20 || parseInt(garment.id, 10) > 28) &&
                 (imageUrl ? (
                   isVideo ? (
-                    <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
-                      <source src={imageUrl} type="video/mp4" />
-                    </video>
+                    <LazyLoad>
+                      <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
+                        <source src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
+                      </video>
+                    </LazyLoad>
                   ) : (
                     <Image
                       className={styles.clothesPhoto}
-                      src={create2KURL(imageUrl)}
+                      src={create2KURL(imageUrl.replace('gateway.pinata', 'digitalax.mypinata'))}
                       alt={garment.id}
                       width={'100%'}
                       height={'100%'}
