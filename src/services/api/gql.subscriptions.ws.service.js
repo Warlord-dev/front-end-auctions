@@ -290,6 +290,8 @@ export const getAllDigitalaxGarmentsCollections = `
         owner
         primarySalePrice
         tokenUri
+        image
+        animation
         children {
           id
           amount
