@@ -98,6 +98,23 @@
   padding-right: 20px;
 }
 
+.bridgeHeader {
+  background-color: transparent!important;
+
+  .link {
+    color: white;
+  }
+
+  .switchNetwork {
+    color: white;
+    background: transparent;
+  }
+
+  .hashAddress {
+    color: white;
+  }
+}
+
 .link {
   @include active();
   font-weight: 600;
