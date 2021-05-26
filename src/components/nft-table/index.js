@@ -23,11 +23,11 @@ const NftTable = ({ data, mode, onChange, nftIds }) => {
               <div className={styles.td} style={{ width: 200 }}>
                 <div className={styles.tdWrapper}>
                   <div className={styles.title}> {nft.name} </div>
-                  <img src={nft.image.replace('gateway.pinata', 'digitalax.mypinata')} />
+                  <img src={nft.image?.replace('gateway.pinata', 'digitalax.mypinata')} />
                 </div>
               </div>
               <div className={styles.td} style={{ width: 150 }}>
-                Matic
+                {mode === 1 ? 'Matic' : 'Ethereum'}
               </div>
               <div className={styles.td} style={{ width: 170 }}>
                 <label className={styles.checkContainer}>

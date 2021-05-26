@@ -32,7 +32,7 @@ const Withdraw = () => {
 
   useEffect(() => {
     if (user) {
-      const pendings = user.withdrawalTxs.filter((tx) => tx.status === 'pending');
+      const pendings = user.withdrawalTxs.filter((tx) => tx.status.includes('pending'));
       setPendingWithdrawals(pendings);
     }
   }, [user]);
@@ -147,7 +147,11 @@ const Withdraw = () => {
       />
       <hr />
       <div className={styles.actions}>
-        <button className={styles.pendingWithdrawalsBtn}> pending withdrawals </button>
+        {pendingWithdrawals.length ? (
+          <Link href={`/bridge/withdraw/pending/${id}`}>
+            <a className={styles.pendingWithdrawalsBtn}> pending withdrawals </a>
+          </Link>
+        ) : null}
         {nftIds.length ? (
           <button className={styles.bridgeBtn} onClick={onBridgeNft}>
             {approvedChildTunnel ? 'Bridge' : 'Approve'}

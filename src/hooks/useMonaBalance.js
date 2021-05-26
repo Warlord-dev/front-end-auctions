@@ -50,7 +50,6 @@ export function useMonaBalance() {
 
   useEffect(() => {
     if (account && posClientParent && posClientChild) {
-      console.log('this is fetch mona balance');
       fetchMonaBalance();
     }
   }, [isMainnet, posClientChild, posClientParent, user]);

@@ -23,7 +23,9 @@ const Pending = () => {
 
   useEffect(() => {
     if (user.withdrawalTxs && user.withdrawalTxs.length) {
-      setPendingWithdrawals(user.withdrawalTxs.filter((tx) => tx.status === 'pending'));
+      setPendingWithdrawals(
+        user.withdrawalTxs.filter((tx) => tx.status === 'pending' || tx.status === 'pending-721'),
+      );
     }
   }, [user]);
 

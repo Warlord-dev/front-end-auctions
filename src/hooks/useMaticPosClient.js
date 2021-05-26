@@ -9,7 +9,6 @@ import { useIsMainnet } from './useIsMainnet';
 export default function useMaticPosClient() {
   const account = useSelector(getAccount);
   const isMainnet = useIsMainnet();
-  console.log('this is isMainnet', isMainnet);
 
   const [posClientParent, setPosClientParent] = useState();
   const [posClientChild, setPosClientChild] = useState();

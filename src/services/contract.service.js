@@ -1,6 +1,7 @@
 import ERC721ABIv0 from '@constants/erc721_abi_V0.json';
 import ERC721ABIv1 from '@constants/erc721_abi_V1.json';
 import ERC721ABIv2 from '@constants/erc721_abi_V2.json';
+import childTunnelAbi from '@constants/child_tunnel_abi.json';
 import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
 import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json';
@@ -460,6 +461,6 @@ export const getTokenPriceMatic = async () =>
 
 export const getChildTunnelContract = (chainId) => {
   const address = getChildTunnelAddressV2ByChainId(chainId);
-  const contract = new window.web3.eth.Contract(ERC721ABIv2, address);
+  const contract = new window.web3.eth.Contract(childTunnelAbi, address);
   return contract;
 };

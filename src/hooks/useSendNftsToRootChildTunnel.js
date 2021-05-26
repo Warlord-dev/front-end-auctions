@@ -27,6 +27,7 @@ const useSendNFTsToRootChildTunnel = () => {
         ...oldIds.map((nftId, index) => ({
           txHash: res.transactionHash,
           amount: nftId,
+          tokenType: 'NFT SKINS',
           status: 'pending-721',
           created: new Date(),
           sendNftsToRootTokenIds: oldIds,
