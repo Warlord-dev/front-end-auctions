@@ -22,6 +22,43 @@
             font-style: normal;
             font-weight: bold;
             font-size: 20px;
+
+            .help {
+                border: 2px solid;
+                border-radius: 50%;
+                transform: translate(5px, -10px);
+                position: relative;
+                display: inline-block;
+                padding: 0.3rem;
+                line-height: 8px;
+                font-weight: normal;
+                font-size: 18px;
+                cursor: pointer;
+
+                .tooltip {
+                    visibility: hidden;
+                    width: 170px;
+                    position: absolute;
+                    left: 1rem;
+                    z-index: 1;
+                    background: #111111;
+                    border: 0.2px solid #000000;
+                    box-sizing: border-box;
+                    padding: .5rem;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 8px;
+                    line-height: 10px;
+                    text-align: center;
+
+                    color: #FFFFFF;
+                }
+
+                &:hover .tooltip {
+                    visibility: visible;
+                }
+            }
         }
 
         .body {
@@ -34,6 +71,11 @@
     
         .header {
             border-bottom: 2px solid #8B8B8B;
+
+            .help {
+                border-color: #8B8B8B;
+                color: #8B8B8B;
+            }
         }
     }
     
@@ -42,6 +84,11 @@
     
         .header {
             border-bottom: 2px solid #EA882D;
+
+            .help {
+                border-color: #EA882D;
+                color: #EA882D;
+            }
         }
     }
     
@@ -50,6 +97,11 @@
     
         .header {
             border-bottom: 2px solid #4F2DEA;
+
+            .help {
+                border-color: #4F2DEA;
+                color: #4F2DEA;
+            }
         }
     }
 }

@@ -12,14 +12,20 @@ import { useSelector } from 'react-redux';
 import { getUser } from '@helpers/user.helpers';
 import NftTable from '@components/nft-table';
 import { useEthMaticNFTs } from '@hooks/useEthMaticNFTs';
+import useApproveForChildTunnel from '@hooks/useApproveForChildTunnel';
+import useSendNFTsToRootChildTunnel from '@hooks/useSendNftsToRootChildTunnel';
 
 const Withdraw = () => {
   const router = useRouter();
   const id = parseInt(router.query.id);
   const [pendingWithdrawals, setPendingWithdrawals] = useState([]);
   const [amount, setAmount] = useState('0');
+  const [nftIds, setNftIds] = useState([]);
   const user = useSelector(getUser);
   const { approved, setApproved, approveCallback } = useApproveForMatic(amount);
+  const { approvedChildTunnel, setApprovedChildTunnel, approveForChildTunnel } =
+    useApproveForChildTunnel();
+  const sendNTFsToRootChildTunnel = useSendNFTsToRootChildTunnel();
   const withdrawCallback = useWithdrawFromMatic();
   const [_, monaMaticBalance] = useMonaBalance();
   const [__, maticNfts] = useEthMaticNFTs();
@@ -51,12 +57,40 @@ const Withdraw = () => {
     }
   };
 
+  const onBridgeNft = async () => {
+    if (!approvedChildTunnel) {
+      try {
+        const res = await approveForChildTunnel();
+        toast.success('Successfully approved!');
+      } catch (err) {
+        toast.error(err.message);
+      }
+    } else {
+      try {
+        await sendNTFsToRootChildTunnel(nftIds);
+        setApprovedChildTunnel(false);
+      } catch (err) {
+        toast.error(err.message);
+      }
+    }
+  };
+
   const erc20 = (
     <div className={styles.erc20ModalWrapper}>
       <div className={styles.priceLabel}> current $mona balance on matic </div>
       <div className={styles.price}> {parseFloat(monaMaticBalance).toFixed(2)} $MONA </div>
       <hr />
-      <div className={styles.amountLabel}> select amount to withdraw </div>
+      <div className={styles.amountLabel}>
+        select amount to withdraw
+        <div className={styles.help}>
+          {' '}
+          ?
+          <span className={styles.tooltip}>
+            WITHDRAWING TO ETHEREUM CAN TAKE A COUPLE OF HOURS (~2-3 HOURS). YOU MUST ALSO CLICK
+            “CLAIM ON ETHEREUM” AFTER THE WITHDRAWAL IS COMPLETE.
+          </span>
+        </div>
+      </div>
       <div className={styles.bodyWrapper}>
         <div className={styles.amountWrapper}>
           <div className={styles.amountPrefix}> $MONA </div>
@@ -99,9 +133,26 @@ const Withdraw = () => {
 
   const espaNft = (
     <div className={styles.espaNftModalWrapper}>
-      <NftTable data={maticNfts} mode={1} />
+      <NftTable
+        data={maticNfts}
+        mode={1}
+        nftIds={nftIds}
+        onChange={(id) => {
+          if (nftIds.indexOf(id) >= 0) {
+            setNftIds(nftIds.filter((nftId) => nftId !== id));
+          } else {
+            setNftIds([...nftIds, id]);
+          }
+        }}
+      />
       <hr />
       <div className={styles.actions}>
+        <button className={styles.pendingWithdrawalsBtn}> pending withdrawals </button>
+        {nftIds.length ? (
+          <button className={styles.bridgeBtn} onClick={onBridgeNft}>
+            {approvedChildTunnel ? 'Bridge' : 'Approve'}
+          </button>
+        ) : null}
         <Link href="/bridge">
           <a className={styles.return}>return</a>
         </Link>

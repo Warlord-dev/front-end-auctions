@@ -48,7 +48,17 @@ const Deposite = () => {
       <div className={styles.priceLabel}> current $mona balance on ethereum </div>
       <div className={styles.price}> {parseFloat(monaEthBalance).toFixed(2)} $MONA </div>
       <hr />
-      <div className={styles.amountLabel}> select amount to deposite </div>
+      <div className={styles.amountLabel}>
+        select amount to deposite
+        <div className={styles.help}>
+          {' '}
+          ?
+          <span className={styles.tooltip}>
+            IT TAKES UP TO 10 MINUTES FOR YOUR BALANCE TO BE REFLECTED ON MATIC, ONCE THE
+            TRANSACTION IS CONFIRMED ON ETHEREUM.
+          </span>
+        </div>
+      </div>
       <div className={styles.bodyWrapper}>
         <div className={styles.amountWrapper}>
           <div className={styles.amountPrefix}> $MONA </div>

@@ -13,6 +13,7 @@ import {
   getDTXV1AddressByChainId,
   getUSDTAddressByChainId,
   getUpgraderAddressByChainId,
+  getChildTunnelAddressV2ByChainId,
 } from './network.service';
 
 import DigiMaterialV2ABI from '../constants/digi_material_v2_abi.json';
@@ -456,3 +457,9 @@ export const getTokenPriceMatic = async () =>
       resolve(1);
     }
   });
+
+export const getChildTunnelContract = (chainId) => {
+  const address = getChildTunnelAddressV2ByChainId(chainId);
+  const contract = new window.web3.eth.Contract(ERC721ABIv2, address);
+  return contract;
+};

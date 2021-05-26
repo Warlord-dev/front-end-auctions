@@ -28,7 +28,7 @@ import useERC721WithdrawFromMatic from '@hooks/useERC721WithdrawToEthereum';
 import useERC721ExitFromMatic from '@hooks/useERC721ExitFromMatic';
 import { useDTXTokenIds } from '@hooks/useERC721TokenId';
 import { useDTXV1TokenIds } from '@hooks/useERC721V1TokenId';
-import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot.hooks';
+import useSendNFTsToRoot from '@hooks/useSendNFTsToRoot';
 import userActions from '@actions/user.actions';
 import styles from './styles.module.scss';
 import UpgradeNFTModal from './UpgradeNFTModal';

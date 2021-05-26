@@ -59,7 +59,7 @@ export const getDesignersByIds = gql`
   query getDesignersByIds($ids: [ID!]) {
     digitalaxGarmentDesigners(first: 1000, where: { id_in: $ids }) {
       id
-      garments(first:1000) {
+      garments(first: 1000) {
         id
         tokenUri
       }
@@ -164,6 +164,24 @@ export const getResultedAuctionsByEndTimeGt = gql`
       }
       topBid
       lastBidTime
+    }
+  }
+`;
+
+export const getDigitalaxCollectorV2 = gql`
+  query digitalaxCollectorV2($id: ID!) {
+    digitalaxCollectorV2(id: $id) {
+      id
+      parentsOwned {
+        id
+        description
+        designer
+        tokenUri
+        animation
+        image
+        owner
+        name
+      }
     }
   }
 `;

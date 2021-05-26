@@ -49,6 +49,14 @@
     "mumbai": "0x194202479730987db2b1a9d61083333d7336b3fb",
     "matic": ""
   },
+  "CHILD_TUNNEL_V2_ADDRESS": {
+    "mumbai": "0x845f67c37AebC442647092A5697992fDd49FeeD9",
+    "matic": ""
+  },
+  "ROOT_TUNNEL_V2_ADDRESS": {
+    "mainnet": "0xb6ec8b0a52c1bae5b6aa890cd0ec9704398d0d55",
+    "goerli": "0x194202479730987db2b1a9d61083333d7336b3fb"
+  },
   "MONA_TOKEN_ADDRESSES": {
     "mainnet": "0x275f5ad03be0fa221b4c6649b8aee09a42d9412a",
     "rinkeby": "0x13379fe0e6992180ed0ac5174a02479896f9c510",

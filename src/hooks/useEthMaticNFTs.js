@@ -7,12 +7,13 @@ import { useDTXTokenIds } from './useERC721TokenId';
 import { getDTXContract, getDTXMaticContract } from '@services/contract.service';
 import { getEthNfts, getMaticNfts } from '@selectors/global.selectors';
 import globalActions from '@actions/global.actions';
+import apiService from '@services/api/api.service';
 
 export function useEthMaticNFTs() {
   const dispatch = useDispatch();
   const [ethDtxTokenIds, maticDtxTokenIds] = useDTXTokenIds();
-  const ethNfts = useSelector(getEthNfts);
-  const maticNfts = useSelector(getMaticNfts);
+  const ethNfts = useSelector(getEthNfts).toJS();
+  const maticNfts = useSelector(getMaticNfts).toJS();
 
   const account = useSelector(getAccount);
   const isMainnet = useIsMainnet();
@@ -41,16 +42,8 @@ export function useEthMaticNFTs() {
   const fetchNfts = async () => {
     if (account) {
       try {
-        const maticDtxContract = await getDTXMaticContract(isMainnet);
-
-        const maticNftTokenUris = await maticDtxContract.methods
-          .batchTokenURI(maticDtxTokenIds)
-          .call({ from: account });
-        dispatch(
-          globalActions.setMaticNfts(
-            maticNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: maticDtxTokenIds[i] })),
-          ),
-        );
+        const { digitalaxCollectorV2 } = await apiService.getDigitalaxCollectorV2(account);
+        dispatch(globalActions.setMaticNfts(digitalaxCollectorV2.parentsOwned));
       } catch (e) {
         console.log(e);
       }

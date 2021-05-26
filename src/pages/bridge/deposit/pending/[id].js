@@ -15,7 +15,11 @@ const Pending = () => {
 
   return (
     <div className={styles.wrapper}>
-      <BridgeModal title="Pending Deposits" mode={2}>
+      <BridgeModal
+        title="Pending Deposits"
+        headerHelper="IT TAKES UP TO 10 MINUTES FOR YOUR BALANCE TO BE REFLECTED ON MATIC, ONCE THE TRANSACTION IS CONFIRMED ON ETHEREUM."
+        mode={2}
+      >
         <PendingTable data={pendingDepositTxs} mode={2} id={id} />
         <hr />
         <div className={styles.actions}>

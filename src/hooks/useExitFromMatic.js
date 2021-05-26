@@ -26,7 +26,7 @@ export default function useExitFromMatic() {
         .then((res) => {
           const index = existingTxs.findIndex((tx) => tx.txHash === hash);
           const newTxs = [...existingTxs];
-          newTxs.splice(index, 1);
+          newTxs[index].status = 'success';
           dispatch(userActions.updateProfile({ withdrawalTxs: newTxs }));
         })
         .catch((err) => {

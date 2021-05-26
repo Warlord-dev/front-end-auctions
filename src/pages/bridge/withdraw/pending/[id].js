@@ -20,20 +20,12 @@ const Pending = () => {
   const [pendingWithdrawals, setPendingWithdrawals] = useState([]);
   const [filter, setFilter] = useState('');
   const [sort, setSort] = useState('1');
-  // let pendingWithdrawals = user.withdrawalTxs.filter((tx) => tx.status === 'pending');
 
   useEffect(() => {
     if (user.withdrawalTxs && user.withdrawalTxs.length) {
-      console.log('this is user change -- inside', user.withdrawalTxs);
       setPendingWithdrawals(user.withdrawalTxs.filter((tx) => tx.status === 'pending'));
     }
   }, [user]);
-
-  useEffect(() => {
-    if (pendingWithdrawals.length) {
-      console.log('this is pendingWithdrawals', pendingWithdrawals);
-    }
-  }, [pendingWithdrawals]);
 
   const onWithdraw = async (data) => {
     if (id === 1) {
@@ -72,7 +64,11 @@ const Pending = () => {
 
   return (
     <div className={styles.wrapper}>
-      <BridgeModal title="Pending Withdrawals" mode={1}>
+      <BridgeModal
+        title="Pending Withdrawals"
+        headerHelper="WITHDRAWING TO ETHEREUM CAN TAKE A COUPLE OF HOURS (~2-3 HOURS). YOU MUST ALSO CLICK “CLAIM ON ETHEREUM” AFTER THE WITHDRAWAL IS COMPLETE."
+        mode={1}
+      >
         <PendingTable
           filter={filter}
           filterChanged={(e) => setFilter(e.target.value)}

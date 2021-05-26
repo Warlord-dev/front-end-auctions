@@ -2,10 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import styles from './styles.module.scss';
 
-const NftTable = ({ data, mode }) => {
-  // const ;
-  console.log('this is matic nfts', data);
-
+const NftTable = ({ data, mode, onChange, nftIds }) => {
   return (
     <div className={classnames(styles.wrapper, styles[`mode-${mode}`])}>
       <div className={styles.table}>
@@ -21,62 +18,29 @@ const NftTable = ({ data, mode }) => {
           </div>
         </div>
         <div className={styles.body}>
-          <div className={styles.tr}>
-            <div className={styles.td} style={{ width: 200 }}>
-              <img src="/images/burak photo.jpeg" />
+          {data.map((nft) => (
+            <div className={styles.tr} key={nft.id}>
+              <div className={styles.td} style={{ width: 200 }}>
+                <div className={styles.tdWrapper}>
+                  <div className={styles.title}> {nft.name} </div>
+                  <img src={nft.image.replace('gateway.pinata', 'digitalax.mypinata')} />
+                </div>
+              </div>
+              <div className={styles.td} style={{ width: 150 }}>
+                Matic
+              </div>
+              <div className={styles.td} style={{ width: 170 }}>
+                <label className={styles.checkContainer}>
+                  <input
+                    type="checkbox"
+                    className={styles.check}
+                    onChange={(e) => onChange(nft.id)}
+                  />
+                  <span className={styles.checkmark} />
+                </label>
+              </div>
             </div>
-            <div className={styles.td} style={{ width: 150 }}>
-              Matic
-            </div>
-            <div className={styles.td} style={{ width: 170 }}>
-              <label className={styles.checkContainer}>
-                <input type="checkbox" className={styles.check} />
-                <span className={styles.checkmark} />
-              </label>
-            </div>
-          </div>
-          <div className={styles.tr}>
-            <div className={styles.td} style={{ width: 200 }}>
-              <img src="/images/burak photo.jpeg" />
-            </div>
-            <div className={styles.td} style={{ width: 150 }}>
-              Matic
-            </div>
-            <div className={styles.td} style={{ width: 170 }}>
-              <label className={styles.checkContainer}>
-                <input type="checkbox" className={styles.check} />
-                <span className={styles.checkmark} />
-              </label>
-            </div>
-          </div>
-          <div className={styles.tr}>
-            <div className={styles.td} style={{ width: 200 }}>
-              <img src="/images/burak photo.jpeg" />
-            </div>
-            <div className={styles.td} style={{ width: 150 }}>
-              Matic
-            </div>
-            <div className={styles.td} style={{ width: 170 }}>
-              <label className={styles.checkContainer}>
-                <input type="checkbox" className={styles.check} />
-                <span className={styles.checkmark} />
-              </label>
-            </div>
-          </div>
-          <div className={styles.tr}>
-            <div className={styles.td} style={{ width: 200 }}>
-              <img src="/images/burak photo.jpeg" />
-            </div>
-            <div className={styles.td} style={{ width: 150 }}>
-              Matic
-            </div>
-            <div className={styles.td} style={{ width: 170 }}>
-              <label className={styles.checkContainer}>
-                <input type="checkbox" className={styles.check} />
-                <span className={styles.checkmark} />
-              </label>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

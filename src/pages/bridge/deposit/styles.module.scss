@@ -47,6 +47,42 @@
 
             color: #CECECE;
             margin: 2rem 0;
+
+            .help {
+                border: 1px solid #4F2DEA;
+                border-radius: 50%;
+                transform: translate(5px, -10px);
+                position: relative;
+                display: inline-block;
+                padding: 0.3rem;
+                line-height: 8px;
+                color: #4F2DEA;
+                cursor: pointer;
+
+                .tooltip {
+                    visibility: hidden;
+                    width: 170px;
+                    position: absolute;
+                    left: 1rem;
+                    z-index: 1;
+                    background: #111111;
+                    border: 0.2px solid #000000;
+                    box-sizing: border-box;
+                    padding: .5rem;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 8px;
+                    line-height: 10px;
+                    text-align: center;
+
+                    color: #FFFFFF;
+                }
+
+                &:hover .tooltip {
+                    visibility: visible;
+                }
+            }
         }
 
         .bodyWrapper {
