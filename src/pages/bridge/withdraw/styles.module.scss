@@ -1,6 +1,9 @@
 .wrapper {
     hr {
-        border-color: rgba(223, 198, 174, 0.38);
+        border-top: 1px solid rgba(223, 198, 174, 0.38);
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 0;
     }
 
     .erc20ModalWrapper {
@@ -185,6 +188,7 @@
         }
 
         .actions {
+            border-top: 1px solid rgba(223, 198, 174, 0.38);
             padding: 1rem 0;
             display: flex;
             justify-content: flex-end;
@@ -209,6 +213,7 @@
 
     .espaNftModalWrapper {
         .actions {
+            border-top: 1px solid rgba(223, 198, 174, 0.38);
             padding: 1rem 0;
             display: flex;
             justify-content: flex-end;

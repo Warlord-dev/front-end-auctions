@@ -18,7 +18,6 @@ const Bridge = () => {
               <a className={styles.mainBtn}> deposit to matic </a>
             </Link>
           </div>
-          <hr />
         </div>
       </BridgeModal>
     </div>

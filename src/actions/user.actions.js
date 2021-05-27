@@ -26,6 +26,7 @@ class UserActions extends BaseActions {
     return async (dispatch) => {
       try {
         const chainId = await window.web3.eth.getChainId();
+        console.log('this is web3 chainId', chainId);
         const authResult = await Arkane.checkAuthenticated();
         const {
           auth: {

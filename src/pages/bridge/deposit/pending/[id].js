@@ -21,7 +21,6 @@ const Pending = () => {
         mode={2}
       >
         <PendingTable data={pendingDepositTxs} mode={2} id={id} />
-        <hr />
         <div className={styles.actions}>
           <Link href="/bridge">
             <a className={styles.return}>return</a>

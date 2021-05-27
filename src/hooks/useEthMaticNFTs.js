@@ -2,9 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getAccount } from '@selectors/user.selectors';
-import { useIsMainnet } from './useIsMainnet';
 import { useDTXTokenIds } from './useERC721TokenId';
-import { getDTXContract, getDTXMaticContract } from '@services/contract.service';
 import { getEthNfts, getMaticNfts } from '@selectors/global.selectors';
 import globalActions from '@actions/global.actions';
 import apiService from '@services/api/api.service';
@@ -16,23 +14,13 @@ export function useEthMaticNFTs() {
   const maticNfts = useSelector(getMaticNfts).toJS();
 
   const account = useSelector(getAccount);
-  const isMainnet = useIsMainnet();
 
   const fetchEthNfts = async () => {
+    console.log({ account });
     if (account) {
       try {
-        const dtxContract = await getDTXContract(isMainnet);
-        const ethNftTokenUris = await Promise.all(
-          ethDtxTokenIds.map((i) =>
-            dtxContract.methods.tokenURI(parseInt(i)).call({ from: account }),
-          ),
-        );
-
-        dispatch(
-          globalActions.setEthNfts(
-            ethNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: ethDtxTokenIds[i] })),
-          ),
-        );
+        const { digitalaxCollector } = await apiService.getDigitalaxCollector(account);
+        dispatch(globalActions.setEthNfts(digitalaxCollector.parentsOwned));
       } catch (e) {
         console.log(e);
       }

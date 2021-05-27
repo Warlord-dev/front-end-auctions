@@ -12,7 +12,8 @@
     "mainnet": "https://api.thegraph.com/subgraphs/name/digitalax/digitalax",
     "rinkeby": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxropsten",
     "mumbai": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxmumbai",
-    "matic": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxmatic"
+    "matic": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxmatic",
+    "goerli": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxgoerli"
   },
   "DEFAULT_NETWORK": "matic",
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
@@ -55,7 +56,7 @@
   },
   "ROOT_TUNNEL_V2_ADDRESS": {
     "mainnet": "0xb6ec8b0a52c1bae5b6aa890cd0ec9704398d0d55",
-    "goerli": "0x194202479730987db2b1a9d61083333d7336b3fb"
+    "goerli": "0xB7c06e7EE83E42d0201591a7af60ED14d5d79875"
   },
   "MONA_TOKEN_ADDRESSES": {
     "mainnet": "0x275f5ad03be0fa221b4c6649b8aee09a42d9412a",

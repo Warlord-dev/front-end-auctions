@@ -41,6 +41,7 @@ const NftTable = ({ data, mode, onChange, nftIds }) => {
               </div>
             </div>
           ))}
+          {!data.length ? <p className={styles.noData}> No Data </p> : null}
         </div>
       </div>
     </div>

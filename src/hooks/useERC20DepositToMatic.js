@@ -42,6 +42,7 @@ export default function useDepositToMatic() {
                 {
                   txHash: res.transactionHash,
                   amount: parseFloat(amount),
+                  tokenType: 'ERC-20',
                   status: 'pending',
                   created: new Date(),
                 },

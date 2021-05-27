@@ -28,7 +28,6 @@ const Options = () => {
               <a className={styles.mainBtn}> ERC-1155 NFTs </a>
             </Link>
           </div>
-          <hr />
           <div className={styles.actions}>
             <Link href="/bridge">
               <a className={classnames(styles.return, styles[`return-${id}`])}> return </a>

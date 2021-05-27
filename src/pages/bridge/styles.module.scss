@@ -3,12 +3,10 @@
     height: 100%;
 
     .modalBodyWrapper {
-        hr {
-            border-color: rgba(223, 198, 174, 0.38);
-            margin-bottom: 5rem;
-        }
-
         .bodyWrapper {
+            border: 0;
+            border-bottom: 1px solid rgba(223, 198, 174, 0.38);
+            margin-bottom: 5rem;
             padding: 2rem 2rem 4rem;
             display: flex;
             align-items: center;
@@ -25,7 +23,7 @@
                 border-radius: 5px;
                 font-family: Inter;
                 font-style: normal;
-                // font-weight: bold;
+                font-weight: 600;
                 text-align: center;
                 margin: 0 .5rem;
     

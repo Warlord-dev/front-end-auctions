@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
@@ -12,18 +12,31 @@ import useDepositToMatic from '@hooks/useERC20DepositToMatic';
 import { useMonaBalance } from '@hooks/useMonaBalance';
 import { useEthMaticNFTs } from '@hooks/useEthMaticNFTs';
 import NftTable from '@components/nft-table';
+import useApproveForRootTunnel from '@hooks/useApproveForRootTunnel';
+import useSendNftsToChildRootTunnel from '@hooks/useSendNftsToChildRootTunnel';
 
 const Deposite = () => {
   const router = useRouter();
   const id = parseInt(router.query.id);
   const [amount, setAmount] = useState('0');
+  const [nftIds, setNftIds] = useState([]);
+  const [pendingDeposits, setPendingDeposits] = useState([]);
   const user = useSelector(getUser);
   const { approved, setApproved, approveCallback } = useApproveForMatic(amount);
+  const { approvedRootTunnel, setApprovedRootTunnel, approveForRootTunnel } =
+    useApproveForRootTunnel();
   const [monaEthBalance] = useMonaBalance();
   const depositCallback = useDepositToMatic();
-  const pendingDeposits = (user.depositTxs || []).filter((tx) => tx.status === 'pending');
+  const sendNftsToChildRootTunnel = useSendNftsToChildRootTunnel();
   const titles = ['$MONA ERC-20', 'ESPA NFT SKINS', 'DIGIFIZZY ERC-998 BUNDLE', 'ERC-1155 NFTs'];
-  const [ethNfts, __] = useEthMaticNFTs();
+  const [ethNfts] = useEthMaticNFTs();
+
+  useEffect(() => {
+    if (user) {
+      const pendings = user.depositTxs.filter((tx) => tx.status.includes('pending'));
+      setPendingDeposits(pendings);
+    }
+  }, [user]);
 
   const onDeposit = async () => {
     if (!approved) {
@@ -43,11 +56,31 @@ const Deposite = () => {
     }
   };
 
+  const onDepositNft = async () => {
+    console.log({ approvedRootTunnel });
+    if (!approvedRootTunnel) {
+      try {
+        console.log('this is approve inside');
+        const res = await approveForRootTunnel();
+        toast.success('Successfully approved!');
+      } catch (err) {
+        toast.error(err.message);
+      }
+    } else {
+      try {
+        const res = await sendNftsToChildRootTunnel(nftIds);
+        setNftIds([]);
+        setApprovedRootTunnel(false);
+      } catch (err) {
+        toast.error(err.message);
+      }
+    }
+  };
+
   const erc20 = (
     <div className={styles.erc20ModalWrapper}>
       <div className={styles.priceLabel}> current $mona balance on ethereum </div>
       <div className={styles.price}> {parseFloat(monaEthBalance).toFixed(2)} $MONA </div>
-      <hr />
       <div className={styles.amountLabel}>
         select amount to deposite
         <div className={styles.help}>
@@ -92,7 +125,6 @@ const Deposite = () => {
           ) : null}
         </div>
       </div>
-      <hr />
       <div className={styles.actions}>
         <Link href="/bridge">
           <a className={styles.return}> return </a>
@@ -103,9 +135,29 @@ const Deposite = () => {
 
   const espaNft = (
     <div className={styles.espaNftModalWrapper}>
-      <NftTable data={ethNfts} mode={2} />
-      <hr />
+      <NftTable
+        data={ethNfts}
+        mode={2}
+        nftIds={nftIds}
+        onChange={(id) => {
+          if (nftIds.indexOf(id) >= 0) {
+            setNftIds(nftIds.filter((nftId) => nftId !== id));
+          } else {
+            setNftIds([...nftIds, id]);
+          }
+        }}
+      />
       <div className={styles.actions}>
+        {pendingDeposits.length ? (
+          <Link href={`/bridge/deposit/pending/${id}`}>
+            <a className={styles.pendingDepositsBtn}> pending deposits </a>
+          </Link>
+        ) : null}
+        {nftIds.length ? (
+          <button className={styles.bridgeBtn} onClick={onDepositNft}>
+            {approvedRootTunnel ? 'Deposit' : 'Approve'}
+          </button>
+        ) : null}
         <Link href="/bridge">
           <a className={styles.return}>return</a>
         </Link>

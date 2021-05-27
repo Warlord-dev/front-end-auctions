@@ -9,30 +9,36 @@ import styles from './styles.module.scss';
 import useERC20Exit from '@hooks/useERC20Exit';
 import useExitFromMatic from '@hooks/useExitFromMatic';
 import { toast } from 'react-toastify';
+import useRootTunnelReceiveMessage from '@hooks/useRootTunnelV2ReceiveMessage';
 
 const Pending = () => {
   const dispatch = useDispatch();
   const router = useRouter();
+  const [pendingWithdrawals, setPendingWithdrawals] = useState([]);
+  const [filter, setFilter] = useState('');
+  const [sort, setSort] = useState('1');
   const id = parseInt(router.query.id);
   const user = useSelector(getUser);
   // const erc20Exit = useERC20Exit();
   const erc20ExitCallback = useExitFromMatic();
-  const [pendingWithdrawals, setPendingWithdrawals] = useState([]);
-  const [filter, setFilter] = useState('');
-  const [sort, setSort] = useState('1');
-
+  const rootTunnelReceiveMessage = useRootTunnelReceiveMessage();
+  console.log({ pendingWithdrawals });
   useEffect(() => {
     if (user.withdrawalTxs && user.withdrawalTxs.length) {
-      setPendingWithdrawals(
-        user.withdrawalTxs.filter((tx) => tx.status === 'pending' || tx.status === 'pending-721'),
-      );
+      setPendingWithdrawals(user.withdrawalTxs.filter((tx) => tx.amount));
     }
   }, [user]);
 
   const onWithdraw = async (data) => {
     if (id === 1) {
       try {
-        await erc20ExitCallback(data.txHash);
+        await erc20ExitCallback(data.rows[0].txHash);
+      } catch (err) {
+        toast.error(err.message);
+      }
+    } else if (id === 2) {
+      try {
+        await rootTunnelReceiveMessage(data.rows);
       } catch (err) {
         toast.error(err.message);
       }
@@ -81,7 +87,6 @@ const Pending = () => {
           mode={1}
           onWithdraw={onWithdraw}
         />
-        <hr />
         <div className={styles.actions}>
           <Link href="/bridge">
             <a className={styles.return}>return</a>

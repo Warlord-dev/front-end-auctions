@@ -185,3 +185,21 @@ export const getDigitalaxCollectorV2 = gql`
     }
   }
 `;
+
+export const getDigitalaxCollector = gql`
+  query digitalaxCollector($id: ID!) {
+    digitalaxCollector(id: $id) {
+      id
+      parentsOwned {
+        id
+        description
+        designer
+        tokenUri
+        animation
+        image
+        owner
+        name
+      }
+    }
+  }
+`;

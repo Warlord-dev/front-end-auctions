@@ -1,10 +1,7 @@
 
 .wrapper {
-    hr {
-        border-color: rgba(223, 198, 174, 0.38);
-    }
-
     .actions {
+        border-top: 1px solid rgba(223, 198, 174, 0.38);
         padding: 1rem 0;
         display: flex;
         justify-content: flex-end;

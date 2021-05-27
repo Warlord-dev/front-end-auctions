@@ -68,6 +68,7 @@ const Withdraw = () => {
     } else {
       try {
         await sendNTFsToRootChildTunnel(nftIds);
+        setNftIds([]);
         setApprovedChildTunnel(false);
       } catch (err) {
         toast.error(err.message);
@@ -122,7 +123,6 @@ const Withdraw = () => {
           ) : null}
         </div>
       </div>
-      <hr />
       <div className={styles.actions}>
         <Link href="/bridge">
           <a className={styles.return}>return</a>
@@ -145,7 +145,6 @@ const Withdraw = () => {
           }
         }}
       />
-      <hr />
       <div className={styles.actions}>
         {pendingWithdrawals.length ? (
           <Link href={`/bridge/withdraw/pending/${id}`}>
