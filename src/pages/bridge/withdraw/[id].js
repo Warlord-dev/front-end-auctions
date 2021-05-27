@@ -36,7 +36,7 @@ const Withdraw = () => {
 
   useEffect(() => {
     if (user) {
-      const pendings = (user.withdrawalTxs || []).filter((tx) => tx.status.includes('pending'));
+      const pendings = (user?.withdrawalTxs || []).filter((tx) => tx.status.includes('pending'));
       setPendingWithdrawals(pendings);
     }
   }, [user]);

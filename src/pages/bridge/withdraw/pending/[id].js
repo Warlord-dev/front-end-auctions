@@ -21,9 +21,9 @@ const Pending = () => {
   const user = useSelector(getUser);
   const erc20ExitCallback = useExitFromMatic();
   const rootTunnelReceiveMessage = useRootTunnelReceiveMessage();
-  console.log({ pendingWithdrawals });
+
   useEffect(() => {
-    if (user.withdrawalTxs && user.withdrawalTxs.length) {
+    if (user?.withdrawalTxs && user.withdrawalTxs.length) {
       setPendingWithdrawals(user.withdrawalTxs.filter((tx) => tx.amount));
     }
   }, [user]);

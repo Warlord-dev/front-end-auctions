@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { Provider, useDispatch, useSelector } from 'react-redux';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import withRedux from 'next-redux-wrapper';
 import { deserialize, serialize } from 'json-immutable/lib';
 import PropTypes from 'prop-types';
@@ -20,6 +20,7 @@ import config from '../utils/config';
 import '../assets/scss/global.scss';
 import Particles from '@components/particles';
 import LoadingOverlay from 'react-loading-overlay';
+import { getAccount } from '@selectors/user.selectors';
 
 if (config.SENTRY_DSN) {
   Sentry.init({
@@ -46,9 +47,14 @@ const InitWrapper = (props) => {
 const NetworkWrapper = (props) => {
   const chainId = useSelector(getChainId);
   const network = getEnabledNetworkByChainId(chainId);
+  const account = useSelector(getAccount);
 
   if (!network) {
     return null;
+  }
+
+  if (!account) {
+    toast.error('Please connect your wallet!');
   }
 
   return props.children;

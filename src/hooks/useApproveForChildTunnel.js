@@ -19,7 +19,7 @@ export default function useApproveForChildTunnel() {
   const childTunnelAddress = getChildTunnelAddressV2ByChainId(chainId);
 
   const isApprovedForAll = async () => {
-    return await dtxMaticContract.methods
+    return await dtxMaticContract?.methods
       .isApprovedForAll(account, childTunnelAddress)
       .call({ from: account });
   };
@@ -39,7 +39,7 @@ export default function useApproveForChildTunnel() {
         dispatch(globalActions.setIsLoading(true));
         const isApprovedAll = await isApprovedForAll();
         if (!isApprovedAll) {
-          return dtxMaticContract.methods
+          return dtxMaticContract?.methods
             .setApprovalForAll(childTunnelAddress, true)
             .send({ from: account })
             .then((res) => {

@@ -19,7 +19,7 @@ export default function useApproveForRootTunnel() {
   const rootTunnelAddressV2 = getRootTunnelAddressV2ByChainId(chainId);
 
   const isApprovedForAll = async () => {
-    return await dtxContract.methods
+    return await dtxContract?.methods
       .isApprovedForAll(account, rootTunnelAddressV2)
       .call({ from: account });
   };
@@ -39,7 +39,7 @@ export default function useApproveForRootTunnel() {
         dispatch(globalActions.setIsLoading(true));
         const isApprovedAll = await isApprovedForAll();
         if (!isApprovedAll) {
-          return dtxContract.methods
+          return dtxContract?.methods
             .setApprovalForAll(rootTunnelAddressV2, true)
             .send({ from: account })
             .then((res) => {

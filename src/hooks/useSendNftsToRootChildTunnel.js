@@ -11,15 +11,15 @@ const useSendNFTsToRootChildTunnel = () => {
   const chainId = useSelector(getChainId);
   const account = useSelector(getAccount);
   const user = useSelector(getUser);
-  const withdrawalTxs = (user.withdrawalTxs || []).filter((tx) => tx.amount);
+  const withdrawalTxs = (user?.withdrawalTxs || []).filter((tx) => tx.amount);
 
   const sendNTFsToRootChildTunnel = async (tokenIds) => {
     try {
       dispatch(globalActions.setIsLoading(true));
       const parsedTokenIds = tokenIds.map((tokenId) => parseInt(tokenId, 10));
       const childTunnelContract = getChildTunnelContract(chainId);
-      console.log(childTunnelContract);
-      const res = await childTunnelContract.methods
+
+      const res = await childTunnelContract?.methods
         .sendNFTsToRoot(parsedTokenIds)
         .send({ from: account });
       const oldIds = [...tokenIds];

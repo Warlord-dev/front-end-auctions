@@ -16,19 +16,6 @@ export default function useApproveForMatic(amount) {
 
   const [approved, setApproved] = useState(false);
 
-  // useEffect(() => {
-  //   if (posClient && account && chainId) {
-  //     const network = getEnabledNetworkByChainId(chainId);
-  //     posClient
-  //       .getERC20Allowance(account, config.MONA_TOKEN_ADDRESSES[network.alias])
-  //       .then((res) => {
-  //         if (res && res > parseInt(amount)) {
-  //           setApproved(true);
-  //         }
-  //       });
-  //   }
-  // }, [account, posClient, chainId]);
-
   const approveCallback = () => {
     if (posClient && account && chainId) {
       const network = getEnabledNetworkByChainId(chainId);

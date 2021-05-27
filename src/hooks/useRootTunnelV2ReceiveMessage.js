@@ -23,7 +23,7 @@ const useRootTunnelReceiveMessage = () => {
       try {
         const res = await Promise.all(
           hashes.map((hash) => {
-            return rootTunnelContract.methods.receiveMessage(hash.txHash).send({
+            return rootTunnelContract?.methods.receiveMessage(hash.txHash).send({
               from: account,
             });
           }),

@@ -37,7 +37,7 @@ const Deposite = () => {
 
   useEffect(() => {
     if (user) {
-      const pendings = (user.depositTxs || []).filter((tx) => tx.status.includes('pending'));
+      const pendings = (user?.depositTxs || []).filter((tx) => tx.status.includes('pending'));
       setPendingDeposits(pendings);
     }
   }, [user]);
@@ -65,7 +65,6 @@ const Deposite = () => {
   };
 
   const onDepositNft = async () => {
-    console.log({ approvedRootTunnel });
     if (!approvedRootTunnel) {
       try {
         const res = await approveForRootTunnel();

@@ -11,7 +11,7 @@ const Pending = () => {
   const router = useRouter();
   const id = parseInt(router.query.id);
   const user = useSelector(getUser);
-  const pendingDepositTxs = (user.depositTxs || []).filter((tx) => tx.status === 'pending');
+  const pendingDepositTxs = (user?.depositTxs || []).filter((tx) => tx.status === 'pending');
 
   return (
     <div className={styles.wrapper}>

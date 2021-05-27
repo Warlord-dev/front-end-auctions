@@ -1,7 +1,7 @@
-import { toast } from 'react-toastify';
 import moment from 'moment';
 import Web3 from 'web3';
 import BaseActions from '@actions/base-actions';
+import { toast } from 'react-toastify';
 import userActions from '@actions/user.actions';
 import auctionActions from '@actions/auction.actions';
 import auctionPageActions from '@actions/auction.page.actions';
@@ -108,7 +108,6 @@ class GlobalActions extends BaseActions {
     return async (dispatch, getState) => {
       try {
         const monaPerEth = await getTokenPriceMatic();
-        console.log('monaPerEth', monaPerEth);
         dispatch(this.setValue('monaPerEth', convertToEth(monaPerEth)));
       } catch (e) {
         console.error(e);
