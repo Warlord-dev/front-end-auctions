@@ -119,7 +119,13 @@ const PageProductsList = ({ collectionId }) => {
       const { digitalaxGarmentAuctions } = await apiService.getLiveAuctions();
       dispatch(auctionPageActions.updateAuctions(digitalaxGarmentAuctions));
     }
+    const fetchInitialCollections = async () => {
+      const { digitalaxGarmentCollections } = await apiService.getGarmentsCollections();
+      dispatch(collectionActions.mapData(digitalaxGarmentCollections));
+    }
+
     fetchInitialAuctions();
+    fetchInitialCollections();
   }, []);
 
 

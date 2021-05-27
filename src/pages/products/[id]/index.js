@@ -16,13 +16,13 @@ import { useSubscription } from '@hooks/subscription.hooks';
 const Products = () => {
   const router = useRouter();
   const { id } = router.query;
-  const garmentId = id.slice(0, id.length - 1);
+  const garmentId = id;
   const tabIndex = parseInt(id.slice(id.length - 1));
 
   if (tabIndex > 3) {
     return null;
   } //hardcoded
-
+  console.log({garmentId});
   const dispatch = useDispatch();
   const garment = useSelector(getGarmentsById(garmentId));
   const collections = useSelector(getAllCollections);
@@ -32,6 +32,7 @@ const Products = () => {
     const jsCollection = collections.toJS();
     return jsCollection.filter((val) => val.garmentAuctionID === garmentId);
   }, [collections]);
+  console.log({ garment });
 
   const currentMarketplaceOffers = useMemo(() => {
     const jsOffers = marketplaceOffers.toJS();

@@ -188,3 +188,28 @@ export const getResultedAuctionsByEndTimeGt = gql`
     }
   }
 `;
+
+export const getDigitalaxGarmentsCollections = gql`
+query getDigitalaxGarmentsCollections
+  {
+    digitalaxGarmentCollections(first: 1000) {
+      id
+      garmentAuctionID
+      rarity
+      garments(first: 1000) {
+        id
+        designer
+        owner
+        primarySalePrice
+        tokenUri
+        image
+        animation
+        children {
+          id
+          amount
+          tokenUri
+        }
+      }
+    }
+  }
+`;

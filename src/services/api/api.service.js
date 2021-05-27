@@ -11,6 +11,7 @@ import {
   getDesignersByIds,
   getAuctionsHistoryByIds,
   getAuctionContracts,
+  getDigitalaxGarmentsCollections
 } from '@services/api/gql.queries.api.service';
 
 class APIService {
@@ -32,6 +33,10 @@ class APIService {
 
   async getLiveAuctions() {
     return request(this.url, getLiveAuctions);
+  }
+
+  async getGarmentsCollections() {
+    return request(this.url, getDigitalaxGarmentsCollections);
   }
 
   async getAuctionsByIds(ids) {

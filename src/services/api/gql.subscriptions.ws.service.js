@@ -12,7 +12,7 @@ export const onDaysChange = `
 
 export const onAuctionsChange = `
   subscription onAuctionsChange {
-    digitalaxGarmentAuctions(first: 1000, where:{resulted_not_in:[true]}) {
+    digitalaxGarmentAuctions(first: 15, where:{resulted_not_in:[true]}) {
       id
       reservePrice
       endTime
@@ -49,7 +49,7 @@ export const onAuctionsChange = `
 
 export const onAllAuctionsChange = `
   subscription onAuctionsChange {
-    digitalaxGarmentAuctions(first: 1000) {
+    digitalaxGarmentAuctions(first: 15) {
       id
       reservePrice
       endTime
