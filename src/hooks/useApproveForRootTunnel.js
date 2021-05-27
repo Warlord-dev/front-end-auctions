@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getAccount } from '@selectors/user.selectors';
@@ -15,30 +15,47 @@ export default function useApproveForRootTunnel() {
   const isMainnet = useIsMainnet();
 
   const [approvedRootTunnel, setApprovedRootTunnel] = useState(false);
+  const dtxContract = getDTXContract(isMainnet);
+  const rootTunnelAddressV2 = getRootTunnelAddressV2ByChainId(chainId);
 
-  const approveForRootTunnel = () => {
+  const isApprovedForAll = async () => {
+    return await dtxContract.methods
+      .isApprovedForAll(account, rootTunnelAddressV2)
+      .call({ from: account });
+  };
+
+  useEffect(() => {
+    const fetchApprovedAll = async () => {
+      const approved = await isApprovedForAll();
+      setApprovedRootTunnel(approved);
+    };
+
+    fetchApprovedAll();
+  }, []);
+
+  const approveForRootTunnel = async () => {
     if (account && chainId) {
       try {
         dispatch(globalActions.setIsLoading(true));
-        const dtxContract = getDTXContract(isMainnet);
-        console.log({ dtxContract });
-
-        const rootTunnelAddressV2 = getRootTunnelAddressV2ByChainId(chainId);
-        console.log(dtxContract);
-        console.log({ rootTunnelAddressV2 });
-        return dtxContract.methods
-          .setApprovalForAll(rootTunnelAddressV2, true)
-          .send({ from: account })
-          .then((res) => {
-            setApprovedRootTunnel(true);
-            dispatch(globalActions.setIsLoading(false));
-            return res;
-          })
-          .catch((err) => {
-            console.log(err);
-            dispatch(globalActions.setIsLoading(false));
-            throw err;
-          });
+        const isApprovedAll = await isApprovedForAll();
+        if (!isApprovedAll) {
+          return dtxContract.methods
+            .setApprovalForAll(rootTunnelAddressV2, true)
+            .send({ from: account })
+            .then((res) => {
+              setApprovedRootTunnel(true);
+              dispatch(globalActions.setIsLoading(false));
+              return res;
+            })
+            .catch((err) => {
+              dispatch(globalActions.setIsLoading(false));
+              throw err;
+            });
+        } else {
+          setApprovedRootTunnel(true);
+          dispatch(globalActions.setIsLoading(false));
+          return;
+        }
       } catch (err) {
         dispatch(globalActions.setIsLoading(false));
         throw err;

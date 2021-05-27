@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getAccount } from '@selectors/user.selectors';
@@ -15,26 +15,47 @@ export default function useApproveForChildTunnel() {
   const isMainnet = useIsMainnet();
 
   const [approvedChildTunnel, setApprovedChildTunnel] = useState(false);
+  const dtxMaticContract = getDTXMaticContract(isMainnet);
+  const childTunnelAddress = getChildTunnelAddressV2ByChainId(chainId);
 
-  const approveForChildTunnel = () => {
+  const isApprovedForAll = async () => {
+    return await dtxMaticContract.methods
+      .isApprovedForAll(account, childTunnelAddress)
+      .call({ from: account });
+  };
+
+  useEffect(() => {
+    const fetchApprovedAll = async () => {
+      const approved = await isApprovedForAll();
+      setApprovedChildTunnel(approved);
+    };
+
+    fetchApprovedAll();
+  }, []);
+
+  const approveForChildTunnel = async () => {
     if (account && chainId) {
       try {
         dispatch(globalActions.setIsLoading(true));
-        const dtxMaticContract = getDTXMaticContract(isMainnet);
-        const childTunnelAddress = getChildTunnelAddressV2ByChainId(chainId);
-        console.log(dtxMaticContract);
-        return dtxMaticContract.methods
-          .setApprovalForAll(childTunnelAddress, true)
-          .send({ from: account })
-          .then((res) => {
-            setApprovedChildTunnel(true);
-            dispatch(globalActions.setIsLoading(false));
-            return res;
-          })
-          .catch((err) => {
-            dispatch(globalActions.setIsLoading(false));
-            throw err;
-          });
+        const isApprovedAll = await isApprovedForAll();
+        if (!isApprovedAll) {
+          return dtxMaticContract.methods
+            .setApprovalForAll(childTunnelAddress, true)
+            .send({ from: account })
+            .then((res) => {
+              setApprovedChildTunnel(true);
+              dispatch(globalActions.setIsLoading(false));
+              return res;
+            })
+            .catch((err) => {
+              dispatch(globalActions.setIsLoading(false));
+              throw err;
+            });
+        } else {
+          setApprovedChildTunnel(true);
+          dispatch(globalActions.setIsLoading(false));
+          return;
+        }
       } catch (err) {
         dispatch(globalActions.setIsLoading(false));
         throw err;
