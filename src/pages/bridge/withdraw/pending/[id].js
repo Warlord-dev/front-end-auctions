@@ -19,7 +19,6 @@ const Pending = () => {
   const [sort, setSort] = useState('1');
   const id = parseInt(router.query.id);
   const user = useSelector(getUser);
-  // const erc20Exit = useERC20Exit();
   const erc20ExitCallback = useExitFromMatic();
   const rootTunnelReceiveMessage = useRootTunnelReceiveMessage();
   console.log({ pendingWithdrawals });

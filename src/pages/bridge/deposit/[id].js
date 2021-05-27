@@ -14,13 +14,17 @@ import { useEthMaticNFTs } from '@hooks/useEthMaticNFTs';
 import NftTable from '@components/nft-table';
 import useApproveForRootTunnel from '@hooks/useApproveForRootTunnel';
 import useSendNftsToChildRootTunnel from '@hooks/useSendNftsToChildRootTunnel';
+import { getEthNfts } from '@selectors/global.selectors';
+import { useDTXTokenIds } from '@hooks/useERC721TokenId';
 
 const Deposite = () => {
   const router = useRouter();
   const id = parseInt(router.query.id);
   const [amount, setAmount] = useState('0');
   const [nftIds, setNftIds] = useState([]);
+  const [ethDtxTokenIds, maticDtxTokenIds] = useDTXTokenIds();
   const [pendingDeposits, setPendingDeposits] = useState([]);
+  const ethNfts = useSelector(getEthNfts).toJS();
   const user = useSelector(getUser);
   const { approved, setApproved, approveCallback } = useApproveForMatic(amount);
   const { approvedRootTunnel, setApprovedRootTunnel, approveForRootTunnel } =
@@ -29,14 +33,18 @@ const Deposite = () => {
   const depositCallback = useDepositToMatic();
   const sendNftsToChildRootTunnel = useSendNftsToChildRootTunnel();
   const titles = ['$MONA ERC-20', 'ESPA NFT SKINS', 'DIGIFIZZY ERC-998 BUNDLE', 'ERC-1155 NFTs'];
-  const [ethNfts] = useEthMaticNFTs();
+  const [fetchEthNfts] = useEthMaticNFTs();
 
   useEffect(() => {
     if (user) {
-      const pendings = user.depositTxs.filter((tx) => tx.status.includes('pending'));
+      const pendings = (user.depositTxs || []).filter((tx) => tx.status.includes('pending'));
       setPendingDeposits(pendings);
     }
   }, [user]);
+
+  useEffect(() => {
+    fetchEthNfts();
+  }, [ethDtxTokenIds]);
 
   const onDeposit = async () => {
     if (!approved) {
@@ -60,7 +68,6 @@ const Deposite = () => {
     console.log({ approvedRootTunnel });
     if (!approvedRootTunnel) {
       try {
-        console.log('this is approve inside');
         const res = await approveForRootTunnel();
         toast.success('Successfully approved!');
       } catch (err) {

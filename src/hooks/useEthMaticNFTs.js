@@ -1,22 +1,15 @@
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getAccount } from '@selectors/user.selectors';
-import { useDTXTokenIds } from './useERC721TokenId';
-import { getEthNfts, getMaticNfts } from '@selectors/global.selectors';
 import globalActions from '@actions/global.actions';
 import apiService from '@services/api/api.service';
 
 export function useEthMaticNFTs() {
   const dispatch = useDispatch();
-  const [ethDtxTokenIds, maticDtxTokenIds] = useDTXTokenIds();
-  const ethNfts = useSelector(getEthNfts).toJS();
-  const maticNfts = useSelector(getMaticNfts).toJS();
 
   const account = useSelector(getAccount);
 
   const fetchEthNfts = async () => {
-    console.log({ account });
     if (account) {
       try {
         const { digitalaxCollector } = await apiService.getDigitalaxCollector(account);
@@ -38,10 +31,5 @@ export function useEthMaticNFTs() {
     }
   };
 
-  useEffect(() => {
-    fetchNfts();
-    fetchEthNfts();
-  }, [maticDtxTokenIds, ethDtxTokenIds]);
-
-  return [ethNfts, maticNfts];
+  return [fetchEthNfts, fetchNfts];
 }

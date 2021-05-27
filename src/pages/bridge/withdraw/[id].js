@@ -14,6 +14,8 @@ import NftTable from '@components/nft-table';
 import { useEthMaticNFTs } from '@hooks/useEthMaticNFTs';
 import useApproveForChildTunnel from '@hooks/useApproveForChildTunnel';
 import useSendNFTsToRootChildTunnel from '@hooks/useSendNftsToRootChildTunnel';
+import { useDTXTokenIds } from '@hooks/useERC721TokenId';
+import { getMaticNfts } from '@selectors/global.selectors';
 
 const Withdraw = () => {
   const router = useRouter();
@@ -21,21 +23,27 @@ const Withdraw = () => {
   const [pendingWithdrawals, setPendingWithdrawals] = useState([]);
   const [amount, setAmount] = useState('0');
   const [nftIds, setNftIds] = useState([]);
+  const [ethDtxTokenIds, maticDtxTokenIds] = useDTXTokenIds();
   const user = useSelector(getUser);
+  const maticNfts = useSelector(getMaticNfts).toJS();
   const { approved, setApproved, approveCallback } = useApproveForMatic(amount);
   const { approvedChildTunnel, setApprovedChildTunnel, approveForChildTunnel } =
     useApproveForChildTunnel();
   const sendNTFsToRootChildTunnel = useSendNFTsToRootChildTunnel();
   const withdrawCallback = useWithdrawFromMatic();
   const [_, monaMaticBalance] = useMonaBalance();
-  const [__, maticNfts] = useEthMaticNFTs();
+  const [__, fetchNfts] = useEthMaticNFTs();
 
   useEffect(() => {
     if (user) {
-      const pendings = user.withdrawalTxs.filter((tx) => tx.status.includes('pending'));
+      const pendings = (user.withdrawalTxs || []).filter((tx) => tx.status.includes('pending'));
       setPendingWithdrawals(pendings);
     }
   }, [user]);
+
+  useEffect(() => {
+    fetchNfts();
+  }, [maticDtxTokenIds]);
 
   const titles = ['$MONA ERC-20', 'ESPA NFT SKINS', 'DIGIFIZZY ERC-998 BUNDLE', 'ERC-1155 NFTs'];
 

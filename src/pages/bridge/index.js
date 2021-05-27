@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import styles from './styles.module.scss';
 
 const Bridge = () => {
-  const dispatch = useDispatch();
   return (
     <div className={styles.wrapper}>
       <BridgeModal title="matic-eth bridge" mode={0}>
