@@ -27,7 +27,7 @@
             .tr {
                 display: flex;
                 align-items: center;
-                padding: 1rem 0;
+                padding: .5rem 0;
                 
                 .td {
                     font-family: Inter;
@@ -45,9 +45,10 @@
                         align-items: center;
 
                         .title {
-                            margin-bottom: .5rem;
+                            margin: .5rem 0;
                             width: 130px;
                             color: white;
+                            text-align: center;
                         }
                     }
 

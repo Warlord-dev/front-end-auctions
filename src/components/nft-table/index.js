@@ -24,6 +24,7 @@ const NftTable = ({ data, mode, onChange, nftIds }) => {
                 <div className={styles.tdWrapper}>
                   <div className={styles.title}> {nft.name} </div>
                   <img src={nft.image?.replace('gateway.pinata', 'digitalax.mypinata')} />
+                  <div className={styles.title}> #{nft.id} </div>
                 </div>
               </div>
               <div className={styles.td} style={{ width: 150 }}>
