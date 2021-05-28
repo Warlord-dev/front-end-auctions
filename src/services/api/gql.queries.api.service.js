@@ -167,3 +167,47 @@ export const getResultedAuctionsByEndTimeGt = gql`
     }
   }
 `;
+
+export const getCollectorsById = gql`
+  query getCollectorsById($id: ID!) {
+    digitalaxCollectors(where: {id: $id}) {
+      id
+      parentsOwned {
+        id
+        name
+        image
+        description
+        animation
+        tokenUri
+        primarySalePrice
+        attributes{
+          id
+          type
+          value
+        }
+      }
+    }
+  }
+`;
+
+export const getCollectorsV2ById = gql`
+  query getCollectorsV2ById($id: ID!) {
+    digitalaxCollectorV2S(where: {id: $id}) {
+      id
+      parentsOwned {
+        id
+        name
+        image
+        description
+        animation
+        tokenUri
+        primarySalePrice
+        attributes{
+          id
+          type
+          value
+        }
+      }
+    }
+  }
+`;
