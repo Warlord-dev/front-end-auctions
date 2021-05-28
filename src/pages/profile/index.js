@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 import copy from 'copy-to-clipboard';
 import { useSelector, useDispatch } from 'react-redux';
@@ -11,6 +11,7 @@ import { useProfile, useNFTs } from '@hooks/espa/user.hooks';
 import accountActions from '@actions/user.actions';
 import Loader from '@components/loader';
 import styles from './styles.module.scss';
+import apiService from '@services/api/api.service';
 
 const Profile = ({ history }) => {
   const user = useSelector(getUser);
@@ -19,7 +20,29 @@ const Profile = ({ history }) => {
     dispatch(accountActions.checkStorageAuth());
   }
   const account = user.get('wallet');
-  const nfts = useNFTs(account);
+  const [nfts, setNfts] = useState([]);
+  const [nftV2s, setNftV2s] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchNfts = async () => {
+      const { digitalaxCollectors } = await apiService.getCollectorsById(account);
+      const { digitalaxCollectorV2S } = await apiService.getCollectorsV2ById(account);
+      if (digitalaxCollectors.length) {
+        if (digitalaxCollectors[0].parentsOwned?.length) {
+          setNfts(digitalaxCollectors[0].parentsOwned);
+        }
+      }
+      if (digitalaxCollectorV2S.length) {
+        if (digitalaxCollectorV2S[0].parentsOwned?.length) {
+          setNftV2s(digitalaxCollectorV2S[0].parentsOwned);
+        }
+      }
+      setLoading(false);
+    }
+
+    fetchNfts();
+  }, []);
 
   const getGameTags = (str) => {
     if (!str) {
@@ -38,7 +61,7 @@ const Profile = ({ history }) => {
     toast("Wallet Address is copied to the clipboard");
   };
 
-  if (!user || !nfts) {
+  if (!user || loading) {
     return <Loader size="large" className={styles.loader} />;
   }
 
@@ -82,6 +105,9 @@ const Profile = ({ history }) => {
         <div className={styles.divider} />
         <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
           {nfts.map((nft) => (
+            <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
+          ))}
+          {nftV2s.map((nft) => (
             <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
           ))}
         </ul>

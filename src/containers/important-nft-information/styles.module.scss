@@ -2,12 +2,11 @@
 @import "../../assets/scss/helpers/helpers.scss";
 
 .smallWhite {
-  margin: 0 12px 0 12px;
+  margin: 10px;
   background-color: #fff;
-  padding: 18px 16px 16px 24px;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
-  min-height: 160px;
   align-items: center;
 
   @media only screen and (max-width: 640px) {
@@ -109,14 +108,38 @@
     min-width: 188px;
   }
 
-  .expirationDateText {
+  .rarityLabel {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: $darkGray1;
-    font-size: 0.5625rem;
+    font-size: 1rem;
     line-height: 11px;
     margin-bottom: 12px;
     font-weight: 900;
+  }
+
+  .rarityText {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.25rem;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #111111;
+  }
+
+  .espaButton {
+    background: #855098;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    color: white;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
   }
 
   .footerBoxRight .buttonSold {

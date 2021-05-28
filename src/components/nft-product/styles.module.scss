@@ -29,7 +29,6 @@
   max-width: 618px;
   // height: 605px;
   // padding: 45px;
-  padding: 15px 0;
 }
 
 .gap {
@@ -71,13 +70,17 @@
 }
 
 .card {
-  background: $lightGray1;
   margin-top: 16px;
   padding-bottom: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  padding: 10px;
+
+  .cardBody {
+    background: $lightGray1;
+  }
 }
 
 .imageWrapper {
@@ -134,4 +137,16 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.common {
+  background: linear-gradient(90deg, #BD004F 0%, #0066FF 100%);
+}
+
+.semi-rare {
+  background: linear-gradient(90deg, #BD004F 0%, #00FFC2 100%);
+}
+
+.exclusive {
+  background: linear-gradient(90deg, #BD004F 0%, #FFC700 100%);
 }
