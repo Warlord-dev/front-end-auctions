@@ -173,7 +173,7 @@ const Deposite = () => {
 
   return (
     <div className={styles.wrapper}>
-      <BridgeModal title={`deposite ${titles[id - 1]}`} mode={2}>
+      <BridgeModal title={`deposit ${titles[id - 1]}`} mode={2}>
         {id === 1 && erc20}
         {id === 2 && espaNft}
       </BridgeModal>
