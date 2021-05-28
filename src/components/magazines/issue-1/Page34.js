@@ -47,18 +47,16 @@ const Page34 = () => {
         Isramae Visales<br />
         Peezy R<br />
         Victor Wiebe<br />
-        Valentina Gomez<br />
-        Haruto<br />
-        Cameron (Ares)<br />
+        Haruto Inoue<br />
+        Cameron Sato<br />
+        James Lin<br />
       </h3>
       <h3 className={styles.content3}>
         Stan McLygin<br />
         Lad<br />
         Jason Kende<br />
         Jason Howard<br />
-        John Jacinto<br />
         Glitch Faced King<br />
-        James Lin<br />
       </h3>
       <h3 className={styles.content4}>
         Robotto Studio<br />
@@ -71,14 +69,11 @@ const Page34 = () => {
       <h3 className={styles.content5}>
         Erick Stow<br />
         Matthew Chaim<br />
-        Brian Benni<br />
         Gregory Gordon<br />
         Tenshi Girl<br />
-        FlowersWithPowers<br />
-        Blade Runway<br />
+        Aditya<br />
       </h3>
       <h3 className={styles.content6}>
-        Aditya<br />
         Charbakd<br />
         Villa Karolina<br />
         Domingo Bette Encour<br />
@@ -91,7 +86,6 @@ const Page34 = () => {
         Ravi Singh<br />
         Lorena Bello<br />
         Rafi 0x<br />
-        Yu<br />
         Alyona Briukhanova<br />
       </h3>
       <h3 className={styles.content8}>
@@ -100,15 +94,15 @@ const Page34 = () => {
         Harrison Kugler<br />
         Cleora<br />
         HYPERREAALIYAH<br />
-        Singe
+        Singe<br />
+        Edward Harber
       </h3>
       <h3 className={styles.content9}>
         Micha Almeda<br />
-        Stephy Fung<br />
-        Miriam McGovern<br />
         EzinCrypto<br />
         Rizzle<br />
         Annissa<br />
+        Mar Guixa<br />
         YeKaterina Burmatnova 
       </h3>
     </div>
