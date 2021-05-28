@@ -21,7 +21,7 @@ const NFTProduct = ({ name, nft, nftId }) => {
   const [imageUrl, isVideo] = getImageForCardProduct(nft);
   const designerName = getDesignerName(nft);
   const designerInfo = useSelector(getDesignerInfoByName(designerName, true));
-  const nftType = nft.attributes.find(item => item.type === 'Degree of Exclusivity');
+  const nftType = nft?.attributes.find(item => item.type === 'Degree of Exclusivity');
 
   return (
     <li className={cn(styles.item)}>
@@ -35,7 +35,7 @@ const NFTProduct = ({ name, nft, nftId }) => {
         photo={designerInfo?.designerPhoto}
         photoIsLink
       />
-      <div className={cn(styles.card, styles[nftType.value.toLowerCase()])}>
+      <div className={cn(styles.card, `${nftType ? styles[nftType.value.toLowerCase()] : ''}`)}>
         <div className={styles.cardBody}>
           <div className={styles.imageWrapper}>
             <Link href="#">

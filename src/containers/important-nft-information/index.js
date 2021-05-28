@@ -58,7 +58,7 @@ const ImportantNFTInformation = ({ nft, nftId, nftType }) => {
       </div>
       <div className={styles.footerBoxRight}>
         <p className={styles.rarityLabel}>RARITY</p>
-        <p className={styles.rarityText}> {nftType.value} </p>
+        <p className={styles.rarityText}> {nftType?.value} </p>
       </div>
     </div>
   );
