@@ -12,7 +12,6 @@ import { toast } from 'react-toastify';
 import useRootTunnelReceiveMessage from '@hooks/useRootTunnelV2ReceiveMessage';
 
 const Pending = () => {
-  const dispatch = useDispatch();
   const router = useRouter();
   const [pendingWithdrawals, setPendingWithdrawals] = useState([]);
   const [filter, setFilter] = useState('');
@@ -42,16 +41,11 @@ const Pending = () => {
         toast.error(err.message);
       }
     }
-    // if (data.amount < 100000) {
-    // } else if (data.amount > 100000) {
-    //   // erc20Exit(hash);
-    // }
   };
 
   const filterSortWithdrawals = () => {
-    const withdrawals = [...pendingWithdrawals];
-    withdrawals.sort((a, b) => {
-      if (sort === 1) {
+    const withdrawals = [...pendingWithdrawals].sort((a, b) => {
+      if (sort === '1') {
         const date1 = new Date(a.created),
           date2 = new Date(b.created);
         if (date1 > date2) return 1;

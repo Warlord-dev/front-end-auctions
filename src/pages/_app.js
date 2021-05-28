@@ -21,6 +21,7 @@ import '../assets/scss/global.scss';
 import Particles from '@components/particles';
 import LoadingOverlay from 'react-loading-overlay';
 import { getAccount } from '@selectors/user.selectors';
+import { useRouter } from 'next/router';
 
 if (config.SENTRY_DSN) {
   Sentry.init({
@@ -71,6 +72,8 @@ const LoadingWrapper = ({ children }) => {
 };
 
 const MyApp = ({ Component, pageProps, store, err }) => {
+  const router = useRouter();
+
   if (err) {
     Sentry.captureException(err, {
       extra: {},
@@ -90,7 +93,7 @@ const MyApp = ({ Component, pageProps, store, err }) => {
         <Modals />
         <NetworkWrapper>
           <LoadingWrapper>
-            <Particles />
+            {router.pathname.includes('bridge') ? <Particles /> : null}
             <Component {...pageProps} />
           </LoadingWrapper>
         </NetworkWrapper>
