@@ -6,6 +6,7 @@ import cn from 'classnames';
 import ReactImageMagnify from 'react-image-magnify';
 import { createGifURL, create2KURL, createPreviewURL } from '@services/imgix.service';
 import styles from './styles.module.scss';
+import LazyLoad from 'react-lazyload';
 
 const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
   const DEFAULT_LARGE_IMAGE = clothesPhotos.find(({ isMain }) => isMain);
@@ -80,9 +81,11 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
               />
             </a>
           ) : (
-            <video autoPlay muted loop className={styles.largeImgWrapper} key={largeImage.video}>
-              <source src={largeImage.video.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
-            </video>
+            <LazyLoad>
+              <video autoPlay muted loop className={styles.largeImgWrapper} key={largeImage.video}>
+                <source src={largeImage.video.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
+              </video>
+            </LazyLoad>
           ))
         )}
       </div>
