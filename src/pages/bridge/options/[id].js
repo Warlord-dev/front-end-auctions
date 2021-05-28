@@ -21,12 +21,18 @@ const Options = () => {
             <Link href={`/bridge/${id === 1 ? 'withdraw' : 'deposit'}/2`}>
               <a className={styles.mainBtn}> ESPA NFT SKINS </a>
             </Link>
-            <Link href={`/bridge/${id === 1 ? 'withdraw' : 'deposit'}/3`}>
+            {/* <Link href={`/bridge/${id === 1 ? 'withdraw' : 'deposit'}/3`}>
               <a className={styles.mainBtn}> DIGIFIZZY ERC-998 BUNDLE </a>
             </Link>
             <Link href={`/bridge/${id === 1 ? 'withdraw' : 'deposit'}/4`}>
               <a className={styles.mainBtn}> ERC-1155 NFTs </a>
-            </Link>
+            </Link> */}
+            {/* <Link> */}
+            <a className={styles.mainBtn}> COMMING SOON </a>
+            {/* </Link> */}
+            {/* <Link> */}
+            <a className={styles.mainBtn}> COMMING SOON </a>
+            {/* </Link> */}
           </div>
           <div className={styles.actions}>
             <Link href="/bridge">
