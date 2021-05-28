@@ -28,10 +28,10 @@ const Options = () => {
               <a className={styles.mainBtn}> ERC-1155 NFTs </a>
             </Link> */}
             {/* <Link> */}
-            <a className={styles.mainBtn}> DIGIFIZZY ERC-998 BUNDLE COMMING SOON </a>
+            <a className={styles.mainBtn}> DIGIFIZZY ERC-998 BUNDLE COMING SOON </a>
             {/* </Link> */}
             {/* <Link> */}
-            <a className={styles.mainBtn}> ERC-155 NFTS COMMING SOON </a>
+            <a className={styles.mainBtn}> ERC-155 NFTS COMING SOON </a>
             {/* </Link> */}
           </div>
           <div className={styles.actions}>
