@@ -28,6 +28,7 @@ export const onAuctionsChange = `
         designer
         primarySalePrice
         tokenUri
+        name
         image
         animation
         children {
@@ -65,6 +66,9 @@ export const onAllAuctionsChange = `
         designer
         primarySalePrice
         tokenUri
+        name
+        image
+        animation
         children {
           amount
           tokenUri
@@ -100,6 +104,9 @@ export const onPreviousAuctionsChange = `
       garment {
         id
         designer
+        name
+        image
+        animation
         primarySalePrice
         tokenUri
         children {
@@ -244,6 +251,9 @@ export const onDigitalaxGarmentsCollectionChange = `
         owner
         primarySalePrice
         tokenUri
+        name
+        image
+        animation
         children {
           id
           amount
@@ -266,6 +276,9 @@ export const onDigitalaxGarmentsCollectionChangeByIds = `
         designer
         owner
         primarySalePrice
+        name
+        image
+        animation
         tokenUri
         children {
           id
@@ -290,6 +303,7 @@ export const getAllDigitalaxGarmentsCollections = `
         owner
         primarySalePrice
         tokenUri
+        name
         image
         animation
         children {

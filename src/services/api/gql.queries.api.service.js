@@ -22,6 +22,7 @@ export const getLiveAuctions = gql`
         designer
         primarySalePrice
         tokenUri
+        name
         image
         animation
         children {
@@ -202,6 +203,7 @@ query getDigitalaxGarmentsCollections
         owner
         primarySalePrice
         tokenUri
+        name
         image
         animation
         children {

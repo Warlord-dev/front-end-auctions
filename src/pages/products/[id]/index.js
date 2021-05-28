@@ -16,7 +16,7 @@ import { useSubscription } from '@hooks/subscription.hooks';
 const Products = () => {
   const router = useRouter();
   const { id } = router.query;
-  const garmentId = id;
+  const garmentId = id.slice(0, id.length - 1);
   const tabIndex = parseInt(id.slice(id.length - 1));
 
   if (tabIndex > 3) {
@@ -32,7 +32,6 @@ const Products = () => {
     const jsCollection = collections.toJS();
     return jsCollection.filter((val) => val.garmentAuctionID === garmentId);
   }, [collections]);
-  console.log({ garment });
 
   const currentMarketplaceOffers = useMemo(() => {
     const jsOffers = marketplaceOffers.toJS();

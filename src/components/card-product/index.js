@@ -39,7 +39,6 @@ const CardProduct = ({
     return null;
   }
 
-  // const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
   const tokenInfo = null;
   const designerInfo = useSelector(getDesignerInfoById(garment.designer));
 
@@ -49,7 +48,7 @@ const CardProduct = ({
     <li className={cn(styles.item, className)}>
       <Link href={`${PRODUCTS}${auctionId}${tabIndex}`}>
         <a className={styles.clothesName}>
-          {tokenInfo && tokenInfo.name ? tokenInfo.name : `ID:${garment.id}`}
+          {garment.name ? garment.name : `ID:${garment.id}`}
         </a>
       </Link>
       <SmallPhotoWithText
@@ -81,13 +80,15 @@ const CardProduct = ({
                       </video>
                     </LazyLoad>
                   ) : (
+                    <div className={styles.clothesPhotoSubWrapper}>
                     <Image
                       className={styles.clothesPhoto}
-                      src={create2KURL(imageUrl.replace('gateway.pinata', 'digitalax.mypinata'))}
+                      src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
                       alt={garment.id}
                       width={'100%'}
                       height={'100%'}
                     />
+                    </div>
                   )
                 ) : null)}
             </a>

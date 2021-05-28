@@ -49,7 +49,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
           >
             <Image
               className={styles.itemLargeImg}
-              src={createGifURL(largeImage.image)}
+              src={largeImage.image.replace('gateway.pinata', 'digitalax.mypinata')}
               alt={clothesName}
             />
           </a>
@@ -67,11 +67,11 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
                 LargeImageClassName={styles.itemLargeImgZoom}
                 {...{
                   smallImage: {
-                    src: create2KURL(largeImage.image),
+                    src: largeImage.image.replace('gateway.pinata', 'digitalax.mypinata'),
                     isFluidWidth: true,
                   },
                   largeImage: {
-                    src: create2KURL(largeImage.image),
+                    src: largeImage.image.replace('gateway.pinata', 'digitalax.mypinata'),
                     width: 1176,
                     height: 1176,
                   },
@@ -81,7 +81,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
             </a>
           ) : (
             <video autoPlay muted loop className={styles.largeImgWrapper} key={largeImage.video}>
-              <source src={largeImage.video} type="video/mp4" />
+              <source src={largeImage.video.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
             </video>
           ))
         )}
