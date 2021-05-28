@@ -1,10 +1,12 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import cn from 'classnames';
 import ReactImageMagnify from 'react-image-magnify';
 import { createGifURL, create2KURL, createPreviewURL } from '@services/imgix.service';
 import styles from './styles.module.scss';
+import LazyLoad from 'react-lazyload';
 
 const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
   const DEFAULT_LARGE_IMAGE = clothesPhotos.find(({ isMain }) => isMain);
@@ -46,9 +48,9 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
             rel="noreferrer"
             className={styles.largeImgWrapper}
           >
-            <img
+            <Image
               className={styles.itemLargeImg}
-              src={createGifURL(largeImage.image)}
+              src={largeImage.image.replace('gateway.pinata', 'digitalax.mypinata')}
               alt={clothesName}
             />
           </a>
@@ -66,11 +68,11 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
                 LargeImageClassName={styles.itemLargeImgZoom}
                 {...{
                   smallImage: {
-                    src: create2KURL(largeImage.image),
+                    src: largeImage.image.replace('gateway.pinata', 'digitalax.mypinata'),
                     isFluidWidth: true,
                   },
                   largeImage: {
-                    src: create2KURL(largeImage.image),
+                    src: largeImage.image.replace('gateway.pinata', 'digitalax.mypinata'),
                     width: 1176,
                     height: 1176,
                   },
@@ -79,9 +81,11 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
               />
             </a>
           ) : (
-            <video autoPlay muted loop className={styles.largeImgWrapper} key={largeImage.video}>
-              <source src={largeImage.video} type="video/mp4" />
-            </video>
+            <LazyLoad>
+              <video autoPlay muted loop className={styles.largeImgWrapper} key={largeImage.video}>
+                <source src={largeImage.video.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
+              </video>
+            </LazyLoad>
           ))
         )}
       </div>
@@ -95,7 +99,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
                 onClick={() => handleClick(item, index)}
               >
                 {item && item.preview ? (
-                  <img
+                  <Image
                     className={styles.itemSmallImg}
                     src={createPreviewURL(item?.preview)}
                     alt={clothesName}

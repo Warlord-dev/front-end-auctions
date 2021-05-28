@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import Link from 'next/link';
+import LazyLoad from 'react-lazyload';
+import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import kebabCase from 'lodash.kebabcase';
 import ImportantProductInformation from '@containers/important-product-information';
@@ -37,16 +39,16 @@ const CardProduct = ({
     return null;
   }
 
-  const tokenInfo = useTokenInfo(garment.tokenUri, [garment.tokenUri]);
+  const tokenInfo = null;
   const designerInfo = useSelector(getDesignerInfoById(garment.designer));
 
-  const [imageUrl, isVideo] = getImageForCardProduct(tokenInfo);
+  const [imageUrl, isVideo] = getImageForCardProduct(garment);
 
   return (
     <li className={cn(styles.item, className)}>
       <Link href={`${PRODUCTS}${auctionId}${tabIndex}`}>
         <a className={styles.clothesName}>
-          {tokenInfo && tokenInfo.name ? tokenInfo.name : `ID:${garment.id}`}
+          {garment.name ? garment.name : `ID:${garment.id}`}
         </a>
       </Link>
       <SmallPhotoWithText
@@ -70,17 +72,23 @@ const CardProduct = ({
                 </video>
               )}
               {(parseInt(garment.id, 10) < 20 || parseInt(garment.id, 10) > 28) &&
-                (tokenInfo && imageUrl ? (
+                (imageUrl ? (
                   isVideo ? (
-                    <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
-                      <source src={imageUrl} type="video/mp4" />
-                    </video>
+                    <LazyLoad>
+                      <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
+                        <source src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
+                      </video>
+                    </LazyLoad>
                   ) : (
-                    <img
+                    <div className={styles.clothesPhotoSubWrapper}>
+                    <Image
                       className={styles.clothesPhoto}
-                      src={create2KURL(imageUrl)}
+                      src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
                       alt={garment.id}
+                      width={'100%'}
+                      height={'100%'}
                     />
+                    </div>
                   )
                 ) : null)}
             </a>

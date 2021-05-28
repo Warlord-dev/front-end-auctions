@@ -12,7 +12,7 @@ export const onDaysChange = `
 
 export const onAuctionsChange = `
   subscription onAuctionsChange {
-    digitalaxGarmentAuctions(first: 1000, where:{resulted_not_in:[true]}) {
+    digitalaxGarmentAuctions(first: 15, where:{resulted_not_in:[true]}) {
       id
       reservePrice
       endTime
@@ -28,6 +28,9 @@ export const onAuctionsChange = `
         designer
         primarySalePrice
         tokenUri
+        name
+        image
+        animation
         children {
           amount
           tokenUri
@@ -47,7 +50,7 @@ export const onAuctionsChange = `
 
 export const onAllAuctionsChange = `
   subscription onAuctionsChange {
-    digitalaxGarmentAuctions(first: 1000) {
+    digitalaxGarmentAuctions(first: 15) {
       id
       reservePrice
       endTime
@@ -63,6 +66,9 @@ export const onAllAuctionsChange = `
         designer
         primarySalePrice
         tokenUri
+        name
+        image
+        animation
         children {
           amount
           tokenUri
@@ -98,6 +104,9 @@ export const onPreviousAuctionsChange = `
       garment {
         id
         designer
+        name
+        image
+        animation
         primarySalePrice
         tokenUri
         children {
@@ -242,6 +251,9 @@ export const onDigitalaxGarmentsCollectionChange = `
         owner
         primarySalePrice
         tokenUri
+        name
+        image
+        animation
         children {
           id
           amount
@@ -264,6 +276,9 @@ export const onDigitalaxGarmentsCollectionChangeByIds = `
         designer
         owner
         primarySalePrice
+        name
+        image
+        animation
         tokenUri
         children {
           id
@@ -288,6 +303,9 @@ export const getAllDigitalaxGarmentsCollections = `
         owner
         primarySalePrice
         tokenUri
+        name
+        image
+        animation
         children {
           id
           amount

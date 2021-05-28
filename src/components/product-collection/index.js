@@ -38,13 +38,13 @@ const CardProduct = ({ collection }) => {
             <Link href={`/collections/${collection.id}`}>
               <a className={styles.clothesPhotoWrapper}>
                 {isVideo ? (
-                  <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
-                    <source src={imageUrl} type="video/mp4" />
+                  <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}>
+                    <source src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
                   </video>
                 ) : (
                   <img
                     className={styles.clothesPhoto}
-                    src={create2KURL(imageUrl)}
+                    src={create2KURL(imageUrl.replace('gateway.pinata', 'digitalax.mypinata'))}
                     alt={collection.id}
                   />
                 )}

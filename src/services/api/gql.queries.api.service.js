@@ -17,6 +17,28 @@ export const getLiveAuctions = gql`
       }
       topBid
       lastBidTime
+      garment {
+        id
+        designer
+        primarySalePrice
+        tokenUri
+        name
+        image
+        animation
+        children {
+          amount
+          tokenUri
+          id
+        }
+      }
+      designer {
+        id
+      }
+      contract {
+        id
+        minBidIncrement
+        bidWithdrawalLockTime
+      }
     }
   }
 `;
@@ -164,6 +186,32 @@ export const getResultedAuctionsByEndTimeGt = gql`
       }
       topBid
       lastBidTime
+    }
+  }
+`;
+
+export const getDigitalaxGarmentsCollections = gql`
+query getDigitalaxGarmentsCollections
+  {
+    digitalaxGarmentCollections(first: 1000) {
+      id
+      garmentAuctionID
+      rarity
+      garments(first: 1000) {
+        id
+        designer
+        owner
+        primarySalePrice
+        tokenUri
+        name
+        image
+        animation
+        children {
+          id
+          amount
+          tokenUri
+        }
+      }
     }
   }
 `;
