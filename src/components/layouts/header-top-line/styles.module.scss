@@ -4,7 +4,6 @@
 
 .wrapper {
   @include wrapper();
-  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,8 +29,8 @@
 }
 
 .floatingNav {
-  border-radius: 2px;
-  box-shadow: 0px 1px 10px #999;
+  // border-radius: 2px;
+  // box-shadow: 0px 1px 10px #999;
 }
 
 .bridgeHeader.floatingNav {
@@ -202,7 +201,7 @@
 
 .notification {
   position: fixed;
-  top: 0px;
+  top: 8px;
   text-align: center;
   width: 100%;
   left: 0;

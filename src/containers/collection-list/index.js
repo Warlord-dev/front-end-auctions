@@ -32,13 +32,13 @@ const collections = [
     id: 1,
     text: 'Collection: Kodomodachi x Charli Cohen',
     designer: 'Kodomodachi',
-    image: 'https://gateway.pinata.cloud/ipfs/QmYvo2f6NfCD75nL49Gy5wi1jEYSh8z7wTHJjnJbV9KJt3',
+    image: 'https://digitalax.mypinata.cloud/ipfs/QmYvo2f6NfCD75nL49Gy5wi1jEYSh8z7wTHJjnJbV9KJt3',
   },
   {
     id: 2,
     text: 'DIGI Bundle',
     designer: 'Digitalax',
-    image: 'https://gateway.pinata.cloud/ipfs/QmQGuYKtqNUKqAqxmHkuYB4qCS9riKW6Eu1SNhBToBc4ry',
+    image: 'https://digitalax.mypinata.cloud/ipfs/QmQGuYKtqNUKqAqxmHkuYB4qCS9riKW6Eu1SNhBToBc4ry',
   },
 ];
 

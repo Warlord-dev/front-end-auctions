@@ -149,7 +149,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
               {linkText}
             </a>
           )}*/}
-          <Link href="https://marketplace.digitalax.xyz">
+          <Link href="https://drip.digitalax.xyz/">
             <a className={styles.link} target="_blank">
               REP YOUR STLE IRL
             </a>

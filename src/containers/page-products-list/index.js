@@ -18,8 +18,11 @@ import wsApi from '@services/api/ws.service';
 import { useSubscription } from '@hooks/subscription.hooks';
 import { useAPY } from '@hooks/apy.hooks';
 import GeneralInformation from './general-information';
+import TextContent from '@containers/page-products-list/text-content';
 import CardList from './card-list';
 import CardListDigi from './card-list-digi';
+import styles from './styles.module.scss';
+import apiService from '@services/api/api.service';
 
 const PageProductsList = ({ collectionId }) => {
   const dispatch = useDispatch();
@@ -111,6 +114,21 @@ const PageProductsList = ({ collectionId }) => {
     []
   );
 
+  useEffect(() => {
+    const fetchInitialAuctions = async () => {
+      const { digitalaxGarmentAuctions } = await apiService.getLiveAuctions();
+      dispatch(auctionPageActions.updateAuctions(digitalaxGarmentAuctions));
+    }
+    const fetchInitialCollections = async () => {
+      const { digitalaxGarmentCollections } = await apiService.getGarmentsCollections();
+      dispatch(collectionActions.mapData(digitalaxGarmentCollections));
+    }
+
+    fetchInitialAuctions();
+    fetchInitialCollections();
+  }, []);
+
+
   const nowTimestamp = Date.now();
 
   const filteredAuctionsTimes = currentAuctions
@@ -165,12 +183,9 @@ const PageProductsList = ({ collectionId }) => {
 
   return (
     <>
-      <GeneralInformation
-        title="All Bids"
-        list={list}
-        timestamp={minTimestampAutcionTime}
-        history={monthResultedAuctions}
-      />
+      <div className={styles.textContent}>
+        <TextContent/>
+      </div>
       {collectionId === '1' ? (
         <CardList
           auctions={currentAuctions}

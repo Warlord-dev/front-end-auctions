@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import kebabCase from 'lodash.kebabcase';
 import ImportantProductInformation from '@containers/important-product-information';
@@ -77,7 +78,7 @@ const CardProductDigi = ({
                       <source src={imageUrl} type="video/mp4" />
                     </video>
                   ) : (
-                    <img
+                    <Image
                       className={styles.clothesPhoto}
                       src={create2KURL(imageUrl)}
                       alt={garment.id}

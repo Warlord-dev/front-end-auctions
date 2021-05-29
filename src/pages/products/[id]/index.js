@@ -22,7 +22,7 @@ const Products = () => {
   if (tabIndex > 3) {
     return null;
   } //hardcoded
-
+  console.log({garmentId});
   const dispatch = useDispatch();
   const garment = useSelector(getGarmentsById(garmentId));
   const collections = useSelector(getAllCollections);
