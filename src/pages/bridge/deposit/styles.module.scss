@@ -1,0 +1,238 @@
+.wrapper {
+    hr {
+        border-top: 1px solid rgba(223, 198, 174, 0.38);
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+    
+    .erc20ModalWrapper {
+        .priceLabel {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 24px;
+            text-transform: uppercase;
+            /* or 185% */
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #CECECE;
+        }
+
+        .price {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 23px;
+            line-height: 28px;
+            text-transform: uppercase;
+            /* identical to box height */
+
+            text-align: center;
+            margin: 2rem 0;
+            color: #4F2DEA;
+        }
+
+        .amountLabel {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 24px;
+            text-transform: uppercase;
+            /* or 185% */
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #CECECE;
+            margin: 2rem 0;
+
+            .help {
+                border: 1px solid #4F2DEA;
+                border-radius: 50%;
+                transform: translate(5px, -10px);
+                position: relative;
+                display: inline-block;
+                padding: 0.3rem;
+                line-height: 8px;
+                color: #4F2DEA;
+                cursor: pointer;
+
+                .tooltip {
+                    visibility: hidden;
+                    width: 170px;
+                    position: absolute;
+                    left: 1rem;
+                    z-index: 1;
+                    background: #111111;
+                    border: 0.2px solid #000000;
+                    box-sizing: border-box;
+                    padding: .5rem;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 8px;
+                    line-height: 10px;
+                    text-align: center;
+
+                    color: #FFFFFF;
+                }
+
+                &:hover .tooltip {
+                    visibility: visible;
+                }
+            }
+        }
+
+        .bodyWrapper {
+            width: 460px;
+            margin: 0 3rem;
+            margin-bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+
+            .amountWrapper {
+                background: #111111;
+                border: 1px solid #4F2DEA;
+                box-sizing: border-box;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                height: 39px;
+                padding: 1rem;
+    
+                .amountPrefix {
+                    color: white;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-transform: uppercase;
+                }
+    
+                .amount {
+                    border: none;
+                    outline: none;
+                    color: white;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    background: transparent;
+                    text-align: right;
+                    flex-grow: 1;
+                    margin-left: .5rem;
+                }
+            }
+    
+            .amountMax {
+                text-align: right;
+                margin: .3rem 0;                
+                
+                button {
+                    border: none;
+                    background: transparent;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #999999;
+                }
+            }
+    
+            .btnGroup {
+                display: flex;
+                align-items: center;
+
+                .btnRightMar {
+                    margin-right: .5rem;
+                }
+
+                .btnLeftMar {
+                    margin-left: .5rem;
+                }
+
+                .btn {
+                    background: #111111;
+                    border: 1px solid #4F2DEA;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    height: 39px;
+                    text-transform: uppercase;
+                    color: white;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 13px;
+                    line-height: 16px;
+                    text-align: center;
+                    letter-spacing: 0.12em;
+                    text-transform: uppercase;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+        
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        .actions {
+            border-top: 1px solid rgba(223, 198, 174, 0.38);
+            padding: 1rem 0;
+            display: flex;
+            justify-content: flex-end;
+
+            .return {
+                padding: .5rem 1rem;
+                text-transform: uppercase;
+                color: white;
+                background: #111111;
+                border-radius: 5px;
+                font-weight: bold;
+                font-family: "Inter";
+                border: 1px solid #4F2DEA;
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+
+    }
+
+    .espaNftModalWrapper {
+        .actions {
+            border-top: 1px solid rgba(223, 198, 174, 0.38);
+            padding: 1rem 0;
+            display: flex;
+            justify-content: flex-end;
+
+            .return, .bridgeBtn, .pendingDepositsBtn {
+                padding: .5rem 1rem;
+                text-transform: uppercase;
+                color: white;
+                background: #111111;
+                border-radius: 5px;
+                font-weight: bold;
+                font-family: "Inter";
+                border: 1px solid #4F2DEA;
+                margin-left: 1rem;
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

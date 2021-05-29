@@ -5,10 +5,13 @@ import cn from 'classnames';
 import { INDEX_PATH } from '@constants/router-constants';
 import styles from './styles.module.scss';
 
-const Logo = ({ className }) => (
+const Logo = ({ className, black }) => (
   <Link href={INDEX_PATH}>
     <a className={cn(className, styles.wrapper)}>
-      <img src="./images/icons/logo.svg" alt="logo" />
+      <p className={styles.logo} style={{ color: black ? 'black' : 'white' }}>
+        {' '}
+        DIGITALAX{' '}
+      </p>
       <p className={styles.description}>The Digital Fashion Engine</p>
     </a>
   </Link>

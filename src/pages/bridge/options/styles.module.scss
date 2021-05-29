@@ -1,0 +1,76 @@
+.wrapper {
+
+    .modalBodyWrapper {
+        display: flex;
+        flex-direction: column;
+
+        .bodyWrapper {
+            padding: 2rem 5rem;
+            padding-bottom: 4rem;
+            display: flex;
+            flex-direction: column;
+
+            .mainBtn {
+                color: white;
+                text-transform: uppercase;
+                background: #111111;
+                width: 300px;
+                padding: .5rem 1rem;
+                box-sizing: border-box;
+                border-radius: 5px;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: bold;
+                text-align: center;
+                cursor: pointer;
+                margin: .5rem 0;
+    
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+
+
+        .actions {
+            border-top: 1px solid rgba(223, 198, 174, 0.38);
+            padding: 1rem 0;
+            display: flex;
+            justify-content: flex-end;
+
+            .return {
+                padding: .5rem 1rem;
+                text-transform: uppercase;
+                color: white;
+                background: #111111;
+                border-radius: 5px;
+                font-weight: bold;
+                font-family: "Inter";
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+
+            .return-1 {
+                border: 1px solid #EA882D;
+            }
+
+            .return-2 {
+                border: 1px solid #4F2DEA;
+            }
+        }
+
+    }
+    .mode-1 {
+        .mainBtn {
+            border: 1px solid #EA882D;
+        }
+    }
+
+    .mode-2 {
+        .mainBtn {
+            border: 1px solid #4F2DEA;
+        }
+    }
+}

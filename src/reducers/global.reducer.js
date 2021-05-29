@@ -1,6 +1,6 @@
 import { createModule } from 'redux-modules';
 import cloneDeep from 'lodash.clonedeep';
-import { Map } from 'immutable';
+import { List, Map } from 'immutable';
 import TransformModules from '../utils/transform-modules';
 
 const DEFAULT_FIELDS = Map({
@@ -12,6 +12,13 @@ const DEFAULT_FIELDS = Map({
   bidWithdrawalLockTime: 0,
   rewards: 0,
   monaPerEth: 0,
+  monaMaticBalance: 0,
+  monaEthBalance: 0,
+  isLoading: false,
+  dtxEthIds: List([]),
+  dtxMaticIds: List([]),
+  ethNfts: List([]),
+  maticNfts: List([]),
 });
 
 export default createModule({

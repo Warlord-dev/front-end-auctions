@@ -34,9 +34,7 @@ export const getAPIUrlByChainId = (chainId) => {
   if (!network || !config.API_URLS[network.alias]) {
     return config.API_URLS[config.DEFAULT_NETWORK];
   }
-  if (network.alias === 'mumbai') return config.API_URLS[network.alias];
-
-  return config.API_URLS[config.DEFAULT_NETWORK];
+  return config.API_URLS[network.alias];
 };
 
 export const getExplorerUrlByChainId = (chainId) => {
@@ -115,4 +113,16 @@ export const getMarketplaceContractAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
   return config.DIGITAL_MARKETPLACE_ADDRESSES[network.alias];
+};
+
+export const getRootTunnelAddressV2ByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.ROOT_TUNNEL_V2_ADDRESS[network.alias];
+};
+
+export const getChildTunnelAddressV2ByChainId = (chainId) => {
+  const network = getEnabledNetworkByChainId(chainId);
+
+  return config.CHILD_TUNNEL_V2_ADDRESS[network.alias];
 };

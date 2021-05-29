@@ -33,6 +33,10 @@
   // box-shadow: 0px 1px 10px #999;
 }
 
+.bridgeHeader.floatingNav {
+  background-color: black!important;
+}
+
 .leftBox {
   display: flex;
   align-items: center;
@@ -95,6 +99,27 @@
   align-items: center;
   justify-content: space-between;
   padding-right: 20px;
+}
+
+.bridgeHeader {
+  background-color: transparent!important;
+
+  .link {
+    color: white;
+  }
+
+  .switchNetwork {
+    color: white;
+    background: transparent;
+  }
+
+  .hashAddress {
+    color: white;
+  }
+
+  .signBtn button {
+    color: white;
+  }
 }
 
 .link {

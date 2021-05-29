@@ -1,0 +1,302 @@
+[
+    {
+        "type": "constructor",
+        "stateMutability": "nonpayable",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_fxChild",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "_nft",
+                "internalType": "contract DigitalaxGarmentNFTv2"
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "name": "MessageSent",
+        "inputs": [
+            {
+                "type": "bytes",
+                "name": "message",
+                "internalType": "bytes",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "contract DigitalaxMaterialsV2"
+            }
+        ],
+        "name": "child",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "fxChild",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "fxRootTunnel",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "bytes",
+                "name": "",
+                "internalType": "bytes"
+            }
+        ],
+        "name": "latestData",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "latestRootMessageSender",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            }
+        ],
+        "name": "latestStateId",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "contract DigitalaxGarmentNFTv2"
+            }
+        ],
+        "name": "nft",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [
+            {
+                "type": "bytes4",
+                "name": "",
+                "internalType": "bytes4"
+            }
+        ],
+        "name": "onERC1155BatchReceived",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_operator",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "_from",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256[]",
+                "name": "_ids",
+                "internalType": "uint256[]"
+            },
+            {
+                "type": "uint256[]",
+                "name": "_values",
+                "internalType": "uint256[]"
+            },
+            {
+                "type": "bytes",
+                "name": "_data",
+                "internalType": "bytes"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [
+            {
+                "type": "bytes4",
+                "name": "",
+                "internalType": "bytes4"
+            }
+        ],
+        "name": "onERC1155Received",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_operator",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "_from",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "_id",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "_amount",
+                "internalType": "uint256"
+            },
+            {
+                "type": "bytes",
+                "name": "_data",
+                "internalType": "bytes"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [
+            {
+                "type": "bytes4",
+                "name": "",
+                "internalType": "bytes4"
+            }
+        ],
+        "name": "onERC721Received",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "operator",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "from",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "tokenId",
+                "internalType": "uint256"
+            },
+            {
+                "type": "bytes",
+                "name": "data",
+                "internalType": "bytes"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "processMessageFromRoot",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "stateId",
+                "internalType": "uint256"
+            },
+            {
+                "type": "address",
+                "name": "rootMessageSender",
+                "internalType": "address"
+            },
+            {
+                "type": "bytes",
+                "name": "data",
+                "internalType": "bytes"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "sendNFTsToRoot",
+        "inputs": [
+            {
+                "type": "uint256[]",
+                "name": "_tokenIds",
+                "internalType": "uint256[]"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "setFxRootTunnel",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_fxRootTunnel",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "bool",
+                "name": "",
+                "internalType": "bool"
+            }
+        ],
+        "name": "withdrawnTokens",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            }
+        ]
+    }
+]

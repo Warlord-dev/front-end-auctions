@@ -12,7 +12,8 @@
     "mainnet": "https://api.thegraph.com/subgraphs/name/digitalax/digitalax",
     "rinkeby": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxropsten",
     "mumbai": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxmumbai",
-    "matic": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxmatic"
+    "matic": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxmatic",
+    "goerli": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxgoerli"
   },
   "DEFAULT_NETWORK": "matic",
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
@@ -48,6 +49,20 @@
     "goerli": "0x194202479730987db2b1a9d61083333d7336b3fb",
     "mumbai": "0x194202479730987db2b1a9d61083333d7336b3fb",
     "matic": ""
+  },
+  "CHILD_TUNNEL_V2_ADDRESS": {
+    "mumbai": "0x845f67c37AebC442647092A5697992fDd49FeeD9",
+    "matic": "0x751FE122eBcC4868138Dfdab9ec44f4d4167cB5a",
+    "mainnet": "",
+    "rinkeby": "",
+    "goerli": ""
+  },
+  "ROOT_TUNNEL_V2_ADDRESS": {
+    "mainnet": "0x8C9b09015273AB12D6A09bC61249FED3061d4199",
+    "goerli": "0xB7c06e7EE83E42d0201591a7af60ED14d5d79875",
+    "mumbai": "",
+    "matic": "",
+    "rinkeby": ""
   },
   "MONA_TOKEN_ADDRESSES": {
     "mainnet": "0x275f5ad03be0fa221b4c6649b8aee09a42d9412a",

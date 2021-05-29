@@ -1,0 +1,47 @@
+.wrapper {
+    margin-bottom: 3rem;
+
+    .progressBar {
+        background: #111111;
+        border: 1px solid #554B42;
+    }
+    
+    .step {
+        position: relative;
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid #554B42;
+
+        &.enable.mode-1 {
+            background: #EA882D;
+        }
+
+        &.enable.mode-2 {
+            background: #4F2DEA;
+        }
+
+        &.disable {
+            background: #111111;
+        }
+
+        .stepLabel {
+            position: absolute;
+            bottom: -1.5rem;
+            transform: translateX(calc(-50% + .5rem));
+            text-transform: uppercase;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        &.mode-1 .stepLabel {
+            color: #EA882D;
+        }
+
+        &.mode-2 .stepLabel {
+            color: #4F2DEA;
+        }
+    }
+}

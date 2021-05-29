@@ -1,6 +1,8 @@
 import ERC721ABIv0 from '@constants/erc721_abi_V0.json';
 import ERC721ABIv1 from '@constants/erc721_abi_V1.json';
 import ERC721ABIv2 from '@constants/erc721_abi_V2.json';
+import childTunnelAbi from '@constants/child_tunnel_abi.json';
+import rootTunnelV2Abi from '@constants/root_tunnel_abi_v2.json';
 import { providers as EthersProviders } from 'ethers';
 import { create as createUniswapPair } from '@helpers/uniswap.helpers';
 import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json';
@@ -13,12 +15,15 @@ import {
   getDTXV1AddressByChainId,
   getUSDTAddressByChainId,
   getUpgraderAddressByChainId,
+  getChildTunnelAddressV2ByChainId,
+  getRootTunnelAddressV2ByChainId,
 } from './network.service';
 
 import DigiMaterialV2ABI from '../constants/digi_material_v2_abi.json';
 import DigiRootTunnelABI from '../constants/digi_root_tunnel_abi.json';
 import ERC20ABI from '../constants/erc20_abi.json';
 import UpgraderABI from '../constants/upgrader_abi.json';
+import { toast } from 'react-toastify';
 
 export const getMarketplaceContract = async (ContractAddress) => {
   const jsonInterface = [
@@ -265,19 +270,16 @@ export const getMonaTokenContract = async (ContractAddress) => {
       type: 'function',
     },
   ];
-
+  if (!window.web3?.eth) return null;
   const contract = await new window.web3.eth.Contract(jsonInterface, ContractAddress);
 
   return contract;
 };
 
 export const getDTXContract = (isMainnet) => {
-  const provider = new Web3.providers.HttpProvider(
-    isMainnet ? config.DEFAULT_WEB3_URL : config.WEB3_URLS.GOERLI,
-  );
-  const web3 = new Web3(provider);
   const address = getDTXAddressByChainId(isMainnet ? '0x1' : '0x5');
-  const contract = new web3.eth.Contract(ERC721ABIv0, address);
+  if (!window.web3?.eth) return null;
+  const contract = new window.web3.eth.Contract(ERC721ABIv0, address);
 
   return contract;
 };
@@ -287,6 +289,7 @@ export const getDTXMaticContract = (isMainnet) => {
   const address = getDTXAddressByChainId(isMainnet ? '0x89' : '0x13881');
   // const web3 = new Web3(config.WEB3_URLS.MUMBAI);
   // const contract = new web3.eth.Contract(ERC721ABIv2, address);
+  if (!window.web3?.eth) return null;
   const contract = new window.web3.eth.Contract(ERC721ABIv2, address);
 
   return contract;
@@ -456,3 +459,17 @@ export const getTokenPriceMatic = async () =>
       resolve(1);
     }
   });
+
+export const getChildTunnelContract = (chainId) => {
+  const address = getChildTunnelAddressV2ByChainId(chainId);
+  if (!window.web3?.eth) return null;
+  const contract = new window.web3.eth.Contract(childTunnelAbi, address);
+  return contract;
+};
+
+export const getRootTunnelV2Contract = (chainId) => {
+  const address = getRootTunnelAddressV2ByChainId(chainId);
+  if (!window.web3?.eth) return null;
+  const contract = new window.web3.eth.Contract(rootTunnelV2Abi, address);
+  return contract;
+};

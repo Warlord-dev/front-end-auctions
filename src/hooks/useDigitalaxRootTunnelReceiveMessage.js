@@ -11,21 +11,18 @@ const useDigitalaxRootTunnelReceiveMessage = () => {
   const account = useSelector(getAccount);
   const isMainnet = useIsMainnet();
   const rootTunnelContract = getDitiRootTunnelContract(isMainnet);
-  const digitalaxRootTunnel = useCallback(
-    async (bytes) => {
-      if (bytes) {
-        try {
-          const res = await rootTunnelContract.methods.receiveMessage(bytes).send({
-            from: account,
-          });
-          return res;
-        } catch (e) {
-          throw e;
-        }
+  const digitalaxRootTunnel = async (bytes) => {
+    if (bytes) {
+      try {
+        const res = await rootTunnelContract.methods.recereiveMessage(bytes).send({
+          from: account,
+        });
+        return res;
+      } catch (e) {
+        throw e;
       }
-    },
-    [rootTunnelContract],
-  );
+    }
+  };
 
   return digitalaxRootTunnel;
 };

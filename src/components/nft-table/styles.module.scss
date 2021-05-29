@@ -1,0 +1,159 @@
+.wrapper {
+    .table {
+        padding: .5rem 0;
+        
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(223, 198, 174, 0.38);
+
+            .th {
+                text-transform: uppercase;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 11px;
+                text-align: center;
+                padding: .5rem 1rem;
+                color: #D3D3D3;
+            }
+        }
+
+        .body {
+            max-height: 40vh;
+            overflow: auto;
+
+            .tr {
+                display: flex;
+                align-items: center;
+                padding: .5rem 0;
+                
+                .td {
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .tdWrapper {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .title {
+                            margin: .5rem 0;
+                            width: 130px;
+                            color: white;
+                            text-align: center;
+                        }
+                    }
+
+                    img {
+                        height: 130px;
+                        width: 130px;
+                    }
+
+                    .checkContainer {
+                        display: block;
+                        position: relative;
+                        cursor: pointer;
+                        font-size: 22px;
+                        top: -10px;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+
+                        .check {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+                        }
+
+                        .checkmark {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 20px;
+                            width: 20px;
+                            background-color: #111111;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .checkContainer .checkmark:after {
+                        left: 6px;
+                        top: 0px;
+                        width: 7px;
+                        height: 14px;
+                        border-width: 0 3px 3px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+
+                    /* Show the checkmark when checked */
+                    .checkContainer input:checked ~ .checkmark:after {
+                        display: block;
+                    }
+
+                    .check {
+                        background: #111111;
+                    }
+                }
+            }
+
+            .noData {
+                text-align: center;
+                font-size: 11px;
+                font-weight: 600;
+                color: #D3D3D3;
+                font-family: Inter;
+                padding: 1rem 0 .5rem;
+            }
+        }
+    }
+}
+
+.mode-1 {
+    .table .body .td {
+        color: #EA882D;
+
+        .checkContainer {
+            .checkmark {
+                border: 1px solid #EA882D;
+            }
+
+            .checkmark:after {
+                border: solid #EA882D;
+            }
+        } 
+    }
+}
+
+.mode-2 {
+    .table .body .td {
+        color: #4F2DEA;
+
+        .checkContainer {
+            .checkmark {
+                border: 1px solid #4F2DEA;
+            }
+
+            .checkmark:after {
+                border: solid #4F2DEA;
+            }
+        }
+    }
+}

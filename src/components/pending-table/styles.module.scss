@@ -1,0 +1,170 @@
+.pendingWrapper {
+    .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .filterLabel, .sortLabel {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #D3D3D3;
+            margin-right: .5rem;
+        }
+
+        .filterWrapper {
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            padding: .2rem;
+            background: #111111;
+            margin-right: .5rem;
+            height: 30px;
+
+            .filterInput {
+                color: white;
+                border: none;
+                outline: none;
+                background: transparent;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+            }
+
+            .filterIcon {
+                height: 12px;
+                width: 12px;
+            }
+        }
+
+        .sortSelect {
+            color: white;
+            background: #111111;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            border-radius: 5px;
+            outline: none;
+            height: 30px;
+            padding: .25rem .5rem;
+        }
+    }
+
+    .table {
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(223, 198, 174, 0.38);
+            
+            .th {
+                text-transform: uppercase;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 11px;
+                text-align: center;
+                padding: .5rem 1rem;
+                color: #D3D3D3;
+            }
+        }
+        
+        .body {
+            max-height: 40vh;
+            overflow: auto;
+            
+            .tr {
+                border-bottom: 1px solid rgba(223, 198, 174, 0.38);
+                .info {
+                    display: flex;
+                    align-items: center;
+    
+                    .td {
+                        padding: 1rem;
+                        font-family: Inter;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 11px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: #999999;
+
+                        .success {
+                            font-family: Inter;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 11px;
+                            line-height: 24px;
+                            text-align: center;
+                            text-transform: uppercase;
+
+                            color: #27A662;
+                        }
+        
+                        .withdrawBtn {
+                            background: #111111;
+                            box-sizing: border-box;
+                            border-radius: 5px;
+                            padding: .5rem;
+                            color: white;
+                            font-family: Inter;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 10px;
+                            line-height: 12px;
+                            text-transform: uppercase;;
+                        }
+                    }
+                }
+                .statusBar {
+                    margin: 0 5rem;
+                }
+            }
+
+            .noData {
+                text-align: center;
+                font-size: 11px;
+                font-weight: 600;
+                color: #D3D3D3;
+                font-family: Inter;
+                padding: 1rem 0 .5rem;
+            }
+        }
+    }
+}
+
+.mode-1 {
+    .toolbar {
+        .filterWrapper {
+            border: 1px solid #EA882D;
+        }
+        
+        .sortSelect {
+            border: 1px solid #EA882D;
+        }
+    }
+
+    .table .body .td .withdrawBtn {
+        border: 1px solid #EA882D;
+    }
+}
+
+.mode-2 {
+    .toolbar {
+        .filterWrapper {
+            border: 1px solid #4F2DEA;
+        }
+        
+        .sortSelect {
+            border: 1px solid #4F2DEA;
+        }
+    }
+
+    .table .body .td .withdrawBtn {
+        border: 1px solid #4F2DEA;
+    }
+}

@@ -18,26 +18,25 @@ import LandingHeader from './landing';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
-  
-  const [hasScrolled, setHasScrolled] = useState(false)
-  const [isCollapse, setIsCollapse] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [isCollapse, setIsCollapse] = useState(false);
 
   useEffect(() => {
     const handleScroll = throttle(() => {
-      const offset = 0
-      const { scrollTop } = document.documentElement
-      const scrolled = scrollTop > offset
+      const offset = 0;
+      const { scrollTop } = document.documentElement;
+      const scrolled = scrollTop > offset;
 
       if (hasScrolled !== scrolled) {
-        setHasScrolled(scrolled)
+        setHasScrolled(scrolled);
       }
-    }, 200)
+    }, 200);
 
-    document.addEventListener('scroll', handleScroll)
+    document.addEventListener('scroll', handleScroll);
     return () => {
-      document.removeEventListener('scroll', handleScroll)
-    }
-  }, [hasScrolled])
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, [hasScrolled]);
 
   const dispatch = useDispatch();
   const user = useSelector(getUser);
@@ -68,7 +67,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const switchNetwork = async () => {
     const res = await requestSwitchNetwork();
     return res;
-  }
+  };
 
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
@@ -92,18 +91,24 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   return isLandingPage ? (
     <LandingHeader />
-  )
-  : (
-    <div className={cn(className, styles.wrapper, hasScrolled?styles.floatingNav:'')}>
+  ) : (
+    <div
+      className={cn(
+        className,
+        styles.wrapper,
+        hasScrolled ? styles.floatingNav : '',
+        pathname.includes('bridge') ? styles.bridgeHeader : '',
+      )}
+    >
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
-        <Logo />
+        <Logo black={!pathname.includes('bridge')} />
         {/* <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
           Switch to Eth Mainnet
         </a> */}
       </div>
       <div className={styles.rightBox}>
-        <div className={cn(styles.links, isCollapse?styles.expandedMenu:'')}>
+        <div className={cn(styles.links, isCollapse ? styles.expandedMenu : '')}>
           {/* <Link href="/">
           <a className={styles.link}>Auctions</a>
         </Link>
@@ -146,7 +151,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           )}*/}
           <Link href="https://drip.digitalax.xyz/">
             <a className={styles.link} target="_blank">
-              REP YOUR STLE IRL 
+              REP YOUR STLE IRL
             </a>
           </Link>
           <Link href="https://marketplace.digitalax.xyz">
@@ -164,7 +169,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
             <a className={styles.link}>Matic-Eth Bridge</a>
           </Link>
           {network.alias !== 'matic' ? (
-            <Button onClick={() => switchNetwork()}>Switch Network</Button>
+            <Button onClick={() => switchNetwork()} className={styles.switchNetwork}>
+              Switch Network
+            </Button>
           ) : null}
           <div className={styles.signBtn}>
             {user ? (
@@ -197,7 +204,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
               <Button onClick={() => handleClick()}>{buttonText}</Button>
             )}
           </div>
-          <a href="javascript:void(0);" className={styles.collapseIcon} onClick={onIconHander}>&#9776;</a>
+          <a href="javascript:void(0);" className={styles.collapseIcon} onClick={onIconHander}>
+            &#9776;
+          </a>
         </div>
       </div>
       {hamburger ? (
