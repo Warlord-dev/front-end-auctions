@@ -12,8 +12,8 @@ const Pending = () => {
   const id = parseInt(router.query.id);
   const user = useSelector(getUser);
   const [filter, setFilter] = useState('');
+  const [pendingDepositTxs, setPendingDepositTxs] = useState([]);
   const [sort, setSort] = useState('1');
-  const pendingDepositTxs = (user?.depositTxs || []).filter((tx) => tx.status === 'pending');
 
   const filterSortDeposits = () => {
     const deposits = [...pendingDepositTxs].sort((a, b) => {
@@ -34,6 +34,12 @@ const Pending = () => {
       return tx.txHash.includes(filter) || tx.status.includes(filter);
     });
   };
+
+  useEffect(() => {
+    if (user?.depositTxs && user.depositTxs.length) {
+      setPendingDepositTxs(user.depositTxs.filter((tx) => tx.amount));
+    }
+  }, [user]);
 
   return (
     <div className={styles.wrapper}>

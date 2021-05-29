@@ -20,7 +20,6 @@ import config from '../utils/config';
 import '../assets/scss/global.scss';
 import Particles from '@components/particles';
 import LoadingOverlay from 'react-loading-overlay';
-import { getAccount } from '@selectors/user.selectors';
 import { useRouter } from 'next/router';
 
 if (config.SENTRY_DSN) {
@@ -48,14 +47,9 @@ const InitWrapper = (props) => {
 const NetworkWrapper = (props) => {
   const chainId = useSelector(getChainId);
   const network = getEnabledNetworkByChainId(chainId);
-  const account = useSelector(getAccount);
 
   if (!network) {
     return null;
-  }
-
-  if (!account) {
-    toast.error('Please connect your wallet!');
   }
 
   return props.children;
