@@ -52,13 +52,13 @@
   },
   "CHILD_TUNNEL_V2_ADDRESS": {
     "mumbai": "0x845f67c37AebC442647092A5697992fDd49FeeD9",
-    "matic": "",
+    "matic": "0x751FE122eBcC4868138Dfdab9ec44f4d4167cB5a",
     "mainnet": "",
     "rinkeby": "",
     "goerli": ""
   },
   "ROOT_TUNNEL_V2_ADDRESS": {
-    "mainnet": "0xb6ec8b0a52c1bae5b6aa890cd0ec9704398d0d55",
+    "mainnet": "0x8C9b09015273AB12D6A09bC61249FED3061d4199",
     "goerli": "0xB7c06e7EE83E42d0201591a7af60ED14d5d79875",
     "mumbai": "",
     "matic": "",
