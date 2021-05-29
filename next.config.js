@@ -24,6 +24,8 @@ const {
   TIME_INTERVAL,
   USDT_ADDRESS,
   QUICKSWAP_ROUTER,
+  CHILD_TUNNEL_V2_ADDRESS,
+  ROOT_TUNNEL_V2_ADDRESS,
 } = require('config');
 const withImages = require('next-images');
 
@@ -54,6 +56,8 @@ module.exports = withImages({
     TIME_INTERVAL,
     USDT_ADDRESS,
     QUICKSWAP_ROUTER,
+    CHILD_TUNNEL_V2_ADDRESS,
+    ROOT_TUNNEL_V2_ADDRESS,
   },
   trailingSlash: true,
   assetPrefix: './',

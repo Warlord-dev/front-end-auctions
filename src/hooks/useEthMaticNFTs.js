@@ -1,60 +1,35 @@
-import { useCallback, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { getAccount } from '@selectors/user.selectors';
-import useMaticPosClient from './useMaticPosClient';
-import { useIsMainnet } from './useIsMainnet';
-import usePollar from './usePollar';
-import { useDTXTokenIds } from './useERC721TokenId';
-import { getDTXContract, getDTXMaticContract } from '@services/contract.service';
-import { closeNotInstalledMetamask } from '@actions/modals.actions';
+import globalActions from '@actions/global.actions';
+import apiService from '@services/api/api.service';
 
 export function useEthMaticNFTs() {
-  const [ethDtxTokenIds, maticDtxTokenIds] = useDTXTokenIds();
-  const [ethNfts, setEthNfts] = useState([]);
-  const [maticNfts, setMaticNfts] = useState([]);
+  const dispatch = useDispatch();
 
   const account = useSelector(getAccount);
-  const isMainnet = useIsMainnet();
 
-  const fetchEthNfts = useCallback(async () => {
+  const fetchEthNfts = async () => {
     if (account) {
       try {
-        const dtxContract = await getDTXContract(isMainnet);
-        const ethNftTokenUris = await Promise.all(
-          ethDtxTokenIds.map((i) =>
-            dtxContract.methods.tokenURI(parseInt(i)).call({ from: account }),
-          ),
-        );
-
-        setEthNfts(ethNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: ethDtxTokenIds[i] })));
+        const { digitalaxCollector } = await apiService.getDigitalaxCollector(account);
+        dispatch(globalActions.setEthNfts(digitalaxCollector.parentsOwned));
       } catch (e) {
         console.log(e);
       }
     }
-  }, [account, isMainnet, ethDtxTokenIds]);
+  };
 
-  const fetchNfts = useCallback(async () => {
+  const fetchNfts = async () => {
     if (account) {
       try {
-        const maticDtxContract = await getDTXMaticContract(isMainnet);
-
-        const maticNftTokenUris = await maticDtxContract.methods
-          .batchTokenURI(maticDtxTokenIds)
-          .call({ from: account });
-        setMaticNfts(
-          maticNftTokenUris.map((uri, i) => ({ tokenUri: uri, id: maticDtxTokenIds[i] })),
-        );
+        const { digitalaxCollectorV2 } = await apiService.getDigitalaxCollectorV2(account);
+        dispatch(globalActions.setMaticNfts(digitalaxCollectorV2.parentsOwned));
       } catch (e) {
         console.log(e);
       }
     }
-  }, [account, isMainnet, maticDtxTokenIds]);
+  };
 
-  useEffect(() => {
-    fetchNfts();
-    fetchEthNfts();
-  }, [maticDtxTokenIds, ethDtxTokenIds]);
-
-  return [ethNfts, maticNfts];
+  return [fetchEthNfts, fetchNfts];
 }

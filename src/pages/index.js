@@ -47,6 +47,7 @@ const LandingPage = () => {
           name="twitter:description"
           content="Take your digital fashion skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game. ESPA is the first casual esports platform, with direct integration with DIGITALAX NFT skins on Matic Network. "
         />
+        <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

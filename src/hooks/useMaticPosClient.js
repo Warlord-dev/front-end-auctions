@@ -25,7 +25,7 @@ export default function useMaticPosClient() {
           maticProvider: isMainnet ? config.WEB3_URLS.MATIC : config.WEB3_URLS.MUMBAI,
           parentDefaultOptions: { from: account },
           maticDefaultOptions: { from: account },
-        })
+        }),
       );
 
       setPosClientChild(
@@ -36,7 +36,7 @@ export default function useMaticPosClient() {
           parentProvider: isMainnet ? config.DEFAULT_WEB3_URL : config.WEB3_URLS.GOERLI,
           parentDefaultOptions: { from: account },
           maticDefaultOptions: { from: account },
-        })
+        }),
       );
     }
   }, [account, isMainnet]);

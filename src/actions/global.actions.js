@@ -1,7 +1,7 @@
-import { toast } from 'react-toastify';
 import moment from 'moment';
 import Web3 from 'web3';
 import BaseActions from '@actions/base-actions';
+import { toast } from 'react-toastify';
 import userActions from '@actions/user.actions';
 import auctionActions from '@actions/auction.actions';
 import auctionPageActions from '@actions/auction.page.actions';
@@ -108,7 +108,6 @@ class GlobalActions extends BaseActions {
     return async (dispatch, getState) => {
       try {
         const monaPerEth = await getTokenPriceMatic();
-        console.log('monaPerEth', monaPerEth);
         dispatch(this.setValue('monaPerEth', convertToEth(monaPerEth)));
       } catch (e) {
         console.error(e);
@@ -146,6 +145,48 @@ class GlobalActions extends BaseActions {
       api.setUrl(url);
       ws.setUrl(wsUrl);
       dispatch(this.setValue('chainId', chainId));
+    };
+  }
+
+  setMonaMaticBalance(value) {
+    return (dispatch) => {
+      dispatch(this.setValue('monaMaticBalance', value));
+    };
+  }
+
+  setMonaEthBalance(value) {
+    return (dispatch) => {
+      dispatch(this.setValue('monaEthBalance', value));
+    };
+  }
+
+  setIsLoading(value) {
+    return (dispatch) => {
+      dispatch(this.setValue('isLoading', value));
+    };
+  }
+
+  setDtxEthIds(values) {
+    return (dispatch) => {
+      dispatch(this.setValue('dtxEthIds', values));
+    };
+  }
+
+  setDtxMaticIds(values) {
+    return (dispatch) => {
+      dispatch(this.setValue('dtxMaticIds', values));
+    };
+  }
+
+  setEthNfts(values) {
+    return (dispatch) => {
+      dispatch(this.setValue('ethNfts', values));
+    };
+  }
+
+  setMaticNfts(values) {
+    return (dispatch) => {
+      dispatch(this.setValue('maticNfts', values));
     };
   }
 }

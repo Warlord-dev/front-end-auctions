@@ -11,6 +11,8 @@ import {
   getDesignersByIds,
   getAuctionsHistoryByIds,
   getAuctionContracts,
+  getDigitalaxCollectorV2,
+  getDigitalaxCollector,
 } from '@services/api/gql.queries.api.service';
 
 class APIService {
@@ -58,10 +60,18 @@ class APIService {
     return request(this.url, getAuctionContracts);
   }
 
+  async getDigitalaxCollectorV2(address) {
+    return request(this.url, getDigitalaxCollectorV2, { id: address });
+  }
+
+  async getDigitalaxCollector(address) {
+    return request(this.url, getDigitalaxCollector, { id: address });
+  }
+
   async getEthRate() {
-    return fetch(
-      `${config.EXCHANGE_API}/simple/price?ids=ethereum&vs_currencies=usd`
-    ).then((response) => response.json());
+    return fetch(`${config.EXCHANGE_API}/simple/price?ids=ethereum&vs_currencies=usd`).then(
+      (response) => response.json(),
+    );
   }
 }
 
