@@ -46,7 +46,7 @@ const Page34 = () => {
         Emma-Jane MacKinnon-Lee<br />
         Isramae Visales<br />
         Peezy R<br />
-        Victor Wiebe<br />
+        Victor<br />
         Haruto Inoue<br />
         Cameron Sato<br />
         James Lin<br />

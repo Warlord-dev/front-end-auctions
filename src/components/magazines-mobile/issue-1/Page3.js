@@ -12,7 +12,7 @@ const Page3 = () => {
         Emma-Jane MacKinnon-Lee <br />
         Isramae Visales  <br />
         Peezy R <br />
-        Victor Wiebe <br />
+        Victor <br />
         Valentina Gomez  <br />
         Haruto <br />
         Cameron (Ares) <br />
