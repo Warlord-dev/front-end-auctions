@@ -33,13 +33,18 @@ const Profile = ({ history }) => {
       const ids = [];
       for (let i = 0; i < digitalaxSubscriptionCollectors.length; i += 1) {
         for (let j = 0; j < digitalaxSubscriptionCollectors[i].parentsOwned.length; j += 1) {
-          const {
-            digitalaxSubscriptionPurchaseHistory,
-          } = await api.getDigitalaxSubscriptionPurchase(
-            digitalaxSubscriptionCollectors[i].parentsOwned[j].id
-          );
-          if (!ids.includes(digitalaxSubscriptionPurchaseHistory.bundleId))
-            ids.push(digitalaxSubscriptionPurchaseHistory.bundleId);
+          let id = 0;
+          if (digitalaxSubscriptionCollectors[i].parentsOwned[j].id >= 100001 && digitalaxSubscriptionCollectors[i].parentsOwned[j].id <= 100730) {
+            id = 1;
+          } else if ((digitalaxSubscriptionCollectors[i].parentsOwned[j].id >= 100731 && digitalaxSubscriptionCollectors[i].parentsOwned[j].id <= 100930) || (
+            digitalaxSubscriptionCollectors[i].parentsOwned[j].id >= 100981 && digitalaxSubscriptionCollectors[i].parentsOwned[j].id <= 101300
+          )) {
+            id = 2;
+          } else if (digitalaxSubscriptionCollectors[i].parentsOwned[j].id >= 100931 && digitalaxSubscriptionCollectors[i].parentsOwned[j].id <= 100980) {
+            id = 3;
+          }
+          if (id && !ids.includes(id))
+            ids.push(id);
         }
       }
       setNftCollectionIds(ids);
@@ -130,8 +135,8 @@ const Profile = ({ history }) => {
             <div className={styles.subscriptionWrapper}>
               {nftCollectionIds.map((nftId) => (
                 <>
-                  {details[parseInt(nftId) - 1].urls.map((url) => (
-                    <NftSubscriptionCard key={`nft_subscription_${nftId}`} id={parseInt(nftId)} details={details[parseInt(nftId) - 1]} url={url} />
+                  {details[parseInt(nftId) - 1].url.map((img) => (
+                    <NftSubscriptionCard key={`nft_subscription_${nftId}`} id={parseInt(nftId)} details={details[parseInt(nftId) - 1]} url={img} />
                   ))}
                 </>
               ))}
