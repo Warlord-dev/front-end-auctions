@@ -11,12 +11,24 @@ import {
   getDesignersByIds,
   getAuctionsHistoryByIds,
   getAuctionContracts,
-  getDigitalaxCollectorV2,
   getDigitalaxCollector,
   getDigitalaxGarmentsCollections,
   getCollectorsById,
-  getCollectorsV2ById
 } from '@services/api/gql.queries.api.service';
+import {
+  getAuctionContractsV2,
+  getAuctionsByIdsV2,
+  getAuctionsHistoryByIdsV2,
+  getAuctionsHistoryByTimestampGtV2,
+  getCollectorsByIdV2,
+  getDesignersByIdsV2,
+  getGarmentsByDesignerIdV2,
+  getGarmentsByIdsV2,
+  getLiveAuctionsV2,
+  getResultedAuctionsByEndTimeGtV2,
+  getDigitalaxGarmentsCollectionsV2,
+  getDigitalaxCollectorV2,
+} from './gql.queries.v2.api.service';
 
 class APIService {
   constructor() {
@@ -27,60 +39,135 @@ class APIService {
     this.url = url;
   }
 
+  getQuery(query1, query2) {
+    if (this.url.includes('matic') || this.url.includes('mumbai')) {
+      return query2;
+    } else {
+      return query1;
+    }
+  }
+
+  wrapRequest(args) {
+    return request(...args).then((res) => {
+      if (Object.keys(res).filter((key) => key.includes('V2')).length) {
+        const keys = Object.keys(res);
+        const parsedRes = {};
+        for (let i = 0; i < keys.length; i += 1) {
+          if (keys[i].includes('V2S')) {
+            parsedRes[keys[i].replace('V2S', 's')] = res[keys[i]];
+          } else if (keys[i].includes('V2')) {
+            parsedRes[keys[i].replace('V2', '')] = res[keys[i]];
+          }
+        }
+        console.log(parsedRes);
+        return parsedRes;
+      } else {
+        return res;
+      }
+    });
+  }
+
   async getResultedAuctionsByEndTimeGt(endTime) {
-    return request(this.url, getResultedAuctionsByEndTimeGt, { endTime });
+    return this.wrapRequest([
+      this.url,
+      this.getQuery(getResultedAuctionsByEndTimeGt, getResultedAuctionsByEndTimeGtV2),
+      { endTime },
+    ]);
   }
 
   async getAuctionsHistoryByTimestampGt(timestamp) {
-    return request(this.url, getAuctionsHistoryByTimestampGt, { timestamp });
+    return this.wrapRequest([
+      this.url,
+      this.getQuery(getAuctionsHistoryByTimestampGt, getAuctionsHistoryByTimestampGtV2),
+      { timestamp },
+    ]);
   }
 
   async getLiveAuctions() {
-    return request(this.url, getLiveAuctions);
+    return this.wrapRequest([this.url, this.getQuery(getLiveAuctions, getLiveAuctionsV2)]);
   }
 
   async getGarmentsCollections() {
-    return request(this.url, getDigitalaxGarmentsCollections);
-  }
-  
-  async getCollectorsById(address) {
-    return request(this.url, getCollectorsById, {id: address});
+    return this.wrapRequest([
+      this.url,
+      this.getQuery(getDigitalaxGarmentsCollections, getDigitalaxGarmentsCollectionsV2),
+    ]);
   }
 
-  async getCollectorsV2ById(address) {
-    return request(this.url, getCollectorsV2ById, {id: address});
+  async getCollectorsById(address) {
+    return this.wrapRequest([
+      this.url,
+      this.getQuery(getCollectorsById, getCollectorsByIdV2),
+      {
+        id: address,
+      },
+    ]);
   }
+
+  // async getCollectorsV2ById(address) {
+  //   return request(this.url, getCollectorsV2ById, { id: address });
+  // }
 
   async getAuctionsByIds(ids) {
-    return request(this.url, getAuctionsByIds, { ids });
+    return this.wrapRequest([
+      this.url,
+      this.getQuery(getAuctionsByIds, getAuctionsByIdsV2),
+      { ids },
+    ]);
   }
 
   async getDesignersByIds(ids) {
-    return request(this.url, getDesignersByIds, { ids });
+    return this.wrapRequest([
+      this.url,
+      this.getQuery(getDesignersByIds, getDesignersByIdsV2),
+      { ids },
+    ]);
   }
 
   async getGarmentsByIds(ids) {
-    return request(this.url, getGarmentsByIds, { ids });
+    return this.wrapRequest([
+      this.url,
+      this.getQuery(getGarmentsByIds, getGarmentsByIdsV2),
+      { ids },
+    ]);
   }
 
   async getGarmentsByDesignerIds(ids) {
-    return request(this.url, getGarmentsByDesignerId, { ids });
+    return this.wrapRequest([
+      this.url,
+      this.getQuery(getGarmentsByDesignerId, getGarmentsByDesignerIdV2),
+      {
+        ids,
+      },
+    ]);
   }
 
   async getAuctionsHistoryByIds(ids) {
-    return request(this.url, getAuctionsHistoryByIds, { ids });
+    return this.wrapRequest([
+      this.url,
+      this.getQuery(getAuctionsHistoryByIds, getAuctionsHistoryByIdsV2),
+      {
+        ids,
+      },
+    ]);
   }
 
   async getAuctionContracts() {
-    return request(this.url, getAuctionContracts);
+    return this.wrapRequest([this.url, this.getQuery(getAuctionContracts, getAuctionContractsV2)]);
   }
 
-  async getDigitalaxCollectorV2(address) {
-    return request(this.url, getDigitalaxCollectorV2, { id: address });
-  }
+  // async getDigitalaxCollectorV2(address) {
+  //   return request(this.url, this.getQuery(getDigitalaxCollectorV2, { id: address });
+  // }
 
   async getDigitalaxCollector(address) {
-    return request(this.url, getDigitalaxCollector, { id: address });
+    return this.wrapRequest([
+      this.url,
+      this.getQuery(getDigitalaxCollector, getDigitalaxCollectorV2),
+      {
+        id: address,
+      },
+    ]);
   }
 
   async getEthRate() {

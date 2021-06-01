@@ -4,9 +4,9 @@ import {
   HISTORY_BID_WITHDRAWN_EVENT,
 } from '@constants/history.constants';
 
-export const getLiveAuctions = gql`
+export const getLiveAuctionsV2 = gql`
   {
-    digitalaxGarmentAuctions(first: 1000, where: { resulted_not_in: [true] }) {
+    digitalaxGarmentV2Auctions(first: 1000, where: { resulted_not_in: [true] }) {
       id
       reservePrice
       endTime
@@ -43,9 +43,9 @@ export const getLiveAuctions = gql`
   }
 `;
 
-export const getAuctionsByIds = gql`
+export const getAuctionsByIdsV2 = gql`
   query getAuctionsByIds($ids: [ID!]) {
-    digitalaxGarmentAuctions(first: 1000, where: { id_in: $ids }) {
+    digitalaxGarmentV2Auctions(first: 1000, where: { id_in: $ids }) {
       id
       reservePrice
       endTime
@@ -60,9 +60,9 @@ export const getAuctionsByIds = gql`
   }
 `;
 
-export const getGarmentsByIds = gql`
+export const getGarmentsByIdsV2 = gql`
   query getGarmentsByIds($ids: [ID!]) {
-    digitalaxGarments(first: 1000, where: { id_in: $ids }) {
+    digitalaxGarmentV2S(first: 1000, where: { id_in: $ids }) {
       id
       designer
       owner
@@ -77,9 +77,9 @@ export const getGarmentsByIds = gql`
   }
 `;
 
-export const getDesignersByIds = gql`
+export const getDesignersByIdsV2 = gql`
   query getDesignersByIds($ids: [ID!]) {
-    digitalaxGarmentDesigners(first: 1000, where: { id_in: $ids }) {
+    digitalaxGarmentV2Designers(first: 1000, where: { id_in: $ids }) {
       id
       garments(first: 1000) {
         id
@@ -100,9 +100,9 @@ export const getDesignersByIds = gql`
   }
 `;
 
-export const getGarmentsByDesignerId = gql`
+export const getGarmentsByDesignerIdV2 = gql`
   query getGarmentsByDesignerId($ids: [Bytes!]) {
-    digitalaxGarments(first: 1000, where: { designer_in: $ids }) {
+    digitalaxGarmentV2S(first: 1000, where: { designer_in: $ids }) {
       id
       designer
       owner
@@ -117,9 +117,9 @@ export const getGarmentsByDesignerId = gql`
   }
 `;
 
-export const getAuctionsHistoryByIds = gql`
+export const getAuctionsHistoryByIdsV2 = gql`
   query getAuctionsHistoryByIds($ids: [ID!]) {
-    digitalaxGarmentAuctionHistories(first: 1000, where: { token_in: $ids }) {
+    digitalaxGarmentV2AuctionHistories(first: 1000, where: { token_in: $ids }) {
       id
       eventName
       timestamp
@@ -143,9 +143,9 @@ export const getAuctionsHistoryByIds = gql`
   }
 `;
 
-export const getAuctionsHistoryByTimestampGt = gql`
+export const getAuctionsHistoryByTimestampGtV2 = gql`
   query getAuctionsHistoryByTimestampGt($timestamp: BigInt!) {
-    digitalaxGarmentAuctionHistories(first: 1000, where: {
+    digitalaxGarmentV2AuctionHistories(first: 1000, where: {
       eventName_in: ["${HISTORY_BID_PLACED_EVENT}",
        "${HISTORY_BID_WITHDRAWN_EVENT}"], 
        timestamp_gt: $timestamp}) {
@@ -157,9 +157,9 @@ export const getAuctionsHistoryByTimestampGt = gql`
   }
 `;
 
-export const getAuctionContracts = gql`
+export const getAuctionContractsV2 = gql`
   {
-    digitalaxAuctionContracts(first: 1000) {
+    digitalaxAuctionV2Contracts(first: 1000) {
       id
       minBidIncrement
       bidWithdrawalLockTime
@@ -170,9 +170,9 @@ export const getAuctionContracts = gql`
   }
 `;
 
-export const getResultedAuctionsByEndTimeGt = gql`
+export const getResultedAuctionsByEndTimeGtV2 = gql`
   query getAuctionsHistoryByTimestampGt($endTime: BigInt!) {
-    digitalaxGarmentAuctions(
+    digitalaxGarmentV2Auctions(
       first: 1000
       where: { resulted_not_in: [false], endTime_gt: $endTime }
     ) {
@@ -190,9 +190,27 @@ export const getResultedAuctionsByEndTimeGt = gql`
   }
 `;
 
-export const getDigitalaxGarmentsCollections = gql`
-  query getDigitalaxGarmentsCollections {
-    digitalaxGarmentCollections(first: 1000) {
+export const getDigitalaxCollectorV2 = gql`
+  query digitalaxCollector($id: ID!) {
+    digitalaxCollectorV2(id: $id) {
+      id
+      parentsOwned {
+        id
+        description
+        designer
+        tokenUri
+        animation
+        image
+        owner
+        name
+      }
+    }
+  }
+`;
+
+export const getDigitalaxGarmentsCollectionsV2 = gql`
+  query getdigitalaxGarmentsCollections {
+    digitalaxGarmentV2Collections(first: 1000) {
       id
       garmentAuctionID
       rarity
@@ -215,27 +233,9 @@ export const getDigitalaxGarmentsCollections = gql`
   }
 `;
 
-export const getDigitalaxCollector = gql`
-  query digitalaxCollector($id: ID!) {
-    digitalaxCollector(id: $id) {
-      id
-      parentsOwned {
-        id
-        description
-        designer
-        tokenUri
-        animation
-        image
-        owner
-        name
-      }
-    }
-  }
-`;
-
-export const getCollectorsById = gql`
+export const getCollectorsByIdV2 = gql`
   query getCollectorsById($id: ID!) {
-    digitalaxCollectors(where: { id: $id }) {
+    digitalaxCollectorV2S(where: { id: $id }) {
       id
       parentsOwned {
         id

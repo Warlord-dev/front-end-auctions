@@ -58,7 +58,7 @@ const PageAuctionList = () => {
       request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
       next: (data) => dispatch(auctionPageActions.updateMonthStats(data.days)),
     },
-    [chainId]
+    [chainId],
   );
 
   useSubscription(
@@ -66,7 +66,7 @@ const PageAuctionList = () => {
       request: wsApi.onDaysChange(TOTAL_VOLUME_DAYS),
       next: (data) => dispatch(auctionPageActions.updateWeekStats(data.days)),
     },
-    [chainId]
+    [chainId],
   );
 
   useSubscription(
@@ -77,12 +77,12 @@ const PageAuctionList = () => {
           auctionPageActions.updateGlobalStats(
             data.digitalaxGarmentNFTGlobalStats.length > 0
               ? data.digitalaxGarmentNFTGlobalStats[0]
-              : []
-          )
+              : [],
+          ),
         );
       },
     },
-    [chainId]
+    [chainId],
   );
 
   useSubscription(
@@ -92,7 +92,7 @@ const PageAuctionList = () => {
         dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
       },
     },
-    [chainId, currentCollections]
+    [chainId, currentCollections],
   );
 
   useEffect(
@@ -101,7 +101,7 @@ const PageAuctionList = () => {
         dispatch(auctionPageActions.reset());
       }
     },
-    []
+    [],
   );
 
   const nowTimestamp = Date.now();
@@ -123,12 +123,12 @@ const PageAuctionList = () => {
                 .plus(new BigNumber(auction.totalMarketplaceVolumeInETH))
                 .plus(
                   new BigNumber(auction.totalMarketplaceVolumeInMona).times(
-                    new BigNumber(monaPerEth)
-                  )
-                )
+                    new BigNumber(monaPerEth),
+                  ),
+                ),
             )
           : acc,
-      new BigNumber(0)
+      new BigNumber(0),
     );
 
   const totalWeekValue = sumTopBids(weekResultedAuctions);
@@ -151,7 +151,7 @@ const PageAuctionList = () => {
     let totalSum = new BigNumber(0);
     if (globalStats.totalSalesValue) {
       totalSum = totalSum.plus(
-        new BigNumber(globalStats.totalMarketplaceSalesInMona).times(new BigNumber(monaPerEth))
+        new BigNumber(globalStats.totalMarketplaceSalesInMona).times(new BigNumber(monaPerEth)),
       );
       totalSum = totalSum.plus(new BigNumber(globalStats.totalMarketplaceSalesInETH));
       totalSum = totalSum.plus(new BigNumber(globalStats.totalSalesValue));
@@ -166,8 +166,8 @@ const PageAuctionList = () => {
         value:
           Math.round(
             parseFloat(
-              convertToEth(totalWeekValue.gte(0) ? totalWeekValue : totalWeekValue.times(-1))
-            ) * 100
+              convertToEth(totalWeekValue.gte(0) ? totalWeekValue : totalWeekValue.times(-1)),
+            ) * 100,
           ) / 100,
       },
       {
@@ -186,9 +186,9 @@ const PageAuctionList = () => {
         history={monthResultedAuctions}
       /> */}
       <div className={styles.textContent}>
-        <TextContent/>
+        <TextContent />
       </div>
-      
+
       <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
         {collections.map((collection) => (
           <ProductCollection key={collection.id} collection={collection} />

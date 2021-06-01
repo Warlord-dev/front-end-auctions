@@ -18,6 +18,23 @@ import {
   onDigitalaxGarmentsCollectionChangeByIds,
   allDigitalaxMarketplaceOffers,
 } from '@services/api/gql.subscriptions.ws.service';
+import {
+  allDigitalaxMarketplaceOffersV2,
+  getAllDigitalaxGarmentsCollectionsV2,
+  onAllAuctionsChangeV2,
+  onAuctionsChangeByIdsV2,
+  onAuctionsChangeV2,
+  onAuctionsHistoryByIdsV2,
+  onDaysChangeV2,
+  onDesignerByIdsV2,
+  onDigitalaxGarmentsCollectionChangeByIdsV2,
+  onDigitalaxGarmentsCollectionChangeV2,
+  onDigitalaxMarketplaceOffersV2,
+  onMarketplaceHistoryByIdsV2,
+  onNFTGlobalStatsV2,
+  onPreviousAuctionsChangeV2,
+  onResultedAuctionsByEndTimeGtAndIdsV2,
+} from './gql.subscriptions.v2.ws.service';
 
 class WSService {
   constructor() {
@@ -41,88 +58,118 @@ class WSService {
     this.createClient();
   }
 
+  getQuery(query1, query2) {
+    if (this.url.includes('matic') || this.url.includes('mumbai')) {
+      return query2;
+    } else {
+      return query1;
+    }
+  }
+
   onDaysChange(countDays) {
     const date = moment().subtract(countDays, 'day').format('YYYY-MM-DD');
-    return this.client.request({ query: onDaysChange, variables: { date } });
+    return this.client.request({
+      query: this.getQuery(onDaysChange, onDaysChangeV2),
+      variables: { date },
+    });
   }
 
   onNFTGlobalStats() {
-    return this.client.request({ query: onNFTGlobalStats });
+    return this.client.request({ query: this.getQuery(onNFTGlobalStats, onNFTGlobalStatsV2) });
   }
 
   onAuctionsChange() {
-    return this.client.request({ query: onAuctionsChange });
+    return this.client.request({ query: this.getQuery(onAuctionsChange, onAuctionsChangeV2) });
   }
 
   onPreviousAuctionsChange() {
-    return this.client.request({ query: onPreviousAuctionsChange });
+    return this.client.request({
+      query: this.getQuery(onPreviousAuctionsChange, onPreviousAuctionsChangeV2),
+    });
   }
 
   onAllAuctionsChange() {
-    return this.client.request({ query: onAllAuctionsChange });
+    return this.client.request({
+      query: this.getQuery(onAllAuctionsChange, onAllAuctionsChangeV2),
+    });
   }
 
   onAuctionsChangeByIds(ids) {
     return this.client.request({
-      query: onAuctionsChangeByIds,
+      query: this.getQuery(onAuctionsChangeByIds, onAuctionsChangeByIdsV2),
       variables: { ids },
     });
   }
 
   onDesignerByIds(ids) {
-    return this.client.request({ query: onDesignerByIds, variables: { ids } });
+    return this.client.request({
+      query: this.getQuery(onDesignerByIds, onDesignerByIdsV2),
+      variables: { ids },
+    });
   }
 
   onAuctionsHistoryByIds(ids) {
     return this.client.request({
-      query: onAuctionsHistoryByIds,
+      query: this.getQuery(onAuctionsHistoryByIds, onAuctionsHistoryByIdsV2),
       variables: { ids },
     });
   }
 
   onMarketplaceHistoryByIds(ids) {
     return this.client.request({
-      query: onMarketplaceHistoryByIds,
+      query: this.getQuery(onMarketplaceHistoryByIds, onMarketplaceHistoryByIdsV2),
       variables: { ids },
     });
   }
 
   onResultedAuctionsByEndTimeGtAndIds(ids, endTime) {
     return this.client.request({
-      query: onResultedAuctionsByEndTimeGtAndIds,
+      query: this.getQuery(
+        onResultedAuctionsByEndTimeGtAndIds,
+        onResultedAuctionsByEndTimeGtAndIdsV2,
+      ),
       variables: { endTime, ids },
     });
   }
 
   onDigitalaxGarmentsCollectionChange(garmentAuctionNFTId) {
     return this.client.request({
-      query: onDigitalaxGarmentsCollectionChange,
+      query: this.getQuery(
+        onDigitalaxGarmentsCollectionChange,
+        onDigitalaxGarmentsCollectionChangeV2,
+      ),
       variables: { garmentAuctionNFTId },
     });
   }
 
   getAllDigitalaxGarmentsCollections() {
     return this.client.request({
-      query: getAllDigitalaxGarmentsCollections,
+      query: this.getQuery(
+        getAllDigitalaxGarmentsCollections,
+        getAllDigitalaxGarmentsCollectionsV2,
+      ),
     });
   }
 
   onDigitalaxMarketplaceOffers(ids) {
     return this.client.request({
-      query: onDigitalaxMarketplaceOffers,
+      query: this.getQuery(onDigitalaxMarketplaceOffers, onDigitalaxMarketplaceOffersV2),
       variables: { ids },
     });
   }
 
   getAllDigitalaxMarketplaceOffers() {
     return this.client.request({
-      query: allDigitalaxMarketplaceOffers,
+      query: this.getQuery(allDigitalaxMarketplaceOffers, allDigitalaxMarketplaceOffersV2),
     });
   }
 
   onDigitalaxGarmentsCollectionChangeByIds(ids) {
     return this.client.request({
-      query: onDigitalaxGarmentsCollectionChangeByIds,
+      query: this.getQuery(
+        onDigitalaxGarmentsCollectionChangeByIds,
+        onDigitalaxGarmentsCollectionChangeByIdsV2,
+      ),
       variables: { ids },
     });
   }
