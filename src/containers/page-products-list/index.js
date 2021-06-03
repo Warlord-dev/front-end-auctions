@@ -89,7 +89,7 @@ const PageProductsList = ({ collectionId }) => {
       request:
         collectionId === '1'
           ? wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id))
-          : wsApi.onDigitalaxMarketplaceOffersV2(['0', '10', '3', '4', '5', '6', '7', '8', '9']),
+          : wsApi.onDigitalaxMarketplaceOffersV2(currentCollections.map((val) => val.id)),
       next: (data) => {
         dispatch(collectionActions.updateMarketplaceOffers(Object.values(data)[0]));
       },
