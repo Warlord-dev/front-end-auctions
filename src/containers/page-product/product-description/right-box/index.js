@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { utils as ethersUtils } from 'ethers';
 import PropTypes from 'prop-types';
@@ -15,6 +15,8 @@ import {
   openBuynowModal,
   openConnectMetamaskModal,
   openConnectMaticModal,
+  openBuyNowCoolDownModal,
+  openBuyNowLimitModal,
 } from '@actions/modals.actions';
 import { getExchangeRateETH, getMonaPerEth, getChainId } from '@selectors/global.selectors';
 import { COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
@@ -22,11 +24,13 @@ import AuctionInformation from './auction-information';
 import DesignInformation from './design-information';
 import GameList from './game-list';
 import styles from './styles.module.scss';
+import apiService from '@services/api/api.service';
 
 const SHOW_FIRST_TAB = 0;
 const SHOW_SECOND_TAB = 1;
 
 const RightBox = ({
+  collectionId,
   clothesId,
   currentClothesInfo,
   currentDesignersInfo,
@@ -39,24 +43,13 @@ const RightBox = ({
   const account = useSelector(getAccount);
   const garment = useSelector(getGarmentsById(clothesId));
   const auction = useSelector(getAuctionById(garment.id));
+  const [ids, setIds] = useState([]);
+  const [lastPurchasedTime, setLastPurchasedTime] = useState(0);
   const monaPerEth = useSelector(getMonaPerEth);
   const chainId = useSelector(getChainId);
+  const modals = useSelector((state) => state.modals.toJS());
+  const { isShowBuyNow } = modals;
   const isMatic = chainId === '0x13881' || chainId === '0x89';
-
-  const [semiRare, common] = useMemo(() => {
-    if (!currentCollections) return [{ children: [] }, { children: [] }];
-
-    const tSemiRare = currentCollections.find(
-      (collection) => collection.rarity === SEMI_RARE_RARITY
-    );
-    const tCommon = currentCollections.find((collection) => collection.rarity === COMMON_RARITY);
-    return [
-      tSemiRare ? tSemiRare.garments[0] : { children: [] },
-      tCommon ? tCommon.garments[0] : { children: [] },
-    ];
-  }, [currentCollections]);
-
-  const exchangeRateETH = useSelector(getExchangeRateETH);
 
   const estimateAPY = useAPY(currentCounts[activeTab].basePrice);
 
@@ -82,7 +75,50 @@ const RightBox = ({
     return null;
   };
 
+  useEffect(() => {
+    const fetchPurchaseInfo = async () => {
+      let histories = [];
+      if (collectionId === '1') {
+        const { digitalaxMarketplacePurchaseHistories } =
+          await apiService.getMarketplacePurchaseHistory(account, parseInt(garment.id));
+        histories = digitalaxMarketplacePurchaseHistories;
+      } else if (collectionId === '3') {
+        const { digitalaxMarketplaceV2PurchaseHistories } =
+          await apiService.getMarketplacePurchaseHistoryV2(account, parseInt(garment.id));
+        histories = digitalaxMarketplaceV2PurchaseHistories;
+      }
+
+      let latest = lastPurchasedTime;
+      for (let i = 0; i < histories.length; i += 1) {
+        if (latest < histories[i].timestamp) {
+          latest = histories[i].timestamp;
+        }
+      }
+      setIds(histories);
+      if (latest !== lastPurchasedTime) {
+        setLastPurchasedTime(latest);
+      }
+    };
+
+    if (!isShowBuyNow) {
+      fetchPurchaseInfo();
+    }
+  }, [isShowBuyNow]);
+
+  const checkLastPurchasedTime = (id) => {
+    const now = new Date();
+    return parseInt(lastPurchasedTime) + 60 < now.getTime() / 1000;
+  };
+
   const handleClickBuy = () => {
+    if (!checkLastPurchasedTime()) {
+      dispatch(openBuyNowCoolDownModal());
+      return;
+    }
+    if (ids.length >= 10) {
+      dispatch(openBuyNowLimitModal());
+      return;
+    }
     if (!isMatic) {
       dispatch(openConnectMaticModal());
       return;
@@ -92,7 +128,7 @@ const RightBox = ({
         openBuynowModal({
           id: currentCounts[activeTab].collectionId,
           priceEth: currentCounts[activeTab].basePrice,
-        })
+        }),
       );
     } else {
       dispatch(openConnectMetamaskModal());
@@ -133,7 +169,7 @@ const RightBox = ({
               {Math.round(
                 (parseFloat(ethersUtils.formatEther(currentCounts[activeTab].basePrice)) /
                   parseFloat(monaPerEth)) *
-                  10000
+                  10000,
               ) / 10000}{' '}
               $MONA
             </span>

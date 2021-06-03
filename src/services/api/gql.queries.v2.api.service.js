@@ -254,3 +254,25 @@ export const getCollectorsByIdV2 = gql`
     }
   }
 `;
+
+export const getDigitalaxMarketplaceV2PurchaseHistory = gql`
+query digitalaxMarketplaceV2PurchaseHistories($buyer: ID!, $garmentId: Int!) {
+  digitalaxMarketplaceV2PurchaseHistories(where: { buyer: $buyer, garmentAuctionId: $garmentId }){
+    id
+    eventName
+    timestamp
+    transactionHash
+    token {
+      id
+    }
+    buyer
+    value
+    isPaidWithMona
+    monaTransferredAmount
+    garmentAuctionId
+    platformFee
+    discountToPayMona
+    rarity
+  }
+}
+`;

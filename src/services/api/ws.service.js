@@ -23,17 +23,12 @@ import {
   getAllDigitalaxGarmentsCollectionsV2,
   onAllAuctionsChangeV2,
   onAuctionsChangeByIdsV2,
-  onAuctionsChangeV2,
   onAuctionsHistoryByIdsV2,
   onDaysChangeV2,
-  onDesignerByIdsV2,
-  onDigitalaxGarmentsCollectionChangeByIdsV2,
   onDigitalaxGarmentsCollectionChangeV2,
   onDigitalaxMarketplaceOffersV2,
   onMarketplaceHistoryByIdsV2,
   onNFTGlobalStatsV2,
-  onPreviousAuctionsChangeV2,
-  onResultedAuctionsByEndTimeGtAndIdsV2,
 } from './gql.subscriptions.v2.ws.service';
 
 class WSService {
@@ -58,120 +53,152 @@ class WSService {
     this.createClient();
   }
 
-  getQuery(query1, query2) {
-    if (this.url.includes('matic') || this.url.includes('mumbai')) {
-      return query2;
-    } else {
-      return query1;
-    }
-  }
-
   onDaysChange(countDays) {
     const date = moment().subtract(countDays, 'day').format('YYYY-MM-DD');
-    return this.client.request({
-      query: this.getQuery(onDaysChange, onDaysChangeV2),
-      variables: { date },
-    });
+    return this.client.request({ query: onDaysChange, variables: { date } });
   }
 
   onNFTGlobalStats() {
-    return this.client.request({ query: this.getQuery(onNFTGlobalStats, onNFTGlobalStatsV2) });
+    return this.client.request({ query: onNFTGlobalStats });
   }
 
   onAuctionsChange() {
-    return this.client.request({ query: this.getQuery(onAuctionsChange, onAuctionsChangeV2) });
+    return this.client.request({ query: onAuctionsChange });
   }
 
   onPreviousAuctionsChange() {
-    return this.client.request({
-      query: this.getQuery(onPreviousAuctionsChange, onPreviousAuctionsChangeV2),
-    });
+    return this.client.request({ query: onPreviousAuctionsChange });
   }
 
   onAllAuctionsChange() {
-    return this.client.request({
-      query: this.getQuery(onAllAuctionsChange, onAllAuctionsChangeV2),
-    });
+    return this.client.request({ query: onAllAuctionsChange });
   }
 
   onAuctionsChangeByIds(ids) {
     return this.client.request({
-      query: this.getQuery(onAuctionsChangeByIds, onAuctionsChangeByIdsV2),
+      query: onAuctionsChangeByIds,
       variables: { ids },
     });
   }
 
   onDesignerByIds(ids) {
-    return this.client.request({
-      query: this.getQuery(onDesignerByIds, onDesignerByIdsV2),
-      variables: { ids },
-    });
+    return this.client.request({ query: onDesignerByIds, variables: { ids } });
   }
 
   onAuctionsHistoryByIds(ids) {
     return this.client.request({
-      query: this.getQuery(onAuctionsHistoryByIds, onAuctionsHistoryByIdsV2),
+      query: onAuctionsHistoryByIds,
       variables: { ids },
     });
   }
 
   onMarketplaceHistoryByIds(ids) {
     return this.client.request({
-      query: this.getQuery(onMarketplaceHistoryByIds, onMarketplaceHistoryByIdsV2),
+      query: onMarketplaceHistoryByIds,
       variables: { ids },
     });
   }
 
   onResultedAuctionsByEndTimeGtAndIds(ids, endTime) {
     return this.client.request({
-      query: this.getQuery(
-        onResultedAuctionsByEndTimeGtAndIds,
-        onResultedAuctionsByEndTimeGtAndIdsV2,
-      ),
+      query: onResultedAuctionsByEndTimeGtAndIds,
       variables: { endTime, ids },
     });
   }
 
   onDigitalaxGarmentsCollectionChange(garmentAuctionNFTId) {
     return this.client.request({
-      query: this.getQuery(
-        onDigitalaxGarmentsCollectionChange,
-        onDigitalaxGarmentsCollectionChangeV2,
-      ),
+      query: onDigitalaxGarmentsCollectionChange,
       variables: { garmentAuctionNFTId },
     });
   }
 
   getAllDigitalaxGarmentsCollections() {
     return this.client.request({
-      query: this.getQuery(
-        getAllDigitalaxGarmentsCollections,
-        getAllDigitalaxGarmentsCollectionsV2,
-      ),
+      query: getAllDigitalaxGarmentsCollections,
     });
   }
 
   onDigitalaxMarketplaceOffers(ids) {
     return this.client.request({
-      query: this.getQuery(onDigitalaxMarketplaceOffers, onDigitalaxMarketplaceOffersV2),
+      query: onDigitalaxMarketplaceOffers,
       variables: { ids },
     });
   }
 
   getAllDigitalaxMarketplaceOffers() {
     return this.client.request({
-      query: this.getQuery(allDigitalaxMarketplaceOffers, allDigitalaxMarketplaceOffersV2),
+      query: allDigitalaxMarketplaceOffers,
     });
   }
 
   onDigitalaxGarmentsCollectionChangeByIds(ids) {
     return this.client.request({
-      query: this.getQuery(
-        onDigitalaxGarmentsCollectionChangeByIds,
-        onDigitalaxGarmentsCollectionChangeByIdsV2,
-      ),
+      query: onDigitalaxGarmentsCollectionChangeByIds,
       variables: { ids },
     });
+  }
+
+  // v2
+
+  getAllDigitalaxGarmentsCollectionsV2() {
+    return this.client.request({
+      query: getAllDigitalaxGarmentsCollectionsV2,
+    });
+  }
+
+  getAllDigitalaxMarketplaceOffersV2() {
+    return this.client.request({
+      query: allDigitalaxMarketplaceOffersV2,
+    });
+  }
+
+  onDigitalaxMarketplaceOffersV2(ids) {
+    return this.client.request({
+      query: onDigitalaxMarketplaceOffersV2,
+      variables: { ids },
+    });
+  }
+
+  onAuctionsChangeByIdsV2(ids) {
+    return this.client.request({
+      query: onAuctionsChangeByIdsV2,
+      variables: { ids },
+    });
+  }
+
+  onDigitalaxGarmentsCollectionChangeV2(garmentAuctionNFTId) {
+    return this.client.request({
+      query: onDigitalaxGarmentsCollectionChangeV2,
+      variables: { garmentAuctionNFTId },
+    });
+  }
+
+  onAllAuctionsChangeV2() {
+    return this.client.request({ query: onAllAuctionsChangeV2 });
+  }
+
+  onAuctionsHistoryByIdsV2(ids) {
+    return this.client.request({
+      query: onAuctionsHistoryByIdsV2,
+      variables: { ids },
+    });
+  }
+
+  onMarketplaceHistoryByIdsV2(ids) {
+    return this.client.request({
+      query: onMarketplaceHistoryByIdsV2,
+      variables: { ids },
+    });
+  }
+
+  onDaysChangeV2(countDays) {
+    const date = moment().subtract(countDays, 'day').format('YYYY-MM-DD');
+    return this.client.request({ query: onDaysChangeV2, variables: { date } });
+  }
+
+  onNFTGlobalStatsV2() {
+    return this.client.request({ query: onNFTGlobalStatsV2 });
   }
 }
 

@@ -14,12 +14,8 @@ import ImportantCollectionInformation from '@containers/important-collection-inf
 import styles from './styles.module.scss';
 
 const CardProduct = ({ collection }) => {
-  const tokenInfo = useTokenInfo(collection.image, [collection.image]);
   const designerInfo = useSelector(getDesignerInfoByName(collection.designer, true));
-  const [imageUrl, isVideo] =
-    collection.id === 2
-      ? [tokenInfo ? tokenInfo.animation : '', true]
-      : getImageForCardProduct(tokenInfo);
+
   return (
     <li className={cn(styles.item)}>
       <Link href={`/collections/${collection.id}`}>
@@ -34,23 +30,22 @@ const CardProduct = ({ collection }) => {
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          {imageUrl && (
-            <Link href={`/collections/${collection.id}`}>
-              <a className={styles.clothesPhotoWrapper}>
-                {isVideo ? (
-                  <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}>
-                    <source src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
-                  </video>
-                ) : (
-                  <img
-                    className={styles.clothesPhoto}
-                    src={create2KURL(imageUrl.replace('gateway.pinata', 'digitalax.mypinata'))}
-                    alt={collection.id}
-                  />
-                )}
-              </a>
-            </Link>
-          )}
+          <Link href={`/collections/${collection.id}`}>
+            <a className={styles.clothesPhotoWrapper}>
+              <video
+                autoPlay
+                muted
+                loop
+                className={styles.clothesPhoto}
+                key={collection.image.replace('gateway.pinata', 'digitalax.mypinata')}
+              >
+                <source
+                  src={collection.image.replace('gateway.pinata', 'digitalax.mypinata')}
+                  type="video/mp4"
+                />
+              </video>
+            </a>
+          </Link>
         </div>
 
         <ImportantCollectionInformation collection={collection} />

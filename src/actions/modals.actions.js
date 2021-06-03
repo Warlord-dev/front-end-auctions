@@ -59,3 +59,9 @@ export const closeESPAReadyModal = () => (dispatch) => dispatch(closeModal('isSh
 
 export const openConnectMaticModal = (params) => (dispatch) => dispatch(openModal('isShowModalConnectMatic', 'hideScroll', params));
 export const closeConnectMaticModal = () => (dispatch) => dispatch(closeModal('isShowModalConnectMatic', 'addScroll'));
+
+export const openBuyNowCoolDownModal = (params) => (dispatch) => dispatch(openModal('isCoolDown', 'hideScroll', params));
+export const closeBuyNowCooldownModal = () => (dispatch) => dispatch(closeModal('isCoolDown', 'addScroll'));
+
+export const openBuyNowLimitModal = (params) => (dispatch) => dispatch(openModal('isLimit', 'hideScroll', params));
+export const closeBuyNowLimitModal = () => (dispatch) => dispatch(closeModal('isLimit', 'addScroll'));

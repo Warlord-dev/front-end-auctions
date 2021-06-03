@@ -26,19 +26,27 @@ import ProductCollection from '@components/product-collection';
 import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
+import apiService from '@services/api/api.service';
 
 const collections = [
+  {
+    id: 3,
+    text: 'MineCraft',
+    designer: 'Digitalax',
+    image: 'https://digitalax.mypinata.cloud/ipfs/QmTfYwLRhqpYBaSoFFGKUJcYU6XSbHpsQvRen2dWQZ8WKH',
+  },
   {
     id: 1,
     text: 'Collection: Kodomodachi x Charli Cohen',
     designer: 'Kodomodachi',
-    image: 'https://digitalax.mypinata.cloud/ipfs/QmYvo2f6NfCD75nL49Gy5wi1jEYSh8z7wTHJjnJbV9KJt3',
+    image1: 'https://digitalax.mypinata.cloud/ipfs/QmYvo2f6NfCD75nL49Gy5wi1jEYSh8z7wTHJjnJbV9KJt3',
+    image: 'https://digitalax.mypinata.cloud/ipfs/QmaXujooccp7MsnNSk6M3A6oxGiPnsvTwwu8hutefFgDEJ',
   },
   {
     id: 2,
     text: 'DIGI Bundle',
     designer: 'Digitalax',
-    image: 'https://digitalax.mypinata.cloud/ipfs/QmQGuYKtqNUKqAqxmHkuYB4qCS9riKW6Eu1SNhBToBc4ry',
+    image: 'https://digitalax.mypinata.cloud/ipfs/QmRdxLAmXR36dNr6cKJeXNyEzSd1JKYMmzbQipHv3HZ1b1',
   },
 ];
 
@@ -97,9 +105,8 @@ const PageAuctionList = () => {
 
   useEffect(
     () => () => {
-      if (!auctions) {
-        dispatch(auctionPageActions.reset());
-      }
+      dispatch(auctionPageActions.reset());
+      dispatch(collectionActions.clear());
     },
     [],
   );

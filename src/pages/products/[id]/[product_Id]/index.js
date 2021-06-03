@@ -15,14 +15,13 @@ import { useSubscription } from '@hooks/subscription.hooks';
 
 const Products = () => {
   const router = useRouter();
-  const { id } = router.query;
-  const garmentId = id.slice(0, id.length - 1);
-  const tabIndex = parseInt(id.slice(id.length - 1));
+  const { id, product_Id } = router.query;
+  const garmentId = product_Id.slice(0, product_Id.length - 1);
+  const tabIndex = parseInt(product_Id.slice(product_Id.length - 1));
 
   if (tabIndex > 3) {
     return null;
   } //hardcoded
-  console.log({garmentId});
   const dispatch = useDispatch();
   const garment = useSelector(getGarmentsById(garmentId));
   const collections = useSelector(getAllCollections);
@@ -40,61 +39,73 @@ const Products = () => {
 
   useSubscription(
     {
-      request: wsApi.onAuctionsChangeByIds([garmentId]),
+      request:
+        id === '1'
+          ? wsApi.onAuctionsChangeByIds([garmentId])
+          : wsApi.onAuctionsChangeByIdsV2([garmentId]),
       next: (data) => {
-        dispatch(auctionActions.mapData(data.digitalaxGarmentAuctions));
+        dispatch(auctionActions.mapData(Object.values(data)[0]));
       },
     },
-    [chainId, garmentId]
+    [chainId, garmentId],
   );
 
   useSubscription(
     {
-      request: wsApi.onDigitalaxGarmentsCollectionChange(garmentId),
+      request:
+        id === '1'
+          ? wsApi.onDigitalaxGarmentsCollectionChange(garmentId)
+          : wsApi.onDigitalaxGarmentsCollectionChangeV2(garmentId),
       next: (data) => {
-        dispatch(collectionActions.mapData(data.digitalaxGarmentCollections));
+        dispatch(collectionActions.mapData(Object.values(data)[0]));
       },
     },
-    [chainId, garmentId]
+    [chainId, garmentId],
   );
 
   useSubscription(
     {
-      request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
+      request:
+        id === '1'
+          ? wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id))
+          : wsApi.onDigitalaxMarketplaceOffersV2(currentCollections.map((val) => val.id)),
       next: (data) => {
-        dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
+        dispatch(collectionActions.updateMarketplaceOffers(Object.values(data)[0]));
       },
     },
-    [chainId, currentCollections]
+    [chainId, currentCollections],
   );
 
   useSubscription(
     {
-      request: wsApi.onAllAuctionsChange(),
+      request: id === '1' ? wsApi.onAllAuctionsChange() : wsApi.onAllAuctionsChangeV2(),
       next: (data) => {
-        dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions));
+        dispatch(auctionPageActions.updateAuctions(Object.values(data)[0]));
       },
     },
-    [chainId]
+    [chainId],
   );
 
   useSubscription(
     {
-      request: wsApi.onAuctionsHistoryByIds([garmentId]),
-      next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
+      request:
+        id === '1'
+          ? wsApi.onAuctionsHistoryByIds([garmentId])
+          : wsApi.onAuctionsHistoryByIdsV2([garmentId]),
+      next: (data) => dispatch(historyActions.mapData(Object.values(data)[0])),
     },
-    [chainId, garmentId]
+    [chainId, garmentId],
   );
 
   useSubscription(
     {
-      request: wsApi.onMarketplaceHistoryByIds([garmentId]),
-      next: (data) =>
-        dispatch(
-          historyActions.updateMarketplaceHistories(data.digitalaxMarketplacePurchaseHistories)
-        ),
+      request:
+        id === '1'
+          ? wsApi.onMarketplaceHistoryByIds([garmentId])
+          : wsApi.onMarketplaceHistoryByIdsV2([garmentId]),
+      next: (data) => dispatch(historyActions.updateMarketplaceHistories(Object.values(data)[0])),
     },
-    [chainId, garmentId]
+    [chainId, garmentId],
   );
 
   useEffect(
@@ -103,7 +114,7 @@ const Products = () => {
         dispatch(garmentPageActions.reset());
       }
     },
-    []
+    [],
   );
 
   if (!garment) {
@@ -114,6 +125,7 @@ const Products = () => {
 
   return (
     <PageProduct
+      collectionId={id}
       clothesId={garment.id}
       tabIndex={tabIndex}
       designerId={designerId}

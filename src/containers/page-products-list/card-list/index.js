@@ -20,7 +20,14 @@ import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
 
-const CardList = ({ auctions, collections, className, showGraphIds, setShowGraphIds }) => {
+const CardList = ({
+  collectionId,
+  auctions,
+  collections,
+  className,
+  showGraphIds,
+  setShowGraphIds,
+}) => {
   const dropdownOptions = [
     { key: 1, text: 'Highest bid', value: 'highest_bid' },
     { key: 2, text: 'Lowest bid', value: 'lowest_bid' },
@@ -31,7 +38,7 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
   const garmentsById = useSelector(getAllGarmentsById);
   const auctionsIsLoaded = useSelector(getAuctionsIsLoaded);
   const [dropdownActiveItem, setDropdownActiveItem] = useState(
-    localStorage.getItem(STORAGE_SORT_BY)
+    localStorage.getItem(STORAGE_SORT_BY),
   );
 
   switch (dropdownActiveItem) {
@@ -75,6 +82,7 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
             const garment = garmentsById.get(auction.id);
             return (
               <CardProduct
+                collectionId={collectionId}
                 key={garment.id}
                 history={historyByTokenId.get(garment.id)}
                 auctionId={auction.id}
@@ -91,6 +99,7 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
               const garment = collection.garments[0];
               return (
                 <CardProduct
+                  collectionId={collectionId}
                   key={garment.id}
                   history={historyByTokenId.get(garment.id)}
                   auctionId={collection.garmentAuctionID}
@@ -107,6 +116,7 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
               const garment = collection.garments[0];
               return (
                 <CardProduct
+                  collectionId={collectionId}
                   key={garment.id}
                   history={historyByTokenId.get(garment.id)}
                   auctionId={collection.garmentAuctionID}

@@ -5,6 +5,7 @@ import Trade from './trade';
 import styles from './styles.module.scss';
 
 const PageProduct = ({
+  collectionId,
   clothesId,
   tabIndex,
   designerId,
@@ -19,6 +20,7 @@ const PageProduct = ({
   return (
     <div className={styles.wrapper}>
       <ProductDescription
+        collectionId={collectionId}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         clothesId={clothesId}

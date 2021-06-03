@@ -9,6 +9,8 @@ import BuyNow from "@containers/modals/buy-now";
 import PreviewMaterial from "@containers/modals/preview-material";
 import ModalESPAReady from "./modal-espa-ready";
 import ModalConnectMatic from "./modal-connect-matic";
+import BuyNowCooldown from './modal-cooldown';
+import BuyNowLimit from './modal-limit';
 
 const Modals = () => {
   const modals = useSelector((state) => state.modals.toJS());
@@ -22,6 +24,8 @@ const Modals = () => {
     isShowBuyNow,
     isShowPreviewMaterial,
     isShowModalESPAReady,
+    isLimit,
+    isCoolDown
   } = modals;
 
   return (
@@ -35,6 +39,8 @@ const Modals = () => {
       {isShowModalConnectMatic && <ModalConnectMatic />}
       {isShowBuyNow && <BuyNow />}
       {isShowPreviewMaterial && <PreviewMaterial />}
+      {isCoolDown && <BuyNowCooldown />}
+      {isLimit && <BuyNowLimit />}
     </>
   );
 };

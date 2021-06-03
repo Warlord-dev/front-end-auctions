@@ -84,7 +84,7 @@ class BidActions extends BaseActions {
         .allowance(account, marketplaceContract)
         .call({ from: account });
       const jsAllowedValue = parseFloat(ethersUtils.formatEther(allowedValue));
-      return jsAllowedValue > 10000000000;
+      return jsAllowedValue > 100000000000;
     };
   }
 
@@ -93,7 +93,7 @@ class BidActions extends BaseActions {
       const account = getState().user.get('account');
       const chainId = getState().global.get('chainId');
       const marketplaceContract = await getMarketplaceContractAddressByChainId(chainId);
-      const contract = await getMarketplaceContract(marketplaceContract);
+      const contract = await getMarketplaceContract(chainId);
       if (isMona) {
         const monaContractAddress = await getMonaContractAddressByChainId(chainId);
         const monaContract = await getMonaTokenContract(monaContractAddress);
@@ -101,7 +101,7 @@ class BidActions extends BaseActions {
           .allowance(account, marketplaceContract)
           .call({ from: account });
         const jsAllowedValue = parseFloat(ethersUtils.formatEther(allowedValue));
-        if (jsAllowedValue < 10000000000) {
+        if (jsAllowedValue < 100000000000) {
           const listener = monaContract.methods
             .approve(marketplaceContract, convertToWei(20000000000))
             .send({ from: account });
@@ -120,11 +120,11 @@ class BidActions extends BaseActions {
       }
 
       const listener = contract.methods
-        .buyOffer(id, isMona)
-        .send({ from: account, value: isMona ? 0 : value });
+        .buyOffer(id)
+        .send({ from: account });
       const promise = new Promise((resolve, reject) => {
         listener.on('error', (error) => reject(error));
-        listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
+        listener.on('confirmation', (transactionHash) => resolve(transactionHash));
       });
       return {
         promise,

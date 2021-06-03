@@ -17,15 +17,18 @@ import {
   getUpgraderAddressByChainId,
   getChildTunnelAddressV2ByChainId,
   getRootTunnelAddressV2ByChainId,
+  getMarketplaceContractAddressByChainId,
 } from './network.service';
 
 import DigiMaterialV2ABI from '../constants/digi_material_v2_abi.json';
 import DigiRootTunnelABI from '../constants/digi_root_tunnel_abi.json';
 import ERC20ABI from '../constants/erc20_abi.json';
 import UpgraderABI from '../constants/upgrader_abi.json';
+import MarketplaceV2ABI from '../constants/marketplace_v2_abi.json';
 import { toast } from 'react-toastify';
 
-export const getMarketplaceContract = async (ContractAddress) => {
+export const getMarketplaceContract = async (chainId) => {
+  const address = getMarketplaceContractAddressByChainId(chainId);
   const jsonInterface = [
     {
       inputs: [
@@ -46,10 +49,12 @@ export const getMarketplaceContract = async (ContractAddress) => {
     },
   ];
 
-  const contract = await new window.web3.eth.Contract(jsonInterface, ContractAddress);
+  const contract = await new window.web3.eth.Contract(chainId === 1 || chainId === 4 ? jsonInterface : MarketplaceV2ABI, address);
 
   return contract;
 };
+
+
 
 export const getMonaTokenContract = async (ContractAddress) => {
   const jsonInterface = [

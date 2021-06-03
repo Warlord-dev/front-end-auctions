@@ -11,6 +11,7 @@ import RightBox from './right-box';
 import styles from './styles.module.scss';
 
 const ProductDescription = ({
+  collectionId,
   clothesId,
   currentCollections,
   currentMarketplaceOffers,
@@ -24,7 +25,7 @@ const ProductDescription = ({
     }
     if (activeTab === 1) {
       const t_semiRare = currentCollections.find(
-        (collection) => collection.rarity === SEMI_RARE_RARITY
+        (collection) => collection.rarity === SEMI_RARE_RARITY,
       );
       return t_semiRare ? t_semiRare.garments[0].tokenUri : '';
     }
@@ -40,21 +41,21 @@ const ProductDescription = ({
   const currentDesignersInfo = useSelector(
     activeTab === 3
       ? getDesignerInfoByName('Digitalax', true)
-      : getDesignerInfoById(garment.designer)
+      : getDesignerInfoById(garment.designer),
   );
   const receive = useSelector(getGarmentsReceiveByName(tokenInfo?.name));
 
   const currentCounts = useMemo(() => {
     let t_semiRare_offer = currentMarketplaceOffers.find(
-      (offer) => offer.garmentCollection.rarity === SEMI_RARE_RARITY
+      (offer) => offer.garmentCollection.rarity === SEMI_RARE_RARITY,
     );
     let t_common_offer = currentMarketplaceOffers.find(
-      (offer) => offer.garmentCollection.rarity === COMMON_RARITY
+      (offer) => offer.garmentCollection.rarity === COMMON_RARITY,
     );
     if (activeTab === 3) {
       //hardcoded
       t_semiRare_offer = currentMarketplaceOffers.find(
-        (offer) => offer.garmentCollection.id === '8'
+        (offer) => offer.garmentCollection.id === '8',
       );
       t_common_offer = null;
     }
@@ -139,6 +140,7 @@ const ProductDescription = ({
         setActiveTab={setActiveTab}
       />
       <RightBox
+        collectionId={collectionId}
         clothesId={clothesId}
         currentCounts={currentCounts}
         currentClothesInfo={currentClothesInfo}

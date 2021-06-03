@@ -53,6 +53,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   useEffect(() => {
     async function getMonaApproval() {
       dispatch(bidActions.getApprovedInMona()).then((val) => {
+        console.log('this is approve in mona', val);
         setApproved(val);
       });
     }
@@ -90,7 +91,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
               <Button
                 isDisabled={isDisabled || !isMatic}
                 background="black"
-                onClick={() => handleClick(0)}
+                onClick={() => handleClick(approved ? 1 : 0)}
                 className={styles.button}
               >
                 {approved ? buttonText1 : 'APPROVE $MONA'}

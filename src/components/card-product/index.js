@@ -21,6 +21,7 @@ import { useTokenInfo } from '@hooks/token.info.hooks';
 import styles from './styles.module.scss';
 
 const CardProduct = ({
+  collectionId,
   history,
   auctionId,
   garment,
@@ -47,9 +48,7 @@ const CardProduct = ({
   return (
     <li className={cn(styles.item, className)}>
       <Link href={`${PRODUCTS}${auctionId}${tabIndex}`}>
-        <a className={styles.clothesName}>
-          {garment.name ? garment.name : `ID:${garment.id}`}
-        </a>
+        <a className={styles.clothesName}>{garment.name ? garment.name : `ID:${garment.id}`}</a>
       </Link>
       <SmallPhotoWithText
         className={styles.designerWrapper}
@@ -60,7 +59,7 @@ const CardProduct = ({
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link href={`${PRODUCTS}${auctionId}${tabIndex}`}>
+          <Link href={`${PRODUCTS}${collectionId}/${auctionId}${tabIndex}`}>
             <a className={styles.clothesPhotoWrapper}>
               <span className={cn(styles.garmentTypeWrapper, COLORS[tabIndex])}>
                 <span className={styles.bannerText}>{TABS[tabIndex]}</span>
@@ -76,18 +75,21 @@ const CardProduct = ({
                   isVideo ? (
                     <LazyLoad>
                       <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
-                        <source src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
+                        <source
+                          src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
+                          type="video/mp4"
+                        />
                       </video>
                     </LazyLoad>
                   ) : (
                     <div className={styles.clothesPhotoSubWrapper}>
-                    <Image
-                      className={styles.clothesPhoto}
-                      src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
-                      alt={garment.id}
-                      width={'100%'}
-                      height={'100%'}
-                    />
+                      <Image
+                        className={styles.clothesPhoto}
+                        src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
+                        alt={garment.id}
+                        width={'100%'}
+                        height={'100%'}
+                      />
                     </div>
                   )
                 ) : null)}

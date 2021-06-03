@@ -1,5 +1,5 @@
-@import "../../../assets/scss/helpers/grid.scss";
-@import "../../../assets/scss/helpers/variables.scss";
+@import '../../../assets/scss/helpers/grid.scss';
+@import '../../../assets/scss/helpers/variables.scss';
 
 .dropdown {
   @include wrapper();
@@ -48,8 +48,8 @@
         align-items: center;
 
         &:before {
-          content: "";
-          background-image: url("../../../../public/images/icons/arrow-bottom.svg") !important;
+          content: '';
+          background-image: url('../../../../public/images/icons/arrow-bottom.svg') !important;
           width: 8px;
           height: 5px;
           display: block;
@@ -75,10 +75,17 @@
   @include wrapper();
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media screen and (min-width: 1320px) {
+    max-width: 1320px;
+    min-width: 1320px;
+    padding: 0;
+  }
   @media screen and (max-width: 1200px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
+
   row-gap: 68px;
   column-gap: 84px;
   margin-bottom: 100px;
