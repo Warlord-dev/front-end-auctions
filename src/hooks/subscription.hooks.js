@@ -5,7 +5,9 @@ export const useSubscription = ({ request, next }, deps) => {
     if (deps || typeof deps === 'undefined') {
       const { unsubscribe } = request.subscribe({
         next: ({ data }) => {
+          // console.log({ data });
           if (!data) {
+            next();
             return;
           }
           if (Object.keys(data).filter((key) => key.includes('V2')).length) {

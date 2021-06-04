@@ -55,53 +55,53 @@ const PageAuctionList = () => {
   const auctions = useSelector(getAllAuctions);
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
   const globalStats = useSelector(getGlobalStats).toJS();
-  const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
-  const currentCollections = useSelector(getAllCollections).toJS();
-  const chainId = useSelector(getChainId);
+  // const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
+  // const currentCollections = useSelector(getAllCollections).toJS();
+  // const chainId = useSelector(getChainId);
   const monaPerEth = useSelector(getMonaPerEth);
   const currentAuctions = auctions.toJS();
 
-  useSubscription(
-    {
-      request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
-      next: (data) => dispatch(auctionPageActions.updateMonthStats(data.days)),
-    },
-    [chainId],
-  );
+  // useSubscription(
+  //   {
+  //     request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
+  //     next: (data) => dispatch(auctionPageActions.updateMonthStats(data.days)),
+  //   },
+  //   [chainId],
+  // );
 
-  useSubscription(
-    {
-      request: wsApi.onDaysChange(TOTAL_VOLUME_DAYS),
-      next: (data) => dispatch(auctionPageActions.updateWeekStats(data.days)),
-    },
-    [chainId],
-  );
+  // useSubscription(
+  //   {
+  //     request: wsApi.onDaysChange(TOTAL_VOLUME_DAYS),
+  //     next: (data) => dispatch(auctionPageActions.updateWeekStats(data.days)),
+  //   },
+  //   [chainId],
+  // );
 
-  useSubscription(
-    {
-      request: wsApi.onNFTGlobalStats(),
-      next: (data) => {
-        dispatch(
-          auctionPageActions.updateGlobalStats(
-            data.digitalaxGarmentNFTGlobalStats.length > 0
-              ? data.digitalaxGarmentNFTGlobalStats[0]
-              : [],
-          ),
-        );
-      },
-    },
-    [chainId],
-  );
+  // useSubscription(
+  //   {
+  //     request: wsApi.onNFTGlobalStats(),
+  //     next: (data) => {
+  //       dispatch(
+  //         auctionPageActions.updateGlobalStats(
+  //           data.digitalaxGarmentNFTGlobalStats.length > 0
+  //             ? data.digitalaxGarmentNFTGlobalStats[0]
+  //             : [],
+  //         ),
+  //       );
+  //     },
+  //   },
+  //   [chainId],
+  // );
 
-  useSubscription(
-    {
-      request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
-      next: (data) => {
-        dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
-      },
-    },
-    [chainId, currentCollections],
-  );
+  // useSubscription(
+  //   {
+  //     request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
+  //     next: (data) => {
+  //       dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
+  //     },
+  //   },
+  //   [chainId, currentCollections],
+  // );
 
   useEffect(
     () => () => {

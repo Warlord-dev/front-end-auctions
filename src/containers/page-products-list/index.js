@@ -32,6 +32,8 @@ const PageProductsList = ({ collectionId }) => {
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
   const globalStats = useSelector(getGlobalStats).toJS();
   const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
+  const [collectionLoaded, setCollectionLoaded] = useState(false);
+  const [auctionLoaded, setAuctionLoaded] = useState(false);
   const chainId = useSelector(getChainId);
   const currentAuctions = auctions.toJS();
   const currentCollections = collections.toJS();
@@ -40,10 +42,12 @@ const PageProductsList = ({ collectionId }) => {
   useSubscription(
     {
       request:
-        collectionId === '1'
+        collectionId === '1' || collectionId === '2'
           ? wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS)
           : wsApi.onDaysChangeV2(MAIN_GRAPH_COUNT_DAYS),
-      next: (data) => dispatch(auctionPageActions.updateMonthStats(Object.values(data)[0])),
+      next: (data) => {
+        dispatch(auctionPageActions.updateMonthStats(data?.days || []));
+      },
     },
     [chainId],
   );
@@ -51,21 +55,28 @@ const PageProductsList = ({ collectionId }) => {
   useSubscription(
     {
       request:
-        collectionId === '1'
+        collectionId === '1' || collectionId === '2'
           ? wsApi.onDaysChange(TOTAL_VOLUME_DAYS)
           : wsApi.onDaysChangeV2(TOTAL_VOLUME_DAYS),
-      next: (data) => dispatch(auctionPageActions.updateWeekStats(Object.values(data)[0])),
+      next: (data) => {
+        dispatch(auctionPageActions.updateWeekStats(data?.days || []));
+      },
     },
     [chainId],
   );
 
   useSubscription(
     {
-      request: collectionId === '1' ? wsApi.onNFTGlobalStats() : wsApi.onNFTGlobalStatsV2(),
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.onNFTGlobalStats()
+          : wsApi.onNFTGlobalStatsV2(),
       next: (data) => {
         dispatch(
           auctionPageActions.updateGlobalStats(
-            Object.values(data)[0].length > 0 ? Object.values(data)[0][0] : [],
+            (data?.digitalaxGarmentNFTGlobalStats || []).length > 0
+              ? Object.values(data)[0][0]
+              : [],
           ),
         );
       },
@@ -73,72 +84,87 @@ const PageProductsList = ({ collectionId }) => {
     [chainId],
   );
 
-  // useSubscription(
-  //   {
-  //     request: wsApi.getAllDigitalaxGarmentsCollections(),
-  //     next: (data) => {
-  //       console.log('this is get All digitalax garment collections');
-  //       dispatch(collectionActions.mapData(Object.values(data)[0]));
-  //     },
-  //   },
-  //   [chainId],
-  // );
+  useSubscription(
+    {
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.getAllDigitalaxGarmentsCollections()
+          : wsApi.getAllDigitalaxGarmentsCollectionsV2(),
+      next: (data) => {
+        dispatch(globalActions.setIsLoading(false));
+        dispatch(collectionActions.mapData(data?.digitalaxGarmentCollections || []));
+      },
+    },
+    [],
+  );
 
   useSubscription(
     {
       request:
-        collectionId === '1'
+        collectionId === '1' || collectionId === '2'
           ? wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id))
           : wsApi.onDigitalaxMarketplaceOffersV2(currentCollections.map((val) => val.id)),
       next: (data) => {
-        dispatch(collectionActions.updateMarketplaceOffers(Object.values(data)[0]));
+        dispatch(collectionActions.updateMarketplaceOffers(data?.digitalaxMarketplaceOffers || []));
       },
     },
     [chainId, currentCollections],
   );
 
-  // useSubscription(
-  //   {
-  //     request: wsApi.onAllAuctionsChange(),
-  //     next: (data) => dispatch(auctionPageActions.updateAuctions(Object.values(data)[0])),
-  //   },
-  //   [chainId],
-  // );
+  useSubscription(
+    {
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.onAllAuctionsChange()
+          : wsApi.onAllAuctionsChangeV2(),
+      next: (data) => {
+        dispatch(globalActions.setIsLoading(false));
+        dispatch(auctionPageActions.updateAuctions(data?.digitalaxGarmentAuctions || []));
+      },
+    },
+    [],
+  );
 
   useSubscription(
     {
       request:
-        collectionId === '1'
+        collectionId === '1' || collectionId === '2'
           ? wsApi.onAuctionsHistoryByIds(showGraphIds)
           : wsApi.onAuctionsHistoryByIdsV2(showGraphIds),
-      next: (data) => dispatch(auctionPageActions.updateHistory(Object.values(data)[0])),
+      next: (data) => {
+        dispatch(auctionPageActions.updateHistory(data?.digitalaxGarmentAuctionHistories || []));
+      },
     },
     [chainId, showGraphIds],
   );
 
-  useEffect(() => {
-    const fetchAuctionsAndCollections = async () => {
-      dispatch(globalActions.setIsLoading(true));
-      if (!auctions || !collections) {
-        dispatch(auctionPageActions.reset());
-        dispatch(collectionActions.clear());
-      }
-      if (collectionId === '1') {
-        const { digitalaxGarmentAuctions } = await apiService.getLiveAuctions();
-        dispatch(auctionPageActions.updateAuctions(digitalaxGarmentAuctions));
-        const { digitalaxGarmentCollections } = await apiService.getGarmentsCollections();
-        dispatch(collectionActions.mapData(digitalaxGarmentCollections));
-      } else if (collectionId === '3') {
-        const { digitalaxGarmentV2Auctions } = await apiService.getLiveAuctionsV2();
-        dispatch(auctionPageActions.updateAuctions(digitalaxGarmentV2Auctions));
-        const { digitalaxGarmentV2Collections } = await apiService.getGarmentsCollectionsV2();
-        dispatch(collectionActions.mapData(digitalaxGarmentV2Collections));
-      }
-      dispatch(globalActions.setIsLoading(false));
-    };
+  // useEffect(() => {
+  //   const fetchAuctionsAndCollections = async () => {
+  //     dispatch(globalActions.setIsLoading(true));
+  //     if (!auctions || !collections) {
+  //       dispatch(auctionPageActions.reset());
+  //       dispatch(collectionActions.clear());
+  //     }
+  //     if (collectionId === '1') {
+  //       const { digitalaxGarmentAuctions } = await apiService.getLiveAuctions();
+  //       dispatch(auctionPageActions.updateAuctions(digitalaxGarmentAuctions));
+  //       const { digitalaxGarmentCollections } = await apiService.getGarmentsCollections();
+  //       dispatch(collectionActions.mapData(digitalaxGarmentCollections));
+  //     } else if (collectionId === '3') {
+  //       const { digitalaxGarmentV2Auctions } = await apiService.getLiveAuctionsV2();
+  //       dispatch(auctionPageActions.updateAuctions(digitalaxGarmentV2Auctions));
+  //       const { digitalaxGarmentV2Collections } = await apiService.getGarmentsCollectionsV2();
+  //       dispatch(collectionActions.mapData(digitalaxGarmentV2Collections));
+  //     }
+  //     dispatch(globalActions.setIsLoading(false));
+  //   };
 
-    fetchAuctionsAndCollections();
-  }, [chainId]);
+  //   fetchAuctionsAndCollections();
+  // }, [chainId]);
+
+  useEffect(() => {
+    dispatch(globalActions.setIsLoading(true));
+  }, []);
 
   const nowTimestamp = Date.now();
 
@@ -210,6 +236,7 @@ const PageProductsList = ({ collectionId }) => {
         />
       ) : (
         <CardListDigi
+          collectionId={collectionId}
           auctions={currentAuctions}
           collections={
             collectionId === '2'

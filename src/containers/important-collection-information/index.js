@@ -33,11 +33,11 @@ const ImportantCollectionInformation = ({ collection }) => {
   useSubscription(
     {
       request:
-        collection.id === 1
+        collection.id === 1 || collection.id === 2
           ? wsApi.getAllDigitalaxGarmentsCollections()
           : wsApi.getAllDigitalaxGarmentsCollectionsV2(),
       next: (data) => {
-        setCurrentCollections(data.digitalaxGarmentCollections);
+        setCurrentCollections(data?.digitalaxGarmentCollections || []);
       },
     },
     [chainId],
@@ -45,8 +45,11 @@ const ImportantCollectionInformation = ({ collection }) => {
 
   useSubscription(
     {
-      request: collection.id === 1 ? wsApi.onAllAuctionsChange() : wsApi.onAllAuctionsChangeV2(),
-      next: (data) => setCurrentAuctions(data.digitalaxGarmentAuctions),
+      request:
+        collection.id === 1 || collection.id === 2
+          ? wsApi.onAllAuctionsChange()
+          : wsApi.onAllAuctionsChangeV2(),
+      next: (data) => setCurrentAuctions(data?.digitalaxGarmentAuctions || []),
     },
     [chainId],
   );
@@ -100,7 +103,7 @@ const ImportantCollectionInformation = ({ collection }) => {
             {collection.id !== 2 ? parseFloat(priceEth / monaPerEth).toFixed(2) : 40} $MONA
           </span>
           <span className={styles.priceUsd}>
-            (${getPriceUsd(collection.id === 1 ? priceEth : 40 * monaPerEth)})
+            (${getPriceUsd(collection.id !== 2 ? priceEth : 40 * monaPerEth)})
           </span>
         </p>
       </div>

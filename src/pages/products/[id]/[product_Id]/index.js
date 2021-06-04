@@ -40,11 +40,11 @@ const Products = () => {
   useSubscription(
     {
       request:
-        id === '1'
+        id === '1' || id === '2'
           ? wsApi.onAuctionsChangeByIds([garmentId])
           : wsApi.onAuctionsChangeByIdsV2([garmentId]),
       next: (data) => {
-        dispatch(auctionActions.mapData(Object.values(data)[0]));
+        dispatch(auctionActions.mapData(data?.digitalaxGarmentAuctions || []));
       },
     },
     [chainId, garmentId],
@@ -53,11 +53,11 @@ const Products = () => {
   useSubscription(
     {
       request:
-        id === '1'
+        id === '1' || id === '2'
           ? wsApi.onDigitalaxGarmentsCollectionChange(garmentId)
           : wsApi.onDigitalaxGarmentsCollectionChangeV2(garmentId),
       next: (data) => {
-        dispatch(collectionActions.mapData(Object.values(data)[0]));
+        dispatch(collectionActions.mapData(data?.digitalaxGarmentCollections || []));
       },
     },
     [chainId, garmentId],
@@ -66,11 +66,11 @@ const Products = () => {
   useSubscription(
     {
       request:
-        id === '1'
+        id === '1' || id === '2'
           ? wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id))
           : wsApi.onDigitalaxMarketplaceOffersV2(currentCollections.map((val) => val.id)),
       next: (data) => {
-        dispatch(collectionActions.updateMarketplaceOffers(Object.values(data)[0]));
+        dispatch(collectionActions.updateMarketplaceOffers(data?.digitalaxMarketplaceOffers || []));
       },
     },
     [chainId, currentCollections],
@@ -78,9 +78,10 @@ const Products = () => {
 
   useSubscription(
     {
-      request: id === '1' ? wsApi.onAllAuctionsChange() : wsApi.onAllAuctionsChangeV2(),
+      request:
+        id === '1' || id === '2' ? wsApi.onAllAuctionsChange() : wsApi.onAllAuctionsChangeV2(),
       next: (data) => {
-        dispatch(auctionPageActions.updateAuctions(Object.values(data)[0]));
+        dispatch(auctionPageActions.updateAuctions(data?.digitalaxGarmentAuctions || []));
       },
     },
     [chainId],
@@ -89,10 +90,11 @@ const Products = () => {
   useSubscription(
     {
       request:
-        id === '1'
+        id === '1' || id === '2'
           ? wsApi.onAuctionsHistoryByIds([garmentId])
           : wsApi.onAuctionsHistoryByIdsV2([garmentId]),
-      next: (data) => dispatch(historyActions.mapData(Object.values(data)[0])),
+      next: (data) =>
+        dispatch(historyActions.mapData(data?.digitalaxGarmentAuctionHistories || [])),
     },
     [chainId, garmentId],
   );
@@ -100,10 +102,15 @@ const Products = () => {
   useSubscription(
     {
       request:
-        id === '1'
+        id === '1' || id === '2'
           ? wsApi.onMarketplaceHistoryByIds([garmentId])
           : wsApi.onMarketplaceHistoryByIdsV2([garmentId]),
-      next: (data) => dispatch(historyActions.updateMarketplaceHistories(Object.values(data)[0])),
+      next: (data) =>
+        dispatch(
+          historyActions.updateMarketplaceHistories(
+            data?.digitalaxMarketplacePurchaseHistories || [],
+          ),
+        ),
     },
     [chainId, garmentId],
   );

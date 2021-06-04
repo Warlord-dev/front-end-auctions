@@ -107,15 +107,14 @@ const ImportantProductInformation = ({
   useSubscription(
     {
       request:
-        collectionId === '1'
+        collectionId === '1' || collectionId === '2'
           ? wsApi.onAuctionsHistoryByIds([auctionId])
           : wsApi.onAuctionsHistoryByIdsV2([auctionId]),
-      next: (data) => dispatch(historyActions.mapData(Object.values(data)[0])),
+      next: (data) =>
+        dispatch(historyActions.mapData(data?.digitalaxGarmentAuctionHistories || [])),
     },
     [chainId, auctionId],
   );
-
-  console.log({ auction });
 
   // if (!auction) {
   //   return null;
@@ -333,7 +332,7 @@ const ImportantProductInformation = ({
                 isDisabled={!isMatic}
                 className={styles.buttonSold}
                 background="black"
-                onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
+                onClick={() => Router.push(`${PRODUCTS}${collectionId}/${auctionId}${tabIndex}`)}
               >
                 <span>SOLD</span>
               </Button>
@@ -344,7 +343,7 @@ const ImportantProductInformation = ({
             isDisabled={!isMatic}
             className={styles.button}
             background="black"
-            onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
+            onClick={() => Router.push(`${PRODUCTS}${collectionId}/${auctionId}${tabIndex}`)}
           >
             <span>BUY NOW</span>
           </Button>

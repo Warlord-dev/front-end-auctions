@@ -6,13 +6,10 @@ import auctionActions from './auction.actions';
 import garmentActions from './garment.actions';
 
 class AuctionPageActions extends BaseActions {
-
   updateAuctions(digitalaxGarmentAuctions) {
     return async (dispatch) => {
       dispatch(
-        designerActions.mapData(
-          digitalaxGarmentAuctions.map((auction) => auction.designer),
-        ),
+        designerActions.mapData(digitalaxGarmentAuctions.map((auction) => auction.designer)),
       );
       dispatch(
         garmentActions.mapData(
@@ -60,7 +57,6 @@ class AuctionPageActions extends BaseActions {
       dispatch(this.setValue('auctionsIsLoaded', false));
     };
   }
-
 }
 
 export default new AuctionPageActions(auctionPageReducer);

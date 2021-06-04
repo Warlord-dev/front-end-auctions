@@ -76,61 +76,57 @@ const CardList = ({
           value={dropdownActiveItem}
         />
       </div>
-      {auctionsIsLoaded ? (
-        <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
-          {auctions.map((auction) => {
-            const garment = garmentsById.get(auction.id);
+      <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
+        {auctions.map((auction) => {
+          const garment = garmentsById.get(auction.id);
+          return (
+            <CardProduct
+              collectionId={collectionId}
+              key={garment.id}
+              history={historyByTokenId.get(garment.id)}
+              auctionId={auction.id}
+              garment={garment}
+              showGraphIds={showGraphIds}
+              setShowGraphIds={setShowGraphIds}
+              tabIndex={0}
+            />
+          );
+        })}
+        {collections
+          .filter((collection) => collection.rarity === SEMI_RARE_RARITY)
+          .map((collection) => {
+            const garment = collection.garments[0];
             return (
               <CardProduct
                 collectionId={collectionId}
                 key={garment.id}
                 history={historyByTokenId.get(garment.id)}
-                auctionId={auction.id}
+                auctionId={collection.garmentAuctionID}
                 garment={garment}
                 showGraphIds={showGraphIds}
                 setShowGraphIds={setShowGraphIds}
-                tabIndex={0}
+                tabIndex={1}
               />
             );
           })}
-          {collections
-            .filter((collection) => collection.rarity === SEMI_RARE_RARITY)
-            .map((collection) => {
-              const garment = collection.garments[0];
-              return (
-                <CardProduct
-                  collectionId={collectionId}
-                  key={garment.id}
-                  history={historyByTokenId.get(garment.id)}
-                  auctionId={collection.garmentAuctionID}
-                  garment={garment}
-                  showGraphIds={showGraphIds}
-                  setShowGraphIds={setShowGraphIds}
-                  tabIndex={1}
-                />
-              );
-            })}
-          {collections
-            .filter((collection) => collection.rarity === COMMON_RARITY)
-            .map((collection) => {
-              const garment = collection.garments[0];
-              return (
-                <CardProduct
-                  collectionId={collectionId}
-                  key={garment.id}
-                  history={historyByTokenId.get(garment.id)}
-                  auctionId={collection.garmentAuctionID}
-                  garment={garment}
-                  showGraphIds={showGraphIds}
-                  setShowGraphIds={setShowGraphIds}
-                  tabIndex={2}
-                />
-              );
-            })}{' '}
-        </ul>
-      ) : (
-        <Loader size="large" className={styles.loader} />
-      )}
+        {collections
+          .filter((collection) => collection.rarity === COMMON_RARITY)
+          .map((collection) => {
+            const garment = collection.garments[0];
+            return (
+              <CardProduct
+                collectionId={collectionId}
+                key={garment.id}
+                history={historyByTokenId.get(garment.id)}
+                auctionId={collection.garmentAuctionID}
+                garment={garment}
+                showGraphIds={showGraphIds}
+                setShowGraphIds={setShowGraphIds}
+                tabIndex={2}
+              />
+            );
+          })}{' '}
+      </ul>
     </>
   );
 };
