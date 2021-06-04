@@ -43,6 +43,7 @@ import { getAllCollections, getAllMarketplaceOffers } from '@selectors/collectio
 import { COMMON_RARITY, EXCLUSIVE_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 
 const ImportantProductInformation = ({
+  collectionId,
   auctionId,
   tabIndex,
   garment,
@@ -77,7 +78,7 @@ const ImportantProductInformation = ({
       (val) =>
         val.garmentCollection.garmentAuctionID === auctionId &&
         val.garmentCollection.rarity ===
-          (tabIndex === 2 ? COMMON_RARITY : tabIndex === 1 ? SEMI_RARE_RARITY : EXCLUSIVE_RARITY)
+          (tabIndex === 2 ? COMMON_RARITY : tabIndex === 1 ? SEMI_RARE_RARITY : EXCLUSIVE_RARITY),
     );
   }, [offers]);
 
@@ -105,17 +106,22 @@ const ImportantProductInformation = ({
 
   useSubscription(
     {
-      request: wsApi.onAuctionsHistoryByIds([auctionId]),
-      next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
+      request:
+        collectionId === '1'
+          ? wsApi.onAuctionsHistoryByIds([auctionId])
+          : wsApi.onAuctionsHistoryByIdsV2([auctionId]),
+      next: (data) => dispatch(historyActions.mapData(Object.values(data)[0])),
     },
-    [chainId, auctionId]
+    [chainId, auctionId],
   );
 
-  if (!auction) {
-    return null;
-  }
+  console.log({ auction });
 
-  const expirationDate = auction.endTime * 1000;
+  // if (!auction) {
+  //   return null;
+  // }
+
+  const expirationDate = auction?.endTime * 1000;
 
   const timeOut = new Date(expirationDate) - new Date() + 1000;
 
@@ -138,7 +144,7 @@ const ImportantProductInformation = ({
           (item) =>
             item &&
             item.bidder &&
-            [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName)
+            [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName),
         )
         .sort((a, b) => b.timestamp - a.timestamp)
     : [];
@@ -147,7 +153,7 @@ const ImportantProductInformation = ({
     // priceEth = sortedHistory.length
     //   ? convertToEth(sortedHistory[0].value)
     //   : Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
-    priceEth = convertToEth(auction.topBid || 0);
+    priceEth = convertToEth(auction?.topBid || 0);
   } else {
     priceEth = Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
   }
@@ -173,7 +179,7 @@ const ImportantProductInformation = ({
       } else if (bidWithdrawalLockTime - timeDiff / 1000 > 0) {
         timer.current = setTimeout(
           () => updateState(Date.now()),
-          (bidWithdrawalLockTime - timeDiff / 1000) * 1000
+          (bidWithdrawalLockTime - timeDiff / 1000) * 1000,
         );
       }
 
@@ -181,7 +187,7 @@ const ImportantProductInformation = ({
     }
 
     const mySortedHistory = sortedHistory.filter(
-      (item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase()
+      (item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase(),
     );
 
     if (mySortedHistory.length) {
@@ -217,7 +223,7 @@ const ImportantProductInformation = ({
         id: clothesId,
         priceEth,
         withdrawValue: convertToEth(withdrawValue),
-      })
+      }),
     );
   };
 
@@ -230,7 +236,7 @@ const ImportantProductInformation = ({
       openWithdrawModal({
         id: clothesId,
         withdrawValue: convertToEth(withdrawValue),
-      })
+      }),
     );
   };
 

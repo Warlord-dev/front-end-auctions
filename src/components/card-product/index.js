@@ -116,7 +116,12 @@ const CardProduct = ({
             </button>
           )}
         </div>
-        <ImportantProductInformation garment={garment} auctionId={auctionId} tabIndex={tabIndex} />
+        <ImportantProductInformation
+          collectionId={collectionId}
+          garment={garment}
+          auctionId={auctionId}
+          tabIndex={tabIndex}
+        />
       </div>
     </li>
   );

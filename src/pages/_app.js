@@ -21,6 +21,8 @@ import '../assets/scss/global.scss';
 import Particles from '@components/particles';
 import LoadingOverlay from 'react-loading-overlay';
 import { useRouter } from 'next/router';
+import api from '@services/api/api.service';
+import ws from '@services/api/ws.service';
 
 if (config.SENTRY_DSN) {
   Sentry.init({
@@ -74,6 +76,11 @@ const MyApp = ({ Component, pageProps, store, err }) => {
     });
     return <Component {...pageProps} />;
   }
+
+  useEffect(() => {
+    api.setUrl(config.API_URLS['matic']);
+    ws.setUrl(config.API_URLS['matic'].replace('http', 'ws'));
+  }, []);
 
   return (
     <Provider store={store}>
