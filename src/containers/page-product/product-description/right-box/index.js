@@ -100,7 +100,7 @@ const RightBox = ({
       }
     };
 
-    if (!isShowBuyNow) {
+    if (!isShowBuyNow && account) {
       fetchPurchaseInfo();
     }
   }, [isShowBuyNow]);

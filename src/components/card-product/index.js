@@ -47,7 +47,7 @@ const CardProduct = ({
 
   return (
     <li className={cn(styles.item, className)}>
-      <Link href={`${PRODUCTS}${auctionId}${tabIndex}`}>
+      <Link href={`${PRODUCTS}${collectionId}/${auctionId}${tabIndex}`}>
         <a className={styles.clothesName}>{garment.name ? garment.name : `ID:${garment.id}`}</a>
       </Link>
       <SmallPhotoWithText

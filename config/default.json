@@ -15,7 +15,7 @@
     "matic": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxmatic",
     "goerli": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxgoerli"
   },
-  "DEFAULT_NETWORK": "matic",
+  "DEFAULT_NETWORK": "mumbai",
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
   "WEB3_URLS": {
     "GOERLI": "https://goerli.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
