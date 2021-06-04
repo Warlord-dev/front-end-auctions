@@ -150,12 +150,10 @@ const RightBox = ({
       {activeTab === 0 && (
         <div className={styles.garmentInformation}>
           <p className={styles.description}>{currentClothesInfo?.description}</p>
-          {activeItem === SHOW_SECOND_TAB && (
-            <div className={styles.timerWrapper}>
-              <p className={styles.expirationDateText}>{expirationDateText}</p>
-              <Timer className={styles.timer} expirationDate={expirationDate} />
-            </div>
-          )}
+          <div className={styles.timerWrapper}>
+            <p className={styles.expirationDateText}>{expirationDateText}</p>
+            <Timer className={styles.timer} expirationDate={expirationDate} />
+          </div>
           <Button className={styles.buttonUtil} background="black">
             <a href="https://espa.digitalax.xyz/">WEAR IN GAME</a>
             <span className={styles.playESPA}>PLAY IN ESPA ESPORTS</span>
