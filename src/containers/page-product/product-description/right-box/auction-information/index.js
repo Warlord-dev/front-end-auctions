@@ -26,11 +26,11 @@ const AuctionInformation = ({ garment }) => {
 
   const calcWidth = (innerWidth) => {
     if (innerWidth >= 1440) {
-      return innerWidth - 618 - 85 - 300 - 160;
-    } else if (innerWidth >= 980) {
-      return innerWidth - 618 - 85 - 100 - 140;
-    } else if (innerWidth >= 640) {
-      return innerWidth - 60 - 140;
+      return (innerWidth - 85 - 300) / 2 - 120;
+    } else if (innerWidth >= 1200) {
+      return (innerWidth - 85 - 100) / 2 - 120;
+    } else if (innerWidth >= 992) {
+      return innerWidth - 100 - 120;
     } else {
       return innerWidth - 40 - 140;
     }
