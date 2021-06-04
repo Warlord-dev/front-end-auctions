@@ -138,7 +138,7 @@ const RightBox = ({
   const expirationDate = auction ? auction.endTime * 1000 : 0;
 
   return (
-    <div className={cn('animate__animated animate__fadeIn', styles.fullWidth)}>
+    <div id="product-details" className={cn('animate__animated animate__fadeIn', styles.fullWidth)}>
       <h2 className={styles.title}>{currentClothesInfo?.clothesName}</h2>
       <SmallPhotoWithText
         className={styles.smallPhotoWithText}
