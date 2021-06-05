@@ -1,5 +1,5 @@
 import issue1PageList from './issue-1/PageList'
-import issue2PageList from './issue-1/PageList'
+import issue2PageList from './issue-2/PageList'
 
 const issueList = {
   1: issue1PageList,
