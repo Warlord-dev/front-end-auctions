@@ -18,6 +18,7 @@ import getOrCreateStore from '../lib/with-redux-store';
 
 import config from '../utils/config';
 import '../assets/scss/global.scss';
+import '../styles/globals.css'
 
 if (config.SENTRY_DSN) {
   Sentry.init({
@@ -45,9 +46,9 @@ const NetworkWrapper = (props) => {
   const chainId = useSelector(getChainId);
   const network = getEnabledNetworkByChainId(chainId);
 
-  if (!network) {
-    return null;
-  }
+  // if (!network) {
+  //   return null;
+  // }
 
   return props.children;
 };
@@ -64,6 +65,8 @@ const MyApp = ({ Component, pageProps, store, err }) => {
       <Head>
         <title>Digitalax - The Digital Fashion Engine</title>
         <link rel="icon" type="image/png" href="/images/icons/favicon-digitalax.ico" />
+        <link href="https://fonts.cdnfonts.com/css/internal-rainbows" rel="stylesheet" />
+        <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
       </Head>
       <InitWrapper>
         <HeaderTopLine />
@@ -78,7 +81,7 @@ const MyApp = ({ Component, pageProps, store, err }) => {
   );
 };
 
-MyApp.getInitialProps = async () => {};
+MyApp.getInitialProps = async () => { };
 
 MyApp.propTypes = {
   Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]).isRequired,

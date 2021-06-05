@@ -48,7 +48,7 @@ const LandingHeader = props => {
           <li>
             <a style={linkStyle}
             href="https://espa.digitalax.xyz" target="_blank">
-              Esports Platform
+              Esports Platforms
             </a>
           </li>
         </ul>

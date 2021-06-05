@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  color: #FF77F1;
 
   &:focus {
     outline: none;
@@ -18,7 +19,7 @@
 }
 
 .transparent {
-  border: 1px solid #E5E5E5;
+  border: 1px solid #FF77F1;
   background: transparent;
   transition: color 0.3, background-color 0.3;
 

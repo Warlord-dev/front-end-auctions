@@ -19,6 +19,8 @@
     "elliptic": ">=6.5.3"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
     "@pinata/sdk": "^1.1.11",
     "@sentry/browser": "^5.18.0",
     "@uniswap/sdk": "^3.0.3",
@@ -83,13 +85,16 @@
     "@babel/traverse": "^7.9.5",
     "@babel/types": "^7.9.5",
     "audit-ci": "^2.5.1",
+    "autoprefixer": "^10.2.6",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "postcss": "^8.3.0",
+    "tailwindcss": "^2.1.4"
   },
   "browserslist": [
     ">0.3%",

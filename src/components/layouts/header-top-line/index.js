@@ -12,6 +12,7 @@ import { openConnectMetamaskModal } from '@actions/modals.actions';
 import accountActions from '@actions/user.actions';
 import Logo from './logo';
 import LandingHeader from './landing';
+import Icon from "@material-ui/core/Icon";
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
@@ -64,7 +65,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   };
 
   return isLandingPage ? (
-    <LandingHeader textColor={'#74A3F3'}/>
+    <LandingHeader/>
   )
   : (
     <div className={cn(className, styles.wrapper, hasScrolled?styles.floatingNav:'')}>
@@ -150,6 +151,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
                       src="./images/icons/arrow-bottom.svg"
                       alt="arrow-bottom"
                     />
+                    {/* <Icon style={{color: "#FF77F1"}}>expand_more</Icon> */}
                   </button>
                 </SmallPhotoWithText>
                 {isShowMenu && (

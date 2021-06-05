@@ -9,7 +9,7 @@
   align-items: center;
   width: 100%;
   padding: 20px 50px;
-  background-color: #fff;
+  background-color: #000;
   transition: 0.2s;
   z-index: 99;
 
@@ -133,12 +133,15 @@
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 17px;
-  color: $black;
+  color: #FF77F1;
   text-transform: uppercase;
   margin-right: 26px;
 
   &:focus {
     outline: none;
+  }
+  &:hover {
+    color: #FF77F1;
   }
 
   @media screen and (max-width: 640px) {
@@ -174,9 +177,10 @@
 .menuButton {
   @include reset-button();
   @include active();
-  border: 1px solid #e6e6e6;
-  background-color: white;
+  border: 1px solid #FF77F1;
+  background-color: black;
   border-radius: 0;
+  color: #FF77F1;
   box-shadow: none;
   padding: 10px 16px;
   width: 100%;
