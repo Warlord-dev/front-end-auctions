@@ -1,0 +1,81 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3364px;
+  background-color: white;
+  color: #FFFFFF;
+  position: relative;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  .backImage {
+    width: 375px;
+    height: 3364px;
+    position: absolute;
+  }
+
+  p {
+    position: absolute;
+    font-family: Acme;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 150%;
+    text-align: center;
+    color: #FFFFFF;
+
+    &.section1 {
+      width: 261.83px;
+      height: 160.35px;
+      left: 82.19px;
+      top: 53px;
+      transform-origin: 0 0;
+      transform: rotate(4deg);
+    }
+
+    &.section2 {
+      width: 261.83px;
+      height: 895px;
+      left: 51px;
+      top: 605px;
+      font-family: Aldrich;
+      font-size: 20px;
+    }
+
+
+    &.section3 {
+      position: absolute;
+      width: 262px;
+      height: 680px;
+      left: 51px;
+      top: 2684px;
+      font-family: Aldrich;
+      font-size: 20px;
+    }
+  }
+
+  .dollarSign1 {
+    position: absolute;
+    width: 162.96px;
+    height: 167px;
+    left: 101px;
+    top: 2066px;
+    
+  }
+
+  .dollarSign2 {
+    position: absolute;
+    width: 162.96px;
+    height: 167px;
+    left: 100px;
+    top: 2257px;
+  }
+
+  .dollarSign3 {
+    position: absolute;
+    width: 162.96px;
+    height: 167px;
+    left: 99px;
+    top: 2448px;
+  }
+}

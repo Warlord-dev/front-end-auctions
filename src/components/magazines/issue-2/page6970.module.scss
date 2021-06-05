@@ -1,0 +1,90 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper(); 
+
+    .background {
+        position: absolute;
+        width: 1920px;
+        height: 1497px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .mainText {
+        position: absolute;
+        width: 925px;
+        height: 192px;
+        left: 35px;
+        top: 85px;
+
+        font-family: Cinzel Decorative;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 80px;
+        line-height: 120.53%;
+        /* or 96px */
+
+
+        color: #FFFFFF;
+
+        mix-blend-mode: normal;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .leftDiv {
+        position: absolute;
+        width: 829px;
+        height: 1085px;
+        left: 61px;
+        top: 340px;
+
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .leftText {
+        position: absolute;
+        width: 633px;
+        height: 1034px;
+        left: 159px;
+        top: 386px;
+
+        font-family: Crafty Girls;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* or 22px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rightDiv {
+        position: absolute;
+        width: 829px;
+        height: 1361px;
+        left: 1030px;
+        top: 64px;
+
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .rightText {
+        position: absolute;
+        width: 633px;
+        height: 1210px;
+        left: 1128px;
+        top: 135px;
+        
+        font-family: Crafty Girls;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* or 22px */
+
+
+        color: #FFFFFF;
+    }
+}

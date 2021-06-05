@@ -1,0 +1,220 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .paintImage {
+    width: 1600px;
+    height: 1200px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 667px;
+    height: 36px;
+    left: 174px;
+    top: 232px;
+
+    font-family: Courier;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120.53%;
+  }
+
+  .content {
+    position: absolute;
+    width: 646px;
+    height: 1100px;
+    left: 174px;
+    top: 286px;
+
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .emmaName {
+    position: absolute;
+    width: 288px;
+    height: 22px;
+    left: 363px;
+    top: 1405px;
+
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120.53%;
+  }
+
+  .backgroundImage {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  h2 {
+    position: absolute;
+    width: 673px;
+    height: 181px;
+    left: 1195px;
+    top: 134px;
+
+    font-family: Nella Sue Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 120.53%;
+    /* identical to box height, or 181px */
+    color: #FFFFFF;
+  }
+
+  h3 {
+    position: absolute;
+    width: 387px;
+    height: 384px;
+  }
+
+  .content2 {
+
+    left: 1034px;
+    top: 338px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content3 {
+    left: 1460px;
+    top: 338px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content4 {
+    height: 288px;
+    left: 954px;
+    top: 774px;
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content5 {
+    height: 288px;
+    left: 1247px;
+    top: 774px;
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content6 {
+    height: 288px;
+    left: 1540px;
+    top: 774px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content7 {
+    height: 288px;
+    left: 954px;
+    top: 1128px;
+    
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .content8 {
+    height: 240px;
+    left: 1233px;
+    top: 1128px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content9 {
+    height: 288px;
+    left: 1540px;
+    top: 1128px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+
+}

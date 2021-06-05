@@ -1,0 +1,157 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3163px;
+  background-color: black;
+  color: white;
+  position: relative;
+
+  .talent1 {
+    position: absolute;
+    width: 453px;
+    height: 60px;
+    left: 61px;
+    top: 29px;
+    
+    font-family: Kite One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    color: #26D9F9;
+  }
+
+  .talent2 {
+    position: absolute;
+    width: 453px;
+    height: 60px;
+    left: 2px;
+    top: 121px;
+    
+    font-family: Kite One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    color: #2654F9;
+  }
+
+  .talent3 {
+    position: absolute;
+    width: 453px;
+    height: 60px;
+    left: 61px;
+    top: 213px;
+    
+    font-family: Kite One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    color: #26F9D3;
+  }
+
+  h2 {
+    position: absolute;
+    width: 453px;
+    height: 120px;
+    left: 36px;
+    top: 332px;
+
+    font-family: Karla;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FFC42D;
+    -webkit-text-stroke: 0.1px #FF0000;
+  }
+
+  .section1 {
+    position: absolute;
+    width: 252.12px;
+    height: 798px;
+    left: 36px;
+    top: 505.19px;
+    
+    font-family: Kite One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 110%;
+    
+    color: #FFFFFF;
+    transform-origin: 0 0;
+    transform: rotate(-3deg);
+    
+  }
+
+  .fullImage {
+    position: absolute;
+    width: 572px;
+    height: 532px;
+    left: -99px;
+    top: 1316px;    
+  }
+
+  .section2 {
+    position: absolute;
+    width: 166.85px;
+    height: 102px;
+    left: 41.34px;
+    top: 1839px;
+
+    font-family: Karla;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 110%;
+    
+    color: #FFFFFF;
+    transform-origin: 0 0;
+    transform: rotate(3deg);   
+  }
+
+  .section3 {
+    position: absolute;
+    width: 308px;
+    height: 49px;
+    left: 27px;
+    top: 1990px;
+    
+    font-family: Fasthand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 100%;
+    
+    color: #FFC42D;
+    -webkit-text-stroke: 2px #FF0000;
+  }
+
+  .video1 {
+    position: absolute;
+    width: 357px;
+    height: 361px;
+    left: 2px;
+    top: 2108px;
+    border: 1px solid white;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 281px;
+    height: 288px;
+    left: 0px;
+    top: 2533px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 281px;
+    height: 295px;
+    left: 94px;
+    top: 2866px;
+  }
+}

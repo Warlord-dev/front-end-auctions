@@ -1,0 +1,211 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper(); 
+
+    .leftDiv {
+        position: absolute;
+        width: 829px;
+        height: 1357px;
+        left: 61px;
+        top: 64px;
+        
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .leftText {
+        position: absolute;
+        width: 633px;
+        height: 1078px;
+        left: 159px;
+        top: 139px;
+
+        font-family: Crafty Girls;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* or 22px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rightDiv {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+        
+        background: #000000;
+    }
+
+    .rightText1 {
+        position: absolute;
+        width: 453px;
+        height: 80px;
+        left: 1044px;
+        top: 34px;
+
+        font-family: Kite One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 100%;
+        /* identical to box height, or 80px */
+
+
+        color: #26D9F9;
+    }
+
+    .rightText2 {
+        position: absolute;
+        width: 453px;
+        height: 80px;
+        left: 1494px;
+        top: 24px;
+
+        font-family: Kite One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 100%;
+        /* identical to box height, or 80px */
+
+
+        color: #2654F9;
+    }
+
+    .rightText3 {
+        position: absolute;
+        width: 453px;
+        height: 120px;
+        left: 987px;
+        top: 143px;
+
+        font-family: Karla;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 120px;
+        line-height: 100%;
+        /* identical to box height, or 120px */
+
+
+        color: #FFC42D;
+        text-shadow: -3px 0 red, 0 3px red, 3px 0 red, 0 -3px red;
+        box-sizing: border-box;
+    }
+
+    .rightText4 {
+        position: absolute;
+        width: 453px;
+        height: 80px;
+        left: 1370px;
+        top: 131px;
+
+        font-family: Kite One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 100%;
+        /* identical to box height, or 80px */
+
+
+        color: #26F9D3;
+    }
+
+    .rightText5 {
+        position: absolute;
+        width: 428px;
+        height: 525px;
+        left: 1017px;
+        top: 263.4px;
+
+        font-family: Kite One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 110%;
+        /* or 21px */
+
+
+        color: #FFFFFF;
+
+        transform: rotate(-3deg);
+    }
+
+    .rightText6 {
+        position: absolute;
+        width: 166.85px;
+        height: 102px;
+        left: 1699.34px;
+        top: 366px;
+
+        font-family: Karla;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 110%;
+        /* or 17px */
+
+
+        color: #FFFFFF;
+
+        transform: rotate(3deg);
+    }
+
+    .rightText7 {
+        position: absolute;
+        width: 414px;
+        height: 49px;
+        left: 1528px;
+        top: 743px;
+
+        font-family: Fasthand;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 100%;
+        /* or 25px */
+
+
+        color: #FF0000;
+    }
+
+    .rightImage1 {
+        position: absolute;
+        width: 572px;
+        height: 532px;
+        left: 1333px;
+        top: 211px;
+    }
+
+    .link1 {
+        position: absolute;
+        width: 357px;
+        height: 361px;
+        left: 1009px;
+        top: 813px;
+
+        video {
+            width: 100%;
+        }
+    }
+
+    .link2 {
+        position: absolute;
+        width: 281px;
+        height: 295px;
+        left: 1270px;
+        top: 1189px;
+    }
+
+    .link3 {
+        position: absolute;
+        width: 338px;
+        height: 347px;
+        left: 1528px;
+        top: 824px;
+    }
+}

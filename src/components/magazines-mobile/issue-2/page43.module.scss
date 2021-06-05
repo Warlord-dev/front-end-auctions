@@ -1,0 +1,361 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 4515px;
+  background-color: white;
+  color: white;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    height: 4800px;
+    object-fit: cover;
+    object-position: left;
+    left: 0px;
+    top: 0px;
+  }
+
+  .title1_copy {
+    position: absolute;
+    width: 324px;
+    height: 44px;
+    left: 25.35px;
+    top: 76px;
+
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 110%;
+    
+    text-shadow: -5px -5px 0 black, -5px -4px 0 black, -5px -3px 0 black, -5px -2px 0 black, -5px -1px 0 black, -5px 0px 0 black, -5px 1px 0 black, -5px 2px 0 black, -5px 3px 0 black, -5px 4px 0 black, -5px 5px 0 black, -4px -5px 0 black, -4px -4px 0 black, -4px -3px 0 black, -4px -2px 0 black, -4px -1px 0 black, -4px 0px 0 black, -4px 1px 0 black, -4px 2px 0 black, -4px 3px 0 black, -4px 4px 0 black, -4px 5px 0 black, -3px -5px 0 black, -3px -4px 0 black, -3px -3px 0 black, -3px -2px 0 black, -3px -1px 0 black, -3px 0px 0 black, -3px 1px 0 black, -3px 2px 0 black, -3px 3px 0 black, -3px 4px 0 black, -3px 5px 0 black, -2px -5px 0 black, -2px -4px 0 black, -2px -3px 0 black, -2px -2px 0 black, -2px -1px 0 black, -2px 0px 0 black, -2px 1px 0 black, -2px 2px 0 black, -2px 3px 0 black, -2px 4px 0 black, -2px 5px 0 black, -1px -5px 0 black, -1px -4px 0 black, -1px -3px 0 black, -1px -2px 0 black, -1px -1px 0 black, -1px 0px 0 black, -1px 1px 0 black, -1px 2px 0 black, -1px 3px 0 black, -1px 4px 0 black, -1px 5px 0 black, 0px -5px 0 black, 0px -4px 0 black, 0px -3px 0 black, 0px -2px 0 black, 0px -1px 0 black, 0px 0px 0 black, 0px 1px 0 black, 0px 2px 0 black, 0px 3px 0 black, 0px 4px 0 black, 0px 5px 0 black, 1px -5px 0 black, 1px -4px 0 black, 1px -3px 0 black, 1px -2px 0 black, 1px -1px 0 black, 1px 0px 0 black, 1px 1px 0 black, 1px 2px 0 black, 1px 3px 0 black, 1px 4px 0 black, 1px 5px 0 black, 2px -5px 0 black, 2px -4px 0 black, 2px -3px 0 black, 2px -2px 0 black, 2px -1px 0 black, 2px 0px 0 black, 2px 1px 0 black, 2px 2px 0 black, 2px 3px 0 black, 2px 4px 0 black, 2px 5px 0 black, 3px -5px 0 black, 3px -4px 0 black, 3px -3px 0 black, 3px -2px 0 black, 3px -1px 0 black, 3px 0px 0 black, 3px 1px 0 black, 3px 2px 0 black, 3px 3px 0 black, 3px 4px 0 black, 3px 5px 0 black, 4px -5px 0 black, 4px -4px 0 black, 4px -3px 0 black, 4px -2px 0 black, 4px -1px 0 black, 4px 0px 0 black, 4px 1px 0 black, 4px 2px 0 black, 4px 3px 0 black, 4px 4px 0 black, 4px 5px 0 black, 5px -5px 0 black, 5px -4px 0 black, 5px -3px 0 black, 5px -2px 0 black, 5px -1px 0 black, 5px 0px 0 black, 5px 1px 0 black, 5px 2px 0 black, 5px 3px 0 black, 5px 4px 0 black, 5px 5px 0 black;
+    transform: rotate(-5deg);
+  }
+
+  .title1 {
+    position: absolute;
+    width: 324px;
+    height: 44px;
+    left: 25.35px;
+    top: 80.22px;
+
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 110%;
+
+    text-shadow: -5px -5px 0 black, -5px -4px 0 black, -5px -3px 0 black, -5px -2px 0 black, -5px -1px 0 black, -5px 0px 0 black, -5px 1px 0 black, -5px 2px 0 black, -5px 3px 0 black, -5px 4px 0 black, -5px 5px 0 black, -4px -5px 0 black, -4px -4px 0 black, -4px -3px 0 black, -4px -2px 0 black, -4px -1px 0 black, -4px 0px 0 black, -4px 1px 0 black, -4px 2px 0 black, -4px 3px 0 black, -4px 4px 0 black, -4px 5px 0 black, -3px -5px 0 black, -3px -4px 0 black, -3px -3px 0 black, -3px -2px 0 black, -3px -1px 0 black, -3px 0px 0 black, -3px 1px 0 black, -3px 2px 0 black, -3px 3px 0 black, -3px 4px 0 black, -3px 5px 0 black, -2px -5px 0 black, -2px -4px 0 black, -2px -3px 0 black, -2px -2px 0 black, -2px -1px 0 black, -2px 0px 0 black, -2px 1px 0 black, -2px 2px 0 black, -2px 3px 0 black, -2px 4px 0 black, -2px 5px 0 black, -1px -5px 0 black, -1px -4px 0 black, -1px -3px 0 black, -1px -2px 0 black, -1px -1px 0 black, -1px 0px 0 black, -1px 1px 0 black, -1px 2px 0 black, -1px 3px 0 black, -1px 4px 0 black, -1px 5px 0 black, 0px -5px 0 black, 0px -4px 0 black, 0px -3px 0 black, 0px -2px 0 black, 0px -1px 0 black, 0px 0px 0 black, 0px 1px 0 black, 0px 2px 0 black, 0px 3px 0 black, 0px 4px 0 black, 0px 5px 0 black, 1px -5px 0 black, 1px -4px 0 black, 1px -3px 0 black, 1px -2px 0 black, 1px -1px 0 black, 1px 0px 0 black, 1px 1px 0 black, 1px 2px 0 black, 1px 3px 0 black, 1px 4px 0 black, 1px 5px 0 black, 2px -5px 0 black, 2px -4px 0 black, 2px -3px 0 black, 2px -2px 0 black, 2px -1px 0 black, 2px 0px 0 black, 2px 1px 0 black, 2px 2px 0 black, 2px 3px 0 black, 2px 4px 0 black, 2px 5px 0 black, 3px -5px 0 black, 3px -4px 0 black, 3px -3px 0 black, 3px -2px 0 black, 3px -1px 0 black, 3px 0px 0 black, 3px 1px 0 black, 3px 2px 0 black, 3px 3px 0 black, 3px 4px 0 black, 3px 5px 0 black, 4px -5px 0 black, 4px -4px 0 black, 4px -3px 0 black, 4px -2px 0 black, 4px -1px 0 black, 4px 0px 0 black, 4px 1px 0 black, 4px 2px 0 black, 4px 3px 0 black, 4px 4px 0 black, 4px 5px 0 black, 5px -5px 0 black, 5px -4px 0 black, 5px -3px 0 black, 5px -2px 0 black, 5px -1px 0 black, 5px 0px 0 black, 5px 1px 0 black, 5px 2px 0 black, 5px 3px 0 black, 5px 4px 0 black, 5px 5px 0 black;
+    transform: rotate(-5deg);
+  }
+
+  .title2{
+    position: absolute;
+    width: 396px;
+    height: 68.22px;
+    left: 31.95px;
+    top: 1219px;
+
+    font-family: Bungee Inline;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
+    color: #6900BC;
+ 
+    text-shadow: -0.3px 0 #FA00FF, 0 0.3px #FA00FF, 0.3px 0 #FA00FF, 0 -0.3px #FA00FF;
+    -webkit-text-stroke: 0.8px #FA00FF;
+    -webkit-text-fill-color: #6900BC;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: rotate(5deg);
+  }
+
+  .sub_title{
+    color: #6900BC;
+    font-size: 17px;
+  }
+
+  .section1 {
+    position: absolute;
+    width: 280px;
+    height: 990px;
+    left: 41px;
+    top: 145px;
+    
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 110%;
+    /* or 18px */
+    color: #FFFFFF;
+
+    a {
+      color: #FFFFFF;
+      text-decoration-line: underline;
+    }
+  }
+
+  .section2{
+    position: absolute;
+    width: 289.7px;
+    height: 765px;
+    left: 81.67px;
+    top: 1311px;
+    
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+    transform-origin: 0 0;
+    transform: rotate(5deg);
+  }
+
+  .section3{
+    position: absolute;
+    width: 269px;
+    height: 180px;
+    left: 43px;
+    top: 2632px;
+
+    font-family: Rosarivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    /* or 18px */
+
+
+    color: #FFFFFF;
+  }
+
+  .section4{
+    position: absolute;
+    width: 263px;
+    height: 252px;
+    left: 51px;
+    top: 3530px;
+    
+    font-family: Rosarivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    /* or 18px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .section5{
+    position: absolute;
+    width: 265px;
+    height: 198px;
+    left: 55px;
+    top: 4156px;
+
+    font-family: Rosarivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    /* or 18px */
+
+
+    color: #FFFFFF;
+  }
+ 
+
+  .video1{
+    position: absolute;
+    width: 253.79px;
+    height: 252px;
+    left: 60px;
+    top: 2248px;
+  }
+  
+  .video2{
+    position: absolute;
+    width: 250.57px;
+    height: 252px;
+    left: 58px;
+    top: 3235px;
+  }
+
+  .video3{
+    position: absolute;
+    width: 254.57px;
+    height: 252px;
+    left: 60px;
+    top: 3868px;     
+  }
+
+  .videoFrame1 {
+    position: absolute;
+    width: 281px;
+    height: 274px;
+    left: 47px;
+    top: 2237px;
+    
+    background: #680099;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);    
+  }
+
+  .videoFrame2 {
+    position: absolute;
+    width: 281px;
+    height: 274px;
+    left: 43px;
+    top: 3224px;
+
+    background: #DD94FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .videoFrame3 {
+    position: absolute;
+    width: 281px;
+    height: 274px;
+    left: 47px;
+    top: 3856px;
+    
+    background: #AD00FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);  
+  }
+
+  .play1 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 47px;
+    top: 2200px;  
+  }
+
+  .play2 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 50px;
+    top: 3185px;
+  }
+
+  .play3 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 45px;
+    top: 3818px;
+  }
+
+  .number1{
+    position: absolute;
+    width: 217px;
+    height: 30px;
+    left: 26px;
+    top: 2532px;
+
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+
+    color: #FFFFFF;
+    text-shadow: -0.2px 0 #000000, 0 0.2px #000000, 0.2px 0 #000000, 0 -0.2px #000000;
+    box-sizing: border-box;
+  }
+
+  .number2{
+    position: absolute;
+    width: 175px;
+    height: 30px;
+    left: 129px;
+    top: 2587px;
+
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+
+    color: #FFFFFF;
+
+    text-shadow: -0.2px 0 #000000, 0 0.2px #000000, 0.2px 0 #000000, 0 -0.2px #000000;
+    box-sizing: border-box;
+  }
+
+  .number3{
+    position: absolute;
+    width: 174px;
+    height: 30px;
+    left: 43px;
+    top: 3185px;
+
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+
+    color: #FFFFFF;
+
+    text-shadow: -0.2px 0 #000000, 0 0.2px #000000, 0.2px 0 #000000, 0 -0.2px #000000;
+    box-sizing: border-box;
+  }
+
+  .number4{
+    position: absolute;
+    width: 218px;
+    height: 30px;
+    left: 47px;
+    top: 3820px;
+
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+
+    color: #FFFFFF;
+
+    text-shadow: -0.2px 0 #000000, 0 0.2px #000000, 0.2px 0 #000000, 0 -0.2px #000000;
+    box-sizing: border-box;
+  }
+  
+  .plus{
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    left: 188px;
+    top: 2561px;
+
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+
+    color: #FFFFFF;
+
+    text-shadow: -0.2px 0 #000000, 0 0.2px #000000, 0.2px 0 #000000, 0 -0.2px #000000;
+    box-sizing: border-box;
+  }
+}

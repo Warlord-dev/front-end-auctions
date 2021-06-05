@@ -1,0 +1,130 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    background: #000000;
+
+    .rightBackground {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+    }
+
+    .gif {
+        position: absolute;
+        width: 1041px;
+        height: 1220px;
+        left: -81px;
+        top: 277px;
+    }
+
+    .firstText {
+        position: absolute;
+        width: 512px;
+        height: 66px;
+        left: 52px;
+        top: 93px;
+
+        font-family: Blacker Display;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 110%;
+        /* identical to box height, or 66px */
+
+
+        color: #FFFFFF;
+    }
+
+    .secondText {
+        position: absolute;
+        width: 756px;
+        height: 88px;
+        left: 84px;
+        top: 142px;
+
+        font-family: Julietta Messie Demo;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 110%;
+        /* identical to box height, or 88px */
+
+
+        color: #FFFFFF;
+    }
+
+    .thirdText {
+        position: absolute;
+        width: 187px;
+        height: 44px;
+        left: 723px;
+        top: 486px;
+
+        font-family: Julietta Messie Demo;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 110%;
+        /* identical to box height, or 44px */
+
+
+        color: #FFFFFF;
+    }
+
+    .fourthText {
+        position: absolute;
+        width: 187px;
+        height: 44px;
+        left: 723px;
+        top: 530px;
+
+        font-family: Julietta Messie Demo;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* or 22px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rightFirstText {
+        position: absolute;
+        width: 512px;
+        height: 198px;
+        left: 1541px;
+        top: 50px;
+
+        font-family: Blacker Display;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 110%;
+        /* or 66px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rightSecondText {
+        position: absolute;
+        width: 302px;
+        height: 110px;
+        left: 1541px;
+        top: 261px;
+
+        font-family: Blacker Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* or 22px */
+
+
+        color: #FFFFFF;
+    }
+}

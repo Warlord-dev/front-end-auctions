@@ -1,0 +1,79 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .left {
+    position: absolute;
+    width: 961px;
+    height: 1498px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .link1 {
+    position: absolute;
+    width: 473px;
+    height: 82px;
+    left: 463px;
+    top: 36px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 69px;
+    text-align: right;
+
+    color: #FFFFFF;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .gif {
+    position: absolute;
+    width: 729px;
+    height: 539px;
+    left: 982px;
+    top: 951px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 473px;
+    height: 82px;
+    left: 463px;
+    top: 118px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 41px;
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+
+  .right {
+    position: absolute;
+    width: 961px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;    
+  }
+
+  .link {
+    position: absolute;
+    width: 452px;
+    height: 120px;
+    left: 1485px;
+    top: 1377px;
+
+    &:hover {
+        border-bottom: 1px solid black;
+    }
+  }
+}

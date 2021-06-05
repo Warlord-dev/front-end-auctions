@@ -1,0 +1,264 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .firstPartWrapper {
+    width: 960px;
+    height: 1497px;
+    overflow: hidden;
+    position: relative;
+    color: #000000;
+
+
+    .backImage1 {
+      position: absolute;
+      width: 960px;
+      height: 1717px;
+      left: 0px;
+      top: -220px;
+      transform-origin: 0 0;
+      transform: scale(1.05, 2.4);
+    }
+
+    .whiteOpacity {
+      position: absolute;
+      width: 960px;
+      height: 1497px;
+      left: 0;
+      top: 0px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    p {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      position: absolute;
+
+      &.leftPart {
+        width: 382px;
+        height: 1320px;
+        left: 65px;
+        top: 64px;
+      }
+
+      &.rightPart {
+        width: 388px;
+        height: 1108px;
+        left: 510px;
+        top: 64px;
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 961px;
+    top: 0px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 547px;
+    height: 169px;
+    left: 1025px;
+    top: 93px;
+
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 130px;
+    line-height: 110%;
+    /* or 143px */
+    color: #FFFFFF;
+  }
+
+  .section1 {
+    position: absolute;
+    width: 263px;
+    height: 110px;
+    left: 1122px;
+    top: 316px;
+  }
+
+  .section2 {
+    position: absolute;
+    width: 368px;
+    height: 74px;
+    left: 1026px;
+    top: 431px;
+  }
+
+  .section3 {
+    position: absolute;
+    width: 509px;
+    height: 102px;
+    left: 1026px;
+    top: 571px;
+  }
+
+  .section4 {
+    position: absolute;
+    width: 400px;
+    height: 119px;
+    left: 1026px;
+    top: 685px;
+  }
+
+  .section5 {
+    position: absolute;
+    width: 502px;
+    height: 67px;
+    left: 1026px;
+    top: 803px;
+  }
+
+  .section6 {
+    position: absolute;
+    width: 405px;
+    height: 195px;
+    left: 1123px;
+    top: 909px;
+  }
+
+  .section7 {
+    position: absolute;
+    width: 394px;
+    height: 189px;
+    left: 1478px;
+    top: 316px;
+  }
+
+  .section8 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 1639px;
+    top: 528px;
+  }
+
+  .section9 {
+    position: absolute;
+    width: 226px;
+    height: 247px;
+    left: 1639px;
+    top: 625px;
+  }
+
+  .section10 {
+    position: absolute;
+    width: 223px;
+    height: 448px;
+    left: 1639px;
+    top: 880px;
+  }
+
+  .section {
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 16.5px;
+    color: #FFFFFF;
+
+    span {
+      font-family: Mad Galaxy Demo;
+      font-size: 17px;
+      line-height: 18.7px;
+    }
+  }
+
+  h2 {
+    position: absolute;
+    width: 700px;
+    height: 66px;
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 110%;
+    color: white;
+
+    &.first {
+      left: 1025px;
+      top: 1199px;
+    }
+
+    &.second {
+      left: 1025px;
+      top: 1316px;
+    }
+  }
+
+  h3 {
+    position: absolute;
+    word-wrap: break-word;
+    width: 23px;
+    height: 630px;
+    left: 1572px;
+    top: 620px;
+
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+    /* or 88px */
+
+
+    color: #FFFFFF;
+  }
+
+  .logoImage1 {
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    left: 1025px;
+    top: 334px;    
+  }
+
+  .logoImage2 {
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    left: 1439px;
+    top: 682px;   
+  }
+
+  .logoImage3 {
+    position: absolute;
+    width: 89px;
+    height: 89px;
+    left: 1022px;
+    top: 907px;  
+  }
+
+  .logoImage4 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 1749px;
+    top: 508px;    
+  }
+
+  .logoImage5 {
+    position: absolute;
+    width: 209px;
+    left: 1624px;
+    top: 1322px;    
+  }
+
+}

@@ -1,0 +1,100 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3763px;
+  background-color: black;
+  color: white;
+  position: relative;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  .backImage {
+    width: 375px;
+    height: 3963px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .section1 {
+    position: absolute;
+    width: 261.83px;
+    height: 895px;
+    left: 56px;
+    top: 62px;
+    
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  h1 {
+    position: absolute;
+    height: 1005.44px;
+    left: 10.85%;
+    right: 7.64%;
+    top: calc(50% - 1005.44px/2 + 586.22px);
+
+    font-family: Internal Rainbows;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+
+    color: #FFFFFF;
+    transform: matrix(1, 0.3, -0.01, 0.96, 0, 0);
+
+    &.shadow1 {
+      position: absolute;
+      height: 982.51px;
+      left: 10.38%;
+      right: 8.11%;
+      top: calc(50% - 982.51px/2 + 574.75px);
+      color: #F90498;
+    }
+
+    &.shadow2 {
+      position: absolute;
+      height: 982.51px;
+      left: 10.79%;
+      right: 7.69%;
+      top: calc(50% - 982.51px/2 + 574.75px);
+      color: #F90498;
+    }
+
+    &.shadow3 {
+      position: absolute;
+      height: 982.51px;
+      left: 11.32%;
+      right: 7.17%;
+      top: calc(50% - 982.51px/2 + 574.75px);
+      color: #F90498;
+    }
+  }
+
+  .section2 {
+    position: absolute;
+    width: 261.83px;
+    height: 178px;
+    left: 51px;
+    top: 3208px;
+
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+}

@@ -1,0 +1,157 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3302px;
+  background-color: white;
+  color: black;
+  position: relative;
+  white-space: normal;
+  text-align: center;
+
+  video {
+    position: absolute;
+    left: 500px;
+    top: 3500px;
+    width: 4000px;
+    height: 500px;
+    object-fit: cover;
+    object-position:bottom;
+    transform-origin: 0 500px;
+    transform: rotate(-90deg);
+  }
+
+  h1 {
+    position: absolute;
+    width: 346px;
+    height: 150px;
+    left: 14px;
+    top: 63px;
+
+    font-family: Heaven Wanders DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 75px;
+    line-height: 100%;
+    /* or 75px */
+
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .timPhoto {
+    position: absolute;
+    width: 305px;
+    height: 322px;
+    left: -30px;
+    top: 200px;
+  }
+  
+  h2 {
+    position: absolute;
+    width: 274px;
+    height: 120px;
+    left: 86px;
+    top: 527px;
+    
+    font-family: Habbo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #000000;    
+  }
+
+  h4 {
+    position: absolute;
+    font-family: THE AMAZING SPIDER-MAN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    text-align: center;
+    color: #515151;
+
+    &.layer1 {
+      width: 578px;
+      height: 99px;
+      left: -119px;
+      top: 1089px;
+    }
+
+    &.layer2 {
+      width: 1331px;
+      height: 70px;
+      left: -461px;
+      top: 1163px;      
+    }
+
+    &.layer3 {
+      width: 1331px;
+      height: 70px;
+      left: -423px;
+      top: 1250px;      
+    }
+  }
+
+  .ellipseImage {
+    position: absolute;
+    width: 373px;
+    height: 373px;
+    left: 51px;
+    top: 228px;
+  }
+
+  p {
+    position: absolute;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    line-height: 150%;
+    transform-origin: 0 0;
+    transform: rotate(-3deg);
+    color: #000000;
+
+    &.text1 {
+      width: 291.17px;
+      height: 199.21px;
+      left: 36px;
+      top: 677.24px;
+      
+      font-family: Ayuthaya;
+      font-size: 15px;
+    }
+
+    &.text2 {
+      position: absolute;
+      width: 272.17px;
+      height: 700.22px;
+      left: 29px;
+      top: 1349.24px;
+      
+      font-family: B612;
+      font-size: 17px;
+    }
+
+    &.text3 {
+      width: 307.97px;
+      height: 461.43px;
+      left: 17px;
+      top: 2321.12px; 
+      font-family: B612;
+      font-size: 17px;     
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 116px;
+    height: 423px;
+    left: 125px;
+    top: 2894px;
+  }
+}

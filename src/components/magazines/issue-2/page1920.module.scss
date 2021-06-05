@@ -1,0 +1,106 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: #FFFFFF;
+  display: flex;
+  position: relative;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  .backImage {
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  p {
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    position: absolute;
+
+    &.section1 {
+      width: 851px;
+      height: 160.35px;
+      left: 77.98px;
+      top: 88px;
+      transform: rotate(5deg);
+    }
+
+    &.section2 {
+      width: 789px;
+      height: 530px;
+      left: 94px;
+      top: 315px;      
+    }
+
+    &.section3 {
+      width: 789px;
+      height: 258px;
+      left: 85px;
+      top: 1125px;
+
+      span {
+        font-family: Acme;
+        font-size: 23px;
+      }
+    }
+
+    &.section4 {
+      width: 789px;
+      left: 1045px;
+      top: 90px;  
+    }
+
+    &.section5 {
+      width: 789px;
+      height: 398px;
+      left: 1045px;
+      top: 306px;
+    }
+
+    &.section6 {
+      width: 851px;
+      height: 160.35px;
+      left: 1015px;
+      top: 728px;
+    }
+  }
+
+  .dollarSign1 {
+    position: absolute;
+    width: 200px;
+    height: 204.96px;
+    left: 147px;
+    top: 852px;
+  }
+
+  .dollarSign2 {
+    position: absolute;
+    width: 200px;
+    height: 204.96px;
+    left: 380px;
+    top: 852px;    
+  }
+
+  .dollarSign3 {
+    position: absolute;
+    width: 200px;
+    height: 204.96px;
+    left: 613px;
+    top: 849px;   
+  }
+}
