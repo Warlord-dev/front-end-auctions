@@ -1,0 +1,243 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    width: 973px;
+    height: 1501px;
+    left: -13px;
+    top: -4px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 755px;
+    height: 108px;
+    left: 184px;
+    top: 61px;
+
+    font-family: Rockabye;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 68px;
+    line-height: 80%;
+    /* or 54px */
+
+
+    color: #B1223B;
+
+    text-shadow: 0px 4px 4px rgba(255, 187, 232, 0.53), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  h2 {
+    position: absolute;
+    width: 755px;
+    height: 73px;
+    left: 251px;
+    top: 183px;
+    font-family: Rochester;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  p {
+    position: absolute;
+    color: #FFFFFF;
+    font-family: Nunito Sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+
+    &.section1 {
+      width: 584px;
+      height: 223px;
+      left: 277px;
+      top: 276px;
+
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: Sanchez;
+    }
+
+    &.section2 {
+      width: 506px;
+      height: 112px;
+      left: 339px;
+      top: 519px;
+
+      font-family: B612;
+      font-style: normal;
+      font-size: 18px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &.section3 {
+      width: 367px;
+      height: 270px;
+      left: 267px;
+      top: 695px;
+    }
+
+    &.section4 {
+      width: 662px;
+      height: 90px;
+      left: 267px;
+      top: 976px;
+    }
+
+    &.section5 {
+      width: 508px;
+      height: 72px;
+      left: 267px;
+      top: 1092px;
+      font-family: Rosario;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      color: #E19CE9;
+      box-sizing: border-box;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &.section6 {
+      width: 369px;
+      height: 169px;
+      left: 560px;
+      top: 1180px;
+      text-align: right;
+    }
+  }
+
+  .name1 {
+    position: absolute;
+    width: 115px;
+    height: 18px;
+    left: 830px;
+    top: 1070px;
+    
+    font-family: Miama;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 120%;
+  }
+
+  .name2 {
+    position: absolute;
+    width: 115px;
+    height: 18px;
+    left: 838px;
+    top: 1430px;
+    
+    font-family: Miama;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 120%;    
+  }
+
+  .indiaNecklaceVideo {
+    position: absolute;
+    width: 428px;
+    height: 432px;
+    left: 983px;
+    top: 20px;
+    object-fit: fill;
+  }
+
+  .circleImg1 {
+    position: absolute;
+    width: 484px;
+    height: 473px;
+    left: 1436px;
+    top: 0px;
+  }
+
+  .circleImg2 {
+    position: absolute;
+    width: 484px;
+    height: 473px;
+    left: 959px;
+    top: 512px;
+  }
+
+  .circleImg3 {
+    position: absolute;
+    width: 486px;
+    height: 474px;
+    left: 1434px;
+    top: 1020px;   
+  }
+
+  .indiaSuitVideo {
+    position: absolute;
+    width: 428px;
+    height: 432px;
+    left: 1467px;
+    top: 532px;
+    object-fit: fill;
+  }
+
+  .indiaSuit2Video {
+    position: absolute;
+    width: 428px;
+    height: 432px;
+    left: 983px;
+    top: 1032px;
+    object-fit: fill;
+  }
+
+  .circleText1 {
+    position: absolute;
+    width: 358px;
+    height: 172px;
+    left: 1499px;
+    top: 150px;
+
+    font-family: Rochester;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .circleText2 {
+    position: absolute;
+    width: 358px;
+    height: 261px;
+    left: 1022px;
+    top: 636px;
+
+    font-family: Rochester;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .circleText3 {
+    position: absolute;
+    width: 328px;
+    height: 351px;
+    left: 1514px;
+    top: 1088px;
+
+    font-family: Rochester;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+  }
+}

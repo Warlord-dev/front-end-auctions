@@ -1,0 +1,252 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .firstPartWrapper {
+    width: 960px;
+    height: 1497px;
+    overflow: hidden;
+    position: relative;
+    color: #000000;
+
+    .backImage1 {
+      position: absolute;
+      width: 361px;
+      height: 1497px;
+      left: 0px;
+      top: 0px;
+    }
+  
+    .backImage2 {
+      position: absolute;
+      width: 599px;
+      height: 1737px;
+      left: 362px;
+      top: -240px;
+      transform-origin: 0 0;
+      transform: scale(1.65, 2.4);
+    }
+  
+    .whiteOpacity {
+      position: absolute;
+      width: 599px;
+      height: 1497px;
+      left: 362px;
+      top: 0px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    h1 {
+      position: absolute;
+      width: 401px;
+      height: 387px;
+      left: 416px;
+      top: 0px;
+
+      font-family: Artisual Deco DEMO;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 100px;
+      line-height: 110%;
+
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+      span {
+        font-size: 37px;
+        line-height: 0;
+      }
+    }
+
+    h2 {
+      position: absolute;
+      width: 401px;
+      height: 22px;
+      left: 426px;
+      top: 434px;
+
+      font-family: Artisual Deco DEMO;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 110%;
+    }
+
+    h3 {
+      position: absolute;
+      width: 401px;
+      height: 17px;
+      left: 426px;
+      top: 462px;
+
+      font-family: Arima Madurai;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 110%;
+    }
+
+    p {
+      position: absolute;
+      width: 453px;
+      height: 897px;
+      left: 416px;
+      top: 508px;
+
+      font-family: Inter;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 150%;
+
+      color: #000000;
+    }
+  }
+
+  .backOrange {
+    position: absolute;
+    width: 1141px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+
+    background: rgba(255, 122, 0, 0.49);
+  }
+
+  .rightImage1 {
+    position: absolute;
+    width: 1044px;
+    height: 1497px;
+    left: 1035px;
+    top: 0px;
+  }
+
+  .rightImage2 {
+    position: absolute;
+    width: 532px;
+    height: 1497px;
+    left: 1346px;
+    top: 0px;
+  }
+
+  .rightImage3 {
+    position: absolute;
+    width: 308px;
+    height: 1497px;
+    left: 1612px;
+    top: 0px;
+
+    mix-blend-mode: color-burn;
+  }
+
+  .rightImage4 {
+    position: absolute;
+    width: 432px;
+    height: 576px;
+    left: 910px;
+    top: 960px;
+
+    transform: rotate(-20deg);
+  }
+
+  .logo_t {
+    position: absolute;
+    width: 126px;
+    height: 675px;
+    left: 1013px;
+    top: 203px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 450px;
+    line-height: 150%;
+    /* identical to box height, or 675px */
+
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  p {
+    color: #FFFFFF;
+  }
+
+  .section1 {
+    position: absolute;
+    width: 803px;
+    height: 306px;
+    left: 1035px;
+    top: 71px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22.5px;
+    color: #FFFFFF;
+  }
+
+  .section2 {
+    position: absolute;
+    width: 500px;
+    height: 293px;
+    left: 1346px;
+    top: 373px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22.5px;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .section3 {
+    position: absolute;
+    width: 803px;
+    height: 230px;
+    left: 1035px;
+    top: 748px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+
+  .section4 {
+    position: absolute;
+    width: 611px;
+    height: 184px;
+    left: 1226px;
+    top: 985px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+
+  .section5 {
+    position: absolute;
+    width: 531px;
+    height: 161px;
+    left: 1299px;
+    top: 1198px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+}

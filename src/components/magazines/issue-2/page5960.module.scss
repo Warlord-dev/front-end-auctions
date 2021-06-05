@@ -1,0 +1,379 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .left {
+    position: absolute;
+    width: 960px;
+    height: 1531px;
+    left: 0px;
+    top: 2px;
+  }
+
+  .right {
+    position: absolute;
+    width: 1157px;
+    height: 1619px;
+    left: 940px;
+    top: -61px;
+  }
+
+  .rightMosh2 {
+    position: absolute;
+    width: 344px;
+    height: 221px;
+    left: 1027px;
+    top: 166px;    
+  }
+
+  .rightMosh3 {
+    position: absolute;
+    width: 250px;
+    height: 198px;
+    left: 1638.26px;
+    top: 425px;
+    
+    transform: rotate(5deg);
+  }
+
+  .rightMosh1 {
+    position: absolute;
+    width: 532px;
+    height: 1592px;
+    left: 940px;
+    top: 557px;
+  }
+
+  .rightText1 {
+    position: absolute;
+    width: 509px;
+    height: 130px;
+    left: 980px;
+    top: 494px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 462px;
+    height: 112px;
+    left: 1027px;
+    top: 67px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 580px;
+    height: 124px;
+    left: 1290px;
+    top: 207px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 102px;
+    height: 40px;
+    top: 250px;
+    left: 1020px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 312px;
+    height: 27px;
+    left: 1027px;
+    top: 408px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 401px;
+    height: 132px;
+    left: 1013px;
+    top: 692px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-shadow: -1px -1px 0 #0009ea, -1px 0px 0 #0009ea, -1px 1px 0 #0009ea, 0px -1px 0 #0009ea, 0px 0px 0 #0009ea, 0px 1px 0 #0009ea, 1px -1px 0 #0009ea, 1px 0px 0 #0009ea, 1px 1px 0 #0009ea;
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 412px;
+    height: 176px;
+    left: 1013px;
+    top: 788px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 401px;
+    height: 132px;
+    left: 1011px;
+    top: 980px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-shadow: -1px -1px 0 #bb00ea, -1px 0px 0 #bb00ea, -1px 1px 0 #bb00ea, 0px -1px 0 #bb00ea, 0px 0px 0 #bb00ea, 0px 1px 0 #bb00ea, 1px -1px 0 #bb00ea, 1px 0px 0 #bb00ea, 1px 1px 0 #bb00ea;
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 412px;
+    height: 176px;
+    left: 1013px;
+    top: 1024px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 500px;
+    height: 72px;
+    left: 1013px;
+    top: 1216px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-shadow: -1px -1px 0 #009220, -1px 0px 0 #009220, -1px 1px 0 #009220, 0px -1px 0 #009220, 0px 0px 0 #009220, 0px 1px 0 #009220, 1px -1px 0 #009220, 1px 0px 0 #009220, 1px 1px 0 #009220;
+    color: #FFFFFF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 401px;
+    height: 135px;
+    left: 1013px;
+    top: 1312px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 396px;
+    height: 112px;
+    left: 1458px;
+    top: 382px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 205px;
+    height: 104px;
+    left: 1460px;
+    top: 520px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 412px;
+    height: 223px;
+    left: 1458px;
+    top: 645px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 312px;
+    height: 27px;
+    left: 1458px;
+    top: 807px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 401px;
+    height: 132px;
+    left: 1475px;
+    top: 879px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-shadow: -1px -1px 0 #ff002e, -1px 0px 0 #ff002e, -1px 1px 0 #ff002e, 0px -1px 0 #ff002e, 0px 0px 0 #ff002e, 0px 1px 0 #ff002e, 1px -1px 0 #ff002e, 1px 0px 0 #ff002e, 1px 1px 0 #ff002e;
+    color: #FFFFFF;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 412px;
+    height: 176px;
+    left: 1475px;
+    top: 956px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 401px;
+    height: 132px;
+    left: 1472px;
+    top: 1167px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-shadow: -1px -1px 0 #00fff0, -1px 0px 0 #00fff0, -1px 1px 0 #00fff0, 0px -1px 0 #00fff0, 0px 0px 0 #00fff0, 0px 1px 0 #00fff0, 1px -1px 0 #00fff0, 1px 0px 0 #00fff0, 1px 1px 0 #00fff0;
+    color: #FFFFFF;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 412px;
+    height: 104px;
+    left: 1469px;
+    top: 1296px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+}

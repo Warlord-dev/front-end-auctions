@@ -1,0 +1,473 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();    
+  background: #E5E5E5;
+
+  .background {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .right {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .defiGems {
+    position: absolute;
+    width: 599px;
+    height: 132px;
+    left: 15px;
+    top: 136px;
+
+    font-family: Empirez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 110%;
+    /* identical to box height, or 132px */
+  }
+
+  .diamond2 {
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    left: 462px;
+    top: 16px;
+  }
+
+  .diamond4 {
+    position: absolute;
+    width: 346px;
+    height: 346px;
+    left: 579px;
+    top: 16px;
+  }
+
+  .diamond1 {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    left: 859px;
+    top: 0px;
+  }
+
+  .text {
+    position: absolute;
+    width: 564.71px;
+    height: 857.49px;
+    left: 161px;
+    top: 317.22px;
+    
+    // font-family: Think Thick;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 110%;
+    /* or 33px */
+    
+    
+    color: #FAD3F0;
+
+    .textTitle {
+      font-size: 30px;
+      font-family: Cool Chaos;
+    }
+
+    
+    transform: rotate(-5deg);
+  }
+  .twitter1 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 261px;
+    top: 321px;
+  }
+
+  .twitter2 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 336px;
+    top: 581px;
+  }
+
+  .twitter3 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 273px;
+    top: 840px;
+  }
+
+  .twitter4 {
+    position: absolute;
+    width: 20.15px;
+    height: 20.15px;
+    left: 310.76px;
+    top: 1061px;
+  }
+
+  .diamond3 {
+    position: absolute;
+    width: 443px;
+    height: 418px;
+    left: 355px;
+    top: 1057px;
+  }
+
+  .diamondHa {
+    position: absolute;
+    left: 596px;
+    top: 1387px;
+
+    font-family: Empirez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+    /* identical to box height, or 88px */
+  }
+
+  .rightTextCopy {
+    position: absolute;
+    width: 851px;
+    height: 116px;
+    left: 1069px;
+    top: 32px;
+
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 105px;
+    line-height: 116px;
+    text-shadow: -5px -5px 0 black, -5px -4px 0 black, -5px -3px 0 black, -5px -2px 0 black, -5px -1px 0 black, -5px 0px 0 black, -5px 1px 0 black, -5px 2px 0 black, -5px 3px 0 black, -5px 4px 0 black, -5px 5px 0 black, -4px -5px 0 black, -4px -4px 0 black, -4px -3px 0 black, -4px -2px 0 black, -4px -1px 0 black, -4px 0px 0 black, -4px 1px 0 black, -4px 2px 0 black, -4px 3px 0 black, -4px 4px 0 black, -4px 5px 0 black, -3px -5px 0 black, -3px -4px 0 black, -3px -3px 0 black, -3px -2px 0 black, -3px -1px 0 black, -3px 0px 0 black, -3px 1px 0 black, -3px 2px 0 black, -3px 3px 0 black, -3px 4px 0 black, -3px 5px 0 black, -2px -5px 0 black, -2px -4px 0 black, -2px -3px 0 black, -2px -2px 0 black, -2px -1px 0 black, -2px 0px 0 black, -2px 1px 0 black, -2px 2px 0 black, -2px 3px 0 black, -2px 4px 0 black, -2px 5px 0 black, -1px -5px 0 black, -1px -4px 0 black, -1px -3px 0 black, -1px -2px 0 black, -1px -1px 0 black, -1px 0px 0 black, -1px 1px 0 black, -1px 2px 0 black, -1px 3px 0 black, -1px 4px 0 black, -1px 5px 0 black, 0px -5px 0 black, 0px -4px 0 black, 0px -3px 0 black, 0px -2px 0 black, 0px -1px 0 black, 0px 0px 0 black, 0px 1px 0 black, 0px 2px 0 black, 0px 3px 0 black, 0px 4px 0 black, 0px 5px 0 black, 1px -5px 0 black, 1px -4px 0 black, 1px -3px 0 black, 1px -2px 0 black, 1px -1px 0 black, 1px 0px 0 black, 1px 1px 0 black, 1px 2px 0 black, 1px 3px 0 black, 1px 4px 0 black, 1px 5px 0 black, 2px -5px 0 black, 2px -4px 0 black, 2px -3px 0 black, 2px -2px 0 black, 2px -1px 0 black, 2px 0px 0 black, 2px 1px 0 black, 2px 2px 0 black, 2px 3px 0 black, 2px 4px 0 black, 2px 5px 0 black, 3px -5px 0 black, 3px -4px 0 black, 3px -3px 0 black, 3px -2px 0 black, 3px -1px 0 black, 3px 0px 0 black, 3px 1px 0 black, 3px 2px 0 black, 3px 3px 0 black, 3px 4px 0 black, 3px 5px 0 black, 4px -5px 0 black, 4px -4px 0 black, 4px -3px 0 black, 4px -2px 0 black, 4px -1px 0 black, 4px 0px 0 black, 4px 1px 0 black, 4px 2px 0 black, 4px 3px 0 black, 4px 4px 0 black, 4px 5px 0 black, 5px -5px 0 black, 5px -4px 0 black, 5px -3px 0 black, 5px -2px 0 black, 5px -1px 0 black, 5px 0px 0 black, 5px 1px 0 black, 5px 2px 0 black, 5px 3px 0 black, 5px 4px 0 black, 5px 5px 0 black;
+
+    color: #FFFFFF;
+  }
+
+  .rightText {
+    position: absolute;
+    width: 851px;
+    height: 116px;
+    left: 1069px;
+    top: 36px;
+
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 105px;
+    line-height: 116px;
+    text-shadow: -5px -5px 0 black, -5px -4px 0 black, -5px -3px 0 black, -5px -2px 0 black, -5px -1px 0 black, -5px 0px 0 black, -5px 1px 0 black, -5px 2px 0 black, -5px 3px 0 black, -5px 4px 0 black, -5px 5px 0 black, -4px -5px 0 black, -4px -4px 0 black, -4px -3px 0 black, -4px -2px 0 black, -4px -1px 0 black, -4px 0px 0 black, -4px 1px 0 black, -4px 2px 0 black, -4px 3px 0 black, -4px 4px 0 black, -4px 5px 0 black, -3px -5px 0 black, -3px -4px 0 black, -3px -3px 0 black, -3px -2px 0 black, -3px -1px 0 black, -3px 0px 0 black, -3px 1px 0 black, -3px 2px 0 black, -3px 3px 0 black, -3px 4px 0 black, -3px 5px 0 black, -2px -5px 0 black, -2px -4px 0 black, -2px -3px 0 black, -2px -2px 0 black, -2px -1px 0 black, -2px 0px 0 black, -2px 1px 0 black, -2px 2px 0 black, -2px 3px 0 black, -2px 4px 0 black, -2px 5px 0 black, -1px -5px 0 black, -1px -4px 0 black, -1px -3px 0 black, -1px -2px 0 black, -1px -1px 0 black, -1px 0px 0 black, -1px 1px 0 black, -1px 2px 0 black, -1px 3px 0 black, -1px 4px 0 black, -1px 5px 0 black, 0px -5px 0 black, 0px -4px 0 black, 0px -3px 0 black, 0px -2px 0 black, 0px -1px 0 black, 0px 0px 0 black, 0px 1px 0 black, 0px 2px 0 black, 0px 3px 0 black, 0px 4px 0 black, 0px 5px 0 black, 1px -5px 0 black, 1px -4px 0 black, 1px -3px 0 black, 1px -2px 0 black, 1px -1px 0 black, 1px 0px 0 black, 1px 1px 0 black, 1px 2px 0 black, 1px 3px 0 black, 1px 4px 0 black, 1px 5px 0 black, 2px -5px 0 black, 2px -4px 0 black, 2px -3px 0 black, 2px -2px 0 black, 2px -1px 0 black, 2px 0px 0 black, 2px 1px 0 black, 2px 2px 0 black, 2px 3px 0 black, 2px 4px 0 black, 2px 5px 0 black, 3px -5px 0 black, 3px -4px 0 black, 3px -3px 0 black, 3px -2px 0 black, 3px -1px 0 black, 3px 0px 0 black, 3px 1px 0 black, 3px 2px 0 black, 3px 3px 0 black, 3px 4px 0 black, 3px 5px 0 black, 4px -5px 0 black, 4px -4px 0 black, 4px -3px 0 black, 4px -2px 0 black, 4px -1px 0 black, 4px 0px 0 black, 4px 1px 0 black, 4px 2px 0 black, 4px 3px 0 black, 4px 4px 0 black, 4px 5px 0 black, 5px -5px 0 black, 5px -4px 0 black, 5px -3px 0 black, 5px -2px 0 black, 5px -1px 0 black, 5px 0px 0 black, 5px 1px 0 black, 5px 2px 0 black, 5px 3px 0 black, 5px 4px 0 black, 5px 5px 0 black;
+
+    color: #FFFFFF;
+  }
+
+  .rightText1 {
+    position: absolute;
+    width: 284px;
+    height: 630px;
+    left: 1007px;
+    top: 179px;
+
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 14px;
+
+    color: #FFFFFF;
+
+    a {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+  }
+
+  .rightText2 {
+    position: absolute;
+    width: 396px;
+    height: 68.22px;
+    left: 1363.95px;
+    top: 159px;
+    
+    font-family: Bungee Inline;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 33px;
+    color: #6900BC;
+    
+    text-shadow: -0.3px 0 #FA00FF, 0 0.3px #FA00FF, 0.3px 0 #FA00FF, 0 -0.3px #FA00FF;
+    -webkit-text-stroke: 0.8px #FA00FF;
+    -webkit-text-fill-color: #6900BC;
+    transform-origin: 0 0;
+    transform: rotate(5deg);
+  }
+
+  .rightText3 {
+    position: absolute;
+    width: 545.28px;
+    height: 336px;
+    left: 1353.28px;
+    top: 230px;
+    
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 110%;
+    
+    color: #FFFFFF;
+    transform-origin: 0 0;
+    transform: rotate(5deg);
+
+    span {
+      font-family: Bellota Text;
+      color: #6900BC;
+    }
+
+    a {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+  }
+
+  .rightText4 {
+    position: absolute;
+    width: 217px;
+    height: 30px;
+    left: 1610px;
+    top: 614px;
+
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+
+    color: #FFFFFF;
+
+    text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px #000000;
+  }
+
+  .plusSign {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    left: 1772px;
+    top: 643px;
+
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    color: #FFFFFF;
+
+    text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px #000000;
+  }
+
+  .rightText5 {
+    position: absolute;
+    width: 175px;
+    height: 30px;
+    left: 1713px;
+    top: 669px;
+    
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    color: #FFFFFF;
+    
+    text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px #000000;
+  }
+
+  .rightText6 {
+    position: absolute;
+    width: 269px;
+    height: 180px;
+    left: 1627px;
+    top: 714px;
+    
+    font-family: Rosarivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+ 
+    color: #FFFFFF;    
+  }
+
+  .rightText7 {
+    position: absolute;
+    width: 570px;
+    height: 97px;
+    left: 1328px;
+    top: 897px;
+    
+    font-family: Rosarivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #FFFFFF;    
+  }
+
+  .rightText8 {
+    position: absolute;
+    width: 174px;
+    height: 30px;
+    left: 1369px;
+    top: 1070px;
+    
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    
+    color: #FFFFFF;
+    
+    text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px #000000;
+  }
+
+  .rightText9 {
+    position: absolute;
+    width: 218px;
+    height: 324px;
+    left: 1672px;
+    top: 1111px;
+    
+    font-family: Rosarivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+
+    color: #FFFFFF;    
+  }
+
+  .rightText10 {
+    position: absolute;
+    width: 252px;
+    height: 216px;
+    left: 1005px;
+    top: 899px;
+    
+    font-family: Rosarivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;   
+    color: #FFFFFF;    
+  }
+  
+  .rightText11 {
+    position: absolute;
+    width: 218px;
+    height: 30px;
+    left: 996px;
+    top: 1123px;
+    
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    color: #FFFFFF;
+    
+    text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px #000000;
+  }
+
+  .videoFrame1 {
+    position: absolute;
+    width: 281px;
+    height: 274px;
+    left: 1324px;
+    top: 614px;
+
+    background: #680099;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .video1 {
+    position: absolute;
+    width: 253.79px;
+    height: 252px;
+    left: 1337px;
+    top: 625px;
+  }
+
+  .videoFrame2 {
+    position: absolute;
+    width: 281px;
+    height: 274px;
+    left: 1369px;
+    top: 1109px;
+
+    background: #DD94FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .video2 {
+    position: absolute;
+    width: 250.57px;
+    height: 252px;
+    left: 1384px;
+    top: 1121px;
+  }
+
+  .videoFrame3 {
+    position: absolute;
+    width: 281px;
+    height: 274px;
+    left: 996px;
+    top: 1159px;
+    
+    background: #AD00FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .video3 {
+    position: absolute;
+    width: 254.57px;
+    height: 252px;
+    left: 1009px;
+    top: 1171px;
+  }
+
+  .play1 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 1312px;
+    top: 573px;
+  }
+
+  .play2 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 1283px;
+    top: 1411px;
+  }
+
+  .play3 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 1618px;
+    top: 1395px;
+  }
+}

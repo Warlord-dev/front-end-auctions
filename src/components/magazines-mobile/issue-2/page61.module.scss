@@ -1,0 +1,320 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 2469px;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+  .Img1{
+    position: absolute;
+    width: 87px;
+    height: 909px;
+    left: 112px;
+    top: 1609px;
+  }
+  .Img2{
+    position: absolute;
+    width: 87px;
+    height: 1497px;
+    left: 288px;
+    top: 898px;
+  }
+  .Img3{
+    position: absolute;
+    width: 87px;
+    height: 1497px;
+    left: 201px;
+    top: 1207px;
+  }
+  .Img4{
+    position: absolute;
+    width: 87px;
+    height: 1497px;
+    left: 114px;
+    top: 1102px;
+  }
+  .Img5{
+    position: absolute;
+    width: 727px;
+    height: 573px;
+    left: 0px;
+    top: 0px;
+  }
+  .Img6{
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: -60px;
+    top: 573px;
+  }
+  .Img7{
+    position: absolute;
+    width: 960px;
+    height: 850px;
+    left: 0px;
+    top: 1619px;
+  }
+
+  h1{
+    font-family: Covered By Your Grace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 110%;
+    /* or 39px */
+    color: #FFFFFF;
+  }
+  
+  .title1{
+    position: absolute;
+    width: 222.14px;
+    height: 429px;
+    left: 90px;
+    top: 100px;
+    transform: rotate(5deg);
+  }
+
+  .title2{        
+    position: absolute;
+    width: 261.87px;
+    height: 273px;
+    left: 51px;
+    top: 977.82px;
+    transform: rotate(-5deg);
+  }
+
+  h2{
+    font-family: Boldfinger;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 110%;
+    /* or 39px */
+  }
+
+  .title3{
+    position: absolute;
+    width: 272px;
+    height: 117px;
+    left: 59px;
+    top: 1734px;
+
+    color: #FFFFFF;
+
+    
+    box-sizing: border-box;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .title4{
+    position: absolute;
+    width: 443px;
+    height: 78px;
+    left: -30.2px;
+    top: 1898px;
+ 
+    text-align: center;
+
+    color: #0085FF;
+
+    
+    box-sizing: border-box;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(5deg);
+
+  }
+
+  .title5{
+    position: absolute;
+    width: 443px;
+    height: 39px;
+    left: -63px;
+    top: 2099.61px;
+ 
+    text-align: center;
+
+    color: #65FF2F;
+ 
+    box-sizing: border-box;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(-5deg);
+
+  }
+
+  .title6{
+    position: absolute;
+    width: 361.24px;
+    height: 78px;
+    left: -1.2px;
+    top: 2185px;
+
+    
+    text-align: center;
+
+    color: #FF9E0D;
+
+    
+    box-sizing: border-box;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(5deg);
+
+  }
+
+  .title7{
+    position: absolute;
+    width: 443px;
+    height: 39px;
+    left: -47px;
+    top: 2379.61px;
+ 
+    text-align: center;
+
+    color: #FF2F2F;
+
+    
+    box-sizing: border-box;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(-5deg);
+  }
+
+  p{
+    font-family: Covered By Your Grace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 110%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
+
+  }
+
+  .text1{
+    position: absolute;
+    width: 238.17px;
+    height: 127.99px;
+    left: 62.16px;
+    top: 566px;   
+    transform: rotate(5deg);
+  }
+
+  .text2{
+    position: absolute;
+    width: 221.99px;
+    height: 198.58px;
+    left: 82px;
+    top: 1232.35px;
+ 
+  }
+
+  .innerWrapper {
+    position: absolute;
+    top: 60px;
+    left: calc((100vw - 280px) / 2);
+    width: 280px;
+    white-space: normal;
+    h1 {
+      font-family: Covered By Your Grace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 35px;
+      line-height: 110%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: Covered By Your Grace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 110%;
+      margin-bottom: 30px;
+    }
+    .section1 {
+      margin-top: 80px;
+      transform: rotate(5deg);
+    }
+    .section2 {
+      margin-top: 80px;
+      transform: rotate(-5deg);
+    }
+    .section3 {
+      margin-top: 80px;
+      h1 {
+        font-family: Boldfinger;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 100px;
+        color: #FFFFFF;
+        -webkit-text-stroke: 1px #000000;
+        box-sizing: border-box;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      h2 {
+        font-family: Boldfinger;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 100px;
+        color: #0085FF;
+        -webkit-text-stroke: 1px #000000;
+        box-sizing: border-box;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transform: rotate(5deg);
+      }
+      h3 {
+        font-family: Boldfinger;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 100px;
+        color: #65FF2F;
+        -webkit-text-stroke: 1px #000000;
+        box-sizing: border-box;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transform: rotate(-5deg);
+      }
+      h4 {
+        font-family: Boldfinger;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 100px;
+        color: #FF9E0D;
+        -webkit-text-stroke: 1px #000000;
+        box-sizing: border-box;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transform: rotate(5deg);
+      }
+      h5 {
+        font-family: Boldfinger;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 100px;
+        color: #FF2F2F;
+        -webkit-text-stroke: 1px #000000;
+        box-sizing: border-box;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transform: rotate(-5deg);
+      }
+    }
+  }
+
+}

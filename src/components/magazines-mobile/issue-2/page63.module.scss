@@ -1,0 +1,48 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 3257px;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .img1{
+    position: absolute;
+    width: 375px;
+    height: 3257px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .img2{
+    position: absolute;
+    width: 313px;
+    height: 3130px;
+    left: 31px;
+    top: 78px;
+  }
+
+  p{
+    position: absolute;
+    width: 235px;
+    height: 3080px;
+    left: 70px;
+    top: 128px;
+
+    font-family: Crafty Girls;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 110%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
+  }
+
+   
+}

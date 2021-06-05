@@ -1,0 +1,54 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+
+    .background {
+        position: absolute;
+        width: 1920px;
+        height: 1920px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .link {
+        position: absolute;
+        width: 338px;
+        height: 66px;
+        left: 1376px;
+        top: 53px;
+
+        font-family: Asdonuts;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 110%;
+        /* identical to box height, or 66px */
+
+
+        color: #CA8886;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+    .text {
+        position: absolute;
+        width: 458px;
+        height: 258px;
+        left: 1376px;
+        top: 119px;
+
+        font-family: Olivia & Kevin;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 110%;
+        /* or 17px */
+
+
+        color: #D79B99;
+    }
+}
