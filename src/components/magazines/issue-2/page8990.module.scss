@@ -1,0 +1,149 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .backImage {
+    position: absolute;
+    width: 1928px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .firstBack {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  h1 {
+    font-family: Homenaje;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 90px;
+    line-height: 99px;
+
+    color: #FFFFFF;
+
+    
+    position: absolute;
+
+    &.h1_1 {
+      width: 456px;
+      height: 297px;
+      left: 47px;
+      top: 41px;
+      text-shadow: -6px 6px rgba(40, 223, 212, 0.18), 6px 0px rgba(40, 223, 212, 0.18), 0px 6px rgba(40, 223, 212, 0.18), 0px -6px rgba(40, 223, 212, 0.18);
+    }
+
+    &.h1_2 {
+      width: 476px;
+      height: 297px;
+      left: 47px;
+      top: 48px;
+      text-shadow: -1px 0 #03D2FF, 0 1px #03D2FF, 1px 0 #03D2FF, 0 -1px #03D2FF;
+    }
+  }
+
+  h2 {
+    position: absolute;
+    height: 30px;
+    left: 47px;
+    top: 338px;
+    
+    font-family: Antonio;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  h3 {
+    position: absolute;
+    width: 228px;
+    height: 30px;
+    left: 133px;
+    top: 395px;
+    
+    font-family: Anton;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  p {
+    font-family: Antic Didone;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 28.5px;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+
+    &.firstText {
+      width: 401px;
+      height: 1001px;
+      left: 47px;
+      top: 441px;
+    }
+
+    &.secondText {
+      width: 420px;
+      height: 1398px;
+      left: 488px;
+      top: 58px;
+
+      span {
+        font-family: Anton;
+        font-size: 20px;
+        line-height: 150%;
+      }
+    }
+  }
+
+  .secondBack {
+    position: absolute;
+    width: 890px;
+    height: 1320px;
+    left: 992px;
+    top: 63px;
+
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .secondPageText {
+    position: absolute;
+    width: 825px;
+    height: 1398px;
+    left: 1028px;
+    top: 128px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    span {
+      font-family: Anton;
+    }
+  }
+}

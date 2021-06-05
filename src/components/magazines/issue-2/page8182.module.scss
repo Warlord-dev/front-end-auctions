@@ -1,0 +1,383 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  
+  .left {
+    position: absolute;
+    width: 961px;
+    height: 1499px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .right {
+    position: absolute;
+    width: 960px;
+    height: 1498px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 617px;
+    height: 137px;
+    left: 1255px;
+    top: 24px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 137px;
+    text-align: right;
+
+    color: #9E00FF;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .link2 {
+    position: absolute;
+    width: 617px;
+    height: 137px;
+    left: 1267px;
+    top: 40px;
+    
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 137px;
+    text-align: right;
+    
+    color: #FF7A00;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .link3 {
+    position: absolute;
+    width: 617px;
+    height: 137px;
+    left: 1280px;
+    top: 64px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 137px;
+    text-align: right;
+
+    color: #FFFFFF;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .leftLink1 {
+    position: absolute;
+    width: 355px;
+    height: 493px;
+    left: 40px;
+    top: 749px;
+
+    box-sizing: border-box;
+  }
+
+  .leftLink2 {
+    position: absolute;
+    width: 288px;
+    height: 188px;
+    left: 40px;
+    top: 1274px;
+
+    font-family: Cardo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+
+
+    color: #FFFFFF;
+  }
+
+  .leftText{
+    position: absolute;
+    width: 269px;
+    height: 188px;
+    left: 348px;
+    top: 1046px;
+
+    font-family: Mouse Deco;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+
+
+    color: #41662C;
+  }
+
+  .rightText1 {
+    position: absolute;
+    width: 227.67px;
+    height: 79.5px;
+    left: 1005.19px;
+    top: 89.27px;
+
+    font-family: Neucha;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+
+    transform: rotate(-10deg);
+  }
+
+  .rightText2 {
+    position: absolute;
+    width: 383px;
+    height: 27px;
+    left: 1294px;
+    top: 186px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 27px;
+
+    color: #FFFFFF;
+  }
+
+  .rightText3 {
+    position: absolute;
+    width: 320px;
+    height: 71.92px;
+    left: 1005px;
+    top: 240px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 27px;
+
+    color: #FFFFFF;
+  }
+
+  .rightText4 {
+    position: absolute;
+    width: 780px;
+    height: 170px;
+    left: 1005px;
+    top: 304px;
+
+    font-family: Neucha;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+  }
+
+  .rightText5 {
+    position: absolute;
+    width: 320px;
+    height: 71.92px;
+    left: 1005px;
+    top: 504.89px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 27px;
+
+    color: #FFFFFF;
+
+    transform: rotate(-5deg);
+  }
+
+  .rightText6 {
+    position: absolute;
+    width: 449.94px;
+    height: 83.58px;
+    left: 1010.53px;
+    top: 594.79px;
+
+    font-family: Neucha;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+
+    transform: rotate(-5deg);
+  }
+
+  .rightText7 {
+    position: absolute;
+    width: 320px;
+    height: 34.42px;
+    left: 1562.53px;
+    top: 506.81px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 27px;
+    text-align: right;
+
+    color: #FFFFFF;
+
+    transform: rotate(5deg);
+  }
+
+  .rightText8 {
+    position: absolute;
+    width: 377.27px;
+    height: 83.58px;
+    left: 1502.81px;
+    top: 534.81px;
+
+    font-family: Neucha;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+
+    color: #FFFFFF;
+
+    transform: rotate(5deg);
+  }
+
+  .rightText9 {
+    position: absolute;
+    width: 320px;
+    height: 71.92px;
+    left: 1146.29px;
+    top: 677.81px;
+
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 27px;
+
+    color: #FFFFFF;
+
+    transform: rotate(3deg);
+  }
+
+  .rightText10 {
+    position: absolute;
+    width: 436.5px;
+    height: 164.34px;
+    left: 1142.13px;
+    top: 736.81px;
+
+    font-family: Neucha;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+
+    transform: rotate(3deg);
+  }
+
+  .rightText11 {
+    position: absolute;
+    width: 142px;
+    height: 170px;
+    left: 1244px;
+    top: 1082px;
+
+    font-family: Neucha;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 13px;
+
+    color: #FFFFFF;
+  }
+
+  .rightText12 {
+    position: absolute;
+    width: 341px;
+    height: 81px;
+    left: 1406px;
+    top: 1230px;
+
+    font-family: Neucha;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 13px;
+
+    color: #FFFFFF;
+  }
+
+  .rightText13 {
+    position: absolute;
+    width: 847px;
+    height: 141px;
+    left: 1016px;
+    top: 1328px;
+
+    font-family: Neucha;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+  }
+
+  .arrow1 {
+    position: absolute;
+    width: 320px;
+    left: 1090.6px;
+    top: 904px;
+  }
+
+  .arrow2 {
+    position: absolute;
+    width: 320px;
+    left: 1431px;
+    top: 1049.45px;
+
+    transform: rotate(-20deg);
+  }
+
+  .video1 {
+    position: absolute;
+    width: 243px;
+    height: 247px;
+    left: 982px;
+    top: 952px;
+  }
+
+  .video2 {
+    position: absolute;
+    width: 379.92px;
+    height: 247px;
+    left: 1524px;
+    top: 935px;
+  }
+}

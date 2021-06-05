@@ -1,0 +1,83 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 1868px;
+  background-color: white;
+  color: white;
+  position: relative;
+
+  font-family: Days One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 100%;
+
+  .backImage1 {
+    position: absolute;
+    width: 100%;
+    height: 1868px;
+    left: 0;
+    top: 0px;
+
+  }
+
+  .backImage2 {      
+    position: absolute;
+    width: 461px;
+    height: 346px;
+    left: -43px;
+    top: -33px;
+  }
+
+  .sectionFrame {
+    position: absolute;
+    left: 0;
+    top: 1059px;
+    width: 375px;
+    height: 809px;
+
+    background: rgba(15, 16, 39, 0.54);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+  
+
+  .text1{   
+    position: absolute;  
+    width: 182px;
+    height: 240px;
+    left: 17px;
+    top: 341px;
+  }
+  .text2{      
+    position: absolute;
+    width: 265px;
+    height: 100px;
+    left: 60px;
+    top: 1110px;
+
+    a {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+
+  .text3{
+    position: absolute;
+    width: 265px;
+    height: 380px;
+    left: 60px;
+    top: 1251px;
+  }
+
+  .text4{
+    position: absolute;
+    width: 250px;
+    height: 160px;
+    left: 60px;
+    top: 1659px;
+
+  }
+   
+  
+}

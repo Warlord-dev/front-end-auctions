@@ -1,0 +1,178 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 100vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    height: 3600px;
+    left: 0px;
+    top: 0px;
+  }
+  .innerWrapper {
+    position: absolute;
+    overflow-x: hidden;
+    top: 60px;
+    left: calc((100vw - 300px) / 2);
+    width: 300px;
+    padding: 0 10px;
+    white-space: normal;
+    text-align: left;
+    .xenotech {
+      width: 300px;
+      margin-left: -20px;
+    }
+    & > h1 {
+      text-align: right;
+      font-family: Neon Nanoborg;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 21px;
+      margin-top: -58px;
+    }
+    & > p {
+      margin-top: 80px;
+      width: 240px;
+      font-family: Neucha;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px;
+      transform: rotate(-10deg);
+    }
+
+    .section1 {
+      margin-top: 80px;
+      h1 {
+        font-family: Neon Nanoborg;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 27px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-family: Neucha;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+    .section2 {
+      transform: rotate(-5deg);
+      margin-top: 80px;
+      h1 {
+        font-family: Neon Nanoborg;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 27px;
+      }
+      p {
+        font-family: Neucha;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+    .section3 {
+      transform: rotate(5deg);
+      margin-top: 80px;
+      text-align: right;
+      h1 {
+        font-family: Neon Nanoborg;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 27px;
+      }
+      p {
+        font-family: Neucha;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+    .section4 {
+      transform: rotate(3deg);
+      margin-top: 80px;
+      h1 {
+        font-family: Neon Nanoborg;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 27px;
+      }
+      p {
+        font-family: Neucha;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+    .section5 {
+      margin-top: 80px;
+      position: relative;
+      img {
+        width: 180px;
+        height: auto;
+      }
+      .arrow {
+        position: absolute;
+        top: -29px;
+        width: 170px;
+        right: 16px;
+        transform: rotateY(180deg) rotateZ(90deg);
+      }
+      p {
+        width: 180px;
+        margin-left: auto;
+        margin-top: 20px;
+      }
+    }
+    .section6 {
+      margin-top: 80px;
+      position: relative;
+      .arrow {
+        position: absolute;
+        top: 80px;
+        left: -40px;
+        width: 260px;
+        transform: rotateY(180deg) rotateX(180deg) rotateZ(-60deg);
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+      }
+      p {
+        padding-top: 260px;
+        width: 240px;
+        margin-left: auto;
+      }
+    }
+    .section7 {
+      margin-top: 80px;
+      p {
+        font-family: Neucha;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

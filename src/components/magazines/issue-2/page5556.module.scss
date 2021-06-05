@@ -1,0 +1,154 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();  
+
+    .left {
+        position: absolute;
+        width: 962px;
+        height: 1497px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .right {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+    }
+
+    .small {
+        position: absolute;
+        width: 344px;
+        height: 230.64px;
+        left: 1533px;
+        top: 1229px;
+        border: 3px solid #FFFFFF;
+        box-sizing: border-box;
+    }
+
+    .text1 {
+        position: absolute;
+        width: 337px;
+        height: 44px;
+        left: 1565px;
+        top: 108px;
+
+        font-family: Knife Princess;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 110%;
+        /* identical to box height, or 44px */
+
+
+        color: #FD0000;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .text2 {
+        position: absolute;
+        width: 337px;
+        height: 44px;
+        left: 1565px;
+        top: 64px;
+
+        font-family: Knife Princess;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 110%;
+        /* identical to box height, or 44px */
+
+
+        color: #FD0000;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .text3 {
+        position: absolute;
+        width: 337px;
+        height: 44px;
+        left: 1565px;
+        top: 86px;
+
+        font-family: Knife Princess;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 110%;
+        /* identical to box height, or 44px */
+
+
+        color: #FD0000;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .text4 {
+        position: absolute;
+        width: 337px;
+        height: 44px;
+        left: 1565px;
+        top: 108px;
+
+        font-family: Knife Princess;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 110%;
+        /* identical to box height, or 44px */
+
+
+        color: #FD0000;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .text5 {
+        position: absolute;
+        width: 337px;
+        height: 44px;
+        left: 1565px;
+        top: 130px;
+
+        font-family: Knife Princess;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 110%;
+        /* identical to box height, or 44px */
+
+
+        color: #FD0000;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .subText {
+        position: absolute;
+        width: 311px;
+        height: 408px;
+        left: 1565px;
+        top: 208px;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 110%;
+        /* or 17px */
+
+
+        color: #FFFFFF;
+    }
+}

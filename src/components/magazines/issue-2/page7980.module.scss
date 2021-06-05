@@ -1,0 +1,57 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #26A3E6;
+
+  .left {
+    position: absolute;
+    height: 1498px;
+  }
+
+  .right {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    left: 1060px;
+    top: 50px;
+    
+    font-family: Empirez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+    
+    &:hover {
+      text-decoration: underline;
+    }
+    color: #FFB115;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    left: 1060px;
+    top: 100px;
+    
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+    
+    
+    color: #FFFFFF;
+  }
+}

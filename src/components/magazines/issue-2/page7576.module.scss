@@ -1,0 +1,340 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1498px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .seeMoreLink {
+    position: absolute;
+    width: 240px;
+    height: 144px;
+    left: 1021px;
+    top: 73px;
+
+    font-family: Noto Sans Armenian;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 90%;
+    /* or 72px */
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    color: #00FFF0;
+  }
+  
+  .mainText {
+    position: absolute;
+    width: 705px;
+    height: 120px;
+    left: 55px;
+    top: 25px;
+
+    font-family: Neon Lights;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 100%;
+    /* identical to box height, or 120px */
+
+
+    color: #00FFF0;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 783px;
+    height: 144px;
+    left: 105px;
+    top: 147px;
+
+    font-family: Muna;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 110%;
+    /* or 18px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 755px;
+    height: 99px;
+    left: 77px;
+    top: 384px;
+
+    font-family: NATS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 710px;
+    height: 55px;
+    left: 55px;
+    top: 329px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    /* identical to box height, or 55px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 820px;
+    height: 33px;
+    left: 70px;
+    top: 517px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* identical to box height, or 33px */
+
+
+    color: #FFFFFF;
+  }
+
+  .img1 {
+    position: absolute;
+    width: 193px;
+    height: 263px;
+    left: 70px;
+    top: 562px;
+  }
+
+  .img2 {
+    position: absolute;
+    width: 192px;
+    height: 263px;
+    left: 263px;
+    top: 562px;
+  }
+
+  .img3 {
+    position: absolute;
+    width: 192px;
+    height: 263px;
+    left: 455px;
+    top: 562px;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 820px;
+    height: 33px;
+    left: 81px;
+    top: 850px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* identical to box height, or 33px */
+
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+
+  .img4 {
+    position: absolute;
+    width: 312px;
+    height: 252px;
+    left: 263px;
+    top: 894px;
+  }
+  
+  .img5 {
+    position: absolute;
+    width: 312px;
+    height: 252px;
+    left: 573px;
+    top: 894px;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 820px;
+    height: 33px;
+    left: 27px;
+    top: 1189px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* identical to box height, or 33px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 451px;
+    height: 33px;
+    left: 1440px;
+    top: 36px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* identical to box height, or 33px */
+
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 660px;
+    height: 33px;
+    left: 1000px;
+    top: 367px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* identical to box height, or 33px */
+
+
+    color: #FFFFFF;
+  }
+
+  .img6 {
+    position: absolute;
+    width: 578px;
+    height: 262.9px;
+    top: 80px;
+    right: 20px;
+  }
+
+  .img7 {
+    position: absolute;
+    width: 600px;
+    height: 266px;
+    left: 1000px;
+    top: 416px;
+  }
+
+  .img8 {
+    position: absolute;
+    width: 270px;
+    height: 314px;
+    left: 1568px;
+    top: 368px;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 800px;
+    height: 33px;
+    left: 1091px;
+    top: 720px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* identical to box height, or 33px */
+
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+
+  .img9 {
+    position: absolute;
+    width: 806px;
+    height: 259.85px;
+    right: 20px;
+    top: 760px;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 737px;
+    height: 66px;
+    left: 1000px;
+    top: 1059px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
+
+
+    color: #FFFFFF;
+  }
+
+  .img10 {
+    position: absolute;
+    width: 867px;
+    height: 326px;
+    left: 1012px;
+    top: 1133px;
+  }
+
+  .img11 {
+    position: absolute;
+    width: 254.57px;
+    height: 252px;
+    Top: 1229px;
+    Left: 20px;    
+  }
+
+  .img12 {
+    position: absolute;
+    width: 250.57px;
+    height: 252px;
+    Top: 1229px;
+    Left: 272px;
+  }
+
+  .img13 {
+    position: absolute;
+    width: 253.79px;
+    height: 252px;
+    Top: 1229px;
+    Left: 524px;
+
+  }
+}

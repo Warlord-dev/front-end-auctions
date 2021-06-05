@@ -1,0 +1,200 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+
+    .left {
+        position: absolute;
+        width: 1061px;
+        height: 2209px;
+        left: -101px;
+        top: -456px;
+    }
+
+    .right {
+        position: absolute;
+        width: 1061px;
+        height: 2658px;
+        left: 960px;
+        top: -626px;
+    }
+
+    .rightOverlay {
+        position: absolute;
+        width: 1061px;
+        height: 2658px;
+        left: 960px;
+        top: -608px;
+    }
+
+    .leftMosh {
+        position: absolute;
+        width: 1061px;
+        height: 2209px;
+        left: -101px;
+        top: -456px;
+    }
+
+    .rightMosh {
+        position: absolute;
+        width: 960px;
+        height: 1492px;
+        left: 960px;
+        top: 5px;
+    }
+
+    .firstParagraph {
+        position: absolute;
+        width: 697px;
+        height: 434px;
+        left: 131px;
+        top: 114px;
+        
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .firstText {
+        position: absolute;
+        width: 583px;
+        height: 262px;
+        left: 188px;
+        top: 154px;
+
+        font-family: Arapey;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 110%;
+        /* or 18px */
+
+        text-align: center;
+
+        color: #000000;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .secondParagraph {
+        position: absolute;
+        width: 697px;
+        height: 463px;
+        left: 131px;
+        top: 564px;
+        
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .secondText {
+        position: absolute;
+        width: 583px;
+        height: 262px;
+        left: 188px;
+        top: 590px;
+
+        font-family: Arapey;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 110%;
+        /* or 18px */
+
+        text-align: center;
+
+        color: #000000;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .thirdParagraph {
+        position: absolute;
+        width: 697px;
+        height: 339px;
+        left: 131px;
+        top: 1043px;
+
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .thirdText {
+        position: absolute;
+        width: 583px;
+        height: 455px;
+        left: 188px;
+        top: 1073px;
+        
+        font-family: Arapey;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 110%;
+        /* or 18px */
+        
+        text-align: center;
+        
+        color: #000000;
+        
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .rightFirstParagraph {
+        position: absolute;
+        width: 697px;
+        height: 156px;
+        left: 1091px;
+        top: 114px;
+
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .rightFirstText {
+        position: absolute;
+        width: 583px;
+        height: 109px;
+        left: 1141px;
+        top: 149px;
+
+        font-family: Arapey;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 110%;
+        /* or 18px */
+
+        text-align: center;
+
+        color: #000000;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .rightSecondParagraph {
+        position: absolute;
+        width: 697px;
+        height: 415px;
+        left: 1091px;
+        top: 285px;
+
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .rightSecondText {
+        position: absolute;
+        width: 583px;
+        height: 262px;
+        left: 1148px;
+        top: 324px;
+
+        font-family: Arapey;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 110%;
+        /* or 18px */
+
+        text-align: center;
+
+        color: #000000;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}

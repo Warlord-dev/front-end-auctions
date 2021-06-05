@@ -1,0 +1,42 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3670px;
+  background-color: white;
+  color: #FFFFFF;
+  display: flex;
+  position: relative;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  .backImage {
+    width: 375px;
+    height: 3670px;
+    position: absolute;
+  }
+  p {
+    position: absolute;
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;    
+    text-align: center;
+    color: #FFFFFF;
+
+    &.section1 {
+      position: absolute;
+      width: 261.83px;
+      height: 895px;
+      left: 56px;
+      top: 71px;
+    }
+
+    &.section2 {
+      width: 262px;
+      height: 680px;
+      left: 51px;
+      top: 1784px;
+    }
+  }
+}
