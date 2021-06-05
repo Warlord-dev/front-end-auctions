@@ -18,7 +18,7 @@ import getOrCreateStore from '../lib/with-redux-store';
 
 import config from '../utils/config';
 import '../assets/scss/global.scss';
-import '../styles/globals.css'
+import '../assets/styles/globals.css'
 
 if (config.SENTRY_DSN) {
   Sentry.init({
