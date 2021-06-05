@@ -1,0 +1,125 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper(); 
+    background: #E5E5E5; 
+
+    .right {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+    }
+
+    .left {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .text1 {
+        position: absolute;
+        width: 512px;
+        height: 132px;
+        left: 272px;
+        top: 560px;
+
+        font-family: Blacker Display;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 110%;
+        /* or 66px */
+
+
+        color: #000000;
+    }
+
+    .leftDiv {
+        position: absolute;
+        width: 619px;
+        height: 463px;
+        left: 116px;
+        top: 813px;
+
+        background: #C4C4C4;
+    }
+
+    .text2 {
+        position: absolute;
+        width: 350px;
+        height: 400px;
+        left: 250px;
+        top: 819px;
+
+        font-family: EB Garamond;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 100px;
+        line-height: 100%;
+        /* or 100px */
+
+
+        color: #000000;
+    }
+
+    .text3 {
+        position: absolute;
+        width: 388px;
+        height: 120px;
+        left: 994px;
+        top: 35px;
+ 
+        font-family: Days One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 100%;
+        /* or 20px */
+
+
+        color: #FFFFFF;
+    }
+
+    .textDiv {
+        position: absolute;
+        width: 960px;
+        height: 330px;
+        left: 960px;
+        top: 1167px;
+
+        background: rgba(15, 16, 39, 0.54);
+    }
+
+    .text4 {
+        position: absolute;
+        width: 840px;
+        height: 40px;
+        left: 1011px;
+        top: 1209px;
+
+        font-family: Days One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 100%;
+        /* or 20px */
+
+        a {
+            text-decoration: underline;
+            color: white;
+        }
+        color: #FFFFFF;
+    }
+
+    .logo {
+        position: absolute;
+        width: 586px;
+        height: 440px;
+        left: 1359px;
+        top: -65px;
+    }
+}

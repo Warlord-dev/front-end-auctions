@@ -1,0 +1,114 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 745px;
+    height: 1288px;
+    left: 1068px;
+    top: 103px;
+    mix-blend-mode: hard-light;
+  }
+
+  .coutureImage {
+    position: absolute;
+    width: 1227px;
+    height: 192px;
+    left: 541px;
+    top: 39px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 499px;
+    height: 386px;
+    left: 92px;
+    top: 9px;
+
+    font-family: Cinzel Decorative;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 320px;
+    line-height: 120.53%;
+  }
+
+  h2 {
+    position: absolute;
+    width: 849px;
+    height: 73px;
+    left: 78px;
+    top: 438px;
+    
+    font-family: Aclonica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  }
+
+  h3 {
+    position: absolute;
+    width: 144px;
+    height: 18px;
+    left: 50px;
+    top: 362px;
+
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 150%;
+
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  }
+
+  p {
+    position: absolute;
+
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+  
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+
+    &.section1 {
+      width: 396px;
+      height: 846px;
+      left: 74px;
+      top: 544px;
+    }
+
+    &.section2 {
+      width: 396px;
+      height: 884px;
+      left: 512px;
+      top: 544px;
+    }
+
+    &.section3 {
+      width: 611px;
+      height: 1055px;
+      left: 1137px;
+      top: 281px;
+      text-align: center;
+    }
+  }
+}

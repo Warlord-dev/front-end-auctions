@@ -1,0 +1,24 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 1074px;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    min-height: 940px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .gif {
+      position: absolute;
+      width: 160% !important;
+      left: -80px;
+      top: 474px;
+  }
+}

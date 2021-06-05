@@ -1,0 +1,609 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1497px;
+  }
+
+  .pathImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 1190px;
+    height: 151px;
+    left: -34px;
+    top: 15px;
+
+    font-family: Artypa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 104px;
+    text-align: center;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 398px;
+    height: 141px;
+    left: 110px;
+    top: 101px;
+
+    font-family: The ART;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 115px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 333px;
+    height: 178px;
+    left: 474px;
+    top: 103px;
+
+    font-family: Arthure;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 266px;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 332px;
+    height: 125px;
+    left: 608px;
+    top: 278px;
+    
+    font-family: 'Atures 900 PERSONAL USE ONLY';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 120.53%;
+    color: #0099EF;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #000000;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 128px;
+    height: 18px;
+    left: 608px;
+    top: 400px;
+    
+    font-family: B612 Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120.53%;
+    
+    color: #000000;    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 291px;
+    height: 47px;
+    left: 608px;
+    top: 441px;
+
+    font-family: B612 Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 120.53%;
+    
+    color: #D600FE;   
+  }
+
+  .text7 {
+    position: absolute;
+    width: 207px;
+    height: 18px;
+    left: 977px;
+    top: 522px;
+    
+    font-family: B612 Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #000000;
+    
+    transform-origin: 0 0;
+    transform: rotate(-90deg);    
+  }
+
+  .text8 {
+    position: absolute;
+    width: 128px;
+    height: 25px;
+    left: 1362px;
+    top: 290px;
+    
+    font-family: Habbo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+
+    color: #000000;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 137px;
+    height: 18px;
+    left: 1362px;
+    top: 385px;
+    
+    font-family: Averia Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    
+    color: #000000;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 305px;
+    height: 62px;
+    left: 1554px;
+    top: 8px;
+    
+    font-family: Cool Chaos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    
+    color: #DE823D;    
+  }
+
+  .text11 {
+    position: absolute;
+    width: 98px;
+    height: 18px;
+    left: 1554px;
+    top: 80px;
+    
+    font-family: B612 Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 120.53%;
+    
+    color: #000000;    
+  }
+
+  .text12 {
+    position: absolute;
+    width: 188px;
+    left: 1732px;
+    top: 8px;
+    
+    font-family: 'Pixel Berry 08/84 Ltd.Edition';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 120.53%;
+
+    color: #5350FF    
+  }
+
+  .text13 {
+    position: absolute;
+    width: 128px;
+    height: 18px;
+    left: 14px;
+    top: 560px;
+    
+    font-family: B612 Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 120.53%;
+
+    color: #000000;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 44px;
+    height: 33px;
+    left: 138px;
+    top: 560px;
+    
+    font-family: Delius;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #E75F64;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #9C5C87;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 279px;
+    height: 22px;
+    left: 17px;
+    top: 595px;
+    
+    font-family: 'TS Block';
+    font-size: 20px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #18CD1F;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 233px;
+    height: 72px;
+    left: 32px;
+    top: 1346px;
+    
+    font-family: 'Maker Van';
+    font-size: 68px;
+    line-height: 120.53%;
+    color: #000000;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 257px;
+    height: 52px;
+    left: 12px;
+    top: 1415px;
+    
+    font-family: 'Medula One';
+    font-size: 35px;
+    line-height: 150%;
+
+    color: #B95524;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 207px;
+    height: 18px;
+    left: 278px;
+    top: 1470px;
+
+    font-family: B612 Mono;
+    font-size: 17px;
+    line-height: 120.53%;
+
+    color: #000000;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+  }
+
+  .text19 {
+    position: absolute;
+    width: 83px;
+    height: 18px;
+    left: 334px;
+    top: 935px;
+    
+    font-family: B612 Mono;
+    font-size: 10px;
+    line-height: 120.53%;
+    
+    color: #000000;
+  }
+
+  .text20 {
+    position: absolute;
+    width: 174px;
+    height: 25px;
+    left: 334px;
+    top: 953px;
+    
+    font-family: B612 Mono;
+    font-size: 20px;
+    line-height: 120.53%;
+    
+    color: #000000;
+  }
+
+  .text21 {
+    position: absolute;
+    width: 113px;
+    height: 40px;
+    left: 502px;
+    top: 938px;
+    
+    font-family: 'Haarlem Deco DEMO';
+    font-size: 40px;
+    line-height: 120.53%;    
+    
+    color: #000000;
+  }
+
+  .text22 {
+    position: absolute;
+    width: 298px;
+    height: 86px;
+    left: 655px;
+    top: 565px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 150%;    
+    
+    color: #000000;
+  }
+
+  .text23 {
+    position: absolute;
+    width: 98px;
+    height: 18px;
+    left: 1155px;
+    top: 593px;
+    
+    font-family: B612 Mono;
+    font-size: 10px;
+    line-height: 120.53%;
+    color: #000000;
+  }
+
+  .text24 {
+    position: absolute;
+    width: 264px;
+    height: 60px;
+    left: 990px;
+    top: 605px;
+    
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 150%;
+    
+    color: #B03405;
+  }
+
+  .text25 {
+    position: absolute;
+    width: 580px;
+    height: 93px;
+    left: 1238px;
+    top: 1313px;
+    
+    font-family: 'Burst My Bubble';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .text26 {
+    position: absolute;
+    width: 207px;
+    height: 18px;
+    left: 1566px;
+    top: 1421px;
+    
+    font-family: B612 Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;    
+    
+    color: #000000;    
+  }
+
+  .text27 {
+    position: absolute;
+    width: 420px;
+    height: 181px;
+    left: 1774px;
+    top: 985px;
+
+    font-family: Arthure;
+    font-size: 150px;
+    line-height: 120.53%;
+    color: #000000;
+    
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+  }
+
+  .text28 {
+    position: absolute;
+    width: 414px;
+    height: 121px;
+    left: 1786px;
+    top: 1448px;
+    
+    font-family: 'Maker Van';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 120.53%;
+    
+    color: #000000;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+  }
+
+  .blueRect {
+    position: absolute;
+    width: 173px;
+    height: 256px;
+    left: 1353px;
+    top: 0;
+    background: #50F4FF;
+  }
+  
+  .orangeRect {
+    position: absolute;
+    width: 313px;
+    height: 297px;
+    left: -1px;
+    top: 254px;
+    background: #FF6F50;
+  }
+
+  .purpleRect {
+    position: absolute;
+    width: 309px;
+    height: 364px;
+    left: 321px;
+    top: 553px;
+    
+    background: #5350FF;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 244px;
+    height: 244px;
+    left: 352px;
+    top: 278px;
+    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 338px;
+    height: 252px;
+    left: 1011px;
+    top: 274px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 347px;
+    height: 433px;
+    left: 1554px;
+    top: 103px;    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 297px;
+    height: 283px;
+    left: 8px;
+    top: 621px;
+  }
+
+  .image5 {
+    position: absolute;
+    left: 7px;
+    top: 930px;
+    width: 299px;
+    height: 407px;
+  }
+
+  .image6 {
+    position: absolute;
+    left: 260px;
+    top: 988px;
+    width: 428px;
+    height: 487px;
+  }
+
+  .nftVideo2 {
+    position: absolute;
+    width: 474px;
+    height: 494px;
+    left: 1284px;
+    top: 553px;
+    object-fit: cover;
+  }
+
+  .nftVideo {
+    position: absolute;
+    width: 610px;
+    height: 785px;
+    left: 650px;
+    top: 679px;
+    object-fit: cover;    
+  }
+}
+
+.loremTextWrapper {
+  font-family: 'Baloo Paaji 2';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 120.53%;
+  position: relative;
+
+  .loremText1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 359px;
+    height: 95px;
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  .loremText2 {
+    position: absolute;
+    left: 16px;
+    top: 25px;
+    width: 359px;
+    height: 95px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .loremText3 {
+    position: absolute;
+    left: 32px;
+    top: 50px;
+    width: 359px;
+    height: 95px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .loremText4 {
+    position: absolute;
+    left: 48px;
+    top: 75px;
+    width: 359px;
+    height: 95px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .loremText5 {
+    position: absolute;
+    left: 64px;
+    top: 100px;
+    width: 359px;
+    height: 95px;
+    color: #000000
+  }
+}

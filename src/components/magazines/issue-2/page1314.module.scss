@@ -1,0 +1,222 @@
+@import './styles.module.scss';
+
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-602px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+  
+  .backImage1 {
+    position: absolute;
+    width: 960px;
+    height: 1519px;
+    left: 0px;
+    top: -22px;
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 808px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+
+  .leftSideFrame {
+    position: absolute;
+    width: 149px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(0 249 58);
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .rightSideFrame {
+    position: absolute;
+    width: 152px;
+    height: 1497px;
+    left: 1768px;
+    top: 0px;
+    background-color: rgb(0 249 58);
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .animationFrame {
+    animation: scrolling 4s linear infinite;
+  }
+
+
+  .leftSideImageWrapper {
+    position: absolute;
+    width: 92.28px;
+    left: 31px;
+    top: 36px;
+  }
+
+  .rightSideImageWrapper {
+    position: absolute;
+    width: 83px;
+    height: 1660px;
+    right: 31px;
+    top: 36px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 659px;
+    height: 75px;
+    left: 212px;
+    top: 27px;
+
+    font-family: Lusitana;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 150%;
+  }
+
+  h2 {
+    font-family: Medula One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 150%;
+    position: absolute;
+
+    &.section1 {
+      width: 272px;
+      height: 38px;
+      left: 195px;
+      top: 89px;
+    }
+
+    &.section2 {
+      width: 703px;
+      height: 30px;
+      left: 195px;
+      top: 249px;
+    }
+
+    &.section3 {
+      width: 408px;
+      height: 38px;
+      left: 195px;
+      top: 404px;
+    }
+
+    &.section4 {
+      width: 623px;
+      height: 60px;
+      left: 271px;
+      top: 563px;
+      text-align: right;      
+    }
+
+    &.section5 {
+      width: 708px;
+      height: 76px;
+      left: 196px;
+      top: 769px;      
+    }
+
+    &.section6 {
+      width: 623px;
+      height: 60px;
+      left: 267px;
+      top: 1048px;
+      text-align: right;      
+    }
+
+    &.section7 {
+      width: 687px;
+      height: 76px;
+      left: 196px;
+      top: 1251px;      
+    }
+  }
+
+  p {
+    font-family: Lexend Zetta;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    position: absolute;
+
+    &.section1 {
+      width: 700px;
+      height: 141px;
+      left: 195px;
+      top: 129px;
+    }
+
+    &.section2 {
+      width: 699px;
+      height: 141px;
+      left: 203px;
+      top: 282px;
+    }
+
+    &.section3 {
+      width: 706px;
+      height: 135px;
+      left: 196px;
+      top: 442px;
+    }
+
+    &.section4 {
+      width: 699px;
+      height: 153px;
+      left: 199px;
+      top: 631px;
+      text-align: right;
+    }
+
+    &.section5 {
+      width: 700px;
+      height: 271px;
+      left: 196px;
+      top: 851px;
+    }
+
+    &.section6 {
+      width: 699px;
+      height: 153px;
+      left: 195px;
+      top: 1120px;
+      text-align: right;
+    }
+
+    &.section7 {
+      width: 698px;
+      height: 141px;
+      left: 196px;
+      top: 1327px;
+    }
+  }
+
+  .artby {
+    position: absolute;
+    width: 260px;
+    height: 18px;
+    left: 1472px;
+    top: 1084px;
+
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 150%;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  }
+}
