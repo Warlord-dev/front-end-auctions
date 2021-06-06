@@ -100,13 +100,11 @@ const PageList = [
     <Page8384 />,
     <Page8586 />,
     <Page8788 />,
-
     <Page8990 />,
     <Page9192 />,
     <Page9394 />,
     <Page9596 />,
     <Page9798 />,
-    
     <Backcover />
   ]
 

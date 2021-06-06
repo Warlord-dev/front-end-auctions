@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './page9798.module.scss';
 
-const Page8788 = () => {
+const Page9798 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/images/93_back.jpg" className={styles.backImage} />
@@ -39,4 +39,4 @@ const Page8788 = () => {
   );
 };
 
-export default Page8788;
+export default Page9798;

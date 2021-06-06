@@ -5,9 +5,7 @@ import styles from './page8788.module.scss';
 import cn from 'classnames';
 
 const Page8788 = () => {
-  const { contentUnlocked } = useSelector((state) => state.global.toJS());
-
-  return (
+    return (
     <div className={styles.wrapper}>
       <img src="./magazine/1/87_88/page87-left.png" className={styles.leftBack} />
       <img src="./magazine/1/87_88/page87-right.png" className={styles.rightBack} />
