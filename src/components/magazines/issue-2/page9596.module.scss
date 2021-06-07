@@ -2,107 +2,73 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #E5E5E5;
+  background: #080808;
 
-  .backImage1 {
+  .image1 {
     position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 0px;
+    width: 505px;
+    height: 546px;
+    left: -4px;
     top: 0px;
   }
 
-  .backImage2 {
+  .image2 {
+    position: absolute;
+    width: 517px;
+    height: 561px;
+    left: 443px;
+    top: -15px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 967px;
+    height: 975px;
+    left: -7px;
+    top: 546px;
+  }
+
+  .image4 {
     position: absolute;
     width: 960px;
-    height: 1497px;
+    height: 1212px;
     left: 960px;
-    top: 0px;
+    top: 285px;
   }
 
-  .textBack1 {
+  .text1 {
     position: absolute;
-    width: 816px;
-    height: 342px;
-    left: 75px;
-    top: 69px;
-    background: #003172;
-  }
+    width: 392px;
+    height: 44px;
+    left: 37px;
+    top: 23px;
 
-  .textBack2 {
-    position: absolute;
-    width: 816px;
-    height: 1028px;
-    left: 75px;
-    top: 435px;
-    
-    background: #C96634;    
-  }
-
-  .textBack3 {
-    position: absolute;
-    width: 816px;
-    height: 908px;
-    left: 1032px;
-    top: 40px;
-
-    background: #003172;
-  }
-
-  .textBack4 {
-    position: absolute;
-    width: 816px;
-    height: 497px;
-    left: 1032px;
-    top: 966px;
-    
-    background: #C96634;    
-  }
-
-  p {
-    font-family: Chilanka;
+    font-family: "Marck Script";
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
-    line-height: 28.5px;
-    text-align: center;
-    color: #FFFFFF;
-    position: absolute;
+    font-size: 40px;
+    line-height: 90%;
+    /* or 36px */
 
-    span {
-      font-family: Chivo;
-    }
 
-    &.text1 {
-      width: 670px;
-      height: 178px;
-      left: 148px;
-      top: 135px;
-    }
-
-    &.text2 {
-      width: 670px;
-      height: 922px;
-      left: 148px;
-      top: 473px;
-    }
-    
-    &.text3 {
-      width: 670px;
-      height: 851px;
-      left: 1108px;
-      top: 75px;
-      font-size: 18px;
-      line-height: 27px;
-    }
-
-    &.text4 {
-      width: 670px;
-      height: 178px;
-      left: 1111px;
-      top: 1009px;
-    }
+    color: #80FF00;
   }
 
+  .text2 {
+    position: absolute;
+    width: 432px;
+    height: 228px;
+    left: 1606px;
+    top: 37px;
 
+    font-family: Digital Dare;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    /* or 55px */
+
+
+    color: #13BB13;
+  }
 }
