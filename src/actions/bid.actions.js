@@ -1,7 +1,9 @@
 import BaseActions from '@actions/base-actions';
 import { utils as ethersUtils } from 'ethers';
+import config from '@utils/config';
 import { convertToWei } from '@helpers/price.helpers';
 import {
+  getEnabledNetworkByChainId,
   getMarketplaceContractAddressByChainId,
   getMonaContractAddressByChainId,
 } from '@services/network.service';
@@ -17,10 +19,11 @@ class BidActions extends BaseActions {
   bid(id, value, monaPerEth) {
     return async (_, getState) => {
       const account = getState().user.get('account');
-      const auctionContractAddress = getState().global.get('auctionContractAddress');
+      const chainId = getState().global.get('chainId');
+      const network = getEnabledNetworkByChainId(chainId);
+      const auctionContractAddress = config.AUCTION_CONTRACT_ADDRESS[network.alias];
       const contract = await getContract(auctionContractAddress);
       const weiValue = convertToWei(value);
-      const chainId = getState().global.get('chainId');
 
       const monaContractAddress = await getMonaContractAddressByChainId(chainId);
       const monaContract = await getMonaTokenContract(monaContractAddress);
