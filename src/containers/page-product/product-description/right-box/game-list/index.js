@@ -8,22 +8,26 @@ const MaterialList = ({ collectionId, currentClothesInfo }) => {
     <div className={cn(styles.wrapper, 'animate__animated animate__fadeIn')}>
       <p className={styles.titleWrapper}>
         <span className={styles.title}>ESPA Tournament:</span>
-        <span className={styles.titleValue}>Among Us Sheriff Mod</span>
+        <span className={styles.titleValue}>
+          {parseInt(collectionId) < 3 ? 'Among Us Sheriff Mod' : 'Minecraft Bed Wars'}
+        </span>
       </p>
       <div className={styles.gameTable}>
         <div className={styles.header}>
           <span className={styles.col1}>GAME CLASSIFIER</span>
           <span className={styles.col2}>SKIN ID</span>
-          <span className={styles.col3}>HAT ID</span>
+          {parseInt(collectionId) < 3 ? <span className={styles.col3}>HAT ID</span> : null}
         </div>
         <div className={styles.body}>
           <div className={styles.row}>
             <div className={styles.col1}>
-              Among Us Sheriff Mod
+              {parseInt(collectionId) < 3 ? 'Among Us Sheriff Mod' : 'Minecraft Bed Wars'}
               <span>ESPA Tournaments</span>
             </div>
             <span className={styles.col2}>{currentClothesInfo?.skinId}</span>
-            <span className={styles.col3}>{currentClothesInfo?.hatId}</span>
+            {parseInt(collectionId) < 3 ? (
+              <span className={styles.col3}>{currentClothesInfo?.hatId}</span>
+            ) : null}
           </div>
         </div>
       </div>
@@ -36,7 +40,12 @@ const MaterialList = ({ collectionId, currentClothesInfo }) => {
         <div className={styles.body}>
           <div className={styles.row}>
             <a className={styles.col1} href="https://github.com/Woodi-dev">
-              <img src="/images/githubuser.svg" className={styles.gitUserIcon} />
+              <img
+                src={
+                  parseInt(collectionId) >= 3 ? '/images/image 247.png' : '/images/githubuser.svg'
+                }
+                className={styles.gitUserIcon}
+              />
               <div className={styles.addressWrapper}>
                 <p className={styles.name}>
                   {parseInt(collectionId) >= 3 ? 'Ad1tya2' : 'Woodi-Dev'}

@@ -67,7 +67,11 @@ const RightBox = ({
   const renderCollectionInfo = () => {
     if (activeItem === SHOW_FIRST_TAB)
       return (
-        <DesignInformation currentClothesInfo={currentClothesInfo} estimateAPY={estimateAPY} />
+        <DesignInformation
+          collectionId={collectionId}
+          currentClothesInfo={currentClothesInfo}
+          estimateAPY={estimateAPY}
+        />
       );
     if (activeItem === SHOW_SECOND_TAB) {
       return <GameList collectionId={collectionId} currentClothesInfo={currentClothesInfo} />;
