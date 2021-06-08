@@ -23,9 +23,9 @@ const CardProduct = ({ collection }) => {
       </Link>
       <SmallPhotoWithText
         className={styles.designerWrapper}
-        id={designerInfo ? kebabCase(designerInfo.designerName) : ''}
-        name={designerInfo?.designerName}
-        photo={designerInfo?.designerPhoto}
+        id={designerInfo ? kebabCase(designerInfo.designerName) : kebabCase('Cleora')}
+        name={designerInfo?.designerName || 'Cleora'}
+        photo={designerInfo?.designerPhoto || '/images/cleoraskin (1) 1.png'}
         photoIsLink
       />
       <div className={styles.card}>

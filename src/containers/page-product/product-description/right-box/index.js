@@ -70,7 +70,7 @@ const RightBox = ({
         <DesignInformation currentClothesInfo={currentClothesInfo} estimateAPY={estimateAPY} />
       );
     if (activeItem === SHOW_SECOND_TAB) {
-      return <GameList currentClothesInfo={currentClothesInfo} />;
+      return <GameList collectionId={collectionId} currentClothesInfo={currentClothesInfo} />;
     }
     return null;
   };

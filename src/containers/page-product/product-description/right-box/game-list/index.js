@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
-const MaterialList = ({ currentClothesInfo }) => {
+const MaterialList = ({ collectionId, currentClothesInfo }) => {
   return (
     <div className={cn(styles.wrapper, 'animate__animated animate__fadeIn')}>
       <p className={styles.titleWrapper}>
@@ -38,11 +38,22 @@ const MaterialList = ({ currentClothesInfo }) => {
             <a className={styles.col1} href="https://github.com/Woodi-dev">
               <img src="/images/githubuser.svg" className={styles.gitUserIcon} />
               <div className={styles.addressWrapper}>
-                <p className={styles.name}>Woodi-Dev</p>
-                <p className={styles.address}>Woodi#0555</p>
+                <p className={styles.name}>
+                  {parseInt(collectionId) >= 3 ? 'Ad1tya2' : 'Woodi-Dev'}
+                </p>
+                <p className={styles.address}>
+                  {parseInt(collectionId) >= 3 ? 'adi#6789' : 'Woodi#0555'}
+                </p>
               </div>
             </a>
-            <a className={styles.col2} href="https://github.com/Woodi-dev">
+            <a
+              className={styles.col2}
+              href={
+                parseInt(collectionId) >= 3
+                  ? 'https://github.com/ad1tya2'
+                  : 'https://github.com/Woodi-dev'
+              }
+            >
               <img src="/images/github.svg" className={styles.gitIcon} />
             </a>
             <a className={styles.col3} href="https://espa.digitalax.xyz">

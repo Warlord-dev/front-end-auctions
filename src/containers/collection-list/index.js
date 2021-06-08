@@ -32,7 +32,7 @@ const collections = [
   {
     id: 3,
     text: 'MineCraft',
-    designer: 'Digitalax',
+    designer: 'Cleora',
     image: 'https://digitalax.mypinata.cloud/ipfs/QmTfYwLRhqpYBaSoFFGKUJcYU6XSbHpsQvRen2dWQZ8WKH',
   },
   {
