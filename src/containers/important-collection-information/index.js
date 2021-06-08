@@ -56,6 +56,15 @@ const ImportantCollectionInformation = ({ collection }) => {
 
   const digitalIds = ['2607', '2633', '2658', '2679', '3532', '773'];
   const filteredAuctions = currentAuctions;
+
+  const filteredCollection1 = currentCollections.filter((collection) =>
+    collection.garments.filter((garment) => {
+      return garment.name.includes('DIGI').length;
+    }),
+  );
+
+  console.log({ filteredCollection1 });
+
   const filteredCollections =
     collection.id === 1
       ? currentCollections.filter(

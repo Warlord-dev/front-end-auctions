@@ -82,7 +82,7 @@ const RightBox = ({
         const { digitalaxMarketplacePurchaseHistories } =
           await apiService.getMarketplacePurchaseHistory(account, parseInt(garment.id));
         histories = digitalaxMarketplacePurchaseHistories;
-      } else if (collectionId === '3') {
+      } else if (collectionId === '3' || collectionId === '4') {
         const { digitalaxMarketplaceV2PurchaseHistories } =
           await apiService.getMarketplacePurchaseHistoryV2(account, parseInt(garment.id));
         histories = digitalaxMarketplaceV2PurchaseHistories;
@@ -126,7 +126,7 @@ const RightBox = ({
     if (account) {
       dispatch(
         openBuynowModal({
-          id: currentCounts[activeTab].collectionId,
+          id: collectionId === '4' ? '8' : currentCounts[activeTab].collectionId,
           priceEth: currentCounts[activeTab].basePrice,
         }),
       );

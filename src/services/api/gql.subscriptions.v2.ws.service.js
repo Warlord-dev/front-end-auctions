@@ -170,6 +170,7 @@ export const onDesignerByIdsV2 = `
 export const onMarketplaceHistoryByIdsV2 = `
   subscription onMarketplaceHistoryByIds($ids: [ID!]) {
     digitalaxMarketplaceV2PurchaseHistories(first: 1000, where: {garmentAuctionId_in: $ids}) {
+      id
       garmentAuctionId
       eventName
       timestamp
@@ -259,6 +260,11 @@ export const onDigitalaxGarmentsCollectionChangeV2 = `
           amount
           tokenUri
         }
+        attributes {
+          id
+          value
+          type
+        }
       }
     }
   }
@@ -280,6 +286,11 @@ export const onDigitalaxGarmentsCollectionChangeByIdsV2 = `
         image
         animation
         tokenUri
+        attributes {
+          id
+          value
+          type
+        }
         children {
           id
           amount
@@ -306,6 +317,11 @@ export const getAllDigitalaxGarmentsCollectionsV2 = `
         name
         image
         animation
+        attributes {
+          id
+          value
+          type
+        }
         children {
           id
           amount
@@ -346,6 +362,7 @@ export const allDigitalaxMarketplaceOffersV2 = `
         garments(first: 1000) {
           id
           tokenUri
+          name
         }
       }
       startTime

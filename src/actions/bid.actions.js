@@ -119,9 +119,7 @@ class BidActions extends BaseActions {
         }
       }
 
-      const listener = contract.methods
-        .buyOffer(id)
-        .send({ from: account });
+      const listener = contract.methods.buyOffer(id).send({ from: account });
       const promise = new Promise((resolve, reject) => {
         listener.on('error', (error) => reject(error));
         listener.on('confirmation', (transactionHash) => resolve(transactionHash));

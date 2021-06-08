@@ -8,16 +8,26 @@ import {
   getHistoryByTokenIds,
   getCommonHistoryByTokenIds,
   getSemiRareHistoryByTokenIds,
+  getAllSemiRareHistoryByTokenId,
 } from '@selectors/history.selectors';
 import { convertToEth } from '@helpers/price.helpers';
 import TradeHistoryLine from './trade-history-line';
 import styles from './styles.module.scss';
 import { getMonaPerEth } from '@selectors/global.selectors';
 
-const TradeHistory = ({ clothesIds, className, headerTitle, activeTab }) => {
+const TradeHistory = ({ collectionId, clothesIds, className, headerTitle, activeTab }) => {
   const history = useSelector(getHistoryByTokenIds(clothesIds));
   const commonHistory = useSelector(getCommonHistoryByTokenIds(clothesIds));
-  const semiRareHistory = useSelector(getSemiRareHistoryByTokenIds(clothesIds));
+  let semiRareHistory = useSelector(getSemiRareHistoryByTokenIds(clothesIds));
+  if (collectionId === 4 || collectionId === '4') {
+    const semiRareHistories = useSelector(getAllSemiRareHistoryByTokenId).toJS();
+    semiRareHistory = [];
+    Object.values(semiRareHistories).forEach((history) => {
+      if (history.filter((item) => clothesIds.indexOf(item.id) > -1).length) {
+        semiRareHistory = semiRareHistory.concat(history);
+      }
+    });
+  }
   const monaPerEth = useSelector(getMonaPerEth);
 
   const tradeHistory = useMemo(() => {
@@ -43,6 +53,7 @@ const TradeHistory = ({ clothesIds, className, headerTitle, activeTab }) => {
           eventName: item.eventName,
         }));
     } else if (activeTab === 1) {
+      console.log({ semiRareHistory });
       return semiRareHistory
         .sort((a, b) => {
           if (a.timestamp === b.timestamp) {
@@ -141,7 +152,7 @@ const TradeHistory = ({ clothesIds, className, headerTitle, activeTab }) => {
                 recipientPhoto: './images/avatar.svg',
                 recipientAddress: item.transactionHash,
                 eventName: item.eventName,
-              }
+              },
         );
     }
   }, [activeTab, history, commonHistory, semiRareHistory]);

@@ -34,7 +34,11 @@ const Products = () => {
 
   const currentMarketplaceOffers = useMemo(() => {
     const jsOffers = marketplaceOffers.toJS();
-    return jsOffers.filter((val) => val.garmentCollection.garmentAuctionID === garmentId);
+    if (id !== '4') {
+      return jsOffers.filter((val) => val.garmentCollection.garmentAuctionID === garmentId);
+    } else {
+      return jsOffers.filter((val) => val.garmentCollection.garments[0].name.includes('DIGI'));
+    }
   }, [marketplaceOffers]);
 
   useSubscription(
@@ -55,6 +59,8 @@ const Products = () => {
       request:
         id === '1' || id === '2'
           ? wsApi.onDigitalaxGarmentsCollectionChange(garmentId)
+          : id === '4'
+          ? wsApi.getAllDigitalaxGarmentsCollectionsV2()
           : wsApi.onDigitalaxGarmentsCollectionChangeV2(garmentId),
       next: (data) => {
         dispatch(collectionActions.mapData(data?.digitalaxGarmentCollections || []));
@@ -68,6 +74,8 @@ const Products = () => {
       request:
         id === '1' || id === '2'
           ? wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id))
+          : id === '4'
+          ? wsApi.getAllDigitalaxMarketplaceOffersV2()
           : wsApi.onDigitalaxMarketplaceOffersV2(currentCollections.map((val) => val.id)),
       next: (data) => {
         dispatch(collectionActions.updateMarketplaceOffers(data?.digitalaxMarketplaceOffers || []));
@@ -104,7 +112,9 @@ const Products = () => {
       request:
         id === '1' || id === '2'
           ? wsApi.onMarketplaceHistoryByIds([garmentId])
-          : wsApi.onMarketplaceHistoryByIdsV2([garmentId]),
+          : id === '3'
+          ? wsApi.onMarketplaceHistoryByIdsV2([garmentId])
+          : wsApi.onMarketplaceHistoryByIdsV2(['100457']),
       next: (data) =>
         dispatch(
           historyActions.updateMarketplaceHistories(

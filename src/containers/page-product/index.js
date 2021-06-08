@@ -28,7 +28,7 @@ const PageProduct = ({
         currentCollections={currentCollections}
         currentMarketplaceOffers={currentMarketplaceOffers}
       />
-      <Trade clothesIds={[clothesId]} activeTab={activeTab} />
+      <Trade collectionId={collectionId} clothesIds={[clothesId]} activeTab={activeTab} />
     </div>
   );
 };

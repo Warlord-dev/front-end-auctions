@@ -96,6 +96,9 @@ const CardList = ({
           .filter((collection) => collection.rarity === SEMI_RARE_RARITY)
           .map((collection) => {
             const garment = collection.garments[0];
+            if (garment?.name.includes('DIGI Bundle')) {
+              return <></>;
+            }
             return (
               <CardProduct
                 collectionId={collectionId}
@@ -113,6 +116,7 @@ const CardList = ({
           .filter((collection) => collection.rarity === COMMON_RARITY)
           .map((collection) => {
             const garment = collection.garments[0];
+            if (garment?.name.includes('DIGI Bundle')) return <></>;
             return (
               <CardProduct
                 collectionId={collectionId}

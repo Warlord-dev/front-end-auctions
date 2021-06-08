@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
@@ -18,7 +18,7 @@ const CardProduct = ({ collection }) => {
 
   return (
     <li className={cn(styles.item)}>
-      <Link href={`/collections/${collection.id}`}>
+      <Link href={collection.id !== 4 ? `/collections/${collection.id}` : `products/4/1020011/`}>
         <a className={styles.clothesName}>{collection.text}</a>
       </Link>
       <SmallPhotoWithText
@@ -30,21 +30,25 @@ const CardProduct = ({ collection }) => {
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link href={`/collections/${collection.id}`}>
-            <a className={styles.clothesPhotoWrapper}>
-              <video
-                autoPlay
-                muted
-                loop
-                className={styles.clothesPhoto}
-                key={collection.image.replace('gateway.pinata', 'digitalax.mypinata')}
-              >
-                <source
-                  src={collection.image.replace('gateway.pinata', 'digitalax.mypinata')}
-                  type="video/mp4"
-                />
-              </video>
-            </a>
+          <Link
+            href={collection.id !== 4 ? `/collections/${collection.id}` : `products/4/1020011/`}
+          >
+            <div className={styles.photoWrapper}>
+              <a className={styles.clothesPhotoWrapper}>
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  className={styles.clothesPhoto}
+                  key={collection.image.replace('gateway.pinata', 'digitalax.mypinata')}
+                >
+                  <source
+                    src={collection.image.replace('gateway.pinata', 'digitalax.mypinata')}
+                    type="video/mp4"
+                  />
+                </video>
+              </a>
+            </div>
           </Link>
         </div>
 

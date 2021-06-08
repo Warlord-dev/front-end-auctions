@@ -138,3 +138,15 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.photoWrapper {
+  padding-top: 100%;
+
+  .clothesPhotoWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
