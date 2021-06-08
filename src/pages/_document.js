@@ -84,6 +84,36 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css?family=Corben"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Sniglet"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poor+Story"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Quando"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Purple+Purse"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Qwigley"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Flamenco"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poller+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Galada"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fjalla+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Kavoon"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Electrolize"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Encode+Sans"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -809,6 +839,11 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Decovar Alpha';
               src: url("./fonts/DecovarAlpha-VF.ttf");
+            }
+
+            @font-face {
+              font-family: 'XXII-ARMY';
+              src: url("./fonts/XXIIDIRTY-ARMY.ttf");
             }
    
             @font-face {
