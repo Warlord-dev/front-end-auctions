@@ -87,7 +87,7 @@ class BidActions extends BaseActions {
         .allowance(account, marketplaceContract)
         .call({ from: account });
       const jsAllowedValue = parseFloat(ethersUtils.formatEther(allowedValue));
-      return jsAllowedValue > 100000000000;
+      return jsAllowedValue > 10000000000;
     };
   }
 
@@ -104,7 +104,7 @@ class BidActions extends BaseActions {
           .allowance(account, marketplaceContract)
           .call({ from: account });
         const jsAllowedValue = parseFloat(ethersUtils.formatEther(allowedValue));
-        if (jsAllowedValue < 100000000000) {
+        if (jsAllowedValue < 10000000000) {
           const listener = monaContract.methods
             .approve(marketplaceContract, convertToWei(20000000000))
             .send({ from: account });
