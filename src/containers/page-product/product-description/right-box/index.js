@@ -43,6 +43,7 @@ const RightBox = ({
   const account = useSelector(getAccount);
   const garment = useSelector(getGarmentsById(clothesId));
   const auction = useSelector(getAuctionById(garment.id));
+  console.log({ garment });
   const [ids, setIds] = useState([]);
   const [lastPurchasedTime, setLastPurchasedTime] = useState(0);
   const monaPerEth = useSelector(getMonaPerEth);
@@ -88,7 +89,10 @@ const RightBox = ({
         histories = digitalaxMarketplacePurchaseHistories;
       } else if (collectionId === '3' || collectionId === '4') {
         const { digitalaxMarketplaceV2PurchaseHistories } =
-          await apiService.getMarketplacePurchaseHistoryV2(account, parseInt(garment.id));
+          await apiService.getMarketplacePurchaseHistoryV2(
+            account,
+            collectionId === '4' ? 100457 : parseInt(garment.id),
+          );
         histories = digitalaxMarketplaceV2PurchaseHistories;
       }
 
