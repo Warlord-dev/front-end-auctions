@@ -254,7 +254,7 @@ export const onDigitalaxGarmentsCollectionChange = `
         name
         image
         animation
-        attribute {
+        attributes {
           id
           value
           type
@@ -285,7 +285,7 @@ export const onDigitalaxGarmentsCollectionChangeByIds = `
         image
         animation
         tokenUri
-        attribute {
+        attributes {
           id
           value
           type
@@ -316,7 +316,7 @@ export const getAllDigitalaxGarmentsCollections = `
         name
         image
         animation
-        attribute {
+        attributes {
           id
           value
           type
