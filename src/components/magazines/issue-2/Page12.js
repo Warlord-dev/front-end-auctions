@@ -4,14 +4,12 @@ import styles from './page12.module.scss';
 const Page12 = () => {
   return (
     <div className={styles.wrapper}>
-      <h3>
-        Interrobang | The essence of the metaverse is that it’s multimodal. People have a choice in
-        how to interact with content & experiences. We can set the foundation for that in starting
-        with how to interpret a magazine visually.
-      </h3>
-      <h1>META</h1>
-      <video autoPlay muted loop>
-        <source src="./magazine/1/videos/moshed-05-01-9-54-15.mp4" type="video/mp4" />
+      <img src="./magazine/2/images/01_02.png" className={styles.background} />
+      <div className={styles.text1}>
+        Asterism  | A Decentralised Autonomous Organisation coordinates across groups of people that are aligned to a certain set of values and long term purpose. It uses Smart Contracts to automate enforcement of minaturised agreements between members, offering them greater flexibility and more frequent tangible results from what they contribute.  
+      </div>
+      <video autoPlay loop muted className={styles.video}>
+        <source src="./magazine/2/images/01_02_movie.mp4" type="video/mp4" />
       </video>
     </div>
   );

@@ -1,61 +1,129 @@
-import React from 'react'
-import styles from './page78.module.scss'
+import React from 'react';
+import styles from './page78.module.scss';
 
 const Page78 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.firstPartWrapper}>
-        <img src='./magazine/1/images/777 1.jpg' className={styles.backImage1} />
-        <img src='./magazine/1/images/777 1.jpg' className={styles.backImage2} />
-        <div className={styles.whiteOpacity}></div>
-        <h1><span>The Next</span><br /> Real <br />Estate<br /> Rush</h1>
-        <h2>It’s not physical. it’s virtual.</h2>
-        <h3>Written by Peezy R.</h3>
-        <p>
-          In Hong Kong, the most expensive piece of real estate housing has been sitting on the market for three years, and you could own it for a cool $450 million. It's a property located at the Peak, the most prestigious neighborhood in the most expensive real estate market in the world, a colonial estate covering over 7,700 square meters, offering breathtaking views of the region, secluded in an evergreen paradise of Victoria Peak with nary a neighbor in sight. A buyer paid over $178 million for a mansion in the same affluent neighborhood, representing the most lucrative residential sale in the entire continent. 
-          <br /><br />
-          $450 million isn't chump change. In fact, it's downright obscene in a world where 36% of the population live under less than $1 a day. Local whispers talk about how outrageous the going prices for real estate in the area go for. More astounding is the fact that these homes and apartments are mostly empty. What price is too much for a piece of real estate that's been depreciating since 1991?
-          <br /><br />
-          True enough, we as a species are terrible judges of an asset's value, particularly when they are pegged at a higher value than their actual utility really is. It's the same reason why we find prices of real estate at the Peak or a particular piece of art, goes for eye-watering sums of money.
-          <br /><br />
-          But the truth is, asset values are determined by whatever society's collective agreement dictates it to be. It has really nothing at all to do with utility.
-          <br /><br />
-          Art valuation works the same — its value is nothing more than what we agree on. It doesn't matter what materials went into its production or its utility. That's why most of us mere mortals cannot process their true worth. If you think otherwise, then I've got some tulip bulbs for you to buy. 
-        </p>
+      <img src="./magazine/2/images/07_08.png" className={styles.backImage} />
+      <div className={styles.text1}>DAOs</div>
+      <div className={styles.text2}>What Are They and Why Are They Important?</div>
+      <div className={styles.text3}>Peezy R.</div>
+      <div className={styles.text4}>
+        Forty years ago, political activist Ralph Nader was at the peak of his fame. Now, he may be
+        seen as a dinosaur in the scene, but his stinging rebuke of corporations then still rings
+        true to this very day.
+        <br />
+        <br />
+        For far too long, corporations have unashamedly put sales above the health and safety of the
+        people they claim to serve and profit from.
+        <br />
+        <br />
+        Examples of corporate malfeasance and lack of accountability underpinned the exposés that
+        revealed how corporate executives knew the harm their products or actions could cause — but
+        went ahead and did anyway — were and are still rife to this very day.
+        <br />
+        <br />
+        Case in point: Apple literally just admitted to storing thousands of customers' PII on
+        Chinese servers and censored apps to kowtow to the government that virtually runs its supply
+        chain, making it easy for government agents to drain sensitive information from Chinese
+        citizens, including messages, location details, and photos — which is 100% illegal under
+        U.S. federal law.
+        <br />
+        <br />
+        Financial impropriety, corruption, bloat, exploitation, cutting corners, and exorbitant
+        management salaries are all part and parcel of every organization's challenges.
+        <br />
+        <br />
+        Worse, as organizations grow, the more decision-makers add hoops for employees to jump
+        through and inflict increasingly convoluted processes to justify the existence of the rising
+        throngs of senior bureaucrats all hoping to keep their jobs until the ax falls. It's
+        perfectly normal: network effects are the catalyst of natural monopolies, and centralization
+        fosters corruption, censorship, and profiteering behavior for all participants in a given
+        ecosystem. The corporate excesses that led to Enron remain a stark reminder of the need for
+        better governance and a better organizational structure.
       </div>
-      
-      <div className={styles.backOrange}>
+      <div className={styles.text5}>
+        <div className={styles.subTitle}>Enter DAOs</div>
+        <br />
+        The key is right here, and it's going to be the next big trend in the blockchain space.
+        Decentralized Autonomous Organizations, or DAOs, are computer programs running on
+        peer-to-peer networks that incorporate decision-making and governance rules which can be
+        programmed to run autonomously, independent from any human involvement, or otherwise can be
+        programmed to allow direct control of the DAO and its assets.
+        <br />
+        <br />
+        In essence, DAOs are a novel way of financing projects and governing communities, while
+        sharing value for all participants by using Web3 technology and rapidly evolving governance
+        and incentive systems to fairly and efficiently distribute decision-making authority and
+        financial rewards. No single authority has the authority to decide and make rules. Instead,
+        DAOs work with smart contracts to run commands based on external information and operated by
+        a
       </div>
-      <img src='./magazine/1/images/moshed-05-01-22-48-25 1.png' className={styles.rightImage1} />
-      <img src='./magazine/1/images/moshed-05-01-22-48-18 1.png' className={styles.rightImage2} />
-      <img src='./magazine/1/images/moshed-05-01-22-48-25 2.png' className={styles.rightImage3} />
-      <div className={styles.logo_t}>T</div>
-      <p className={styles.section1}>
-        It's only elementary that people would be shocked to find out when acclaimed auction house Christie's sold a piece of digital NFT artwork for $69 million — for a piece of art that doesn't physically exist. 
-        <br /><br />
-        The shock was mainly because most people find it hard to reconcile the value of a digital piece of art, whose production costs are next to nothing compared to the price it went for, and whose value is more closely tied to its scarcity (perceived or otherwise) than its actual utility.
-        <br /><br />
-        The same is happening for the real estate boom that's occurring right under the collective industry's nose, and it's all unfolding in the corners of the metaverse—the virtual worlds where digital art, virtual real estate, avatars, and digital fashion can be bought and sold as NFTs. The world where digital natives and their avatars can explore, socialize, play, and live.
-      </p>
-      <p className={styles.section2}>
-        <span>he Value of Virtual Real Estate.</span> Everybody gets digital art, but virtual real estate is a different thing. Why should anyone spend money on a virtual piece of real estate that doesn't exist in real life? What makes pixelated parcels of land on a virtual world accessible through a website a real, tangible asset?
-        <br /><br />
-        This requires a bit more context. That said, if you've ever played a video game — doesn't matter if it's on the Atari or the NES, or if it's Super Mario, FIFA, Final Fantasy, Fortnite, or Call of Duty — then you would know that as your character explores the virtual world, you'd be spending oodles and oodles of time roaming through the vast expanses of the countless artificial universes these games offer.
-      </p>
-      <p className={styles.section3}>
-        And the almost limitless expanses of these virtual worlds provide opportunities for brands to market, advertise, or engage with the emerging digital population. In-game advertising, after all, is a multi-billion-dollar industry that needs no further introduction.
-        <br /><br />
-        Furthermore, virtual real estate presents an opportunity for companies to purchase virtual parcels of land within the metaverses that they form part of — and the possibilities are endless. Companies can build entire cityscapes within those metaverses and monetize them as they see fit— such as putting up a building and leasing out ad and store space, create living spaces that they can rent out, or any revenue-generating venture, for that matter. The possibilities are endless.
-      </p>
-      <p className={styles.section4}>
-        Case in point: Beeple's $69 million NFT artwork entitled "Everydays: the First 5000 Days" was purchased by NFT fund founder and investor who goes by the pseudonym Metakovan. And based on his estimation, $69 million is a pittance compared to the value of what could be this generation's definitive piece of art, pegging its value at a staggering $1 billion. That's not a typo, and neither is it beyond the realm of imagination. Eventually, the crypto investor intends to create a virtual museum — yet another piece of virtual real estate — with which to display his vast collection of rare NFTs in the emergent metaverse.
-      </p>
-      <p className={styles.section5}>
-        Think of the possibility for someone holding the NFT rights to the high-resolution video of Michael Jordan hitting the iconic game-winning shot over Bryon Russell in Game 6 of the 1998 NBA Finals to win his sixth and last NBA Championship. The holder could then put this up for display within a virtual world where individuals can view it using their VR headset for a fee. It sounds like something out of a sci-fi plotline — but the technology is already here.
-      </p>
-      <img src='./magazine/1/images/moshed-05-07-17-22-22 (1).gif' className={styles.rightImage4} />
+      <div className={styles.text6}>
+        community of stakeholders incentivized via an iteration of a token mechanism based on
+        participation, contribution, and investment. Token holders can thereafter submit and vote on
+        proposals, while sharing in the potential upside.
+        <br />
+        <br />
+        DAOs might have the potential to reshape the way we work, make group decisions, allocate
+        resources, distribute wealth, and solve some of the world's biggest problems.
+        <br />
+        <br />
+        In many ways, DAOs work similarly to corporations or governments, but without the monolithic
+        hierarchical structures, convoluted layers of bureaucracy, and miles upon miles of red tape
+        that traditional organizations run with to this very day. They are the future because they
+        were the past. DAOs are organic communities with tokenized asset ownership, while
+        corporations are synthetic ones governed by aging hierarchies hellbent on the bottom line
+        and the bottom line alone. Humans have existed as a species for hundreds of thousands of
+        years, while corporations are a present-day abomination. Traditional institutions, in the
+        end, are all created from the same market-making flesh and blood that corporations are — and
+        DAOs, like the blockchain, NFTs, and decentralized finance (DeFi), are the ultimate
+        solution.
+        <br />
+        <br />
+        <div className={styles.subTitle}>THE DAO: The First Vibratory DAO Experiment</div>
+        <br />
+        However, it is necessary to make a particular distinction between DAOs as a type of
+        organization and THE DAO, which was one of the first attempts at creating a
+        blockchain-based, decentralized kind of venture capital fund that allowed commercial and
+        nonprofit organizations to secure funding on the Ethereum blockchain. It failed due to a bug
+        in the code leading to US$50 million in Ethereum siphoned from the smart contract's
+        then-record crowdfunded token capital of over US$160 million. This ultimately led to the
+        dissolution of THE DAO and the hard forking of Ethereum as we know it today and Ethereum
+        Classic, its original, pre-fork iteration that exists today solely as a speculative ghost
+        chain.
+        <br />
+        <br />
+        The collapse of THE DAO caused a rethink about the future of decentralized autonomous
+        organizations and set it back a few years. But just five years later, DAOs are re-emerging
+        with an entirely new set of various use cases, increasing software toolkits, and new
+        incentivization and governance models. And based on the leading thinkers in the scene, DAOs
+        will be the next big thing in blockchain technology after NFTs.
+        <br />
+        <br />
+        <div className={styles.subTitle}>DeFi, DAOs, and NFTs: The Emerging Ownership Economy</div>
+        <br />
+        DAOs are revolutionizing finance as far as ownership is concerned. DAOs are enabling
+        individuals to access financial products and services that only the 1% literally had access
+        to until DeFi came around. As DeFi protocols continue to thrive since their rise in
+        popularity in the last couple of years as decentralized exchanges and yield farming
+        platforms emerge, as they rely on them for governance.
+        <br />
+        <br />
+        Moreover, the emergence of NFTs has permanently settled the question of digital ownership —
+        and more communities are making the shift from token holders toward becoming DAOs
+        themselves. DAOs and NFTs can work together to develop a sustainable economic environment
+        built on true democratic, moral, and fair principles. Web3 is just around the corner, and
+        DAOs and NFTs will play a key role in how we will solve everyday problems in the rapidly
+        developing future.
+        <br />
+        <br />
+        One thing's for sure: the more creators, investors, and digital natives create DAOs and use
+        NFTs to lay the foundations on which Web3 will be built, the better the creative world is
+        going to be from tomorrow onwards.
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page78
+export default Page78;
