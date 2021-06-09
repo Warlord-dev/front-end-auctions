@@ -18,7 +18,7 @@ const CardProduct = ({ collection }) => {
 
   return (
     <li className={cn(styles.item)}>
-      <Link href={collection.id !== 4 ? `/collections/${collection.id}` : `products/4/1020011/`}>
+      <Link href={collection.id !== 4 ? `/collections/${collection.id}` : `products/4/102799/`}>
         <a className={styles.clothesName}>{collection.text}</a>
       </Link>
       <SmallPhotoWithText
@@ -30,9 +30,7 @@ const CardProduct = ({ collection }) => {
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link
-            href={collection.id !== 4 ? `/collections/${collection.id}` : `products/4/1020011/`}
-          >
+          <Link href={collection.id !== 4 ? `/collections/${collection.id}` : `products/4/102799/`}>
             <div className={styles.photoWrapper}>
               <a className={styles.clothesPhotoWrapper}>
                 <video

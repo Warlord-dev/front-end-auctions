@@ -37,7 +37,7 @@ const collections = [
   },
   {
     image: 'https://digitalax.mypinata.cloud/ipfs/QmVsV93QdVdqqbqMMm9VhZWHZW1Y6FuxYRgRKs8KTm51cA',
-    designer: '102001',
+    designer: '102799',
     id: 4,
     image1: 'https://digitalax.mypinata.cloud/ipfs/QmctArVrTggDjdXafbbLMCrk13qRqpdbYKxKLKxHvGT2M5',
     text: 'Minecraft DIGI Bundle',
