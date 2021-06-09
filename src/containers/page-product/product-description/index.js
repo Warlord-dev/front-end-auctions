@@ -37,7 +37,10 @@ const ProductDescription = ({
     return t_common ? t_common.garments[0].tokenUri : '';
   }, [activeTab, currentCollections]);
   const tokenInfo = useTokenInfo(tokenUri, [tokenUri]);
-  const clothesPhotos = useMemo(() => createArrayForGallery(garment), [garment]);
+  const clothesPhotos = useMemo(
+    () => createArrayForGallery(parseInt(collectionId) === 4 ? garment : tokenInfo),
+    [parseInt(collectionId) === 4 ? garment : tokenInfo],
+  );
   const currentDesignersInfo = useSelector(
     activeTab === 3
       ? getDesignerInfoByName('Digitalax', true)
@@ -97,6 +100,7 @@ const ProductDescription = ({
     }
     if (collectionId === 4 || collectionId === '4') {
       let digiOffer = currentMarketplaceOffers.find((offer) => offer.id === '8');
+      console.log({ digiOffer });
       return [
         {
           total: digiOffer ? digiOffer.garmentCollection.garments.length : 0,
@@ -132,8 +136,7 @@ const ProductDescription = ({
   // pull designer informations and cloth photos for all rare types
   // IMPORTANT relationships between nfts :(
   let currentClothesInfo;
-  if (parseInt(collectionId) >= 3) {
-    console.log({ garment });
+  if (parseInt(collectionId) === 4) {
     currentClothesInfo = {
       clothesId,
       clothesName: garment && garment.name ? garment.name : `ID: ${clothesId}`,

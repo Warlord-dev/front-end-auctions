@@ -97,6 +97,7 @@ const CardList = ({
           .map((collection) => {
             const garment = collection.garments[0];
             if (garment?.name.includes('DIGI Bundle')) {
+              console.log({ garment });
               return <></>;
             }
             return (

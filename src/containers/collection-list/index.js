@@ -36,7 +36,7 @@ const collections = [
     image: 'https://digitalax.mypinata.cloud/ipfs/QmTfYwLRhqpYBaSoFFGKUJcYU6XSbHpsQvRen2dWQZ8WKH',
   },
   {
-    image: 'https://digitalax.mypinata.cloud/ipfs/QmVsV93QdVdqqbqMMm9VhZWHZW1Y6FuxYRgRKs8KTm51cA',
+    image: 'https://digitalax.mypinata.cloud/ipfs/QmXQrcfSzSGCRbcGbAFGR3gRpbB89hnSMpGfcfn3cVGVRi',
     designer: '102799',
     id: 4,
     image1: 'https://digitalax.mypinata.cloud/ipfs/QmctArVrTggDjdXafbbLMCrk13qRqpdbYKxKLKxHvGT2M5',

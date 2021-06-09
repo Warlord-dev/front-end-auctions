@@ -61,7 +61,7 @@ const CardProductDigi = ({
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link href={`${PRODUCTS}${auctionId}${tabIndexD}`}>
+          <Link href={`${PRODUCTS}${collectionId}/${auctionId}${tabIndexD}`}>
             <a className={styles.clothesPhotoWrapper}>
               <span className={cn(styles.garmentTypeWrapper, COLORS[tabIndexD])}>
                 <span className={styles.bannerText}>{TABS[tabIndexD]}</span>

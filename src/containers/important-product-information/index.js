@@ -254,7 +254,7 @@ const ImportantProductInformation = ({
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
           <span className={styles.priceEth}>{priceEth} $MONA</span>
-          <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
+          <span className={styles.priceUsd}>(${getPriceUsd(priceEth * monaPerEth)})</span>
         </p>
         {collection?.garments && (
           <p>
