@@ -60,7 +60,7 @@ const RightBox = ({
   const renderAuctionInfo = () => {
     if (activeItem === SHOW_FIRST_TAB) return <AuctionInformation garment={garment} />;
     if (activeItem === SHOW_SECOND_TAB) {
-      return <GameList currentClothesInfo={currentClothesInfo} />;
+      return <GameList collectionId={collectionId} currentClothesInfo={currentClothesInfo} />;
     }
     return null;
   };
@@ -172,12 +172,7 @@ const RightBox = ({
         <>
           <p className={styles.priceWrapper}>
             <span className={styles.priceMono}>
-              {Math.round(
-                (parseFloat(ethersUtils.formatEther(currentCounts[activeTab].basePrice)) /
-                  parseFloat(monaPerEth)) *
-                  10000,
-              ) / 10000}{' '}
-              $MONA
+              {currentCounts[activeTab].basePrice / 10 ** 18} $MONA
             </span>
           </p>
           <p className={styles.countInfo}>

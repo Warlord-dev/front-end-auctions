@@ -30,6 +30,8 @@ const TradeHistory = ({ collectionId, clothesIds, className, headerTitle, active
   }
   const monaPerEth = useSelector(getMonaPerEth);
 
+  console.log({ monaPerEth });
+
   const tradeHistory = useMemo(() => {
     if (activeTab === 0) {
       return history
@@ -53,7 +55,6 @@ const TradeHistory = ({ collectionId, clothesIds, className, headerTitle, active
           eventName: item.eventName,
         }));
     } else if (activeTab === 1) {
-      console.log({ semiRareHistory });
       return semiRareHistory
         .sort((a, b) => {
           if (a.timestamp === b.timestamp) {

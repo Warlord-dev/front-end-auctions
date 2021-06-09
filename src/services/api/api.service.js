@@ -17,6 +17,7 @@ import {
   getDigitalaxMarketplacePurchaseHistory,
 } from '@services/api/gql.queries.api.service';
 import {
+  getDigitalaxGarmentNFTV2GlobalStat,
   getDigitalaxGarmentsCollectionsV2,
   getDigitalaxMarketplaceV2PurchaseHistory,
   getLiveAuctionsV2,
@@ -101,6 +102,10 @@ class APIService {
       buyer: address,
       garmentId: id,
     });
+  }
+
+  async getMonaPerEth() {
+    return request(config.API_URLS['mumbai'], getDigitalaxGarmentNFTV2GlobalStat);
   }
 
   async getEthRate() {

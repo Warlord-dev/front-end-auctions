@@ -132,7 +132,8 @@ const ProductDescription = ({
   // pull designer informations and cloth photos for all rare types
   // IMPORTANT relationships between nfts :(
   let currentClothesInfo;
-  if (collectionId === 4 || collectionId === '4') {
+  if (parseInt(collectionId) >= 3) {
+    console.log({ garment });
     currentClothesInfo = {
       clothesId,
       clothesName: garment && garment.name ? garment.name : `ID: ${clothesId}`,
@@ -145,8 +146,14 @@ const ProductDescription = ({
         : 'Graphic, FBX, Material Component',
       valueChildNfts: 'ERC1155',
       valueApy: '',
-      skinId: garment && garment.attributes[4] ? garment.attributes[4].value : '<empty>',
-      hatId: garment && garment.attributes[5] ? garment.attributes[5].value : '<empty>',
+      skinId:
+        garment && garment.attributes && garment.attributes[4]
+          ? garment.attributes[4].value
+          : '<empty>',
+      hatId:
+        garment && garment.attributes && garment.attributes[5]
+          ? garment.attributes[5].value
+          : '<empty>',
     };
   } else {
     currentClothesInfo = {

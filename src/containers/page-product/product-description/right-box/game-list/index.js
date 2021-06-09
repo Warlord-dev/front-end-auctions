@@ -39,7 +39,14 @@ const MaterialList = ({ collectionId, currentClothesInfo }) => {
         </div>
         <div className={styles.body}>
           <div className={styles.row}>
-            <a className={styles.col1} href="https://github.com/Woodi-dev">
+            <a
+              className={styles.col1}
+              href={
+                parseInt(collectionId) >= 3
+                  ? 'https://github.com/ad1tya2'
+                  : 'https://github.com/Woodi-dev'
+              }
+            >
               <img
                 src={
                   parseInt(collectionId) >= 3 ? '/images/image 247.png' : '/images/githubuser.svg'

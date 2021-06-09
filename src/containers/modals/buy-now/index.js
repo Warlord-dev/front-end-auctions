@@ -82,12 +82,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
               </span>
             </p>
             <div className={styles.selectWrapper}>
-              <span>
-                {Math.round(
-                  (parseFloat(ethersUtils.formatEther(priceEth)) / parseFloat(monaPerEth)) * 10000
-                ) / 10000}{' '}
-                $MONA
-              </span>
+              <span>{priceEth / 10 ** 18} $MONA</span>
               <Button
                 isDisabled={isDisabled || !isMatic}
                 background="black"
@@ -100,7 +95,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
             {showError && <p className={styles.error}>{showError}</p>}
           </div>
         </Modal>,
-        document.body
+        document.body,
       )}
     </>
   );
