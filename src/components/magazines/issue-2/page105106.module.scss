@@ -57,10 +57,10 @@
 
   .image7 {
     position: absolute;
-    width: 960px;
     height: 1497px;
-    left: 960px;
+    left: 720px;
     top: 0px;
+    z-index: -1;
   }
 
   .text1 {
@@ -100,7 +100,7 @@
     color: #FFFFFF;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    letter-spacing: -10px;
+    letter-spacing: -43px;
   }
 
   .text3 {

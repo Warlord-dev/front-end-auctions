@@ -7,8 +7,12 @@ const Page119120 = () => {
     <div className={styles.wrapper}>
        <img src="./magazine/1/119_120/image1.png" className={styles.image1} />
        
-       <img src="./magazine/1/119_120/image3.png" className={styles.image3} />
-       <img src="./magazine/1/119_120/image4.png" className={styles.image4} />
+       <video className={styles.image3} muted loop autoPlay>
+        <source src="./magazine/1/119_120/video4.mp4" type="video/mp4" />
+       </video>
+       <video className={styles.image4} muted loop autoPlay>
+        <source src="./magazine/1/119_120/video3.mp4" type="video/mp4" />
+       </video>
        <video className={styles.image5} muted loop autoPlay>
         <source src="./magazine/1/119_120/video1.mp4" type="video/mp4" />
        </video>

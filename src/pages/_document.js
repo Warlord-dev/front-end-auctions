@@ -114,6 +114,20 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Encode+Sans"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Space+Mono"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Marck+Script"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Salsa"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Goblin+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Istok+Web"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Khand"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jaldi"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{

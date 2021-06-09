@@ -69,7 +69,7 @@ const Page127128 = loadable(() => import ('./Page127128'))
 const Page129130 = loadable(() => import ('./Page129130'))
 const Page131132 = loadable(() => import ('./Page131132'))
 
-const Backcover = loadable(() => import ('./Backcover'))
+// const Backcover = loadable(() => import ('./Backcover'))
 
 const PageList = [
     <CoverPage />,
@@ -139,7 +139,7 @@ const PageList = [
     <Page127128 />,
     <Page129130 />,
     <Page131132 />,
-    <Backcover />
+    // <Backcover />
   ]
 
   export default PageList

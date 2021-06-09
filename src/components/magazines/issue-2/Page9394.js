@@ -11,7 +11,9 @@ const Page9394 = () => {
       <img src="./magazine/1/93_94/leftImg3.png" className={styles.left3} />
       <img src="./magazine/1/93_94/rightImg1.png" className={styles.right1} />
       <img src="./magazine/1/93_94/rightImg2.png" className={styles.right2} />
-      <img src="./magazine/1/93_94/rightImg3.png" className={styles.right3} />
+      <video className={styles.right3} muted loop autoPlay>
+        <source src="./magazine/1/93_94/video1.mp4" type="video/mp4" />
+       </video>
       <img src="./magazine/1/93_94/rightImg4.png" className={styles.right4} />
       <Link href="https://www.instagram.com/abigneonglitter/"><a className={styles.text1}>
       ABigNeonGlitter

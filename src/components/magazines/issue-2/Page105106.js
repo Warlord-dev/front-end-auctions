@@ -5,6 +5,9 @@ import Link from 'next/link';
 const Page105106 = () => {
   return (
     <div className={styles.wrapper}>
+      <video className={styles.image7} muted loop autoPlay>
+        <source src="./magazine/1/105_106/video1.mov" type="video/mp4" />
+       </video>
       <div className={styles.image1}></div>
        <img src="./magazine/1/105_106/image1.gif" className={styles.image2} />
        <img src="./magazine/1/105_106/image2.png" className={styles.image3} />
@@ -17,7 +20,7 @@ const Page105106 = () => {
        </video>
        <p className={styles.text1}>Nike Adapt BB</p>
        <Link href="https://marcellobaldari.artstation.com/"><a className={styles.text2}>
-       Marcell o Baldari
+       Marcello Baldari
         </a>
        </Link>
        <p className={styles.text3}>EDGE</p>

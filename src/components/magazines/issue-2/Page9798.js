@@ -14,7 +14,7 @@ const Page9798 = () => {
         <source src="./magazine/1/97_98/espa_skin.mp4" type="video/mp4" />
        </video>
        <Link href="www.instagram.com/pr.esc/"><a className={styles.text1}>
-        SJessica Schott
+        Jessica Schott
         </a>
        </Link>
        <p className={styles.text2}>BBLUNDERR</p>
