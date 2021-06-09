@@ -93,7 +93,7 @@ class MyDocument extends Document {
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow"></link>
           <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100"></link>
+          href="https://fonts.googleapis.com/css2?family=Poppins"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Qwigley"></link>
            <link rel="stylesheet"
