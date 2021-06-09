@@ -30,8 +30,6 @@ const TradeHistory = ({ collectionId, clothesIds, className, headerTitle, active
   }
   const monaPerEth = useSelector(getMonaPerEth);
 
-  console.log({ monaPerEth });
-
   const tradeHistory = useMemo(() => {
     if (activeTab === 0) {
       return history

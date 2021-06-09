@@ -36,7 +36,8 @@ const ProductDescription = ({
     const t_common = currentCollections.find((collection) => collection.rarity === COMMON_RARITY);
     return t_common ? t_common.garments[0].tokenUri : '';
   }, [activeTab, currentCollections]);
-  const tokenInfo = useTokenInfo(tokenUri, [tokenUri]);
+
+  const tokenInfo = useTokenInfo(tokenUri.trim(), [tokenUri]);
   const clothesPhotos = useMemo(
     () => createArrayForGallery(parseInt(collectionId) === 4 ? garment : tokenInfo),
     [parseInt(collectionId) === 4 ? garment : tokenInfo],
@@ -100,7 +101,6 @@ const ProductDescription = ({
     }
     if (collectionId === 4 || collectionId === '4') {
       let digiOffer = currentMarketplaceOffers.find((offer) => offer.id === '8');
-      console.log({ digiOffer });
       return [
         {
           total: digiOffer ? digiOffer.garmentCollection.garments.length : 0,

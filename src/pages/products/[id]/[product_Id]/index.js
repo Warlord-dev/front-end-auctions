@@ -37,7 +37,11 @@ const Products = () => {
     if (id !== '4') {
       return jsOffers.filter((val) => val.garmentCollection.garmentAuctionID === garmentId);
     } else {
-      return jsOffers.filter((val) => val.garmentCollection.garments[0].name.includes('DIGI'));
+      return jsOffers.filter(
+        (val) =>
+          val.garmentCollection.garments.length &&
+          val.garmentCollection.garments[0].name.includes('DIGI'),
+      );
     }
   }, [marketplaceOffers]);
 
