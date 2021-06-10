@@ -95,6 +95,16 @@ const ImportantCollectionInformation = ({ collection }) => {
     return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
   };
 
+  const getLink = () => {
+    if (collection.id === 4) {
+      return 'products/4/101075/9/1002943/';
+    } else if (collection.id === 2) {
+      return 'products/2/1/1/1';
+    } else {
+      return `/collections/${collection.id}`;
+    }
+  };
+
   return (
     <div className={styles.smallWhite}>
       <div className={styles.leftWrapper}>
@@ -115,11 +125,7 @@ const ImportantCollectionInformation = ({ collection }) => {
             <p className={styles.expirationDateText}>TIME LEFT</p>
           </>
         )}
-        <Link
-          href={collection.id <= 3 ? `/collections/${collection.id}` : `products/4/1027991/`}
-          className={styles.buttonSold}
-          background="black"
-        >
+        <Link href={getLink()} className={styles.buttonSold} background="black">
           <span>VIEW COLLECTION</span>
         </Link>
       </div>

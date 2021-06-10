@@ -42,7 +42,7 @@ const RightBox = ({
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
   const garment = useSelector(getGarmentsById(clothesId));
-  const auction = useSelector(getAuctionById(garment.id));
+  const auction = useSelector(getAuctionById(garment?.id));
   const [ids, setIds] = useState([]);
   const [lastPurchasedTime, setLastPurchasedTime] = useState(0);
   const monaPerEth = useSelector(getMonaPerEth);
@@ -84,13 +84,13 @@ const RightBox = ({
       let histories = [];
       if (collectionId === '1') {
         const { digitalaxMarketplacePurchaseHistories } =
-          await apiService.getMarketplacePurchaseHistory(account, parseInt(garment.id));
+          await apiService.getMarketplacePurchaseHistory(account, parseInt(garment?.id));
         histories = digitalaxMarketplacePurchaseHistories;
       } else if (collectionId === '3' || collectionId === '4') {
         const { digitalaxMarketplaceV2PurchaseHistories } =
           await apiService.getMarketplacePurchaseHistoryV2(
             account,
-            collectionId === '4' ? 100457 : parseInt(garment.id),
+            collectionId === '4' ? 100294 : parseInt(garment?.id),
           );
         histories = digitalaxMarketplaceV2PurchaseHistories;
       }
@@ -133,7 +133,7 @@ const RightBox = ({
     if (account) {
       dispatch(
         openBuynowModal({
-          id: collectionId === '4' ? '8' : currentCounts.collectionId,
+          id: currentCounts.collectionId,
           priceEth: currentCounts.basePrice,
         }),
       );

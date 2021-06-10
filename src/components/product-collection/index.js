@@ -16,13 +16,19 @@ import styles from './styles.module.scss';
 const CardProduct = ({ collection }) => {
   const designerInfo = useSelector(getDesignerInfoByName(collection.designer, true));
 
+  const getLink = () => {
+    if (collection.id === 4) {
+      return 'products/4/101075/9/1002943/';
+    } else if (collection.id === 2) {
+      return 'products/2/1/1/1/';
+    } else {
+      return `/collections/${collection.id}`;
+    }
+  };
+
   return (
     <li className={cn(styles.item)}>
-      <Link
-        href={
-          collection.id !== 4 ? `/collections/${collection.id}` : `products/4/101075/9/1002943/`
-        }
-      >
+      <Link href={getLink()}>
         <a className={styles.clothesName}>{collection.text}</a>
       </Link>
       <SmallPhotoWithText
@@ -34,11 +40,7 @@ const CardProduct = ({ collection }) => {
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link
-            href={
-              collection.id !== 4 ? `/collections/${collection.id}` : `products/4/101075/9/1002943/`
-            }
-          >
+          <Link href={getLink()}>
             <div className={styles.photoWrapper}>
               <a className={styles.clothesPhotoWrapper}>
                 <video

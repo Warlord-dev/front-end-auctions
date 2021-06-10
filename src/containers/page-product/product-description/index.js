@@ -19,7 +19,38 @@ const ProductDescription = ({
   activeTab,
   setActiveTab,
 }) => {
-  const garment = useSelector(getGarmentsById(clothesId));
+  let garment = useSelector(getGarmentsById(clothesId));
+  if (parseInt(collectionId) === 2) {
+    garment = {
+      name: 'Genesis DIGI Bundle',
+      description:
+        'The DIGI Bundle is the ultimate Esports, Gaming, Digital Fashion package. It contains 4 unique surprises that cross the digital-physical realms. 1. The Player Access Card (PAC) provides an in-game flare for the Esports tournaments, giving Players a higher chance of being allocated the Imposter role. 2. Special Edition Digital Fashion NFT designed by Kodomodachi that can be taken into the Among Us Sheriff Mod. 3. Physical Charli Cohen Unisex Jacket that incorporates the on-chain issued Genesis Charli Cohen pattern.  Every jacket is different, no two jackets are the same. 4. Best Plays of the Game Memorabilia NFT from the Among Us Sheriff Mod tournaments and airdropped after the tournament rounds.',
+      'external url': 'https://skins.digitalax.xyz/',
+      animation: 'https://gateway.pinata.cloud/ipfs/QmRdxLAmXR36dNr6cKJeXNyEzSd1JKYMmzbQipHv3HZ1b1',
+      image: 'https://gateway.pinata.cloud/ipfs/Qmc9oYm7Vb4zK1EBw6QJGwRPg4BQbdx5bx5kfWWhHgZAHp',
+      image2: 'https://gateway.pinata.cloud/ipfs/Qmem8dCoDLJSkHZ8xguwkpt9KAFtfYq28M2HjQmAc37TYW',
+      image3: 'https://gateway.pinata.cloud/ipfs/Qmby9cGdRqi5ZzGdd7ifQeGEuykDDESbmCednuGd92Jd4C',
+      image4: 'https://gateway.pinata.cloud/ipfs/QmWQymzUCDhZ1N6z2Pq2GM7a4h9CqBTto7yRjuVyK9JB5a',
+      attributes: [
+        {
+          trait_type: 'Issuance',
+          value: 'Among Us Genesis',
+        },
+        {
+          trait_type: 'Collection',
+          value: 'DIGI Bundle',
+        },
+        {
+          trait_type: 'Game Classifier',
+          value: 'Among Us Sheriff Mod',
+        },
+        {
+          trait_type: 'Degree of Exclusivity',
+          value: 'Semi-Rare',
+        },
+      ],
+    };
+  }
   // const tokenUri = useMemo(() => {
   //   if (activeTab === 0) {
   //     return garment.tokenUri;
@@ -49,10 +80,13 @@ const ProductDescription = ({
   //     ? getDesignerInfoByName('Digitalax', true)
   //     : getDesignerInfoById(garment.designer),
   // );
-
   const currentDesignersInfo = useSelector(
     getDesignerInfoByName(
-      activeTab === 3 ? 'Digitalax' : garment.attributes ? garment.attributes[0].value : '',
+      activeTab === 3
+        ? 'Digitalax'
+        : garment.attributes && garment.attributes[0]
+        ? garment.attributes[0].value
+        : '',
       true,
     ),
   );
