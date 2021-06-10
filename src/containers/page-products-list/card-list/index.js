@@ -96,8 +96,8 @@ const CardList = ({
           .filter((collection) => collection.rarity === SEMI_RARE_RARITY)
           .map((collection) => {
             const garment = collection.garments[0];
+            console.log({ garment });
             if (garment?.name.includes('DIGI Bundle')) {
-              console.log({ garment });
               return <></>;
             }
             return (
@@ -106,6 +106,8 @@ const CardList = ({
                 key={garment.id}
                 history={historyByTokenId.get(garment.id)}
                 auctionId={collection.garmentAuctionID}
+                auctionIndex={collection.id}
+                garmentId={garment.id}
                 garment={garment}
                 showGraphIds={showGraphIds}
                 setShowGraphIds={setShowGraphIds}
@@ -124,6 +126,8 @@ const CardList = ({
                 key={garment.id}
                 history={historyByTokenId.get(garment.id)}
                 auctionId={collection.garmentAuctionID}
+                auctionIndex={collection.id}
+                garmentId={garment.id}
                 garment={garment}
                 showGraphIds={showGraphIds}
                 setShowGraphIds={setShowGraphIds}

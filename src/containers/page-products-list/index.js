@@ -111,6 +111,8 @@ const PageProductsList = ({ collectionId }) => {
     [chainId, currentCollections],
   );
 
+  console.log({ currentCollections });
+
   useSubscription(
     {
       request:

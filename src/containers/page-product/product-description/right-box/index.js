@@ -51,7 +51,7 @@ const RightBox = ({
   const { isShowBuyNow } = modals;
   const isMatic = chainId === '0x13881' || chainId === '0x89';
 
-  const estimateAPY = useAPY(currentCounts[activeTab].basePrice);
+  const estimateAPY = useAPY(currentCounts.basePrice);
 
   const TABS = [activeTab === 0 ? 'Auction Information' : 'Design Information', 'In-game details'];
   const [activeItem, setActiveItem] = useState(SHOW_FIRST_TAB);
@@ -133,8 +133,8 @@ const RightBox = ({
     if (account) {
       dispatch(
         openBuynowModal({
-          id: collectionId === '4' ? '8' : currentCounts[activeTab].collectionId,
-          priceEth: currentCounts[activeTab].basePrice,
+          id: collectionId === '4' ? '8' : currentCounts.collectionId,
+          priceEth: currentCounts.basePrice,
         }),
       );
     } else {
@@ -170,29 +170,23 @@ const RightBox = ({
       {activeTab > 0 && (
         <>
           <p className={styles.priceWrapper}>
-            <span className={styles.priceMono}>
-              {currentCounts[activeTab].basePrice / 10 ** 18} $MONA
-            </span>
+            <span className={styles.priceMono}>{currentCounts.basePrice / 10 ** 18} $MONA</span>
           </p>
           <p className={styles.countInfo}>
-            {currentCounts[activeTab].sold > currentCounts[activeTab].total
-              ? currentCounts[activeTab].total
-              : currentCounts[activeTab].sold}{' '}
-            of {currentCounts[activeTab].total}
+            {currentCounts.sold > currentCounts.total ? currentCounts.total : currentCounts.sold} of{' '}
+            {currentCounts.total}
           </p>
           <div className={styles.buttons}>
             <Button
               onClick={() => handleClickBuy()}
               className={styles.button}
               background="black"
-              isDisabled={currentCounts[activeTab].sold === currentCounts[activeTab].total}
+              isDisabled={currentCounts.sold === currentCounts.total}
             >
               <span className={styles.buttonText}>
-                {currentCounts[activeTab].sold === currentCounts[activeTab].total
-                  ? 'Sold Out'
-                  : 'Buy Now'}
+                {currentCounts.sold === currentCounts.total ? 'Sold Out' : 'Buy Now'}
               </span>
-              {currentCounts[activeTab].sold !== currentCounts[activeTab].total && (
+              {currentCounts.sold !== currentCounts.total && (
                 <span className={styles.buttonGray}>(Pay in ETH or $MONA)</span>
               )}
             </Button>

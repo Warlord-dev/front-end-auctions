@@ -23,6 +23,8 @@ const CardProductDigi = ({
   collectionId,
   history,
   auctionId,
+  auctionIndex,
+  garmentId,
   garment,
   tabIndex,
   className,
@@ -47,7 +49,9 @@ const CardProductDigi = ({
 
   return (
     <li className={cn(styles.item, className)}>
-      <Link href={`${PRODUCTS}${collectionId}/${auctionId}${tabIndexD}`}>
+      <Link
+        href={`${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndexD}`}
+      >
         <a className={styles.clothesName}>
           {tokenInfo && tokenInfo.name ? tokenInfo.name : `ID:${garment.id}`}
         </a>
@@ -61,7 +65,9 @@ const CardProductDigi = ({
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link href={`${PRODUCTS}${collectionId}/${auctionId}${tabIndexD}`}>
+          <Link
+            href={`${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndexD}`}
+          >
             <a className={styles.clothesPhotoWrapper}>
               <span className={cn(styles.garmentTypeWrapper, COLORS[tabIndexD])}>
                 <span className={styles.bannerText}>{TABS[tabIndexD]}</span>
@@ -116,6 +122,8 @@ const CardProductDigi = ({
           collectionId={collectionId}
           garment={garment}
           auctionId={auctionId}
+          auctionIndex={auctionIndex}
+          garmentId={garmentId}
           tabIndex={tabIndexD}
         />
       </div>

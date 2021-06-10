@@ -250,6 +250,7 @@ export const onDigitalaxGarmentsCollectionChange = `
         designer
         owner
         primarySalePrice
+        description
         tokenUri
         name
         image

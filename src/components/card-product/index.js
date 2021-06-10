@@ -24,6 +24,8 @@ const CardProduct = ({
   collectionId,
   history,
   auctionId,
+  auctionIndex,
+  garmentId,
   garment,
   tabIndex,
   className,
@@ -47,7 +49,9 @@ const CardProduct = ({
 
   return (
     <li className={cn(styles.item, className)}>
-      <Link href={`${PRODUCTS}${collectionId}/${auctionId}${tabIndex}`}>
+      <Link
+        href={`${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`}
+      >
         <a className={styles.clothesName}>{garment.name ? garment.name : `ID:${garment.id}`}</a>
       </Link>
       <SmallPhotoWithText
@@ -59,7 +63,9 @@ const CardProduct = ({
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link href={`${PRODUCTS}${collectionId}/${auctionId}${tabIndex}`}>
+          <Link
+            href={`${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`}
+          >
             <a className={styles.clothesPhotoWrapper}>
               <span className={cn(styles.garmentTypeWrapper, COLORS[tabIndex])}>
                 <span className={styles.bannerText}>{TABS[tabIndex]}</span>
@@ -119,6 +125,8 @@ const CardProduct = ({
         <ImportantProductInformation
           collectionId={collectionId}
           garment={garment}
+          garmentId={garmentId}
+          auctionIndex={auctionIndex}
           auctionId={auctionId}
           tabIndex={tabIndex}
         />

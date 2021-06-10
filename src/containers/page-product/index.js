@@ -8,7 +8,9 @@ const PageProduct = ({
   collectionId,
   clothesId,
   tabIndex,
+  auctionIndex,
   designerId,
+  auctionId,
   currentCollections,
   currentMarketplaceOffers,
 }) => {
@@ -23,12 +25,13 @@ const PageProduct = ({
         collectionId={collectionId}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
+        auctionIndex={auctionIndex}
         clothesId={clothesId}
         designerId={designerId}
         currentCollections={currentCollections}
         currentMarketplaceOffers={currentMarketplaceOffers}
       />
-      <Trade collectionId={collectionId} clothesIds={[clothesId]} activeTab={activeTab} />
+      <Trade collectionId={collectionId} clothesIds={[auctionId]} activeTab={activeTab} />
     </div>
   );
 };

@@ -12,7 +12,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
   const DEFAULT_LARGE_IMAGE = clothesPhotos.find(({ isMain }) => isMain);
   const [largeImage, setLargeImage] = useState(DEFAULT_LARGE_IMAGE);
   const [isShowGif, setIsShowGif] = useState(
-    DEFAULT_LARGE_IMAGE ? DEFAULT_LARGE_IMAGE.isGif : false
+    DEFAULT_LARGE_IMAGE ? DEFAULT_LARGE_IMAGE.isGif : false,
   );
 
   const handleClick = (item, index) => {
@@ -50,6 +50,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
           >
             <Image
               className={styles.itemLargeImg}
+              unsized
               src={largeImage.image.replace('gateway.pinata', 'digitalax.mypinata')}
               alt={clothesName}
             />
@@ -83,7 +84,10 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
           ) : (
             <LazyLoad>
               <video autoPlay muted loop className={styles.largeImgWrapper} key={largeImage.video}>
-                <source src={largeImage.video.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
+                <source
+                  src={largeImage.video.replace('gateway.pinata', 'digitalax.mypinata')}
+                  type="video/mp4"
+                />
               </video>
             </LazyLoad>
           ))
@@ -100,6 +104,7 @@ const ViewImages = ({ className, clothesPhotos, clothesName, clothesId }) => {
               >
                 {item && item.preview ? (
                   <Image
+                    unsized
                     className={styles.itemSmallImg}
                     src={createPreviewURL(item?.preview)}
                     alt={clothesName}

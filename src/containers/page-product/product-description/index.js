@@ -13,35 +13,37 @@ import styles from './styles.module.scss';
 const ProductDescription = ({
   collectionId,
   clothesId,
+  auctionIndex,
   currentCollections,
   currentMarketplaceOffers,
   activeTab,
   setActiveTab,
 }) => {
   const garment = useSelector(getGarmentsById(clothesId));
-  const tokenUri = useMemo(() => {
-    if (activeTab === 0) {
-      return garment.tokenUri;
-    }
-    if (activeTab === 1) {
-      const t_semiRare = currentCollections.find(
-        (collection) => collection.rarity === SEMI_RARE_RARITY,
-      );
-      return t_semiRare ? t_semiRare.garments[0].tokenUri : '';
-    }
-    if (activeTab === 3) {
-      //hardcoded
-      return 'https://gateway.pinata.cloud/ipfs/Qmam1Wj39rZbBbmyVmHLyBcwnLCr1eJbmSDJcCcUav5vXg';
-    }
-    const t_common = currentCollections.find((collection) => collection.rarity === COMMON_RARITY);
-    return t_common ? t_common.garments[0].tokenUri : '';
-  }, [activeTab, currentCollections]);
+  // const tokenUri = useMemo(() => {
+  //   if (activeTab === 0) {
+  //     return garment.tokenUri;
+  //   }
+  //   if (activeTab === 1) {
+  //     const t_semiRare = currentCollections.find(
+  //       (collection) => collection.rarity === SEMI_RARE_RARITY,
+  //     );
+  //     return t_semiRare ? t_semiRare.garments[0].tokenUri : '';
+  //   }
+  //   if (activeTab === 3) {
+  //     //hardcoded
+  //     return 'https://gateway.pinata.cloud/ipfs/Qmam1Wj39rZbBbmyVmHLyBcwnLCr1eJbmSDJcCcUav5vXg';
+  //   }
+  //   const t_common = currentCollections.find((collection) => collection.rarity === COMMON_RARITY);
+  //   return t_common ? t_common.garments[0].tokenUri : '';
+  // }, [activeTab, currentCollections]);
 
-  const tokenInfo = useTokenInfo(tokenUri.trim(), [tokenUri]);
-  const clothesPhotos = useMemo(
-    () => createArrayForGallery(parseInt(collectionId) === 4 ? garment : tokenInfo),
-    [parseInt(collectionId) === 4 ? garment : tokenInfo],
-  );
+  // const tokenInfo = useTokenInfo(tokenUri.trim(), [tokenUri]);
+  // const clothesPhotos = useMemo(
+  //   () => createArrayForGallery(parseInt(collectionId) === 4 ? garment : tokenInfo),
+  //   [parseInt(collectionId) === 4 ? garment : tokenInfo],
+  // );
+  const clothesPhotos = useMemo(() => createArrayForGallery(garment), [garment]);
   const currentDesignersInfo = useSelector(
     activeTab === 3
       ? getDesignerInfoByName('Digitalax', true)
@@ -50,88 +52,103 @@ const ProductDescription = ({
   const receive = useSelector(getGarmentsReceiveByName(garment?.name));
 
   const currentCounts = useMemo(() => {
-    let t_semiRare_offer = currentMarketplaceOffers.find(
-      (offer) => offer.garmentCollection.rarity === SEMI_RARE_RARITY,
+    const currentOffer = currentMarketplaceOffers.find(
+      (offer) => offer.garmentCollection.id === auctionIndex,
     );
-    let t_common_offer = currentMarketplaceOffers.find(
-      (offer) => offer.garmentCollection.rarity === COMMON_RARITY,
+    const currentCollection = currentCollections.find(
+      (collection) => collection.id === auctionIndex,
     );
-    if (activeTab === 3) {
-      //hardcoded
-      t_semiRare_offer = currentMarketplaceOffers.find(
-        (offer) => offer.garmentCollection.id === '8',
-      );
-      t_common_offer = null;
-    }
-    let t_semiRare = t_semiRare_offer
-      ? currentCollections.find((collection) => collection.id === t_semiRare_offer.id)
-      : null;
-    if (activeTab === 3) {
-      //hardcoded
-      t_semiRare = t_semiRare_offer
-        ? currentCollections.find((collection) => collection.id == 8)
-        : null;
-    }
-    const t_common = t_common_offer
-      ? currentCollections.find((collection) => collection.id === t_common_offer.id)
-      : null;
-    if (activeTab === 3) {
-      //hardcoded
-      return [
-        { total: 1, sold: !garment.resulted ? 0 : 1 },
-        {
-          total: t_semiRare ? t_semiRare.garments.length : 0,
-          collectionId: t_semiRare ? t_semiRare.id : null,
-          basePrice: t_semiRare_offer ? t_semiRare_offer.primarySalePrice : '0',
-          sold: t_semiRare_offer ? parseInt(t_semiRare_offer.amountSold, 10) : 0,
-        },
-        {
-          total: t_common ? t_common.garments.length : 0,
-          collectionId: t_common ? t_common.id : null,
-          basePrice: t_common_offer ? t_common_offer.primarySalePrice : '0',
-          sold: t_common_offer ? parseInt(t_common_offer.amountSold, 10) : 0,
-        },
-        {
-          total: t_semiRare ? t_semiRare.garments.length : 0,
-          collectionId: t_semiRare ? t_semiRare.id : null,
-          basePrice: t_semiRare_offer ? t_semiRare_offer.primarySalePrice : '0',
-          sold: t_semiRare_offer ? parseInt(t_semiRare_offer.amountSold, 10) : 0,
-        },
-      ];
-    }
-    if (collectionId === 4 || collectionId === '4') {
-      let digiOffer = currentMarketplaceOffers.find((offer) => offer.id === '8');
-      return [
-        {
-          total: digiOffer ? digiOffer.garmentCollection.garments.length : 0,
-          basePrice: digiOffer ? digiOffer.primarySalePrice : 0,
-          sold: digiOffer ? parseInt(digiOffer.amountSold, 10) : 0,
-          collectionId: digiOffer ? digiOffer.id : null,
-        },
-        {
-          total: digiOffer ? digiOffer.garmentCollection.garments.length : 0,
-          basePrice: digiOffer ? digiOffer.primarySalePrice : 0,
-          sold: digiOffer ? parseInt(digiOffer.amountSold, 10) : 0,
-          collectionId: digiOffer ? digiOffer.id : null,
-        },
-      ];
-    }
-    return [
-      { total: 1, sold: !garment.resulted ? 0 : 1 },
-      {
-        total: t_semiRare ? t_semiRare.garments.length : 0,
-        collectionId: t_semiRare ? t_semiRare.id : null,
-        basePrice: t_semiRare_offer ? t_semiRare_offer.primarySalePrice : '0',
-        sold: t_semiRare_offer ? parseInt(t_semiRare_offer.amountSold, 10) : 0,
-      },
-      {
-        total: t_common ? t_common.garments.length : 0,
-        collectionId: t_common ? t_common.id : null,
-        basePrice: t_common_offer ? t_common_offer.primarySalePrice : '0',
-        sold: t_common_offer ? parseInt(t_common_offer.amountSold, 10) : 0,
-      },
-    ];
+    return {
+      total: currentCollection ? currentCollection.garments.length : 0,
+      collectionId: currentCollection ? currentCollection.id : null,
+      basePrice: currentOffer ? currentOffer.primarySalePrice : '0',
+      sold: currentOffer ? parseInt(currentOffer.amountSold, 10) : 0,
+    };
   }, [currentCollections, currentMarketplaceOffers]);
+
+  // const currentCounts = useMemo(() => {
+  //   let t_semiRare_offer = currentMarketplaceOffers.find(
+  //     (offer) => offer.garmentCollection.rarity === SEMI_RARE_RARITY,
+  //   );
+  //   let t_common_offer = currentMarketplaceOffers.find(
+  //     (offer) => offer.garmentCollection.rarity === COMMON_RARITY,
+  //   );
+  //   if (activeTab === 3) {
+  //     //hardcoded
+  //     t_semiRare_offer = currentMarketplaceOffers.find(
+  //       (offer) => offer.garmentCollection.id === '8',
+  //     );
+  //     t_common_offer = null;
+  //   }
+  //   let t_semiRare = t_semiRare_offer
+  //     ? currentCollections.find((collection) => collection.id === t_semiRare_offer.id)
+  //     : null;
+  //   if (activeTab === 3) {
+  //     //hardcoded
+  //     t_semiRare = t_semiRare_offer
+  //       ? currentCollections.find((collection) => collection.id == 8)
+  //       : null;
+  //   }
+  //   const t_common = t_common_offer
+  //     ? currentCollections.find((collection) => collection.id === t_common_offer.id)
+  //     : null;
+  //   if (activeTab === 3) {
+  //     //hardcoded
+  //     return [
+  //       { total: 1, sold: !garment.resulted ? 0 : 1 },
+  //       {
+  //         total: t_semiRare ? t_semiRare.garments.length : 0,
+  //         collectionId: t_semiRare ? t_semiRare.id : null,
+  //         basePrice: t_semiRare_offer ? t_semiRare_offer.primarySalePrice : '0',
+  //         sold: t_semiRare_offer ? parseInt(t_semiRare_offer.amountSold, 10) : 0,
+  //       },
+  //       {
+  //         total: t_common ? t_common.garments.length : 0,
+  //         collectionId: t_common ? t_common.id : null,
+  //         basePrice: t_common_offer ? t_common_offer.primarySalePrice : '0',
+  //         sold: t_common_offer ? parseInt(t_common_offer.amountSold, 10) : 0,
+  //       },
+  //       {
+  //         total: t_semiRare ? t_semiRare.garments.length : 0,
+  //         collectionId: t_semiRare ? t_semiRare.id : null,
+  //         basePrice: t_semiRare_offer ? t_semiRare_offer.primarySalePrice : '0',
+  //         sold: t_semiRare_offer ? parseInt(t_semiRare_offer.amountSold, 10) : 0,
+  //       },
+  //     ];
+  //   }
+  //   if (collectionId === 4 || collectionId === '4') {
+  //     let digiOffer = currentMarketplaceOffers.find((offer) => offer.id === '8');
+  //     return [
+  //       {
+  //         total: digiOffer ? digiOffer.garmentCollection.garments.length : 0,
+  //         basePrice: digiOffer ? digiOffer.primarySalePrice : 0,
+  //         sold: digiOffer ? parseInt(digiOffer.amountSold, 10) : 0,
+  //         collectionId: digiOffer ? digiOffer.id : null,
+  //       },
+  //       {
+  //         total: digiOffer ? digiOffer.garmentCollection.garments.length : 0,
+  //         basePrice: digiOffer ? digiOffer.primarySalePrice : 0,
+  //         sold: digiOffer ? parseInt(digiOffer.amountSold, 10) : 0,
+  //         collectionId: digiOffer ? digiOffer.id : null,
+  //       },
+  //     ];
+  //   }
+  //   return [
+  //     { total: 1, sold: !garment.resulted ? 0 : 1 },
+  //     {
+  //       total: t_semiRare ? t_semiRare.garments.length : 0,
+  //       collectionId: t_semiRare ? t_semiRare.id : null,
+  //       basePrice: t_semiRare_offer ? t_semiRare_offer.primarySalePrice : '0',
+  //       sold: t_semiRare_offer ? parseInt(t_semiRare_offer.amountSold, 10) : 0,
+  //     },
+  //     {
+  //       total: t_common ? t_common.garments.length : 0,
+  //       collectionId: t_common ? t_common.id : null,
+  //       basePrice: t_common_offer ? t_common_offer.primarySalePrice : '0',
+  //       sold: t_common_offer ? parseInt(t_common_offer.amountSold, 10) : 0,
+  //     },
+  //   ];
+  // }, [currentCollections, currentMarketplaceOffers]);
 
   // pull designer informations and cloth photos for all rare types
   // IMPORTANT relationships between nfts :(
@@ -161,8 +178,8 @@ const ProductDescription = ({
   } else {
     currentClothesInfo = {
       clothesId,
-      clothesName: tokenInfo && tokenInfo.name ? tokenInfo.name : `ID: ${clothesId}`,
-      description: tokenInfo && tokenInfo.description ? tokenInfo.description : `ID: ${clothesId}`,
+      clothesName: garment && garment.name ? garment.name : `ID: ${clothesId}`,
+      description: garment && garment.description ? garment.description : `ID: ${clothesId}`,
       estimateApy: 127,
       youReceive: receive?.receive
         ? receive.receive
@@ -171,8 +188,8 @@ const ProductDescription = ({
         : 'Graphic, FBX, Material Component',
       valueChildNfts: 'ERC1155',
       valueApy: '',
-      skinId: tokenInfo && tokenInfo.attributes[4] ? tokenInfo.attributes[4].value : '<empty>',
-      hatId: tokenInfo && tokenInfo.attributes[5] ? tokenInfo.attributes[5].value : '<empty>',
+      skinId: garment && garment.attributes[4] ? garment.attributes[4].value : '<empty>',
+      hatId: garment && garment.attributes[5] ? garment.attributes[5].value : '<empty>',
     };
   }
 

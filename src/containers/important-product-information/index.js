@@ -45,6 +45,8 @@ import { COMMON_RARITY, EXCLUSIVE_RARITY, SEMI_RARE_RARITY } from '@constants/gl
 const ImportantProductInformation = ({
   collectionId,
   auctionId,
+  auctionIndex,
+  garmentId,
   tabIndex,
   garment,
   estimateApyText,
@@ -332,7 +334,11 @@ const ImportantProductInformation = ({
                 isDisabled={!isMatic}
                 className={styles.buttonSold}
                 background="black"
-                onClick={() => Router.push(`${PRODUCTS}${collectionId}/${auctionId}${tabIndex}`)}
+                onClick={() =>
+                  Router.push(
+                    `${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`,
+                  )
+                }
               >
                 <span>SOLD</span>
               </Button>
@@ -343,7 +349,11 @@ const ImportantProductInformation = ({
             isDisabled={!isMatic}
             className={styles.button}
             background="black"
-            onClick={() => Router.push(`${PRODUCTS}${collectionId}/${auctionId}${tabIndex}`)}
+            onClick={() =>
+              Router.push(
+                `${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`,
+              )
+            }
           >
             <span>BUY NOW</span>
           </Button>

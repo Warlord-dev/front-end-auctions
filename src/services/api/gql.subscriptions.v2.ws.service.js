@@ -31,6 +31,7 @@ export const onAuctionsChangeV2 = `
         name
         image
         animation
+        description
         children {
           amount
           tokenUri
@@ -69,6 +70,7 @@ export const onAllAuctionsChangeV2 = `
         name
         image
         animation
+        description
         children {
           amount
           tokenUri
@@ -108,6 +110,7 @@ export const onPreviousAuctionsChangeV2 = `
         image
         animation
         primarySalePrice
+        description
         tokenUri
         children {
           amount
@@ -251,6 +254,7 @@ export const onDigitalaxGarmentsCollectionChangeV2 = `
         designer
         owner
         primarySalePrice
+        description
         tokenUri
         name
         image
@@ -282,6 +286,7 @@ export const onDigitalaxGarmentsCollectionChangeByIdsV2 = `
         designer
         owner
         primarySalePrice
+        description
         name
         image
         animation
@@ -314,6 +319,7 @@ export const getAllDigitalaxGarmentsCollectionsV2 = `
         owner
         primarySalePrice
         tokenUri
+        description
         name
         image
         animation
@@ -363,6 +369,7 @@ export const allDigitalaxMarketplaceOffersV2 = `
           id
           tokenUri
           name
+          description
         }
       }
       startTime

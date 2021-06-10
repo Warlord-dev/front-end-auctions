@@ -18,7 +18,11 @@ const CardProduct = ({ collection }) => {
 
   return (
     <li className={cn(styles.item)}>
-      <Link href={collection.id !== 4 ? `/collections/${collection.id}` : `products/4/1027991/`}>
+      <Link
+        href={
+          collection.id !== 4 ? `/collections/${collection.id}` : `products/4/102799/8/1004571/`
+        }
+      >
         <a className={styles.clothesName}>{collection.text}</a>
       </Link>
       <SmallPhotoWithText
@@ -31,7 +35,9 @@ const CardProduct = ({ collection }) => {
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
           <Link
-            href={collection.id !== 4 ? `/collections/${collection.id}` : `products/4/1027991/`}
+            href={
+              collection.id !== 4 ? `/collections/${collection.id}` : `products/4/102799/8/1004571/`
+            }
           >
             <div className={styles.photoWrapper}>
               <a className={styles.clothesPhotoWrapper}>
