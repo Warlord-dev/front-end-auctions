@@ -46,7 +46,6 @@ const CardProduct = ({
   const designerInfo = useSelector(getDesignerInfoById(garment.designer));
 
   const [imageUrl, isVideo] = getImageForCardProduct(garment);
-
   return (
     <li className={cn(styles.item, className)}>
       <Link
@@ -56,9 +55,9 @@ const CardProduct = ({
       </Link>
       <SmallPhotoWithText
         className={styles.designerWrapper}
-        id={designerInfo ? kebabCase(designerInfo.designerName) : ''}
-        name={designerInfo?.designerName}
-        photo={designerInfo?.designerPhoto}
+        id={garment.attributes[0] ? kebabCase(garment.attributes[0].value) : ''}
+        name={garment.attributes[0] ? garment.attributes[0].value : ''}
+        photo={designerInfo?.designerPhoto || ''}
         photoIsLink
       />
       <div className={styles.card}>
