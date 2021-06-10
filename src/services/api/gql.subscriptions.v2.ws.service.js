@@ -32,6 +32,11 @@ export const onAuctionsChangeV2 = `
         image
         animation
         description
+        attributes {
+          id
+          value
+          type
+        }
         children {
           amount
           tokenUri
@@ -76,6 +81,11 @@ export const onAllAuctionsChangeV2 = `
           tokenUri
           id
         }
+        attributes {
+          id
+          value
+          type
+        }
       }
       designer {
         id
@@ -116,6 +126,11 @@ export const onPreviousAuctionsChangeV2 = `
           amount
           tokenUri
           id
+        }
+        attributes {
+          id
+          value
+          type
         }
       }
       designer {
