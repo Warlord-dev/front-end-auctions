@@ -20,7 +20,7 @@ const CardProduct = ({ collection }) => {
     <li className={cn(styles.item)}>
       <Link
         href={
-          collection.id !== 4 ? `/collections/${collection.id}` : `products/4/102799/8/1004573/`
+          collection.id !== 4 ? `/collections/${collection.id}` : `products/4/101075/9/1002943/`
         }
       >
         <a className={styles.clothesName}>{collection.text}</a>
@@ -36,7 +36,7 @@ const CardProduct = ({ collection }) => {
         <div className={styles.imageWrapper}>
           <Link
             href={
-              collection.id !== 4 ? `/collections/${collection.id}` : `products/4/102799/8/1004573/`
+              collection.id !== 4 ? `/collections/${collection.id}` : `products/4/101075/9/1002943/`
             }
           >
             <div className={styles.photoWrapper}>
