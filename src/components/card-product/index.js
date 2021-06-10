@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 import kebabCase from 'lodash.kebabcase';
 import ImportantProductInformation from '@containers/important-product-information';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-import { getDesignerInfoById } from '@selectors/designer.selectors';
+import { getDesignerInfoById, getDesignerInfoByName } from '@selectors/designer.selectors';
 import { getCardProductChartOptions } from '@services/graph.service';
 import { create2KURL } from '@services/imgix.service';
 import { getImageForCardProduct } from '@helpers/photo.helpers';
@@ -42,8 +42,16 @@ const CardProduct = ({
     return null;
   }
 
-  const tokenInfo = null;
-  const designerInfo = useSelector(getDesignerInfoById(garment.designer));
+  const designerInfo = useSelector(
+    getDesignerInfoByName(
+      tabIndex === 3
+        ? 'Digitalax'
+        : garment.attributes && garment.attributes[0]
+        ? garment.attributes[0].value
+        : '',
+      true,
+    ),
+  );
 
   const [imageUrl, isVideo] = getImageForCardProduct(garment);
   return (
@@ -55,8 +63,8 @@ const CardProduct = ({
       </Link>
       <SmallPhotoWithText
         className={styles.designerWrapper}
-        id={garment.attributes[0] ? kebabCase(garment.attributes[0].value) : ''}
-        name={garment.attributes[0] ? garment.attributes[0].value : ''}
+        id={designerInfo ? kebabCase(designerInfo.designerName) : ''}
+        name={designerInfo?.designerName}
         photo={designerInfo?.designerPhoto || ''}
         photoIsLink
       />

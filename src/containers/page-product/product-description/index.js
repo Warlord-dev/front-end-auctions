@@ -44,10 +44,17 @@ const ProductDescription = ({
   //   [parseInt(collectionId) === 4 ? garment : tokenInfo],
   // );
   const clothesPhotos = useMemo(() => createArrayForGallery(garment), [garment]);
+  // const currentDesignersInfo = useSelector(
+  //   activeTab === 3
+  //     ? getDesignerInfoByName('Digitalax', true)
+  //     : getDesignerInfoById(garment.designer),
+  // );
+
   const currentDesignersInfo = useSelector(
-    activeTab === 3
-      ? getDesignerInfoByName('Digitalax', true)
-      : getDesignerInfoById(garment.designer),
+    getDesignerInfoByName(
+      activeTab === 3 ? 'Digitalax' : garment.attributes ? garment.attributes[0].value : '',
+      true,
+    ),
   );
   const receive = useSelector(getGarmentsReceiveByName(garment?.name));
 

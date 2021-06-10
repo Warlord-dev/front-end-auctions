@@ -20,23 +20,23 @@ const CardProduct = ({ collection }) => {
     <li className={cn(styles.item)}>
       <Link
         href={
-          collection.id !== 4 ? `/collections/${collection.id}` : `products/4/102799/8/1004571/`
+          collection.id !== 4 ? `/collections/${collection.id}` : `products/4/102799/8/1004573/`
         }
       >
         <a className={styles.clothesName}>{collection.text}</a>
       </Link>
       <SmallPhotoWithText
         className={styles.designerWrapper}
-        id={designerInfo ? kebabCase(designerInfo.designerName) : kebabCase('Cleora')}
-        name={designerInfo?.designerName || 'Cleora'}
-        photo={designerInfo?.designerPhoto || '/images/cleoraskin (1) 1.png'}
+        id={designerInfo ? kebabCase(designerInfo.designerName) : ''}
+        name={designerInfo?.designerName}
+        photo={designerInfo?.designerPhoto}
         photoIsLink
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
           <Link
             href={
-              collection.id !== 4 ? `/collections/${collection.id}` : `products/4/102799/8/1004571/`
+              collection.id !== 4 ? `/collections/${collection.id}` : `products/4/102799/8/1004573/`
             }
           >
             <div className={styles.photoWrapper}>

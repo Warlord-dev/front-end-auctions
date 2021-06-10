@@ -149,9 +149,9 @@ const RightBox = ({
       <h2 className={styles.title}>{currentClothesInfo?.clothesName}</h2>
       <SmallPhotoWithText
         className={styles.smallPhotoWithText}
-        id={garment.attributes[0] ? kebabCase(garment.attributes[0].value) : ''}
+        id={currentDesignersInfo ? kebabCase(currentDesignersInfo.designerName) : ''}
         photo={currentDesignersInfo?.designerPhoto}
-        name={garment.attributes[0] ? garment.attributes[0].value : ''}
+        name={currentDesignersInfo?.designerName}
         photoIsLink
       />
       {activeTab === 0 && (
