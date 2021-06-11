@@ -8,18 +8,10 @@
   position: relative;
 
   .backVideo {
-    width: 50%;
+    width: 100%;
     transform: scale(1.05);
     position: absolute;
-    right: 50%;
-    top: 20px;
-  }
-
-  .backVideo1 {
-    width: 50%;
-    transform: scale(1.05);
-    position: absolute;
-    left: 50%;
+    right: 0;
     top: 20px;
   }
 

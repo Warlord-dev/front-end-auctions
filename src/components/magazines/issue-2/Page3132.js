@@ -7,9 +7,6 @@ const Page3132 = () => {
       <video autoPlay muted loop className={styles.backVideo}>
         <source src="./magazine/2/images/31_32.mp4" />
       </video>
-      <video autoPlay muted loop className={styles.backVideo1}>
-        <source src="./magazine/2/images/31_32.mp4" />
-      </video>
       <div className={styles.text1}>Is Bitcoin greener than what we think?</div>
       <div className={styles.text2}>
         When it comes to digital curriencies, especially the two most prominent out there, Bitcoin
