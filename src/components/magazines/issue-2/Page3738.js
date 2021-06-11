@@ -4,99 +4,100 @@ import styles from './page3738.module.scss';
 const Page3738 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/Group 1179.jpg" className={styles.backImage} />
-      <h1>The Long Thread of Textile History Continues</h1>
-      <h2>India Embraces Digital Fashion</h2>
-      <p className={styles.section1}>
-        We owe a lot of what constitutes the fashion industry, as we know of it today, to India. In 
-        fact, our earliest knowledge about the origins and use of cotton can be dated back to a 
-        series of famous Indian poems written in 600BC. And, even Alexander the Great is recorded 
-        wearing cotton clothes after invading India with his troops. The nation has contributed a 
-        whole threadline of rich history to fashion globally, with about 1/3 of India’s textile 
-        production export orientated, and the US standing as the biggest importer of Indian 
-        textile.
+      <img src="./magazine/2/images/37_38.png" className={styles.backImage} />
+      <div className={styles.text1}>
+        These NFTs can be programmable, tradable, interoperable and composable. This composable
+        approach towards fashion, verified by the blockchain, is a major leap in digital materials
+        and design ownership, digital supply chain management, process automation, efficacy
+        management.
         <br />
         <br />
-        Thus, it only seems fated that the region is now embracing the new world of fashiontech, 
-        which has been propelled over the past few months with the rise in relevance of NFTs and 
-        their harmonious affinity for finally bridging value and authenticity to digital fashion.
-      </p>
-      <p className={styles.section2}>
-        We sat down with Ravi Singh, a newcomer to digital fashion yet avid supporter of inspiring
-        traditional cultural inclusivity in the industry, and 3D designer, Lorena Bello, to discuss
-        their collaboration alongside DIGITALAX, on the world’s first Indian digital fashion
-        collection.
-      </p>
-      <p className={styles.section3}>
-        Last year, if you had told me that I’d be writing for the world’s first metaverse magazine
-        about my Indian digital fashion collection, designed in collaboration with Lorena Bello, a
-        world-renowned 3d fashion designer, I would have said you were confusing me for a character
-        in a Marvel movie. After being on Indian Matchmaking on Netflix in 2020, I started to
-        connect with South Asian influencers and artists around the world. Through an Indian
-        streetwear brand, I attended New York Fashion Week, which inspired me to explore how to fuse
-        South Asian culture with American identity. This spring, I learned about DIGITALAX, the
-        world’s first digital fashion operating system, and how it’s designed to liberate gaming and
-        fashion mods from gatekeepers to the masses.
-      </p>
-      <p className={styles.section4}>
-        I was excited by the intersection of crypto and the metaverse – digital worlds layered on
-        top of our physical reality. All these connections led me to want to build an Indian digital
-        fashion collection, which is something I had never seen before. But this is more than about
-        digital fashion – it’s about creating culturally inclusive spaces in the metaverse. It’s
-        about inspiring more metaverse artists from all backgrounds, from Africa, to South America,
-        to India, Pakistan and Bangladesh.
-      </p>
-      <div className={styles.name1}>-Ravi Singh</div>
-      <p className={styles.section5}>
-        The collection was inspired by Ravi, 3D modeled by Lorena and all scenes, animation and
-        renders composed by DIGITALAX.
-      </p>
-      <p className={styles.section6}>
-        From my first conversation with Ravi, I was completely behind the idea of bridging
-        traditional culture into digital fashion. The opportunity to be a part of the world’s first
-        digital fashion line based on Indian culture + make a disruptive point in South Asian
-        fashion culture and open a new frontier in the digital fashion space.... to help bear Indian
-        fashion into the Metaverse... I absolutely wanted to be involved!
+        FGO is built native to web3— where both the Ethereum blockchain and Polygon Network are
+        leveraged for the minting and issuance of each 1155 NFT. Polygon ensures that the minted
+        NFTs are in check with the broader revolution of what digital fashion enables— a more
+        efficiently sustainable supply chain and fashion industry.
         <br />
         <br />
-        Not having a strong background in Indian Culture myself allowed me to work without
-        preconceptions. After many virtual coffees NYC-Madrid I worked experimentally to best
-        present the first cultural crossover into digital fashion.
-      </p>
-      <div className={styles.name2}>-Lorena Bello</div>
-      <video autoPlay muted loop className={styles.indiaNecklaceVideo}>
-        <source src="./magazine/1/videos/indiaNecklace.mp4" type="video/mp4" />
-      </video>
-      <img src="./magazine/1/images/Group 1185.png" className={styles.circleImg1} />
-      <div className={styles.circleText1}>
-        The owl is a vehicle of Lakshmi, the goddess of wealth and good fortune in Hinduism.
+        FGO also promotes the broader mission for enabling gatemakers of the metaverse. Modding the
+        Metaverse. The metaverse is nothing more than a radical reduction in the barriers between
+        us. As these barriers come down, as the gates minaturise, the friction that might stop us
+        normally from any given choice dissipates, allowing for new modes of interaction that are
+        inherently fluid and liberating. And, with that said, modding is the fundamental practice
+        that drives growth and change in fashion, gaming, mechanics… everything. The methodology
+        behind modding and the byproducts that come from it are what actually build the metaverse.
+        And, not just build the metaverse but also ensure that it will be kept open, vital and
+        continuously unique to each personal experience.
+        <br />
+        <br />
+        Fractional Garment Ownership is an immediate first step towards reinforcing the ground roots
+        growth and authenticity of our ecosystem to be comprehensively responsive to the commons
+        from the most modular, composable and programmable level — the pattern, material and texture
+        level — as the building blocks for streamlining an entirely on-chain and open source supply
+        chain that can be scaled across both the digital and physical realms; underpinned by ERC
+        protocol standards (1155, 721, 998). Open is important, because this time around we must do
+        it right.
+        <br />
+        <br />
       </div>
-      <img src="./magazine/1/images/Group 1186.png" className={styles.circleImg2} />
-      <div className={styles.circleText2}>
-        The sherwani; a long coat-like jacket that is knee length and originated in 19th century
-        India.
+
+      <div className={styles.text2}>
+        Through FGO we are building out an entire Global Designer Network of creators that align
+        with our mission of decentralisation and open source for the fashion industry. We are here
+        to revolutionise the entire industry and do it right; overturning gatekeepers that have
+        become comfortable with closed, exploitative, predatory, unsustainable and studio dominant
+        bullshit.
         <br />
         <br />
-        The jacket contains lotus flowers, which symbolize purity, enlightenment and
-        self-regeneration— a popular symbol in India and around the world.
-      </div>
-      <video autoPlay muted loop className={styles.indiaSuitVideo}>
-        <source src="./magazine/1/videos/indiaSuit.mp4" type="video/mp4" />
-      </video>
-      <video autoPlay muted loop className={styles.indiaSuit2Video}>
-        <source src="./magazine/1/videos/IndiaDress.mp4" type="video/mp4" />
-      </video>
-      <img src="./magazine/1/images/Group 1187.png" className={styles.circleImg3} />
-      <div className={styles.circleText3}>
-        A popular form of Indian women’s dress, the Lehenga Choli, which originated in North India
-        during the 10th century and is often worn for weddings or other formal events.
+        As a very special first initiation, each designer in our network has crafted a digital
+        material, pattern, texture print that they personally minted on-chain, with their wallet
+        addresses, through the DIGITALAX Polygon 1155 NFT smart contracts, open sourcing this into
+        our material, texture, pattern libraries.
         <br />
         <br />
-        The pattern on the skirt is a binary flower, fusing the traditional – a flower – with the
-        futuristic – 0’s and 1’s used in binary codes popularized in the movie the Matrix. The
-        blouse contains a cubed pattern containing Ravi’s initials, RGS, and was sketched by hand by
-        Nureen Wohl, a social worker based in New York City. The headscarf, or the dupatta, contains
-        an intricate piece of forehead jewelry, called a maang tikka.
+        This first step is all about enabling the commons. A commons cannot exist if we ignore the
+        actions, models, systems and arrangements that are destructive to the commons. All too
+        often, and very much native to the extractive web2 structure currently in place, power goes
+        to those that steal a free option from society. Optimising purely for self interest in the
+        short term results in a situation where an individual benefits themselves whilst
+        simultaneously spreading out negative effects across the larger population. It is not just
+        pitting short term self interest against the common good, but, moreso, it is actively
+        destroying the rest of the population, ecosystem, and co-existing environment.
+        <br />
+        <br />
+        The commons is a societal resource where access is guaranteed to all, beyond the control of
+        any centralized authority. It’s about ensuring that preservation of the collective is
+        injected into the complexity of the web3 systems we are continuing to build out; ensuring
+        that our ecosystem is incentivized to operate as an open bazaar — where a higher level of
+        direct exchange optimises the effectiveness of the emergent evolutionary process for
+        eradicating false positives and unlocking progressive decentralisation and utility of the
+        ecosystem in general.
+        <br />
+        <br />
+        Each FGO 1155 NFT, by the Global Designer Network, has been minted under the DIGITALAX
+        <a href="https://digitalax.xyz/fgo-2">
+          Fractional Garment Ownership License and Distribution Standard 1.2
+        </a>{' '}
+        with a Degree of Exclusivity as Common— further reinforcing the enablement of this group.
+        <br />
+        <br />
+        <b>
+          This is just the start, where eventually, the designer network and on-chain libraries will
+          open up points of entry and capacity for anyone to engage fully in dynamic decentralised
+          commerce, driven by ubiquitous digital fashion and cross digital-physical realms.{' '}
+        </b>
+        <br />
+        <br />
+        These FGO NFTs will be leveraged under the FGO open source licensing standards, where
+        DIGITALAX is taking the first initiative of proving out the model cross-realm (digi-fizzy)
+        in our hybrid DRIP digital-physical fashion line— incorparating these patterns and prints
+        with a royalty distribution of 15% back to the OG designers behind the modular components
+        that will be incoporated across different master physical garments. The master physical
+        garment will be minted as a 721 NFT with the 1155 patterns incorporated attached to it under
+        DIGITALAX’s ERC-998 variant standard.
+        <br />
+        <br />
+        An opening to web3 digital fashion that is ready for the metaverse and powered by the
+        commons.
       </div>
     </div>
   );
