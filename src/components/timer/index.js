@@ -1,12 +1,9 @@
-import React, {
-  useState, useEffect, useRef, memo,
-} from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
 const Timer = ({ className, expirationDate, size }) => {
-
   const [days, updateDays] = useState(0);
   const [hours, updateHours] = useState(0);
   const [minutes, updateMinutes] = useState(0);
@@ -14,19 +11,18 @@ const Timer = ({ className, expirationDate, size }) => {
   const interval = useRef();
 
   useEffect(() => {
-
     const getTimer = () => {
       const nowDate = new Date();
       const finalDate = new Date(expirationDate);
-      const restDate = (finalDate - nowDate) + 1000;
+      const restDate = finalDate - nowDate + 1000;
       if (restDate < 0) {
         return;
       }
 
-      updateDays(Math.floor(restDate / 1000 / 60 / 60 / 24));
-      updateHours(Math.floor((restDate / 1000 / 60 / 60) % 24));
-      updateMinutes(Math.floor(Math.floor((restDate / 1000 / 60) % 60)));
-      updateSeconds(Math.floor(Math.floor((restDate / 1000) % 60)));
+      updateDays(Math.floor(restDate / 1000 / 60 / 60 / 24) || 0);
+      updateHours(Math.floor((restDate / 1000 / 60 / 60) % 24) || 0);
+      updateMinutes(Math.floor(Math.floor((restDate / 1000 / 60) % 60)) || 0);
+      updateSeconds(Math.floor(Math.floor((restDate / 1000) % 60)) || 0);
     };
 
     getTimer();
@@ -39,11 +35,12 @@ const Timer = ({ className, expirationDate, size }) => {
   }, [expirationDate]);
 
   return (
-    <div className={cn(className, {
-      [styles.isDefault]: size === 'default',
-      [styles.isLarge]: size === 'large',
-      [styles.isSmall]: size === 'small',
-    })}
+    <div
+      className={cn(className, {
+        [styles.isDefault]: size === 'default',
+        [styles.isLarge]: size === 'large',
+        [styles.isSmall]: size === 'small',
+      })}
     >
       {!!days && (
         <>

@@ -78,15 +78,15 @@ const CardList = ({
       </div>
       <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
         {auctions.map((auction) => {
-          const garment = garmentsById.get(auction.id);
+          const garment = collectionId !== '1' ? garmentsById.get(auction.id) : auction;
           return (
             <CardProduct
               collectionId={collectionId}
-              key={garment.id}
-              history={historyByTokenId.get(garment.id)}
-              auctionIndex={auction.id}
-              garmentId={garment.id}
-              auctionId={auction.id}
+              key={garment?.id}
+              history={historyByTokenId.get(garment?.id)}
+              auctionIndex={auction?.id}
+              garmentId={garment?.id}
+              auctionId={auction?.id}
               garment={garment}
               showGraphIds={showGraphIds}
               setShowGraphIds={setShowGraphIds}

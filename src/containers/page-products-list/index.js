@@ -24,6 +24,7 @@ import CardListDigi from './card-list-digi';
 import styles from './styles.module.scss';
 import apiService from '@services/api/api.service';
 import globalActions from '@actions/global.actions';
+import amongUsAuctions from '@constants/amongus_auctions.json';
 
 const PageProductsList = ({ collectionId }) => {
   const dispatch = useDispatch();
@@ -35,9 +36,13 @@ const PageProductsList = ({ collectionId }) => {
   const [collectionLoaded, setCollectionLoaded] = useState(false);
   const [auctionLoaded, setAuctionLoaded] = useState(false);
   const chainId = useSelector(getChainId);
-  const currentAuctions = auctions.toJS();
+  let currentAuctions = auctions.toJS();
   const currentCollections = collections.toJS();
   const [showGraphIds, setShowGraphIds] = useState([]);
+
+  if (collectionId === '1') {
+    currentAuctions = amongUsAuctions;
+  }
 
   useSubscription(
     {
@@ -139,30 +144,6 @@ const PageProductsList = ({ collectionId }) => {
     },
     [chainId, showGraphIds],
   );
-
-  // useEffect(() => {
-  //   const fetchAuctionsAndCollections = async () => {
-  //     dispatch(globalActions.setIsLoading(true));
-  //     if (!auctions || !collections) {
-  //       dispatch(auctionPageActions.reset());
-  //       dispatch(collectionActions.clear());
-  //     }
-  //     if (collectionId === '1') {
-  //       const { digitalaxGarmentAuctions } = await apiService.getLiveAuctions();
-  //       dispatch(auctionPageActions.updateAuctions(digitalaxGarmentAuctions));
-  //       const { digitalaxGarmentCollections } = await apiService.getGarmentsCollections();
-  //       dispatch(collectionActions.mapData(digitalaxGarmentCollections));
-  //     } else if (collectionId === '3') {
-  //       const { digitalaxGarmentV2Auctions } = await apiService.getLiveAuctionsV2();
-  //       dispatch(auctionPageActions.updateAuctions(digitalaxGarmentV2Auctions));
-  //       const { digitalaxGarmentV2Collections } = await apiService.getGarmentsCollectionsV2();
-  //       dispatch(collectionActions.mapData(digitalaxGarmentV2Collections));
-  //     }
-  //     dispatch(globalActions.setIsLoading(false));
-  //   };
-
-  //   fetchAuctionsAndCollections();
-  // }, [chainId]);
 
   useEffect(() => {
     dispatch(globalActions.setIsLoading(true));
