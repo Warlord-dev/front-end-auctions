@@ -149,17 +149,11 @@ const ImportantProductInformation = ({
         )
         .sort((a, b) => b.timestamp - a.timestamp)
     : [];
-  let priceEth;
-  if (tabIndex === 0) {
-    // priceEth = sortedHistory.length
-    //   ? convertToEth(sortedHistory[0].value)
-    //   : Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
-    priceEth = convertToEth(auction?.topBid || 0);
-  } else {
-    priceEth = Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
+  let priceEth = garment.primarySalePrice / 10 ** 18;
+  if (collectionId === '3') {
+    if (collection?.rarity === 'Common') priceEth = 0.015;
+    else priceEth = 0.45;
   }
-  if (auctionId == '2' && tabIndex == '1')
-    priceEth = Math.round((convertToEth('57000000000000000') / monaPerEth) * 10000) / 10000;
   const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
 
   let isMakeBid = false;
@@ -246,6 +240,15 @@ const ImportantProductInformation = ({
     return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
   };
 
+  const getTotalAmount = () => {
+    if (collection?.rarity === 'Common') {
+      return 128;
+    } else if (collection?.rarity === 'Semi-Rare') {
+      return 64;
+    }
+    return collection?.garments?.length;
+  };
+
   return (
     <div
       className={cn({
@@ -260,7 +263,7 @@ const ImportantProductInformation = ({
         </p>
         {collection?.garments && (
           <p>
-            {currentOffer?.amountSold} of {collection?.garments?.length}
+            {currentOffer?.amountSold} of {getTotalAmount()}
           </p>
         )}
         {/* <p className={styles.estimateWrapper}>

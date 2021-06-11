@@ -46,6 +46,8 @@ const CardProduct = ({
     getDesignerInfoByName(
       tabIndex === 3
         ? 'Digitalax'
+        : collectionId === '1'
+        ? 'Kodomodachi'
         : garment.attributes && garment.attributes[0]
         ? garment.attributes[0].value
         : '',
