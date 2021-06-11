@@ -161,9 +161,15 @@ const RightBox = ({
             <p className={styles.expirationDateText}>{expirationDateText}</p>
             <Timer className={styles.timer} expirationDate={expirationDate} />
           </div>
-          <Button className={styles.buttonUtil} background="black">
-            <a href="https://espa.digitalax.xyz/">WEAR IN GAME</a>
-            <span className={styles.playESPA}>PLAY IN ESPA ESPORTS</span>
+          <Button className={styles.buttonUtil} background="black" style={{ padding: 0 }}>
+            <a
+              href="https://espa.digitalax.xyz/"
+              target="_blank"
+              style={{ padding: '15px 16px', width: '100%' }}
+            >
+              WEAR IN GAME <br />
+              <span className={styles.playESPA}>PLAY IN ESPA ESPORTS</span>
+            </a>{' '}
           </Button>
         </div>
       )}
@@ -191,9 +197,15 @@ const RightBox = ({
               )}
             </Button>
             {activeItem === SHOW_FIRST_TAB && (
-              <Button className={styles.buttonUtil} background="black">
-                <a href="https://espa.digitalax.xyz/">WEAR IN GAME</a>{' '}
-                <span className={styles.playESPA}>PLAY IN ESPA ESPORTS</span>
+              <Button className={styles.buttonUtil} background="black" style={{ padding: 0 }}>
+                <a
+                  href="https://espa.digitalax.xyz/"
+                  target="_blank"
+                  style={{ padding: '15px 16px', width: '100%' }}
+                >
+                  WEAR IN GAME <br />
+                  <span className={styles.playESPA}>PLAY IN ESPA ESPORTS</span>
+                </a>{' '}
               </Button>
             )}
           </div>

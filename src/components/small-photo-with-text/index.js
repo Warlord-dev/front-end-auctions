@@ -54,7 +54,11 @@ const SmallPhotoWithText = ({
               />
             </a>
           )}
-          {id && <a className={cn(styles.designerName, styles.designerNameLink)}>{name}</a>}
+          {id && (
+            <a className={cn(styles.designerName, styles.designerNameLink, styles.textUppercase)}>
+              {name}
+            </a>
+          )}
         </>
       )}
       {address && (
