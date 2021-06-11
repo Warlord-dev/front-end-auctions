@@ -17,7 +17,7 @@ const Page2324 = () => {
         <img src="./magazine/2/images/23_24_image2.png" className={styles.link2} />
       </a>
       <a href="https://www.hicetnunc.xyz/objkt/41534" target="_blank">
-        <video autoPlay loop className={styles.link6}>
+        <video autoPlay muted loop className={styles.link6}>
           <source src="./magazine/2/images/23_24_video1.mp4" type="video/mp4" />
         </video>
       </a>
@@ -42,7 +42,7 @@ const Page2324 = () => {
       <div className={styles.text17}> MAKERS </div>
       <div className={styles.text18}> MAKERS </div>
       <a href="https://superrare.co/artwork-v2/rainbow-sunset-16662" target="_blank">
-        <video autoPlay loop className={styles.link5}>
+        <video autoPlay muted loop className={styles.link5}>
           <source src="./magazine/2/images/23_24_video4.mp4" type="video/mp4" />
         </video>
       </a>

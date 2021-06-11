@@ -4,11 +4,12 @@ import styles from './page3334.module.scss';
 const Page3334 = () => {
   const [play, setPlay] = useState(false);
   const ref = useRef();
+  const refAudio = useRef();
 
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/2/images/33_34.png" className={styles.backImage} />
-      <video autoPlay loop className={styles.video} ref={ref}>
+      <video autoPlay muted loop className={styles.video} ref={ref}>
         <source src="./magazine/2/images/33_34_video.mp4" type="video/mp4" />
       </video>
       <div className={styles.text1}>FlamingoDAO</div>
@@ -20,9 +21,20 @@ const Page3334 = () => {
         src={`./magazine/2/images/33_34_${play ? 'play' : 'pause'}.png`}
         className={styles.play}
         onClick={() => {
+          if (play) {
+            refAudio.current.play();
+          } else {
+            refAudio.current.pause();
+          }
           setPlay(!play);
         }}
       />
+      <audio
+        ref={refAudio}
+        controls
+        className={styles.audio}
+        src="./magazine/2/images/33_34_audio.mp3"
+      ></audio>
 
       <div className={styles.text5}>
         DIGITALAX has collaborated with Maria Ruano and the Human Rights Foundation for the first
