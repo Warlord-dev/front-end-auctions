@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
@@ -14,15 +14,21 @@ import ImportantCollectionInformation from '@containers/important-collection-inf
 import styles from './styles.module.scss';
 
 const CardProduct = ({ collection }) => {
-  const tokenInfo = useTokenInfo(collection.image, [collection.image]);
   const designerInfo = useSelector(getDesignerInfoByName(collection.designer, true));
-  const [imageUrl, isVideo] =
-    collection.id === 2
-      ? [tokenInfo ? tokenInfo.animation : '', true]
-      : getImageForCardProduct(tokenInfo);
+
+  const getLink = () => {
+    if (collection.id === 4) {
+      return 'products/4/101075/9/1002943/';
+    } else if (collection.id === 2) {
+      return 'products/2/1/1/1/';
+    } else {
+      return `/collections/${collection.id}`;
+    }
+  };
+
   return (
     <li className={cn(styles.item)}>
-      <Link href={`/collections/${collection.id}`}>
+      <Link href={getLink()}>
         <a className={styles.clothesName}>{collection.text}</a>
       </Link>
       <SmallPhotoWithText
@@ -34,23 +40,24 @@ const CardProduct = ({ collection }) => {
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          {imageUrl && (
-            <Link href={`/collections/${collection.id}`}>
+          <Link href={getLink()}>
+            <div className={styles.photoWrapper}>
               <a className={styles.clothesPhotoWrapper}>
-                {isVideo ? (
-                  <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}>
-                    <source src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
-                  </video>
-                ) : (
-                  <img
-                    className={styles.clothesPhoto}
-                    src={create2KURL(imageUrl.replace('gateway.pinata', 'digitalax.mypinata'))}
-                    alt={collection.id}
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  className={styles.clothesPhoto}
+                  key={collection.image.replace('gateway.pinata', 'digitalax.mypinata')}
+                >
+                  <source
+                    src={collection.image.replace('gateway.pinata', 'digitalax.mypinata')}
+                    type="video/mp4"
                   />
-                )}
+                </video>
               </a>
-            </Link>
-          )}
+            </div>
+          </Link>
         </div>
 
         <ImportantCollectionInformation collection={collection} />

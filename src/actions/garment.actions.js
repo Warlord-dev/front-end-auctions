@@ -3,7 +3,6 @@ import { mapImmuatableDataById } from '@helpers/map.helpers';
 import reducer from '../reducers/garment.reducer';
 
 class GarmentActions extends BaseActions {
-
   mapData(digitalaxGarments) {
     return async (dispatch, getState) => {
       const state = getState();
@@ -16,13 +15,10 @@ class GarmentActions extends BaseActions {
   setGarmentInfo(id, value) {
     return (dispatch, getState) => {
       const state = getState();
-      const garmentsInfoById = state.garment
-        .get('garmentsInfoById')
-        .set(id, value);
+      const garmentsInfoById = state.garment.get('garmentsInfoById').set(id, value);
       dispatch(this.setValue('garmentsInfoById', garmentsInfoById));
     };
   }
-
 }
 
 export default new GarmentActions(reducer);

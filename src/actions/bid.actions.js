@@ -1,7 +1,9 @@
 import BaseActions from '@actions/base-actions';
 import { utils as ethersUtils } from 'ethers';
+import config from '@utils/config';
 import { convertToWei } from '@helpers/price.helpers';
 import {
+  getEnabledNetworkByChainId,
   getMarketplaceContractAddressByChainId,
   getMonaContractAddressByChainId,
 } from '@services/network.service';
@@ -17,10 +19,11 @@ class BidActions extends BaseActions {
   bid(id, value, monaPerEth) {
     return async (_, getState) => {
       const account = getState().user.get('account');
-      const auctionContractAddress = getState().global.get('auctionContractAddress');
+      const chainId = getState().global.get('chainId');
+      const network = getEnabledNetworkByChainId(chainId);
+      const auctionContractAddress = config.AUCTION_CONTRACT_ADDRESS[network.alias];
       const contract = await getContract(auctionContractAddress);
       const weiValue = convertToWei(value);
-      const chainId = getState().global.get('chainId');
 
       const monaContractAddress = await getMonaContractAddressByChainId(chainId);
       const monaContract = await getMonaTokenContract(monaContractAddress);
@@ -93,7 +96,7 @@ class BidActions extends BaseActions {
       const account = getState().user.get('account');
       const chainId = getState().global.get('chainId');
       const marketplaceContract = await getMarketplaceContractAddressByChainId(chainId);
-      const contract = await getMarketplaceContract(marketplaceContract);
+      const contract = await getMarketplaceContract(chainId);
       if (isMona) {
         const monaContractAddress = await getMonaContractAddressByChainId(chainId);
         const monaContract = await getMonaTokenContract(monaContractAddress);
@@ -119,12 +122,10 @@ class BidActions extends BaseActions {
         }
       }
 
-      const listener = contract.methods
-        .buyOffer(id, isMona)
-        .send({ from: account, value: isMona ? 0 : value });
+      const listener = contract.methods.buyOffer(id).send({ from: account });
       const promise = new Promise((resolve, reject) => {
         listener.on('error', (error) => reject(error));
-        listener.on('transactionHash', (transactionHash) => resolve(transactionHash));
+        listener.on('confirmation', (transactionHash) => resolve(transactionHash));
       });
       return {
         promise,

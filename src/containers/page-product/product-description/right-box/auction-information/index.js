@@ -1,8 +1,9 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Highcharts from 'highcharts';
 import cn from 'classnames';
+import throttle from 'lodash.throttle';
 import HighchartsReact from 'highcharts-react-official';
 import ImportantProductInformation from '@containers/important-product-information';
 import { getHistoryByTokenId } from '@selectors/history.selectors';
@@ -11,10 +12,41 @@ import styles from './styles.module.scss';
 
 const AuctionInformation = ({ garment }) => {
   const history = useSelector(getHistoryByTokenId(garment.id));
-  const options = getAuctionInformationChartOptions(history);
+  const [options, setOptions] = useState(getAuctionInformationChartOptions(history));
+
+  useEffect(() => {
+    setOptions({
+      ...options,
+      chart: {
+        width: calcWidth(window.innerWidth),
+      },
+    });
+    window.onresize = throttle(onResize, 100);
+  }, []);
+
+  const calcWidth = (innerWidth) => {
+    if (innerWidth >= 1440) {
+      return (innerWidth - 85 - 300) / 2 - 120;
+    } else if (innerWidth >= 1200) {
+      return (innerWidth - 85 - 100) / 2 - 120;
+    } else if (innerWidth >= 992) {
+      return innerWidth - 100 - 120;
+    } else {
+      return innerWidth - 40 - 140;
+    }
+  };
+
+  const onResize = (e) => {
+    setOptions({
+      ...options,
+      chart: {
+        width: calcWidth(window.innerWidth),
+      },
+    });
+  };
 
   return (
-    <div className={cn(styles.wrapper, 'animate__animated animate__fadeIn')}>
+    <div className={cn(styles.wrapper)}>
       <div className={styles.chartWrapper}>
         <HighchartsReact highcharts={Highcharts} options={options} />
       </div>

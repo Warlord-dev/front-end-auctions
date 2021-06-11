@@ -3,27 +3,31 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
-const MaterialList = ({ currentClothesInfo }) => {
+const MaterialList = ({ collectionId, currentClothesInfo }) => {
   return (
     <div className={cn(styles.wrapper, 'animate__animated animate__fadeIn')}>
       <p className={styles.titleWrapper}>
         <span className={styles.title}>ESPA Tournament:</span>
-        <span className={styles.titleValue}>Among Us Sheriff Mod</span>
+        <span className={styles.titleValue}>
+          {parseInt(collectionId) < 3 ? 'Among Us Sheriff Mod' : 'Minecraft Bed Wars'}
+        </span>
       </p>
       <div className={styles.gameTable}>
         <div className={styles.header}>
           <span className={styles.col1}>GAME CLASSIFIER</span>
           <span className={styles.col2}>SKIN ID</span>
-          <span className={styles.col3}>HAT ID</span>
+          {parseInt(collectionId) < 3 ? <span className={styles.col3}>HAT ID</span> : null}
         </div>
         <div className={styles.body}>
           <div className={styles.row}>
             <div className={styles.col1}>
-              Among Us Sheriff Mod
+              {parseInt(collectionId) < 3 ? 'Among Us Sheriff Mod' : 'Minecraft Bed Wars'}
               <span>ESPA Tournaments</span>
             </div>
             <span className={styles.col2}>{currentClothesInfo?.skinId}</span>
-            <span className={styles.col3}>{currentClothesInfo?.hatId}</span>
+            {parseInt(collectionId) < 3 ? (
+              <span className={styles.col3}>{currentClothesInfo?.hatId}</span>
+            ) : null}
           </div>
         </div>
       </div>
@@ -35,14 +39,37 @@ const MaterialList = ({ currentClothesInfo }) => {
         </div>
         <div className={styles.body}>
           <div className={styles.row}>
-            <a className={styles.col1} href="https://github.com/Woodi-dev">
-              <img src="/images/githubuser.svg" className={styles.gitUserIcon} />
+            <a
+              className={styles.col1}
+              href={
+                parseInt(collectionId) >= 3
+                  ? 'https://github.com/ad1tya2'
+                  : 'https://github.com/Woodi-dev'
+              }
+            >
+              <img
+                src={
+                  parseInt(collectionId) >= 3 ? '/images/image 247.png' : '/images/githubuser.svg'
+                }
+                className={styles.gitUserIcon}
+              />
               <div className={styles.addressWrapper}>
-                <p className={styles.name}>Woodi-Dev</p>
-                <p className={styles.address}>Woodi#0555</p>
+                <p className={styles.name}>
+                  {parseInt(collectionId) >= 3 ? 'Ad1tya2' : 'Woodi-Dev'}
+                </p>
+                <p className={styles.address}>
+                  {parseInt(collectionId) >= 3 ? 'adi#6789' : 'Woodi#0555'}
+                </p>
               </div>
             </a>
-            <a className={styles.col2} href="https://github.com/Woodi-dev">
+            <a
+              className={styles.col2}
+              href={
+                parseInt(collectionId) >= 3
+                  ? 'https://github.com/ad1tya2'
+                  : 'https://github.com/Woodi-dev'
+              }
+            >
               <img src="/images/github.svg" className={styles.gitIcon} />
             </a>
             <a className={styles.col3} href="https://espa.digitalax.xyz">

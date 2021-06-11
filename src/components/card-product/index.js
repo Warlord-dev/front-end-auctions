@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 import kebabCase from 'lodash.kebabcase';
 import ImportantProductInformation from '@containers/important-product-information';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-import { getDesignerInfoById } from '@selectors/designer.selectors';
+import { getDesignerInfoById, getDesignerInfoByName } from '@selectors/designer.selectors';
 import { getCardProductChartOptions } from '@services/graph.service';
 import { create2KURL } from '@services/imgix.service';
 import { getImageForCardProduct } from '@helpers/photo.helpers';
@@ -21,8 +21,11 @@ import { useTokenInfo } from '@hooks/token.info.hooks';
 import styles from './styles.module.scss';
 
 const CardProduct = ({
+  collectionId,
   history,
   auctionId,
+  auctionIndex,
+  garmentId,
   garment,
   tabIndex,
   className,
@@ -39,28 +42,37 @@ const CardProduct = ({
     return null;
   }
 
-  const tokenInfo = null;
-  const designerInfo = useSelector(getDesignerInfoById(garment.designer));
+  const designerInfo = useSelector(
+    getDesignerInfoByName(
+      tabIndex === 3
+        ? 'Digitalax'
+        : garment.attributes && garment.attributes[0]
+        ? garment.attributes[0].value
+        : '',
+      true,
+    ),
+  );
 
   const [imageUrl, isVideo] = getImageForCardProduct(garment);
-
   return (
     <li className={cn(styles.item, className)}>
-      <Link href={`${PRODUCTS}${auctionId}${tabIndex}`}>
-        <a className={styles.clothesName}>
-          {garment.name ? garment.name : `ID:${garment.id}`}
-        </a>
+      <Link
+        href={`${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`}
+      >
+        <a className={styles.clothesName}>{garment.name ? garment.name : `ID:${garment.id}`}</a>
       </Link>
       <SmallPhotoWithText
         className={styles.designerWrapper}
         id={designerInfo ? kebabCase(designerInfo.designerName) : ''}
         name={designerInfo?.designerName}
-        photo={designerInfo?.designerPhoto}
+        photo={designerInfo?.designerPhoto || ''}
         photoIsLink
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link href={`${PRODUCTS}${auctionId}${tabIndex}`}>
+          <Link
+            href={`${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`}
+          >
             <a className={styles.clothesPhotoWrapper}>
               <span className={cn(styles.garmentTypeWrapper, COLORS[tabIndex])}>
                 <span className={styles.bannerText}>{TABS[tabIndex]}</span>
@@ -76,18 +88,21 @@ const CardProduct = ({
                   isVideo ? (
                     <LazyLoad>
                       <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
-                        <source src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
+                        <source
+                          src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
+                          type="video/mp4"
+                        />
                       </video>
                     </LazyLoad>
                   ) : (
                     <div className={styles.clothesPhotoSubWrapper}>
-                    <Image
-                      className={styles.clothesPhoto}
-                      src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
-                      alt={garment.id}
-                      width={'100%'}
-                      height={'100%'}
-                    />
+                      <Image
+                        className={styles.clothesPhoto}
+                        src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
+                        alt={garment.id}
+                        width={'100%'}
+                        height={'100%'}
+                      />
                     </div>
                   )
                 ) : null)}
@@ -114,7 +129,14 @@ const CardProduct = ({
             </button>
           )}
         </div>
-        <ImportantProductInformation garment={garment} auctionId={auctionId} tabIndex={tabIndex} />
+        <ImportantProductInformation
+          collectionId={collectionId}
+          garment={garment}
+          garmentId={garmentId}
+          auctionIndex={auctionIndex}
+          auctionId={auctionId}
+          tabIndex={tabIndex}
+        />
       </div>
     </li>
   );

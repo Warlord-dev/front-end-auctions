@@ -20,7 +20,14 @@ import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
 
-const CardListDigi = ({ auctions, collections, className, showGraphIds, setShowGraphIds }) => {
+const CardListDigi = ({
+  collectionId,
+  auctions,
+  collections,
+  className,
+  showGraphIds,
+  setShowGraphIds,
+}) => {
   const dropdownOptions = [
     { key: 1, text: 'Highest bid', value: 'highest_bid' },
     { key: 2, text: 'Lowest bid', value: 'lowest_bid' },
@@ -31,7 +38,7 @@ const CardListDigi = ({ auctions, collections, className, showGraphIds, setShowG
   const garmentsById = useSelector(getAllGarmentsById);
   const auctionsIsLoaded = useSelector(getAuctionsIsLoaded);
   const [dropdownActiveItem, setDropdownActiveItem] = useState(
-    localStorage.getItem(STORAGE_SORT_BY)
+    localStorage.getItem(STORAGE_SORT_BY),
   );
 
   switch (dropdownActiveItem) {
@@ -77,9 +84,12 @@ const CardListDigi = ({ auctions, collections, className, showGraphIds, setShowG
               const garment = collection.garments[0];
               return (
                 <CardProductDigi
+                  collectionId={collectionId}
                   key={garment.id}
                   history={historyByTokenId.get(garment.id)}
                   auctionId={collection.garmentAuctionID}
+                  auctionIndex={collection.id}
+                  garmentId={garment.id}
                   garment={garment}
                   showGraphIds={showGraphIds}
                   setShowGraphIds={setShowGraphIds}
@@ -93,9 +103,12 @@ const CardListDigi = ({ auctions, collections, className, showGraphIds, setShowG
               const garment = collection.garments[0];
               return (
                 <CardProductDigi
+                  collectionId={collectionId}
                   key={garment.id}
                   history={historyByTokenId.get(garment.id)}
                   auctionId={collection.garmentAuctionID}
+                  auctionIndex={collection.id}
+                  garmentId={garment.id}
                   garment={garment}
                   showGraphIds={showGraphIds}
                   setShowGraphIds={setShowGraphIds}

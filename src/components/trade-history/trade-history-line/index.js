@@ -41,7 +41,7 @@ const TradeHistoryLine = ({
       {isPaidWithMona ? (
         <div>
           <span className={styles.priceEth}>{Math.round(priceMona * 10000) / 10000.0} MONA</span>
-          <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
+          <span className={styles.priceUsd}>(${getPriceUsd(priceMona * monaPerEth)})</span>
           <span> - {getDefaultText(eventName)}</span>
         </div>
       ) : (

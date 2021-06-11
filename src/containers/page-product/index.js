@@ -5,9 +5,12 @@ import Trade from './trade';
 import styles from './styles.module.scss';
 
 const PageProduct = ({
+  collectionId,
   clothesId,
   tabIndex,
+  auctionIndex,
   designerId,
+  auctionId,
   currentCollections,
   currentMarketplaceOffers,
 }) => {
@@ -19,14 +22,16 @@ const PageProduct = ({
   return (
     <div className={styles.wrapper}>
       <ProductDescription
+        collectionId={collectionId}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
+        auctionIndex={auctionIndex}
         clothesId={clothesId}
         designerId={designerId}
         currentCollections={currentCollections}
         currentMarketplaceOffers={currentMarketplaceOffers}
       />
-      <Trade clothesIds={[clothesId]} activeTab={activeTab} />
+      <Trade collectionId={collectionId} clothesIds={[auctionId]} activeTab={activeTab} />
     </div>
   );
 };
