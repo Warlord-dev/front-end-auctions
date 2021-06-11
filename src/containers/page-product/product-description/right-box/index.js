@@ -144,6 +144,14 @@ const RightBox = ({
 
   const expirationDate = auction ? auction.endTime * 1000 : 0;
 
+  const getTotalAmount = () => {
+    if (activeTab === 2) {
+      return 128;
+    } else if (activeTab === 1) {
+      return 64;
+    }
+  };
+
   return (
     <div id="product-details" className={cn('animate__animated animate__fadeIn', styles.fullWidth)}>
       <h2 className={styles.title}>{currentClothesInfo?.clothesName}</h2>
@@ -179,15 +187,14 @@ const RightBox = ({
             <span className={styles.priceMono}>{currentCounts.basePrice / 10 ** 18} $MONA</span>
           </p>
           <p className={styles.countInfo}>
-            {currentCounts.sold > currentCounts.total ? currentCounts.total : currentCounts.sold} of{' '}
-            {currentCounts.total}
+            {currentCounts.sold} of {getTotalAmount()}
           </p>
           <div className={styles.buttons}>
             <Button
               onClick={() => handleClickBuy()}
               className={styles.button}
               background="black"
-              isDisabled={currentCounts.sold === currentCounts.total}
+              isDisabled={currentCounts.sold === getTotalAmount()}
             >
               <span className={styles.buttonText}>
                 {currentCounts.sold === currentCounts.total ? 'Sold Out' : 'Buy Now'}

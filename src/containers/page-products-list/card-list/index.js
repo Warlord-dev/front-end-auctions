@@ -98,7 +98,6 @@ const CardList = ({
           .filter((collection) => collection.rarity === SEMI_RARE_RARITY)
           .map((collection) => {
             const garment = collection.garments[0];
-            console.log({ garment });
             if (garment?.name.includes('DIGI Bundle')) {
               return <></>;
             }
