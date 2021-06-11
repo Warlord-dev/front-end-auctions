@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import styles from './page5960.module.scss';
 import Link from 'next/link';
-import ReactAudioPlayer from 'react-audio-player';
 
 const Page5960 = () => {
   const audioRef = useRef()

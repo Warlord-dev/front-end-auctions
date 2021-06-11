@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import UnlockPage from '../common/UnlockPage';
 import styles from './page8788.module.scss';
 
 const Page8788 = () => {
+  const ref1 = useRef()
+  const ref2 = useRef()
+  const [isPlaying1, setIsPlaying1] = useState(false)
+  const [isPlaying2, setIsPlaying2] = useState(false)
+  const playVideo1 = () => {
+    if(isPlaying1) {
+      ref1.current.pause();
+      setIsPlaying1(false)
+    } else {
+      ref1.current.play();
+      setIsPlaying1(true)
+    }
+  }
+  const playVideo2 = () => {
+    if(isPlaying2) {
+      ref2.current.pause();
+      setIsPlaying2(false)
+    } else {
+      ref2.current.play();
+      setIsPlaying2(true)
+    }
+  }
     return (
       <div className={styles.wrapper}>
       <img src="./magazine/1/87_88/image1.png" className={styles.image1} />
@@ -15,17 +37,19 @@ const Page8788 = () => {
       <img src="./magazine/1/87_88/image8.png" className={styles.image6} />
       <div className={styles.image7}>
         <div className={styles.image9}>
-        <video className={styles.image8} muted loop autoPlay>
+        <video ref={ref1} className={styles.image8} muted loop>
           <source src="./magazine/1/87_88/video1.MOV" type="video/mp4" />
         </video>
         </div>
+        <button onClick={()=>{playVideo1()}}><img src={`./magazine/1/87_88/${isPlaying1 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>
       </div>
       <div className={styles.image10}>
         <div className={styles.image11}>
-        <video className={styles.image12} muted loop autoPlay>
+        <video ref={ref2} className={styles.image12} muted loop>
           <source src="./magazine/1/87_88/video2.MOV" type="video/mp4" />
         </video>
         </div>
+        <button onClick={()=>{playVideo2()}}><img src={`./magazine/1/87_88/${isPlaying1 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>
       </div>
       <div className={styles.image13}>
       </div>
