@@ -56,7 +56,7 @@ const Page6566 = () => {
         }}
       >
         {
-          <img src={`./magazine/1/65_66/${isPlayingAudio2 ? 'image3' : 'image10'}.png`} className="w-full h-full"  /> 
+          <img src={`./magazine/1/65_66/${isPlayingAudio2 ? 'image10' : 'image3'}.png`} className="w-full h-full"  /> 
         }
       </button>
       <Link href="https://soundcloud.com/heapons/witch-encounter-see-me-now"><a>
