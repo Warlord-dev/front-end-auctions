@@ -108,6 +108,22 @@ const CardProduct = ({
                     </div>
                   )
                 ) : null)}
+              {collectionId === '1' && !garment.id ? (
+                <LazyLoad>
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    className={styles.clothesPhoto}
+                    key={garment.animation_url}
+                  >
+                    <source
+                      src={garment.animation_url.replace('gateway.pinata', 'digitalax.mypinata')}
+                      type="video/mp4"
+                    />
+                  </video>
+                </LazyLoad>
+              ) : null}
             </a>
           </Link>
           {isOpen && (

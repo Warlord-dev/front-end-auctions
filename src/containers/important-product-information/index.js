@@ -150,7 +150,9 @@ const ImportantProductInformation = ({
         .sort((a, b) => b.timestamp - a.timestamp)
     : [];
   let priceEth = garment.primarySalePrice / 10 ** 18;
-  if (collectionId === '3') {
+  if (tabIndex === 0) {
+    priceEth = convertToEth(auction?.topBid || 0);
+  } else if (collectionId === '3') {
     if (collection?.rarity === 'Common') priceEth = 0.015;
     else priceEth = 0.45;
   }
@@ -258,8 +260,8 @@ const ImportantProductInformation = ({
     >
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{priceEth} $MONA</span>
-          <span className={styles.priceUsd}>(${getPriceUsd(priceEth * monaPerEth)})</span>
+          <span className={styles.priceEth}>{priceEth || 0} $MONA</span>
+          <span className={styles.priceUsd}>(${getPriceUsd((priceEth || 0) * monaPerEth)})</span>
         </p>
         {collection?.garments && (
           <p>
