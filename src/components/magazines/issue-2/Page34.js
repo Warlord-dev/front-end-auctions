@@ -1,118 +1,175 @@
-import React from 'react'
-import styles from './page34.module.scss'
+import React from 'react';
+import styles from './page34.module.scss';
 
 const Page34 = () => {
   return (
     <div className={styles.wrapper}>
-      <img className={styles.paintImage} src='./magazine/1/images/pINT 2.png' />
-      <h1>
-        Stay <span style={{color: 'white'}}>Hungry. Sta</span>y Foolish, Continued.
-      </h1>
+      <img className={styles.paintImage} src="./magazine/2/images/03_04_left.png" />
+      <h1>Reclaiming the Delta.</h1>
       <p className={styles.content}>
-        In many ways, it is easy to come into a new market, or at least look at it from the outside, 
-        and short it for what seems lacking when you start from a false premise. 
-        There is substantially less risk in placing the safe bet and adopting a conventional view that mocks or diminishes any genuine risk taking pioneers. 
-        But, the truth is, that even the least or the most off target results gained from a more deliberate 
-        and discerning effort at exploring the uncharted areas of a field have more value than the hot takes of paradigmatic short sellers. 
-        There are times when a well placed risk transforms every constraint that governs our lives. Grand pronouncements about humanity aside, 
-        we ourselves are often far too unkind to the dreamers, the risk takers and the crazy ones. We fear loss, isolation, rejection, 
-        and the chance we will appear foolish, far too often. And yet, courage is easier to say than to live. The foolish need friends, also, 
-        if we are hungry enough to create the new. 
-        <br/><br/>
-        This is after all why we are here. The metaverse is little more than the connections between us and the full expanse of human activity, 
-        given form and substance. It turns out the missing piece for the evolution of the internet into a truly accessible, user owned, co-created, 
-        global<br/> meta-network is a mix of the tangible infrastructure provided by a distributed digital record, 
-        and the more intrinsic courage to go beyond what most of our peers believe is socially acceptable, profitable, or even possible.
-        <br/><br/>
-        All too often we allow the imposition of constraints on what we can and can’t do and 
-        the inflammation of fears actively stoked by gatekeepers who have gained their positions by some arbitrary means, 
-        and fight like hell to protect themselves from anyone else knocking them out of that role. 
-        Letting accolades, certificates and acceptance from gatekeepers dictate our futures is hard to break free from, 
-        but never actually worth settling for. In my own life it wasn’t easy to take the leap and drop out of Mechanical and Space Engineering school—  
-        a program that had come to define a lot of my greatest aspirations. 
-        But, what I realized is that these aspirations would not be achieved through a certificate on paper, or, through appeasing any system of gatekeepers. 
-        <br/><br/>
-        I designed a majority of the pages in DigiFizzy myself, in the hope that you too might gain just enough of what you need to take a similar leap. 
-        Not everyone can become a great creator; but, a great creator can come from anywhere. And a metaverse built on web3 truly enables that. 
+        Why do we accept things as they are?
+        <br />
+        <br />
+        In many ways this is a loaded question with a multitude of reasonable and potentially valid
+        responses (in some realities). For the majority of us, for a large chunk of our lives, if
+        not all of it, we are continually told that things are the way they are because that’s just
+        how it works. We are told that the system that we know exists to maintain order, keep
+        everything in good check, and ensure that each of us can lead happy, healthy, and
+        conventionally lucrative lives. We are made to feel that the path that is given to us is the
+        correct and responsible path to follow, and to question it will only lead to the complete
+        dissipation of any potential energy that we put into hypothesising some unnarratable
+        resolve, remaining largely irrelevant as the system persists unperterbed.
+        <br />
+        <br />
+        Yet, that is all but a completely false premise.
+        <br />
+        <br />
+        Have you ever stopped to really ask whether you could get a better life? I’m sure most of us
+        have from time to time. But, converting these ambitions into a tangible reality in a way
+        that doesn’t fabricate large asymmetric concavity and downside risk against our favor is
+        almost impossible with the way things currently stand. Attempting to break from the “normal”
+        comes with a highly probable given that we will confer a free option to those that are
+        preserving the system in the first place. We put skin in the game only to increase the
+        asymmetry between both the upside and downside that we will gain or lose against those that
+        have been granted by the system the means to be able to transfer their risk onto us.
+        <br />
+        <br />
+        So, how do we begin to reclaim this delta, increase our own redundancy and exponentially
+        multiply our optionality for maximising each of our own potentialities? Well, web3, in its
+        true form, is an absolutely comprehensive key to this fatigued hellish lock, and, even more
+        specifically, that too of real DAOs. Decentralisated coordination and collectively aligned
+        incentives around governance, actions & motives is a principle initiative for crafting a
+        dynamic system that ensures that anyone that puts in the time and effort in adherence to the
+        integrity of the DAOs purpose has a clear roadmap for leveling up and seeing the upside they
+        deserve; and for anyone that doesn’t, it’s the fair reverse.
+        <br />
+        <br />
+        It’s about overcoming the central illusion that we don’t have the ability to really control
+        our lives, and collectively coming to the essential base realisation that what we create
+        outside of the system surpasses that of anything that might seem sincere from accepting
+        things as they are and just operating for the sake of it. Reclaiming our positive delta is
+        possible, but more importantly, essential.
       </p>
-      <div className={styles.emmaName}>
-        - Emma-Jane MacKinnon-Lee
-      </div>
-      <img className={styles.backgroundImage} src='./magazine/1/images/ezgif-frame-038_auto_x2 1.jpg' />
-      <h2>
-        contributors
-      </h2>
+      <div className={styles.emmaName}>- Emma-Jane MacKinnon-Lee</div>
+      <img className={styles.backgroundImage} src="./magazine/2/images/03_04_right.png" />
+      <h2>contributors</h2>
       <h3 className={styles.content2}>
-        Emma-Jane MacKinnon-Lee<br />
-        Isramae Visales<br />
+        Emma-Jane MacKinnon-Lee
+        <br />
+        Isramae Visales
+        <br />
         Peezy R<br />
-        Victor Wiebe<br />
-        Valentina Gomez<br />
-        Haruto<br />
-        Cameron (Ares)<br />
+        <br />
+        Haruto Inoue
+        <br />
+        Cameron Sato
+        <br />
+        Victor Wiebe
+        <br />
+        Gemma Asedilla
       </h3>
       <h3 className={styles.content3}>
-        Stan McLygin<br />
-        Lad<br />
-        Jason Kende<br />
-        Jason Howard<br />
-        John Jacinto<br />
-        Glitch Faced King<br />
-        James Lin<br />
+        Stan McLygin
+        <br />
+        Lad
+        <br />
+        Micha Almeda
+        <br />
+        Glitch Faced King
+        <br />
+        James Lin
+        <br />
+        Glitch Faced King
+        <br />
+        Eric Song
+        <br />
+        Aditya
+        <br />
       </h3>
       <h3 className={styles.content4}>
-        Robotto Studio<br />
-        Rudeolph<br />
-        Blade Runway<br />
-        Chaimholtjer<br />
-        Kevin Owocki<br />
-        Gemma Asedilla<br />
+        Robotto Studio
+        <br />
+        Pri Desai
+        <br />
+        Ana Rivera
+        <br />
+        Rafi 0x
+        <br />
+        Dhruv Gupta
+        <br />
+        Rozahviy
+        <br />
       </h3>
       <h3 className={styles.content5}>
-        Erick Stow<br />
-        Matthew Chaim<br />
-        Brian Benni<br />
-        Gregory Gordon<br />
-        Tenshi Girl<br />
-        FlowersWithPowers<br />
-        Blade Runway<br />
+        dxDAO
+        <br />
+        Jeremy Stern
+        <br />
+        Heapons
+        <br />
+        Arjay Soul
+        <br />
+        Elijah Thurston
+        <br />
+        Retlagem
+        <br />
       </h3>
       <h3 className={styles.content6}>
-        Aditya<br />
-        Charbakd<br />
-        Villa Karolina<br />
-        Domingo Bette Encour<br />
-        Future Creators Club<br />
-        Lawrence<br />
+        Charbakd
+        <br />
+        FaunaDB
+        <br />
+        Bianca Graulau
+        <br />
+        Maria Ruano
+        <br />
+        Michael Mckain
+        <br />
+        Soulyasa
+        <br />
       </h3>
       <h3 className={styles.content7}>
-        HVDSON<br />
-        Jenil Thakker<br />
-        Ravi Singh<br />
-        Lorena Bello<br />
-        Rafi 0x<br />
-        Yu<br />
-        Alyona Briukhanova<br />
+        <br />
+        Alexander Kurmanin
+        <br />
+        Blade Runway
+        <br />
+        Burak Dahan
+        <br />
+        Rudeolph
+        <br />
+        YeKaterina Burmatnova
+        <br />
       </h3>
       <h3 className={styles.content8}>
-        Xenotech<br />
-        Pixls<br />
-        Harrison Kugler<br />
-        Cleora<br />
-        HYPERREAALIYAH<br />
-        Singe
+        <br />
+        Serah reikka
+        <br />
+        Aaron Kaufman
+        <br />
+        DITA
+        <br />
+        ABigNeonGlitter
+        <br />
+        Ica & Kostika
+        <br />
+        Kenneth Eze
       </h3>
       <h3 className={styles.content9}>
-        Micha Almeda<br />
-        Stephy Fung<br />
-        Miriam McGovern<br />
-        EzinCrypto<br />
-        Rizzle<br />
-        Annissa<br />
-        YeKaterina Burmatnova 
+        Domingo Bette Encour
+        <br />
+        Jessica Schott
+        <br />
+        BBLUNDERR
+        <br />
+        Ahu Agu
+        <br />
+        McMistrzYT
+        <br />
+        Shiu Studio
       </h3>
     </div>
-  )
-}
+  );
+};
 
-export default Page34
+export default Page34;

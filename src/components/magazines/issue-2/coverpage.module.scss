@@ -2,88 +2,116 @@
 
 .wrapper {
   @include magazineWrapper();
-  h1 {
+  
+  .deco {
     position: absolute;
-    width: 47px;
-    height: 576px;
-    left: 36px;
-    top: 534px;
-    
-    font-family: Fresca;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 120px;
-    line-height: 80%;
-    /* or 96px */
-    
-    
-    color: #FFFFFF;    
-  }
+    width: 50px;
+    height: 672px;
+    left: 42px;
+    top: 260px;
 
-  h2 {  
     font-family: Corben;
+    word-break: break-all;
     font-style: normal;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 60px;
     line-height: 80%;
-    /* or 56px */
+    color: #00EA09;
+    text-shadow: -3px 0 #FF007A, 0 3px #FF007A, 3px 0 #FF007A, 0 -3px #FF007A;
+  }
+
+  .aimusic {
+    position: absolute;
+    width: 50px;
+    height: 320px;
+    left: 113px;
+    top: 355px;
+
+    font-family: Exodus Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 80%;
+    text-align: center;
+
+    color: #FFFFFF;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+  }
+
+  .en {
+    position: absolute;
+    width: 50px;
+    height: 240px;
+    left: 113px;
+    top: 692px;
+    word-break: break-all;
+
+    font-family: Exodus Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 80%;
     color: #FFFFFF;
 
-    &.india {
-      position: absolute;
-      width: 50px;
-      height: 280px;
-      left: 117px;
-      top: 693px;
-    }
-
-    &.forweb3 {
-      position: absolute;
-      width: 358px;
-      height: 112px;
-      left: 116px;
-      top: 985px;
-    }
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   }
 
-  h3 {
+  .text1 {
     position: absolute;
-    width: 708px;
-    height: 98px;
-    left: 33px;
-    top: 1130px;
-    
-    font-family: 'Burst My Bubble';
-    font-size: 80px;
-    line-height: 70px;
+    width: 379px;
+    height: 216px;
+    left: 42px;
+    top: 992px;
+
+    font-family: Ander Hedge;
+    font-style: normal;
     font-weight: normal;
-  
-    color: #FFFFFF;    
+    font-size: 80px;
+    line-height: 60px;
+    color: #FFFFFF;
   }
 
-  h4 {
+  .text2 {
     position: absolute;
-    width: 478px;
-    height: 60px;
-    left: 95px;
-    top: 1253px;
-    
-    font-family: Carme;
-    font-size: 50px;
-    line-height: 120.53%;
-    text-align: center;
-    
-    color: #FFFFFF;    
+    width: 379px;
+    height: 120px;
+    left: 341px;
+    top: 991px;
+
+    font-family: KoHo;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    /* or 100% */
+
+
+    color: #FFFFFF;
   }
 
-  h5 {
+  .text3 {
     position: absolute;
-    width: 602px;
+    width: 738px;
+    height: 98px;
+    left: 42px;
+    top: 1191px;
+
+    font-family: Brawler;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 50px;
+    color: #FF0000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 732px;
     height: 96px;
-    left: 33px;
-    top: 1307px;
-    
-    font-family: Neon Lights;
+    left: 42px;
+    top: 1306px;
+
+    font-family: Bungee Shade;
     font-style: normal;
     font-weight: normal;
     font-size: 80px;
@@ -91,95 +119,138 @@
     color: #FFFFFF;
   }
 
-  h6 {
+  .text5 {
     position: absolute;
-    width: 469px;
-    height: 84px;
-    left: 33px;
-    top: 1396px;
-    
+    width: 738px;
+    height: 54px;
+    left: 42px;
+    top: 1407px;
+
     font-family: Cinzel;
     font-style: normal;
     font-weight: 900;
-    font-size: 70px;
-    line-height: 120.53%;
-    
-    color: #FFFFFF;    
-  }
-  
-  .digifizzy1 {
-    position: absolute;
-    width: 47px;
-    height: 648px;
-    left: 749px;
-    top: 748px;
-    
-    font-family: Internal Rainbows;
-    font-size: 60px;
-    line-height: 120.53%;   
-    color: #FF0505;    
-  }
-
-  .digifizzy2 {
-    position: absolute;
-    width: 47px;
-    height: 648px;
-    left: 755px;
-    top: 748px;
-    
-    font-family: Internal Rainbows;
-    font-size: 60px;
-    line-height: 120.53%;
-    color: #05FF69;
-    
-  }
-
-  .digifizzy3 {
-    position: absolute;
-    width: 47px;
-    height: 648px;
-    left: 764px;
-    top: 748px;
-    
-    font-family: Internal Rainbows;
-    font-size: 60px;
+    font-size: 45px;
     line-height: 120.53%;
     color: #FFFFFF;
   }
 
-  .issue1 {
+  .text6 {
+    position: absolute;
+    width: 47px;
+    height: 648px;
+    left: 815px;
+    top: 825px;
+
+    font-family: Internal Rainbows;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    /* or 72px */
+
+
+    color: #EBFF07;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 47px;
+    height: 648px;
+    left: 821px;
+    top: 825px;
+
+    font-family: Internal Rainbows;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    /* or 72px */
+
+
+    color: #052DFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 47px;
+    height: 648px;
+    left: 830px;
+    top: 825px;
+
+    font-family: Internal Rainbows;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    /* or 72px */
+
+
+    color: #BF6FFF;
+  }
+
+  .text9 {
     position: absolute;
     width: 13px;
     height: 288px;
-    left: 830px;
-    top: 1091px;
-    word-wrap: break-word;
+    left: 894px;
+    top: 1168px;
 
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 120.53%;
+    /* or 36px */
+
+    word-break: break-all;
     text-align: center;
-    color: #FF0000;
+
+    color: #000000;
+
     text-shadow: 0px 4px 4px rgba(241, 241, 241, 0.25), 0px 4px 4px rgba(211, 211, 211, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25);
   }
 
-  .issue2 {
+  .text10 {
     position: absolute;
     width: 13px;
     height: 288px;
-    left: 833px;
-    top: 1091px;
-    word-wrap: break-word;
-    
+    left: 899px;
+    top: 1168px;
+
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 120.53%;
+    /* or 36px */
+
+    word-break: break-all;
     text-align: center;
-    color: #FF0000;
-    text-shadow: 0px 4px 4px rgba(241, 241, 241, 0.25), 0px 4px 4px rgba(211, 211, 211, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25);    
+
+    color: #33DAFF;
+
+    text-shadow: 0px 4px 4px rgba(241, 241, 241, 0.25), 0px 4px 4px rgba(211, 211, 211, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25);
+  }
+
+  .text11 {
+    position: absolute;
+    width: 516.66px;
+    height: 288px;
+    left: 311.09px;
+    top: 41px;
+
+    font-family: Julietta Messie Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 120.53%;
+    /* or 96px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    transform: rotate(5deg);
+    text-shadow: -5px 0 #AD00FF, 0 5px #AD00FF, 5px 0 #AD00FF, 0 -5px #AD00FF;
   }
 }

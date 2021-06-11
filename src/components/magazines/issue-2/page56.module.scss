@@ -10,29 +10,8 @@
   img {
     position: absolute;
     width: 1920px;
-    height: 1536px;
+    height: 100%;
     left: 0px;
-    top: -19px;
-  }
-
-  a {
-    position: absolute;
-    width: 231px;
-    height: 66px;
-    left: 405px;
-    top: 1385px;
-
-    font-family: Gayathri;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 15px;
-    color: #0044F3; 
-    span {
-      text-decoration: underline;
-    }
-    &:hover {
-      color: #0044F3;
-    }
+    top: 0;
   }
 }

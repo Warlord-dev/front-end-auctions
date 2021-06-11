@@ -4,10 +4,9 @@ import styles from './page4142.module.scss';
 const Page4142 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/41_42/41_42.png" />
-      <a href='https://Linktr.ee/chaimholtjer' target='_blank'>Art by Chaimholtjer<br /><span>Linktr.ee/chaimholtjer</span></a>
+      <img src="./magazine/2/images/41_42.png" className={styles.image} />
     </div>
   );
 };
 
-export default Page4142
+export default Page4142;
