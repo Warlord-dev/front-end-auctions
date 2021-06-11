@@ -880,7 +880,7 @@ class MyDocument extends Document {
 
             @font-face {
               font-family: "Ander Hedge";
-              src: url("./fonts/Ander Hedge.ttf);
+              src: url("./fonts/Ander Hedge.ttf");
               font-weight: 400;
             }
 
@@ -897,7 +897,7 @@ class MyDocument extends Document {
             }
 
             @font-face {
-              font-family: "BungeeShade";
+              font-family: "Bungee Shade";
               src: url("./fonts/BungeeShade-Regular.ttf");
               font-weight: 400;
             }
@@ -929,6 +929,150 @@ class MyDocument extends Document {
             @font-face {
               font-family: "Chinese Dragon";
               src: url("./fonts/ChineseDragon.woff");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Mansalva";
+              src: url("./fonts/Mansalva-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Arvo";
+              src: url("./fonts/Arvo-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Pacifico";
+              src: url("./fonts/Pacifico-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Baloo Tammudu";
+              src: url("./fonts/BalooTammudu2-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Miltonian";
+              src: url("./fonts/Miltonian-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Big Shoulders Text";
+              src: url("./fonts/BigShouldersText-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Walter Turncoat";
+              src: url("./fonts/WalterTurncoat-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Trochut";
+              src: url("./fonts/Trochut-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Africa";
+              src: url("./fonts/Africa.woff");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Grenze";
+              src: url("./fonts/Grenze-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Bayon";
+              src: url("./fonts/Bayon-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Hanuman";
+              src: url("./fonts/Hanuman-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "MixGiants";
+              src: url("./fonts/MixGiants.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Dispence";
+              src: url("./fonts/Dispence.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Jungle";
+              src: url("./fonts/Jungle DF.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "PAC LIBERTAS";
+              src: url("./fonts/PAC LIBERTAS font.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Saphira DEMO";
+              src: url("./fonts/Saphira DEMO.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Public Secret DEMO";
+              src: url("./fonts/Public Secret DEMO.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Hello Avocado";
+              src: url("./fonts/Hello Avocado.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Doctor Glitch";
+              src: url("./fonts/Doctor Glitch.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Poppins";
+              src: url("./fonts/Poppins-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Poller One";
+              src: url("./fonts/PollerOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Post No Bills Colombo SemiBold";
+              src: url("./fonts/PostNoBillsColombo-Regular.woff");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Roboto";
+              src: url("./fonts/Roboto-Regular.ttf");
               font-weight: 400;
             }
           `,

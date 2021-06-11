@@ -1,67 +1,198 @@
-import React from 'react'
-import styles from './page1516.module.scss'
+import React, { useState, useRef } from 'react';
+import styles from './page1516.module.scss';
 
 const Page1516 = () => {
+  const [play1, setPlay1] = useState(false);
+  const [play2, setPlay2] = useState(false);
+  const [play3, setPlay3] = useState(false);
+  const [play4, setPlay4] = useState(false);
+  const [play5, setPlay5] = useState(false);
+  const [play6, setPlay6] = useState(false);
+  const audio1 = useRef();
+  const audio2 = useRef();
+  const audio3 = useRef();
+  const audio4 = useRef();
+  const audio5 = useRef();
+  const audio6 = useRef();
+
   return (
     <div className={styles.wrapper}>
-      <img src='./magazine/1/images/oonboarding-the-99-background 1.jpg' className={styles.backImage}/>
-      <img src='./magazine/1/images/Group 1146.png' className={styles.dollarSign}/>
-      <div className={styles.artby}>
-        Art by Robotto Studio.
+      <img src="./magazine/2/images/15_16.png" className={styles.back} />
+      <div className={styles.leftSideFrame}></div>
+      <div className={[styles.animationFrame, styles.leftSideImageWrapper].join(' ')}>
+        <img src="./magazine/2/images/howtogetintext 2.png" />
+        <img src="./magazine/2/images/howtogetintext 2.png" />
+        <img src="./magazine/2/images/howtogetintext 2.png" />
+        <img src="./magazine/2/images/howtogetintext 2.png" />
       </div>
-      <div className={styles.lawrence}>
-        Lawrence.
+      <div className={styles.rightSideFrame}></div>
+      <div className={[styles.animationFrame, styles.rightSideImageWrapper].join(' ')}>
+        <img src="./magazine/2/images/howtogetintext 1.png" />
+        <img src="./magazine/2/images/howtogetintext 1.png" />
+        <img src="./magazine/2/images/howtogetintext 1.png" />
+        <img src="./magazine/2/images/howtogetintext 1.png" />
       </div>
-      <h1 className={styles.shadow1}>
-        If life is a game, it’s not played under fair rules.
-      </h1>
-      <h1 className={styles.shadow2}>
-        If life is a game, it’s not played under fair rules.
-      </h1>
-      <h1 className={styles.shadow3}>
-        If life is a game, it’s not played under fair rules.
-      </h1>
-      <h1>
-        If life is a game, it’s not played under fair rules.
-      </h1>
-      <p className={styles.section1}>
-        If life is a game, it’s not played under fair rules. 
-        The rich are getting more while the struggling ones continue to feel the brunt of the suffering. 
-        People who argue that perseverance is the key out of poverty do not understand that sometimes, 
-        the cards are stacked unfavorably with no easy way out. It’s not that the underprivileged are lazy. 
-        Instead, the well-off have a considerable head start.
-      </p>
-      <p className={styles.section2}>
-        Even before the COVID-19 pandemic, the divide was already prominent. 
-        The 2020 World Global Inequality Data by the World Inequality Lab highlights that 
-        Latin America and the Middle East are the most imbalanced regions for wealth distribution. 
-        In these areas, the top ten wealthiest individuals make up 54 and 56 percent of the average national income, respectively.
-      </p>
-      <p className={styles.section3}>
-        In Africa, the top ten percent own half of the national income. 
-        However, the divide is more prominent in nations that experienced European colonization and racial injustice, 
-        partly because of outdated taxation systems and the absence of land reform. 
-        The Asian region saw the wealthiest possess close to 60 percent of income share, especially in India, 
-        wherein the difference in classes emerge even more.
-      </p>
+      <img src="./magazine/2/images/15_16_headphone.png" className={styles.headPhone} />
+      <img src="./magazine/2/images/15_16_record1.png" className={styles.record1} />
 
-      <img src='./magazine/1/images/moshed-05-01-16-16-24.jpg' className={styles.backImage2}/>
-      <p className={styles.section4}>
-        Finally, the United States displayed a rapid rise in income for the rich. In 1980, the top ten wealthiest Americans compensated for just 34 percent of the country’s wealth. But that number jumps to 45 percent in 2019. The fortunes of the top five US billionaires grew by 26%, or $102 billion, from April to June 2020. Overall, the combined wealth of the richest grew dramatically in the same period.
-        <br /><br />
-        Yet, as alarming as those figures are, the pandemic gave those who have less a slower recovery curve. Blue-collar workers lost their capacity to earn due to the social distancing protocols. The tourism and hospitality industries received a devastating blow to their livelihood due to a nosedive in tourist activities. Even those who work in the health sector cannot engage in a second job because they must render long hours. Worse, they might get sick, which eliminates their capacity to make a living.
-        <br /><br />
-        Unsurprisingly, some Americans had no choice but to seek assistance from food lines for the first time in their lives. Those who live in impoverished communities suffer even more. It is during these trying times that Universal Basic Income can be the lifeline that the helpless need. But even that ideal situation of giving equal money comes with several caveats due to existing bureaucracies.
-        <br /><br />
-        <span>Benefits and Issues with UBI distribution</span><br />
-        The concept of Universal Basic Income isn’t new anymore. Personalities such as Thomas Paine, Martin Luther King Jr., and Stephen Hawking support this initiative. But it came into the limelight once more when former Democratic presidential candidate Andrew Yang became a staunch advocate of the approach. As an overview, individuals get a fixed amount regardless of age, profession, or socioeconomic status. The money is provided regularly (usually monthly) and directly to a person’s bank account.
-        <br /><br />
-        Inequality and poverty are two pressing matters that UBI aims to address. Instead of giving food stamps, the government doles out cash to give people the ability to buy necessities. However, even a slight financial windfall of a monthly monetary reward will provide people with more buying power or invest in initiatives to help them reach their dreams.
-        <br /><br />
-        Several workers are held prisoner in the work cycle that they must perform to provide even if they do not necessarily enjoy the task. With their basic needs covered through UBI, they can devote time to improve a craft or start a business that can provide long-term financial freedom. Having a basic income across the board can also reduce crime rates, improve healthcare benefits, and elevate educational attainment. Even the housing sector will experience an uptick due to increased occupancy.
-      </p>
+      <img
+        src={`./magazine/2/images/15_16_${!play5 ? 'play' : 'pause'}2.png`}
+        className={styles.play5}
+        onClick={() => {
+          setPlay5(!play5);
+          if (!play5) {
+            audio5.current.play();
+          } else {
+            audio5.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} controls ref={audio5}>
+        <source src="./magazine/2/images/15_16_play5.mp3" type="audio/mp3" />
+      </audio>
+
+      <a href="https://beta.catalog.works/">
+        <img src="./magazine/2/images/15_16_logo.png" className={styles.logo} />
+      </a>
+      <div className={styles.textDiv1} />
+      <div className={styles.text1}>
+        Jeremy Stern and Mike McCain met in college at Northeastern in Boston and were living
+        together for a while, both making music or producing it in some form or another, when they
+        started to think more about the problems in the music industry; from convoluted ownership
+        structures to really weird payment systems and artists just generally not getting their fair
+        share of the pie and not earning the value that they create.
+        <br />
+        <br />
+        So, from there they started experimenting with a music web three app called loft radio— a 24
+        /7 chill beats radio, where you could tip the currently playing artists in small increments
+        of Ether, and 100% of each tip would go directly to the artists wallet. However, when it
+        came to scaling this up, the model wasn’t really right. So, the pair started looking more
+        into social tokens and the potential for artists to be able to launch their own currency,
+        which could be used kind of like rewards points, but also with different staking mechanisms
+        etc. However, the market seemed still too early. So, this is when the Catalog that we know
+        of today was formed; an NFT platform and marketplace for music artists.
+        <br />
+        <br />
+        The platform itself is still in BETA and advancing in its engineering day by day, where the
+        team has been building ever since initiation. It’s one of the more authentic NFT music
+        platforms out there, that is truly focused on empowering artists directly, not about
+        introducing just another hybrid web2 gatekeeper model through larger studios trying to mold
+        chokepoints, that don’t fit for web3, in this new market.
+        <br />
+        <br />
+        Join their{' '}
+        <a href="https://catalog.community/" target="_blank">
+          discord
+        </a>{' '}
+        to get more involved. It’s a blank canvas for a new world of music ownership.
+      </div>
+      <div className={styles.text2}>Web3 Music Bazaar</div>
+      <div className={styles.text3}>Chatting with the Catalog Team; Jeremy and Mike</div>
+
+      <img src="./magazine/2/images/15_16_vector1.png" className={styles.vector5} />
+      <div className={styles.play6}> CLICK TO LISTEN </div>
+      {/* <audio className={styles.audio} controls ref={audio2}>
+        <source src="./magazine/2/images/15_16_play2.mp3" type="audio/mp3" />
+      </audio> */}
+
+      <img src="./magazine/2/images/15_16_footer.png" className={styles.footer} />
+      <img src="./magazine/2/images/15_16_vector.png" className={styles.vector1} />
+      <img src="./magazine/2/images/15_16_vector.png" className={styles.vector2} />
+      <img src="./magazine/2/images/15_16_vector.png" className={styles.vector3} />
+      <img src="./magazine/2/images/15_16_vector.png" className={styles.vector4} />
+      <a href="https://beta.catalog.works/aer/medina" target="_blank" className={styles.text4}>
+        {' '}
+        Medina | Aer{' '}
+      </a>
+      <a
+        href="https://beta.catalog.works/maelstrom/maalish"
+        target="_blank"
+        className={styles.text5}
+      >
+        {' '}
+        Maalish | Maelstrom{' '}
+      </a>
+      <a
+        href="https://beta.catalog.works/kaanbulak/falling-in-a-dream"
+        target="_blank"
+        className={styles.text6}
+      >
+        {' '}
+        Falling In A Dream | Kaan Bulak{' '}
+      </a>
+      <a
+        href="https://beta.catalog.works/cleareyes/growth-1615254797"
+        target="_blank"
+        className={styles.text7}
+      >
+        {' '}
+        Growth | Clear Eyes{' '}
+      </a>
+      <img
+        src={`./magazine/2/images/15_16_${!play1 ? 'play' : 'pause'}1.png`}
+        className={styles.play1}
+        onClick={() => {
+          setPlay1(!play1);
+          if (!play1) {
+            audio1.current.play();
+          } else {
+            audio1.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} controls ref={audio1}>
+        <source src="./magazine/2/images/15_16_play1.mp3" type="audio/mp3" />
+      </audio>
+
+      <img
+        src={`./magazine/2/images/15_16_${!play2 ? 'play' : 'pause'}1.png`}
+        className={styles.play2}
+        onClick={() => {
+          setPlay2(!play2);
+          if (!play2) {
+            audio2.current.play();
+          } else {
+            audio2.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} controls ref={audio2}>
+        <source src="./magazine/2/images/15_16_play2.mp3" type="audio/mp3" />
+      </audio>
+
+      <img
+        src={`./magazine/2/images/15_16_${!play3 ? 'play' : 'pause'}1.png`}
+        className={styles.play3}
+        onClick={() => {
+          setPlay3(!play3);
+          if (!play3) {
+            audio3.current.play();
+          } else {
+            audio3.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} controls ref={audio3}>
+        <source src="./magazine/2/images/15_16_play3.mp3" type="audio/mp3" />
+      </audio>
+
+      <img
+        src={`./magazine/2/images/15_16_${!play4 ? 'play' : 'pause'}1.png`}
+        className={styles.play4}
+        onClick={() => {
+          setPlay4(!play4);
+          if (!play4) {
+            audio4.current.play();
+          } else {
+            audio4.current.pause();
+          }
+        }}
+      />
+      <audio className={styles.audio} controls ref={audio4}>
+        <source src="./magazine/2/images/15_16_play4.mp3" type="audio/mp3" />
+      </audio>
     </div>
-  )
-}
+  );
+};
 
-export default Page1516
+export default Page1516;

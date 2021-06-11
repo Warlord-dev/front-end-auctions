@@ -1,37 +1,107 @@
-import React from 'react'
-import styles from './page3132.module.scss'
+import React from 'react';
+import styles from './page3132.module.scss';
 
 const Page3132 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='./magazine/1/images/Group 1135.jpg' className={styles.backImage1} />
-      <img src='./magazine/1/images/Rectangle 805.png' className={styles.backImage2} />
-      <p className={styles.section1}>
-        NFTs benefiting brands<br/>
-        NFTs have also become part and parcel of the developing metaverse, and they've definitely hit their stride in terms of popularity in recent months, with artists and celebrities getting in on the buzz as digital items going for tens of millions of dollars at auctions. 
-        <br/><br/>
-        Luxury watchmaker Jacob & Co. partnered with NFT platform ArtGrails to sell the first-ever digital NFT watch, which went for an eye-watering $100,000 from an initial bid price of $5,000. The watch comes with all the necessary regalia, such as a certificate of ownership and a case containing a hard drive with a digital rendering of the luxury watch.
-        <br/><br/>
-        While much of the hype is centered on fashion brands taking advantage of the potentially lucrative marketing opportunities NFTs pose, the underlying technology — the ability to authenticate, verify, and track — is here to stay. There is some serious steak beyond all the sizzle we've been seeing.
-      </p>
-      <p className={styles.section2}>
-        Innovation the new norm<br/>
-        As the fashion industry continues to pivot towards full-on digitalization, innovation has become the new norm. Interoperability is a critical facet of digital fashion, in fashion and in gaming, which are both industries traditionally long been siloed and walled off by the big boys. Nowhere is this more evident than Epic Games CEO Tim Sweeney's crusade against tech giants Apple and Google, and the hullabaloo that led to Nike putting the kibosh on the infamous collaboration between Lil Nas X and MSCHF that led to the creation of Satan Shoes (and their more angelic counterpart, Jesus Shoes). Imagine exerting effort to cancel a fucking shoe.
-        <br/><br/>
-        DIGITALAX is pioneering the first-ever digital fashion NFT platform and interoperable infrastructure across live content environments, seeking to break the silos that exist in fashion and in gaming. Artists and creators can create a module part of a particular garment (such as raw materials, patterns, and textures) as NFTs, which can then be sourced from the DIGITALAX platform to open source on-chain libraries across virtual platforms. Their recent collaboration with Polygon (formerly Matic) is yet another critical development in the adoption of digital fashion by enabling rapid scaling, reducing barriers to participation, making participation accessible for everyone, negligible gas costs, and most importantly, maintaining sustainability as a key catalyst for the entire digital fashion industry.
-      </p>
-      <p className={styles.section3}>
-        Meanwhile, NONHUMAN is a digital fashion agency founded by Dylan Tull, which focuses on creating immersive experiences with artists seeking to push the boundaries on what is and what should never be in digital fashion, leveraging the vast power of XR to create 3D pieces that redefine what we can and can't put on our digital identities in the metaverse.
-        <br/><br/>
-        Conclusion<br/>
-        As Kent Bye, one of the foremost voices in extended reality put it, fashion in virtual worlds has always been huge, and it will only get bigger. And we're seeing that coming to fruition as extended reality develops at a frighteningly accelerated pace. 
-        <br/><br/>
-        After all, the idea of an extended reality — the metaverse, as it were — is inseparable from fashion. Fashion represents our collective aspirations, meant to create an insatiable longing for the unattainable versus the mundane world we live in. Fashion, at its very core, is a fundamental expression of our identities. It's so human. And as we take our identities towards the metaverse, they become digitized, as social media muddles what we construe as tangible and intangible realities, as extended realities increasingly become the norm rather than the exception.
-        <br/><br/>
-        As we constantly blur the line between the physical and virtual world, there is no shortage of actors standing at the forefront of digital fashion, extended reality, and the metaverse. We've barely scratched the surface of what is possible between fashion in the physical realm and the metaverse — and we can’t wait for what the future holds. Fashion in the metaverse? Bring it.
-      </p>
+      <video autoPlay muted loop className={styles.backVideo}>
+        <source src="./magazine/2/images/31_32.mp4" />
+      </video>
+      <video autoPlay muted loop className={styles.backVideo1}>
+        <source src="./magazine/2/images/31_32.mp4" />
+      </video>
+      <div className={styles.text1}>Is Bitcoin greener than what we think?</div>
+      <div className={styles.text2}>
+        When it comes to digital curriencies, especially the two most prominent out there, Bitcoin
+        and Ethereum, we are all far too aware of the critical headlines and contraversies around
+        both of the crypto’s carbon footprint, sustainability and the large energy consumption
+        required in order to keep them operational, where both employ the Proof of Work (PoW)
+        consensus mechanism for securing transcations on the network. PoW relies on computers
+        solving puzzles, which uses electricity, and these puzzles get harder and harder overtime,
+        where as the network grows, the relative rate of new coins mined stays stable. Miners solve
+        these puzzles and are rewarded with new coins. And thus, they get better GPU’s, more
+        powerful setups to remain competitive as the mining pool grows. The cost of attacking
+        Bitcoin rises along with the increase in the computational power and the energy consumed by
+        those mining or securing the network.
+        <br />
+        <br />
+        However, there is more to the story than just flashy headlines and 5,000 word Medium
+        articles deeming the entire crypto ecosystem and everything built around it as an absolute
+        disaster where ecological devastation remains out of control.
+        <br />
+      </div>
+      <div className={styles.text3}>
+        So let’s break down this narrative further, because, after all, the devil is in the details.
+        <br />
+        <br />
+        First off, to set some of the ground context, everything that we do has an impact; the very
+        internet that all of us
+      </div>
+      <div className={styles.text4}>
+        have efficiently integrated within every aspect of what we do is powered by servers needing
+        cooling mechanisms to function properly. And these companies employ thousands of employees
+        travelling to and from work each day to AC equipped office to maintain our precious
+        connectivity. And it’s not just that, every single picture that we save to the cloud or send
+        to our friends, families has a cost associated with it. Every tweet, tiktok, discord server
+        increases each of our carbon footprints. And that’s just
+      </div>
+      <div className={styles.text5}>
+        the beginning; how about travel? Not just our own personal location hopping but that of all
+        of the resoruces that each of us consume; food, apparel, electronics etc. etc. All of it is
+        not local, it usually travels thousands of miles across the continents to get to us.
+        <br />
+        <br />
+        Thus, with this said, it’s not to say that the concerns around cryptocurrency mining
+        consumption are not valid in some respects— in fact, for the better half of the entire
+        industry’s existence it has been a forefront topic that some of the brightest minds have
+        actively spoken up about and starting hashing out varying solutions. No one in the crypto
+        community is trying to hide any of
+      </div>
+      <div className={styles.text6}>
+        the concerns or costs, and in fact, if you speak with an authentic community member they
+        will be more than open to discussing the topic in all of its glory. There are 4-5 years of
+        documented discussions, conferences, deep academic research, and github repositories all on
+        this topic. Ethereum is currently in the live process of migrating to Ethereum 2.0 and Proof
+        of Stake as a huge step environmentally conscious step as the mechanism for securing the
+        network becomes far more energy efficient.
+        <br />
+        <br />
+        Bitcoin, unlike Ethereum, for now, and most probably as long as it continues to operate, is
+        sticking with Proof of Work. However, not all of Bitcoin’s energy consumption translates
+        into the high
+      </div>
+      <div className={styles.text7}>
+        carbon emissions that is so often misrepresented. Much of Bitcoin’s mining uses renewable
+        energy, and, although the exact % of mining leveraging this is not precisely accounted for,
+        it sits somewhere between 39%-70%— which, case in point, is in itself higher than the
+        renewable energy in the US power grid. Miners in China also have taken the same initiative,
+        where a considerable amount use excess energy that would otherwise be wasted in those areas
+        where it can not be exported to city infrastructure.
+      </div>
+      <div className={styles.text8}>
+        Thus, with this said, and taking a step back to look at the bigger picture, perhaps there is
+        a way after all that Bitcoin can continue to operate and actually help take advantage of
+        much more wasted energy than previously thought.
+      </div>
+      <div className={styles.text9}>
+        It’s consumption shouldn’t be ignored and more active and collective steps must be taken,
+        however, perhaps after all, all of the contraversy isn’t so much just solely about the
+        environment. It’s moreso about people being scared of a new revolutionary technology and not
+        taking the proper time, that is required, to fully understand it in all of its complicity.
+        <br />
+        <br />
+        It’s important that we do not mistake the forest for the trees— the situation is not black
+        and white. Bitcoin is so much more than just an energy expenditure. It is the first globally
+        recognised censorship-resistant decentralised digital asset that has ultimately initiated
+        the entirity of the web3 ecosystem as we know of it today— an ecosystem that provides
+        tangible evidence that the broken centralised web2 exploitation is not a framework that any
+        of us have to accept or be forced to live by.
+      </div>
+      <div className={styles.text10}>SUSTAINABILITY PIONEERS</div>
+      <img src="./magazine/2/images/31_32_image.png" className={styles.image1} />
+      <img src="./magazine/2/images/31_32_bitcoin.png" className={styles.image2} />
     </div>
-  )
-}
+  );
+};
 
-export default Page3132
+export default Page3132;

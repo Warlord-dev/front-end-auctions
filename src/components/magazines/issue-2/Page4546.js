@@ -4,112 +4,173 @@ import styles from './page4546.module.scss';
 const Page4546 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/45_46/left.png" className={styles.left} />
-      <img src="./magazine/1/45_46/Group 1191.png" className={styles.right} />
-      <img src="./magazine/1/45_46/mosh_left.png" className={styles.leftMosh} />
-      <div className={styles.firstParagraph} />
-      <div className={styles.firstText}>
-        And, as the internet moves towards an open, trustless, and permissionless model — a prelude
-        to the eventual decentralization of the internet as we know it, one driven by blockchain
-        protocols like Bitcoin and Ethereum — we see the next logical step towards the evolution of
-        the metaverse.
+      <img src="./magazine/2/images/45_46.png" className={styles.back} />
+      <img src="./magazine/2/images/45_46_video.gif" className={styles.video} />
+      <div className={styles.text1}>Peezy r.</div>
+      <div className={styles.text2}>DAOs & Governance</div>
+      <div className={styles.text3}>How SOON ARE DAOs? A primer on decentralized governance.</div>
+      <div className={styles.text4}>
+        For far too long, highly centralized, hierarchical, and hidebound structures have dominated
+        the fabric of every organization — religion, association, corporation, or nonprofit be
+        damned.
         <br />
         <br />
-        An internet that's not bound by the whims and caprices of large, centralized corporations
-        and platform owners like Facebook, Apple, or Google, which store massive amounts of
-        information about you and me that they use to sell us things and influence us for the
-        benefit of their almighty advertisers. All with no seeming consequences for their
-        negligence, misconduct, or wrongdoing.
+        Old habits are hard to break. It's hard to mess with organizational systems that have worked
+        for so long that they're ingrained in our collective psyche — even though traditional
+        hierarchy in corporations has often led to sub-par to mediocre and unsustainable outcomes
+        for employees.
         <br />
         <br />
-        That's not to mention the ever-growing file they build on each of us with every piece of
-        personal information we willingly surrender to them in favor of the value of the services
-        that they provide — subjecting ourselves to draconian terms and conditions that, with one
-        wrong move, can lead to the social media equivalent of damnatio memoriae.
-        <br />
-        <br />
-        We've seen how Facebook, TikTok, and YouTube can Thanos-snap even the most popular of
-        accounts for a single faux pas (or by coordinated mass reporting), whether substantiated or
-        otherwise — taking every photo, video, story, post, or piece of content along with them.
-        Every single hour spent crafting content.
+        Corporate hierarchy is, after all, overrated. But it works, even if the notion of someone
+        being able to tell you what to do with your time just by virtue of getting a bigger paycheck
+        than you seems like complete and total bullshit in this day and age. That's not to mention
+        the unsustainable pace with which corporations require an endless stream of process upon
       </div>
-      <div className={styles.secondParagraph} />
-      <div className={styles.secondText}>
-        But imagine if there was a way to keep every single piece of content you've created
-        regardless of whatever platform you have it on and be able to move it fluently from one 3D
-        environment to another without any technical restraints? What if there was a way to go
-        beyond the walled gardens that prevent connectivity between different content that Big Tech
-        has so skillfully built to lock users into their dystopian ecosystems?
-        <br />
-        <br />
-        Pretty soon, the days of Facebook, Apple, and Google owning every single piece of your
-        digital life will be no longer a thing. Rather, you own your online presence — and
-        everything that goes with it. The emergence of Web3 will change the way we think about the
-        ownership of our digital lives. And NFTs are the key to this new standard of ownership.
-        <br />
-        <br />
-        NFTs prove this immutable ownership over your digital assets, including your avatar. And
-        while we can all debate endlessly on how NFTs might or might not be under a bubble, one
-        thing's for sure: the technology is not going anywhere as the metaverse takes shape along
-        with Web3. And as avatars are literally our digital representations, it makes perfect sense
-        to own them alongside the other digital assets that we own instead of leaving them at the
-        mercy of an absentee landlord.
-        <br />
-        <br />
-        Epic Games founder Tim Sweeney has become one of the leading figures for the metaverse,
-        taking the fight against the walled gardens that prevent it from fully blooming. Closed
-        systems are the norm, thus leading to less competition at every point in the value chain.
-        Apart from that, there are no technical interoperability standards, and you can't move from
-        one environment to another.
+      <div className={styles.text5}>
+        process, department upon department, and cog upon replaceable cog in rank and file employees
+        — and the subsequent bureaucratic morass can be unbearable to deal with. But that's your
+        garden variety Fortune 500 company. Isn't it amazing how far we've come as a species
       </div>
-      <div className={styles.thirdParagraph} />
-      <div className={styles.thirdText}>
-        The metaverse needs to be an open, live, evolving platform with builders creating worlds of
-        all kinds that are interoperable and interact with each other. A blockchain-based foundation
-        for an open metaverse is the apparent path towards a long-term open framework Sweeney is
-        advocating for — one that's free from any gatekeeping, and every actor has their agency. And
-        NFTs will be the bedrock of that metaverse. The technology is already here, and it's not
-        going away anytime soon.
+      <div className={styles.text6}>
+        technology-wise, yet our governance structures remain ancient relics from thousands of years
+        of monarchies and centralized political systems?
         <br />
         <br />
-        Sweeney advocates for a shardless environment enabling virtual content environments to scale
-        to massive sizes without the closed approach that creates broken rather than immersive
-        experiences.
+        We all know the old saying: if it ain't broke, don't fix it. But aren't the hierarchical
+        governance models we've all grown accustomed to already broken, to begin with? What if we
+        could fix it?
         <br />
         <br />
-        His advocacy has led him to take Apple head on in response to a series of events that led to
-        Epic Games filing an antitrust lawsuit against the tech giant. TL;DR: Epic implemented its
-        own payment system on iOS to circumvent Apple's charges, which was against App Store rules.
-        In response, Apple took down Epic's apps, including Fortnite.
+        <b>The Way of the DAO</b>
+        <br />
+        Decentralized autonomous organizations, or DAOs, are the next tantalizing prospect of
+        blockchain technology after decentralized finance (DeFi) and non-fungible tokens (NFTs). And
+        rightfully so.
+        <br />
+        <br />
+        DAOs are the emerging form of organizing business transactions, where all transactions are
+        codified and saved in a shared ledger and enabled by the blockchain and smart contracts.
+        <br />
+        <br />
+        But to understand why DAOs are on the cusp of changing the way we imagine governance, it's
+        essential to mention the things that make them different from traditional organizations.
+        <br />
+        <br />
+        DAOs do not follow hierarchical structures with power concentrated in centralized authority.
+        Instead, DAO stakeholders vote on proposals on-chain, which are stored transparently on the
+        ledger.
       </div>
-      <div className={styles.rightFirstParagraph} />
-      <div className={styles.rightFirstText}>
-        The outcome will determine whether Fortnite will ever make a comeback to iOS devices,
-        whether Epic can continue to access the Unreal Engine on iOS platforms, and lastly, whether
-        third-party app stores can launch on iOS devices or otherwise. If Epic can prove Apple's
-        monopoly, any game publisher can create their app store on iOS devices, opening a huge door
-        for new value that is not controlled by Apple.
+      <div className={styles.text7}>
+        This ensures absolute transparency and complete shareholder control, as every member in a
+        DAO can vote on how funds are spent. No one entity can single-handedly make and enforce
+        decisions in a DAO, and no legal contracts are needed between stakeholders either —
+        everything is codified transparently.
+        <br />
+        <br />
+        And therein lies the rub: essentially, DAOs have created an environment where the success
+        and influence of an organization aren't tied to a select hierarchy; instead, they are
+        determined by the value a token holder contributes to the organization itself.
+        <br />
+        <br />
+        DAOs may revolutionize governance with the following aspects:
+        <ul>
+          <li>
+            Decentralized governance. DAOs allow each investor with a fair and equal opportunity to
+            play a role in driving the organization's success and a decisive voice in determining
+            how the organization is run. Owing to its non-hierarchical structure, each suggestion
+            can be considered, regardless of where the idea came from.
+          </li>
+          <li>
+            Improved efficiency. Dealing with bureaucracy is a certainty for traditional
+            organizations, leading to breakdowns within the process and slowing it down altogether.
+            Imagine how many hoops you need to jump through to get a reimbursement. DAOs
+            significantly reduce transaction processing times; on the other hand, as the voting
+            process requires a particular amount of tokens for every stakeholder, they are
+            incentivized not to waste hash rate and time on unproductive solutions.
+          </li>
+          <li>
+            Unmatched transparency. Every single transaction in a DAO is immediately available on
+            the public ledger for the entire world to see. Moreover, consensus mechanisms enable
+            optimum ensure so that each stakeholder is directly involved in how the blockchain
+            develops.
+          </li>
+        </ul>
+        <br />
+        On the other hand, DAO governance also poses challenges that need to be overcome if they are
+        to take off:
+        <br />
+        <br />
+        <ul>
+          <li>
+            Security vulnerabilities. While the immutability of smart contracts offers an undoubted
+            host of pros, they also pose certain disadvantages because of how new the technology is.
+            As with anything new, security risks are a concern. Once the smart contract governing
+            the DAO is
+          </li>
+        </ul>
       </div>
-      <div className={styles.rightSecondParagraph} />
-      <div className={styles.rightSecondText}>
-        The heat is on as industry secrets are about to be dragged out in the public arena —
-        something Apple keeps under close lock and key. The trial is shaping up to be an opportunity
-        to get a rare look behind the walled garden of Apple. The main point of contention is the
-        inherent 70%-30% revenue scheme on the App Store. Epic is framing that arrangement as unfair
-        and one-sided, while Apple has been painting the latter as a disingenuous, avaricious
-        partner — as the tech giant faces its biggest legal threat in recent memory.
+      <div className={styles.text8}>
+        <div style={{ marginLeft: '1rem' }}>
+          codified, the system will begin to run, and it cannot be unilaterally changed or reversed.
+          And, as the code is visible to everyone, any known security issues can be exploited. We
+          all remember how the first DAO, aptly called THE DAO, ended due to a spanner in the works
+          that led to the hard fork between Ethereum and Ethereum Classic.
+        </div>
+        <ul>
+          <li>
+            Uncertain legal status. Certain startups with DAO organizational and business structures
+            need a legal framework to operate lawfully in specific jurisdictions while interacting
+            with the legacy financial system and intellectual property. DAO members may otherwise be
+            held legally responsible for not doing so.
+          </li>
+          <li>
+            Levels of decision-making power. As decision-making is democratic in DAOs, technical
+            knowledge may vary. Not all voters will have adequate skills and competencies, nor will
+            everybody know about the issues they vote on. DAOs use a plurality mechanism to
+            determine votes. Therefore the results may not always be optimal and are more likely to
+            be influenced by majority voting rights.
+          </li>
+        </ul>
         <br />
         <br />
-        It’s going to be a tooth and nail fight that may change the way the gaming industry — and in
-        the bigger picture — how the metaverse evolves, and we should be paying more attention to
-        this skirmish because of the far-ranging consequences it poses for the fledgling layer of
-        reality that’s emerging right beneath our collective noses.
+        <b>Decentralized Systems and Governance</b>
+        <br />
+        As the name implies, decentralized systems do not have a leadership or intelligence system
+        based on a traditional top-down corporate hierarchy. But DAOs work similarly to
+        nation-states or corporations in essence. The very nature of how information flows within a
+        decentralized system — optimized through dynamic feedback — makes it easy for them to evolve
+        and grow remarkably fast.
         <br />
         <br />
-        We can all chalk it up to the growing pains of the metaverse — Sweeney's stand against the
-        walled gardens exemplified by the fight against Apple is just what we need to plot out the
-        future of the metaverse and progress to the next stage of the paradigm shift. Are we going
-        to see a dramatic rearranging of the metaverse’s cosmology? Time will tell. Sooner or later.
+        Moreover, power is concentrated in hierarchies out of necessity in organizations. In
+        contrast, the distribution of power in DAOs theoretically grants each member autonomy,
+        allowing for greater flexibility and opportunities for efficiencies to emerge due to this
+        decentralization of power. Therefore, such a dynamic organization requires governance
+        structures that motivate members to productively collaborate by rewarding development with
+        fair compensation.
+        <br />
+        <br />
+        In a nutshell, DAOs use economic mechanisms to align the interests of the organization with
+        the interests of its members using game theory rather than conventional stock options and
+        corporate incentivization schemes.
+        <br />
+        <br />
+        <b>The Wuestion of Compensation</b>
+        <br />
+        DAOs are usually operated by a community of stakeholders incentivized through a form of
+        token mechanism.
+        <br />
+        <br />
+        One of the core forms of DAO compensation is the appreciation of the value of the tokens
+        members hold. Furthermore, DAO members can also earn a separate income by earning more
+        tokens by supporting the organization's objectives.
+        <br />
+        <br />
+        Compensation in DAOs is based on the evergreen theory of supply and demand, freeing DAO
+        members from the inefficiencies and pitfalls of corporate compensation as we know it. As DAO
+        token supply is fully transparent and baked into the code, so does the value of its tokens
+        increase with demand. Moreover, because the DAO code comes with the total token supply baked
+        into it, dilution is practically impossible.
       </div>
     </div>
   );

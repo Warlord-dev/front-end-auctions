@@ -13,12 +13,28 @@
     height: 100%;
   }
 
+  .gif {
+    position: absolute;
+    width: 622px;
+    height: 1240px;
+    left: 169px;
+    top: 257px;
+  }
+
+  .letter {
+    position: absolute;
+    width: 788px;
+    height: 1050px;
+    left: 2px;
+    top: 421px;
+  }
+
   .text1 {
     position: absolute;
     width: 850px;
     height: 305px;
     left: 55px;
-    top: 49px;
+    top: 0px;
 
     font-family: Chinese Dragon;
     font-style: normal;
@@ -81,7 +97,7 @@
     left: 1039px;
     top: 198px;
 
-    font-family: Libre Barcode 39 Extended Text;
+    font-family: Lexend Giga;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;

@@ -17,6 +17,7 @@
     font-size: 60px;
     line-height: 80%;
     color: #00EA09;
+    text-shadow: -3px 0 #FF007A, 0 3px #FF007A, 3px 0 #FF007A, 0 -3px #FF007A;
   }
 
   .aimusic {
@@ -34,7 +35,7 @@
     text-align: center;
 
     color: #FFFFFF;
-    text-shadow: 0px 4px 10px #FFFFFF;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   }
 
   .en {
@@ -52,7 +53,7 @@
     line-height: 80%;
     color: #FFFFFF;
 
-    text-shadow: 0px 4px 10px #FFFFFF;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   }
 
   .text1 {
@@ -250,5 +251,6 @@
     color: #FFFFFF;
 
     transform: rotate(5deg);
+    text-shadow: -5px 0 #AD00FF, 0 5px #AD00FF, 5px 0 #AD00FF, 0 -5px #AD00FF;
   }
 }

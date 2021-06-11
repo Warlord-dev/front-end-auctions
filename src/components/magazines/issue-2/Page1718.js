@@ -5,6 +5,8 @@ const Page1718 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/2/images/17_18.png" className={styles.backImage} />
+      <img src="./magazine/2/images/17_18_left.gif" className={styles.gif} />
+      <img src="./magazine/2/images/17_18_letter.png" className={styles.letter} />
       <div className={styles.text1}>The Tao of DAO Security</div>
       <div className={styles.text2}>DC. Way</div>
       <div className={styles.text3}>
