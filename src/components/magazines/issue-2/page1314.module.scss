@@ -14,209 +14,155 @@
   
   .backImage1 {
     position: absolute;
-    width: 960px;
-    height: 1519px;
+    width: 883px;
+    height: 1458px;
     left: 0px;
-    top: -22px;
+    top: 0px;
   }
 
   .backImage2 {
     position: absolute;
-    width: 808px;
-    height: 1497px;
-    left: 960px;
-    top: 0px;
+    width: 883px;
+    height: 1420px;
+    left: 999px;
+    top: 38px;
   }
 
-
-  .leftSideFrame {
+  .text2 {
     position: absolute;
-    width: 149px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
-    background-color: rgb(0 249 58);
-    border-left: 10px solid black;
-    border-right: 10px solid black;
+    width: 700px;
+    height: 135px;
+    left: 93px;
+    top: 963px;
   }
 
-  .rightSideFrame {
+  .text1 {
     position: absolute;
-    width: 152px;
-    height: 1497px;
-    left: 1768px;
-    top: 0px;
-    background-color: rgb(0 249 58);
-    border-left: 10px solid black;
-    border-right: 10px solid black;
-  }
+    width: 190px;
+    height: 68px;
+    left: 653px;
+    top: 535px;
 
-  .animationFrame {
-    animation: scrolling 4s linear infinite;
-  }
-
-
-  .leftSideImageWrapper {
-    position: absolute;
-    width: 92.28px;
-    left: 31px;
-    top: 36px;
-  }
-
-  .rightSideImageWrapper {
-    position: absolute;
-    width: 83px;
-    height: 1660px;
-    right: 31px;
-    top: 36px;
-  }
-
-  h1 {
-    position: absolute;
-    width: 659px;
-    height: 75px;
-    left: 212px;
-    top: 27px;
-
-    font-family: Lusitana;
+    font-family: Nella Sue Demo;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 120.53%;
+    /* or 34px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 657px;
+    height: 52px;
+    left: 38px;
+    top: 1131px;
+
+    font-family: Mervale Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 150%;
+    /* or 60px */
+
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 466px;
+    height: 120px;
+    left: 364px;
+    top: 1220px;
+
+    font-family: Beth Ellen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 793px;
+    height: 90px;
+    left: 1045px;
+    top: 97px;
+
+    font-family: Nella Sue Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 75px;
+    line-height: 120.53%;
+    /* or 90px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 812px;
+    height: 339px;
+    left: 1034px;
+    top: 196px;
+
+    font-family: Jockey One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 348px;
+    height: 850px;
+    left: 1066px;
+    top: 569px;
+
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
     font-size: 15px;
     line-height: 150%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
   }
 
-  h2 {
-    font-family: Medula One;
+  .text8 {
+    position: absolute;
+    width: 348px;
+    height: 850px;
+    left: 1466px;
+    top: 569px;
+
+    font-family: Jacques Francois;
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 15px;
     line-height: 150%;
-    position: absolute;
+    /* or 22px */
 
-    &.section1 {
-      width: 272px;
-      height: 38px;
-      left: 195px;
-      top: 89px;
-    }
 
-    &.section2 {
-      width: 703px;
-      height: 30px;
-      left: 195px;
-      top: 249px;
-    }
+    color: #FFFFFF;
 
-    &.section3 {
-      width: 408px;
-      height: 38px;
-      left: 195px;
-      top: 404px;
-    }
-
-    &.section4 {
-      width: 623px;
-      height: 60px;
-      left: 271px;
-      top: 563px;
-      text-align: right;      
-    }
-
-    &.section5 {
-      width: 708px;
-      height: 76px;
-      left: 196px;
-      top: 769px;      
-    }
-
-    &.section6 {
-      width: 623px;
-      height: 60px;
-      left: 267px;
-      top: 1048px;
-      text-align: right;      
-    }
-
-    &.section7 {
-      width: 687px;
-      height: 76px;
-      left: 196px;
-      top: 1251px;      
-    }
-  }
-
-  p {
-    font-family: Lexend Zetta;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 150%;
-    position: absolute;
-
-    &.section1 {
-      width: 700px;
-      height: 141px;
-      left: 195px;
-      top: 129px;
-    }
-
-    &.section2 {
-      width: 699px;
-      height: 141px;
-      left: 203px;
-      top: 282px;
-    }
-
-    &.section3 {
-      width: 706px;
-      height: 135px;
-      left: 196px;
-      top: 442px;
-    }
-
-    &.section4 {
-      width: 699px;
-      height: 153px;
-      left: 199px;
-      top: 631px;
-      text-align: right;
-    }
-
-    &.section5 {
-      width: 700px;
-      height: 271px;
-      left: 196px;
-      top: 851px;
-    }
-
-    &.section6 {
-      width: 699px;
-      height: 153px;
-      left: 195px;
-      top: 1120px;
-      text-align: right;
-    }
-
-    &.section7 {
-      width: 698px;
-      height: 141px;
-      left: 196px;
-      top: 1327px;
-    }
-  }
-
-  .artby {
-    position: absolute;
-    width: 260px;
-    height: 18px;
-    left: 1472px;
-    top: 1084px;
-
-    font-family: Aldrich;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 21px;
-    line-height: 150%;
-    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
   }
 }

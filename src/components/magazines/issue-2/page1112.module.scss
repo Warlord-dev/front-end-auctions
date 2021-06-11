@@ -7,167 +7,473 @@
   display: flex;
   position: relative;
 
-  .pageBack1 {
-    position: absolute;
-    width: 883px;
-    height: 1420px;
-    left: 38px;
-    top: 38px;
-    background: #DBCF95;
+  .backImage {
+    width: 100%;
+    height: 100%;
   }
 
-  .pathImage {
+  .text1 {
     position: absolute;
-    width: 581px;
-    height: 454px;
-    left: 94px;
-    top: -49px;
-  }
-  
-  .manImage {
-    position: absolute;
-    width: 651px;
-    height: 806px;
-    left: 137px;
-    top: 154px;
-  }
+    width: 603px;
+    height: 91px;
+    left: 319px;
+    top: 141px;
 
-  .textDiv1 {
-    position: absolute;
-    width: 321px;
-    height: 68px;
-    left: 586px;
-    top: 303px;
-
-    font-family: Nella Sue Demo;
+    font-family: Helvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 28px;
+    font-size: 13px;
     line-height: 120.53%;
+    /* or 18px */
+
+    text-align: right;
 
     color: #FFFFFF;
   }
 
-  .pageBack2 {
+  .text2 {
     position: absolute;
-    width: 883px;
-    height: 1420px;
-    left: 999px;
-    top: 38px;
+    width: 619px;
+    height: 203px;
+    left: 33px;
+    top: 275px;
 
-    background: #DBCF95;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 120.53%;
+    /* or 18px */
+
+
+    color: #FFFFFF;
   }
 
-  h1 {
+  .text3 {
     position: absolute;
-    width: 1051px;
-    height: 259px;
-    left: -52px;
-    top: 892px;
+    width: 885px;
+    height: 176px;
+    left: 37px;
+    top: 533px;
 
-    font-family: PLAYPULL;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 120.53%;
+    /* or 18px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 353px;
+    height: 224px;
+    left: 40px;
+    top: 779px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 120.53%;
+    /* or 18px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 454px;
+    height: 224px;
+    left: 463px;
+    top: 761px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13.5px;
+    line-height: 120.53%;
+    /* or 18px */
+
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 426px;
+    height: 224px;
+    left: 40px;
+    top: 1139px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 323px;
+    height: 224px;
+    left: 574px;
+    top: 1070px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 120.53%;
+    /* or 18px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 547px;
+    height: 169px;
+    left: 1021px;
+    top: 77px;
+
+    font-family: Archie Websters;
     font-style: normal;
     font-weight: normal;
     font-size: 130px;
-    line-height: 150%;
-    text-align: center;
-    color: #EC761D;
+    line-height: 110%;
+    /* or 143px */
 
-    .impact1 {
-      font-family: Rugsnatcher DEMO;
-      color: #DA283E;
-    }
 
-    .impact2 {
-      color: #DA283E;
-    }
-
-    .impact3 {
-      font-family: Rugrats;
-      color: #F28C27;
-    }
-  }
-
-  h2 {
-    position: absolute;
-    width: 657px;
-    height: 52px;
-    left: 38px;
-    top: 1057px;
-    font-family: Mervale Script;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 150%;
-    text-align: center;
     color: #000000;
   }
 
-  h3 {
+  .text9 {
     position: absolute;
-    width: 466px;
-    height: 120px;
-    left: 417px;
-    top: 1265px;
+    width: 421px;
+    height: 189px;
+    left: 1172px;
+    top: 241px;
 
-    font-family: Beth Ellen;
+    font-family: Mada;
     font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 150%;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+
+
+    color: #FFFFFF;
+
+    .subText {
+      font-size: 17px;
+      font-family: Mad Galaxy Demo;
+      font-weight: normal;
+    }
   }
 
-  h4 {
+  .text10 {
     position: absolute;
-    width: 800px;
-    height: 102px;
-    left: 1041px;
-    top: 97px;
+    width: 700px;
+    height: 66px;
+    left: 1021px;
+    top: 456px;
 
-    font-family: Nella Sue Demo;
+    font-family: Archie Websters;
     font-style: normal;
     font-weight: normal;
-    font-size: 85px;
-    line-height: 120.53%;
+    font-size: 100px;
+    line-height: 110%;
+    /* or 110px */
+
+
+    color: #000000;
   }
 
-  h5 {
+  .text11 {
     position: absolute;
-    width: 800px;
-    height: 312px;
-    left: 1041px;
-    top: 215px;
-    
-    font-family: Jockey One;
+    width: 700px;
+    height: 66px;
+    left: 1021px;
+    top: 573px;
+
+    font-family: Archie Websters;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 150%;
-    /* or 30px */
-    
-    text-align: center;
+    font-size: 100px;
+    line-height: 110%;
+    /* or 110px */
+
+
+    color: #000000;
   }
 
-  p {
-    font-family: Jacques Francois;
+  .text12 {
+    .subText {
+      font-family: Mad Galaxy Demo;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 17px;
+    }
+
+    position: absolute;
+    width: 144px;
+    height: 87px;
+    left: 1124px;
+    top: 721px;
+
+    font-family: Mada;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 223px;
+    height: 448px;
+    left: 1021px;
+    top: 815px;
+
+    font-family: Mada;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 150%;
-    &.leftSideText {
-      position: absolute;
-      width: 348px;
-      height: 850px;
-      left: 1063px;
-      top: 527px;
+    line-height: 110%;
+    /* or 17px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text14 {
+    .subText {
+      font-family: Mad Galaxy Demo;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 17px;
     }
 
-    &.rightSideText {
-      position: absolute;
-      width: 348px;
-      height: 850px;
-      left: 1463px;
-      top: 527px;
+    position: absolute;
+    width: 144px;
+    height: 87px;
+    left: 1420px;
+    top: 721px;
+
+    font-family: Mada;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 248px;
+    height: 356px;
+    left: 1317px;
+    top: 815px;
+
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text16 {
+    .subText {
+      font-family: Mad Galaxy Demo;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 17px;
     }
+
+    position: absolute;
+    width: 343px;
+    height: 87px;
+    left: 1287px;
+    top: 1198px;
+
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 857px;
+    height: 153px;
+    left: 1022px;
+    top: 1304px;
+
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 23px;
+    height: 630px;
+    left: 1636px;
+    top: 639px;
+
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+    /* or 88px */
+    word-break: break-all;
+    color: #000000;
+  }
+
+  .text19 {
+    .subText {
+      font-family: Mad Galaxy Demo;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 17px;
+    }
+
+    position: absolute;
+    width: 161px;
+    height: 87px;
+    left: 1627px;
+    top: 31px;
+
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text20 {
+    position: absolute;
+    width: 265px;
+    height: 417px;
+    left: 1628px;
+    top: 118px;
+
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text21 {
+    .subText {
+      font-family: Mad Galaxy Demo;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 17px;
+    }
+
+    position: absolute;
+    width: 178px;
+    height: 448px;
+    left: 1713px;
+    top: 701px;
+
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+
+
+    color: #FFFFFF;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 1021px;
+    top: 721px;
+  }
+
+  .link2 {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 1317px;
+    top: 721px;
+  }
+
+  .link3 {
+    position: absolute;
+    width: 100px;
+    height: 148px;
+    left: 1721px;
+    top: 541px;
+  }
+
+  .link4 {
+    position: absolute;
+    width: 249px;
+    height: 73px;
+    left: 1022px;
+    top: 1204px;
+  }
+
+  .link5 {
+    position: absolute;
+    width: 86px;
+    height: 92px;
+    left: 1800px;
+    top: 13px;
+  }
+
+  .link6 {
+    position: absolute;
+    width: 133px;
+    height: 171px;
+    left: 1021px;
+    top: 256px;
   }
 }
