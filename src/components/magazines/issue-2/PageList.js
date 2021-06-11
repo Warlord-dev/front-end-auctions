@@ -68,6 +68,8 @@ const Page125126 = loadable(() => import ('./Page125126'))
 const Page127128 = loadable(() => import ('./Page127128'))
 const Page129130 = loadable(() => import ('./Page129130'))
 const Page131132 = loadable(() => import ('./Page131132'))
+const Page133134 = loadable(() => import ('./Page133134'))
+const Page135136 = loadable(() => import ('./Page135136'))
 
 // const Backcover = loadable(() => import ('./Backcover'))
 
@@ -139,6 +141,8 @@ const PageList = [
     <Page127128 />,
     <Page129130 />,
     <Page131132 />,
+    <Page133134 />,
+    <Page135136 />,
     // <Backcover />
   ]
 

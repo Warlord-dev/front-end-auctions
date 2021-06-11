@@ -2,126 +2,408 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #E5E5E5;
-
-  .left {
+  background-color: #000641;
+  
+  .image1 {
     position: absolute;
     width: 960px;
-    height: 1507px;
+    height: 1497px;
     left: 0px;
-    top: 6px;
+    top: 0px;
   }
 
-  .right {
+  .image2 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: 25px;
+    top: 31px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: 114px;
+    top: 80px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: -17px;
+    top: 158px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 541px;
+    height: 267px;
+    left: 0px;
+    top: 1230px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: 270px;
+    top: 1443px;
+  }
+
+  .image7 {
     position: absolute;
     width: 960px;
     height: 1497px;
     left: 960px;
-    top: 0px;    
+    top: 0px;
   }
 
-  .movie {
+  .image8 {
     position: absolute;
-    width: 809px;
-    height: 417px;
-    left: 935px;
-    top: 442px;
-    
-    font-family: Baloo Tamma 2;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 120%;
-    /* or 36px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
+    width: 408px;
+    height: 272px;
+    left: 1564px;
+    top: -3px;
   }
 
-  .link1 {
+  .image9 {
     position: absolute;
-    width: 95px;
-    height: 39px;
-    left: 1799px;
-    top: 130px;
+    width: 159px;
+    height: 210px;
+    left: 1020px;
+    top: 321px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 509px;
+    height: 215px;
+    left: 1000px;
+    top: 521px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 503px;
+    height: 112px;
+    left: 1027px;
+    top: 40px;
     
-    font-family: Medula One;
+    font-family: Bahiana;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
-    line-height: 150%;
-    /* or 45px */
-    
-    text-align: center;
+    font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
     
     color: #FFFFFF;
   }
 
-  .link2 {
+  .text2 {
     position: absolute;
-    width: 225px;
+    width: 134px;
     height: 40px;
-    left: 1040px;
-    top: 777px;
+    left: 1540px;
+    top: 44px;
     
-    font-family: Carter One;
+    font-family: Knife Princess;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
-    line-height: 120%;
-    /* or 48px */
+    line-height: 100%;
+    /* identical to box height, or 40px */
     
-    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 636px;
+    height: 124px;
+    left: 1027px;
+    top: 116px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 396px;
+    height: 112px;
+    left: 1193px;
+    top: 314px;
+
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 312px;
+    height: 27px;
+    left: 1588px;
+    top: 282px;
+
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 260px;
+    height: 168px;
+    left: 1607px;
+    top: 336px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 278px;
+    height: 40px;
+    left: 1201px;
+    top: 453px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+    
     
     color: #FFFFFF;
   }
 
-  .rightBottomText {
+  .text8 {
     position: absolute;
-    width: 266px;
-    height: 133px;
-    left: 1620px;
-    top: 1247px;
+    width: 312px;
+    height: 27px;
+    left: 1207px;
+    top: 504px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
 
-    font-family: Carter One;
+  .text9 {
+    position: absolute;
+    width: 371px;
+    height: 128px;
+    left: 1518px;
+    top: 515px;
+
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text10 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 401px;
+    height: 132px;
+    left: 1020px;
+    top: 722px;
+    
+    font-family: Masterblast;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
-    line-height: 120%;
-    /* or 36px */
-
-    text-align: center;
-    text-shadow: -4px -3px 0px #7F00E2;
-
-    a {
-      color: white;
-      text-decoration: underline;
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-
+    line-height: 100%;
+    /* or 30px */
+    
+    -webkit-text-stroke: #0009EA;
+    -webkit-text-stroke-width: 1px;
     color: #FFFFFF;
   }
 
-  .link3 {
+  .text11 {
     position: absolute;
-    width: 266px;
-    height: 71px;
-    left: 1623px;
-    top: 1405px;
+  width: 412px;
+  height: 127px;
+  left: 1020px;
+  top: 817px;
+
+  font-family: DM Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 100%;
+  /* or 20px */
+
+  -webkit-text-stroke: #000000;
+  -webkit-text-stroke-width: 1px;
+  color: #FFFFFF;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 324px;
+    height: 72px;
+    left: 1466px;
+    top: 698px;
     
-    font-family: Baloo Tamma 2;
+    font-family: Masterblast;
     font-style: normal;
-    font-weight: 800;
+    font-weight: normal;
     font-size: 30px;
-    line-height: 120%;
-    /* or 36px */
+    line-height: 100%;
+    /* or 30px */
     
-    text-align: center;
+    -webkit-text-stroke: #009220;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 401px;
+    height: 282px;
+    left: 1466px;
+    top: 768px;
+
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 401px;
+    height: 132px;
+    left: 1020px;
+    top: 974px;
     
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    -webkit-text-stroke: #FF002E;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 412px;
+    height: 461px;
+    left: 1020px;
+    top: 1021px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    
+    color: #FFFFFF;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 401px;
+    height: 132px;
+    left: 1466px;
+    top: 1022px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    -webkit-text-stroke: #BB00EA;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;   
+  }
+
+  .text17 {
+    position: absolute;
+    width: 412px;
+    height: 414px;
+    left: 1468px;
+    top: 1066px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
     color: #FFFFFF;
   }
 }

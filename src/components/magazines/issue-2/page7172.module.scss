@@ -2,210 +2,112 @@
 
 .wrapper {
     @include magazineWrapper(); 
+    background-color: #FFFFFF;
 
-    .leftDiv {
+    .image1 {
         position: absolute;
-        width: 829px;
-        height: 1357px;
-        left: 61px;
-        top: 64px;
-        
-        background: rgba(0, 0, 0, 0.6);
+        width: 960px;
+        height: 1497px;
+        left: 0px;
+        top: 0px;
     }
 
-    .leftText {
+    .image2 {
         position: absolute;
-        width: 633px;
-        height: 1078px;
-        left: 159px;
-        top: 139px;
-
-        font-family: Crafty Girls;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 110%;
-        /* or 22px */
-
-
-        color: #FFFFFF;
+        width: 1181px;
+        height: 1181px;
+        left: 1162px;
+        top: -148px;
     }
 
-    .rightDiv {
+    .image3 {
         position: absolute;
         width: 960px;
         height: 1497px;
         left: 960px;
         top: 0px;
+    }
+
+    .image4 {
+        position: absolute;
+        width: 1004px;
+        height: 1004px;
+        left: 1011px;
+        top: 643px;
+    }
+
+    .text1 {
+        position: absolute;
+        width: 363px;
+        height: 84px;
+        left: 557px;
+        top: 63px;
         
-        background: #000000;
-    }
-
-    .rightText1 {
-        position: absolute;
-        width: 453px;
-        height: 80px;
-        left: 1044px;
-        top: 34px;
-
-        font-family: Kite One;
+        font-family: fairy wings;
         font-style: normal;
         font-weight: normal;
-        font-size: 80px;
+        font-size: 100px;
         line-height: 100%;
-        /* identical to box height, or 80px */
-
-
-        color: #26D9F9;
-    }
-
-    .rightText2 {
-        position: absolute;
-        width: 453px;
-        height: 80px;
-        left: 1494px;
-        top: 24px;
-
-        font-family: Kite One;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 80px;
-        line-height: 100%;
-        /* identical to box height, or 80px */
-
-
-        color: #2654F9;
-    }
-
-    .rightText3 {
-        position: absolute;
-        width: 453px;
-        height: 120px;
-        left: 987px;
-        top: 143px;
-
-        font-family: Karla;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 120px;
-        line-height: 100%;
-        /* identical to box height, or 120px */
-
-
-        color: #FFC42D;
-        text-shadow: -3px 0 red, 0 3px red, 3px 0 red, 0 -3px red;
+        /* or 100px */
+        
+        -webkit-text-stroke: #FFFFFF;
+        -webkit-text-stroke-width: 0.5px;
+        color: #FFFFFF;
         box-sizing: border-box;
     }
 
-    .rightText4 {
+    .text2 {
         position: absolute;
-        width: 453px;
-        height: 80px;
-        left: 1370px;
-        top: 131px;
-
-        font-family: Kite One;
+        width: 98px;
+        height: 34px;
+        left: 40px;
+        top: 1414px;
+        
+        font-family: Marker Felt;
         font-style: normal;
-        font-weight: normal;
-        font-size: 80px;
+        font-weight: bold;
+        font-size: 20px;
         line-height: 100%;
-        /* identical to box height, or 80px */
-
-
-        color: #26F9D3;
-    }
-
-    .rightText5 {
-        position: absolute;
-        width: 428px;
-        height: 525px;
-        left: 1017px;
-        top: 263.4px;
-
-        font-family: Kite One;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 19px;
-        line-height: 110%;
-        /* or 21px */
-
-
+        /* or 20px */
+        
+        -webkit-text-stroke: #00E0FF;
+        -webkit-text-stroke-width: 0.5px;
         color: #FFFFFF;
-
-        transform: rotate(-3deg);
     }
 
-    .rightText6 {
+    .text3 {
         position: absolute;
-        width: 166.85px;
-        height: 102px;
-        left: 1699.34px;
-        top: 366px;
-
-        font-family: Karla;
+        width: 363px;
+        height: 84px;
+        left: 1213px;
+        top: 21px;
+        
+        font-family: Erica One;
         font-style: normal;
         font-weight: normal;
-        font-size: 15px;
-        line-height: 110%;
-        /* or 17px */
-
-
-        color: #FFFFFF;
-
-        transform: rotate(3deg);
-    }
-
-    .rightText7 {
-        position: absolute;
-        width: 414px;
-        height: 49px;
-        left: 1528px;
-        top: 743px;
-
-        font-family: Fasthand;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 25px;
+        font-size: 70px;
         line-height: 100%;
-        /* or 25px */
-
-
-        color: #FF0000;
+        /* or 70px */
+        
+        
+        color: #E56615;
     }
 
-    .rightImage1 {
+    .text4 {
         position: absolute;
-        width: 572px;
-        height: 532px;
-        left: 1333px;
-        top: 211px;
-    }
-
-    .link1 {
-        position: absolute;
-        width: 357px;
-        height: 361px;
-        left: 1009px;
-        top: 813px;
-
-        video {
-            width: 100%;
-        }
-    }
-
-    .link2 {
-        position: absolute;
-        width: 281px;
-        height: 295px;
-        left: 1270px;
-        top: 1189px;
-    }
-
-    .link3 {
-        position: absolute;
-        width: 338px;
-        height: 347px;
-        left: 1528px;
-        top: 824px;
+        width: 350px;
+        height: 98px;
+        left: 1213px;
+        top: 107px;
+        
+        font-family: EB Garamond;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 100%;
+        /* or 14px */
+        
+        
+        color: #FFFFFF;
     }
 }

@@ -5,7 +5,7 @@
 
   .backImage {
     position: absolute;
-    width: 960px;
+    width: 1928px;
     height: 1497px;
     left: 0px;
     top: 0px;
@@ -13,76 +13,15 @@
 
   .leftBack {
     position: absolute;
-    width: 50%;
+    width: auto;
     height: 1497px;
-    left: 0px;
+    left: 0;
     top: 0px;
-    z-index: 100;
-    background: #889DA9;
-  }
-
-  .left1 {
-    position: absolute;
-    width: 348px;
-    height: 426px;
-    left: 84px;
-    top: 49px;
-    z-index: 100;
-  }
-
-  .left2 {
-    position: absolute;
-    width: 470px;
-    height: 590px;
-    left: 461px;
-    top: 235px;
-    z-index: 100;
-  }
-
-  .left3 {
-    position: absolute;
-    width: 486px;
-    height: 594px;
-    left: 37px;
-    top: 866px;
-    z-index: 100;
-  }
-
-  .right1 {
-    position: absolute;
-    width: 542px;
-    height: 542px;
-    left: 960px;
-    top: 0px;
-  }
-
-  .right2 {
-    position: absolute;
-    width: 560px;
-    height: 560px;
-    left: 1502px;
-    top: -18px;
-  }
-
-  .right3 {
-    position: absolute;
-    width: 794px;
-    height: 896px;
-    left: 859px;
-    top: 599px;
-  }
-
-  .right4 {
-    position: absolute;
-    width: 339px;
-    height: 474px;
-    left: 1550px;
-    top: 1000px;
   }
 
   .rightBack {
     position: absolute;
-    width: 1404px;
+    width: auto;
     height: 1497px;
     left: 960px;
     top: 0px;
@@ -91,97 +30,126 @@
 
   .text1 {
     position: absolute;
-    width: 459px;
+    width: 337px;
     height: 44px;
-    left: 491px;
-    top: 39px;
-    
-    font-family: Neon Nanoborg;
+    top: 17px;
+    left: 19px;
+    font-family: Knife Princess;
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
-    line-height: 90%;
-    /* or 63px */
-    z-index: 100;
-    text-align: center;
-    
-    color: #FF0F00;
+    font-size: 40px;
+    line-height: 110%;
+    /* identical to box height, or 44px */
+
+
+    color: #0038FF;
+
+    -webkit-text-stroke: black;
+    -webkit-text-stroke-width: 2px;
   }
 
   .text2 {
     position: absolute;
-    width: 451px;
-    height: 153px;
-    left: 480px;
-    top: 109px;
-
-    font-family: Lustria;
+    width: 586px;
+    height: 44px;
+    top: 1410px;
+    left: 31px;
+    font-family: Jungle;
     font-style: normal;
     font-weight: normal;
-    font-size: 65px;
-    line-height: 90%;
-    /* or 58px */
-    z-index: 100;
-    text-align: center;
-
-    color: #FFD2DD;
+    font-size: 40px;
+    line-height: 110%;
+    /* identical to box height, or 44px */
+    color: #FFFFFF;
+    -webkit-text-stroke: #0066FF;
+    -webkit-text-stroke-width: 2px;
   }
 
   .text3 {
     position: absolute;
-    width: 392px;
-    height: 44px;
-    left: 1487px;
-    top: 575px;
+    width: 166px;
+    height: 20px;
+    left: 1018px;
+    top: 72px;
 
-    font-family: Lexend Zetta;
+    font-family: Inter;
     font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 90%;
-    /* or 22px */
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+    z-index: 100;
 
-    text-align: right;
-
-    color: #926BFF;
+    color: #FF9D9D;
   }
 
   .text4 {
     position: absolute;
-    width: 392px;
-    height: 44px;
-    left: 1487px;
-    top: 608px;
+    width: 205px;
+    height: 249px;
+    left: 1018px;
+    top: 110px;
 
-    font-family: Lexend Zetta;
+    font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
-    line-height: 90%;
-    /* or 22px */
+    font-size: 12px;
+    line-height: 100%;
+    /* or 20px */
+    z-index: 100;
 
-    text-align: right;
-
-    color: #FFFFFF;
+    color: #FF9D9D;
   }
 
   .text5 {
     position: absolute;
-    width: 392px;
-    height: 277px;
-    left: 1487px;
-    top: 664px;
-
-    font-family: Lexend Zetta;
+    width: 241px;
+    height: 44px;
+    left: 1670px;
+    top: 40px;
+    font-family: Kohinoor Devanagari;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
-    line-height: 90%;
-    /* or 13px */
+    font-size: 40px;
+    line-height: 110%;
+    /* identical to box height, or 44px */
 
-    text-align: right;
+    z-index: 100;
+    color: #FFFFFF;
+    -webkit-text-stroke: #FF9900;
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .secondBack {
+    position: absolute;
+    width: 890px;
+    height: 1320px;
+    left: 992px;
+    top: 63px;
+
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .secondPageText {
+    position: absolute;
+    width: 825px;
+    height: 1398px;
+    left: 1028px;
+    top: 128px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+
+    text-align: center;
 
     color: #FFFFFF;
-  } 
 
+    span {
+      font-family: Anton;
+    }
+  }
 }

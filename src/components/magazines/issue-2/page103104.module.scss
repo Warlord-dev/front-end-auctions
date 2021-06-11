@@ -2,123 +2,120 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #FFFFFF;
+  background: #BEFFC5;
 
   .image1 {
     position: absolute;
-    width: 834px;
-    height: 1503px;
-    left: -137px;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
     top: 0px;
   }
 
   .image2 {
     position: absolute;
-    width: 260px;
+    width: 960px;
     height: 1497px;
-    left: 700px;
+    left: 0px;
     top: 0px;
   }
 
   .image3 {
     position: absolute;
-    width: 339px;
-    height: 556px;
-    left: 603px;
-    top: 13px;    
+    width: 686px;
+    height: 941px;
+    left: 123px;
+    top: 131px;
   }
 
   .image4 {
     position: absolute;
-    width: 391px;
-    height: 553px;
-    left: 508px;
-    top: 812px;
-    border: 7px solid #052DFF;
-    box-sizing: border-box;
+    width: 617px;
+    height: auto;
+    left: 0;
+    top: 580px;
   }
 
   .image5 {
     position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 960px;
-    top: 0px;
+    width: 613px;
+    height: 1232px;
+    left: 347px;
+    top: 311px;
   }
 
   .image6 {
     position: absolute;
-    width: 960px;
-    height: 1031px;
+    width: 389px;
+    height: 509px;
     left: 960px;
-    top: 233px;
+    top: 0px;
   }
 
   .image7 {
     position: absolute;
-    width: 316px;
-    height: 561px;
-    left: 1604px;
-    top: -28px;
+    width: 389px;
+    height: 486px;
+    left: 960px;
+    top: 508px;
   }
 
   .image8 {
     position: absolute;
-    width: 243px;
-    height: 411px;
-    left: 1097px;
-    top: 158px;
+    width: 389px;
+    height: 504px;
+    left: 960px;
+    top: 993px;
   }
 
   .image9 {
     position: absolute;
-    width: 340px;
-    height: 604px;
-    left: 1511px;
-    top: 612px;
+    width: 572px;
+    height: 743px;
+    left: 1348px;
+    top: -24px;
   }
 
   .image10 {
     position: absolute;
-    width: 437px;
-    height: 776px;
-    left: 960px;
-    top: 775px;
+    width: 572px;
+    height: 778px;
+    left: 1348px;
+    top: 718px;
   }
 
   .text1 {
     position: absolute;
-    width: 374px;
-    height: 142px;
-    left: 586px;
-    top: 41px;
+    width: 570px;
+    height: 90px;
+    left: 84px;
+    top: 66px;
     
-    font-family: Julietta Messie Demo;
+    font-family: Salsa;
     font-style: normal;
     font-weight: normal;
-    font-size: 150px;
+    font-size: 90px;
     line-height: 100%;
-    /* or 150px */
+    /* identical to box height, or 90px */
     
     text-align: center;
-    -webkit-text-stroke: 0.5px #FA00FF;
     
     color: #FFFFFF;
   }
 
   .text2 {
     position: absolute;
-    width: 242px;
-    height: 334px;
-    left: 652px;
-    top: 174px;
+    width: 190px;
+    height: 50px;
+    left: 980px;
+    top: 10px;
     
-    font-family: Inria Sans;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 20px;
+    font-family: Sahitya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
     line-height: 100%;
-    /* or 20px */
+    /* identical to box height, or 50px */
     
     text-align: center;
     
@@ -127,75 +124,20 @@
 
   .text3 {
     position: absolute;
-    width: 242px;
-    height: 47px;
-    left: 697px;
-    top: 1428px;
+    width: 162px;
+    height: 40px;
+    left: 985px;
+    top: 60px;
     
-    font-family: Helvetica;
+    font-family: Sahitya;
     font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
+    font-weight: normal;
+    font-size: 20px;
     line-height: 100%;
-    /* or 40px */
+    /* or 20px */
     
     text-align: center;
     
     color: #FFFFFF;
-  }
-
-  .text4 {
-    position: absolute;
-    width: 347px;
-    height: 58px;
-    left: 985px;
-    top: 22px;
-    
-    font-family: Istok Web;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 100%;
-    /* or 60px */
-    
-    
-    color: #004FE9;
-  }
-
-  .text5 {
-    position: absolute;
-    width: 347px;
-    height: 58px;
-    left: 985px;
-    top: 80px;
-    
-    font-family: Istok Web;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 100%;
-    /* or 40px */
-    
-    
-    color: #004B23;
-  }
-
-  .text6 {
-    position: absolute;
-    width: 433px;
-    height: 174px;
-    left: 1451px;
-    top: 1268px;
-    
-    font-family: Khand;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 100%;
-    /* or 35px */
-    
-    text-align: right;
-    
-    color: #0500FF;
   }
 }

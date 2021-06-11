@@ -2,13 +2,14 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #BEFFC5;
+  background: #FFFF;
 
   .image1 {
     position: absolute;
-    height: 1497px;
-    left: -90px;
-    top: 0;
+    width: 1496px;
+    height: 1496px;
+    left: -220px;
+    top: 0px;
   }
 
   .image2 {
@@ -21,26 +22,26 @@
 
   .image3 {
     position: absolute;
-    width: 367px;
-    height: 744px;
-    left: 988px;
-    top: 717px;
+    width: 262px;
+    height: 371px;
+    left: 990px;
+    top: 25px;
   }
 
   .image4 {
     position: absolute;
-    width: 427px;
-    height: 816px;
-    left: 960px;
-    top: 681px;
+    width: 262px;
+    height: 371px;
+    left: 990px;
+    top: 420px;
   }
 
   .image5 {
     position: absolute;
-    width: 427px;
-    height: 816px;
-    left: 1493px;
-    top: 681px;
+    width: 262px;
+    height: 371px;
+    left: 990px;
+    top: 815px;
   }
 
   .image6 {
@@ -53,55 +54,58 @@
 
   .text1 {
     position: absolute;
-    width: 870px;
-    height: 140px;
-
-    left: 31px;
-    top: 20px;
+    width: 237px;
+    height: 100px;
+    left: 48px;
+    top: 25px;
     
-    font-family: Romanesco;
+    font-family: Kurale;
     font-style: normal;
     font-weight: normal;
-    font-size: 130px;
-    line-height: 70px;
-    /* or 54% */
+    font-size: 100px;
+    line-height: 100%;
+    /* identical to box height, or 100px */
     
+    text-align: center;
     
-    color: #FF00E5;
+    color: #FFFFFF;
   }
 
   .text2 {
     position: absolute;
-    width: 405px;
-    height: 140px;
-    left: 31px;
-    top: 150px;
+    width: 375px;
+    height: 60px;
+    left: 990px;
+    top: 1406px;
     
-    font-family: Romanesco;
+    font-family: Kavoon;
     font-style: normal;
     font-weight: normal;
-    font-size: 95px;
-    line-height: 70px;
-    /* or 54% */
-    background: -webkit-linear-gradient(#924200 0%, #e400cc);
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+    background: -webkit-linear-gradient(#FF00B8, #A40031);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+    text-align: center;
   }
 
   .text3 {
     position: absolute;
-    width: 297px;
-    height: 235px;
-    left: 987px;
-    top: 20px;
-    font-family: Elsie Swash Caps;
+    width: 338px;
+    height: 59px;
+    left: 1551px;
+    top: 88px;
+
+    font-family: Minecrafter;
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
-    line-height: 70px;
-    /* or 47% */
-    
-    
-    color: #F47500;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    text-align: right;
+
+    color: #003789;
   }
 }

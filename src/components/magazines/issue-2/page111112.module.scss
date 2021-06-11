@@ -15,17 +15,17 @@
   .image2 {
     position: absolute;
     width: 961px;
-    height: 748px;
+    height: 1497px;
     left: 960px;
     top: 0px;
   }
 
   .image3 {
     position: absolute;
-    width: 960px;
-    height: 749px;
-    left: 960px;
-    top: 748px;
+    width: 367px;
+    height: 744px;
+    left: 988px;
+    top: 717px;
   }
 
   .image4 {
@@ -54,75 +54,81 @@
 
   .text1 {
     position: absolute;
-    width: 328px;
-    height: 60px;
-    left: 39px;
-    top: 20px;
+    width: 510px;
+    height: 218px;
+    left: 21px;
+    top: 23px;
     
-    font-family: Purple Purse;
+    font-family: Jacques Francois;
     font-style: normal;
     font-weight: normal;
     font-size: 60px;
     line-height: 100%;
-    /* identical to box height, or 60px */
+    /* or 60px */
+    -webkit-text-stroke: #FFFFFF;
+    -webkit-text-stroke-width: 1px;
     
-    
-    color: #AD00FF;
+    color: #BD00FF;
+    box-sizing: border-box;
   }
 
   .text2 {
     position: absolute;
-    width: 473px;
-    height: 60px;
-    left: 465px;
-    top: 1411px;
+    width: 284px;
+    height: 30px;
+    left: 21px;
+    top: 152px;
     
-    font-family: Purple Purse;
+    font-family: Jacques Francois;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
+    font-size: 30px;
     line-height: 100%;
-    /* identical to box height, or 60px */
+    /* identical to box height, or 30px */
     
-    
-    color: #00D1FF;
+    -webkit-text-stroke: #FFFFFF;
+    -webkit-text-stroke-width: 1px;
+    color: #BD00FF;
+    box-sizing: border-box;
   }
 
   .text3 {
     position: absolute;
-    width: 425px;
-    height: 117px;
-    left: 1461px;
-    top: 16px;
+    width: 567px;
+    height: 70px;
+    left: 22px;
+    top: 1403px;
     
-    font-family: Poor Story;
+    font-family: Saira;
     font-style: normal;
-    font-weight: normal;
-    font-size: 90px;
+    font-weight: 800;
+    font-size: 70px;
     line-height: 100%;
-    /* or 90px */
+    /* identical to box height, or 70px */
     
-    text-align: right;
     
-    color: #FFFFFF;
+    color: #BD00FF;
+    -webkit-text-stroke: #FFFFFF;
+    -webkit-text-stroke-width: 1px;
+    box-sizing: border-box;
   }
 
   .text4 {
     position: absolute;
-    width: 747px;
-    height: 226px;
-    left: 1068px;
-    top: 607px;
+    width: 362px;
+    height: 128px;
+    left: 1519px;
+    top: 1334px;
 
-    font-family: Poor Story;
+    font-family: Jacques Francois Shadow;
     font-style: normal;
     font-weight: normal;
-    font-size: 200px;
+    font-size: 50px;
     line-height: 100%;
-    /* or 200px */
+    /* or 50px */
 
-    text-align: center;
+    text-align: right;
 
-    color: #FFFFFF;
+    color: #FA00FF;
   }
 }

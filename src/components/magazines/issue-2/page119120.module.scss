@@ -2,85 +2,80 @@
 
 .wrapper {
   @include magazineWrapper();
+  background: #FFFFFF;
 
   .image1 {
     position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
+    width: 541px;
+    height: 649px;
+    left: -47px;
+    top: -52px;
   }
 
   .image2 {
     position: absolute;
-    height: 1497px;
-    left: 720px;
-    top: 0px;
-    z-index: -1;
+    width: 561px;
+    height: 649px;
+    left: 395px;
+    top: 335px;
   }
 
   .image3 {
     position: absolute;
-    width: 444px;
-    height: 445px;
-    left: 0px;
-    top: 195px;
-    border: 2px solid #00FF29;
+    width: 541px;
+    height: 649px;
+    left: -146px;
+    top: 571px;
   }
 
   .image4 {
     position: absolute;
-    width: 457px;
-    height: 456px;
-    left: 494px;
-    top: 521px;
-    border: 2px solid #00FF29;
+    width: 541px;
+    height: 649px;
+    left: 0px;
+    top: 1025px;
   }
 
   .image5 {
     position: absolute;
-    width: 480px;
-    height: 481px;
-    left: 63px;
-    top: 1015px;
-    border: 2px solid #00FF29;
+    width: 541px;
+    height: 451px;
+    left: 415px;
+    top: 964px;
   }
 
   .image6 {
     position: absolute;
-    width: 383px;
-    height: 744px;
-    left: 1515px;
-    top: 717px;
+    width: 541px;
+    height: 315px;
+    left: 416px;
+    top: 1416px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 810px;
+    height: 1406px;
+    left: 4px;
+    top: 91px;
   }
 
   .text1 {
     position: absolute;
-    width: 300px;
-    height: 50px;
-    left: 63px;
-    top: 31px;
-    
-    font-family: Galada;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 100%;
-    /* identical to box height, or 50px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 452px;
+    width: 385px;
     height: 100px;
-    left: 1440px;
-    top: 31px;
+    left: 551px;
+    top: 10px;
     
-    font-family: Fjalla One;
+    font-family: Qwigley;
     font-style: normal;
     font-weight: normal;
     font-size: 100px;
@@ -89,25 +84,47 @@
     
     text-align: center;
     
-    color: #FFFFFF;
+    color: #FFB800;
+    -webkit-text-stroke: #FFB800;
+    -webkit-text-stroke-width: 1px;
+    box-sizing: border-box;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 363px;
+    height: 132px;
+    left: 586px;
+    top: 110px;
+    
+    font-family: Qwigley;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    /* or 100px */
+    
+    text-align: center;
+    
+    color: #EAD629;
   }
 
   .text3 {
     position: absolute;
-    width: 338px;
-    height: 59px;
-    left: 1551px;
-    top: 88px;
-
-    font-family: Minecrafter;
+    width: 902px;
+    height: 150px;
+    left: 985px;
+    top: 16px;
+    
+    font-family: Flamenco;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 150px;
     line-height: 100%;
-    /* or 50px */
-
-    text-align: right;
-
-    color: #003789;
+    /* identical to box height, or 150px */
+    
+    text-align: center;
+    
+    color: #AED8FF;
   }
 }

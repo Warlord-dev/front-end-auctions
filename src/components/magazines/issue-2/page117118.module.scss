@@ -2,7 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #000000;
+  background: #00000000;
 
   .image1 {
     position: absolute;
@@ -14,9 +14,11 @@
 
   .image2 {
     position: absolute;
+    width: 1497px;
     height: 1497px;
-    left: 964px;
+    left: 700px;
     top: 0px;
+    z-index: -1;
   }
 
   .image3 {
@@ -53,58 +55,76 @@
 
   .text1 {
     position: absolute;
-    width: 60px;
-    height: 450px;
-    left:1832px;
-    top: 40px;
-    
-    font-family: Poller One;
+    width: 378px;
+    height: 90px;
+    left: 50px;
+    top: 33px;
+
+    font-family: Poor Story;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
-    line-height: 25px;
-    /* or 50px */
-    
-    text-align: center;
-    
-    color: #FF8E1A;
+    font-size: 90px;
+    line-height: 100%;
+    /* identical to box height, or 90px */
+
+    text-align: left;
+
+    color: #FF0000;
   }
 
   .text2 {
     position: absolute;
-    width: 60px;
-    height: 720px;
-    left:1760px;
-    top: 40px;
+    width: 461px;
+    height: 50px;
+    left: 50px;
+    top: 120px;
     
-    font-family: Poller One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 30px;
-    /* or 60px */
-    
-    text-align: center;
-    
-    color: #5B94EF;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 338px;
-    height: 59px;
-    left: 1551px;
-    top: 88px;
-
-    font-family: Minecrafter;
+    font-family: Poor Story;
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
     line-height: 100%;
-    /* or 50px */
+    /* identical to box height, or 50px */
+    
+    
+    color: #FF0000;
+  }
 
-    text-align: right;
+  .text3 {
+    position: absolute;
+    width: 285px;
+    height: 90px;
+    left: 980px;
+    top: 1328px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 90px;
+    line-height: 100%;
+    /* identical to box height, or 90px */
+    
+    text-align: left;
+    
+    color: #FF7B00;
+  }
 
-    color: #003789;
+  .text4 {
+    position: absolute;
+    width: 469px;
+    height: 70px;
+    left: 985px;
+    top: 1418px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 70px;
+    line-height: 100%;
+    /* identical to box height, or 70px */
+
+    text-align: left;
+
+    color: #FF0000;
   }
 }

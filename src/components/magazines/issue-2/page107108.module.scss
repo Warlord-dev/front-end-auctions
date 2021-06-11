@@ -2,133 +2,200 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #BEFFC5;
+  background: #FFFFFF;
 
   .image1 {
     position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 0px;
+    width: 834px;
+    height: 1503px;
+    left: -137px;
     top: 0px;
   }
 
   .image2 {
     position: absolute;
-    width: 961px;
+    width: 260px;
     height: 1497px;
-    left: 960px;
+    left: 700px;
     top: 0px;
   }
 
   .image3 {
     position: absolute;
-    width: 367px;
-    height: 744px;
-    left: 988px;
-    top: 717px;
+    width: 339px;
+    height: 556px;
+    left: 603px;
+    top: 13px;    
   }
 
   .image4 {
     position: absolute;
-    width: 427px;
-    height: 816px;
-    left: 960px;
-    top: 681px;
+    width: 391px;
+    height: 553px;
+    left: 508px;
+    top: 812px;
+    border: 7px solid #052DFF;
+    box-sizing: border-box;
   }
 
   .image5 {
     position: absolute;
-    width: 427px;
-    height: 816px;
-    left: 1493px;
-    top: 681px;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
   }
 
   .image6 {
     position: absolute;
-    width: 383px;
-    height: 744px;
-    left: 1515px;
-    top: 717px;
+    width: 960px;
+    height: 1031px;
+    left: 960px;
+    top: 233px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 316px;
+    height: 561px;
+    left: 1604px;
+    top: -28px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 243px;
+    height: 411px;
+    left: 1097px;
+    top: 158px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 340px;
+    height: 604px;
+    left: 1511px;
+    top: 612px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 437px;
+    height: 776px;
+    left: 960px;
+    top: 775px;
   }
 
   .text1 {
     position: absolute;
-    width: 510px;
-    height: 218px;
-    left: 21px;
-    top: 23px;
+    width: 374px;
+    height: 142px;
+    left: 586px;
+    top: 41px;
     
-    font-family: Jacques Francois;
+    font-family: Julietta Messie Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 100%;
+    /* or 150px */
+    
+    text-align: center;
+    -webkit-text-stroke: 0.5px #FA00FF;
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 242px;
+    height: 334px;
+    left: 652px;
+    top: 174px;
+    
+    font-family: Inria Sans;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 242px;
+    height: 47px;
+    left: 697px;
+    top: 1428px;
+    
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 347px;
+    height: 58px;
+    left: 985px;
+    top: 22px;
+    
+    font-family: Istok Web;
     font-style: normal;
     font-weight: normal;
     font-size: 60px;
     line-height: 100%;
     /* or 60px */
-    -webkit-text-stroke: #FFFFFF;
-    -webkit-text-stroke-width: 1px;
     
-    color: #BD00FF;
-    box-sizing: border-box;
+    
+    color: #004FE9;
   }
 
-  .text2 {
+  .text5 {
     position: absolute;
-    width: 284px;
-    height: 30px;
-    left: 21px;
-    top: 152px;
+    width: 347px;
+    height: 58px;
+    left: 985px;
+    top: 80px;
     
-    font-family: Jacques Francois;
+    font-family: Istok Web;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #004B23;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 433px;
+    height: 174px;
+    left: 1451px;
+    top: 1268px;
+    
+    font-family: Khand;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 35px;
     line-height: 100%;
-    /* identical to box height, or 30px */
+    /* or 35px */
     
-    -webkit-text-stroke: #FFFFFF;
-    -webkit-text-stroke-width: 1px;
-    color: #BD00FF;
-    box-sizing: border-box;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 567px;
-    height: 70px;
-    left: 22px;
-    top: 1403px;
-    
-    font-family: Saira;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 70px;
-    line-height: 100%;
-    /* identical to box height, or 70px */
-    
-    
-    color: #BD00FF;
-    -webkit-text-stroke: #FFFFFF;
-    -webkit-text-stroke-width: 1px;
-    box-sizing: border-box;
-  }
-
-  .text4 {
-    position: absolute;
-    width: 362px;
-    height: 128px;
-    left: 1519px;
-    top: 1334px;
-
-    font-family: Jacques Francois Shadow;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 100%;
-    /* or 50px */
-
     text-align: right;
-
-    color: #FA00FF;
+    
+    color: #0500FF;
   }
 }

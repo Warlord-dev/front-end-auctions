@@ -1,44 +1,41 @@
 import React from 'react';
 import styles from './page6162.module.scss';
+import Link from 'next/link';
 
 const Page6162 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/61_62/Group 1193.png" className={styles.left} />
-      <img src="./magazine/1/61_62/girl-and-panda 1.png" className={styles.right} />
-      <div className={styles.text3}>
-        First TenshiGirl Collection on the
-        <br /> blockchain. Featuring 50
-        <br /> high-resolution trading cards with
-        <br /> unique artwork from renowned
-        <br /> anime artists and in-game
-        <br /> functionality.
-      </div>
-      <div className={styles.textDiv}></div>
-      <div className={styles.text4}>
-        <a href="https://share.tenshigirl.io/ad8a23" target="_blank">
-          TenshiGirl.io
-        </a>{' '}
-        is a new crypto trading platform and NFT collectible trading card project, built on
-        Ethereum.
-        <br />
-        <br />
-        They are bridging world renowned artists to create the world of Vestrian— a narrative filled
-        with rich characters, storylines and battles between factions.
-        <br />
-        <br />
-        Each artwork is presented in a collection of ERC721 NFT packs on Ethereum Mainnet. You can
-        purchase an NFT pack with Tenshi coins— the digital currency used to purchase NFTs at
-        TenshiGirl.io.
-        <br />
-        <br />
-        Each trading card also has in-game functionality and dynamic scarcity— holders can level up
-        their cards as they move through the narrative.
-      </div>
-      <img
-        src="./magazine/1/61_62/Tenshigirl Main Logo RGB Light Background 1.png"
-        className={styles.logo}
-      />
+      <img src="./magazine/1/61_62/image2.png" className={styles.image2} />
+      <img src="./magazine/1/61_62/image1.png" className={styles.image1} />
+      <img src="./magazine/1/61_62/image3.png" className={styles.image3} />
+      <img src="./magazine/1/61_62/image4.png" className={styles.image4} />
+      <p className={styles.text1}>#DivingIntoSomniumSpace</p>
+      <Link href="https://somniumspace.com/parcel/2701"><a>
+      <img src="./magazine/1/61_62/image5.png" className={styles.image5} />
+      </a>
+      </Link>
+      <Link href="https://somniumspace.com/parcel/752"><a>
+      <img src="./magazine/1/61_62/image6.png" className={styles.image6} />
+      </a>
+      </Link>  
+      <Link href="https://somniumspace.com/parcel/3250"><a>
+      <img src="./magazine/1/61_62/image7.png" className={styles.image7} />
+      </a>
+      </Link>     
+      <Link href="https://somniumspace.com/parcel/3461"><a>
+      <img src="./magazine/1/61_62/image8.png" className={styles.image8} />
+      </a>
+      </Link>  
+      <img src="./magazine/1/61_62/image9.png" className={styles.image9} />
+      <img src="./magazine/1/61_62/image10.png" className={styles.image10} />
+      <img src="./magazine/1/61_62/image11.png" className={styles.image11} />
+      <p className={styles.text2}>Genesis VR Gallery</p>
+      <p className={styles.text3}>360 Gallery</p>
+      <p className={styles.text4}>Iron Giant</p>
+      <p className={styles.text5}>Local Butterfly</p>
+      <p className={styles.text6}>Somnium Waypoint</p>
+      <p className={styles.text7}>Pablo Rodriguez-Fraile</p>
+      <p className={styles.text8}>Magical Forest</p>
     </div>
   );
 };

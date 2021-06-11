@@ -2,46 +2,45 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #FFFF;
+  background: #000000;
 
   .image1 {
     position: absolute;
-    width: 1496px;
-    height: 1496px;
-    left: -220px;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
     top: 0px;
   }
 
   .image2 {
     position: absolute;
-    width: 960px;
     height: 1497px;
-    left: 960px;
+    left: 964px;
     top: 0px;
   }
 
   .image3 {
     position: absolute;
-    width: 262px;
-    height: 371px;
-    left: 990px;
-    top: 25px;
+    width: 367px;
+    height: 744px;
+    left: 988px;
+    top: 717px;
   }
 
   .image4 {
     position: absolute;
-    width: 262px;
-    height: 371px;
-    left: 990px;
-    top: 420px;
+    width: 427px;
+    height: 816px;
+    left: 960px;
+    top: 681px;
   }
 
   .image5 {
     position: absolute;
-    width: 262px;
-    height: 371px;
-    left: 990px;
-    top: 815px;
+    width: 427px;
+    height: 816px;
+    left: 1493px;
+    top: 681px;
   }
 
   .image6 {
@@ -54,58 +53,58 @@
 
   .text1 {
     position: absolute;
-    width: 237px;
-    height: 100px;
-    left: 48px;
-    top: 25px;
+    width: 60px;
+    height: 450px;
+    left:1832px;
+    top: 40px;
     
-    font-family: Kurale;
+    font-family: Poller One;
     font-style: normal;
     font-weight: normal;
-    font-size: 100px;
-    line-height: 100%;
-    /* identical to box height, or 100px */
+    font-size: 50px;
+    line-height: 25px;
+    /* or 50px */
     
     text-align: center;
     
-    color: #FFFFFF;
+    color: #FF8E1A;
   }
 
   .text2 {
     position: absolute;
-    width: 375px;
-    height: 60px;
-    left: 990px;
-    top: 1406px;
+    width: 60px;
+    height: 720px;
+    left:1760px;
+    top: 40px;
     
-    font-family: Kavoon;
+    font-family: Poller One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 30px;
+    /* or 60px */
+    
+    text-align: center;
+    
+    color: #5B94EF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 510px;
+    height: 50px;
+    left: 31px;
+    top: 1409px;
+    
+    font-family: Fira Code;
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
     line-height: 100%;
     /* identical to box height, or 50px */
-    background: -webkit-linear-gradient(#FF00B8, #A40031);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    
     text-align: center;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 338px;
-    height: 59px;
-    left: 1551px;
-    top: 88px;
-
-    font-family: Minecrafter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 100%;
-    /* or 50px */
-
-    text-align: right;
-
-    color: #003789;
+    
+    color: #FF1313;
   }
 }

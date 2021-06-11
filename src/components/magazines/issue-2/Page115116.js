@@ -6,22 +6,18 @@ const Page115116 = () => {
   return (
     <div className={styles.wrapper}>
        <img src="./magazine/1/115_116/image1.png" className={styles.image1} />
-       <img src="./magazine/1/115_116/image1.png" className={styles.image2} />
-       <img src="./magazine/1/115_116/image1.png" className={styles.image3} />
-       <img src="./magazine/1/115_116/image1.png" className={styles.image4} />
-       <img src="./magazine/1/115_116/image2.png" className={styles.image5} />
-       <img src="./magazine/1/115_116/image3.png" className={styles.image6} />
-       <img src="./magazine/1/115_116/image4.png" className={styles.image7} />
-       <img src="./magazine/1/115_116/image5.png" className={styles.image8} />
-       <Link href="https://the-dots.com/users/tania-viegas-918782"><a className={styles.text1}>
-       Mask of Sanity
+       <img src="./magazine/1/115_116/image2.png" className={styles.image2} />
+       <img src="./magazine/1/115_116/image3.png" className={styles.image3} />
+       <Link href="https://www.instagram.com/cryptsie/"><a className={styles.text1}>
+       Cryptsie Art
         </a>
        </Link>
-       <p className={styles.text2}>Tania Viegas</p>
-       <Link href="www.paolaguivel.com"><a className={styles.text3}>
-       Paola Olaguivel
+       <p className={styles.text2}>Space Adventures</p>
+       <Link href="http://instagram.com/di.universe"><a className={styles.text3}>
+        Di.universe 
         </a>
        </Link>
+       <p className={styles.text4}>RELAX</p>
     </div>
   );
 };

@@ -2,91 +2,80 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #BEFFC5;
 
   .image1 {
     position: absolute;
     width: 960px;
-    height: 1497px;
+    height: 383px;
     left: 0px;
     top: 0px;
+    
+    background: #3D9BA2;
   }
 
   .image2 {
     position: absolute;
-    width: 900px;
-    height: 900px;
-    left: -107px;
-    top: -24px;
+    width: 960px;
+    height: 1115px;
+    left: 0px;
+    top: 383px;
   }
 
   .image3 {
     position: absolute;
-    width: 960px;
-    height: 470px;
-    left: 960px;
-    top: 0px;
-    
-    background: linear-gradient(180deg, #9C050E 63.89%, #9C0510 75.18%, #673943 93.54%);
+    width: 347px;
+    height: 238px;
+    left: -57.76px;
+    top: -47.84px;
+    transform: rotate(-20deg);
   }
 
   .image4 {
     position: absolute;
-    width: 960px;
-    height: 593px;
-    left: 960px;
-    top: 470px;
-    
-    background: linear-gradient(180deg, #ACAC54 0%, #ACAC52 73.09%, #A0A05E 79.02%, #7A7A86 93.94%);
+    width: 400.21px;
+    height: 237.01px;
+    left: 367.46px;
+    top: -66.71px;
+    transform: rotate(-20deg);
   }
 
   .image5 {
     position: absolute;
-    width: 960px;
-    height: 434px;
-    left: 960px;
-    top: 1063px;
-    
-    background: linear-gradient(180deg, #1B000B 71.23%, #1B000B 78.25%, #2B0F04 81.33%, #492D22 93.38%);
+    width: 241px;
+    height: 241px;
+    left: 185px;
+    top: 134px;
   }
 
   .image6 {
     position: absolute;
-    width: 423px;
-    height: 455px;
-    left: 960px;
-    top: 12px;
+    width: 316px;
+    height: 217px;
+    left: 638px;
+    top: 146px;
   }
 
   .image7 {
     position: absolute;
-    width: 587px;
-    height: 587px;
-    left: 1333px;
-    top: 477px;
-  }
-
-  .image8 {
-    position: absolute;
-    width: 447px;
-    height: 447px;
-    left: 1038px;
-    top: 1064px;
+    height: 1497px;
+    left: 720px;
+    top: 0px;
+    z-index: -1;
   }
 
   .text1 {
     position: absolute;
-    width: 827px;
-    height: 356px;
-    left: 54px;
-    top: 1079px;
+    width: 125px;
+    height: 145px;
+    left: 820px;
+    top: 8px;
     
-    font-family: XXII ARMY;
+    font-family: Poppins;
     font-style: normal;
-    font-weight: normal;
-    font-size: 23px;
+    font-weight: 650;
+    font-size: 40px;
     line-height: 100%;
-    /* or 23px */
+    /* or 40px */
     
     
     color: #FFFFFF;
@@ -94,76 +83,99 @@
 
   .text2 {
     position: absolute;
-    width: 366px;
-    height: 80px;
-    left: 568px;
-    top: 1385px;
+    width: 138px;
+    height: 955px;
+    left: 47px;
+    top: 463px;
     
-    font-family: XXII-ARMY;
+    font-family: Jaldi;
     font-style: normal;
     font-weight: normal;
-    font-size: 80px;
+    font-size: 60px;
     line-height: 100%;
-    /* identical to box height, or 80px */
+    /* or 60px */
     
-    text-align: right;
+    text-align: center;
     
-    color: #2B40FF;
+    color: #FFFFFF;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -43px;
   }
 
   .text3 {
     position: absolute;
-    width: 422px;
-    height: 330px;
-    left: 1432px;
-    top: 54px;
+    width: 190px;
+    height: 71px;
+    left: 760px;
+    top: 1382px;
     
-    font-family: Poor Story;
+    font-family: Nobile;
     font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 60px;
     line-height: 100%;
-    /* or 30px */
+    /* or 60px */
     
-    text-align: right;
+    text-align: center;
     
     color: #FFFFFF;
   }
 
   .text4 {
     position: absolute;
-    width: 395px;
-    height: 201px;
-    left: 1485px;
-    top: 1159px;
-
-    font-family: Quando;
+    width: 441px;
+    height: 87px;
+    left: 1445px;
+    top: 24px;
+    
+    font-family: Rose Cake - Personal Use;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 70px;
     line-height: 100%;
-    /* or 15px */
-
-
-    color: #FEFEFE;
+    /* or 70px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
   }
 
   .text5 {
     position: absolute;
-    width: 436px;
-    height: 55px;
-    left: 1465px;
-    top: 1419px;
+    width: 441px;
+    height: 87px;
+    left: 1445px;
+    top: 91px;
 
-    font-family: Quando;
+    font-family: Rose Cake - Personal Use;
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
     line-height: 100%;
     /* or 50px */
 
-    text-align: center;
+    text-align: right;
 
-    color: #FEFEFE;
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 193px;
+    height: 340px;
+    left: 1693px;
+    top: 153px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    /* or 12px */
+
+    text-align: right;
+
+    color: #FFFFFF;
   }
 }

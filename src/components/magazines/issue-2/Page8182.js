@@ -4,113 +4,40 @@ import styles from './page8182.module.scss';
 const Page8182 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/81_82/left2.png" className={styles.left} />
-      <img src="./magazine/1/81_82/Group 1190 (3).png" className={styles.right} />
-      <video className={styles.leftLink1} muted autoPlay loop>
-        <source src="./magazine/1/81_82/Untitled (11).mp4" type="video/mp4" />
-      </video>
-      <a href="https://www.marguixastudio.com/" className={styles.leftLink2} target="_blank">
-        MAR GUIXA STUDIO
-      </a>
-      <div className={styles.leftText}>BLACK DECO TRENCH COAT</div>
-      <a href="https://www.instagram.com/prizecard/?hl=en" className={styles.link1} target="_blank">
-        {' '}
-        XENOTECH{' '}
-      </a>
-      <a href="https://www.instagram.com/prizecard/?hl=en" className={styles.link2} target="_blank">
-        {' '}
-        XENOTECH{' '}
-      </a>
-      <a href="https://www.instagram.com/prizecard/?hl=en" className={styles.link3} target="_blank">
-        {' '}
-        XENOTECH{' '}
-      </a>
-      <div className={styles.rightText1}>
-        23 yr old art and design student based in NYC at The New School, with an international
-        upbringing, from Japan, NYC, Rome, and Abu Dhabi.
-      </div>
-      <div className={styles.rightText2}>Designing for the Metaverse</div>
-      <div className={styles.rightText3}>What has been your digital fashion journey?</div>
-      <div className={styles.rightText4}>
-        My digital creative work started when I was in elementary school, living in Abu Dhabi. I was
-        exploring video editing and filmmaking, creating special effects videos with my friends. I
-        continued pursuing film until I reached college where I began experimenting with other
-        mediums, primarily clothing design. I was working on a graphic design based streetwear brand
-        during my early years of college, spending most of the time practicing graphic design and
-        learning how to sew physical garments. I always envisioned this streetwear brand having a
-        digital presence with every physical garment being paired with a digital twin along with a
-        native virtual world where the brand's customers could purchase the garments. It was during
-        this time that I started growing a passion for futurism, technology, and virtual worlds.
-        This ultimately drove me down many rabbit holes and finally last year I moved away from
-        physical clothing, built a computer and dedicated myself to learning 3D modeling and
-        building a prototype of this vision. During this process I have discovered blockchain, NFTs,
-        and the Metaverse and have been truly blown away by the implications they hold.
-      </div>
-      <div className={styles.rightText5}>
-        Do you have a preferred set of software that you like to use?
-      </div>
-      <div className={styles.rightText6}>
-        I began my 3D modeling journey less than a year ago (fall of 2020) so I am still very much
-        in the learning stage trying to navigate all the tools available. My preferred software so
-        far is definitely Blender. I’ve also spent time using Unity, Marvelous Designer, After
-        Effects, Photoshop, and FL Studios for music.
-      </div>
-      <div className={styles.rightText7}>What is XENOTECH?</div>
-      <div className={styles.rightText8}>
-        XENOTECH is the natural extension to the previous physical streetwear brand I was building.
-        My vision for XENOTECH has always and still is to become a Metaverse social-commerce virtual
-        world targeting fashion designers and creatives alike. I am currently looking for people
-        interested in helping me realize this. However, in respect to this being a longer-term
-        resource intensive goal, in this early stage I am focused on first establishing XENOTECH as
-        a digital streetwear brand exploring themes of futurism and the convergence of exponential
-        technological trends.
-      </div>
-      <div className={styles.rightText9}>How is XENOTECH using NFTs?</div>
-      <div className={styles.rightText10}>
-        The shorter term plans for XENOTECH include first developing a collection of 3D NFT garments
-        to be sold as XENOTECH exclusives. Then the aim is towards expanding into Metaverse
-        wearables, since ultimately Digital Fashion is meant to have utility and be worn by owners'
-        avatars. I am looking into Crytovoxels, Decentraland, and The Sandbox as potential starting
-        points. Another short-term plan is to finalize the Cryptovoxels XENOTECH store which
-        currently resides on the Milan island in Cryptovoxels, and to continue expanding to more
-        retail locations across the Metaverse in order to start featuring other 3D clothing
-        designers / brands by providing them digital storefront space.
-      </div>
-      <video className={styles.video1} muted loop autoPlay>
-        <source src="./magazine/1/81_82/Singularity.mp4" type="video/mp4" />
-      </video>
-      <img src="./magazine/1/81_82/image 321.png" className={styles.arrow1} />
-      <div className={styles.rightText11}>
-        The Singularity sweater is an early XENOTECH 3D garment—a prelude to the official first
-        collection releasing soon. It speaks to the concept of an approaching technological
-        singularity, a result of the convergence of countless different exponential disruptive
-        technologies including Artificial Intelligence, genetic editing, and brain-computer
-        interfaces.
-      </div>
-      <video className={styles.video2} muted loop autoPlay>
-        <source src="./magazine/1/81_82/Untitled (12).mp4" type="video/mp4" />
-      </video>
-      <img src="./magazine/1/81_82/image 320.png" className={styles.arrow2} />
-      <div className={styles.rightText12}>
-        This is the prototype of the 3D city that I built out to help visualize the way I imagine
-        the XENOTECH Metaverse to look. Everything was modeled from scratch using Marvelous Designer
-        and Blender, then Unity to put it all together. The graphics and video edits seen on the
-        buildings were done using Photoshop and After Effects.
-      </div>
-      <div className={styles.rightText13}>
-        When I was previously designing physical clothing I was always frustrated by the constraints
-        faced when trying to work with my favorite fabrics such as Vinyl—they were a nightmare to
-        sew with and ultimately very uncomfortable to wear. With digital fashion these constraints
-        disappear and there are unlimited possibilities. Video Clothing and the use of
-        physically-impossible fabrics and textures are some examples. My current process includes
-        starting with graphic design or video editing in Photoshop or After Effects, then
-        constructing a garment in Marvelous Designer, then using Blender to add graphics/videos,
-        materials, and other 3D components.
-        <br />
-        <br />
-        In the short term I am looking towards releasing the first exclusive XENOTECH garment
-        collection, and officially launching the XENOTECH Metaverse store in Cryptovoxels.
-      </div>
+      <img src="./magazine/1/81_82/image1.png" className={styles.image1} />
+      <div className={styles.image2}></div>
+      <div className={styles.image3}></div>
+      <p className={styles.text1}>The demands of survival in such a mad world, paired with constantly ringing alarm bells and the stream of noise overloading our sensations every second — not to mention the scarcity and disconnection of our jobs from a true sense of purpose — can break us. 
+      <br/><br/>
+Democracy or Dictatorship?
+The democratization that Web2 and its model of gatekeeping that has pervaded benefit only those who are at the very top, as the rest of those who are on the right side of the gate are thrown crumbs if they play by the rules that the autocrats at the very top routinely shit out.
+<br/><br/>
+Sure, there will always be winners and losers, end of. But when the game is played with marked cards, it's the rest of us who are being played in this vignette of deceit courtesy of the powers-that-be that run this world: the gatekeepers.
+<br/><br/>
+Web2 brought internet access to billions of individuals worldwide. But creators have to play by the rules lest these centralized platforms would one day decide to set the rules in opposition — and laugh their asses off as their users haplessly jump from one foot to the other, trying not to get eternally Zucc'd from the Web2 Garden of Eden. Expelled, never to be seen, heard from, or earn another dime ever again...with absolutely zero recourse. They're tight-asses, they're sadists, and they're absentee landlords.
+<br/><br/>
+We've seen how the social media machine can eat up an aspiring influencer, chew them up until every last trickle of profitability can be extracted, then spit them out like yesterday's brisket once the views start dropping. We've seen entire platforms, creators, artists, musicians, designers, and influencers that got yeeted in the blink of an eye by the seemingly arbitrary rules that the gatekeepers set for them. As a result, more individuals get banished from Twitter or YouTube than we can ever count. Parler literally got Thanos-snapped out of existence once Amazon, Apple, and Google felt they had to engage them in a dick-swinging contest. Guess who's going to win that one? Every. Single. Time.
+<br/><br/>
+Meanwhile, social media has turned us into modern-day Kafkaesque bugmen looking for the next hit of dopamine from the last bit of engagement, turning us into social media zombies going through one vapid TikTok fad after the next, all in the search for meaning that has ultimately been lost in all the noise that surrounds it. 
+<br/><br/>
+Gatekeepers are everywhere — art, music, design, fashion, technology, corporates...you name it, there's bound to be an iteration on the same tired gatekeeper bullshit that impedes progress everywhere. The same crap that gives all power to the elite "haves," instead of the "have nots" who have to comply with the rules of the walled gardens they enter, lest they suffer the consequence of literal virtual death. Abandon all hope of freedom, all ye who enter.
+<br/><br/>
+The tricks only work once, and people get it as they age. We've all been had. It's all a fucking scam — and we all hate the fact of how transparently we're being jerked around by the gatekeepers that hold such concentrated power in the hands of so few for so long.</p>
+      <p className={styles.text2}>If this is what democratization looks like under Web2, how worse can dictatorship possibly be when the centralized internet platforms hold all the aces anyway?
+      <br/><br/>
+If there's anything we should have learned about Silicon Valley, it was that it could: 1) cancel you in a heartbeat for perceived "wrongthink" by its algorithms, 2) decide who can and can't publish apps, and 3) seize your domain willy-nilly. At any rate, the internet has become a centralized, monolithic cesspool and beaten black and blue like a government mule by its gatekeepers. Does anyone working at Facebook feel remorse for banning thousands of people and deleting millions of posts even when they end up being in the wrong? Fuck it, let the whole thing burn.
+<br/><br/>
+If anything, the coronavirus pandemic hastened the path towards decentralization. The emergence of remote work, eSports, extended reality and the rapidly-growing creator economy are all part of this sea change. Recent events, particularly the divisive recent U.S. presidential elections, have contributed to this change. If Twitter can go after a sitting President and try to cancel him, what chance does Joe Blow stand when his beloved tech gatekeepers turn on him?
+<br/><br/>
+This precarity is everywhere, hanging like a sword of Damocles on top of our collective heads, leaving us walking on eggshells lest we step out of line and experience the closest thing to total damnation of the memory from the annals of social media and internet history. The emotional toll is real after discovering that it's the entire structure that's broken. Post-traumatic stress from everyday precarity is real, and it's more pervasive than any of us care to imagine. "It is no measure of health to be well-adjusted to a profoundly sick society," as the philosopher J. Krishnamurti put it. And boy, was he ever right — in this bizarro clown world of frenzied indolence, in a never-ending cycle of jerky, stop-start, constant inertia.
+<br/><br/>
+Web3 and the Importance of Hedging 
+With all the uncertainty and risk prevailing in the world today, this makes the concept of hedging all the more critical in the coming years. Hedging, in essence, is managing uncertainty. It's no different from bringing a coat when you expect stormy weather—or taking out health insurance. Think of hedging as in case shit happens — which it sure as hell did last year, what with the pandemic. Hedging is acting in the present to try to mitigate future risks, and one of the hedges that a growing number of individuals are turning to is the decentralized internet, or Web3.
+<br/><br/>
+Web3 tears down gates and burns down the walled gardens that its predecessor created to perpetuate itself as the digital economy comes around — a decentralized economy that provides fair incentives for participants who then gain their skin in the game to help expand the network.
+<br/><br/>
+Crypto and blockchain technologies such as non-fungible tokens (NFTs), decentralized finance (DeFi), and decentralized autonomous organizations (DAOs) are opening up possibilities as far as giving individuals more agency, more opportunity, and more sustainable outcomes than their centralized counterparts would ever allow — in a codified, permissionless, and transparent manner.
+</p>
     </div>
   );
 };

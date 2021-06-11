@@ -5,16 +5,24 @@ import Link from 'next/link';
 const Page9596 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/95_96/image1.png" className={styles.image1} />
-      <img src="./magazine/1/95_96/image2.png" className={styles.image2} />
-      <img src="./magazine/1/95_96/image3.png" className={styles.image3} />
-      <img src="./magazine/1/95_96/image4.png" className={styles.image4} />
-      <Link href="https://shwangerika.cargo.site/"><a className={styles.text1}>
-      Shiu Studio
+      <img src="./magazine/1/95_96/left.png" className={styles.leftBack} />
+      <img src="./magazine/1/95_96/right.png" className={styles.rightBack} />
+      <img src="./magazine/1/95_96/right-top.png" className={styles.rightTop} />
+      <video autoPlay muted loop className={styles.leftBottom}>
+        <source src="./magazine/1/95_96/Automata-Turntable.mp4" type="video/mp4" />
+      </video>
+      <Link href="https://twitter.com/rudeoolph"><a className={styles.text1}>
+      Rudeolph
       </a>
       </Link>
-      <Link href="https://instagram.com/veletagram"><a className={styles.text2}>
-      DOMINGO BETTE ENCOUR
+      <p className={styles.text2}>
+      Automata
+      </p>
+      <div className={styles.text3}>
+      Lost in Space
+      </div>
+      <Link href="https://www.instagram.com/yekaterinab/"><a className={styles.text4}>
+      YeKaterina Burmatnova
       </a>
       </Link>
     </div>

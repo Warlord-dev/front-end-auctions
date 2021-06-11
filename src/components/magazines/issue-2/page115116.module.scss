@@ -2,129 +2,127 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #FFFFFF;
+  background: #BEFFC5;
 
   .image1 {
     position: absolute;
-    width: 541px;
-    height: 649px;
-    left: -47px;
-    top: -52px;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
   }
 
   .image2 {
     position: absolute;
-    width: 561px;
-    height: 649px;
-    left: 395px;
-    top: 335px;
-  }
-
-  .image3 {
-    position: absolute;
-    width: 541px;
-    height: 649px;
-    left: -146px;
-    top: 571px;
-  }
-
-  .image4 {
-    position: absolute;
-    width: 541px;
-    height: 649px;
-    left: 0px;
-    top: 1025px;
-  }
-
-  .image5 {
-    position: absolute;
-    width: 541px;
-    height: 451px;
-    left: 415px;
-    top: 964px;
-  }
-
-  .image6 {
-    position: absolute;
-    width: 541px;
-    height: 315px;
-    left: 416px;
-    top: 1416px;
-  }
-
-  .image7 {
-    position: absolute;
-    width: 960px;
-    height: 1497px;
+    width: 961px;
+    height: 748px;
     left: 960px;
     top: 0px;
   }
 
-  .image8 {
+  .image3 {
     position: absolute;
-    width: 810px;
-    height: 1406px;
-    left: 4px;
-    top: 91px;
+    width: 960px;
+    height: 749px;
+    left: 960px;
+    top: 748px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 427px;
+    height: 816px;
+    left: 960px;
+    top: 681px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 427px;
+    height: 816px;
+    left: 1493px;
+    top: 681px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 383px;
+    height: 744px;
+    left: 1515px;
+    top: 717px;
   }
 
   .text1 {
     position: absolute;
-    width: 385px;
-    height: 100px;
-    left: 551px;
-    top: 10px;
+    width: 328px;
+    height: 60px;
+    left: 39px;
+    top: 20px;
     
-    font-family: Qwigley;
+    font-family: Purple Purse;
     font-style: normal;
     font-weight: normal;
-    font-size: 100px;
+    font-size: 60px;
     line-height: 100%;
-    /* identical to box height, or 100px */
+    /* identical to box height, or 60px */
     
-    text-align: center;
     
-    color: #FFB800;
-    -webkit-text-stroke: #FFB800;
-    -webkit-text-stroke-width: 1px;
-    box-sizing: border-box;
+    color: #AD00FF;
   }
 
   .text2 {
     position: absolute;
-    width: 363px;
-    height: 132px;
-    left: 586px;
-    top: 110px;
+    width: 473px;
+    height: 60px;
+    left: 465px;
+    top: 1411px;
     
-    font-family: Qwigley;
+    font-family: Purple Purse;
     font-style: normal;
     font-weight: normal;
-    font-size: 100px;
+    font-size: 60px;
     line-height: 100%;
-    /* or 100px */
+    /* identical to box height, or 60px */
     
-    text-align: center;
     
-    color: #EAD629;
+    color: #00D1FF;
   }
 
   .text3 {
     position: absolute;
-    width: 902px;
-    height: 150px;
-    left: 985px;
+    width: 425px;
+    height: 117px;
+    left: 1461px;
     top: 16px;
     
-    font-family: Flamenco;
+    font-family: Poor Story;
     font-style: normal;
     font-weight: normal;
-    font-size: 150px;
+    font-size: 90px;
     line-height: 100%;
-    /* identical to box height, or 150px */
+    /* or 90px */
     
+    text-align: right;
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 747px;
+    height: 226px;
+    left: 1068px;
+    top: 607px;
+
+    font-family: Poor Story;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 100%;
+    /* or 200px */
+
     text-align: center;
-    
-    color: #AED8FF;
+
+    color: #FFFFFF;
   }
 }

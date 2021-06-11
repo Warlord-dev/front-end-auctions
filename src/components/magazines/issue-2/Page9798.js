@@ -5,20 +5,39 @@ import Link from 'next/link';
 const Page9798 = () => {
   return (
     <div className={styles.wrapper}>
-       <img src="./magazine/1/97_98/image1.png" className={styles.image1} />
-       <img src="./magazine/1/97_98/image4.png" className={styles.image4} />
-       <img src="./magazine/1/97_98/image4.png" className={styles.image5} />
-       <img src="./magazine/1/97_98/image3.png" className={styles.image3} />
-       <img src="./magazine/1/97_98/image5.png" className={styles.image6} />
-       <video className={styles.image2} muted loop autoPlay>
-        <source src="./magazine/1/97_98/espa_skin.mp4" type="video/mp4" />
+       <div className={styles.leftBack}></div>
+      <img src="./magazine/1/97_98/leftImg1.png" className={styles.left1} />
+      <img src="./magazine/1/97_98/leftImg2.png" className={styles.left2} />
+      <img src="./magazine/1/97_98/leftImg3.png" className={styles.left3} />
+      <img src="./magazine/1/97_98/rightImg1.png" className={styles.right1} />
+      <img src="./magazine/1/97_98/rightImg2.png" className={styles.right2} />
+      <video className={styles.right3} muted loop autoPlay>
+        <source src="./magazine/1/97_98/video1.mp4" type="video/mp4" />
        </video>
-       <Link href="www.instagram.com/pr.esc/"><a className={styles.text1}>
-        Jessica Schott
-        </a>
-       </Link>
-       <p className={styles.text2}>BBLUNDERR</p>
-       <p className={styles.text3}>minecraft</p>
+      <img src="./magazine/1/97_98/rightImg4.png" className={styles.right4} />
+      <Link href="https://www.instagram.com/abigneonglitter/"><a className={styles.text1}>
+      ABigNeonGlitter
+      </a>
+      </Link>
+      <p className={styles.text2}>
+      MERETRIXXX
+      </p>
+      <Link href="https://www.icakostika.com/"><a className={styles.text3}>
+      ICA & KOSTIKA
+      </a>
+      </Link>
+      <p className={styles.text4}>
+      The Ctenophora Dress
+      </p>
+      <p className={styles.text5}>
+      This dress is inspired by deep sea creatures called Ctenophora. Such beings belong to a phylum of invertebrate animals that live in marine waters worldwide. 
+<br/><br/>
+Their biolumniescent properties allow them to glow in the dark, bringing light to the deepest ends of our oceans. 
+<br/><br/>
+“Instead of fighting the darkness, you bring in the light.” A quote by Eckhart Tolle, reminding us of our deepest inner light of hope, love and infinite energy. 
+<br/><br/>
+The dress, headpiece and heels are all made from plastic waste, extracted from our oceans.
+      </p>
     </div>
   );
 };

@@ -5,21 +5,38 @@ import Link from 'next/link';
 const Page121122 = () => {
   return (
     <div className={styles.wrapper}>
-       <video className={styles.image1} muted loop autoPlay>
-        <source src="./magazine/1/121_122/video1.mp4" type="video/mp4" />
+       <Link href="www.instagram.com/pr.esc/"><a>
+       <img src="./magazine/1/121_122/image1.png" className={styles.image1} />
+       </a>
+       </Link>
+       <video className={styles.image2} muted loop autoPlay>
+        <source src="./magazine/1/121_122/video1.mov" type="video/mp4" />
        </video>
-       <img src="./magazine/1/121_122/image2.png" className={styles.image2} />
-       <img src="./magazine/1/121_122/image3.png" className={styles.image3} />
-       <img src="./magazine/1/121_122/image4.png" className={styles.image4} />
-       <img src="./magazine/1/121_122/image5.png" className={styles.image5} />
-       <Link href="www.luciidigital.com"><a className={styles.text1}>
-       LUCII
-        </a>
+       <Link href="www.instagram.com/pr.esc/"><a>
+       <p className={styles.text3}>Nicole Savitskaya</p>
+       </a>
        </Link>
-       <Link href="http://instagram.com/onandno.project"><a className={styles.text2}>
-       Onando Project
-        </a>
-       </Link>
+       <p className={styles.text1}>F<br/><br/>
+I<br/><br/>
+R<br/><br/>
+E<br/><br/><br/><br/>
+
+S<br/><br/>
+U<br/><br/>
+I<br/><br/>
+T</p>
+<p className={styles.text2}>N<br/><br/>
+A<br/><br/>
+S<br/><br/>
+H<br/><br/><br/>
+ 
+R<br/><br/>
+U<br/><br/>
+C<br/><br/>
+K<br/><br/>
+M<br/><br/>
+A<br/><br/>
+N</p>
     </div>
   );
 };

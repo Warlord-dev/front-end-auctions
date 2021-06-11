@@ -2,9 +2,8 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #BEFFC5;
 
-  .image1 {
+  .backImage {
     position: absolute;
     width: 960px;
     height: 1497px;
@@ -12,100 +11,177 @@
     top: 0px;
   }
 
-  .image2 {
+  .leftBack {
     position: absolute;
-    width: 963px;
-    height: 540px;
-    left: 957px;
-    top: 158px;
+    width: 50%;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    background: #889DA9;
   }
 
-  .image3 {
+  .left1 {
     position: absolute;
-    width: 367px;
-    height: 744px;
-    left: 988px;
-    top: 717px;
+    width: 348px;
+    height: 426px;
+    left: 84px;
+    top: 49px;
+    z-index: 100;
   }
 
-  .image4 {
+  .left2 {
     position: absolute;
-    width: 427px;
-    height: 816px;
+    width: 470px;
+    height: 590px;
+    left: 461px;
+    top: 235px;
+    z-index: 100;
+  }
+
+  .left3 {
+    position: absolute;
+    width: 486px;
+    height: 594px;
+    left: 37px;
+    top: 866px;
+    z-index: 100;
+  }
+
+  .right1 {
+    position: absolute;
+    width: 542px;
+    height: 542px;
     left: 960px;
-    top: 681px;
+    top: 0px;
   }
 
-  .image5 {
+  .right2 {
     position: absolute;
-    width: 427px;
-    height: 816px;
-    left: 1493px;
-    top: 681px;
+    width: 560px;
+    height: 560px;
+    left: 1502px;
+    top: -18px;
   }
 
-  .image6 {
+  .right3 {
     position: absolute;
-    width: 383px;
-    height: 744px;
-    left: 1515px;
-    top: 717px;
+    width: 794px;
+    height: 896px;
+    left: 859px;
+    top: 599px;
+  }
+
+  .right4 {
+    position: absolute;
+    width: 339px;
+    height: 474px;
+    left: 1550px;
+    top: 1000px;
+  }
+
+  .rightBack {
+    position: absolute;
+    width: 1404px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    z-index: 99;
   }
 
   .text1 {
     position: absolute;
-    width: 725px;
-    height: 120px;
-    left: 113px;
-    top: 20px;
-
-    font-family: Public Secret DEMO;
+    width: 459px;
+    height: 44px;
+    left: 491px;
+    top: 39px;
+    
+    font-family: Neon Nanoborg;
     font-style: normal;
     font-weight: normal;
-    font-size: 120px;
-    line-height: 100%;
-    /* identical to box height, or 120px */
-
+    font-size: 70px;
+    line-height: 90%;
+    /* or 63px */
+    z-index: 100;
     text-align: center;
-
-    color: #8219B4;
+    
+    color: #FF0F00;
   }
 
   .text2 {
     position: absolute;
-    width: 249px;
-    height: 59px;
-    left: 1640px;
-    top: 21px;
+    width: 451px;
+    height: 153px;
+    left: 480px;
+    top: 109px;
 
-    font-family: Public Secret DEMO;
+    font-family: Lustria;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
-    line-height: 100%;
-    /* or 50px */
+    font-size: 65px;
+    line-height: 90%;
+    /* or 58px */
+    z-index: 100;
+    text-align: center;
 
-    text-align: right;
-
-    color: #003789;
+    color: #FFD2DD;
   }
 
   .text3 {
     position: absolute;
-    width: 338px;
-    height: 59px;
-    left: 1551px;
-    top: 88px;
+    width: 392px;
+    height: 44px;
+    left: 1487px;
+    top: 575px;
 
-    font-family: Minecrafter;
+    font-family: Lexend Zetta;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
-    line-height: 100%;
-    /* or 50px */
+    font-size: 25px;
+    line-height: 90%;
+    /* or 22px */
 
     text-align: right;
 
-    color: #003789;
+    color: #926BFF;
   }
+
+  .text4 {
+    position: absolute;
+    width: 392px;
+    height: 44px;
+    left: 1487px;
+    top: 608px;
+
+    font-family: Lexend Zetta;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 90%;
+    /* or 22px */
+
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 392px;
+    height: 277px;
+    left: 1487px;
+    top: 664px;
+
+    font-family: Lexend Zetta;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 90%;
+    /* or 13px */
+
+    text-align: right;
+
+    color: #FFFFFF;
+  } 
+
 }

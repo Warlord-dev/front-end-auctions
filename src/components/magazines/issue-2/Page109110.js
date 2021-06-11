@@ -5,32 +5,36 @@ import Link from 'next/link';
 const Page109110 = () => {
   return (
     <div className={styles.wrapper}>
-       <img src="./magazine/1/109_110/image1.png" className={styles.image1} />
-       <img src="./magazine/1/109_110/image2.png" className={styles.image2} />
-       <div className={styles.image3}></div>
-       <div className={styles.image4}></div>
-       <div className={styles.image5}></div>
-       <img src="./magazine/1/109_110/image3.png" className={styles.image6} />
-       <img src="./magazine/1/109_110/image4.png" className={styles.image7} />
-       <img src="./magazine/1/109_110/image5.png" className={styles.image8} />
-       <p className={styles.text1}>3021-humanity, having finally destroyed the earth, completely moved the conscious of the surviving population to a new virtual world. But after a while, chaos ensured and only those most able to adapt to the difficult conditions survived. On the ruins of this digital world, among the deserts and broken textures, the adapted population dwells, utilising the unique technologies to survive.
-<br/><br/>
-111Corp - the company that creates the advanced technologies in this new reality. 
-<br/><br/>
-D. D. C. E_111 is their latest development— made of digital nylon, the glitch camouflage suit helps the population survive in digital storms, deserts, and the ruins of the latest civilization. The suit allows you to hide amongst the textures, and operate at an almost invulnerable state, despite the dangerous environmental conditions. DDCE is the crown hybrid between virtual technology and fashion. </p>
-       <Link href="https://www.instagram.com/errorillusion/"><a className={styles.text2}>
-       Max Dyrman
+       <video className={styles.image7} muted loop autoPlay>
+        <source src="./magazine/1/109_110/video1.mov" type="video/mp4" />
+       </video>
+      <div className={styles.image1}></div>
+       <img src="./magazine/1/109_110/image1.gif" className={styles.image2} />
+       <img src="./magazine/1/109_110/image2.png" className={styles.image3} />
+       <img src="./magazine/1/109_110/image3.png" className={styles.image4} />
+       <img src="./magazine/1/109_110/image4.png" className={styles.image5} />
+       <img src="./magazine/1/109_110/image5.png" className={styles.image6} />
+       {/* <img src="./magazine/1/105_106/image6.png" className={styles.image7} /> */}
+       <video className={styles.image7} muted loop autoPlay>
+        <source src="./magazine/1/109_110/video1.mov" type="video/mp4" />
+       </video>
+       <p className={styles.text1}>Nike Adapt BB</p>
+       <Link href="https://marcellobaldari.artstation.com/"><a className={styles.text2}>
+       Marcello Baldari
         </a>
        </Link>
-       <p className={styles.text3}>Do virtual worlds need virtual handbags? How do our physical items translate into virtual spaces?
-       <br/><br/>
-Beginning with these questions and four fashion archetypes of the physical world, this capsule of three colorways brings together a bag, belt, a piece of jewelry, and a pair of sneakers into a digital hybrid accessory.</p>
-        <p className={styles.text4}>Lauren is an American fashion designer and entrepreneur, starting out in 2012. She specialises in circular and digital fashion, in Paris, London, and New York. 
-        <br/><br/>
-She is motivated by the substantial role fashion plays in the overconsumption and destruction of planetary resources, seeing digital fashion as a key solution to this issue. From AR filters to immersive digital worlds, this new medium can allow for true identity exploration.
-
-She is the founder of Alterrage, a phygital fashion brand bridging the digital realm with physical reality. Creating the future of phygital.</p>
-       <p className={styles.text5}>Lauren Kacher</p>
+       <p className={styles.text3}>EDGE</p>
+       <Link href="https://www.instagram.com/dgtl_stylist/"><a className={styles.text4}>
+       Alyona Briukhanova
+        </a>
+       </Link>
+       <p className={styles.text5}>Air Bubble Dress</p>
+       <p className={styles.text6}>Born as a part of “The Verge of Extinction” collection, the Air Bubble Dress was created to draw attention to one of the most important natural resources - air ... and its wastage… Pollution… Shortage.  
+<br/><br/>
+The purity and tenderness of the predominant entity is being wrapped into a mixture of solid particles, metals and gases. Car emissions, chemicals from factories, dust, pollen and mold spores spread across the air we breathe. As a result 4.2 million people die every year from health issues connected to air pollution. 
+<br/><br/>
+Year on year it is harder to find clean and fresh air. Soon, we will literally have to search for it. Alike, through the metal texture of the bubbles of a dress it is hard to distinguish the air, sky, clouds… She is so delicate, but covered in stiff gown. So beautiful, but deadly sad. The embodiment of the planet on the verge of extinction. 
+</p>
     </div>
   );
 };

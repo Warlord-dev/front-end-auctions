@@ -5,39 +5,29 @@ import Link from 'next/link';
 const Page9394 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.leftBack}></div>
-      <img src="./magazine/1/93_94/leftImg1.png" className={styles.left1} />
-      <img src="./magazine/1/93_94/leftImg2.png" className={styles.left2} />
-      <img src="./magazine/1/93_94/leftImg3.png" className={styles.left3} />
-      <img src="./magazine/1/93_94/rightImg1.png" className={styles.right1} />
-      <img src="./magazine/1/93_94/rightImg2.png" className={styles.right2} />
-      <video className={styles.right3} muted loop autoPlay>
-        <source src="./magazine/1/93_94/video1.mp4" type="video/mp4" />
-       </video>
-      <img src="./magazine/1/93_94/rightImg4.png" className={styles.right4} />
-      <Link href="https://www.instagram.com/abigneonglitter/"><a className={styles.text1}>
-      ABigNeonGlitter
-      </a>
-      </Link>
+      <img src="./magazine/1/93_94/left.png" className={styles.leftBack} />
+      <img src="./magazine/1/93_94/right.png" className={styles.rightBack} />
+      <div className={styles.text1}>
+      BLADE RUNWAY
+      </div>
       <p className={styles.text2}>
-      MERETRIXXX
+      Welcome to the Meta-Jungle
       </p>
-      <Link href="https://www.icakostika.com/"><a className={styles.text3}>
-      ICA & KOSTIKA
-      </a>
-      </Link>
+      <div className={styles.text3}>
+      Sheantoz Story
+      </div>
       <p className={styles.text4}>
-      The Ctenophora Dress
+Sheantoz is an intergalactic alien singer from a distant future. She has an unique and powerful voice that can both fascinate  and enchant the audience with just a single song. She is originally from a planet called Saquarious, where her species has blue color skin and the ability to breath under water— her planet is 60% liquid water and 30% iced water. Only %10 of the planet is solid land, where the enemy species rules. 
+<br/>
+<br/>
+Sheantoz was once captured by enemy forces for their own amusement, however, her voice was able to enchant the soldiers, allowing her to escape via space craft. 
+<br/>
+<br/>
+Ever since, she has been roaming from one planet to the next, travelling across galaxies. She plans one day to also visit Earth, giving a concert to her fans and using her voice for the greater good. 
       </p>
-      <p className={styles.text5}>
-      This dress is inspired by deep sea creatures called Ctenophora. Such beings belong to a phylum of invertebrate animals that live in marine waters worldwide. 
-<br/><br/>
-Their biolumniescent properties allow them to glow in the dark, bringing light to the deepest ends of our oceans. 
-<br/><br/>
-“Instead of fighting the darkness, you bring in the light.” A quote by Eckhart Tolle, reminding us of our deepest inner light of hope, love and infinite energy. 
-<br/><br/>
-The dress, headpiece and heels are all made from plastic waste, extracted from our oceans.
-      </p>
+      <div className={styles.text5}>
+      Burak Dahan
+      </div>
     </div>
   );
 };

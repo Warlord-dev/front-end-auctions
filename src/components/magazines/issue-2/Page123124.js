@@ -6,20 +6,25 @@ const Page123124 = () => {
   return (
     <div className={styles.wrapper}>
        <img src="./magazine/1/123_124/image1.png" className={styles.image1} />
-       <img src="./magazine/1/123_124/image2.png" className={styles.image2} />
-       <img src="./magazine/1/123_124/image3.png" className={styles.image3} />
-       <img src="./magazine/1/123_124/image4.png" className={styles.image3} />
-       <img src="./magazine/1/123_124/image5.png" className={styles.image3} />
-       <img src="./magazine/1/123_124/image6.png" className={styles.image4} />
-       <Link href="https://www.instagram.com/sasa3dimensions/"><a className={styles.text1}>
-       SASA3DIMENSIONS
+       
+       <video className={styles.image3} muted loop autoPlay>
+        <source src="./magazine/1/123_124/video4.mp4" type="video/mp4" />
+       </video>
+       <video className={styles.image4} muted loop autoPlay>
+        <source src="./magazine/1/123_124/video3.mp4" type="video/mp4" />
+       </video>
+       <video className={styles.image5} muted loop autoPlay>
+        <source src="./magazine/1/123_124/video1.mp4" type="video/mp4" />
+       </video>
+       <video className={styles.image2} muted loop autoPlay>
+        <source src="./magazine/1/123_124/video2.mp4" type="video/mp4" />
+       </video>
+       <Link href="https://www.instagram.com/ava3ddesigners/"><a className={styles.text1}>
+       AVA Designers
         </a>
        </Link>
-       <p className={styles.text2}>SUBSTANCE</p>
-       <p className={styles.text3}>An organic sculpture that represents a change of form: all the particles break down and reassemble to form a new element— a change occuring constantly on our own planet.</p>
-       <p className={styles.text4}>Take Charge Boot</p>
-       <Link href="https://www.instagram.com/vicke_jones/"><a className={styles.text5}>
-       Vicky Gonzalez Boerr
+       <Link href="http://joannahir.com/"><a className={styles.text2}>
+       JOANNA HIR
         </a>
        </Link>
     </div>

@@ -2,73 +2,124 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #080808;
 
-  .image1 {
+  .backImage {
     position: absolute;
-    width: 505px;
-    height: 546px;
-    left: -4px;
+    width: 960px;
+    height: 1502px;
+    left: 0px;
     top: 0px;
   }
 
-  .image2 {
+  .leftBack {
     position: absolute;
-    width: 517px;
-    height: 561px;
-    left: 443px;
-    top: -15px;
+    width: 50%;
+    height: 1528px;
+    left: 0;
+    top: 0px;
+    z-index: 99;
   }
 
-  .image3 {
+  .rightBack {
     position: absolute;
-    width: 967px;
-    height: 975px;
-    left: -7px;
-    top: 546px;
+    width: 1229px;
+    height: 1497px;
+    left: 691px;
+    top: 0px;
   }
 
-  .image4 {
+  .rightTop {
     position: absolute;
-    width: 960px;
-    height: 1212px;
-    left: 960px;
-    top: 285px;
+    width: 302px;
+    height: 425px;
+    right: 20px;
+    top: 31px;
+    border: 5px solid #721E99;
+    box-sizing: border-box;
+  }
+
+  .leftBottom {
+    position: absolute;
+    width: 434px;
+    height: 525px;
+    left: 513px;
+    top: 972px;
+    z-index: 100;
   }
 
   .text1 {
     position: absolute;
-    width: 392px;
-    height: 44px;
-    left: 37px;
-    top: 23px;
+    width: 338px;
+    height: 66px;
+    left: 691px;
+    top: 25px;
 
-    font-family: "Marck Script";
+    font-family: Asdonuts;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 90%;
-    /* or 36px */
+    font-size: 60px;
+    line-height: 110%;
+    /* identical to box height, or 66px */
+    z-index: 100;
 
-
-    color: #80FF00;
+    color: #982B27;
   }
 
   .text2 {
     position: absolute;
-    width: 432px;
-    height: 228px;
-    left: 1606px;
-    top: 37px;
+    width: 338px;
+    height: 66px;
+    left: 661px;
+    top: 90px;
 
-    font-family: Digital Dare;
+    font-family: Asdonuts;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 60px;
     line-height: 110%;
-    /* or 55px */
+    /* identical to box height, or 66px */
+    z-index: 100;
+
+    color: #2D6464;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 429px;
+    height: 50px;
+    top: 25px;
+    left: 1030px;
+
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
 
 
-    color: #13BB13;
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 319px;
+    height: 153px;
+    left: 1579px;
+    top: 1116px;
+    
+    font-family: Reenie Beanie;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 75px;
+    line-height: 90%;
+    /* or 67px */
+    
+    
+    color: #FF01DC;
+  }
+
+  .video {
+
   }
 }

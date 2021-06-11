@@ -128,6 +128,22 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Khand"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Jaldi"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Forum"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Englebert"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=DM+Mono"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Reem+Kufi"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Erica+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jolly+Lodger"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -939,6 +955,62 @@ class MyDocument extends Document {
               font-family: "SNOWBREAK";
               src: url("./fonts/SNOWBREAK.ttf");
               font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Fragmentcore";
+              src: url("./fonts/Fragmentcore.woff");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "39Smooth";
+              src: url("./fonts/39smooth.ttf");
+            }
+
+            @font-face {
+              font-family: "VTKS Estilosa";
+              src: url("./fonts/VTKS Estilosa.ttf");
+            }
+
+            @font-face {
+              font-family: "fairy wings";
+              src: url("./fonts/fairy wings.ttf");
+            }
+
+            @font-face {
+              font-family: "Anime Inept";
+              src: url("./fonts/Anime Inept.otf");
+            }
+
+            @font-face {
+              font-family: "Marker Felt";
+              src: url("./fonts/Marker Felt.ttf");
+            }
+
+            @font-face {
+              font-family: "Ander Hedge";
+              src: url("./fonts/Ander Hedge.ttf");
+            }
+
+            @font-face {
+              font-family: "DJB Emilys Garden";
+              src: url("./fonts/DJB Emilys Garden.ttf");
+            }
+
+            @font-face {
+              font-family: "ExodusDemo";
+              src: url("./fonts/ExodusDemo.otf");
+            }
+
+            @font-face {
+              font-family: "Nimbus-Sans-D-OT";
+              src: url("./fonts/Nimbus-Sans-D-OT.otf");
+            }
+
+            @font-face {
+              font-family: "ExodusDemo-Regular";
+              src: url("./fonts/ExodusDemo-Regular.otf");
             }
           `,
             }}
