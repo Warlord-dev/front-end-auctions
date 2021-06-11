@@ -2,6 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
+  background: #000000;
 
   .image1 {
     position: absolute;
@@ -14,36 +15,32 @@
   .image2 {
     position: absolute;
     height: 1497px;
-    left: 720px;
+    left: 964px;
     top: 0px;
-    z-index: -1;
   }
 
   .image3 {
     position: absolute;
-    width: 444px;
-    height: 445px;
-    left: 0px;
-    top: 195px;
-    border: 2px solid #00FF29;
+    width: 367px;
+    height: 744px;
+    left: 988px;
+    top: 717px;
   }
 
   .image4 {
     position: absolute;
-    width: 457px;
-    height: 456px;
-    left: 494px;
-    top: 521px;
-    border: 2px solid #00FF29;
+    width: 427px;
+    height: 816px;
+    left: 960px;
+    top: 681px;
   }
 
   .image5 {
     position: absolute;
-    width: 480px;
-    height: 481px;
-    left: 63px;
-    top: 1015px;
-    border: 2px solid #00FF29;
+    width: 427px;
+    height: 816px;
+    left: 1493px;
+    top: 681px;
   }
 
   .image6 {
@@ -56,12 +53,50 @@
 
   .text1 {
     position: absolute;
-    width: 300px;
-    height: 50px;
-    left: 63px;
-    top: 31px;
+    width: 60px;
+    height: 450px;
+    left:1832px;
+    top: 40px;
     
-    font-family: Galada;
+    font-family: Poller One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 25px;
+    /* or 50px */
+    
+    text-align: center;
+    
+    color: #FF8E1A;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 60px;
+    height: 720px;
+    left:1760px;
+    top: 40px;
+    
+    font-family: Poller One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 30px;
+    /* or 60px */
+    
+    text-align: center;
+    
+    color: #5B94EF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 510px;
+    height: 50px;
+    left: 31px;
+    top: 1409px;
+    
+    font-family: Fira Code;
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
@@ -70,44 +105,6 @@
     
     text-align: center;
     
-    color: #FFFFFF;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 452px;
-    height: 100px;
-    left: 1440px;
-    top: 31px;
-    
-    font-family: Fjalla One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100px;
-    line-height: 100%;
-    /* identical to box height, or 100px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 338px;
-    height: 59px;
-    left: 1551px;
-    top: 88px;
-
-    font-family: Minecrafter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 100%;
-    /* or 50px */
-
-    text-align: right;
-
-    color: #003789;
+    color: #FF1313;
   }
 }

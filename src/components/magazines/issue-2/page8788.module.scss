@@ -1,371 +1,337 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper();
+    @include magazineWrapper();    
+    background: #003E42;
 
-  .image1 {
-    position: absolute;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
-  }
+    .image1 {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 0px;
+        top: 0px;
+    }
 
-  .image2 {
-    position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
-  }
-  
-  .image3 {
-    position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 960px;
-    top: 0px;
-  }
+    .image2 {
+        position: absolute;
+        width: 623px;
+        height: 185px;
+        left: 53px;
+        top: 40px;
+    }
 
-  .image4 {
-    position: absolute;
-    width: 295px;
-    height: 237px;
-    left: 47px;
-    top: 570px;
-  }
+    .image3 {
+        position: absolute;
+        width: 430px;
+        height: 430px;
+        left: 530px;
+        top: -60px;
+    }
 
-  .image5 {
-    position: absolute;
-    width: 295px;
-    height: 237px;
-    left: 342px;
-    top: 570px;
-  }
+    .image4 {
+        position: absolute;
+        width: 468px;
+        height: 468px;
+        left: 492px;
+        top: 837px;
+    }
 
-  .image6 {
-    position: absolute;
-    width: 295px;
-    height: 237px;
-    left: 637px;
-    top: 570px;
-  }
+    .image5 {
+        position: absolute;
+        width: 430px;
+        height: 430px;
+        left: 10px;
+        top: 1052px;    
+    }
 
-  .image7 {
-    position: absolute;
-    width: 232px;
-    height: 294px;
-    left: 50px;
-    top: 960px;
-  }
+    .image6 {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+    }
 
-  .image8 {
-    position: absolute;
-    width: 315px;
-    height: 294px;
-    left: 282px;
-    top: 960px;
-  }
+    .image7 {
+        position: absolute;
+        width: 437px;
+        height: 374px;
+        left: 1045px;
+        top: 123px;
+        padding: 21px;
+        
+        background: #0076E3;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  .image9 {
-    position: absolute;
-    width: 301px;
-    height: 294px;
-    left: 597px;
-    top: 960px;
-  }
+        .image9 {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .image8 {
+                position: absolute;
+                height: 336px;
+                left: -100px;
+                top: 0;
+            }
+        }
+    }
 
-  .image10 {
-    position: absolute;
-    width: 232px;
-    height: 218px;
-    left: 50px;
-    top: 1254px;
-  }
+    .image10 {
+        position: absolute;
+        width: 437px;
+        height: 374px;
+        left: 1422px;
+        top: 577px;
+        padding: 21px;
+        
+        background: #0076E3;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  .image11 {
-    position: absolute;
-    width: 316px;
-    height: 220px;
-    left: 282px;
-    top: 1254px;
-  }
+        .image11 {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .image12 {
+                position: absolute;
+                height: 395px;
+                left: 0;
+                top: -30px;
+            }
+        }
+    }
 
-  .image12 {
-    position: absolute;
-    width: 301px;
-    height: 220px;
-    left: 597px;
-    top: 1254px;
-  }
+    .image13 {
+        position: absolute;
+        width: 437px;
+        height: 374px;
+        left: 1012px;
+        top: 1071px;
+        padding: 21px;
+        
+        background: #0076E3;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  .image13 {
-    position: absolute;
-    width: 273px;
-    height: 274px;
-    left: 1329px;
-    top: 124px;
-  }
+        .image14 {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            
+            .image15 {
+                position: absolute;
+                height: 335px;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
 
-  .image14 {
-    position: absolute;
-    width: 273px;
-    height: 273.9px;
-    left: 1602px;
-    top: 124px;
-  }
+    .image15 {
+        position: absolute;
+        width: 390px;
+        height: 365px;
+        left: 1500px;
+        top: 123px;
+        
+        background: rgba(0, 0, 0, 0.47);
+        .text5 {
+            position: absolute;
+            width: 347px;
+            height: 30px;
+            left: 33px;
+            top: 30px;
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 25px;
+            /* or 62% */
+            
+            
+            color: #FFFFFF;
+        }
 
-  .image15 {
-    position: absolute;
-    width: 220px;
-    height: 208px;
-    left: 995px;
-    top: 499px;
-  }
+        .text6 {
+            position: absolute;
+            width: 347px;
+            height: 319px;
+            left: 33px;
+            top: 69px;
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 17px;
+            line-height: 25px;
+            /* or 147% */
+            
+            
+            color: #FFFFFF;
+        }
+    }
 
-  .image16 {
-    position: absolute;
-    width: 220px;
-    height: 208px;
-    left: 1215px;
-    top: 499px;      
-  }
+    .image16 {
+        position: absolute;
+        width: 390px;
+        height: 279px;
+        left: 1012px;
+        top: 625px;
+        
+        background: rgba(0, 0, 0, 0.47);
+        .text7 {
+            position: absolute;
+            width: 347px;
+            height: 30px;
+            left: 33px;
+            top: 30px;
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 25px;
+            /* or 62% */
+            
+            
+            color: #FFFFFF;
+        }
 
-  .image17 {
-    position: absolute;
-    width: 220px;
-    height: 208px;
-    left: 1435px;
-    top: 499px;      
-  }
+        .text8 {
+            position: absolute;
+            width: 347px;
+            height: 133px;
+            left: 33px;
+            top: 73px;
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 25px;
+            /* or 125% */
+            
+            
+            color: #FFFFFF;
+        }
+    }
 
-  .image18 {
-    position: absolute;
-    width: 220px;
-    height: 208px;
-    left: 1655px;
-    top: 499px;
-  }
+    .image17 {
+        position: absolute;
+        width: 390px;
+        height: 279px;
+        left: 1482px;
+        top: 1118px;
+        
+        background: rgba(0, 0, 0, 0.47);
+        .text9 {
+            position: absolute;
+            width: 347px;
+            height: 30px;
+            left: 28px;
+            top: 34px;
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 25px;
+            /* or 62% */
+            
+            
+            color: #FFFFFF;
+        }
 
-  .image19 {
-    position: absolute;
-    width: 280px;
-    height: 238px;
-    left: 1249px;
-    top: 841px;
-  }
+        .text10 {
+            position: absolute;
+            width: 347px;
+            height: 133px;
+            left: 28px;
+            top: 73px;
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 25px;
+            /* or 125% */
+            
+            
+            color: #FFFFFF;
+        }
+    }
 
-  .image20 {
-    position: absolute;
-    width: 280px;
-    height: 238.18px;
-    left: 1529px;
-    top: 841px;
-  }
+    .text1 {
+        position: absolute;
+        width: 292px;
+        height: 300px;
+        left: 606px;
+        top: 35px;
+        
+        font-family: ExodusDemo-Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 100%;
+        /* or 15px */
+        
+        
+        color: #FFFFFF;
+    }
 
-  .image21 {
-    position: absolute;
-    width: 227px;
-    height: 264px;
-    left: 1031px;
-    top: 1200px;
-  }
+    .text2 {
+        position: absolute;
+        width: 547px;
+        height: 50px;
+        left: 72px;
+        top: 225px;
+        
+        font-family: ExodusDemo-Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 100%;
+        /* identical to box height, or 50px */
+        
+        
+        color: #FFFFFF;
+    }
 
-  .image22 {
-    position: absolute;
-    width: 287px;
-    height: 264px;
-    left: 1258px;
-    top: 1200px;
-  }
+    .text3 {
+        position: absolute;
+        width: 302px;
+        height: 375px;
+        left: 580px;
+        top: 892px;
+        
+        font-family:ExodusDemo-Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 100%;
+        /* or 15px */
+        
+        
+        color: #FFFFFF;
+    }
 
-  .image23 {
-    position: absolute;
-    width: 274px;
-    height: 264px;
-    left: 1545px;
-    top: 1200px;
-  }
-
-  .text1 {
-    position: absolute;
-    width: 705px;
-    height: 120px;
-    left: 55px;
-    top: 25px;
-    
-    font-family: Neon Lights;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 120px;
-    line-height: 100%;
-    /* identical to box height, or 120px */
-    
-    
-    color: #FFB800;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 783px;
-    height: 144px;
-    left: 105px;
-    top: 147px;
-    
-    font-family: Muna;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 110%;
-    /* or 18px */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 710px;
-    height: 55px;
-    left: 50px;
-    top: 312px;
-    
-    font-family: Neon Vortex;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 110%;
-    /* identical to box height, or 55px */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .text4 {
-    position: absolute;
-    width: 755px;
-    height: 99px;
-    left: 72px;
-    top: 367px;
-    
-    font-family: NATS;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 110%;
-    /* or 33px */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .text5 {
-    position: absolute;
-    width: 749px;
-    height: 66px;
-    left: 47px;
-    top: 495px;
-    
-    font-family: Neon Vortex;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 110%;
-    /* or 33px */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .text6 {
-    position: absolute;
-    width: 829px;
-    height: 66px;
-    left: 82px;
-    top: 876px;
-    
-    font-family: Neon Vortex;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 110%;
-    /* or 33px */
-    
-    text-align: right;
-    
-    color: #FFFFFF;
-  }
-
-  .text7 {
-    position: absolute;
-    width: 820px;
-    height: 66px;
-    left: 1062px;
-    top: 33px;
-    
-    font-family: Neon Vortex;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 110%;
-    /* or 33px */
-    
-    text-align: right;
-    
-    color: #FFFFFF;
-  }
-
-  .text8 {
-    position: absolute;
-    width: 685px;
-    height: 33px;
-    left: 993px;
-    top: 441px;
-    
-    font-family: Neon Vortex;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 110%;
-    /* identical to box height, or 33px */
-    
-    text-align: right;
-    
-    color: #FFFFFF;
-  }
-
-  .text9 {
-    position: absolute;
-    width: 737px;
-    height: 66px;
-    left: 1249px;
-    top: 750px;
-    
-    font-family: Neon Vortex;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 110%;
-    /* or 33px */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .text10 {
-    position: absolute;
-    width: 869px;
-    height: 66px;
-    left: 1031px;
-    top: 1122px;
-    
-    font-family: Neon Vortex;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 110%;
-    /* or 33px */
-    
-    
-    color: #FFFFFF;
-  }
+    .text4 {
+        position: absolute;
+        width: 309px;
+        height: 252px;
+        left: 70px;
+        top: 1140px;
+        
+        font-family: ExodusDemo-Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 100%;
+        /* or 28px */
+        
+        
+        color: #FFFFFF;
+    }
 }

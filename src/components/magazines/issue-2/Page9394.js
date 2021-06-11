@@ -1,33 +1,59 @@
 import React from 'react';
 import styles from './page9394.module.scss';
-import Link from 'next/link';
+import cn from 'classnames';
 
 const Page9394 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/93_94/left.png" className={styles.leftBack} />
-      <img src="./magazine/1/93_94/right.png" className={styles.rightBack} />
-      <div className={styles.text1}>
-      BLADE RUNWAY
+      <img src="./magazine/1/93_94/page87-left.png" className={styles.leftBack} />
+      <img src="./magazine/1/93_94/page87-right.png" className={styles.rightBack} />
+      <img src="./magazine/1/93_94/page87-right2.png" className={styles.rightBack} />
+      <img src="./magazine/1/93_94/page87-right3.png" className={styles.rightBottom} />
+      <div className={styles.image1}>
+
       </div>
-      <p className={styles.text2}>
-      Welcome to the Meta-Jungle
-      </p>
-      <div className={styles.text3}>
-      Sheantoz Story
+      <div className={cn(styles.text, styles.text1)}>
+      WHAT ARE YOU WEARING?
       </div>
-      <p className={styles.text4}>
-Sheantoz is an intergalactic alien singer from a distant future. She has an unique and powerful voice that can both fascinate  and enchant the audience with just a single song. She is originally from a planet called Saquarious, where her species has blue color skin and the ability to breath under water— her planet is 60% liquid water and 30% iced water. Only %10 of the planet is solid land, where the enemy species rules. 
-<br/>
-<br/>
-Sheantoz was once captured by enemy forces for their own amusement, however, her voice was able to enchant the soldiers, allowing her to escape via space craft. 
-<br/>
-<br/>
-Ever since, she has been roaming from one planet to the next, travelling across galaxies. She plans one day to also visit Earth, giving a concert to her fans and using her voice for the greater good. 
-      </p>
-      <div className={styles.text5}>
-      Burak Dahan
+      <div className={cn(styles.text, styles.text2)}>
+      WHAT ARE YOU WEARING?
       </div>
+      <div className={cn(styles.text, styles.text3)}>
+      WHAT ARE YOU WEARING?
+      </div>
+      <div className={cn(styles.text, styles.text4)}>
+      WHAT ARE YOU WEARING?
+      </div>
+      <div className={cn(styles.text, styles.text5)}>
+      WHAT ARE YOU WEARING?
+      </div>
+      <div className={styles.text6}>
+      FASHION FOR THE METAVERSE
+      </div>
+      <div className={styles.text7}>
+      This month DIGITALAX ran...
+      </div>
+      <div className={styles.text8}>
+      #FLEXYOURFLARE
+      </div>
+      <div className={styles.text9}>
+      #FLEXYOURFLARE
+      </div>
+      <div className={styles.text10}>
+      #FLEXYOURFLARE
+      </div>
+      <div className={styles.text11}>
+      An open digital fashion competition bringing together amazingly talented creators from across the realms, focused on enabling creatives for modding their version of the metaverse.
+      </div>
+      <div className={styles.text12}>
+      This might sound cliche but all entries were too good not to include in DIGIFIZZY. We truly felt that everyone’s efforts deserved to be seen! 
+      </div>
+      <div className={styles.text13}>
+      So, for the next pages of What Are you Wearing? feast your eyes on some delightful digital fashion visual salience. 
+      </div>
+      <p className={styles.text14}>Our Competition winners included; <span className={styles.text15}>Porka_X, Blade Runway, Marcello Baldari, Tony Lukey, BBlundeRR and Mia Locklace.</span>
+<br/><br/>
+Their FLARE creations were minted as NFTs on Matic Network and can be collected in the DIGIFIZZY Bundles as part of the #FLEXYOURFLARE Digital Fashion Collection.</p>
     </div>
   );
 };

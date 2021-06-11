@@ -2,125 +2,153 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #BEFFC5;
 
   .image1 {
     position: absolute;
     width: 960px;
-    height: 1497px;
+    height: 383px;
     left: 0px;
     top: 0px;
+    
+    background: #3D9BA2;
   }
 
   .image2 {
     position: absolute;
-    width: 961px;
-    height: 1497px;
-    left: 960px;
-    top: 0px;
+    width: 960px;
+    height: 1115px;
+    left: 0px;
+    top: 383px;
   }
 
   .image3 {
     position: absolute;
-    width: 367px;
-    height: 744px;
-    left: 988px;
-    top: 717px;
+    width: 347px;
+    height: 238px;
+    left: -57.76px;
+    top: -47.84px;
+    transform: rotate(-20deg);
   }
 
   .image4 {
     position: absolute;
-    width: 427px;
-    height: 816px;
-    left: 960px;
-    top: 681px;
+    width: 400.21px;
+    height: 237.01px;
+    left: 367.46px;
+    top: -66.71px;
+    transform: rotate(-20deg);
   }
 
   .image5 {
     position: absolute;
-    width: 427px;
-    height: 816px;
-    left: 1493px;
-    top: 681px;
+    width: 241px;
+    height: 241px;
+    left: 185px;
+    top: 134px;
   }
 
   .image6 {
     position: absolute;
-    width: 383px;
-    height: 744px;
-    left: 1515px;
-    top: 717px;
+    width: 316px;
+    height: 217px;
+    left: 638px;
+    top: 146px;
+  }
+
+  .image7 {
+    position: absolute;
+    height: 1497px;
+    left: 720px;
+    top: 0px;
+    z-index: -1;
   }
 
   .text1 {
     position: absolute;
-    width: 510px;
-    height: 218px;
-    left: 21px;
-    top: 23px;
+    width: 125px;
+    height: 145px;
+    left: 820px;
+    top: 8px;
     
-    font-family: Jacques Francois;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 650;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 138px;
+    height: 955px;
+    left: 47px;
+    top: 463px;
+    
+    font-family: Jaldi;
     font-style: normal;
     font-weight: normal;
     font-size: 60px;
     line-height: 100%;
     /* or 60px */
-    -webkit-text-stroke: #FFFFFF;
-    -webkit-text-stroke-width: 1px;
     
-    color: #BD00FF;
-    box-sizing: border-box;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 284px;
-    height: 30px;
-    left: 21px;
-    top: 152px;
+    text-align: center;
     
-    font-family: Jacques Francois;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 100%;
-    /* identical to box height, or 30px */
-    
-    -webkit-text-stroke: #FFFFFF;
-    -webkit-text-stroke-width: 1px;
-    color: #BD00FF;
-    box-sizing: border-box;
+    color: #FFFFFF;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -43px;
   }
 
   .text3 {
     position: absolute;
-    width: 567px;
-    height: 70px;
-    left: 22px;
-    top: 1403px;
+    width: 190px;
+    height: 71px;
+    left: 760px;
+    top: 1382px;
     
-    font-family: Saira;
+    font-family: Nobile;
     font-style: normal;
-    font-weight: 800;
-    font-size: 70px;
+    font-weight: bold;
+    font-size: 60px;
     line-height: 100%;
-    /* identical to box height, or 70px */
+    /* or 60px */
     
+    text-align: center;
     
-    color: #BD00FF;
-    -webkit-text-stroke: #FFFFFF;
-    -webkit-text-stroke-width: 1px;
-    box-sizing: border-box;
+    color: #FFFFFF;
   }
 
   .text4 {
     position: absolute;
-    width: 362px;
-    height: 128px;
-    left: 1519px;
-    top: 1334px;
+    width: 441px;
+    height: 87px;
+    left: 1445px;
+    top: 24px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+  }
 
-    font-family: Jacques Francois Shadow;
+  .text5 {
+    position: absolute;
+    width: 441px;
+    height: 87px;
+    left: 1445px;
+    top: 91px;
+
+    font-family: Rose Cake - Personal Use;
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
@@ -129,6 +157,25 @@
 
     text-align: right;
 
-    color: #FA00FF;
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 193px;
+    height: 340px;
+    left: 1693px;
+    top: 153px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    /* or 12px */
+
+    text-align: right;
+
+    color: #FFFFFF;
   }
 }

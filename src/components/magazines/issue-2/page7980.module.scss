@@ -1,15 +1,13 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper();
-  background: #FFFFFF;
+  @include magazineWrapper();    
 
   .image1 {
     position: absolute;
-    width: 960px;
     height: 1497px;
-    left: 0px;
-    top: 0px;
+    left: -830px;
+    top: 0px;    
   }
 
   .image2 {
@@ -17,84 +15,95 @@
     width: 960px;
     height: 1497px;
     left: 960px;
-    top: 0px;
-    
-    background: linear-gradient(180deg, rgba(173, 0, 255, 0.43) 0%, rgba(0, 79, 79, 0.43) 100%);
+    top: 0px; 
   }
 
   .image3 {
     position: absolute;
-    width: 828px;
-    height: 1396px;
-    left: 1018px;
-    top: 59px;
-    background-color: rgba(164, 0, 147, 0.43);
+    width: 960px;
+    height: 84px;
+    left: 0px;
+    top: 1413px;
+    
+    background: #000000;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 960px;
+    height: 84px;
+    left: 960px;
+    top: 1413px;
+
+    background: #C4A5AE;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 885px;
+    height: 56px;
+    left: 27px;
+    top: 1426px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+    
+    color: #FFFFFF;
   }
 
   .text2 {
-    position: absolute;
-    width: 604px;
-    height: 252px;
-    left: 72px;
-    top: 30px;
-    
-    font-family: Ander Hedge;
+    font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 100px;
-    line-height: 115px;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
     
-    color: #A65EB4;
+    text-decoration-line: underline;
+    
+    color: #FFFFFF;
   }
 
   .text3 {
     position: absolute;
-    width: 248px;
-    height: 37px;
-    left: 72px;
-    top: 253px;
+    width: 139px;
+    height: 70px;
+    left: 966px;
+    top: 1423px;
     
-    font-family: Ander Hedge;
+    font-family: Marker Felt;
     font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 35px;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 100%;
+    /* identical to box height, or 70px */
     
-    color: #A65EB4;
+    text-align: center;
+    
+    color: #33559A;
   }
 
   .text4 {
     position: absolute;
-    width: 248px;
-    height: 37px;
-    left: 662px;
-    top: 1426px;
+    width: 751px;
+    height: 63px;
+    left: 1123px;
+    top: 1430px;
     
-    font-family: Ander Hedge;
+    font-family: Marker Felt;
     font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 35px;
-    
-    color: #A65EB4;    
-  }
-
-  .text5 {
-    position: absolute;
-    width: 666px;
-    height: 1149px;
-    left: 1099px;
-    top: 116px;
-    
-    font-family: Lexend Giga;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 15px;
-    line-height: 150%;
-    /* or 22px */
+    line-height: 100%;
+    /* or 15px */
     
-    text-align: center;
+    display: flex;
+    align-items: center;
     
-    color: #FFFFFF;
+    color: #68296D;
   }
 }

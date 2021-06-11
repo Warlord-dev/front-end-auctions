@@ -5,39 +5,26 @@ import Link from 'next/link';
 const Page9798 = () => {
   return (
     <div className={styles.wrapper}>
-       <div className={styles.leftBack}></div>
-      <img src="./magazine/1/97_98/leftImg1.png" className={styles.left1} />
-      <img src="./magazine/1/97_98/leftImg2.png" className={styles.left2} />
-      <img src="./magazine/1/97_98/leftImg3.png" className={styles.left3} />
-      <img src="./magazine/1/97_98/rightImg1.png" className={styles.right1} />
-      <img src="./magazine/1/97_98/rightImg2.png" className={styles.right2} />
-      <video className={styles.right3} muted loop autoPlay>
-        <source src="./magazine/1/97_98/video1.mp4" type="video/mp4" />
-       </video>
-      <img src="./magazine/1/97_98/rightImg4.png" className={styles.right4} />
-      <Link href="https://www.instagram.com/abigneonglitter/"><a className={styles.text1}>
-      ABigNeonGlitter
+      <img src="./magazine/1/97_98/left.png" className={styles.leftBack} />
+      <img src="./magazine/1/97_98/right.png" className={styles.rightBack} />
+      <img src="./magazine/1/97_98/right-top.png" className={styles.rightTop} />
+      <video autoPlay muted loop className={styles.leftBottom}>
+        <source src="./magazine/1/97_98/Automata-Turntable.mp4" type="video/mp4" />
+      </video>
+      <Link href="https://twitter.com/rudeoolph"><a className={styles.text1}>
+      Rudeolph
       </a>
       </Link>
       <p className={styles.text2}>
-      MERETRIXXX
+      Automata
       </p>
-      <Link href="https://www.icakostika.com/"><a className={styles.text3}>
-      ICA & KOSTIKA
+      <div className={styles.text3}>
+      Lost in Space
+      </div>
+      <Link href="https://www.instagram.com/yekaterinab/"><a className={styles.text4}>
+      YeKaterina Burmatnova
       </a>
       </Link>
-      <p className={styles.text4}>
-      The Ctenophora Dress
-      </p>
-      <p className={styles.text5}>
-      This dress is inspired by deep sea creatures called Ctenophora. Such beings belong to a phylum of invertebrate animals that live in marine waters worldwide. 
-<br/><br/>
-Their biolumniescent properties allow them to glow in the dark, bringing light to the deepest ends of our oceans. 
-<br/><br/>
-“Instead of fighting the darkness, you bring in the light.” A quote by Eckhart Tolle, reminding us of our deepest inner light of hope, love and infinite energy. 
-<br/><br/>
-The dress, headpiece and heels are all made from plastic waste, extracted from our oceans.
-      </p>
     </div>
   );
 };

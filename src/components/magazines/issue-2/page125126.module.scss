@@ -2,46 +2,48 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #FFFF;
 
   .image1 {
     position: absolute;
-    width: 1496px;
-    height: 1496px;
-    left: -220px;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
     top: 0px;
   }
 
   .image2 {
     position: absolute;
-    width: 960px;
     height: 1497px;
-    left: 960px;
+    left: 720px;
     top: 0px;
+    z-index: -1;
   }
 
   .image3 {
     position: absolute;
-    width: 262px;
-    height: 371px;
-    left: 990px;
-    top: 25px;
+    width: 444px;
+    height: 445px;
+    left: 0px;
+    top: 195px;
+    border: 2px solid #00FF29;
   }
 
   .image4 {
     position: absolute;
-    width: 262px;
-    height: 371px;
-    left: 990px;
-    top: 420px;
+    width: 457px;
+    height: 456px;
+    left: 494px;
+    top: 521px;
+    border: 2px solid #00FF29;
   }
 
   .image5 {
     position: absolute;
-    width: 262px;
-    height: 371px;
-    left: 990px;
-    top: 815px;
+    width: 480px;
+    height: 481px;
+    left: 63px;
+    top: 1015px;
+    border: 2px solid #00FF29;
   }
 
   .image6 {
@@ -54,12 +56,31 @@
 
   .text1 {
     position: absolute;
-    width: 237px;
-    height: 100px;
-    left: 48px;
-    top: 25px;
+    width: 300px;
+    height: 50px;
+    left: 63px;
+    top: 31px;
     
-    font-family: Kurale;
+    font-family: Galada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 452px;
+    height: 100px;
+    left: 1440px;
+    top: 31px;
+    
+    font-family: Fjalla One;
     font-style: normal;
     font-weight: normal;
     font-size: 100px;
@@ -69,25 +90,6 @@
     text-align: center;
     
     color: #FFFFFF;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 375px;
-    height: 60px;
-    left: 990px;
-    top: 1406px;
-    
-    font-family: Kavoon;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 100%;
-    /* identical to box height, or 50px */
-    background: -webkit-linear-gradient(#FF00B8, #A40031);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    text-align: center;
   }
 
   .text3 {

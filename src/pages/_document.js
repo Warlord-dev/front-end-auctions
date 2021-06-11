@@ -1005,12 +1005,22 @@ class MyDocument extends Document {
 
             @font-face {
               font-family: "Nimbus-Sans-D-OT";
-              src: url("./fonts/Nimbus-Sans-D-OT.otf");
+              src: url("./fonts/Nimbus-Sans-D-OT.ttf");
             }
 
             @font-face {
               font-family: "ExodusDemo-Regular";
               src: url("./fonts/ExodusDemo-Regular.otf");
+            }
+
+            @font-face {
+              font-family: "CF Punk Fashion PERSONAL";
+              src: url("./fonts/CF Punk Fashion PERSONAL.ttf");
+            }
+
+            @font-face {
+              font-family: "Ligconsolata";
+              src: url("./fonts/Ligconsolata.ttf");
             }
           `,
             }}

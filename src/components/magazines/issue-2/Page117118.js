@@ -5,17 +5,19 @@ import Link from 'next/link';
 const Page117118 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/117_118/image1.png" className={styles.image1} />
-       <video className={styles.image2} muted loop autoPlay>
-        <source src="./magazine/1/117_118/video1.mp4" type="video/mp4" />
-       </video>
-       <Link href="http://instagram.com/mysecunha"><a className={styles.text1}>
-       Myse Cunha
+       <img src="./magazine/1/117_118/image1.png" className={styles.image1} />
+       <img src="./magazine/1/117_118/image2.png" className={styles.image2} />
+       <img src="./magazine/1/117_118/image3.png" className={styles.image3} />
+       <Link href="https://www.instagram.com/cryptsie/"><a className={styles.text1}>
+       Cryptsie Art
         </a>
        </Link>
-       <p className={styles.text2}>Essentia Collection</p>
-       <p className={styles.text3}>Lumps</p>
-       <p className={styles.text4}>Antonio Lopez</p>
+       <p className={styles.text2}>Space Adventures</p>
+       <Link href="http://instagram.com/di.universe"><a className={styles.text3}>
+        Di.universe 
+        </a>
+       </Link>
+       <p className={styles.text4}>RELAX</p>
     </div>
   );
 };

@@ -1,0 +1,110 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #000000;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 62px;
+    height: 648px;
+    left: 819px;
+    top: 59px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 294px;
+    height: 340px;
+    left: 0px;
+    top: 1157px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 427px;
+    height: 816px;
+    left: 960px;
+    top: 681px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 427px;
+    height: 816px;
+    left: 1493px;
+    top: 681px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 383px;
+    height: 744px;
+    left: 1515px;
+    top: 717px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 470px;
+    height: 70px;
+    left: 34px;
+    top: 1394px;
+    
+    font-family: Encode Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 70px;
+    /* identical to box height, or 100% */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 249px;
+    height: 59px;
+    left: 1640px;
+    top: 21px;
+
+    font-family: Public Secret DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    text-align: right;
+
+    color: #003789;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 338px;
+    height: 59px;
+    left: 1551px;
+    top: 88px;
+
+    font-family: Minecrafter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    text-align: right;
+
+    color: #003789;
+  }
+}

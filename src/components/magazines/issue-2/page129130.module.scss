@@ -6,33 +6,34 @@
 
   .image1 {
     position: absolute;
-    height: 1497px;
-    left: -90px;
-    top: 0;
+    width: 960px;
+    height: 986px;
+    left: 0px;
+    top: -4px;
   }
 
   .image2 {
     position: absolute;
     width: 960px;
-    height: 1497px;
-    left: 960px;
-    top: 0px;
+    height: 515px;
+    left: 0px;
+    top: 979px;
   }
 
   .image3 {
     position: absolute;
-    width: 367px;
-    height: 744px;
-    left: 988px;
-    top: 717px;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: -4px;
   }
 
   .image4 {
     position: absolute;
-    width: 427px;
-    height: 816px;
-    left: 960px;
-    top: 681px;
+    width: 933px;
+    height: 903px;
+    left: 973px;
+    top: 414px;
   }
 
   .image5 {
@@ -53,55 +54,88 @@
 
   .text1 {
     position: absolute;
-    width: 870px;
-    height: 140px;
-
-    left: 31px;
-    top: 20px;
+    width: 346px;
+    height: 44px;
+    left: 18px;
+    top: 18px;
     
-    font-family: Romanesco;
+    font-family: IM FELL French Canon;
     font-style: normal;
     font-weight: normal;
-    font-size: 130px;
-    line-height: 70px;
-    /* or 54% */
+    font-size: 38px;
+    line-height: 44px;
     
-    
-    color: #FF00E5;
+    color: #DBFF00;
   }
 
   .text2 {
     position: absolute;
-    width: 405px;
-    height: 140px;
-    left: 31px;
-    top: 150px;
+    width: 221px;
+    height: 44px;
+    left: 18px;
+    top: 65px;
     
-    font-family: Romanesco;
+    font-family: IM FELL French Canon;
     font-style: normal;
     font-weight: normal;
-    font-size: 95px;
-    line-height: 70px;
-    /* or 54% */
-    background: -webkit-linear-gradient(#924200 0%, #e400cc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-size: 38px;
+    line-height: 44px;
+    
+    color: #00C2FF;
+    
   }
 
   .text3 {
     position: absolute;
-    width: 297px;
-    height: 235px;
-    left: 987px;
-    top: 20px;
-    font-family: Elsie Swash Caps;
+    width: 212px;
+    height: 147px;
+
+    left: 18px;
+    top: 110px;
+    
+    font-family: IM FELL French Canon;
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
-    line-height: 70px;
-    /* or 47% */
+    font-size: 18px;
+    line-height: 21px;
     
-    
-    color: #F47500;
+    color: #00C2FF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 828px;
+    height: 420px;
+    left: 988px;
+    top: 16px;
+
+    font-family: Electrolize;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 140px;
+    /* or 93% */
+
+
+    color: #3B2C9F;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 479px;
+    height: 60px;
+    left: 1427px;
+    top: 1414px;
+
+    font-family: Electrolize;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+
+    text-align: center;
+
+    color: #FD2F81;
   }
 }

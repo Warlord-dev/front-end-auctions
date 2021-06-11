@@ -2,7 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #00000000;
+  background: #BEFFC5;
 
   .image1 {
     position: absolute;
@@ -14,19 +14,18 @@
 
   .image2 {
     position: absolute;
-    width: 1497px;
-    height: 1497px;
-    left: 700px;
+    width: 961px;
+    height: 748px;
+    left: 960px;
     top: 0px;
-    z-index: -1;
   }
 
   .image3 {
     position: absolute;
-    width: 367px;
-    height: 744px;
-    left: 988px;
-    top: 717px;
+    width: 960px;
+    height: 749px;
+    left: 960px;
+    top: 748px;
   }
 
   .image4 {
@@ -55,76 +54,75 @@
 
   .text1 {
     position: absolute;
-    width: 378px;
-    height: 90px;
-    left: 50px;
-    top: 33px;
-
-    font-family: Poor Story;
+    width: 328px;
+    height: 60px;
+    left: 39px;
+    top: 20px;
+    
+    font-family: Purple Purse;
     font-style: normal;
     font-weight: normal;
-    font-size: 90px;
+    font-size: 60px;
     line-height: 100%;
-    /* identical to box height, or 90px */
-
-    text-align: left;
-
-    color: #FF0000;
+    /* identical to box height, or 60px */
+    
+    
+    color: #AD00FF;
   }
 
   .text2 {
     position: absolute;
-    width: 461px;
-    height: 50px;
-    left: 50px;
-    top: 120px;
+    width: 473px;
+    height: 60px;
+    left: 465px;
+    top: 1411px;
     
-    font-family: Poor Story;
+    font-family: Purple Purse;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 60px;
     line-height: 100%;
-    /* identical to box height, or 50px */
+    /* identical to box height, or 60px */
     
     
-    color: #FF0000;
+    color: #00D1FF;
   }
 
   .text3 {
     position: absolute;
-    width: 285px;
-    height: 90px;
-    left: 980px;
-    top: 1328px;
+    width: 425px;
+    height: 117px;
+    left: 1461px;
+    top: 16px;
     
-    font-family: Poppins;
+    font-family: Poor Story;
     font-style: normal;
-    font-weight: 200;
+    font-weight: normal;
     font-size: 90px;
     line-height: 100%;
-    /* identical to box height, or 90px */
+    /* or 90px */
     
-    text-align: left;
+    text-align: right;
     
-    color: #FF7B00;
+    color: #FFFFFF;
   }
 
   .text4 {
     position: absolute;
-    width: 469px;
-    height: 70px;
-    left: 985px;
-    top: 1418px;
+    width: 747px;
+    height: 226px;
+    left: 1068px;
+    top: 607px;
 
-    font-family: Poppins;
+    font-family: Poor Story;
     font-style: normal;
-    font-weight: 200;
-    font-size: 70px;
+    font-weight: normal;
+    font-size: 200px;
     line-height: 100%;
-    /* identical to box height, or 70px */
+    /* or 200px */
 
-    text-align: left;
+    text-align: center;
 
-    color: #FF0000;
+    color: #FFFFFF;
   }
 }

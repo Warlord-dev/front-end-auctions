@@ -2,12 +2,12 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #FFFFFF;
+  background: #BEFFC5;
 
   .image1 {
     position: absolute;
-    width: 1092px;
-    height: 748px;
+    width: 960px;
+    height: 1497px;
     left: 0px;
     top: 0px;
   }
@@ -54,93 +54,57 @@
 
   .text1 {
     position: absolute;
-    width: 451px;
-    height: 36px;
-    left: 250px;
-    top: 309px;
+    width: 470px;
+    height: 70px;
+    left: 34px;
+    top: 1394px;
     
-    font-family: Courier;
+    font-family: Encode Sans;
     font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 120.53%;
-    /* or 36px */
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 70px;
+    /* identical to box height, or 100% */
     
     
-    color: #000000;
+    color: #FFFFFF;
   }
 
   .text2 {
     position: absolute;
-    width: 624px;
-    height: 1061px;
-    left: 250px;
-    top: 358px;
-    
-    font-family: Courier New;
+    width: 249px;
+    height: 59px;
+    left: 1640px;
+    top: 21px;
+
+    font-family: Public Secret DEMO;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 120.53%;
-    /* or 22px */
-    
-    
-    color: #000000;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    text-align: right;
+
+    color: #003789;
   }
 
   .text3 {
     position: absolute;
-    width: 288px;
-    height: 22px;
-    left: 503px;
-    top: 1411px;
-    
-    font-family: Courier New;
+    width: 338px;
+    height: 59px;
+    left: 1551px;
+    top: 88px;
+
+    font-family: Minecrafter;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 120.53%;
-    /* identical to box height, or 22px */
-    
-    
-    color: #000000;
-  }
-
-  .text4 {
-    position: absolute;
-    width: 274px;
-    height: 25px;
-    left: 1620px;
-    top: 29px;
-
-    font-family: Trocchi;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
+    font-size: 50px;
     line-height: 100%;
-    /* identical to box height, or 25px */
+    /* or 50px */
 
-    text-align: center;
+    text-align: right;
 
-    color: #FFFFFF;
-  }
-
-  .text5 {
-    position: absolute;
-    width: 155px;
-    height: 25px;
-    left: 1620px;
-    top: 64px;
-    
-    font-family: Trocchi;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 100%;
-    /* identical to box height, or 25px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
+    color: #003789;
   }
 }

@@ -5,121 +5,151 @@
 
   .backImage {
     position: absolute;
-    width: 960px;
-    height: 1502px;
+    width: 1928px;
+    height: 1497px;
     left: 0px;
     top: 0px;
   }
 
   .leftBack {
     position: absolute;
-    width: 50%;
-    height: 1528px;
+    width: auto;
+    height: 1497px;
     left: 0;
     top: 0px;
-    z-index: 99;
   }
 
   .rightBack {
     position: absolute;
-    width: 1229px;
+    width: auto;
     height: 1497px;
-    left: 691px;
+    left: 960px;
     top: 0px;
-  }
-
-  .rightTop {
-    position: absolute;
-    width: 302px;
-    height: 425px;
-    right: 20px;
-    top: 31px;
-    border: 5px solid #721E99;
-    box-sizing: border-box;
-  }
-
-  .leftBottom {
-    position: absolute;
-    width: 434px;
-    height: 525px;
-    left: 513px;
-    top: 972px;
-    z-index: 100;
+    z-index: 99;
   }
 
   .text1 {
     position: absolute;
-    width: 338px;
-    height: 66px;
-    left: 691px;
-    top: 25px;
-
-    font-family: Asdonuts;
+    width: 337px;
+    height: 44px;
+    top: 17px;
+    left: 19px;
+    font-family: Knife Princess;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
+    font-size: 40px;
     line-height: 110%;
-    /* identical to box height, or 66px */
-    z-index: 100;
+    /* identical to box height, or 44px */
 
-    color: #982B27;
+
+    color: #0038FF;
+
+    -webkit-text-stroke: black;
+    -webkit-text-stroke-width: 2px;
   }
 
   .text2 {
     position: absolute;
-    width: 338px;
-    height: 66px;
-    left: 661px;
-    top: 90px;
-
-    font-family: Asdonuts;
+    width: 586px;
+    height: 44px;
+    top: 1410px;
+    left: 31px;
+    font-family: Jungle;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
+    font-size: 40px;
     line-height: 110%;
-    /* identical to box height, or 66px */
-    z-index: 100;
-
-    color: #2D6464;
+    /* identical to box height, or 44px */
+    color: #FFFFFF;
+    -webkit-text-stroke: #0066FF;
+    -webkit-text-stroke-width: 2px;
   }
 
   .text3 {
     position: absolute;
-    width: 429px;
-    height: 50px;
-    top: 25px;
-    left: 1030px;
+    width: 166px;
+    height: 20px;
+    left: 1018px;
+    top: 72px;
 
-    font-family: Space Mono;
+    font-family: Inter;
     font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
+    font-weight: 600;
+    font-size: 20px;
     line-height: 100%;
-    /* identical to box height, or 50px */
+    /* identical to box height, or 20px */
+    z-index: 100;
 
-
-    color: #FFFFFF;
+    color: #FF9D9D;
   }
 
   .text4 {
     position: absolute;
-    width: 319px;
-    height: 153px;
-    left: 1579px;
-    top: 1116px;
-    
-    font-family: Reenie Beanie;
+    width: 205px;
+    height: 249px;
+    left: 1018px;
+    top: 110px;
+
+    font-family: Inter;
     font-style: normal;
-    font-weight: 500;
-    font-size: 75px;
-    line-height: 90%;
-    /* or 67px */
-    
-    
-    color: #FF01DC;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    /* or 20px */
+    z-index: 100;
+
+    color: #FF9D9D;
   }
 
-  .video {
+  .text5 {
+    position: absolute;
+    width: 241px;
+    height: 44px;
+    left: 1670px;
+    top: 40px;
+    font-family: Kohinoor Devanagari;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    /* identical to box height, or 44px */
 
+    z-index: 100;
+    color: #FFFFFF;
+    -webkit-text-stroke: #FF9900;
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .secondBack {
+    position: absolute;
+    width: 890px;
+    height: 1320px;
+    left: 992px;
+    top: 63px;
+
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .secondPageText {
+    position: absolute;
+    width: 825px;
+    height: 1398px;
+    left: 1028px;
+    top: 128px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    span {
+      font-family: Anton;
+    }
   }
 }

@@ -5,19 +5,26 @@ import Link from 'next/link';
 const Page125126 = () => {
   return (
     <div className={styles.wrapper}>
-       <video className={styles.image1} muted loop autoPlay>
+       <img src="./magazine/1/125_126/image1.png" className={styles.image1} />
+       
+       <video className={styles.image3} muted loop autoPlay>
+        <source src="./magazine/1/125_126/video4.mp4" type="video/mp4" />
+       </video>
+       <video className={styles.image4} muted loop autoPlay>
+        <source src="./magazine/1/125_126/video3.mp4" type="video/mp4" />
+       </video>
+       <video className={styles.image5} muted loop autoPlay>
         <source src="./magazine/1/125_126/video1.mp4" type="video/mp4" />
        </video>
-       <img src="./magazine/1/125_126/image2.png" className={styles.image2} />
-       <img src="./magazine/1/125_126/image3.png" className={styles.image3} />
-       <img src="./magazine/1/125_126/image4.png" className={styles.image4} />
-       <img src="./magazine/1/125_126/image5.png" className={styles.image5} />
-       <Link href="www.luciidigital.com"><a className={styles.text1}>
-       LUCII
+       <video className={styles.image2} muted loop autoPlay>
+        <source src="./magazine/1/125_126/video2.mp4" type="video/mp4" />
+       </video>
+       <Link href="https://www.instagram.com/ava3ddesigners/"><a className={styles.text1}>
+       AVA Designers
         </a>
        </Link>
-       <Link href="http://instagram.com/onandno.project"><a className={styles.text2}>
-       Onando Project
+       <Link href="http://joannahir.com/"><a className={styles.text2}>
+       JOANNA HIR
         </a>
        </Link>
     </div>
