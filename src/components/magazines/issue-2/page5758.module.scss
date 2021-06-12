@@ -308,8 +308,8 @@
         position: absolute;
         width: 478px;
         height: 76px;
-        left: 1403px;
-        top: 867px;
+        left: 1415px;
+        top: 41px;
 
         font-family: Poppins;
         font-style: normal;
@@ -319,6 +319,9 @@
         /* or 70px */
 
         text-align: right;
+
+        color: #FFFFFF;
+
         text-shadow: -3px 0 #FF0000, 0 3px #FF0000, 3px 0 #FF0000, 0 -3px #FF0000;
 
         color: #FFFFFF;
@@ -328,8 +331,8 @@
         position: absolute;
         width: 478px;
         height: 228px;
-        left: 1403px;
-        top: 947px;
+        left: 1415px;
+        top: 121px;
 
         font-family: Post No Bills Colombo SemiBold;
         font-style: normal;
@@ -345,10 +348,10 @@
 
     .text16 {
         position: absolute;
-        width: 376px;
+        width: 434px;
         height: 228px;
-        left: 959px;
-        top: 1219px;
+        left: 981px;
+        top: 534px;
 
         font-family: Poppins;
         font-style: normal;
@@ -365,8 +368,8 @@
         position: absolute;
         width: 485px;
         height: 80px;
-        left: 1065px;
-        top: 1382px;
+        left: 1381px;
+        top: 674px;
 
         font-family: Poller One;
         font-style: normal;
@@ -379,8 +382,26 @@
         color: #FF5555;
 
         &:hover {
-            text-shadow: 4px 3px 0px rgba(0, 0, 0, 0.8), 9px 8px 0px rgba(0,0,0,0.15);
+            text-shadow: 4px 3px 0px rgb(0 0 0 / 80%), 9px 8px 0px rgb(0 0 0 / 15%);
         }
+    }
+
+    .text19 {
+        position: absolute;
+        width: 465px;
+        height: 280px;
+        left: 1381px;
+        top: 776px;
+
+        font-family: Poppins;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 100%;
+        /* or 20px */
+
+
+        color: #FFFFFF;
     }
 
     .image3 {
@@ -410,30 +431,86 @@
     .image4 {
         position: absolute;
         width: 434px;
-        height: 305px;
-        left: 969px;
-        top: 896px;
+        height: 447px;
+        left: 981px;
+        top: 54px;        
     }
 
     .image5 {
         position: absolute;
-        width: 260px;
-        height: 195px;
-        left: 1345px;
-        top: 1103px;
+        width: 408px;
+        height: 306px;
+        left: 1458px;
+        top: 293px;
     }
 
     .video4 {
         position: absolute;
-        width: 267px;
-        height: 262px;
-        left: 1617px;
-        top: 1156px;
+        width: 339px;
+        height: 333px; 
+        left: 978px;
+        top: 706px;
     }
 
     .text18 {
         font-size: 22px;
         color: #FF5EDB;
         line-height: 22px;
+    }
+
+    .text20 {
+        position: absolute;
+        width: 434px;
+        height: 221px;
+        left: 867px;
+        top: 1153px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 100%;
+        /* or 60px */
+
+
+        color: #FFFFFF;
+
+        transform: rotate(-90deg);
+    }
+
+    .text21 {
+        position: absolute;
+        width: 434px;
+        height: 221px;
+        left: 987px;
+        top: 1153px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 100%;
+        /* or 60px */
+
+
+        color: #FFFFFF;
+
+        transform: rotate(-90deg);
+    }
+
+    .image6 {
+        position: absolute;
+        width: 298px;
+        height: 300px;
+        left: 1269px;
+        top: 1110px;
+    }
+
+    .image7 {
+        position: absolute;
+        width: 441.36px;
+        height: 386.26px;
+        left: 1514px;
+        top: 1078.23px;
     }
 }

@@ -73,27 +73,6 @@ const Page5758 = () => {
       </video>
       <img src="./magazine/2/images/57_58_image2.png" className={styles.image2} />
 
-      <div className={styles.text10}>THAKANE BAZILL X TAKAII</div>
-      <div className={styles.text11}>
-        Thakane is a designer, entrepreneur and sometimes MC. Her vibes are international, having
-        lived in Costa Rica, South Africa, Brussels, Barcelona, Berlin + she speaks 4 languages.
-        <br />
-        <br />
-        She is the founder of TAKAII— an activewear brand that she is currently expanding into the
-        metaverse, from physical to digital, from surplus to efficient and from seasonal to
-        timeless.
-      </div>
-      <div className={styles.text12}>
-        TAKAII aims to flip the script and allow for users to interact with garments first in gaming
-        spaces and virtual worlds.
-      </div>
-      <Link href="/">
-        <a className={styles.link3}>
-          <div className={styles.text13}>
-            Follow the journey of Thakane as she takes TAKAII hybrid digital-physical
-          </div>
-        </a>
-      </Link>
       <div className={styles.text14}>XENOTECH</div>
       <div className={styles.text15}>
         In 2020 XENOTECH transitioned from working on a physical clothing brand to 3D, having always
@@ -112,26 +91,30 @@ const Page5758 = () => {
           <div className={styles.text17}>Discover the XENOTECH Sphere.</div>
         </a>
       </Link>
-      <video
-        autoPlay
-        loop
-        muted
-        className={styles.video2}
-        src="./magazine/2/images/57_58_video2.mov"
-      ></video>
-      <img src="./magazine/2/images/57_58_image3.png" className={styles.image3} />
-      <video
-        autoPlay
-        loop
-        muted
-        className={styles.video3}
-        src="./magazine/2/images/57_58_video3.mov"
-      ></video>
+      <div className={styles.text19}>
+        The biggest inspiration behind my creative work has been my upbringing and travels. My
+        father’s job as a journalist resulted in our family moving from country to country
+        frequently. From birth to highschool I moved between Tokyo (birthplace), New York, Rome, and
+        Abu Dhabi. I was fortunate to have exposure to many different cultures and international
+        experiences growing up, which has informed much of the work I do today. Much of this
+        upbringing forced me to quickly adapt to change and learn to embrace it, and for this reason
+        change is something I cherish.
+      </div>
       <img src="./magazine/2/images/57_58_image4.png" className={styles.image4} />
       <img src="./magazine/2/images/57_58_image5.png" className={styles.image5} />
       <video autoPlay loop muted className={styles.video4}>
         <source src="./magazine/2/images/57_58_video4.mp4" type="video/mp4" />
       </video>
+      <div className={styles.text20}>
+        DECO
+        <br /> ONLY FANS
+      </div>
+      <div className={styles.text21}>
+        DECO
+        <br /> ONLY FANS
+      </div>
+      <img src="./magazine/2/images/57_58_image6.png" className={styles.image6} />
+      <img src="./magazine/2/images/57_58_image7.png" className={styles.image7} />
     </div>
   );
 };
