@@ -3,111 +3,118 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 3332px;
+  height: 2433px;
   overflow: hidden;
-  background-color: white;
+  background-color: #00D2C2;
   color: white;
   display: flex;
   position: relative;
 
-  .backImage {
-    object-fit: fill;
+  .image1   {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
+    width: 885px;
+    height: 1394px;
+    left: -255px;
+    top: -4px;  
   }
 
-  h1{   
-    font-family: Carter One;
+  .image2 {
+    position: absolute;
+    height: 127px;
+    left: 23px;
+    top: 52px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    left: 0px;
+    top: 835px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    left: -61px;
+    top: 1908px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    left: -23px;
+    top: 1390px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 292px;
+    height: 300px;
+    left: 76px;
+    top: 891px;
+    
+    font-family: ExodusDemo-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 547px;
+    height: 30px;
+    left: 41px;
+    top: 193px;
+    
+    font-family: ExodusDemo-Regular;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
-    line-height: 120%;
-    /* or 36px */
-
-    text-align: center;
-
+    /* identical to box height, or 50px */
     
-  }
-
-  .title1{
-    position: absolute;
-    width: 266px;
-    height: 133px;
-    left: 26px;
-    top: 2051px;
+    
     color: #FFFFFF;
   }
-  .title2{
+  .text3 {
     position: absolute;
-    width: 266px;
-    height: 133px;
-    left: 17px;
-    top: 2054px;
- 
+    width: 282px;
+    height: 350px;
+    left: 37px;
+    top: 1965px;
 
-    color: #7F00E2;
-  }
-
-  .link1{
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  .link2{
-    color: #7F00E2;
-    text-decoration: underline;
-  }
-
-  a{
-    
-    font-family: Carter One;
+    font-family: ExodusDemo-Regular;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 120%;
-    /* or 48px */
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
 
-    text-align: center;    
-  }
 
-  .title3{
-    position: absolute;
-    width: 225px;
-    height: 40px;
-    left: 11px;
-    top: 1676px;
     color: #FFFFFF;
   }
-
-  .title4{
-    position: absolute;
-    width: 394px;
-    height: 49px;
-    left: -75px;
-    top: 1682px;
-    color: #730000;
-  }
-
-  .title5{
-    position: absolute;
-    width: 394px;
-    height: 49px;
-    left: -75px;
-    top: 1689px;
- 
-
-    color: #F53939;
-  }
-
-  .wolfimg{
-    position: absolute;
-    width: 367px;
-    height: 189px;
-    left: -39px;
-    top: 1337px;
-  }
-
+.text4 {
+  position: absolute;
+  width: 309px;
+  height: 252px;
+  left: 37px;
+  top: 1478px;
+  
+  font-family: ExodusDemo-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 100%;
+  /* or 28px */
+  
+  
+  color: #FFFFFF;
+}
 }

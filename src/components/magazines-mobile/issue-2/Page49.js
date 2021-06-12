@@ -1,24 +1,18 @@
 import React from 'react'
 import styles  from './page49.module.scss'
+import Link from 'next/link';
 
 const Page49 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page56-bg.png" className={styles.backImage} /> 
-      <a href='https://twitter.com/BladeRunway' target='_blank'>
-       <p className={styles.title1}>BLADE RUNWAY</p>
-       <p className={styles.title2}>BLADE RUNWAY</p>
-       <p className={styles.title3}>BLADE RUNWAY</p>
-       <p className={styles.title4}>BLADE RUNWAY</p>
-       <p className={styles.title5}>BLADE RUNWAY</p>
-      </a>
-      <p className={styles.section1}>
-        Blade Runway is the first Digital Couture Fashion House in Italy. Founded by designers Greta Meacci and Alan Aronica, the project was launched to bring the high quality and know-how of traditional Italian haute couture into the digital world. Their ambition is to shape the aesthetic paradigms of tomorrow by influencing the collective imagination and contribute in writing the future of fashion.
-        <br/><br/>
-        Unbound by any kind of physical limitation Blade Runway’s creative vision is projected towards exploring the limitless possibilities offered by the new age of digital realities. Historically fashion has always had a profound impact on social interactions, human relationships and cultures. Empowered by blockchain technology and the decentralization of the new internet, this next generation fashion house aims to build a sustainable future that transcends beyond space and time to redefine and reinvent how we interact with one another.
-      </p>
-      <img src="./magazine/1/images/mobile/RachelFurCoat_4 1.png"  className={styles.image2}/>
-      
+      <img src="./magazine/1/77_78/image1.png" className={styles.image1} />
+      <div className={styles.image3}>     
+      </div>
+      <Link href="https://linktr.ee/_kenneth3ze_"><a>
+          <p className={styles.text1}>Kenneth Eze</p>
+        </a>
+      </Link>
+      <p className={styles.text2}>Art is such a broad concept. Everyone makes art for different reasons, however, I pour my feelings and thoughts into the pieces I make because it's the best way I can tell you how I feel.</p>
     </div>
   )
 }

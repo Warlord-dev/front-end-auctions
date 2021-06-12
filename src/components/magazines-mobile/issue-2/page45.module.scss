@@ -2,57 +2,69 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 629px;
+  height: 910px;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
   justify-content: center;
 
-  .backImage {
-    object-fit: fill;
+   .image2 {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0px;
+    width: 584px;
+    height: 910px;
+    left: -91px;
     top: 0px;
-  }
+   }
 
-  .title{
+   .text4 {
     position: absolute;
-    width: 206px;
-    height: 99px;
-    left: 179px;
-    top: 31px;
+    width: 316px;
+    height: 100px;
+    left: 15px;
+    top: 28px;
     
-    font-family: Blacker Display;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 110%;
-    /* or 33px */
-    
-    
-    color: #FFFFFF;
-
-  }
-
-  .text{
-    position: absolute;
-    width: 155px;
-    height: 60px;
-    left: 179px;
-    top: 137px;
-
-    font-family: Blacker Display;
+    font-family: Reem Kufi;
     font-style: normal;
     font-weight: normal;
-    font-size: 11px;
-    line-height: 110%;
-    /* or 12px */
+    font-size: 50px;
+    line-height: 100%;
+    
+    -webkit-text-stroke: #00E0FF;
+    -webkit-text-stroke-width: 0.5px;
+    color: #5200FF;
+    box-sizing: border-box;
+   }
 
-
+   .text5 {
+    position: absolute;
+    width: 153px;
+    height: 89px;
+    left: 16px;
+    top: 139px;
+    
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #00E0FF;
+    -webkit-text-stroke-width: 0.3px;
     color: #FFFFFF;
-  }
-  
+   }
+
+   .text6 {
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #00E0FF;
+    -webkit-text-stroke-width: 0.3px;
+    color: #FFFFFF;
+   }
 }

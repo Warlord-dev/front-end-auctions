@@ -2,18 +2,57 @@
 
 .wrapper {
   @include magazineWrapper();
+  background-color: #000641;
   
-  .left {
+  .image1 {
     position: absolute;
     width: 960px;
     height: 1497px;
     left: 0px;
     top: 0px;
-    
-    background: rgba(13, 13, 13, 0.3);
   }
 
-  .right {
+  .image2 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: 25px;
+    top: 31px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: 114px;
+    top: 80px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: -17px;
+    top: 158px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 541px;
+    height: 267px;
+    left: 0px;
+    top: 1230px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: 270px;
+    top: 1443px;
+  }
+
+  .image7 {
     position: absolute;
     width: 960px;
     height: 1497px;
@@ -21,407 +60,350 @@
     top: 0px;
   }
 
+  .image8 {
+    position: absolute;
+    width: 408px;
+    height: 272px;
+    left: 1564px;
+    top: -3px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 159px;
+    height: 210px;
+    left: 1020px;
+    top: 321px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 509px;
+    height: 215px;
+    left: 1000px;
+    top: 521px;
+  }
+
   .text1 {
     position: absolute;
-    width: 580px;
-    height: 88px;
-    left: 54px;
-    top: 87px;
+    width: 503px;
+    height: 112px;
+    left: 1027px;
+    top: 40px;
     
-    font-family: Covered By Your Grace;
+    font-family: Bahiana;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 60px;
     line-height: 110%;
-    /* or 22px */
-    
+    /* or 66px */
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
     
     color: #FFFFFF;
   }
 
   .text2 {
     position: absolute;
-    width: 580px;
-    height: 240px;
-    left: 54px;
-    top: 197px;
+    width: 134px;
+    height: 40px;
+    left: 1540px;
+    top: 44px;
     
-    font-family: Covered By Your Grace;
+    font-family: Knife Princess;
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 110%;
-    /* or 24px */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 270px;
-    height: 78px;
-    left: 54px;
-    top: 476px;
-    
-    font-family: Covered By Your Grace;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* or 39px */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .text4 {
-    position: absolute;
-    width: 258px;
-    height: 242px;
-    left: 54px;
-    top: 560px;
-    
-    font-family: Covered By Your Grace;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
     
     
     color: #FFFFFF;    
   }
 
-  .text5 {
+  .text3 {
     position: absolute;
-    width: 271px;
-    height: 78px;
-    left: 388.8px;
-    top: 506px;
+    width: 636px;
+    height: 124px;
+    left: 1027px;
+    top: 116px;
     
-    font-family: Covered By Your Grace;
+    font-family: DM Mono;
     font-style: normal;
     font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* or 39px */
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
     
-    text-align: center;
-    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
     color: #FFFFFF;
-    
-    transform: rotate(5deg);
+  }
+
+  .text4 {
+    position: absolute;
+    width: 396px;
+    height: 112px;
+    left: 1193px;
+    top: 314px;
+
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 312px;
+    height: 27px;
+    left: 1588px;
+    top: 282px;
+
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
   }
 
   .text6 {
     position: absolute;
-    width: 231px;
-    height: 176px;
-    left: 404.34px;
-    top: 594px;
+    width: 260px;
+    height: 168px;
+    left: 1607px;
+    top: 336px;
     
-    font-family: Covered By Your Grace;
+    font-family: DM Mono;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
+    line-height: 100%;
+    /* or 20px */
     
-    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
     color: #FFFFFF;
-    
-    transform: rotate(5deg);
   }
 
   .text7 {
     position: absolute;
-    width: 439.27px;
-    height: 117px;
-    left: 88px;
-    top: 851.29px;
+    width: 278px;
+    height: 40px;
+    left: 1201px;
+    top: 453px;
     
-    font-family: Covered By Your Grace;
+    font-family: Knife Princess;
     font-style: normal;
     font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* or 39px */
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
     
     
     color: #FFFFFF;
-    
-    transform: rotate(-5deg);    
   }
 
   .text8 {
     position: absolute;
-    width: 448.1px;
-    height: 117.48px;
-    left: 104px;
-    top: 969.72px;
+    width: 312px;
+    height: 27px;
+    left: 1207px;
+    top: 504px;
     
-    font-family: Covered By Your Grace;
+    font-family: DM Mono;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
+    line-height: 100%;
+    /* or 20px */
     
-    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
     color: #FFFFFF;
-    
-    transform: rotate(-5deg);
   }
 
   .text9 {
     position: absolute;
-    width: 439.27px;
-    height: 78px;
-    left: 213.8px;
-    top: 1121px;
-    
-    font-family: Covered By Your Grace;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* or 39px */
-    
-    text-align: right;
-    
-    color: #FFFFFF;
-    
-    transform: rotate(5deg);
-  }
+    width: 371px;
+    height: 128px;
+    left: 1518px;
+    top: 515px;
 
-  .text10 {
-    position: absolute;
-    width: 568.32px;
-    height: 243px;
-    left: 77.18px;
-    top: 1201px;
-    
-    font-family: Covered By Your Grace;
+    font-family: DM Mono;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
-    
-    text-align: right;
-    
+    line-height: 100%;
+    /* or 20px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
     color: #FFFFFF;
+  }
+
+  .text10 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 401px;
+    height: 132px;
+    left: 1020px;
+    top: 722px;
     
-    transform: rotate(5deg);
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    -webkit-text-stroke: #0009EA;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
   }
 
   .text11 {
     position: absolute;
-    width: 692.39px;
-    height: 117px;
-    left: 1055.8px;
-    top: 85px;
-    
-    font-family: Covered By Your Grace;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* or 39px */
-    
-    
-    color: #FFFFFF;
-    
-    transform: rotate(5deg);
+  width: 412px;
+  height: 127px;
+  left: 1020px;
+  top: 817px;
+
+  font-family: DM Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 100%;
+  /* or 20px */
+
+  -webkit-text-stroke: #000000;
+  -webkit-text-stroke-width: 1px;
+  color: #FFFFFF;
   }
 
   .text12 {
     position: absolute;
-    width: 804.72px;
-    height: 127.99px;
-    left: 1046.18px;
-    top: 217px;
+    width: 324px;
+    height: 72px;
+    left: 1466px;
+    top: 698px;
     
-    font-family: Covered By Your Grace;
+    font-family: Masterblast;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
     
-    
+    -webkit-text-stroke: #009220;
+    -webkit-text-stroke-width: 1px;
     color: #FFFFFF;
-    
-    transform: rotate(5deg);
   }
 
   .text13 {
     position: absolute;
-    width: 692.39px;
-    height: 156px;
-    left: 1008px;
-    top: 454.35px;
-    
-    font-family: Covered By Your Grace;
+    width: 401px;
+    height: 282px;
+    left: 1466px;
+    top: 768px;
+
+    font-family: DM Mono;
     font-style: normal;
     font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* or 39px */
-    
-    
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
     color: #FFFFFF;
-    
-    transform: rotate(-5deg);
   }
 
   .text14 {
     position: absolute;
-    width: 431.3px;
-    height: 198.58px;
-    left: 1010px;
-    top: 583.59px;
+    width: 401px;
+    height: 132px;
+    left: 1020px;
+    top: 974px;
     
-    font-family: Covered By Your Grace;
+    font-family: Masterblast;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
     
-    
+    -webkit-text-stroke: #FF002E;
+    -webkit-text-stroke-width: 1px;
     color: #FFFFFF;
-    
-    transform: rotate(-5deg);
   }
 
   .text15 {
     position: absolute;
-    width: 443px;
-    height: 78px;
-    left: 1048px;
-    top: 842px;
+    width: 412px;
+    height: 461px;
+    left: 1020px;
+    top: 1021px;
     
-    font-family: Boldfinger;
+    font-family: DM Mono;
     font-style: normal;
     font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* or 39px */
-    
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
     
     color: #FFFFFF;
-    
-    box-sizing: border-box;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  .link1 {
+  .text16 {
     position: absolute;
-    width: 443px;
-    height: 78px;
-    left: 1088.4px;
-    top: 947px;
+    width: 401px;
+    height: 132px;
+    left: 1466px;
+    top: 1022px;
     
-    font-family: Boldfinger;
+    font-family: Masterblast;
     font-style: normal;
     font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* or 39px */
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
     
-    text-align: center;
-    
-    color: #0085FF;
-    
-    box-sizing: border-box;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    &:hover {
-      opacity: .7;
-    }
-    transform: rotate(5deg);
+    -webkit-text-stroke: #BB00EA;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;   
   }
 
-  .link2 {
+  .text17 {
     position: absolute;
-    width: 443px;
-    height: 39px;
-    left: 894px;
-    top: 1106.61px;
+    width: 412px;
+    height: 414px;
+    left: 1468px;
+    top: 1066px;
     
-    font-family: Boldfinger;
+    font-family: DM Mono;
     font-style: normal;
     font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* identical to box height, or 39px */
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
     
-    text-align: center;
-    
-    color: #65FF2F;
-    
-    box-sizing: border-box;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    &:hover {
-      opacity: .7;
-    }
-    transform: rotate(-5deg);
-  }
-
-  .link3 {
-    position: absolute;
-    width: 443px;
-    height: 78px;
-    left: 1088.8px;
-    top: 1190px;
-    
-    font-family: Boldfinger;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* or 39px */
-    
-    text-align: center;
-    
-    color: #FF9E0D;
-    
-    box-sizing: border-box;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    &:hover {
-      opacity: .7;
-    }
-    transform: rotate(5deg);    
-  }
-
-  .link4 {
-    position: absolute;
-    width: 443px;
-    height: 39px;
-    left: 927px;
-    top: 1337.61px;
-
-    font-family: Boldfinger;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* identical to box height, or 39px */
-
-    text-align: center;
-
-    color: #FF2F2F;
-
-    box-sizing: border-box;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    &:hover {
-      opacity: .7;
-    }
-    transform: rotate(-5deg);
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
   }
 }

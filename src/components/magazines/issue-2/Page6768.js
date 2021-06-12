@@ -1,118 +1,44 @@
 import React from 'react';
 import styles from './page6768.module.scss';
+import Link from 'next/link';
 
 const Page6768 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/67_68/Group 1182 (2).png" className={styles.left} />
-      <img src="./magazine/1/67_68/Group 1182 (1).png" className={styles.right} />
-      <div className={styles.text1}>
-        The modding community is the backbone to the gaming and esports industries. The modders have
-        built the castles for the OG game content that so many of us identify with, supporting
-        increasingly novel content for building avid player bases and die hard fans. The community
-        is heavily undervalued, unseen.
-      </div>
-      <div className={styles.text2}>
-        DARK PRINCE has been an integral part of the modding community for a number of years. He
-        identified with mod culture after being introduced to the vibrant Devil May Cry modding
-        scene. Since then, he has become one of the most inspiring, humble and well known voices in
-        the DMC community. He mods because he has a true passion and wants to bring joy to others
-        through his content.
-        <br />
-        <br />
-        When first meeting Dark Prince in the devilmaycry.org forum he was so welcoming— decoding
-        the ins and outs of the ecosystem and openly sharing his journey as a modder.
-      </div>
-      <div className={styles.text3}>How long have you been a gamer for?</div>
-      <div className={styles.text4}>
-        I can't remember exactly how long, but, I can guess that I was around 4 or 5 (God knows my
-        memories). I played classic Sega games. Then back when I was around 6-7 or 8 (my memory is
-        still foggy) I was playing interesting “brick” games before becoming a PC gamer from XP
-        between 8 and 10 and yeah I was also a bit of a mobile gamer.
-      </div>
-      <div className={styles.text5}>What is your favorite game?</div>
-      <div className={styles.text6}>
-        I love DMC (Vergil), Marvel stuff (Spider-Man & Venom) and Shadow of Mordor/War (Badass Elf
-        Lord Celebrimbor). I would like to see Spider-Man again on PC.
-      </div>
-      <div className={styles.text7}>
-        What was the first game that you ever modded? Why did you choose this game?
-      </div>
-      <div className={styles.text8}>
-        From what I can remember I always played games without mods and I wasn’t even aware that
-        there was a modding community out there! But, after installing DMC I suddenly became more
-        curious in modding scene, and the rest was history... I started my hobby as a modder.
-      </div>
-      <div className={styles.text9}>What drew you into modding & becoming a game modder?</div>
-      <div className={styles.text10}>
-        I'm not a “special person” or anything but when I came across the modding community I
-        realised that this is a place where I can really let my imagination run wild. There truly
-        are no limits. You inspire the narrative.
-        <br />
-        <br />
-        Spider-Man games finally have more suits! A version of a game can have exclusive content
-        that isn’t originally provided to PC players! With mods, PC players can experience the same
-        content as exclusive players of the same platform— Marvel Ultimate Alliance can be
-        remastered with mods to the latest version. It’s pretty amazing.
-      </div>
-      <div className={styles.text11}>
-        Do you have any opinions about the future of modding? Do you think larger developers/game
-        studios will shut down the modding communities and industry?
-      </div>
-      <div className={styles.text12}>
-        They simply can not shut our community down..
-        <br />
-        <br />
-        Some game companies don't like their games get modded, they prefer to maintain complete
-        control, keep everything behind a walled garden. But, modding is what keeps the game
-        industry alive. It is what gives the devs and studios huge benefits, it’s what ensures that
-        their games don’t die!
-      </div>
-      <div className={styles.text13}>
-        What is your advice to people wanting to start modding? Where should they go? Where do they
-        start learning?
-      </div>
-      <div className={styles.text14}>
-        Modding is not an exclusive talent, anyone can become modder. The best place to start is
-        join a community (Like devilmaycry.org !)... watch some youtube tutorials and take advice
-        from others. Modding communities are incredibly active on forums and discord servers. Just
-        dive in and start, it really is one of the most vibrant ecosystems, and, even if you don’t
-        want to actually develop a mod, I can assure you that the gameplay is just as fun, so..
-        start by just playing, support other modders work!
-      </div>
-      <div className={styles.text15}>CHECK OUT SOME OF DARK PRINCE’S MODS</div>
-      <a
-        href="https://devilmaycry.org/forums/threads/crossover-vergil-john-wick.25137/"
-        className={styles.link1}
-        target="_blank"
-      >
-        {' '}
-        CROSSOVER: VeRGIL WICK{' '}
-      </a>
-      <a
-        href="https://devilmaycry.org/forums/threads/dark-dante-red-coat-v2.25126/"
-        className={styles.link2}
-        target="_blank"
-      >
-        {' '}
-        DARK DANTE V2{' '}
-      </a>
-      <a
-        href="https://devilmaycry.org/forums/threads/advanced-per-stab-vergil.23704/"
-        className={styles.link3}
-        target="_blank"
-      >
-        {' '}
-        Advanced Per-Stab Vergil{' '}
-      </a>
-      <a
-        href="https://devilmaycry.org/forums/threads/powerful-per-stab-project-glow.25147/ "
-        className={styles.link4}
-        target="_blank"
-      >
-        {' '}
-        PROJECT GLOW{' '}
-      </a>
+      <img src="./magazine/1/67_68/image1.png" className={styles.image1} />
+      <img src="./magazine/1/67_68/image2.png" className={styles.image2} />
+      <img src="./magazine/1/67_68/image3.png" className={styles.image3} />
+      <img src="./magazine/1/67_68/image4.png" className={styles.image4} />
+      <img src="./magazine/1/67_68/image5.png" className={styles.image5} />
+      <img src="./magazine/1/67_68/image6.png" className={styles.image6} />
+      <img src="./magazine/1/67_68/image7.png" className={styles.image7} />
+      <img src="./magazine/1/67_68/image8.png" className={styles.image8} />
+      <img src="./magazine/1/67_68/image9.png" className={styles.image9} />
+      <img src="./magazine/1/67_68/image10.png" className={styles.image10} />
+
+      <p className={styles.text1}>E-SPORTS PLAYER OF THE MONTH</p>
+      <p className={styles.text2}>N0TAIL</p>
+      <p className={styles.text3}>With the Dota 2 TI coming up, N0tail is a player that can’t be looked past. He’s one of the most salient players in the entire Dota 2 pro-scene, having led his team, OG, to victory two-times with TI and overcome a mountain of obstacles in order to make that happen. He’s also accumulated well over 20,000 hours of Dota playtime— he must have a good gamer chair indeed! </p>
+      <p className={styles.text5}>metaverse ready score: 6</p>
+      <p className={styles.text4}>E-SPORTS RISING STAR OF THE MONTH</p>
+      <p className={styles.text6}>At 19, Remo Arets is showing huge promise. He’s already reached 6th place in the EU MMR leaderboard & 2nd in EU’s lower DPC division with his team Creepwave.</p>
+      <p className={styles.text7}>Crystallis</p>
+      <p className={styles.text8}>metaverse ready score: 8</p>
+      <p className={styles.text9}>He’s a refreshing new face to Dota 2 and in stark contrast to many players who have proceeded him— where he is known for his calm and no-nonsense attitude. </p>
+      <p className={styles.text10}>WILD RIFT PATCH 2.3</p>
+      <p className={styles.text11}>League of Legends mobile version is introducing 4 new champions as well as a plethora of new skins for the game. Both Riven and Irelia headlined as upcoming champions to Wild Rift.</p>
+      <p className={styles.text12}>THE OLYMPICS HAS GONE DIGITIAL</p>
+      <p className={styles.text13}>It’s official, the Olympics just went digital! Playstation announced the first-ever Olympic Virtual Series Motor Sport Event. The event is one of five in the virtual series, the others being cycling, rowing, sailing, and baseball.
+<br/><br/>
+Seems like just another waypoint for the metaverse. </p>
+      <p className={styles.text14}>ACADEMIA FOr ESPORTS</p>
+      <p className={styles.text15}>Staffordshire University first made headlines in 2017 upon announcement of the first esports degree, where now there are currently 380 students overall, across the three years and at a Master’s level.
+      <br/><br/>
+However, controversy has prevailed, with many students, staff, onlookers speaking up in belief that the entire degree was nothing more than a quick cash grab— where the course has proved out to be led by those with not only no industry or domain knowledge within esports, but also no true intention to craft content and materials that will legitimately equip enrolled students for being able to further pilot esports into the metaverse.  </p>
+      <p className={styles.text16}>DREAM ADMISSION</p>
+      <p className={styles.text17}>Probably the most well known Minecraft content creator, Dream, recently admitted to cheating in Minecraft speedruns. He admitted to using a disallowed modification during the run but claimed he was unaware the mod was active at the time.
+      <br/><br/>
+Overall, the controversy has gone on for many months, with Dream initially actively arguing against the results of Speedrun.com’s investigation. It’s been a pretty toxic turmoil for the whole community involved, but, it seems now there is some conclusion for moving forward. </p>
     </div>
   );
 };

@@ -28,6 +28,8 @@ const MagazineViewer = forwardRef((props, refs) => {
         index < pageList.length - 1
       )
         return
+        console.log(realPageNum);
+        console.log(item);
       childrenList.push(
         <MagazinePageWrapper key={realPageNum} zoom={zoom} windowHeight={windowHeight}>
           {item}

@@ -1,0 +1,110 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #000000;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    height: 1497px;
+    left: 964px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 367px;
+    height: 744px;
+    left: 988px;
+    top: 717px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 427px;
+    height: 816px;
+    left: 960px;
+    top: 681px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 427px;
+    height: 816px;
+    left: 1493px;
+    top: 681px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 383px;
+    height: 744px;
+    left: 1515px;
+    top: 717px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 60px;
+    height: 450px;
+    left:1832px;
+    top: 40px;
+    
+    font-family: Poller One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 25px;
+    /* or 50px */
+    
+    text-align: center;
+    
+    color: #FF8E1A;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 60px;
+    height: 720px;
+    left:1760px;
+    top: 40px;
+    
+    font-family: Poller One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 30px;
+    /* or 60px */
+    
+    text-align: center;
+    
+    color: #5B94EF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 510px;
+    height: 50px;
+    left: 31px;
+    top: 1409px;
+    
+    font-family: Fira Code;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+    
+    text-align: center;
+    
+    color: #FF1313;
+  }
+}

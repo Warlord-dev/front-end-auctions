@@ -2,230 +2,47 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3179px;
+  height: 3601px;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
 
-  .backImage1 {
+  .image1 {
     position: absolute;
-    height: 3400px;
-    width: 100%;
-    left: 0px;
-    top: 0px;
+    width: 2383px;
+    height: 2383px;
+    left: -957px;
+    top: 337px;
+    transform: rotate(-90deg);
   }
 
-  .backImage2 {
+  .image3 {
     position: absolute;
-    width: 340px;
-    height: 699px;
-    left: 45px;
-    top: 2480px;
-  }
+    width: 316px;
+    height: 3480px;
+    left: 29px;
+    top: 76px;
 
-  .backImage3 {
-   position: absolute;
-  width: 34px;
-  height: 34px;
-  left: 91px;
-  top: 3117px;
+    background: rgba(164, 0, 147, 0.43);
   }
   
-  .section{
-      .title1{
-        position: absolute;
-        width: 282px;
-        height: 33px;
-        left: 46px;
-        top: 299px;
-
-        font-family: Biryani;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 30px;
-        line-height: 110%;
-        /* identical to box height, or 33px */
-
-
-        color: #FFFFFF;
-        text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
-      
-      }
-
-      .title2{
-        position: absolute;
-        width: 255px;
-        height: 83px;
-        left: 42px;
-        top: 333px;
-
-        font-family: Helvetica;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 75px;
-        line-height: 110%;
-        /* identical to box height, or 83px */
-
-        text-align: center;
-
-        color: #0038FF;
-      }
-
-      .title3{
-        position: absolute;
-        width: 298px;
-        height: 215px;
-        left: 45px;
-        top: 1309px;
-
-        font-family: Barlow;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 40px;
-        line-height: 110%;
-        /* or 44px */
-
-
-        color: #FFFFFF;
-      }
-
-    
-      .header1{
-
-        position: absolute;
-        width: 353px;
-        height: 220px;        
-        top: 2195px;
-        font-family: Habbo;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 100px;
-        line-height: 110%;
-        /* or 110px */
-        
-        text-align: center;
-        
-        color: #8F00FF;
-        
-        transform: rotate(-10deg);
-      }
-
-      .header2{
-        position: absolute;
-        width: 353px;
-        height: 220px;
-        left: -102px;
-        top: 2454.3px;
-        
-        font-family: Habbo;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 100px;
-        line-height: 110%;
-        /* or 110px */
-        
-        text-align: center;
-        
-        color: #8F00FF;
-        
-        transform: rotate(-10deg);
-        
-      }
-
-      font-family: Capriola;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 110%;
-      /* or 13px */
-
-
-      color: #FFFFFF;
-      
-      .text1{
-        position: absolute;
-        width: 260px;
-        height: 273px;
-        left: 45px;
-        top: 450px;        
-      }
-
-      .text2{
-        position: absolute;
-        width: 260px;
-        height: 359px;
-        left: 45px;
-        top: 779px; 
-      }
-
-      .text3{
-        position: absolute;
-        width: 260px;
-        height: 100px;
-        left: 46px;
-        top: 1417px;
-      }
-
-      .text4{
-        position: absolute;
-        width: 260px;
-        height: 500px;
-        left: 46px;
-        top: 1587px;
-
-        a {
-          text-decoration: underline;
-          color: #FFFFFF;
-          overflow-wrap: break-word;
-        }
-      }
-  }
- 
-   .section1{
+  .text2 {
     position: absolute;
-    width: 262px;
-    height: 571px;
-    left: 80px;
-    top: 2507px;
+    width: 264px;
+    height: 1305px;
+    left: 55px;
+    top: 139px;
     
-    font-family: Sniglet;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 11px;
-    line-height: 110%;
-    /* or 22px */
-    text-transform: uppercase;
-    color: #FFFFFF;        
-   }
-   .title4{
-     
-    font-family: Sniglet;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
-    text-transform: uppercase;
-    
-    color: #5869FF;
-   
-  }
-   .text5{
-    position: absolute;
-    width: 186px;
-    height: 31px;
-    left: 150px;
-    top: 3103px;
-    
-    font-family: SNOWBREAK;
+    font-family: Lexend Giga;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 110%;
-    /* or 17px */
+    line-height: 150%;
+    /* or 22px */
     
+    text-align: center;
     
     color: #FFFFFF;
-   }
+  }
 }

@@ -1,57 +1,109 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper();
-  background: #26A3E6;
+  @include magazineWrapper();    
 
-  .left {
+  .image1 {
     position: absolute;
-    height: 1498px;
+    height: 1497px;
+    left: -830px;
+    top: 0px;    
   }
 
-  .right {
+  .image2 {
     position: absolute;
     width: 960px;
     height: 1497px;
     left: 960px;
-    top: 0px;
+    top: 0px; 
+  }
+
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 84px;
+    left: 0px;
+    top: 1413px;
+    
+    background: #000000;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 960px;
+    height: 84px;
+    left: 960px;
+    top: 1413px;
+
+    background: #C4A5AE;
   }
 
   .text1 {
     position: absolute;
-    width: 300px;
-    height: 40px;
-    left: 1060px;
-    top: 50px;
+    width: 885px;
+    height: 56px;
+    left: 27px;
+    top: 1426px;
     
-    font-family: Empirez;
+    font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 100%;
-    /* identical to box height, or 40px */
-    
-    &:hover {
-      text-decoration: underline;
-    }
-    color: #FFB115;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 300px;
-    height: 350px;
-    left: 1060px;
-    top: 100px;
-    
-    font-family: EB Garamond;
-    font-style: normal;
-    font-weight: bold;
     font-size: 14px;
     line-height: 100%;
     /* or 14px */
     
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+    
+    text-decoration-line: underline;
     
     color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 139px;
+    height: 70px;
+    left: 966px;
+    top: 1423px;
+    
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 100%;
+    /* identical to box height, or 70px */
+    
+    text-align: center;
+    
+    color: #33559A;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 751px;
+    height: 63px;
+    left: 1123px;
+    top: 1430px;
+    
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #68296D;
   }
 }
