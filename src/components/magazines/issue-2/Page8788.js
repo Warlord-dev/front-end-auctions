@@ -49,7 +49,7 @@ const Page8788 = () => {
           <source src="./magazine/1/87_88/video2.MOV" type="video/mp4" />
         </video>
         </div>
-        <button onClick={()=>{playVideo2()}}><img src={`./magazine/1/87_88/${isPlaying1 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>
+        <button onClick={()=>{playVideo2()}}><img src={`./magazine/1/87_88/${isPlaying2 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>
       </div>
       <div className={styles.image13}>
       </div>

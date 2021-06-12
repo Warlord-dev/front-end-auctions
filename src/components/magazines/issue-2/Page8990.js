@@ -20,6 +20,7 @@ const Page8990 = () => {
       <img src="./magazine/1/89_90/image10.png" className={styles.image11} />
       <img src="./magazine/1/89_90/image11.png" className={styles.image12} />
       <img src="./magazine/1/89_90/image12.png" className={styles.image13} />
+      <img src="./magazine/1/89_90/image29.png" className={styles.image24} />
       <img src="./magazine/1/89_90/image13.png" className={styles.image14} />
       <img src="./magazine/1/89_90/image14.png" className={styles.image15} />
       <img src="./magazine/1/89_90/image15.png" className={styles.image16} />

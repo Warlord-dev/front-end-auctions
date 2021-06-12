@@ -4,35 +4,40 @@ import styles from './page61.module.scss'
 const Page61 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page61/moshed-05-06-5-2-20 2.png" className={styles.Img1} />
-      <img src="./magazine/1/images/mobile/page61/moshed-05-06-5-2-20 3.png" className={styles.Img2} />
-      <img src="./magazine/1/images/mobile/page61/moshed-05-06-5-2-20 4.png" className={styles.Img3} />
-      <img src="./magazine/1/images/mobile/page61/moshed-05-06-5-2-20 5.png" className={styles.Img4} />  
-      <img src="./magazine/1/images/mobile/page61/moshed-05-06-5-5-41 1.png" className={styles.Img5} />
-      <img src="./magazine/1/images/mobile/page61/moshed-05-06-4-53-45 1.png" className={styles.Img6} />
-      <img src="./magazine/1/images/mobile/page61/moshed-05-06-4-53-45 3.png" className={styles.Img7} />
-      <h1 className={styles.title1}>Do you have any opinions about the future of modding? Do you think larger developers/game studios will shut down the modding communities and industry?</h1>
-      <h1 className={styles.title2}>What is your advice to people wanting to start modding? Where should they go? Where do they start learning?</h1>
-      <h2 className={styles.title3}>CHECK OUT SOME OF DARK PRINCE’S MODS </h2>
-      <a href="https://devilmaycry.org/forums/threads/crossover-vergil-john-wick.25137/" target='_blank'>
-        <h2 className={styles.title4}>CROSSOVER: VeRGIL WICK</h2>
-      </a>
-      <a href="https://devilmaycry.org/forums/threads/dark-dante-red-coat-v2.25126/" target='_blank'>
-        <h2 className={styles.title5}>DARK DANTE V2</h2>
-      </a>
-      <a href="https://devilmaycry.org/forums/threads/advanced-per-stab-vergil.23704/" target='_blank'>
-        <h2 className={styles.title6}>Advanced Per-Stab Vergil</h2>
-      </a>
-      <a href="https://devilmaycry.org/forums/threads/powerful-per-stab-project-glow.25147/" target='_blank'>
-        <h2 className={styles.title7}>PROJECT GLOW</h2>
-      </a>
-      <p className={styles.text1}>They simply can not shut our community down..
-        <br/><br/>
-        Some game companies don't like their games get modded, they prefer to maintain complete control, keep everything behind a walled garden. But, modding is what keeps the game industry alive. It is what gives the devs and studios huge benefits, it’s what ensures that their games don’t die! 
-      </p>
-      <p className={styles.text2}>
-        Modding is not an exclusive talent, anyone can become modder. The best place to start is join a community (Like devilmaycry.org !)... watch some youtube tutorials and take advice from others. Modding communities are incredibly active on forums and discord servers. Just dive in and start, it really is one of the most vibrant ecosystems, and, even if you don’t want to actually develop a mod, I can assure you that the gameplay is just as fun, so.. start by just playing, support other modders work! 
-      </p>
+      <img src="./magazine/1/89_90/image1.png" className={styles.image1} />
+      <div className={styles.image2}></div>
+      <img src="./magazine/1/89_90/image3.png" className={styles.image4} />
+      <img src="./magazine/1/89_90/image4.png" className={styles.image5} />
+      <img src="./magazine/1/89_90/image5.png" className={styles.image6} />
+      <img src="./magazine/1/89_90/image24.png" className={styles.image7} />
+      <img src="./magazine/1/89_90/image25.png" className={styles.image8} />
+      <img src="./magazine/1/89_90/image26.png" className={styles.image9} />
+      <img src="./magazine/1/89_90/image9.png" className={styles.image10} />
+      <img src="./magazine/1/89_90/image27.png" className={styles.image11} />
+      <img src="./magazine/1/89_90/image28.png" className={styles.image12} />
+      <img src="./magazine/1/89_90/image12.png" className={styles.image13} />
+      <img src="./magazine/1/89_90/image29.png" className={styles.image24} />
+      <img src="./magazine/1/89_90/image13.png" className={styles.image14} />
+      <img src="./magazine/1/89_90/image14.png" className={styles.image15} />
+      <img src="./magazine/1/89_90/image15.png" className={styles.image16} />
+      <img src="./magazine/1/89_90/image16.png" className={styles.image17} />
+      <img src="./magazine/1/89_90/image17.png" className={styles.image18} />
+      <img src="./magazine/1/89_90/image18.png" className={styles.image19} />
+      <img src="./magazine/1/89_90/image19.png" className={styles.image20} />
+      <img src="./magazine/1/89_90/image20.png" className={styles.image21} />
+      <img src="./magazine/1/89_90/image21.png" className={styles.image22} />
+      <img src="./magazine/1/89_90/image22.png" className={styles.image23} />
+
+      <p className={styles.text1}>NFT BUNDLES</p>
+      <p className={styles.text2}>Through DIGIFIZZY we are proving out a new publishing model with NFT based decentralised subscriptions. All of the content is free to read, and, people can subscribe to NFT bundles that bring together a mix of well known and upcoming/undervalued talent across music, art, fashion, gaming, other collectibles etc. This is not an auction or a typical drop, but unlike where if creators were featured on the cover of a magazine they would get nothing for it or sometimes have to pay for placement, here they get a share distributed across the contributors to the bundle, whilst the publication is still able to prove out the model through a majority share, being the core creator, engineer, distributor and contributor.</p>
+      <p className={styles.text3}>ERC-998 BUNDLE</p>
+      <p className={styles.text4}>BURN YOUR ERC-721 TO UNLOCK A COLLECTION OF ERC-1155 NFTs + HIDDEN MAGAZINE CONTENT AND DYNAMIC NFT AIRDROPS. 3 x BUNDLES: COMMON, SEMI-RARE, EXCLUSIVE. </p>
+      <p className={styles.text5}>Human RIGHTS FOUNDATION WEAR YOUR VALUES.</p>
+      <p className={styles.text6}>#FLEXYOURFLARE DIGITAL FASHION COLLECTION</p>
+      <p className={styles.text7}>DRIP Minecraft espa casual esports guild LINE.</p>
+      <p className={styles.text8}>WEB3 Wiazrds COLLECTiBLES.</p>
+      <p className={styles.text9}>AUDIO visual NFTS from AI ROBOT ARTIST 9EN.</p>
+      <p className={styles.text10}>DECO ONLY FANS UNLOCKABLE EXCLUSIVE CONTENT & EXPERIENCES</p>
     </div>
   )
 }

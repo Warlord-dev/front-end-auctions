@@ -2,196 +2,363 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2443px;
+  height: 4280px;
   background-color: white;
   color: black;
   display: flex;
   position: relative;
   
-  .header1{
+  .image7 {
     position: absolute;
-    width: 599px;
-    height: 77px;
-    left: 22px;
-    top: 141px;
-    font-family: Empirez;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 110%;
-
-    color: #3A6B6B;
-    text-shadow: -3px 0 #FFFFFF, 0 3px #FFFFFF, 3px 0 #FFFFFF, 0 -3px #FFFFFF;     
-  }
-
-  .header2{
-    position: absolute;
-    width: 966px;
-    height: 88px;
+    width: 375px;
+    height: 4280px;
     left: 0px;
-    top: 2355px;
+    top: 0px;
+  }  
 
-    font-family: Empirez;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 80px;
-    line-height: 110%;
-    /* identical to box height, or 88px */
-
-
-    color: #3A6B6B;
-    text-shadow: -3px 0 #FFFFFF, 0 3px #FFFFFF, 3px 0 #FFFFFF, 0 -3px #FFFFFF;
+  .image8 {
+    position: absolute;
+    width: 408px;
+    height: 272px;
+    left: 37px;
+    top: 563px;
   }
 
-  .header3{
+  .image9 {
     position: absolute;
-    width: 626.04px;
-    height: 49.61px;
-    left: 126px;
-    top: 2105.56px;
+    width: 159px;
+    height: 210px;
+    left: 162px;
+    top: 1075px;
+  }
 
-    font-family: Cool Chaos;
+  .text1 {
+    position: absolute;
+    width: 273px;
+    height: 112px;
+    left: 50px;
+    top: 46px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 134px;
+    height: 40px;
+    left: 37px;
+    top: 582px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+    
+    
+    color: #FFFFFF;   
+  }
+
+  .text3 {
+    position: absolute;
+    width: 273px;
+    height: 124px;
+    left: 50px;
+    top: 189px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 312px;
+    height: 27px;
+    left: 33px;
+    top: 850px;
+
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 276px;
+    height: 112px;
+    left: 50px;
+    top: 914px;   
+
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 260px;
+    height: 168px;
+    left: 37px;
+    top: 1387px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 278px;
+    height: 40px;
+    left: 19px;
+    top: 1294px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 312px;
+    height: 27px;
+    left: 25px;
+    top: 1345px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 289px;
+    height: 128px;
+    left: 37px;
+    top: 1555px;
+
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 335px;
+    height: 130px;
+    left: 37px;
+    top: 1768px;
+  }
+
+  .text10 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 255px;
+    height: 132px;
+    left: 51px;
+    top: 1919px;
+    
+    font-family: Masterblast;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
-    line-height: 110%;
-    /* or 33px */
-
-
-    color: #FAD3F0;
-
-    transform-origin: 0 0;
-    transform: rotate(-5deg);
-  }
-  
-   
-  .rectImg{
-    position: absolute;
-    width: 841px;
-    height: 2064px;
-    left: -138px;
-    top: 180px;
-  }
-
-  .artImg{
-    position: absolute;
-    width: 1338px;
-    height: 3818px;
-    left: -229px;
-    top: -55px;
-  }
-
-  .diamond1Img{
-    position: absolute;
-    width: 152px;
-    height: 152px;
-    left: -22px;
-    top: -11px;
-
-    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
-
-  .diamond2Img{
-    position: absolute;
-    width: 96px;
-    height: 96px;
-    left: 234px;
-    top: 45px;
-        
-    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
-
-  .diamond3Img{
-    position: absolute;
-    width: 305px;
-    height: 305px;
-    left: 130px;
-    top: 218px;
-     
-    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
-
-  .diamond4Img{
-    position: absolute;
-    width: 443px;
-    height: 418px;
-    left: 86px;
-    top: 2122px;
-
-    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
-
-  .manImg{
-    position: absolute;
-    width: 190px;
-    height: 191px;
-    left: 0px;
-    top: 2075px;
-  }
-
-  .text{
-    position: absolute;
-    width: 225.74px;
-    height: 857.49px;
-    left: 36.65px;
-    top: 521.7px;
-
+    line-height: 100%;
+    /* or 30px */
     
+    -webkit-text-stroke: #0009EA;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 276px;
+    height: 127px;
+    left: 51px;
+    top: 2051px;
+
+  font-family: DM Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 100%;
+  /* or 20px */
+
+  -webkit-text-stroke: #000000;
+  -webkit-text-stroke-width: 1px;
+  color: #FFFFFF;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 324px;
+    height: 72px;
+    left: 51px;
+    top: 3067px;
+    
+    font-family: Masterblast;
     font-style: normal;
     font-weight: normal;
-    font-size: 5.8px;
-    line-height: 16.2px;
-    /* or 33px */
-
-     
-    font-family: Think Thick;
-
-    color: #FAD3F0;
-    transform-origin: 0 0;
-    transform: rotate(-3deg);
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
     
-    span {
-      font-family: Cool Chaos;
-      font-size: 30px;
-      line-height: 44%;
-    }
+    -webkit-text-stroke: #009220;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
   }
 
- 
-  .twitter_1{
+  .text13 {
     position: absolute;
-    width: 28px;
-    height: 28px;
-    left: 173px;
-    top: 500px;
-  }
+    width: 264px;
+    height: 282px;
+    left: 51px;
+    top: 3137px;  
 
-  .twitter_2{
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+  .text14 {
     position: absolute;
-    width: 28px;
-    height: 28px;
-    left: 254px;
-    top: 1075px;
-
+    width: 288px;
+    height: 132px;
+    left: 51px;
+    top: 2308px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    -webkit-text-stroke: #FF002E;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
   }
 
-  .twitter_3{
+  .text15 {
     position: absolute;
-    width: 28px;
-    height: 28px;
-    left: 201px;
-    top: 1612px;
+    width: 288px;
+    height: 461px;
+    left: 51px;
+    top: 2383px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    
+    color: #FFFFFF;
   }
 
-  .twitter_4{
+  .text16 {
     position: absolute;
-    width: 28px;
-    height: 28px;
-    left: 250px;
-    top: 2085px;
-
-
-    transform: rotate(5deg);
+    width: 288px;
+    height: 132px;
+    left: 51px;
+    top: 3527px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    -webkit-text-stroke: #BB00EA;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;   
   }
 
+  .text17 {
+    position: absolute;
+    width: 264px;
+    height: 414px;
+    left: 51px;
+    top: 3596px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
 }

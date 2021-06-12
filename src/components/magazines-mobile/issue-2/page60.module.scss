@@ -3,284 +3,86 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 4285px;
+  height: 1383px;
   overflow: hidden;
-  background-color: white;
+  background-color: #003E42;
   color: white;
   display: flex;
   position: relative;
 
-  .backImage {
+  .image6 {
     position: absolute;
-    width: 197px;
-    height: 1380px;
-    left: 180px;
-    top: -3px;
-  }
-
-  .rect1{
-    position: absolute;
-    width: 184px;
-    height: 1373px;
-    left: -4px;
+    height: 1383px;
+    left: -353px;
     top: 0px;
   }
 
-  .m1{
+  .image7 {
     position: absolute;
-    width: 375px;
-    height: 1497px;
-    left: 1px;
-    top: 1373px;
+    width: 325px;
+    height: 278px;
+    left: 25px;
+    top: 83px;
+    padding: 16px;
+    background: #0076E3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .image9 {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .image8 {
+          position: absolute;
+          height: 336px;
+          left: -100px;
+          top: 0;
+      }
+    }
   }
 
-  .m2{
+  .image10{
     position: absolute;
-    width: 1099px;
-    height: 123px;
-    left: -489px;
-    top: 1847px;
+    width: 325px;
+    height: 296px;
+    left: 25px;
+    top: 483px;
+    padding: 16px;
+    background: #0076E3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .image11 {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .image12 {
+          position: absolute;
+          height: 336px;
+          left: 0;
+          top: 0;
+      }
+    }
   }
 
-  .m3{
+  .image13 {
     position: absolute;
-    width: 1014px;
-    height: 218px;
-    left: -376px;
-    top: 2163px;
-  }
-
-  .m4{
-    position: absolute;
-    width: 996px;
-    height: 407px;
-    left: -96px;
-    top: 2381px;
-  }
-
-  .m5{
-    position: absolute;
-    width: 878px;
-    height: 218px;
-    left: -308px;
-    top: 2122px;
-  }
-
-  .m6{
-    position: absolute;
-    width: 375px;
-    height: 1497px;
-    left: 0px;
-    top: 2788px;
-  }
-
-  .m7{
-    position: absolute;
-    width: 1099px;
-    height: 123px;
-    left: -490px;
-    top: 3262px;
-  }
-
-  .m8{
+    width: 325px;
+    height: 296px;
+    left: 25px;
+    top: 901px;
     
+    background: #0076E3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .playbutton {
     position: absolute;
-    width: 1014px;
-    height: 218px;
-    left: -377px;
-    top: 3578px;
-
-  }
-
-  .m9{
-    position: absolute;
-    width: 996px;
-    height: 407px;
-    left: -97px;
-    top: 3796px;
-  }
-
-  .m10{
-    position: absolute;
-    width: 878px;
-    height: 218px;
-    left: -309px;
-    top: 3537px;
-  }
-
-  .title1{
-    position: absolute;
-    width: 48px;
-    height: 1254px;
-    left: 65px;
-    top: 60px;
-
-    font-family: Blacker Display;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 60px;
-    line-height: 110%;
-    /* or 66px */
-
-    text-align: center;
-
-    color: #FFFFFF;
-    word-break: break-all;
-
-  }
-
-  .title2{
-    position: absolute;
-    width: 25px;
-    height: 1012px;
-    left: 175px;
-    top: 186px;
-
-    font-family: Blacker Display;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 110%;
-    /* or 44px */
-
-    text-align: center;
-    word-break: break-all;
-    color: #2FA8FF;
-
-  }
-
-  .title3{
-    position: absolute;
-    width: 30px;
-    height: 990px;
-    left: 268px;
-    top: 60px;
-
-    font-family: Blacker Display;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 60px;
-    line-height: 110%;
-    /* or 66px */
-
-    text-align: center;
-    word-break: break-all;
-    color: #FF3939;
-  }
-  p{     
-    font-family: Covered By Your Grace;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
-    color: #FFFFFF;
-  }
-
-  .text1{
-    position: absolute;
-    width: 245px;
-    height: 220px;
-    left: 61px;
-    top: 1474px; 
-  }
-
-  .text2{
-    position: absolute;
-    width: 245px;
-    height: 528px;
-    left: 61px;
-    top: 1722px;
-  }
-
-  .text3{
-    position: absolute;
-    width: 258px;
-    height: 242px;
-    left: 32px;
-    top: 2439px;
-  }
-
-  .text4{
-    position: absolute;
-    width: 231px;
-    height: 176px;
-    left: 85.34px;
-    top: 2799px;
-    transform-origin: 0 0;
-    transform: rotate(5deg);
-  }
-
-  .text5{
-    position: absolute;
-    width: 224.92px;
-    height: 117.48px;
-    left: 60px;
-    top: 3247.6px;
-    transform-origin: 0 0;
-    transform: rotate(-5deg);
-  }
-
-  .text6{
-    position: absolute;
-    width: 263.43px;
-    height: 243px;
-    left: 63.9px;
-    top: 3656.57px;
-    text-align: right;
-    transform-origin: 0 0;
-    transform: rotate(5deg);
-  }
-  
-  h2 {
-    font-family: Covered By Your Grace;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 110%;
-    /* or 39px */
-    color: #FFFFFF; 
-  }
-
-  .title4{
-    position: absolute;
-    width: 270px;
-    height: 78px;
-    left: 20px;
-    top: 2358.83px;
-    transform-origin: 0 0;
-    transform: rotate(-4deg);
-  }
-
-  .title5{
-    position: absolute;
-    width: 271px;
-    height: 78px;
-    left: 69.8px;
-    top: 2711px;
-    transform-origin: 0 0;
-    transform: rotate(5deg);
-  }
-
-  .title6{
-    position: absolute;
-    width: 224.78px;
-    height: 234px;
-    left: 41px;
-    top: 2999.59px;
-    transform-origin: 0 0;
-    transform: rotate(-5deg);
-  }
-
-  .title7{
-    position: absolute;
-    width: 305.18px;
-    height: 117px;
-    left: 22.2px;
-    top: 3513px;
-    text-align: right;
-    transform-origin: 0 0;
-    transform: rotate(5deg);
-  }
-
+    width: 32px;
+    height: 32px;
+    right: 28px;
+    top: 32px;
+    background: rgba(255, 255, 255, 0);
+    border: none;
+}
 }
