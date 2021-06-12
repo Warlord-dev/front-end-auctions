@@ -2,107 +2,154 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #E5E5E5;
 
-  .backImage1 {
+  .backImage {
     position: absolute;
-    width: 960px;
+    width: 1928px;
     height: 1497px;
     left: 0px;
     top: 0px;
   }
 
-  .backImage2 {
+  .leftBack {
     position: absolute;
-    width: 960px;
+    width: auto;
     height: 1497px;
-    left: 960px;
+    left: 0;
     top: 0px;
   }
 
-  .textBack1 {
+  .rightBack {
     position: absolute;
-    width: 816px;
-    height: 342px;
-    left: 75px;
-    top: 69px;
-    background: #003172;
+    width: auto;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    z-index: 99;
   }
 
-  .textBack2 {
+  .text1 {
     position: absolute;
-    width: 816px;
-    height: 1028px;
-    left: 75px;
-    top: 435px;
-    
-    background: #C96634;    
-  }
-
-  .textBack3 {
-    position: absolute;
-    width: 816px;
-    height: 908px;
-    left: 1032px;
-    top: 40px;
-
-    background: #003172;
-  }
-
-  .textBack4 {
-    position: absolute;
-    width: 816px;
-    height: 497px;
-    left: 1032px;
-    top: 966px;
-    
-    background: #C96634;    
-  }
-
-  p {
-    font-family: Chilanka;
+    width: 337px;
+    height: 44px;
+    top: 17px;
+    left: 19px;
+    font-family: Knife Princess;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
-    line-height: 28.5px;
-    text-align: center;
-    color: #FFFFFF;
-    position: absolute;
+    font-size: 40px;
+    line-height: 110%;
+    /* identical to box height, or 44px */
 
-    span {
-      font-family: Chivo;
-    }
 
-    &.text1 {
-      width: 670px;
-      height: 178px;
-      left: 148px;
-      top: 135px;
-    }
+    color: #0038FF;
 
-    &.text2 {
-      width: 670px;
-      height: 922px;
-      left: 148px;
-      top: 473px;
-    }
-    
-    &.text3 {
-      width: 670px;
-      height: 851px;
-      left: 1108px;
-      top: 75px;
-      font-size: 18px;
-      line-height: 27px;
-    }
-
-    &.text4 {
-      width: 670px;
-      height: 178px;
-      left: 1111px;
-      top: 1009px;
-    }
+    -webkit-text-stroke: black;
+    -webkit-text-stroke-width: 2px;
   }
 
+  .text2 {
+    position: absolute;
+    width: 586px;
+    height: 44px;
+    top: 1410px;
+    left: 31px;
+    font-family: Jungle;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    /* identical to box height, or 44px */
+    color: #FFFFFF;
+    -webkit-text-stroke: #0066FF;
+    -webkit-text-stroke-width: 2px;
+  }
 
+  .text3 {
+    position: absolute;
+    width: 166px;
+    height: 20px;
+    left: 1018px;
+    top: 72px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+    z-index: 100;
+
+    color: #FF9D9D;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 205px;
+    height: 249px;
+    left: 1018px;
+    top: 110px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    /* or 20px */
+    z-index: 100;
+
+    color: #FF9D9D;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 241px;
+    height: 44px;
+    left: 1670px;
+    top: 40px;
+    font-family: Kohinoor Devanagari;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    /* identical to box height, or 44px */
+
+    z-index: 100;
+    color: #FFFFFF;
+    -webkit-text-stroke: #FF9900;
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .secondBack {
+    position: absolute;
+    width: 890px;
+    height: 1320px;
+    left: 992px;
+    top: 63px;
+
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .secondPageText {
+    position: absolute;
+    width: 825px;
+    height: 1398px;
+    left: 1028px;
+    top: 128px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    span {
+      font-family: Anton;
+    }
+  }
 }

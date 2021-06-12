@@ -1,33 +1,23 @@
 import React from 'react';
 import styles from './page7980.module.scss';
+import Link from 'next/link';
 
 const Page7980 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/79_80/Group 1179.png" className={styles.left} />
-      <img src="./magazine/1/79_80/right2.png" className={styles.right} />
-      <a href="https://www.instagram.com/pragmatik0/" className={styles.text1} target="_blank">
-        Andrea Nieto
-      </a>
-      <div className={styles.text2}>
-        Andrea is a multidisciplinary designer and innovator originally from Colombia. Andrea’s
-        background is in apparel and textile design but her work has expanded to include the areas
-        of footwear design and digital experiences. Now Andrea leads from a design perspective
-        projects across those different competencies at Adidas’s innovation team - Future.
-        <br />
-        <br />
-        Andrea joined Adidas back in 2014 and since has been helping build the latest innovations
-        for the brand. Some of her most recent work is a new proprietary Adidas technology
-        innovation called Strung. This new technology leverages robots to help build new types of
-        textiles that are high resolution and allow the integration of athlete/human data into the
-        workflow.
-        <br />
-        <br />
-        On her free time Andrea explores digital design widely, all the way from non-practical
-        artistic applications to more utilitarian ones like digital footwear and apparel. Andrea is
-        passionate to build the next generation of functional NFT experiences for the Metaverse as
-        well as to build bridges to the physical world in more sustainable ways.
-      </div>
+      <video className={styles.image1} muted loop autoPlay>
+        <source src="./magazine/1/79_80/video1.mp4" type="video/mp4" />
+       </video>
+      <img src="./magazine/1/79_80/image2.png" className={styles.image2} />
+      
+      <div className={styles.image3}></div>
+      <div className={styles.image4}></div>
+      <p className={styles.text1}><Link href="https://www.instagram.com/aaaronkaufman/"><a className={styles.text2}>Aaron Kaufman</a></Link> is a multidisciplinary graphic artist currently living and working in Montreal, Canada. With a background in traditional arts, Aaron applies his artistic vision to contemporary mediums and creates visually striking work. His work has been part of award winning campaigns, gallery exhibits worldwide, and concerts for major acts. He enjoys exploring juxtapositions between forms, colors, patterns, environments and ideas to create dynamic and thought-provoking imagery.</p>
+      <Link href="https://www.instagram.com/ditadivita/"><a>
+          <p className={styles.text3}>DITA</p>
+        </a>
+      </Link>
+      <p className={styles.text4}>DITA is a YouTube-taught 3D designer with a background in fashion and graphic design. What fascinates DITA the most about digital art is the endless creative possibilities without real life restrictions. DITA enjoys expanding their knowledge of general 3D techniques and combining this with apparel design.</p>
     </div>
   );
 };

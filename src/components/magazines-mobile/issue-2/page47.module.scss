@@ -2,55 +2,69 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 629px;
-  background-color: white;
+  height: 2670px;
+  background-color: #7B7C7E;;
   color: white;
   display: flex;
   position: relative;
-
-  .backImage {
-    object-fit: fill;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-  }
-
-  .text{
-    position: absolute;
-    width: 221px;
-    height: 258px;
-    left: 123px;
-    top: 67px;
-
-    font-family: Olivia & Kevin;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 9px;
-    line-height: 110%;
-    /* or 10px */
-
-
-    color: #D79B99;
-  }
-
-  .title{
-    position: absolute;
-    width: 338px;
-    height: 33px;
-    left: 123px;
-    top: 29px;
-
-    font-family: Asdonuts;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 110%;
-    /* identical to box height, or 33px */
-
-
-    color: #CA8886;
-  }
   
+  .image2 {
+    position: absolute;
+    width: 1181px;
+    height: 1181px;
+    left: -345px;
+    top: 1585px;
+  }
+   .image3 {
+    position: absolute;
+    width: 608px;
+    height: 634px;
+    left: -20px;
+    top: 0px;
+   }
+
+   .image4 {
+    position: absolute;
+    width: 884px;
+    height: 859px;
+    left: -546px;
+    top: 840px;
+   }
+   .text3 {
+    position: absolute;
+    width: 66px;
+    height: 84px;
+    left: 284px;
+    top: 448px;
+
+    font-family: Erica One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+
+    text-align: center;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    color: #E56615;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 212px;
+    height: 168px;
+    left: 33px;
+    top: 1531px;
+    
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+    
+    
+    color: #FFFFFF;
+  }
 }

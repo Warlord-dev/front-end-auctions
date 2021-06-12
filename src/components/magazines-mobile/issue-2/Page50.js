@@ -1,18 +1,18 @@
 import React from 'react'
 import styles from './page50.module.scss'
+import Link from 'next/link';
 
 const Page50 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/DIGITALAX DOMINGO BETA 1.png" className={styles.backImage}/>  
-      <p>
-        Domingo Beta is a Graphic designer and digital artist from Medellín Colombia.<br />
-        His love with colors, shapes, and movement. He is a Domestika's teacher and, along with his wife, works in their design studio, Veleta Studiolab, where they collaborate with clients on projects to explore different approaches to aesthetics and communication. 
-        <br /><br />
-        The Walkers is a 3 part project. Domingo was inspired by the way feelings can move from one state to another.<br />
-        Late Night Walker is sorrow in motion, trying to move freely in space in an extravagant fashion.
-      </p>
-      <a href="https://instagram.com/veletagram" target='_blank'><h1>DOMINGO BETTE ENCOUR</h1></a>
+      <img src="./magazine/1/77_78/image3.png" className={styles.image2} />
+      <Link href="https://www.instagram.com/serahreikka/"><a>
+          <p className={styles.text3}>Serah reikka</p>
+        </a>
+      </Link>
+      <p className={styles.text4}>MIA LOCKLACE</p>
+      <p className={styles.text5}>Mia is a CG Artist and the manager of Serah Reikka. Serah (Fei) Reikka is a French Canadian virtual influencer & model. She is know for her role as Serah Alec in the short animated movie Beyond Polaris and had the privilege of modeling at the prestigious Russian Fashion Week last year with Mercedes-Benz. Serah has also been featured on Forbes Magazine as one of the 12 most famous virtual influencer in the world for 2020.
+Serah has a weekly vlog; covering everything about her way of life as an Artificial Intelligence virtual model navigating the real world.</p>
     </div>
   )
 }

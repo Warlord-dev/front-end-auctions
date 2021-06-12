@@ -1,116 +1,39 @@
 import React from 'react';
 import styles from './page8182.module.scss';
+import Link from 'next/link';
 
 const Page8182 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/81_82/left2.png" className={styles.left} />
-      <img src="./magazine/1/81_82/Group 1190 (3).png" className={styles.right} />
-      <video className={styles.leftLink1} muted autoPlay loop>
-        <source src="./magazine/1/81_82/Untitled (11).mp4" type="video/mp4" />
-      </video>
-      <a href="https://www.marguixastudio.com/" className={styles.leftLink2} target="_blank">
-        MAR GUIXA STUDIO
-      </a>
-      <div className={styles.leftText}>BLACK DECO TRENCH COAT</div>
-      <a href="https://www.instagram.com/prizecard/?hl=en" className={styles.link1} target="_blank">
-        {' '}
-        XENOTECH{' '}
-      </a>
-      <a href="https://www.instagram.com/prizecard/?hl=en" className={styles.link2} target="_blank">
-        {' '}
-        XENOTECH{' '}
-      </a>
-      <a href="https://www.instagram.com/prizecard/?hl=en" className={styles.link3} target="_blank">
-        {' '}
-        XENOTECH{' '}
-      </a>
-      <div className={styles.rightText1}>
-        23 yr old art and design student based in NYC at The New School, with an international
-        upbringing, from Japan, NYC, Rome, and Abu Dhabi.
-      </div>
-      <div className={styles.rightText2}>Designing for the Metaverse</div>
-      <div className={styles.rightText3}>What has been your digital fashion journey?</div>
-      <div className={styles.rightText4}>
-        My digital creative work started when I was in elementary school, living in Abu Dhabi. I was
-        exploring video editing and filmmaking, creating special effects videos with my friends. I
-        continued pursuing film until I reached college where I began experimenting with other
-        mediums, primarily clothing design. I was working on a graphic design based streetwear brand
-        during my early years of college, spending most of the time practicing graphic design and
-        learning how to sew physical garments. I always envisioned this streetwear brand having a
-        digital presence with every physical garment being paired with a digital twin along with a
-        native virtual world where the brand's customers could purchase the garments. It was during
-        this time that I started growing a passion for futurism, technology, and virtual worlds.
-        This ultimately drove me down many rabbit holes and finally last year I moved away from
-        physical clothing, built a computer and dedicated myself to learning 3D modeling and
-        building a prototype of this vision. During this process I have discovered blockchain, NFTs,
-        and the Metaverse and have been truly blown away by the implications they hold.
-      </div>
-      <div className={styles.rightText5}>
-        Do you have a preferred set of software that you like to use?
-      </div>
-      <div className={styles.rightText6}>
-        I began my 3D modeling journey less than a year ago (fall of 2020) so I am still very much
-        in the learning stage trying to navigate all the tools available. My preferred software so
-        far is definitely Blender. I’ve also spent time using Unity, Marvelous Designer, After
-        Effects, Photoshop, and FL Studios for music.
-      </div>
-      <div className={styles.rightText7}>What is XENOTECH?</div>
-      <div className={styles.rightText8}>
-        XENOTECH is the natural extension to the previous physical streetwear brand I was building.
-        My vision for XENOTECH has always and still is to become a Metaverse social-commerce virtual
-        world targeting fashion designers and creatives alike. I am currently looking for people
-        interested in helping me realize this. However, in respect to this being a longer-term
-        resource intensive goal, in this early stage I am focused on first establishing XENOTECH as
-        a digital streetwear brand exploring themes of futurism and the convergence of exponential
-        technological trends.
-      </div>
-      <div className={styles.rightText9}>How is XENOTECH using NFTs?</div>
-      <div className={styles.rightText10}>
-        The shorter term plans for XENOTECH include first developing a collection of 3D NFT garments
-        to be sold as XENOTECH exclusives. Then the aim is towards expanding into Metaverse
-        wearables, since ultimately Digital Fashion is meant to have utility and be worn by owners'
-        avatars. I am looking into Crytovoxels, Decentraland, and The Sandbox as potential starting
-        points. Another short-term plan is to finalize the Cryptovoxels XENOTECH store which
-        currently resides on the Milan island in Cryptovoxels, and to continue expanding to more
-        retail locations across the Metaverse in order to start featuring other 3D clothing
-        designers / brands by providing them digital storefront space.
-      </div>
-      <video className={styles.video1} muted loop autoPlay>
-        <source src="./magazine/1/81_82/Singularity.mp4" type="video/mp4" />
-      </video>
-      <img src="./magazine/1/81_82/image 321.png" className={styles.arrow1} />
-      <div className={styles.rightText11}>
-        The Singularity sweater is an early XENOTECH 3D garment—a prelude to the official first
-        collection releasing soon. It speaks to the concept of an approaching technological
-        singularity, a result of the convergence of countless different exponential disruptive
-        technologies including Artificial Intelligence, genetic editing, and brain-computer
-        interfaces.
-      </div>
-      <video className={styles.video2} muted loop autoPlay>
-        <source src="./magazine/1/81_82/Untitled (12).mp4" type="video/mp4" />
-      </video>
-      <img src="./magazine/1/81_82/image 320.png" className={styles.arrow2} />
-      <div className={styles.rightText12}>
-        This is the prototype of the 3D city that I built out to help visualize the way I imagine
-        the XENOTECH Metaverse to look. Everything was modeled from scratch using Marvelous Designer
-        and Blender, then Unity to put it all together. The graphics and video edits seen on the
-        buildings were done using Photoshop and After Effects.
-      </div>
-      <div className={styles.rightText13}>
-        When I was previously designing physical clothing I was always frustrated by the constraints
-        faced when trying to work with my favorite fabrics such as Vinyl—they were a nightmare to
-        sew with and ultimately very uncomfortable to wear. With digital fashion these constraints
-        disappear and there are unlimited possibilities. Video Clothing and the use of
-        physically-impossible fabrics and textures are some examples. My current process includes
-        starting with graphic design or video editing in Photoshop or After Effects, then
-        constructing a garment in Marvelous Designer, then using Blender to add graphics/videos,
-        materials, and other 3D components.
-        <br />
-        <br />
-        In the short term I am looking towards releasing the first exclusive XENOTECH garment
-        collection, and officially launching the XENOTECH Metaverse store in Cryptovoxels.
-      </div>
+      <img src="./magazine/1/81_82/image1.png" className={styles.image1} />
+      <div className={styles.image2}></div>
+      <div className={styles.image3}></div>
+      <p className={styles.text2}>Hedging Against Precarity</p>
+      <p className={styles.text3}>F. Check</p>
+      <Link href="https://www.instagram.com/robottostudio/"><a>
+          <p className={styles.text4}>Art by Robotto Studio</p>
+        </a>
+      </Link>
+      <p className={styles.text5}>The dictionary definition of precarity is the state of being precarious— that is, being dependent on chance circumstances, unknown conditions, or uncertain developments.
+<br/><br/>
+It's the state of flux created by living through times of constant precariousness.
+<br/><br/>
+Precarity is a mundane reality experienced by everyone as an existential state of being — one where we implicitly develop mechanisms to allow us to feel a smidgen of control and certainty in this all-too impermanent, illusory plane we inhabit. 
+<br/><br/>
+Without a shadow of a doubt, precarity is a self-perpetuating cycle — and the increasing disaffection bedeviling the younger generation is a symptom of this ever-present dread of an increasingly bleak future.
+<br/><br/>
+One where access to a stable job, a dignified income, and the right to housing is rapidly diminishing, and where one has to hustle day in and day out just to make ends meet. 
+<br/><br/>
+Unemployment is at record levels. Flora and fauna are going extinct faster than any other time in recent history. War, famine, and disease are constants in this inherently flawed world we all live in. The economy remains turgid, and governments worldwide are failing their populations as far as reacting to their needs are concerned. 
+<br/><br/>
+Worse, the staggering ball and chain of debt cast onto the shoulders of every individual feel like the weight of the sky that poor Atlas was sentenced to carry for his role in leading the Titans against the battle of the Olympian gods in the cosmic Royal Rumble at Mount Olympus some millennia back. 
+<br/><br/>
+The debt phenomenon created a broken economy where debt slavery in the form of credit, student loans, and long-term mortgages props up these shambles of an economy while protecting the 1% that benefit from the entire goddamn system. The rest are left to their own devices, underpaid, underemployed, and miserable as they live out unfulfilling lives in a system they never asked to be part of. 
+<br/><br/>
+The pandemic is going to have some nightmarish, far-ranging repercussions in the next coming years, and there are yet Pandora's boxes to open as we march shambolically into the future as the house of cards grows ever so heavier day in, day out. Being stuck at home for over a year and counting hasn't helped much to assuage this constant, foreboding sense of doom that's always just around the corner.
+<br/><br/>
+One thing's for certain: the impact of eternal precarity exacerbated with the stresses of pandemic living, war, famine, ecological destruction, unemployment, and economic inequality has taken an unprecedented toll on our collective mental health as a species.
+</p>
     </div>
   );
 };
