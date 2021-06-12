@@ -1075,6 +1075,12 @@ class MyDocument extends Document {
               src: url("./fonts/Roboto-Regular.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: "Krub";
+              src: url("./fonts/Krub-Regular.ttf");
+              font-weight: 400;
+            }
           `,
             }}
           />
