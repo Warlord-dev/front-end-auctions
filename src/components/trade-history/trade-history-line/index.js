@@ -29,7 +29,7 @@ const TradeHistoryLine = ({
 
   const getPriceUsd = (valueEth) => {
     const priceUsd = valueEth * exchangeRateETH;
-    return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
+    return (Math.trunc(priceUsd * 10000) / 10000).toFixed(2).toLocaleString('en');
   };
 
   const getDefaultText = (text) => text.split(/(?=[A-Z])/).join(' ');
