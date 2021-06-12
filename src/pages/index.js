@@ -4,7 +4,7 @@ import Router, { useRouter } from 'next/router';
 import styles from './styles.module.scss';
 import BottomLine from '@components/bottom-line';
 import api from '@services/api/api.service';
-import { getAccount } from '@selectors/user.selectors'
+import { getAccount } from '@selectors/user.selectors';
 import globalActions from '@actions/global.actions';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -25,14 +25,17 @@ const LandingPage = () => {
         });
       });
   }, []);
- 
+
   useEffect(() => {
     const fetchDigitalaxSubscriptionCollectors = async () => {
       const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
-      if (digitalaxSubscriptionCollectors[0] && digitalaxSubscriptionCollectors[0].parentsOwned.length) {
+      if (
+        digitalaxSubscriptionCollectors[0] &&
+        digitalaxSubscriptionCollectors[0].parentsOwned.length
+      ) {
         dispatch(globalActions.setContentUnlocked(true));
       }
-    }
+    };
 
     fetchDigitalaxSubscriptionCollectors();
   }, []);
@@ -44,9 +47,13 @@ const LandingPage = () => {
           <div className={styles.header}> DIGIFIZZY </div>
           <div className={styles.subTitle}> Mod the Metaverse </div>
           <div className={styles.magazineWrapper}>
-            <img className={styles.mainMagazine} src="/images/nft/main_magazine.png" onClick={() => {
-              router.push('/magazines/1');
-            }} />
+            <img
+              className={styles.mainMagazine}
+              src="/images/nft/2/x2 1.png"
+              onClick={() => {
+                router.push('/magazines/2');
+              }}
+            />
           </div>
         </div>
         <BottomLine transparent={false} />

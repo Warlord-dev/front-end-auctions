@@ -6,7 +6,9 @@ const IssueCard = ({ image, id, title }) => {
   return (
     <div className={styles.wrapper}>
       <Link href="/magazines/1">
-        <a><img src={image} className={styles.thumbnail} /></a>
+        <a>
+          <img src={image} className={styles.thumbnail} />
+        </a>
       </Link>
       <div className={styles.actions}>
         <div className={styles.titles}>
@@ -16,10 +18,7 @@ const IssueCard = ({ image, id, title }) => {
         <div className={styles.contents}>
           <div className={styles.issueTitle}> {title} </div>
           <Link href="/unlockable">
-              <a className={styles.button}>
-            {' '}
-            VIEW{' '}
-            </a>
+            <a className={styles.button}> VIEW </a>
           </Link>
         </div>
       </div>
