@@ -34,15 +34,12 @@ const ImportantNFTInformation = ({ nft, nftId, nftType }) => {
   const timeOut = new Date(expirationDate) - new Date() + 1000;
 
   if (timeOut > 0) {
-    timerToSoldButton.current = setTimeout(
-      () => updateState(Date.now()),
-      timeOut,
-    );
+    timerToSoldButton.current = setTimeout(() => updateState(Date.now()), timeOut);
   }
 
   const getPriceUsd = (valueEth) => {
     const priceUsd = valueEth * exchangeRateETH;
-    return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
+    return (Math.trunc(priceUsd * 10000) / 10000).toFixed(2).toLocaleString('en');
   };
 
   return (
