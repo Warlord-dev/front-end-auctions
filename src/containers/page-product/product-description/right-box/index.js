@@ -147,8 +147,10 @@ const RightBox = ({
   const getTotalAmount = () => {
     if (activeTab === 2) {
       return 128;
-    } else if (activeTab === 1) {
+    } else if (activeTab === 1 && collectionId !== '4') {
       return 64;
+    } else {
+      return 30;
     }
   };
 
