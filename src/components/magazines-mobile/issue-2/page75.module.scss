@@ -3,122 +3,88 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 1812px;
+  height: 3076px;
   overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
  
-  .img1{
+  .image6{
     position: absolute;
-    width: 100%;
-    height: 3193px;    
-  }
-
-  .img2{
-    position: absolute;
-    width: 100%;
-    height: 869px;  
+    width: 389px;
+    height: 567px;
+    left: -14px;
     top: 0px;
   }
 
-  .img3{
+  .image7 {
     position: absolute;
-    width: 100%;
-    height: 1002px;
-     
-    top: 749px;
-  }
-  .img4{
-    position: absolute;
-    width: 582px;
-    height: 444px;
-    left: -141px;
-    top: 840px;
-
+    width: 389px;
+    height: 485px;
+    left: -7px;
+    top: 567px;
   }
 
-  h1{
-    font-family: "Pixel Berry 08/84 Ltd.Edition";
+  .image9 {
+    position: absolute;
+    width: 571px;
+    height: 744px;
+    left: -105px;
+    top: 1051px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 571px;
+    height: 779px;
+    left: -7px;
+    top: 1794px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 389px;
+    height: 504px;
+    left: 0px;
+    top: 2572px;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 184px;
+    height: 50px;
+    left: 180px;
+    top: 17px;
+    
+    font-family: Sahitya;
     font-style: normal;
     font-weight: normal;
-    font-size: 120px;
+    font-size: 50px;
     line-height: 100%;
+    /* identical to box height, or 50px */
     
-  }
-  .title1{
-    position: absolute;
-    width: 1431px;
-    height: 120px;
-    left: -300px;
-    top: 727px;         
-    color: #CE479C;
-  }
-
-  .title2{
-    position: absolute;
-    width: 1431px;
-    height: 120px;
-    left: -334px;
-    top: 1110px;
- 
-    color: #D29033;
-  }
-
-  .title3{
-    position: absolute;
-    width: 1431px;
-    height: 120px;
-    left: 68px;
-    top: 1397px; 
-
-    color: #62B744;
-  }
-
-  h2{
+    text-align: center;
     
-    font-family: "Pixel Berry 08/84 Ltd.Edition";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 120px;
-    line-height: 100%;
     color: #FFFFFF;
   }
 
-  .title4{
+  .text3 {
     position: absolute;
-    width: 452px;
-    height: 120px;
-    left: -158px;
-    top: 358px;
-  }
-  .title5{
-    position: absolute;
-    width: 452px;
-    height: 120px;
-    left: -141px;
-    top: 1758px;
-  }
-  .title6{
-    position: absolute;
-    width: 452px;
-    height: 120px;
-    left: -37px;
-    top: 689px;
-  }
-  .title7{
-    position: absolute;
-    width: 452px;
-    height: 120px;
-    left: 486px;
-    top: 869px;
-  }
-  .title8{
-    position: absolute;
-    width: 452px;
-    height: 120px;
-    left: 164px;
-    top: 1537px;
+    width: 162px;
+    height: 40px;
+    left: 188px;
+    top: 67px;
+    
+    font-family: Sahitya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
   }
 }

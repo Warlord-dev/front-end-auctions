@@ -3,207 +3,76 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 3677px;
+  height: 983px;
   overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
 
-  .img1{
+  .rightBack {
     position: absolute;
-    width: 100%;
-    height: 3766px;     
+    width: 629px;
+    height: 983px;
+    left: -127px;
     top: 0px;
   }
-   
-  .img4{
+
+  .text3 {
     position: absolute;
-    width: 304px;
-    height: 389px;
-    left: 34px;
-    top: 1493px;   
-  }
-
-  .img5{
-    position: absolute;
-    width: 304px;
-    height: 389.56px;
-    left: 34px;
-    top: 2037px;
-  }
-  .img6{
-    position: absolute;
-    width: 303.81px;
-    height: 389px;
-    left: 34px;
-    top: 3125px;
-  }
-  .img7{
-    position: absolute;
-    width: 303.81px;
-    height: 389px;
-    left: 34px;
-    top: 2580px;
-  }
-  h1{    
-    position: absolute;
-    width: 341px;
-    height: 140px;
-    top: 87px;
-    left: 18px;
-    font-family: "Knife Princess";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 100%;
-    /* or 70px */
-
-
-    color: #26D9F9;
-  }
-
-  p{     
-    font-family: Basic;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
-    color: #FFFFFF;
-  }
-
-  .text1{
-    position: absolute;
-    width: 246px;
-    height: 748px;
-    top: 239px;
-    left: 65px;       
-  }
-
-  .text2{
-    position: absolute;
-    width: 252px;
-    height: 308px;
-    left: 68px;
-    top: 1064px;
- 
-  }
-
-  h2{
-    position: absolute;
-    width: 216px;
-    height: 26px;
-    left: 68px;
-    top: 1031px;
-
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 23px;
-    line-height: 110%;
-    /* or 26px */
-    color: #FFFFFF;
-  }
-
-  h3{
+    width: 166px;
+    height: 20px;
+    top: 688px;
+    left: 105px;
     
-    font-family: Courier Prime;
+    font-family: Inter;
     font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 110%;
-    /* or 24px */
-    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+    
+    text-align: center;
+    
+    color: #FF9D9D;
   }
 
-  .name1{
+  .text4 {
     position: absolute;
-    width: 227px;
-    height: 24px;
-    top: 1433px;
-    left: 35px;     
-  }   
-
-  .name2{
-    position: absolute;
-    width: 227px;
-    height: 24px;
-    top: 1957px;
-    left: 35px;     
-  }   
-
-  .name3{
-    position: absolute;
-    width: 227px;
-    height: 24px;
-    top: 2500px;
-    left: 35px;     
-  }   
-
-  .name4{
-    position: absolute;
-    width: 227px;
-    height: 24px;
-    top: 3045px;
-    left: 35px;     
-  }   
-  
-  
-
-  .subtitle1{
-    position: absolute;
-    width: 325px;
-    height: 22px;
-    top: 1463px;
-    left: 35px; 
-    font-family: Courier Prime;
+    width: 205px;
+    height: 249px;
+    top: 720px;
+    left: 85px;
+    
+    font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 110%;
-    color: #FFFFFF;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-align: center;
+    
+    color: #FF9D9D;
   }
 
-  .subtitle2{
+  .text5 {
     position: absolute;
-    width: 325px;
-    height: 22px;
-    top: 1987px;
-    left: 35px; 
-    font-family: Courier Prime;
+    width: 241px;
+    height: 33px;
+    left: 16px;
+    top: 8px;
+    
+    font-family: Kohinoor Devanagari;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 110%;
+    /* identical to box height, or 33px */
+    
+    
     color: #FFFFFF;
-  }
-
-  .subtitle3{
-    position: absolute;
-    width: 325px;
-    height: 22px;
-    top: 2530px;
-    left: 35px; 
-    font-family: Courier Prime;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 110%;
-    color: #FFFFFF;
-  }
-
-  .subtitle4{
-    position: absolute;
-    width: 325px;
-    height: 22px;
-    top: 3075px;
-    left: 35px; 
-    font-family: Courier Prime;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 110%;
-    color: #FFFFFF;
+    
+    text-shadow: rgb(255, 153, 0) 2px 0px 0px, rgb(255, 153, 0) 1.75517px 0.958851px 0px, rgb(255, 153, 0) 1.0806px 1.68294px 0px, rgb(255, 153, 0) 0.141474px 1.99499px 0px, rgb(255, 153, 0) -0.832294px 1.81859px 0px, rgb(255, 153, 0) -1.60229px 1.19694px 0px, rgb(255, 153, 0) -1.97998px 0.28224px 0px, rgb(255, 153, 0) -1.87291px -0.701566px 0px, rgb(255, 153, 0) -1.30729px -1.5136px 0px, rgb(255, 153, 0) -0.421592px -1.95506px 0px, rgb(255, 153, 0) 0.567324px -1.91785px 0px, rgb(255, 153, 0) 1.41734px -1.41108px 0px, rgb(255, 153, 0) 1.92034px -0.558831px 0px;
   }
 }

@@ -53,39 +53,43 @@
 
   .text1 {
     position: absolute;
-    width: 470px;
-    height: 70px;
-    left: 34px;
-    top: 1394px;
+    width: 870px;
+    height: 140px;
+    left: 30px;
+    top: 30px;
     
-    font-family: Encode Sans;
+    font-family: Romanesco;
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
+    font-size: 130px;
     line-height: 70px;
-    /* identical to box height, or 100% */
+    /* or 54% */
     
     
-    color: #FFFFFF;
+    color: #FF00E5;
   }
 
   .text2 {
     position: absolute;
-    width: 249px;
-    height: 59px;
-    left: 1640px;
-    top: 21px;
-
-    font-family: Public Secret DEMO;
+    width: 405px;
+    height: 140px;
+    left: 30px;
+    top: 150px;
+    
+    font-family: Romanesco;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
-    line-height: 100%;
-    /* or 50px */
+    font-size: 80px;
+    line-height: 70px;
 
-    text-align: right;
+    text-align: left;
 
-    color: #003789;
+    background: #FFB800;
+    background: -webkit-linear-gradient(to bottom, #FFB800 0%, #64065A 100%);
+    background: -moz-linear-gradient(to bottom, #FFB800 0%, #64065A 100%);
+    background: linear-gradient(to bottom, #FFB800 0%, #64065A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .text3 {

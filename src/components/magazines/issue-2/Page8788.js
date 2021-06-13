@@ -37,7 +37,7 @@ const Page8788 = () => {
       <img src="./magazine/1/87_88/image8.png" className={styles.image6} />
       <div className={styles.image7}>
         <div className={styles.image9}>
-        <video ref={ref1} className={styles.image8} muted loop>
+        <video ref={ref1} className={styles.image8} loop>
           <source src="./magazine/1/87_88/video1.MOV" type="video/mp4" />
         </video>
         </div>
@@ -45,7 +45,7 @@ const Page8788 = () => {
       </div>
       <div className={styles.image10}>
         <div className={styles.image11}>
-        <video ref={ref2} className={styles.image12} muted loop>
+        <video ref={ref2} className={styles.image12} loop>
           <source src="./magazine/1/87_88/video2.MOV" type="video/mp4" />
         </video>
         </div>

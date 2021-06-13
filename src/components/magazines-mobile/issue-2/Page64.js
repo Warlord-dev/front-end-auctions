@@ -4,21 +4,36 @@ import styles from './page64.module.scss'
 const Page64 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page62/BG 3 Original 1.png" className={styles.img1} />
-      <img src="./magazine/1/images/mobile/page62/Rectangle 1123.png" className={styles.img2} />
-       
-      <p>
-        GDP per capita ranking is no longer the gold standard of economic prosperity that we've all been led to believe it was. Instead, a population's well-being is just as important, particularly within the context of global crises that worsen economic inequality.
-        <br/><br/>
-        The metaverse, and gaming in general, are increasingly demonstrating their actual value as the digitalization of society accelerates. New, disruptive, and decentralized technologies are being developed at light speed, granting user agency on a scale that's never been seen before. The metaverse economy is constantly expanding as eye-watering sums of money are passed around like hot potatoes. We're seeing a shift towards individuals taking full ownership of their digital identities and controlling them as they move through their bespoke customer journeys interacting with the brands they choose while strengthening social bonds between fellow gamers and digital citizens. Creators, artists, designers, and visionary startups are finally getting their due as harbingers of a new era thanks to the metaverse. 
-        <br/><br/>
-        Moreover, as the lines blur between the physical and the digital planes of existence, the opportunities remain as tantalizing and limitless for creators of all persuasions as more companies involve themselves in the emergent metaverse, all seeking to get their piece of the pie (and digital real estate) on which to advertise, create, innovate, and explore. 
-        <br/><br/>
-        While McGonigal stated that reality was "broken" because it lacks the ability to engage or motivate meaningful action as games do (in the negative context of the word), the metaverse can be defined as "broken" within the context of an exceedingly over-powered or downright degenerate Magic: the Gathering card because its powers are so immense, and its impact can be world-changing. 
-        <br/><br/>
-        It's astounding to think that there are still individuals who feel the metaverse — and gaming, for that matter — exists solely for the purpose of tuning in, turning on, and dropping out. But the truth is, gaming is so much more than just hedonistic pleasure. Gaming has always been about creating a sense of identity and belonging to a tightly-knit community. It's all just a matter of putting it all together and leveraging the unbridled optimism, productivity, and creativity — as well as an epic win condition — to make real, tangible, and long-lasting change, regardless of what plane of existence it is pursued on, physical or digital notwithstanding. 
+      <img src="./magazine/1/93_94/image2.png" className={styles.image1} />
+      <img src="./magazine/1/93_94/image3.png" className={styles.image2} />
+      <img src="./magazine/1/93_94/image4.png" className={styles.image3} />
+      <div className={styles.image4}>
 
-      </p>
+      </div>
+      <div className={styles.text7}>
+      This month DIGITALAX ran...
+      </div>
+      <div className={styles.text8}>
+      #FLEXYOURFLARE
+      </div>
+      <div className={styles.text9}>
+      #FLEXYOURFLARE
+      </div>
+      <div className={styles.text10}>
+      #FLEXYOURFLARE
+      </div>
+      <div className={styles.text11}>
+      An open digital fashion competition bringing together amazingly talented creators from across the realms, focused on enabling creatives for modding their version of the metaverse.
+      </div>
+      <div className={styles.text12}>
+      This might sound cliche but all entries were too good not to include in DIGIFIZZY. We truly felt that everyone’s efforts deserved to be seen! 
+      </div>
+      <div className={styles.text13}>
+      So, for the next pages of What Are you Wearing? feast your eyes on some delightful digital fashion visual salience. 
+      </div>
+      <p className={styles.text14}>Our Competition winners included; <span className={styles.text15}>Porka_X, Blade Runway, Marcello Baldari, Tony Lukey, BBlundeRR and Mia Locklace.</span>
+<br/><br/>
+Their FLARE creations were minted as NFTs on Matic Network and can be collected in the DIGIFIZZY Bundles as part of the #FLEXYOURFLARE Digital Fashion Collection.</p>
     </div>
   )
 }

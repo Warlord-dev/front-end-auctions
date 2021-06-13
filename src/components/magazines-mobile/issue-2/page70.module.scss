@@ -3,89 +3,99 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 881px;
+  height: 3362px;
   overflow: hidden;
-  background-color: white;
+  background-color: #000000;
   color: white;
   display: flex;
   position: relative;
- 
-  .img1{
-    position: absolute;
-    position: absolute;
-    width: 100%;
-  }
 
-  .img2{
+  .right1{
     position: absolute;
-    width: 375px;
-    height: 881px;
-    left: 0px;
+    width: 542px;
+    height: 542px;
+    left: -83px;
     top: 0px;
   }
 
-  .img3{
+  .right3 {
     position: absolute;
-    width: 881px;
-    height: 375px;
-    left: 0px;
-    top: 881px;
+    width: 794px;
+    height: 896px;
+    left: -209px;
+    top: 785px;
   }
 
-  h1{
+  .right2 {
+    position: absolute;
+    width: 560px;
+    height: 560px;
+    left: -92px;
+    top: 2740px;
+  }
+
+  .right4 {
+    position: absolute;
+    width: 339px;
+    height: 474px;
+    left: 33.58px;
+    top: 2194.83px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 392px;
+    height: 44px;
+    left: -36px;
+    top: 1790px;
     
-    font-family: Rose Cake - Personal Use;
+    font-family: Lexend Zetta;
     font-style: normal;
     font-weight: normal;
-    font-size: 80px;
-    line-height: 100%;
-    /* or 80px */
-
-
-    color: #FFFFFF;
-  }
-  .title1{
-    position: absolute;
-    width: 620px;
-    height: 239px;
-    left: 199px;
-    top: 282px;
+    font-size: 25px;
+    line-height: 90%;
+    /* or 22px */
     
+    text-align: right;
+    
+    color: #926BFF;
   }
 
-  .title2{
+  .text4 {
     position: absolute;
-    width: 620px;
-    height: 239px;
-    left: -83px;
-    top: 202px;
-  }
-
-  .title3{
-    position: absolute;
-    width: 620px;
-    height: 239px;
-    left: 65px;
-    top: 51px;
-  }
-
-  .title4{
-    position: absolute;
-    width: 266px;
-    height: 163px;
-    left: 20px;
-    top: 693px;
-
-    font-family: CF Punk Fashion PERSONAL;
+    width: 392px;
+    height: 44px;
+    left: -36px;
+    top: 1823px;
+    
+    font-family: Lexend Zetta;
     font-style: normal;
-    font-weight: 900;
-    font-size: 50px;
-    line-height: 100%;
-    /* or 50px */
-
-
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 90%;
+    /* or 22px */
+    
+    text-align: right;
+    
     color: #FFFFFF;
   }
 
-  
+  .text5 {
+    position: absolute;
+    width: 392px;
+    height: 277px;
+    left: -36px;
+    top: 1879px;
+    
+    font-family: Lexend Zetta;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 90%;
+    /* or 13px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;    
+  }
 }
