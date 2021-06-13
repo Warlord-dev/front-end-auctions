@@ -3,25 +3,36 @@ import styles from './page3334.module.scss';
 
 const Page3334 = () => {
   const [play, setPlay] = useState(false);
-  const ref = useRef();
+  const [play1, setPlay1] = useState(false);
+  const ref1 = useRef();
   const refAudio = useRef();
 
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/2/images/33_34.png" className={styles.backImage} />
-      <video autoPlay muted loop className={styles.video} ref={ref}>
+      <video ref={ref1} muted={true} autoPlay loop className={styles.video}>
         <source src="./magazine/2/images/33_34_video.mp4" type="video/mp4" />
       </video>
+
+      <img
+        src={`./magazine/2/images/15_16_${!play1 ? 'play1' : 'pause1'}.png`}
+        className={styles.play1}
+        onClick={() => {
+          setPlay1(!play1);
+          ref1.current.muted = play1;
+        }}
+      />
+
       <div className={styles.text1}>FlamingoDAO</div>
       <div className={styles.text2}> Conversations with Pri Desai </div>
       <div className={styles.text3}> Conversations with Pri Desai </div>
       <div className={styles.text4}> Conversations with Pri Desai </div>
 
       <img
-        src={`./magazine/2/images/33_34_${play ? 'play' : 'pause'}.png`}
+        src={`./magazine/2/images/33_34_${!play ? 'play' : 'pause'}.png`}
         className={styles.play}
         onClick={() => {
-          if (play) {
+          if (!play) {
             refAudio.current.play();
           } else {
             refAudio.current.pause();
