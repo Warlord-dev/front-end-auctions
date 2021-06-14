@@ -94,7 +94,7 @@ const Page1516 = () => {
         className={styles.play6}
         onClick={() => {
           setPlay6(!play6);
-          if (play6) {
+          if (!play6) {
             audio6.current.play();
           } else {
             audio6.current.pause();
@@ -102,7 +102,7 @@ const Page1516 = () => {
         }}
       >
         {' '}
-        {play6 ? 'CLICK TO LISTEN' : 'PAUSE'}{' '}
+        {!play6 ? 'CLICK TO LISTEN' : 'PAUSE'}{' '}
       </div>
       <audio className={styles.audio} controls ref={audio6}>
         <source src="./magazine/2/images/15_16_play6.mp3" type="audio/mp3" />

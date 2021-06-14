@@ -1,23 +1,29 @@
 import React from 'react'
 import styles from './page77.module.scss'
+import Link from 'next/link';
 
 const Page77 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page77/moshed-05-08-14-57-15 1.png" className={styles.img1} />
-      <img src="./magazine/1/images/mobile/page77/08_furcoat_alyonabriukhanova_S 1.png" className={styles.img2} />
-      <img src="./magazine/1/images/mobile/page77/neofuturo_sweatshirt_01_Custom_View_2 1.png" className={styles.img3} />
-      <img src="./magazine/1/images/mobile/page77/OceanSky_render 1.png" className={styles.img4} />
-      <img src="./magazine/1/images/mobile/page77/Magentic_coat 1.png" className={styles.img5} />
-      <video autoPlay muted loop className={styles.video}>
-        <source src="./magazine/1/85_86/hat_360.mp4" type="video/mp4" />
-      </video>
-      <a href="https://www.instagram.com/dgtl_stylist/" target='_blank'>
-        <h1 className={styles.title1}>Alyona Briukhanova</h1>
-        <h1 className={styles.title2}>Alyona Briukhanova</h1>
-        <h1 className={styles.title3}>Alyona Briukhanova</h1>
-      </a>
-      <h2 className={styles.title4}>PIXLS</h2>
+      <div className={styles.image1}></div>
+      <img src="./magazine/1/107_108/image6.png" className={styles.image2} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image3} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image4} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image5} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image6} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image7} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image8} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image9} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image10} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image11} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image12} />
+      <img src="./magazine/1/107_108/image7.png" className={styles.image21} />
+       <img src="./magazine/1/107_108/image8.png" className={styles.image22} />
+       <Link href="https://www.instagram.com/kurmanin_tailor/?hl=en"><a className={styles.text3}>
+       aLEXANDER KURMANIN
+        </a>
+       </Link>
+       <p className={styles.text4 }>CYBER NINJA</p>
     </div>
   )
 }

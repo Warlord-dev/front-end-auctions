@@ -30,7 +30,7 @@ const Page60 = () => {
       <img src="./magazine/1/87_88/image7.gif" className={styles.image6} />
       <div className={styles.image7}>
         <div className={styles.image9}>
-        <video ref={ref1} className={styles.image8} muted loop>
+        <video ref={ref1} className={styles.image8} loop>
           <source src="./magazine/1/87_88/video1.MOV" type="video/mp4" />
         </video>
         </div>
@@ -39,7 +39,7 @@ const Page60 = () => {
 
       <div className={styles.image10}>
         <div className={styles.image11}>
-        <video ref={ref2} className={styles.image12} muted loop>
+        <video ref={ref2} className={styles.image12} loop>
           <source src="./magazine/1/87_88/video2.MOV" type="video/mp4" />
         </video>
         </div>

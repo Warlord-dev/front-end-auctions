@@ -3,17 +3,226 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 100vh;
+  height: 1319px;
   overflow: scroll;
+  overflow-x: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
 
-  .backImage {
+  .image1 {
     position: absolute;
-    height: 1800px;
-    left: 0px;
+    width: 410px;
+    height: 1474px;
+    left: -19px;
     top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 772px;
+    height: 52px;
+    left: 189px;
+    top: 27px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 772px;
+    height: 52px;
+    left: -178px;
+    top: 92px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 772px;
+    height: 52px;
+    left: 250px;
+    top: 147px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 772px;
+    height: 52px;
+    left: 0px;
+    top: 208px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 772px;
+    height: 52px;
+    left: 189px;
+    top: 273px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 772px;
+    height: 52px;
+    left: 115px;
+    top: 337px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 772px;
+    height: 52px;
+    left: -590px;
+    top: 357px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 772px;
+    height: 52px;
+    left: 86px;
+    top: 403px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 772px;
+    height: 52px;
+    left: -650px;
+    top: 409px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 411px;
+    height: 411px;
+    left: -85px;
+    top: 0px;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 320px;
+    height: 70px;
+    left: 22px;
+    top: 493px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* identical to box height, or 70px */
+    
+    text-align: right;
+    
+    color: #2B40FF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 327px;
+    height: 356px;
+    left: 24px;
+    top: 577px;
+    
+    font-family: XXII-ARMY;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 100%;
+    /* or 23px */
+    
+    
+    color: #FFFFFF;
   }
 }

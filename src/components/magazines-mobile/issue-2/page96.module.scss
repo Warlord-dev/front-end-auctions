@@ -1,0 +1,39 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 890px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    height: 890px;
+    left: -170px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 190px;
+    height: 80px;
+    left: 24px;
+    top: 32px;
+    
+    font-family: Kurale;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 100%;
+    /* identical to box height, or 80px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}

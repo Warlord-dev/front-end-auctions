@@ -3,116 +3,159 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 1943px;
+  height: 1963px;
   overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-  .img1{
+  .image1 {
     position: absolute;
-    width: 100%;
-    height: 2243px;
-    left: 0px;
+    width: 480px;
+    height: 3076px;
+    left: -105px;
     top: 0px;
-  }
-  .img2{
-    position: absolute;
-    width: 516px;
-    height: 523px;
-    left: -49px;
-    top: 0px;
-    border-radius: 1000px;
-  }
-  .img3{
-    position: absolute;
-    width: 268px;
-    height: 268px;
-    left: 0px;
-    top: 474px;
- 
-    border: 8px solid rgba(0, 208, 196, 0.28);
-    box-sizing: border-box;
-    border-radius: 2000px;
-  }
-  .img4{
-    position: absolute;
-    width: 430px;
-    height: 430px;
-    left: 96px;
-    top: 638px;
- 
-    border-radius: 1000px;
-  }
-  .img5{
-    position: absolute;
-    width: 345px;
-    height: 345px;
-    left: -49px;
-    top: 968px;
- 
-    border-radius: 289.5px;
-  }
-  .video{
-    position: absolute;
-    width: 346px;
-    height: 345px;
-    left: 15px;
-    top: 1551px;
+    
+    background: rgba(159, 126, 42, 0.9);
   }
 
-  h1{
-     
-    font-family: Rose Cake - Personal Use;
+  .image21 {
+    position: absolute;
+    width: 650px;
+    height: 779.87px;
+    left: -137px;
+    top: 171px;
+  }
+
+  .image22 {
+    position: absolute;
+    width: 650px;
+    height: 780px;
+    left: -138px;
+    top: 1043px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 676px;
+    height: 121px;
+    left: 13px;
+    top: 50px;
+    
+    font-family: Knife Princess;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
+    font-size: 30px;
     line-height: 100%;
-    /* or 60px */
+    /* or 30px */
     
     
     color: #FFFFFF;
   }
 
-  .title1{
+  .text4 {
     position: absolute;
-    width: 441px;
-    height: 87px;
-    left: 15px;
-    top: 1464px;
-     
-  }
-
-  .title2{
-    position: absolute;
-    width: 441px;
-    height: 87px;
-    left: 15px;
-    top: 1418px;
-  }
-  .title3{
-    position: absolute;
-    width: 441px;
-    height: 87px;
-    left: 15px;
-    top: 1369px;
-  }
-  .title4{
+    width: 294px;
+    height: 30px;
+    left: 13px;
+    top: 96px;
     
-    position: absolute;
-    width: 452px;
-    height: 120px;
-    left: -141px;
-    top: 1758px;
-
-    font-family: "Pixel Berry 08/84 Ltd.Edition";
+    font-family: Knife Princess;
     font-style: normal;
     font-weight: normal;
-    font-size: 120px;
+    font-size: 30px;
     line-height: 100%;
-    /* identical to box height, or 120px */
-
-
+    /* identical to box height, or 30px */
+    
+    
     color: #FFFFFF;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 213px;
+    height: 212px;
+    left: 162px;
+    top: 129px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 277px;
+    height: 276px;
+    left: -25px;
+    top: 341px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 123px;
+    height: 122px;
+    left: 252px;
+    top: 341px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    left: 276px;
+    top: 523px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    left: 72px;
+    top: 665px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 331px;
+    height: 331px;
+    left: 122px;
+    top: 1538px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 188px;
+    height: 188px;
+    left: -105px;
+    top: 1658px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 67px;
+    top: 1810px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 157px;
+    top: 1875px;
+  }
+
+  .image11 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 36px;
+    top: 1916px;
+  }
+
+  .image12 {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: -23px;
+    top: 1869px;
   }
 }

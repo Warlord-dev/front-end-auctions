@@ -1,0 +1,40 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 839px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image7 {
+    position: absolute;
+    width: 540px;
+    height: 839px;
+    left: -48px;
+    top: 0px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 361px;
+    height: 60px;
+    left: 7px;
+    top: 33px;
+    
+    font-family: Flamenco;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    text-align: center;
+    
+    color: #AED8FF;
+  }
+}

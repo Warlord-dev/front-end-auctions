@@ -78,7 +78,10 @@ const Page3132 = () => {
       <div className={styles.text8}>
         Thus, with this said, and taking a step back to look at the bigger picture, perhaps there is
         a way after all that Bitcoin can continue to operate and actually help take advantage of
-        much more wasted energy than previously thought.
+        much more wasted energy than previously thought. Even El Salvador and the presidents recent
+        announcement to enact Bitcoin as legal tender has been announced alongside the country’s
+        intention to put up a plan to offer facilities for Bitcoin mining with considerably cheap
+        and 100% renewable 0 emissions energy from their volcanos.
       </div>
       <div className={styles.text9}>
         It’s consumption shouldn’t be ignored and more active and collective steps must be taken,
