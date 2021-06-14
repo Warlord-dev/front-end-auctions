@@ -3,75 +3,118 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 1474px;
-  overflow: scroll;
-  overflow-x: hidden;
-  background-color: #000000;
+  height: 2433px;
+  overflow: hidden;
+  background-color: #00D2C2;
   color: white;
   display: flex;
   position: relative;
 
-  .image7 {
+  .image1   {
     position: absolute;
-    height: 1052px;
-    left: -320px;
-    top: 422px;
+    width: 885px;
+    height: 1394px;
+    left: -255px;
+    top: -4px;  
   }
 
-  .text4 {
+  .image2 {
     position: absolute;
-    width: 441px;
-    height: 87px;
-    left: -79px;
-    top: 29px;
+    height: 127px;
+    left: 23px;
+    top: 52px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    left: 0px;
+    top: 835px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    left: -61px;
+    top: 1908px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    left: -23px;
+    top: 1390px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 292px;
+    height: 300px;
+    left: 76px;
+    top: 891px;
     
-    font-family: Rose Cake - Personal Use;
+    font-family: ExodusDemo-Regular;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
+    font-size: 15px;
     line-height: 100%;
-    /* or 60px */
+    /* or 15px */
     
-    text-align: right;
     
     color: #FFFFFF;
   }
 
-  .text5 {
+  .text2 {
     position: absolute;
-    width: 441px;
-    height: 87px;
-    left: -79px;
-    top: 86px;
+    width: 547px;
+    height: 30px;
+    left: 41px;
+    top: 193px;
     
-    font-family: Rose Cake - Personal Use;
+    font-family: ExodusDemo-Regular;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 100%;
-    /* or 40px */
+    font-size: 30px;
+    /* identical to box height, or 50px */
     
-    text-align: right;
     
     color: #FFFFFF;
   }
+  .text3 {
+    position: absolute;
+    width: 282px;
+    height: 350px;
+    left: 37px;
+    top: 1965px;
 
-  .text6 {
-    position: absolute;
-    width: 313px;
-    height: 236px;
-    left: 31px;
-    top: 151px;
-    
-    font-family: Helvetica;
+    font-family: ExodusDemo-Regular;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 100%;
-    /* or 12px */
-    
-    text-align: right;
-    
+    /* or 14px */
+
+
     color: #FFFFFF;
   }
+.text4 {
+  position: absolute;
+  width: 309px;
+  height: 252px;
+  left: 37px;
+  top: 1478px;
+  
+  font-family: ExodusDemo-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 100%;
+  /* or 28px */
+  
+  
+  color: #FFFFFF;
+}
 }

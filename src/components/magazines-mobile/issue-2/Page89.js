@@ -5,9 +5,18 @@ import Link from 'next/link';
 const Page89 = () => {
   return (
     <div className={styles.wrapper}>
-      <video className={styles.image2} loop autoPlay>
-        <source src="./magazine/1/119_120/video1.mp4" type="video/mp4" />
-       </video>
+       <img src="./magazine/1/97_98/image1.png" className={styles.image1} />
+       <div className={styles.image2}></div>
+       <video autoPlay loop className={styles.image3}>
+        <source src="./magazine/1/97_98/Automata-Turntable.mp4" type="video/mp4" />
+      </video>
+       <Link href="https://twitter.com/rudeoolph"><a className={styles.text1}>
+      Rudeolph
+      </a>
+      </Link>
+      <p className={styles.text2}>
+      Automata
+      </p>
     </div>
   )
 }

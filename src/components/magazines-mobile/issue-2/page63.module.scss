@@ -2,129 +2,55 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 960px;
-  overflow: hidden;
+  height: 1497px;
   background-color: white;
-  color: white;
+  color: black;
   display: flex;
   position: relative;
 
-  .leftBack {
-    position: absolute;
+  .image1 {
+    position: relative;
     width: 375px;
-    height: 960px;
+    height: 1497px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: -122px;
+    top: 51px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: -33px;
+    top: 100px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 572px;
+    height: 72px;
+    left: -164px;
+    top: 178px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 541px;
+    height: 292px;
     left: 0px;
-    top: 0px;
+    top: 1073px;
   }
 
-  .text1 {
+  .image6 {
     position: absolute;
-    width: 620px;
-    height: 239px;
-    left: -197px;
-    top: -29px;
-    
-    font-family: Rose Cake - Personal Use;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 100%;
-    /* or 70px */
-    
-    text-align: center;
-    
-    color: #000000;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 620px;
-    height: 239px;
-    left: -227px;
-    top: 38px;
-    
-    font-family: Rose Cake - Personal Use;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 100%;
-    /* or 70px */
-    
-    
-    color: #000000;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 620px;
-    height: 239px;
-    left: 83px;
-    top: 105px;
-    
-    font-family: Rose Cake - Personal Use;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 100%;
-    /* or 70px */
-    
-    
-    color: #000000;
-  }
-
-  .text4 {
-    position: absolute;
-    width: 620px;
-    height: 239px;
-    left: -197px;
-    top: 172px;
-    
-    font-family: Rose Cake - Personal Use;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 100%;
-    /* or 70px */
-    
-    text-align: center;
-    
-    color: #000000;
-  }
-  .text5 {
-    position: absolute;
-    width: 620px;
-    height: 239px;
-    left: 0px;
-    top: 241px;
-    
-    font-family: Rose Cake - Personal Use;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 100%;
-    /* or 70px */
-    
-    text-align: center;
-    
-    color: #000000;
-  }
-
-  .text6 {
-    position: absolute;
-    width: 375px;
-    height: 375px;
-    left: 9px;
-    top: 723px;
-    
-    font-family: CF Punk Fashion PERSONAL;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 100%;
-    /* or 70px */
-    
-    
-    color: #000000;
+    width: 572px;
+    height: 72px;
+    left: 28px;
+    top: 1401px;
   }
 }

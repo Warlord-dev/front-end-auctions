@@ -2,101 +2,45 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 2433px;
-  overflow: hidden;
-  background-color: #ffffff;
+  height: 3161px;
+  background: white;
   color: white;
   display: flex;
   position: relative;
-
-  .image1 {
-    position: absolute;
-    width: 258px;
-    height: 674px;
-    left: -5.56px;
-    top: -21.92px;
-    
-    transform: rotate(40deg);
-  }
-
+  
   .image2 {
+    background: linear-gradient(180deg, rgba(173, 0, 255, 0.43) 0%, rgba(0, 79, 79, 0.43) 100%);
     position: absolute;
-    width: 960px;
-    height: 2433px;
-    left: -239px;
+    width: 968px;
+    height: 3249px;
+    left: -297px;
     top: 0px;
   }
 
   .image3 {
     position: absolute;
-    width: 287.07px;
-    height: 751.8px;
-    left: 97.72px;
-    top: 354.41px;
-    transform: rotate(-30deg);
+    width: 316px;
+    height: 2984px;
+    left: 29px;
+    top: 76px;
+    background-color: rgba(164, 0, 147, 0.43);
   }
 
-  .image4 {
+  .text5 {
     position: absolute;
-    width: 258px;
-    height: 674px;
-    left: -6.12px;
-    top: 717.96px;
-    transform: rotate(-5deg);
-  }
-
-  .image5 {
-    position: absolute;
-    width: 320px;
-    height: 837px;
-    left: 70.24px;
-    top: 1149.43px;
-    transform: rotate(10deg);
-  }
-
-  .image6 {
-    position: absolute;
-    width: 258px;
-    height: 674px;
-    left: 1.88px;
-    top: 1661.96px;
-    transform: rotate(-5deg);
-  }
-
-  .text1 {
-    position: absolute;
-    width: 735px;
-    height: 57px;
-    left: -377px;
-    top: 26px;
+    width: 264px;
+    height: 1149px;
+    left: 55px;
+    top: 113px;
     
-    font-family: Goblin One;
+    font-family: Lexend Giga;
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
-    line-height: 100%;
-    /* or 25px */
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
     
-    text-align: right;
-    
-    color: #FFFFFF;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 735px;
-    height: 57px;
-    left: 62px;
-    top: 59px;
-    
-    font-family: Goblin One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 100%;
-    /* or 30px */
-    
+    text-align: center;
     
     color: #FFFFFF;
   }

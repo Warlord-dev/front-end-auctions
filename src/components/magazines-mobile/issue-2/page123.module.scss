@@ -1,0 +1,39 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 1045px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: #534D01;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image2 {
+    position: absolute;
+    width: 543px;
+    height: 847px;
+    left: -102px;
+    top: 0px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 297px;
+    height: 140px;
+    left: 50px;
+    top: 847px;
+    
+    font-family: Elsie Swash Caps;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 70px;
+    /* or 100% */
+    
+    
+    color: #F47500;
+  }
+}

@@ -2,74 +2,56 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 1488px;
-  overflow: hidden;
+  height: 631px;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-  
+
   .image1 {
-    position: absolute;
-    width: 644px;
-    height: 785px;
-    left: -145px;
-    top: -22px;
-  }
-
-  .image2 {
-    position: absolute;
+    position: relative;
     width: 375px;
-    height: 496px;
-    left: 0px;
-    top: 992px;    
+    height: 100%;
   }
 
-  .image3 {
+  .text1 {
     position: absolute;
-    width: 375px;
-    height: 230px;
-    left: 0px;
-    top: 762px;
+    width: 363px;
+    height: 84px;
+    left: 107px;
+    top: 24px;
     
-    background: linear-gradient(90deg, #2A0026 0.52%, #821B9B 31.34%, #253D92 79.5%, #012241 100.77%, rgba(127, 27, 155, 0) 102.13%);
+    font-family: fairy wings;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+    /* or 100px */
+    
+    -webkit-text-stroke: #FFFFFF;
+    -webkit-text-stroke-width: 0.5px;
+    color: #FFFFFF;
+    box-sizing: border-box;
   }
 
-  .text3 {
+  .text2 {
     position: absolute;
-    width: 343px;
-    height: 40px;
-    left: 5px;
-    top: 915px;
+    width: 98px;
+    height: 34px;
+    left: 11px;
+    top: 583px;
     
-    font-family: Space Mono;
+    font-family: Marker Felt;
     font-style: normal;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 20px;
     line-height: 100%;
-    /* identical to box height, or 40px */
-    text-align: right;
+    /* or 20px */
     
+    -webkit-text-stroke: #00E0FF;
+    -webkit-text-stroke-width: 0.5px;
     color: #FFFFFF;
-    
-  }
+}
 
-  .text4 {
-    position: absolute;
-    width: 319px;
-    height: 153px;
-    left: 56px;
-    top: 790px;
-    
-    font-family: Reenie Beanie;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 65px;
-    line-height: 90%;
-    /* or 58px */
-    
-    
-    color: #FF01DC;
-  }
 }

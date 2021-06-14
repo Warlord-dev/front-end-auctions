@@ -2,38 +2,104 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 1045px;
-  overflow: scroll;
-  overflow-x: hidden;
-  background-color: #534D01;
+  height: 2826px;
+  background-color: #DCF8EA;
   color: white;
   display: flex;
   position: relative;
 
-  .image2 {
+  .image6 {
     position: absolute;
-    width: 543px;
-    height: 847px;
-    left: -102px;
-    top: 0px;
+    width: 960px;
+    height: 1031px;
+    left: -292px;
+    top: 135px;
   }
 
-  .text3 {
+  .image7 {
     position: absolute;
-    width: 297px;
-    height: 140px;
-    left: 50px;
-    top: 847px;
+    width: 243px;
+    height: 411px;
+    left: 28px;
+    top: 173px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 437px;
+    height: 776px;
+    left: 52px;
+    top: 667px;
+  }
+
+  .image11 {
+    position: absolute;
+    width: 327px;
+    height: 404px;
+    left: -39px;
+    top: 1466px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 316px;
+    height: 561px;
+    left: 30px;
+    top: 2219px;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 347px;
+    height: 58px;
+    left: 28px;
+    top: 33px;
     
-    font-family: Elsie Swash Caps;
+    font-family: Istok Web;
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
-    line-height: 70px;
-    /* or 100% */
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
     
     
-    color: #F47500;
+    color: #004FE9;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 347px;
+    height: 58px;
+    left: 28px;
+    top: 91px;
+    
+    font-family: Istok Web;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #004B23;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 298px;
+    height: 174px;
+    left: 30px;
+    top: 1904px;
+    
+    font-family: Khand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 100%;
+    /* or 35px */
+    
+    text-align: right;
+    
+    color: #0500FF;
   }
 }

@@ -1,66 +1,14 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 781px;
+  height: 2315px;
   background-color: white;
   color: white;
-  display: flex;
   position: relative;
+  white-space: normal;
+  text-align: left;
 
-  .image1 {
-    position: absolute;
-    width: 419px;
-    height: 781px;
-    left: 0;
-    top: 0;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 351px;
-    height: 252px;
-    left: 24px;
-    top: 23px;
-    
-    font-family: Ander Hedge;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 58px;
-    
-    color: #A65EB4;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 248px;
-    height: 37px;
-    left: 24px;
-    top: 136px;
-    
-    font-family: Ander Hedge;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 23px;
-    
-    color: #A65EB4;
-  }
-
-  .text4 {
-    position: absolute;
-    width: 248px;
-    height: 37px;
-    left: 187px;
-    top: 730px;
-    
-    font-family: Ander Hedge;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 23px;
-    
-    color: #A65EB4;
-  }
+  
 }

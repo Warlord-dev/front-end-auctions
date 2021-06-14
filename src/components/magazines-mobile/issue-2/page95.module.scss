@@ -3,29 +3,29 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 660px;
-  overflow: scroll;
-  overflow-x: hidden;
+  height: 640px;
+  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-
+  
   .image1 {
     position: absolute;
-    height: 660px;
-    left: -130px;
+    width: 411px;
+    height: 640px;
+    left: -36px;
     top: 0px;
   }
 
-  .text2 {
+  .text1 {
     position: absolute;
-    width: 226px;
+    width: 302px;
     height: 50px;
-    left: 129px;
-    top: 22px;
+    left: 19px;
+    top: 11px;
     
-    font-family: Fjalla One;
+    font-family: Public Secret DEMO;
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
@@ -34,6 +34,6 @@
     
     text-align: center;
     
-    color: #FFFFFF;
+    color: #8219B4;
   }
 }

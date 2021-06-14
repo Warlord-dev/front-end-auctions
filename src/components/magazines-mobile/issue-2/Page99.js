@@ -5,16 +5,25 @@ import Link from 'next/link';
 const Page99 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/129_130/image3.png" className={styles.image3} />
-       <img src="./magazine/1/129_130/image4.png" className={styles.image3} />
-       <img src="./magazine/1/129_130/image5.png" className={styles.image3} />
-       <p className={styles.text4}>Take Charge Boot</p>
-       <Link href="https://www.instagram.com/vicke_jones/"><a className={styles.text5}>
-       Vicky Gonzalez Boerr
+      <div className={styles.image1}></div>
+      <img src="./magazine/1/107_108/image6.png" className={styles.image2} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image3} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image4} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image5} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image6} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image7} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image8} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image9} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image10} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image11} />
+      <img src="./magazine/1/107_108/image6.png" className={styles.image12} />
+      <img src="./magazine/1/107_108/image7.png" className={styles.image21} />
+       <img src="./magazine/1/107_108/image8.png" className={styles.image22} />
+       <Link href="https://www.instagram.com/kurmanin_tailor/?hl=en"><a className={styles.text3}>
+       aLEXANDER KURMANIN
         </a>
        </Link>
-
-       <img src="./magazine/1/129_130/image6.png" className={styles.image4} />
+       <p className={styles.text4 }>CYBER NINJA</p>
     </div>
   )
 }

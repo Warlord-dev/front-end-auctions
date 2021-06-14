@@ -1,26 +1,15 @@
 import React from 'react'
-import styles from './page66.module.scss'
+import styles  from './page66.module.scss'
+import Link from 'next/link';
 
 const Page66 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/95_96/right.png" className={styles.rightBack} />
-
-      <div className={styles.text3}>
-      Sheantoz Story
-      </div>
-      <p className={styles.text4}>
-Sheantoz is an intergalactic alien singer from a distant future. She has an unique and powerful voice that can both fascinate  and enchant the audience with just a single song. She is originally from a planet called Saquarious, where her species has blue color skin and the ability to breath under water— her planet is 60% liquid water and 30% iced water. Only %10 of the planet is solid land, where the enemy species rules. 
-<br/>
-<br/>
-Sheantoz was once captured by enemy forces for their own amusement, however, her voice was able to enchant the soldiers, allowing her to escape via space craft. 
-<br/>
-<br/>
-Ever since, she has been roaming from one planet to the next, travelling across galaxies. She plans one day to also visit Earth, giving a concert to her fans and using her voice for the greater good. 
-      </p>
-      <div className={styles.text5}>
-      Burak Dahan
-      </div>
+     <img src="./magazine/1/71_72/image1.png" className={styles.image1} />
+     <img src="./magazine/1/71_72/image3.png" className={styles.image3} />
+     <div className={styles.image4}></div>
+      <p className={styles.text1}>Throughout the Metaverse</p>
+      <p className={styles.text2}><Link href="https://www.elijahthurstonportfolio.com/"><a className={styles.text3}>Elijah Thurston </a></Link> is a 3D Render Artist based in Vermont. He has worked with DAZ Studio for over eight years and focuses on creating high fashion 3d renders.</p>
     </div>
   )
 }

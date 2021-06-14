@@ -3,35 +3,79 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 805px;
+  height: 2388px;
   overflow: scroll;
   overflow-x: hidden;
-  background-color: white;
+  background-color: #3D9BA2;
   color: white;
   display: flex;
   position: relative;
 
-  .image1 {
+  .image2 {
     position: absolute;
-    width: 475px;
-    height: 805px;
-    left: -50px;
-    top: 0px;
+    width: 880px;
+    height: 1145px;
+    left: -252px;
+    top: 1243px;
   }
 
-  .text1 {
+  .image3 {
     position: absolute;
-    width: 243px;
-    height: 70px;
-    left: 16px;
-    top: 0px;
+    width: 347px;
+    height: 238px;
+    left: -82.76px;
+    top: 52.16px;
+    transform: rotate(-20deg);
+  }
+
+  .image4 {
+    position: absolute;
+    width: 400.21px;
+    height: 237.01px;
+    left: -115.54px;
+    top: 616.29px;
+    transform: rotate(-20deg);
+  }
+
+  .image5 {
+    position: absolute;
+    width: 241px;
+    height: 241px;
+    left: 160px;
+    top: 234px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 316px;
+    height: 217px;
+    left: 155px;
+    top: 829px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 375px;
+    height: 164px;
+    left: 0px;
+    top: 1079px;
     
-    font-family: Encode Sans;
+    background: #9578DD;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 297px;
+    height: 58px;
+    left: 22px;
+    top: 1095px;
+    
+    font-family: Jaldi;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
-    line-height: 70px;
-    /* identical to box height, or 233% */
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
     
     
     color: #FFFFFF;

@@ -1,43 +1,14 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 806px;
+  height: 2315px;
   background-color: white;
-  color: black;
-  display: flex;
+  color: white;
   position: relative;
+  white-space: normal;
+  text-align: left;
 
-  .text1 {
-    position: absolute;
-    width: 458px;
-    height: 71px;
-    left: -42px;
-    top: 34px;
-    
-    font-family: VTKS Estilosa;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 54px;
-    text-align: center;
-    
-    color: #000000;
-  }
-
-  .image1 {
-    position: absolute;
-    width: 309px;
-    height: 318px;
-    left: 33px;
-    top: 119px;
-  }
-
-  .image2 {
-    position: absolute;
-    width: 309px;
-    height: 315px;
-    left: 33px;
-    top: 441px;
-  }
+  
 }

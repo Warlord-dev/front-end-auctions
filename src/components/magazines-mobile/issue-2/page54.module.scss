@@ -1,47 +1,14 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 3161px;
-  background: white;
+  height: 2315px;
+  background-color: white;
   color: white;
-  display: flex;
   position: relative;
+  white-space: normal;
+  text-align: left;
+
   
-  .image2 {
-    background: linear-gradient(180deg, rgba(173, 0, 255, 0.43) 0%, rgba(0, 79, 79, 0.43) 100%);
-    position: absolute;
-    width: 968px;
-    height: 3249px;
-    left: -297px;
-    top: 0px;
-  }
-
-  .image3 {
-    position: absolute;
-    width: 316px;
-    height: 2984px;
-    left: 29px;
-    top: 76px;
-    background-color: rgba(164, 0, 147, 0.43);
-  }
-
-  .text5 {
-    position: absolute;
-    width: 264px;
-    height: 1149px;
-    left: 55px;
-    top: 113px;
-    
-    font-family: Lexend Giga;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 150%;
-    /* or 22px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
 }

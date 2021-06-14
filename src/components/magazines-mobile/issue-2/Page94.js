@@ -5,20 +5,11 @@ import Link from 'next/link';
 const Page94 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/125_126/image6.png" className={styles.image1} />
-      <Link href="https://www.instagram.com/ava3ddesigners/"><a className={styles.text1}>
-       AVA Designers
-        </a>
-       </Link>
-       <video className={styles.image3} loop autoPlay>
-        <source src="./magazine/1/125_126/video4.mp4" type="video/mp4" />
-       </video>
-       <video className={styles.image4} loop autoPlay>
-        <source src="./magazine/1/125_126/video3.mp4" type="video/mp4" />
-       </video>
-       <video className={styles.image5} loop autoPlay>
-        <source src="./magazine/1/125_126/video1.mp4" type="video/mp4" />
-       </video>
+     <img src="./magazine/1/101_102/image4.png" className={styles.image4} />
+     <Link href="https://instagram.com/veletagram"><a className={styles.text2}>
+      DOMINGO BETTE ENCOUR
+      </a>
+      </Link>
     </div>
   )
 }

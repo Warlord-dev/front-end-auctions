@@ -3,120 +3,128 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 2288px;
-  overflow: scroll;
-  overflow-x: hidden;
+  height: 960px;
+  overflow: hidden;
   background-color: white;
-  color: black;
+  color: white;
   display: flex;
   position: relative;
 
-  .back1 {
+  .leftBack {
     position: absolute;
-    width: 960px;
-    height: 705px;
-    left: -250px;
+    width: 375px;
+    height: 960px;
+    left: 0px;
     top: 0px;
-
-    background: linear-gradient(180deg, #9C050E 63.89%, #9C0510 75.18%, #673943 93.54%);
   }
 
-  .back2 {
+  .text1 {
     position: absolute;
-    width: 960px;
-    height: 593px;
-    left: -165px;
-    top: 705px;
+    width: 620px;
+    height: 239px;
+    left: -197px;
+    top: -29px;
     
-    background: linear-gradient(180deg, #ACAC54 0%, #ACAC52 73.09%, #A0A05E 79.02%, #7A7A86 93.94%);
+    font-family: Rose Cake - Personal Use;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+    
+    text-align: center;
+    
+    color: #000000;
   }
 
-  .back3 {
+  .text2 {
     position: absolute;
-    width: 960px;
-    height: 817px;
-    left: -24px;
-    top: 1298px;
+    width: 620px;
+    height: 239px;
+    left: -227px;
+    top: 38px;
     
-    background: linear-gradient(180deg, #1B000B 71.23%, #1B000B 78.25%, #2B0F04 81.33%, #492D22 93.38%);
+    font-family: Rose Cake - Personal Use;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+    
+    
+    color: #000000;
   }
 
   .text3 {
     position: absolute;
-    width: 299px;
-    height: 200px;
-    left: 51px;
-    top: 38px;
+    width: 620px;
+    height: 239px;
+    left: 83px;
+    top: 105px;
     
-    font-family: Poor Story;
+    font-family: Rose Cake - Personal Use;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 70px;
     line-height: 100%;
-    /* or 20px */
+    /* or 70px */
     
-    text-align: right;
     
-    color: #FFFFFF;
+    color: #000000;
   }
 
   .text4 {
     position: absolute;
-    width: 265px;
-    height: 201px;
-    left: 47px;
-    top: 1342px;
+    width: 620px;
+    height: 239px;
+    left: -197px;
+    top: 172px;
     
-    font-family: Quando;
+    font-family: Rose Cake - Personal Use;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 70px;
     line-height: 100%;
-    /* or 15px */
+    /* or 70px */
     
+    text-align: center;
     
-    color: #FEFEFE;
+    color: #000000;
   }
-
   .text5 {
     position: absolute;
-    width: 341px;
-    height: 121px;
-    left: 47px;
-    top: 1720px;
+    width: 620px;
+    height: 239px;
+    left: 0px;
+    top: 241px;
     
-    font-family: Quando;
+    font-family: Rose Cake - Personal Use;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 70px;
     line-height: 100%;
-    /* or 50px */
+    /* or 70px */
+    
+    text-align: center;
+    
+    color: #000000;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 375px;
+    height: 375px;
+    left: 9px;
+    top: 723px;
+    
+    font-family: CF Punk Fashion PERSONAL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
     
     
-    color: #FEFEFE;
-  }
-
-  .image6 {
-    position: absolute;
-    width: 423px;
-    height: 455px;
-    left: -24px;
-    top: 250px;    
-  }
-
-  .image7 {
-    position: absolute;
-    width: 587px;
-    height: 587px;
-    left: -106px;
-    top: 717px;
-  }
-
-  .image8 {
-    position: absolute;
-    width: 447px;
-    height: 447px;
-    left: -36px;
-    top: 1841px;
+    color: #000000;
   }
 }

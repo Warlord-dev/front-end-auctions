@@ -2,93 +2,44 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 2826px;
-  overflow: hidden;
-  background-color: #010103 ;
+  height: 3601px;
+  background-color: white;
   color: white;
   display: flex;
   position: relative;
-  
+
   .image1 {
     position: absolute;
-    width: 834px;
-    height: 1503px;
-    left: -229px;
-    top: 143px;
+    width: 2383px;
+    height: 2383px;
+    left: -957px;
+    top: 337px;
+    transform: rotate(-90deg);
   }
 
   .image3 {
     position: absolute;
-    width: 339px;
-    height: 461px;
-    left: 18px;
-    top: 1679px;
-  }
+    width: 316px;
+    height: 3480px;
+    left: 29px;
+    top: 76px;
 
-  .image4 {
-    position: absolute;
-    width: 375px;
-    height: 553px;
-    left: 0px;
-    top: 2273px;
-    
-    border: 7px solid #052DFF;
-    box-sizing: border-box;
+    background: rgba(164, 0, 147, 0.43);
   }
-
-  .text1 {
-    position: absolute;
-    width: 374px;
-    height: 142px;
-    left: 1px;
-    top: 55px;
-    
-    font-family: Julietta Messie Demo;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 150px;
-    line-height: 100%;
-    /* or 150px */
-    
-    text-align: center;
-    -webkit-text-stroke: 0.5px #FA00FF;
-    
-    color: #FFFFFF;
-  }
-
+  
   .text2 {
     position: absolute;
-    width: 242px;
-    height: 334px;
-    left: 67px;
-    top: 1745px;
+    width: 264px;
+    height: 1305px;
+    left: 55px;
+    top: 139px;
     
-    font-family: Inria Sans;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 100%;
-    /* or 20px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 242px;
-    height: 47px;
-    left: 67px;
-    top: 2183px;
-    
-    font-family: Helvetica;
+    font-family: Lexend Giga;
     font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 100%;
-    /* or 40px */
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
     
     text-align: center;
     

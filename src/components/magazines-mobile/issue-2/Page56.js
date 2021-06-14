@@ -1,26 +1,30 @@
 import React from 'react'
 import styles from './page56.module.scss'
+import Link from 'next/link';
 
 const Page56 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/83_84/image2.png" className={styles.image1} />
-      <div className={styles.image3}></div>
-      <p className={styles.text2}>If this is what democratization looks like under Web2, how worse can dictatorship possibly be when the centralized internet platforms hold all the aces anyway?
-      <br/><br/>
-If there's anything we should have learned about Silicon Valley, it was that it could: 1) cancel you in a heartbeat for perceived "wrongthink" by its algorithms, 2) decide who can and can't publish apps, and 3) seize your domain willy-nilly. At any rate, the internet has become a centralized, monolithic cesspool and beaten black and blue like a government mule by its gatekeepers. Does anyone working at Facebook feel remorse for banning thousands of people and deleting millions of posts even when they end up being in the wrong? Fuck it, let the whole thing burn.
-<br/><br/>
-If anything, the coronavirus pandemic hastened the path towards decentralization. The emergence of remote work, eSports, extended reality and the rapidly-growing creator economy are all part of this sea change. Recent events, particularly the divisive recent U.S. presidential elections, have contributed to this change. If Twitter can go after a sitting President and try to cancel him, what chance does Joe Blow stand when his beloved tech gatekeepers turn on him?
-<br/><br/>
-This precarity is everywhere, hanging like a sword of Damocles on top of our collective heads, leaving us walking on eggshells lest we step out of line and experience the closest thing to total damnation of the memory from the annals of social media and internet history. The emotional toll is real after discovering that it's the entire structure that's broken. Post-traumatic stress from everyday precarity is real, and it's more pervasive than any of us care to imagine. "It is no measure of health to be well-adjusted to a profoundly sick society," as the philosopher J. Krishnamurti put it. And boy, was he ever right — in this bizarro clown world of frenzied indolence, in a never-ending cycle of jerky, stop-start, constant inertia.
-<br/><br/>
-Web3 and the Importance of Hedging 
-With all the uncertainty and risk prevailing in the world today, this makes the concept of hedging all the more critical in the coming years. Hedging, in essence, is managing uncertainty. It's no different from bringing a coat when you expect stormy weather—or taking out health insurance. Think of hedging as in case shit happens — which it sure as hell did last year, what with the pandemic. Hedging is acting in the present to try to mitigate future risks, and one of the hedges that a growing number of individuals are turning to is the decentralized internet, or Web3.
-<br/><br/>
-Web3 tears down gates and burns down the walled gardens that its predecessor created to perpetuate itself as the digital economy comes around — a decentralized economy that provides fair incentives for participants who then gain their skin in the game to help expand the network.
-<br/><br/>
-Crypto and blockchain technologies such as non-fungible tokens (NFTs), decentralized finance (DeFi), and decentralized autonomous organizations (DAOs) are opening up possibilities as far as giving individuals more agency, more opportunity, and more sustainable outcomes than their centralized counterparts would ever allow — in a codified, permissionless, and transparent manner.
-</p>
+      <img src="./magazine/1/59_60/image21.png" className={styles.image21} />
+       <Link href="https://daostack.io/"><a>
+        <img src="./magazine/1/59_60/image16.png" className={styles.image22} />
+        </a>
+       </Link>
+       <Link href="https://aragon.org/"><a>
+        <img src="./magazine/1/59_60/image17.png" className={styles.image23} />
+        </a>
+       </Link>
+       <Link href="https://snapshot.org/#/"><a>
+       <img src="./magazine/1/59_60/image18.png" className={styles.image24} />
+       </a>
+       </Link>
+       <p className={styles.text7}>Considering Launching A DAO?</p>
+      <p className={styles.text8}>It’s not a trivial endeavor— especailly if you’re going to do it right; establish a real DAO. The whole process is quite encumbersome. But... it doesn’t have to be set up completely from scratch, there are some great ready to use interfaces, tools, gadgets out there that allow you to set up different parts of your DAO structure and evolve it overtime. </p>
+      <p className={styles.text9}>An open source project that allows you to easily set up and interface with a DAO through their Alchemy platform. It’s unique for the fact that you don’t have to launch your own ERC-20, but rather can use DAOstack’s REP token and distribute this to members for on-chain voting. A user’s Reputation score represents their decision-making power. Each DAO has a separate ledger of Reputation scores, and so Reputation cannot be directly transferred from peer to peer, ensuring that members of the DAO earn their voting power rather than just accumulating it for the sake of it, where it is distributed through the passing of proposals inside the DAO and is non-transferrable. </p>
+      <p className={styles.text10}>ARAGON</p>
+      <p className={styles.text11}>Aragon too offers a variety of different governance solutions with on-chain voting, and it’s govern product will soon implement gasless voting, allowing more accessible proposal management. However, one potential caveat is that the governance tokens are liquid, meaning that they can be traded, openly, allowing anyone to accumulate power within the DAO through siimply buying the token, rather than potentially actually contributing to its broader mission. </p>
+      <p className={styles.text12}>snapshot</p>
+      <p className={styles.text13}>Snapshot is another DAO infrastructure, that allows anyone to launch what is called “spaces” with off-chain gasless governance. It allows members of a project or DAO i.e. holding the governance token, to sign messages with their wallet addresses when voting on put forth proposals. Proposals can be made with select start and stop times, as well as a block height which is used to gather on-chain data for the front end.    </p>
     </div>
   )
 }
