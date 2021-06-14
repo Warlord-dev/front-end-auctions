@@ -4,17 +4,22 @@ import styles from './page85.module.scss'
 const Page85 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/images/mobile/page85-bg.png" className={styles.backImage} />
-      <div className={styles.innerWrapper}>
-        <h1>Mod the Metaverse.</h1>
-        <p>DIGIFIZZY is for the dreamers, the creators, the players, the technologists, the developers, the risk takers. It’s for anyone out there that truly believes in the potentiality of where we are headed. It’s for those that want to be part of building the right metaverse, underwriting it with the value and ethos that we keep being promised, but is yet to actually play out. </p>
-        <p>We are all climbing a mountain that has never been climbed before. Charting a new course. There is no textbook or pre-prepared answers for what is to come as we traverse these new plains. But ultimately, there doesn’t need to be. Because we all already know the map that we want to navigate. It’s one that ensures openness, vitality and allows us the ability to spin up personal decentralised realms with dynamic access keys. </p>
-        <p>It’s one that allows us to mod— to break everything down into all of its parts, tweak it, mess around with it, and then reassemble it into something new, novel, generative— engage in the practice of driving growth, continued betterness. As we build out these new decentralised networks and ecosystems we must make sure that humanity stays at the heart of it. We must take control of our own identities, our own quests, and not be conformed by a legacy frame that does no justice but to make us ponder “Cui bono?”.    </p>
-        <h2>DIGIFIZZY is for the gatemakers.</h2>
-        <p>It’s not just the pursuit for enabling greater potentiality in all of us, but rather, actually making it happen. I invite you all to join us in living this through. That’s all it is. A leap of faith. </p>
-        <p>To be continued. </p>
-        <p>- Emma-Jane MacKinnon-Lee</p>
-      </div>
+     <div className={styles.back1}></div>
+     <div className={styles.back2}></div>
+     <div className={styles.back3}></div>
+     <img src="./magazine/1/115_116/image3.png" className={styles.image6} />
+     <img src="./magazine/1/115_116/image4.png" className={styles.image7} />
+       <img src="./magazine/1/115_116/image5.png" className={styles.image8} />
+
+     <p className={styles.text3}>Do virtual worlds need virtual handbags? How do our physical items translate into virtual spaces?
+       <br/><br/>
+Beginning with these questions and four fashion archetypes of the physical world, this capsule of three colorways brings together a bag, belt, a piece of jewelry, and a pair of sneakers into a digital hybrid accessory.</p>
+        <p className={styles.text4}>Lauren is an American fashion designer and entrepreneur, starting out in 2012. She specialises in circular and digital fashion, in Paris, London, and New York. 
+        <br/><br/>
+She is motivated by the substantial role fashion plays in the overconsumption and destruction of planetary resources, seeing digital fashion as a key solution to this issue. From AR filters to immersive digital worlds, this new medium can allow for true identity exploration.
+
+She is the founder of Alterrage, a phygital fashion brand bridging the digital realm with physical reality. Creating the future of phygital.</p>
+       <p className={styles.text5}>Lauren Kacher</p>
     </div>
   )
 }

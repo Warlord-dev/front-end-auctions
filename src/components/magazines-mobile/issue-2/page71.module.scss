@@ -3,77 +3,53 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 2273px;
+  height: 1766px;
   overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-  
-  .img1{
-    position: absolute;
-    width: 375px;
-    height: 100%;
-    left: 0px;
-     
-  }
-  .img2{
-    position: absolute;
-    width: 881px;
-    height: 375px;
-    left: 0px;
-    top: 881px;
-  }
-  .img3{
-    position: absolute;
-    width: 100%;
-    height: 646px;     
-    top: 1040px;
-  }
-  .img4{
-    position: absolute;
-    width: 100%;    
-    top: 266px;
-  }
-  .img5{
-    position: absolute;
-    width: 100%;
-    height: 647px;    
-    top: 1686px;
-  }
-  h1{
-    position: absolute;
-    width: 300px;
-    height: 40px;
-    left: 21px;
-    top: 28px;
 
-    font-family: Empirez;
+  
+  .image1 {
+    position: absolute;
+    width: 505px;
+    height: 546px;
+    left: -65px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 517px;
+    height: 562px;
+    left: -142px;
+    top: 545px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 654px;
+    height: 659px;
+    left: -164px;
+    top: 1107px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 392px;
+    height: 44px;
+    left: 25px;
+    top: 25px;
+    
+    font-family: Marck Script;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
-    line-height: 100%;
-    /* identical to box height, or 40px */
-
-
-    color: #FFB115;
-  }
-
-  p{
-    position: absolute;
-    width: 300px;
-    height: 350px;
-    left: 22px;
-    top: 86px;
-
-    font-family: EB Garamond;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 100%;
-    /* or 14px */
-
-
-    color: #FFFFFF;
+    line-height: 90%;
+    /* or 36px */
+    
+    
+    color: #80FF00;
   }
 }

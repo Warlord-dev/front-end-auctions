@@ -1,0 +1,57 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 619px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image2 {
+    position: absolute;
+    height: 619px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 60px;
+    height: 450px;
+    left:323px;
+    top: 37px;
+    
+    font-family: Poller One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 50%;
+    text-align: center;
+    /* or 20px */ 
+    
+    color: #FF8E1A;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 60px;
+    height: 720px;
+    left:295px;
+    top: 36px;
+    
+    font-family: Poller One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 70%;
+    /* or 25px */
+    
+    text-align: center;
+    
+    color: #5B94EF;
+  }
+}

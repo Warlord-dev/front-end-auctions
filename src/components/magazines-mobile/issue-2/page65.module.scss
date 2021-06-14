@@ -2,156 +2,54 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3163px;
+  height: 1496px;
   background-color: black;
   color: white;
   position: relative;
 
-  .talent1 {
-    position: absolute;
-    width: 453px;
-    height: 60px;
-    left: 61px;
-    top: 29px;
-    
-    font-family: Kite One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 100%;
-    color: #26D9F9;
-  }
-
-  .talent2 {
-    position: absolute;
-    width: 453px;
-    height: 60px;
-    left: 2px;
-    top: 121px;
-    
-    font-family: Kite One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 100%;
-    color: #2654F9;
-  }
-
-  .talent3 {
-    position: absolute;
-    width: 453px;
-    height: 60px;
-    left: 61px;
-    top: 213px;
-    
-    font-family: Kite One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 100%;
-    color: #26F9D3;
-  }
-
-  h2 {
-    position: absolute;
-    width: 453px;
-    height: 120px;
-    left: 36px;
-    top: 332px;
-
-    font-family: Karla;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 120px;
-    line-height: 100%;
-    color: #FFC42D;
-    -webkit-text-stroke: 0.1px #FF0000;
-  }
-
-  .section1 {
-    position: absolute;
-    width: 252.12px;
-    height: 798px;
-    left: 36px;
-    top: 505.19px;
-    
-    font-family: Kite One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 19px;
-    line-height: 110%;
-    
-    color: #FFFFFF;
-    transform-origin: 0 0;
-    transform: rotate(-3deg);
-    
-  }
-
-  .fullImage {
-    position: absolute;
-    width: 572px;
-    height: 532px;
-    left: -99px;
-    top: 1316px;    
-  }
-
-  .section2 {
-    position: absolute;
-    width: 166.85px;
-    height: 102px;
-    left: 41.34px;
-    top: 1839px;
-
-    font-family: Karla;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 110%;
-    
-    color: #FFFFFF;
-    transform-origin: 0 0;
-    transform: rotate(3deg);   
-  }
-
-  .section3 {
-    position: absolute;
-    width: 308px;
-    height: 49px;
-    left: 27px;
-    top: 1990px;
-    
-    font-family: Fasthand;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 100%;
-    
-    color: #FFC42D;
-    -webkit-text-stroke: 2px #FF0000;
-  }
-
-  .video1 {
-    position: absolute;
-    width: 357px;
-    height: 361px;
-    left: 2px;
-    top: 2108px;
-    border: 1px solid white;
-  }
-
   .image1 {
     position: absolute;
-    width: 281px;
-    height: 288px;
-    left: 0px;
-    top: 2533px;
+    width: 1715px;
+    height: 1544px;
+    left: -1038px;
+    top: -48px;
   }
 
-  .image2 {
+  .text1 {
     position: absolute;
-    width: 281px;
-    height: 295px;
-    left: 94px;
-    top: 2866px;
+    width: 337px;
+    height: 44px;
+    left: 60px;
+    top: 15px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    /* identical to box height, or 44px */
+    
+    text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+    color: #0038FF;
+  }
+
+  .text2  {
+    position: absolute;
+    width: 322px;
+    height: 88px;
+    left: 13px;
+    top: 1352px;
+    
+    font-family: Jungle;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    /* or 44px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px; 
   }
 }
