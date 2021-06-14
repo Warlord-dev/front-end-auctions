@@ -1,13 +1,13 @@
-@import "../assets/scss/base/responsive.scss";
+@import '../assets/scss/base/responsive.scss';
 
 .wrapper {
-  background: url("/images/nft/ejml13 hires 1.png");
+  background: url('/images/nft/1/ejml13 hires 1.png');
   background-size: cover;
 
   .bodyWrapper {
     color: white;
     width: 100%;
-    font-family: "Inter";
+    font-family: 'Inter';
     padding-top: 75px;
     padding: 64px;
 
@@ -15,7 +15,7 @@
       padding: 1rem;
       padding-top: 3rem;
     }
-  
+
     .header {
       padding-top: 50px;
       font-family: Internal Rainbows;
@@ -46,11 +46,14 @@
       /* identical to box height, or 50px */
 
       margin-bottom: 30px;
-      color: #FFFFFF;
+      color: #ffffff;
 
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+        0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+        0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+        0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-  
+
     .subTitle {
       font-family: Nella Sue Demo;
       font-style: normal;
@@ -80,9 +83,12 @@
       text-align: center;
       margin-bottom: 30px;
 
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+        0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+        0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+        0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
-  
+
     .title {
       margin-bottom: 82px;
       color: #ff0000;
@@ -95,7 +101,7 @@
 
     .magazineWrapper {
       width: 100%;
-      text-align: center;        
+      text-align: center;
 
       @media (max-width: 768px) {
         .mainMagazine {
@@ -106,36 +112,35 @@
         @include media-xs {
           width: 80%;
         }
-  
+
         @include media-sm {
           width: 80%;
         }
-  
+
         @include media-md {
           width: 80%;
         }
-  
+
         @include media-lg {
           width: unset;
         }
       }
-
     }
-  
+
     .panel {
-      background: #F7F7F7;
+      background: #f7f7f7;
       height: 1145px;
       position: relative;
       margin-bottom: 350px;
-  
+
       .new {
         position: absolute;
         top: 0;
         left: 0;
         transform: translate(-25%, -25%);
-        width: 250px
+        width: 250px;
       }
-  
+
       .meta {
         position: absolute;
         bottom: 0;

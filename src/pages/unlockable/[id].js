@@ -7,9 +7,11 @@ import details from '@constants/nft_subscription_issue1';
 
 const Unlockable = () => {
   const router = useRouter();
+  const { id } = router.query;
+  const issueId = parseInt(id) - 1;
 
   const onUnlockableDetails = (id) => {
-    router.push(`/purchase/${id}`);
+    router.push(`/purchase/${issueId + 1}/${id}`);
   };
 
   const onUnlock = (id) => {
@@ -28,7 +30,7 @@ const Unlockable = () => {
               autoPlay
               muted
               className={styles.thumbnail}
-              src={details[0][0].url[0]}
+              src={details[issueId][0].url[0]}
             ></video>
             <div className={`${styles.overlay} ${styles.overlay1}`}>
               <button type="button" onClick={() => onUnlock(1)}>
@@ -43,7 +45,7 @@ const Unlockable = () => {
               autoPlay
               muted
               className={styles.thumbnail}
-              src={details[0][1].url[0]}
+              src={details[issueId][1].url[0]}
             ></video>
             <div className={`${styles.overlay} ${styles.overlay2}`}>
               <button type="button" onClick={() => onUnlock(2)}>
@@ -58,7 +60,7 @@ const Unlockable = () => {
               autoPlay
               muted
               className={styles.thumbnail}
-              src={details[0][2].url[0]}
+              src={details[issueId][2].url[0]}
             ></video>
             <div className={`${styles.overlay} ${styles.overlay3}`}>
               <button type="button" onClick={() => onUnlock(3)}>

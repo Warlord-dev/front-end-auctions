@@ -2,12 +2,18 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './styles.module.scss';
 
-const IssueCard = ({ image, id, title }) => {
+const IssueCard = ({ image, video = null, id, title, link1, link2 }) => {
   return (
     <div className={styles.wrapper}>
-      <Link href="/magazines/1">
+      <Link href={link1}>
         <a>
-          <img src={image} className={styles.thumbnail} />
+          {video ? (
+            <video autoPlay muted loop className={styles.thumbnail}>
+              <source src={video} />
+            </video>
+          ) : (
+            <img src={image} className={styles.thumbnail} />
+          )}
         </a>
       </Link>
       <div className={styles.actions}>
@@ -17,7 +23,7 @@ const IssueCard = ({ image, id, title }) => {
         </div>
         <div className={styles.contents}>
           <div className={styles.issueTitle}> {title} </div>
-          <Link href="/unlockable">
+          <Link href={link2}>
             <a className={styles.button}> VIEW </a>
           </Link>
         </div>
