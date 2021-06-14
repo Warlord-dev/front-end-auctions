@@ -14,18 +14,18 @@
 
     .image1 {
         position: absolute;
-        width: 680px;
-        height: 699.79px;
-        left: 1100px;
-        top: 99px;
+        width: 650px;
+        height: 661px;
+        left: 1115px;
+        top: 105px;
     }
 
     .image2 {
         position: absolute;
-        width: 680px;
-        height: 685px;
-        left: 1100px;
-        top: 799px;
+        width: 687px;
+        height: 676px;
+        left: 1097px;
+        top: 771px;
     }
 
     .text1 {
@@ -42,6 +42,25 @@
         line-height: 76px;
         text-align: center;
 
+        color: #000000;
+    }
+
+    .text2 {
+        position: absolute;
+        width: 81px;
+        height: 17px;
+        left: 1202px;
+        top: 81px;
+        
+        font-family: VTKS Estilosa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 16px;
+        /* identical to box height */
+        
+        text-align: center;
+        
         color: #000000;
     }
 }
