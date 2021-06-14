@@ -167,10 +167,10 @@ const Page4546 = () => {
         <br />
         <br />
         Compensation in DAOs is based on the evergreen theory of supply and demand, freeing DAO
-        members from the inefficiencies and pitfalls of corporate compensation as we know it. As DAO
-        token supply is fully transparent and baked into the code, so does the value of its tokens
-        increase with demand. Moreover, because the DAO code comes with the total token supply baked
-        into it, dilution is practically impossible.
+        members from the inefficiencies and pitfalls of corporate compensation as we know it. As a
+        DAO’s token supply is fully transparent and baked into the code, so does the value of its
+        tokens increase with demand. Moreover, because the DAO code often comes with the total token
+        supply baked into it, dilution is practically impossible.
       </div>
     </div>
   );

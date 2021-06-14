@@ -19,8 +19,8 @@ const Page2122 = () => {
             generation of new blocks. One of the rules states that the ability to create a block
             must be proportional to the processing power of the proof-of-work mechanism. This means
             one has to actually own the computing power required to create a new block. Ethereum
-            also uses PoW, but is in the process of changing its consensus mechanism to the next
-            one.
+            also uses PoW, but is in the process of changing its consensus mechanism to Proof of
+            Stake.
           </li>
           <br />
           <li>
@@ -44,15 +44,12 @@ const Page2122 = () => {
             <span className={styles.subTitle}>Delegated proof of stake (DPoS).</span> Delegated
             Proof-of-Stake models are a popular iteration of the latter PoS concept, where network
             users vote and elect delegates to validate the succeeding block. With DPoS, an
-            individual can vote on delegates by sending your tokens into a staking pool and linking
-            it to their delegate. No physical transfers from wallet to wallet occur. Then, an
-            individual can vote through delegates by pooling their tokens into a staking pool and
-            linking them to a particular delegate. They do not physically transfer your tokens to
-            another wallet but rather utilize a staking service provider to stake your tokens in a
-            staking pool. Its proponents believe it is a more democratized way of choosing who
-            validates the following block (rather than being at random) and allowing diverse,
-            serious stakers to participate in the process. Fewer validators enable the network to
-            reach a faster consensus.
+            individual can vote on delegates by sending their tokens into a staking pool and linking
+            it to their delegate. They do not physically transfer your tokens to another wallet but
+            rather utilize a staking service provider to stake your tokens in a staking pool. Its
+            proponents believe it is a more democratized way of choosing who validates the following
+            block (rather than being at random) and allowing diverse, serious stakers to participate
+            in the process. Fewer validators enable the network to reach a faster consensus.
           </li>
         </ul>
         <br />
@@ -70,8 +67,8 @@ const Page2122 = () => {
         <br />
         There's always going to be tradeoffs for every technological advantage, but the benefits are
         undoubtedly tantalizing. The future probably lies somewhere in eventually using a balance of
-        both centralized and distributed systems, which allow for exciting implementations based on
-        a particular need.
+        both decentralised and distributed systems, which allow for exciting implementations based
+        on a particular need.
         <br />
         <br />
         In the end, the capability to work in different sectors lies in which consensus mechanisms
