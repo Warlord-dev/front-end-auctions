@@ -3,37 +3,90 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 890px;
-  overflow: scroll;
-  overflow-x: hidden;
-  background-color: white;
+  height: 1527px;
+  overflow: hidden;
+  background-color: #BEFFC5;
   color: white;
   display: flex;
   position: relative;
-
-  .image1 {
+  .image2 {
     position: absolute;
-    height: 890px;
-    left: -170px;
-    top: 0px;
+    width: 377px;
+    height: 205px;
+    left: -2px;
+    top: 200px;
   }
 
-  .text1 {
+  .image4 {
     position: absolute;
-    width: 190px;
-    height: 80px;
-    left: 24px;
-    top: 32px;
+    width: 230px;
+    height: 439px;
+    left: 72px;
+    top: 475px;
     
-    font-family: Kurale;
+    background: linear-gradient(180deg, #1C7E38 0%, rgba(28, 126, 56, 0) 100%);
+  }
+
+  .image5 {
+    position: absolute;
+    width: 230px;
+    height: 435px;
+    left: 72px;
+    top: 983px;
+    
+    background: linear-gradient(180deg, #1C7E38 0%, rgba(28, 126, 56, 0) 100%);
+  }
+
+  .image3 {
+    position: absolute;
+    width: 198px;
+    height: 401px;
+    left: 87px;
+    top: 494px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 198px;
+    height: 385.32px;
+    left: 87px;
+    top: 1008px;
+  }
+  .text2 {
+    position: absolute;
+    width: 249px;
+    height: 59px;
+    left: 108px;
+    top: 40px;
+    
+    font-family: Public Secret DEMO;
     font-style: normal;
     font-weight: normal;
-    font-size: 80px;
+    font-size: 50px;
     line-height: 100%;
-    /* identical to box height, or 80px */
+    /* or 50px */
     
-    text-align: center;
+    text-align: right;
     
-    color: #FFFFFF;
+    color: #003789;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 338px;
+    height: 59px;
+    left: 19px;
+    top: 107px;
+    
+    font-family: Minecrafter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+    
+    text-align: right;
+    
+    color: #003789;
   }
 }

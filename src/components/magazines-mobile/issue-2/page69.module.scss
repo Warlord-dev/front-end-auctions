@@ -2,84 +2,69 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 1776px;
-  overflow: hidden;
-  background-color: white;
+  height: 2670px;
+  background-color: #7B7C7E;;
   color: white;
   display: flex;
   position: relative;
-
-  .leftBack {
+  
+  .image2 {
     position: absolute;
-    width: 960px;
-    height: 1940px;
-    left: -165px;
-    top: -47px;
-    
-    background: #889DA9;
+    width: 1181px;
+    height: 1181px;
+    left: -345px;
+    top: 1585px;
   }
-
-  .left1 {
+   .image3 {
     position: absolute;
-    width: 310px;
-    height: 379px;
-    left: 7px;
-    top: 165px;
-  }
+    width: 608px;
+    height: 634px;
+    left: -20px;
+    top: 0px;
+   }
 
-  .left2 {
+   .image4 {
     position: absolute;
-    width: 346px;
-    height: 434px;
-    left: 22px;
-    top: 637px;
-  }
+    width: 884px;
+    height: 859px;
+    left: -546px;
+    top: 840px;
+   }
+   .text3 {
+    position: absolute;
+    width: 66px;
+    height: 84px;
+    left: 284px;
+    top: 448px;
 
-  .left3 {
-    position: absolute;
-    width: 321px;
-    height: 392px;
-    left: 15px;
-    top: 1228px;
-  }
-
-  .text1 {
-    position: absolute;
-    width: 459px;
-    height: 44px;
-    left: -42px;
-    top: 27px;
-    
-    font-family: Neon Nanoborg;
+    font-family: Erica One;
     font-style: normal;
     font-weight: normal;
     font-size: 70px;
-    line-height: 90%;
-    /* or 63px */
-    
+    line-height: 100%;
+    /* or 70px */
+
     text-align: center;
-    
-    color: #FF0F00;
-    
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    color: #E56615;
   }
 
-  .text2 {
+  .text4 {
     position: absolute;
-    width: 451px;
-    height: 153px;
-    left: -38px;
-    top: 88px;
+    width: 212px;
+    height: 168px;
+    left: 33px;
+    top: 1531px;
     
-    font-family: Lustria;
+    font-family: EB Garamond;
     font-style: normal;
-    font-weight: normal;
-    font-size: 55px;
-    line-height: 90%;
-    /* or 49px */
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
     
-    text-align: center;
     
-    color: #FFD2DD;
+    color: #FFFFFF;
   }
 }

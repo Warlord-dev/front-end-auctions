@@ -18,10 +18,9 @@ const Page6768 = () => {
 
       <p className={styles.text1}>E-SPORTS PLAYER OF THE MONTH</p>
       <p className={styles.text2}>N0TAIL</p>
-      <p className={styles.text3}>With the Dota 2 TI coming up, N0tail is a player that can’t be looked past. He’s one of the most salient players in the entire Dota 2 pro-scene, having led his team, OG, to victory two-times with TI and overcome a mountain of obstacles in order to make that happen. He’s also accumulated well over 20,000 hours of Dota playtime— he must have a good gamer chair indeed! </p>
+      <p className={styles.text3}>With the Dota 2 TI coming up, N0tail is a player that can’t be looked past. He’s one of the most salient players in the entire Dota 2 pro-scene, having led his team, OG, to victory two-times with TI and overcoming a mountain of obstacles in order to make that happen. He’s also accumulated well over 20,000 hours of Dota playtime— he must have a good gamer chair indeed!</p>
       <p className={styles.text5}>metaverse ready score: 6</p>
       <p className={styles.text4}>E-SPORTS RISING STAR OF THE MONTH</p>
-      <p className={styles.text6}>At 19, Remo Arets is showing huge promise. He’s already reached 6th place in the EU MMR leaderboard & 2nd in EU’s lower DPC division with his team Creepwave.</p>
       <p className={styles.text7}>Crystallis</p>
       <p className={styles.text8}>metaverse ready score: 8</p>
       <p className={styles.text9}>He’s a refreshing new face to Dota 2 and in stark contrast to many players who have proceeded him— where he is known for his calm and no-nonsense attitude. </p>

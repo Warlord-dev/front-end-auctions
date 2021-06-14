@@ -1,71 +1,14 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 994px;
-  overflow: hidden;
-  background-color: #8BE0FF;
+  height: 2315px;
+  background-color: white;
   color: white;
-  display: flex;
   position: relative;
+  white-space: normal;
+  text-align: left;
 
-  .image2 {
-    position: absolute;
-    width: 375px;
-    height: 997px;
-    left: 0px;
-    top: 0px;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 263px;
-    height: 68px;
-    left: 25px;
-    top: 12px;
-    
-    font-family: Anime Inept;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 68px;
-    /* identical to box height */
-    
-    
-    color: #FF00D6;
-  }
-
-  .text4 {
-    position: absolute;
-    width: 158px;
-    height: 41px;
-    left: 198px;
-    top: 700px;
-    
-    font-family: Anime Inept;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 41px;
-    /* identical to box height */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .text5 {
-    position: absolute;
-    width: 164px;
-    height: 259px;
-    left: 198px;
-    top: 735px;
-    
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
-    line-height: 12px;
-    
-    color: #FFFFFF;
-  }
+  
 }

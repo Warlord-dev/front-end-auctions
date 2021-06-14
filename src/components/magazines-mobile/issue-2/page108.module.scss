@@ -1,0 +1,56 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 1170px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 731px;
+    height: 1196px;
+    left: -178px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 273px;
+    height: 50px;
+    left: 24px;
+    top: 28px;
+    
+    font-family: Purple Purse;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+    
+    
+    color: #AD00FF;
+  }
+  .text2 {
+    position: absolute;
+    width: 315px;
+    height: 40px;
+    left: 30px;
+    top: 1103px;
+    
+    font-family: Purple Purse;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+    
+    
+    color: #00D1FF;
+  }
+}

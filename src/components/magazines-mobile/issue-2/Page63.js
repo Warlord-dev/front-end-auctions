@@ -1,29 +1,15 @@
 import React from 'react'
 import styles from './page63.module.scss'
-import cn from 'classnames';
 
 const Page63 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/93_94/image1.png" className={styles.leftBack} />
-      <div className={cn(styles.text, styles.text1)}>
-      WHAT ARE YOU WEARING?
-      </div>
-      <div className={cn(styles.text, styles.text2)}>
-      WHAT ARE YOU WEARING?
-      </div>
-      <div className={cn(styles.text, styles.text3)}>
-      WHAT ARE YOU WEARING?
-      </div>
-      <div className={cn(styles.text, styles.text4)}>
-      WHAT ARE YOU WEARING?
-      </div>
-      <div className={cn(styles.text, styles.text5)}>
-      WHAT ARE YOU WEARING?
-      </div>
-      <div className={styles.text6}>
-      FASHION FOR THE METAVERSE
-      </div>
+      <img src="./magazine/1/67_68/image11.png" className={styles.image1} />
+      <img src="./magazine/1/67_68/image2.png" className={styles.image2} />
+      <img src="./magazine/1/67_68/image3.png" className={styles.image3} />
+      <img src="./magazine/1/67_68/image4.png" className={styles.image4} />
+      <img src="./magazine/1/67_68/image5.png" className={styles.image5} />
+      <img src="./magazine/1/67_68/image6.png" className={styles.image6} />
     </div>
   )
 }

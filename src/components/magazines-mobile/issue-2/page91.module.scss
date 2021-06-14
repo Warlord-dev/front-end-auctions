@@ -3,38 +3,83 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 839px;
-  overflow: scroll;
-  overflow-x: hidden;
+  height: 1776px;
+  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
 
-  .image7 {
+  .leftBack {
     position: absolute;
-    width: 540px;
-    height: 839px;
-    left: -48px;
-    top: 0px;
+    width: 960px;
+    height: 1940px;
+    left: -165px;
+    top: -47px;
+    
+    background: #889DA9;
   }
 
-  .text3 {
+  .left1 {
     position: absolute;
-    width: 361px;
-    height: 60px;
+    width: 310px;
+    height: 379px;
     left: 7px;
-    top: 33px;
+    top: 165px;
+  }
+
+  .left2 {
+    position: absolute;
+    width: 346px;
+    height: 434px;
+    left: 22px;
+    top: 637px;
+  }
+
+  .left3 {
+    position: absolute;
+    width: 321px;
+    height: 392px;
+    left: 15px;
+    top: 1228px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 459px;
+    height: 44px;
+    left: -42px;
+    top: 27px;
     
-    font-family: Flamenco;
+    font-family: Neon Nanoborg;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
-    line-height: 100%;
-    /* identical to box height, or 60px */
+    font-size: 70px;
+    line-height: 90%;
+    /* or 63px */
     
     text-align: center;
     
-    color: #AED8FF;
+    color: #FF0F00;
+    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 451px;
+    height: 153px;
+    left: -38px;
+    top: 88px;
+    
+    font-family: Lustria;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 90%;
+    /* or 49px */
+    
+    text-align: center;
+    
+    color: #FFD2DD;
   }
 }

@@ -3,7 +3,7 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 1045px;
+  height: 825px;
   overflow: scroll;
   overflow-x: hidden;
   background-color: white;
@@ -13,86 +13,44 @@
 
   .image2 {
     position: absolute;
-    width: 585px;
-    height: 1182px;
-    left: -105px;
-    top: -137px;    
-  }
-
-  .image3 {
-    position: absolute;
-    width: 375px;
-    height: 461px;
+    width: 530px;
+    height: 825px;
     left: 0px;
-    top: 292px;
-    
-    background: rgba(145, 0, 113, 0.8);
+    top: 0px;    
   }
 
-  .image4 {
+  .text3 {
     position: absolute;
-    width: 153px;
-    height: 44px;
-    left: 111px;
-    top: 330px;
-    .image5 {
-      width: 153px;
-      height: 44px;
-    }
-  }
-  .text6 {
-    position: absolute;
-    width: 325px;
-    height: 24px;
-    left: 25px;
-    top: 54px;
+    width: 262px;
+    height: 30px;
+    left: 23px;
+    top: 729px;
     
-    font-family: Courier;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 120.53%;
-    /* or 24px */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .text7 {
-    position: absolute;
-    width: 267px;
-    height: 222px;
-    left: 54px;
-    top: 108px;
-    
-    font-family: Courier;
+    font-family: Jacques Francois;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 120.53%;
-    /* or 18px */
+    line-height: 100%;
+    /* or 15px */
     
-    text-align: center;
     
-    color: #FFFFFF;
+    color: #FA00FF;
   }
 
-  .text8 {
+  .text4 {
     position: absolute;
-    width: 67px;
-    height: 24px;
-    left:43px;
-    top: 10px;
+    width: 234px;
+    left: 23px;
+    top: 749px;
     
-    font-family: Helvetica;
+    font-family: Jacques Francois Shadow;
     font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 120.53%;
-    /* or 24px */
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
     
-    text-align: center;
     
-    color: #FFFFFF;
+    color: #FA00FF;
   }
 }

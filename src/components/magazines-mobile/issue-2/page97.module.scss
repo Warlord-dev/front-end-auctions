@@ -3,62 +3,88 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 2341px;
-  overflow: scroll;
-  overflow-x: hidden;
-  background-color: #899096;
+  height: 3076px;
+  overflow: hidden;
+  background-color: white;
   color: white;
   display: flex;
   position: relative;
-
-  .image2 {
+ 
+  .image6{
     position: absolute;
-    width: 817px;
-    height: 1062px;
-    left: -221px;
+    width: 389px;
+    height: 567px;
+    left: -14px;
     top: 0px;
   }
 
-  .image3 {
+  .image7 {
     position: absolute;
-    width: 262px;
-    height: 371px;
-    left: 57px;
-    top: 1128px;
+    width: 389px;
+    height: 485px;
+    left: -7px;
+    top: 567px;
   }
 
-  .image4 {
+  .image9 {
     position: absolute;
-    width: 262px;
-    height: 371px;
-    left: 57px;
-    top: 1523px;
+    width: 571px;
+    height: 744px;
+    left: -105px;
+    top: 1051px;
   }
 
-  .image5 {
+  .image10 {
     position: absolute;
-    width: 262px;
-    height: 371px;
-    left: 57px;
-    top: 1918px;
+    width: 571px;
+    height: 779px;
+    left: -7px;
+    top: 1794px;
   }
-  
+
+  .image8 {
+    position: absolute;
+    width: 389px;
+    height: 504px;
+    left: 0px;
+    top: 2572px;
+  }
+
   .text2 {
     position: absolute;
-    width: 300px;
-    height: 40px;
-    left: 38px;
-    top: 1053px;
+    width: 184px;
+    height: 50px;
+    left: 180px;
+    top: 17px;
     
-    font-family: Kavoon;
+    font-family: Sahitya;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 50px;
     line-height: 100%;
-    /* identical to box height, or 40px */
-    background: -webkit-linear-gradient(#FF00B8, #A40031);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    /* identical to box height, or 50px */
+    
     text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 162px;
+    height: 40px;
+    left: 188px;
+    top: 67px;
+    
+    font-family: Sahitya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
   }
 }

@@ -1,17 +1,14 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
+  height: 2315px;
   background-color: white;
-  display: flex;
-  height: 757px;
+  color: white;
   position: relative;
+  white-space: normal;
+  text-align: left;
 
-  left {
-    position: absolute;
-    width: 375px;
-    height: 760px;
-    left: 0px;
-    top: 0px;
-  }
+  
 }

@@ -1,52 +1,39 @@
-import React, { useRef, useState } from 'react';
+import React from 'react'
 import styles from './page60.module.scss'
+import Link from 'next/link';
 
 const Page60 = () => {
-  const ref1 = useRef()
-  const ref2 = useRef()
-  const [isPlaying1, setIsPlaying1] = useState(false)
-  const [isPlaying2, setIsPlaying2] = useState(false)
-  const playVideo1 = () => {
-    if(isPlaying1) {
-      ref1.current.pause();
-      setIsPlaying1(false)
-    } else {
-      ref1.current.play();
-      setIsPlaying1(true)
-    }
-  }
-  const playVideo2 = () => {
-    if(isPlaying2) {
-      ref2.current.pause();
-      setIsPlaying2(false)
-    } else {
-      ref2.current.play();
-      setIsPlaying2(true)
-    }
-  }
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/87_88/image8.png" className={styles.image6} />
-      <img src="./magazine/1/87_88/image7.gif" className={styles.image6} />
-      <div className={styles.image7}>
-        <div className={styles.image9}>
-        <video ref={ref1} className={styles.image8} loop>
-          <source src="./magazine/1/87_88/video1.MOV" type="video/mp4" />
-        </video>
-        </div>
-        <button onClick={()=>{playVideo1()}} className={styles.playbutton}><img src={`./magazine/1/87_88/${isPlaying1 ? 'pause' : 'play'}.png`} /></button>
-      </div>
-
-      <div className={styles.image10}>
-        <div className={styles.image11}>
-        <video ref={ref2} className={styles.image12} loop>
-          <source src="./magazine/1/87_88/video2.MOV" type="video/mp4" />
-        </video>
-        </div>
-        <button onClick={()=>{playVideo2()}} className={styles.playbutton}><img src={`./magazine/1/87_88/${isPlaying2 ? 'pause' : 'play'}.png`} /></button>
-      </div>
-      <div className={styles.image13}>
-      </div>
+      <img src="./magazine/1/63_64/image3.png" className={styles.image3} />
+      <img src="./magazine/1/63_64/image4.png" className={styles.image4} />
+      <p className={styles.text1}>#DivingIntoSomniumSpace</p>
+      <Link href="https://somniumspace.com/parcel/2701"><a>
+      <img src="./magazine/1/63_64/image5.png" className={styles.image5} />
+      </a>
+      </Link>
+      <Link href="https://somniumspace.com/parcel/752"><a>
+      <img src="./magazine/1/63_64/image6.png" className={styles.image6} />
+      </a>
+      </Link>  
+      <Link href="https://somniumspace.com/parcel/3250"><a>
+      <img src="./magazine/1/63_64/image7.png" className={styles.image7} />
+      </a>
+      </Link>     
+      <Link href="https://somniumspace.com/parcel/3461"><a>
+      <img src="./magazine/1/63_64/image8.png" className={styles.image8} />
+      </a>
+      </Link>  
+      <img src="./magazine/1/63_64/image9.png" className={styles.image9} />
+      <img src="./magazine/1/63_64/image10.png" className={styles.image10} />
+      <img src="./magazine/1/63_64/image11.png" className={styles.image11} />
+      <p className={styles.text2}>Genesis VR Gallery</p>
+      <p className={styles.text3}>360 Gallery</p>
+      <p className={styles.text4}>Iron Giant</p>
+      <p className={styles.text5}>Local Butterfly</p>
+      <p className={styles.text6}>Somnium Waypoint</p>
+      <p className={styles.text7}>Pablo Rodriguez-Fraile</p>
+      <p className={styles.text8}>Magical Forest</p>
     </div>
   )
 }

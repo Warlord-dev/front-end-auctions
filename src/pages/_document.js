@@ -1013,6 +1013,11 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: "Muna";
+              src: url("./fonts/Muna-Bold.ttf");
+            }
+
+            @font-face {
               font-family: "CF Punk Fashion PERSONAL";
               src: url("./fonts/CF Punk Fashion PERSONAL.ttf");
             }

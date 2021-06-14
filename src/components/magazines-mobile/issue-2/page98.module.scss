@@ -3,75 +3,101 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 1460px;
-  overflow: scroll;
-  overflow-x: hidden;
-  background-color: #2E2C2C;
+  height: 2433px;
+  overflow: hidden;
+  background-color: #ffffff;
   color: white;
   display: flex;
   position: relative;
 
   .image1 {
     position: absolute;
-    width: 497px;
-    height: 511px;
-    left: -61px;
-    top: 135px;
+    width: 258px;
+    height: 674px;
+    left: -5.56px;
+    top: -21.92px;
+    
+    transform: rotate(40deg);
   }
 
   .image2 {
     position: absolute;
     width: 960px;
-    height: 592px;
-    left: -220px;
-    top: 868px;    
+    height: 2433px;
+    left: -239px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 287.07px;
+    height: 751.8px;
+    left: 97.72px;
+    top: 354.41px;
+    transform: rotate(-30deg);
+  }
+
+  .image4 {
+    position: absolute;
+    width: 258px;
+    height: 674px;
+    left: -6.12px;
+    top: 717.96px;
+    transform: rotate(-5deg);
+  }
+
+  .image5 {
+    position: absolute;
+    width: 320px;
+    height: 837px;
+    left: 70.24px;
+    top: 1149.43px;
+    transform: rotate(10deg);
+  }
+
+  .image6 {
+    position: absolute;
+    width: 258px;
+    height: 674px;
+    left: 1.88px;
+    top: 1661.96px;
+    transform: rotate(-5deg);
   }
 
   .text1 {
     position: absolute;
-    width: 346px;
-    height: 44px;
-    left: 15px;
-    top: 16px;
+    width: 735px;
+    height: 57px;
+    left: -377px;
+    top: 26px;
     
-    font-family: IM FELL French Canon;
+    font-family: Goblin One;
     font-style: normal;
     font-weight: normal;
-    font-size: 38px;
-    line-height: 44px;
+    font-size: 25px;
+    line-height: 100%;
+    /* or 25px */
     
-    color: #DBFF00;
+    text-align: right;
+    
+    color: #FFFFFF;
   }
 
   .text2 {
     position: absolute;
-    width: 221px;
-    height: 44px;
-    left: 15px;
-    top: 60px;
+    width: 735px;
+    height: 57px;
+    left: 62px;
+    top: 59px;
     
-    font-family: IM FELL French Canon;
+    font-family: Goblin One;
     font-style: normal;
     font-weight: normal;
-    font-size: 38px;
-    line-height: 44px;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
     
-    color: #00C2FF;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 278px;
-    height: 126px;
-    left: 45px;
-    top: 683px;
     
-    font-family: IM FELL French Canon;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    
-    color: #00C2FF;
+    color: #FFFFFF;
   }
 }

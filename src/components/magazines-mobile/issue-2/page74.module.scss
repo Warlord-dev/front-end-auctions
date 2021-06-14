@@ -3,90 +3,58 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 1527px;
-  overflow: hidden;
-  background-color: #BEFFC5;
+  height: 781px;
+  background-color: #C4A5AE;
   color: white;
   display: flex;
   position: relative;
+
   .image2 {
     position: absolute;
-    width: 377px;
-    height: 205px;
-    left: -2px;
-    top: 200px;
-  }
-
-  .image4 {
-    position: absolute;
-    width: 230px;
-    height: 439px;
-    left: 72px;
-    top: 475px;
-    
-    background: linear-gradient(180deg, #1C7E38 0%, rgba(28, 126, 56, 0) 100%);
-  }
-
-  .image5 {
-    position: absolute;
-    width: 230px;
-    height: 435px;
-    left: 72px;
-    top: 983px;
-    
-    background: linear-gradient(180deg, #1C7E38 0%, rgba(28, 126, 56, 0) 100%);
-  }
-
-  .image3 {
-    position: absolute;
-    width: 198px;
-    height: 401px;
-    left: 87px;
-    top: 494px;
-  }
-
-  .image6 {
-    position: absolute;
-    width: 198px;
-    height: 385.32px;
-    left: 87px;
-    top: 1008px;
-  }
-  .text2 {
-    position: absolute;
-    width: 249px;
-    height: 59px;
-    left: 108px;
-    top: 40px;
-    
-    font-family: Public Secret DEMO;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 100%;
-    /* or 50px */
-    
-    text-align: right;
-    
-    color: #003789;
+    width: 375px;
+    height: 602px;
+    left: 0px;
+    top: 0px;    
   }
 
   .text3 {
     position: absolute;
-    width: 338px;
-    height: 59px;
-    left: 19px;
-    top: 107px;
+    width: 139px;
+    height: 70px;
+    left: 22px;
+    top: 655px;
     
-    font-family: Minecrafter;
+    font-family: Marker Felt;
     font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 0;
+    /* identical to box height, or 70px */
+    
+    text-align: center;
+    
+    color: #33559A;
+    
+    transform: rotate(-90deg);
+  }
+
+  .text4 {
+    position: absolute;
+    width: 238px;
+    height: 63px;
+    left: 116px;
+    top: 658px;
+    
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
     line-height: 100%;
-    /* or 50px */
+    /* or 14px */
     
-    text-align: right;
+    display: flex;
+    align-items: center;
     
-    color: #003789;
+    color: #68296D;
   }
 }

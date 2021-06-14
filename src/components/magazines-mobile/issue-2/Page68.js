@@ -1,18 +1,14 @@
 import React from 'react'
-import styles from './page68.module.scss'
+import styles  from './page68.module.scss'
 import Link from 'next/link';
 
 const Page68 = () => {
   return (
     <div className={styles.wrapper}>
-     <img src="./magazine/1/97_98/right.png" className={styles.image1} />
-     <img src="./magazine/1/97_98/right-top.png" className={styles.image2} />
-     <div className={styles.image3}></div>
-     <div className={styles.text3}>
-      Lost in Space
-      </div>
-      <Link href="https://www.instagram.com/yekaterinab/"><a className={styles.text4}>
-      YeKaterina Burmatnova
+      <img src="./magazine/1/73_74/image1.png" className={styles.image1} />
+      <p className={styles.text1}>LANCY</p>
+      <Link href="https://linktr.ee/soulyasa"><a>
+      <p className={styles.text2}>Soulyasa.</p>
       </a>
       </Link>
     </div>
