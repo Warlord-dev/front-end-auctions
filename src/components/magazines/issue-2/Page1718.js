@@ -24,8 +24,8 @@ const Page1718 = () => {
         capability, thereby dismantling the rigid top-down hierarchies that are pervasive in today's
         organizations. Rather than hierarchy, DAOs use Web3 technology and rapidly evolving
         governance and incentivization models for distributing authority and financial rewards by
-        some iteration of tokenization. Then, holders of said tokens would then be able to submit
-        governance proposals, vote, and take their piece of the pie.
+        some iteration of tokenization. Then, holders of said tokens are able to submit governance
+        proposals, vote, and take their piece of the pie.
         <br />
         <br />
         DAOs answer the question that Ethereum founder Vitalik Buterin asked: can management be

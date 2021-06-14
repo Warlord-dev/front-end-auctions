@@ -49,7 +49,7 @@
 
   .text3 {
     position: absolute;
-    width: 311px;
+    width: 282px;
     height: 155px;
     left: 1025px;
     top: 266px;
@@ -61,7 +61,7 @@
     line-height: 23px;
 
     color: #FF0000;
-
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     box-sizing: border-box;
   }
 
@@ -132,9 +132,9 @@
 
   .textDiv2 {
     position: absolute;
-    width: 558px;
+    width: 546px;
     height: 309.96px;
-    left: 1314px;
+    left: 1331px;
     top: 273.9px;
 
     background: rgba(0, 0, 0, 0.52);

@@ -65,12 +65,12 @@ const Page1516 = () => {
         <br />
         So, from there they started experimenting with a music web three app called loft radio— a 24
         /7 chill beats radio, where you could tip the currently playing artists in small increments
-        of Ether, and 100% of each tip would go directly to the artists wallet. However, when it
+        of Ether, and 100% of each tip would go directly to the artist’s wallet. However, when it
         came to scaling this up, the model wasn’t really right. So, the pair started looking more
         into social tokens and the potential for artists to be able to launch their own currency,
-        which could be used kind of like rewards points, but also with different staking mechanisms
-        etc. However, the market seemed still too early. So, this is when the Catalog that we know
-        of today was formed; an NFT platform and marketplace for music artists.
+        which could be used in a way similar to rewards points, but also with different staking
+        mechanisms. However, the market seemed still too early. So, this is when the Catalog that we
+        know of today was formed; an NFT platform and marketplace for music artists.
         <br />
         <br />
         The platform itself is still in BETA and advancing in its engineering day by day, where the

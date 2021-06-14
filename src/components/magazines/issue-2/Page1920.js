@@ -9,7 +9,7 @@ const Page1920 = () => {
         On June 17th, 2016, The DAO was hacked, and over US$55 million (or about 3.6 million Ether)
         was stolen using the first-ever documented reentrancy attack. The exploit almost brought
         down the second-largest blockchain behind Bitcoin in 2016, after pulling in an eye-watering
-        US$150 million in crowdfunding. That's a shitload of opportunities. This pretty much drew a
+        US$160 million in crowdfunding. That's a shitload of opportunities. This pretty much drew a
         bulls-eye on The DAO for unscrupulous actors to try to exploit, considering the amounts of
         money going into the project. The hack ultimately led to the hard fork that created Ethereum
         Classic (the original blockchain) and Ethereum as we know it today. The crisis involving The
@@ -18,13 +18,12 @@ const Page1920 = () => {
         fail.
         <br />
         <br />
-        The bug was that an unscrupulous actor could recursively call that action to get that Ether
-        out of the contract and do it again and again until you drain the contract from all its
-        money.
+        The bug was so that an unscrupulous actor could recursively call the action to get Ether out
+        of the contract and do it repetitively, so draining the contract from all of its money.
         <br />
         <br />
         This ultimately led to the Ethereum Foundation issuing a critical update to roll the hack
-        back, resulting in the hard fork into Ethereum Classic and Ethereum.
+        back.
         <br />
         <br />
         Cornell University professor and AVA Labs founder and CEO Emin Gün Sirer was then an
@@ -32,7 +31,8 @@ const Page1920 = () => {
         apart from the attacks that can be carried out against its code (which eventually came to
         pass). So despite all the potential that DAOs bring as far as revolutionizing the way
         organizations conduct their business, the bullishness must be tempered with a sobering dose
-        of reality. You can harden your defenses all you want, but nothing can be 100% secure.
+        of reality. You can harden your defenses all you want, but nothing can be 100% secure...
+        yet.
         <br />
         <br />
         <div className={styles.subTitle}>
@@ -48,14 +48,21 @@ const Page1920 = () => {
         investors losing capital as follows:
         <br />
         <br />
-        Affirmative Biases and Disincentivizing to Vote No. Voting in the DAO was found to have
-        demonstrated positive biases on "yes" votes, particularly funding proposals due to the
-        outcome of such votes being visible from the get-go. In contrast, negative sentiments were
-        suppressed throughout the voting process.
-        <br />
-        Stalking Attacks. Supposing an investor decides to exit The DAO by creating a new DAO
-        contract, potential "stalkers" can allocate 53% of the funds into the new contract, which
-        would block investors from withdrawing funds.
+        <ul>
+          <li>
+            <span className={styles.subTitle}>
+              Affirmative Biases and Disincentivizing to Vote No.
+            </span>{' '}
+            Voting in the DAO was found to have demonstrated positive biases on "yes" votes,
+            particularly funding proposals due to the outcome of such votes being visible from the
+            get-go. In contrast, negative sentiments were suppressed throughout the voting process.
+          </li>
+          <li>
+            <span className={styles.subTitle}>Stalking Attacks.</span> Supposing an investor decides
+            to exit The DAO by creating a new DAO contract, potential "stalkers" can allocate 53% of
+            the funds into the new contract, which would block investors from withdrawing funds.
+          </li>
+        </ul>
       </div>
       <div className={styles.text2}>
         <ul>
@@ -63,32 +70,32 @@ const Page1920 = () => {
             <span className={styles.subTitle}>Ambush Attacks.</span> Ambush attacks refer to a
             scenario where a "whale" might be able to influence outcomes of proposal votes by
             sending in a massive number of "yes" votes at the latest possible moment, leaving no
-            time for other token holders to organize and inhibit themselves from participating. {' '}
+            time for other token holders to organize and inhibit themselves from participating.
           </li>
           <li>
             <span className={styles.subTitle}>Token Raids.</span> Token raids involve large
             investors manipulating token prices by fudding among investors or adding selling
             pressure on the tokens, which would lower costs of tokens so that they can buy a more
-            significant piece of the organization. 
+            significant piece of the organization.
           </li>
           <li>
             <span className={styles.subTitle}>extraBalance Attacks.</span> This is the opposite of
             the latter, where a whale could fud existing token holders into leaving The DAO,
-            therefore driving up token value and increasing extraBalance. 
+            therefore driving up token value and increasing extraBalance.
           </li>
           <li>
             <span className={styles.subTitle}>Split Majority Attacks.</span> Split majority attacks
             raise doubt on the ability of curators to determine whether a voting block sized 53% and
             above proposes to award 100% to its benefit. Curators are expected to do the task of
             tracking beneficiary identities, which may be a fool's task when the proposal in
-            question is broken up into multiple sub-proposals. 
+            question is broken up into multiple sub-proposals.
           </li>
           <li>
             <span className={styles.subTitle}>Concurrent Tie-down Attacks.</span> Concurrent
             tie-down attacks are a scenario where a voter's shares can be stuck in a proposal whose
             voting period lasts longer, followed by a proposal with a much shorter period. Such
             cases prevent voters voting on a proposal from splitting until the end of its voting
-            period, tying their vote up while others pull a fast one.{' '}
+            period, tying their vote up while others pull a fast one.
           </li>
         </ul>
         Ultimately, however, the fallout from The DAO will likely bring in a new era of nuanced
@@ -100,7 +107,7 @@ const Page1920 = () => {
         <div className={styles.subTitle}>Of Sybil and Consensus Mechanisms</div>
         <br />
         DAOs are susceptible to Sybil attacks. Sybil attacks are a kind of security threat on an
-        online system where individual attempts to take over a network by creating multiple
+        online system where an individual attempts to take over a network by creating multiple
         accounts, nodes, or computers. They can be as simple as one person creating multiple
         accounts on social media. In the crypto sphere, this can mean someone running various nodes
         on a blockchain network.
