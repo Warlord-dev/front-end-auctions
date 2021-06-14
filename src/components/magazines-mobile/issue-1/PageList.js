@@ -79,15 +79,15 @@ const Page76 = loadable(() => import ('./Page76'))
 const Page77 = loadable(() => import ('./Page77'))
 const Page78 = loadable(() => import ('./Page78'))
 const Page79 = loadable(() => import ('./Page79'))
-// const Page80 = loadable(() => import ('./Page80'))
-// const Page81 = loadable(() => import ('./Page81'))
-// const Page82 = loadable(() => import ('./Page82'))
-// const Page83 = loadable(() => import ('./Page83'))
-// const Page84 = loadable(() => import ('./Page84'))
-// const Page85 = loadable(() => import ('./Page85'))
-// const Page86 = loadable(() => import ('./Page86'))
-// const Page87 = loadable(() => import ('./Page87'))
-// const Page88 = loadable(() => import ('./Page88'))
+const Page80 = loadable(() => import ('./Page80'))
+const Page81 = loadable(() => import ('./Page81'))
+const Page82 = loadable(() => import ('./Page82'))
+const Page83 = loadable(() => import ('./Page83'))
+const Page84 = loadable(() => import ('./Page84'))
+const Page85 = loadable(() => import ('./Page85'))
+const Page86 = loadable(() => import ('./Page86'))
+const Page87 = loadable(() => import ('./Page87'))
+const Page88 = loadable(() => import ('./Page88'))
 
 const Backcover = loadable(() => import ('./Backcover'))
 
@@ -172,15 +172,15 @@ const PageList = [
   <Page77 />,
   <Page78 />,
   <Page79 />,
-  // <Page80 />,
-  // <Page81 />,
-  // <Page82 />,
-  // <Page83 />,
-  // <Page84 />,
-  // <Page85 />,
-  // <Page86 />,
-  // <Page87 />,
-  // <Page88 />,
+  <Page80 />,
+  <Page81 />,
+  <Page82 />,
+  <Page83 />,
+  <Page84 />,
+  <Page85 />,
+  <Page86 />,
+  <Page87 />,
+  <Page88 />,
   <Backcover />
 ]
 

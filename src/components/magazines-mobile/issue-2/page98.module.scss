@@ -1,0 +1,77 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 1460px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: #2E2C2C;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 497px;
+    height: 511px;
+    left: -61px;
+    top: 135px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 592px;
+    left: -220px;
+    top: 868px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 346px;
+    height: 44px;
+    left: 15px;
+    top: 16px;
+    
+    font-family: IM FELL French Canon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 44px;
+    
+    color: #DBFF00;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 221px;
+    height: 44px;
+    left: 15px;
+    top: 60px;
+    
+    font-family: IM FELL French Canon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 44px;
+    
+    color: #00C2FF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 278px;
+    height: 126px;
+    left: 45px;
+    top: 683px;
+    
+    font-family: IM FELL French Canon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: #00C2FF;
+  }
+}

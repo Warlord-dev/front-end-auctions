@@ -899,7 +899,7 @@ class MyDocument extends Document {
 
             @font-face {
               font-family: 'XXII-ARMY';
-              src: url("./fonts/XXIIDIRTY-ARMY.ttf");
+              src: url("./fonts/XXIISTRAIGHT-ARMY.ttf");
             }
    
             @font-face {
@@ -1212,6 +1212,12 @@ class MyDocument extends Document {
             @font-face {
               font-family: "Doctor Glitch";
               src: url("./fonts/Doctor Glitch.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Poppins-900";
+              src: url("./fonts/Poppins-Black.otf");
               font-weight: 400;
             }
 

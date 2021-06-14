@@ -1,0 +1,72 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 1045px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image2 {
+    position: absolute;
+    height: 697px;
+    left: -150px;
+    top: 0px;
+  }
+  .image3 {
+    position: absolute;
+    width: 526px;
+    height: 1052px;
+    left: -75px;
+    top: -7px;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 273px;
+    height: 180px;
+    left: 21px;
+    top: 25px;
+    
+    font-family: Electrolize;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 60px;
+    /* or 86% */
+    
+    
+    color: #3B2C9F;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 296px;
+    height: 180px;
+    left: 40px;
+    top: 806px;
+    
+    font-family: Electrolize;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+    
+    text-align: right;
+    
+    color: #FD2F81;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 479px;
+    height: 464px;
+    left: -52px;
+    top: 247px;
+  }
+}

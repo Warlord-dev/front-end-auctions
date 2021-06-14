@@ -3,111 +3,36 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 2621px;
+  height: 946px;
   overflow: hidden;
-  background-color: white;
+  background-color: #080808;
   color: white;
   display: flex;
   position: relative;
   
-  .img1{
+  .image4 {
     position: absolute;
-    width: 960px;
-    height: 2123px;
-    left: -105px;
-    top: 498px;
+    width: 581px;
+    height: 733px;
+    left: -101px;
+    top: 213px;
   }
 
-  .img2{
+  .text2 {
     position: absolute;
-    width: 881px;
-    height: 375px;
-    left: 0px;
-    top: 881px;
-
-  }
-
-  .img3{
-    position: absolute;
-    width: 478px;
-    height: 498px;
-    left: -50px;
-    top: 0px;
-  }
-
-  .video1 {
-    position: absolute;
-    width: 355px;
-    height: 493px;
-    left: 10px;
-    top: 550px;
-    object-fit: fill;
-     
-    border: 10px solid #4D3B24;
-    box-sizing: border-box;  
-  }
-
-  .img5{
-    position: absolute;
-    width: 431.92px;
-    height: 492.37px;
-    left: 42.91px;
-    top: 1164px;
-    transform: rotate(5deg);
-  }
-
-  .img6{
-    position: absolute;
-    width: 525px;
-    height: 590px;
-    left: -146px;
-    top: 1538.76px;
- 
-    transform: rotate(-5deg);
-  }
-
-  .img7{
-    position: absolute;
-    width: 408px;
-    height: 463px;
-    left: 62.35px;
-    top: 1994px;
- 
-    transform: rotate(5deg);
-  }
-  h1{
-    position: absolute;
-    width: 345px;
-    height: 188px;
-    left: 6px;
-    top: 1058px;
-
-    font-family: Mouse Deco;
+    width: 432px;
+    height: 228px;
+    left: 100px;
+    top: 22px;
+    
+    font-family: Digital Dare;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
-    line-height: 100%;
-    /* or 60px */
-
-
-    color: #41662C;
-  }
-
-  h2{
-    position: absolute;
-    width: 288px;
-    height: 188px;
-    left: 45px;
-    top: 2397px;
-
-    font-family: Cardo;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 60px;
-    line-height: 100%;
-    /* or 60px */
-
-
-    color: #FFFFFF;
+    font-size: 50px;
+    line-height: 110%;
+    /* or 55px */
+    
+    
+    color: #13BB13;    
   }
 }
