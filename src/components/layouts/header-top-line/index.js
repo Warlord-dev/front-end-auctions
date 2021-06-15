@@ -103,52 +103,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
         <Logo black={!pathname.includes('bridge')} />
-        {/* <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
-          Switch to Eth Mainnet
-        </a> */}
       </div>
       <div className={styles.rightBox}>
         <div className={cn(styles.links, isCollapse ? styles.expandedMenu : '')}>
-          {/* <Link href="/">
-          <a className={styles.link}>Auctions</a>
-        </Link>
-        <Link href="/sold">
-          <a className={styles.link}>Previously Sold</a>
-        </Link> 
-        <a
-          href="https://pode.digitalax.xyz/"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          PODE
-        </a> 
-          <a
-            href="https://medium.com/@digitalax"
-            className={styles.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Blog
-          </a>
-          <a
-            href="https://community.digitalax.xyz/"
-            className={styles.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Forum
-          </a>
-          {isShowStaking && (
-            <a
-              href="http://staking.digitalax.xyz/"
-              className={styles.link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {linkText}
-            </a>
-          )}*/}
           <Link href="https://drip.digitalax.xyz/">
             <a className={styles.link} target="_blank">
               REP YOUR STLE IRL
@@ -159,8 +116,10 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
               OG MARKETPLACE
             </a>
           </Link>
-          <Link href="/global">
-            <a className={styles.link}>Global Designer Network</a>
+          <Link href="https://designers.digitalax.xyz/global">
+            <a className={styles.link} target="_blank">
+              Global Designer Network
+            </a>
           </Link>
           <Link href="/swap">
             <a className={styles.link}>Token Swap</a>
