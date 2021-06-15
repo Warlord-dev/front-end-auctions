@@ -2,8 +2,12 @@
 
 .wrapper {
   @include magazineWrapper();
-  background-color: #33DAFF;
+  background-color: #33daff;
+  height: 3945px;
   color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
 
   .image {
     position: absolute;
