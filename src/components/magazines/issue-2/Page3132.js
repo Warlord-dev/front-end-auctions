@@ -11,7 +11,7 @@ const Page3132 = () => {
       <div className={styles.text2}>
         When it comes to digital curriencies, especially the two most prominent out there, Bitcoin
         and Ethereum, we are all far too aware of the critical headlines and contraversies around
-        both of the crypto’s carbon footprint, sustainability and the large energy consumption
+        both of the crypto’s carbon footprints, sustainability and the large energy consumption
         required in order to keep them operational, where both employ the Proof of Work (PoW)
         consensus mechanism for securing transcations on the network. PoW relies on computers
         solving puzzles, which uses electricity, and these puzzles get harder and harder overtime,
@@ -37,7 +37,7 @@ const Page3132 = () => {
       <div className={styles.text4}>
         have efficiently integrated within every aspect of what we do is powered by servers needing
         cooling mechanisms to function properly. And these companies employ thousands of employees
-        travelling to and from work each day to AC equipped office to maintain our precious
+        travelling to and from work each day to AC equipped offices to maintain our precious
         connectivity. And it’s not just that, every single picture that we save to the cloud or send
         to our friends, families has a cost associated with it. Every tweet, tiktok, discord server
         increases each of our carbon footprints. And that’s just
@@ -51,16 +51,16 @@ const Page3132 = () => {
         Thus, with this said, it’s not to say that the concerns around cryptocurrency mining
         consumption are not valid in some respects— in fact, for the better half of the entire
         industry’s existence it has been a forefront topic that some of the brightest minds have
-        actively spoken up about and starting hashing out varying solutions. No one in the crypto
-        community is trying to hide any of
+        actively spoken up about, hashing out varying solutions. No one in the crypto community is
+        trying to hide any of
       </div>
       <div className={styles.text6}>
         the concerns or costs, and in fact, if you speak with an authentic community member they
         will be more than open to discussing the topic in all of its glory. There are 4-5 years of
         documented discussions, conferences, deep academic research, and github repositories all on
         this topic. Ethereum is currently in the live process of migrating to Ethereum 2.0 and Proof
-        of Stake as a huge step environmentally conscious step as the mechanism for securing the
-        network becomes far more energy efficient.
+        of Stake as a huge environmentally conscious step as the mechanism for securing the network
+        becomes far more energy efficient.
         <br />
         <br />
         Bitcoin, unlike Ethereum, for now, and most probably as long as it continues to operate, is
@@ -78,7 +78,10 @@ const Page3132 = () => {
       <div className={styles.text8}>
         Thus, with this said, and taking a step back to look at the bigger picture, perhaps there is
         a way after all that Bitcoin can continue to operate and actually help take advantage of
-        much more wasted energy than previously thought.
+        much more wasted energy than previously thought. Even El Salvador and the presidents recent
+        announcement to enact Bitcoin as legal tender has been announced alongside the country’s
+        intention to put up a plan to offer facilities for Bitcoin mining with considerably cheap
+        and 100% renewable 0 emissions energy from their volcanos.
       </div>
       <div className={styles.text9}>
         It’s consumption shouldn’t be ignored and more active and collective steps must be taken,
@@ -97,6 +100,8 @@ const Page3132 = () => {
       <div className={styles.text10}>SUSTAINABILITY PIONEERS</div>
       <img src="./magazine/2/images/31_32_image.png" className={styles.image1} />
       <img src="./magazine/2/images/31_32_bitcoin.png" className={styles.image2} />
+      <div className={styles.middleLine1} />
+      <div className={styles.middleLine2} />
     </div>
   );
 };

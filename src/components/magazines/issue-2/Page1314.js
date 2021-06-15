@@ -53,7 +53,7 @@ const Page1314 = () => {
         However, this model in its vanilla web2 form is counter to what is required to build out an
         authentic project in crypto, NFTs, web3 etc. The mechanistic backdrop behind the model of an
         investor, or anyone, taking on the risk at the most uncertain stage thus warranting them the
-        highest reward correctly weighs out the incentives, however, where it breaks down is the
+        highest reward correctly weighs out the incentives. However, where it breaks down is the
         thinking that in a web3 environment structuring token allocations for the explicit benefit
         of VCs, the internal team, and those purely entering for the
       </div>

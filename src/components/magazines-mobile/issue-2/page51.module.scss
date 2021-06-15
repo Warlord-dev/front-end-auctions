@@ -3,12 +3,15 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2315px;
+  height: 100vh;
   background-color: white;
   color: white;
   position: relative;
   white-space: normal;
   text-align: left;
 
-  
+  .back {
+    height: 100%;
+    width: 100%;
+  }
 }

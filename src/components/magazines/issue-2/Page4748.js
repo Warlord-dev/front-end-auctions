@@ -111,7 +111,7 @@ const Page4748 = () => {
         ensure progress is actually being made.
         <br />
         <br />
-        In the end, communities that are able to build a tribe and cementing the values that they
+        In the end, communities that are able to build a tribe and cement the values that they
         espouse can harness the power of DAOs and their underlying tokenization: organizations with
         truly massive, global, and agile scale, extremely low operational costs, fully-aligned
         milestones, incentives, and motivations to pursue a shared and deeply-ingrained mission and

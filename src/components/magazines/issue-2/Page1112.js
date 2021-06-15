@@ -100,6 +100,7 @@ const Page1112 = () => {
       </div>
       <div className={styles.text6}>
         <i>
+          {' '}
           <b>
             How long do you think it will be before we see a truly decentralised database?
             Architecturally, what could this look like? We already have distributed storage but it’s
@@ -157,9 +158,9 @@ const Page1112 = () => {
         accessible iconography to web3— offering a robust collection of open source icons.
         <br />
         <br />
-        It might sound trivial, even unneccassary, but these are the small details that provide that
-        fasten the buckle for streamlining user onboarding and driving global mass adoption for
-        usage ubiquity. The project is still in its early stages but the icons look mighty fine!
+        It might sound trivial, even unneccassary, but these are the small details that fasten the
+        buckle for streamlining user onboarding and driving global mass adoption for usage ubiquity.
+        The project is still in its early stages but the icons look mighty fine!
       </div>
       <div className={styles.text14}>
         <div className={styles.subText}>Furucombo</div>
@@ -190,7 +191,7 @@ const Page1112 = () => {
         This DAO is aligned for dvancing the token engineering discipline— An emerging engineering
         discipline focused on holistic systems design and the theory, practice and tools used to
         design and verify tokenized ecosystems. TEC aims to support the efficient distribution of
-        fund to projects across the emerging field of token engineering, encouraging the robust and
+        funds to projects across the emerging field of token engineering, encouraging the robust and
         ethical design of tokenized infrastructures.
         <br />
         <br />
@@ -222,13 +223,13 @@ const Page1112 = () => {
         ZeroPool is one of a number of projects that has set out to reinstate crypto’s primary
         principles. It’s a multi-blockchain compatible DAPP that encrypts transactions in a way so
         that an external observer gets zero information out of it, and so allowing anyone to send
-        fully anonymous, cheap, non-custodial transactions. Assets deposited into ZeroPool becomes
+        fully anonymous, cheap, non-custodial transactions. Assets deposited into ZeroPool become
         genuinely private.
       </div>
       <div className={styles.text21}>
         <div className={styles.subText}>The Commons stack</div>
         The Commons Stack has built out an entire library of open-source, interoperable web3
-        components for building common-based microeconomies for support public goods. Their stack
+        components for building common-based microeconomies for supporting public goods. Their stack
         puts new tools in the hands of communities, enabling them to build out DAO structures for
         raising and allocating shared funds, carrying out transparent decision making, and
         monitoring progress in supporting the commons.

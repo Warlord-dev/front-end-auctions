@@ -2,124 +2,39 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3636px;
+  height: 3145px;
   background-color: #FFFFFF;
   color: #FFFFFF;
   position: relative;
 
-  .backOrange {
+  .back {
     position: absolute;
     width: 375px;
-    height: 3689px;
+    height: 100%;
     left: 0px;
     top: 0x;
   }
 
-  .rightImage4 {
-    left: -50px;
-    top: 3000px;
-    transform: rotate(-20deg);
+  .text1 {
     position: absolute;
-    width: 432px;
-    height: 576px;
-    z-index:0;
-  }
-
-  .logo_t {
-    position: absolute;
-    width: 401px;
-    height: 300px;
-    left: 71px;
-    top: 756px;
-
-    width: 126px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 180px;
-
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  p {
-    color: #FFFFFF;
-  }
-
-  .section1 {
-    position: absolute;
-    width: 239px;
-    height: 752px;
-    left: 71px;
+    width: 246px;
+    height: 1430px;
+    left: 25px;
     top: 59px;
 
     font-family: Inter;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
     font-size: 15px;
     line-height: 150%;
-  }
-
-  .section2 {
-    position: absolute;
-    width: 239px;
-    height: 293px;
-    left: 68px;
-    top: 1003px;
-
-    white-space: normal;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 150%;
-
-    span {
-      font-weight: 700;
-    }
-
-  }
-
-  .section3 {
-    position: absolute;
-    width: 239px;
-    height: 621px;
-    left: 71px;
-    top: 1610px;
+    /* or 22px */
 
 
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 150%;
-  }
-
-  .section4 {
-    position: absolute;
-    width: 239px;
-    height: 460px;
-    left: 71px;
-    top: 2226px;
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 150%;
-  }
-
-  .section5 {
-    position: absolute;
-    width: 239px;
-    height: 345px;
-    left: 71px;
-    top: 2700px;
-    
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 150%;
     color: #FFFFFF;
+
+    .subtitle {
+      font-weight: 600;
+      font-size: 22px;
+    }
   }
 }

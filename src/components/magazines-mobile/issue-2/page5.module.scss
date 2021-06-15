@@ -2,90 +2,106 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 1812px;
+  height: 2879px;
   background-color: white;
   color: black;
   display: flex;
   position: relative;
 
-  .backImage1 {
+  .image {
     position: absolute;
     width: 375px;
     left: 0px;
     top: 0px;
   }
-
-  .backImage2 {
+  
+  .text1 {
     position: absolute;
-    width: 375px;
-    left: 0px;
-    top: 251px;
-  }
+    width: 396px;
+    height: 171px;
+    left: -8px;
+    top: 68px;
 
-  h1 {
-    position: absolute;
-    width: 401px;
-    height: 316px;
-    left: 33px;
-    top: 292px;
-
-    font-family: Artisual Deco DEMO;
+    font-family: Silom;
     font-style: normal;
-    font-weight: normal;
-    font-size: 80px;
+    font-weight: bold;
+    font-size: 130px;
+    line-height: 120.53%;
+    /* or 157px */
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    span {
-      font-size: 37px;
-    }
+    text-align: center;
+
+    color: #00FFD1;
   }
 
-  h2 {
+  .text2 {
     position: absolute;
-    width: 401px;
-    height: 19px;
-    left: 40px;
-    top: 619px;
+    width: 339px;
+    height: 72px;
+    left: 18px;
+    top: 245px;
 
-    font-family: Artisual Deco DEMO;
+    font-family: Zilla Slab;
     font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 110%;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+
+    text-align: center;
+
+    color: #00FFD1;
   }
 
-  h3 {
+  .text3 {
     position: absolute;
-    width: 401px;
-    height: 17px;
-    left: 40px;
-    top: 646px;
-
-    font-family: Arima Madurai;
+    width: 78px;
+    height: 18px;
+    left: 18px;
+    top: 315px;
+    
+    font-family: Zilla Slab;
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
-    line-height: 110%;
-    margin-bottom: 20px;
+    line-height: 120.53%;
+    /* identical to box height, or 18px */
+    
+    
+    color: #00FFD1;
+    
   }
 
-  p {
+  .text4 {
     position: absolute;
-    width: 294px;
-    height: 1060px;
-    left: 40px;
-    top: 685px;
-
-    white-space: normal;
+    width: 246px;
+    height: 882px;
+    left: 72px;
+    top: 422px;
+    
     font-family: Inter;
-    font-weight: normal;
+    font-style: normal;
+    font-weight: 600;
     font-size: 15px;
-
-    color: #000000;
-
-    span.italicText {
-      font-style: italic;
-    }
+    line-height: 150%;
+    /* or 22px */
+    
+    
+    color: #FFFFFF;
   }
-  
+
+  .textDiv1 {
+    position: absolute;
+    width: 280px;
+    height: 2320px;
+    left: 48px;
+    top: 400px;
+    background: rgba(111, 87, 255, 0.8);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+
+  .subtitle {
+    font-weight: 600;
+    font-size: 22px;
+  }
 }

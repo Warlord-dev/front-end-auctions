@@ -1080,6 +1080,7 @@ class MyDocument extends Document {
             @font-face {
               font-family: "Ligconsolata";
               src: url("./fonts/Ligconsolata.ttf");
+            }
               
             @font-face {
               font-family: "KoHo";
@@ -1096,12 +1097,6 @@ class MyDocument extends Document {
             @font-face {
               font-family: "Bungee Shade";
               src: url("./fonts/BungeeShade-Regular.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: "Exodus Demo";
-              src: url("./fonts/ExodusDemo-Regular.ttf");
               font-weight: 400;
             }
 
@@ -1259,6 +1254,28 @@ class MyDocument extends Document {
               font-family: "Roboto";
               src: url("./fonts/Roboto-Regular.ttf");
               font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Krub";
+              src: url("./fonts/Krub-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Porter Sans Block";
+              src: url("./fonts/PorterSansBlock-Regular.woff");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Pavanam";
+              src: url("./fonts/Pavanam-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: "Sora";
+              src: url("./fonts/Sora-Regular.ttf");
             }
           `,
             }}

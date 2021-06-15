@@ -29,6 +29,17 @@
     text-align: center;
 
     color: #FFFFFF;
+
+    ul {
+      li {
+        list-style: disc;
+        margin-bottom: 1rem;
+
+        .subTitle {
+          font-size: 15px;
+        }
+      }
+    }
   }
   
   .subTitle {

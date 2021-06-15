@@ -2,58 +2,16 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2730px;
-  background-color: black;
+  background-color: #33daff;
+  height: 3945px;
   color: white;
   position: relative;
+  white-space: normal;
+  text-align: left;
 
-  h1 {
+  .image {
     position: absolute;
-    width: 217px;
-    height: 2425px;
-    left: 126px;
-    top: 100px;
-
-    font-family: A DAY WITHOUT SUN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 700px;
-    line-height: 600px;
-  }
-
-  video {
-    position: absolute;
-    width: 341px;
-    height: 316px;
-    left: 21px;
-    top: 2367px;
-    
-    font-family: A DAY WITHOUT SUN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 300px;
-    line-height: 374px;
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
-
-  h3 {
-    position: absolute;
-    width: 1041px;
-    height: 59px;
-    left: 38px;
-    top: 1072px;
-
-    font-family: Abel;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 25px;
-
-    color: #FFFFFF;
-
-    transform-origin: 0 0;
-    transform: rotate(-90deg);
+    left: -6px;
+    top: 0;
   }
 }

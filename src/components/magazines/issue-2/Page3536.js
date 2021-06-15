@@ -1,8 +1,11 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './page3536.module.scss';
 
 const Page3536 = () => {
+  const [play, setPlay] = useState(false);
+  const ref = useRef();
+
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/2/images/35_36.png" className={styles.back} />
@@ -44,9 +47,18 @@ const Page3536 = () => {
       <img src="./magazine/2/images/35_36_image1.png" className={styles.image1} />
       <img src="./magazine/2/images/35_36_image2.png" className={styles.image2} />
       <img src="./magazine/2/images/35_36_image3.png" className={styles.image3} />
-      <video autoPlay muted loop className={styles.video}>
+      <video ref={ref} muted={true} autoPlay loop className={styles.video}>
         <source src="./magazine/2/images/35_36_video.mp4" type="video/mp4" />
       </video>
+
+      <img
+        src={`./magazine/2/images/35_36_${!play ? 'play' : 'pause'}.png`}
+        className={styles.play}
+        onClick={() => {
+          setPlay(!play);
+          ref.current.muted = play;
+        }}
+      />
     </div>
   );
 };

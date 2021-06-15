@@ -93,6 +93,13 @@
     line-height: 24px;
 
     color: #FFFFFF;
+
+    ul {
+      li {
+        list-style: disc;
+        margin-left: 1.5rem;
+      }
+    }
   }
 
   .image1 {
@@ -119,5 +126,13 @@
     height: 569px;
     left: 0px;
     top: 562px;
+  }
+
+  .play {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    left: 903px;
+    top: 585px;
   }
 }

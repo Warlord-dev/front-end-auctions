@@ -49,9 +49,11 @@ const Page3738 = () => {
         <br />
         <br />
         As a very special first initiation, each designer in our network has crafted a digital
-        material, pattern, texture print that they personally minted on-chain, with their wallet
-        addresses, through the DIGITALAX Polygon 1155 NFT smart contracts, open sourcing this into
-        our material, texture, pattern libraries.
+        material, pattern, texture print that they are personally minting on-chain, with their
+        wallet addresses, through the DIGITALAX Polygon 1155 NFT smart contracts, open sourcing this
+        into our material, texture, pattern libraries. Their contribution will soon be visible on
+        the DIGITALAX{' '}
+        <a href="https://designers.digitalax.xyz/"> Global Designer Network portal. </a>
         <br />
         <br />
         This first step is all about enabling the commons. A commons cannot exist if we ignore the
@@ -73,7 +75,7 @@ const Page3738 = () => {
         ecosystem in general.
         <br />
         <br />
-        Each FGO 1155 NFT, by the Global Designer Network, has been minted under the DIGITALAX
+        Each FGO 1155 NFT, by the Global Designer Network, is minted under the DIGITALAX{' '}
         <a href="https://digitalax.xyz/fgo-2">
           Fractional Garment Ownership License and Distribution Standard 1.2
         </a>{' '}
@@ -83,13 +85,13 @@ const Page3738 = () => {
         <b>
           This is just the start, where eventually, the designer network and on-chain libraries will
           open up points of entry and capacity for anyone to engage fully in dynamic decentralised
-          commerce, driven by ubiquitous digital fashion and cross digital-physical realms.{' '}
+          commerce, driven by ubiquitous digital fashion and cross digital-physical realms.
         </b>
         <br />
         <br />
         These FGO NFTs will be leveraged under the FGO open source licensing standards, where
         DIGITALAX is taking the first initiative of proving out the model cross-realm (digi-fizzy)
-        in our hybrid DRIP digital-physical fashion line— incorparating these patterns and prints
+        in our hybrid DRIP digital-physical fashion line— incorperating these patterns and prints
         with a royalty distribution of 15% back to the OG designers behind the modular components
         that will be incoporated across different master physical garments. The master physical
         garment will be minted as a 721 NFT with the 1155 patterns incorporated attached to it under

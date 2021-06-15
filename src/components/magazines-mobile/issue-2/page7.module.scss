@@ -2,7 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3120px;
+  height: 2599px;
   background-color: white;
   color: black;
   position: relative;
@@ -18,31 +18,36 @@
     transform: scale(1.05, 2.4);
   }
 
-  p {
+  .textDiv1 {
     position: absolute;
+    width: 280px;
+    height: 2403px;
+    left: 46px;
+    top: 98px;
+
+    background: rgba(255, 138, 0, 0.8);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 246px;
+    height: 1166px;
+    left: 65px;
+    top: 133px;
+
     font-family: Inter;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
     font-size: 15px;
-    line-height: 22px;
-    color: #000000;
+    line-height: 150%;
+    /* or 22px */
 
-    &.section1 {
-      width: 294px;
-      height: 1800px;
-      left: 42px;
-      top: 41px;
-    }
 
-    &.section2 {
-      width: 294px;
-      height: 1108px;
-      left: 42px;
-      top: 1722px;
-    }
+    color: #FFFFFF;
 
-    span {
-      font-weight: 700;
+    .subText {
+      font-weight: 800;
+      font-size: 22px;
     }
   }
 }

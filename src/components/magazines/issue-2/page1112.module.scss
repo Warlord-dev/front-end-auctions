@@ -391,7 +391,7 @@
     width: 265px;
     height: 417px;
     left: 1628px;
-    top: 118px;
+    top: 110px;
 
     font-family: Mada;
     font-style: normal;
@@ -435,6 +435,10 @@
     height: 87px;
     left: 1021px;
     top: 721px;
+
+    &:hover {
+      transform: scale(1.08);
+    }
   }
 
   .link2 {
@@ -443,6 +447,10 @@
     height: 87px;
     left: 1317px;
     top: 721px;
+
+    &:hover {
+      transform: scale(1.08);
+    }
   }
 
   .link3 {
@@ -451,6 +459,10 @@
     height: 148px;
     left: 1721px;
     top: 541px;
+
+    &:hover {
+      transform: scale(1.08);
+    }
   }
 
   .link4 {
@@ -459,6 +471,10 @@
     height: 73px;
     left: 1022px;
     top: 1204px;
+
+    &:hover {
+      transform: scale(1.08);
+    }
   }
 
   .link5 {
@@ -467,6 +483,10 @@
     height: 92px;
     left: 1800px;
     top: 13px;
+
+    &:hover {
+      transform: scale(1.08);
+    }
   }
 
   .link6 {
@@ -475,5 +495,9 @@
     height: 171px;
     left: 1021px;
     top: 256px;
+
+    &:hover {
+      transform: scale(1.08);
+    }
   }
 }

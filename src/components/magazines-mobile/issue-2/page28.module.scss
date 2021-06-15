@@ -3,109 +3,90 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3302px;
+  height: 3741px;
   background-color: white;
   color: black;
   position: relative;
   white-space: normal;
   text-align: left;
 
-  video {
+  .back {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: 500px;
-    top: 3500px;
-    width: 4000px;
-    height: 500px;
-    object-fit: cover;
-    object-position:bottom;
-    transform-origin: 0 500px;
-    transform: rotate(-90deg);
   }
 
-  h1 {
+  .text1 {
     position: absolute;
-    width: 297px;
-    height: 152px;
-    left: 33px;
-    top: 109px;
+    width: 284.5px;
+    height: 493.2px;
+    left: 32px;
+    top: 180.89px;
 
-    font-family: Comics Tricks;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 38px;
-    line-height: 100%;
-    text-align: right;
-
-    color: #000000;
-  }
-  
-  h2 {
-    position: absolute;
-    width: 225px;
-    height: 120px;
-    left: 57px;
-    top: 1767px;
-    
-    font-family: Inter;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 150%;
-    /* or 60px */
-    
-    
-    color: #000000;
-  }
-
-  p {
-    position: absolute;
-    font-family: Joti One;
+    font-family: Ayuthaya;
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
-    line-height: 150%;    
-    text-align: right;
-    color: #000000;
+    line-height: 150%;
+    /* or 25px */
 
-    &.text1 {
-      width: 279px;
-      height: 339px;
-      left: 51px;
-      top: 291px;
-    }
+    color: #ffffff;
 
-    &.text2 {
-      width: 260px;
-      height: 444px;
-      left: 70px;
-      top: 1043px;  
-    }
-
-    &.text3 {
-      width: 276px;
-      height: 339px;
-      left: 56px;
-      top: 1898px;
-      
-      font-family: Inter;
-      text-align: left;
-
-    }
-  }
-  
-  .image1 {
-    position: absolute;
-    width: 116px;
-    height: 423px;
-    left: 125px;
-    top: 2894px;
+    transform: rotate(-3deg);
   }
 
-  .image2 {
+  .text2 {
     position: absolute;
-    width: 855;
-    height: 1291px;
-    left: -400px;
-    top: -20px;
+    width: 297.38px;
+    height: 658.34px;
+    left: 32px;
+    top: 1008.74px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+    color: #ffffff;
+
+    transform: rotate(-4deg);
+  }
+
+  .text3 {
+    position: absolute;
+    width: 224.17px;
+    height: 152px;
+    left: 66px;
+    top: 1562.32px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+    color: #ffffff;
+
+    transform: rotate(-7deg);
+  }
+
+  .text4 {
+    position: absolute;
+    width: 286.73px;
+    height: 257.11px;
+    left: 44px;
+    top: 2288px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+    color: #ffffff;
   }
 }
