@@ -6,11 +6,11 @@ const Page123124 = () => {
   return (
     <div className={styles.wrapper}>
        <Link href="www.instagram.com/pr.esc/"><a>
-       <img src="./magazine/1/123_124/image1.png" className={styles.image1} />
+       <img src="./magazine/2/images/123_124/image1.png" className={styles.image1} />
        </a>
        </Link>
        <video className={styles.image2} muted loop autoPlay>
-        <source src="./magazine/1/123_124/video1.mov" type="video/mp4" />
+        <source src="./magazine/2/images/123_124/video1.mov" type="video/mp4" />
        </video>
        <Link href="www.instagram.com/pr.esc/"><a>
        <p className={styles.text3}>Nicole Savitskaya</p>

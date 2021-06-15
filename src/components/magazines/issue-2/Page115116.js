@@ -5,14 +5,14 @@ import Link from 'next/link';
 const Page115116 = () => {
   return (
     <div className={styles.wrapper}>
-       <img src="./magazine/1/115_116/image1.png" className={styles.image1} />
-       <img src="./magazine/1/115_116/image2.png" className={styles.image2} />
+       <img src="./magazine/2/images/115_116/image1.png" className={styles.image1} />
+       <img src="./magazine/2/images/115_116/image2.png" className={styles.image2} />
        <div className={styles.image3}></div>
        <div className={styles.image4}></div>
        <div className={styles.image5}></div>
-       <img src="./magazine/1/115_116/image3.png" className={styles.image6} />
-       <img src="./magazine/1/115_116/image4.png" className={styles.image7} />
-       <img src="./magazine/1/115_116/image5.png" className={styles.image8} />
+       <img src="./magazine/2/images/115_116/image3.png" className={styles.image6} />
+       <img src="./magazine/2/images/115_116/image4.png" className={styles.image7} />
+       <img src="./magazine/2/images/115_116/image5.png" className={styles.image8} />
        <p className={styles.text1}>3021-humanity, having finally destroyed the earth, completely moved the conscious of the surviving population to a new virtual world. But after a while, chaos ensured and only those most able to adapt to the difficult conditions survived. On the ruins of this digital world, among the deserts and broken textures, the adapted population dwells, utilising the unique technologies to survive.
 <br/><br/>
 111Corp - the company that creates the advanced technologies in this new reality. 

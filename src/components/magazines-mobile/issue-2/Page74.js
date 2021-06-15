@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Page74 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/79_80/image2.png" className={styles.image2} />
+      <img src="./magazine/2/images/79_80/image2.png" className={styles.image2} />
       <Link href="https://www.instagram.com/ditadivita/"><a>
           <p className={styles.text3}>DITA</p>
         </a>

@@ -4,7 +4,7 @@ import styles from './page88.module.scss'
 const Page88 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/95_96/right.png" className={styles.rightBack} />
+      <img src="./magazine/2/images/95_96/right.png" className={styles.rightBack} />
 
       <div className={styles.text3}>
       Sheantoz Story

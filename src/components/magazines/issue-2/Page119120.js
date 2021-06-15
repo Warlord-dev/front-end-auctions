@@ -5,9 +5,9 @@ import Link from 'next/link';
 const Page119120 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/119_120/image1.png" className={styles.image1} />
+      <img src="./magazine/2/images/119_120/image1.png" className={styles.image1} />
        <video className={styles.image2} muted loop autoPlay>
-        <source src="./magazine/1/119_120/video1.mp4" type="video/mp4" />
+        <source src="./magazine/2/images/119_120/video1.mp4" type="video/mp4" />
        </video>
        <Link href="http://instagram.com/mysecunha"><a className={styles.text1}>
        Myse Cunha

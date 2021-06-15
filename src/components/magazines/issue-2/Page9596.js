@@ -4,8 +4,8 @@ import styles from './page9596.module.scss';
 const Page9596 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/95_96/left.png" className={styles.leftBack} />
-      <img src="./magazine/1/95_96/right.png" className={styles.rightBack} />
+      <img src="./magazine/2/images/95_96/left.png" className={styles.leftBack} />
+      <img src="./magazine/2/images/95_96/right.png" className={styles.rightBack} />
       <div className={styles.text1}>
       BLADE RUNWAY
       </div>

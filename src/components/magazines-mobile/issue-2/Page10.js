@@ -4,38 +4,49 @@ import styles from './page10.module.scss'
 const Page10 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.pageBack}></div>
-      <h1>
-        The Private Key Rugpull
-      </h1>
-      <h2>
-        Too many of us onboarding into crypto find custody one of the biggest challenges. 
-        Where do you actually go to store your crypto assets? For most newbies it’s not a decentralised web3 wallet like Metamask, 
-        which can be incredibly daunting to set up and maintain, but rather, it’s a hybrid web2 centralised service provider, like Coinbase. 
-        <br />
-        The messaging and marketing of these centralised entities convinces us that they are providing the scaffolding and rails for a more secure, 
-        comfortable and familiar experience. But, once you are in the door and have put your money into the system that is where the Rugpull happens. 
-        Suddenly, you find customer support tickets unanswered for days, weeks and months, and, 
-        if you make a mistake because of faulty UX, it’s completely on you —if your complaints are even acknowledged. 
-      </h2>
-      <h3>
-        Not to say that Coinbase, or any other non-scammy overly regulated centralised crypto exchange and custody provider, hasn’t immensely helped in moving the entire industry forward and bringing the world’s attention to just how revolutionary web3 and digital money is— but, for each case, there are huge caveats in the way that they currently operate that really should be actively addressed and moved forward towards resolution. 
-        <br /><br />
-        One of the biggest of these caveats all comes down to custody. For a lot of these centralised wallet providers your crypto isn’t actually yours. It operates simliar to a bank where your money isn’t really sitting in your account, it’s rather just a ledger on a screen, appearing in your possession through the UI, but actually, it’s being most likely leveraged up and rehypothecated for growing someone else’s balance sheet. 
-        <br /><br />
-        If you don’t fully own your private keys (That 12-24 secret key phrase), then the crypto is not in your custody. Your experience and your money exist at the whims of non-existent customer support, opaque company policies, risk mitigating lawyers and faulty UI where dev teams have no stake to make sure to align with the urgency of your agency and ownership. They pretty much own you. 
-        <br /><br />
-        This might sound likey hyperbole, but, actually it’s painfully real. Imagine you own a substantial amount of a crypto asset and want to keep it somewhere reliable and secure— say, for example, your Coinbase wallet. 
-      </h3>
-      <h4>
-        This is exactly what happened to a San Francisco based tech enthusiast back in 2018. They had purchased with their friend a large amount of HOLO tokens and like most of us are led to believe that any token can be sent to be stored in our wallets. Even if Coinbase, in this case, doesn’t support trading of the asset. 
-        <br /><br />
-        However, to their shock, sending HOLO token to their Coinbase wallet has resulted in an on-going 3 year battle with Coinbase to recover over $800,000 of a token that they rightfully  own and that keeps gaining value. Because Coinbase does not officialy support HOLO they refuse to transfer the funds still sitting in the same wallet, but not accessible for withdrawal through the UI. It’s been years of customer support tickets, direct conversations with members from the core team and a pervasive attitude of telling them that they don’t actually own those crypto assets anymore. Engineers have looked into it and it’s not a Smart Contract or technical obstacle, rather a failure of will. 
-        <br /><br />
-        Even Binance has a similiar policy, where if you send the wrong type of crypto asset to a Binance deposit address you can only recover the funds if you are buddies with the CEO, pay at least a $10,000 fine and sign an NDA swearing to not disclose to anyone that Binance helped you resecure your own assets. 
-        <br /><br />
-        So, in closing, despite what might seem as sufficient on-ramps into crypto and web3, we are still really far from what is so often talked about as a “fully permissionless peer to peer economy”.  Becareful out there.  
-      </h4>
+      <img src="./magazine/2/images/11_12/mobile/image1.png" className={styles.image1} />
+      <img src="./magazine/2/images/11_12/mobile/image2.png" className={styles.image9} />
+      <div className={styles.image10}></div>
+      <p className={styles.text1 }>hybrid multimodal database to bridge web2 into web3</p>
+      <div className={styles.image2}></div>
+      <div className={styles.image3}></div>
+      <div className={styles.image4}></div>
+      <div className={styles.image5}></div>
+      <div className={styles.image6}></div>
+      <div className={styles.image7}></div>
+      <div className={styles.image8}></div>
+      <p className={styles.text2 }>Why was Fauna founded? What motivates the team?</p>
+      <p className={styles.text3 }>Fauna was created with the mission to make working with operational data productive, scalable, and secure for every software development team. Our founders built the distributed storage systems that scaled Twitter, and set out to create the “data API” that they would've wanted. We built on that foundation to deliver the serverless database to power the next generation of applications.</p>
+      <p className={styles.text4 }>What makes Fauna different?</p>
+      <p className={styles.text5 }>Fauna is reimagining the database. Much like what Twilio and Stripe did for communication
+and payment systems respectively, with their API-centric approach, Fauna is a Data API for
+modern application development. It is a disruptive, new, serverless database written from
+the ground up specifically for modern application development environments and workflows.
+<br/><br/>
+Fauna offers a flexible, developer-friendly, transactional database available as a secure, cloud API with native GraphQL. With an innovative query model that lets you encapsulate business logic into programmable functions executed close to your data, Fauna boosts application performance and accelerates development. With Fauna, you never again worry about database provisioning, maintenance, scaling, sharding, replication, or correctness. If you're building fullstack applications with serverless components and a modern programming environment, you will love Fauna even more!
+</p>
+      <p className={styles.text6 }>What differences do you think better databases will make for people? Can you give some examples of types of people and how it impacts them?</p>
+      <p className={styles.text7 }>
+When it comes to people that are users of applications, better databases will enable more interactive digital experiences, with faster performance, and more reliability in their interactions. E.g. You never want to see your bank balance to be inaccurate! But you do want your applications to be more responsive, without those hourglasses, waiting for them to load!
+
+Looking at the same question from a developer perspective, better databases will save hours of work, and frustration, allowing developers to focus on what matters to them the most -- building more interesting applications for their end users. Better databases, like Fauna, enable developers to simplify code, reduce complexity and ship faster! Ultimately, more productive and powerful databases will allow for the creation of totally new businesses, not just make existing applications a little bit better.
+</p>
+      <p className={styles.text8 }>How is Fauna built to help other companies, projects be ready for the metaverse? What is unique about Fauna that supports a transition and existence to web3 and full digitally native immersivity?</p>
+      <p className={styles.text9 }>Because Fauna is globally distributed and serverless, data stored in it is essentially ubiquitous and accessible with low latency from anywhere, including both server and client applications. This makes it a great match for decentralized applications that have no central control and are accessed directly by end users. Fauna provides a true data fabric that is fast, secure, and universally available that can be used to augment contractual and decentralized data on blockchains. Like thegraph.com, Fauna offers a GraphQL interface making it easy to integrate into GraphQL-based applications and services.
+</p>
+      <p className={styles.text10 }>What doesn’t work with databases today? Why aren’t more people focused on solving these problems?</p>
+      <p className={styles.text11 }>
+RDBMS systems designed in the 1970s did not scale. To solve this problem, NoSQL databases sacrificed correctness and flexibility, while NewSQL databases sacrificed operational simplicity and performance. Productivity suffered. As application architecture evolves to embrace the cloud APIs, serverless functions, and microservices, you need a database that is always correct, always fast, and works frictionlessly with your stack.<br/><br/>
+
+Databases are hard to build, and even harder to gain adoption. We’ve seen a lot of attempts at improving databases, however, these tend to be serving niche use cases or are incremental improvements to old guard databases like Postgres or MySQL.
+</p>
+      <p className={styles.text12 }>With a lot of projects starting to move into the web3 space, how do you see Fauna continuing to adapt and advance to meet these hybrid needs, especially maintaining reliable security?</p>
+      <p className={styles.text13 }>
+Because it is an API and not a traditional database or a database-as-a-service, Fauna has a very robust security model that makes it safe to access from client devices over the public internet. Over time we intend to deliver additional security and encryption features that will be useful for distributing private data to decentralized applications.</p>
+        <p className={styles.text14 }>How long do you think it will be before we see a truly decentralised database? Architecturally, what could this look like? We already have distributed storage but it’s definitely not on a scale robust or flexible enough to be considered a true database.</p>
+        <p className={styles.text15 }>
+ Most databases rely on a small group of physical servers to act as the single source of truth; if any of these servers have a problem the data becomes unavailable or corrupt. Fauna is not like this; rather it is architected with unique distributed algorithms that do not rely on centralization of any kind, so it can survive tolerate the kinds of failures and partial connectivity that are common in both the distributed cloud as well as decentralized apps. It’s conceptually possible to evolve a system like Fauna to work in a fully decentralized way and perhaps someday we will.</p>
+ <img src="./magazine/2/images/11_12/mobile/image13.png" className={styles.image13} />
     </div>
   )
 }

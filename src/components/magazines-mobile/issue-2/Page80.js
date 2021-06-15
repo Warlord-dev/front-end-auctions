@@ -5,11 +5,11 @@ const Page80 = () => {
   return (
     <div className={styles.wrapper}>
       <video className={styles.image3} muted loop autoPlay>
-        <source src="./magazine/1/85_86/video1.mp4" type="video/mp4" />
+        <source src="./magazine/2/images/85_86/video1.mp4" type="video/mp4" />
       </video>
-      <img src="./magazine/1/85_86/image4.png" className={styles.image6} />
-      <img src="./magazine/1/85_86/image4.png" className={styles.image7} />
-      <img src="./magazine/1/85_86/image4.png" className={styles.image8} />
+      <img src="./magazine/2/images/85_86/image4.png" className={styles.image6} />
+      <img src="./magazine/2/images/85_86/image4.png" className={styles.image7} />
+      <img src="./magazine/2/images/85_86/image4.png" className={styles.image8} />
       <p className={styles.text2}>Gatekeeper Gardens</p>
       <p className={styles.text3}>Sifting through the web2 weeds— spotlighting stories from the walled gardens where they love to tangle and lurk. </p>
       <p className={styles.text4}>SendinBlue</p>

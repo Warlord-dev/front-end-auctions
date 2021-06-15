@@ -85,12 +85,12 @@ const Page6566 = () => {
   };
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/65_66/image1.png" className={styles.image1} />
+      <img src="./magazine/2/images/65_66/image1.png" className={styles.image1} />
       <div className={styles.image2}></div>
       <div className={styles.image3}></div>
       <div className={styles.image4}></div>
-      <img src="./magazine/1/65_66/image8.gif" className={styles.image11} />
-      <img src="./magazine/1/65_66/image2.png" className={styles.image5} />
+      <img src="./magazine/2/images/65_66/image8.gif" className={styles.image11} />
+      <img src="./magazine/2/images/65_66/image2.png" className={styles.image5} />
       <button 
        className={styles.image12}
         onClick={() => {
@@ -98,7 +98,7 @@ const Page6566 = () => {
         }}
       >
         {
-          <img src={`./magazine/1/65_66/${isPlayingAudio1 ? 'image9.svg' : 'image11.png'}`} /> 
+          <img src={`./magazine/2/images/65_66/${isPlayingAudio1 ? 'image9.svg' : 'image11.png'}`} /> 
           
         }
       </button>
@@ -110,7 +110,7 @@ const Page6566 = () => {
         }}
       >
         {
-          <img src={`./magazine/1/65_66/${isPlayingAudio2 ? 'image10' : 'image3'}.png`} className="w-full h-full"  /> 
+          <img src={`./magazine/2/images/65_66/${isPlayingAudio2 ? 'image10' : 'image3'}.png`} className="w-full h-full"  /> 
         }
       </button>
       <Link href="https://soundcloud.com/heapons/witch-encounter-see-me-now"><a>
@@ -118,39 +118,39 @@ const Page6566 = () => {
       </a>
       </Link>
       <Link href="https://soundcloud.com/heapons/sets/timmyturnersgranddad"><a>
-      <img src="./magazine/1/65_66/image5.png" className={styles.image8} />
+      <img src="./magazine/2/images/65_66/image5.png" className={styles.image8} />
       </a>
       </Link>
       <Link href="https://soundcloud.com/heapons/the-finalities"><a>
-      <img src="./magazine/1/65_66/image6.png" className={styles.image9} />
+      <img src="./magazine/2/images/65_66/image6.png" className={styles.image9} />
       </a>
       </Link>
       <Link href="https://soundcloud.com/heapons/sparta-tetris"><a>
-      <img src="./magazine/1/65_66/image7.png" className={styles.image10} />
+      <img src="./magazine/2/images/65_66/image7.png" className={styles.image10} />
       </a>
       </Link>
       <p className={styles.text2}>Witch Encounter & See Me Now have the same tempo</p>
       <p className={styles.text3}>Witch Encounter & See Me Now have the same tempo</p>
       <p className={styles.text4}>Witch Encounter & See Me Now have the same tempo</p>
       <p className={styles.text5}>I mean, it's true, right?</p>
-      <img src="./magazine/1/65_66/image4.png" className={styles.image7} />
+      <img src="./magazine/2/images/65_66/image4.png" className={styles.image7} />
       <p className={styles.text6}>Check Out More of Heapons Music + Music Mods <Link href="https://soundcloud.com/heapons"><a target="_blank" className={styles.text9}>here!</a></Link> </p>
       <p className={styles.text7}>Heapons started out with MIDISlaps (downloading midis from the internet and slapping soundfonts in them) before moving on to learn more about music theory. </p>
       <p className={styles.text8}>Why does Heapons do it? Because he enjoys making melody swaps. Just like how SiIvaGunner does it. </p>
       <audio ref={audioRef1} loop>
-        <source src="./magazine/1/65_66/audio2.mp3" type="audio/mpeg" />
+        <source src="./magazine/2/images/65_66/audio2.mp3" type="audio/mpeg" />
       </audio>
       <audio ref={audioRef2} loop>
-        <source src="./magazine/1/65_66/audio1.mp3" type="audio/mpeg" />
+        <source src="./magazine/2/images/65_66/audio1.mp3" type="audio/mpeg" />
       </audio>
       <audio ref={audioRef3} loop>
-        <source src="./magazine/1/65_66/audio3.mp3" type="audio/mpeg" />
+        <source src="./magazine/2/images/65_66/audio3.mp3" type="audio/mpeg" />
       </audio>
       <audio ref={audioRef4} loop>
-        <source src="./magazine/1/65_66/audio4.mp3" type="audio/mpeg" />
+        <source src="./magazine/2/images/65_66/audio4.mp3" type="audio/mpeg" />
       </audio>
       <audio ref={audioRef5} loop>
-        <source src="./magazine/1/65_66/audio5.mp3" type="audio/mpeg" />
+        <source src="./magazine/2/images/65_66/audio5.mp3" type="audio/mpeg" />
       </audio>
       <button 
        className={styles.image13}
@@ -159,7 +159,7 @@ const Page6566 = () => {
         }}
       >
         {
-          <img src={`./magazine/1/65_66/${isPlayingAudio3 ? 'image17.png' : 'image15.png'}`} /> 
+          <img src={`./magazine/2/images/65_66/${isPlayingAudio3 ? 'image17.png' : 'image15.png'}`} /> 
           
         }
       </button>
@@ -171,7 +171,7 @@ const Page6566 = () => {
         }}
       >
         {
-          <img src={`./magazine/1/65_66/${isPlayingAudio4 ? 'image18.png' : 'image14.png'}`} /> 
+          <img src={`./magazine/2/images/65_66/${isPlayingAudio4 ? 'image18.png' : 'image14.png'}`} /> 
           
         }
       </button>
@@ -183,7 +183,7 @@ const Page6566 = () => {
         }}
       >
         {
-          <img src={`./magazine/1/65_66/${isPlayingAudio5 ? 'image19.png' : 'image16.png'}`} /> 
+          <img src={`./magazine/2/images/65_66/${isPlayingAudio5 ? 'image19.png' : 'image16.png'}`} /> 
           
         }
       </button>

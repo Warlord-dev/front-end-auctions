@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Page106 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/115_116/image6.png" className={styles.image1} />
+      <img src="./magazine/2/images/115_116/image6.png" className={styles.image1} />
       <p className={styles.text1}>Digital Desert C</p>
       <p className={styles.text2}>Digital Desert Camo Equipment 111 (DDC</p>
       <p className={styles.text3}>Digital Des</p>
@@ -15,7 +15,7 @@ const Page106 = () => {
       <p className={styles.text7}>Digital Desert Camo Equipment 111 (DDCE 111)</p>
       <p className={styles.text8}>Digital Desert Camo E</p>
       <p className={styles.text9}>Digital Desert Camo Equipment 111 (DDCE 111)</p>
-      <img src="./magazine/1/115_116/image2.png" className={styles.image2} />
+      <img src="./magazine/2/images/115_116/image2.png" className={styles.image2} />
       <Link href="https://www.instagram.com/errorillusion/"><a className={styles.text10}>
        Max Dyrman
         </a>

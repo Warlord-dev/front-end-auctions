@@ -4,7 +4,7 @@ import styles from './page78.module.scss'
 const Page78 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/83_84/image2.png" className={styles.image1} />
+      <img src="./magazine/2/images/83_84/image2.png" className={styles.image1} />
       <div className={styles.image3}></div>
       <p className={styles.text2}>If this is what democratization looks like under Web2, how worse can dictatorship possibly be when the centralized internet platforms hold all the aces anyway?
       <br/><br/>

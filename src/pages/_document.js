@@ -44,6 +44,118 @@ class MyDocument extends Document {
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y06VSWY6VY"></script>
           <script dangerouslySetInnerHTML={{ __html: gaScriptText }} />
           {/* {this.getPreloadFontsLinks()} */}
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Rosarivo"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Bungee Inline"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=News Cycle"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Bellota Text"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lexend Giga"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Abel"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Beth Ellen"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Jockey One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Jacques Francois"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Chivo"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Chilanka"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Monoton"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Antic Didone"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Anton"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Antonio"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Homenaje"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Cinzel"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Carme"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Corben"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Sniglet"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poor+Story"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Quando"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Purple+Purse"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Qwigley"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Flamenco"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poller+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Galada"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fjalla+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Kavoon"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Electrolize"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Encode+Sans"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Space+Mono"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Marck+Script"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Salsa"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Goblin+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Istok+Web"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Khand"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jaldi"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Forum"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Englebert"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=DM+Mono"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Reem+Kufi"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Erica+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jolly+Lodger"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Mansalva"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Arvo"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Krub"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=B612+Mono"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Averia+Libre"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Bayon"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rosarivo"></link>
           <link
             rel="stylesheet"
@@ -70,80 +182,13 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Carme"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Corben"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poor+Story"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quando"></link>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Purple+Purse"
-          ></link>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow"
-          ></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Qwigley"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Flamenco"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poller+One"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Galada"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fjalla+One"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavoon"></link>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon"
-          ></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Electrolize"></link>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps"
-          ></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Encode+Sans"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono"></link>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Marck+Script"
-          ></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Salsa"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Goblin+One"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Khand"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jaldi"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Forum"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Englebert"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Erica+One"></link>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Jolly+Lodger"
-          ></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rosarivo"></link>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Bungee Inline"
-          ></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=News Cycle"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bellota Text"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend Giga"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Beth Ellen"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jockey One"></link>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Jacques Francois"
-          ></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chivo"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chilanka"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic Didone"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antonio"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Homenaje"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Carme"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Corben"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Miltonian"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Pacifico"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2"></link>
+          
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -378,6 +423,11 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Metal Lord';
+              src: url("./fonts/Metal-Lord.ttf");
+            }
+
+            @font-face {
               font-family: 'PLAYPULL';
               src: url("./fonts/PLAYPULL_Demo.ttf");
               font-weight: 400;
@@ -432,6 +482,11 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Asdonuts';
               src: url("./fonts/Asdonuts.ttf");
+            }
+
+            @font-face {
+              font-family: 'Ode to Idle Gaming';
+              src: url("./fonts/Ode to Idle Gaming.otf");
             }
           
             @font-face {
@@ -574,11 +629,6 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Finger Paint';
               src: url("./fonts/FingerPaint-Regular.ttf");
-            }
-              
-            @font-face {
-              font-family: 'B612 Mono';
-              src: url("./fonts/B612Mono-Regular.ttf");
             }
                 
             @font-face {
@@ -1023,6 +1073,11 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: "Chinese Dragon";
+              src: url("./fonts/ChineseDragon.ttf");
+            }
+
+            @font-face {
               font-family: "Ligconsolata";
               src: url("./fonts/Ligconsolata.ttf");
             }
@@ -1064,12 +1119,6 @@ class MyDocument extends Document {
             }
 
             @font-face {
-              font-family: "Chinese Dragon";
-              src: url("./fonts/ChineseDragon.woff");
-              font-weight: 400;
-            }
-
-            @font-face {
               font-family: "Mansalva";
               src: url("./fonts/Mansalva-Regular.ttf");
               font-weight: 400;
@@ -1084,18 +1133,6 @@ class MyDocument extends Document {
             @font-face {
               font-family: "Pacifico";
               src: url("./fonts/Pacifico-Regular.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: "Baloo Tammudu";
-              src: url("./fonts/BalooTammudu2-Regular.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: "Miltonian";
-              src: url("./fonts/Miltonian-Regular.ttf");
               font-weight: 400;
             }
 

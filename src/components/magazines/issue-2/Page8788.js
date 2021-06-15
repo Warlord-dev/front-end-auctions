@@ -39,36 +39,36 @@ const Page8788 = () => {
   }
     return (
       <div className={styles.wrapper}>
-      <img src="./magazine/1/87_88/image1.png" className={styles.image1} />
-      <img src="./magazine/1/87_88/image2.png" className={styles.image2} />
-      <img src="./magazine/1/87_88/image3.png" className={styles.image3} />
-      <img src="./magazine/1/87_88/image4.png" className={styles.image4} />
-      <img src="./magazine/1/87_88/image5.png" className={styles.image5} />
-      <img src="./magazine/1/87_88/image7.gif" className={styles.image6} />
-      <img src="./magazine/1/87_88/image8.png" className={styles.image6} />
+      <img src="./magazine/2/images/87_88/image1.png" className={styles.image1} />
+      <img src="./magazine/2/images/87_88/image2.png" className={styles.image2} />
+      <img src="./magazine/2/images/87_88/image3.png" className={styles.image3} />
+      <img src="./magazine/2/images/87_88/image4.png" className={styles.image4} />
+      <img src="./magazine/2/images/87_88/image5.png" className={styles.image5} />
+      <img src="./magazine/2/images/87_88/image7.gif" className={styles.image6} />
+      <img src="./magazine/2/images/87_88/image8.png" className={styles.image6} />
       <div className={styles.image7}>
         <div className={styles.image9}>
         <video ref={ref1} className={styles.image8} muted autoPlay loop>
-          <source src="./magazine/1/87_88/video1.mp4" type="video/mp4" />
+          <source src="./magazine/2/images1/87_88/video1.mp4" type="video/mp4" />
         </video>
         </div>
-        <button onClick={()=>{playVideo1()}}><img src={`./magazine/1/87_88/${isPlaying1 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>
+        <button onClick={()=>{playVideo1()}}><img src={`./magazine/2/images/87_88/${isPlaying1 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>
       </div>
       <div className={styles.image10}>
         <div className={styles.image11}>
         <video ref={ref2} className={styles.image12} muted autoPlay loop>
-          <source src="./magazine/1/87_88/video2.mp4" type="video/mp4" />
+          <source src="./magazine/2/images/87_88/video2.mp4" type="video/mp4" />
         </video>
         </div>
-        <button onClick={()=>{playVideo2()}}><img src={`./magazine/1/87_88/${isPlaying2 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>
+        <button onClick={()=>{playVideo2()}}><img src={`./magazine/2/images/87_88/${isPlaying2 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>
       </div>
       <div className={styles.image13}>
       <div className={styles.image18}>
         <video ref={ref3} className={styles.image19} muted autoPlay loop>
-          <source src="./magazine/1/87_88/video3.mp4" type="video/mp4" />
+          <source src="./magazine/2/images/87_88/video3.mp4" type="video/mp4" />
         </video>
         </div>
-        <button onClick={()=>{playVideo3()}}><img src={`./magazine/1/87_88/${isPlaying3 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>
+        <button onClick={()=>{playVideo3()}}><img src={`./magazine/2/images/87_88/${isPlaying3 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>
       </div>
       <div className={styles.image15}>
         <p className={styles.text5}>PORTAL</p>

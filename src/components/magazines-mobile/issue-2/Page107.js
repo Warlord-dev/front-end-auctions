@@ -7,9 +7,9 @@ const Page107 = () => {
      <div className={styles.back1}></div>
      <div className={styles.back2}></div>
      <div className={styles.back3}></div>
-     <img src="./magazine/1/115_116/image3.png" className={styles.image6} />
-     <img src="./magazine/1/115_116/image4.png" className={styles.image7} />
-       <img src="./magazine/1/115_116/image5.png" className={styles.image8} />
+     <img src="./magazine/2/images/115_116/image3.png" className={styles.image6} />
+     <img src="./magazine/2/images/115_116/image4.png" className={styles.image7} />
+       <img src="./magazine/2/images/115_116/image5.png" className={styles.image8} />
 
      <p className={styles.text3}>Do virtual worlds need virtual handbags? How do our physical items translate into virtual spaces?
        <br/><br/>

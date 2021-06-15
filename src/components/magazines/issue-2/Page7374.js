@@ -5,10 +5,10 @@ import Link from 'next/link';
 const Page7374 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/73_74/image1.png" className={styles.image1} />
-      <img src="./magazine/1/73_74/image3.png" className={styles.image3} />
-      <img src="./magazine/1/73_74/image2.png" className={styles.image2} />
-      <img src="./magazine/1/73_74/image4.png" className={styles.image4} />
+      <img src="./magazine/2/images/73_74/image1.png" className={styles.image1} />
+      <img src="./magazine/2/images/73_74/image3.png" className={styles.image3} />
+      <img src="./magazine/2/images/73_74/image2.png" className={styles.image2} />
+      <img src="./magazine/2/images/73_74/image4.png" className={styles.image4} />
       <p className={styles.text1}>LANCY</p>
       <Link href="https://linktr.ee/soulyasa"><a>
       <p className={styles.text2}>Soulyasa.</p>

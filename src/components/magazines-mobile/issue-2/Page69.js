@@ -5,9 +5,9 @@ import Link from 'next/link';
 const Page69 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/73_74/image3.png" className={styles.image3} />
-      <img src="./magazine/1/73_74/image2.png" className={styles.image2} />
-      <img src="./magazine/1/73_74/image4.png" className={styles.image4} />
+      <img src="./magazine/2/images/73_74/image3.png" className={styles.image3} />
+      <img src="./magazine/2/images/73_74/image2.png" className={styles.image2} />
+      <img src="./magazine/2/images/73_74/image4.png" className={styles.image4} />
       <Link href="https://www.instagram.com/rozahviy/"><a>
       <p className={styles.text3}>Rozahviy</p>
       </a>

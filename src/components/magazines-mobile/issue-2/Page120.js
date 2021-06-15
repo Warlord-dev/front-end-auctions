@@ -5,8 +5,8 @@ import Link from 'next/link';
 const Page120 = () => {
   return (
     <div className={styles.wrapper}>
-     <img src="./magazine/1/129_130/image1.png" className={styles.image1} />
-     <img src="./magazine/1/129_130/image2.png" className={styles.image2} />
+     <img src="./magazine/2/images/129_130/image1.png" className={styles.image1} />
+     <img src="./magazine/2/images/129_130/image2.png" className={styles.image2} />
      <Link href="https://www.instagram.com/sasa3dimensions/"><a className={styles.text1}>
        SASA3DIMENSIONS
         </a>

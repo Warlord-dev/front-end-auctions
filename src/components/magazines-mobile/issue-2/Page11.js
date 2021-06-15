@@ -1,88 +1,75 @@
 import React from 'react'
 import styles from './page11.module.scss'
+import Link from 'next/link';
 
 const Page11 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.topSideFrame}></div>
-      <div className={[styles.animationFrame, styles.topSideImageWrapper].join(' ')}>
-        <img src="./magazine/1/images/mobile/howtogetintext.png" />
-        <img src="./magazine/1/images/mobile/howtogetintext.png" />
-        <img src="./magazine/1/images/mobile/howtogetintext.png" />
-        <img src="./magazine/1/images/mobile/howtogetintext.png" /> 
-      </div>
-      <div className={styles.bottomSideFrame}></div>
-      <div className={[styles.animationFrame, styles.bottomSideImageWrapper].join(' ')}>
-        <img src="./magazine/1/images/mobile/howtogetintext.png" />
-        <img src="./magazine/1/images/mobile/howtogetintext.png" />
-        <img src="./magazine/1/images/mobile/howtogetintext.png" />
-        <img src="./magazine/1/images/mobile/howtogetintext.png" />
-      </div>
+      <img src="./magazine/2/images/11_12/mobile/image15.png" className={styles.image2} />
+      <img src="./magazine/2/images/11_12/mobile/image14.png" className={styles.image1} />
+      <Link href="https://github.com/zeropoolnetwork"><a target="_blank">
+      <img src="./magazine/2/images/11_12/mobile/image16.png" className={styles.image3} />
+      </a>
+      </Link>
+      <Link href="https://www.poap.xyz/"><a target="_blank">
+      <img src="./magazine/2/images/11_12/mobile/image17.png" className={styles.image4} />
+      </a>
+      </Link>
+      <Link href="https://fusion.li/"><a target="_blank">
+      <img src="./magazine/2/images/11_12/mobile/image19.png" className={styles.image6} />
+      </a>
+      </Link>
+      <Link href="https://furucombo.app/"><a target="_blank">
+      <img src="./magazine/2/images/11_12/mobile/image20.png" className={styles.image7} />
+      </a>
+      </Link>
+      <Link href="https://commonsstack.org/"><a target="_blank">
+      <img src="./magazine/2/images/11_12/mobile/image21.png" className={styles.image8} />
+      </a>
+      </Link>
+      <Link href="https://forum.tecommons.org/"><a target="_blank">
+      <img src="./magazine/2/images/11_12/mobile/image22.png" className={styles.image9} />
+      </a>
+      </Link>
+      <img src="./magazine/2/images/11_12/mobile/image18.png" className={styles.image5} />      
 
-      <img src='./magazine/1/images/mobile/Rectangle 786.png' className={styles.backImage1}/>
-      <h1>
-        Starting with 3D// Interview with Stan McGylin, Pipeline Manager and Creative Director at DIGITALAX, on the 3D Content Creation process. 
-      </h1>
-      <h2 className={styles.section1}>
-        How did you begin working with DIGITALAX?
-      </h2>
-      <p className={styles.section1}>
-        I started as a freelancer, brought in to assist with a small task: a simple turntable render with a pretty complex garment in a very very short deadline. 
-        After that, I met with all the designers that were already working on some awesome garments, 
-        and we started to prepare our very first auction. From then on, I was an official team member! 
-      </p>
-      <h2 className={styles.section2}>
-        Can you walk us through the pipeline process for how you get all those designs together and ready for auction! 
-      </h2>
-      <p className={styles.section2}>
-        We have a very flexible pipeline with a fast render engine. We work with the designers in CLO3D/Marvelous Designer to create the awesome garments. 
-        Then all the data (geometry, textures, caches, etc.) flows into Houdini for look development, lighting and rendering. 
-        We use Redshift for the render engine. After all of this, the render passes go to Fusion for compositing, and then into After Effects for motion graphics and titles.
-      </p>
-      <h2 className={styles.section3}>
-        What was your process for deciding what modeling tools to use?
-      </h2>
-      <p className={styles.section3}>
-        I’m a software agnostic, so I’m usually using any software that can get the job done. 
-        For any clothing creation/garment simulation our choice is CLO3D. For modeling, our team uses a huge variety of different tools, 
-        in the end it's just a bunch of polygons, so any tool can work - Blender, Maya, Softimage, Modo, etc.
-      </p>
-      <h2 className={styles.section4}>
-        You were instrumental to pulling off DIGITALAX’s first auction. What were the biggest challenges encoutered! 
-      </h2>
-      <p className={styles.section4}>
-        The theme of the first auction was Crypto memes, it was a lot of fun to turn that into garments! 
-        I remember one annoying moment when we were transferring fur from one software to another, 
-        the fastest way to solve it was to rebuild the garment from scratch at the final stage in the look development software. 
-        We had a very tough deadline so we worked for 18-20 hours a day then slept 2-3 hours to get back to work!
-      </p>
-      <h2 className={styles.section5}>
-        DIGITALAX is the first virtual fashion platform to employ Fraction Garment Ownership (FGO). How did you and Emma collaborate on making this happen? 
-      </h2>
-      <p className={styles.section5}>
-        DIGITALAX has created a fashion revolution, pure fashion without any borders. 
-        I very often see amazing works by different designers all over the world and they deserve to be known. 
-        With our open source library, we have engineered such an opportunity, and I think this is the future. 
-        You already can see the NFT madness on the market, and many talented artists are getting in on this opportunity. 
-        2020 was a really amazing year for digital art and I think fashion is next. 
-        NFTs bring freedom to the designers and transparency to the buyer, a whole supply chain can be tracked sustainably. 
-        No web2 solutions can even begin to achieve this. 
-      </p>
-      <h2 className={styles.section6}>
-        How are you preparing for the future collaborations and projects that DIGITALAX has in store?
-      </h2>
-      <p className={styles.section6}>
-        Well there is no preparing for all of them! Some of the most exciting ones are at the heart of the modding communities, particularly content like Minecraft, CS:GO and DMC. I am a gamer myself, however, I did find it a challenge to work with the MC skins and come up with new ideas around what could work best in highlighting them in higher fidelity 3D!
-      </p>
-      <h2 className={styles.section7}>
-        You’ve been doing this work for a while now, correct? How would you recommend getting to where you are now?
-      </h2>
-      <p className={styles.section7}>
-        Correct, I've been doing this for a while and there is no universal recipe to get here. 
-        But what I would say, is that if you are on a team in this space don't work as an individual: 
-        make teamwork your priority and make decisions together. It’s important to set defined roles and responsibilities for each contribution to the project, 
-        and streamline the entire pipeline. Also, just start giving the software a go! Try and learn as much as you can, stay agnostic! 
-      </p>
+      <p className={styles.text1 }>Open Source Oasis</p>
+      <p className={styles.text2 }>ZEROPOOL</p>
+      <p className={styles.text3 }>Anonymity and privacy, or moreso, dependability of  privacy, are some of the most important </p>
+      <p className={styles.text4 }>topics for each and every one of us. Our privacy is what guarantees our control and freedom over our lives, actions, interactions. In many ways, it’s our most intrinsic collateral. It is this awareness that allured so many people into crypto in the first place, with the blockchain assuring some kind of open anonymity. 
+<br/><br/>
+However, as the ecosystem has entered stages of web2 hybridisation and targeted identity revealing tools and DAPPs have become more advanced, the privacy affordance of crypto has deteriorated. 
+<br/><br/>
+ZeroPool is one of a number of projects that has set out to reinstate crypto’s primary principles. It’s a multi-blockchain compatible DAPP that encrypts transactions in a way so that an external observer gets zero information out of it, and so allowing anyone to send fully anonymous, cheap, non-custodial transactions. Assets deposited into ZeroPool becomes genuinely private.</p>
+      <p className={styles.text5 }>POAP</p>
+      <p className={styles.text6 }>POAP, or more like the Proof of Attendance Protocol, allows individuals to collect  ERC-721 NFT badges each time they participate in a certain activity, event or happening, where each NFT acts as a unique and verifiable “you turned up” validation. It might sound simple, but this concept is actually quite revolutionary; it sets forth the beginnings of a completely new way for cultivating and forming communities and ecosystems, and then  further incentivising them through unique and more personalised social experiences that are formed out of the ledger of attedance that can be provably associated with each person. </p>
+      <p className={styles.text7 }>L i b r e S o f t w a r e</p>
+      <p className={styles.text8 }>L i b r e S o f t w a r e</p>
+      <p className={styles.text9 }>fusion</p>
+      <p className={styles.text10 }>Web3 is confusing enough as it is on paper, and the naming conventions don’t </p>
+      <p className={styles.text11 }>make it any easier... I mean ... NFT not only doesn’t sound very interesting or cool, but it also significantly undercuts the true proficiency of the tech. 
+<br/><br/>
+Fusion is on a mission to change all of this by bringing better, more beautiful and more accessible iconography to web3— offering a robust collection of open source icons. 
+<br/><br/>
+It might sound trivial, even unneccassary, but these are the small details that provide that fasten the buckle for streamlining user onboarding and driving global mass adoption for usage ubiquity. The project is still in its early stages but the icons look mighty fine! </p>
+      <p className={styles.text12 }>Furucombo</p>
+      <p className={styles.text13 }>DeFi is often described as lego blocks, where its composable nature is what makes it so</p>
+      <p className={styles.text14 }>innovative and revolutionary. Furucombo took this to the next level by building a  drag and drop tool for users to be able to mix and match a variety of different DeFi protocols, transactions and strategies all in one. 
+      <br/><br/>
+It works by setting up the desired inputs and outputs across different cubes. For example, someone could choose to swap DAI to USDC using Uniswap V2 in the first cube and then take that USDC into a Maker vault to collateralise and borrow DAI for the second cube, and then take that DAI into AAVE in the third cube for a flash loan set up. 
+<br/><br/>
+All cubes are draggable allowing for easy swapping in and out of different ideas and strategies. </p>
+      <p className={styles.text15 }>The Commons stack</p>
+      <p className={styles.text16 }>The Commons Stack has built out an entire library of open-source, interoperable web3 components for building common-based microeconomies for support public goods. Their stack puts new tools in the hands of communities, enabling them 
+to build out DAO structures for raising and allocating shared funds,  carrying out transparent decision making, and monitoring progress in supporting the commons. 
+
+Through this, they are radicallising our current economic system for the better; ensuring altruistic efforts addressing the collective needs of society are no longer so easily exploited and undervalued.  </p>
+      <p className={styles.text17 }>Open Web</p>
+      <p className={styles.text18 }>TOKEN ENGINEERING COMMONS</p>
+      <p className={styles.text19 }>TEC is an open source and collectively governed project that aims to create a token economy for accelerating the responsible & ethical creation of public goods within the token engineering community.</p>
+      <p className={styles.text20 }>This DAO is aligned for dvancing the token engineering discipline— An emerging engineering discipline focused on holistic systems design and the theory, practice and tools used to design and verify tokenized ecosystems. TEC aims to support the efficient distribution of fund to projects across the emerging field of token engineering, encouraging the robust and ethical design of tokenized infrastructures. 
+<br/><br/>
+The DAO is still in its early stages, with automation through smart contracts and on-chain governance still in progress, however, the common goal that they are charting forth is something that extends far beyond just the members of the DAO itself. Tokenised communities, broadly falling under DAO frameworks, are probably the most overlooked project categories currently in web3, where most of the hype is still centred around DeFi. Being able to align, automate and enhance community incentives for a common shared mission creates an unstoppable strength for enhancing literally every aspect of our lives as we know it.  </p>
     </div>
   )
 }
