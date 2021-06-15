@@ -18,26 +18,25 @@ import LandingHeader from './landing';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
-  
-  const [hasScrolled, setHasScrolled] = useState(false)
-  const [isCollapse, setIsCollapse] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [isCollapse, setIsCollapse] = useState(false);
 
   useEffect(() => {
     const handleScroll = throttle(() => {
-      const offset = 0
-      const { scrollTop } = document.documentElement
-      const scrolled = scrollTop > offset
+      const offset = 0;
+      const { scrollTop } = document.documentElement;
+      const scrolled = scrollTop > offset;
 
       if (hasScrolled !== scrolled) {
-        setHasScrolled(scrolled)
+        setHasScrolled(scrolled);
       }
-    }, 200)
+    }, 200);
 
-    document.addEventListener('scroll', handleScroll)
+    document.addEventListener('scroll', handleScroll);
     return () => {
-      document.removeEventListener('scroll', handleScroll)
-    }
-  }, [hasScrolled])
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, [hasScrolled]);
 
   const dispatch = useDispatch();
   const user = useSelector(getUser);
@@ -49,7 +48,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const router = useRouter();
   const pathname = router.pathname;
-  const isMobile = window.innerWidth>768? false: true;
+  const isMobile = window.innerWidth > 768 ? false : true;
 
   const isLandingPage = pathname === '/';
 
@@ -86,16 +85,32 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   };
 
   return (
-    <div className={cn(className, styles.wrapper, isMobile?styles.mobileNav:'', hasScrolled?styles.floatingNav:'')}>
+    <div
+      className={cn(
+        className,
+        styles.wrapper,
+        isMobile ? styles.mobileNav : '',
+        hasScrolled ? styles.floatingNav : ''
+      )}
+    >
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
-        <Logo isMobile={isMobile}/>
+        <Logo isMobile={isMobile} />
         {/* <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
           Switch to Eth Mainnet
         </a> */}
       </div>
-      <div className={cn(styles.rightBox, pathname.includes('purchase') || pathname.includes('contact') || pathname.includes('profile')?styles.blackWrapper:styles.whiteWrapper)}>
-        <div className={cn(styles.links, isCollapse?styles.expandedMenu:'')}>
+      <div
+        className={cn(
+          styles.rightBox,
+          pathname.includes('purchase') ||
+            pathname.includes('contact') ||
+            pathname.includes('profile')
+            ? styles.blackWrapper
+            : styles.whiteWrapper
+        )}
+      >
+        <div className={cn(styles.links, isCollapse ? styles.expandedMenu : '')}>
           {/* <Link href="/">
           <a className={styles.link}>Auctions</a>
         </Link>
@@ -142,7 +157,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           <Link href="/contact">
             <a className={styles.link}>Contact</a>
           </Link>
-          <Link href="/unlockable">
+          <Link href="/unlockables">
             <a className={styles.link}>Unlockable nft drops</a>
           </Link>
           <div className={styles.signBtn}>
@@ -173,10 +188,14 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
                 )}
               </div>
             ) : (
-              <Button className={styles.signinButton} onClick={() => handleClick()}>{buttonText}</Button>
+              <Button className={styles.signinButton} onClick={() => handleClick()}>
+                {buttonText}
+              </Button>
             )}
           </div>
-          <a href="javascript:void(0);" className={styles.collapseIcon} onClick={onIconHander}>&#9776;</a>
+          <a href="javascript:void(0);" className={styles.collapseIcon} onClick={onIconHander}>
+            &#9776;
+          </a>
         </div>
       </div>
     </div>
