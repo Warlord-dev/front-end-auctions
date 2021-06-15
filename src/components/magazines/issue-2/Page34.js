@@ -58,7 +58,9 @@ const Page34 = () => {
         <br />
         Isramae Visales
         <br />
-        Peezy R<br />
+        Peezy R
+        <br />
+        Victor Wiebe
         <br />
         Haruto Inoue
         <br />

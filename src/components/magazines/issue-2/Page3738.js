@@ -73,7 +73,7 @@ const Page3738 = () => {
         ecosystem in general.
         <br />
         <br />
-        Each FGO 1155 NFT, by the Global Designer Network, has been minted under the DIGITALAX
+        Each FGO 1155 NFT, by the Global Designer Network, has been minted under the DIGITALAX{' '}
         <a href="https://digitalax.xyz/fgo-2">
           Fractional Garment Ownership License and Distribution Standard 1.2
         </a>{' '}
@@ -89,7 +89,7 @@ const Page3738 = () => {
         <br />
         These FGO NFTs will be leveraged under the FGO open source licensing standards, where
         DIGITALAX is taking the first initiative of proving out the model cross-realm (digi-fizzy)
-        in our hybrid DRIP digital-physical fashion line— incorparating these patterns and prints
+        in our hybrid DRIP digital-physical fashion line— incorperating these patterns and prints
         with a royalty distribution of 15% back to the OG designers behind the modular components
         that will be incoporated across different master physical garments. The master physical
         garment will be minted as a 721 NFT with the 1155 patterns incorporated attached to it under

@@ -1,27 +1,99 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
 import styles from './page55.module.scss'
+import Link from 'next/link';
 
 const Page55 = () => {
+  const audioRef = useRef()
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const startAudio = () => {
+    audioRef.current.play()
+    setIsPlaying(true)
+  };
+
+  const pauseAudio = () => {
+    audioRef.current.pause()
+    setIsPlaying(false)
+  };
   return (
-    <div className={styles.wrapper}>      
-      <img src="./magazine/1/83_84/image2.png" className={styles.image1} />
-      <div className={styles.image2}></div>
-      <p className={styles.text1}>The demands of survival in such a mad world, paired with constantly ringing alarm bells and the stream of noise overloading our sensations every second — not to mention the scarcity and disconnection of our jobs from a true sense of purpose — can break us. 
-      <br/><br/>
-Democracy or Dictatorship?
-The democratization that Web2 and its model of gatekeeping that has pervaded benefit only those who are at the very top, as the rest of those who are on the right side of the gate are thrown crumbs if they play by the rules that the autocrats at the very top routinely shit out.
-<br/><br/>
-Sure, there will always be winners and losers, end of. But when the game is played with marked cards, it's the rest of us who are being played in this vignette of deceit courtesy of the powers-that-be that run this world: the gatekeepers.
-<br/><br/>
-Web2 brought internet access to billions of individuals worldwide. But creators have to play by the rules lest these centralized platforms would one day decide to set the rules in opposition — and laugh their asses off as their users haplessly jump from one foot to the other, trying not to get eternally Zucc'd from the Web2 Garden of Eden. Expelled, never to be seen, heard from, or earn another dime ever again...with absolutely zero recourse. They're tight-asses, they're sadists, and they're absentee landlords.
-<br/><br/>
-We've seen how the social media machine can eat up an aspiring influencer, chew them up until every last trickle of profitability can be extracted, then spit them out like yesterday's brisket once the views start dropping. We've seen entire platforms, creators, artists, musicians, designers, and influencers that got yeeted in the blink of an eye by the seemingly arbitrary rules that the gatekeepers set for them. As a result, more individuals get banished from Twitter or YouTube than we can ever count. Parler literally got Thanos-snapped out of existence once Amazon, Apple, and Google felt they had to engage them in a dick-swinging contest. Guess who's going to win that one? Every. Single. Time.
-<br/><br/>
-Meanwhile, social media has turned us into modern-day Kafkaesque bugmen looking for the next hit of dopamine from the last bit of engagement, turning us into social media zombies going through one vapid TikTok fad after the next, all in the search for meaning that has ultimately been lost in all the noise that surrounds it. 
-<br/><br/>
-Gatekeepers are everywhere — art, music, design, fashion, technology, corporates...you name it, there's bound to be an iteration on the same tired gatekeeper bullshit that impedes progress everywhere. The same crap that gives all power to the elite "haves," instead of the "have nots" who have to comply with the rules of the walled gardens they enter, lest they suffer the consequence of literal virtual death. Abandon all hope of freedom, all ye who enter.
-<br/><br/>
-The tricks only work once, and people get it as they age. We've all been had. It's all a fucking scam — and we all hate the fact of how transparently we're being jerked around by the gatekeepers that hold such concentrated power in the hands of so few for so long.</p>
+    <div className={styles.wrapper}>
+      <img src="./magazine/1/59_60/image20.png" className={styles.image1} />
+      <div className={styles.color1}></div>
+      <div className={styles.color2}></div>
+      <img src="./magazine/1/59_60/image6.png" className={styles.image6} />
+      <div className={styles.color3}></div>
+      <Link href="https://dxdao.eth.link/"><a>
+        <img src="./magazine/1/59_60/image2.png" className={styles.image2} />
+        </a>
+       </Link>
+      <img src="./magazine/1/59_60/image3.gif" className={styles.image3} />
+      <img src="./magazine/1/59_60/image4.png" className={styles.image4} />
+      <button 
+        className={styles.image5}
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio()
+        }}
+      >
+        {
+          <img src={`./magazine/1/59_60/${isPlaying ? 'image19' : 'image5'}.png`}/>
+        }
+      </button>
+      <img src="./magazine/1/59_60/image8.png" className={styles.image8} />
+      <img src="./magazine/1/59_60/image7.png" className={styles.image7} />
+      <img src="./magazine/1/59_60/image9.png" className={styles.image9} />
+      <Link href="https://swapr.eth.link/#/swap"><a>
+        <img src="./magazine/1/59_60/image10.png" className={styles.image10} />
+        </a>
+       </Link>
+       <Link href="https://dxdao.eth.link/#/"><a>
+        <img src="./magazine/1/59_60/image10.png" className={styles.image11} />
+        </a>
+       </Link>
+       <Link href="https://omen.eth.link/#/liquidity"><a>
+        <img src="./magazine/1/59_60/image10.png" className={styles.image12} />
+        </a>
+       </Link>
+       <Link href="https://discord.gg/4QXEJQkvHH"><a>
+        <img src="./magazine/1/59_60/image11.png" className={styles.image13} />
+        </a>
+       </Link>
+       <Link href="https://discord.gg/4QXEJQkvHH"><a>
+        <img src="./magazine/1/59_60/image11.png" className={styles.image14} />
+        </a>
+       </Link>
+       <Link href="https://discord.gg/4QXEJQkvHH"><a>
+        <img src="./magazine/1/59_60/image11.png" className={styles.image15} />
+        </a>
+       </Link>
+       <Link href="https://twitter.com/SwaprEth"><a>
+        <img src="./magazine/1/59_60/image12.png" className={styles.image16} />
+        </a>
+       </Link>
+       <Link href="https://twitter.com/DXdao_"><a>
+        <img src="./magazine/1/59_60/image12.png" className={styles.image17} />
+        </a>
+       </Link>
+       <Link href="https://twitter.com/Omen_eth"><a>
+        <img src="./magazine/1/59_60/image12.png" className={styles.image18} />
+        </a>
+       </Link>
+       <Link href="https://dxdao.medium.com/"><a>
+        <img src="./magazine/1/59_60/image13.png" className={styles.image19} />
+        </a>
+       </Link>
+       <Link href="hhttps://daotalk.org/c/dx-dao/15"><a>
+        <img src="./magazine/1/59_60/image14.png" className={styles.image20} />
+        </a>
+       </Link>
+      <p className={styles.text1}>DAO’ing Out With DXDAO Keenan + Caden</p>
+      <p className={styles.text2}>A Real DAO. Swarm Knowledge. Open for Everyone. Information Symmetry. </p>
+      <p className={styles.text3}>SOVEREIGNTY.<br/> ON-CHAIN. </p>
+      <p className={styles.text4}>DECENTRALISATION MAXIMALISM.</p>
+      <p className={styles.text5}>dxDAO is an ecosystem project developing across so many verticals that it is hard to really encompass it all in just a few words. However, with that said, some of the most important parts of dxDAO, and what truly makes it a real DAO is the fact that it isn’t a pay to vote/pay to participate ecosystem. This is bigger than it seems. With many DAOs (on-chain or not) you can go and purchase the token from the market, and, if you are a whale with enough buying power, you can purchase large enough amounts to sway the entire ecosystems vote or governance. This is not the case for dxDAO. You can ONLY get reputation, which is the voting power of dxDAO, by earning it. By actually contributing to the DAO in a way that supports, enhacces and furthers the collective mission of the DAO. . </p>
+      <p className={styles.text6}>WANT TO START DAO’ING OUT WITH DXDAO AND GETTING REPUTATION?</p>
+      <audio ref={audioRef} loop>
+        <source src="./magazine/1/59_60/1.mp3" type="audio/mpeg" />
+      </audio>
     </div>
   )
 }

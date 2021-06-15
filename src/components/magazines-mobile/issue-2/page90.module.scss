@@ -3,77 +3,73 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 914px;
-  overflow: scroll;
-  overflow-x: hidden;
+  height: 1488px;
+  overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-
+  
   .image1 {
     position: absolute;
-    width: 541px;
-    height: 649px;
-    left: -166px;
-    top: -82px;
+    width: 644px;
+    height: 785px;
+    left: -145px;
+    top: -22px;
   }
 
   .image2 {
     position: absolute;
-    width: 561px;
-    height: 649px;
-    left: -67px;
-    top: 451px;
+    width: 375px;
+    height: 496px;
+    left: 0px;
+    top: 992px;    
   }
 
-  .image8 {
+  .image3 {
     position: absolute;
-    width: 429px;
-    height: 744px;
-    left: -27px;
-    top: 52px;
-  }
-
-  .text1 {
-    position: absolute;
-    width: 269px;
-    height: 70px;
-    left: 87px;
-    top: 4px;
+    width: 375px;
+    height: 230px;
+    left: 0px;
+    top: 762px;
     
-    font-family: Qwigley;
+    background: linear-gradient(90deg, #2A0026 0.52%, #821B9B 31.34%, #253D92 79.5%, #012241 100.77%, rgba(127, 27, 155, 0) 102.13%);
+  }
+
+  .text3 {
+    position: absolute;
+    width: 343px;
+    height: 40px;
+    left: 5px;
+    top: 915px;
+    
+    font-family: Space Mono;
     font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
+    font-weight: bold;
+    font-size: 40px;
     line-height: 100%;
-    /* identical to box height, or 70px */
+    /* identical to box height, or 40px */
+    text-align: right;
     
-    text-align: center;
+    color: #FFFFFF;
     
-    color: #FFB800;
-    
-    -webkit-text-stroke: #FFB800;
-    -webkit-text-stroke-width: 1px;
-    box-sizing: border-box;
   }
 
-  .text2 {
+  .text4 {
     position: absolute;
-    width: 363px;
-    height: 132px;
-    left: 59px;
-    top: 61px;
+    width: 319px;
+    height: 153px;
+    left: 56px;
+    top: 790px;
     
-    font-family: Qwigley;
+    font-family: Reenie Beanie;
     font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 100%;
-    /* or 70px */
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 90%;
+    /* or 58px */
     
-    text-align: center;
     
-    color: #EAD629;
+    color: #FF01DC;
   }
 }

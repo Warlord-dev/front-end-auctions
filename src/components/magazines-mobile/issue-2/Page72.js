@@ -5,11 +5,14 @@ import Link from 'next/link';
 const Page72 = () => {
   return (
     <div className={styles.wrapper}>
-     <img src="./magazine/1/101_102/image4.png" className={styles.image4} />
-     <Link href="https://instagram.com/veletagram"><a className={styles.text2}>
-      DOMINGO BETTE ENCOUR
-      </a>
+      <img src="./magazine/1/77_78/image3.png" className={styles.image2} />
+      <Link href="https://www.instagram.com/serahreikka/"><a>
+          <p className={styles.text3}>Serah reikka</p>
+        </a>
       </Link>
+      <p className={styles.text4}>MIA LOCKLACE</p>
+      <p className={styles.text5}>Mia is a CG Artist and the manager of Serah Reikka. Serah (Fei) Reikka is a French Canadian virtual influencer & model. She is know for her role as Serah Alec in the short animated movie Beyond Polaris and had the privilege of modeling at the prestigious Russian Fashion Week last year with Mercedes-Benz. Serah has also been featured on Forbes Magazine as one of the 12 most famous virtual influencer in the world for 2020.
+Serah has a weekly vlog; covering everything about her way of life as an Artificial Intelligence virtual model navigating the real world.</p>
     </div>
   )
 }

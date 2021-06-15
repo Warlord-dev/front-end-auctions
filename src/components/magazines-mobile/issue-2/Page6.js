@@ -1,38 +1,75 @@
-import React from 'react'
-import styles from './page6.module.scss'
+import React from 'react';
+import styles from './page6.module.scss';
 
 const Page6 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='magazine/1/images/mobile/06-01.png' className={styles.backOrange} />
-      <div className={styles.section1}>
-        It's only elementary that people would be shocked to find out when acclaimed auction house Christie's sold a piece of digital NFT artwork for $69 million — for a piece of art that doesn't physically exist.
-        <br/><br/>
-        The shock was mainly because most people find it hard to reconcile the value of a digital piece of art, whose production costs are next to nothing compared to the price it went for, and whose value is more closely tied to its scarcity (perceived or otherwise) than its actual utility.
-        <br/><br/>
-        The same is happening for the real estate boom that's happening right under the collective industry's nose, and it's happening in the corners of the metaverse—the virtual worlds where not only digital art, real estate, avatars, and fashion can be bought and sold as NFTs. The world where digital natives and their avatars can explore, socialize, play, and live.
+      <img src="magazine/2/images/07_08_mobile1.png" className={styles.back} />
+      <div className={styles.text1}>
+        community of stakeholders incentivized via an iteration of a token mechanism based on
+        participation, contribution, and investment. Token holders can thereafter submit and vote on
+        proposals, while sharing in the potential upside.
+        <br />
+        <br />
+        DAOs might have the potential to reshape the way we work, make group decisions, allocate
+        resources, distribute wealth, and solve some of the world's biggest problems.
+        <br />
+        <br />
+        In many ways, DAOs work similarly to corporations or governments, but without the monolithic
+        hierarchical structures, convoluted layers of bureaucracy, and miles upon miles of red tape
+        that traditional organizations run with to this very day. They are the future because they
+        were the past. DAOs are organic communities with tokenized asset ownership, while
+        corporations are synthetic ones governed by aging hierarchies hellbent on the bottom line
+        and the bottom line alone. Humans have existed as a species for hundreds of thousands of
+        years, while corporations are a present-day abomination. Traditional institutions, in the
+        end, are all created from the same market-making flesh and blood that corporations are — and
+        DAOs, like the blockchain, NFTs, and decentralized finance (DeFi), are the ultimate
+        solution.
+        <br />
+        <br />
+        <div className={styles.subtitle}>THE DAO: The First Vibratory DAO Experiment</div>
+        <br />
+        However, it is necessary to make a particular distinction between DAOs as a type of
+        organization and THE DAO, which was one of the first attempts at creating a
+        blockchain-based, decentralized kind of venture capital fund that allowed commercial and
+        nonprofit organizations to secure funding on the Ethereum blockchain. It failed due to a bug
+        in the code leading to US$50 million in Ethereum siphoned from the smart contract's
+        then-record crowdfunded token capital of over US$160 million. This ultimately led to the
+        dissolution of THE DAO and the hard forking of Ethereum as we know it today and Ethereum
+        Classic, its original, pre-fork iteration that exists today solely as a speculative ghost
+        chain.
+        <br />
+        <br />
+        The collapse of THE DAO caused a rethink about the future of decentralized autonomous
+        organizations and set it back a few years. But just five years later, DAOs are re-emerging
+        with an entirely new set of various use cases, increasing software toolkits, and new
+        incentivization and governance models. And based on the leading thinkers in the scene, DAOs
+        will be the next big thing in blockchain technology after NFTs.
+        <br />
+        <br />
+        DeFi, DAOs, and NFTs: The Emerging Ownership Economy
+        <br />
+        DAOs are revolutionizing finance as far as ownership is concerned. DAOs are enabling
+        individuals to access financial products and services that only the 1% literally had access
+        to until DeFi came around. As DeFi protocols continue to thrive since their rise in
+        popularity in the last couple of years as decentralized exchanges and yield farming
+        platforms emerge, as they rely on them for governance.
+        <br />
+        <br />
+        Moreover, the emergence of NFTs has permanently settled the question of digital ownership —
+        and more communities are making the shift from token holders toward becoming DAOs
+        themselves. DAOs and NFTs can work together to develop a sustainable economic environment
+        built on true democratic, moral, and fair principles. Web3 is just around the corner, and
+        DAOs and NFTs will play a key role in how we will solve everyday problems in the rapidly
+        developing future.
+        <br />
+        <br />
+        One thing's for sure: the more creators, investors, and digital natives create DAOs and use
+        NFTs to lay the foundations on which Web3 will be built, the better the creative world is
+        going to be from tomorrow onwards.
       </div>
-      <div className={styles.logo_t}>T</div>
-      <div className={styles.section2}>
-        <span>he Value of Virtual Real Estate.</span> Everybody gets digital art, but virtual real estate is a different thing. Why should anyone spend money on a virtual piece of real estate that doesn't exist in real life? What makes pixelated parcels of land on a virtual world accessible through a website a real, tangible asset?
-        <br/><br/>
-        This requires a bit more context. That said, if you've ever played a video game — doesn't matter if it's on the Atari or the NES, or if it's Super Mario, FIFA, Final Fantasy, Fortnite, or Call of Duty — then you would know that as your character explores the virtual world, you'd be spending oodles and oodles of time roaming through the vast expanses of the countless artificial universes these games offer.
-      </div>
-      <div className={styles.section3}>
-        And the virtually limitless expanses of virtual worlds provide opportunities for brands to market, advertise, or engage with the emerging digital population. In-game advertising, after all, is a multi-billion-dollar industry that needs no further introduction.
-        <br/><br/>
-        Furthermore, virtual real estate presents an opportunity for companies to purchase virtual parcels of land within the metaverses that they form part of — and the possibilities are endless. Companies can build entire cityscapes within those metaverses and monetize them as they see fit— such as putting up a building and leasing out ad and store space, create living spaces that they can rent out, or any revenue-generating venture, for that matter. The possibilities are endless.
-      </div>
-      
-      <p className={styles.section4}>
-        Case in point: Beeple's $69 million NFT artwork entitled "Everydays: the First 5000 Days" was purchased by NFT fund founder and investor who goes by the pseudonym Metakovan. And based on his estimation, $69 million is a pittance compared to the value of what could be this generation's definitive piece of art, pegging its value at a staggering $1 billion. That's not a typo, and neither is it beyond the realm of imagination. Eventually, the crypto investor intends to create a virtual museum — yet another piece of virtual real estate — with which to display his vast collection of rare NFTs in the emergent metaverse. 
-      </p>
-      <p className={styles.section5}>
-        Think of how someone holding the NFT rights to the high-resolution video of Michael Jordan hitting the iconic game-winning shot over Bryon Russell in Game 6 of the 1998 NBA Finals to win his sixth and last NBA Championship. The holder can then put it up for display within a virtual world where individuals can view it using their VR headset for a fee. It sounds like something out of a sci-fi plotline — but the technology is already here. 
-      </p>
-      <img src='./magazine/1/images/moshed-05-07-17-22-22 (1).gif' className={styles.rightImage4} />
     </div>
-  )
-}
+  );
+};
 
-export default Page6
+export default Page6;

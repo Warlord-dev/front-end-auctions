@@ -2,89 +2,65 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 3076px;
-  overflow: hidden;
+  height: 781px;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
- 
-  .image6{
-    position: absolute;
-    width: 389px;
-    height: 567px;
-    left: -14px;
-    top: 0px;
-  }
 
-  .image7 {
+  .image1 {
     position: absolute;
-    width: 389px;
-    height: 485px;
-    left: -7px;
-    top: 567px;
-  }
-
-  .image9 {
-    position: absolute;
-    width: 571px;
-    height: 744px;
-    left: -105px;
-    top: 1051px;
-  }
-
-  .image10 {
-    position: absolute;
-    width: 571px;
-    height: 779px;
-    left: -7px;
-    top: 1794px;
-  }
-
-  .image8 {
-    position: absolute;
-    width: 389px;
-    height: 504px;
-    left: 0px;
-    top: 2572px;
+    width: 419px;
+    height: 781px;
+    left: 0;
+    top: 0;
   }
 
   .text2 {
     position: absolute;
-    width: 184px;
-    height: 50px;
-    left: 180px;
-    top: 17px;
+    width: 351px;
+    height: 252px;
+    left: 24px;
+    top: 23px;
     
-    font-family: Sahitya;
+    font-family: Ander Hedge;
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
-    line-height: 100%;
-    /* identical to box height, or 50px */
+    line-height: 58px;
     
-    text-align: center;
-    
-    color: #FFFFFF;
+    color: #A65EB4;
   }
 
   .text3 {
     position: absolute;
-    width: 162px;
-    height: 40px;
-    left: 188px;
-    top: 67px;
+    width: 248px;
+    height: 37px;
+    left: 24px;
+    top: 136px;
     
-    font-family: Sahitya;
+    font-family: Ander Hedge;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 100%;
-    /* or 20px */
+    line-height: 23px;
     
-    text-align: center;
+    color: #A65EB4;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 248px;
+    height: 37px;
+    left: 187px;
+    top: 730px;
     
-    color: #FFFFFF;
+    font-family: Ander Hedge;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    
+    color: #A65EB4;
   }
 }

@@ -1,47 +1,174 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 3601px;
-  background-color: white;
+  height: 2527px;
+  background-color: black;
   color: white;
-  display: flex;
   position: relative;
+  white-space: normal;
+  text-align: left;
 
-  .image1 {
+  .image21 {
     position: absolute;
-    width: 2383px;
-    height: 2383px;
-    left: -957px;
-    top: 337px;
-    transform: rotate(-90deg);
+    width: 376px;
+    height: 2527px;
+    left: -1px;
+    top: 0px;
   }
 
-  .image3 {
+  .image22 {
     position: absolute;
-    width: 316px;
-    height: 3480px;
-    left: 29px;
-    top: 76px;
+    width: 404.55px;
+    height: 172.52px;
+    left: -18.09px;
+    top: 487.81px;
 
-    background: rgba(164, 0, 147, 0.43);
+    transform: rotate(10deg);
   }
-  
-  .text2 {
+
+  .image23 {
     position: absolute;
-    width: 264px;
-    height: 1305px;
-    left: 55px;
-    top: 139px;
+    width: 127.74px;
+    height: 129.83px;
+    left: 9.62px;
+    top: 1289.02px;
+    transform: rotate(-10deg);
+  }
+
+  .image24 {
+    position: absolute;
+    width: 115.13px;
+    height: 115.13px;
+    left: 266.07px;
+    top: 1912.07px;
+    transform: rotate(30deg);
+  }
+
+  .text7 {
+    position: absolute;
+    width: 299px;
+    height: 122px;
+    left: 28px;
+    top: 46px;
     
-    font-family: Lexend Giga;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    /* or 133% */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 277px;
+    height: 129px;
+    left: 28px;
+    top: 125px;
+    
+    font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
-    line-height: 150%;
-    /* or 22px */
+    font-size: 16px;
+    line-height: 25px;
+    /* or 156% */
     
-    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 249px;
+    height: 279px;
+    left: 63px;
+    top: 626px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    /* or 156% */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 515px;
+    height: 122px;
+    left: 159px;
+    top: 1314px;
+    
+    font-family: Nimbus-Sans-D-OT;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 60px;
+    /* or 200% */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 249px;
+    height: 185px;
+    left: 60px;
+    top: 1436px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    /* or 156% */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 214px;
+    height: 59px;
+    left: 80px;
+    top: 1970px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 60px;
+    /* or 120% */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 249px;
+    height: 172px;
+    left: 70px;
+    top: 2026px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    /* or 156% */
+    
+    text-align: right;
     
     color: #FFFFFF;
   }

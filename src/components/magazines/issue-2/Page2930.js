@@ -13,19 +13,18 @@ const Page2930 = () => {
         The first launchpad project on Avalanche— a decentralised platform and protocol for new
         projects in the Avalanche ecosystem to fund-raise and launch their tokens. The platform
         supports projects from the ground up all in the name of enabling greater web3 innovation,
-        where projects are able to offer their tokens for sales across a variety of different
+        where projects are able to offer their tokens for sale across a variety of different
         options, including; fixed price pools, custom bonding curves, multiple auction types, etc.
-        Token sale allocations for each project is split across three tiers;
+        Token sale allocations for each project are split across three tiers;
         <br />
         -The first tier will be for $XAVA stakers, who will get guaranteed allocation based on time
         and amount of tokens staked.
         <br />
-        -The second tier is for Avalanche chain validators and delegators (evidence of the
-        Avalaunch’s focus on supporting the Avax ecosystem)
+        -The second tier is for Avalanche chain validators and delegators
         <br />
         -And the third tier will be a public tier, open to everyone.
         <br />
-        The tier mechanics in itself ensures deep and stable liquidity for the project from day one,
+        The tier mechanics in itself ensure deep and stable liquidity for the project from day one,
         where tier 1 underwrites utility and demand for the $XAVA token over time (And since
         allocations are also based on time staked, we can imagine a large share of the supply will
         be locked in staking at all times, decreasing circulating supply), and tiers 2 and 3 ensure

@@ -93,6 +93,13 @@
     line-height: 24px;
 
     color: #FFFFFF;
+
+    ul {
+      li {
+        list-style: disc;
+        margin-left: 1.5rem;
+      }
+    }
   }
 
   .image1 {

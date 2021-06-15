@@ -5,11 +5,15 @@ import Link from 'next/link';
 const Page100 = () => {
   return (
     <div className={styles.wrapper}>
-      <video className={styles.image1} loop autoPlay>
-        <source src="./magazine/1/131_132/video1.mp4" type="video/mp4" />
-       </video>
-       <p className={styles.text1}>Like A Statue</p>
-       <p className={styles.text2}>IMPSSBL</p>
+       <img src="./magazine/1/109_110/image1.png" className={styles.image1} />
+       <img src="./magazine/1/109_110/image4.png" className={styles.image4} />
+       <img src="./magazine/1/109_110/image3.png" className={styles.image3} />
+       <p className={styles.text1}>Jelly</p>
+       <p className={styles.text2}>Closely connected to the concept and definition of life— death is an eluctable fate that affects every living organism on Earth, condemned to cease biological functions and end existence. However, this fate escapes Turritopsis Nutricula; a hydrozoan with the extraordinary ability to regress to the polyp stage from the jellyfish stage. So, here we see an infinite cycle which has the potentiality to influence biological immortality. </p>
+       <Link href="https://www.instagram.com/lnvvld/"><a className={styles.text3}>
+       Luna Vivaldi
+        </a>
+       </Link>
     </div>
   )
 }

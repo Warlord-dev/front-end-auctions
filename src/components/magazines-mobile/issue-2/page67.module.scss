@@ -2,72 +2,69 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 1403px;
-  overflow: hidden;
+  height: 910px;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-  
-  .image1 {
+  justify-content: center;
+
+   .image2 {
     position: absolute;
-    width: 708px;
-    height: 675px;
-    left: -182px;
+    width: 584px;
+    height: 910px;
+    left: -91px;
     top: 0px;
-  }
+   }
 
-  .image2 {
+   .text4 {
     position: absolute;
-    width: 375px;
-    height: 203px;
-    left: 0px;
-    top: 674px;
+    width: 316px;
+    height: 100px;
+    left: 15px;
+    top: 28px;
     
-    background: #000000;
-  }
-
-  .image3 {
-    position: absolute;
-    height: 527px;
-    left: -29px;
-    top: 876px;
-  }
-
-  .text1 {
-    position: absolute;
-    width: 338px;
-    height: 66px;
-    left: 164px;
-    top: 711px;
-    
-    font-family: Asdonuts;
+    font-family: Reem Kufi;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
-    line-height: 110%;
-    /* identical to box height, or 66px */
+    font-size: 50px;
+    line-height: 100%;
     
-    
-    color: #982B27;
-  }
+    -webkit-text-stroke: #00E0FF;
+    -webkit-text-stroke-width: 0.5px;
+    color: #5200FF;
+    box-sizing: border-box;
+   }
 
-  .text2 {
+   .text5 {
     position: absolute;
-    width: 338px;
-    height: 66px;
-    left: 134px;
-    top: 776px;
+    width: 153px;
+    height: 89px;
+    left: 16px;
+    top: 139px;
     
-    font-family: Asdonuts;
+    font-family: Marker Felt;
     font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 110%;
-    /* identical to box height, or 66px */
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 20px */
     
+    -webkit-text-stroke: #00E0FF;
+    -webkit-text-stroke-width: 0.3px;
+    color: #FFFFFF;
+   }
+
+   .text6 {
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
     
-    color: #2D6464;
-  }
+    -webkit-text-stroke: #00E0FF;
+    -webkit-text-stroke-width: 0.3px;
+    color: #FFFFFF;
+   }
 }

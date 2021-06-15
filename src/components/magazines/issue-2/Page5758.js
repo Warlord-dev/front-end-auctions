@@ -20,7 +20,7 @@ const Page5758 = () => {
       </Link>
       <div className={styles.text3}>
         The DIGITALAX Ambassadors are each spinning up their own personalised world of unlockable
-        NFT content and exerpierence drops as they bridge into the web3 metaverse.
+        NFT content and experience drops as they bridge into the web3 metaverse.
         <br />
         <br />
         Holders of the DIGIFIZZY NFT content bundles will have exclusive behind the scenes access to
@@ -65,7 +65,7 @@ const Page5758 = () => {
       <Link href="/">
         <a className={styles.link2}>
           <div className={styles.text9}>
-            Get your backstage pass into Arjay’s view ARJAY’s immersive content experience.
+            Get your backstage pass into Arjay’s immersive content experience.
           </div>
         </a>
       </Link>
