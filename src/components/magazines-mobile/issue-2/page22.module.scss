@@ -1,45 +1,557 @@
 @import './styles.module.scss';
 .wrapper {
   @include magazineWrapper();
-  height: 2505px;
+  height: 5011px;
   background-color: white;
   color: black;
   position: relative;
 
-  .backImage {
+  .image1 {
     position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 375px;
-    height: 2505px;
+    width: 124px;
+    height: 748px;
+    left: -62px;
+    top: -2px;
+    
+    background: #50F4FF;
   }
 
-  h1 {
+  .image2 {
     position: absolute;
-    width: 302px;
-    height: 435px;
-    left: 36px;
-    top: 64px;
+    width: 392px;
+    height: 493px;
+    left: -9px;
+    top: 499px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 128px;
+    height: 77px;
+    left: -20px;
+    top: 1015px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 128px;
+    height: 77px;
+    left: -20px;
+    top: 1092px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 991px;
+    height: 844px;
+    left: -553px;
+    top: 689px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 2016px;
+    height: 0px;
+    left: -292px;
+    top: 1309px;
     
-    font-family: Bahianita;
+    border: 9px solid #000000;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 375px;
+    height: 89px;
+    left: 0px;
+    top: 2053px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 680px;
+    height: 510px;
+    left: -103px;
+    top: 1443px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 444px;
+    height: 465px;
+    left: -72px;
+    top: 2214px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 2030px;
+    height: 0px;
+    left: -660px;
+    top: 2968px;
+    
+    border: 9px solid #000000;
+    transform: rotate(-90deg);
+  }
+
+  .image11 {
+    position: absolute;
+    width: 2016px;
+    height: 0px;
+    left: -133px;
+    top: 2837px;
+    
+    border: 9px solid #000000;
+  }
+
+  .image12 {
+    position: absolute;
+    width: 433px;
+    height: 578px;
+    left: -29px;
+    top: 2866px;  
+  }
+
+  .image13 {
+    position: absolute;
+    width: 68px;
+    height: 748px;
+    left: 231px;
+    top: 3650px;
+    
+    background: rgba(148, 28, 221, 0.53);
+  }
+
+  .image14 {
+    position: absolute;
+    width: 114px;
+    height: 429px;
+    left: 309px;
+    top: 3969px;
+    
+    background: #5350FF;    
+  }
+
+  .image15 {
+    position: absolute;
+    width: 716px;
+    height: 0px;
+    left: -84px;
+    top: 4860px;
+    
+    border: 9px solid #000000;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 439px;
+    height: 151px;
+    left: 9px;
+    top: 21px;
+    
+    font-family: Artypa;
     font-style: normal;
     font-weight: normal;
-    font-size: 120px;
-    line-height: 120.53%;    
+    font-size: 60px;
+    line-height: 78px;
+    
+    color: #9AB014;
   }
 
-  .playButton {
+  .text2 {
     position: absolute;
-    width: 117px;
-    height: 117px;
-    left: 220px;
-    top: 585.67px;
-    background: transparent;
-    border: none;
+    width: 398px;
+    height: 141px;
+    left: 0px;
+    top: 176px;
     
-    img {
-      width: 100%;
-      height: 100%;
-    }
+    font-family: The ART;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 115px;
+    
+    color: #2B5F5B;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 333px;
+    height: 178px;
+    left: 115px;
+    top: 286px;
+    
+    font-family: Arthure;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 266px;
+    
+    color: #2B5F5B;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 145px;
+    height: 148px;
+    left: 127px;
+    top: 1018px;
+    
+    font-family: B612 Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+    
+    
+    color: #D600FE;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 257px;
+    height: 96px;
+    left: 200.5px;
+    top: 1098.5px;
+    
+    font-family: Habbo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+    
+    
+    color: #000000;
+    transform: rotate(-90deg);
+  }
+
+  .text6 {
+    position: absolute;
+    width: 147px;
+    height: 100px;
+    left: 301.5px;
+    top: 1152.5px;
+    
+    font-family: Averia Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    
+    color: #000000;
+    transform: rotate(-90deg);
+  }
+
+  .text7 {
+    position: absolute;
+    width: 265px;
+    height: 97px;
+    left: 90px;
+    top: 1346px;
+    
+    font-family: B612 Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+    
+    
+    color: #000000;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 423px;
+    height: 90px;
+    left: 26px;
+    top: 1973px;
+    
+    font-family: Atures 900 PERSONAL USE ONLY;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+      
+    
+    color: #BD00FF;
+    
+    text-shadow: rgb(0, 240, 255) 3px 0px 0px, rgb(0, 240, 255) 2.83487px 0.981584px 0px, rgb(0, 240, 255) 2.35766px 1.85511px 0px, rgb(0, 240, 255) 1.62091px 2.52441px 0px, rgb(0, 240, 255) 0.705713px 2.91581px 0px, rgb(0, 240, 255) -0.287171px 2.98622px 0px, rgb(0, 240, 255) -1.24844px 2.72789px 0px, rgb(0, 240, 255) -2.07227px 2.16926px 0px, rgb(0, 240, 255) -2.66798px 1.37182px 0px, rgb(0, 240, 255) -2.96998px 0.42336px 0px, rgb(0, 240, 255) -2.94502px -0.571704px 0px, rgb(0, 240, 255) -2.59586px -1.50383px 0px, rgb(0, 240, 255) -1.96093px -2.27041px 0px, rgb(0, 240, 255) -1.11013px -2.78704px 0px, rgb(0, 240, 255) -0.137119px -2.99686px 0px, rgb(0, 240, 255) 0.850987px -2.87677px 0px, rgb(0, 240, 255) 1.74541px -2.43999px 0px, rgb(0, 240, 255) 2.44769px -1.73459px 0px, rgb(0, 240, 255) 2.88051px -0.838247px 0px;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 179px;
+    height: 52px;
+    left: 23px;
+    top: 2680px;
+    
+    font-family: Medula One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 150%;
+    /* or 52px */
+    
+    
+    color: #FF702B;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 299px;
+    height: 48px;
+    left: 40px;
+    top: 2733px;
+    
+    font-family: Maker Van;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+    
+    
+    color: #000000;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 147px;
+    height: 18px;
+    left: 17px;
+    top: 2790px;
+    
+    font-family: Bayon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    text-align: right;
+    
+    color: #000000;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 311px;
+    height: 54px;
+    left: 10px;
+    top: 3473px;
+    
+    font-family: Miltonian;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 120.53%;
+    /* or 54px */
+    
+    
+    color: #000000;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 267px;
+    height: 52px;
+    left: 10px;
+    top: 3528px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 150%;
+    /* or 60px */
+    
+    
+    color: #FF702B;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 147px;
+    height: 20px;
+    left: 70px;
+    top: 3580px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    text-align: right;
+    
+    color: #000000;    
+  }
+
+  .text15 {
+    position: absolute;
+    width: 172px;
+    height: 144px;
+    left: 32px;
+    top: 4024px;
+    
+    font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+    
+    
+    color: #000000;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 251px;
+    height: 40px;
+    left: 124px;
+    top: 4184px;
+    
+    font-family: "Baloo Tammudu 2";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+    
+    
+    color: #000000;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 308px;
+    height: 39px;
+    left: 47px;
+    top: 4221px;
+    
+    font-family: B612 Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    
+    color: #000000;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 817px;
+    height: 151px;
+    left: 18px;
+    top: 4675px;
+    
+    font-family: Ode to Idle Gaming;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #70FF00 0%, #012AFF 14.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text19 {
+    position: absolute;
+    width: 817px;
+    height: 151px;
+    left: 21px;
+    top: 4720px;
+    
+    font-family: Ode to Idle Gaming;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #FF2E00 0%, #EB01FF 16.67%, #FFF501 38.54%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text20 {
+    position: absolute;
+    width: 148px;
+    height: 18px;
+    left: 21px;
+    top: 4820px;
+    
+    font-family: Bayon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    text-align: right;
+    
+    color: #000000;
+  }
+
+  .text21 {
+    position: absolute;
+    width: 280px;
+    height: 121px;
+    left: -69px;
+    top: 4900px;
+    
+    font-family: Arthure;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 120.53%;
+    /* identical to box height, or 121px */
+    
+    
+    color: #000000;
+  }
+
+  .text22 {
+    position: absolute;
+    width: 280px;
+    height: 121px;
+    left: 231px;
+    top: 4900px;
+    
+    font-family: Arthure;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 120.53%;
+    /* identical to box height, or 121px */
+    
+    
+    color: #000000;
+  }
+
+  .video1 {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 3641px;
+  }
+
+  .video2 {
+    position: absolute;
+    width: 406px;
+    height: 403px;
+    left: -16px;
+    top: 4306px;
   }
 }

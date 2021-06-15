@@ -7,201 +7,443 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3799px;
+  height: 4324px;
   background-color: white;
   color: black;
   position: relative;
   white-space: normal;
   
-  .backImage1 {
+  .image1 {
     position: absolute;
     width: 375px;
-    height: 3403px;
-    left: 0px;
-    top: 197px;
-  }
-  .topSideFrame {
-    position: absolute;
-    width: 100%;
-    height: 197px;
+    height: 4658px;
     left: 0px;
     top: 0px;
-    background-color: rgb(0 249 58);
-    border-top: 10px solid black;
-    border-bottom: 10px solid black;
   }
 
-  .bottomSideFrame {
+  .image2 {
     position: absolute;
-    width: 100%;
-    height: 197px;
+    width: 375px;
+    height: 4658px;
     left: 0px;
-    bottom: 0px;
-    background-color: rgb(0 249 58);
-    border-top: 10px solid black;
-    border-bottom: 10px solid black;
+    top: 0px;
   }
 
-  .animationFrame {
-    animation: scrolling 4s linear infinite;
-  }
-
-  .topSideImageWrapper {
+  .image3 {
     position: absolute;
-    left: 0px;
-    top: 68px;
-    width: 2400px;
-    height: 47px;
-    display: flex;
+    width: 86px;
+    height: 92px;
+    left: 218px;
+    top: 398px;
   }
 
-  .bottomSideImageWrapper {
+  .image4 {
     position: absolute;
-    left: 0px;
-    width: 2400px;
-    top: 3675px;
-    height: 47px;
-    display: flex;
+    width: 133px;
+    height: 171px;
+    left: 34px;
+    top: 962px;
   }
 
-  h1 {
+  .image5 {
     position: absolute;
-    width: 283px;
-    height: 75px;
-    left: 46px;
-    top: 300px;
+    width: 170px;
+    height: 170px;
+    left: 235px;
+    top: 963px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 64px;
+    top: 1801px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 63px;
+    top: 2329px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 100px;
+    height: 148px;
+    left: 51px;
+    top: 2859px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 249px;
+    height: 73px;
+    left: 75px;
+    top: 3520px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 343px;
+    height: 169px;
+    left: 32px;
+    top: 63px;
     
-    font-family: Lusitana;
+    font-family: Archie Websters;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 130px;
+    line-height: 110%;
+    /* or 143px */
+    
+    
+    color: #000000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 161px;
+    height: 87px;
+    left: 54px;
+    top: 409px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
     font-size: 17px;
-    line-height: 150%;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
   }
 
-  h2 {
+  .text3 {
     position: absolute;
-    font-family: Medula One;
+    width: 161px;
+    height: 87px;
+    left: 54px;
+    top: 430px;
+    
+    font-family: Mada;
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
-    line-height: 150%;
-    color: #000000;
-
-    &.section1 {
-      width: 272px;
-      height: 38px;
-      left: 46px;
-      top: 447px;      
-    }
-
-    &.section2 {
-      position: absolute;
-      width: 279px;
-      height: 90px;
-      left: 42px;
-      top: 757px;
-      text-align: right;      
-    }
-
-    &.section3 {
-      width: 271px;
-      height: 76px;
-      left: 46px;
-      top: 1196px;      
-    }
-
-    &.section4 {
-      width: 275px;
-      height: 90px;
-      left: 46px;
-      top: 1534px;
-      text-align: right;      
-    }
-
-    &.section5 {
-      width: 270px;
-      height: 152px;
-      left: 51px;
-      top: 2000px;      
-    }
-
-    &.section6 {
-      width: 245px;
-      height: 90px;
-      left: 80px;
-      top: 2640px;
-      text-align: right;      
-    }
-
-    &.section7 {
-      width: 264px;
-      height: 123px;
-      left: 54px;
-      top: 3048px;
-            
-    }
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
   }
 
-
-  p {
+  .text4 {
     position: absolute;
-    font-family: Lexend Zetta;
+    width: 265px;
+    height: 417px;
+    left: 55px;
+    top: 496px;
+    
+    font-family: Mada;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 150%;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 247px;
+    height: 356px;
+    left: 55px;
+    top: 1158px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 265px;
+    height: 417px;
+    left: 55px;
+    top: 1180px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 700px;
+    height: 66px;
+    left: 25px;
+    top: 1526px;
+    
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 110%;
+    /* or 110px */
+    
+    
     color: #000000;
+  }
 
-    &.section1 {
-      width: 287px;
-      height: 356px;
-      left: 46px;
-      top: 485px;      
-    }
+  .text8 {
+    position: absolute;
+    width: 700px;
+    height: 66px;
+    left: 25px;
+    top: 1643px;
+    
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 110%;
+    /* or 110px */
+    
+    
+    color: #000000;
+  }
 
-    &.section2 {
-      width: 287px;
-      height: 141px;
-      left: 37px;
-      top: 867px; 
-      text-align: right;   
-    }
+  .text9 {
+    position: absolute;
+    width: 144px;
+    height: 87px;
+    left: 167px;
+    top: 1801px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
 
-    &.section3 {
-      width: 287px;
-      height: 135px;
-      left: 46px;
-      top: 1278px;  
-    }
+  .text10 {
+    position: absolute;
+    width: 144px;
+    height: 87px;
+    left: 167px;
+    top: 1820px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
 
-    &.section4 {
-      width: 271px;
-      height: 153px;
-      left: 54px;
-      top: 1660px;
-      text-align: right;
-    }
+  .text11 {
+    position: absolute;
+    width: 223px;
+    height: 448px;
+    left: 64px;
+    top: 1895px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+  }
 
-    &.section5 {
-      width: 287px;
-      height: 271px;
-      left: 54px;
-      top: 2170px;
-    }
+  .text12 {
+    position: absolute;
+    width: 144px;
+    height: 87px;
+    left: 166px;
+    top: 2329px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
 
-    &.section6 {
-      width: 287px;
-      height: 327px;
-      left: 40px;
-      top: 2780px;
-      text-align: right;
-    }
+  .text13 {
+    position: absolute;
+    width: 144px;
+    height: 87px;
+    left: 166px;
+    top: 2350px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
 
-    &.section7 {
-      width: 287px;
-      height: 141px;
-      left: 54px;
-      top: 3180px;      
-    }
+  .text14 {
+    position: absolute;
+    width: 248px;
+    height: 356px;
+    left: 63px;
+    top: 2423px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 178px;
+    height: 448px;
+    left: 43px;
+    top: 3019px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 178px;
+    height: 448px;
+    left: 43px;
+    top: 3040px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 23px;
+    height: 630px;
+    left: 288px;
+    top: 2830px;
+    
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    /* or 88px */
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    line-height: 0;
+    letter-spacing: -30px;
+    
+    color: #000000;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 265px;
+    height: 87px;
+    left: 43px;
+    top: 3624px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text19 {
+    position: absolute;
+    width: 265px;
+    height: 87px;
+    left: 43px;
+    top: 3645px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text20 {
+    position: absolute;
+    width: 281px;
+    height: 153px;
+    left: 43px;
+    top: 3760px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
   }
 }

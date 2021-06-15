@@ -2,156 +2,92 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3191px;
-  background-color: black;
+  height: 3989px;
+  background-color: #FFFFFF;
   color: white;
   position: relative;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
-  .backImage {
+  .image1 {
     position: absolute;
-    width: 375px;
-    height: 3190px;
-    left: 0px;
-    top: 0;
-  }
-
-  .innerWrapper {
-    position: absolute;
-    top: 200px;
-    left: 0;
-  }
-  
-  .dollarSign {
-    position: absolute;
-    width: 403px;
-    height: 413px;
-    left: -33px;
-    top: 1206px;
-  }
-
-  .lawrence {
-    position: absolute;
-    width: 154px;
-    height: 18px;
-    left: 36px;
-    top: 460px;
+    width: 333px;
+    height: 3912px;
+    left: 21px;
+    top: 27px;
     
-    font-family: Aldrich;
+    background: #DB95A2;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 310px;
+    height: 180px;
+    left: 21px;
+    top: 86px;
+    
+    font-family: Nella Sue Demo;
     font-style: normal;
     font-weight: normal;
-    font-size: 21px;
-    line-height: 150%;
-
-    color: #FFFFFF;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
     
-  }
-  .shadow {
-    width: 341px;
-    height: 114.6px;
-    left: 2px;
-    top: 300px;
-    position: relative;
-  }
-  h1 {
-    position: absolute;
-    left: 1.39%;
-    right: 73.69%;
-    top: 0;
-    width: 300px;
-
-    font-family: Internal Rainbows;
-    font-style: normal;
-    font-weight: normal;
-    white-space: normal;
-    font-size: 26px;
-    line-height: 35px;
-    text-align: center;
-    transform: rotate(3deg);
-
-    &.shadow1 {
-      position: absolute;
-      left: -2.49%;
-      right: 73.23%;
-      top: 0;
-      color: #F90498;
-    }
-
-    &.shadow2 {
-      position: absolute;
-      left: -1.18%;
-      right: 73.02%;
-      top: 0;
-      color: #F90498;
-    }
-
-    &.shadow3 {
-      position: absolute;
-      left: -0.02%;
-      right: 72.76%;
-      top: 0;
-      color: #F90498;
-    }
-
-  }
-  .section1 {
-    position: absolute;
-    width: 261.83px;
-    height: 292px;
-    left: 34px;
-    top: 552.7px;
-    
-    font-family: Aldrich;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 21px;
-    line-height: 150%;
-
     text-align: center;
     
-    color: #FFFFFF;
-    transform-origin: 0 0;
-    transform: rotate(-3deg);
+    color: #FFFFFF;    
   }
 
-  .section2 {
+  .text2 {
     position: absolute;
-    width: 261.83px;
-    height: 321px;
-    left: 42px;
-    top: 1706px;
+    width: 264px;
+    height: 339px;
+    left: 55px;
+    top: 320px;
     
-    font-family: Aldrich;
+    font-family: Jockey One;
     font-style: normal;
     font-weight: normal;
-    font-size: 21px;
+    font-size: 20px;
     line-height: 150%;
-    /* or 31px */
+    /* or 30px */
     
     text-align: center;
     
     color: #FFFFFF;
   }
 
-  .section3 {
+  .text3 {
     position: absolute;
-    width: 261.83px;
-    height: 275px;
-    left: 103.52px;
-    top: 2331px;
+    width: 228px;
+    height: 850px;
+    left: 73px;
+    top: 1248px;
     
-    font-family: Aldrich;
+    font-family: Jacques Francois;
     font-style: normal;
     font-weight: normal;
-    font-size: 23px;
+    font-size: 15px;
     line-height: 150%;
-    /* or 34px */
+    /* or 22px */
     
-    text-align: center;
     
     color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 228px;
+    height: 850px;
+    left: 73px;
+    top: 2612px;
     
-    transform-origin: 0 0;
-    transform: rotate(7deg);
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    
+    
+    color: #FFFFFF;
   }
 }

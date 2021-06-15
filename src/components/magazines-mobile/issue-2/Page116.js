@@ -10,13 +10,13 @@ const Page116 = () => {
        AVA Designers
         </a>
        </Link>
-       <video className={styles.image3} loop autoPlay>
+       <video className={styles.image3} loop muted autoPlay>
         <source src="./magazine/2/images/125_126/video4.mp4" type="video/mp4" />
        </video>
-       <video className={styles.image4} loop autoPlay>
+       <video className={styles.image4} loop muted autoPlay>
         <source src="./magazine/2/images/125_126/video3.mp4" type="video/mp4" />
        </video>
-       <video className={styles.image5} loop autoPlay>
+       <video className={styles.image5} loop muted autoPlay>
         <source src="./magazine/2/images/125_126/video1.mp4" type="video/mp4" />
        </video>
     </div>

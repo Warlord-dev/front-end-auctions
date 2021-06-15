@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Page117 = () => {
   return (
     <div className={styles.wrapper}>
-      <video className={styles.image1} loop autoPlay>
+      <video className={styles.image1} loop muted autoPlay>
         <source src="./magazine/2/images/125_126/video2.mp4" type="video/mp4" />
        </video>
        <Link href="http://joannahir.com/"><a className={styles.text2}>

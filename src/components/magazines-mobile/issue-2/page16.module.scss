@@ -2,58 +2,89 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3963;
+  height: 1671px;
   background-color: black;
   color: white;
   position: relative;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
-  .backImage {
-    width: 375px;
-    height: 3963;
-    left: 0px;
-    top: 0px;
+  .image1 {
+    position: absolute;
+    width: 1023px;
+    height: 1050px;
+    left: -327px;
+    top: -128px
   }
 
-  .section3 {
+  .image2 {
     position: absolute;
-    width: 261.83px;
-    height: 160.35px;
-    left: 14.21px;
-    top: 69.43px;
+    width: 689px;
+    height: 707px;
+    left: -338px;
+    top: -94px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 254px;
+    left: -264px;
+    top: -24px;
     
+    background: rgba(0, 0, 0, 0.31);
+  }
+
+  .image4 {
+    position: absolute;
+    height: 1240px;
+    left: -95px;
+    top: 431px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 1023px;
+    height: 1050px;
+    left: -474px;
+    top: 613px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 319px;
+    height: 305px;
+    left: 28px;
+    top: 78px;
+    
+    font-family: Chinese Dragon;
     font-style: normal;
     font-weight: normal;
-    white-space: normal;
-    font-family: Aldrich;
-    font-size: 20px;
-    line-height: 150%;
-    text-align: center;
-    /* or 34px */
-    text-align: center;
+    font-size: 100px;
+    line-height: 80%;
+    /* or 80px */
+    
+    display: flex;
+    align-items: center;
+    
     color: #FFFFFF;
-    transform-origin: 0 0;
-    transform: rotate(-4deg);
-
-    span {
-      font-family: Acme;
-      font-size: 23px;
-    }
   }
-  .section4 {
+
+  .text2 {
     position: absolute;
-    width: 261.83px;
-    height: 895px;
-    left: 56px;
-    top: 1274px;
+    width: 196px;
+    height: 43px;
+    left: 28px;
+    top: 350px;
     
-    font-family: Aldrich;
+    font-family: Marker Felt;
     font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 30px;
     line-height: 150%;
-    /* or 30px */
+    /* or 45px */
     
-    text-align: center;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
   }
 }

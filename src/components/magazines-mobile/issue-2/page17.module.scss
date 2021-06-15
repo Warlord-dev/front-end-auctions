@@ -2,80 +2,75 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3364px;
-  background-color: white;
+  height: 3658px;
+  background-color: #000000;
   color: #FFFFFF;
   position: relative;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
-  .backImage {
-    width: 375px;
-    height: 3364px;
+  .image1 {
     position: absolute;
+    width: 115px;
+    height: 3658px;
+    left: 340px;
+    top: 0px;
+    
+    background: #FF0000;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
-  p {
+  .image2 {
     position: absolute;
-    font-family: Acme;
+    width: 115px;
+    height: 3658px;
+    left: 340px;
+    top: 0px;
+    
+    background: rgba(185, 65, 130, 0.48);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 312px;
+    height: 320px;
+    left: 31px;
+    top: 50px;
+    
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 150%;
+    /* or 45px */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 246px;
+    height: 1267px;
+    left: 64px;
+    top: 344px;
+    
+    font-family: Lexend Giga;
     font-style: normal;
     font-weight: normal;
-    font-size: 23px;
+    font-size: 15px;
     line-height: 150%;
+    /* or 22px */
+    
     text-align: center;
+    
     color: #FFFFFF;
 
-    &.section1 {
-      width: 261.83px;
-      height: 160.35px;
-      left: 82.19px;
-      top: 53px;
-      transform-origin: 0 0;
-      transform: rotate(4deg);
-    }
-
-    &.section2 {
-      width: 261.83px;
-      height: 895px;
-      left: 51px;
-      top: 605px;
-      font-family: Aldrich;
+    .text3 {
+      font-family: Marker Felt;
       font-size: 20px;
     }
-
-
-    &.section3 {
-      position: absolute;
-      width: 262px;
-      height: 680px;
-      left: 51px;
-      top: 2684px;
-      font-family: Aldrich;
-      font-size: 20px;
-    }
-  }
-
-  .dollarSign1 {
-    position: absolute;
-    width: 162.96px;
-    height: 167px;
-    left: 101px;
-    top: 2066px;
-    
-  }
-
-  .dollarSign2 {
-    position: absolute;
-    width: 162.96px;
-    height: 167px;
-    left: 100px;
-    top: 2257px;
-  }
-
-  .dollarSign3 {
-    position: absolute;
-    width: 162.96px;
-    height: 167px;
-    left: 99px;
-    top: 2448px;
   }
 }

@@ -6,7 +6,7 @@ const Page92 = () => {
   return (
     <div className={styles.wrapper}>     
       <img src="./magazine/2/images/99_100/rightImg1.png" className={styles.right1} />
-      <video className={styles.right3} loop autoPlay>
+      <video className={styles.right3} loop muted autoPlay>
         <source src="./magazine/2/images/99_100/video1.mp4" type="video/mp4" />
       </video>
       <img src="./magazine/2/images/99_100/rightImg2.png" className={styles.right2} />

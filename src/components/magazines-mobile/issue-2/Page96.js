@@ -4,7 +4,7 @@ import styles from './page96.module.scss'
 const Page96 = () => {
   return (
     <div className={styles.wrapper}>     
-      <video className={styles.image2} loop autoPlay>
+      <video className={styles.image2} loop muted autoPlay>
         <source src="./magazine/2/images/103_104/espa_skin.mp4" type="video/mp4" />
        </video>
        <img src="./magazine/2/images/103_104/image4.png" className={styles.image4} />
