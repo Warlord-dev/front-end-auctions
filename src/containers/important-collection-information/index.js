@@ -78,7 +78,13 @@ const ImportantCollectionInformation = ({ collection }) => {
       collection.garments.reduce((total, cur) => total + parseInt(cur.primarySalePrice), 0),
     )
     .reduce((total, cur) => total + cur, 0);
-  const priceEth = convertToEth(auctionPrice + collectionPrice);
+  let priceEth = convertToEth(auctionPrice + collectionPrice);
+  if (collection.id === 4) {
+    const collection = currentCollections.filter((collection) => collection.id === '9');
+    if (collection && collection[0]) {
+      priceEth = collection[0].valueSold;
+    }
+  }
 
   const expirationDate = filteredAuctions.length
     ? Math.max(...filteredAuctions.map((auction) => parseInt(auction.endTime))) * 1000
