@@ -328,6 +328,7 @@ export const getAllDigitalaxGarmentsCollectionsV2 = `
       id
       garmentAuctionID
       rarity
+      valueSold
       garments(first: 1000) {
         id
         designer

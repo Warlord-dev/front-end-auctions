@@ -81,8 +81,11 @@ const ImportantCollectionInformation = ({ collection }) => {
   let priceEth = convertToEth(auctionPrice + collectionPrice);
   if (collection.id === 4) {
     const collection = currentCollections.filter((collection) => collection.id === '9');
+    console.log({ collection });
     if (collection && collection[0]) {
-      priceEth = collection[0].valueSold;
+      priceEth = collection[0].valueSold || '0';
+    } else {
+      priceEth = '0';
     }
   }
 
