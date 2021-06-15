@@ -56,7 +56,7 @@ const details = [
   ],
   [
     {
-      id: 5,
+      id: 9,
       title: 'Common Unlock',
       subTitle: [
         'Issue Two',
@@ -90,7 +90,7 @@ const details = [
       amountAvailable: 700,
     },
     {
-      id: 6,
+      id: 10,
       title: 'Semi-Rare Unlock',
       subTitle: [
         'Issue Two',
@@ -124,7 +124,7 @@ const details = [
       amountAvailable: 200,
     },
     {
-      id: 7,
+      id: 11,
       title: 'Exclusive Unlock',
       subTitle: [
         'Issue Two',
