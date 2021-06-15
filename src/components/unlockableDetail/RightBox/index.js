@@ -122,7 +122,7 @@ const RightBox = ({ details, id, activeImage }) => {
         {`${details.subTitle ? `: ${details.subTitle[activeImage]}` : ''}`}
       </div>
       <div className={styles.body}>
-        {typeof details.body === 'array' ? details.body[activeImage] : details.body}
+        {typeof details.body === 'string' ? details.body : details.body[activeImage]}
       </div>
       <div className={styles.price}>
         {details.price} $MONA
