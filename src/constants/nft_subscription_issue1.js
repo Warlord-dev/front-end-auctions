@@ -95,7 +95,7 @@ const details = [
       subTitle: [
         'Issue Two',
         'SEE',
-        'Jacket',
+        'Porka Jacket',
         'Wear Your Values HRF Leap of Faith: All In',
         'Polaris X35 Suit',
         'Minecraft Guild Hoodie Green',

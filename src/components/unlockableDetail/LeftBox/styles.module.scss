@@ -1,42 +1,42 @@
-@import "../../../assets/scss/base/responsive.scss";
+@import '../../../assets/scss/base/responsive.scss';
 
 .wrapper {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 
-    @include media-md {
-        width: 580px;
+  @include media-md {
+    width: 580px;
+  }
+
+  @include media-xl {
+    margin-right: 85px !important;
+  }
+
+  .activeImageWrapper {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .activeImage {
+      width: 100%;
+      height: 450px;
+
+      @include media-md {
+        height: 650px;
+      }
+      object-fit: contain;
     }
+  }
 
-    @include media-xl {
-        margin-right: 85px!important;
+  .previewImageWrapper {
+    display: flex;
+    height: 120px;
+    overflow: auto;
+
+    .previewImage {
+      width: 100px;
+      height: 100%;
+      object-fit: contain;
+      margin-right: 1rem;
     }
-
-    .activeImageWrapper {
-        width: 100%;
-        margin-bottom: 1rem;
-
-        .activeImage {
-            width: 100%;
-            height: 450px;
-
-            @include media-md {
-                height: 650px;
-            }
-            object-fit: cover;
-        }
-    }
-
-    .previewImageWrapper {
-        display: flex;
-        height: 120px;
-        overflow: auto;
-
-        .previewImage {
-            width: 100px;
-            height: 100%;
-            object-fit: cover;
-            margin-right: 1rem;
-        }
-    }
+  }
 }
