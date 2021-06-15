@@ -1,35 +1,55 @@
-import React from 'react'
-import styles from './page28.module.scss'
+import React from 'react';
+import styles from './page28.module.scss';
 
 const Page28 = () => {
   return (
     <div className={styles.wrapper}>
-      <video autoPlay muted loop >
-        <source src='./magazine/1/videos/moshed-05-01-15-49-19.mp4' type="video/mp4" />
-      </video>
-      <img src="./magazine/1/images/Group 1188.png" className={styles.image2} />
-      <h1>
-        ROADMAP TO POS - ETHEREUM AND THE ENVIRONMENT
-      </h1>
-      <p className={styles.text1}>
-        At this point many of us have heard of Proof Of Stake— although some may not understand yet how it works or why it matters so much. The importance isn’t so much that economic resources and game theory are used to secure the system, but more the fact that it requires skin in the game. Because if nothing is at risk then nothing has value.  
-        <br /><br />
-        As we continue to increase our digital points of interaction, the tools that we use must ensure that we do not also increase the points of potential failure. Validation for each exchange of content, human connection, and transactable value can only be backed by a tangible and distributed fear of loss. It is a basic princple in everything, from human psychology to physics, if there is no mass then how do you measure it and why does it matter?        
-      </p>
-      <p className={styles.text2}>
-        Well, PoS gives us a sustainable way to run infinite games to test and keep a proveable record about which interactions have merit in an environmented governed by decentralisation. At the very least we are able to spot which interactors are engaging in malicious practice at a much higher rate than traditional systems. If you have ever been the victim of anything from white lies to outright fraud then you know how vital this is.
-        <br /><br />
-        Sustainability isn’t simply a global ambition or far off hope for environmental wellbeing, but rather it’s how we personally sustain ourselves against catastrophic loss and yet another legacy system lock in.         
-      </p>
-      <h2>Helsinki Biennial</h2>
-      <p className={styles.text3}>
-        With the effects from the pandemic still dictating so much of our lives— it’s easy to forget that other people and the real world actually exist, that we are not just blips on a screen. In fact, it’s these in-person interactions that shape the constraints and possibilities of every facet of our lives through industry, economics, communities, and how we have so often approached solutions to bettering sustainable working processes. 
-        <br /><br />
-        With the high speed boost that the NFT and crypto art scene has experienced over the past few months, it seems timely that the Helsinki Art Museum and the inaugural Helsinki Biennial in Finland is taking steps to transform the culture around in-person art exhibitions. As we continue to move further back to the new normal and increase our social interactions, given the current global focus on digital art, it is essential to bridge old industries and mediums into new sustainable worlds through NFTs. The Helsinki Art Museum a lead on one half of this by designing their entire Biennial event as Carbon neutral. This is a big step and the first of its kind.          
-      </p>
-      <img src="./magazine/1/images/mobile/27-01.png" className={styles.image1} />
+      <img src="./magazine/2/images/31_32_mobile.jpg" className={styles.back} />
+      <div className={styles.text1}>
+        the concerns or costs, and in fact, if you speak with an authentic community member they
+        will be more than open to discussing the topic in all of its glory. There are 4-5 years of
+        documented discussions, conferences, deep academic research, and github repositories all on
+        this topic. Ethereum is currently in the live process of migrating to Ethereum 2.0 and Proof
+        of Stake as a huge environmentally conscious step as the mechanism for securing the network
+        becomes far more energy efficient.
+        <br />
+        <br />
+        Bitcoin, unlike Ethereum, for now, and most probably as long as it continues to operate, is
+        sticking with Proof of Work. However, not all of Bitcoin’s energy consumption translates
+        into the high
+      </div>
+      <div className={styles.text2}>
+        carbon emissions that is so often misrepresented. Much of Bitcoin’s mining uses renewable
+        energy, and, although the exact % of mining leveraging this is not precisely accounted for,
+        it sits somewhere between 39%-70%— which, case in point, is in itself higher than the
+        renewable energy in the US power grid. Miners in China also have taken the same initiative,
+        where a considerable amount use excess energy that would otherwise be wasted in those areas
+        where it can not be exported to city infrastructure.
+      </div>
+      <div className={styles.text3}>
+        Thus, with this said, and taking a step back to look at the bigger picture, perhaps there is
+        a way after all that Bitcoin can continue to operate and actually help take advantage of
+        much more wasted energy than previously thought. Even El Salvador and the presidents recent
+        announcement to enact Bitcoin as legal tender has been announced alongside the country’s
+        intention to put up a plan to offer facilities for Bitcoin mining with considerably cheap
+        and 100% renewable 0 emissions energy from their volcanos.
+      </div>
+      <div className={styles.text4}>
+        It’s consumption shouldn’t be ignored and more active and collective steps must be taken,
+        however, perhaps after all, all of the contraversy isn’t so much just solely about the
+        environment. It’s moreso about people being scared of a new revolutionary technology and not
+        taking the proper time, that is required, to fully understand it in all of its complicity.
+        <br />
+        <br />
+        It’s important that we do not mistake the forest for the trees— the situation is not black
+        and white. Bitcoin is so much more than just an energy expenditure. It is the first globally
+        recognised censorship-resistant decentralised digital asset that has ultimately initiated
+        the entirity of the web3 ecosystem as we know of it today— an ecosystem that provides
+        tangible evidence that the broken centralised web2 exploitation is not a framework that any
+        of us have to accept or be forced to live by.
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page28
+export default Page28;

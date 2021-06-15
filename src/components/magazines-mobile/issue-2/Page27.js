@@ -1,53 +1,54 @@
-import React from 'react'
-import styles from './page27.module.scss'
+import React from 'react';
+import styles from './page27.module.scss';
 
 const Page27 = () => {
   return (
     <div className={styles.wrapper}>
-      <video autoPlay muted loop >
-        <source src='./magazine/1/videos/moshed-05-01-15-49-19.mp4' type="video/mp4" />
-      </video>
-      <img src='./magazine/1/images/Ellipse 39.png' className={styles.ellipseImage} />
-      <h1>
-        SUSTAINABILITY <br />PIONEERS
-      </h1>
-      <img src='./magazine/1/images/ts 1.png' className={styles.timPhoto} />
-      <h2>
-        TIM SWEENEY DONATES TO Appalachian fund
-      </h2>
-      <p className={styles.text1}>
-        Tim Sweeney, founder and CEO of Epic Games, donated over 7,500 acres of land on Thursday to Asheville-based nonprofit Southern Appalachian Highlands Conservancy. 
-        <br /><br />
-        The donation included dozens of land parcels rising to 5,300 feet, including rare plants and animals (Some of them on the endangered species list), waterfalls and the largest American Chestnut restoration project. 
-      </p>
-
-      <h4 className={styles.layer1}>
-        LAYER TWO
-      </h4>
-      <h4 className={styles.layer2}>
-        LAYER TWO
-      </h4>
-      <h4 className={styles.layer3}>
-        LAYER TWO
-      </h4>
-
-      <p className={styles.text2}>
-        Scaling for Ethereum has been a hot topic for 2021, providing much needed solutions for how we can continue to interact in a web3 environment without being absolutely obliterated by large gas fees from an increasingly congesteded network or know that sustainability wise we could be doing better.
-        <br /><br />
-        For a quick TLDR and break down on what scaling infrastructure actually means; there are two core scaling routes, Layer 2 scaling and Side Chains. 
-        <br /><br />
-        Layer 2 relies on the security of the main layer; the Ethereum blockchain. It leverages off of the main chain’s security, robustness and network effects. Some examples are plasma, optimistic roll ups and ZK roll ups. 
-        <br /><br />
-        Side chains rely on their own consensus and security models i.e both Matic PoS chain and xDAI, where Matic’s PoS chain not only introduces a 99% more energy efficient system, but, also still remains heavily interconnected with the Ethereum developer community. 
-      </p>
-      <p className={styles.text3}>
-        But with all this said, the real reason why Layer 2s are so vital, so impactful, is because ultimately they serve to provide better onboarding ramps and a more all-embracing user experience. 
-        <br /><br />
-        They allow us to build better, wider and more interoperable roads between us, what we create and the other people that make up the fabric of web3 based networks. Mass global adoption won’t happen on its own or over night. But if we are to enable for it being possible and to be ready for when it does happen we must be able to meet the user’s expectation for what they will using scaling for.         
-      </p>
-      <img src="./magazine/1/images/mobile/27-01.png" className={styles.image1} />
+      <img src="./magazine/2/images/31_32_mobile1.jpg" className={styles.back} />
+      <div className={styles.text1}>SUSTAINABILITY PIONEERS</div>
+      <div className={styles.text2}>Is Bitcoin greener than what we think?</div>
+      <div className={styles.text3}>
+        When it comes to digital curriencies, especially the two most prominent out there, Bitcoin
+        and Ethereum, we are all far too aware of the critical headlines and contraversies around
+        both of the crypto’s carbon footprint, sustainability and the large energy consumption
+        required in order to keep them operational, where both employ the Proof of Work (PoW)
+        consensus mechanism for securing transcations on the network. PoW relies on computers
+        solving puzzles, which uses electricity, and these puzzles get harder and harder overtime,
+        where as the network grows, the relative rate of new coins mined stays stable. Miners solve
+        these puzzles and are rewarded with new coins. And thus, they get better GPU’s, more
+        powerful setups to remain competitive as the mining pool grows. The cost of attacking
+        Bitcoin rises along with the increase in the computational power and the energy consumed by
+        those mining or securing the network.
+        <br />
+        <br />
+        However, there is more to the story than just flashy headlines and 5,000 word Medium
+        articles deeming the entire crypto ecosystem and everything built around it as an absolute
+        disaster where ecological devastation remains out of control.
+      </div>
+      <div className={styles.text4}>
+        So let’s break down this narrative further, because, after all, the devil is in the details.
+        <br />
+        <br />
+        First off, to set some of the ground context, everything that we do has an impact; the very
+        internet that all of us have efficiently integrated within every aspect of what we do is
+        powered by servers needing cooling mechanisms to function properly. And these companies
+        employ thousands of employees travelling to and from work each day to AC equipped office to
+        maintain our precious connectivity. And it’s not just that, every single picture that we
+        save to the cloud or send to our friends, families has a cost associated with it. Every
+        tweet, tiktok, discord server increases each of our carbon footprints. And that’s just the
+        beginning; how about travel? Not just our own personal location hopping but that of all of
+        the resoruces that each of us consume; food, apparel, electronics etc. etc. All of it is not
+        local, it usually travels thousands of miles across the continents to get to us.
+        <br />
+        <br />
+        Thus, with this said, it’s not to say that the concerns around cryptocurrency mining
+        consumption are not valid in some respects— in fact, for the better half of the entire
+        industry’s existence it has been a forefront topic that some of the brightest minds have
+        actively spoken up about and starting hashing out varying solutions. No one in the crypto
+        community is trying to hide any of
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page27
+export default Page27;

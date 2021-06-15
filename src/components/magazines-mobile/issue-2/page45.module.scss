@@ -3,12 +3,116 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2315px;
-  background-color: white;
+  height: 2940px;
+  background-color: black;
   color: white;
   position: relative;
   white-space: normal;
   text-align: left;
 
-  
+  .video1 {
+    position: absolute;
+    width: 619px;
+    height: 608px;
+    left: -244px;
+    top: -310px;
+  }
+
+  .image1 {
+    position: absolute;
+    left: -16px;
+    top: 387px;
+    width: 180px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 434px;
+    height: 336px;
+    left: -30px;
+    top: 2604px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 718px;
+    height: 185px;
+    left: -130px;
+    top: 654px;
+
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+    /* or 80px */
+
+    color: #ffffff;
+
+    transform: rotate(90deg);
+  }
+
+  .text2 {
+    position: absolute;
+    width: 97px;
+    height: 722px;
+    left: 77px;
+    top: 1855px;
+
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 100%;
+    /* or 120px */
+
+    color: #a22501;
+
+    text-shadow: -3px 0 #f13737, 0 3px #f13737, 3px 0 #f13737, 0 -3px #f13737;
+
+    filter: blur(4px);
+  }
+
+  .text3 {
+    position: absolute;
+    width: 130px;
+    height: 478px;
+    left: 194px;
+    top: 2092px;
+
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 100%;
+    word-break: break-all;
+    /* or 120px */
+
+    color: #a22501;
+
+    text-shadow: -3px 0 #f13737, 0 3px #f13737, 3px 0 #f13737, 0 -3px #f13737;
+
+    filter: blur(4px);
+  }
+
+  .text4 {
+    position: absolute;
+    width: 404px;
+    height: 28px;
+    left: 120px;
+    top: 2612px;
+
+    font-family: Joti One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+    text-align: right;
+
+    color: #ffffff;
+
+    transform: rotate(-90deg);
+  }
 }

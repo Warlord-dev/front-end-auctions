@@ -1,8 +1,10 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './page52.module.scss';
 
 const Page52 = () => {
+  const [play, setPlay] = useState(false);
+  const ref = useRef();
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/2/images/57_58_mobile1.jpg" className={styles.back} />
@@ -42,9 +44,17 @@ const Page52 = () => {
       <div className={styles.text6}>ARJAY SOUL</div>
       <img src="./magazine/2/images/57_58_image1.png" className={styles.image1} />
       <img src="./magazine/2/images/57_58_image2.png" className={styles.image2} />
-      <video autoPlay muted loop className={styles.video1}>
+      <video ref={ref} muted autoPlay loop className={styles.video1}>
         <source src="./magazine/2/images/57_58_video1.mp4" type="video/mp4" />
       </video>
+      <img
+        src={`./magazine/2/images/57_58_${!play ? 'play' : 'pause'}.png`}
+        className={styles.play}
+        onClick={() => {
+          setPlay(!play);
+          ref.current.muted = play;
+        }}
+      />
       <div className={styles.text7}>
         Not your regular R&B singer – the versatile and independent artist – ArjaySoul is not afraid
         to take risks when creating his own waves in music. The Arizona-native is no stranger to
