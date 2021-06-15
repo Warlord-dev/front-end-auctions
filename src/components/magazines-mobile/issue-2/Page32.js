@@ -1,48 +1,44 @@
-import React from 'react'
-import styles from './page32.module.scss'
+import React from 'react';
+import styles from './page32.module.scss';
 
 const Page32 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.box1}></div>
-      <video autoPlay muted loop className={styles.indiaNecklaceVideo}>
-        <source src="./magazine/1/videos/indiaNecklace.mp4" type="video/mp4" />
-      </video>
-      <img src="./magazine/1/images/Group 1185.png" className={styles.circleImg1} />
-      <div className={styles.circleText1}>
-        The owl is a vehicle of Lakshmi, the goddess of wealth and good fortune in Hinduism.
-      </div>
-      <div className={styles.box2}></div>
-      <video autoPlay muted loop className={styles.indiaSuitVideo}>
-        <source src="./magazine/1/videos/indiaSuit.mp4" type="video/mp4" />
-      </video>
-      <img src="./magazine/1/images/Group 1186.png" className={styles.circleImg2} />
-      <div className={styles.circleText2}>
-        The sherwani; a long coat-like jacket that is knee length and originated in 19th century
-        India.
+      <img src="./magazine/2/images/35_36_mobile.jpg" className={styles.back} />
+      <img src="./magazine/2/images/35_36_image1.png" className={styles.image1} />
+      <img src="./magazine/2/images/35_36_image2.png" className={styles.image2} />
+      <img src="./magazine/2/images/35_36_image3.png" className={styles.image3} />
+      <div className={styles.text1}>
+        <b>
+          DIGITALAX introduced Fractional Garment Ownership (FGO) at the inception of the project in
+          2020.
+        </b>{' '}
+        FGO sets forth the standard and dress code for the manufacture of digital fashion along the
+        digital content supply chain. It leverages ERC Protocol standards across the Ethereum
+        Blockchain and Polygon (Matic Network) for breaking down a master ERC-721 digital garment
+        into its programmable and composable ERC-1155 elements of materials, patterns and textures.
         <br />
         <br />
-        The jacket contains lotus flowers, which symbolize purity, enlightenment and
-        self-regeneration— a popular symbol in India and around the world.
-      </div>
-      <div className={styles.box3}></div>
-      <video autoPlay muted loop className={styles.indiaSuit2Video}>
-        <source src="./magazine/1/videos/IndiaDress.mp4" type="video/mp4" />
-      </video>
-      <img src="./magazine/1/images/Group 1187.png" className={styles.circleImg3} />
-      <div className={styles.circleText3}>
-        A popular form of Indian women’s dress, the Lehenga Choli, which originated in North India
-        during the 10th century and is often worn for weddings or other formal events.
+        Here, we are using a variant on the ERC-998 standard, where each ERC-721 token can hold a
+        balance of ERC-1155 NFTs. We coin this respectively the Parent and Child NFTs. This allows
+        for other designers to leverage off of the open source digital libraries, incorporating the
+        patterns, materials and textures into their master garments, whilst still ensuring that all
+        original contributors to the digital fashion item can have their IP authenticated and
+        effectively traced across the entire journey through the digital fashion supply chain.
         <br />
         <br />
-        The pattern on the skirt is a binary flower, fusing the traditional – a flower – with the
-        futuristic – 0’s and 1’s used in binary codes popularized in the movie the Matrix. The
-        blouse contains a cubed pattern containing Ravi’s initials, RGS, and was sketched by hand by
-        Nureen Wohl, a social worker based in New York City. The headscarf, or the dupatta, contains
-        an intricate piece of forehead jewelry, called a maang tikka.
+        FGO directly enables individual artists, designers to create and issue the modular building
+        blocks and components to a master digital fashion garment, with complete on-chain
+        verification. This directly allows for;
+        <ul>
+          <li>Completely new models of monetisation</li>
+          <li>An Open Source spirit injection</li>
+          <li>Authenticated and transparent tracking at each stage of the supply chain</li>
+          <li>A more complete framework for valuing and assessing native digital goods</li>
+        </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page32
+export default Page32;
