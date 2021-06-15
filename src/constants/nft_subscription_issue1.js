@@ -1,6 +1,7 @@
 const details = [
   [
     {
+      id: 1,
       title: 'Common Unlock',
       issueIndex: 'Issue One',
       url: [
@@ -16,6 +17,7 @@ const details = [
       amountAvailable: 700,
     },
     {
+      id: 2,
       title: 'Semi-Rare Unlock',
       issueIndex: 'Issue One',
       url: [
@@ -32,6 +34,7 @@ const details = [
       amountAvailable: 200,
     },
     {
+      id: 3,
       title: 'Exclusive Unlock',
       issueIndex: 'Issue One',
       url: [
@@ -53,6 +56,7 @@ const details = [
   ],
   [
     {
+      id: 5,
       title: 'Common Unlock',
       subTitle: [
         'Issue Two',
@@ -86,6 +90,7 @@ const details = [
       amountAvailable: 700,
     },
     {
+      id: 6,
       title: 'Semi-Rare Unlock',
       subTitle: [
         'Issue Two',
@@ -119,6 +124,7 @@ const details = [
       amountAvailable: 200,
     },
     {
+      id: 7,
       title: 'Exclusive Unlock',
       subTitle: [
         'Issue Two',
