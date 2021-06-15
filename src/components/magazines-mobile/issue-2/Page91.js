@@ -6,9 +6,9 @@ const Page91 = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.leftBack}></div> 
-      <img src="./magazine/1/99_100/leftImg1.png" className={styles.left1} />
-      <img src="./magazine/1/99_100/leftImg2.png" className={styles.left2} />
-      <img src="./magazine/1/99_100/leftImg3.png" className={styles.left3} />
+      <img src="./magazine/2/images/99_100/leftImg1.png" className={styles.left1} />
+      <img src="./magazine/2/images/99_100/leftImg2.png" className={styles.left2} />
+      <img src="./magazine/2/images/99_100/leftImg3.png" className={styles.left3} />
       <Link href="https://www.instagram.com/abigneonglitter/"><a className={styles.text1}>
       ABigNeonGlitter
       </a>

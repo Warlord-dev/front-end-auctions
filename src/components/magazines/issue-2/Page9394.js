@@ -5,10 +5,10 @@ import cn from 'classnames';
 const Page9394 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/93_94/page87-left.png" className={styles.leftBack} />
-      <img src="./magazine/1/93_94/page87-right.png" className={styles.rightBack} />
-      <img src="./magazine/1/93_94/page87-right2.png" className={styles.rightBack} />
-      <img src="./magazine/1/93_94/page87-right3.png" className={styles.rightBottom} />
+      <img src="./magazine/2/images/93_94/page87-left.png" className={styles.leftBack} />
+      <img src="./magazine/2/images/93_94/page87-right.png" className={styles.rightBack} />
+      <img src="./magazine/2/images/93_94/page87-right2.png" className={styles.rightBack} />
+      <img src="./magazine/2/images/93_94/page87-right3.png" className={styles.rightBottom} />
       <div className={styles.image1}>
 
       </div>

@@ -5,17 +5,17 @@ import Link from 'next/link';
 const Page56 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/59_60/image21.png" className={styles.image21} />
+      <img src="./magazine/2/images/59_60/image21.png" className={styles.image21} />
        <Link href="https://daostack.io/"><a>
-        <img src="./magazine/1/59_60/image16.png" className={styles.image22} />
+        <img src="./magazine/2/images/59_60/image16.png" className={styles.image22} />
         </a>
        </Link>
        <Link href="https://aragon.org/"><a>
-        <img src="./magazine/1/59_60/image17.png" className={styles.image23} />
+        <img src="./magazine/2/images/59_60/image17.png" className={styles.image23} />
         </a>
        </Link>
        <Link href="https://snapshot.org/#/"><a>
-       <img src="./magazine/1/59_60/image18.png" className={styles.image24} />
+       <img src="./magazine/2/images/59_60/image18.png" className={styles.image24} />
        </a>
        </Link>
        <p className={styles.text7}>Considering Launching A DAO?</p>

@@ -6,7 +6,7 @@ const Page115 = () => {
   return (
     <div className={styles.wrapper}>
      <video className={styles.image2} loop autoPlay>
-        <source src="./magazine/1/123_124/video1.mov" type="video/mp4" />
+        <source src="./magazine/2/images/123_124/video1.mov" type="video/mp4" />
        </video>
        <p className={styles.text1}>F<br/><br/>
 I<br/><br/>

@@ -18,13 +18,13 @@ const Page5960 = () => {
 
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/59_60/image1.png" className={styles.image1} />
+      <img src="./magazine/2/images/59_60/image1.png" className={styles.image1} />
       <Link href="https://dxdao.eth.link/"><a>
-        <img src="./magazine/1/59_60/image2.png" className={styles.image2} />
+        <img src="./magazine/2/images/59_60/image2.png" className={styles.image2} />
         </a>
        </Link>
-      <img src="./magazine/1/59_60/image3.gif" className={styles.image3} />
-      <img src="./magazine/1/59_60/image4.png" className={styles.image4} />
+      <img src="./magazine/2/images/59_60/image3.gif" className={styles.image3} />
+      <img src="./magazine/2/images/59_60/image4.png" className={styles.image4} />
       <button 
         className={styles.image5}
         onClick={() => {
@@ -32,76 +32,76 @@ const Page5960 = () => {
         }}
       >
         {
-          <img src={`./magazine/1/59_60/${isPlaying ? 'image19' : 'image5'}.png`}/>
+          <img src={`./magazine/2/images/59_60/${isPlaying ? 'image19' : 'image5'}.png`}/>
         }
       </button>
-      <img src="./magazine/1/59_60/image6.png" className={styles.image6} />
-      <img src="./magazine/1/59_60/image7.png" className={styles.image7} />
-      <img src="./magazine/1/59_60/image8.png" className={styles.image8} />
-      <img src="./magazine/1/59_60/image9.png" className={styles.image9} />
+      <img src="./magazine/2/images/59_60/image6.png" className={styles.image6} />
+      <img src="./magazine/2/images/59_60/image7.png" className={styles.image7} />
+      <img src="./magazine/2/images/59_60/image8.png" className={styles.image8} />
+      <img src="./magazine/2/images/59_60/image9.png" className={styles.image9} />
       <Link href="https://swapr.eth.link/#/swap"><a>
-        <img src="./magazine/1/59_60/image10.png" className={styles.image10} />
+        <img src="./magazine/2/images/59_60/image10.png" className={styles.image10} />
         </a>
        </Link>
        <Link href="https://dxdao.eth.link/#/"><a>
-        <img src="./magazine/1/59_60/image10.png" className={styles.image11} />
+        <img src="./magazine/2/images/59_60/image10.png" className={styles.image11} />
         </a>
        </Link>
        <Link href="https://omen.eth.link/#/liquidity"><a>
-        <img src="./magazine/1/59_60/image10.png" className={styles.image12} />
+        <img src="./magazine/2/images/59_60/image10.png" className={styles.image12} />
         </a>
        </Link>
        <Link href="https://discord.gg/4QXEJQkvHH"><a>
-        <img src="./magazine/1/59_60/image11.png" className={styles.image13} />
+        <img src="./magazine/2/images/59_60/image11.png" className={styles.image13} />
         </a>
        </Link>
        <Link href="https://discord.gg/4QXEJQkvHH"><a>
-        <img src="./magazine/1/59_60/image11.png" className={styles.image14} />
+        <img src="./magazine/2/images/59_60/image11.png" className={styles.image14} />
         </a>
        </Link>
        <Link href="https://discord.gg/4QXEJQkvHH"><a>
-        <img src="./magazine/1/59_60/image11.png" className={styles.image15} />
+        <img src="./magazine/2/images/59_60/image11.png" className={styles.image15} />
         </a>
        </Link>
        <Link href="https://twitter.com/SwaprEth"><a>
-        <img src="./magazine/1/59_60/image12.png" className={styles.image16} />
+        <img src="./magazine/2/images/59_60/image12.png" className={styles.image16} />
         </a>
        </Link>
        <Link href="https://twitter.com/DXdao_"><a>
-        <img src="./magazine/1/59_60/image12.png" className={styles.image17} />
+        <img src="./magazine/2/images/59_60/image12.png" className={styles.image17} />
         </a>
        </Link>
        <Link href="https://twitter.com/Omen_eth"><a>
-        <img src="./magazine/1/59_60/image12.png" className={styles.image18} />
+        <img src="./magazine/2/images/59_60/image12.png" className={styles.image18} />
         </a>
        </Link>
        <Link href="https://dxdao.medium.com/"><a>
-        <img src="./magazine/1/59_60/image13.png" className={styles.image19} />
+        <img src="./magazine/2/images/59_60/image13.png" className={styles.image19} />
         </a>
        </Link>
        <Link href="hhttps://daotalk.org/c/dx-dao/15"><a>
-        <img src="./magazine/1/59_60/image14.png" className={styles.image20} />
+        <img src="./magazine/2/images/59_60/image14.png" className={styles.image20} />
         </a>
        </Link>
-       <img src="./magazine/1/59_60/image15.png" className={styles.image21} />
+       <img src="./magazine/2/images/59_60/image15.png" className={styles.image21} />
        <Link href="https://daostack.io/"><a>
-        <img src="./magazine/1/59_60/image16.png" className={styles.image22} />
+        <img src="./magazine/2/images/59_60/image16.png" className={styles.image22} />
         </a>
        </Link>
        <Link href="https://snapshot.org/#/"><a>
-       <img src="./magazine/1/59_60/image18.png" className={styles.image24} />
+       <img src="./magazine/2/images/59_60/image18.png" className={styles.image24} />
        </a>
        </Link>
        <Link href="https://gnosis.io/"><a>
-       <img src="./magazine/1/59_60/image22.png" className={styles.image25} />
+       <img src="./magazine/2/images/59_60/image22.png" className={styles.image25} />
        </a>
        </Link>
        <Link href="https://discord.com/"><a>
-       <img src="./magazine/1/59_60/image23.png" className={styles.image26} />
+       <img src="./magazine/2/images/59_60/image23.png" className={styles.image26} />
        </a>
        </Link>
        <Link href="https://www.discourse.org/"><a>
-       <img src="./magazine/1/59_60/image24.png" className={styles.image27} />
+       <img src="./magazine/2/images/59_60/image24.png" className={styles.image27} />
        </a>
        </Link>
       <p className={styles.text1}>DAO’ing Out With DXDAO Keenan + Caden</p>
@@ -118,7 +118,7 @@ const Page5960 = () => {
       <p className={styles.text13}>Unfortunately a wide range of infrastructure for DAOs still isn’t really there yet. Well, it’s not there is a complete enough off-the-shelf version so that anyone can interact with it; DAOStack and Snapshot each have their caveats. Many groups use a combination of Gnosis Vault for treasury management, and Discord and Discourse for community management, proposal evaluation and social coordination. </p>
       <p className={styles.text14}>Gnosis Vault + Discord + Discourse</p>
       <audio ref={audioRef} loop>
-        <source src="./magazine/1/59_60/1.mp3" type="audio/mpeg" />
+        <source src="./magazine/2/images/59_60/1.mp3" type="audio/mpeg" />
       </audio>
     </div>
   );

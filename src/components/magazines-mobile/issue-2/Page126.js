@@ -6,7 +6,7 @@ const Page126 = () => {
   const [usually] = useState("{usually}")
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/135_136/image4.png" className={styles.image1} />
+      <img src="./magazine/2/images/135_136/image4.png" className={styles.image1} />
       <p className={styles.text1}>A Variance Swap for Life.</p>
        <p className={styles.text2}>Life comes with no instruction manual and the advice given along the way is all over the place; others try to impose their views and thoughts, not out of maliciousness {usually}, but rather out of conviction that they think they know what is best or good for us, despite it often being a case of either naive intervensionism or the green lumber phallacy (i.e. attempting to draw conclusions from what they know or have experienced as holding the same contextual weight within our own situations). 
 <br/><br/>

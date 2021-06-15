@@ -4,10 +4,10 @@ import styles from './page64.module.scss'
 const Page64 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/67_68/image12.png" className={styles.image7} />
-      <img src="./magazine/1/67_68/image8.png" className={styles.image8} />
-      <img src="./magazine/1/67_68/image9.png" className={styles.image9} />
-      <img src="./magazine/1/67_68/image10.png" className={styles.image10} />
+      <img src="./magazine/2/images/67_68/image12.png" className={styles.image7} />
+      <img src="./magazine/2/images/67_68/image8.png" className={styles.image8} />
+      <img src="./magazine/2/images/67_68/image9.png" className={styles.image9} />
+      <img src="./magazine/2/images1/67_68/image10.png" className={styles.image10} />
 
       <p className={styles.text1}>E-SPORTS PLAYER OF THE MONTH</p>
       <p className={styles.text2}>N0TAIL</p>

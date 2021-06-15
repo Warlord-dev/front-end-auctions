@@ -6,7 +6,7 @@ const Page114 = () => {
   return (
     <div className={styles.wrapper}>
       <Link href="www.instagram.com/pr.esc/"><a>
-       <img src="./magazine/1/123_124/image1.png" className={styles.image1} />
+       <img src="./magazine/2/images/123_124/image1.png" className={styles.image1} />
        </a>
        </Link>
        <Link href="www.instagram.com/pr.esc/"><a>

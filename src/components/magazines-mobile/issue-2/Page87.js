@@ -4,7 +4,7 @@ import styles from './page87.module.scss'
 const Page87 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/95_96/image1.png" className={styles.image1} />
+      <img src="./magazine/2/images/95_96/image1.png" className={styles.image1} />
       <div className={styles.text1}>
       BLADE RUNWAY
       </div>

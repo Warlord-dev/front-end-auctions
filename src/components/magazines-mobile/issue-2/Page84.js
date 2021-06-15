@@ -4,7 +4,7 @@ import styles from './page84.module.scss'
 const Page84 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/91_92/image2.png" className={styles.image1} />
+      <img src="./magazine/2/images/91_92/image2.png" className={styles.image1} />
     </div>
   )
 }

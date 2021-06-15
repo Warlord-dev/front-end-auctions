@@ -2,84 +2,122 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3238px;
+  height: 3679px;
   background-color: white;
   color: white;
   position: relative;
 
-  .pageBack {
+  .image1 {
     position: absolute;
-    width: 304px;
-    height: 3159px;
-    left: 35px;
-    top: 43px;
-    
-    background: #DBCF95;
+    width: 255px;
+    height: 66px;
+    left: 0px;
+    top: 18px;
   }
 
-  h1 {
+  .image2 {
+    position: absolute;
+    width: 293px;
+    height: 302px;
+    left: 27px;
+    top: 320px;
+    
+    background: rgba(0, 0, 0, 0.67);
+  }
+
+  .image3 {
+    position: absolute;
+    width: 473px;
+    height: 506px;
+    left: -160px;
+    top: 683px;
+    
+    background: rgba(15, 14, 71, 0.67);
+  }
+
+  .image4 {
+    position: absolute;
+    width: 319px;
+    height: 543px;
+    left: 56px;
+    top: 1229px;
+    
+    background: rgba(0, 0, 0, 0.67);
+  }
+
+  .image5 {
+    position: absolute;
+    width: 346px;
+    height: 377px;
+    left: 0px;
+    top: 1833px;
+    
+    background: rgba(33, 13, 43, 0.67);
+  }
+
+  .image6 {
+    position: absolute;
+    width: 444px;
+    height: 492px;
+    left: 24px;
+    top: 2250px;
+    
+    background: rgba(0, 0, 0, 0.67);
+  }
+
+  .image7 {
+    position: absolute;
+    width: 339px;
+    height: 339px;
+    left: 0px;
+    top: 2782px;
+    
+    background: rgba(15, 14, 71, 0.67);
+  }
+
+  .image8 {
+    position: absolute;
+    width: 483px;
+    height: 465px;
+    left: -27px;
+    top: 3161px;
+    
+    background: rgba(0, 0, 0, 0.67);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 309px;
+    height: 34px;
+    left: 38px;
+    top: 124px;
+    
+    font-family: Metal Lord;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+    
+    
+    color: #3D1550;
+  }
+
+  .text2 {
     position: absolute;
     width: 235px;
-    height: 288px;
-    left: 70px;
-    top: 88px;
+    height: 229px;
+    left: 56px;
+    top: 351px;
     
-    font-family: Nella Sue Demo;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 72px;
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
-
-  h2 {
-    position: absolute;
-    width: 250px;
-    height: 526px;
-    left: 63px;
-    top: 412px;
-    
-    font-family: Jockey One;
-    font-style: normal;
-    font-weight: normal;
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: bold;
     font-size: 15px;
-    line-height: 22.5px;
+    line-height: 120.53%;
+    /* or 18px */
     
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
-
-  h3 {
-    position: absolute;
-    width: 250px;
-    height: 850px;
-    left: 63px;
-    top: 921px;
-    
-    font-family: Jacques Francois;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 22.5px;
-    color: #FFFFFF;
-  }
-
-  h4 {
-    position: absolute;
-    width: 250px;
-    height: 850px;
-    left: 59px;
-    top: 2042px;
-    
-    font-family: Jacques Francois;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 22.5px;
-
+    text-align: right;
     
     color: #FFFFFF;
   }

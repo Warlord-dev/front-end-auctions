@@ -4,7 +4,7 @@ import styles from './page8384.module.scss';
 const Page8384 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/1/83_84/image1.png" className={styles.image1} />
+      <img src="./magazine/2/images/83_84/image1.png" className={styles.image1} />
       <div className={styles.image2}></div>
       <div className={styles.image3}></div>
       <p className={styles.text1}>The demands of survival in such a mad world, paired with constantly ringing alarm bells and the stream of noise overloading our sensations every second — not to mention the scarcity and disconnection of our jobs from a true sense of purpose — can break us. 

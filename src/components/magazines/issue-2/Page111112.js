@@ -6,17 +6,17 @@ const Page111112 = () => {
   return (
     <div className={styles.wrapper}>
        <video className={styles.image7} muted loop autoPlay>
-        <source src="./magazine/1/111_112/video1.mov" type="video/mp4" />
+        <source src="./magazine/2/images/111_112/video1.mov" type="video/mp4" />
        </video>
       <div className={styles.image1}></div>
-       <img src="./magazine/1/111_112/image1.gif" className={styles.image2} />
-       <img src="./magazine/1/111_112/image2.png" className={styles.image3} />
-       <img src="./magazine/1/111_112/image3.png" className={styles.image4} />
-       <img src="./magazine/1/111_112/image4.png" className={styles.image5} />
-       <img src="./magazine/1/111_112/image5.png" className={styles.image6} />
+       <img src="./magazine/2/images/111_112/image1.gif" className={styles.image2} />
+       <img src="./magazine/2/images/111_112/image2.png" className={styles.image3} />
+       <img src="./magazine/2/images/111_112/image3.png" className={styles.image4} />
+       <img src="./magazine/2/images/111_112/image4.png" className={styles.image5} />
+       <img src="./magazine/2/images/111_112/image5.png" className={styles.image6} />
        {/* <img src="./magazine/1/105_106/image6.png" className={styles.image7} /> */}
        <video className={styles.image7} muted loop autoPlay>
-        <source src="./magazine/1/111_112/video1.mov" type="video/mp4" />
+        <source src="./magazine/2/images/111_112/video1.mov" type="video/mp4" />
        </video>
        <p className={styles.text1}>Nike Adapt BB</p>
        <Link href="https://marcellobaldari.artstation.com/"><a className={styles.text2}>

@@ -6,7 +6,7 @@ const Page103 = () => {
   return (
     <div className={styles.wrapper}>
       <video className={styles.image7} loop autoPlay>
-        <source src="./magazine/1/111_112/video1.mov" type="video/mp4" />
+        <source src="./magazine/2/images/111_112/video1.mov" type="video/mp4" />
        </video>
        <Link href="https://www.instagram.com/dgtl_stylist/"><a className={styles.text4}>
        Alyona Briukhanova
