@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Router, { useRouter }  from 'next/router';
+import Router, { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import throttle from 'lodash.throttle';
 import cn from 'classnames';
@@ -15,26 +15,25 @@ import LandingHeader from './landing';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
-  
-  const [hasScrolled, setHasScrolled] = useState(false)
-  const [isCollapse, setIsCollapse] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [isCollapse, setIsCollapse] = useState(false);
 
   useEffect(() => {
     const handleScroll = throttle(() => {
-      const offset = 0
-      const { scrollTop } = document.documentElement
-      const scrolled = scrollTop > offset
+      const offset = 0;
+      const { scrollTop } = document.documentElement;
+      const scrolled = scrollTop > offset;
 
       if (hasScrolled !== scrolled) {
-        setHasScrolled(scrolled)
+        setHasScrolled(scrolled);
       }
-    }, 200)
+    }, 200);
 
-    document.addEventListener('scroll', handleScroll)
+    document.addEventListener('scroll', handleScroll);
     return () => {
-      document.removeEventListener('scroll', handleScroll)
-    }
-  }, [hasScrolled])
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, [hasScrolled]);
 
   const dispatch = useDispatch();
   const user = useSelector(getUser);
@@ -64,62 +63,14 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   };
 
   return isLandingPage ? (
-    <LandingHeader textColor={'#74A3F3'}/>
-  )
-  : (
-    <div className={cn(className, styles.wrapper, hasScrolled?styles.floatingNav:'')}>
+    <LandingHeader textColor={'#74A3F3'} />
+  ) : (
+    <div className={cn(className, styles.wrapper, hasScrolled ? styles.floatingNav : '')}>
       <div className={styles.leftBox}>
         <Logo />
-        {/* <a href="https://skins.digitalax.xyz/" className={styles.goToMaticButton}>
-          Switch to Matic for ESPA
-        </a> */}
-        {/* <div className={styles.arrow}>
-          <img src="images/arrow.svg"  />
-          <span className={styles.arrowDesc}>Switch for ESPA and Among Us Mod Drop</span>
-        </div> */}
       </div>
       <div className={styles.rightBox}>
-        <div className={cn(styles.links, isCollapse?styles.expandedMenu:'')}>
-          {/* <Link href="/">
-            <a className={styles.link}>Auctions</a>
-          </Link>
-          <Link href="/sold">
-            <a className={styles.link}>Previously Sold</a>
-          </Link> */
-          /* <a
-            href="https://pode.digitalax.xyz/"
-            className={styles.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            PODE
-          </a> */          
-          /* <a
-            href="https://medium.com/@digitalax"
-            className={styles.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Blog
-          </a>
-          <a
-            href="https://community.digitalax.xyz/"
-            className={styles.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Forum
-          </a>
-          {isShowStaking && (
-            <a
-              href="http://staking.digitalax.xyz/"
-              className={styles.link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {linkText}
-            </a>
-          )} */}
+        <div className={cn(styles.links, isCollapse ? styles.expandedMenu : '')}>
           <Link href="https://skins.digitalax.xyz">
             <a className={styles.link} target="_blank">
               SUIT UP IN YOUR GAME SKINS
@@ -127,10 +78,10 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           </Link>
           <Link href="https://marketplace.digitalax.xyz">
             <a className={styles.link} target="_blank">
-              REP YOUR STLE IRL 
+              REP YOUR STLE IRL
             </a>
           </Link>
-          <Link href="/global">
+          <Link href="https://designers.digitalax.xyz/global">
             <a className={styles.link}>Global Designer Network</a>
           </Link>
           <Link href="http://staking.digitalax.xyz/">
@@ -167,7 +118,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
               <Button onClick={() => handleClick()}>{buttonText}</Button>
             )}
           </div>
-          <a href="javascript:void(0);" className={styles.collapseIcon} onClick={onIconHander}>&#9776;</a>
+          <a href="javascript:void(0);" className={styles.collapseIcon} onClick={onIconHander}>
+            &#9776;
+          </a>
         </div>
       </div>
     </div>
