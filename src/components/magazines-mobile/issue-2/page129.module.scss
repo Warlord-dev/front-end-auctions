@@ -1,0 +1,53 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2269px;
+  background-color: white;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 228px;
+    height: 120px;
+    left: 85px;
+    top: 88px;
+
+    font-family: Post No Bills Colombo SemiBold;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+
+    text-align: right;
+
+    color: #ffffff;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 189px;
+    height: 1948px;
+    left: 109px;
+    top: 214px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+
+    color: #ffffff;
+  }
+}

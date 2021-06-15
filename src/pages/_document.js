@@ -1235,6 +1235,11 @@ class MyDocument extends Document {
               font-family: "Pavanam";
               src: url("./fonts/Pavanam-Regular.ttf");
             }
+
+            @font-face {
+              font-family: "Sora";
+              src: url("./fonts/Sora-Regular.ttf");
+            }
           `,
             }}
           />

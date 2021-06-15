@@ -1,9 +1,8 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 100vh;
+  height: 1552px;
   background-color: white;
   color: white;
   position: relative;
@@ -11,6 +10,7 @@
   text-align: left;
 
   .back {
+    position: absolute;
     height: 100%;
     width: 100%;
   }
