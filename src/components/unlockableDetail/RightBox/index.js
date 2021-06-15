@@ -34,7 +34,7 @@ const RightBox = ({ details, id, activeImage }) => {
     const fetchSubscriptionOffer = async () => {
       try {
         const { digitalaxSubscriptionMarketplaceOffer } = await api.getDigitalaxSubscriptionOffer(
-          id
+          details.id
         );
         setAmountSold(digitalaxSubscriptionMarketplaceOffer.amountSold);
       } catch (e) {
@@ -54,7 +54,7 @@ const RightBox = ({ details, id, activeImage }) => {
               await api.getDigitalaxSubscriptionPurchase(
                 digitalaxSubscriptionCollectors[i].parentsOwned[j].id
               );
-            if (digitalaxSubscriptionPurchaseHistory.bundleId === id) {
+            if (digitalaxSubscriptionPurchaseHistory.bundleId === details.id) {
               ids.push(digitalaxSubscriptionPurchaseHistory);
               if (lastPurchasedTime < parseInt(digitalaxSubscriptionPurchaseHistory.timestamp)) {
                 setLastPurchasedTime(parseInt(digitalaxSubscriptionPurchaseHistory.timestamp));
@@ -83,7 +83,7 @@ const RightBox = ({ details, id, activeImage }) => {
   };
 
   const onUnlock = () => {
-    if (!checkLastPurchasedTime(id)) {
+    if (!checkLastPurchasedTime(details.id)) {
       dispatch(openBuynowNftCoolDownModal());
       return;
     }
@@ -102,7 +102,7 @@ const RightBox = ({ details, id, activeImage }) => {
         if (account) {
           dispatch(
             openBuynowNftSubscriptionModal({
-              id: id,
+              id: details.id,
               priceEth: details.price,
             })
           );
