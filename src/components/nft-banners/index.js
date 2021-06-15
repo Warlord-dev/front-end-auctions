@@ -42,7 +42,6 @@ const NftBanners = () => {
           </Link>
         </div>
         <img src={`images/nft/2/2.png`} />
-        <img src={`images/nft/2/2.png`} />
         <img src={`images/nft/2/3.png`} />
         <img src={`images/nft/2/4.png`} />
         <img src={`images/nft/2/5.png`} />

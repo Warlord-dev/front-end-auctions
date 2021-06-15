@@ -17,7 +17,7 @@ import {
 } from '@actions/modals.actions';
 import Button from '@components/buttons/button';
 
-const RightBox = ({ details, id }) => {
+const RightBox = ({ details, id, activeImage }) => {
   const dispatch = useDispatch();
   const [amountSold, setAmountSold] = useState(0);
   const [buyAvailable, setBuyAvailable] = useState(true);
@@ -33,7 +33,9 @@ const RightBox = ({ details, id }) => {
   useEffect(() => {
     const fetchSubscriptionOffer = async () => {
       try {
-        const { digitalaxSubscriptionMarketplaceOffer } = await api.getDigitalaxSubscriptionOffer(id);
+        const { digitalaxSubscriptionMarketplaceOffer } = await api.getDigitalaxSubscriptionOffer(
+          id
+        );
         setAmountSold(digitalaxSubscriptionMarketplaceOffer.amountSold);
       } catch (e) {
         console.log('error happend on fetching: ', e);
@@ -45,7 +47,7 @@ const RightBox = ({ details, id }) => {
 
       try {
         const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
-        
+
         for (let i = 0; i < digitalaxSubscriptionCollectors.length; i += 1) {
           for (let j = 0; j < digitalaxSubscriptionCollectors[i].parentsOwned.length; j += 1) {
             const { digitalaxSubscriptionPurchaseHistory } =
@@ -60,9 +62,8 @@ const RightBox = ({ details, id }) => {
             }
           }
         }
-
       } catch (e) {
-        console.log('getSubscriptionNftStatus error: ', e)
+        console.log('getSubscriptionNftStatus error: ', e);
       }
 
       setCollectionIds(ids);
@@ -116,11 +117,16 @@ const RightBox = ({ details, id }) => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.title}>{details.title}</div>
-      <div className={styles.body}>{details.body}</div>
+      <div className={styles.title}>
+        {details.title}
+        {`${details.subTitle ? `: ${details.subTitle[activeImage]}` : ''}`}
+      </div>
+      <div className={styles.body}>
+        {typeof details.body === 'array' ? details.body[activeImage] : details.body}
+      </div>
       <div className={styles.price}>
-        {details.price} $MONA 
-          {/* <span>{`${amountSold} of ${details.amountAvailable}`}</span>{' '} */}
+        {details.price} $MONA
+        {/* <span>{`${amountSold} of ${details.amountAvailable}`}</span>{' '} */}
       </div>
       <div className={styles.actionGroup}>
         <Button isDisabled={!buyAvailable} background="black" onClick={onUnlock}>

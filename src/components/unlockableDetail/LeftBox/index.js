@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss';
 
-const LeftBox = ({ details }) => {
-  const [activeImage, setActiveImage] = useState(0);
+const LeftBox = ({ details, activeImage, setActiveImage }) => {
   const image = details.url;
 
   const isVideo = (url) => {
