@@ -16,7 +16,7 @@ const Page6364 = () => {
       </a>
       <a href="https://somniumspace.com/parcel/752" target="_blank">
       <img src="./magazine/2/images/63_64/image6.png" className={styles.image6} />
-      </a>=
+      </a>
       <a href="https://somniumspace.com/parcel/3250" target="_blank">
       <img src="./magazine/2/images/63_64/image7.png" className={styles.image7} />
       </a>  
