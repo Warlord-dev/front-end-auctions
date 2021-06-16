@@ -1,0 +1,137 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #00000000;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 1497px;
+    height: 1497px;
+    left: 700px;
+    top: 0px;
+    z-index: -1;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 367px;
+    height: 744px;
+    left: 988px;
+    top: 717px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 427px;
+    height: 816px;
+    left: 960px;
+    top: 681px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 427px;
+    height: 816px;
+    left: 1493px;
+    top: 681px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 383px;
+    height: 744px;
+    left: 1515px;
+    top: 717px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 378px;
+    height: 90px;
+    left: 50px;
+    top: 33px;
+
+    font-family: Poor Story;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 90px;
+    line-height: 100%;
+    /* identical to box height, or 90px */
+
+    text-align: left;
+
+    color: #FF0000;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 461px;
+    height: 50px;
+    left: 50px;
+    top: 120px;
+    
+    font-family: Poor Story;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+    
+    
+    color: #FF0000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 285px;
+    height: 90px;
+    left: 980px;
+    top: 1328px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 90px;
+    line-height: 100%;
+    
+    text-align: left;
+    
+    color: #FF7B00;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 485px;
+    height: 70px;
+    left: 985px;
+    top: 1418px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 70px;
+    line-height: 100%;
+    /* identical to box height, or 70px */
+
+    text-align: left;
+
+    color: #FF0000;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

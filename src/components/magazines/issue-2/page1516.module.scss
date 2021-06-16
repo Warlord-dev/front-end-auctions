@@ -1,0 +1,349 @@
+@import './styles.module.scss';
+
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-1661px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+  position: relative;
+
+  .back {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .leftSideFrame {
+    position: absolute;
+    width: 149px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background-color: #1f41ff;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .rightSideFrame {
+    position: absolute;
+    width: 152px;
+    height: 1497px;
+    left: 1768px;
+    top: 0px;
+    background-color: #1f41ff;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .animationFrame {
+    animation: scrolling 6s linear infinite;
+  }
+
+  .leftSideImageWrapper {
+    position: absolute;
+    width: 92.28px;
+    left: 31px;
+    top: 36px;
+  }
+
+  .rightSideImageWrapper {
+    position: absolute;
+    width: 83px;
+    height: 1660px;
+    right: 31px;
+    top: 36px;
+  }
+
+  .headPhone {
+    position: absolute;
+    width: 817px;
+    height: 682.95px;
+    left: 948px;
+    top: 298px;
+  }
+
+  .textDiv1 {
+    position: absolute;
+    width: 705px;
+    height: 739px;
+    left: 195px;
+    top: 269px;
+
+    background: rgba(0, 0, 0, 0.41);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 612px;
+    height: 660px;
+    left: 248px;
+    top: 298px;
+
+    font-family: Arvo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FF9900;
+
+    a {
+      text-decoration: underline;
+      color: #FF9900;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 431px;
+    height: 77px;
+    left: 379px;
+    top: 198px;
+    
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 44px;
+    
+    color: #FFFFFF;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 632px;
+    height: 262px;
+    left: 1020px;
+    top: 369.75px;
+
+    font-family: Julietta Messie Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 120.53%;
+    /* or 84px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    transform: rotate(-10deg);
+  }
+
+  .record1 {
+    position: absolute;
+    left: 1132px;
+  }
+
+  .footer {
+    position: absolute;
+    width: 1610px;
+    height: 122px;
+    left: 155px;
+    top: 1360px;
+  }
+
+  .logo {
+    position: absolute;
+    width: 595px;
+    height: 168px;
+    left: 215px;
+    top: 43px;
+  }
+
+  .vector1 {
+    position: absolute;
+    left: 18.23%;
+    right: 73.96%;
+    top: 76.69%;
+    bottom: 13.29%;
+  }
+
+  .vector2 {
+    position: absolute;
+    left: 36.82%;
+    right: 55.36%;
+    top: 76.69%;
+    bottom: 13.29%;
+  }
+
+  .vector4 {
+    position: absolute;
+    left: 74.01%;
+    right: 18.18%;
+    top: 76.69%;
+    bottom: 13.29%;
+  }
+
+  .vector3 {
+    position: absolute;
+    left: 55.42%;
+    right: 36.77%;
+    top: 76.69%;
+    bottom: 13.29%;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 431px;
+    height: 77px;
+    left: 210px;
+    top: 1071px;
+    
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    
+    color: #FFFFFF;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .text5 {
+    position: absolute;
+    width: 431px;
+    height: 77px;
+    left: 567px;
+    top: 1071px;
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+
+    color: #FFFFFF;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .text6 {
+    position: absolute;
+    width: 282px;
+    height: 77px;
+    left: 1002px;
+    top: 1069px;
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 33px;
+    text-align: center;
+
+    color: #FFFFFF;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .text7 {
+    position: absolute;
+    width: 431px;
+    height: 77px;
+    left: 1281px;
+    top: 1071px;
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+
+    color: #FFFFFF;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .play1 {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    left: 402px;
+    top: 1200px;
+  }
+
+  .play2 {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    left: 759px;
+    top: 1200px;
+  }
+
+  .play3 {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    left: 1116px;
+    top: 1200px;
+  }
+
+  .play4 {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    left: 1473px;
+    top: 1200px;
+  }
+
+  .play5 {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 1506px;
+    top: 141px;
+  }
+
+  .play6 {
+    position: absolute;
+    width: 359.75px;
+    height: 139.41px;
+    left: 1313px;
+    top: 676.47px;
+    cursor: pointer;
+
+    font-family: Krub;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+
+    text-align: center;
+
+    color: #FF7A00;
+    &:hover {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    transform: rotate(-10deg)
+  }
+
+  .vector5 {
+    position: absolute;
+    width: 364px;
+    height: 364px;
+    left: 1375px;
+    top: 457px;
+  }
+
+  .audio {
+    visibility: hidden;
+  }
+}

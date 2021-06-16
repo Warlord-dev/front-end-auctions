@@ -1,0 +1,196 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2809px;
+  background-color: #FFFFFF;
+  color: white;
+  position: relative;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  .image1 {
+    position: absolute;
+    width: 1514px;
+    height: 195px;
+    left: -570px;
+    top: -2px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 1018px;
+    height: 47px;
+    left: -241px;
+    top: 43px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 315px;
+    height: 89px;
+    left: 21px;
+    top: 220px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 375px;
+    height: 2489px;
+    left: 0px;
+    top: 125px;    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 705px;
+    height: 2249px;
+    left: -165px;
+    top: 368px;
+    
+    background: rgba(0, 0, 0, 0.41);
+  }
+
+  .image6 {
+    position: absolute;
+    left: 29.87%;
+    right: 30.13%;
+    top: 68.67%;
+    bottom: 25.99%;
+
+    .image7 {
+      width: 100%;
+      height: 100%;
+      -webkit-animation:spin 4s linear infinite;
+      -moz-animation:spin 4s linear infinite;
+      animation:spin 4s linear infinite;
+    }
+
+    .image8 {
+      position: absolute;
+      width: 46.81px;
+      height: 46.08px;
+      left: 52px;
+      top: 52px;
+      background: none;
+      border: none;
+    }
+  }
+
+  .image9 {
+    position: absolute;
+    left: 29.87%;
+    right: 30.13%;
+    top: 81.1%;
+    bottom: 13.56%;
+    .image10 {
+      width: 100%;
+      height: 100%;
+      -webkit-animation:spin 4s linear infinite;
+      -moz-animation:spin 4s linear infinite;
+      animation:spin 4s linear infinite;
+    }
+    .image11 {
+      position: absolute;
+      width: 46.81px;
+      height: 46.08px;
+      left: 52px;
+      top: 52px;
+      background: none;
+      border: none;
+    }
+  }
+
+  .image12 {
+    position: absolute;
+    width: 1514px;
+    height: 195px;
+    left: -570px;
+    top: 2614px;
+  }
+
+  .image13 {
+    position: absolute;
+    width: 1610px;
+    height: 50px;
+    left: -666px;
+    top: 2496px;
+  }
+
+  .image14 {
+    position: absolute;
+    width: 1018px;
+    height: 47px;
+    left: -241px;
+    top: 2690px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 431px;
+    height: 77px;
+    left: 21px;
+    top: 309px;
+    
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 44px;
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 301px;
+    height: 660px;
+    left: 45px;
+    top: 386px;
+    
+    font-family: Arvo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    
+    color: #FF9900;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 431px;
+    height: 77px;
+    left: -28px;
+    top: 1865px;
+    
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 431px;
+    height: 77px;
+    left: -28px;
+    top: 2201px;
+    
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+}

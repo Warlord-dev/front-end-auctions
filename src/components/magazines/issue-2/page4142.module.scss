@@ -1,0 +1,10 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}

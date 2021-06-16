@@ -1,0 +1,232 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3864px;
+  background-color: white;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 341px;
+    height: 221px;
+    left: 17px;
+    top: 28px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 299px;
+    height: 429px;
+    left: 38px;
+    top: 262px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+
+    text-align: right;
+
+    color: #fecbff;
+
+    .subText {
+      font-size: 20px;
+      line-height: 22px;
+      color: #ff5edb;
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 318.33px;
+    height: 107.52px;
+    left: 74.21px;
+    top: 728.28px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+
+    color: #b42594;
+
+    transform: matrix(1, -0.18, -0.02, 0.99, 0, 0);
+  }
+
+  .text4 {
+    position: absolute;
+    width: 318.33px;
+    height: 107.52px;
+    left: 78.51px;
+    top: 729.77px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+
+    color: #2bffe5;
+
+    transform: matrix(1, -0.18, -0.02, 0.99, 0, 0);
+  }
+
+  .text5 {
+    position: absolute;
+    width: 202.58px;
+    height: 304.92px;
+    left: 161.57px;
+    top: 894px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+
+    text-align: center;
+
+    color: #ffffff;
+
+    transform: rotate(5deg);
+  }
+
+  .text6 {
+    position: absolute;
+    width: 478px;
+    height: 76px;
+    left: -138px;
+    top: 1349px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    text-align: right;
+
+    color: #ffffff;
+    text-shadow: -3px 0 #ffb800, 0 3px #ffb800, 3px 0 #ffb800, 0 -3px #ffb800;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 384px;
+    height: 480px;
+    left: 42px;
+    top: 1433px;
+
+    border: 3px solid #000000;
+    box-sizing: border-box;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 295px;
+    height: 526px;
+    left: 0px;
+    top: 1787px;
+  }
+
+  .video1 {
+    position: absolute;
+    width: 409px;
+    height: 488px;
+    left: -17px;
+    top: 2244px;
+  }
+
+  .play {
+    width: 36.81px;
+    height: 36.81px;
+    position: absolute;
+    top: 2264px;
+    right: 20px;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 266px;
+    height: 266px;
+    left: 54px;
+    top: 2763px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+
+    color: #ffffff;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 270px;
+    height: 506px;
+    left: 54px;
+    top: 3060px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 110%;
+    /* or 22px */
+
+    color: #ffcc4a;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 254px;
+    height: 140px;
+    left: 85px;
+    top: 3599px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 110%;
+    /* or 28px */
+
+    text-align: right;
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+    text-shadow: -1px 0 #ff9900, 0 1px #ff9900, 1px 0 #ff9900, 0 -1px #ff9900;
+  }
+}

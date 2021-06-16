@@ -1,0 +1,93 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3989px;
+  background-color: #FFFFFF;
+  color: white;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 333px;
+    height: 3912px;
+    left: 21px;
+    top: 27px;
+    
+    background: #DB95A2;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 310px;
+    height: 180px;
+    left: 21px;
+    top: 86px;
+    
+    font-family: Nella Sue Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 264px;
+    height: 339px;
+    left: 55px;
+    top: 320px;
+    
+    font-family: Jockey One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 228px;
+    height: 850px;
+    left: 73px;
+    top: 1248px;
+    
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 228px;
+    height: 850px;
+    left: 73px;
+    top: 2612px;
+    
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    
+    
+    color: #FFFFFF;
+  }
+}

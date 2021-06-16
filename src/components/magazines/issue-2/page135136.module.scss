@@ -1,0 +1,197 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #FFFFFF;
+
+  .image1 {
+    position: absolute;
+    width: 1092px;
+    height: 748px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 330px;
+    left: 960px;
+    top: 591px;
+    
+    background: rgba(145, 0, 113, 0.8);
+  }
+
+  .image4 {
+    position: absolute;
+    width: 153px;
+    height: 44px;
+    left: 403px;
+    top: 213px;
+    .image5 {
+      width: 153px;
+      height: 44px;
+    }
+  }
+
+  .button{
+    border: none;
+    background: none;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 451px;
+    height: 36px;
+    left: 250px;
+    top: 309px;
+    
+    font-family: Courier;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+    
+    
+    color: #000000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 624px;
+    height: 1061px;
+    left: 250px;
+    top: 358px;
+    
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120.53%;
+    /* or 22px */
+    
+    
+    color: #000000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 289px;
+    height: 22px;
+    left: 503px;
+    top: 1380px;
+    
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120.53%;
+    /* identical to box height, or 22px */
+    
+    
+    color: #000000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 274px;
+    height: 25px;
+    left: 1620px;
+    top: 29px;
+
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 100%;
+    /* identical to box height, or 25px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 155px;
+    height: 25px;
+    left: 1620px;
+    top: 64px;
+    
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 100%;
+    /* identical to box height, or 25px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 487px;
+    height: 36px;
+    left: 236px;
+    top: 41px;
+    
+    font-family: Courier;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 621px;
+    height: 72px;
+    left:169px;
+    top: 100px;
+    
+    font-family: Courier;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 67px;
+    height: 24px;
+    left:43px;
+    top: 10px;
+    
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}

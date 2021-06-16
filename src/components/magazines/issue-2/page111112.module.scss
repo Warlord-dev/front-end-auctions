@@ -1,0 +1,189 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 383px;
+    left: 0px;
+    top: 0px;
+    
+    background: #3D9BA2;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1115px;
+    left: 0px;
+    top: 383px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 347px;
+    height: 238px;
+    left: -57.76px;
+    top: -47.84px;
+    transform: rotate(-20deg);
+  }
+
+  .image4 {
+    position: absolute;
+    width: 400.21px;
+    height: 237.01px;
+    left: 367.46px;
+    top: -66.71px;
+    transform: rotate(-20deg);
+  }
+
+  .image5 {
+    position: absolute;
+    width: 241px;
+    height: 241px;
+    left: 185px;
+    top: 134px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 316px;
+    height: 217px;
+    left: 638px;
+    top: 146px;
+  }
+
+  .image7 {
+    position: absolute;
+    height: 1497px;
+    left: 720px;
+    top: 0px;
+    z-index: -1;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 125px;
+    height: 145px;
+    left: 820px;
+    top: 8px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 650;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 138px;
+    height: 955px;
+    left: 47px;
+    top: 463px;
+    
+    font-family: Jaldi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -43px;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 190px;
+    height: 71px;
+    left: 760px;
+    top: 1382px;
+    
+    font-family: Nobile;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 441px;
+    height: 87px;
+    left: 1445px;
+    top: 24px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text5 {
+    position: absolute;
+    width: 441px;
+    height: 87px;
+    left: 1445px;
+    top: 91px;
+
+    font-family: Rose Cake - Personal Use;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 193px;
+    height: 340px;
+    left: 1693px;
+    top: 153px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    /* or 12px */
+
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+}

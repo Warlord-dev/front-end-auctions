@@ -1,0 +1,138 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #FFFFFF;
+
+  .image1 {
+    position: absolute;
+    width: 541px;
+    height: 649px;
+    left: -47px;
+    top: -52px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 561px;
+    height: 649px;
+    left: 395px;
+    top: 335px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 541px;
+    height: 649px;
+    left: -146px;
+    top: 571px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 541px;
+    height: 649px;
+    left: 0px;
+    top: 1025px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 541px;
+    height: 451px;
+    left: 415px;
+    top: 964px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 541px;
+    height: 315px;
+    left: 416px;
+    top: 1416px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 810px;
+    height: 1406px;
+    left: 4px;
+    top: 91px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 385px;
+    height: 100px;
+    left: 551px;
+    top: 10px;
+    
+    font-family: Qwigley;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    /* identical to box height, or 100px */
+    
+    text-align: center;
+    
+    color: #FFB800;
+    -webkit-text-stroke: #FFB800;
+    -webkit-text-stroke-width: 1px;
+    box-sizing: border-box;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 363px;
+    height: 132px;
+    left: 586px;
+    top: 110px;
+    
+    font-family: Qwigley;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    /* or 100px */
+    
+    text-align: center;
+    
+    color: #EAD629;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 902px;
+    height: 150px;
+    left: 985px;
+    top: 16px;
+    
+    font-family: Flamenco;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 100%;
+    /* identical to box height, or 150px */
+    
+    text-align: center;
+    
+    color: #AED8FF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

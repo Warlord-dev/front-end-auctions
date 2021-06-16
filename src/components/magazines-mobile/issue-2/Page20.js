@@ -1,0 +1,18 @@
+import React from 'react'
+import styles from './page20.module.scss'
+
+const Page20 = () => {
+  return (
+    <div className={styles.wrapper}>
+      <p className={styles.text1 }> In other words, consensus allows groups to reach an agreement that benefits the entire group, rather than simply going for majority rule. The main consensus mechanisms include the following:
+      <br/><br/><span className={styles.title}>• Proof-of-work (PoW).</span> Proof of work relies on computational power as a scarce resource, which requires threat actors to acquire a large portion of the computational power of the validating network, making it consume high amounts of energy. For instance, Bitcoin applies a specific set of rules to the generation of new blocks. One of the rules states that the ability to create a block must be proportional to the processing power of the proof-of-work mechanism. This means one has to actually own the computing power required to create a new block. Ethereum also uses PoW, but is in the process of changing its consensus mechanism to the next one.
+      <br/><br/><span className={styles.title}>• Proof-of-stake (PoS).</span> Proof-of-stake states that an individual can mine or validate block transactions depending on how many tokens (or stakes) they hold. The more tokens owned by a miner, the more mining power they possess. Proof-of-stake is the underlying mechanism that enables validators upon receiving enough stake. Ethereum is moving to this consensus mechanism from a PoW model as part of its Ethereum 2.0 upgrades in order to address transaction fees and scalability issues. However, getting this consensus mechanism is a complex technical challenge that will take time. Unlike PoW, validators don't need to spend massive computational power because they are selected at random and are not competing against each other. Validators get rewards for proposing new blocks and for attesting to ones they've seen. PoS models make 51% attacks risky for threat actors because executing it requires 51% of staked ETH, which costs oodles and oodles of money. There is no incentive to destroy the value and infrastructure of a heavily invested cryptocurrency individuals are in.
+      <br/><br/><span className={styles.title}>• Delegated proof of stake (DPoS).</span> Delegated Proof-of-Stake models are a popular iteration of the latter PoS concept, where network users vote and elect delegates to validate the succeeding block. With DPoS, an individual can vote on delegates by sending your tokens into a staking pool and linking it to their delegate. No physical transfers from wallet to wallet occur. Then, an individual can vote through delegates by pooling their tokens into a staking pool and linking them to a particular delegate. They do not physically transfer your tokens to another wallet but rather utilize a staking service provider to stake your tokens in a staking pool. Its proponents believe it is a more democratized way of choosing who validates the following block (rather than being at random) and allowing diverse, serious stakers to participate in the process. Fewer validators enable the network to reach a faster consensus.
+<br/><br/>
+Getting consensus exactly right is extremely difficult in production, considering the theory itself is academic. Worse, the real world has a knack for proving theory wrong, especially since we are still in the early days of distributed ledger technologies.
+</p>
+    </div>
+  )
+}
+
+export default Page20

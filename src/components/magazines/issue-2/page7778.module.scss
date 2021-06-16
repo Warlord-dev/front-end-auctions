@@ -1,0 +1,117 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1380px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1502px;
+    left: 957px;
+    top: 0px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 115px;
+    left: 0px;
+    top: 1379px;
+    
+    background: #FF729C;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 170px;
+    height: 38px;
+    left: 19px;
+    top: 1387px;
+    
+    font-family: Inter;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 150%;
+    /* identical to box height, or 37px */
+    
+    
+    color: #AB00AE;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 891px;
+    height: 54px;
+    left: 19px;
+    top: 1430px;
+    
+    font-family: Inter;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 263px;
+    height: 68px;
+    left: 1628px;
+    top: 1139px;
+    
+    font-family: Anime Inept;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 68px;
+    /* identical to box height */
+    
+    
+    color: #FF00D6;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 263px;
+    height: 68px;
+    left: 1628px;
+    top: 1201px;
+    font-family: Anime Inept;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 68px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 268px;
+    height: 195px;
+    left: 1633px;
+    top: 1262px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    
+    color: #FFFFFF;
+  }
+}

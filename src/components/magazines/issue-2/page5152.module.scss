@@ -1,0 +1,154 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();    
+  background: #E5E5E5;
+  overflow: hidden;
+
+  .backImage {
+    position: absolute;
+    left: 0;
+    top: -37px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 728px;
+    height: 709px;
+    left: 119px;
+    top: 108px;
+
+    font-family: Hello Avocado;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 646px;
+    height: 210px;
+    left: 1025px;
+    top: 49px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 70px;
+    /* or 100% */
+
+
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 282px;
+    height: 155px;
+    left: 1025px;
+    top: 266px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #FF0000;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    box-sizing: border-box;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 256px;
+    height: 860px;
+    left: 1014px;
+    top: 504px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 20px;
+
+    color: white;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 484px;
+    height: 280px;
+    left: 1358px;
+    top: 294.05px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 20px;
+
+    color: white;
+
+    transform: rotate(-10deg);
+  }
+
+  .text6 {
+    position: absolute;
+    width: 455.79px;
+    height: 600px;
+    left: 1386.94px;
+    top: 705px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 20px;
+
+    color: white;
+    transform: rotate(10deg);
+  }
+  
+  .title {
+    color: #FF0000;
+  }
+
+  .textDiv1 {
+    position: absolute;
+    width: 316px;
+    height: 930px;
+    left: 987px;
+    top: 474px;
+
+    background: rgba(0, 0, 0, 0.52);
+  }
+
+  .textDiv2 {
+    position: absolute;
+    width: 546px;
+    height: 309.96px;
+    left: 1331px;
+    top: 273.9px;
+
+    background: rgba(0, 0, 0, 0.52);
+    transform: rotate(-10deg);
+  }
+
+  .textDiv3 {
+    position: absolute;
+    width: 517.27px;
+    height: 620.87px;
+    left: 1350.94px;
+    top: 671px;
+
+    background: rgba(0, 0, 0, 0.52);
+    transform: rotate(10deg);
+  }
+}

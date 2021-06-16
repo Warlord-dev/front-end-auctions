@@ -1,0 +1,265 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #BEFFC5;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 258px;
+    height: 674px;
+    left: 148.44px;
+    top: -98.92px;
+    transform: rotate(40deg);
+  }
+
+  .image4 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 960px;
+    height: 1595px;
+    left: 960px;
+    top: -98px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 331px;
+    height: 331px;
+    left: 1609px;
+    top: -98px;    
+  }
+
+  .image7 {
+    position: absolute;
+    width: 320px;
+    height: 837px;
+    left: 570.24px;
+    top: 28.43px;
+    transform: rotate(10deg);
+  }
+
+  .image8 {
+    position: absolute;
+    width: 258px;
+    height: 674px;
+    left: -35.12px;
+    top: 687.96px;
+    transform: rotate(-5deg);
+  }
+
+  .image9 {
+    position: absolute;
+    width: 258px;
+    height: 674px;
+    left: 648.88px;
+    top: 1137.96px;
+    transform: rotate(-5deg);
+  }
+
+  .image10 {
+    position: absolute;
+    width: 144.27px;
+    height: 376.89px;
+    left: 382.15px;
+    top: 829.57px;
+    transform: rotate(-5deg);
+  }
+
+  .image11 {
+    position: absolute;
+    width: 509px;
+    height: 1333px;
+    left: 202.15px;
+    top: -6.04px;
+    transform: rotate(-30deg);
+  }
+
+  .image12 {
+    position: absolute;
+    width: 188px;
+    height: 188px;
+    left: 1382px;
+    top: 22px;
+  }
+
+  .image13 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 1554px;
+    top: 174px;
+  }
+
+  .image14 {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 1464px;
+    top: 233px;
+  }
+
+  .image15 {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 1644px;
+    top: 239px;
+  }
+
+  .image16 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 1523px;
+    top: 280px;
+  }
+
+  .image17 {
+    position: absolute;
+    width: 331px;
+    height: 331px;
+    left: 960px;
+    top: 1212px;
+  }
+
+  .image18 {
+    position: absolute;
+    width: 213px;
+    height: 212px;
+    left: 1310px;
+    top: 1166px;
+  }
+
+  .image19 {
+    position: absolute;
+    width: 213px;
+    height: 212px;
+    left: 1479px;
+    top: 1304px;
+  }
+
+  .image20 {
+    position: absolute;
+    width: 147px;
+    height: 146px;
+    left: 1793px;
+    top: 1216px;
+  }
+
+  .image21 {
+    position: absolute;
+    width: 1026px;
+    height: 1231px;
+    left: 702px;
+    top: 312px;
+  }
+
+  .image22 {
+    position: absolute;
+    width: 1004px;
+    height: 1204px;
+    left: 1190px;
+    top: 339px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 735px;
+    height: 57px;
+    left: -116px;
+    top: 1359px;
+    
+    font-family: Goblin One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 735px;
+    height: 57px;
+    left: 27px;
+    top: 1410px;
+    
+    font-family: Goblin One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 676px;
+    height: 121px;
+    left: 1003px;
+    top: 42px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+    
+    
+    color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text4 {
+    position: absolute;
+    width: 676px;
+    height: 50px;
+    left: 1003px;
+    top: 102px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+    
+    
+    color: #FFFFFF;
+  }
+}

@@ -1,0 +1,226 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: linear-gradient(180deg, #291F61 0%, rgba(197, 0, 118, 0.98) 41.59%, rgba(134, 0, 197, 0.98) 76.56%);
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 927px;
+    left: 0px;
+    top: 570px;
+  }
+
+  .image3 {
+    position: absolute;
+    height: 1497px;
+    left: 525px;
+    top: 0px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 828px;
+    height: 929px;
+    left: 66px;
+    top: 63px;
+    
+    background: #A40093;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 257px;
+    height: 286px;
+    left: 960px;
+    top: 547px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 141px;
+    height: 141px;
+    left: 1076px;
+    top: 846px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    left: 974px;
+    top: 841px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    left: 1586px;
+    top: 1032px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 671px;
+    height: 779px;
+    left: 144px;
+    top: 116px;
+    
+    font-family: Lexend Giga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    
+    text-align: center;
+    
+    color: #FFE600;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 572px;
+    height: 160px;
+    left: 1001px;
+    top: 42px;
+    
+    font-family: DJB Emilys Garden;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 85px;
+    /* or 85% */
+    
+    -webkit-text-stroke: #5C3700;
+    -webkit-text-stroke-width: 1px;
+    color: #000000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 891px;
+    height: 92px;
+    left: 1001px;
+    top: 248px;
+    
+    font-family: Inter;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    /* or 120% */
+    
+    -webkit-text-stroke: #5C3700;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 295px;
+    height: 92px;
+    left: 1582px;
+    top: 317px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 85px;
+    /* or 170% */
+    
+    -webkit-text-stroke: #5C3700;
+    -webkit-text-stroke-width: 1px;
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 874px;
+    height: 163px;
+    left: 994px;
+    top: 389px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    /* or 176% */
+    
+    text-align: right;
+    -webkit-text-stroke: #5C3700;
+    -webkit-text-stroke-width: 0.5px;
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 653px;
+    height: 543px;
+    left: 1214px;
+    top: 535px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    /* or 176% */
+    
+    text-align: right;
+    -webkit-text-stroke: #5C3700;
+    -webkit-text-stroke-width: 0.5px;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 599px;
+    height: 391px;
+    left: 989px;
+    top: 1008px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    /* or 176% */
+    
+    -webkit-text-stroke: #5C3700;
+    -webkit-text-stroke-width: 0.5px;
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 925px;
+    height: 160px;
+    left: 960px;
+    top: 1396px;
+    
+    font-family: DJB Emilys Garden;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 85px;
+    /* or 85% */
+    
+    -webkit-text-stroke: #5C3700;
+    -webkit-text-stroke-width: 1px;
+    color: #000000;
+  }
+}

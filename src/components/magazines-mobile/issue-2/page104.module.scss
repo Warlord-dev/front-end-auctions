@@ -1,0 +1,63 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 1206px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: #5F6577;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 685px;
+    height: 1007px;
+    left: -155px;
+    top: 199px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 271px;
+    height: 218px;
+    left: 24px;
+    top: 19px;
+    
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #BD00FF;
+    
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+    box-sizing: border-box;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 284px;
+    height: 30px;
+    left: 24px;
+    top: 113px;
+    
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* identical to box height, or 30px */
+    
+    
+    color: #BD00FF;
+    
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+    box-sizing: border-box;
+  }
+}

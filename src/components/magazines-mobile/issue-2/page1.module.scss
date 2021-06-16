@@ -1,0 +1,17 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #33daff;
+  height: 3945px;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .image {
+    position: absolute;
+    left: -6px;
+    top: 0;
+  }
+}

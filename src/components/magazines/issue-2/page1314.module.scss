@@ -1,0 +1,168 @@
+@import './styles.module.scss';
+
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-602px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+  
+  .backImage1 {
+    position: absolute;
+    width: 883px;
+    height: 1458px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 883px;
+    height: 1420px;
+    left: 999px;
+    top: 38px;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 700px;
+    height: 135px;
+    left: 93px;
+    top: 963px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 190px;
+    height: 68px;
+    left: 653px;
+    top: 535px;
+
+    font-family: Nella Sue Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 120.53%;
+    /* or 34px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 657px;
+    height: 52px;
+    left: 38px;
+    top: 1131px;
+
+    font-family: Mervale Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 150%;
+    /* or 60px */
+
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 466px;
+    height: 120px;
+    left: 364px;
+    top: 1220px;
+
+    font-family: Beth Ellen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 793px;
+    height: 90px;
+    left: 1045px;
+    top: 97px;
+
+    font-family: Nella Sue Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 75px;
+    line-height: 120.53%;
+    /* or 90px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 812px;
+    height: 339px;
+    left: 1034px;
+    top: 196px;
+
+    font-family: Jockey One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 348px;
+    height: 850px;
+    left: 1066px;
+    top: 569px;
+
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 348px;
+    height: 850px;
+    left: 1466px;
+    top: 569px;
+
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
+
+  }
+}

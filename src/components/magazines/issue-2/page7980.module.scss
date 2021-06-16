@@ -1,0 +1,109 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();    
+
+  .image1 {
+    position: absolute;
+    height: 1497px;
+    left: -830px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px; 
+  }
+
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 84px;
+    left: 0px;
+    top: 1413px;
+    
+    background: #000000;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 960px;
+    height: 84px;
+    left: 960px;
+    top: 1413px;
+
+    background: #C4A5AE;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 885px;
+    height: 56px;
+    left: 27px;
+    top: 1426px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+    
+    text-decoration-line: underline;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 139px;
+    height: 70px;
+    left: 966px;
+    top: 1423px;
+    
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 100%;
+    /* identical to box height, or 70px */
+    
+    text-align: center;
+    
+    color: #33559A;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 751px;
+    height: 63px;
+    left: 1123px;
+    top: 1430px;
+    
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #68296D;
+  }
+}

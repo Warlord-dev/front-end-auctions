@@ -1,0 +1,86 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2799px;
+  background-color: white;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 269px;
+    height: 185px;
+    left: 53px;
+    top: 91px;
+
+    font-family: Public Secret DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    color: #b42594;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 328px;
+    height: 522px;
+    left: 26px;
+    top: 525px;
+
+    font-family: Hello Avocado;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #000000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 328px;
+    height: 437px;
+    left: 23px;
+    top: 1699px;
+
+    font-family: Hello Avocado;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #000000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 328px;
+    height: 263px;
+    left: 23px;
+    top: 2022px;
+
+    font-family: Hello Avocado;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #000000;
+  }
+}

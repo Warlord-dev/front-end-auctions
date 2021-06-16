@@ -1,0 +1,121 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    height: 1497px;
+    left: 720px;
+    top: 0px;
+    z-index: -1;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 444px;
+    height: 445px;
+    left: 0px;
+    top: 195px;
+    border: 2px solid #00FF29;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 457px;
+    height: 456px;
+    left: 494px;
+    top: 521px;
+    border: 2px solid #00FF29;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 480px;
+    height: 481px;
+    left: 63px;
+    top: 1015px;
+    border: 2px solid #00FF29;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 383px;
+    height: 744px;
+    left: 1515px;
+    top: 717px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    left: 63px;
+    top: 31px;
+    
+    font-family: Galada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 452px;
+    height: 100px;
+    left: 1440px;
+    top: 31px;
+    
+    font-family: Fjalla One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    /* identical to box height, or 100px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 338px;
+    height: 59px;
+    left: 1551px;
+    top: 88px;
+
+    font-family: Minecrafter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    text-align: right;
+
+    color: #003789;
+  }
+}

@@ -1,0 +1,34 @@
+@import './styles.module.scss';
+
+@keyframes arrow {
+  0% {
+    left: 540px;
+  }
+
+  50% {
+    left: 580px;
+  }
+
+  100% {
+    left: 540px;
+  }
+}
+
+.wrapper {
+  @include magazineWrapper();    
+  
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 390px;
+    height: 388px;
+    top: 1130px;
+    left: 560px;
+    animation: arrow 2s infinite;
+  }
+}

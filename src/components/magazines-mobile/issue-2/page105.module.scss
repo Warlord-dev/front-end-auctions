@@ -1,0 +1,56 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 825px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image2 {
+    position: absolute;
+    width: 530px;
+    height: 825px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 262px;
+    height: 30px;
+    left: 23px;
+    top: 729px;
+    
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+    
+    
+    color: #FA00FF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 234px;
+    left: 23px;
+    top: 749px;
+    
+    font-family: Jacques Francois Shadow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    
+    color: #FA00FF;
+  }
+}

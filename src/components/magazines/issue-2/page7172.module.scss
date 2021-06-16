@@ -1,0 +1,129 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(13, 13, 13, 0.3);
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 518px;
+    height: 76px;
+    left: 35px;
+    top: 30px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 756px;
+    height: 88px;
+    left: 85px;
+    top: 90px;
+    font-family: Julietta Messie Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+    /* identical to box height, or 88px */
+    
+    
+    color: #FF2222;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 348px;
+    height: 57px;
+    left: 30px;
+    top: 1410px;
+    font-family: Jockey One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    color: #FF2222;
+  }
+
+  .text3 {
+    font-family: Jockey One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    text-decoration-line: underline;
+    
+    color: #FF2222;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 455px;
+    height: 140px;
+    left: 998px;
+    top: 25px;
+    
+    font-family: Reem Kufi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+    
+    -webkit-text-stroke: #00E0FF;
+    -webkit-text-stroke-width: 0.5px;
+    color: #5200FF;
+    box-sizing: border-box;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 478px;
+    height: 89px;
+    left: 998px;
+    top: 178px;
+    
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #00E0FF;
+    -webkit-text-stroke-width: 0.5px;
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    -webkit-text-stroke: #00E0FF;
+    -webkit-text-stroke-width: 0.5px;
+    color: #FFFFFF;
+  }
+}

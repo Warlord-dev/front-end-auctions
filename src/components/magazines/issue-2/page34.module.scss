@@ -1,0 +1,254 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .paintImage {
+    position: absolute;
+    width: 537px;
+    height: 741px;
+    left: 0px;
+    top: 0px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 573px;
+    height: 33px;
+    left: 228px;
+    top: 263px;
+
+    font-family: Courier;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 120.53%;
+    /* identical to box height, or 33px */
+
+
+    color: #000000;
+  }
+
+  .content {
+    position: absolute;
+    width: 660px;
+    height: 1171px;
+    left: 228px;
+    top: 316px;
+
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120.53%;
+    /* or 22px */
+
+
+    color: #000000;
+  }
+
+  .emmaName {
+    position: absolute;
+    width: 288px;
+    height: 22px;
+    left: 552px;
+    top: 1439px;
+
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120.53%;
+    /* identical to box height, or 22px */
+
+
+    color: #000000;
+  }
+
+  .backgroundImage {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  h2 {
+    position: absolute;
+    width: 673px;
+    height: 181px;
+    left: 1203px;
+    top: 67px;
+
+    font-family: Nella Sue Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 120.53%;
+    /* identical to box height, or 181px */
+
+
+    color: #FFFFFF;
+  }
+
+  h3 {
+    position: absolute;
+    width: 387px;
+    height: 384px;
+  }
+
+  .content2 {
+    position: absolute;
+    width: 387px;
+    height: 336px;
+    left: 1034px;
+    top: 299px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content4 {
+    position: absolute;
+    width: 387px;
+    height: 528px;
+    left: 952px;
+    top: 750px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content5 {
+    position: absolute;
+    width: 387px;
+    height: 336px;
+    left: 1246px;
+    top: 750px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content6 {
+    position: absolute;
+    width: 387px;
+    height: 384px;
+    left: 1533px;
+    top: 750px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content7 {
+    position: absolute;
+    width: 387px;
+    height: 336px;
+    left: 952px;
+    top: 1092px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content8 {
+    position: absolute;
+    width: 387px;
+    height: 288px;
+    left: 1246px;
+    top: 1092px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content9 {
+    position: absolute;
+    width: 387px;
+    height: 463px;
+    left: 1533px;
+    top: 1092px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .content3 {
+    position: absolute;
+    width: 387px;
+    height: 336px;
+    left: 1460px;
+    top: 299px;
+
+    font-family: Sweetly Broken;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+}

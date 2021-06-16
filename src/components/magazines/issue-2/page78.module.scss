@@ -1,0 +1,132 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    position: absolute;
+    width: 2031px;
+    height: 1594px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 396px;
+    height: 171px;
+    left: 217px;
+    top: 55px;
+
+    font-family: Silom;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 150px;
+    line-height: 120.53%;
+    /* or 181px */
+
+    text-align: center;
+
+    color: #00FFD1;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 624px;
+    height: 36px;
+    left: 221px;
+    top: 244px;
+
+    font-family: Zilla Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+
+    text-align: center;
+
+    color: #00FFD1;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 78px;
+    height: 18px;
+    left: 232px;
+    top: 280px;
+
+    font-family: Zilla Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* identical to box height, or 18px */
+
+
+    color: #00FFD1;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 580px;
+    height: 882px;
+    left: 283px;
+    top: 368px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 588px;
+    height: 368px;
+    left: 283px;
+    top: 1074px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 33px */
+
+
+    color: #FFFFFF;
+  }
+
+  .subTitle {
+    font-size: 22px;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 580px;
+    height: 1430px;
+    left: 1011px;
+    top: 35px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
+  }
+  
+}

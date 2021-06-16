@@ -1,0 +1,250 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backVideo {
+    width: 100%;
+    transform: scale(1.05);
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 650.31px;
+    height: 90px;
+    left: 49px;
+    top: 102.25px;
+
+    font-family: Comic Sans MS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 100%;
+    /* or 45px */
+
+
+    color: #FFFFFF;
+
+    transform: rotate(-7deg);
+  }
+
+  .text2 {
+    position: absolute;
+    width: 803.3px;
+    height: 493.2px;
+    left: 63px;
+    top: 205.5px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+
+    color: #FFFFFF;
+
+    transform: rotate(-7deg);
+  }
+
+  .text3 {
+    position: absolute;
+    width: 433.67px;
+    height: 186.08px;
+    left: 40px;
+    top: 681.85px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+
+    color: #FFFFFF;
+
+    transform: rotate(-7deg);
+  }
+
+  .text4 {
+    position: absolute;
+    width: 580.23px;
+    height: 216.35px;
+    left: 68px;
+    top: 889.71px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+
+    color: #FFFFFF;
+
+    transform: rotate(-7deg);
+  }
+
+  .text5 {
+    position: absolute;
+    width: 674.38px;
+    height: 435.11px;
+    left: 98px;
+    top: 1122.19px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+
+    color: #FFFFFF;
+
+    transform: rotate(-7deg);
+  }
+
+  .text6 {
+    position: absolute;
+    width: 433.67px;
+    height: 501.15px;
+    left: 1013px;
+    top: 76.85px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+
+    color: #FFFFFF;
+
+    transform: rotate(-7deg);
+  }
+
+  .text7 {
+    position: absolute;
+    width: 297.38px;
+    height: 658.34px;
+    left: 1490px;
+    top: 91.85px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+
+    color: #FFFFFF;
+
+    transform: rotate(-7deg);
+  }
+
+  .text8 {
+    position: absolute;
+    width: 458.2px;
+    height: 401.88px;
+    left: 1435px;
+    top: 666.84px;
+    
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+    
+    
+    color: #FFFFFF;
+    
+    transform: rotate(-7deg);
+  }
+
+  .text9 {
+    position: absolute;
+    width: 746.06px;
+    height: 257.11px;
+    left: 1117px;
+    top: 997.92px;
+
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+
+
+    color: #FFFFFF;
+
+    transform: rotate(-7deg);
+  }
+
+  .text10 {
+    position: absolute;
+    width: 1331px;
+    height: 400px;
+    left: 294px;
+    top: 634px;
+
+    font-family: Heaven Wanders DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 100%;
+    /* or 200px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 116px;
+    height: 423px;
+    left: 903px;
+    top: 1074px;
+  }
+
+  .image2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .middleLine1 {
+    position: absolute;
+    width: 0px;
+    height: 515px;
+    left: 960px;
+    top: 0px;
+
+    border: 1px solid #FFFFFF;
+  }
+
+  .middleLine2 {
+    position: absolute;
+    width: 0px;
+    height: 423px;
+    left: 960px;
+    top: 1074px;
+    
+    border: 0.5px solid #FFFFFF;
+  }
+}

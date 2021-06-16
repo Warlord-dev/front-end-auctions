@@ -1,0 +1,82 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #080808;
+
+  .image1 {
+    position: absolute;
+    width: 505px;
+    height: 546px;
+    left: -4px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 517px;
+    height: 561px;
+    left: 443px;
+    top: -15px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 967px;
+    height: 975px;
+    left: -7px;
+    top: 546px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 960px;
+    height: 1212px;
+    left: 960px;
+    top: 285px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 392px;
+    height: 44px;
+    left: 37px;
+    top: 23px;
+
+    font-family: "Marck Script";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 90%;
+    /* or 36px */
+
+
+    color: #80FF00;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 432px;
+    height: 228px;
+    left: 1606px;
+    top: 37px;
+
+    font-family: Digital Dare;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    /* or 55px */
+
+
+    color: #13BB13;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

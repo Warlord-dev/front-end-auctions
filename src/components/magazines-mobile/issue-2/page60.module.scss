@@ -1,0 +1,233 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2527px;
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .image3 {
+    position: absolute;
+    height: 2527px;
+    left: -610px;
+    top: 0px;
+  }  
+
+  .image4 {
+    position: absolute;
+    width: 302px;
+    height: 120px;
+    left: 36px;
+    top: 54px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 132px;
+    top: 550px;
+  }
+
+  .image6  {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 22px;
+    top: 252px;    
+  }
+
+  .image7 {
+    position: absolute;
+    width: 220px;
+    height: 220.2px;
+    left: 3px;
+    top: 850px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 113px;
+    top: 1127px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 22px;
+    top: 1470px;
+  }
+
+  .image11 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 101px;
+    top: 1772px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 75px;
+    top: 2108px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 604px;
+    height: 15px;
+    left: -115px;
+    top: 193px;
+    
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 100%;
+    /* identical to box height, or 15px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: -31px;
+    top: 482px;
+    
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: 79px;
+    top: 784px;
+    
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: -50px;
+    top: 1084px;
+    
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: 60px;
+    top: 1368px;
+    
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: -31px;
+    top: 1704px;
+
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: 48px;
+    top: 2006px;
+    
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: 22px;
+    top: 2342px;
+    
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}

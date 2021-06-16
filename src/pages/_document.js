@@ -84,6 +84,111 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css?family=Corben"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Sniglet"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poor+Story"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Quando"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Purple+Purse"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Qwigley"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Flamenco"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poller+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Galada"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fjalla+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Kavoon"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Electrolize"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Encode+Sans"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Space+Mono"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Marck+Script"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Salsa"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Goblin+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Istok+Web"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Khand"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jaldi"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Forum"></link>
+           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Englebert"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=DM+Mono"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Reem+Kufi"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Erica+One"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jolly+Lodger"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Mansalva"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Arvo"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Krub"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=B612+Mono"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Averia+Libre"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Bayon"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rosarivo"></link>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Bungee Inline"
+          ></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=News Cycle"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bellota Text"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend Giga"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Beth Ellen"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jockey One"></link>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Jacques Francois"
+          ></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chivo"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chilanka"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic Didone"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antonio"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Homenaje"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Carme"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Corben"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Miltonian"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Pacifico"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2"></link>
+          
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -318,6 +423,11 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Metal Lord';
+              src: url("./fonts/Metal-Lord.ttf");
+            }
+
+            @font-face {
               font-family: 'PLAYPULL';
               src: url("./fonts/PLAYPULL_Demo.ttf");
               font-weight: 400;
@@ -372,6 +482,11 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Asdonuts';
               src: url("./fonts/Asdonuts.ttf");
+            }
+
+            @font-face {
+              font-family: 'Ode to Idle Gaming';
+              src: url("./fonts/Ode to Idle Gaming.otf");
             }
           
             @font-face {
@@ -514,11 +629,6 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Finger Paint';
               src: url("./fonts/FingerPaint-Regular.ttf");
-            }
-              
-            @font-face {
-              font-family: 'B612 Mono';
-              src: url("./fonts/B612Mono-Regular.ttf");
             }
                 
             @font-face {
@@ -810,6 +920,11 @@ class MyDocument extends Document {
               font-family: 'Decovar Alpha';
               src: url("./fonts/DecovarAlpha-VF.ttf");
             }
+
+            @font-face {
+              font-family: 'XXII-ARMY';
+              src: url("./fonts/XXIISTRAIGHT-ARMY.ttf");
+            }
    
             @font-face {
               font-family: 'DIN Alternate';
@@ -890,6 +1005,265 @@ class MyDocument extends Document {
               font-family: "SNOWBREAK";
               src: url("./fonts/SNOWBREAK.ttf");
               font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Fragmentcore";
+              src: url("./fonts/Fragmentcore.woff");
+            }
+
+            @font-face {
+              font-family: "39Smooth";
+              src: url("./fonts/39smooth.ttf");
+            }
+
+            @font-face {
+              font-family: "VTKS Estilosa";
+              src: url("./fonts/VTKS Estilosa.ttf");
+            }
+
+            @font-face {
+              font-family: "fairy wings";
+              src: url("./fonts/fairy wings.ttf");
+            }
+
+            @font-face {
+              font-family: "Anime Inept";
+              src: url("./fonts/Anime Inept.otf");
+            }
+
+            @font-face {
+              font-family: "Marker Felt";
+              src: url("./fonts/Marker Felt.ttf");
+            }
+
+            @font-face {
+              font-family: "Ander Hedge";
+              src: url("./fonts/Ander Hedge.ttf");
+            }
+
+            @font-face {
+              font-family: "DJB Emilys Garden";
+              src: url("./fonts/DJB Emilys Garden.ttf");
+            }
+
+            @font-face {
+              font-family: "ExodusDemo";
+              src: url("./fonts/ExodusDemo.otf");
+            }
+
+            @font-face {
+              font-family: "Nimbus-Sans-D-OT";
+              src: url("./fonts/Nimbus-Sans-D-OT.ttf");
+            }
+
+            @font-face {
+              font-family: "ExodusDemo-Regular";
+              src: url("./fonts/ExodusDemo-Regular.otf");
+            }
+
+            @font-face {
+              font-family: "Muna";
+              src: url("./fonts/Muna-Bold.ttf");
+            }
+
+            @font-face {
+              font-family: "CF Punk Fashion PERSONAL";
+              src: url("./fonts/CF Punk Fashion PERSONAL.ttf");
+            }
+
+            @font-face {
+              font-family: "Chinese Dragon";
+              src: url("./fonts/ChineseDragon.ttf");
+            }
+
+            @font-face {
+              font-family: "Ligconsolata";
+              src: url("./fonts/Ligconsolata.ttf");
+            }
+              
+            @font-face {
+              font-family: "KoHo";
+              src: url("./fonts/KoHo-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Brawler";
+              src: url("./fonts/Brawler-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Bungee Shade";
+              src: url("./fonts/BungeeShade-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Silom";
+              src: url("./fonts/SilomBol.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Zilla Slab";
+              src: url("./fonts/ZillaSlab-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Libre Barcode 39 Extended Text";
+              src: url("./fonts/LibreBarcode39ExtendedText-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Mansalva";
+              src: url("./fonts/Mansalva-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Arvo";
+              src: url("./fonts/Arvo-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Pacifico";
+              src: url("./fonts/Pacifico-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Big Shoulders Text";
+              src: url("./fonts/BigShouldersText-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Walter Turncoat";
+              src: url("./fonts/WalterTurncoat-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Trochut";
+              src: url("./fonts/Trochut-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Africa";
+              src: url("./fonts/Africa.woff");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Grenze";
+              src: url("./fonts/Grenze-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Bayon";
+              src: url("./fonts/Bayon-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Hanuman";
+              src: url("./fonts/Hanuman-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "MixGiants";
+              src: url("./fonts/MixGiants.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Dispence";
+              src: url("./fonts/Dispence.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Jungle";
+              src: url("./fonts/Jungle DF.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "PAC LIBERTAS";
+              src: url("./fonts/PAC LIBERTAS font.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Saphira DEMO";
+              src: url("./fonts/Saphira DEMO.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Public Secret DEMO";
+              src: url("./fonts/Public Secret DEMO.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Hello Avocado";
+              src: url("./fonts/Hello Avocado.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Doctor Glitch";
+              src: url("./fonts/Doctor Glitch.otf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Poller One";
+              src: url("./fonts/PollerOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Post No Bills Colombo SemiBold";
+              src: url("./fonts/PostNoBillsColombo-Regular.woff");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Roboto";
+              src: url("./fonts/Roboto-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Krub";
+              src: url("./fonts/Krub-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Porter Sans Block";
+              src: url("./fonts/PorterSansBlock-Regular.woff");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Pavanam";
+              src: url("./fonts/Pavanam-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: "Sora";
+              src: url("./fonts/Sora-Regular.ttf");
             }
           `,
             }}

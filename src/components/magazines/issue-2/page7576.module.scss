@@ -1,0 +1,31 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+ 
+  .image1 {
+    position: relative;
+    width: 1920px;
+    height: 1497px;
+    left: 0;
+    top: 0;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 256px;
+    height: 122px;
+    left: 58px;
+    top: 1344px;
+    
+    font-family: Jolly Lodger;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 122px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../assets/scss/base/responsive.scss';
+
+.mainWrapper {
+  padding-top: 80px;
+  background: url('/images/nft/1/ejml13 hires 1.png');
+  background-size: cover;
+
+  .bodyWrapper {
+    @include media-xs {
+      padding: 1rem;
+    }
+
+    @include media-sm {
+      padding: 2rem;
+    }
+
+    @include media-md {
+      padding: 5rem;
+    }
+
+    @include media-lg {
+      padding: 7.5rem;
+    }
+
+    .issues {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .issue {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

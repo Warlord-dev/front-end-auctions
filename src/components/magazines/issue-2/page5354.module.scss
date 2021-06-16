@@ -1,0 +1,337 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    background: #000000;
+
+    .left {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .right {
+        position: absolute;
+        left: 50%;
+        top: 0;
+    }
+
+    .textDiv1 {
+        position: absolute;
+        width: 864px;
+        height: 546px;
+        left: 48px;
+        top: 40px;
+
+        background: rgba(0, 0, 0, 0.52);
+    }
+
+    .textDiv2 {
+        position: absolute;
+        width: 423px;
+        height: 493px;
+        left: 48px;
+        top: 601px;
+
+        background: rgba(0, 0, 0, 0.52);
+    }
+
+    .textDiv3 {
+        position: absolute;
+        width: 420px;
+        height: 493px;
+        left: 492px;
+        top: 601px;
+
+        background: rgba(0, 0, 0, 0.52);
+    }
+
+    .text1 {
+        position: absolute;
+        width: 784px;
+        height: 502px;
+        left: 100px;
+        top: 67px;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 17px;
+        line-height: 20px;
+        color: white;
+    }
+
+    .text2 {
+        position: absolute;
+        width: 330px;
+        height: 440px;
+        left: 100px;
+        top: 621px;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 17px;
+        line-height: 20px;
+
+        color: white;
+    }
+
+    .text3 {
+        position: absolute;
+        width: 352px;
+        height: 460px;
+        left: 526px;
+        top: 625px;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 17px;
+        line-height: 20px;
+        color: white;
+    }
+
+    .title {
+        color: #FF0000;
+    }
+
+    .rText1 {
+        position: absolute;
+        width: 676px;
+        height: 80px;
+        left: 1186px;
+        top: 40px;
+
+        font-family: Knife Princess;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 100%;
+        /* identical to box height, or 80px */
+
+        text-align: right;
+
+        color: #FFFFFF;
+    }
+
+    .rText2 {
+        position: absolute;
+        width: 101px;
+        height: 26px;
+        left: 1033px;
+        top: 168px;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 110%;
+        /* or 26px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rText3 {
+        position: absolute;
+        width: 814px;
+        height: 330px;
+        left: 1033px;
+        top: 199px;
+
+        font-family: Basic;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* or 22px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rText4 {
+        position: absolute;
+        width: 252px;
+        height: 24px;
+        left: 1022px;
+        top: 586px;
+
+        font-family: Courier Prime;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 110%;
+        /* or 24px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rText5 {
+        position: absolute;
+        width: 325px;
+        height: 22px;
+        left: 1022px;
+        top: 614px;
+
+        font-family: Courier Prime;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* identical to box height, or 22px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rText6 {
+        position: absolute;
+        width: 227px;
+        height: 24px;
+        left: 1478px;
+        top: 541px;
+
+        font-family: Courier Prime;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 110%;
+        /* or 24px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rText7 {
+        position: absolute;
+        width: 325px;
+        height: 22px;
+        left: 1478px;
+        top: 569px;
+
+        font-family: Courier Prime;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* identical to box height, or 22px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rText8 {
+        position: absolute;
+        width: 252px;
+        height: 24px;
+        left: 1056px;
+        top: 1044px;
+
+        font-family: Courier Prime;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 110%;
+        /* or 24px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rText9 {
+        position: absolute;
+        width: 325px;
+        height: 22px;
+        left: 1056px;
+        top: 1072px;
+
+        font-family: Courier Prime;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* identical to box height, or 22px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rText10 {
+        position: absolute;
+        width: 252px;
+        height: 24px;
+        left: 1535px;
+        top: 1044px;
+
+        font-family: Courier Prime;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 110%;
+        /* or 24px */
+
+
+        color: #FFFFFF;
+    }
+
+    .rText11 {
+        position: absolute;
+        width: 325px;
+        height: 22px;
+        left: 1535px;
+        top: 1072px;
+
+        font-family: Courier Prime;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* identical to box height, or 22px */
+
+
+        color: #FFFFFF;
+    }
+
+    .image1 {
+        position: absolute;
+        width: 368px;
+        height: 368px;
+        left: 1022px;
+        top: 650px;
+    }
+
+    .image2 {
+        position: absolute;
+        width: 368px;
+        height: 348px;
+        left: 1478px;
+        top: 598px;
+    }
+
+    .image3 {
+        position: absolute;
+        width: 368px;
+        height: 368px;
+        left: 1056px;
+        top: 1107px;
+    }
+
+    .image4 {
+        position: absolute;
+        width: 368px;
+        height: 368px;
+        left: 1535px;
+        top: 1105px;
+    }
+
+    .image5 {
+        position: absolute;
+        width: 810px;
+        height: 390px;
+        left: 75px;
+        top: 1109px;
+    }
+}

@@ -1,0 +1,115 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2562px;
+  background-color: black;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .borderDiv {
+    position: absolute;
+    width: 385px;
+    height: 0px;
+    left: -5px;
+    top: 107px;
+
+    border: 4px solid #c3635b;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 413px;
+    height: 94px;
+    left: -19px;
+    top: 28px;
+
+    font-family: Heaven Wanders DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 85px;
+    line-height: 100%;
+    /* or 85px */
+
+    text-align: center;
+
+    color: #c3635b;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 385px;
+    height: 26px;
+    left: -3px;
+    top: 122px;
+
+    font-family: Gugi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 100%;
+    /* or 23px */
+
+    text-align: center;
+
+    color: #c3635b;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 385px;
+    height: 26px;
+    left: -6px;
+    top: 122px;
+
+    font-family: Gugi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 100%;
+    /* or 23px */
+
+    text-align: center;
+
+    color: #700900;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 385px;
+    height: 26px;
+    left: -5px;
+    top: 121px;
+
+    font-family: Gugi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 100%;
+    /* or 23px */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .play {
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    left: 191px;
+    top: 1035px;
+  }
+
+  .audio {
+    display: none;
+  }
+}

@@ -6,7 +6,10 @@ import { getMonaPerEth, getChainId } from '@selectors/global.selectors';
 import PropTypes from 'prop-types';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
-import { closeBuynowNftSubscriptionModal, openNftSubscriptionReadyModal } from '@actions/modals.actions';
+import {
+  closeBuynowNftSubscriptionModal,
+  openNftSubscriptionReadyModal,
+} from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
 import styles from './styles.module.scss';
@@ -27,11 +30,11 @@ const BuyNowNftSubscription = ({ className, title, buttonText1, buttonText2 }) =
   const handleClose = () => {
     dispatch(closeBuynowNftSubscriptionModal());
   };
-  
+
   const handleCloseSuccess = () => {
     handleClose();
     dispatch(openNftSubscriptionReadyModal());
-  }
+  };
 
   const handleClick = (mode) => {
     setShowError(null);
@@ -54,20 +57,20 @@ const BuyNowNftSubscription = ({ className, title, buttonText1, buttonText2 }) =
     });
   };
 
-//   useEffect(() => {
-//     async function getMonaApproval() {
-//       dispatch(bidActions.getApprovedInMona()).then((val) => {
-//         setApproved(val);
-//       });
-//     }
+  useEffect(() => {
+    async function getMonaApproval() {
+      dispatch(bidActions.getApprovedInMona()).then((val) => {
+        setApproved(val);
+      });
+    }
 
-//     getMonaApproval();
+    getMonaApproval();
 
-//     return () => {
-//       requests.current.forEach((request) => request.unsubscribe());
-//       requests.current = [];
-//     };
-//   }, []);
+    return () => {
+      requests.current.forEach((request) => request.unsubscribe());
+      requests.current = [];
+    };
+  }, []);
 
   return (
     <>
@@ -81,7 +84,10 @@ const BuyNowNftSubscription = ({ className, title, buttonText1, buttonText2 }) =
           <div className={styles.footer}>
             <p className={styles.footerCaption}>
               <span>
-                Need to top up on $MONA? Get it <a href="https://skins.digitalax.xyz/swap/" target="_blank">here.</a>
+                Need to top up on $MONA? Get it{' '}
+                <a href="https://skins.digitalax.xyz/swap/" target="_blank">
+                  here.
+                </a>
               </span>
             </p>
             <div className={styles.selectWrapper}>

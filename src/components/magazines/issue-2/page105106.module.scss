@@ -1,0 +1,151 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #BEFFC5;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 686px;
+    height: 941px;
+    left: 123px;
+    top: 131px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 617px;
+    height: auto;
+    left: 0;
+    top: 580px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 613px;
+    height: 1232px;
+    left: 347px;
+    top: 311px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 389px;
+    height: 509px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 389px;
+    height: 486px;
+    left: 960px;
+    top: 508px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 389px;
+    height: 504px;
+    left: 960px;
+    top: 993px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 572px;
+    height: 743px;
+    left: 1348px;
+    top: -24px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 572px;
+    height: 778px;
+    left: 1348px;
+    top: 718px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 570px;
+    height: 90px;
+    left: 84px;
+    top: 66px;
+    
+    font-family: Salsa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 90px;
+    line-height: 100%;
+    /* identical to box height, or 90px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 190px;
+    height: 50px;
+    left: 980px;
+    top: 10px;
+    
+    font-family: Sahitya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 162px;
+    height: 40px;
+    left: 985px;
+    top: 60px;
+    
+    font-family: Sahitya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

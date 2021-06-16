@@ -1,0 +1,524 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();  
+
+    .back {
+        width: 100%;
+        height: 100%;
+    }
+
+    .link1 {
+        .text2 {
+            position: absolute;
+            width: 393.41px;
+            height: 132.89px;
+            left: 78.04px;
+            top: 80.15px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 100%;
+            /* or 30px */
+
+
+            color: #2BFFE5;
+
+            transform: matrix(1, -0.18, -0.02, 0.99, 0, 0);
+        }
+
+        .text1 {
+            display: none;
+            position: absolute;
+            width: 393.41px;
+            height: 132.89px;
+            left: 72.74px;
+            top: 78.32px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 100%;
+            /* or 30px */
+
+
+            color: #B42594;
+
+            transform: matrix(1, -0.18, -0.02, 0.99, 0, 0);
+        }
+
+        &:hover {
+            .text1 {
+                display: block;
+            }
+        }
+    }
+
+    .text3 {
+        position: absolute;
+        width: 317.03px;
+        height: 304.92px;
+        left: 67.58px;
+        top: 230px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 110%;
+        /* or 19px */
+
+        text-align: center;
+
+        color: #FFFFFF;
+
+        transform: rotate(5deg);
+    }
+
+    .text4 {
+        position: absolute;
+        width: 434px;
+        height: 221px;
+        left: 495px;
+        top: 42px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 100%;
+        /* or 70px */
+
+        text-align: right;
+
+        color: #FFFFFF;
+    }
+
+    .text5 {
+        position: absolute;
+        width: 525px;
+        height: 290px;
+        left: 404px;
+        top: 198px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 110%;
+        /* or 17px */
+
+        text-align: right;
+
+        color: #FECBFF;
+    }
+
+    .text6 {
+        position: absolute;
+        width: 478px;
+        height: 76px;
+        left: 0px;
+        top: 549px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 100%;
+        /* or 70px */
+
+        text-align: right;
+
+        color: #FFFFFF;
+        text-shadow: -3px 0 #FFB800, 0 3px #FFB800, 3px 0 #FFB800, 0 -3px #FFB800;
+
+    }
+
+    .text7 {
+        position: absolute;
+        width: 266px;
+        height: 266px;
+        left: 48px;
+        top: 1175px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 110%;
+        /* or 19px */
+
+
+        color: #FFFFFF;
+    }
+
+    .text8 {
+        position: absolute;
+        width: 569px;
+        height: 220px;
+        left: 333px;
+        top: 1236px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* or 22px */
+
+
+        color: #FFCC4A;
+    }
+
+    .text9 {
+        position: absolute;
+        width: 254px;
+        height: 140px;
+        left: 656px;
+        top: 1040px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 110%;
+        /* or 28px */
+
+        text-align: right;
+
+        color: #FFFFFF;
+
+        box-sizing: border-box;
+        text-shadow: -1px 0 #FF9900, 0 1px #FF9900, 1px 0 #FF9900, 0 -1px #FF9900;
+        
+        &:hover {
+            text-shadow: 4px 3px 0px rgba(0, 0, 0, 0.8), 9px 8px 0px rgba(0,0,0,0.15);
+        }
+    }
+
+    .image1 {
+        position: absolute;
+        width: 384px;
+        height: 480px;
+        left: 20px;
+        top: 659px;
+    }
+
+    .image2 {
+        position: absolute;
+        width: 295px;
+        height: 526px;
+        left: 333px;
+        top: 694px;
+    }
+
+    .video1 {
+        position: absolute;
+        width: 409px;
+        height: 488px;
+        left: 506px;
+        top: 534px;
+    }
+
+    .text10 {
+        position: absolute;
+        width: 794px;
+        height: 76px;
+        left: 973px;
+        top: 54px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 100%;
+        /* or 70px */
+
+        text-align: right;
+
+        color: #FFFFFF;
+        text-shadow: -3px 0 #1045FF, 0 3px #1045FF, 3px 0 #1045FF, 0 -3px #1045FF;
+
+    }
+
+    .text11 {
+        position: absolute;
+        width: 554px;
+        height: 144px;
+        left: 959px;
+        top: 136px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 100%;
+        /* or 18px */
+
+
+        color: #EFEAFF;
+    }
+
+    .text13 {
+        position: absolute;
+        width: 355.05px;
+        height: 160px;
+        left: 945px;
+        top: 712.65px;
+
+        font-family: Post No Bills Colombo SemiBold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 100%;
+        /* or 40px */
+
+
+        color: #9CD5FF;
+
+        transform: rotate(-10deg);
+
+        &:hover {
+            text-shadow: 4px 3px 0px rgba(0, 0, 0, 0.8), 9px 8px 0px rgba(0,0,0,0.15);
+        }
+    }
+
+    .text12 {
+        position: absolute;
+        width: 536px;
+        height: 48px;
+        left: 1345px;
+        top: 751px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+        /* or 18px */
+
+
+        color: #5BF5FF;
+    }
+
+    .text14 {
+        position: absolute;
+        width: 478px;
+        height: 76px;
+        left: 1415px;
+        top: 41px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 100%;
+        /* or 70px */
+
+        text-align: right;
+
+        color: #FFFFFF;
+
+        text-shadow: -3px 0 #FF0000, 0 3px #FF0000, 3px 0 #FF0000, 0 -3px #FF0000;
+
+        color: #FFFFFF;
+    }
+
+    .text15 {
+        position: absolute;
+        width: 478px;
+        height: 228px;
+        left: 1415px;
+        top: 121px;
+
+        font-family: Post No Bills Colombo SemiBold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        /* or 20px */
+
+        text-align: right;
+
+        color: #FFFFFF;
+    }
+
+    .text16 {
+        position: absolute;
+        width: 434px;
+        height: 228px;
+        left: 981px;
+        top: 534px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        /* or 20px */
+
+
+        color: #DA1919;
+    }
+
+    .text17 {
+        position: absolute;
+        width: 485px;
+        height: 80px;
+        left: 1381px;
+        top: 674px;
+
+        font-family: Poller One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 100%;
+        /* or 40px */
+
+
+        color: #FF5555;
+
+        &:hover {
+            text-shadow: 4px 3px 0px rgb(0 0 0 / 80%), 9px 8px 0px rgb(0 0 0 / 15%);
+        }
+    }
+
+    .text19 {
+        position: absolute;
+        width: 465px;
+        height: 280px;
+        left: 1381px;
+        top: 776px;
+
+        font-family: Poppins;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 100%;
+        /* or 20px */
+
+
+        color: #FFFFFF;
+    }
+
+    .image3 {
+        position: absolute;
+        width: 394px;
+        height: 355px;
+        left: 980px;
+        top: 316px;
+    }
+
+    .video2 {
+        position: absolute;
+        width: 246px;
+        height: 373px;
+        left: 1353px;
+        top: 348px;
+    }
+
+    .video3 {
+        position: absolute;
+        width: 243px;
+        height: 407px;
+        left: 1612px;
+        top: 244px;
+    }
+
+    .image4 {
+        position: absolute;
+        width: 434px;
+        height: 447px;
+        left: 981px;
+        top: 54px;        
+    }
+
+    .image5 {
+        position: absolute;
+        width: 408px;
+        height: 306px;
+        left: 1458px;
+        top: 293px;
+    }
+
+    .video4 {
+        position: absolute;
+        width: 339px;
+        height: 333px; 
+        left: 978px;
+        top: 706px;
+    }
+
+    .text18 {
+        font-size: 22px;
+        color: #FF5EDB;
+        line-height: 22px;
+    }
+
+    .text20 {
+        position: absolute;
+        width: 434px;
+        height: 221px;
+        left: 867px;
+        top: 1153px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 100%;
+        /* or 60px */
+
+
+        color: #FFFFFF;
+
+        transform: rotate(-90deg);
+    }
+
+    .text21 {
+        position: absolute;
+        width: 434px;
+        height: 221px;
+        left: 987px;
+        top: 1153px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 100%;
+        /* or 60px */
+
+
+        color: #FFFFFF;
+
+        transform: rotate(-90deg);
+    }
+
+    .image6 {
+        position: absolute;
+        width: 298px;
+        height: 300px;
+        left: 1269px;
+        top: 1110px;
+    }
+
+    .image7 {
+        position: absolute;
+        width: 441.36px;
+        height: 386.26px;
+        left: 1514px;
+        top: 1078.23px;
+    }
+
+    .play {
+        position: absolute;
+        width: 46.81px;
+        height: 46.08px;
+        left: 839px;
+        top: 554px;
+    }
+}

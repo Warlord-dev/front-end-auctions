@@ -1,0 +1,195 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .backImage {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .leftBack {
+    position: absolute;
+    width: 50%;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    background: #889DA9;
+  }
+
+  .left1 {
+    position: absolute;
+    width: 348px;
+    height: 426px;
+    left: 84px;
+    top: 49px;
+    z-index: 100;
+  }
+
+  .left2 {
+    position: absolute;
+    width: 470px;
+    height: 590px;
+    left: 461px;
+    top: 235px;
+    z-index: 100;
+  }
+
+  .left3 {
+    position: absolute;
+    width: 486px;
+    height: 594px;
+    left: 37px;
+    top: 866px;
+    z-index: 100;
+  }
+
+  .right1 {
+    position: absolute;
+    width: 542px;
+    height: 542px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .right2 {
+    position: absolute;
+    width: 560px;
+    height: 560px;
+    left: 1502px;
+    top: -18px;
+  }
+
+  .right3 {
+    position: absolute;
+    width: 794px;
+    height: 896px;
+    left: 859px;
+    top: 599px;
+  }
+
+  .right4 {
+    position: absolute;
+    width: 339px;
+    height: 474px;
+    left: 1550px;
+    top: 1000px;
+  }
+
+  .rightBack {
+    position: absolute;
+    width: 1404px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    z-index: 99;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 459px;
+    height: 44px;
+    left: 491px;
+    top: 39px;
+    
+    font-family: Neon Nanoborg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 90%;
+    /* or 63px */
+    z-index: 100;
+    text-align: center;
+    
+    color: #FF0F00;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 451px;
+    height: 153px;
+    left: 480px;
+    top: 109px;
+
+    font-family: Lustria;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 65px;
+    line-height: 90%;
+    /* or 58px */
+    z-index: 100;
+    text-align: center;
+
+    color: #FFD2DD;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 392px;
+    height: 44px;
+    left: 1487px;
+    top: 575px;
+
+    font-family: Lexend Zetta;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 90%;
+    /* or 22px */
+
+    text-align: right;
+
+    color: #926BFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text4 {
+    position: absolute;
+    width: 392px;
+    height: 44px;
+    left: 1487px;
+    top: 608px;
+
+    font-family: Lexend Zetta;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 90%;
+    /* or 22px */
+
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 392px;
+    height: 277px;
+    left: 1487px;
+    top: 664px;
+
+    font-family: Lexend Zetta;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 90%;
+    /* or 13px */
+
+    text-align: right;
+
+    color: #FFFFFF;
+  } 
+
+}

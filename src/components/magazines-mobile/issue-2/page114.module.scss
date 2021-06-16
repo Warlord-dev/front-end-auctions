@@ -1,0 +1,40 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 767px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 376px;
+    height: 611px;
+    left: -1px;
+    top: 0px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 357px;
+    height: 35px;
+    left: 9px;
+    top: 673px;
+    
+    font-family: Fira Code;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 100%;
+    /* identical to box height, or 35px */
+    
+    text-align: center;
+    
+    color: #FF1313;
+  }
+}

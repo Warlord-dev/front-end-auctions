@@ -1,0 +1,205 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #FFFFFF;
+
+  .image1 {
+    position: absolute;
+    width: 834px;
+    height: 1503px;
+    left: -136px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 260px;
+    height: 1497px;
+    left: 697px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 339px;
+    height: 556px;
+    left: 603px;
+    top: 13px;    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 391px;
+    height: 553px;
+    left: 508px;
+    top: 812px;
+    border: 7px solid #052DFF;
+    box-sizing: border-box;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 960px;
+    height: 1031px;
+    left: 960px;
+    top: 233px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 316px;
+    height: 561px;
+    left: 1604px;
+    top: -28px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 243px;
+    height: 411px;
+    left: 1097px;
+    top: 158px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 340px;
+    height: 604px;
+    left: 1511px;
+    top: 612px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 437px;
+    height: 776px;
+    left: 960px;
+    top: 775px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 374px;
+    height: 142px;
+    left: 586px;
+    top: 41px;
+    
+    font-family: Julietta Messie Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 100%;
+    /* or 150px */
+    
+    text-align: center;
+    -webkit-text-stroke: 0.5px #FA00FF;
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 242px;
+    height: 334px;
+    left: 652px;
+    top: 174px;
+    
+    font-family: Inria Sans;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 242px;
+    height: 47px;
+    left: 697px;
+    top: 1428px;
+    
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text4 {
+    position: absolute;
+    width: 347px;
+    height: 58px;
+    left: 985px;
+    top: 22px;
+    
+    font-family: Istok Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+    
+    
+    color: #004FE9;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 347px;
+    height: 58px;
+    left: 985px;
+    top: 80px;
+    
+    font-family: Istok Web;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #004B23;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 433px;
+    height: 174px;
+    left: 1451px;
+    top: 1268px;
+    
+    font-family: Khand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 100%;
+    /* or 35px */
+    
+    text-align: right;
+    
+    color: #0500FF;
+  }
+}

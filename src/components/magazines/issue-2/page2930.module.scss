@@ -1,0 +1,129 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage1 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    top: 0;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 68px;
+    height: 30px;
+    left: 18px;
+    top: 1230px;
+
+    font-family: A DAY WITHOUT SUN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    color: #FF0000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 227px;
+    height: 40px;
+    left: -77px;
+    top: 1350px;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FF0000;
+
+    transform: rotate(-90deg);
+  }
+
+  .subTitle {
+    font-size: 30px;
+    font-family: Cool Chaos;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 654.71px;
+    height: 700.3px;
+    left: 1090px;
+    top: 345.22px;
+
+    font-family: Think Thick;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7px;
+    line-height: 14px;
+    color: #D4FAD3;
+
+    transform: rotate(-5deg);
+  }
+
+  .twitter1 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 1200px;
+    top: 355px;
+  }
+
+  .twitter2 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 1300px;
+    top: 615px;
+  }
+
+  .twitter3 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 1185px;
+    top: 805px;
+  }
+
+  .twitter4 {
+    position: absolute;
+    width: 20.15px;
+    height: 20.15px;
+    left: 1243px;
+    top: 1056px;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 152.97px;
+    height: 49.61px;
+    left: 1125px;
+    top: 1052.56px;
+
+    font-family: Cool Chaos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    color: #D4FAD3;
+
+    transform: rotate(-5deg);
+  }
+
+}

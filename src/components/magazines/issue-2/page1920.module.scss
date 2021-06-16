@@ -1,0 +1,79 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: #FFFFFF;
+  display: flex;
+  position: relative;
+
+  .backImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 666px;
+    height: 1149px;
+    left: 148px;
+    top: 152px;
+
+    font-family: Lexend Giga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    ul {
+      li {
+        list-style: disc;
+        margin-bottom: 1rem;
+
+        .subTitle {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  
+  .subTitle {
+    font-family: Marker Felt;
+    font-size: 20px;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 666px;
+    height: 1396px;
+    left: 1050px;
+    top: 52px;
+
+    font-family: Lexend Giga;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    ul {
+      li {
+        list-style: disc;
+        margin-bottom: 1rem;
+
+        .subTitle {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

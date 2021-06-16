@@ -1,0 +1,60 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 2973px;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+  
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 3662px;
+    left: -480px;
+    top: 0px;
+    
+    background: linear-gradient(180deg, #291F61 0%, rgba(197, 0, 118, 0.98) 41.59%, rgba(134, 0, 197, 0.98) 76.56%);
+  }
+
+  .image2 {
+    position: absolute;
+    width: 1367px;
+    height: 1492px;
+    left: -447px;
+    top: 1766px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 316px;
+    height: 2075px;
+    left: 29px;
+    top: 76px;
+    
+    background: #A40093;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 264px;
+    height: 779px;
+    left: 55px;
+    top: 139px;
+    
+    font-family: Lexend Giga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    
+    text-align: center;
+    
+    color: #FFE600;
+  }
+}

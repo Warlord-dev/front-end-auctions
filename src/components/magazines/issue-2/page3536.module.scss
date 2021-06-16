@@ -1,0 +1,138 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .back {
+    position: absolute;
+    left: -96px;
+    top: -2px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 1225px;
+    height: 36px;
+    left: 50px;
+    top: 40px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 676px;
+    height: 36px;
+    top: 273px;
+    left: 120px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 771px;
+    height: 61px;
+    top: 90px;
+    left: 50px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 61px;
+    background: -webkit-linear-gradient(45deg, #DB00FF, #2B67F1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 770px;
+    height: 162px;
+    top: 329px;
+    left: 120px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 54px;
+    background: -webkit-linear-gradient(45deg, #DB00FF, #2B67F1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 789px;
+    height: 523px;
+    left: 1032px;
+    top: 870px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+    ul {
+      li {
+        list-style: disc;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    left: 925px;
+    top: 563px;
+  }
+
+  .image2 {
+    position: absolute;
+    left: 1250px;
+    top: 563px;   
+  }
+
+  .image3 {
+    position: absolute;
+    left: 1567px;
+    top: 563px;   
+  }
+
+  .video {
+    position: absolute;
+    width: 960px;
+    height: 569px;
+    left: 0px;
+    top: 562px;
+  }
+
+  .play {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    left: 903px;
+    top: 585px;
+  }
+}

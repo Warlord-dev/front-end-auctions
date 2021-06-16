@@ -1,0 +1,103 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 2433px;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 258px;
+    height: 674px;
+    left: -5.56px;
+    top: -21.92px;
+    
+    transform: rotate(40deg);
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 2433px;
+    left: -239px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 287.07px;
+    height: 751.8px;
+    left: 97.72px;
+    top: 354.41px;
+    transform: rotate(-30deg);
+  }
+
+  .image4 {
+    position: absolute;
+    width: 258px;
+    height: 674px;
+    left: -6.12px;
+    top: 717.96px;
+    transform: rotate(-5deg);
+  }
+
+  .image5 {
+    position: absolute;
+    width: 320px;
+    height: 837px;
+    left: 70.24px;
+    top: 1149.43px;
+    transform: rotate(10deg);
+  }
+
+  .image6 {
+    position: absolute;
+    width: 258px;
+    height: 674px;
+    left: 1.88px;
+    top: 1661.96px;
+    transform: rotate(-5deg);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 735px;
+    height: 57px;
+    left: -377px;
+    top: 26px;
+    
+    font-family: Goblin One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 100%;
+    /* or 25px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 735px;
+    height: 57px;
+    left: 62px;
+    top: 59px;
+    
+    font-family: Goblin One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    
+    color: #FFFFFF;
+  }
+}

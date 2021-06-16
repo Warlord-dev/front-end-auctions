@@ -1,0 +1,35 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  height: 1805px;
+  background-color: white;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 279px;
+    height: 709px;
+    left: 48px;
+    top: 84px;
+
+    font-family: Hello Avocado;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #ffffff;
+  }
+}

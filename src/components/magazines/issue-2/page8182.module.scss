@@ -1,0 +1,100 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #FFFFFF;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    
+    background: linear-gradient(180deg, rgba(173, 0, 255, 0.43) 0%, rgba(0, 79, 79, 0.43) 100%);
+  }
+
+  .image3 {
+    position: absolute;
+    width: 828px;
+    height: 1396px;
+    left: 1018px;
+    top: 59px;
+    background-color: rgba(164, 0, 147, 0.43);
+  }
+
+  .text2 {
+    position: absolute;
+    width: 604px;
+    height: 252px;
+    left: 72px;
+    top: 30px;
+    
+    font-family: Ander Hedge;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 115px;
+    
+    color: #A65EB4;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 248px;
+    height: 37px;
+    left: 72px;
+    top: 253px;
+    
+    font-family: Ander Hedge;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    
+    color: #A65EB4;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 248px;
+    height: 37px;
+    left: 662px;
+    top: 1426px;
+    
+    font-family: Ander Hedge;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    
+    color: #A65EB4;    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 666px;
+    height: 1149px;
+    left: 1099px;
+    top: 116px;
+    
+    font-family: Lexend Giga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}

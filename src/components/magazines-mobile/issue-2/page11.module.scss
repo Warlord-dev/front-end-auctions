@@ -1,0 +1,449 @@
+@import './styles.module.scss';
+
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-605px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+  height: 4324px;
+  background-color: white;
+  color: black;
+  position: relative;
+  white-space: normal;
+  
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 4658px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 375px;
+    height: 4658px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 86px;
+    height: 92px;
+    left: 218px;
+    top: 398px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 133px;
+    height: 171px;
+    left: 34px;
+    top: 962px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    left: 235px;
+    top: 963px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 64px;
+    top: 1801px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 63px;
+    top: 2329px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 100px;
+    height: 148px;
+    left: 51px;
+    top: 2859px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 249px;
+    height: 73px;
+    left: 75px;
+    top: 3520px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 343px;
+    height: 169px;
+    left: 32px;
+    top: 63px;
+    
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 130px;
+    line-height: 110%;
+    /* or 143px */
+    
+    
+    color: #000000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 161px;
+    height: 87px;
+    left: 54px;
+    top: 409px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 161px;
+    height: 87px;
+    left: 54px;
+    top: 430px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 265px;
+    height: 417px;
+    left: 55px;
+    top: 496px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 247px;
+    height: 356px;
+    left: 55px;
+    top: 1158px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 265px;
+    height: 417px;
+    left: 55px;
+    top: 1180px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 700px;
+    height: 66px;
+    left: 25px;
+    top: 1526px;
+    
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 110%;
+    /* or 110px */
+    
+    
+    color: #000000;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 700px;
+    height: 66px;
+    left: 25px;
+    top: 1643px;
+    
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 110%;
+    /* or 110px */
+    
+    
+    color: #000000;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 144px;
+    height: 87px;
+    left: 167px;
+    top: 1801px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 144px;
+    height: 87px;
+    left: 167px;
+    top: 1820px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 223px;
+    height: 448px;
+    left: 64px;
+    top: 1895px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 144px;
+    height: 87px;
+    left: 166px;
+    top: 2329px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 144px;
+    height: 87px;
+    left: 166px;
+    top: 2350px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 248px;
+    height: 356px;
+    left: 63px;
+    top: 2423px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 178px;
+    height: 448px;
+    left: 43px;
+    top: 3019px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 178px;
+    height: 448px;
+    left: 43px;
+    top: 3040px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 23px;
+    height: 630px;
+    left: 288px;
+    top: 2830px;
+    
+    font-family: Archie Websters;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    /* or 88px */
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    line-height: 0;
+    letter-spacing: -30px;
+    
+    color: #000000;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 265px;
+    height: 87px;
+    left: 43px;
+    top: 3624px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text19 {
+    position: absolute;
+    width: 265px;
+    height: 87px;
+    left: 43px;
+    top: 3645px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 19px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text20 {
+    position: absolute;
+    width: 281px;
+    height: 153px;
+    left: 43px;
+    top: 3760px;
+    
+    font-family: Mada;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+  }
+}

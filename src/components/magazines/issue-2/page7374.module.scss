@@ -1,0 +1,113 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper(); 
+    background-color: #FFFFFF;
+
+    .image1 {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .image2 {
+        position: absolute;
+        width: 1181px;
+        height: 1181px;
+        left: 1162px;
+        top: -148px;
+    }
+
+    .image3 {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+    }
+
+    .image4 {
+        position: absolute;
+        width: 1004px;
+        height: 1004px;
+        left: 1011px;
+        top: 643px;
+    }
+
+    .text1 {
+        position: absolute;
+        width: 363px;
+        height: 84px;
+        left: 557px;
+        top: 63px;
+        
+        font-family: fairy wings;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 100px;
+        line-height: 100%;
+        /* or 100px */
+        
+        -webkit-text-stroke: #FFFFFF;
+        -webkit-text-stroke-width: 0.5px;
+        color: #FFFFFF;
+        box-sizing: border-box;
+    }
+
+    .text2 {
+        position: absolute;
+        width: 98px;
+        height: 34px;
+        left: 40px;
+        top: 1414px;
+        
+        font-family: Marker Felt;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 100%;
+        /* or 20px */
+        
+        -webkit-text-stroke: #00E0FF;
+        -webkit-text-stroke-width: 0.5px;
+        color: #FFFFFF;
+    }
+
+    .text3 {
+        position: absolute;
+        width: 363px;
+        height: 84px;
+        left: 1213px;
+        top: 21px;
+        
+        font-family: Erica One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 70px;
+        line-height: 100%;
+        /* or 70px */
+        
+        
+        color: #E56615;
+    }
+
+    .text4 {
+        position: absolute;
+        width: 350px;
+        height: 98px;
+        left: 1213px;
+        top: 107px;
+        
+        font-family: EB Garamond;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 100%;
+        /* or 14px */
+        
+        
+        color: #FFFFFF;
+    }
+}

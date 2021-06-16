@@ -1,0 +1,40 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3145px;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+  position: relative;
+
+  .back {
+    position: absolute;
+    width: 375px;
+    height: 100%;
+    left: 0px;
+    top: 0x;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 246px;
+    height: 1430px;
+    left: 25px;
+    top: 59px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
+
+    .subtitle {
+      font-weight: 600;
+      font-size: 22px;
+    }
+  }
+}

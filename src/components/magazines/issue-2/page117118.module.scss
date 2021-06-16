@@ -1,0 +1,135 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #BEFFC5;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 961px;
+    height: 748px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 749px;
+    left: 960px;
+    top: 748px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 427px;
+    height: 816px;
+    left: 960px;
+    top: 681px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 427px;
+    height: 816px;
+    left: 1493px;
+    top: 681px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 383px;
+    height: 744px;
+    left: 1515px;
+    top: 717px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 328px;
+    height: 60px;
+    left: 39px;
+    top: 20px;
+    
+    font-family: Purple Purse;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    color: #AD00FF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 473px;
+    height: 60px;
+    left: 465px;
+    top: 1411px;
+    
+    font-family: Purple Purse;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    
+    color: #00D1FF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 425px;
+    height: 117px;
+    left: 1461px;
+    top: 16px;
+    
+    font-family: Poor Story;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 90px;
+    line-height: 100%;
+    /* or 90px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text4 {
+    position: absolute;
+    width: 747px;
+    height: 226px;
+    left: 1068px;
+    top: 607px;
+
+    font-family: Poor Story;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 100%;
+    /* or 200px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+}

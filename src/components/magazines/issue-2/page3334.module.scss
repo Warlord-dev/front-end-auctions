@@ -1,0 +1,260 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  video {
+    position: absolute;
+    width: 1941px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    object-fit: fill;
+  }
+
+  .backImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 413px;
+    height: 94px;
+    left: 548px;
+    top: 20px;
+
+    font-family: Heaven Wanders DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    text-decoration: underline;
+    /* or 100px */
+
+    text-align: center;
+
+    color: #C3635B;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 385px;
+    height: 26px;
+    left: 562px;
+    top: 125px;
+
+    font-family: Gugi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 100%;
+    /* identical to box height, or 26px */
+
+    text-align: center;
+
+    color: #C3635B;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 385px;
+    height: 26px;
+    left: 559px;
+    top: 125px;
+
+    font-family: Gugi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 100%;
+    /* identical to box height, or 26px */
+
+    text-align: center;
+
+    color: #700900;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 385px;
+    height: 26px;
+    left: 558px;
+    top: 125px;
+
+    font-family: Gugi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 100%;
+    /* identical to box height, or 26px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .video {
+    position: absolute;
+    width: 960px;
+    height: 502px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 646px;
+    height: 92px;
+    left: 986px;
+    top: 758px;
+
+    font-family: Dispence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 746px;
+    height: 115px;
+    left: 1148px;
+    top: 858px;
+
+    font-family: Dispence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+  
+  .text7 {
+    position: absolute;
+    width: 726px;
+    height: 140px;
+    left: 1171px;
+    top: 994px;
+
+    font-family: Dispence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: right;
+
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 593px;
+    height: 140px;
+    left: 986px;
+    top: 1134px;
+
+    font-family: Dispence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 489px;
+    height: 80px;
+    left: 1007px;
+    top: 1274px;
+
+    font-family: Alegreya;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 40px;
+    /* or 100% */
+
+
+    color: #000000;
+    box-sizing: border-box;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 519px;
+    height: 90px;
+    left: 986px;
+    top: 1373px;
+
+    font-family: Inter;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 30px;
+    /* or 200% */
+
+
+    color: #FFFFFF;
+  }
+
+  .textDiv {
+    position: absolute;
+    width: 574px;
+    height: 102px;
+    left: 960px;
+    top: 1264px;
+
+    background: rgba(255, 255, 255, 0.43);
+  }
+
+  .link1 {
+    position: absolute;
+    width: 149px;
+    height: 20px;
+    left: 1752px;
+    top: 1463px;
+
+    font-family: Dispence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+  .play {
+    position: absolute;
+    width: 233px;
+    height: 233px;
+    left: 690px;
+    top: 562px;
+  }
+
+  .play1 {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    top: 30px;
+    left: 980px;
+  }
+}

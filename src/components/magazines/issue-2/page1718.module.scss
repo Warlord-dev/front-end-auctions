@@ -1,0 +1,111 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  .backImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gif {
+    position: absolute;
+    width: 622px;
+    height: 1240px;
+    left: 169px;
+    top: 257px;
+  }
+
+  .letter {
+    position: absolute;
+    width: 788px;
+    height: 1050px;
+    left: 2px;
+    top: 421px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 850px;
+    height: 305px;
+    left: 55px;
+    top: 0px;
+
+    font-family: Chinese Dragon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140px;
+    line-height: 80%;
+    /* or 112px */
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 196px;
+    height: 43px;
+    left: 55px;
+    top: 257px;
+
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 150%;
+    /* or 45px */
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 666px;
+    height: 122px;
+    left: 1039px;
+    top: 79px;
+
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 150%;
+    /* or 45px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 666px;
+    height: 1267px;
+    left: 1039px;
+    top: 198px;
+
+    font-family: Lexend Giga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+}

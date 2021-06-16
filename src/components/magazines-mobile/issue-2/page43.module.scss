@@ -1,0 +1,55 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3815px;
+  background-color: #914d8a;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .text1 {
+    position: absolute;
+    width: 269px;
+    height: 1395px;
+    left: 56px;
+    top: 91px;
+
+    font-family: Saphira DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+
+    color: #ffffff;
+  }
+
+  .gif {
+    position: absolute;
+    width: 545px;
+    height: 880px;
+    left: -80px;
+    top: 1873px;
+    transform: rotate(-180deg);
+  }
+
+  .text2 {
+    position: absolute;
+    width: 269px;
+    height: 691px;
+    left: 53px;
+    top: 2793px;
+
+    font-family: Saphira DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+
+    color: #ffffff;
+  }
+}
