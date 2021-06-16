@@ -112,10 +112,10 @@ const Page1112 = () => {
         Most databases rely on a small group of physical servers to act as the single source of
         truth; if any of these servers have a problem the data becomes unavailable or corrupt. Fauna
         is not like this; rather it is architected with unique distributed algorithms that do not
-        rely on centralization of any kind, so it can survive tolerate the kinds of failures and
-        partial connectivity that are common in both the distributed cloud as well as decentralized
-        apps. It’s conceptually possible to evolve a system like Fauna to work in a fully
-        decentralized way and perhaps someday we will.
+        rely on centralization of any kind, so it can tolerate the kinds of failures and partial
+        connectivity that are common in both the distributed cloud as well as decentralized apps.
+        It’s conceptually possible to evolve a system like Fauna to work in a fully decentralized
+        way and perhaps someday we will.
       </div>
       <div className={styles.text7}>
         <i>
