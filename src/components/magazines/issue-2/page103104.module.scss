@@ -69,6 +69,10 @@
     text-align: center;
 
     color: #8219B4;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .text2 {
