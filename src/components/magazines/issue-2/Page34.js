@@ -60,13 +60,11 @@ const Page34 = () => {
         <br />
         Peezy R
         <br />
-        Victor Wiebe
+        Victor
         <br />
         Haruto Inoue
         <br />
         Cameron Sato
-        <br />
-        Victor Wiebe
         <br />
         Gemma Asedilla
       </h3>
@@ -80,8 +78,6 @@ const Page34 = () => {
         Glitch Faced King
         <br />
         James Lin
-        <br />
-        Glitch Faced King
         <br />
         Eric Song
         <br />
@@ -131,6 +127,7 @@ const Page34 = () => {
         <br />
       </h3>
       <h3 className={styles.content7}>
+        9EN
         <br />
         Alexander Kurmanin
         <br />
@@ -144,6 +141,7 @@ const Page34 = () => {
         <br />
       </h3>
       <h3 className={styles.content8}>
+        Kenneth Eze
         <br />
         Serah reikka
         <br />
@@ -154,8 +152,6 @@ const Page34 = () => {
         ABigNeonGlitter
         <br />
         Ica & Kostika
-        <br />
-        Kenneth Eze
       </h3>
       <h3 className={styles.content9}>
         Domingo Bette Encour
