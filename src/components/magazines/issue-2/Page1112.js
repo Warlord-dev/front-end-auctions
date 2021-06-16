@@ -141,7 +141,7 @@ const Page1112 = () => {
         this concept is actually quite revolutionary; it sets forth the beginnings of a completely
         new way for cultivating and forming communities and ecosystems, and then further
         incentivising them through unique and more personalised social experiences that are formed
-        out of the ledger of attedance that can be provably associated with each person.
+        out of the ledger of attendance that can be provably associated with each person.
       </div>
       <div className={styles.text10}>L i b r e S o f t w a r e</div>
       <div className={styles.text11}>L i b r e S o f t w a r e</div>
