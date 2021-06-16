@@ -3,8 +3,12 @@ import { useSelector } from 'react-redux';
 import UnlockPage from '../common/UnlockPage';
 import styles from './page8990.module.scss';
 import cn from 'classnames';
+import Router, { useRouter } from 'next/router'
 
 const Page8990 = () => {
+  const handleSeeMore = () => {
+    Router.push('/unlockable/2')
+  }
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/2/images/89_90/image1.png" className={styles.image1} />
@@ -43,7 +47,7 @@ const Page8990 = () => {
       <p className={styles.text10}>DECO ONLY FANS UNLOCKABLE EXCLUSIVE CONTENT & EXPERIENCES</p>
       <p className={styles.text11}>ARJAY SOUL</p>
       <p className={styles.text12}>XENOTECH</p>
-      <p className={styles.text13}>SEE MORE</p>
+      <p className={styles.text13} onClick={() => handleSeeMore()}>SEE MORE</p>
     </div>
   );
 };
