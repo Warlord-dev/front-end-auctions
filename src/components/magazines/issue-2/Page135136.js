@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import styles from './page135136.module.scss';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
+import UnlockPage from '../common/UnlockPage';
+import Router, { useRouter } from 'next/router'
 
 const Page135136 = () => {
+  const router = useRouter()
+  const { slug } = router.query;
+  const issueId = slug && slug.length > 0
+  ? slug[0] : magazineIssues[0].issueId
   const [usually] = useState("{usually}")
+  const { contentUnlocked } = useSelector((state) => state.global.toJS());
+  
   return (
     <div className={styles.wrapper}>
        <img src="./magazine/2/images/135_136/image1.png" className={styles.image1} />
        <img src="./magazine/2/images/135_136/image2.png" className={styles.image2} />
-       <div className={styles.image3}>
-        <p className={styles.text6}>Unlock More Hidden Content! </p>
-        <p className={styles.text7}>All holders of our unlockable NFT content will receive access to additional dynamic hidden content and NFT airdrops! This content changes and is added to overtime throughout the month; new updates, insights, creative works. </p>
-        <div className={styles.image4}>
-        <img src="./magazine/2/images/135_136/image3.png" className={styles.image5}/>
-        <p className={styles.text8}>Unlock</p>
-        </div>
-       </div>
+       {!contentUnlocked && <UnlockPage issueId={issueId} />}
        <p className={styles.text1}>A Variance Swap for Life.</p>
        <p className={styles.text2}>Life comes with no instruction manual and the advice given along the way is all over the place; others try to impose their views and thoughts, not out of maliciousness {usually}, but rather out of conviction that they think they know what is best or good for us, despite it often being a case of either naive intervensionism or the green lumber phallacy (i.e. attempting to draw conclusions from what they know or have experienced as holding the same contextual weight within our own situations). 
 <br/><br/>
