@@ -11,22 +11,18 @@ const Page6364 = () => {
       <img src="./magazine/2/images/63_64/image3.png" className={styles.image3} />
       <img src="./magazine/2/images/63_64/image4.png" className={styles.image4} />
       <p className={styles.text1}>#DivingIntoSomniumSpace</p>
-      <Link href="https://somniumspace.com/parcel/2701"><a>
+      <a href="https://somniumspace.com/parcel/2701" target="_blank">
       <img src="./magazine/2/images/63_64/image5.png" className={styles.image5} />
       </a>
-      </Link>
-      <Link href="https://somniumspace.com/parcel/752"><a>
+      <a href="https://somniumspace.com/parcel/752" target="_blank">
       <img src="./magazine/2/images/63_64/image6.png" className={styles.image6} />
-      </a>
-      </Link>  
-      <Link href="https://somniumspace.com/parcel/3250"><a>
+      </a>=
+      <a href="https://somniumspace.com/parcel/3250" target="_blank">
       <img src="./magazine/2/images/63_64/image7.png" className={styles.image7} />
-      </a>
-      </Link>     
-      <Link href="https://somniumspace.com/parcel/3461"><a>
+      </a>  
+      <a href="https://somniumspace.com/parcel/3461" target="_blank">
       <img src="./magazine/2/images/63_64/image8.png" className={styles.image8} />
-      </a>
-      </Link>  
+      </a> 
       <img src="./magazine/2/images/63_64/image9.png" className={styles.image9} />
       <img src="./magazine/2/images/63_64/image10.png" className={styles.image10} />
       <img src="./magazine/2/images/63_64/image11.png" className={styles.image11} />
