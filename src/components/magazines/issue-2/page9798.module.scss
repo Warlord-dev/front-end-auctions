@@ -63,6 +63,11 @@
     z-index: 100;
 
     color: #982B27;
+
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .text2 {
@@ -117,6 +122,10 @@
     
     
     color: #FF01DC;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .video {

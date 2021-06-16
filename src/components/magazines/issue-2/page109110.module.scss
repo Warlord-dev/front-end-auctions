@@ -142,6 +142,10 @@
     text-align: center;
     
     color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .text4 {

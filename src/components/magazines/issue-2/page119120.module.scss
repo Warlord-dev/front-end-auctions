@@ -70,6 +70,10 @@
     text-align: left;
 
     color: #FF0000;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .text2 {
