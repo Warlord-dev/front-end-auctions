@@ -49,7 +49,7 @@ const Page8788 = () => {
       <div className={styles.image7}>
         <div className={styles.image9}>
         <video ref={ref1} className={styles.image8} muted autoPlay loop>
-          <source src="./magazine/2/images1/87_88/video1.mp4" type="video/mp4" />
+          <source src="./magazine/2/images/87_88/video1.mp4" type="video/mp4" />
         </video>
         </div>
         <button onClick={()=>{playVideo1()}}><img src={`./magazine/2/images/87_88/${isPlaying1 ? 'pause' : 'play'}.png`} className={styles.playbutton}/></button>

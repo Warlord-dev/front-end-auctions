@@ -46,6 +46,10 @@
 
     -webkit-text-stroke: black;
     -webkit-text-stroke-width: 2px;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text2 {
@@ -118,6 +122,10 @@
     color: #FFFFFF;
     -webkit-text-stroke: #FF9900;
     -webkit-text-stroke-width: 2px;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .secondBack {

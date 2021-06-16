@@ -106,6 +106,10 @@
     text-align: center;
     
     color: #FF0F00;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text2 {
@@ -144,6 +148,10 @@
     text-align: right;
 
     color: #926BFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text4 {
