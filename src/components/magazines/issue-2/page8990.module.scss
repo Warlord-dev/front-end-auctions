@@ -438,8 +438,13 @@
     font-size: 80px;
     line-height: 90%;
     /* or 72px */
+    cursor: pointer;
     
     
     color: #FBFF1F;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
