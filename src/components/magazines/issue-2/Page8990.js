@@ -43,6 +43,7 @@ const Page8990 = () => {
       <p className={styles.text10}>DECO ONLY FANS UNLOCKABLE EXCLUSIVE CONTENT & EXPERIENCES</p>
       <p className={styles.text11}>ARJAY SOUL</p>
       <p className={styles.text12}>XENOTECH</p>
+      <p className={styles.text13}>SEE MORE</p>
     </div>
   );
 };
