@@ -15,7 +15,10 @@ const Page119120 = () => {
        </Link>
        <p className={styles.text2}>Essentia Collection</p>
        <p className={styles.text3}>Lumps</p>
-       <p className={styles.text4}>Antonio Lopez</p>
+       <Link href="https://www.instagram.com/i_my_own/"><a className={styles.text4}>
+       Antonio Lopez
+        </a>
+       </Link>
     </div>
   );
 };

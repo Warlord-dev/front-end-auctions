@@ -18,7 +18,7 @@ const Page121122 = () => {
         </a>
        </Link>
        <p className={styles.text2}>Tania Viegas</p>
-       <Link href="www.paolaguivel.com"><a className={styles.text3}>
+       <Link href="https://paolaguivel.com"><a className={styles.text3}>
        Paola Olaguivel
         </a>
        </Link>
