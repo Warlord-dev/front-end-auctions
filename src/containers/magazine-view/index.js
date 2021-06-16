@@ -22,14 +22,8 @@ const MagazineViewer = forwardRef((props, refs) => {
     let realPageNum = 0
 
     pageList.forEach((item, index) => {
-      if (
-        realPageNum > currentIssue.freePageCount &&
-        !contentUnlocked &&
-        index < pageList.length - 1
-      )
+      if (((realPageNum > currentIssue.freePageCount && !contentUnlocked) || (realPageNum > ((currentIssue.freePageCount + currentIssue.hiddenPageCount)) && contentUnlocked)) && index < pageList.length - 1 )
         return
-        console.log(realPageNum);
-        console.log(item);
       childrenList.push(
         <MagazinePageWrapper key={realPageNum} zoom={zoom} windowHeight={windowHeight}>
           {item}

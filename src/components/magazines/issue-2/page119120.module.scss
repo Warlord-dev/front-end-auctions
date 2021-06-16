@@ -70,6 +70,10 @@
     text-align: left;
 
     color: #FF0000;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text2 {
@@ -102,7 +106,6 @@
     font-weight: 200;
     font-size: 90px;
     line-height: 100%;
-    /* identical to box height, or 90px */
     
     text-align: left;
     
@@ -111,7 +114,7 @@
 
   .text4 {
     position: absolute;
-    width: 469px;
+    width: 485px;
     height: 70px;
     left: 985px;
     top: 1418px;
@@ -126,5 +129,9 @@
     text-align: left;
 
     color: #FF0000;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

@@ -109,6 +109,10 @@
     text-align: right;
     
     color: #2B40FF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text3 {

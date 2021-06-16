@@ -52,6 +52,10 @@
 
 
     color: #80FF00;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text2 {
@@ -70,5 +74,9 @@
 
 
     color: #13BB13;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

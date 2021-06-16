@@ -13,7 +13,7 @@ const Page103104 = () => {
        <video className={styles.image2} muted loop autoPlay>
         <source src="./magazine/2/images/103_104/espa_skin.mp4" type="video/mp4" />
        </video>
-       <Link href="www.instagram.com/pr.esc/"><a className={styles.text1}>
+       <Link href="https://instagram.com/pr.esc/"><a className={styles.text1}>
         Jessica Schott
         </a>
        </Link>

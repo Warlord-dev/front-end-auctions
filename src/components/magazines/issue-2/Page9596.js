@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './page9596.module.scss';
+import Link from 'next/link';
 
 const Page9596 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/2/images/95_96/left.png" className={styles.leftBack} />
       <img src="./magazine/2/images/95_96/right.png" className={styles.rightBack} />
-      <div className={styles.text1}>
+      <Link href="https://twitter.com/BladeRunway"><a className={styles.text1}>
       BLADE RUNWAY
-      </div>
+      </a>
+      </Link>
       <p className={styles.text2}>
       Welcome to the Meta-Jungle
       </p>
@@ -24,9 +26,10 @@ Sheantoz was once captured by enemy forces for their own amusement, however, her
 <br/>
 Ever since, she has been roaming from one planet to the next, travelling across galaxies. She plans one day to also visit Earth, giving a concert to her fans and using her voice for the greater good. 
       </p>
-      <div className={styles.text5}>
+      <Link href="https://www.instagram.com/burak.dahan/"><a className={styles.text5}>
       Burak Dahan
-      </div>
+      </a>
+      </Link>
     </div>
   );
 };

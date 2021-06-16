@@ -66,6 +66,10 @@
     line-height: 44px;
     
     color: #DBFF00;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text2 {
@@ -137,5 +141,9 @@
     text-align: center;
 
     color: #FD2F81;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

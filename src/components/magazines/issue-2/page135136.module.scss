@@ -42,6 +42,11 @@
     }
   }
 
+  .button{
+    border: none;
+    background: none;
+  }
+
   .text1 {
     position: absolute;
     width: 451px;
@@ -80,10 +85,10 @@
 
   .text3 {
     position: absolute;
-    width: 288px;
+    width: 289px;
     height: 22px;
     left: 503px;
-    top: 1390px\ ;
+    top: 1380px;
     
     font-family: Courier New;
     font-style: normal;

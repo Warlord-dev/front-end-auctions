@@ -107,6 +107,10 @@
     text-align: center;
     
     color: #EAD629;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text3 {
@@ -126,5 +130,9 @@
     text-align: center;
     
     color: #AED8FF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

@@ -127,13 +127,13 @@ const Page124 = loadable(() => import('./Page124'));
 const Page125 = loadable(() => import('./Page125'));
 const Page126 = loadable(() => import('./Page126'));
 const Page127 = loadable(() => import('./Page127'));
-const Page128 = loadable(() => import('./Page128'));
 const Page129 = loadable(() => import('./Page129'));
 const Page130 = loadable(() => import('./Page130'));
 const Page131 = loadable(() => import('./Page131'));
 const Page132 = loadable(() => import('./Page132'));
 const Page133 = loadable(() => import('./Page133'));
 const Page134 = loadable(() => import('./Page134'));
+const Page128 = loadable(() => import('./Page128'));
 
 // const Backcover = loadable(() => import ('./Backcover'))
 
@@ -266,13 +266,13 @@ const PageList = [
   <Page125 />,
   <Page126 />,
   <Page127 />,
-  <Page128 />,
   <Page129 />,
   <Page130 />,
   <Page131 />,
   <Page132 />,
   <Page133 />,
   <Page134 />,
+  <Page128 />,
   // <Backcover />
 ];
 

@@ -101,6 +101,10 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
     letter-spacing: -43px;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text3 {
@@ -139,6 +143,10 @@
     text-align: right;
     
     color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text5 {

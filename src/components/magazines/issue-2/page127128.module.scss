@@ -69,6 +69,10 @@
     text-align: center;
     
     color: #FFFFFF;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text2 {
@@ -88,6 +92,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     text-align: center;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text3 {
