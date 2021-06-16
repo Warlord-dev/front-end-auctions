@@ -2,9 +2,14 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import UnlockPage from '../common/UnlockPage';
 import styles from './page8788.module.scss';
+import Router, { useRouter } from 'next/router'
 
 const Page8788 = () => {
   const { contentUnlocked } = useSelector((state) => state.global.toJS());
+  const router = useRouter()
+  const { slug } = router.query;
+  const issueId = slug && slug.length > 0
+  ? slug[0] : magazineIssues[0].issueId
 
   return (
     <div className={styles.wrapper}>
@@ -45,7 +50,7 @@ const Page8788 = () => {
         To be continued.
       </div>
       <div className={styles.bottomText}>- Emma-Jane MacKinnon-Lee</div>
-      {!contentUnlocked && <UnlockPage />}
+      {!contentUnlocked && <UnlockPage issueId={issueId} />}
     </div>
   );
 };

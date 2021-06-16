@@ -88,10 +88,6 @@
     -webkit-text-stroke: #FFB800;
     -webkit-text-stroke-width: 1px;
     box-sizing: border-box;
-    transition: transform .4s;
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   .text2 {
@@ -111,6 +107,10 @@
     text-align: center;
     
     color: #EAD629;
+    transition: transform .4s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text3 {
