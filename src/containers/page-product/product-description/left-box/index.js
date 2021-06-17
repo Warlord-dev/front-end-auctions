@@ -25,9 +25,9 @@ const LeftBox = ({
       </span>
       <span className={styles.countTag}>
         <span className={styles.bannerText}>
-          {currentCounts[activeTab].total - currentCounts[activeTab].sold > 0
-            ? `${currentCounts[activeTab].sold + 1} OF ${currentCounts[activeTab].total}`
-            : `${currentCounts[activeTab].total === 0 ? 'NOT AVAIlABLE' : 'SOLD OUT'}`}
+          {currentCounts.total - currentCounts.sold > 0
+            ? `${currentCounts.sold + 1} OF ${currentCounts.total}`
+            : `${currentCounts.total === 0 ? 'NOT AVAIlABLE' : 'SOLD OUT'}`}
         </span>
         <span className={styles.gap} />
       </span>
@@ -35,7 +35,7 @@ const LeftBox = ({
         clothesId={clothesId}
         clothesPhotos={clothesPhotos}
         clothesName={clothesName}
-        isSoldOut={currentCounts[activeTab].current === 0}
+        isSoldOut={currentCounts.current === 0}
       />
     </div>
   );

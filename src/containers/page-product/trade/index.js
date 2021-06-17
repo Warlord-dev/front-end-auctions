@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import TradeHistory from '@components/trade-history';
 import styles from './styles.module.scss';
 
-const Trade = ({ clothesIds, tradeHistoryText, activeTab }) => (
+const Trade = ({ collectionId, clothesIds, tradeHistoryText, activeTab }) => (
   <section>
     <p className={styles.title}>{tradeHistoryText}</p>
-    <TradeHistory clothesIds={clothesIds} activeTab={activeTab} />
+    <TradeHistory collectionId={collectionId} clothesIds={clothesIds} activeTab={activeTab} />
   </section>
 );
 

@@ -43,7 +43,10 @@ import { getAllCollections, getAllMarketplaceOffers } from '@selectors/collectio
 import { COMMON_RARITY, EXCLUSIVE_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 
 const ImportantProductInformation = ({
+  collectionId,
   auctionId,
+  auctionIndex,
+  garmentId,
   tabIndex,
   garment,
   estimateApyText,
@@ -77,7 +80,7 @@ const ImportantProductInformation = ({
       (val) =>
         val.garmentCollection.garmentAuctionID === auctionId &&
         val.garmentCollection.rarity ===
-          (tabIndex === 2 ? COMMON_RARITY : tabIndex === 1 ? SEMI_RARE_RARITY : EXCLUSIVE_RARITY)
+          (tabIndex === 2 ? COMMON_RARITY : tabIndex === 1 ? SEMI_RARE_RARITY : EXCLUSIVE_RARITY),
     );
   }, [offers]);
 
@@ -105,17 +108,21 @@ const ImportantProductInformation = ({
 
   useSubscription(
     {
-      request: wsApi.onAuctionsHistoryByIds([auctionId]),
-      next: (data) => dispatch(historyActions.mapData(data.digitalaxGarmentAuctionHistories)),
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.onAuctionsHistoryByIds([auctionId])
+          : wsApi.onAuctionsHistoryByIdsV2([auctionId]),
+      next: (data) =>
+        dispatch(historyActions.mapData(data?.digitalaxGarmentAuctionHistories || [])),
     },
-    [chainId, auctionId]
+    [chainId, auctionId],
   );
 
-  if (!auction) {
-    return null;
-  }
+  // if (!auction) {
+  //   return null;
+  // }
 
-  const expirationDate = auction.endTime * 1000;
+  const expirationDate = auction?.endTime * 1000;
 
   const timeOut = new Date(expirationDate) - new Date() + 1000;
 
@@ -138,21 +145,17 @@ const ImportantProductInformation = ({
           (item) =>
             item &&
             item.bidder &&
-            [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName)
+            [HISTORY_BID_WITHDRAWN_EVENT, HISTORY_BID_PLACED_EVENT].includes(item.eventName),
         )
         .sort((a, b) => b.timestamp - a.timestamp)
     : [];
-  let priceEth;
+  let priceEth = garment.primarySalePrice / 10 ** 18;
   if (tabIndex === 0) {
-    // priceEth = sortedHistory.length
-    //   ? convertToEth(sortedHistory[0].value)
-    //   : Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
-    priceEth = convertToEth(auction.topBid || 0);
-  } else {
-    priceEth = Math.round((convertToEth(garment.primarySalePrice) / monaPerEth) * 10000) / 10000;
+    priceEth = convertToEth(auction?.topBid || 0);
+  } else if (collectionId === '3') {
+    if (collection?.rarity === 'Common') priceEth = 0.015;
+    else priceEth = 0.45;
   }
-  if (auctionId == '2' && tabIndex == '1')
-    priceEth = Math.round((convertToEth('57000000000000000') / monaPerEth) * 10000) / 10000;
   const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
 
   let isMakeBid = false;
@@ -173,7 +176,7 @@ const ImportantProductInformation = ({
       } else if (bidWithdrawalLockTime - timeDiff / 1000 > 0) {
         timer.current = setTimeout(
           () => updateState(Date.now()),
-          (bidWithdrawalLockTime - timeDiff / 1000) * 1000
+          (bidWithdrawalLockTime - timeDiff / 1000) * 1000,
         );
       }
 
@@ -181,7 +184,7 @@ const ImportantProductInformation = ({
     }
 
     const mySortedHistory = sortedHistory.filter(
-      (item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase()
+      (item) => account && item.bidder && item.bidder.id.toLowerCase() === account.toLowerCase(),
     );
 
     if (mySortedHistory.length) {
@@ -217,7 +220,7 @@ const ImportantProductInformation = ({
         id: clothesId,
         priceEth,
         withdrawValue: convertToEth(withdrawValue),
-      })
+      }),
     );
   };
 
@@ -230,13 +233,22 @@ const ImportantProductInformation = ({
       openWithdrawModal({
         id: clothesId,
         withdrawValue: convertToEth(withdrawValue),
-      })
+      }),
     );
   };
 
   const getPriceUsd = (valueEth) => {
     const priceUsd = valueEth * exchangeRateETH;
-    return (Math.trunc(priceUsd * 10000) / 10000).toLocaleString('en');
+    return (Math.trunc(priceUsd * 10000) / 10000).toFixed(2).toLocaleString('en');
+  };
+
+  const getTotalAmount = () => {
+    if (collection?.rarity === 'Common') {
+      return 128;
+    } else if (collection?.rarity === 'Semi-Rare') {
+      return 64;
+    }
+    return collection?.garments?.length;
   };
 
   return (
@@ -248,12 +260,12 @@ const ImportantProductInformation = ({
     >
       <div className={styles.leftWrapper}>
         <p className={styles.priceWrapper}>
-          <span className={styles.priceEth}>{priceEth} $MONA</span>
-          <span className={styles.priceUsd}>(${getPriceUsd(priceEth)})</span>
+          <span className={styles.priceEth}>{priceEth || 0} $MONA</span>
+          <span className={styles.priceUsd}>(${getPriceUsd((priceEth || 0) * monaPerEth)})</span>
         </p>
         {collection?.garments && (
           <p>
-            {currentOffer?.amountSold} of {collection?.garments?.length}
+            {currentOffer?.amountSold} of {getTotalAmount()}
           </p>
         )}
         {/* <p className={styles.estimateWrapper}>
@@ -327,7 +339,11 @@ const ImportantProductInformation = ({
                 isDisabled={!isMatic}
                 className={styles.buttonSold}
                 background="black"
-                onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
+                onClick={() =>
+                  Router.push(
+                    `${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`,
+                  )
+                }
               >
                 <span>SOLD</span>
               </Button>
@@ -338,7 +354,11 @@ const ImportantProductInformation = ({
             isDisabled={!isMatic}
             className={styles.button}
             background="black"
-            onClick={() => Router.push(`${PRODUCTS}${auctionId}${tabIndex}`)}
+            onClick={() =>
+              Router.push(
+                `${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`,
+              )
+            }
           >
             <span>BUY NOW</span>
           </Button>

@@ -21,6 +21,9 @@ import '../assets/scss/global.scss';
 import Particles from '@components/particles';
 import LoadingOverlay from 'react-loading-overlay';
 import { useRouter } from 'next/router';
+import api from '@services/api/api.service';
+import ws from '@services/api/ws.service';
+import { convertToEth } from '@helpers/price.helpers';
 
 if (config.SENTRY_DSN) {
   Sentry.init({
@@ -35,6 +38,14 @@ const InitWrapper = (props) => {
 
   useEffect(() => {
     dispatch(globalActions.initApp());
+    const fetchMonaPerEth = async () => {
+      const { digitalaxGarmentNFTV2GlobalStats } = await api.getMonaPerEth();
+      dispatch(
+        globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth)),
+      );
+    };
+
+    fetchMonaPerEth();
   }, []);
 
   if (!isInitialized) {
@@ -74,6 +85,11 @@ const MyApp = ({ Component, pageProps, store, err }) => {
     });
     return <Component {...pageProps} />;
   }
+
+  useEffect(() => {
+    api.setUrl(config.API_URLS['matic']);
+    ws.setUrl(config.API_URLS['matic'].replace('http', 'ws'));
+  }, []);
 
   return (
     <Provider store={store}>

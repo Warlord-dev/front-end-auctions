@@ -1,10 +1,20 @@
-@import "../helpers/variables.scss";
+@import '../helpers/variables.scss';
 
 html {
   box-sizing: border-box;
   height: 100%;
 
-  h1, h2, h3, h4, h5, body, button, input, optgroup, select, textarea {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  body,
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
     font-family: $primary-font;
   }
 
@@ -54,14 +64,15 @@ html {
       outline: none;
     }
   }
-  
+
   *,
   *:before,
   *:after {
     box-sizing: inherit;
   }
 
-  *, p {
+  *,
+  p {
     margin: 0;
     padding: 0;
   }
@@ -72,19 +83,19 @@ html {
     list-style-position: initial;
     list-style-image: initial;
     list-style-type: none;
-  } 
+  }
 
-  input[type="number"]::-webkit-outer-spin-button,
-  input[type="number"]::-webkit-inner-spin-button {
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
 
-  input[type="number"] {
+  input[type='number'] {
     -moz-appearance: textfield;
   }
-  input[type="number"]:hover,
-  input[type="number"]:focus {
+  input[type='number']:hover,
+  input[type='number']:focus {
     -moz-appearance: number-input;
   }
 }
@@ -95,25 +106,6 @@ html {
   flex-direction: column;
 }
 
-
-@media only screen and (max-width: 1490px) {
-  .highcharts-container {
-    width: 420px !important;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .highcharts-container {
-    width: calc(100vw - 200px) !important;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  .highcharts-container {
-    width: calc(100vw - 100px) !important;
-  }
-}
-
 ._loading_overlay_overlay {
-  position: fixed!important;
+  position: fixed !important;
 }

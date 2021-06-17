@@ -18,6 +18,18 @@ import {
   onDigitalaxGarmentsCollectionChangeByIds,
   allDigitalaxMarketplaceOffers,
 } from '@services/api/gql.subscriptions.ws.service';
+import {
+  allDigitalaxMarketplaceOffersV2,
+  getAllDigitalaxGarmentsCollectionsV2,
+  onAllAuctionsChangeV2,
+  onAuctionsChangeByIdsV2,
+  onAuctionsHistoryByIdsV2,
+  onDaysChangeV2,
+  onDigitalaxGarmentsCollectionChangeV2,
+  onDigitalaxMarketplaceOffersV2,
+  onMarketplaceHistoryByIdsV2,
+  onNFTGlobalStatsV2,
+} from './gql.subscriptions.v2.ws.service';
 
 class WSService {
   constructor() {
@@ -125,6 +137,68 @@ class WSService {
       query: onDigitalaxGarmentsCollectionChangeByIds,
       variables: { ids },
     });
+  }
+
+  // v2
+
+  getAllDigitalaxGarmentsCollectionsV2() {
+    return this.client.request({
+      query: getAllDigitalaxGarmentsCollectionsV2,
+    });
+  }
+
+  getAllDigitalaxMarketplaceOffersV2() {
+    return this.client.request({
+      query: allDigitalaxMarketplaceOffersV2,
+    });
+  }
+
+  onDigitalaxMarketplaceOffersV2(ids) {
+    return this.client.request({
+      query: onDigitalaxMarketplaceOffersV2,
+      variables: { ids },
+    });
+  }
+
+  onAuctionsChangeByIdsV2(ids) {
+    return this.client.request({
+      query: onAuctionsChangeByIdsV2,
+      variables: { ids },
+    });
+  }
+
+  onDigitalaxGarmentsCollectionChangeV2(garmentAuctionNFTId) {
+    return this.client.request({
+      query: onDigitalaxGarmentsCollectionChangeV2,
+      variables: { garmentAuctionNFTId },
+    });
+  }
+
+  onAllAuctionsChangeV2() {
+    return this.client.request({ query: onAllAuctionsChangeV2 });
+  }
+
+  onAuctionsHistoryByIdsV2(ids) {
+    return this.client.request({
+      query: onAuctionsHistoryByIdsV2,
+      variables: { ids },
+    });
+  }
+
+  onMarketplaceHistoryByIdsV2(ids) {
+    return this.client.request({
+      query: onMarketplaceHistoryByIdsV2,
+      variables: { ids },
+    });
+  }
+
+  onDaysChangeV2(countDays) {
+    const date = moment().subtract(countDays, 'day').format('YYYY-MM-DD');
+    return this.client.request({ query: onDaysChangeV2, variables: { date } });
+  }
+
+  onNFTGlobalStatsV2() {
+    return this.client.request({ query: onNFTGlobalStatsV2 });
   }
 }
 

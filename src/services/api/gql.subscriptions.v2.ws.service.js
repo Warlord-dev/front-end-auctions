@@ -1,6 +1,6 @@
-export const onDaysChange = `
+export const onDaysChangeV2 = `
   subscription onAuctionsChangeByIds($date: String!) {
-    days(first: 1000, where: {id_gt: $date }) {
+    dayV2S(first: 1000, where: {id_gt: $date }) {
       id
       totalBidValue
       totalWithdrawalValue
@@ -10,9 +10,9 @@ export const onDaysChange = `
     }
   }`;
 
-export const onAuctionsChange = `
+export const onAuctionsChangeV2 = `
   subscription onAuctionsChange {
-    digitalaxGarmentAuctions(first: 15, where:{resulted_not_in:[true]}) {
+    digitalaxGarmentV2Auctions(first: 15, where:{resulted_not_in:[true]}) {
       id
       reservePrice
       endTime
@@ -31,6 +31,12 @@ export const onAuctionsChange = `
         name
         image
         animation
+        description
+        attributes {
+          id
+          value
+          type
+        }
         children {
           amount
           tokenUri
@@ -48,9 +54,9 @@ export const onAuctionsChange = `
     }
   }`;
 
-export const onAllAuctionsChange = `
+export const onAllAuctionsChangeV2 = `
   subscription onAuctionsChange {
-    digitalaxGarmentAuctions(first: 15) {
+    digitalaxGarmentV2Auctions(first: 15) {
       id
       reservePrice
       endTime
@@ -69,10 +75,16 @@ export const onAllAuctionsChange = `
         name
         image
         animation
+        description
         children {
           amount
           tokenUri
           id
+        }
+        attributes {
+          id
+          value
+          type
         }
       }
       designer {
@@ -86,9 +98,9 @@ export const onAllAuctionsChange = `
     }
   }`;
 
-export const onPreviousAuctionsChange = `
+export const onPreviousAuctionsChangeV2 = `
   subscription onPreviousAuctionsChange {
-    digitalaxGarmentAuctions(first: 1000, where: {resulted_in: [true]}) {
+    digitalaxGarmentV2Auctions(first: 1000, where: {resulted_in: [true]}) {
       id
       resulted
       reservePrice
@@ -108,11 +120,17 @@ export const onPreviousAuctionsChange = `
         image
         animation
         primarySalePrice
+        description
         tokenUri
         children {
           amount
           tokenUri
           id
+        }
+        attributes {
+          id
+          value
+          type
         }
       }
       designer {
@@ -126,9 +144,9 @@ export const onPreviousAuctionsChange = `
     }
   }`;
 
-export const onAuctionsChangeByIds = `
+export const onAuctionsChangeByIdsV2 = `
   subscription onAuctionsChangeByIds($ids: [ID!]) {
-    digitalaxGarmentAuctions(first: 1000, where: {id_in: $ids}) {
+    digitalaxGarmentV2Auctions(first: 1000, where: {id_in: $ids}) {
       id
       reservePrice
       endTime
@@ -143,9 +161,9 @@ export const onAuctionsChangeByIds = `
   }
 `;
 
-export const onDesignerByIds = `
+export const onDesignerByIdsV2 = `
   subscription onDesignerGarments($ids: [ID!]) {
-    digitalaxGarmentDesigners(first: 1000, where: { id_in: $ids }) {
+    digitalaxGarmentV2Designers(first: 1000, where: { id_in: $ids }) {
       id
       listings {
         id
@@ -167,9 +185,10 @@ export const onDesignerByIds = `
   }
 `;
 
-export const onMarketplaceHistoryByIds = `
+export const onMarketplaceHistoryByIdsV2 = `
   subscription onMarketplaceHistoryByIds($ids: [ID!]) {
-    digitalaxMarketplacePurchaseHistories(first: 1000, where: {garmentAuctionId_in: $ids}) {
+    digitalaxMarketplaceV2PurchaseHistories(first: 1000, where: {garmentAuctionId_in: $ids}) {
+      id
       garmentAuctionId
       eventName
       timestamp
@@ -195,9 +214,9 @@ export const onMarketplaceHistoryByIds = `
   }
 `;
 
-export const onAuctionsHistoryByIds = `
+export const onAuctionsHistoryByIdsV2 = `
   subscription onAuctionsHistoryByIds($ids: [ID!]) {
-    digitalaxGarmentAuctionHistories(first: 1000, where: {eventName_in: ["BidPlaced", "BidWithdrawn"], token_in: $ids}) {
+    digitalaxGarmentV2AuctionHistories(first: 1000, where: {eventName_in: ["BidPlaced", "BidWithdrawn"], token_in: $ids}) {
       id
       eventName
       timestamp
@@ -221,9 +240,9 @@ export const onAuctionsHistoryByIds = `
   }
 `;
 
-export const onResultedAuctionsByEndTimeGtAndIds = `
+export const onResultedAuctionsByEndTimeGtAndIdsV2 = `
   subscription getAuctionsHistoryByTimestampGt($ids: [ID!], $endTime: BigInt!) {
-    digitalaxGarmentAuctions(where: {id_in: $ids, resulted_not_in:[false], endTime_gt: $endTime }) {
+    digitalaxGarmentV2Auctions(where: {id_in: $ids, resulted_not_in:[false], endTime_gt: $endTime }) {
       id
       reservePrice
       endTime
@@ -238,10 +257,10 @@ export const onResultedAuctionsByEndTimeGtAndIds = `
   }
 `;
 
-export const onDigitalaxGarmentsCollectionChange = `
+export const onDigitalaxGarmentsCollectionChangeV2 = `
   subscription onDigitalaxGarmentsCollectionChange($garmentAuctionNFTId: BigInt!)
   {
-    digitalaxGarmentCollections(first: 1000, where: { garmentAuctionID: $garmentAuctionNFTId }) {
+    digitalaxGarmentV2Collections(first: 1000, where: { garmentAuctionID: $garmentAuctionNFTId }) {
       id
       garmentAuctionID
       rarity
@@ -255,25 +274,25 @@ export const onDigitalaxGarmentsCollectionChange = `
         name
         image
         animation
-        attributes {
-          id
-          value
-          type
-        }
         children {
           id
           amount
           tokenUri
+        }
+        attributes {
+          id
+          value
+          type
         }
       }
     }
   }
 `;
 
-export const onDigitalaxGarmentsCollectionChangeByIds = `
+export const onDigitalaxGarmentsCollectionChangeByIdsV2 = `
   subscription onDigitalaxGarmentsCollectionChange($ids: [BigInt!])
   {
-    digitalaxGarmentCollections(first: 1000, where: { garmentAuctionID_in: $ids }) {
+    digitalaxGarmentV2Collections(first: 1000, where: { garmentAuctionID_in: $ids }) {
       id
       garmentAuctionID
       rarity
@@ -282,6 +301,7 @@ export const onDigitalaxGarmentsCollectionChangeByIds = `
         designer
         owner
         primarySalePrice
+        description
         name
         image
         animation
@@ -301,19 +321,21 @@ export const onDigitalaxGarmentsCollectionChangeByIds = `
   }
 `;
 
-export const getAllDigitalaxGarmentsCollections = `
+export const getAllDigitalaxGarmentsCollectionsV2 = `
   subscription getAllDigitalaxGarmentsCollections
   {
-    digitalaxGarmentCollections(first: 1000) {
+    digitalaxGarmentV2Collections(first: 1000) {
       id
       garmentAuctionID
       rarity
+      valueSold
       garments(first: 1000) {
         id
         designer
         owner
         primarySalePrice
         tokenUri
+        description
         name
         image
         animation
@@ -332,10 +354,10 @@ export const getAllDigitalaxGarmentsCollections = `
   }
 `;
 
-export const onDigitalaxMarketplaceOffers = `
+export const onDigitalaxMarketplaceOffersV2 = `
   subscription onDigitalaxMarketplaceOffers($ids: [ID!])
   {
-    digitalaxMarketplaceOffers(first: 1000, where: { id_in: $ids }) {
+    digitalaxMarketplaceV2Offers(first: 1000, where: { id_in: $ids }) {
       id
       primarySalePrice
       garmentCollection {
@@ -349,10 +371,10 @@ export const onDigitalaxMarketplaceOffers = `
   }
 `;
 
-export const allDigitalaxMarketplaceOffers = `
+export const allDigitalaxMarketplaceOffersV2 = `
   subscription onDigitalaxMarketplaceOffers
   {
-    digitalaxMarketplaceOffers(first: 1000) {
+    digitalaxMarketplaceV2Offers(first: 1000) {
       id
       primarySalePrice
       garmentCollection {
@@ -362,6 +384,8 @@ export const allDigitalaxMarketplaceOffers = `
         garments(first: 1000) {
           id
           tokenUri
+          name
+          description
         }
       }
       startTime
@@ -370,9 +394,9 @@ export const allDigitalaxMarketplaceOffers = `
   }
 `;
 
-export const onNFTGlobalStats = `
+export const onNFTGlobalStatsV2 = `
   subscription onNFTGlobalStats {
-    digitalaxGarmentNFTGlobalStats {
+    digitalaxGarmentNFTV2GlobalStats {
       id
       totalSalesValue
       totalActiveBidsValue

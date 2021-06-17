@@ -106,13 +106,13 @@ class GlobalActions extends BaseActions {
 
   setContractParams() {
     return async (dispatch, getState) => {
-      try {
-        const monaPerEth = await getTokenPriceMatic();
-        dispatch(this.setValue('monaPerEth', convertToEth(monaPerEth)));
-      } catch (e) {
-        console.error(e);
-        dispatch(this.setValue('monaPerEth', 1));
-      }
+      // try {
+      //   const monaPerEth = await getTokenPriceMatic();
+      //   dispatch(this.setValue('monaPerEth', convertToEth(monaPerEth)));
+      // } catch (e) {
+      //   console.error(e);
+      //   dispatch(this.setValue('monaPerEth', 1));
+      // }
 
       try {
         const { digitalaxAuctionContracts } = await api.getAuctionContracts();
@@ -151,6 +151,12 @@ class GlobalActions extends BaseActions {
   setMonaMaticBalance(value) {
     return (dispatch) => {
       dispatch(this.setValue('monaMaticBalance', value));
+    };
+  }
+
+  setMonaPerEth(value) {
+    return (dispatch) => {
+      dispatch(this.setValue('monaPerEth', value));
     };
   }
 

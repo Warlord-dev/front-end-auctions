@@ -20,7 +20,14 @@ import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
 
-const CardList = ({ auctions, collections, className, showGraphIds, setShowGraphIds }) => {
+const CardList = ({
+  collectionId,
+  auctions,
+  collections,
+  className,
+  showGraphIds,
+  setShowGraphIds,
+}) => {
   const dropdownOptions = [
     { key: 1, text: 'Highest bid', value: 'highest_bid' },
     { key: 2, text: 'Lowest bid', value: 'lowest_bid' },
@@ -31,7 +38,7 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
   const garmentsById = useSelector(getAllGarmentsById);
   const auctionsIsLoaded = useSelector(getAuctionsIsLoaded);
   const [dropdownActiveItem, setDropdownActiveItem] = useState(
-    localStorage.getItem(STORAGE_SORT_BY)
+    localStorage.getItem(STORAGE_SORT_BY),
   );
 
   switch (dropdownActiveItem) {
@@ -69,58 +76,68 @@ const CardList = ({ auctions, collections, className, showGraphIds, setShowGraph
           value={dropdownActiveItem}
         />
       </div>
-      {auctionsIsLoaded ? (
-        <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
-          {auctions.map((auction) => {
-            const garment = garmentsById.get(auction.id);
+      <ul className={cn(styles.list, className, 'animate__animated animate__fadeIn')}>
+        {auctions.map((auction) => {
+          const garment = collectionId !== '1' ? garmentsById.get(auction.id) : auction;
+          return (
+            <CardProduct
+              collectionId={collectionId}
+              key={garment?.id}
+              history={historyByTokenId.get(garment?.id)}
+              auctionIndex={auction?.id}
+              garmentId={garment?.id}
+              auctionId={auction?.id}
+              garment={garment}
+              showGraphIds={showGraphIds}
+              setShowGraphIds={setShowGraphIds}
+              tabIndex={0}
+            />
+          );
+        })}
+        {collections
+          .filter((collection) => collection.rarity === SEMI_RARE_RARITY)
+          .map((collection) => {
+            const garment = collection.garments[0];
+            if (garment?.name.includes('DIGI Bundle')) {
+              return <></>;
+            }
             return (
               <CardProduct
+                collectionId={collectionId}
                 key={garment.id}
                 history={historyByTokenId.get(garment.id)}
-                auctionId={auction.id}
+                auctionId={collection.garmentAuctionID}
+                auctionIndex={collection.id}
+                garmentId={garment.id}
                 garment={garment}
                 showGraphIds={showGraphIds}
                 setShowGraphIds={setShowGraphIds}
-                tabIndex={0}
+                tabIndex={1}
               />
             );
           })}
-          {collections
-            .filter((collection) => collection.rarity === SEMI_RARE_RARITY)
-            .map((collection) => {
-              const garment = collection.garments[0];
-              return (
-                <CardProduct
-                  key={garment.id}
-                  history={historyByTokenId.get(garment.id)}
-                  auctionId={collection.garmentAuctionID}
-                  garment={garment}
-                  showGraphIds={showGraphIds}
-                  setShowGraphIds={setShowGraphIds}
-                  tabIndex={1}
-                />
-              );
-            })}
-          {collections
-            .filter((collection) => collection.rarity === COMMON_RARITY)
-            .map((collection) => {
-              const garment = collection.garments[0];
-              return (
-                <CardProduct
-                  key={garment.id}
-                  history={historyByTokenId.get(garment.id)}
-                  auctionId={collection.garmentAuctionID}
-                  garment={garment}
-                  showGraphIds={showGraphIds}
-                  setShowGraphIds={setShowGraphIds}
-                  tabIndex={2}
-                />
-              );
-            })}{' '}
-        </ul>
-      ) : (
-        <Loader size="large" className={styles.loader} />
-      )}
+        {collections
+          .filter((collection) => collection.rarity === COMMON_RARITY)
+          .map((collection) => {
+            const garment = collection.garments[0];
+            if (garment?.name.includes('DIGI Bundle')) return <></>;
+            if (collection.id === '3') return <></>;
+            return (
+              <CardProduct
+                collectionId={collectionId}
+                key={garment.id}
+                history={historyByTokenId.get(garment.id)}
+                auctionId={collection.garmentAuctionID}
+                auctionIndex={collection.id}
+                garmentId={garment.id}
+                garment={garment}
+                showGraphIds={showGraphIds}
+                setShowGraphIds={setShowGraphIds}
+                tabIndex={2}
+              />
+            );
+          })}{' '}
+      </ul>
     </>
   );
 };

@@ -10,6 +10,7 @@
   width: 100%;
   padding: 20px 50px;
   background-color: #fff;
+  position: fixed;
   transition: 0.2s;
   z-index: 99;
 
@@ -118,7 +119,7 @@
   }
 
   .signBtn button {
-    color: white;
+    color: black;
   }
 }
 

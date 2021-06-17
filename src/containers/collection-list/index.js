@@ -26,19 +26,34 @@ import ProductCollection from '@components/product-collection';
 import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
+import apiService from '@services/api/api.service';
 
 const collections = [
+  {
+    id: 3,
+    text: 'MineCraft',
+    designer: 'Cleora',
+    image: 'https://digitalax.mypinata.cloud/ipfs/QmTfYwLRhqpYBaSoFFGKUJcYU6XSbHpsQvRen2dWQZ8WKH',
+  },
+  {
+    image: 'https://digitalax.mypinata.cloud/ipfs/QmXQrcfSzSGCRbcGbAFGR3gRpbB89hnSMpGfcfn3cVGVRi',
+    designer: 'Digitalax',
+    id: 4,
+    image1: 'https://digitalax.mypinata.cloud/ipfs/QmctArVrTggDjdXafbbLMCrk13qRqpdbYKxKLKxHvGT2M5',
+    text: 'Minecraft DIGI Bundle',
+  },
   {
     id: 1,
     text: 'Collection: Kodomodachi x Charli Cohen',
     designer: 'Kodomodachi',
-    image: 'https://digitalax.mypinata.cloud/ipfs/QmYvo2f6NfCD75nL49Gy5wi1jEYSh8z7wTHJjnJbV9KJt3',
+    image1: 'https://digitalax.mypinata.cloud/ipfs/QmYvo2f6NfCD75nL49Gy5wi1jEYSh8z7wTHJjnJbV9KJt3',
+    image: 'https://digitalax.mypinata.cloud/ipfs/QmaXujooccp7MsnNSk6M3A6oxGiPnsvTwwu8hutefFgDEJ',
   },
   {
     id: 2,
     text: 'DIGI Bundle',
     designer: 'Digitalax',
-    image: 'https://digitalax.mypinata.cloud/ipfs/QmQGuYKtqNUKqAqxmHkuYB4qCS9riKW6Eu1SNhBToBc4ry',
+    image: 'https://digitalax.mypinata.cloud/ipfs/QmRdxLAmXR36dNr6cKJeXNyEzSd1JKYMmzbQipHv3HZ1b1',
   },
 ];
 
@@ -47,61 +62,60 @@ const PageAuctionList = () => {
   const auctions = useSelector(getAllAuctions);
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
   const globalStats = useSelector(getGlobalStats).toJS();
-  const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
-  const currentCollections = useSelector(getAllCollections).toJS();
-  const chainId = useSelector(getChainId);
+  // const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
+  // const currentCollections = useSelector(getAllCollections).toJS();
+  // const chainId = useSelector(getChainId);
   const monaPerEth = useSelector(getMonaPerEth);
   const currentAuctions = auctions.toJS();
 
-  useSubscription(
-    {
-      request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
-      next: (data) => dispatch(auctionPageActions.updateMonthStats(data.days)),
-    },
-    [chainId]
-  );
+  // useSubscription(
+  //   {
+  //     request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
+  //     next: (data) => dispatch(auctionPageActions.updateMonthStats(data.days)),
+  //   },
+  //   [chainId],
+  // );
 
-  useSubscription(
-    {
-      request: wsApi.onDaysChange(TOTAL_VOLUME_DAYS),
-      next: (data) => dispatch(auctionPageActions.updateWeekStats(data.days)),
-    },
-    [chainId]
-  );
+  // useSubscription(
+  //   {
+  //     request: wsApi.onDaysChange(TOTAL_VOLUME_DAYS),
+  //     next: (data) => dispatch(auctionPageActions.updateWeekStats(data.days)),
+  //   },
+  //   [chainId],
+  // );
 
-  useSubscription(
-    {
-      request: wsApi.onNFTGlobalStats(),
-      next: (data) => {
-        dispatch(
-          auctionPageActions.updateGlobalStats(
-            data.digitalaxGarmentNFTGlobalStats.length > 0
-              ? data.digitalaxGarmentNFTGlobalStats[0]
-              : []
-          )
-        );
-      },
-    },
-    [chainId]
-  );
+  // useSubscription(
+  //   {
+  //     request: wsApi.onNFTGlobalStats(),
+  //     next: (data) => {
+  //       dispatch(
+  //         auctionPageActions.updateGlobalStats(
+  //           data.digitalaxGarmentNFTGlobalStats.length > 0
+  //             ? data.digitalaxGarmentNFTGlobalStats[0]
+  //             : [],
+  //         ),
+  //       );
+  //     },
+  //   },
+  //   [chainId],
+  // );
 
-  useSubscription(
-    {
-      request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
-      next: (data) => {
-        dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
-      },
-    },
-    [chainId, currentCollections]
-  );
+  // useSubscription(
+  //   {
+  //     request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
+  //     next: (data) => {
+  //       dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
+  //     },
+  //   },
+  //   [chainId, currentCollections],
+  // );
 
   useEffect(
     () => () => {
-      if (!auctions) {
-        dispatch(auctionPageActions.reset());
-      }
+      dispatch(auctionPageActions.reset());
+      dispatch(collectionActions.clear());
     },
-    []
+    [],
   );
 
   const nowTimestamp = Date.now();
@@ -123,12 +137,12 @@ const PageAuctionList = () => {
                 .plus(new BigNumber(auction.totalMarketplaceVolumeInETH))
                 .plus(
                   new BigNumber(auction.totalMarketplaceVolumeInMona).times(
-                    new BigNumber(monaPerEth)
-                  )
-                )
+                    new BigNumber(monaPerEth),
+                  ),
+                ),
             )
           : acc,
-      new BigNumber(0)
+      new BigNumber(0),
     );
 
   const totalWeekValue = sumTopBids(weekResultedAuctions);
@@ -151,7 +165,7 @@ const PageAuctionList = () => {
     let totalSum = new BigNumber(0);
     if (globalStats.totalSalesValue) {
       totalSum = totalSum.plus(
-        new BigNumber(globalStats.totalMarketplaceSalesInMona).times(new BigNumber(monaPerEth))
+        new BigNumber(globalStats.totalMarketplaceSalesInMona).times(new BigNumber(monaPerEth)),
       );
       totalSum = totalSum.plus(new BigNumber(globalStats.totalMarketplaceSalesInETH));
       totalSum = totalSum.plus(new BigNumber(globalStats.totalSalesValue));
@@ -166,8 +180,8 @@ const PageAuctionList = () => {
         value:
           Math.round(
             parseFloat(
-              convertToEth(totalWeekValue.gte(0) ? totalWeekValue : totalWeekValue.times(-1))
-            ) * 100
+              convertToEth(totalWeekValue.gte(0) ? totalWeekValue : totalWeekValue.times(-1)),
+            ) * 100,
           ) / 100,
       },
       {
@@ -186,9 +200,9 @@ const PageAuctionList = () => {
         history={monthResultedAuctions}
       /> */}
       <div className={styles.textContent}>
-        <TextContent/>
+        <TextContent />
       </div>
-      
+
       <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
         {collections.map((collection) => (
           <ProductCollection key={collection.id} collection={collection} />

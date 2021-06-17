@@ -114,7 +114,6 @@ class UserActions extends BaseActions {
           localStorage.setItem(STORAGE_IS_LOGGED_IN, 1);
           localStorage.setItem(STORAGE_USER, JSON.stringify(returnData));
           localStorage.setItem(STORAGE_TOKEN, secret);
-          Router.push('/profile');
         } else {
           dispatch(this.logout());
         }

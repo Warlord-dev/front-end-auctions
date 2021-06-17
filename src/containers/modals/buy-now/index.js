@@ -53,6 +53,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   useEffect(() => {
     async function getMonaApproval() {
       dispatch(bidActions.getApprovedInMona()).then((val) => {
+        console.log('this is approve in mona', val);
         setApproved(val);
       });
     }
@@ -81,16 +82,11 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
               </span>
             </p>
             <div className={styles.selectWrapper}>
-              <span>
-                {Math.round(
-                  (parseFloat(ethersUtils.formatEther(priceEth)) / parseFloat(monaPerEth)) * 10000
-                ) / 10000}{' '}
-                $MONA
-              </span>
+              <span>{priceEth / 10 ** 18} $MONA</span>
               <Button
                 isDisabled={isDisabled || !isMatic}
                 background="black"
-                onClick={() => handleClick(0)}
+                onClick={() => handleClick(approved ? 1 : 0)}
                 className={styles.button}
               >
                 {approved ? buttonText1 : 'APPROVE $MONA'}
@@ -99,7 +95,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
             {showError && <p className={styles.error}>{showError}</p>}
           </div>
         </Modal>,
-        document.body
+        document.body,
       )}
     </>
   );
