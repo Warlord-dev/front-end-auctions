@@ -91,6 +91,7 @@ const Page6566 = () => {
       <div className={styles.image4}></div>
       <img src="./magazine/2/images/65_66/image8.gif" className={styles.image11} />
       <img src="./magazine/2/images/65_66/image2.png" className={styles.image5} />
+      <img src="./magazine/2/images/65_66/image20.png" className={styles.image16} />
       <button 
        className={styles.image12}
         onClick={() => {
