@@ -12,7 +12,7 @@ const scriptTxt = `
 })();
 `;
 
-const gaScriptText =`
+const gaScriptText = `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -124,6 +124,24 @@ class MyDocument extends Document {
             @font-face {
               font-family: "Animosa";
               src: url("./fonts/Animosa-Regular.otf");
+              font-weight: 400;
+            }
+            
+            @font-face {
+              font-family: "Bebas Neue";
+              src: url("./fonts/BebasNeue-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "m12";
+              src: url("./fonts/m12.TTF");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Trans America";
+              src: url("./fonts/transamerica.ttf");
               font-weight: 400;
             }
           

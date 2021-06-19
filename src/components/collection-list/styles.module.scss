@@ -1,0 +1,26 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+
+  @media (min-width: 1440px) {
+    gap: 10rem;
+  }
+
+  @media (max-width: 1440px) {
+    gap: 8rem;
+  }
+
+  @media (max-width: 1200px) {
+    gap: 6rem;
+  }
+
+  @media (max-width: 920px) {
+    gap: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}

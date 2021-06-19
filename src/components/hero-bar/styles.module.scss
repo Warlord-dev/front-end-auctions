@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #BA0C76;
+
+  @media (max-width: 1200px) {
+    flex-direction: row;
+  }
+
+  @media (max-width: 920px) {
+    flex-direction: column;
+    align-items: center;
+
+    .text {
+      margin: 1rem 0;
+    }
+  } 
+
+  .text {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-family: m12;
+    -webkit-text-stroke: 1px rgb(156, 40, 255);
+
+    @media (min-width: 1440px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 1440px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 920px) {
+      font-size: 14px;
+    }
+  }
+}

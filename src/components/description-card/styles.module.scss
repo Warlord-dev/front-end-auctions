@@ -1,0 +1,59 @@
+.wrapper {
+  border: 2px solid #c52081;
+  box-shadow:
+    inset 0px 0px 30px 20px rgba(197, 32, 129, 0.5),
+    0px 0px 30px 20px rgba(197, 32, 129, 0.5);
+  border-radius: 1rem;
+  padding: .5rem;
+
+  .body {
+    background: rgba(247, 207, 207, 0.47);
+    padding: 1rem;
+
+    .title {
+      color: white;
+      font-family: Gilroy;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 36px;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      font-family: Inter;
+      font-weight: normal;
+      font-size: 22px;
+      color: white;
+    }
+
+    @media (min-width: 1440px) {
+      .title {
+        font-size: 36px;
+      }
+
+      .description {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .title {
+        font-size: 30px;
+      }
+
+      .description {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .title {
+        font-size: 25px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+    }
+  }
+}

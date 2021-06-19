@@ -1,0 +1,87 @@
+.wrapper {
+
+  .heroSection {
+    position: relative;
+    background-color: black;
+    padding: 5rem 0;
+
+    .mainLogo {
+      margin-left: 50%;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      width: 70%;
+      transform: translateX(-50%);
+    }
+
+    .flag {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .gpad {
+      position: absolute;
+      top: 17rem;
+      right: 10rem;
+    }
+  }
+
+  .exclusiveSection {
+    background-image: url('/images/metaverse/exc-back.png');
+    background-repeat: none;
+    background-size: cover;
+    position: relative;
+    background-color: black;
+  }
+
+  .semiSection {
+    position: relative;
+    background-image: url('/images/metaverse/semi-back.png');
+    background-repeat: none;
+    background-size: cover;
+    background-color: #451F68;
+  }
+
+  .commonSection {
+    position: relative;
+    background-image: url('/images/metaverse/common-back.png');
+    background-repeat: none;
+    background-size: cover;
+    background-color: #0A1228;
+  }
+
+  .texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .cardWrapper {
+    position: relative;
+    padding: 5rem 7.5rem;
+    z-index: 1;
+
+    @media (min-width: 1440px) {
+      padding: 5rem 7.5rem;
+    }
+
+    @media (max-width: 1440px) {
+      padding: 5rem 5rem;
+    }
+
+    @media (max-width: 1200px) {
+      padding: 4rem 4rem;
+    }
+
+    @media (max-width: 920px) {
+      padding: 3rem 3rem;
+    }
+
+    @media (max-width: 768px) {
+      padding: 2rem;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.button {
+  position: relative;
+  color: white;
+  background: transparent;
+  width: 200px;
+  border: none;
+  outline: none;
+  color: white;
+  transition: all .3s ease;
+  
+  img {
+    width: 100%;
+  }
+  
+  span {
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Bebas Neue";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all .3s ease;
+  }
+}
