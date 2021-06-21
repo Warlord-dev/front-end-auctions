@@ -59,7 +59,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const wrongNetworkText =
     pathname !== '/bridge' && pathname !== '/bridge/deposit'
-      ? network.alias !== 'matic'
+      ? network?.alias !== 'matic'
         ? 'Please switch to Matic Network'
         : ''
       : 'Please switch to Mainnet';
