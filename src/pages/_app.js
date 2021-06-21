@@ -101,12 +101,12 @@ const MyApp = ({ Component, pageProps, store, err }) => {
       <InitWrapper>
         <HeaderTopLine />
         <Modals />
-        <NetworkWrapper>
-          <LoadingWrapper>
-            {router.pathname.includes('bridge') ? <Particles /> : null}
-            <Component {...pageProps} />
-          </LoadingWrapper>
-        </NetworkWrapper>
+        {/* <NetworkWrapper> */}
+        <LoadingWrapper>
+          {router.pathname.includes('bridge') ? <Particles /> : null}
+          <Component {...pageProps} />
+        </LoadingWrapper>
+        {/* </NetworkWrapper> */}
         <Footer />
       </InitWrapper>
       <ToastContainer />
