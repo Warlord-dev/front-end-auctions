@@ -6,8 +6,8 @@ export const getEnabledNetworks = () =>
 
 export const getEnabledNetworkByChainId = (chainId) => {
   getEnabledNetworks().find((network) => {
-    console.log({ 'network-hex': network.hex });
-    console.log({ chainId });
+    console.log({ 'network-hex': Number(network.hex) });
+    console.log({ Number(chainId) });
     return Number(network.hex) === Number(chainId);
   });
 };
