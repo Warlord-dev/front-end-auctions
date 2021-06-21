@@ -5,11 +5,7 @@ export const getEnabledNetworks = () =>
   AVAILABLE_NETWORKS.filter((network) => config.NETWORKS.includes(network.alias));
 
 export const getEnabledNetworkByChainId = (chainId) => {
-  getEnabledNetworks().find((network) => {
-    console.log({ 'network-hex': Number(network.hex) });
-    console.log({ chainId: Number(chainId) });
-    return Number(network.hex) === Number(chainId);
-  });
+  getEnabledNetworks().find((network) => Number(network.hex) === Number(chainId));
 };
 
 export const requestSwitchNetwork = () => {

@@ -49,7 +49,7 @@ const RightBox = ({
   const chainId = useSelector(getChainId);
   const modals = useSelector((state) => state.modals.toJS());
   const { isShowBuyNow } = modals;
-  const isMatic = chainId === '0x13881' || chainId === '0x89';
+  const isMatic = Number(chainId) === 137 || Number(chainId) === 80001;
 
   const estimateAPY = useAPY(currentCounts.basePrice);
 
