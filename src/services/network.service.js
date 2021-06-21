@@ -2,7 +2,7 @@ import { AVAILABLE_NETWORKS } from '@constants/networks.constants';
 import config from '@utils/config';
 
 export const getEnabledNetworks = () =>
-  AVAILABLE_NETWORKS.filter((network) => config.NETWORKS.includes(network?.alias));
+  AVAILABLE_NETWORKS.filter((network) => config.NETWORKS.includes(network.alias));
 
 export const getEnabledNetworkByChainId = (chainId) => {
   getEnabledNetworks().find((network) => {
@@ -36,15 +36,15 @@ export const requestSwitchNetwork = () => {
 export const getAPIUrlByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  if (!network || !config.API_URLS[network?.alias]) {
+  if (!network || !config.API_URLS[network.alias]) {
     return config.API_URLS[config.DEFAULT_NETWORK];
   }
-  return config.API_URLS[network?.alias];
+  return config.API_URLS[network.alias];
 };
 
 export const getExplorerUrlByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
-  return config.EXPLORER_URLS[network?.alias];
+  return config.EXPLORER_URLS[network.alias];
 };
 
 export const getDefaultNetworkChainId = () => {
@@ -69,65 +69,65 @@ export const getWSUrlByChainId = (chainId) => {
 export const getRewardContractAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.REWARD_CONTRACT_ADDRESSES[network?.alias];
+  return config.REWARD_CONTRACT_ADDRESSES[network.alias];
 };
 
 export const getMonaContractAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.MONA_TOKEN_ADDRESSES[network?.alias];
+  return config.MONA_TOKEN_ADDRESSES[network.alias];
 };
 
 export const getUSDTAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.USDT_ADDRESS[network?.alias];
+  return config.USDT_ADDRESS[network.alias];
 };
 
 export const getDTXAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.DTX_ADDRESSES[network?.alias];
+  return config.DTX_ADDRESSES[network.alias];
 };
 
 export const getDTXV1AddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.DTXV1_ADDRESSES[network?.alias];
+  return config.DTXV1_ADDRESSES[network.alias];
 };
 
 export const getDigiMaterialV2AddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.DIGI_MATERIALS_V2[network?.alias];
+  return config.DIGI_MATERIALS_V2[network.alias];
 };
 
 export const getDigiRootTunnelAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.ROOT_TUNNEL_ADDRESS[network?.alias];
+  return config.ROOT_TUNNEL_ADDRESS[network.alias];
 };
 
 export const getUpgraderAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.UPGRADER_ADDRESSES[network?.alias];
+  return config.UPGRADER_ADDRESSES[network.alias];
 };
 
 export const getMarketplaceContractAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.DIGITAL_MARKETPLACE_ADDRESSES[network?.alias];
+  return config.DIGITAL_MARKETPLACE_ADDRESSES[network.alias];
 };
 
 export const getRootTunnelAddressV2ByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.ROOT_TUNNEL_V2_ADDRESS[network?.alias];
+  return config.ROOT_TUNNEL_V2_ADDRESS[network.alias];
 };
 
 export const getChildTunnelAddressV2ByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
-  return config.CHILD_TUNNEL_V2_ADDRESS[network?.alias];
+  return config.CHILD_TUNNEL_V2_ADDRESS[network.alias];
 };
