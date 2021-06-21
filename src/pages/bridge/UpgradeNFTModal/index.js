@@ -20,7 +20,7 @@ export default function UpgradeNFTModal({ onClose, onLoading }) {
 
   const upgraderCallback = useERC721Upgrader();
   const handleUpgrade = async () => {
-    if (network.alias === (isMainnet ? 'matic' : 'mumbai')) {
+    if (network?.alias === (isMainnet ? 'matic' : 'mumbai')) {
       onLoading(true);
       await upgraderCallback(dtxV1MaticIds);
       onLoading(false);
