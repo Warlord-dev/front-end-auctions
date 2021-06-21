@@ -4,57 +4,242 @@
   width: 100%;
   font-family: "Inter";
 
-  .navBack {
-    background-color: black;
-    margin-top: -75px;
+  .heroSection {
     position: relative;
-    padding-top: 80px;
+    text-align: center;
+    padding-bottom: 5rem;
 
-    .skinList {
-      display: none;
-      img {
-        width: 25%;
-      }
-    }
-
-    .espaSkins {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .amongus, .minecraft, .roblox {
+      position: absolute;
+      right: 0;
+      background-color: #BA0C76;
+      width: 192px;
+      padding: 1rem;
+      font-family: Trans America;
+      font-size: 1rem;
+      text-transform: uppercase;    
+      letter-spacing: 2px;
+      font-style: italic;
+      text-shadow: 1px 1px 9px #57b5e9, 1px 1px 6px #57b5e9;
+      color: white;
       
-      h1 {
-        font-size: 4.5vw;
-        font-family: "Gilroy";
-        margin-bottom: 10px;
+      &:hover {
+        width: 230px;
+        transition: all .3s ease;
       }
     }
 
-    .espaSkinsMobile, .buttonForMobile {
-      display: none;
+    .amongus {
+      top: 80px;
+    }
+
+    .minecraft {
+      top: 180px;
+    }
+
+    .roblox {
+      top: 280px;
+    }
+
+    .heroImage {
+      width: 70%;
+      margin-top: 7.5rem;
+      margin-bottom: 7.5rem;
     }
   }
 
-  .promoteWrapper {
-    padding: 3% 10%;
-    width: 100%;
-    font-weight: 700;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 2%;
-    // grid-template-columns: auto auto auto;
+  .collectionSection {
+    background-image: url('/images/metaverse/collection-bg.png');
+    background-size: 100%;
+    .back {
+      width: 100%;
+    }
 
-    h1 {
-      font-size: 1.5vw;
-      line-height: 1.6vw;
-      font-family: "Inter";
+    .collectionWrapper {
+      @media (min-width: 1440px) {
+        padding: 7.5rem;
+
+        .title {
+          font-size: 60px;
+        }
+      }
+
+      @media (max-width: 1440px) {
+        padding: 7.5rem;
+
+        .title {
+          font-size: 50px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        padding: 6rem;
+
+        .title {
+          font-size: 40px;
+        }
+      }
+
+      @media (max-width: 920px) {
+        padding: 4rem;
+
+        .title {
+          font-size: 35px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        padding: 2.5rem;
+
+        .title {
+          font-size: 35px;
+        }
+      }
+
+      @media (maxi-width: 576px) {
+        padding: 1rem;
+
+        .title {
+          font-size: 25px;
+        }
+      }
+
+      .title {
+        font-family: Gilroy;
+        text-transform: uppercase;
+        text-shadow: #fcee18 4px 0px 18px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .bundleWrapper {
+      @media (min-width: 1440px) {
+        padding: 7.5rem;
+      }
+
+      @media (max-width: 1440px) {
+        padding: 7.5rem;
+      }
+
+      @media (max-width: 1200px) {
+        padding: 6rem;
+      }
+
+      @media (max-width: 920px) {
+        padding: 4rem;
+      }
+
+      @media (max-width: 768px) {
+        padding: 2.5rem;
+      }
+
+      @media (maxi-width: 576px) {
+        padding: 1rem;
+      }
+
+
+      .title {
+        font-family: Gilroy;
+        font-size: 60px;
+        text-transform: uppercase;
+        text-shadow: #fcee18 4px 0px 18px;
+        margin-bottom: 2rem;
+      }
     }
   }
 
-  .videoWrapper {
+  .amongusSection {
+    position: relative;
+    text-align: center;
+
+    .back {
+      width: 100%;
+    }
+
+    .logo {
+      position: absolute;
+      margin-top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
+
     video {
       width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .suitUp {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .mineCraftSection {
+    position: relative;
+    text-align: center;
+    background-color: #BF4FC2;
+
+    .back {
+      width: 100%;
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      z-index: 1;
+    }
+
+    video {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .suitUp {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .robloxSection {
+    position: relative;
+    text-align: center;
+    background-color: #14244D;
+
+    .back {
+      width: 100%;
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      z-index: 1;
+    }
+
+    video {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .suitUp {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

@@ -1,11 +1,16 @@
-import React, { memo, useEffect } from 'react';
-import Router from 'next/router';
+import React, { useEffect } from 'react';
+import { Router } from 'next/router';
 import Head from 'next/head';
+import { getCollections, getCollectionsV2 } from '@services/api/apiService';
 import styles from './styles.module.scss';
-import UButton from '@components/buttons/ubutton';
-import MobilePanel from '@components/mobile-panel';
+import { useSelector } from 'react-redux';
+import { getChainId } from '@selectors/global.selectors';
+import NewButton from '@components/buttons/newbutton';
+import CollectionList from '@components/collection-list';
+import HeroBar from '@components/hero-bar';
 
 const LandingPage = () => {
+  const chainId = useSelector(getChainId);
   useEffect(() => {
     import('react-facebook-pixel')
       .then((x) => x.default)
@@ -17,6 +22,17 @@ const LandingPage = () => {
           ReactPixel.pageView();
         });
       });
+  }, []);
+
+  useEffect(() => {
+    const fetchCollections = async () => {
+      const { digitalaxGarmentCollections } = await getCollections(chainId);
+      const { digitalaxGarmentV2Collections } = await getCollectionsV2(chainId);
+      console.log({ digitalaxGarmentCollections });
+      console.log({ digitalaxGarmentV2Collections });
+    };
+
+    fetchCollections();
   }, []);
 
   const structuredData = {
@@ -53,64 +69,65 @@ const LandingPage = () => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
-      <div className={styles.navBack}>
-        <div className={styles.espaSkinsMobile}>
-          <h1>ESPA SKINS</h1>
-          <p>Purchase with $MONA or crypto</p>
+      <section className={styles.heroSection}>
+        <img src="/images/metaverse/metaverse-logo.png" className={styles.heroImage} />
+        <a href="#amongus" className={styles.amongus}>
+          among us
+        </a>
+        <a href="#minecraft" className={styles.minecraft}>
+          minecraft
+        </a>
+        <a href="#roblox" className={styles.roblox}>
+          roblox
+        </a>
+        <HeroBar />
+      </section>
+
+      <section className={styles.collectionSection}>
+        <div className={styles.collectionWrapper}>
+          <h1 className={styles.title}> collection </h1>
+          <CollectionList />
         </div>
-        <div className={styles.skinList}>
-          <img src={'/images/skin-sample/espa-skin-1.png'} alt="espa-skin-1" />
-          <img src={'/images/skin-sample/espa-skin-2.png'} alt="espa-skin-2" />
-          <img src={'/images/skin-sample/espa-skin-3.png'} alt="espa-skin-3" />
-          <img src={'/images/skin-sample/espa-skin-4.png'} alt="espa-skin-4" />
+        <div className={styles.bundleWrapper}>
+          <h1 className={styles.title}> bundle </h1>
+          <CollectionList />
         </div>
-        <div className={styles.espaSkins}>
-          <h1>ESPA SKINS</h1>
-          <UButton caption="SUIT UP >" link="/marketplace" />
-        </div>
-        <div className={styles.buttonForMobile}>
-          <UButton
-            caption="SUIT UP >"
-            style={{
-              fontSize: 18,
-              padding: 12,
-              paddingLeft: 20,
-              paddingRight: 20,
-              borderRadius: 8,
-            }}
-            link="/marketplace"
-          />
-        </div>
-      </div>
-      <div className={styles.promoteWrapper}>
-        <h1>Get Winning Streaks & Earn $MONA.</h1>
-        <h1>Matic Layer 2 Sustainability. </h1>
-        <h1
-          style={{
-            marginRight: '5%',
-          }}
-        >
-          Suit up for Indie & Mod Esports.
-        </h1>
-      </div>
-      <div className={styles.videoWrapper}>
+      </section>
+
+      <section className={styles.amongusSection} id="amongus">
+        <img src="./images/metaverse/section-texture.png" className={styles.back} />
+        <img src="./images/metaverse/amongus-logo.png" className={styles.logo} />
         <video autoPlay loop muted playsInline>
-          <source src={`/video/among-us.mp4`} type="video/mp4" />
+          <source src="/video/among-us.mp4" type="video/mp4" />
         </video>
-      </div>
-      <MobilePanel>SUIT UP FOR BATTLE IN THE ESPA INDIE + MOD ESPORTS TOURNAMENTS</MobilePanel>
-      <MobilePanel backgroundColor={'#74A3F3'} color={'white'}>
-        WE ARE EMPOWERING DESIGNERS, DEVELOPERS, MODDERS, PLAYERS GLOBALLY.
-      </MobilePanel>
-      <MobilePanel backgroundColor={'white'} color={'black'}>
-        LIBERATING FASHION AND GAMING.
-      </MobilePanel>
-      <MobilePanel>MATIC LAYER 2 SUSTAINABILITY.</MobilePanel>
-      <MobilePanel backgroundColor={'#74A3F3'} color={'white'}>
-        PLAY ESPORTS, EARN $MONA.
-      </MobilePanel>
+        <div className={styles.suitUp}>
+          <NewButton text="Suit up" />
+        </div>
+      </section>
+
+      <section className={styles.mineCraftSection} id="minecraft">
+        <img src="./images/metaverse/section-texture.png" className={styles.back} />
+        <img src="./images/metaverse/minecraft-logo.png" className={styles.logo} />
+        <video autoPlay loop muted playsInline>
+          <source src="/video/among-us.mp4" type="video/mp4" />
+        </video>
+        <div className={styles.suitUp}>
+          <NewButton text="Suit up" />
+        </div>
+      </section>
+
+      <section className={styles.robloxSection} id="roblox">
+        <img src="./images/metaverse/section-texture.png" className={styles.back} />
+        <img src="./images/metaverse/roblox-logo.png" className={styles.logo} />
+        <video autoPlay loop muted playsInline>
+          <source src="/video/among-us.mp4" type="video/mp4" />
+        </video>
+        <div className={styles.suitUp}>
+          <NewButton text="Suit up" />
+        </div>
+      </section>
     </div>
   );
 };
 
-export default memo(LandingPage);
+export default LandingPage;

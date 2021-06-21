@@ -5,7 +5,7 @@ import TransformModules from '../utils/transform-modules';
 
 const DEFAULT_FIELDS = Map({
   isInitialized: false,
-  chainId: null,
+  chainId: 0x13881,
   exchangeRateETH: 0,
   minBidIncrement: 0,
   auctionContractAddress: null,
