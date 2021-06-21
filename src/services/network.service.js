@@ -4,10 +4,8 @@ import config from '@utils/config';
 export const getEnabledNetworks = () =>
   AVAILABLE_NETWORKS.filter((network) => config.NETWORKS.includes(network.alias));
 
-export const getEnabledNetworkByChainId = (chainId) => {
+export const getEnabledNetworkByChainId = (chainId) =>
   getEnabledNetworks().find((network) => Number(network.hex) === Number(chainId));
-};
-
 export const requestSwitchNetwork = () => {
   window.ethereum
     .request({
