@@ -169,6 +169,10 @@ const ImportantProductInformation = ({
     }
   }, []);
 
+  useEffect(() => {
+    setPriceEth(getInitialPrice());
+  }, [collection]);
+
   const sortedHistory = history
     ? history
         .filter(
