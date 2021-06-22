@@ -156,6 +156,8 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Averia+Libre"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Bayon"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Ramabhadra"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rosarivo"></link>
           <link
             rel="stylesheet"
@@ -1236,6 +1238,12 @@ class MyDocument extends Document {
               font-family: "Post No Bills Colombo SemiBold";
               src: url("./fonts/PostNoBillsColombo-Regular.woff");
               font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Post No Bills Colombo ExtraBold";
+              src: url("./fonts/PostNoBillsColombo-ExtraBold.ttf");
+              font-weight: 800;
             }
 
             @font-face {

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './page143144.module.scss';
 
-const Page141142 = () => {
+const Page143144 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="./magazine/2/images/143_144.png" className={styles.back} />
@@ -146,4 +146,4 @@ const Page141142 = () => {
   );
 };
 
-export default Page141142;
+export default Page143144;
