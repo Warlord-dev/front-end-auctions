@@ -91,22 +91,17 @@ const ImportantProductInformation = ({
     ? currentCollections.find((collection) => collection.id === currentOffer.id)
     : null;
 
-  const getInitialPrice = () => {
-    let priceEth = garment.primarySalePrice / 10 ** 18;
-    if (tabIndex === 0) {
-      // priceEth = convertToEth(auction?.topBid || 0);
-      priceEth = 0;
-    } else if (collectionId === '3') {
-      if (collection?.rarity === 'Common') priceEth = 0.015;
-      else priceEth = 0.45;
-    }
-
-    return priceEth;
+  let priceEth = garment.primarySalePrice / 10 ** 18;
+  if (tabIndex === 0) {
+    priceEth = convertToEth(auction?.topBid || 0);
+  } else if (collectionId === '3') {
+    if (collection?.rarity === 'Common') priceEth = 0.015;
+    else priceEth = 0.45;
   }
+
   const estimateApy = useAPY(garment.primarySalePrice);
 
   const [, updateState] = React.useState(0);
-  const [priceEth, setPriceEth] = useState(getInitialPrice());
   const timer = useRef(null);
   const timerToSoldButton = useRef(null);
   let canShowWithdrawBtn = false;
@@ -135,10 +130,6 @@ const ImportantProductInformation = ({
     [chainId, auctionId],
   );
 
-  // if (!auction) {
-  //   return null;
-  // }
-
   const expirationDate = auction?.endTime * 1000;
 
   const timeOut = new Date(expirationDate) - new Date() + 1000;
@@ -155,23 +146,6 @@ const ImportantProductInformation = ({
   } else {
     showSoldButton = true;
   }
-
-  useEffect(() => {
-    const fetchTopBid = async () => {
-      const auctionContractAddress = config.AUCTION_CONTRACT_ADDRESS[network.alias];
-      const contract = await getContract(auctionContractAddress);
-      const res = await contract.methods.getHighestBidder(garment.id).call({from: account});
-      setPriceEth(convertToEth(res._bid));
-    };
-
-    if (tabIndex === 0) {
-      fetchTopBid();
-    }
-  }, []);
-
-  useEffect(() => {
-    setPriceEth(getInitialPrice());
-  }, [collection]);
 
   const sortedHistory = history
     ? history
