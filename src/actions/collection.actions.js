@@ -19,6 +19,12 @@ class CollectionActions extends BaseActions {
       dispatch(this.setValue('marketplaceOffers', digitalaxMarketplaceOffers));
     };
   }
+
+  updateMarketplaceOffersV1(digitalaxMarketplaceOffersV1) {
+    return async (dispatch) => {
+      dispatch(this.setValue('marketplaceOffersV1', digitalaxMarketplaceOffersV1));
+    }
+  }
 }
 
 export default new CollectionActions(collectionReducer);
