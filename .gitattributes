@@ -1,5 +1,0 @@
-*.mp4 filter=lfs diff=lfs merge=lfs -text
-public/magazine/2/images/149_150/bts.mp4 filter=lfs diff=lfs merge=lfs -text
-public/magazine/2/images/149_150/video2.mp4 filter=lfs diff=lfs merge=lfs -text
-public/magazine/2/images/149_150/video3.mp4 filter=lfs diff=lfs merge=lfs -text
-public/magazine/2/images/149_150/video5.mp4 filter=lfs diff=lfs merge=lfs -text
