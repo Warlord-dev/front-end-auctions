@@ -16,9 +16,12 @@ import {
   closeBuynowNftSubscriptionModal,
 } from '@actions/modals.actions';
 import Button from '@components/buttons/button';
+import { useRouter } from 'next/router';
 
 const RightBox = ({ details, id, activeImage }) => {
   const dispatch = useDispatch();
+  const router = useRouter();
+  const { issueId } = router.query;
   const [amountSold, setAmountSold] = useState(0);
   const [buyAvailable, setBuyAvailable] = useState(true);
   const account = useSelector(getAccount);
@@ -133,7 +136,7 @@ const RightBox = ({ details, id, activeImage }) => {
           {buyAvailable ? 'UNLOCK' : <div className={styles.spinner} />}
         </Button>
         {contentUnlocked ? (
-          <Link href={`/magazines/1/hidden`}>
+          <Link href={`/magazines/${issueId}/hidden`}>
             <Button background="black" className={styles.showHiddenButton}>
               SEE HIDDEN CONTENT
             </Button>

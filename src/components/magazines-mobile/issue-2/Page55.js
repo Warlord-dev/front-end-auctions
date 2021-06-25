@@ -85,7 +85,7 @@ const Page55 = () => {
         <img src="./magazine/2/images/59_60/image14.png" className={styles.image20} />
         </a>
        </Link>
-      <p className={styles.text1}>DAO’ing Out With DXDAO Keenan + Caden</p>
+      <p className={styles.text1}>DAO’ing Out With DXDAO Keenan + Sky</p>
       <p className={styles.text2}>A Real DAO. Swarm Knowledge. Open for Everyone. Information Symmetry. </p>
       <p className={styles.text3}>SOVEREIGNTY.<br/> ON-CHAIN. </p>
       <p className={styles.text4}>DECENTRALISATION MAXIMALISM.</p>

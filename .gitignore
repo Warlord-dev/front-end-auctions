@@ -33,3 +33,5 @@ yarn-error.log*
 # vercel
 .vercel
 .scannerwork
+
+/public/magazine/2/images/149_150/video1.mp4

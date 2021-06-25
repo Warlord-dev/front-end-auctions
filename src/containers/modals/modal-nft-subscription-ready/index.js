@@ -12,6 +12,8 @@ import Link from 'next/link';
 
 const ModalNftSubscriptionAReady = ({ className, title, buttonText }) => {
   const dispatch = useDispatch();
+  const router = useRouter();
+  const { issueId } = router.query;
   const handleClose = () => {
     dispatch(global.setContentUnlocked(true));
     dispatch(closeNftSubscriptionReadyModal());
@@ -31,7 +33,7 @@ const ModalNftSubscriptionAReady = ({ className, title, buttonText }) => {
             DIGIFIZZY Bundles Are Highlighting Well Known and Unseen Creators Across the Metaverse.
             These are the Gatemakers.
           </p>
-          <Link href={`/magazines/1/hidden`}>
+          <Link href={`/magazines/${issueId}/hidden`}>
             <Button background="black" onClick={() => handleClose()} className={styles.button}>
               {buttonText}
             </Button>
