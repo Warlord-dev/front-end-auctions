@@ -29,12 +29,12 @@ const Page149150 = () => {
     <div className={styles.wrapper}>
       <img src="./magazine/2/images/147_148/image1.png" className={styles.back} />
       <img src="./magazine/2/images/149_150/image1.png" className={styles.image2} />
-      <div className={styles.image1}>
+      {/* <div className={styles.image1}>
         <video muted autoPlay loop className={styles.video1} ref={ref1}>
           <source src="./magazine/2/images/149_150/bts.mp4" type="video/mp4" />
         </video>
         <button onClick={()=>{playVideo1()}}><img src={`./magazine/2/images/149_150/${isPlaying1 ? 'pause' : 'play'}.png`} className={styles.playbutton1}/></button>
-      </div>
+      </div> */}
       <div className={styles.image3}>
         <video muted autoPlay loop className={styles.video2} ref={ref2}>
           <source src="./magazine/2/images/149_150/video2.mp4" type="video/mp4" />
