@@ -5,8 +5,8 @@ import Link from 'next/link';
 const Page9596 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/2/images/95_96/left.png" className={styles.leftBack} />
-      <img src="./magazine/2/images/95_96/right.png" className={styles.rightBack} />
+      <img async src="./magazine/2/images/95_96/left.png" className={styles.leftBack} />
+      <img async src="./magazine/2/images/95_96/right.png" className={styles.rightBack} />
       <Link href="https://twitter.com/BladeRunway"><a className={styles.text1}>
       BLADE RUNWAY
       </a>

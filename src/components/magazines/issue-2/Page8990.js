@@ -11,30 +11,30 @@ const Page8990 = () => {
   }
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/2/images/89_90/image1.png" className={styles.image1} />
-      <img src="./magazine/2/images/89_90/image2.png" className={styles.image2} />
-      <img src="./magazine/2/images/89_90/image2.png" className={styles.image3} />
-      <img src="./magazine/2/images/89_90/image3.png" className={styles.image4} />
-      <img src="./magazine/2/images/89_90/image4.png" className={styles.image5} />
-      <img src="./magazine/2/images/89_90/image5.png" className={styles.image6} />
-      <img src="./magazine/2/images/89_90/image6.png" className={styles.image7} />
-      <img src="./magazine/2/images/89_90/image7.png" className={styles.image8} />
-      <img src="./magazine/2/images/89_90/image8.png" className={styles.image9} />
-      <img src="./magazine/2/images/89_90/image9.png" className={styles.image10} />
-      <img src="./magazine/2/images/89_90/image10.png" className={styles.image11} />
-      <img src="./magazine/2/images/89_90/image11.png" className={styles.image12} />
-      <img src="./magazine/2/images/89_90/image12.png" className={styles.image13} />
-      <img src="./magazine/2/images/89_90/image29.png" className={styles.image24} />
-      <img src="./magazine/2/images/89_90/image13.png" className={styles.image14} />
-      <img src="./magazine/2/images/89_90/image14.png" className={styles.image15} />
-      <img src="./magazine/2/images/89_90/image15.png" className={styles.image16} />
-      <img src="./magazine/2/images/89_90/image16.png" className={styles.image17} />
-      <img src="./magazine/2/images/89_90/image17.png" className={styles.image18} />
-      <img src="./magazine/2/images/89_90/image18.png" className={styles.image19} />
-      <img src="./magazine/2/images/89_90/image19.png" className={styles.image20} />
-      <img src="./magazine/2/images/89_90/image20.png" className={styles.image21} />
-      <img src="./magazine/2/images/89_90/image22.png" className={styles.image23} />
-      <img src="./magazine/2/images/89_90/image30.png" className={styles.image25} />
+      <img async src="./magazine/2/images/89_90/image1.png" className={styles.image1} />
+      <img async src="./magazine/2/images/89_90/image2.png" className={styles.image2} />
+      <img async src="./magazine/2/images/89_90/image2.png" className={styles.image3} />
+      <img async src="./magazine/2/images/89_90/image3.png" className={styles.image4} />
+      <img async src="./magazine/2/images/89_90/image4.png" className={styles.image5} />
+      <img async src="./magazine/2/images/89_90/image5.png" className={styles.image6} />
+      <img async src="./magazine/2/images/89_90/image6.png" className={styles.image7} />
+      <img async src="./magazine/2/images/89_90/image7.png" className={styles.image8} />
+      <img async src="./magazine/2/images/89_90/image8.png" className={styles.image9} />
+      <img async src="./magazine/2/images/89_90/image9.png" className={styles.image10} />
+      <img async src="./magazine/2/images/89_90/image10.png" className={styles.image11} />
+      <img async src="./magazine/2/images/89_90/image11.png" className={styles.image12} />
+      <img async src="./magazine/2/images/89_90/image12.png" className={styles.image13} />
+      <img async src="./magazine/2/images/89_90/image29.png" className={styles.image24} />
+      <img async src="./magazine/2/images/89_90/image13.png" className={styles.image14} />
+      <img async src="./magazine/2/images/89_90/image14.png" className={styles.image15} />
+      <img async src="./magazine/2/images/89_90/image15.png" className={styles.image16} />
+      <img async src="./magazine/2/images/89_90/image16.png" className={styles.image17} />
+      <img async src="./magazine/2/images/89_90/image17.png" className={styles.image18} />
+      <img async src="./magazine/2/images/89_90/image18.png" className={styles.image19} />
+      <img async src="./magazine/2/images/89_90/image19.png" className={styles.image20} />
+      <img async src="./magazine/2/images/89_90/image20.png" className={styles.image21} />
+      <img async src="./magazine/2/images/89_90/image22.png" className={styles.image23} />
+      <img async src="./magazine/2/images/89_90/image30.png" className={styles.image25} />
       <p className={styles.text1}>NFT BUNDLES</p>
       <p className={styles.text2}>Through DIGIFIZZY we are proving out a new publishing model with NFT based decentralised subscriptions. All of the content is free to read, and, people can subscribe to NFT bundles that bring together a mix of well known and upcoming/undervalued talent across music, art, fashion, gaming, other collectibles etc. This is not an auction or a typical drop, but unlike where if creators were featured on the cover of a magazine they would get nothing for it or sometimes have to pay for placement, here they get a share distributed across the contributors to the bundle, whilst the publication is still able to prove out the model through a majority share, being the core creator, engineer, distributor and contributor.</p>
       <p className={styles.text3}>ERC-998 BUNDLE</p>
