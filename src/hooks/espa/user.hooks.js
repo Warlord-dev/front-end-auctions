@@ -1,76 +1,78 @@
-import { useEffect, useState } from 'react';
-import api from '@services/api/espa/api.service';
+import { useEffect, useState } from 'react'
+import api from '@services/api/espa/api.service'
+import { USERNAME_AVAILABLE } from '@constants/global.constants'
+
 
 export function useSignMessage(account) {
-  const [signMsg, setSignMsg] = useState(null);
+  const [signMsg, setSignMsg] = useState(null)
 
   useEffect(() => {
-    api.fetchAuthToken(account).then((msg) => setSignMsg(msg));
-  }, [account]);
+    api.fetchAuthToken(account).then((msg) => setSignMsg(msg))
+  }, [account])
 
-  return signMsg;
+  return signMsg
 }
 
 export function useUserNameAvailable(username) {
-  const [isAvailable, setUserNameAvailable] = useState(true);
+  const [isAvailable, setUserNameAvailable] = useState(USERNAME_AVAILABLE)
 
   useEffect(() => {
     if (username) {
-      api.checkUserName(username).then((isAvailable) => setUserNameAvailable(isAvailable));
+      api.checkUserName(username).then(isAvailable => setUserNameAvailable(isAvailable))
     }
-  }, [username]);
+  }, [username])
 
-  return isAvailable;
+  return isAvailable
 }
 
 export function useNFTs(account) {
-  const [nfts, setNfts] = useState(null);
+  const [nfts, setNfts] = useState(null)
 
   useEffect(() => {
     api
       .fetchNfts(account)
       .then((data) => {
-        let items = [];
+        let items = []
         if (data.digitalaxCollectors.length) {
           items = data.digitalaxCollectors[0].parentsOwned.map((item) => {
             return {
               ...item,
               isEth: true,
-            };
-          });
+            }
+          })
         }
         for (let item of data.digitalaxGarments) {
           if (!items.find((el) => el.id === item.id)) {
-            items = [...items, { ...item, isStaked: true }];
+            items = [...items, { ...item, isStaked: true }]
           }
         }
         if (data.matic.digitalaxCollectors.length) {
-          items = [...items, ...data.matic.digitalaxCollectors[0].parentsOwned];
+          items = [...items, ...data.matic.digitalaxCollectors[0].parentsOwned]
         }
-        setNfts(items);
+        setNfts(items)
       })
-      .catch((e) => setNfts([]));
-  }, [account]);
+      .catch((e) => setNfts([]))
+  }, [account])
 
-  return nfts;
+  return nfts
 }
 
 export function useProfile() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
-    api.getProfile().then((data) => setUser(data));
-  }, []);
+    api.getProfile().then((data) => setUser(data))
+  }, [])
 
-  return user;
+  return user
 }
 
 export function useMyIP() {
-  const [ip, setIp] = useState(null);
+  const [ip, setIp] = useState(null)
 
   useEffect(() => {
-    api.getMyIP().then((data) => setIp(data));
-  }, []);
+    api.getMyIP().then((data) => setIp(data))
+  }, [])
 
-  return ip;
+  return ip
 }
