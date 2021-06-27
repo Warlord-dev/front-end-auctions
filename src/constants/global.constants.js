@@ -10,3 +10,7 @@ export const STAGE_ESPA_BACKEND_URL = 'https://7kuwlltzmc.execute-api.eu-central
 export const COMMON_RARITY = 'Common';
 export const SEMI_RARE_RARITY = 'Semi-Rare';
 export const EXCLUSIVE_RARITY = 'Exclusive';
+
+export const USERNAME_AVAILABLE = 1
+export const USERNAME_ALREADY_EXISTS = 0
+export const USERNAME_ERROR = 2
