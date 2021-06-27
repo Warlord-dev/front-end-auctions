@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '@services/api/espa/api.service';
+import { USERNAME_AVAILABLE } from '@constants/global.constants'
 
 export function useSignMessage(account) {
   const [signMsg, setSignMsg] = useState(null);
@@ -12,7 +13,7 @@ export function useSignMessage(account) {
 }
 
 export function useUserNameAvailable(username) {
-  const [isAvailable, setUserNameAvailable] = useState(true);
+  const [isAvailable, setUserNameAvailable] = useState(USERNAME_AVAILABLE);
 
   useEffect(() => {
     if (username) {
