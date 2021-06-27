@@ -15,3 +15,7 @@ export const EXCLUSIVE_RARITY = 'Exclusive';
 
 export const WALLET_METAMASK = 'METAMASK';
 export const WALLET_ARKANE = 'ARKANE';
+
+export const USERNAME_AVAILABLE = 1
+export const USERNAME_ALREADY_EXISTS = 0
+export const USERNAME_ERROR = 2
