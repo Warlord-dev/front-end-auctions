@@ -1,4 +1,4 @@
-import { STAGE_ESPA_BACKEND_URL } from '@constants/global.constants';
+import { STAGE_ESPA_BACKEND_URL, USERNAME_ERROR } from '@constants/global.constants';
 import { get, post, put } from '@utils/api';
 import axios from 'axios';
 
@@ -57,9 +57,9 @@ class EspaApiService {
       const isExist = await get('/username-available', {
         username,
       });
-      return isExist;
+      return isExist | 0;
     } catch (e) {
-      return null;
+      return USERNAME_ERROR;
     }
   }
 

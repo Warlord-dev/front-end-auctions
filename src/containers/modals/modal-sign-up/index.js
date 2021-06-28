@@ -7,6 +7,7 @@ import Button from '@components/buttons/button';
 import Modal from '@components/modal';
 import Loader from '@components/loader';
 
+import { USERNAME_ERROR, USERNAME_ALREADY_EXISTS } from '@constants/global.constants'
 import { closeSignupModal } from '@actions/modals.actions';
 import userActions from '@actions/user.actions';
 
@@ -89,9 +90,16 @@ const ModalSignUp = ({ className, title }) => {
                         </span>
                       </div>
                       <input value={userName} onChange={(e) => userNameChanged(e.target.value)} />
-                      {!isUserNameAvailable && (
-                        <p>That User ID is already taken. Please choose another one</p>
-                      )}
+                      {
+                        isUserNameAvailable === USERNAME_ALREADY_EXISTS && (
+                          <p>That User ID is already taken. Please choose another one</p>
+                        )
+                      }
+                      {
+                        isUserNameAvailable === USERNAME_ERROR && (
+                          <p>Something went wrong on our side. Don't worry, we are working on fixing that right now! Try again soon!</p>
+                        )
+                      }
                     </div>
                     <div className={styles.inputItem}>
                       <label>EMAIL</label>
