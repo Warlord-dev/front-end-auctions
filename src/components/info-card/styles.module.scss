@@ -1,0 +1,20 @@
+.wrapper {
+  border: 2px solid #c52081;
+  box-shadow: inset 0px 0px 30px 20px rgba(197, 32, 129, 0.5),
+    0px 0px 30px 20px rgba(197, 32, 129, 0.5);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  position: relative;
+
+  .body {
+    background: rgba(189, 61, 169, 0.47);
+    padding: 1rem;
+  }
+
+  .libon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+}

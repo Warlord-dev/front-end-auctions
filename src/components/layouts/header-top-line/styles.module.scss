@@ -3,14 +3,15 @@
 @import '../../../assets/scss/helpers/helpers.scss';
 
 .wrapper {
-  @include wrapper();
+  // @include wrapper();
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 20px 50px;
-  background-color: #fff;
+  background-color: #000;
   position: fixed;
+  top: 0;
   transition: 0.2s;
   z-index: 99;
 
@@ -25,7 +26,7 @@
   }
 }
 
-.collapseIcon{
+.collapseIcon {
   display: none;
 }
 
@@ -35,7 +36,7 @@
 }
 
 .bridgeHeader.floatingNav {
-  background-color: black!important;
+  background-color: black !important;
 }
 
 .leftBox {
@@ -70,27 +71,23 @@
 .links {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex: 1;
 
-  @media screen and (min-width: 1200px) {
-    justify-content: flex-end;
-  }
   @media screen and (max-width: 640px) {
     flex-direction: row;
     justify-content: flex-end;
-    // margin: 0;
     a {
       display: none;
     }
 
-   .collapseIcon {
+    .collapseIcon {
       position: absolute;
       display: block;
       top: 27px;
       right: 27px;
     }
-  }  
+  }
 }
 
 .rightBox {
@@ -99,11 +96,11 @@
   flex: 1;
   align-items: center;
   justify-content: space-between;
-  padding-right: 20px;
+  color: white;
 }
 
 .bridgeHeader {
-  background-color: transparent!important;
+  background-color: transparent !important;
 
   .link {
     color: white;
@@ -128,9 +125,9 @@
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 17px;
-  color: $black;
-  text-transform: uppercase;
-  margin-right: 26px;
+  color: white;
+  text-transform: capitalize;
+  margin-left: 1rem;
 
   &:focus {
     outline: none;
@@ -140,24 +137,29 @@
     text-align: center;
     line-height: 30px;
   }
+
+  &:hover {
+    color: white;
+  }
 }
 
-.signBtn{
+.signBtn {
   @media screen and (max-width: 640px) {
-      margin-right: 20px;
-      position: absolute;
-      top: 10px;
-      right: 40px;
+    margin-right: 20px;
+    position: absolute;
+    top: 10px;
+    right: 40px;
 
-      .buttonWrapper {
-        position: relative;
-        padding-top: 7px;
-      }
+    .buttonWrapper {
+      position: relative;
+      padding-top: 7px;
+    }
   }
 }
 
 .buttonWrapper {
   position: relative;
+  cursor: pointer;
 }
 
 .menuWrapper {
@@ -217,7 +219,7 @@
   line-height: 36px;
 }
 
-.expandedMenu{
+.expandedMenu {
   display: block;
   margin-top: 30px;
   a {

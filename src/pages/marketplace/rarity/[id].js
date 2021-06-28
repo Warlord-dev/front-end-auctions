@@ -1,3 +1,4 @@
+import Container from '@components/container';
 import HeroBar from '@components/hero-bar';
 import ProductCard from '@components/product-card';
 import { useRouter } from 'next/router';
@@ -22,23 +23,29 @@ const MarketplaceRarity = () => {
 
         <section className={styles.exclusiveSection}>
           <img src="./images/metaverse/marketplace-texture.png" className={styles.texture} />
-          <div className={styles.cardWrapper}>
-            <ProductCard />
-          </div>
+          <Container>
+            <div className={styles.cardWrapper}>
+              <ProductCard />
+            </div>
+          </Container>
         </section>
 
         <section className={styles.semiSection}>
           <img src="./images/metaverse/marketplace-texture.png" className={styles.texture} />
-          <div className={styles.cardWrapper}>
-            <ProductCard />
-          </div>
+          <Container>
+            <div className={styles.cardWrapper}>
+              <ProductCard />
+            </div>
+          </Container>
         </section>
 
         <section className={styles.commonSection}>
           <img src="./images/metaverse/marketplace-texture.png" className={styles.texture} />
-          <div className={styles.cardWrapper}>
-            <ProductCard />
-          </div>
+          <Container>
+            <div className={styles.cardWrapper}>
+              <ProductCard />
+            </div>
+          </Container>
         </section>
       </div>
     </>

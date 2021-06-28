@@ -102,18 +102,18 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     >
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
-        <Logo black={!pathname.includes('bridge')} />
+        <Logo black={false} />
       </div>
       <div className={styles.rightBox}>
         <div className={cn(styles.links, isCollapse ? styles.expandedMenu : '')}>
           <Link href="https://drip.digitalax.xyz/">
             <a className={styles.link} target="_blank">
-              REP YOUR STLE IRL
+              rep your style irl
             </a>
           </Link>
           <Link href="https://marketplace.digitalax.xyz">
             <a className={styles.link} target="_blank">
-              OG MARKETPLACE
+              OG marketplace
             </a>
           </Link>
           <Link href="https://designers.digitalax.xyz/global">
@@ -127,46 +127,46 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           <Link href="/bridge">
             <a className={styles.link}>Matic-Eth Bridge</a>
           </Link>
-          {network.alias !== 'matic' ? (
-            <Button onClick={() => switchNetwork()} className={styles.switchNetwork}>
-              Switch Network
-            </Button>
-          ) : null}
-          <div className={styles.signBtn}>
-            {user ? (
-              <div className={styles.buttonWrapper}>
-                <SmallPhotoWithText
-                  photo={user.get('avatar') ? user.get('avatar') : './images/user-photo.svg'}
-                  address={user.get('username')}
-                  className={styles.hashAddress}
-                >
-                  <button className={styles.arrowBottom} onClick={() => setIsShowMenu(!isShowMenu)}>
-                    <img
-                      className={styles.arrowBottomImg}
-                      src="./images/icons/arrow-bottom.svg"
-                      alt="arrow-bottom"
-                    />
-                  </button>
-                </SmallPhotoWithText>
-                {isShowMenu && (
-                  <div className={styles.menuWrapper}>
-                    <button onClick={() => handleProfileClick()} className={styles.menuButton}>
-                      Profile
-                    </button>
-                    <button onClick={() => handleLogoutClick()} className={styles.menuButton}>
-                      Logout
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Button onClick={() => handleClick()}>{buttonText}</Button>
-            )}
-          </div>
-          <a href="javascript:void(0);" className={styles.collapseIcon} onClick={onIconHander}>
-            &#9776;
-          </a>
         </div>
+        {network.alias !== 'matic' ? (
+          <Button onClick={() => switchNetwork()} className={styles.switchNetwork}>
+            Switch Network
+          </Button>
+        ) : null}
+        <div className={styles.signBtn}>
+          {user ? (
+            <div className={styles.buttonWrapper} onClick={() => setIsShowMenu(!isShowMenu)}>
+              <SmallPhotoWithText
+                photo={user.get('avatar') ? user.get('avatar') : './images/user-photo.svg'}
+                address={user.get('username')}
+                className={styles.hashAddress}
+              >
+                <button className={styles.arrowBottom}>
+                  <img
+                    className={styles.arrowBottomImg}
+                    src="./images/icons/arrow-bottom.svg"
+                    alt="arrow-bottom"
+                  />
+                </button>
+              </SmallPhotoWithText>
+              {isShowMenu && (
+                <div className={styles.menuWrapper}>
+                  <button onClick={() => handleProfileClick()} className={styles.menuButton}>
+                    Profile
+                  </button>
+                  <button onClick={() => handleLogoutClick()} className={styles.menuButton}>
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <Button onClick={() => handleClick()}>{buttonText}</Button>
+          )}
+        </div>
+        <a href="javascript:void(0);" className={styles.collapseIcon} onClick={onIconHander}>
+          &#9776;
+        </a>
       </div>
       {hamburger ? (
         <div className={styles.mobileMenu}>

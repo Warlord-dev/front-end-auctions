@@ -1,9 +1,11 @@
-.wrapper {
+@import '../../../assets/scss/helpers/grid.scss';
 
+.wrapper {
   .heroSection {
     position: relative;
     background-color: black;
     padding: 5rem 0;
+    overflow: hidden;
 
     .mainLogo {
       margin-left: 50%;
@@ -39,7 +41,7 @@
     background-image: url('/images/metaverse/semi-back.png');
     background-repeat: none;
     background-size: cover;
-    background-color: #451F68;
+    background-color: #451f68;
   }
 
   .commonSection {
@@ -47,7 +49,7 @@
     background-image: url('/images/metaverse/common-back.png');
     background-repeat: none;
     background-size: cover;
-    background-color: #0A1228;
+    background-color: #0a1228;
   }
 
   .texture {
@@ -61,27 +63,27 @@
 
   .cardWrapper {
     position: relative;
-    padding: 5rem 7.5rem;
     z-index: 1;
+    padding: 2rem;
 
-    @media (min-width: 1440px) {
-      padding: 5rem 7.5rem;
+    @include sm-width {
+      padding: 2rem;
     }
 
-    @media (max-width: 1440px) {
-      padding: 5rem 5rem;
-    }
-
-    @media (max-width: 1200px) {
-      padding: 4rem 4rem;
-    }
-
-    @media (max-width: 920px) {
+    @include md-width {
       padding: 3rem 3rem;
     }
 
-    @media (max-width: 768px) {
-      padding: 2rem;
+    @include lg-width {
+      padding: 4rem 4rem;
+    }
+
+    @include xl-width {
+      padding: 5rem 5rem;
+    }
+
+    @include xxl-width {
+      padding: 5rem 5rem;
     }
   }
 }

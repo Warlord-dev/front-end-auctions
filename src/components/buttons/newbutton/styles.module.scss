@@ -1,31 +1,40 @@
+@import '../../../assets/scss/helpers/grid.scss';
+
 .button {
   position: relative;
   color: white;
   background: transparent;
-  width: 200px;
+  width: 100px;
+  min-width: 100px;
   border: none;
   outline: none;
   color: white;
-  transition: all .3s ease;
-  
+  transition: all 0.3s ease;
+
+  @include sm-width {
+    width: 200px;
+    min-width: 200px;
+  }
+
   img {
     width: 100%;
   }
-  
+
   span {
     text-transform: uppercase;
     font-style: italic;
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: "Bebas Neue";
+    font-family: 'Bebas Neue';
     position: absolute;
     left: 50%;
     top: 50%;
+    z-index: 10;
     transform: translate(-50%, -50%);
   }
 
   &:hover {
     transform: scale(1.05);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 }

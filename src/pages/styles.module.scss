@@ -1,31 +1,35 @@
+@import '.../../../assets/scss/helpers/grid.scss';
+
 .wrapper {
   background-color: black;
   color: white;
   width: 100%;
-  font-family: "Inter";
+  font-family: 'Inter';
 
   .heroSection {
     position: relative;
     text-align: center;
     padding-bottom: 5rem;
 
-    .amongus, .minecraft, .roblox {
+    .amongus,
+    .minecraft,
+    .roblox {
       position: absolute;
       right: 0;
-      background-color: #BA0C76;
+      background-color: #ba0c76;
       width: 192px;
       padding: 1rem;
       font-family: Trans America;
       font-size: 1rem;
-      text-transform: uppercase;    
+      text-transform: uppercase;
       letter-spacing: 2px;
       font-style: italic;
       text-shadow: 1px 1px 9px #57b5e9, 1px 1px 6px #57b5e9;
       color: white;
-      
+
       &:hover {
         width: 230px;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
       }
     }
 
@@ -56,51 +60,47 @@
     }
 
     .collectionWrapper {
-      @media (min-width: 1440px) {
-        padding: 7.5rem;
+      @include xs-width {
+        padding: 2rem;
 
         .title {
-          font-size: 60px;
+          font-size: 25px;
         }
       }
 
-      @media (max-width: 1440px) {
-        padding: 7.5rem;
+      @include sm-width {
+        padding: 3rem;
 
         .title {
-          font-size: 50px;
+          font-size: 35px;
         }
       }
 
-      @media (max-width: 1200px) {
-        padding: 6rem;
+      @include md-width {
+        padding: 2rem;
+
+        .title {
+          font-size: 35px;
+        }
+      }
+
+      @include lg-width {
+        padding: 7.5rem 5rem;
 
         .title {
           font-size: 40px;
         }
       }
 
-      @media (max-width: 920px) {
-        padding: 4rem;
-
+      @include xl-width {
         .title {
-          font-size: 35px;
+          font-size: 50px;
         }
       }
 
-      @media (max-width: 768px) {
-        padding: 2.5rem;
-
+      @include xxl-width {
         .title {
-          font-size: 35px;
-        }
-      }
-
-      @media (maxi-width: 576px) {
-        padding: 1rem;
-
-        .title {
-          font-size: 25px;
+          font-size: 60px;
         }
       }
 
@@ -113,34 +113,56 @@
     }
 
     .bundleWrapper {
-      @media (min-width: 1440px) {
-        padding: 7.5rem;
+      @include xs-width {
+        padding: 2rem;
+
+        .title {
+          font-size: 25px;
+        }
       }
 
-      @media (max-width: 1440px) {
-        padding: 7.5rem;
-      }
-
-      @media (max-width: 1200px) {
-        padding: 6rem;
-      }
-
-      @media (max-width: 920px) {
-        padding: 4rem;
-      }
-
-      @media (max-width: 768px) {
+      @include sm-width {
         padding: 2.5rem;
+
+        .title {
+          font-size: 35px;
+        }
       }
 
-      @media (maxi-width: 576px) {
-        padding: 1rem;
+      @include md-width {
+        padding: 4rem;
+
+        .title {
+          font-size: 35px;
+        }
       }
 
+      @include lg-width {
+        padding: 6rem;
+
+        .title {
+          font-size: 40px;
+        }
+      }
+
+      @include xl-width {
+        padding: 7.5rem;
+
+        .title {
+          font-size: 50px;
+        }
+      }
+
+      @include xxl-width {
+        padding: 7.5rem;
+
+        .title {
+          font-size: 60px;
+        }
+      }
 
       .title {
         font-family: Gilroy;
-        font-size: 60px;
         text-transform: uppercase;
         text-shadow: #fcee18 4px 0px 18px;
         margin-bottom: 2rem;
@@ -162,6 +184,7 @@
       left: 50%;
       transform: translateX(-50%);
       top: 0;
+      width: 80%;
     }
 
     video {
@@ -182,7 +205,7 @@
   .mineCraftSection {
     position: relative;
     text-align: center;
-    background-color: #BF4FC2;
+    background-color: #bf4fc2;
 
     .back {
       width: 100%;
@@ -193,6 +216,7 @@
       left: 50%;
       transform: translateX(-50%);
       top: 0;
+      width: 80%;
       z-index: 1;
     }
 
@@ -214,7 +238,7 @@
   .robloxSection {
     position: relative;
     text-align: center;
-    background-color: #14244D;
+    background-color: #14244d;
 
     .back {
       width: 100%;
@@ -226,6 +250,7 @@
       transform: translateX(-50%);
       top: 0;
       z-index: 1;
+      width: 60%;
     }
 
     video {
@@ -243,53 +268,3 @@
     }
   }
 }
-
-@media (max-width: 590px) {
-  .wrapper {
-    .navBack {
-      margin-top: 0;
-      padding-top: 0;
-
-      .skinList {
-        display: block;
-        width: 100%;
-      }
-
-      .espaSkins {
-        display: none;
-      }
-
-      .espaSkinsMobile {
-        padding: 4vw 6vw 5vw 8vw;
-        display: block;
-
-        h1 {
-          font-family: 'Gilroy';
-          font-size: 7vw;
-        }
-        p {
-          font-family: 'Gilroy';
-          color: #74A3F3;
-          font-size: 2vw;
-        }
-      }
-
-      .buttonForMobile {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        padding-bottom: 10vw;
-      }
-    }
-    .promoteWrapper {
-      display: none;
-    }
-  
-    .videoWrapper {
-  
-    }
-  }
-}
-

@@ -6,6 +6,7 @@ import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import NewButton from '@components/buttons/newbutton';
+import Container from '@components/container';
 import CollectionList from '@components/collection-list';
 import HeroBar from '@components/hero-bar';
 
@@ -84,14 +85,16 @@ const LandingPage = () => {
       </section>
 
       <section className={styles.collectionSection}>
-        <div className={styles.collectionWrapper}>
-          <h1 className={styles.title}> collection </h1>
-          <CollectionList />
-        </div>
-        <div className={styles.bundleWrapper}>
-          <h1 className={styles.title}> bundle </h1>
-          <CollectionList />
-        </div>
+        <Container>
+          <div className={styles.collectionWrapper}>
+            <h1 className={styles.title}> collection </h1>
+            <CollectionList />
+          </div>
+          <div className={styles.bundleWrapper}>
+            <h1 className={styles.title}> bundle </h1>
+            <CollectionList />
+          </div>
+        </Container>
       </section>
 
       <section className={styles.amongusSection} id="amongus">
@@ -118,10 +121,10 @@ const LandingPage = () => {
 
       <section className={styles.robloxSection} id="roblox">
         <img src="./images/metaverse/section-texture.png" className={styles.back} />
-        <img src="./images/metaverse/roblox-logo.png" className={styles.logo} />
         <video autoPlay loop muted playsInline>
           <source src="/video/among-us.mp4" type="video/mp4" />
         </video>
+        <img src="./images/metaverse/roblox-logo.png" className={styles.logo} />
         <div className={styles.suitUp}>
           <NewButton text="Suit up" />
         </div>
