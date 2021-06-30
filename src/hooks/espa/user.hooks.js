@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import api from '@services/api/espa/api.service';
 
 export function useSignMessage(account) {
@@ -13,10 +13,18 @@ export function useSignMessage(account) {
 
 export function useUserNameAvailable(username) {
   const [isAvailable, setUserNameAvailable] = useState(true);
+  const timer = useRef(null);
 
   useEffect(() => {
     if (username) {
-      api.checkUserName(username).then((isAvailable) => setUserNameAvailable(isAvailable));
+      if (timer.current) {
+        clearTimeout(timer.current);
+      }
+
+      timer.current = setTimeout(() => {
+        api.checkUserName(username)
+        .then(isAvailable => setUserNameAvailable(isAvailable));
+      }, 1000);
     }
   }, [username]);
 

@@ -59,6 +59,9 @@ const NetworkWrapper = (props) => {
   const chainId = useSelector(getChainId);
   const network = getEnabledNetworkByChainId(chainId);
 
+  console.log({ chainId });
+  console.log({ network });
+
   if (!network) {
     return null;
   }

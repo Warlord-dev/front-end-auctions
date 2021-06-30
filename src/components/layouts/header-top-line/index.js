@@ -59,7 +59,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const wrongNetworkText =
     pathname !== '/bridge' && pathname !== '/bridge/deposit'
-      ? network.alias !== 'matic'
+      ? network?.alias !== 'matic'
         ? 'Please switch to Matic Network'
         : ''
       : 'Please switch to Mainnet';
@@ -127,7 +127,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           <Link href="/bridge">
             <a className={styles.link}>Matic-Eth Bridge</a>
           </Link>
-          {network.alias !== 'matic' ? (
+          {network?.alias !== 'matic' ? (
             <Button onClick={() => switchNetwork()} className={styles.switchNetwork}>
               Switch Network
             </Button>

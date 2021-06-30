@@ -101,6 +101,7 @@ const CardList = ({
             if (garment?.name.includes('DIGI Bundle')) {
               return <></>;
             }
+            if (parseInt(collection.id) >= 10) return;
             return (
               <CardProduct
                 collectionId={collectionId}
@@ -122,6 +123,7 @@ const CardList = ({
             const garment = collection.garments[0];
             if (garment?.name.includes('DIGI Bundle')) return <></>;
             if (collection.id === '3') return <></>;
+            if (parseInt(collection.id) >= 10) return;
             return (
               <CardProduct
                 collectionId={collectionId}

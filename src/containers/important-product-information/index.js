@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import config from '@utils/config';
 import Router from 'next/router';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
@@ -41,6 +42,8 @@ import { utils as ethersUtils } from 'ethers';
 import styles from './styles.module.scss';
 import { getAllCollections, getAllMarketplaceOffers } from '@selectors/collection.selectors';
 import { COMMON_RARITY, EXCLUSIVE_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
+import { getEnabledNetworkByChainId } from '@services/network.service';
+import { getContract } from '@services/contract.service';
 
 const ImportantProductInformation = ({
   collectionId,
@@ -88,6 +91,14 @@ const ImportantProductInformation = ({
     ? currentCollections.find((collection) => collection.id === currentOffer.id)
     : null;
 
+  let priceEth = garment.primarySalePrice / 10 ** 18;
+  if (tabIndex === 0) {
+    priceEth = convertToEth(auction?.topBid || 0);
+  } else if (collectionId === '3') {
+    if (collection?.rarity === 'Common') priceEth = 0.015;
+    else priceEth = 0.45;
+  }
+
   const estimateApy = useAPY(garment.primarySalePrice);
 
   const [, updateState] = React.useState(0);
@@ -95,8 +106,9 @@ const ImportantProductInformation = ({
   const timerToSoldButton = useRef(null);
   let canShowWithdrawBtn = false;
   let showSoldButton = false;
-
+  
   const chainId = useSelector(getChainId);
+  const network = getEnabledNetworkByChainId(chainId);
   const isMatic = chainId === '0x13881' || chainId === '0x89';
   clearTimeout(timer.current);
   clearTimeout(timerToSoldButton.current);
@@ -117,10 +129,6 @@ const ImportantProductInformation = ({
     },
     [chainId, auctionId],
   );
-
-  // if (!auction) {
-  //   return null;
-  // }
 
   const expirationDate = auction?.endTime * 1000;
 
@@ -149,13 +157,7 @@ const ImportantProductInformation = ({
         )
         .sort((a, b) => b.timestamp - a.timestamp)
     : [];
-  let priceEth = garment.primarySalePrice / 10 ** 18;
-  if (tabIndex === 0) {
-    priceEth = convertToEth(auction?.topBid || 0);
-  } else if (collectionId === '3') {
-    if (collection?.rarity === 'Common') priceEth = 0.015;
-    else priceEth = 0.45;
-  }
+
   const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
 
   let isMakeBid = false;

@@ -57,7 +57,7 @@ class EspaApiService {
       const isExist = await get('/username-available', {
         username,
       });
-      return isExist;
+      return isExist | 0;
     } catch (e) {
       return null;
     }
