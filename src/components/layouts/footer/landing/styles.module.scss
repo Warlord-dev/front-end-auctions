@@ -95,8 +95,14 @@
         margin-right: 10px;
       }
       .mediumIcon {
-          margin-left: 10px;
-        }
+        margin-left: 10px;
+      }
+      .tiktokIcon {
+        margin-right: 20px;
+      }
+      .twitchIcon {
+        margin-right: 20px;
+      }
     }
 
     .faqLine {
@@ -195,10 +201,23 @@
         }
       }
       .iconsLine {
-        img{
-          height: 25px;
+        img {
+          height: 20px;
+          width: 20px;
           margin-right: 5px;
         }
+        .mediumIcon {
+          height: 20px;
+        }
+
+        .tiktokIcon {
+          margin-right: 5px;
+        }
+
+        .twitchIcon {
+          margin-right: 5px;
+        }
+
       }
       .faqLine {
         padding-top: 20px;
