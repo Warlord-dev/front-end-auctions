@@ -5,7 +5,6 @@ export const useSubscription = ({ request, next }, deps) => {
     if (deps || typeof deps === 'undefined') {
       const { unsubscribe } = request.subscribe({
         next: ({ data }) => {
-          // console.log({ data });
           if (!data) {
             next();
             return;
@@ -27,7 +26,9 @@ export const useSubscription = ({ request, next }, deps) => {
         },
       });
 
-      return () => unsubscribe();
+      return () => {
+        unsubscribe();
+      }
     }
   }, deps);
 };
