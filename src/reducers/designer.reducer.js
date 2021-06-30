@@ -488,10 +488,10 @@ const DEFAULT_FIELDS = Map({
         '1',
         '2',
       ],
-      designerName: 'Kodomodachi',
+      designerName: 'Cosmos',
       designerPhoto: './images/QmSfpPJJhS4MEEt912qB2fg8JdGj5VKrVUXDoEyGoQtAHk.png',
       descriptionDesigner: [
-        'Kodomodachi, also know as Andressa Lara, is an artist who started her small career through poor financial conditions before turning into an adult, mainly drawing with a mouse. Her fantasy with games is vivid and creative to the point where she can combine different things that are almost impossible to work with. She believes that stories in arts can teach value to others, and that her work will do the same.',
+        'Cosmos, also know as Andressa Lara, is an artist who started her small career through poor financial conditions before turning into an adult, mainly drawing with a mouse. Her fantasy with games is vivid and creative to the point where she can combine different things that are almost impossible to work with. She believes that stories in arts can teach value to others, and that her work will do the same.',
       ],
       designerCountry: 'Brazil',
       designerCountryFlagIcon: './images/icons/brazil.png',

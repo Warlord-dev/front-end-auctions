@@ -47,7 +47,7 @@ const CardProduct = ({
       tabIndex === 3
         ? 'Digitalax'
         : collectionId === '1'
-        ? 'Kodomodachi'
+        ? 'Cosmos'
         : garment.attributes && garment.attributes[0]
         ? garment.attributes[0].value
         : '',
