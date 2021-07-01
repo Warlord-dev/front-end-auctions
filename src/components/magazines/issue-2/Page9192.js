@@ -4,7 +4,7 @@ import styles from './page9192.module.scss';
 const Page9192 = () => {
   return (
     <div className={styles.wrapper}>
-      <img async src="./magazine/2/images/91_92/image1.png" className={styles.image1} />
+      <img src="./magazine/2/images/91_92/image1.png" className={styles.image1} />
     </div>
   );
 };

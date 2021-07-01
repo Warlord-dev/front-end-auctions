@@ -5,11 +5,11 @@ import Link from 'next/link';
 const Page9798 = () => {
   return (
     <div className={styles.wrapper}>
-      <img async src="./magazine/2/images/97_98/left.png" className={styles.leftBack} />
-      <img async src="./magazine/2/images/97_98/right.png" className={styles.rightBack} />
-      <img async src="./magazine/2/images/97_98/right-top.png" className={styles.rightTop} />
+      <img src="./magazine/2/images/97_98/left.png" className={styles.leftBack} />
+      <img src="./magazine/2/images/97_98/right.png" className={styles.rightBack} />
+      <img src="./magazine/2/images/97_98/right-top.png" className={styles.rightTop} />
       <video autoPlay muted loop className={styles.leftBottom}>
-        <source async src="./magazine/2/images/97_98/Automata-Turntable.mp4" type="video/mp4" />
+        <source src="./magazine/2/images/97_98/Automata-Turntable.mp4" type="video/mp4" />
       </video>
       <Link href="https://twitter.com/rudeoolph"><a className={styles.text1}>
       Rudeolph
