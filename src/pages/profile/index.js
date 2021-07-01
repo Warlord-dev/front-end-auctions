@@ -24,25 +24,25 @@ const Profile = ({ history }) => {
   const [nftV2s, setNftV2s] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchNfts = async () => {
-      const { digitalaxCollectors } = await apiService.getCollectorsById(account);
-      const { digitalaxCollectorV2S } = await apiService.getCollectorsV2ById(account);
-      if (digitalaxCollectors.length) {
-        if (digitalaxCollectors[0].parentsOwned?.length) {
-          setNfts(digitalaxCollectors[0].parentsOwned);
-        }
-      }
-      if (digitalaxCollectorV2S.length) {
-        if (digitalaxCollectorV2S[0].parentsOwned?.length) {
-          setNftV2s(digitalaxCollectorV2S[0].parentsOwned);
-        }
-      }
-      setLoading(false);
-    }
+  // useEffect(() => {
+  //   const fetchNfts = async () => {
+  //     const { digitalaxCollectors } = await apiService.getCollectorsById(account);
+  //     const { digitalaxCollectorV2S } = await apiService.getCollectorsV2ById(account);
+  //     if (digitalaxCollectors.length) {
+  //       if (digitalaxCollectors[0].parentsOwned?.length) {
+  //         setNfts(digitalaxCollectors[0].parentsOwned);
+  //       }
+  //     }
+  //     if (digitalaxCollectorV2S.length) {
+  //       if (digitalaxCollectorV2S[0].parentsOwned?.length) {
+  //         setNftV2s(digitalaxCollectorV2S[0].parentsOwned);
+  //       }
+  //     }
+  //     setLoading(false);
+  //   };
 
-    fetchNfts();
-  }, []);
+  //   fetchNfts();
+  // }, []);
 
   const getGameTags = (str) => {
     if (!str) {
@@ -58,15 +58,16 @@ const Profile = ({ history }) => {
 
   const onCopyWalletAddress = () => {
     copy(account);
-    toast("Wallet Address is copied to the clipboard");
+    toast('Wallet Address is copied to the clipboard');
   };
 
-  if (!user || loading) {
-    return <Loader size="large" className={styles.loader} />;
-  }
+  // if (!user || loading) {
+  //   return <Loader size="large" className={styles.loader} />;
+  // }
 
   return (
     <div className={styles.profileWrapper}>
+      <img src="./images/metaverse/Gamepad 4.png" className={styles.gamePad} />
       <div className={styles.leftSideWrapper}>
         <div className={styles.avatarIDSection}>
           <img src={user.get('avatar') ? user.get('avatar') : '../../../images/user-photo.svg'} />
@@ -104,12 +105,12 @@ const Profile = ({ history }) => {
         <p className={styles.titleWrapper}>CHANGING ROOM</p>
         <div className={styles.divider} />
         <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
-          {nfts.map((nft) => (
+          {/* {nfts.map((nft) => (
             <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
           ))}
           {nftV2s.map((nft) => (
             <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
-          ))}
+          ))} */}
         </ul>
       </div>
     </div>

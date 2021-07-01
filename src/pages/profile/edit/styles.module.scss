@@ -1,22 +1,34 @@
+@import '../../../assets/scss/helpers/grid.scss';
+
 .container {
-  width: 929px;
-  border: 1px solid #e6e6e6;
-  padding: 20px 115px 20px 135px;
-  display: flex;
-  flex-direction: column;
   margin: auto;
   position: relative;
-  @media only screen and (max-width: 980px) {
-    padding: 20px 30px;
-    margin-top: 20px;
-    width: calc(100% - 40px);
+  background-image: url('../../../../public/images/metaverse/profile-bg.png');
+  background-size: cover;
+  padding: 150px 1rem 100px;
+
+  @include sm-width {
+    padding: 170px 0 120px;
+    width: unset;
   }
 }
+
+.cardWrapper {
+  width: -webkit-fill-available;
+
+  @include sm-width {
+    margin: auto;
+    width: fit-content;
+  }
+}
+
 .profileWrapper {
-  display: flex;
-  justify-content: space-between;
-  @media only screen and (max-width: 980px) {
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: 1;
+
+  @include md-width {
+    grid-template-columns: auto auto;
+    gap: 4rem;
   }
 }
 
@@ -27,7 +39,7 @@
   img {
     width: 150px;
     height: 150px;
-    margin-bottom: 40px;
+    margin-bottom: 1rem;
     border-radius: 50%;
   }
   span {
@@ -41,6 +53,8 @@
 .uploadButton {
   width: 154px;
   height: 41px;
+  background-color: #770b47;
+  color: white;
   font-size: 0.9375rem;
   margin-bottom: 26px;
 }
@@ -58,23 +72,26 @@
   span {
     font-size: 0.75rem;
     font-weight: bold;
-    color: #111111;
+    color: white;
     margin-bottom: 10px;
   }
   p {
     font-size: 0.5625rem;
     font-weight: 900;
     letter-spacing: 0.12em;
-    color: #b6b6b6;
+    color: white;
     margin-bottom: 6px;
   }
   input {
-    width: 363px;
+    width: 100%;
     height: 44px;
-    border: 1px solid #e6e6e6;
+    background-color: #770b47;
+    color: white;
+    border: none;
     padding-left: 12px;
-    @media only screen and (max-width: 480px) {
-      width: 100%;
+
+    @include sm-width {
+      width: 363px;
     }
   }
 }
@@ -83,8 +100,8 @@
   width: 154px;
   height: 41px;
   font-size: 0.9375rem;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #770b47;
+  color: white;
 }
 
 .pageLoader,
@@ -106,16 +123,19 @@
 
 .ipInput {
   display: flex;
+
   input {
-    width: 250px;
+    flex-grow: 1;
+    width: unset;
     margin-right: 12px;
   }
 }
 
 .detectIpButton {
-  width: 100px;
   height: 44px;
   font-size: 0.9375rem;
+  background-color: #770b47;
+  color: white;
 }
 
 .questionMark {
@@ -158,15 +178,20 @@
 }
 
 .backProfileButton {
-  width: 103px;
-  height: 22px;
-  font-size: 0.5rem;
-  position: absolute;
-  bottom: 32px;
-  left: 39px;
+  height: 41px;
+  font-size: 0.9375rem;
+  color: white;
+  margin-left: 1rem;
+  background-color: #770b47;
   white-space: nowrap;
   @media only screen and (max-width: 480px) {
     top: 10px;
     left: 10px;
   }
+}
+
+.buttonsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }

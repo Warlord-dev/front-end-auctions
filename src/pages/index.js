@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { Router } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import { Router, useRouter } from 'next/router';
 import Head from 'next/head';
-import { getCollections, getCollectionsV2 } from '@services/api/apiService';
+import { getCollectionGroups } from '@services/api/apiService';
 import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
@@ -12,6 +12,10 @@ import HeroBar from '@components/hero-bar';
 
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
+  const router = useRouter();
+  const [collectionGroups, setCollectionGroups] = useState([]);
+  const [bundleGroups, setBundleGroups] = useState([]);
+
   useEffect(() => {
     import('react-facebook-pixel')
       .then((x) => x.default)
@@ -26,14 +30,25 @@ const LandingPage = () => {
   }, []);
 
   useEffect(() => {
-    const fetchCollections = async () => {
-      const { digitalaxGarmentCollections } = await getCollections(chainId);
-      const { digitalaxGarmentV2Collections } = await getCollectionsV2(chainId);
-      console.log({ digitalaxGarmentCollections });
-      console.log({ digitalaxGarmentV2Collections });
+    const fetchCollectionGroups = async () => {
+      const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
+      let collections = [],
+        bundles = [];
+      digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
+        collections.push({
+          ...digitalaxCollectionGroup.collections[0].garments[0],
+          id: digitalaxCollectionGroup.id,
+        });
+        bundles.push({
+          ...digitalaxCollectionGroup.digiBundle.garments[0],
+          id: digitalaxCollectionGroup.id,
+        });
+      });
+      setCollectionGroups(collections);
+      setBundleGroups(bundles);
     };
 
-    fetchCollections();
+    fetchCollectionGroups();
   }, []);
 
   const structuredData = {
@@ -88,11 +103,11 @@ const LandingPage = () => {
         <Container>
           <div className={styles.collectionWrapper}>
             <h1 className={styles.title}> collection </h1>
-            <CollectionList />
+            <CollectionList items={collectionGroups} />
           </div>
           <div className={styles.bundleWrapper}>
             <h1 className={styles.title}> bundle </h1>
-            <CollectionList />
+            <CollectionList items={bundleGroups} />
           </div>
         </Container>
       </section>
@@ -104,7 +119,7 @@ const LandingPage = () => {
           <source src="/video/among-us.mp4" type="video/mp4" />
         </video>
         <div className={styles.suitUp}>
-          <NewButton text="Suit up" />
+          <NewButton text="Suit up" onClick={() => router.push('/marketplace/all/0')} />
         </div>
       </section>
 
@@ -115,7 +130,7 @@ const LandingPage = () => {
           <source src="/video/among-us.mp4" type="video/mp4" />
         </video>
         <div className={styles.suitUp}>
-          <NewButton text="Suit up" />
+          <NewButton text="Suit up" onClick={() => router.push('/marketplace/all/1')} />
         </div>
       </section>
 
@@ -126,7 +141,7 @@ const LandingPage = () => {
         </video>
         <img src="./images/metaverse/roblox-logo.png" className={styles.logo} />
         <div className={styles.suitUp}>
-          <NewButton text="Suit up" />
+          <NewButton text="Suit up" onClick={() => router.push('/marketplace/all/2')} />
         </div>
       </section>
     </div>

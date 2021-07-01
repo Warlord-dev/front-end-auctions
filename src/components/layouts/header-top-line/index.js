@@ -43,7 +43,6 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const chainId = useSelector(getChainId);
   const [hamburger, setHamburger] = useState(false);
   const network = useMemo(() => {
-    console.log(chainId);
     return getEnabledNetworkByChainId(chainId);
   }, [chainId]);
 
@@ -59,7 +58,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const wrongNetworkText =
     pathname !== '/bridge' && pathname !== '/bridge/deposit'
-      ? network.alias !== 'matic'
+      ? network?.alias !== 'matic'
         ? 'Please switch to Matic Network'
         : ''
       : 'Please switch to Mainnet';
@@ -128,7 +127,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
             <a className={styles.link}>Matic-Eth Bridge</a>
           </Link>
         </div>
-        {network.alias !== 'matic' ? (
+        {network?.alias !== 'matic' ? (
           <Button onClick={() => switchNetwork()} className={styles.switchNetwork}>
             Switch Network
           </Button>

@@ -2,17 +2,16 @@ import CollectionCard from '@components/collection-card';
 import React from 'react';
 import styles from './styles.module.scss';
 
-const CollectionList = () => {
-	const array = [1, 2];
+const CollectionList = ({ items }) => {
   return (
-		<>
-			<div className={styles.wrapper}>
-				{array.map((item) => (
-					<CollectionCard />
-				))}
-			</div>
-		</>
-	);
+    <>
+      <div className={styles.wrapper}>
+        {items.map((item) => (
+          <CollectionCard collection={item} />
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default CollectionList;

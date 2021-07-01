@@ -9,6 +9,8 @@ import userActions from '@actions/user.actions';
 import { getUser, getIsLoading } from '@selectors/user.selectors';
 import styles from './styles.module.scss';
 import { useMyIP } from '@hooks/espa/user.hooks';
+import DescriptionCard from '@components/description-card';
+import InfoCard from '@components/info-card';
 
 const EditProfile = ({ history }) => {
   const dispatch = useDispatch();
@@ -65,12 +67,14 @@ const EditProfile = ({ history }) => {
   };
 
   const validateEmail = (email) => {
-    const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const regEx =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regEx.test(String(email).toLowerCase());
   };
 
   const validIp = (address) => {
-    const regEx = /^(([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)$/;
+    const regEx =
+      /^(([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)$/;
     return regEx.test(address);
   };
 
@@ -107,69 +111,79 @@ const EditProfile = ({ history }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.profileWrapper}>
-        <div className={styles.avatarWrapper}>
-          <img src={user.avatar ? user.avatar : '../../../images/user-photo.svg'} />
-          <input
-            id="avatar-upload"
-            type="file"
-            onChange={onChangeFile}
-            hidden
-            accept=".jpg, .png, .gif"
-          />
-          <Button className={styles.uploadButton} background="black" onClick={showBrowserForAvatar}>
-            UPLOAD
-          </Button>
-          <span>JPG, PNG, GIF. NO BIGGER THAN 5MB.</span>
-        </div>
-        <div className={styles.detailsWrapper}>
-          <div className={styles.inputSection}>
-            <span>CHANGE USER ID</span>
-            <input value={user.username} onChange={(e) => onChange(e, 'username')} />
-          </div>
-          <div className={styles.inputSection}>
-            <span>CHANGE EMAIL</span>
-            <input value={user.email} onChange={(e) => onChange(e, 'email')} />
-          </div>
-          <div className={styles.inputSection}>
-            <span>GAME TAGS</span>
-            <p>LIST YOUR FAVOURITE GAMES. SEPARATE BY COMMAS.</p>
-            <input value={user.gameTags} onChange={(e) => onChange(e, 'gameTags')} />
-          </div>
-          <div className={styles.inputSection}>
-            <div className={styles.ipAddrLabel}>
-              <span>IP ADDRESS</span>
-              <span className={styles.questionMark}>?</span>
-              <span className={styles.hint}>
-                DIGITALAX uses your IP Address as an extra authentication for anonymous game
-                environments. You must use the same IP Address in order to participate in certain
-                games.
-              </span>
-            </div>
-            <div className={styles.ipInput}>
+      <div className={styles.cardWrapper}>
+        <InfoCard mainColor={'rgba(247, 207, 207, 0.47)'}>
+          <div className={styles.profileWrapper}>
+            <div className={styles.avatarWrapper}>
+              <img src={user.avatar ? user.avatar : '../../../images/user-photo.svg'} />
               <input
-                value={user.ipAddrs}
-                placeholder="xxx.xxx.xxx.xxx"
-                onChange={(e) => onChange(e, 'ipAddrs')}
+                id="avatar-upload"
+                type="file"
+                onChange={onChangeFile}
+                hidden
+                accept=".jpg, .png, .gif"
               />
-              <Button className={styles.detectIpButton} background="black" onClick={onDetectIp}>
-                DETECT IP
+              <Button
+                className={styles.uploadButton}
+                background="black"
+                onClick={showBrowserForAvatar}
+              >
+                UPLOAD
               </Button>
+              <span>JPG, PNG, GIF. NO BIGGER THAN 5MB.</span>
+            </div>
+            <div className={styles.detailsWrapper}>
+              <div className={styles.inputSection}>
+                <span>CHANGE USER ID</span>
+                <input value={user.username} onChange={(e) => onChange(e, 'username')} />
+              </div>
+              <div className={styles.inputSection}>
+                <span>CHANGE EMAIL</span>
+                <input value={user.email} onChange={(e) => onChange(e, 'email')} />
+              </div>
+              <div className={styles.inputSection}>
+                <span>GAME TAGS</span>
+                <p>LIST YOUR FAVOURITE GAMES. SEPARATE BY COMMAS.</p>
+                <input value={user.gameTags} onChange={(e) => onChange(e, 'gameTags')} />
+              </div>
+              <div className={styles.inputSection}>
+                <div className={styles.ipAddrLabel}>
+                  <span>IP ADDRESS</span>
+                  <span className={styles.questionMark}>?</span>
+                  <span className={styles.hint}>
+                    DIGITALAX uses your IP Address as an extra authentication for anonymous game
+                    environments. You must use the same IP Address in order to participate in
+                    certain games.
+                  </span>
+                </div>
+                <div className={styles.ipInput}>
+                  <input
+                    value={user.ipAddrs}
+                    placeholder="xxx.xxx.xxx.xxx"
+                    onChange={(e) => onChange(e, 'ipAddrs')}
+                  />
+                  <Button className={styles.detectIpButton} background="black" onClick={onDetectIp}>
+                    DETECT IP
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+          <div className={styles.buttonsWrapper}>
+            <Button className={styles.saveButton} background="black" onClick={saveProfile}>
+              SAVE
+            </Button>
+            <Button
+              className={styles.backProfileButton}
+              background="black"
+              onClick={() => Router.push('/profile')}
+            >
+              BACK TO PROFILE
+            </Button>
+          </div>
+          {isLoading && <Loader size="large" className={styles.pageLoader} />}
+        </InfoCard>
       </div>
-      <Button className={styles.saveButton} background="black" onClick={saveProfile}>
-        SAVE
-      </Button>
-      <Button
-        className={styles.backProfileButton}
-        background="black"
-        onClick={() => Router.push('/profile')}
-      >
-        BACK TO PROFILE
-      </Button>
-      {isLoading && <Loader size="large" className={styles.pageLoader} />}
     </div>
   );
 };

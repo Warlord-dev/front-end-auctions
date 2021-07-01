@@ -1,12 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 import HeroBar from '@components/hero-bar';
 import ImageCard from '@components/image-card';
 import styles from './styles.module.scss';
 import InfoCard from '@components/info-card';
 import NewButton from '@components/buttons/newbutton';
 import Container from '@components/container';
+import { getGarmentV2ByAuctionId, getGarmentV2ByCollectionId } from '@services/api/apiService';
+import { getChainId } from '@selectors/global.selectors';
 
 const Product = () => {
+  const router = useRouter();
+  const { id, rarity } = router.query;
+  const chainId = useSelector(getChainId);
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    if (id) {
+      const fetchGarmentV2ByID = async () => {
+        if (rarity !== '1') {
+          const { digitalaxGarmentV2Collection } = await getGarmentV2ByCollectionId(chainId, id);
+          setProduct({
+            id: digitalaxGarmentV2Collection.id,
+            garment: digitalaxGarmentV2Collection.garments[0]
+          });
+        } else {
+          const { digitalaxGarmentV2Auction } = await getGarmentV2ByAuctionId(chainId, id);
+          setProduct(digitalaxGarmentV2Auction);
+        }
+      }
+
+      fetchGarmentV2ByID();
+    }
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <section className={styles.mainSection}>
@@ -16,7 +44,7 @@ const Product = () => {
         <Container>
           <div className={styles.body}>
             <div className={styles.mainBody}>
-              <ImageCard />
+              <ImageCard data={product} libon={rarity} />
               <div className={styles.infoWrapper}>
                 <InfoCard libon="./images/metaverse/Gamepad 1.png">
                   <div className={styles.infoCard}>

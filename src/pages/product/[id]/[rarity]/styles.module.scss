@@ -1,0 +1,206 @@
+@import '../../../../assets/scss/helpers/grid.scss';
+
+.wrapper {
+  section {
+    position: relative;
+    overflow: hidden;
+    .video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+      z-index: 0;
+      margin-bottom: -5px;
+    }
+
+    .body {
+      padding: 7.5rem 5rem;
+
+      @include xs-width {
+        padding: 7.5rem 2rem;
+      }
+
+      @include md-width {
+        padding: 7.5rem 7.5rem;
+      }
+      
+      @include xl-width {
+        padding: 7.5rem 5rem;
+      }
+      
+      @include xxl-width {
+        padding: 7.5rem 5rem;
+      }
+
+      .mainBody {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        
+        @include md-width {
+          grid-template-columns: auto 40%;
+        }
+        
+        @include lg-width {
+          gap: 5rem;
+        }
+        
+        @include xl-width {
+          gap: 7.5rem;
+        }
+        
+        @include xxl-width {
+          gap: 10rem;
+        }
+        
+        .infoWrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+
+        .infoCard {
+          color: white;
+          font-family: Gilroy;
+          font-size: 22px;
+          font-weight: 800;
+          text-transform: uppercase;
+          line-height: 27px;
+
+          img {
+            position: relative;
+            width: 50px;
+            border-radius: 0.5rem;
+            margin-right: 1rem;
+          }
+
+          .info {
+            display: flex;
+            align-items: center;
+          }
+
+          .skinName,
+          .designer,
+          .developer {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        .actions {
+          margin-top: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          z-index: 10;
+
+          .gamePad {
+            position: relative;
+            height: 100px;
+          }
+
+          .buttonWrapper {
+            display: flex;
+            flex-direction: column;
+
+            button {
+              width: 220px;
+              margin: auto;
+            }
+
+            a {
+              text-transform: uppercase;
+              text-align: center;
+              color: white;
+              font-family: Inter;
+              font-weight: 800;
+              font-size: 17px;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .designerBody,
+    .developerBody {
+      position: relative;
+
+      @include xs-width {
+        padding: 2rem;
+      }
+      
+      @include md-width {
+        padding: 7.5rem 7.5rem;
+      }
+      
+      @include xl-width {
+        padding: 7.5rem 5rem;
+      }
+      
+      @include xxl-width {
+        padding: 7.5rem 5rem;
+      }
+
+      .title {
+        font-size: 60px;
+        font-family: Gilroy;
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-shadow: #f82ba2 -2px 0px 14px;
+      }
+
+      .data {
+        padding: 3rem 5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+
+        @include md-width {
+          grid-template-columns: auto 40%;
+        }
+        
+        @include lg-width {
+          padding: 3rem 0rem;
+          gap: 5rem;
+        }
+        
+        @include xl-width {
+          padding: 3rem 5rem;
+          gap: 7.5rem;
+        }
+        
+        @include xxl-width {
+          padding: 3rem 5rem;
+          gap: 10rem;
+        }
+
+        .infoWrapper {
+          display: flex;
+          align-items: center;
+        }
+
+        .name {
+          text-transform: uppercase;
+          color: white;
+          font-size: 22px;
+          line-height: 27px;
+          font-weight: 800;
+          font-family: Gilroy;
+        }
+
+        .description {
+          font-family: Gilroy;
+          font-weight: 300;
+          font-size: 1rem;
+          line-height: 18px;
+          color: white;
+        }
+      }
+    }
+  }
+}
