@@ -137,7 +137,7 @@ const LandingPage = () => {
       <section className={styles.robloxSection} id="roblox">
         <img src="./images/metaverse/section-texture.png" className={styles.back} />
         <video autoPlay loop muted playsInline>
-          <source src="/video/among-us.mp4" type="video/mp4" />
+          <source src="/video/roblox.mp4" type="video/mp4" />
         </video>
         <img src="./images/metaverse/roblox-logo.png" className={styles.logo} />
         <div className={styles.suitUp}>

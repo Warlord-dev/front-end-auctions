@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import CollectionInfoCard from './collection-info-card';
 import styles from './styles.module.scss';
 
 const CollectionCard = ({ collection }) => {
@@ -21,12 +22,7 @@ const CollectionCard = ({ collection }) => {
             </video>
           </div>
         </div>
-        <Link href={`/marketplace/rarity/${collection.id}`}>
-          <a className={styles.link}>
-            view collection
-            <img src="./images/metaverse/yellow-right-arrow.png" />
-          </a>
-        </Link>
+        <CollectionInfoCard collection={collection} />
       </div>
     </>
   );

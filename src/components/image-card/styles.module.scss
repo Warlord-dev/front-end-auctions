@@ -1,16 +1,85 @@
+@import '../../assets/scss/helpers/grid.scss';
+
 .wrapper {
-  .name {
-    position: relative;
-    color: white;
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 44px;
-    margin-bottom: 1rem;
-    margin-left: 2rem;
-    width: calc(100% - 4rem);
+  width: 100%;
+  margin: auto;
+
+  @include sm-width {
+    width: 400px;
+
+    .bodyWrapper {
+      height: 400px;
+    }
   }
+
+  @include md-width {
+    width: 500px;
+
+    .bodyWrapper {
+      height: 500px;
+    }
+  }
+
+  @include lg-width {
+    width: 350px;
+
+    .bodyWrapper {
+      height: 350px;
+    }
+  }
+
+  @include xl-width {
+    width: 400px;
+
+    .bodyWrapper {
+      height: 400px;
+    }
+  }
+
+  @include xxl-width {
+    width: 500px;
+
+    .bodyWrapper {
+      height: 500px;
+    }
+  }
+
+  .designerWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .photo {
+      width: 50px;
+      margin-right: 1rem;
+    }
+
+    .name {
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 27px;
+      /* identical to box height */
+
+
+      color: #FFFFFF;
+    }
+  }
+
+  // .name {
+  //   position: relative;
+  //   color: white;
+  //   font-family: Gilroy;
+  //   font-style: normal;
+  //   font-weight: 800;
+  //   font-size: 36px;
+  //   line-height: 44px;
+  //   margin-bottom: 1rem;
+  //   margin-left: 2rem;
+  //   width: calc(100% - 4rem);
+  // }
 
   .bodyWrapper {
     position: relative;

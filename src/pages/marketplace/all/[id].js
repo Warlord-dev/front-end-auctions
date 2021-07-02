@@ -10,6 +10,7 @@ import { getCollectionGroupById } from '@services/api/apiService';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import HeroSection from '@components/hero-section';
+import ProductInfoCard from '@components/product-info-card';
 
 const All = () => {
   const route = useRouter();
@@ -66,12 +67,13 @@ const All = () => {
             <video autoPlay muted loop className={styles.backVideo}>
               <source src="./images/metaverse/all_skins.mp4" type="video/mp4" />
             </video>
-            <img src="./images/metaverse/Gamepad 4.png" className={styles.gamePad} />
             <Container>
               <div className={styles.body}>
-                <ImageCard data={auctions[index]} showName />
+                <ProductInfoCard product={auctions[index]} />
+                {/* <ImageCard data={auctions[index]} showName /> */}
                 {index + 1 < auctions.length ? (
-                  <ImageCard data={auctions[index + 1]} showName />
+                  <ProductInfoCard product={auctions[index]} />
+                  // <ImageCard data={auctions[index + 1]} showName />
                 ) : null}
               </div>
             </Container>
@@ -86,12 +88,13 @@ const All = () => {
             <video autoPlay muted loop className={styles.backVideo}>
               <source src="./images/metaverse/all_skins.mp4" type="video/mp4" />
             </video>
-            <img src="./images/metaverse/Gamepad 4.png" className={styles.gamePad} />
             <Container>
               <div className={styles.body}>
-                <ImageCard data={collections[index]} showName />
+                <ProductInfoCard product={collections[index]} />
+                {/* <ImageCard data={collections[index]} showName /> */}
                 {index + 1 < collections.length ? (
-                  <ImageCard data={collections[index + 1]} showName />
+                  <ProductInfoCard product={collections[index]} />
+                  // <ImageCard data={collections[index + 1]} showName />
                 ) : null}
               </div>
             </Container>

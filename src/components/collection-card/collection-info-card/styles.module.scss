@@ -1,0 +1,36 @@
+.wrapper {
+
+  .cardBodyWrapper {
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      padding: 1rem;
+      font-family: Gilroy;
+      background: rgba(247, 207, 207, 0.47);
+      color: white;
+      font-weight: bold;
+      margin-bottom: 1rem;
+  
+      img {
+        height: 2rem;
+      }
+  
+      &:hover {
+        img {
+          animation: rightMove 1s infinite;
+        }
+      }
+    }
+    
+    .pricesWrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+
+}

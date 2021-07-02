@@ -38,7 +38,7 @@
         grid-template-columns: 1fr;
         gap: 5rem;
         
-        @include md-width {
+        @include lg-width {
           grid-template-columns: auto 40%;
         }
         
@@ -160,7 +160,7 @@
         grid-template-columns: 1fr;
         gap: 5rem;
 
-        @include md-width {
+        @include lg-width {
           grid-template-columns: auto 40%;
         }
         

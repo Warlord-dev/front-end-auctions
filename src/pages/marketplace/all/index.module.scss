@@ -47,7 +47,7 @@
       grid-template-columns: 1fr;
       gap: 5rem;
 
-      @include md-width {
+      @include lg-width {
         grid-template-columns: repeat(2, 1fr);
       }
 

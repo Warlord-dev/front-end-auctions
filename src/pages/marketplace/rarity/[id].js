@@ -40,8 +40,6 @@ const MarketplaceRarity = () => {
 
       setCollections(colls);
       setAuctions(aucs);
-
-      console.log({ digitalaxCollectionGroup });
     };
 
     fetchCollectionGroup();

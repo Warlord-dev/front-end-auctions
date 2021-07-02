@@ -2,18 +2,10 @@ import React, { useState } from 'react';
 import ImageCard from '@components/image-card';
 import DescriptionCard from '@components/description-card';
 import styles from './styles.module.scss';
+import { getRarityId } from '@utils/helpers';
 
 const ProductCard = ({ products, rarity }) => {
   const [selected, setSelected] = useState(0);
-  const getLibonId = () => {
-    if (rarity === 'Exclusive') {
-      return 1;
-    } else if (rarity === 'Semi-Rare') {
-      return 2;
-    } else {
-      return 3;
-    }
-  };
 
   return (
     <div className={styles.wrapper}>
@@ -30,7 +22,7 @@ const ProductCard = ({ products, rarity }) => {
           />
           <div className={styles.imageInnerWrapper}>
             <div className={styles.rarity}>{rarity.replace('-', ' ')}</div>
-            <ImageCard libon={getLibonId()} data={products[selected]} />
+            <ImageCard libon={getRarityId(rarity)} data={products[selected]} />
           </div>
           <img
             src="./images/metaverse/right-arrow-pink.png"
