@@ -168,7 +168,13 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend Giga"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Beth Ellen"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jockey One"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baumans"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Modak"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Akronim"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mate"></link>
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
@@ -184,6 +190,8 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Carme"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Corben"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Convergence"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asap"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Miltonian"></link>
           <link rel="stylesheet"
