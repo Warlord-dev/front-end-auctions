@@ -1,0 +1,27 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  color: white;
+  display: flex;
+  position: relative;
+  
+}
+
+.txt_1_1{
+    position: absolute;
+    width: 1343px;
+    height: 85px;
+    left: 52px;
+    top: 1451px;
+
+    font-family: Abel;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: #FFFFFF;
+
+    transform: rotate(-90deg);
+}
