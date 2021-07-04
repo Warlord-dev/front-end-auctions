@@ -179,6 +179,11 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon"></link>  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar"></link>  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@700"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Griffy"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Just+Another+Hand"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Shadow"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Offside"></link>  
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
@@ -699,6 +704,16 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'League Gothic';
+              src: url("./fonts/LeagueGothic-Regular.otf");
+            }
+
+            @font-face {
+              font-family: 'ThickDeco';
+              src: url("./fonts/ThickDeco.ttf");
+            }
+
+            @font-face {
               font-family: 'NATS';
               src: url("./fonts/NATS-Regular.woff");
             }
@@ -793,6 +808,12 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Joti One';
               src: url("./fonts/JotiOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Cherry Bomb';
+              src: url("./fonts/CherryBomb-Regular.ttf");
               font-weight: 400;
             }
 

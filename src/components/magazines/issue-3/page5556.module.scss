@@ -2,6 +2,40 @@
 
 .wrapper {
     @include magazineWrapper();    
-
+    background: #FFFFFF;
     
+    .image1 {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 0px;
+        top: 0px;
+        
+        background: #F43C41;
+    }
+    .text1 {
+        position: absolute;
+        width: 580px;
+        height: 1120px;
+        left: 181px;
+        top: 69px;
+        
+        font-family: Cherry Bomb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 120.53%;
+        /* or 18px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    .image2 {
+        position: absolute;
+        width: 1076px;
+        height: 1244px;
+        left: -109px;
+        top: 701px;
+    }
 }
