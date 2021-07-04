@@ -18,7 +18,7 @@ const Profile = ({ history }) => {
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }
-  const account = '0xb0CD38895f459d835541bd12eCB09CE99f57d7f9'; // useSelector(getAccount);
+  const account = useSelector(getAccount);
   const nfts = useNFTs(account);
   const getGameTags = (str) => {
     if (!str) {
