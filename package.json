@@ -1,6 +1,6 @@
 {
-  "name": "digitalax-front",
-  "version": "0.1.1",
+  "name": "digitalax-digifizzy",
+  "version": "0.2.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -68,6 +68,7 @@
     "qs": "^6.9.3",
     "rc-slider": "^9.7.2",
     "react": "^16.13.1",
+    "react-animejs": "^0.5.6",
     "react-audio-player": "^0.17.0",
     "react-dom": "^16.13.1",
     "react-facebook-pixel": "^1.0.4",

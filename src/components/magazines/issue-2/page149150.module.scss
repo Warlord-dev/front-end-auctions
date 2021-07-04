@@ -1,0 +1,102 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  color: white;
+  display: flex;
+  position: relative;
+
+  .back {
+    position: absolute;
+    width: 1977px;
+    height: 1552px;
+    left: -24px;
+    top: -2px;
+    filter: blur(10px);
+  }
+
+  .image1 {
+    position: absolute;
+    width: 972px;
+    height: 1499px;
+    left: -8px;
+    top: -2px;
+    overflow: hidden;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 1473px;
+    height: 736px;
+    left: 432px;
+    top: 13px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 856px;
+    left: 964px;
+    top: 641px;
+    overflow: hidden;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 274px;
+    height: 530px;
+    left: 992px;
+    top: 36px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 465px;
+    height: 503px;
+    left: 1412px;
+    top: 14px;
+    overflow: hidden;
+  }
+
+  .video1 {
+    width: 100%;
+  }
+
+  .video3 {
+    height: 100%;
+  }
+
+  .video2 {
+    width: 100%;
+  }
+
+  .video4 {
+    width: 100%;
+  }
+
+
+
+  .playbutton1 {
+    position: absolute;
+    width: 104.81px;
+    height: 103.17px;
+    right: 39px;
+    top: 38px;
+  }
+
+  .playbutton2 {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    left: 28px;
+    bottom: 26px;
+  }
+
+  .playbutton3 {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    right: 28px;
+    bottom: 26px;
+  }
+}

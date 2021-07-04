@@ -1,0 +1,11 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: #FFFFFF;
+  display: flex;
+  position: relative;
+
+  
+}

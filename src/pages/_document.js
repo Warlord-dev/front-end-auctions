@@ -156,6 +156,8 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Averia+Libre"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Bayon"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Ramabhadra"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rosarivo"></link>
           <link
             rel="stylesheet"
@@ -166,7 +168,22 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend Giga"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Beth Ellen"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jockey One"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baumans"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Modak"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Akronim"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mate"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@600"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@700"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Griffy"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Just+Another+Hand"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Shadow"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Offside"></link>  
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
@@ -182,6 +199,8 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Carme"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Corben"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Convergence"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asap"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Miltonian"></link>
           <link rel="stylesheet"
@@ -685,6 +704,16 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'League Gothic';
+              src: url("./fonts/LeagueGothic-Regular.otf");
+            }
+
+            @font-face {
+              font-family: 'ThickDeco';
+              src: url("./fonts/ThickDeco.ttf");
+            }
+
+            @font-face {
               font-family: 'NATS';
               src: url("./fonts/NATS-Regular.woff");
             }
@@ -783,6 +812,12 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Cherry Bomb';
+              src: url("./fonts/CherryBomb-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
               font-family: 'THE AMAZING SPIDER-MAN';
               src: url("./fonts/The Amazing Spider-Man.ttf");
               font-weight: 400;
@@ -842,6 +877,18 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Montserrat';
               src: url("./fonts/Montserrat-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Krungthep';
+              src: url("./fonts/Krungthep.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Moonrising';
+              src: url("./fonts/Moonrising.ttf");
               font-weight: 400;
             }
 
@@ -1221,6 +1268,12 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: "Thunder Trooper";
+              src: url("./fonts/thundertrooper.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
               font-family: "Doctor Glitch";
               src: url("./fonts/Doctor Glitch.otf");
               font-weight: 400;
@@ -1236,6 +1289,12 @@ class MyDocument extends Document {
               font-family: "Post No Bills Colombo SemiBold";
               src: url("./fonts/PostNoBillsColombo-Regular.woff");
               font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Post No Bills Colombo ExtraBold";
+              src: url("./fonts/PostNoBillsColombo-ExtraBold.ttf");
+              font-weight: 800;
             }
 
             @font-face {

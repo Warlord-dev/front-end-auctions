@@ -1,0 +1,28 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    background-color: #FFFFFF;
+    display: flex;
+    position: relative;
+
+    section {
+        position: absolute;
+        top: 500px;
+    }
+    .blue {
+        width: 2rem;
+        height: 2rem;
+        background-color: #206EFF;
+    }
+    .green {
+        width: 2rem;
+        height: 2rem;
+        background-color: #31FFA6;
+    }
+    .red {
+        width: 2rem;
+        height: 2rem;
+        background-color: #FF324A;
+    }
+}

@@ -1,0 +1,72 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    background: #FFFFFF;
+
+    .image1 {
+        position: absolute;
+        width: 1061px;
+        height: 487px;
+        left: 927px;
+        top: -131px;
+    }
+    .text1 {
+        position: absolute;
+        width: 231px;
+        height: 85px;
+        left: 1161px;
+        top: 203px;
+        
+        font-family: Cherry Bomb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 33px;
+        line-height: 120.53%;
+        /* or 40px */
+        
+        text-align: center;
+        
+        color: #F82020;
+        
+        text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+    }
+    .text2 {
+        position: absolute;
+        width: 630px;
+        height: 42px;
+        left: 1220px;
+        top: 302px;
+        
+        font-family: Cherry Bomb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 33px;
+        line-height: 120.53%;
+        /* or 40px */
+        
+        text-align: center;
+        
+        color: #F82020;
+        
+        text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+    }
+    .text3 {
+        position: absolute;
+        width: 580px;
+        height: 852px;
+        left: 1160px;
+        top: 432px;
+        
+        font-family: Griffy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 120.53%;
+        /* or 18px */
+        
+        text-align: center;
+        
+        color: #000000;
+    }
+}
