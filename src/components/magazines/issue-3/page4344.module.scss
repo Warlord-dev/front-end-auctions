@@ -2,44 +2,4 @@
 .wrapper {
   @include magazineWrapper();    
   
-  .image1 {
-    position: absolute;
-    width: 1920px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
-  }
-  .image2 {
-    position: absolute;
-    width: 515px;
-    height: 2px;
-    left: 702.5px;
-    top: 257.5px;
-    transform: rotate(90deg);
-  }
-  .image3 {
-    position: absolute;
-    width: 116px;
-    height: 423px;
-    left: 903px;
-    top: 1074px;
-  }
-  .text1 {
-    position: absolute;
-    width: 1331px;
-    height: 400px;
-    left: 294px;
-    top: 591px;
-    
-    font-family: Heaven Wanders DEMO;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 200px;
-    line-height: 100%;
-    /* or 200px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
 }

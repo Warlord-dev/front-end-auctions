@@ -175,6 +175,10 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Modak"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Akronim"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mate"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@600"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@700"></link>  
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
@@ -856,6 +860,18 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Krungthep';
+              src: url("./fonts/Krungthep.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Moonrising';
+              src: url("./fonts/Moonrising.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
               font-family: 'Montserrat';
               src: url("./fonts/Montserrat-Bold.ttf");
               font-weight: 700;
@@ -1227,6 +1243,12 @@ class MyDocument extends Document {
             @font-face {
               font-family: "Hello Avocado";
               src: url("./fonts/Hello Avocado.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Thunder Trooper";
+              src: url("./fonts/thundertrooper.ttf");
               font-weight: 400;
             }
 
