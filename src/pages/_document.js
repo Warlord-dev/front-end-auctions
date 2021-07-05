@@ -186,7 +186,8 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Offside"></link>  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eczar"></link>  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Song+Myung"></link> 
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Milonga"></link>  
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
@@ -968,6 +969,11 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Carme';
               src: url("./fonts/Carme-Regular.ttf");
+            }
+
+            @font-face {
+              font-family: 'CropFontXtra';
+              src: url("./fonts/CropFontXtra.ttf");
             }
             
             @font-face {
