@@ -7,5 +7,25 @@
   display: flex;
   position: relative;
 
-  
+  .image1 {
+    position: absolute;
+    width: 959px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+  .image2 {
+    position: absolute;
+    width: 1141px;
+    height: 1669px;
+    left: 959px;
+    top: 0px;
+  }
+  .image3 {
+    position: absolute;
+    width: 870px;
+    height: 520px;
+    left: 1049px;
+    top: 147px;
+  }
 }

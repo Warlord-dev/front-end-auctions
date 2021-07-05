@@ -184,6 +184,9 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower"></link>  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Shadow"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Offside"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eczar"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Song+Myung"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue"></link>  
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
@@ -681,6 +684,21 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'FresHot_DEMO';
               src: url("./fonts/FresHot_DEMO.ttf");
+            }
+
+            @font-face {
+              font-family: 'Pilat Extended';
+              src: url("./fonts/PilatExtended-Black.ttf");
+            }
+
+            @font-face {
+              font-family: 'Armageda Wide';
+              src: url("./fonts/Armageda Wide.ttf");
+            }
+
+            @font-face {
+              font-family: 'Arial Black';
+              src: url("./fonts/ariblk.ttf");
             }
 
             @font-face {

@@ -38,4 +38,29 @@
         left: -109px;
         top: 701px;
     }
+    .image3 {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+    }
+    .text2 {
+        position: absolute;
+        width: 566px;
+        height: 75px;
+        left: 1172px;
+        top: 102px;
+        
+        font-family: Neon Nanoborg;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 120px;
+        line-height: 90%;
+        /* or 108px */
+        
+        text-align: center;
+        
+        color: #FF0F00;
+    }
 }

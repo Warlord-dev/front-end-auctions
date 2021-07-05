@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './page5556.module.scss';
+import Link from 'next/link';
 
 const Page5556 = () => {
   return (
@@ -20,6 +21,12 @@ Conclusion
 We’re past the point of hype. The quantum leaps and bounds we see in finance as driven by crypto are but a little taste of what’s possible as far as money’s function is concerned. Yes, the DeFi space is fledgling, with plenty of lost time to make up against legacy financial services and technology. But the possibility of how radically finance can be transformed when anyone with a modicum of coding knowledge can freely participate in building their own solution in the coming years is a future so tantalizing it’s worth paying to see.
 </p>  
       <img src="/magazine/3/images/55_56/image1.png" className={styles.image2}/>  
+      <img src="/magazine/3/images/55_56/image2.png" className={styles.image3}/>  
+      <Link href="https://www.instagram.com/abigneonglitter/">
+        <a target="_blank">
+          <p className={styles.text2}>ABigNeonGlitter</p>   
+        </a>
+      </Link>
     </div>
   );
 };
