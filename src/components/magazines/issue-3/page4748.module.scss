@@ -2,27 +2,175 @@
 
 .wrapper {
     @include magazineWrapper();    
-    background-color: #FFFFFF;
-    display: flex;
-    position: relative;
+    background: #FFFFFF;
 
-    section {
+    .image1 {
         position: absolute;
-        top: 500px;
+        width: 1061px;
+        height: 487px;
+        left: 927px;
+        top: -131px;
     }
-    .blue {
-        width: 2rem;
-        height: 2rem;
-        background-color: #206EFF;
+    .text1 {
+        position: absolute;
+        width: 231px;
+        height: 85px;
+        left: 1161px;
+        top: 203px;
+        
+        font-family: Cherry Bomb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 33px;
+        line-height: 120.53%;
+        /* or 40px */
+        
+        text-align: center;
+        
+        color: #F82020;
+        
+        text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
     }
-    .green {
-        width: 2rem;
-        height: 2rem;
-        background-color: #31FFA6;
+    .text2 {
+        position: absolute;
+        width: 630px;
+        height: 42px;
+        left: 1220px;
+        top: 302px;
+        
+        font-family: Cherry Bomb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 33px;
+        line-height: 120.53%;
+        /* or 40px */
+        
+        text-align: center;
+        
+        color: #F82020;
+        
+        text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
     }
-    .red {
-        width: 2rem;
-        height: 2rem;
-        background-color: #FF324A;
+    .text3 {
+        position: absolute;
+        width: 580px;
+        height: 852px;
+        left: 1160px;
+        top: 432px;
+        
+        font-family: Griffy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 120.53%;
+        /* or 18px */
+        
+        text-align: center;
+        
+        color: #000000;
+    }
+    .image2 {
+        position: absolute;
+        width: 927px;
+        height: 1498px;
+        left: 0px;
+        top: -1px;
+    }
+    .image3 {
+        position: absolute;
+        width: 92px;
+        height: 92px;
+        left: 819px;
+        top: 1405px;
+    }
+    .text4 {
+        position: absolute;
+        width: 206px;
+        height: 63px;
+        left: 235px;
+        top: 21px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 120.53%;
+        /* or 66px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    .text5 {
+        position: absolute;
+        width: 206px;
+        height: 63px;
+        left: 441px;
+        top: 21px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 120.53%;
+        /* or 66px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;        
+    }
+    .text6 {
+        position: absolute;
+        width: 206px;
+        height: 63px;
+        left: 651px;
+        top: 21px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 120.53%;
+        /* or 66px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    .text7 {
+        position: absolute;
+        width: 206px;
+        height: 63px;
+        left: 338px;
+        top: 79px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 120.53%;
+        /* or 66px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    .text8 {
+        position: absolute;
+        width: 206px;
+        height: 63px;
+        left: 548px;
+        top: 79px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 120.53%;
+        /* or 66px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
     }
 }

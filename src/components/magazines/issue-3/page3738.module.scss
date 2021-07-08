@@ -2,10 +2,77 @@
 
 .wrapper {
   @include magazineWrapper();
-  background-color: white;
-  color: black;
-  display: flex;
-  position: relative;
+  background-color: #FFFFFF;
 
- 
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: -9px;
+    top: 0px;
+    
+    background: #000000;
+  }
+  .text1 {
+    position: absolute;
+    width: 853px;
+    height: 300px;
+    left: 35px;
+    top: 20px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 150px;
+    
+    color: #FFFFFF;
+  }
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 53px;
+    left: 0px;
+    top: 316px;
+    
+    background: #FFFFFF;
+  }
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 53px;
+    left: 0px;
+    top: 388px;
+    
+    background: #D34CF5;
+  }
+  .text2 {
+    position: absolute;
+    width: 722px;
+    height: 150px;
+    left: 49px;
+    top: 539px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    
+    color: #FFFFFF;
+    .bold {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  .image4 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
 }

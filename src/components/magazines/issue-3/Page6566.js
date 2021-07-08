@@ -6,13 +6,30 @@ const Page6566 = () => {
  
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/65_66/image1.png" className={styles.image1}/>  
-     <p className={styles.text1}>I'm a fashion and costume designer with a Master's from IED Milano. Since childhood, I have loved to sew and come up with different models.When home supplies ran out, I decided it was time to make it a profession of it. I have a clothing brand for which I make mini collections of unique things, dance clothes and I also design costumes for theaters. Recently I fell in love with virtual fashion and now I am developing in this direction.</p>   
-     <Link href="https://www.instagram.com/bugazdesign/">
+      <div className={styles.image1}>
+        <video className={styles.image2} muted loop autoPlay>
+          <source src="./magazine/3/images/65_66/video1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <Link href="https://www.instagram.com/hugorichel/">
         <a target="_blank">
-          <p className={styles.text2}>BUGAS</p>   
+        <p className={styles.text1}>Hugo Richel</p> 
         </a>
-      </Link> 
+      </Link>
+      <p className={styles.text2}>SUTAN FILTER</p> 
+      <img src="/magazine/3/images/65_66/image1.png" className={styles.image3}/> 
+      <p className={styles.text3}> Blue Averan</p> 
+      <p className={styles.text4}>
+I’m Tiago Filipe (or James Phillip). I’m a self taught  3D artist living in Portugal. I love fashion, but I don’t have any background in it.
+ <br/><br/>
+I discovered DazStudio in 2018 and, since I didn’t own many assets, I decided to learn how to create 3D clothes to use in my characters when creating art. I've learnt Marvelous Designer and Autodesk Maya to create 3D Outfits for DazStudio.
+<br/><br/>
+Now I'm a PA (Published Artist) at Renderosity always looking to improve my store with new outfits. I look for inspiration in the web in sites like Pinterest and sometimes i try to recreate designs from known Fashion Designers like Dior, Versace or Alexander McQueen</p> 
+      <Link href="https://www.instagram.com/tiago.filipe.silva/?hl=en">
+        <a target="_blank">
+        <p className={styles.text5}>Tiago Filipe</p>  
+        </a>
+      </Link>
     </div>
   );
 };

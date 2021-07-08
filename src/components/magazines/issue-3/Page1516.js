@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styles from './page1516.module.scss';
+import Link from 'next/link';
 
 const Page1516 = () => {
   return (
@@ -28,10 +29,27 @@ Inverse Finance is a simple, clean and highly effective earnings protocol, depos
 <span className={styles.title}>OCTOFI</span><br/>
 OctoFi offers all DeFi solutions, from token swaps, liquidity mining, lending, orderbook trading, derivatives trading, token set investing, NFTs to fiat on and off ramps, all from a single user-friendly platform with great design. OctoFi can be thought of as an interface with the major existing DeFi platforms, so it will execute a swap or provide liquidity using Uniswap, Sushi, Balancer, etc, do orderbook trading through 0x, borrow crypto using Aave, or trade NFTs through Opensea. The efficiency this brings to users is unmatched where, for example, if you wanted to do a swap between two tokens, OctoFi will aggregate data from 32 exchanges, including Uniswap, Sushiswap, 1inch, Balancer, Ox, Airswap, Kber, Bancor, Radar Relay and others, and recommend the one with the best price at that moment. On top of this, OctoFi also has it’s own native token, $OCTO, that will be used for governance on the platform, and, 100% of platform fees will be distributed to $OCTO holders! These fees will come from spot trading fees (0.2%), and partner commissions on swaps, fiat gateways or NFT trading.</p>
       <p className={styles.text5}>- rafi_0X</p>
-      <img src="/magazine/3/images/15_16/image5.png" className={styles.image8}/>
-      <img src="/magazine/3/images/15_16/image5.png" className={styles.image9}/>
-      <img src="/magazine/3/images/15_16/image5.png" className={styles.image10}/>
-      <img src="/magazine/3/images/15_16/image5.png" className={styles.image11}/>
+      <Link href="https://twitter.com/Rafi_0x/status/1376266462722203654">
+        <a target="_blank">
+        <img src="/magazine/3/images/15_16/image5.png" className={styles.image8}/>
+        </a>
+      </Link>
+      <Link href="https://twitter.com/Rafi_0x/status/1402025915438317568">
+        <a target="_blank">
+        <img src="/magazine/3/images/15_16/image5.png" className={styles.image9}/>
+        </a>
+      </Link>
+      <Link href="https://twitter.com/Rafi_0x/status/1364683174513631233">
+        <a target="_blank">
+        <img src="/magazine/3/images/15_16/image5.png" className={styles.image10}/>
+        </a>
+      </Link>
+      <Link href="https://twitter.com/Rafi_0x">
+        <a target="_blank">
+        <img src="/magazine/3/images/15_16/image5.png" className={styles.image11}/>
+        </a>
+      </Link>
+      
       
     </div>
   );

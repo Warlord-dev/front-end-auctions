@@ -1,5 +1,10 @@
 @import './styles.module.scss';
 
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-602px); }
+}
+
 .wrapper {
   @include magazineWrapper();
   background-color: black;
@@ -7,5 +12,77 @@
   display: flex;
   position: relative;
 
-  
+  .backImage1 {
+    position: absolute;
+    width: 960px;
+    height: 1519px;
+    left: 0px;
+    top: -22px;
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 808px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+
+  .leftSideFrame {
+    position: absolute;
+    width: 149px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(255 153 54);
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .rightSideFrame {
+    position: absolute;
+    width: 152px;
+    height: 1497px;
+    left: 1768px;
+    top: 0px;
+    background-color: rgb(255 153 54);
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .animationFrame {
+    animation: scrolling 4s linear infinite;
+  }
+
+
+  .leftSideImageWrapper {
+    position: absolute;
+    width: 92.28px;
+    left: 31px;
+    top: 36px;
+  }
+
+  .rightSideImageWrapper {
+    position: absolute;
+    width: 83px;
+    height: 1660px;
+    right: 31px;
+    top: 36px;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 1616px;
+    height: 1497px;
+    left: 155px;
+    top: 0px;
+  }
+  .image2 {
+    position: absolute;
+    width: 560px;
+    height: 160px;
+    left: 155px;
+    top: 15px;
+  }
 }

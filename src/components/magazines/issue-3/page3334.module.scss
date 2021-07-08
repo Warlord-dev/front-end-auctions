@@ -13,6 +13,11 @@
     height: 1497px;
     left: 0px;
     top: 0px;
+    overflow: hidden;
+    .image4 {
+      position: absolute;
+      left: -250px;
+    }
   }
   .image2 {
     position: absolute;

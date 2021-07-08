@@ -188,6 +188,16 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Song+Myung"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Milonga"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Didact+Gothic"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Knewave"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@600"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@700"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Odibee+Sans"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700"></link>  
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali:wght@700"></link> 
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
@@ -996,6 +1006,11 @@ class MyDocument extends Document {
               font-family: 'XXII-ARMY';
               src: url("./fonts/XXIISTRAIGHT-ARMY.ttf");
             }
+
+            @font-face {
+              font-family: 'Fatcat';
+              src: url("./fonts/FatCat.otf");
+            }
    
             @font-face {
               font-family: 'DIN Alternate';
@@ -1005,6 +1020,11 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Think Thick';
               src: url("./fonts/Think Thick.ttf");
+            }
+
+            @font-face {
+              font-family: 'Counter-Strike';
+              src: url("./fonts/cs_regular.ttf");
             }
 
             @font-face {
@@ -1069,6 +1089,12 @@ class MyDocument extends Document {
             @font-face {
               font-family: "Ceviche One";
               src: url("./fonts/CevicheOne-Regular.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: "Evil Highway";
+              src: url("./fonts/Evil Highway.ttf");
               font-weight: 400;
             }
 

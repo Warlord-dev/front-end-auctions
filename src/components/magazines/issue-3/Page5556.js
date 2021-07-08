@@ -1,32 +1,47 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './page5556.module.scss';
 import Link from 'next/link';
 
 const Page5556 = () => {
+  const [play, setPlay] = useState(false);
+  const ref1 = useRef();
+  const refAudio = useRef();
   return (
     <div className={styles.wrapper}>
-      <div className={styles.image1}></div>
-      <p className={styles.text1}>Caveat emptor
-DeFi, like blockchain technology, has no shortage of evangelists willing to promote to anyone who would listen about how it redefines finance under the principles that underpin blockchain technology. 
-<br/><br/>
-However, as with any fast-growing sector and developing technology, it has its own set of detractors, critics, risks, and uncertainties, as evidenced by the numerous cases of rugpulls, scams, governance dramas, and other colossal failures in the DeFi space (just as the Mark Cuban/Titan Finance debacle recently proved.)
-<br/><br/>
-Therefore, it’s not just the participants who need to be onboarded on a rational understanding of the possibilities, numerous opportunities, problems, and pitfalls, but also the entirety of industry and government alike. 
-<br/><br/>
-There’s no question that massive amounts of capital are flowing into numerous DeFi protocols—but the industry remains volatile as ever. However, much of the activity has been centered on yield generation, speculation, and leverage. Moreover, the programmability, immutability, and interoperability that DeFi services offer also have their share of new and untested risks.
-<br/><br/>
-DeFi will ultimately sink or swim on the basis of achieving its full, unbridled potential. And its potential benefits can’t have arrived at a better time than now—in a world fraught with black swans, precariously teetering on the brink of existence. It’s all going to be a matter of adoption and the ongoing process of mitigating risk.
-<br/><br/>
-Conclusion
-We’re past the point of hype. The quantum leaps and bounds we see in finance as driven by crypto are but a little taste of what’s possible as far as money’s function is concerned. Yes, the DeFi space is fledgling, with plenty of lost time to make up against legacy financial services and technology. But the possibility of how radically finance can be transformed when anyone with a modicum of coding knowledge can freely participate in building their own solution in the coming years is a future so tantalizing it’s worth paying to see.
-</p>  
-      <img src="/magazine/3/images/55_56/image1.png" className={styles.image2}/>  
-      <img src="/magazine/3/images/55_56/image2.png" className={styles.image3}/>  
-      <Link href="https://www.instagram.com/abigneonglitter/">
-        <a target="_blank">
-          <p className={styles.text2}>ABigNeonGlitter</p>   
-        </a>
-      </Link>
+      <img src="/magazine/3/images/55_56/image1.png" className={styles.image1}/>
+      <img src="/magazine/3/images/55_56/image2.png" className={styles.image2}/>
+      <img src="/magazine/3/images/55_56/image3.png" className={styles.image3}/>
+      <img src="/magazine/3/images/55_56/image4.png" className={styles.image4}/>
+      <img src="/magazine/3/images/55_56/image5.png" className={styles.image5}/>
+      <img src="/magazine/3/images/55_56/image6.png" className={styles.image6}/>
+      <img src="/magazine/3/images/55_56/image7.png" className={styles.image8}/>
+      <div className={styles.image7}>
+        <video className={styles.image10} muted loop autoPlay>
+          <source src="./magazine/3/images/55_56/video1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <img src="/magazine/3/images/55_56/image8.gif" className={styles.image9}/>
+      <button onClick={() => {
+          if (!play) {
+            refAudio.current.play();
+          } else {
+            refAudio.current.pause();
+          }
+          setPlay(!play);
+        }}><img src={`./magazine/3/images/55_56/${play ? 'pause' : 'play'}.png`} className={styles.playbutton1}/></button>
+      <p className={styles.text1}>DECO<br/>ONLY FANS</p>
+      <p className={styles.text6}>Paranoid Park</p>  
+      <p className={styles.text2}>We are continuing on with our DECO “Decentralised Commerce” Only Fans with the DIGITALAX Ambassadors; using native web3 distribution models and creator monetisation paths, all underwritten by NFTs.
+      <br/><br/>
+<span className={styles.text3}> In web2 it’s entirely altruistic, you are depending on a one way incentive where the giver feels good for an obscure reason enough so to give to you. It’s a shot in the dark, and there is no clear path from 0 to 1, no clear solution to the cold start problem. In the web3 model, mutual incentives are aligned, where the creator can actually implement sustainability without excessive and unnecessary blocking points like paywalls and ad based models. It allows them to spin up personalised decentralised channels and invite people behind the scenes for exclusive content, unlockable drops and experience based backstage passes.  </span></p>  
+      <p className={styles.text4}> In the previous content I broke down how the XENOTECH virtual world would be structured. The primary NFTs that users would interact with are clothing stores, apartments, and clothing wearables. </p> 
+      <p className={styles.text5}>Though I don't have a huge background in gaming, I am fascinated with the concept of the virtual world-- especially one that is more than just a game. Virtual worlds for commerce, art, and education are particularly interesting to me and areas that I will dedicate myself to building. I have spent a lot of time conceptualizing a Metaverse platform / ecosystem based around the 3D city prototype I had built out, one that is particularly focused on 3D fashion.</p>
+      <audio
+        ref={refAudio}
+        controls
+        className={styles.audio}
+        src="./magazine/3/images/55_56/audio1.mp3"
+      ></audio>
     </div>
   );
 };

@@ -2,78 +2,95 @@
 
 .wrapper {
   @include magazineWrapper();
-  background-color: #FFFFFF;
-
+  background-color: #000641;
+  
   .image1 {
     position: absolute;
     width: 960px;
     height: 1497px;
     left: 0px;
     top: 0px;
+    overflow: hidden;
+    .image2 {
+      position: absolute;
+      height: 1497px;
+      left: -350px;
+      top: 0px;
+    }
   }
   .text1 {
     position: absolute;
-    width: 449px;
+    width: 411px;
     height: 88px;
-    left: 49px;
-    top: 31px;
+    left: 638px;
+    top: 33px;
     
-    font-family: League Gothic;
+    font-family: Trykker;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 80px;
     line-height: 110%;
-    /* or 44px */
+    /* identical to box height, or 88px */
     
     
-    color: #CB5858;
+    color: #1B8F43;
   }
-  .image2 {
+  .text2 {
+    position: absolute;
+    width: 248px;
+    height: 33px;
+    left: 638px;
+    top: 121px;
+    
+    font-family: Trykker;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* identical to box height, or 33px */
+    
+    
+    color: #1B8F43;
+  }
+  .image3 {
     position: absolute;
     width: 960px;
     height: 1497px;
     left: 960px;
     top: 0px;
-    overflow: hidden;
-    .image3 {
-      position: absolute;
-      height: 1497px;
-      left:-120px;
-      top: 0px;
-    }
-  }
-  .text2 {
-    position: absolute;
-    width: 338px;
-    height: 108px;
-    left: 983px;
-    top: 1281px;
-    
-    font-family: Space Mono;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
-    line-height: 110%;
-    /* or 9px */
-    
-    
-    color: #FFFFFF;
   }
   .text3 {
     position: absolute;
-    width: 632px;
-    height: 66px;
-    left: 983px;
-    top: 1392px;
+    width: 259px;
+    height: 33px;
+    left: 976px;
+    top: 1276px;
     
-    font-family: Space Mono;
+    font-family: Joti One;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
+    font-size: 30px;
     line-height: 110%;
-    /* identical to box height, or 66px */
+    /* identical to box height, or 33px */
     
     
-    color: #FFFFFF;
+    color: #000000;
+  }
+  .text4 {
+    position: absolute;
+    width: 259px;
+    height: 176px;
+    left: 976px;
+    top: 1309px;
+    
+    font-family: Joti One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+    /* or 88px */
+    
+    
+    color: #000000;
   }
 }
