@@ -202,6 +202,11 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Snippet"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@700"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Faster+One"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ewert"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700"></link> 
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
@@ -1152,6 +1157,11 @@ class MyDocument extends Document {
             @font-face {
               font-family: "DJB Emilys Garden";
               src: url("./fonts/DJB Emilys Garden.ttf");
+            }
+
+            @font-face {
+              font-family: "Digitalino";
+              src: url("./fonts/Digitalino-rev11.otf");
             }
 
             @font-face {

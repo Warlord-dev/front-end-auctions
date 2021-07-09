@@ -5,50 +5,44 @@ import Link from 'next/link';
 const Page5354 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/53_54/image2.png" className={styles.image3}/>  
-      <img src="/magazine/3/images/53_54/image1.png" className={styles.image1}/>  
-      <div className={styles.image2}></div>
-      <p className={styles.text1}>WEB3 WIZARDS</p>  
-      <p className={styles.text2}>DeFi Dealers.</p>  
-      <p className={styles.text3}>Most of us remember the craziness of DeFi Summer mid 2020, where we all sat in awe watching the Total Value Locked (TVL) across DeFi protocols exponentially skyrocket from tens of millions to tens of billions in just a few short months. It was an incredibly significant moment for the entirity of the crypto community, where effective usage of blockchain and web3 took a new turn for the better in actually directly being beneficial to a broader retail market, beyond just speculation and hype of new token launches or fancy tech savvy protocols with implementation scheduled for “sometime in the next 2-5 years”. 
+      <div className={styles.image1}></div>
+      <p className={styles.text1}>Caveat emptor<br/>
+DeFi, like blockchain technology, has no shortage of evangelists willing to promote to anyone who would listen about how it redefines finance under the principles that underpin blockchain technology. 
 <br/><br/>
-Before this, a lot of the promise of the applications of web3 technology seemed too far removed from everyday life to have a consequential and serious impact on us, our families and our ability to sustain and continue to level up in increasing our own agency and potentiality for greater opportunity. DeFi changed a lot of this in a real way. It channelled the technology into a use case that made it no longer about the technology, the product, or what the product was doing; but rather, it made it about serving our needs and helping us get to where we wanted to go with less friction, less barriers, less need to worry about gatekeepers. So, for this edition of Web3 Wizards we take our hats off to those that pioneered the industry before anyone really even knew what it was. </p>  
-      <p className={styles.text4}>Stani.</p>  
-      <p className={styles.text5}>Project: DeFi Dealer.</p>  
-      <img src="/magazine/3/images/53_54/image3.png" className={styles.image4}/>  
-      <p className={styles.text6}>Andre.</p>  
-      <p className={styles.text7}>Project: DeFi Dealer.</p>  
-      <img src="/magazine/3/images/53_54/image4.png" className={styles.image5}/>  
-      <p className={styles.text8}>Kain.</p>  
-      <p className={styles.text9}>PProject: DeFi Dealer.</p>  
-      <img src="/magazine/3/images/53_54/image5.png" className={styles.image6}/>  
-      <p className={styles.text10}>Rune.</p>  
-      <p className={styles.text11}>Project: DeFi Dealer.</p>  
-      <img src="/magazine/3/images/53_54/image6.png" className={styles.image7}/>  
-      <div className={styles.image8}></div>
-      <div className={styles.image9}></div>
-      <img src="/magazine/3/images/53_54/image7.png" className={styles.image10}/>  
-      <img src="/magazine/3/images/53_54/image8.png" className={styles.image11}/> 
-      <img src="/magazine/3/images/53_54/image9.png" className={styles.image12}/>  
-      <Link href="https://rarible.com/">
+However, as with any fast-growing sector and developing technology, it has its own set of detractors, critics, risks, and uncertainties, as evidenced by the numerous cases of rugpulls, scams, governance dramas, and other colossal failures in the DeFi space (just as the Mark Cuban/Titan Finance debacle recently proved.)
+<br/><br/>
+Therefore, it’s not just the participants who need to be onboarded on a rational understanding of the possibilities, numerous opportunities, problems, and pitfalls, but also the entirety of industry and government alike. 
+<br/><br/>
+There’s no question that massive amounts of capital are flowing into numerous DeFi protocols—but the industry remains volatile as ever. However, much of the activity has been centered on yield generation, speculation, and leverage. Moreover, the programmability, immutability, and interoperability that DeFi services offer also have their share of new and untested risks.
+<br/><br/>
+DeFi will ultimately sink or swim on the basis of achieving its full, unbridled potential. And its potential benefits can’t have arrived at a better time than now—in a world fraught with black swans, precariously teetering on the brink of existence. It’s all going to be a matter of adoption and the ongoing process of mitigating risk.
+<br/><br/>
+Conclusion<br/>
+We’re past the point of hype. The quantum leaps and bounds we see in finance as driven by crypto are but a little taste of what’s possible as far as money’s function is concerned. Yes, the DeFi space is fledgling, with plenty of lost time to make up against legacy financial services and technology. But the possibility of how radically finance can be transformed when anyone with a modicum of coding knowledge can freely participate in building their own solution in the coming years is a future so tantalizing it’s worth paying to see.
+</p>  
+      <img src="/magazine/3/images/53_54/image1.png" className={styles.image2}/>  
+      <img src="/magazine/3/images/53_54/image2.png" className={styles.image3}/>  
+      <Link href="https://www.instagram.com/abigneonglitter/">
         <a target="_blank">
-          <p className={styles.text12}>Rarible.</p>   
+          <p className={styles.text2}>ABigNeonGlitter</p>   
         </a>
       </Link>
-      <p className={styles.text13}>You launched Rari about 1 year ago. Looking back, did you anticipate that it'd be such a wild ride? Up and then down and then back again. </p> 
-      <p className={styles.text14}>Definitely not! In the back of my head, I had always known it was a possibility as I had seen the rise and fall of many projects before mine but it is a totally different feeling when you’re in the steering wheel. However, it is the ups and downs that make all of this as exciting as it is. </p> 
-      <p className={styles.text15}>Let's play a quick game. Flex how RARI your knowledge of NFTs, DeFi and crypto really is. FILL in the blank. Wrong answers only.</p>
-      <p className={styles.text16}>NFTs are <span className={styles.text17}>bad for the environment (lol)</span></p>
-      <p className={styles.text18}>DAOs are bad for <span className={styles.text19}>IRS</span></p>
-      <p className={styles.text20}><span className={styles.text21}>Doge</span> will replace Ethereum as <span className={styles.text21}>the money of the future</span></p>
-      <p className={styles.text22}>Better known as <span className={styles.text23}>John Mccaffee</span>, this <span className={styles.text23}>crypto-influencer</span> will bring the bull market back</p>
-      <p className={styles.text24}>Now let's get a bit more serious. Building in web3 is hella fun and I am sure that we can all agree that none of us would ever sell out to go back to the legacy system that we came from. But, what actually keeps you up at night and what makes all of this so important? </p>
-      <p className={styles.text25}>Recently at Rari Capital, we’ve been ideating around this campaign called, “Break Free.” It is centered on enabling every individual in our community to truly break free. Our products are just one of the many paths to doing so. If we don’t do this, as an industry, people are stuck. Stuck in their debt, or just being crapped on by the banks and centralized institutions. DeFi should be the beacon to save all. I worry that we aren’t doing enough, I worry that we’re so stuck on farming incentives and yield farms that we’ll lose sight of this.</p>
-      <p className={styles.text26}>And finally, if we were to instigate an NFT focused variation on the anime Food Wars, with really off the creators instead of chefs, would you be in?</p>
-      <p className={styles.text27}>Hell yeah.</p>
-      <p className={styles.text28}>DEFI</p>
-      <p className={styles.text29}>DAO</p>
-      <p className={styles.text30}>NFT</p>
+      
+      <img src="/magazine/3/images/53_54/image3.png" className={styles.image4}/> 
+      <img src="/magazine/3/images/53_54/image4.png" className={styles.image5}/> 
+      <div className={styles.image6}></div>
+      <div className={styles.image7}>
+        <video className={styles.image8} muted loop autoPlay>
+          <source src="./magazine/3/images/53_54/video1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <p className={styles.text4}>Metallic Bubblegum<br/>
+Captain America's pink shield is a really special item as it was the key for me to start making 3D. That was my first object made in blender. So many great memories!</p>
+      <p className={styles.text5}>OMEGA<br/>
+This texture, appearance and colors were accidentally replaced. Glad that the final render stayed and I am very happy to have him now as a non-fungible token, he deserves this place.</p>
+      <p className={styles.text6}>ALPHA<br/>
+This token is a portal that is just waiting to turn into NFT. Now your powers have increased.<br/>
+> this video has a track with a license that authorizes use and dissemination through the credits - song: 'Escapade' by @nctrnm from Free Music Archive (FMA) being licensed under CC BY 4.0 </p>
     </div>
   );
 };
