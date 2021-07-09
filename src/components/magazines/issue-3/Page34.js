@@ -17,53 +17,57 @@ Peezy R<br/><br/>
 Victor<br/><br/>
 Haruto  Inoue<br/><br/>
 Cameron Sato<br/><br/>
+Miko Matsumura
+
 </p>       
         <p className={styles.text5}>Stan McLygin<br/><br/>
-Micha Almeda<br/><br/>
 Glitch Faced King<br/><br/>
 James Lin<br/><br/>
 Eric Song <br/><br/>
-Aditya</p>   
-        <p className={styles.text6}>Robotto Studio<br/><br/>
-Pri Desai<br/><br/>
-Ana Rivera<br/><br/>
+Aditya<br/><br/>
+Global Designer Network <br/><br/>(GDN)</p>   
+        <p className={styles.text6}>Ana Rivera<br/><br/>
 Rafi 0x<br/><br/>
-Dhruv Gupta<br/><br/>
-Rozahviy</p>      
-        <p className={styles.text7}>dxDAO<br/><br/>
-Jeremy Stern<br/><br/>
-Heapons<br/><br/>
-Arjay Soul<br/><br/>
-Elijah Thurston<br/><br/>
-Retlagem
+XtraCube<br/><br/>
+Thakane/Takii<br/><br/>
+Xenotech <br/><br/>
+Charbakd</p>      
+        <p className={styles.text7}>Bancor Network <br/><br/>
+Fei Protocol<br/><br/>
+Rarible <br/><br/>
+Vesper Finance <br/><br/>
+Ren Project <br/><br/>
+Hamzah Khan <br/><br/>
+
 </p>     
         <p className={styles.text8}>
-Charbakd<br/><br/>
-FaunaDB<br/><br/>
-Bianca Graulau<br/><br/>
-Maria Ruano<br/><br/>
-Michael Mckain<br/><br/>
-Soulyasa
+        Opyn<br/><br/>
+Mason Nystrom<br/><br/>
+Ruler Protocol<br/><br/>
+Zapper Finance<br/><br/>
+Polygon<br/><br/>
+InstaDAPP
 </p>      
-        <p className={styles.text9}>9EN<br/><br/>
-Alexander Kurmanin<br/><br/>
-Blade Runway<br/><br/>
-Burak Dahan<br/><br/>
-Rudeolph<br/><br/>
-YeKaterina Burmatnova
+        <p className={styles.text9}>Pickle Finance<br/><br/>
+ForceDAO<br/><br/>
+IMPSSBL<br/><br/>
+Anna Chilli<br/><br/>
+HAPI<br/><br/>
+Hacken
 </p>      
-        <p className={styles.text10}>Kenneth Eze<br/><br/>
-Serah reikka<br/><br/>
-Aaron Kaufman<br/><br/>
-DITA<br/><br/>
+        <p className={styles.text10}>PureFi<br/><br/>
 ABigNeonGlitter<br/><br/>
-Ica & Kostika</p>   
-        <p className={styles.text11}>Domingo Bette Encour<br/><br/>
-Jessica Schott<br/><br/>
-BBLUNDERR<br/><br/>
-Ahu Agu<br/><br/>
-McMistrzYT<br/><br/>
-Shiu Studio</p>   
+Nabi<br/><br/>
+Katriane<br/><br/>
+An Nguyen<br/><br/>
+howiseedatworld</p>   
+        <p className={styles.text11}>BUGAS<br/><br/>
+Tom Pastor<br/><br/>
+Hugo Richel<br/><br/>
+Tiago Filipe<br/><br/>
+Lilium Labs<br/><br/>
+Pat Lok
+</p>   
     </div>
   );
 };
