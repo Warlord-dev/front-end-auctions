@@ -198,6 +198,10 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Odibee+Sans"></link>  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700"></link>  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali:wght@700"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gravitas+One"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Snippet"></link> 
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
@@ -955,6 +959,12 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Burst My Bubble';
               src: url("./fonts/BurstMyBubbleBold.ttf");
+              font-weight: 700;
+            }
+
+            @font-face {
+              font-family: 'PÕRTO';
+              src: url("./fonts/PORTO.ttf");
               font-weight: 700;
             }
 
