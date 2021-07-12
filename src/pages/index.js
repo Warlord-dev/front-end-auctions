@@ -23,7 +23,7 @@ const LandingPage = () => {
   const structuredData = {
     '@context': 'http://schema.org',
     '@type': 'Marketplace Landing page',
-    title: 'Digitalax - The Digital Fashion Engine',
+    title: 'Digitalax - Web3 Fashion Economy',
     description:
       'DIGITALAX is the first NFT live digital fashion market, combining NFT staking and DeFi. We are pioneering Fractional Garment Ownership with ERC-721 and ERC-1155 NFTs. All designs are handmade by our Global Designer Network and infused with the special attention of our in house fashion studio. All NFTs are backed by the 3D File and all metadata is decentralised. ',
   };
@@ -35,7 +35,7 @@ const LandingPage = () => {
           name="description"
           content="DIGITALAX is the first NFT live digital fashion market, combining NFT staking and DeFi. We are pioneering Fractional Garment Ownership with ERC-721 and ERC-1155 NFTs. All designs are handmade by our Global Designer Network and infused with the special attention of our in house fashion studio. All NFTs are backed by the 3D File and all metadata is decentralised. "
         />
-        <meta property="og:title" content="Digitalax - The Digital Fashion Engine" />
+        <meta property="og:title" content="Digitalax - Web3 Fashion Economy" />
         <meta
           property="og:description"
           content="DIGITALAX is the first NFT live digital fashion market, combining NFT staking and DeFi. We are pioneering Fractional Garment Ownership with ERC-721 and ERC-1155 NFTs. All designs are handmade by our Global Designer Network and infused with the special attention of our in house fashion studio. All NFTs are backed by the 3D File and all metadata is decentralised. "

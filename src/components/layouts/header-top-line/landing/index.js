@@ -15,7 +15,7 @@ const LandingHeader = props => {
           style={{
             color: textColor || 'white'
           }}>Digitalax </span>
-          <span className={styles.subBrand}>The Digital Fashion Engine</span>
+          <span className={styles.subBrand}>Web3 Fashion Economy</span>
         </a>
       </div>
 
