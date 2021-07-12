@@ -12,7 +12,7 @@ const Logo = ({ className, black }) => (
         {' '}
         DIGITALAX{' '}
       </p>
-      <p className={styles.description}>The Digital Fashion Engine</p>
+      <p className={styles.description}>Web3 Fashion Economy</p>
     </a>
   </Link>
 );
