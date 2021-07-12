@@ -13,7 +13,7 @@ const Logo = ({ className, isMobile }) => {
   <Link href={INDEX_PATH}>
     <a className={cn(className, styles.wrapper)}>
       <img src={pathname.includes('purchase') || pathname.includes('contact') || pathname.includes('profile') || isMobile ? `./images/icons/logo.svg` : './images/DIGITALAX-white.png'} alt="logo" />
-      <p className={styles.description}>The Digital Fashion Engine</p>
+      <p className={styles.description}>Web3 Fashion Economy</p>
     </a>
   </Link>
 )
