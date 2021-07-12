@@ -19,7 +19,6 @@ const Page3132 = () => {
       <div className={styles.image13}></div>
       <div className={styles.image14}></div>
       <div className={styles.image15}></div>
-      <div className={styles.image16}></div>
       <div className={styles.image17}></div>
       <div className={styles.image18}></div>
       <div className={styles.image38}></div>
@@ -37,6 +36,7 @@ const Page3132 = () => {
       <div className={styles.image51}></div>
       <div className={styles.image52}></div>
       <img src="/magazine/3/images/31_32/image2.png" className={styles.image19}/>
+      <div className={styles.image16}></div>
       <img src="/magazine/3/images/31_32/image1.png" className={styles.image20}/>
       <img src="/magazine/3/images/31_32/image1.png" className={styles.image21}/>  
       <img src="/magazine/3/images/31_32/image3.png" className={styles.image22}/>   

@@ -13,11 +13,12 @@ const CoverPage = () => {
           DEFI
           OPTIONS 
         </p>
-        <p className={styles.txt22}>POLYGON & Interest earning assets</p>
+        <p className={styles.txt22}>POLYGON & <br/><span className={styles.text27}>Interest earning assets</span></p>
         <p className={styles.txt23}>RARI& DAOS</p>
         <p className={styles.txt24}>Is the Ownership Economy already here?</p>
         <p className={styles.txt25}>Bitcoin Maxis & the Future of Decentralisation</p>
         <p className={styles.txt26}>MERGING FASHION X DEFI </p>
+        <img className={styles.img6} src="/magazine/3/images/cover/image1.png"/>
     </div>
   );
 };

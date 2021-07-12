@@ -83,7 +83,11 @@
     width: 560px;
     height: 160px;
     left: 155px;
-    top: 15px;
+    top: 0px;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .text1 {
     position: absolute;

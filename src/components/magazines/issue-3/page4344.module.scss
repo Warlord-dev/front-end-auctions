@@ -22,6 +22,10 @@
   background: linear-gradient(to bottom, #FF2D2D 0%, #FF7E07 50%, #0AF0FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
 }
 .text2 {
   position: absolute;
@@ -306,6 +310,10 @@
   
   
   color: #FFFFFF;
+  transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
 }
 .image10 {
   position: absolute;

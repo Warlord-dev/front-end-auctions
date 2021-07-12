@@ -8,10 +8,15 @@ const Page7980 = () => {
     <div className={styles.wrapper}>
       <img src="/magazine/3/images/79_80/image1.png" className={styles.image1}/>
       <div className={styles.image2}></div>
-      <p className={styles.text1}>REN PROJECT</p> 
+      <Link href="https://renproject.io/">
+        <a target="_blank">
+          <p className={styles.text1}>REN PROJECT</p> 
+        </a>
+      </Link>
+      
       <Link href="https://twitter.com/renprotocol">
         <a target="_blank">
-          <img src="/magazine/3/images/79_80/image2.png" className={styles.image3}/>
+          <img src="/magazine/3/images/79_80/image2.png" className={styles.image37}/>
         </a>
       </Link>
       <div className={styles.image3}></div>

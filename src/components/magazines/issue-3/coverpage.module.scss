@@ -93,41 +93,45 @@
         width: 768px;
         height: 151px;
         left: 33px;
-        top: 1298px;
+        top: 1324px;
 
         font-family: Exodus Demo;
         font-style: normal;
         font-weight: normal;
         font-size: 100px;
-        line-height: 100%;
+        line-height: 50px;
         /* or 100px */
 
 
         color: #FFFFFF;
 
         text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
+        .text27 {
+            font-size: 55px;
+            line-height: 55px;
+        }
     }
 
     .img1{
         position: absolute;
         width: 730px;
         height: 59px;
-        left: 282px;
-        top: 45px;
+        left: 212px;
+        top: 20px;
     }
     .img2{
         position: absolute;
         width: 383px;
         height: 68px;
-        left: 408px;
-        top: 126px;
+        left: 289px;
+        top: 115px;
     }
     .img3{    
         position: absolute;
         width: 561px;
         height: 119.53px;
-        left: 347.4px;
-        top: 148.98px;
+        left: 202.74px;
+        top: 158.6px;        
 
         transform: rotate(-3deg);
     }
@@ -144,6 +148,13 @@
         height: 360px;
         left: 913px;
         top: 1084px;
+    }
+    .img6 {
+        position: absolute;
+        width: 747px;
+        height: 747px;
+        left: 474px;
+        top: 77px;
     }
     .txt23 {
         position: absolute;

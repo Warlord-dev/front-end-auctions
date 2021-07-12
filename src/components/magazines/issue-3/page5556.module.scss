@@ -294,7 +294,7 @@
         width: 381px;
         height: 84px;
         left: 1539px;
-        top: 19px;
+        top: -4px;
         
         font-family: Pilat Extended;
         font-style: normal;
@@ -305,6 +305,10 @@
         
         
         color: #FFFFFF;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     .text13 {
         position: absolute;
@@ -559,6 +563,23 @@
         
         
         color: #000000;
+    }
+    .text31 {
+        position: absolute;
+        width: 381px;
+        height: 24px;
+        left: 1539px;
+        top: 79px;
+        
+        font-family: Pilat Extended;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 120.53%;
+        /* or 24px */
+        
+        
+        color: #FFFFFF;
     }
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }

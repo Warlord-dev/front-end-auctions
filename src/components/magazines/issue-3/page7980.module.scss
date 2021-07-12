@@ -36,6 +36,10 @@
     
     
     color: #FFFFFF;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.05 );
+    }  
   }
   .image3 {
     position: absolute;
@@ -689,6 +693,17 @@
     &:hover {
       transform: scale(1.1);
     }
+  }
+  .image37 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 839px;
+    top: 16px;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }    
   }
   .text21 {
     position: absolute;

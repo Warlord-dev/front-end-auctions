@@ -88,6 +88,10 @@
         
         color: #FFFFFF;
         transform: rotate(90deg);
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.1) rotate(90deg);
+        }
     }
     .text4 {
         position: absolute;
@@ -123,6 +127,10 @@
         text-align: right;
         
         color: #FFFFFF;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     .text6 {
         position: absolute;

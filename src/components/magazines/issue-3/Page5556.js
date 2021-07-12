@@ -15,18 +15,17 @@ const Page5556 = () => {
 <br/><br/>
 Before this, a lot of the promise of the applications of web3 technology seemed too far removed from everyday life to have a consequential and serious impact on us, our families and our ability to sustain and continue to level up in increasing our own agency and potentiality for greater opportunity. DeFi changed a lot of this in a real way. It channelled the technology into a use case that made it no longer about the technology, the product, or what the product was doing; but rather, it made it about serving our needs and helping us get to where we wanted to go with less friction, less barriers, less need to worry about gatekeepers. So, for this edition of Web3 Wizards we take our hats off to those that pioneered the industry before anyone really even knew what it was. </p>  
       <p className={styles.text4}>Stani.</p>  
-      <p className={styles.text5}>Project: DeFi Dealer.</p>  
+      <p className={styles.text5}>Project: AAVE.</p>  
       <img src="/magazine/3/images/55_56/image3.png" className={styles.image4}/>  
       <p className={styles.text6}>Andre.</p>  
-      <p className={styles.text7}>Project: DeFi Dealer.</p>  
+      <p className={styles.text7}>Project: Yearn Finance.</p>  
       <img src="/magazine/3/images/55_56/image4.png" className={styles.image5}/>  
       <p className={styles.text8}>Kain.</p>  
-      <p className={styles.text9}>PProject: DeFi Dealer.</p>  
+      <p className={styles.text9}>Project: Synthetix.</p>  
       <img src="/magazine/3/images/55_56/image5.png" className={styles.image6}/>  
       <p className={styles.text10}>Rune.</p>  
-      <p className={styles.text11}>Project: DeFi Dealer.</p>  
+      <p className={styles.text11}>Project: MakerDAO.</p>  
       <img src="/magazine/3/images/55_56/image6.png" className={styles.image7}/>  
-      <div className={styles.image8}></div>
       <div className={styles.image9}></div>
       <img src="/magazine/3/images/55_56/image7.png" className={styles.image10}/>  
       <img src="/magazine/3/images/55_56/image8.png" className={styles.image11}/> 
@@ -36,6 +35,7 @@ Before this, a lot of the promise of the applications of web3 technology seemed 
           <p className={styles.text12}>Rarible.</p>   
         </a>
       </Link>
+      <p className={styles.text31}>Jai Bhavnani</p>   
       <p className={styles.text13}>You launched Rari about 1 year ago. Looking back, did you anticipate that it'd be such a wild ride? Up and then down and then back again. </p> 
       <p className={styles.text14}>Definitely not! In the back of my head, I had always known it was a possibility as I had seen the rise and fall of many projects before mine but it is a totally different feeling when you’re in the steering wheel. However, it is the ups and downs that make all of this as exciting as it is. </p> 
       <p className={styles.text15}>Let's play a quick game. Flex how RARI your knowledge of NFTs, DeFi and crypto really is. FILL in the blank. Wrong answers only.</p>

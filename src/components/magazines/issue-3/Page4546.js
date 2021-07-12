@@ -5,10 +5,8 @@ import Link from 'next/link';
 const Page4546 = () => {
   const ref1 = useRef()
   const ref2 = useRef()
-  const ref3 = useRef()
   const [isPlaying1, setIsPlaying1] = useState(false)
   const [isPlaying2, setIsPlaying2] = useState(false)
-  const [isPlaying3, setIsPlaying3] = useState(false)
   const playVideo1 = () => {
     if(isPlaying1) {
       ref1.current.muted = true;
@@ -27,18 +25,13 @@ const Page4546 = () => {
       setIsPlaying2(true)
     }
   }
-  const playVideo3 = () => {
-    if(isPlaying3) {
-      ref3.current.muted = true;
-      setIsPlaying3(false)
-    } else {
-      ref3.current.muted = false;
-      setIsPlaying3(true)
-    }
-  }
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/45_46/image2.png" className={styles.image1}/>
+      <div className={styles.image1}>
+          <video ref={ref2} className={styles.image17} muted autoPlay loop>
+            <source src="./magazine/3/images/45_46/video4.mp4" type="video/mp4" />
+          </video>
+        </div>
       <img src="/magazine/3/images/45_46/image1.png" className={styles.image2}/>
       <p className={styles.text1}>INTERNATIONAL PLAYERS</p>
       <p className={styles.text2}>UKRAINE</p>
@@ -56,7 +49,7 @@ const Page4546 = () => {
             <source src="./magazine/3/images/45_46/video2.mp4" type="video/mp4" />
           </video>
         </div>
-        <button onClick={()=>{playVideo2()}}><img src={`./magazine/3/images/45_46/${isPlaying2 ? 'pause' : 'play'}.png`} className={styles.playbutton2}/></button>
+        
       </div>
       <img src="/magazine/3/images/45_46/image5.png" className={styles.image5}/>
       <div className={styles.image7}>
@@ -65,7 +58,6 @@ const Page4546 = () => {
             <source src="./magazine/3/images/45_46/video3.mp4" type="video/mp4" />
           </video>
         </div>
-        <button onClick={()=>{playVideo2()}}><img src={`./magazine/3/images/45_46/${isPlaying2 ? 'pause' : 'play'}.png`} className={styles.playbutton2}/></button>
       </div>
       <img src="/magazine/3/images/45_46/image8.png" className={styles.image8}/>
       <div className={styles.image9}>

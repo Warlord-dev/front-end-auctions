@@ -27,7 +27,9 @@ We’re past the point of hype. The quantum leaps and bounds we see in finance a
           <p className={styles.text2}>ABigNeonGlitter</p>   
         </a>
       </Link>
-      
+      <p className={styles.text7}>“I always loved collecting; from holographic cards that came greasy in snack packages, to video-game tapes, toys, action figures, cups, magazines, phone cards… and I could name more. Oh the 90s!
+      <br/><br/>
+Today I am very excited about Non-Fungible Tokens that can be made by myself and literally carry my traits around as a kind of rich information like DNA and at any time I can organize a collection and make these gems available for other digital hunters. I'm feeling so ready for this"</p>   
       <img src="/magazine/3/images/53_54/image3.png" className={styles.image4}/> 
       <img src="/magazine/3/images/53_54/image4.png" className={styles.image5}/> 
       <div className={styles.image6}></div>

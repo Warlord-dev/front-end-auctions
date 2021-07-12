@@ -20,6 +20,7 @@ const Page1112 = () => {
       <img src="/magazine/3/images/11_12/image2.png" className={styles.image7}/>  
       <img src="/magazine/3/images/11_12/image3.png" className={styles.image8}/>  
       <img src="/magazine/3/images/11_12/image1.png" className={styles.image1}/>   
+      <img src="/magazine/3/images/11_12/image10.png" className={styles.image16}/>  
       <p className={styles.text9}>3. We’ve seen a variety of projects experimenting with social tokens. WTF are social tokens and what do you think is special about them? </p>
       <p className={styles.text10}>Social tokens are digital assets that represent a brand, individual or community. Social tokens give projects that historically not be well suited to raise outside capital an opportunity to source capital and deploy it as a community. It adds a dimension of shared ownership and upside that allows any contributor to earn financial and social capital from their work. Social tokens will power the Creator Economy and the rise of micro-economies.</p>
       <p className={styles.text11}>4. Have you seen any interesting projects combining audio NFTs and social tokens?</p>

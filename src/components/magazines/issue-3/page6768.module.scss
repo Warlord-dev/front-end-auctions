@@ -33,6 +33,10 @@
     /* identical to box height, or 55px */
     
     color: #FFFFFF;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
   }
   .text2 {
     position: absolute;
@@ -107,5 +111,9 @@
 
 
     color: #457CAC;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
   }
 }

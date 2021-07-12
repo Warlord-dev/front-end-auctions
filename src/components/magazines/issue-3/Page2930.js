@@ -20,7 +20,12 @@ const Page2930 = () => {
         <img src="./magazine/1/images/howtogetintext 1.png" />
       </div>
       <img src="/magazine/3/images/29_30/image1.png" className={styles.image1}/>
-      <img src="/magazine/3/images/29_30/image2.png" className={styles.image2}/>
+      <Link href="https://bancor.network/">
+        <a target="_blank">
+        <img src="/magazine/3/images/29_30/image2.png" className={styles.image2}/>
+        </a>
+      </Link>
+      
       <p className={styles.text1}>Automated Money Markets are BANCOR NETWORK</p>
       <p className={styles.text2}>The BANCOR Breakdown with Steven Fox.</p> 
       <img src="/magazine/3/images/29_30/image3.png" className={styles.image3}/>

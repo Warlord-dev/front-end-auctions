@@ -130,8 +130,6 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Jaldi"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Forum"></link>
-           <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Englebert"></link>
           <link rel="stylesheet"
@@ -206,7 +204,16 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Faster+One"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ewert"></link> 
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Expletus+Sans"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@700"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Coda"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;700"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pangolin"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@700"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Imprima"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital"></link> 
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
@@ -224,6 +231,7 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Convergence"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asap"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Miltonian"></link>
           <link rel="stylesheet"
@@ -377,12 +385,6 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Beth Ellen';
               src: url("./fonts/Beth-Ellen-2.0.ttf");
-              font-weight: 400;
-            }
-
-            @font-face {
-              font-family: 'Jockey One';
-              src: url("./fonts/JockeyOne-Regular.ttf");
               font-weight: 400;
             }
 
@@ -762,6 +764,11 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'QuickSales';
+              src: url("./fonts/QuickSales.ttf");
+            }
+
+            @font-face {
               font-family: 'Kite One';
               src: url("./fonts/KiteOne-Regular.ttf");
             }
@@ -1018,6 +1025,11 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Galaxy Monkey';
+              src: url("./fonts/galaxymonkey.ttf");
+            }
+
+            @font-face {
               font-family: 'XXII-ARMY';
               src: url("./fonts/XXIISTRAIGHT-ARMY.ttf");
             }
@@ -1165,7 +1177,7 @@ class MyDocument extends Document {
             }
 
             @font-face {
-              font-family: "ExodusDemo";
+              font-family: "Exodus Demo";
               src: url("./fonts/ExodusDemo.otf");
             }
 
