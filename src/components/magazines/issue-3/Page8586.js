@@ -38,6 +38,9 @@ I'm not really sure where I want to go in terms of modding. I want to try keepin
           <source src="https://www.youtube.com/watch?v=wIwCeexQoxQ" type="video/mp4" />
         </video>
       </div>
+      <div className={styles.image10}>
+        <iframe width="496" height="236" src="https://www.youtube.com/embed/wIwCeexQoxQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
       <img src="/magazine/3/images/85_86/image4.png" className={styles.image12}/>
       <img src="/magazine/3/images/85_86/image4.png" className={styles.image13}/>
       <img src="/magazine/3/images/85_86/image4.png" className={styles.image14}/>

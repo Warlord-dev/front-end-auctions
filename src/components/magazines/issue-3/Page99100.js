@@ -49,12 +49,18 @@ const Page99100 = () => {
           <source src="./magazine/3/images/99_100/video3.mp4" type="video/mp4" />
         </video>
       </div>
+      
       <img src="/magazine/3/images/99_100/image15.png" className={styles.image27}/>
       <img src="/magazine/3/images/99_100/image16.png" className={styles.image28}/>
       <p className={styles.text7}>Paola Olaguivel</p>  
       <img src="/magazine/3/images/99_100/image17.png" className={styles.image29}/>
+      <img src="/magazine/3/images/99_100/image19.png" className={styles.image31}/>
       <p className={styles.text8}>ABigNeonGlitter</p>  
       <img src="/magazine/3/images/99_100/image18.png" className={styles.image30}/>
+      <img src="/magazine/3/images/99_100/image20.png" className={styles.image32}/>
+      <img src="/magazine/3/images/99_100/image21.png" className={styles.image33}/>
+      <div className={styles.image34}></div>
+      <p className={styles.text9}>I think that fashion today is no longer something exclusively for people in the flesh who know how to draw very well and, still venture to say, sew. From now on we are in the middle of a new era of how to present products and creations while still being very interactive in everything.</p>  
     </div>
   );
 };

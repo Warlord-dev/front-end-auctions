@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './page7778.module.scss';
 import Link from 'next/link';
 import cn from 'classnames';
 
 const Page7778 = () => {
+  const [play, setPlay] = useState(false);
+  const [play1, setPlay1] = useState(false);
+  const refAudio = useRef();
+  const refAudio1 = useRef();
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/3/images/77_78/image1.png" className={styles.image1}/>
@@ -12,12 +16,17 @@ const Page7778 = () => {
       <img src="/magazine/3/images/77_78/image4.png" className={styles.image4}/>
       <img src="/magazine/3/images/77_78/image5.png" className={styles.image5}/>
       <img src="/magazine/3/images/77_78/image6.png" className={styles.image6}/>
-      <div className={styles.image7}>
-        <video className={styles.image8} muted loop autoPlay>
-          <source src="./magazine/3/images/77_78/video1.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <iv className={styles.image9}></iv>
+      <img src="/magazine/3/images/77_78/image9.png" className={styles.image15}/>
+      <Link href="https://www.instagram.com/howiseedatworld/?hl=en">
+        <a target="_blank">
+          <div className={styles.image7}>
+            <video className={styles.image8} muted loop autoPlay>
+              <source src="./magazine/3/images/77_78/video1.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </a>
+      </Link>
+      <div className={styles.image9}></div>
       <p className={cn(styles.text1, styles.text)}>ill-esha</p>  
       <p className={cn(styles.text2, styles.text)}>ill-esha</p>  
       <p className={cn(styles.text3, styles.text)}>ill-esha</p>  
@@ -44,9 +53,46 @@ What first intrigued me about NFTs is that they represent the opposite: instead 
 My journey has only accelerated as I become more aware of the limitless potential for independent creators to achieve both financial and creative freedom through DeFi, and Staxe and I are now launching a collaborative video and livestream series which turns Cryptowaves into free and fun education about DeFi protocols, practices, and crypto-based sound design, with accompanying regular NFTs! The entire project is tokenized for investment - token holders will receive shares in the project’s success, as well as ongoing perks like VIP entries, exclusive special events and other unique collectibles. Our future goals are to further expand into forming a new form of decentralized collective collaboration; potentially, to form an artist-run DAO, where the project’s early adopters and future ones converge to form an organization with its own economy - fueled by its tokenholders’ votes and efforts, whose success is transparently and efficiently shared amongst all</p>  
       <p className={styles.text19}>For the first time, I truly feel like an independent artist, with the ability to create my own projects in my own economic universe; and I have a new mission to empower others in my community with the same knowledge.</p>  
       <div className={styles.image10}>
-        <iframe width="416" height="213" src="https://www.youtube.com/embed/zTAUip--srg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="416" height="213" src="https://www.youtube.com/embed/zTAUip--srg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
       </div>
-      
+      <img src="/magazine/3/images/77_78/image7.png" className={styles.image11}/>
+      <div className={styles.image12}>
+        <video className={styles.image13} muted loop autoPlay>
+          <source src="./magazine/3/images/77_78/video2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <img src="/magazine/3/images/77_78/image8.png" className={styles.image14}/>
+      <audio className={styles.audio} ref={refAudio}>
+        <source src="./magazine/3/images/77_78/audio1.mp3" type="audio/mpeg" />
+      </audio>
+      <img
+        src={`./magazine/3/images/77_78/${!play ? 'play' : 'pause'}.png`}
+        className={styles.play}
+        onClick={() => {
+          if (!play) {
+            refAudio.current.play();
+          } else {
+            refAudio.current.pause();
+          }
+          setPlay(!play);
+        }}
+      />
+
+      <audio className={styles.audio} ref={refAudio1}>
+        <source src="./magazine/3/images/77_78/audio2.mp3" type="audio/mpeg" />
+      </audio>
+      <img
+        src={`./magazine/3/images/77_78/${!play1 ? 'play1' : 'pause1'}.png`}
+        className={styles.play1}
+        onClick={() => {
+          if (!play1) {
+            refAudio1.current.play();
+          } else {
+            refAudio1.current.pause();
+          }
+          setPlay1(!play1);
+        }}
+      />
     </div>
   );
 };

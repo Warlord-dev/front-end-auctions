@@ -204,4 +204,54 @@
     box-sizing: border-box;
     overflow: hidden;
   }
+  .image11 {
+    position: absolute;
+    width: 629px;
+    height: 481px;
+    left: 960px;
+    top: 1016px;
+  }
+  .image12 {
+    position: absolute;
+    width: 957px;
+    height: 401px;
+    left: 963px;
+    top: 0px;
+    border: 6px solid #FFFFFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    .image13 {
+      width: 100%;
+    }
+  }
+  .image14 {
+    position: absolute;
+    left: 83.96%;
+    right: 8.23%;
+    top: 80.83%;
+    bottom: 9.15%;
+  }
+  .play {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    left: 1664px;
+    top: 1262px;
+    cursor: pointer;
+  }
+  .image15 {
+    position: absolute;
+    width: 241px;
+    height: 52px;
+    left: 545px;
+    top: 11px;
+  }
+  .play1 {
+    position: absolute;
+    width: 114px;
+    height: 133px;
+    left: 572px;
+    top: 74px;
+    cursor: pointer;
+  }
 }

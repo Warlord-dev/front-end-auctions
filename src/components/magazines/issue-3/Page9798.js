@@ -93,7 +93,7 @@ Physical property: </p>
       </div>
       <div className={styles.image32}>
         <video className={styles.image33} muted loop autoPlay>
-          <source src="./magazine/3/images/97_98/video3.mp4" type="video/mp4" />
+          <source src="./magazine/3/images/97_98/video4.mp4" type="video/mp4" />
         </video>
       </div>
     </div>

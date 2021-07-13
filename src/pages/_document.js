@@ -156,7 +156,6 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Bayon"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Ramabhadra"></link>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rosarivo"></link>
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Bungee Inline"
@@ -213,7 +212,13 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pangolin"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@700"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Imprima"></link> 
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@1"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plaster"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Peralta"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rye"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shojumaru"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Smythe"></link> 
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"
