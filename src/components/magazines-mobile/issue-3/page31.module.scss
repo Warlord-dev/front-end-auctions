@@ -1,0 +1,174 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3210px;
+  background-color: white;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .backImage {
+    position: absolute;
+    width: 375px;
+    height: 3210px;
+    left: 0px;
+    top: 0px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 275px;
+    height: 270px;
+    left: 62px;
+    top: 267px;
+    
+    font-family: Rockabye;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 68px;
+    line-height: 80%;
+    /* or 54px */
+    
+    
+    color: #B1223B;
+    
+    text-shadow: 0px 4px 4px rgba(255, 187, 232, 0.53), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 266px;
+    height: 223px;
+    left: 58px;
+    top: 594px;
+    
+    font-family: Sanchez;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 255px;
+    height: 221px;
+    left: 58px;
+    top: 1094px;
+    
+    font-family: B612;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    /* or 22px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 266px;
+    height: 396px;
+    left: 58px;
+    top: 1372px;
+    
+    font-family: Nunito Sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+    
+    
+    color: #FFFFFF;    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 266px;
+    height: 347px;
+    left: 58px;
+    top: 1789px;
+    
+    font-family: Nunito Sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 270px;
+    height: 120px;
+    left: 58px;
+    top: 2390px;
+    
+    font-family: Rosario;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 24px */
+    
+    
+    color: #E19CE9;
+    
+    // border: 0.2px solid #000000;
+    box-sizing: border-box;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .text6 {
+    position: absolute;
+    width: 262px;
+    height: 169px;
+    left: 58px;
+    top: 2546px;
+    
+    font-family: Nunito Sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 272px;
+    height: 249px;
+    left: 103px;
+    top: 2084px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 241px;
+    height: 241px;
+    left: 0px;
+    top: 2927px;
+    box-sizing: border-box;    
+  }
+}

@@ -1,0 +1,17 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 1868px;
+  background-color: white;
+  color: white;
+  position: relative;
+
+  font-family: Days One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 100%;
+
+  
+}

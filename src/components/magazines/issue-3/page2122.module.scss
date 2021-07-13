@@ -1,0 +1,164 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 959px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+  .image2 {
+    position: absolute;
+    width: 1141px;
+    height: 1669px;
+    left: 959px;
+    top: 0px;
+  }
+  .image3 {
+    position: absolute;
+    width: 870px;
+    height: 520px;
+    left: 1049px;
+    top: 147px;
+  }
+  .image4 {
+    position: absolute;
+    width: 287px;
+    height: 290px;
+    left: 1633px;
+    top: 0px;
+    background: rgb(249,197,250);
+    background: linear-gradient(180deg, rgba(249,197,250,1) 0%, rgba(69,39,217,1) 100%);
+  }
+  .text1 {
+    position: absolute;
+    width: 249px;
+    height: 256px;
+    left: 1655px;
+    top: 20px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FFFFFF;
+  }
+  .image5 {
+    position: absolute;
+    width: 454px;
+    height: 402px;
+    left: 1076px;
+    top: 428px;
+    
+    background: linear-gradient(180deg, #E430CC 0%, #437C65 100%);
+  }
+  .text2 {
+    position: absolute;
+    width: 414px;
+    height: 352px;
+    left: 1103px;
+    top: 452px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FFFFFF;
+  }
+  .image6 {
+    position: absolute;
+    width: 454px;
+    height: 440px;
+    left: 959px;
+    top: 1057px;
+    
+    background: linear-gradient(180deg, #5DA7F3 0%, #FAC209 100%);
+  }
+  .text3 {
+    position: absolute;
+    width: 414px;
+    height: 392px;
+    left: 985px;
+    top: 1088px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 14px;
+    
+    color: #FFFFFF;
+  }
+  .text4 {
+    position: absolute;
+    width: 328px;
+    height: 448px;
+    left: 1580px;
+    top: 549px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FFFFFF;
+    .title {
+      color: #1EF1FF;
+    }
+  }
+  .text5 {
+    position: absolute;
+    width: 415px;
+    height: 240px;
+    left: 1490px;
+    top: 1102px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FFFFFF;
+    .title {
+      color: #1EF1FF;
+    }
+  }
+  .image7 {
+    position: absolute;
+    width: 463px;
+    height: 193.41px;
+    left: 995px;
+    top: 0px;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image8 {
+    position: absolute;
+    width: 463px;
+    height: 193.41px;
+    left: 1152px;
+    top: 153px;    
+  }
+  .image9 {
+    position: absolute;
+    width: 221px;
+    height: 188px;
+    left: 995px;
+    top: 219px;    
+  }
+}

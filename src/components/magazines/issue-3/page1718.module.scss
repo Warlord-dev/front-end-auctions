@@ -1,0 +1,228 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #FFFFFF;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+  .image2 {
+    position: absolute;
+    width: 686px;
+    height: 660px;
+    left: 0px;
+    top: 0px;
+    border-radius: 100%;
+    overflow: hidden;
+    .image3 {
+      height: 100%;
+    }
+  }
+  .image4 {
+    position: absolute;
+    width: 420px;
+    height: 404px;
+    left: 540px;
+    top: 840px;
+    border-radius: 100%;
+    overflow: hidden;
+    .image5 {
+      height: 100%;
+    }
+  }
+  .image6 {
+    position: absolute;
+    width: 284px;
+    height: 273px;
+    left: 14px;
+    top: 1197px;
+    border-radius: 100%;
+    overflow: hidden;
+    .image7 {
+      height: 100%;
+    }
+  }
+  .image8 {
+    position: absolute;
+    width: 512px;
+    height: 486px;
+    left: 448px;
+    top: -32px;
+  }
+  .image9 {
+    position: absolute;
+    width: 512px;
+    height: 486px;
+    left: 122px;
+    top: 880px;
+  }
+  .image10 {
+    position: absolute;
+    width: 256px;
+    height: 243px;
+    left: 480px;
+    top: 1227px;
+  }
+  .text1 {
+    position: absolute;
+    width: 801px;
+    height: 396px;
+    left: 51px;
+    top: 519px;
+    
+    font-family: Eczar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 110%;
+    /* or 132px */
+    
+    
+    color: #FFA41B;
+    
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #ffa41b;
+    text-shadow: 0px 4px 30px #000000;
+  }
+  .text2 {
+    position: absolute;
+    width: 225px;
+    height: 55px;
+    left: 51px;
+    top: 904px;
+    
+    font-family: Eczar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    /* identical to box height, or 55px */
+    
+    
+    color: #FFA41B;
+    
+    text-shadow: 0px 4px 30px #000000;
+  }
+  .image11 {
+    position: absolute;
+    width: 960px;
+    height: 1005px;
+    left: 960px;
+    top: 454px;
+    
+    background: linear-gradient(180deg, #FC0FF2 0%, #130017 100%);
+  }
+  .image12 {
+    position: absolute;
+    width: 960px;
+    height: 38px;
+    left: 960px;
+    top: 1459px;
+    
+    background: #741370;
+  }
+  .text3 {
+    position: absolute;
+    width: 748px;
+    height: 352px;
+    left: 1066px;
+    top: 64px;
+    
+    font-family: Song Myung;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    
+    color: #9F3E9B;
+    .text4 {
+      font-family: SeoulNamsan;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 22.5px;
+    }
+  }
+  .text5 {
+    position: absolute;
+    width: 761px;
+    height: 154px;
+    left: 1066px;
+    top: 481px;
+    
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    
+    
+    color: #F4FF76;
+  }
+  .text6 {
+    position: absolute;
+    width: 720px;
+    height: 388px;
+    left: 1162px;
+    top: 657px;
+    
+    font-family: PLAYPULL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    /* or 45px */
+    
+    
+    color: #FFFFFF;
+    .text7 {
+      font-family: Nunito Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .image13 {
+    position: absolute;
+    width: 138px;
+    height: 205px;
+    left: 960px;
+    top: 543px;
+  }
+  .image14 {
+    position: absolute;
+    width: 524px;
+    height: 486px;
+    left: 1559px;
+    top: 1011px;
+  }
+  .text8 {
+    position: absolute;
+    width: 544px;
+    height: 439px;
+    left: 1000px;
+    top: 979px;
+    
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    
+    
+    color: #FFFFFF;
+  }
+}

@@ -1,0 +1,36 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 805px;
+  background-color: #000000;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 320.77px;
+    height: 447px;
+    left: 27px;
+    top: 72px;    
+  }
+  .text1 {
+    position: absolute;
+    width: 258px;
+    height: 96px;
+    left: 58px;
+    top: 541px;
+    
+    font-family: Convergence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}

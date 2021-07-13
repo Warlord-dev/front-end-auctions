@@ -1,0 +1,30 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2308px;
+  background-color: #F43C41;
+  color: white;
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+  .text2 {
+    position: absolute;
+    width: 308px;
+    height: 1319px;
+    left: 35px;
+    top: 67px;
+    
+    font-family: Cherry Bomb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}

@@ -1,0 +1,257 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .image1 {
+    position: absolute;
+    width: 1956px;
+    height: 1539px;
+    left: -36px;
+    top: 0px;    
+  }
+  .image2 {
+    position: absolute;
+    width: 623px;
+    height: 185px;
+    left: 44px;
+    top: 22px;
+  }
+  .image3 {
+    position: absolute;
+    width: 695.09px;
+    height: 371.9px;
+    left: -60.78px;
+    top: 181.89px;
+    transform: rotate(40deg);
+  }
+  .image4 {
+    position: absolute;
+    width: 364px;
+    height: 460px;
+    left: 115px;
+    top: 207px;
+  }
+  .image5 {
+    position: absolute;
+    width: 176.65px;
+    height: 209.28px;
+    left: 782px;
+    top: -38px;
+  }
+  .image6 {
+    position: absolute;
+    width: 246px;
+    height: 158px;
+    left: 706px;
+    top: 148px;
+  }
+  .image7 {
+    position: absolute;
+    width: 339px;
+    height: 331px;
+    left: 509px;
+    top: 292px;
+    overflow: hidden;
+    border: 4px solid #FFFFFF;
+    box-sizing: border-box;
+    .image8 {
+      height: 100%;
+      position: absolute;
+      left: -120px;
+    }
+  }
+  .text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    position: absolute;
+    width: 241px;
+    height: 49px;
+    left: -5px;
+    text-shadow: 0px 4px 4px #FF22F6;
+  }
+  .text1 {
+    top: 721px;
+  }
+  .text2 {
+    top: 770px;
+  }
+  .text3 {
+    top: 819px;
+  }
+  .text4 {
+    top: 868px;
+  }
+  .text5 {
+    top: 917px;
+  }
+  .text6 {
+    top: 966px;
+  }
+  .text7 {
+    top: 1015px;
+  }
+  .text8 {
+    top: 1064px;
+  }
+  .text9 {
+    top: 1113px;
+  }
+  .text10 {
+    top: 1164px;
+  }
+  .text11 {
+    top: 1217px;
+  }
+  .text12 {
+    top: 1266px;
+  }
+  .text13 {
+    top: 1315px;
+  }
+  .text14 {
+    top: 1366px;
+  }
+  .text15 {
+    top: 1417px;
+  }
+  .text16 {
+    position: absolute;
+    width: 707px;
+    height: 518px;
+    left: 239px;
+    top: 687px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 120.53%;
+    /* or 14px */
+    
+    text-align: center;
+    
+    color: #35004F;
+    .text17 {
+      font-family: Imprima;
+      font-weight: 400;
+      color: #FFFFFF;
+    }
+  }
+  .text18 {
+    position: absolute;
+    width: 286px;
+    height: 235px;
+    left: 658px;
+    top: 1152px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 120.53%;
+    /* or 12px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .text19 {
+    position: absolute;
+    width: 673px;
+    height: 64px;
+    left: 246px;
+    top: 1404px;
+    
+    font-family: IM FELL French Canon;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120.53%;
+    /* or 22px */
+    
+    text-align: center;
+    
+    color: #FF0000;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #ff0000;
+  }
+  .image9 {
+    position: absolute;
+    width: 960px;
+    height: 812px;
+    left: 0px;
+    top: 685px;
+    
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #8B2929 38.97%);
+  }
+  .image10 {
+    position: absolute;
+    width: 416px;
+    height: 213px;
+    left: 216px;
+    top: 1170px;
+    border: 5px solid #000000;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .image11 {
+    position: absolute;
+    width: 629px;
+    height: 481px;
+    left: 960px;
+    top: 1016px;
+  }
+  .image12 {
+    position: absolute;
+    width: 957px;
+    height: 401px;
+    left: 963px;
+    top: 0px;
+    border: 6px solid #FFFFFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    .image13 {
+      width: 100%;
+    }
+  }
+  .image14 {
+    position: absolute;
+    left: 83.96%;
+    right: 8.23%;
+    top: 80.83%;
+    bottom: 9.15%;
+  }
+  .play {
+    position: absolute;
+    width: 46.81px;
+    height: 46.08px;
+    left: 1664px;
+    top: 1262px;
+    cursor: pointer;
+  }
+  .image15 {
+    position: absolute;
+    width: 241px;
+    height: 52px;
+    left: 545px;
+    top: 11px;
+  }
+  .play1 {
+    position: absolute;
+    width: 114px;
+    height: 133px;
+    left: 572px;
+    top: 74px;
+    cursor: pointer;
+  }
+}
