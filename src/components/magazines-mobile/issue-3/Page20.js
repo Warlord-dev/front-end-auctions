@@ -1,16 +1,48 @@
 import React from 'react'
 import styles from './page20.module.scss'
+import Link from 'next/link';
 
 const Page20 = () => {
   return (
     <div className={styles.wrapper}>
-      <p className={styles.text1 }> In other words, consensus allows groups to reach an agreement that benefits the entire group, rather than simply going for majority rule. The main consensus mechanisms include the following:
-      <br/><br/><span className={styles.title}>• Proof-of-work (PoW).</span> Proof of work relies on computational power as a scarce resource, which requires threat actors to acquire a large portion of the computational power of the validating network, making it consume high amounts of energy. For instance, Bitcoin applies a specific set of rules to the generation of new blocks. One of the rules states that the ability to create a block must be proportional to the processing power of the proof-of-work mechanism. This means one has to actually own the computing power required to create a new block. Ethereum also uses PoW, but is in the process of changing its consensus mechanism to the next one.
-      <br/><br/><span className={styles.title}>• Proof-of-stake (PoS).</span> Proof-of-stake states that an individual can mine or validate block transactions depending on how many tokens (or stakes) they hold. The more tokens owned by a miner, the more mining power they possess. Proof-of-stake is the underlying mechanism that enables validators upon receiving enough stake. Ethereum is moving to this consensus mechanism from a PoW model as part of its Ethereum 2.0 upgrades in order to address transaction fees and scalability issues. However, getting this consensus mechanism is a complex technical challenge that will take time. Unlike PoW, validators don't need to spend massive computational power because they are selected at random and are not competing against each other. Validators get rewards for proposing new blocks and for attesting to ones they've seen. PoS models make 51% attacks risky for threat actors because executing it requires 51% of staked ETH, which costs oodles and oodles of money. There is no incentive to destroy the value and infrastructure of a heavily invested cryptocurrency individuals are in.
-      <br/><br/><span className={styles.title}>• Delegated proof of stake (DPoS).</span> Delegated Proof-of-Stake models are a popular iteration of the latter PoS concept, where network users vote and elect delegates to validate the succeeding block. With DPoS, an individual can vote on delegates by sending your tokens into a staking pool and linking it to their delegate. No physical transfers from wallet to wallet occur. Then, an individual can vote through delegates by pooling their tokens into a staking pool and linking them to a particular delegate. They do not physically transfer your tokens to another wallet but rather utilize a staking service provider to stake your tokens in a staking pool. Its proponents believe it is a more democratized way of choosing who validates the following block (rather than being at random) and allowing diverse, serious stakers to participate in the process. Fewer validators enable the network to reach a faster consensus.
+       <img src="/magazine/3/images/21_22/image6.png" className={styles.image1}/>
+       <Link href="https://idle.finance/#/">
+        <a target="_blank">
+          <img src="/magazine/3/images/21_22/image4.png" className={styles.image7}/>
+        </a>
+      </Link>
+      <img src="/magazine/3/images/21_22/image4.png" className={styles.image8}/>
+      <img src="/magazine/3/images/21_22/image5.png" className={styles.image9}/>
+      <div className={styles.image4}></div>
+      <div className={styles.image5}></div>
+      <p className={styles.text1}>L2s and sidechains are a fairly new technology, with many improvements in the pipeline. With Idle and our community, we have explored many scalability solutions in our forum. Seems like there are some good synergies between our protocol and Polygon, as many DeFi primitives are moving there and we would be able to port our aggregation layer in Polygon as well. We are on the lookout for other scalable solutions, and we do appreciate solutions that have a native settlement layer with ETH like optimistic rollups or ZKS.</p>  
+      <p className={styles.text2}>For me (Matteo Pandolfi, founder of Idle Protocol), the watershed moment when I realized that we needed to build Idle was during ETHBerlin 2019. I went there right after the Gitcoin hackathon we won in July 2019, to do user feedback sessions and get closer to the Ethereum community. 
 <br/><br/>
-Getting consensus exactly right is extremely difficult in production, considering the theory itself is academic. Worse, the real world has a knack for proving theory wrong, especially since we are still in the early days of distributed ledger technologies.
-</p>
+When I put Idle in the hands of the users they were all enthusiastic about the rebalance concept and the automatic optimization of interest rate returns. 
+<br/><br/>
+Plenty of people told me that it was exactly what they were looking for, some others gave me really good insights on how to improve it, and generally everybody was immediately understanding of the benefit of using Idle to optimize returns. It was easy to grasp for anyone, but powerful for those who deeply understood it. 
+<br/><br/>
+The Ethereum community and ConsenSys Tachyon acceleration program gave me a boost  of motivation to keep working on Idle, and is what kept me building a protocol that is changing the way people and organizations think about wealth management.</p>  
+      <div className={styles.image6}></div>
+      <p className={styles.text3}>In November 2020 we launched the Idle DAO and the $IDLE governance token to effectively replace the administrator of the Idle protocol. From that point forward, all changes (from supported assets to system parameters) have been originated from IDLE token-holders – fulfilling our vision of an open protocol that can evolve in entirely new ways. 
+      <br/><br/>
+I would say we are a DAO-first community, and lately, we introduced the Leagues structure, a series of organizational units designed to take care of the daily maintenance and improvement of the protocol. IDLE token holders are able to vote on Leagues composition, mandate duration, and budgets assigned to each specific League.
+<br/><br/>
+This model comes from our thesis: given the amorphous nature of the organizational structure of a DAO, varied participation will occur and most members will tend towards relatively passive participation. DAOs tend to be driven by a handful of key members with the larger community providing relevant input. Ultimately, Leagues are composed of full-time remunerated participants in each organizational unit and ensure appropriately skilled teams are best positioned for success. 
+<br/><br/>
+The composition of Leagues is designed to evolve over time based on the needs and opportunities for Idle DAO. The proposed current composition of Leagues is based on a relatively common organizational structure of departments of any professional asset management firm, but one would expect that the DAO structure evolves considerably over time. We could see more specialized Leagues such as one specifically for tokenomics or yield strategies, for compliance, for bounties and outward-facing development work, or any other activity that will accrue value to Idle DAO.</p>  
+      <p className={styles.text4}><span className={styles.title}>How do people new to DeFi and web3 learn how to make the best use of Idle?</span>
+      <br/><br/>
+Depends on what kind of persona you’re talking about for people new to DeFi and web3. New people could be retail, and for that we have an easy-to-use dashboard with many tools that can help through the onboarding process (fiat-on ramps, token swap, batched deposit). 
+<br/><br/>
+If you are talking about institutions or integrators of the Idle Protocol, they would need to deeply understand the numbers behind the protocol (via our stats page, or the community Dune dashboard) and check the documentation for a technical overview of our protocol. 
+<br/><br/>
+In general, if people want to stay up-to-date with protocol development, I’d suggest to follow our twitter account, or subscribe to either our Idle Beats weekly newsletter (for more savvy users) or to our monthly report newsletter. If users have any questions, they can hop on Discord or Telegram channels, where they will find both the Leagues team and our vibrant community ready to give them more information regarding the products and protocol.
+</p>  
+      <p className={styles.text5}><span className={styles.title}>Why Idle? Does it have something to do with passive income? What about your approach lets users becoming lazy in the right ways in their lives so that they can do more about what they care about in other areas?</span>
+
+      <br/><br/><br/>
+It can be interpreted in two different ways. The initial concept behind the name Idle Finance is because the protocol is specifically built for all the idle assets and capital – with the growth of the protocol, we saw that users really appreciate being idle while using the protocol to optimize their returns, and we pretty much loved this community-led definition. Our vision is that money should never sit still, and we’re working to change the way idle funds are managed – hence, everybody can be idle and just give their savings a better place to stay.</p>  
     </div>
   )
 }

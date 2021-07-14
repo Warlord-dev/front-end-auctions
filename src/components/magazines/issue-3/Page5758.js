@@ -39,7 +39,6 @@ const Page5758 = () => {
       <p className={styles.text5}>Though I don't have a huge background in gaming, I am fascinated with the concept of the virtual world-- especially one that is more than just a game. Virtual worlds for commerce, art, and education are particularly interesting to me and areas that I will dedicate myself to building. I have spent a lot of time conceptualizing a Metaverse platform / ecosystem based around the 3D city prototype I had built out, one that is particularly focused on 3D fashion.</p>
       <audio
         ref={refAudio}
-        controls
         className={styles.audio}
         src="./magazine/3/images/57_58/audio1.mp3"
       ></audio>

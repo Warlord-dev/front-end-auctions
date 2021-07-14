@@ -28,7 +28,7 @@ const Page4546 = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.image1}>
-          <video ref={ref2} className={styles.image17} muted autoPlay loop>
+          <video className={styles.image17} muted autoPlay loop>
             <source src="./magazine/3/images/45_46/video4.mp4" type="video/mp4" />
           </video>
         </div>

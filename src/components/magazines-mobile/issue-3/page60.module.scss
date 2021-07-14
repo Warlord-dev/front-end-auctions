@@ -1,0 +1,14 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 4285px;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+ 
+}

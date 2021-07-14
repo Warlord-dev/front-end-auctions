@@ -1,0 +1,322 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+@keyframes scrollingLeft {
+  0% { transform: translateX(-1199px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes scrollingRight {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(-1199px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2404px;
+  background-color: black;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .backImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 375px;
+    height: 2400px;
+  }
+  
+  h1 {
+    position: absolute;
+    width: 175px;
+    height: 66px;
+    left: 26px;
+    top: 37px;
+    
+    font-family: Minecrafter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+    color: #FFFFFF;    
+  }
+
+  h2 {
+    position: absolute;
+    width: 376.18px;
+    height: 35.67px;
+    left: -59px;
+    top: 149.66px;
+    
+    font-family: ZCOOL KuaiLe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    /* or 44px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    transform-origin: 0 0;
+    transform: rotate(-20deg);    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 285px;
+    height: 246px;
+    left: 68px;
+    top: 215px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 347px;
+    height: 349px;
+    left: 15px;
+    top: 493px;    
+  }
+
+  .arrowTop {
+    position: absolute;
+    width: 245px;
+    height: 334px;
+    left: 0px;
+    top: 700px;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 148px;
+    height: 52px;
+    left: 210px;
+    top: 847px;
+    
+    font-family: Mad Galaxy Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 110%;
+    
+    text-align: right;
+    
+    color: #FFFFFF;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 194px;
+    height: 102px;
+    left: 30px;
+    top: 928px;
+    
+    font-family: Finger Paint;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    /* or 14px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  h3 {
+    position: absolute;
+    width: 417px;
+    height: 24px;
+    left: -15px;
+    top: 1030px;
+    
+    font-family: Finger Paint;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    /* or 14px */
+    
+    text-align: center;
+    
+    color: #FF1818;    
+  }
+
+  .arrowBottom {
+    position: absolute;
+    width: 156px;
+    height: 214px;
+    left: 69px;
+    top: 996px;
+  }
+
+  h4 {
+    position: absolute;
+    width: 199.47px;
+    height: 161.68px;
+    left: 168px;
+    top: 1103px;
+    
+    font-family: ZCOOL KuaiLe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  h5 {
+    position: absolute;
+    width: 292px;
+    height: 88px;
+    left: 39px;
+    top: 1932px;
+    
+    font-family: Minecrafter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    /* or 44px */
+    
+    
+    color: #0904FF;    
+  }
+
+  h6 {
+    position: absolute;
+    width: 265px;
+    height: 100px;
+    left: 39px;
+    top: 2036px;
+    
+    font-family: Minecrafter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    /* identical to box height, or 100px */
+    
+    
+    color: #2F1276;    
+  }
+
+  p {
+    position: absolute;
+    font-family: B612 Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    text-align: right;
+    color: #FFFFFF;
+    &.text4 {
+      width: 215px;
+      height: 18px;
+      left: 138px;
+      top: 2152px;      
+    }
+    &.text5 {
+      width: 374px;
+      height: 18px;
+      left: -21px;
+      top: 2183px;
+    }
+    &.text6 {
+      width: 374px;
+      height: 18px;
+      left: -21px;
+      top: 2214px;
+    }
+    &.text7 {
+      width: 215px;
+      height: 18px;
+      left: 138px;
+      top: 2244px;
+    }
+  }
+
+  .india_2 {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 288px;
+    top: 1943px;    
+  }
+
+  .animationFrame {
+    position: absolute;
+    left: -143px;
+    top: 1242px;
+    display: flex;
+    align-items: center;
+
+    div {
+      align-items: center;
+      display: flex;
+
+      img {
+        margin: 0 1rem;
+      }
+    }
+
+    animation: scrollingLeft 5s linear infinite;
+  }
+
+  .animationFrame1 {
+    position: absolute;
+    left: -256px;
+    top: 1475px;
+    display: flex;
+    
+    div {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin: 0 1rem;
+      }
+    }
+
+    animation: scrollingRight 6s linear infinite;
+  }
+
+  .animationFrame2 {
+    position: absolute;
+    left: -132px;
+    top: 1684px;
+    display: flex;
+    align-items: center;
+
+    div {
+      align-items: center;
+      display: flex;
+
+      img {
+        margin: 0 1rem;
+      }
+    }
+
+    animation: scrollingLeft 7s linear infinite;
+  }
+
+
+}

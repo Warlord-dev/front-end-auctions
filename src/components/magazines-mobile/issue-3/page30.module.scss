@@ -1,0 +1,165 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  height: 2960px;
+  color: black;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 290px;
+    height: 184px;
+    left: 40px;
+    top: 809px;
+
+    font-family: Dispence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #ffffff;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 253px;
+    height: 368px;
+    left: 77px;
+    top: 1025px;
+
+    font-family: Dispence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: right;
+
+    color: #ffffff;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 289px;
+    height: 360px;
+    left: 41px;
+    top: 1410px;
+
+    font-family: Dispence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: right;
+
+    color: #ffffff;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 149px;
+    height: 20px;
+    left: 174px;
+    top: 2099px;
+
+    font-family: Dispence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #ffffff;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 301px;
+    height: 280px;
+    left: 34px;
+    top: 2172px;
+
+    font-family: Dispence;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+
+    color: #ffffff;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 306px;
+    height: 120px;
+    left: 34px;
+    top: 2520px;
+
+    font-family: Alegreya;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 37px;
+    line-height: 40px;
+    /* or 100% */
+
+    color: #000000;
+
+    box-sizing: border-box;
+  }
+
+  .textDiv1 {
+    position: absolute;
+    width: 376px;
+    height: 192px;
+    left: -1px;
+    top: 2484px;
+
+    background: rgba(255, 255, 255, 0.43);
+  }
+
+  .text7 {
+    position: absolute;
+    width: 294px;
+    height: 150px;
+    left: 41px;
+    top: 2708px;
+
+    font-family: Inter;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 30px;
+    /* or 200% */
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+  }
+
+  .video {
+    position: absolute;
+    width: 375px;
+    height: 243px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .play {
+    position: absolute;
+    width: 36.81px;
+    height: 36.81px;
+    top: 40px;
+    right: 20px;
+  }
+}
