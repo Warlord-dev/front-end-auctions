@@ -2,10 +2,34 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2589px;
+  height: 583px;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
  
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 583px;
+    left: 0px;
+    top: 0px;
+  }
+  .text1 {
+    position: absolute;
+    width: 174px;
+    height: 66px;
+    left: 29px;
+    top: 24px;
+    
+    font-family: League Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 110%;
+    /* or 22px */
+    
+    
+    color: #CB5858;
+  }
 }
