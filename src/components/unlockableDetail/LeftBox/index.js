@@ -6,7 +6,7 @@ const LeftBox = ({ details, activeImage, setActiveImage }) => {
 
   const isVideo = (url) => {
     const convertedUrl = url.toLowerCase();
-    if (convertedUrl.includes('mp4') || convertedUrl.includes('mov')) return true;
+    if (convertedUrl.includes('mp4') || convertedUrl.includes('mov') || convertedUrl.includes('m4v')) return true;
     return false;
   };
 

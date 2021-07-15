@@ -1,6 +1,8 @@
 import React from 'react';
 import IssueCard from '@components/IssueCard';
 import styles from './styles.module.scss';
+import { info } from '@constants/nft_subscription_issues';
+
 
 const AllIssues = () => {
   return (
@@ -9,24 +11,17 @@ const AllIssues = () => {
         <div className={styles.mainText}>ALL ISSUES.</div>
         <div className={styles.subText}>DigiFizzy. Magazine for the Metaverse.</div>
         <div className={styles.issues}>
-          <div className={styles.issue}>
-            <IssueCard
-              image="/images/nft/1/main_magazine.png"
-              id="ONE"
-              title="DIGIFIZZY"
-              link1="/magazines/1"
-              link2="/unlockable/1"
-            />
-          </div>
-          <div className={styles.issue}>
-            <IssueCard
-              image="/images/nft/2/home.png"
-              id="TWO"
-              title="DIGIFIZZY"
-              link1="/magazines/2"
-              link2="/unlockable/2"
-            />
-          </div>
+          {info.map((issue, index) => (
+            <div className={styles.issue} key={issue.id}>
+              <IssueCard
+                image={issue.image}
+                id={issue.id}
+                title={issue.title}
+                link1={`/magazines/${index + 1}`}
+                link2={`/unlockable/${index + 1}`}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>
