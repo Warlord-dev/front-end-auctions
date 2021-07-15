@@ -1,0 +1,207 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 3769px;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: relative;
+    width: 375px;
+    height: 3769px;
+  }
+  .image2 {
+    position: absolute;
+    width: 343px;
+    height: 521px;
+    left: 0px;
+    top: 0px;
+  }
+  .image3 {
+    position: absolute;
+    width: 375px;
+    height: 1018px;
+    left: 0px;
+    top: 521px;
+    
+    background: #17A6A0;
+    border: 5px solid #00FF29;
+    box-sizing: border-box;
+  }
+  .text1 {
+    position: absolute;
+    width: 296px;
+    height: 142px;
+    left: 40px;
+    top: 601px;
+    
+    font-family: Snippet;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120.53%;
+    /* or 28px */
+    
+    letter-spacing: 0.07em;
+    
+    color: #FFFFFF;
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+  }
+  .text2 {
+    position: absolute;
+    width: 312px;
+    height: 94px;
+    left: 32px;
+    top: 1045px;
+    
+    font-family: Snippet;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 120.53%;
+    /* or 43px */
+    
+    letter-spacing: 0.07em;
+    
+    color: #FFFFFF;
+    text-shadow: rgb(196, 71, 255) 2px 0px 0px, rgb(196, 71, 255) 1.75517px 0.958851px 0px, rgb(196, 71, 255) 1.0806px 1.68294px 0px, rgb(196, 71, 255) 0.141474px 1.99499px 0px, rgb(196, 71, 255) -0.832294px 1.81859px 0px, rgb(196, 71, 255) -1.60229px 1.19694px 0px, rgb(196, 71, 255) -1.97998px 0.28224px 0px, rgb(196, 71, 255) -1.87291px -0.701566px 0px, rgb(196, 71, 255) -1.30729px -1.5136px 0px, rgb(196, 71, 255) -0.421592px -1.95506px 0px, rgb(196, 71, 255) 0.567324px -1.91785px 0px, rgb(196, 71, 255) 1.41734px -1.41108px 0px, rgb(196, 71, 255) 1.92034px -0.558831px 0px;    
+  }
+  .text3 {
+    position: absolute;
+    width: 652px;
+    height: 108px;
+    left: 32px;
+    top: 1336px;
+    
+    font-family: QuickSales;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+    
+    letter-spacing: 0.07em;
+    
+    color: #FFFFFF;    
+  }
+  .text4 {
+    position: absolute;
+    width: 652px;
+    height: 108px;
+    left: 49px;
+    top: 1385px;
+    
+    font-family: QuickSales;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+    
+    letter-spacing: 0.07em;
+    
+    color: #FFFFFF;
+  }
+  .text5 {
+    position: absolute;
+    width: 652px;
+    height: 108px;
+    left: 9px;
+    top: 1431px;
+    
+    font-family: QuickSales;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+    
+    letter-spacing: 0.07em;
+    
+    color: #FFADF2;
+  }
+  .image5 {
+    position: absolute;
+    width: 388px;
+    height: 317px;
+    left: 0px;
+    top: 1611px;
+  }
+  .text7 {
+    position: absolute;
+    width: 315px;
+    height: 34px;
+    left: 0px;
+    top: 1911px;
+    
+    font-family: Snippet;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120.53%;
+    /* or 28px */
+    
+    letter-spacing: 0.07em;
+    
+    color: #FFFFFF;
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+  }
+  .image6 {
+    position: absolute;
+    width: 294px;
+    height: 289px;
+    left: 81px;
+    top: 1945px;
+  }
+  .image4 {
+    position: absolute;
+    width: 167px;
+    height: 167px;
+    left: -1px;
+    top: 2165px;
+  }
+  .text6 {
+    position: absolute;
+    width: 169px;
+    height: 18px;
+    left: 174px;
+    top: 2249px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .image7 {
+    position: absolute;
+    width: 342px;
+    height: 347px;
+    left: -27px;
+    top: 2288px;
+  }
+  .image9 {
+    position: absolute;
+    width: 960px;
+    height: 111px;
+    left: -399.5px;
+    top: 3099.5px;
+    transform: rotate(-90deg);
+  }
+  .image8 {
+    position: absolute;
+    width: 961px;
+    height: 215px;
+    left: -237px;
+    top: 3047px;
+    transform: rotate(-90deg);
+  }
+}

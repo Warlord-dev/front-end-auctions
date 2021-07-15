@@ -3,12 +3,29 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 2377px;
+  height: 2099px;
   overflow: hidden;
-  background-color: white;
+  background-color: black;
   color: white;
   display: flex;
   position: relative;
   
-  
+  .text2 {
+    position: absolute;
+    width: 272px;
+    height: 1237px;
+    left: 52px;
+    top: 70px;
+    
+    font-family: Milonga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 120.53%;
+    /* or 20px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
 }

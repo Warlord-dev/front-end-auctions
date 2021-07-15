@@ -48,6 +48,10 @@
         height: 253px;
         left: 1667px;
         top: 0px;
+        transition: transform .2s;
+        &:hover {
+        transform: scale(1.1);
+        }
     }
     .image5 {
         position: absolute;
@@ -150,8 +154,12 @@
         height: 301px;
         left: 33px;
         top: 693px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
         .image10 {
-            width: 100%;
+            height: 100%;
         }
     }
     .playbutton1 {
@@ -185,8 +193,12 @@
         height: 301px;
         left: 541px;
         top: 893px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
         .image13 {
-            width: 100%;
+            height: 100%;
         }
     }
     .playbutton2 {
@@ -238,10 +250,97 @@
         height: 301px;
         left: 0px;
         top: 1196px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
         .image16 {
-            width: 100%;
-            transform: scale(1.7);
+            height: 100%;
         }
+    }
+    .image17 {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        left: 1210px;
+        top: 252px;
+    }
+    .image18 {
+        position: absolute;
+        width: 900px;
+        height: 866px;
+        left: 986px;
+        top: 419px;
+        
+        background: rgba(0, 0, 0, 0.69);
+    }
+    .text8 {
+        position: absolute;
+        width: 790px;
+        height: 180px;
+        left: 1041px;
+        top: 455px;
+        
+        font-family: Signika;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        
+        color: #FFFFFF;
+    }
+    .image19 {
+        position: absolute;
+        width: 900px;
+        height: 120px;
+        left: 986px;
+        top: 670px;
+        
+        background: rgba(0, 0, 0, 0.69);
+    }
+    .text9 {
+        position: absolute;
+        width: 781px;
+        height: 56px;
+        left: 1041px;
+        top: 699px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        
+        color: #FFFFFF;
+    }
+    .text10 {
+        position: absolute;
+        width: 423px;
+        height: 368px;
+        left: 1051px;
+        top: 844px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        
+        color: #FF2828;
+    }
+    .text11 {
+        position: absolute;
+        width: 256px;
+        height: 416px;
+        left: 1571px;
+        top: 822px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        
+        color: #FFFFFF;
     }
 }

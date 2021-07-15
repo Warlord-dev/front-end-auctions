@@ -34,11 +34,6 @@ I'm not really sure where I want to go in terms of modding. I want to try keepin
       <img src="/magazine/3/images/85_86/image3.gif" className={styles.image9}/>
       <img src="/magazine/3/images/85_86/image4.gif" className={styles.image15}/>
       <div className={styles.image10}>
-        <video className={styles.image11} muted loop autoPlay>
-          <source src="https://www.youtube.com/watch?v=wIwCeexQoxQ" type="video/mp4" />
-        </video>
-      </div>
-      <div className={styles.image10}>
         <iframe width="496" height="236" src="https://www.youtube.com/embed/wIwCeexQoxQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
       </div>
       <img src="/magazine/3/images/85_86/image4.png" className={styles.image12}/>

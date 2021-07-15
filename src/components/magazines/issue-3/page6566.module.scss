@@ -79,6 +79,10 @@
       
       
       color: #000000;
+      transition: transform .2s;
+      &:hover {
+          transform: scale(1.1);
+      }
     }
     .text4 {
       position: absolute;

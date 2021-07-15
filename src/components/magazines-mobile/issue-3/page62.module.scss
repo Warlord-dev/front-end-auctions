@@ -3,12 +3,18 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 2883px;
+  height: 583px;
   overflow: hidden;
-  background-color: white;
+  background-color: black;
   color: white;
   display: flex;
   position: relative;
 
-  
+  .image2 {
+    position: absolute;
+    width: 449px;
+    height: 583px;
+    left: -40px;
+    top: 0px;
+  }
 }

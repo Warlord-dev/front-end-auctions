@@ -49,21 +49,17 @@ const Page1112 = () => {
         <img src="/magazine/3/images/11_12/image4.png" className={styles.image10}/>
         </a>
       </Link>
-      <Link href="https://ethhole.link/">
+      <Link href="https://llama.community/#/">
         <a target="_blank">
         <img src="/magazine/3/images/11_12/image5.png" className={styles.image11}/>
         </a>
       </Link>
-      <Link href="https://llama.community/#/">
+      <Link href="https://illuminate.finance/">
         <a target="_blank">
         <img src="/magazine/3/images/11_12/image6.png" className={styles.image12}/>
         </a>
       </Link>
-      <Link href="https://illuminate.finance/">
-        <a target="_blank">
-        <img src="/magazine/3/images/11_12/image7.png" className={styles.image13}/>
-        </a>
-      </Link>
+      <img src="/magazine/3/images/11_12/image7.png" className={styles.image13}/>
       <Link href="https://github.com/NFTags">
         <a target="_blank">
         <img src="/magazine/3/images/11_12/image8.png" className={styles.image14}/>

@@ -48,6 +48,7 @@ Fabeeo Breen is Digital Fashion Brand Specialized in innovation and virtualizati
       <p className={styles.text6}>This model is made entirely on Zbrush and the rendered in Keyshot.</p> 
       <p className={styles.text7}>Lucii</p> 
       <p className={styles.text8}>Marcello Baldari</p> 
+      <p className={styles.text18}>Mo’Casso</p> 
       <p className={styles.text9}>The softwares I use for the production of the dress are Marvelous and Clo3D. For accessories and footwear, on the other hand, I use Zbrush and Maya. I start by creating the 2D pattern and then I dress the avatar. Afterwards I improve the fit, until I'm satisfied with the result.</p> 
       <img src="/magazine/3/images/95_96/image15.png" className={styles.image23}/>
       <img src="/magazine/3/images/95_96/image16.png" className={styles.image24}/>
@@ -74,7 +75,7 @@ Fabeeo Breen is Digital Fashion Brand Specialized in innovation and virtualizati
 <br/>Good design is honest
 <br/>Good design is thorough down to the last detail
 </p> 
-      <img src="/magazine/3/images/95_96/image25.png" className={styles.image33}/>
+      <img src="/magazine/3/images/95_96/image25.png" className={styles.image37}/>
       <div className={styles.image34}>
         <video className={styles.image35} muted loop autoPlay>
           <source src="./magazine/3/images/95_96/video4.mp4" type="video/mp4" />
@@ -83,6 +84,7 @@ Fabeeo Breen is Digital Fashion Brand Specialized in innovation and virtualizati
       <img src="/magazine/3/images/95_96/image26.png" className={styles.image36}/>
       <p className={styles.text16}>Trying Out Different Lighting Variations</p> 
       <p className={styles.text17}>Trying Out Different Lighting Variations</p> 
+      <p className={styles.text19}>The creation process can take several hours, it all depends on the amount of details and elements you want to add to the garment. For the concept and creation part of the pattern it took about 4 hours and another 4 to improve the fit</p> 
     </div>
   );
 };

@@ -114,12 +114,12 @@
         height: 327px;
         left: 1030px;
         top: 1054px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
         .image8 {
-            position: absolute;
-            left: -375px;
-            transform: scale(0.3);
-            top: -380px;
+            width: 100%;
         }
     }
     .text4 {

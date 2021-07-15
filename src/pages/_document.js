@@ -220,6 +220,9 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shojumaru"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Smythe"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Domine:wght@700"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signika"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cantora+One"></link> 
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Jacques Francois"

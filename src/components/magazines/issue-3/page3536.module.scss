@@ -49,6 +49,48 @@
     
     color: #FFFFFF;
 }
+.play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  position: absolute;
+  width: 193px;
+  height: 172.48px;
+  left: 677px;
+  top: 220px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.arrow {
+  position: absolute;
+  width: 277.21px;
+  height: 116.86px;
+  left: 640.3px;
+  top: 134.82px;
+  transform: matrix(0.5, 0.87, 0.87, -0.5, 0, 0);
+  pointer-events: none;
+}
+.text23 {
+  position: absolute;
+  width: 214.37px;
+  height: 30px;
+  left: 720.98px;
+  top: 71.39px;
+  
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height, or 150% */
+  
+  
+  color: #FFFFFF;
+  transform: rotate(-10deg);
+  text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+}
 .text2 {
     position: absolute;
     width: 361px;
@@ -67,6 +109,10 @@
     color: #FFFFFF;
     
     text-shadow: rgb(0, 217, 165) 10px 0px 0px, rgb(0, 217, 165) 9.95004px 0.998334px 0px, rgb(0, 217, 165) 9.80067px 1.98669px 0px, rgb(0, 217, 165) 9.55336px 2.9552px 0px, rgb(0, 217, 165) 9.21061px 3.89418px 0px, rgb(0, 217, 165) 8.77583px 4.79426px 0px, rgb(0, 217, 165) 8.25336px 5.64642px 0px, rgb(0, 217, 165) 7.64842px 6.44218px 0px, rgb(0, 217, 165) 6.96707px 7.17356px 0px, rgb(0, 217, 165) 6.2161px 7.83327px 0px, rgb(0, 217, 165) 5.40302px 8.41471px 0px, rgb(0, 217, 165) 4.53596px 8.91207px 0px, rgb(0, 217, 165) 3.62358px 9.32039px 0px, rgb(0, 217, 165) 2.67499px 9.63558px 0px, rgb(0, 217, 165) 1.69967px 9.8545px 0px, rgb(0, 217, 165) 0.707372px 9.97495px 0px, rgb(0, 217, 165) -0.291995px 9.99574px 0px, rgb(0, 217, 165) -1.28844px 9.91665px 0px, rgb(0, 217, 165) -2.27202px 9.73848px 0px, rgb(0, 217, 165) -3.2329px 9.463px 0px, rgb(0, 217, 165) -4.16147px 9.09297px 0px, rgb(0, 217, 165) -5.04846px 8.63209px 0px, rgb(0, 217, 165) -5.88501px 8.08496px 0px, rgb(0, 217, 165) -6.66276px 7.45705px 0px, rgb(0, 217, 165) -7.37394px 6.75463px 0px, rgb(0, 217, 165) -8.01144px 5.98472px 0px, rgb(0, 217, 165) -8.56889px 5.15501px 0px, rgb(0, 217, 165) -9.04072px 4.2738px 0px, rgb(0, 217, 165) -9.42222px 3.34988px 0px, rgb(0, 217, 165) -9.70958px 2.39249px 0px, rgb(0, 217, 165) -9.89993px 1.4112px 0px, rgb(0, 217, 165) -9.99135px 0.415807px 0px, rgb(0, 217, 165) -9.98295px -0.583741px 0px, rgb(0, 217, 165) -9.8748px -1.57746px 0px, rgb(0, 217, 165) -9.66798px -2.55541px 0px, rgb(0, 217, 165) -9.36457px -3.50783px 0px, rgb(0, 217, 165) -8.96758px -4.4252px 0px, rgb(0, 217, 165) -8.481px -5.29836px 0px, rgb(0, 217, 165) -7.90968px -6.11858px 0px, rgb(0, 217, 165) -7.25932px -6.87766px 0px, rgb(0, 217, 165) -6.53644px -7.56803px 0px, rgb(0, 217, 165) -5.74824px -8.18277px 0px, rgb(0, 217, 165) -4.90261px -8.71576px 0px, rgb(0, 217, 165) -4.00799px -9.16166px 0px, rgb(0, 217, 165) -3.07333px -9.51602px 0px, rgb(0, 217, 165) -2.10796px -9.7753px 0px, rgb(0, 217, 165) -1.12153px -9.93691px 0px, rgb(0, 217, 165) -0.123887px -9.99923px 0px, rgb(0, 217, 165) 0.87499px -9.96165px 0px, rgb(0, 217, 165) 1.86512px -9.82453px 0px, rgb(0, 217, 165) 2.83662px -9.58924px 0px, rgb(0, 217, 165) 3.77978px -9.25815px 0px, rgb(0, 217, 165) 4.68517px -8.83455px 0px, rgb(0, 217, 165) 5.54374px -8.32267px 0px, rgb(0, 217, 165) 6.34693px -7.72764px 0px, rgb(0, 217, 165) 7.0867px -7.0554px 0px, rgb(0, 217, 165) 7.75566px -6.31267px 0px, rgb(0, 217, 165) 8.34713px -5.50686px 0px, rgb(0, 217, 165) 8.8552px -4.64602px 0px, rgb(0, 217, 165) 9.27478px -3.73877px 0px, rgb(0, 217, 165) 9.6017px -2.79415px 0px, rgb(0, 217, 165) 9.83268px -1.82162px 0px, rgb(0, 217, 165) 9.96542px -0.830894px 0px;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 .image4 {
     position: absolute;
@@ -109,7 +155,7 @@
     color: #F8F8F8;
 }
 .animationFrame {
-    animation: scrolling 4s linear infinite;
+    animation: scrolling 8s linear infinite;
 }
 .rightSideImageWrapper {
     display: flex;
@@ -176,6 +222,10 @@
     height: 83px;
     left: 297px;
     top: 1334px;    
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
   }
   .image6 {
     position: absolute;
@@ -183,6 +233,10 @@
     height: 71px;
     left: 440px;
     top: 1337px;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
   }
   .image7 {
     position: absolute;
@@ -190,6 +244,10 @@
     height: 81px;
     left: 570px;
     top: 1332px;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
   }
   .text7 {
     position: absolute;

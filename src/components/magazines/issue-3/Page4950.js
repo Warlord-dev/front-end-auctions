@@ -38,6 +38,33 @@ It aims to provide a full-cycle solution for cryptoasset analytics and AML/KYC p
 PureFi within a set of smart contracts will connect KYC/AML providers with DeFi users and DexEs/Defi projects in order to provide cryptoasset analytics and protect honest DeFi market players from “dirty money” risks. 
 <br/><br/>
 For example, the liquidity pool user will be able to avoid the risk of having an illegal money trail using the Verifiable Credentials certificate with his full-fledged AML/KYC data.</p>  
+      <p className={styles.text16}>We want to make crypto and DeFi more accessible to everyone. 
+      <br/><br/>
+Unfortunately, this journey is not an easy one! 
+<br/><br/>
+AML Compliance is one of the key requirements that institutions have to comply with. 
+<br/><br/>
+By providing such a solution we open doors for many institutional players that were afraid to step into the market due to the reputation of crypto being associated with dirty money. 
+<br/><br/>
+We actually started our journey with an AML Tool for “traditional” cryptos - AMLBot. Achieving high success with it, we decided to tackle DeFi next!</p>  
+      <p className={styles.text17}>We want to make crypto and DeFi more accessible to everyone. 
+      <br/><br/>
+Unfortunately, this journey is not an easy one! 
+<br/><br/>
+AML Compliance is one of the key requirements that institutions have to comply with. 
+<br/><br/>
+By providing such a solution we open doors for many institutional players that were afraid to step into the market due to the reputation of crypto being associated with dirty money. 
+<br/><br/>
+We actually started our journey with an AML Tool for “traditional” cryptos - AMLBot. Achieving high success with it, we decided to tackle DeFi next!</p>  
+      <p className={styles.text18}>The DeFi space is targeted very much at the retail finance sector. 
+      <br/><br/>
+PureFi is focused more on onboarding institutional entities into crypto.
+<br/><br/>
+<span className={styles.text19}>what does that mean for the entire we b3 space? </span>
+<br/><br/>
+institutional money is one of the keys to mainstream adoption. 
+<br/><br/>
+It means wider adoption and access for the larger projects/companies. Many of them are not comfortable with crypto, and DeFi in particular, due to the absences of regulation and AML procedures. But this is changing and we are striving to take the lead in the DeFi space by building adequate infrastructure for the institutions to onboard and enter. </p>  
       <p className={styles.text20}>Our main goal in Purefi is to enable DeFi market participants to engage in a trustless environment and still remain anonymous. We aim to protect not to control - and therefore, we provide VC certificates using a zero-knowledge proof concept (that means a PureFi user would be able to share only requested data i.e. origin of funds, risk score etc.) without disclosing all the information from the VC.
       <br/><br/>
   With our help, anyone is able not only to get risk score analysis but also to generate a VC certificate (zero-knowledge proof concept) which includes information about the origin of the funds, KYC, and other metadata. the VC certificate is stored by users and proves the “purity” by providing any requested information contained within the VC. 

@@ -3,116 +3,281 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 1943px;
+  height: 4239px;
   overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
-  .img1{
-    position: absolute;
-    width: 100%;
-    height: 2243px;
-    left: 0px;
-    top: 0px;
-  }
-  .img2{
-    position: absolute;
-    width: 516px;
-    height: 523px;
-    left: -49px;
-    top: 0px;
-    border-radius: 1000px;
-  }
-  .img3{
-    position: absolute;
-    width: 268px;
-    height: 268px;
-    left: 0px;
-    top: 474px;
  
-    border: 8px solid rgba(0, 208, 196, 0.28);
-    box-sizing: border-box;
-    border-radius: 2000px;
+  .image4 {
+    position: relative;
+    width: 375px;
+    height: 4239px;
   }
-  .img4{
+  .text1 {
     position: absolute;
-    width: 430px;
-    height: 430px;
-    left: 96px;
-    top: 638px;
- 
-    border-radius: 1000px;
-  }
-  .img5{
-    position: absolute;
-    width: 345px;
-    height: 345px;
-    left: -49px;
-    top: 968px;
- 
-    border-radius: 289.5px;
-  }
-  .video{
-    position: absolute;
-    width: 346px;
-    height: 345px;
-    left: 15px;
-    top: 1551px;
-  }
-
-  h1{
-     
-    font-family: Rose Cake - Personal Use;
+    width: 317px;
+    height: 112px;
+    left: 25px;
+    top: 90px;
+    
+    font-family: Bahiana;
     font-style: normal;
     font-weight: normal;
     font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text2 {
+    position: absolute;
+    width: 122px;
+    height: 40px;
+    left: 188px;
+    top: 230px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
     line-height: 100%;
-    /* or 60px */
+    /* identical to box height, or 40px */
     
     
     color: #FFFFFF;
   }
-
-  .title1{
+  .text3 {
     position: absolute;
-    width: 441px;
-    height: 87px;
-    left: 15px;
-    top: 1464px;
-     
-  }
-
-  .title2{
-    position: absolute;
-    width: 441px;
-    height: 87px;
-    left: 15px;
-    top: 1418px;
-  }
-  .title3{
-    position: absolute;
-    width: 441px;
-    height: 87px;
-    left: 15px;
-    top: 1369px;
-  }
-  .title4{
+    width: 272px;
+    height: 124px;
+    left: 34px;
+    top: 298px;
     
-    position: absolute;
-    width: 452px;
-    height: 120px;
-    left: -141px;
-    top: 1758px;
-
-    font-family: "Pixel Berry 08/84 Ltd.Edition";
+    font-family: DM Mono;
     font-style: normal;
     font-weight: normal;
-    font-size: 120px;
+    font-size: 20px;
     line-height: 100%;
-    /* identical to box height, or 120px */
-
-
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text4 {
+    position: absolute;
+    width: 177px;
+    height: 27px;
+    left: 170px;
+    top: 926px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text5 {
+    position: absolute;
+    width: 291px;
+    height: 112px;
+    left: 51px;
+    top: 1025px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text6 {
+    position: absolute;
+    width: 278px;
+    height: 218px;
+    left: 184px;
+    top: 1174px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+  .image6 {
+    position: absolute;
+    width: 250px;
+    height: 243px;
+    left: 31px;
+    top: 1233px;
+  }
+  .text7 {
+    position: absolute;
+    width: 312px;
+    height: 27px;
+    left: 54px;
+    top: 1504px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+    color: #FFFFFF;
+  }
+  .text8 {
+    position: absolute;
+    width: 256px;
+    height: 261px;
+    left: 31px;
+    top: 1549px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .image7 {
+    position: absolute;
+    width: 320px;
+    height: 130px;
+    left: 57px;
+    top: 1986px;    
+  }
+  .text10 {
+    position: absolute;
+    width: 401px;
+    height: 132px;
+    left: 31px;
+    top: 2120px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(234, 0, 210) 1px 0px 0px, rgb(234, 0, 210) 0.540302px 0.841471px 0px, rgb(234, 0, 210) -0.416147px 0.909297px 0px, rgb(234, 0, 210) -0.989992px 0.14112px 0px, rgb(234, 0, 210) -0.653644px -0.756802px 0px, rgb(234, 0, 210) 0.283662px -0.958924px 0px, rgb(234, 0, 210) 0.96017px -0.279415px 0px;
+  }
+  .text11 {
+    position: absolute;
+    width: 299px;
+    height: 1137px;
+    left: 31px;
+    top: 2215px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text12 {
+    position: absolute;
+    width: 324px;
+    height: 72px;
+    left: 31px;
+    top: 3241px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-shadow: rgb(0, 146, 32) 1px 0px 0px, rgb(0, 146, 32) 0.540302px 0.841471px 0px, rgb(0, 146, 32) -0.416147px 0.909297px 0px, rgb(0, 146, 32) -0.989992px 0.14112px 0px, rgb(0, 146, 32) -0.653644px -0.756802px 0px, rgb(0, 146, 32) 0.283662px -0.958924px 0px, rgb(0, 146, 32) 0.96017px -0.279415px 0px;
+    color: #FFFFFF;
+  }
+  .text13 {
+    position: absolute;
+    width: 289px;
+    height: 118px;
+    left: 30px;
+    top: 3313px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+    color: #FFFFFF;
+  }
+  .text14 {
+    position: absolute;
+    width: 327px;
+    height: 132px;
+    left: 30px;
+    top: 3563px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-shadow: rgb(255, 0, 46) 1px 0px 0px, rgb(255, 0, 46) 0.540302px 0.841471px 0px, rgb(255, 0, 46) -0.416147px 0.909297px 0px, rgb(255, 0, 46) -0.989992px 0.14112px 0px, rgb(255, 0, 46) -0.653644px -0.756802px 0px, rgb(255, 0, 46) 0.283662px -0.958924px 0px, rgb(255, 0, 46) 0.96017px -0.279415px 0px;
+    color: #FFFFFF;
+  }
+  .text15 {
+    position: absolute;
+    width: 319px;
+    height: 343px;
+    left: 28px;
+    top: 3635px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
     color: #FFFFFF;
   }
 }

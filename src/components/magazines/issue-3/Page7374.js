@@ -6,7 +6,7 @@ const Page7374 = () => {
     <div className={styles.wrapper}>
      <img src="/magazine/3/images/73_74/image1.png" className={styles.image1}/>
      <img src="/magazine/3/images/73_74/image2.png" className={styles.image2}/>
-     <div className={styles.image3}>
+      <div className={styles.image3}>
         <video className={styles.image4} muted loop autoPlay>
           <source src="./magazine/3/images/73_74/video1.mp4" type="video/mp4" />
         </video>
