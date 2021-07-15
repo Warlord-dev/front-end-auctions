@@ -133,12 +133,12 @@
     position: absolute;
     width: 564.71px;
     height: 700.3px;
-    left: 1115.44px;
+    left: 1112.44px;
     top: 329.28px;
     
     font-family: Cool Chaos;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 100;
     font-size: 14px;
     line-height: 110%;
     transform: rotate(-5deg);
@@ -173,23 +173,35 @@
     position: absolute;
     width: 28px;
     height: 28px;
-    left: 1200px;
-    top: 340px;
+    left: 1180px;
+    top: 338px;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .image9 {
     position: absolute;
     width: 28px;
     height: 28px;
-    left: 1280px;
-    top: 586px;
+    left: 1242px;
+    top: 575px;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .image10 {
     position: absolute;
     width: 28px;
     height: 28px;
-    left: 1192px;
-    top: 780px;
+    left: 1230px;
+    top: 760px;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text6 {
@@ -218,5 +230,9 @@
     height: 20.15px;
     left: 1275px;
     top: 1060px;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

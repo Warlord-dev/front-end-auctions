@@ -1,15 +1,44 @@
 import React from 'react';
 import styles from './page8586.module.scss';
+import Link from 'next/link';
 
 const Page8586 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/85_86/image1.png" className={styles.image1}/>
-      <div className={styles.image2}></div>
-      <p className={styles.text1}>NFT BUNDLES</p> 
-      <p className={styles.text2}>Through DIGIFIZZY we are proving out a new publishing model with NFT based decentralised subscriptions. All of the content is free to read, and, people can subscribe to NFT bundles that bring together a mix of well known and upcoming/undervalued talent across music, art, fashion, gaming, other collectibles etc. This is not an auction or a typical drop, but unlike where if creators were featured on the cover of a magazine they would get nothing for it or sometimes have to pay for placement, here they get a share distributed across the contributors to the bundle, whilst the publication is still able to prove out the model through a majority share, being the core creator, engineer, distributor and contributor.</p> 
-      <p className={styles.text3}>ERC-998 BUNDLE</p>
-      <p className={styles.text4}>BURN YOUR ERC-721 TO UNLOCK A COLLECTION OF ERC-1155 NFTs + HIDDEN MAGAZINE CONTENT AND DYNAMIC NFT AIRDROPS. 3 x BUNDLES: COMMON, SEMI-RARE, EXCLUSIVE. </p> 
+      <div className={styles.image1}></div>
+        <div className={styles.image2}></div>
+        <img src="/magazine/3/images/85_86/image1.png" className={styles.image3}/>
+        <div className={styles.image4}>
+          <video className={styles.image5} muted loop autoPlay>
+            <source src="./magazine/3/images/85_86/video1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className={styles.image6}></div>
+        <Link href="https://github.com/XtraCube">
+          <a target="_blank">
+            <p className={styles.text1}>XTRACUBE</p> 
+          </a>
+        </Link>
+        <img src="/magazine/3/images/85_86/image2.png" className={styles.image7}/>
+        <div className={styles.image8}></div>
+        <p className={styles.text2}>I've been modding since around November 2020</p>
+        <p className={styles.text3}>and started because 1) I had an interest in programming | 2) I saw mods on youtube and wanted to make some myself. 
+<br/><br/>
+I'm not really sure where I want to go in terms of modding. I want to try keeping AOU alive, and I wouldn't mind making some more money off of mods if I ever get back into that.</p> 
+      <p className={styles.text4}>Among Us Spectators Feature for Ghosts; Scan the Entire Crew</p>
+      <p className={styles.text5}>THE COLOR SWAP</p>
+      <p className={styles.text6}>COOLIO</p>
+      <p className={styles.text7}>COOLIO</p>
+      <p className={styles.text8}>COOLIO</p>
+      <p className={styles.text9}>XTRACUBE Mod Featured by De Nogla!</p>
+      <img src="/magazine/3/images/85_86/image3.gif" className={styles.image9}/>
+      <img src="/magazine/3/images/85_86/image4.gif" className={styles.image15}/>
+      <div className={styles.image10}>
+        <iframe width="496" height="236" src="https://www.youtube.com/embed/wIwCeexQoxQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <img src="/magazine/3/images/85_86/image4.png" className={styles.image12}/>
+      <img src="/magazine/3/images/85_86/image4.png" className={styles.image13}/>
+      <img src="/magazine/3/images/85_86/image4.png" className={styles.image14}/>
     </div>
   );
 };
