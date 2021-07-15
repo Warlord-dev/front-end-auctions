@@ -1,0 +1,39 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .background {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .logo {
+    position: absolute;
+    width: 237px;
+    height: 297px;
+    left: 40px;
+    top: 1145px;
+  }
+
+  .text {
+    position: absolute;
+    width: 47px;
+    height: 648px;
+    left: 845px;
+    top: 37px;
+    
+    font-family: Internal Rainbows;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    /* or 72px */
+    
+    
+    color: #FFFFFF;
+  }
+}

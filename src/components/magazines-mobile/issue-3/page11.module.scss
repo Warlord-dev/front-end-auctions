@@ -1,0 +1,106 @@
+@import './styles.module.scss';
+
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-605px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+  height: 1559px;
+  background-color: white;
+  color: black;
+  position: relative;
+  white-space: normal;
+  
+  .image1 {
+    position: absolute;
+    width: 320px;
+    height: 1490px;
+    left: 28px;
+    top: 35px;
+    
+    background: #9F95DB;
+  }
+  .image3 {
+    position: absolute;
+    width: 652px;
+    height: 540px;
+    left: -75px;
+    top: 0px;
+  }
+  .image4 {
+    position: absolute;
+    width: 277px;
+    height: 347px;
+    left: 49px;
+    top: 482px;
+  }
+  h1 {
+    position: absolute;
+    width: 452px;
+    height: 165px;
+    left: -38px;
+    top: 874px;
+    
+    font-family: PLAYPULL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 100%;
+    /* or 80px */
+    
+    text-align: center;
+    
+    color: #ECBE1D;
+
+    .impact1 {
+      font-family: Rugsnatcher DEMO;
+      color: #DA283E;
+    }
+
+    .impact2 {
+      color: #DA283E;
+    }
+
+    .impact3 {
+      font-family: Rugrats;
+      color: #f2ea27;
+    }
+  }
+  .text2 {
+    position: absolute;
+    width: 657px;
+    height: 52px;
+    left: -90px;
+    top: 1055px;
+    
+    font-family: Mervale Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #000000;
+  }
+  .text3 {
+    position: absolute;
+    width: 227px;
+    height: 120px;
+    left: 74px;
+    top: 1123px;
+    
+    font-family: Beth Ellen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+    
+    
+    color: #FFFFFF;  
+  }
+}
