@@ -1,0 +1,70 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 1688px;
+  background-color: black;
+  color: white;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 297px;
+    height: 41px;
+    left: -15px;
+    top: 0px;
+    
+    background: #00FFFF;
+  }
+  .image2 {
+    position: absolute;
+    width: 297px;
+    height: 41px;
+    left: -15px;
+    top: 77px;
+    
+    background: #00FFFF;
+  }
+  .image3 {
+    position: absolute;
+    width: 297px;
+    height: 41px;
+    left: -15px;
+    top: 154px;
+    
+    background: #00FFFF;
+  }
+  .image4 {
+    position: absolute;
+    width: 93px;
+    height: 1975px;
+    left: 282px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .image5 {
+        position: absolute;
+        height: 100%;
+    }
+  }
+  .text4 {
+    position: absolute;
+    width: 227px;
+    height: 1072px;
+    left: 20px;
+    top: 235px;
+    
+    font-family: Milonga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}

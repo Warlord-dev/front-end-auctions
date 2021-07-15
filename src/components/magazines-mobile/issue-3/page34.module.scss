@@ -1,0 +1,120 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  height: 1559px;
+  background-color: black;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .image2 {
+    position: absolute;
+    width: 375px;
+    height: 112px;
+    left: 0px;
+    top: 0px;
+    
+    background: #BA0C76;
+  }
+  .image3 {
+    position: absolute;
+    width: 375px;
+    height: 113px;
+    left: 0px;
+    top: 111px;
+    
+    background: #A500FD;
+  }
+  .image4 {
+    position: absolute;
+    width: 375px;
+    height: 112px;
+    left: 0px;
+    top: 224px;
+    
+    background: #000000;
+  }
+  .image8 {
+    position: absolute;
+    width: 375px;
+    height: 1223px;
+    left: 0px;
+    top: 336px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .image9 {
+      height: 100%;
+    }
+  }
+  .text1 {
+    position: absolute;
+    width: 337px;
+    height: 60px;
+    left: 19px;
+    top: 30px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .text2 {
+    position: absolute;
+    width: 1433px;
+    height: 30px;
+    left: -529px;
+    top: 153px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .text3 {
+    position: absolute;
+    width: 341px;
+    height: 60px;
+    left: 17px;
+    top: 250px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .text4 {
+    position: absolute;
+    width: 278px;
+    height: 456px;
+    left: 49px;
+    top: 377px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 37px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}
