@@ -128,11 +128,12 @@
         left: 226px;
         top: 1102px;
         overflow: hidden;
-        
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: 5px solid #FF0C0C;
         box-sizing: border-box;
         .image10 {
-            position: absolute;
             width: 100%;
         }
     }

@@ -205,10 +205,12 @@
     height: 387px;
     left: 1611px;
     top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     .image10 {
-      position: absolute;
-      top: -400px;
+      height: 100%;
     }
     .playbutton1 {
       position: absolute;
@@ -224,12 +226,12 @@
     height: 521px;
     left: 960px;
     top: 317px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     .image14 {
-        position: absolute;
-        transform: scale(0.6);
-        top: -186px;
-        left: -541px;
+      height: 100%;
     }
     .playbutton2 {
       position: absolute;

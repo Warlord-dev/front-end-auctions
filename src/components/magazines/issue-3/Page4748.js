@@ -69,29 +69,23 @@ After her graduate studies, Anna worked three years in an architectural firm bef
       <img src="/magazine/3/images/47_48/image3.png" className={styles.image6}/>
       <img src="/magazine/3/images/47_48/image4.png" className={styles.image7}/>
       <div className={styles.image8}>
-        <div className={styles.image9}>
-          <video ref={ref1} className={styles.image10} muted autoPlay loop>
-            <source src="./magazine/3/images/47_48/video1.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <video ref={ref1} className={styles.image10} muted autoPlay loop>
+          <source src="./magazine/3/images/47_48/video1.mp4" type="video/mp4" />
+        </video>
         <button onClick={()=>{playVideo1()}}><img src={`./magazine/3/images/47_48/${isPlaying1 ? 'pause' : 'play'}.png`} className={styles.playbutton1}/></button>
       </div>
       <p className={styles.text5}>Fairy House</p> 
       <div className={styles.image11}>
-        <div className={styles.image12}>
-          <video ref={ref2} className={styles.image13} muted autoPlay loop>
-            <source src="./magazine/3/images/47_48/video2.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <video ref={ref2} className={styles.image13} muted autoPlay loop>
+          <source src="./magazine/3/images/47_48/video2.mp4" type="video/mp4" />
+        </video>
         <button onClick={()=>{playVideo2()}}><img src={`./magazine/3/images/47_48/${isPlaying2 ? 'pause' : 'play'}.png`} className={styles.playbutton2}/></button>
       </div>
       <p className={styles.text6}>Palo Santo</p> 
       <div className={styles.image14}>
-        <div className={styles.image15}>
-          <video ref={ref3} className={styles.image16} muted autoPlay loop>
-            <source src="./magazine/3/images/47_48/video3.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <video ref={ref3} className={styles.image16} muted autoPlay loop>
+          <source src="./magazine/3/images/47_48/video3.mp4" type="video/mp4" />
+        </video>
         <button onClick={()=>{playVideo3()}}><img src={`./magazine/3/images/47_48/${isPlaying3 ? 'pause' : 'play'}.png`} className={styles.playbutton2}/></button>
       </div>
       <p className={styles.text7}>Light Body</p> 
