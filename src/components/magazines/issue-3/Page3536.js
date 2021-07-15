@@ -3,11 +3,13 @@ import React, { useRef, useState } from 'react';
 import styles from './page3536.module.scss';
 
 const Page3536 = () => {
+  const ref1 = useRef();
+  const [play, setPlay] = useState(false);
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/3/images/35_36/image1.png" className={styles.image1}/>  
       <div className={styles.image2}>
-      <img src="/magazine/3/images/35_36/image2.gif" className={styles.image3}/>   
+        <img src="/magazine/3/images/35_36/image2.gif" className={styles.image3}/>   
       </div>
       <p className={styles.text1}>Upgrading Optionality. </p> 
       <Link href="https://www.opyn.co/">
@@ -15,6 +17,19 @@ const Page3536 = () => {
         <p className={styles.text2}>opyn</p> 
         </a>
       </Link>
+      <audio className={styles.audio} ref={ref1}>
+        <source src="/magazine/3/images/35_36/audio1.mp3" type="audio/mp3" />
+      </audio>
+      <button className={styles.play} onClick={() => {
+          setPlay(!play);
+          if (!play) {
+            ref1.current.play();
+          } else {
+            ref1.current.pause();
+          }
+        }}><img src={`./magazine/3/images/35_36/${play ? 'pause' : 'play'}.png`} className={styles}/></button>
+      <img src="/magazine/3/images/35_36/arrow.png" className={styles.arrow}/>  
+      <p className={styles.text23}>Alexis and Aparna!</p>  
       <div className={styles.image4}>
         <div className={[styles.animationFrame, styles.rightSideImageWrapper].join(' ')}>
           <img src="/magazine/3/images/35_36/image2.png" />

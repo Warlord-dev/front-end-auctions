@@ -18,7 +18,11 @@ const Page6566 = () => {
       </Link>
       <p className={styles.text2}>howiseedatworld</p>  
       <img src="/magazine/3/images/65_66/image1.png" className={styles.image3}/>
-      <p className={styles.text3}>Tom Pastor</p> 
+      <Link href="https://www.instagram.com/lisa_gen_paris_/">
+        <a target="_blank">
+        <p className={styles.text3}>Tom Pastor</p> 
+        </a>
+      </Link>
       <p className={styles.text4}>Lisa Gen</p> 
     </div>
   );

@@ -84,6 +84,7 @@ Fabeeo Breen is Digital Fashion Brand Specialized in innovation and virtualizati
       <img src="/magazine/3/images/95_96/image26.png" className={styles.image36}/>
       <p className={styles.text16}>Trying Out Different Lighting Variations</p> 
       <p className={styles.text17}>Trying Out Different Lighting Variations</p> 
+      <p className={styles.text19}>The creation process can take several hours, it all depends on the amount of details and elements you want to add to the garment. For the concept and creation part of the pattern it took about 4 hours and another 4 to improve the fit</p> 
     </div>
   );
 };

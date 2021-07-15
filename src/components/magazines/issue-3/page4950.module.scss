@@ -102,6 +102,10 @@
         text-align: center;
         
         color: #FFFFFF;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     .text5 {
         position: absolute;

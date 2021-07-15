@@ -45,8 +45,6 @@ Antimatter is a DeFi options protocol using a polarised token approach where put
         <img src="/magazine/3/images/15_16/image5.png" className={styles.image11}/>
         </a>
       </Link>
-      
-      
     </div>
   );
 };

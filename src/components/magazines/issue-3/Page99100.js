@@ -61,6 +61,7 @@ const Page99100 = () => {
       <img src="/magazine/3/images/99_100/image21.png" className={styles.image33}/>
       <div className={styles.image34}></div>
       <p className={styles.text9}>I think that fashion today is no longer something exclusively for people in the flesh who know how to draw very well and, still venture to say, sew. From now on we are in the middle of a new era of how to present products and creations while still being very interactive in everything.</p>  
+      <p className={styles.text10}>Aisha</p>  
     </div>
   );
 };

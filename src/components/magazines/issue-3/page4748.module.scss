@@ -48,6 +48,10 @@
         height: 253px;
         left: 1667px;
         top: 0px;
+        transition: transform .2s;
+        &:hover {
+        transform: scale(1.1);
+        }
     }
     .image5 {
         position: absolute;
@@ -243,5 +247,90 @@
             width: 100%;
             transform: scale(1.7);
         }
+    }
+    .image17 {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        left: 1210px;
+        top: 252px;
+    }
+    .image18 {
+        position: absolute;
+        width: 900px;
+        height: 866px;
+        left: 986px;
+        top: 419px;
+        
+        background: rgba(0, 0, 0, 0.69);
+    }
+    .text8 {
+        position: absolute;
+        width: 790px;
+        height: 180px;
+        left: 1041px;
+        top: 455px;
+        
+        font-family: Signika;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        
+        color: #FFFFFF;
+    }
+    .image19 {
+        position: absolute;
+        width: 900px;
+        height: 120px;
+        left: 986px;
+        top: 670px;
+        
+        background: rgba(0, 0, 0, 0.69);
+    }
+    .text9 {
+        position: absolute;
+        width: 781px;
+        height: 56px;
+        left: 1041px;
+        top: 699px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        
+        color: #FFFFFF;
+    }
+    .text10 {
+        position: absolute;
+        width: 423px;
+        height: 368px;
+        left: 1051px;
+        top: 844px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        
+        color: #FF2828;
+    }
+    .text11 {
+        position: absolute;
+        width: 256px;
+        height: 416px;
+        left: 1571px;
+        top: 822px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        
+        color: #FFFFFF;
     }
 }

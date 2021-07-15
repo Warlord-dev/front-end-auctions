@@ -3,148 +3,236 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2315px;
+  height: 1970px;
   background-color: white;
   color: white;
   position: relative;
   white-space: normal;
   text-align: left;
 
-  .box1 {
+  .image1 {
     position: absolute;
-    width: 375.15px;
-    height: 372px;
+    width: 375px;
+    height: 1970px;
     left: 0px;
     top: 0px;
+  }
+  .image3 {
+    position: absolute;
+    width: 651px;
+    height: 622px;
+    left: -8px;
+    top: -311px;
+  }
+  .text1 {
+    position: absolute;
+    width: 268px;
+    height: 180px;
+    left: 120px;
+    top: 24px;
     
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);        
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 60px;
+    
+    color: #FFFFFF;    
   }
-
-  .indiaNecklaceVideo {
+  .image6 {
     position: absolute;
-    width: 336.61px;
-    height: 339.75px;
-    left: 18.87px;
-    top: 15.73px;    
+    width: 364.84px;
+    height: 227px;
+    left: 6px;
+    top: 407px;
   }
-
-  .circleImg1 {
+  .image7 {
     position: absolute;
-    width: 357.12px;
-    height: 349px;
-    left: 9px;
-    top: 398px;
-
-    border-radius: 231px;
+    width: 364.84px;
+    height: 227px;
+    left: 6px;
+    top: 658px;
   }
-
-  .circleText1 {
+  .image8 {
     position: absolute;
-    width: 264.15px;
-    height: 126.91px;
-    left: 56px;
-    top: 514px;
-
-    font-family: Rochester;
+    width: 364.84px;
+    height: 227px;
+    left: 6px;
+    top: 909px;    
+  }
+  .image9 {
+    position: absolute;
+    width: 364.84px;
+    height: 227px;
+    left: 6px;
+    top: 1160px;
+  }
+  .image10 {
+    position: absolute;
+    width: 364.84px;
+    height: 227px;
+    left: 6px;
+    top: 1411px;
+  }
+  .image11 {
+    position: absolute;
+    width: 364.84px;
+    height: 227px;
+    left: 6px;
+    top: 1662px;
+  }
+  .image5 {
+    position: absolute;
+    width: 996px;
+    height: 1659px;
+    left: -274px;
+    top: 311px;
+  }
+  .text2 {
+    position: absolute;
+    width: 288px;
+    height: 130px;
+    left: 44px;
+    top: 448px;
+    
+    font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 27px;
-    line-height: 120%;
-    text-align: center;
-
+    font-size: 17px;
+    line-height: 25px;
+    
     color: #FFFFFF;
+    .bold {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 25px;
+    }
   }
-
-  .box2 {
+  .text3 {
     position: absolute;
-    width: 375.15px;
-    height: 372px;
-    left: 0px;
-    top: 773px;
+    width: 310px;
+    height: 156px;
+    left: 33px;
+    top: 686px;
     
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);    
-  }
-  .indiaSuitVideo {
-    position: absolute;
-    width: 336.61px;
-    height: 339.75px;
-    left: 18.88px;
-    top: 788.73px;    
-  }  
-
-  .circleImg2 {
-    position: absolute;
-    width: 357.12px;
-    height: 349px;
-    left: 8px;
-    top: 1166px;
-    
-    border-radius: 246px;
-  }
-
-  .circleText2 {
-    position: absolute;
-    width: 264.15px;
-    height: 192.58px;
-    left: 54.48px;
-    top: 1257.49px;
-    
-    font-family: Rochester;
+    font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 120%;
-    
-    text-align: center;
+    font-size: 17px;
+    line-height: 25px;
     
     color: #FFFFFF;
+    .bold {
+      font-weight: bold;
+    }
   }
-
-  .box3 {
+  .text4 {
     position: absolute;
-    width: 375.15px;
-    height: 372px;
-    left: 0px;
-    top: 1541px;
+    width: 290px;
+    height: 161px;
+    left: 38px;
+    top: 934px;
     
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  .indiaSuit2Video {
-    position: absolute;
-    width: 336.61px;
-    height: 339.75px;
-    left: 18.88px;
-    top: 1547.29px;
-  }
-
-  .circleImg3 {
-    position: absolute;
-    width: 355.65px;
-    height: 349px;
-    left: 9px;
-    top: 1939px;
-    border-radius: 237px;
-  }
-
-  .circleText3 {
-    position: absolute;
-    width: 241.02px;
-    height: 258.44px;
-    left: 67.79px;
-    top: 1989.07px;
-    
-    font-family: Rochester;
+    font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 120%;
-    text-align: center;
+    line-height: 22px;
     
     color: #FFFFFF;
+    .bold {
+      font-weight: bold;
+    }
+  }
+  .text5 {
+    position: absolute;
+    width: 288px;
+    height: 161px;
+    left: 44px;
+    top: 1185px;
     
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    
+    color: #FFFFFF;
+    .bold {
+      font-weight: bold;
+    }
+  }
+  .text6 {
+    position: absolute;
+    width: 297px;
+    height: 161px;
+    left: 38px;
+    top: 1436px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    
+    color: #FFFFFF;
+    .bold {
+      font-weight: bold;
+    }
+  }
+  .text7 {
+    position: absolute;
+    width: 295px;
+    height: 160px;
+    left: 38px;
+    top: 1690px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    
+    color: #FFFFFF;
+    .bold {
+      font-weight: bold;
+    }
+  }
+  .image12 {
+    position: absolute;
+    width: 215px;
+    height: 217px;
+    left: 220px;
+    top: 296px;
+  }
+  .image15 {
+    position: absolute;
+    width: 157px;
+    height: 157px;
+    left: -30px;
+    top: 804px;
+  }
+  .image13 {
+    position: absolute;
+    width: 178px;
+    height: 179px;
+    left: 237px;
+    top: 1063px;
+  }
+  .image14 {
+    position: absolute;
+    width: 178px;
+    height: 179px;
+    left: -56px;
+    top: 1578px;
+  }
+  .image16 {
+    position: absolute;
+    width: 216px;
+    height: 216px;
+    left: 224px;
+    top: 1785px;
   }
 }
