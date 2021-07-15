@@ -4,10 +4,9 @@ import styles from './page79.module.scss'
 import UnlockPage from '../common/UnlockPage'
 
 const Page79 = () => {
-  const { contentUnlocked } = useSelector((state) => state.global.toJS());
   return (
     <div className={styles.wrapper}>
-      
+      <img src="/magazine/3/images/91_92/image6.jpg" className={styles.image1}/>
     </div>
   )
 }

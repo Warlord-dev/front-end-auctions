@@ -2,10 +2,15 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 1454px;
+  height: 1434px;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
 
+  .image1 {
+    position: relative;
+    width: 375px;
+    height: 1434px;
+  }
 }
