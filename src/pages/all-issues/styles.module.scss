@@ -96,12 +96,17 @@
     }
 
     .issues {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
       align-items: center;
 
-      .issue {
-        margin-right: 1rem;
+      @include media-sm {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include media-lg {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }

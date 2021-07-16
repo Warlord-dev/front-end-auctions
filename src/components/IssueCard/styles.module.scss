@@ -9,18 +9,13 @@
       0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
       0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: 10px solid #ab4a7f;
-    width: 411px;
-    height: 511px;
+    width: 100%;
     object-fit: cover;
 
     @include media-xs {
       width: 100%;
     }
-
-    @include media-sm {
-      width: 411px;
-    }
-
+  
     margin-bottom: 1.5rem;
   }
 
