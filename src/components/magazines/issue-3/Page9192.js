@@ -19,7 +19,7 @@ This is incredibly important. Without strong systems in place to support and fac
       <p className={styles.text4}>The Global Designer Network is making the market for web3 fashion. We are dynamically seeding the initial foundations and building blocks so that anyone that desires to, can start onboarding with a clear roadmap and pathway to success, elevation and prosperity. 
       <br/><br/>
 As an essential primary step to this, we are composing the WEB3 FASHION 101— a concentrated glossary and reference platform filled with resources, content, assets, materials and supplies that can be used by any designer, creator, consumer, fashion or metaverse lover either beginning or continuing their journey in the world of web3 fashion, inclusive of NFTs, DeFi, digital fashion, hybrid digi-physical, gaming, 3D applications etc. </p> 
-      <Link href="Link to https://designers.digitalax.xyz/">
+      <Link href="https://designers.digitalax.xyz/">
         <a target="_blank">
         <img src="/magazine/3/images/91_92/image4.png" className={styles.image5}/>
         </a>

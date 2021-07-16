@@ -13,8 +13,8 @@ const Page7374 = () => {
       </div>
       <p className={styles.text1}>Tools for capturing the valuE In change</p>
       <p className={styles.text2}>Dov B.</p>
-      <p className={styles.text3}>Life is inherently asymmetrical. Nowhere is this more evident than the flawed, chaotic plane of existence we exist in.
-<br/><br/>
+      <p className={styles.text3}>Life is inherently asymmetrical. Nowhere is this more evident than the flawed, chaotic plane of “life” that so many of us exist in.
+      <br/><br/>
 Despite the entirely understandable human need for order, stability, and predictability—and therefore, symmetry—in everything we do, we’re out here on our own, flapping in the wind, constantly dangling on the edge of this precarious mortal coil.
 <br/><br/>
 Symmetry is something we inherently strive for, whether in our relationships, career, finances, business, and health.

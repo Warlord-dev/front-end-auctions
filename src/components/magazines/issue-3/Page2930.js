@@ -53,7 +53,7 @@ Wow.  What a question!  It wasn’t long ago DeFi was first hitting 1 Billion US
       <p className={styles.text5}>Doing DeFi before it was DeFi</p> 
       <p className={styles.text6}>What is the closest parallel to what Bancor is replacing in traditional finance/CeFi? </p> 
       <p className={styles.text7}>Liquidity providers stake their tokens and earn fees paid by traders. This essentially takes the business model of banks and makes it available to everyone. For the liquidity providers, staking also starts to feel like depositing into a high-interest savings account at a bank, except the yields are way higher than you could ever get at a bank.</p> 
-      <p className={styles.text8}>s there anything unexpected/non obvious about DeFi that you can tell us which more people getting into DeFi really need to know?</p> 
+      <p className={styles.text8}>Is there anything unexpected/non obvious about DeFi that you can tell us which more people getting into DeFi really need to know?</p> 
       <p className={styles.text9}>Yes!  It actually relates to the answer above.  When you see a crazy APR, make sure you understand the risks that “Impermanent Loss” poses on your returns. Bancor is the only AMM where when you see an APR, there isn’t a hidden risk behind it. Try it out at bancor.network. If you have any questions the community is super responsive and support is always around to help: t.me/bancor</p> 
       <p className={styles.text10}>Can you tell us more about impermanent loss insurance with your V2.1 updates. </p> 
       <p className={styles.text11}>Sure, when most people stake in an AMM, there is a hidden risk called “Impermanent Loss”.  So if you stake on an AMM that doesn’t have a solution, even if you make 15% APYs, you might be losing more than that.  Bancor 2.1 solved this issue for liquidity providers, who receive full compensation for an impermanent loss so long as they stay in the pool for 100 days or more. It’s as simple as, "set it and forget it".</p> 
@@ -62,8 +62,7 @@ Wow.  What a question!  It wasn’t long ago DeFi was first hitting 1 Billion US
       <p className={styles.text14}>A lot of people reading may not know what Bancor is. What's your favourite way of describing it?</p> 
       <p className={styles.text15}>There are two types of Bancor users.  
       <br/><br/>
-Traders: Make trades with low slippage. They can <br/>
-also take advantage of our gas-free limit orders.<br/>
+Traders: Make trades with low slippage. They can also take advantage of our gas-free limit orders.<br/>
 <br/><br/>
 Liquidity Providers: Instead of just "HODLing" a token, they stake it in a Bancor pool to earn interest, paid in both the token they’ve staked and BNT. Bancor’s unique single-sided staking means that if a liquidity provider stays in a pool for 100 days or more, they are guaranteed their tokens back plus their share of fees paid by traders and liquidity mining rewards.</p> 
     </div>

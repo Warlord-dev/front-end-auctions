@@ -13,7 +13,12 @@ const Page9394 = () => {
       <p className={styles.text3}>FIRST LOOK!</p>   
       <p className={styles.text4}>FIRST LOOK!</p>   
       <p className={styles.text5}>FIRST LOOK!</p>   
-      <img src="/magazine/3/images/93_94/image3.png" className={styles.image4}/>
+      <Link href="https://www.instagram.com/shiu_studio/ ">
+        <a target="_blank">
+        <img src="/magazine/3/images/93_94/image3.png" className={styles.image4}/>
+        </a>
+      </Link>
+      
       <p className={styles.text6}>Shiu Studios</p>   
       <img src="/magazine/3/images/93_94/image7.png" className={styles.image8}/>
       <img src="/magazine/3/images/93_94/image5.png" className={styles.image6}/>
@@ -23,7 +28,12 @@ const Page9394 = () => {
       <img src="/magazine/3/images/93_94/image8.png" className={styles.image9}/>
       <img src="/magazine/3/images/93_94/image9.png" className={styles.image10}/>
       <img src="/magazine/3/images/93_94/image10.png" className={styles.image11}/>
-      <img src="/magazine/3/images/93_94/image11.png" className={styles.image12}/>
+      <Link href="https://www.instagram.com/dollushka/?hl=en">
+        <a target="_blank">
+        <img src="/magazine/3/images/93_94/image11.png" className={styles.image12}/>
+        </a>
+      </Link>
+      
       <img src="/magazine/3/images/93_94/image12.png" className={styles.image13}/>
       <img src="/magazine/3/images/93_94/image13.png" className={styles.image14}/>
       <p className={styles.text8}>Nina Doll</p>   
@@ -34,7 +44,12 @@ I’m specialized in generative materials, using mostly artificial intelligence 
       <p className={styles.text10}>I’m Davide Carbone aka LivingSparks, an electronic engineer specialized in research and technological innovation.
       <br/><br/>
 I’m specialized in generative materials, using mostly artificial intelligence networks. I’ve developed all the software I use to generate materials and textures. I start by writing a raw neural network, finding and tuning parameters in order to obtain pleasant patterns and texture. After I process the texture to add generative normals for the material and enrich them with details and roughness.</p>  
-      <img src="/magazine/3/images/93_94/image15.png" className={styles.image16}/>
+      
+      <Link href="https://www.instagram.com/livingsparks/?hl=en">
+        <a target="_blank">
+        <img src="/magazine/3/images/93_94/image15.png" className={styles.image16}/>
+        </a>
+      </Link>
       <p className={styles.text11}>LivingSparks</p>   
       <div className={styles.image17}>
         <video className={styles.image18} muted loop autoPlay>
@@ -48,10 +63,9 @@ I’m specialized in generative materials, using mostly artificial intelligence 
       </div>
       
       <p className={styles.text12}>DERIVATIVE</p>   
-      <p className={styles.text13}>Powerful environment for artists and creative, no code needed. </p>   
-      
+      <p className={styles.text13}>Powerful environment for artists and creators, no code needed.  </p>   
       <p className={styles.text14}>PYCHEUNG</p>   
-      <p className={styles.text15}>for checking various sizes and repetition of my patterns</p>   
+      <p className={styles.text15}>For checking various sizes and repetition of my patterns</p>   
       
       <p className={styles.text16}>COLAB</p>   
       <p className={styles.text17}>Google Platform to play with python on a web browser </p>   

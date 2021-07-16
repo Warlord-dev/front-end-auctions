@@ -9,13 +9,23 @@ const Page5758 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/3/images/57_58/image1.png" className={styles.image1}/>
-      <img src="/magazine/3/images/57_58/image2.png" className={styles.image2}/>
+      <Link href="https://digifizzy.xyz/unlockable/3">
+        <a target="_blank">
+        <img src="/magazine/3/images/57_58/image2.png" className={styles.image2}/>
+        </a>
+      </Link>
+      
       <img src="/magazine/3/images/57_58/image3.png" className={styles.image3}/>
       <img src="/magazine/3/images/57_58/image4.png" className={styles.image4}/>
       <img src="/magazine/3/images/57_58/image5.png" className={styles.image5}/>
       <img src="/magazine/3/images/57_58/image6.png" className={styles.image6}/>
       <img src="/magazine/3/images/57_58/image7.png" className={styles.image8}/>
-      <img src="/magazine/3/images/57_58/image2.png" className={styles.image11}/>
+      <Link href="https://digifizzy.xyz/unlockable/3">
+        <a target="_blank">
+        <img src="/magazine/3/images/57_58/image2.png" className={styles.image11}/>
+        </a>
+      </Link>
+      
       <div className={styles.image7}>
         <video className={styles.image10} muted loop autoPlay>
           <source src="./magazine/3/images/57_58/video1.mp4" type="video/mp4" />

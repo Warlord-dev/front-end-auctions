@@ -41,6 +41,10 @@
   height: 185px;
   left: 736px;
   top: 35px;
+  transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
  }
  .text1 {
   position: absolute;
@@ -112,6 +116,10 @@
   height: 195px;
   left: 1200px;
   top: 338px;
+  transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
  }
  .image12 {
   position: absolute;
@@ -161,6 +169,10 @@
   height: 249px;
   left: 38px;
   top: 586px;
+  transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
  }
  .text4 {
   position: absolute;
@@ -292,6 +304,10 @@
   height: 193px;
   left: 1618px;
   top: 590px;
+  transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
  }
  .image28 {
   position: absolute;
@@ -322,6 +338,10 @@
   height: 216px;
   left: 983px;
   top: 1056px;
+  transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
  }
  .text8 {
   position: absolute;

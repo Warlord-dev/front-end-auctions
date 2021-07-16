@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './page3940.module.scss';
+import Link from 'next/link';
 
 const Page3940 = () => {
   return (
@@ -8,15 +9,21 @@ const Page3940 = () => {
       <div className={styles.image3}></div>
       <div className={styles.image4}></div>
       <img src="/magazine/3/images/39_40/image1.png" className={styles.image1}/>  
-      <div className={styles.image8}>
-        <video className={styles.image9} muted loop autoPlay>
+      <div className={styles.image27}>
+        <video className={styles.image28} muted loop autoPlay>
           <source src="./magazine/3/images/39_40/video1.mp4" type="video/mp4" />
         </video>
       </div>
       <p className={styles.text1}>Hybrid Digital Physical NFT Fashion Collections. </p>  
       <p className={styles.text2}>With DeFi Functionality.</p>  
       <p className={styles.text3}>Designed by DIGITALAX and the Global Designer Network</p>  
-      <p className={styles.text4}>DIGITALAX and the Global Designer Network DAO have partnered with top DeFi protocols creating hybrid digital-physical NFT fashion collections with DeFi functionality. Stake the NFTs for crypto yield. </p>  
+      <p className={styles.text4}>DIGITALAX and the 
+      <Link href="https://rarible.com/">
+        <a target="_blank">
+          <span className={styles.designer}> Global Designer Network DAO </span>
+        </a>
+      </Link>
+       have partnered with top DeFi protocols creating hybrid digital-physical NFT fashion collections with DeFi functionality. Stake the NFTs for crypto yield. </p>  
       <p className={styles.text5}>AAVE</p>  
       <p className={styles.text6}>BANCOR</p>  
       <p className={styles.text7}>INSTADAPP</p>  
@@ -53,6 +60,11 @@ const Page3940 = () => {
       <img src="/magazine/3/images/39_40/image23.gif" className={styles.image23}/>  
       <img src="/magazine/3/images/39_40/image24.gif" className={styles.image24}/>  
       <img src="/magazine/3/images/39_40/image25.gif" className={styles.image25}/>  
+      <Link href="https://drip.digitalax.xyz/">
+        <a target="_blank">
+          <img src="/magazine/3/images/39_40/image26.png" className={styles.image26}/>  
+        </a>
+      </Link>
     </div>
   );
 };
