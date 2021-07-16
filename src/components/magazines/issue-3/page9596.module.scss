@@ -50,6 +50,10 @@
     height: 210px;
     left: 296px;
     top: 256px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .text1 {
     position: absolute;
@@ -115,6 +119,10 @@
     height: 220px;
     left: 42px;
     top: 848px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .image13 {
     position: absolute;
@@ -136,6 +144,10 @@
     height: 202px;
     left: 751px;
     top: 812px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .image16 {
     position: absolute;
@@ -334,6 +346,10 @@
     height: 232px;
     left: 1203px;
     top: 27px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .image25 {
     position: absolute;
@@ -379,6 +395,10 @@
     height: 250px;
     left: 1592px;
     top: 234px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .image29 {
     position: absolute;
@@ -483,9 +503,21 @@
     line-height: 14px;
     
     color: #FFFFFF;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #1500ff;
-    -webkit-text-fill-color: #ffffff;
+  }
+  .text20 {
+    position: absolute;
+    width: 305px;
+    height: 140px;
+    left: 1020px;
+    top: 894px;
+    
+    font-family: Inconsolata;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 14px;
+    
+    color: #1400FF;
   }
   .text15 {
     position: absolute;

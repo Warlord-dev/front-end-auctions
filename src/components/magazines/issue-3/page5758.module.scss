@@ -89,6 +89,10 @@
         height: 203.01px;
         left: 1497px;
         top: 1266px;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     .image3 {
         position: absolute;
@@ -178,6 +182,10 @@
         height: 203.01px;
         left: 73px;
         top: 3px;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     .playbutton1 {
         position: absolute;

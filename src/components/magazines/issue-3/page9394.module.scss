@@ -125,6 +125,10 @@
     height: 167px;
     left: 0px;
     top: 631px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .text6 {
     position: absolute;
@@ -197,6 +201,10 @@
     height: 219px;
     left: 1671px;
     top: 26px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .image13 {
     position: absolute;
@@ -294,6 +302,10 @@
     height: 185px;
     left: 1726px;
     top: 840px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .text11 {
     position: absolute;

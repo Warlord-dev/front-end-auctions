@@ -13,7 +13,12 @@ const Page99100 = () => {
       </div>
       <img src="/magazine/3/images/99_100/image2.png" className={styles.image4}/>
       <img src="/magazine/3/images/99_100/image3.png" className={styles.image5}/>
-      <img src="/magazine/3/images/99_100/image4.png" className={styles.image6}/>
+      <Link href="https://www.instagram.com/hadee_art/">
+        <a target="_blank">
+        <img src="/magazine/3/images/99_100/image4.png" className={styles.image6}/>
+        </a>
+      </Link>
+      
       <p className={styles.text1}>Hadeeart</p>  
       <div className={styles.image7}></div>
       <p className={styles.text2}>Personally I use CLO3D for the basis of my clothes. It offers a quick and effective way to create 3D garments by simulating the physical properties of two-dimensionally-drawn sewing patterns. I also model accessories in Blender and texture them in Substance painter. At times when I need to make my own textures, I use Substance Alchemist and Photoshop which allow direct usage in CLO3D. </p>  
@@ -23,12 +28,22 @@ const Page99100 = () => {
           <source src="./magazine/3/images/99_100/video2.mp4" type="video/mp4" />
         </video>
       </div>
-      <img src="/magazine/3/images/99_100/image6.png" className={styles.image11}/>
+      
+      <Link href="https://www.instagram.com/a.ainsha/?r=nametag">
+        <a target="_blank">
+        <img src="/magazine/3/images/99_100/image6.png" className={styles.image11}/>
+        </a>
+      </Link>
       <img src="/magazine/3/images/99_100/image7.png" className={styles.image12}/>
       <div className={styles.image13}></div>
-      <p className={styles.text3}>For garment simulation, I use CLO 3D. Animation and avatars from daz studio. Marvelous designer is another option for garment simulation. In daz studio, I morph the avatar into the desired looks I want before exporting as an obj file of course with the collected maps to use in CLO 3D. The avatar should be in A pose for easy garment simulation. Then I pose the avatar from my collection of poses and also export as an OBJ. For my animation, I use animate 2. Tip: always add an empty block before adding your motions when exporting animations into CLO.</p>  
+      <p className={styles.text3}>For garment simulation, I use CLO 3D. Animation and avatars from daz studio. Marvelous designer is another option for garment simulation. In daz studio, I morph the avatar into the desired looks I want before exporting as an obj file with the collected maps to use in CLO3D. The avatar should be in A pose for easy garment simulation. Then I pose the avatar from my collection of poses and also export as an OBJ. For my animation, I use animate 2. Tip: always add an empty block before adding your motions when exporting animations into CLO.</p>  
       <img src="/magazine/3/images/99_100/image8.png" className={styles.image14}/>
-      <img src="/magazine/3/images/99_100/image9.png" className={styles.image15}/>
+      
+      <Link href="https://mysecunha.com/laessentia-colecao/">
+        <a target="_blank">
+        <img src="/magazine/3/images/99_100/image9.png" className={styles.image15}/>
+        </a>
+      </Link>
       <p className={styles.text4}>Myse Cunha</p>  
       <img src="/magazine/3/images/99_100/image10.png" className={styles.image16}/>
       <img src="/magazine/3/images/99_100/image11.png" className={styles.image17}/>
@@ -49,11 +64,20 @@ const Page99100 = () => {
           <source src="./magazine/3/images/99_100/video3.mp4" type="video/mp4" />
         </video>
       </div>
+      <Link href="https://blog.digitalax.xyz/www.paolaguivel.com">
+        <a target="_blank">
+        <img src="/magazine/3/images/99_100/image15.png" className={styles.image27}/>
+        </a>
+      </Link>
       
-      <img src="/magazine/3/images/99_100/image15.png" className={styles.image27}/>
       <img src="/magazine/3/images/99_100/image16.png" className={styles.image28}/>
       <p className={styles.text7}>Paola Olaguivel</p>  
-      <img src="/magazine/3/images/99_100/image17.png" className={styles.image29}/>
+      <Link href="https://www.instagram.com/abigneonglitter/">
+        <a target="_blank">
+        <img src="/magazine/3/images/99_100/image17.png" className={styles.image29}/>
+        </a>
+      </Link>
+      
       <img src="/magazine/3/images/99_100/image19.png" className={styles.image31}/>
       <p className={styles.text8}>ABigNeonGlitter</p>  
       <img src="/magazine/3/images/99_100/image18.png" className={styles.image30}/>

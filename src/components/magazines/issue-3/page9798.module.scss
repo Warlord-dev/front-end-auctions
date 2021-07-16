@@ -16,6 +16,10 @@
     height: 168px;
     left: 37px;
     top: 25px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .text1 {
     position: absolute;
@@ -104,7 +108,7 @@
     left: 18px;
     top: 263px;
     
-    font-family: Baloo Bhai 2;
+    font-family: 'Baloo Bhai 2';
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -117,6 +121,24 @@
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #25ff3b;
     -webkit-text-fill-color: #ffffff;
+  }
+  .text14 {
+    position: absolute;
+    width: 905px;
+    height: 102px;
+    left: 997px;
+    top: 536px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 115%;
+    /* or 17px */
+    
+    letter-spacing: 0.07em;
+    
+    color: #FFADF2;
   }
   .text3 {
     position: absolute;
@@ -142,6 +164,10 @@
     height: 202px;
     left: 724px;
     top: 539px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .text4 {
     position: absolute;
@@ -217,6 +243,10 @@
     height: 133px;
     left: 37px;
     top: 1186px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .text6 {
     position: absolute;
@@ -342,6 +372,10 @@
     height: 222px;
     left: 1329px;
     top: 260px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .text11 {
     position: absolute;
@@ -414,6 +448,10 @@
     height: 178px;
     left: 1614px;
     top: 1064px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .image29 {
     position: absolute;

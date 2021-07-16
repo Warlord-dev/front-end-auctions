@@ -45,6 +45,7 @@
     height: 158px;
     left: 706px;
     top: 148px;
+    pointer-events: none;
   }
   .image7 {
     position: absolute;
@@ -114,6 +115,10 @@
   }
   .text1 {
     top: 721px;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
   }
   .text2 {
     top: 770px;
@@ -352,6 +357,10 @@
     color: #000000;
     
     text-shadow: 0px 4px 4px #000000;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
   }
   .text24 {
     position: absolute;
