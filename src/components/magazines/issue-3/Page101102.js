@@ -10,6 +10,7 @@ const Page101102 = () => {
   const router = useRouter()
   const { slug } = router.query;
   const issueId = slug && slug.length > 0
+  ? slug[0] : magazineIssues[0].issueId
   const { contentUnlocked } = useSelector((state) => state.global.toJS());
   return (
     <div className={styles.wrapper}>

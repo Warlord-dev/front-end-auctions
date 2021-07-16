@@ -524,7 +524,7 @@
     
     font-family: Muna;
     font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 15px;
     line-height: 110%;
     /* or 17px */
@@ -560,5 +560,14 @@
     top: 22px;
     background: rgba(255, 255, 255, 0);
     border: none;
+  }
+  .image19 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: radial-gradient(124.88% 124.88% at 0% 50.03%, rgba(237, 184, 104, 0.63) 0%, rgba(237, 184, 104, 0.63) 42.5%, rgba(237, 184, 104, 0.63) 68.75%);
   }
 }

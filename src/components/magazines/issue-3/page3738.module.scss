@@ -243,7 +243,7 @@
     width: 824px;
     height: 490px;
     left: 1028px;
-    top: -196px;
+    top: -215px;
   }
   .text8 {
     position: absolute;
@@ -274,8 +274,8 @@
     position: absolute;
     width: 110px;
     height: 109.95px;
-    left: 996px;
-    top: 665px;
+    left: 25px;
+    top: 240px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -287,8 +287,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1065px;
-    top: 522px;
+    left: 144px;
+    top: 85px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -300,8 +300,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1197px;
-    top: 392px;
+    left: 316px;
+    top: 10px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -326,8 +326,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1559px;
-    top: 381px;
+    left: 410px;
+    top: 780px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -339,8 +339,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1700px;
-    top: 496px;
+    left: 518px;
+    top: 30px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -352,8 +352,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1777px;
-    top: 654px;
+    left: 689px;
+    top: 169px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -365,8 +365,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1775px;
-    top: 819px;
+    left: 764px;
+    top: 378px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -378,8 +378,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1712px;
-    top: 966px;
+    left: 730px;
+    top: 575px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -391,8 +391,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1602px;
-    top: 1069px;
+    left: 590px;
+    top: 725px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -417,8 +417,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1230px;
-    top: 1097px;
+    left: 200px;
+    top: 740px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -430,8 +430,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1092px;
-    top: 987px;
+    left: 55px;
+    top: 595px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -443,8 +443,8 @@
     position: absolute;
     width: 110px;
     height: 110px;
-    left: 1010px;
-    top: 841px;
+    left: 0;
+    top: 411px;
     box-shadow: 0px 4px 20px 10px #FF00F5;
     border-radius: 100%;
     transition: transform .2s;
@@ -525,4 +525,17 @@
     
     color: #FFFFFF;
   }
+  .rotate {
+    position: absolute;
+    width: 874px;
+    height: 900px;
+    left: 1003px;
+    top: 344px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 30s linear infinite;
+  }
 }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

@@ -15,6 +15,7 @@ const Page7778 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/3/images/77_78/image1.png" className={styles.image1}/>
+      <div className={styles.image19}></div>
       <img src="/magazine/3/images/77_78/image3.png" className={styles.image3}/>
       <img src="/magazine/3/images/77_78/image2.png" className={styles.image2}/>
       <img src="/magazine/3/images/77_78/image4.png" className={styles.image4}/>
@@ -67,9 +68,9 @@ What first intrigued me about NFTs is that they represent the opposite: instead 
         </video>
         <button onClick={() => {
           if (!play2) {
-            ref1.current.muted = true;
-          } else {
             ref1.current.muted = false;
+          } else {
+            ref1.current.muted = true;
           }
           setPlay2(!play2);
         }} className={styles.playbutton1}><img src={`./magazine/3/images/77_78/${play2 ? 'pause' : 'play'}.png`} /></button>

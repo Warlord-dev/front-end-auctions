@@ -136,18 +136,19 @@
     left: 1112.44px;
     top: 329.28px;
     
-    font-family: Cool Chaos;
+    font-family: Think Thick;
     font-style: normal;
     font-weight: 100;
-    font-size: 14px;
-    line-height: 110%;
+    font-size: 7px;
+    line-height: 13px;
     transform: rotate(-5deg);
     /* or 33px */
     
     
     color: #FFB9B9;    
     .title {
-      font-size: 24px;
+      font-family: Cool Chaos;
+      font-size: 30px;
       font-weight: bold;
     }
   }
@@ -173,8 +174,8 @@
     position: absolute;
     width: 28px;
     height: 28px;
-    left: 1180px;
-    top: 338px;
+    left: 1208px;
+    top: 335px;
     transition: transform .2s;
     &:hover {
       transform: scale(1.1);
@@ -184,8 +185,8 @@
     position: absolute;
     width: 28px;
     height: 28px;
-    left: 1242px;
-    top: 575px;
+    left: 1275px;
+    top: 570px;
     transition: transform .2s;
     &:hover {
       transform: scale(1.1);
@@ -196,7 +197,7 @@
     position: absolute;
     width: 28px;
     height: 28px;
-    left: 1230px;
+    left: 1260px;
     top: 760px;
     transition: transform .2s;
     &:hover {

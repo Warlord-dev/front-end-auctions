@@ -13,10 +13,12 @@
     height: 1497px;
     left: 0px;
     top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     .image4 {
-      position: absolute;
-      left: -250px;
+      height: 100%;
     }
   }
   .image2 {

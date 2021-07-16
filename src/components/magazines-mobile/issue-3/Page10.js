@@ -28,7 +28,7 @@ const Page10 = () => {
         <img src="/magazine/3/images/11_12/image6.png" className={styles.image12}/>
         </a>
       </Link>
-      <Link href="https://illuminate.finance/">
+      <Link href="https://www.thx.network/">
         <a target="_blank">
         <img src="/magazine/3/images/11_12/image7.png" className={styles.image13}/>
         </a>
@@ -49,7 +49,9 @@ const Page10 = () => {
       <p className={styles.text22}>Llama<br/>
 <span className={styles.text23}>With DAOs becoming more and more popular, so are the services being created and developed out around them. Llama is one of those, </span></p>
 <br/><br/>
-<p className={styles.text33}>providing treasury management for DAOs and DeFi protocols. As we are all aware, crypto is a highly dynamic and active ecosystem where it’s never enough to just rely on the expected routine— whether that be in the form of token price action, developer operations, managing deployments of high stakes smart contracts and/or community coordination and vitality. Thus, not only is efficient treasury management vital for being able to effectively respond to this dynamic environment, but also, it is necessary for guaranteeing a project’s ability to move in inertia with the constantly evolving currents, rather than being stuck in a position for having to battle against them.<br/><br/> Llama’s services include everything from asset allocation to financial planning and reporting, where DAOs are able to categorize transactions and access real-time financial statements. The relevance of this becomes even more clear when considering what is required to operate a real DAO and uphold community transparency as a core pillar to this. </p>
+<p className={styles.text33}>providing treasury management for DAOs and DeFi protocols. As we are all aware, crypto is a highly dynamic and active ecosystem where it’s never enough to just rely on the expected routine— whether that be in the form of token price action, developer operations, managing deployments of high stakes smart contracts and/or community coordination and vitality. Thus, not only is efficient treasury management vital for being able to effectively respond to this dynamic environment, but also, it is necessary for guaranteeing a project’s ability to move in inertia with the constantly evolving currents, rather than being stuck in a position for having to battle against them. 
+<br/><br/>
+Llama’s services include everything from asset allocation to financial planning and reporting, where DAOs are able to categorize transactions and access real-time financial statements. The relevance of this becomes even more clear when considering what is required to operate a real DAO and uphold community transparency as a core pillar to this. </p>
       <p className={styles.text24}>Illuminate finance<br/>
 <span className={styles.text25}>For the majority of people, understanding complex algorithmic DeFi protocols isn’t something that can just be contemplated over in simple time. Yield farming, staking, yield aggregators, swaps, flash loans etc. come as a completely new language, heuristic and behavior. And, especially as DeFi grows and scales in terms of the number of projects and protocols building and releasing products in the space; it becomes even more difficult to separate the signal from the noise and know exactly where one should go to find reasonably protected exposure to gainz. 
 <br/><br/>
