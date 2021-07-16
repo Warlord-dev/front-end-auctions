@@ -64,6 +64,7 @@ const CardList = ({
     localStorage.setItem(STORAGE_SORT_BY, value);
   };
 
+
   return (
     <>
       <div className={styles.dropdown}>
@@ -82,7 +83,7 @@ const CardList = ({
           return (
             <CardProduct
               collectionId={collectionId}
-              key={garment?.id}
+              key={`${garment?.name}-${auction?.id}`}
               history={historyByTokenId.get(garment?.id)}
               auctionIndex={auction?.id}
               garmentId={garment?.id}
@@ -101,11 +102,12 @@ const CardList = ({
             if (garment?.name.includes('DIGI Bundle')) {
               return <></>;
             }
+
             if (parseInt(collection.id) >= 10) return;
             return (
               <CardProduct
                 collectionId={collectionId}
-                key={garment.id}
+                key={`${garment.name}-${collection.garmentAuctionID}`}
                 history={historyByTokenId.get(garment.id)}
                 auctionId={collection.garmentAuctionID}
                 auctionIndex={collection.id}
@@ -127,7 +129,7 @@ const CardList = ({
             return (
               <CardProduct
                 collectionId={collectionId}
-                key={garment.id}
+                key={`${garment.name}-${collection.garmentAuctionID}`}
                 history={historyByTokenId.get(garment.id)}
                 auctionId={collection.garmentAuctionID}
                 auctionIndex={collection.id}
