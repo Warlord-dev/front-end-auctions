@@ -207,6 +207,107 @@ const mapList = [
         rotate: '-12',
       }
     ]
+  },
+  {
+    issueId: '3',
+    content: [
+      {
+        pageNum: 0,
+        x: '65',
+        y: '5',
+        rotate: '-30',
+      },
+      {
+        pageNum: 3,
+        x: '10',
+        y: '20',
+        rotate: '-18',
+      },
+      {
+        pageNum: 7,
+        x: '5',
+        y: '70',
+        rotate: '15',
+      },
+      {
+        pageNum: 11,
+        x: '30',
+        y: '10',
+        rotate: '20',
+      },
+      {
+        pageNum: 23,
+        x: '44',
+        y: '20',
+        rotate: '-5',
+      },
+      {
+        pageNum: 29,
+        x: '57',
+        y: '30',
+        rotate: '0',
+      },
+      {
+        pageNum: 35,
+        x: '80',
+        y: '25',
+        rotate: '-12',
+      },
+      {
+        pageNum: 39,
+        x: '55',
+        y: '75',
+        rotate: '0',
+      },
+      {
+        pageNum: 49,
+        x: '70',
+        y: '39',
+        rotate: '-40',
+      },
+      {
+        pageNum: 54,
+        x: '18',
+        y: '60',
+        rotate: '-10',
+      },
+      {
+        pageNum: 59,
+        x: '88',
+        y: '7',
+        rotate: '-15',
+      },
+      {
+        pageNum: 66,
+        x: '23',
+        y: '40',
+        rotate: '22',
+      },
+      {
+        pageNum: 81,
+        x: '32',
+        y: '72',
+        rotate: '-17',
+      },
+      {
+        pageNum: 89,
+        x: '45',
+        y: '50',
+        rotate: '9',
+      },
+      {
+        pageNum: 93,
+        x: '85',
+        y: '70',
+        rotate: '11',
+      },
+      {
+        pageNum: 126,
+        x: '70',
+        y: '60',
+        rotate: '-12',
+      }
+    ]
   }
 ]
 
