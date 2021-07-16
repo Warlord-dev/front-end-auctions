@@ -23,8 +23,10 @@ const UnlockPageThree = props => {
       <button className={styles.unlock} onClick={() => {
         if(issueId === 1) {
           Router.push('/unlockable')
-        } else if(issueId == 2) {
+        } else if(issueId === 2) {
           Router.push('/unlockable/2')
+        } else if(issueId === 3) {
+          Router.push('/unlockable/3')
         }
       }}>
         Unlock

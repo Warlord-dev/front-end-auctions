@@ -34,7 +34,9 @@ const Page3738 = () => {
       <p className={styles.text12}>DIGITALAX and the Global Designer Network DAO have partnered with top DeFi protocols creating hybrid digital-physical NFT fashion collections with DeFi functionality. 
 <br/><br/>
 This fashion isn’t just ordinary fashion. It onboards you into an entire world of NFTs, Decentralised Finance, Crypto and Web3. Every fashion piece is a unique NFT that can also earn you yield in $MONA token and other crypto. </p> 
+      
       <img src="/magazine/3/images/37_38/image10.png" className={styles.image17}/>
+      <div className={styles.rotate}>
       <Link href="https://rarible.com/">
         <a target="_blank">
           <img src="/magazine/3/images/37_38/image11.png" className={styles.image18}/>
@@ -48,11 +50,6 @@ This fashion isn’t just ordinary fashion. It onboards you into an entire world
       <Link href="https://rulerprotocol.com/">
         <a target="_blank">
           <img src="/magazine/3/images/37_38/image13.png" className={styles.image20}/>
-        </a>
-      </Link>
-      <Link href="https://zapper.fi/">
-        <a target="_blank">
-          <img src="/magazine/3/images/37_38/image14.png" className={styles.image21}/>
         </a>
       </Link>
       <Link href="https://instadapp.io/">
@@ -80,11 +77,6 @@ This fashion isn’t just ordinary fashion. It onboards you into an entire world
           <img src="/magazine/3/images/37_38/image19.png" className={styles.image26}/>
         </a>
       </Link>
-      <Link href="https://zerion.io/">
-        <a target="_blank">
-          <img src="/magazine/3/images/37_38/image20.png" className={styles.image27}/>
-        </a>
-      </Link>
       <Link href="https://pickle.finance/">
         <a target="_blank">
           <img src="/magazine/3/images/37_38/image21.png" className={styles.image28}/>
@@ -105,6 +97,7 @@ This fashion isn’t just ordinary fashion. It onboards you into an entire world
           <img src="/magazine/3/images/37_38/image24.png" className={styles.image31}/>
         </a>
       </Link>
+      </div>
       <img src="/magazine/3/images/37_38/image25.png" className={styles.image32}/>
     </div>
   );

@@ -27,7 +27,7 @@ The financialization of NFTs will open the door to new protocols, derivatives, a
       <br/><br/>
 We’ve reached the point where NFTs have been collateralized such that individuals can borrow, transact, or issue loans with them. 
 <br/><br/>
-Case in point: DeFi mainstay Aave has created its own NFT protocol with a focus on decentralized finance known as Aavegotchi, whose NFTs may then be used as collateral, apart from Aave’s main product using fungible collateral to underwrite crypto loans. On the other hand, Dapper Labs-backed NFTfi is working on using NFTs instead of fungible collateral to provide loans, whose promissory notes have been issued on Opensea. Simultaneously, Charged Particles is a protocol allowing users to deposit and embed any number of ERC-20 tokens into a “basket” of non-custodial NFTs. These can be stablecoins such as Dai, USDT, or USDC, which will then be converted into their yield-bearing equivalents upon deposit— allowing them to accrue interest over time.
+Case in point: DeFi mainstay Aave has supported the creation of a gamified NFT system on top of its protocol, known as Aavegotchi, that has a focus on decentralized finance and whose NFTs may then be used as collateral, apart from Aave’s main product using fungible collateral to underwrite crypto loans. On the other hand, Dapper Labs-backed NFTfi— working on using NFTs instead of fungible collateral to provide loans, whose promissory notes have been issued on Opensea. Simultaneously, Charged Particles is a protocol allowing users to deposit and embed any number of ERC-20 tokens into a “basket” of non-custodial NFTs. These can be stablecoins such as Dai, USDT, or USDC, which will then be converted into their yield-bearing equivalents upon deposit— allowing them to accrue interest over time.
 <br/><br/>
 NFTs + DeFi: a summation<br/>
 NFTs are much more than just cryptographic tokens with subjective value to a particular market. It’s indicative of a broader aspect of the tokenization revolution driving the expansion of web3 while proving the resoluteness of the DeFi movement together with its interoperability that allows it to intersect platforms and serve as a vehicle of exchange for all sorts of tokens.
@@ -36,8 +36,7 @@ While no single protocol yet exists to unlock mass utility and fully leverage th
 <br/><br/>
 The road is long and arduous—but the resolve to build new DeFi applications for the NFT market is there, and the use cases are gaining traction across fintech and blockchain. There’s a lot of tremendous potential to be unlocked. Once an appraisal system is implemented to evaluate the value of NFTs and other digital assets, and in doing so, underwrite their intrinsically dynamic value, there’s no telling how this industry is going to blow. Moreover, the emergence of decentralized autonomous organizations (DAOs) is central to this next evolution, as a pivotal tool to align governance, and develop a fair, incentivized protocol for everyone involved.
 <br/><br/>
-DeFi has always been about doing cool things with liquidity, and its collision course with NFTs may see a mushrooming of liquidity in the NFT space. Individuals are now paying for the value locked in NFTs, as opposed to merely buying them for clout. Apples and oranges, my friends—the intersection of these two worlds within crypto is shaping up to be an instant classic.
-</p> 
+DeFi has always been about doing cool things with liquidity, and its collision course with NFTs may see a mushrooming of liquidity in the NFT space. Individuals are now paying for the value locked in NFTs, as opposed to merely buying them for clout. Apples and oranges, my friends—the intersection of these two worlds within crypto is shaping up to be an instant classic.</p> 
     </div>
   );
 };

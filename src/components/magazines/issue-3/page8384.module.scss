@@ -266,13 +266,17 @@
     height: 149px;
     left: 1635px;
     top: 1309px;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.05 );
+    }  
   }
   .image15 {
     position: absolute;
-    width: 223px;
-    height: 225.27px;
-    left: 50px;
-    top: 663px;
+    width: 801px;
+    height: 602px;
+    left: 49px;
+    top: 736px;
   }
   .image16 {
     position: absolute;

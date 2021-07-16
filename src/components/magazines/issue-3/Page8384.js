@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './page8384.module.scss';
+import Link from 'next/link';
 
 const Page8384 = () => {
   return (
@@ -18,11 +19,6 @@ const Page8384 = () => {
       <img src="/magazine/3/images/83_84/image5.png" className={styles.image7}/>
       <img src="/magazine/3/images/83_84/image6.png" className={styles.image8}/>
       <img src="/magazine/3/images/83_84/image14.png" className={styles.image15}/>
-      <img src="/magazine/3/images/83_84/image15.png" className={styles.image16}/>
-      <img src="/magazine/3/images/83_84/image16.png" className={styles.image17}/>
-      <img src="/magazine/3/images/83_84/image17.png" className={styles.image18}/>
-      <img src="/magazine/3/images/83_84/image18.png" className={styles.image19}/>
-      <img src="/magazine/3/images/83_84/image19.png" className={styles.image20}/>
       <p className={styles.text8}>ANNACHILLI VR audio-visual ART EXPERIENCE</p>
       <p className={styles.text9}>aBIGNEONGLITTER 3D ART COLLECTIBLES</p>
       <img src="/magazine/3/images/83_84/image7.png" className={styles.image9}/>
@@ -31,7 +27,11 @@ const Page8384 = () => {
       <p className={styles.text10}>DECO ONLY FANS UNLOCKABLE EXCLUSIVE CONTENT & EXPERIENCES</p>
       <img src="/magazine/3/images/83_84/image10.png" className={styles.image12}/>
       <img src="/magazine/3/images/83_84/image11.png" className={styles.image13}/>
-      <img src="/magazine/3/images/83_84/image12.png" className={styles.image14}/>
+      <Link href="https://digifizzy.xyz/unlockable/3">
+        <a target="_blank">
+        <img src="/magazine/3/images/83_84/image12.png" className={styles.image14}/>
+        </a>
+      </Link>
     </div>
   );
 };
