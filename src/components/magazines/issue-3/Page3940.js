@@ -18,7 +18,7 @@ const Page3940 = () => {
       <p className={styles.text2}>With DeFi Functionality.</p>  
       <p className={styles.text3}>Designed by DIGITALAX and the Global Designer Network</p>  
       <p className={styles.text4}>DIGITALAX and the 
-      <Link href="https://rarible.com/">
+      <Link href="https://designers.digitalax.xyz/">
         <a target="_blank">
           <span className={styles.designer}> Global Designer Network DAO </span>
         </a>

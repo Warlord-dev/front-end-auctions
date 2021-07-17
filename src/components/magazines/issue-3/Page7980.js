@@ -45,7 +45,7 @@ const Page7980 = () => {
       <img src="/magazine/3/images/79_80/image6.png" className={styles.image6}/>
       <div className={styles.image9}></div>
       <div className={styles.image18}>
-        <iframe width="486" height="249" src="https://www.youtube.com/embed/zTAUip--srg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="486" height="249" src="https://www.youtube.com/embed/zTAUip--srg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       <Link href="https://ill-esha.com/ ">
         <a target="_blank">

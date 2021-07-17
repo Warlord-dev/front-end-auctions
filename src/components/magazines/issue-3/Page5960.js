@@ -76,6 +76,8 @@ const Page5960 = () => {
           <source src="./magazine/3/images/59_60/video4.mp4" type="video/mp4" />
         </video>
       </div>
+      <p className={styles.text14}>XENOTECH</p>  
+      <p className={styles.text15}>XENOTECH</p>  
     </div>
   );
 };
