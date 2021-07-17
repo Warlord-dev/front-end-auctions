@@ -6,24 +6,13 @@ const Page6566 = () => {
  
   return (
     <div className={styles.wrapper}>
-      <div className={styles.image1}>
-        <video className={styles.image2} muted loop autoPlay>
-          <source src="./magazine/3/images/65_66/video1.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <Link href="https://www.instagram.com/howiseedatworld/?hl=en">
+      <img src="/magazine/3/images/65_66/image1.png" className={styles.image1}/>  
+     <p className={styles.text1}>I'm a fashion and costume designer with a Master's from IED Milano. Since childhood, I have loved to sew and come up with different models. When home supplies ran out, I decided it was time to make a profession of it. I have a clothing brand for which I make mini collections of unique things, dance clothes and I also design costumes for theaters. Recently I fell in love with virtual fashion and now I am developing in this direction.</p>   
+     <Link href="https://www.instagram.com/bugazdesign/">
         <a target="_blank">
-          <p className={styles.text1}>Hellion</p>   
+          <p className={styles.text2}>BUGAS</p>   
         </a>
-      </Link>
-      <p className={styles.text2}>howiseedatworld</p>  
-      <img src="/magazine/3/images/65_66/image1.png" className={styles.image3}/>
-      <Link href="https://www.instagram.com/lisa_gen_paris_/">
-        <a target="_blank">
-        <p className={styles.text3}>Tom Pastor</p> 
-        </a>
-      </Link>
-      <p className={styles.text4}>Lisa Gen</p> 
+      </Link> 
     </div>
   );
 };

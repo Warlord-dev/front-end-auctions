@@ -3,33 +3,35 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 1663px;
+  height: 2653px;
   overflow: hidden;
-  background-color: white;
+  background-color: #000000;
   color: white;
   display: flex;
   position: relative;
-  
+
   .image1 {
-    position: relative;
+    position: absolute;
     width: 375px;
-    height: 1663px;
+    height: 2653px;
+    left: 0px;
+    top: 0px;
   }
-  .image2 {
+  .image3 {
     position: absolute;
     width: 308px;
-    height: 1403px;
+    height: 2552px;
     left: 33px;
-    top: 69px;
+    top: 70px;
     
-    background: #00B7E5;    
+    background: #E93504;
   }
-  .text1 {
+  .text4 {
     position: absolute;
     width: 245px;
     height: 1119px;
     left: 65px;
-    top: 116px;
+    top: 129px;
     
     font-family: Roboto;
     font-style: normal;

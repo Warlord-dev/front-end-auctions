@@ -1,121 +1,44 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './page71.module.scss'
-import ReactAnime from 'react-animejs'
+import Link from 'next/link';
 
 const Page71 = () => {
-  const {Anime, stagger} = ReactAnime
-  const ref1 = useRef();
-  
-  const handleProgress = () => {
-    ref1.current.onplay = () => {
-      ref1.current.addEventListener('timeupdate', () => {
-        document.getElementById("myRange").value = Math.floor(ref1.current.currentTime / ref1.current.duration * 100)
-        // setProgressValue(Math.floor(ref1.current.currentTime / ref1.current.duration * 100))
-      }, true)
-    }
-  }
+  const [play, setPlay] = useState(false);
+  const [play1, setPlay1] = useState(false);
+  const refAudio = useRef();
+  const refAudio1 = useRef();
   return (
     <div className={styles.wrapper}>     
-     <img src="/magazine/3/images/81_82/image4.png" className={styles.image1}/>
-     <p className={styles.text1}>Consent & Decentralisation </p>
-     <p className={styles.text2}>Miko Matsumura</p>
-     <audio className={styles.audio} ref={ref1} onLoadedData={() => handleProgress()}>
-        <source src="/magazine/3/images/81_82/audio1.mp3" type="audio/mp3" />
-      </audio>
-     <div className={styles.anim}>
-      <Anime
-        initial={[
-          {
-            targets: "#blue",
-            translateX: 220,
-            loop: true,
-            easing: 'easeOutQuad',
-            autoPlay: false,
-            scale: 1,
-            rotate: 99,
-            duration: 1500,
+       <img src="/magazine/3/images/79_80/image2.png" className={styles.image3}/>
+      <img src="/magazine/3/images/79_80/image3.png" className={styles.image2}/>
+      <img src="/magazine/3/images/79_80/image9.png" className={styles.image15}/>
+      <img src="/magazine/3/images/79_80/image5.png" className={styles.image5}/>
+      <img
+        src={`./magazine/3/images/79_80/${!play ? 'play1' : 'pause1'}.png`}
+        className={styles.play1}
+        onClick={() => {
+          if (!play) {
+            refAudio.current.play();
+          } else {
+            refAudio.current.pause();
           }
-        ]}
-      >
-        <div
-          className={styles.blue} id="blue"
-        />
-      </Anime>
-      <Anime
-        initial={[
-          {
-            targets: "#green",
-            translateX: 268,
-            loop: true,
-            easing: 'easeOutQuad',
-            scale: 1.6,
-            rotate: -184,
-            duration: 1500,
-          }
-        ]}
-      >
-        <div
-          className={styles.green} id="green"
-        />
-      </Anime>
-      <Anime
-        initial={[
-          {
-            targets: "#red",
-            translateX: 220,
-            loop: true,
-            easing: 'easeOutQuad',
-            scale: 1.7,
-            rotate: 150,
-            duration: 1500,
-          }
-        ]}
-      >
-        <div
-          className={styles.red} id="red"
-        />
-      </Anime>
-      <input
-        type="range"
-        min="1"
-        max="100"
-        className={styles.slider}
-        id="myRange"
-        value={0}
-        onChange={e => console.log(setControl(["seek", e.currentTarget.value]))}
+          setPlay(!play);
+        }}
       />
-      <div className={styles.buttons}>
-        <button
-          className={styles.button}
-          onClick={() => {
-            console.log("play")
-            ref1.current.play();
-          }}
-        >
-          Play
-        </button>
-        <button
-          className={styles.button}
-          onClick={() => {
-            console.log("pause");
-            ref1.current.pause();
-          }}
-        >
-          Pause
-        </button>
-        <button
-          className={styles.button}
-          onClick={() => {
-            ref1.current.pause();
-            ref1.current.currentTime = 0;
-            ref1.current.play();
-          }}
-        >
-          Restart
-        </button>
-        </div>
-      
-      </div>
+
+      <audio className={styles.audio} ref={refAudio}>
+        <source src="./magazine/3/images/79_80/audio1.mp3" type="audio/mpeg" />
+      </audio>
+      <img src="/magazine/3/images/79_80/image10.png" className={styles.image6}/>
+      <Link href="https://www.instagram.com/howiseedatworld/?hl=en">
+        <a target="_blank">
+          <div className={styles.image7}>
+            <video className={styles.image8} muted loop autoPlay>
+              <source src="./magazine/3/images/79_80/video1.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </a>
+      </Link>
     </div>
   )
 }

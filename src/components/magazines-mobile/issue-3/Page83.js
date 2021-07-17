@@ -1,52 +1,30 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
 import styles from './page83.module.scss'
+import Link from 'next/link';
 
 const Page83 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/95_96/image27.png" className={styles.image1}/>
-      <img src="/magazine/3/images/95_96/image2.png" className={styles.image2}/>
-      <div className={styles.image3}>
-        <video className={styles.image4} muted loop autoPlay>
-          <source src="./magazine/3/images/95_96/video1.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className={styles.image8}>
-        <video className={styles.image9} muted loop autoPlay>
-          <source src="./magazine/3/images/95_96/video2.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className={styles.image6}></div>
-      <img src="/magazine/3/images/95_96/image4.png" className={styles.image7}/>
-      <p className={styles.text1}>Fabeeo Breen</p> 
-      <p className={styles.text2}>Curiosity is my engine, I always wanted to control as many aspects as possible of digital image generation and manipulation.
-My key skill is the ability to use and combine multiple softwares, allowing myself to explore different areas of the CGI field, with a strong objective-driven attitude.
+      <img src="/magazine/3/images/93_94/image7.png" className={styles.image2}/>
+       <img src="/magazine/3/images/93_94/image8.png" className={styles.image6}/>
+       <div className={styles.image3}></div>
+       <p className={styles.text1}>How does anyone make a market? 
 <br/><br/>
-After 12+ years’ experience in virtual worlds and 5+ years into VFX for the cinema industry, I founded in 2018 the "Fabeeo Breen" brand:
+Often it is used to describe activity that occurs between buyers and sellers of financial instruments, where the ‘market makers’ are those that provide readily available consistent liquidity to either side of a trade and assist in defining the overall market structure. 
 <br/><br/>
-Fabeeo Breen is Digital Fashion Brand Specialized in innovation and virtualization of fashion industry, aiming at setting forth a new way of crafting and perceiving fashion in the digital era.</p> 
-      <img src="/magazine/3/images/95_96/image5.png" className={styles.image10}/>
-      <img src="/magazine/3/images/95_96/image7.png" className={styles.image12}/>
-      <img src="/magazine/3/images/95_96/image6.png" className={styles.image11}/>
-      <p className={styles.text3}>NIKE Adapt BB</p> 
-      <p className={styles.text4}>NIKE Adapt BB</p> 
-      <p className={styles.text5}>NIKE Adapt BB</p> 
-      <img src="/magazine/3/images/95_96/image8.png" className={styles.image13}/>
-      <p className={styles.text6}>This model is made entirely on Zbrush and the rendered in Keyshot.</p> 
-      <img src="/magazine/3/images/95_96/image9.png" className={styles.image14}/>
-      <img src="/magazine/3/images/95_96/image10.png" className={styles.image15}/>
-      <p className={styles.text8}>Marcello Baldari</p> 
-      <div className={styles.image20}>
-        <video className={styles.image21} muted loop autoPlay>
-          <source src="./magazine/3/images/95_96/video3.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className={styles.image16}></div>
-      <p className={styles.text9}>The softwares I use for the production of the dress are Marvelous and Clo3D. For accessories and footwear, on the other hand, I use Zbrush and Maya. I start by creating the 2D pattern and then I dress the avatar. Afterwards I improve the fit, until I'm satisfied with the result.</p> 
-      <img src="/magazine/3/images/95_96/image11.png" className={styles.image17}/>
-      <p className={styles.text10}>The softwares I use for the production of the dress are Marvelous and Clo3D. For accessories and footwear, on the other hand, I use Zbrush and Maya. I start by creating the 2D pattern and then I dress the avatar. Afterwards I improve the fit, until I'm satisfied with the result.</p> 
-      <img src="/magazine/3/images/95_96/image12.png" className={styles.image18}/>
-      <img src="/magazine/3/images/95_96/image13.png" className={styles.image19}/>
+This is incredibly important. Without strong systems in place to support and facilitate ease of participation for anyone desiring to interact with a particular market, not only does it make it incredibly difficult for that market to grow and expand, but, more destructively, ultimately the very definition of a market ceases to exist.  </p> 
+      <p className={styles.text2}>MARKET MAKING FOR WEB3 FASHION</p> 
+      <img src="/magazine/3/images/93_94/image3.png" className={styles.image4}/>
+      <p className={styles.text3}>GLOBAL DESIGNER NETWORK (GDN)</p> 
+      <p className={styles.text4}>The Global Designer Network is making the market for web3 fashion. We are dynamically seeding the initial foundations and building blocks so that anyone that desires to, can start onboarding with a clear roadmap and pathway to success, elevation and prosperity. 
+      <br/><br/>
+As an essential primary step to this, we are composing the WEB3 FASHION 101— a concentrated glossary and reference platform filled with resources, content, assets, materials and supplies that can be used by any designer, creator, consumer, fashion or metaverse lover either beginning or continuing their journey in the world of web3 fashion, inclusive of NFTs, DeFi, digital fashion, hybrid digi-physical, gaming, 3D applications etc. </p> 
+      <Link href="Link to https://designers.digitalax.xyz/">
+        <a target="_blank">
+        <img src="/magazine/3/images/93_94/image4.png" className={styles.image5}/>
+        </a>
+      </Link>
+      <p className={styles.text5}>COMPOSING THE</p> 
     </div>
   )
 }

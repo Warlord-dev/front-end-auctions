@@ -5,48 +5,29 @@ import Link from 'next/link';
 const Page100 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/111_112/image11.png" className={styles.image1}/>
-      <img src="/magazine/3/images/111_112/image6.png" className={styles.image10}/>
-      <div className={styles.image12}></div>
-      <p className={styles.text9}>People ask me why I started and activewear brand, and the answer is simple; because I want to create garments that people invest in for the betterment of their lives and not just for trends. My garments are created in a small, family run business in Bulgaria, using Italian sports fabrics which I chose for their durability and function. I create jumpsuits because I believe they are the most efficient type of garment for sports, and also they make you feel bad-ass and ready to go. My first collection was quite minimalistic and very limited in stock. I was inspired by the colour cobalt blue, by superhero’s and rave culture. You could wear them for sports, or clubbing!</p>  
-      <img src="/magazine/3/images/111_112/image7.png" className={styles.image11}/>
-      <div className={styles.image2}>
-        <video className={styles.image3} muted loop autoPlay>
-          <source src="./magazine/3/images/111_112/video1.mp4" type="video/mp4" />
-        </video>
+     <img src="/magazine/3/images/111_112/image7.png" className={styles.image1}/>
+      <p className={styles.text1}>XENOTECH</p> 
+      <p className={styles.text2}>XENOTECH</p> 
+      <p className={styles.text3}>XENOTECH</p> 
+      <p className={styles.text4}>XENOTECH</p> 
+      <div className={styles.image2}></div>
+      <p className={styles.text5}> In the previous content I broke down how the XENOTECH virtual world would be structured. The primary NFTs that users would interact with are clothing stores, apartments, and clothing wearables.</p> 
+      <p className={styles.text6}>Clothing Stores</p> 
+      <p className={styles.text7}>Clothing Stores</p>
+      <div className={styles.image3}></div> 
+      <p className={styles.text8}>Across the city there would be 3D retail spaces that designers and brands could rent or purchase (as NFTs) and subsequently customize and launch clothing stores for both their digital and physical products. Depending on the scenario, these stores would either be persistently open to the public, or they could be scheduled NFT ticketed pop-up store events. Scarcity is a crucial characteristic of streetwear and fashion and the reason that people will line up and even camp on the street overnight for a Supreme drop.</p> 
+      <div className={styles.image4}></div>
+      <p className={styles.text9}>In a virtual world, a brand could replicate this sort of scarcity thrill for clothing drops by pre-selling a limited number of tickets (NFTs or social tokens) that would grant their holders private access to the 3D clothing store upon the drop. Upon purchasing an NFT clothing garment from a brand, a customer could then view the garment in their inventory and equip it on their avatar. Users could also purchase their own NFT apartment within the virtual world where they could display their clothing garments and other 3D NFT objects.</p> 
+      <div className={styles.image5}>
+        <video className={styles.image6} muted loop autoPlay>
+            <source src="./magazine/3/images/111_112/video1.mp4" type="video/mp4" />
+          </video>
       </div>
-      <div className={styles.image16}>
-        <video className={styles.image17} muted loop autoPlay>
-          <source src="./magazine/3/images/111_112/video2.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className={styles.image18}>
-        <video className={styles.image19} muted loop autoPlay>
-          <source src="./magazine/3/images/111_112/video3.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className={styles.image13}></div>
-      <p className={styles.text10}>In some ways as a designer/artist/music lover I feel limited creatively in my business, but now I see avenues to showcase creative concepts without being wasteful to the environment 
-About 3-4 years ago I became fascinated with wearable technology, I contacted Kinetic Analysis, a Dutch wearables company, where we discussed our collaboration for a future TAKAII jumpsuit including sensors for measuring your bodily movements via an app, anywhere you train. I would love to make this dream come true and add even more functionality to my garments to serve more people in their pursuit of health. 
-<br/><br/>
-For the time-being my goal is to participate in the dismantlement of wasteful, polluting and inefficient manufacturing and allow my creativity to be fully expressed in my brand by integrating digital practices not just in the manufacturing process, but in the brand experience itself. </p>  
-      <div className={styles.image14}></div>
-      <p className={styles.text11}>The virtual world we are building is inspired by the four continents of Europe, Africa, South America and Asia. I believe we have so much wealth in heritage and this has been so essential to my identity. At the same time I love to rework and reimagine, you will see nods to Brutalist architecture, Indigenous artefacts and futurist city scapes.
-      <br/><br/>
-TAKAII’s breakthrough project will include a digital world to be experienced in Oculus Quest 2 VR glasses, showcasing my own conceptual designs.
-<br/><br/>
-A Ready-to-wear activewear collection will be inspired by this conceptual collection, and available for purchase as real life garments and/or digital twin, made-to-measure through a network of seamstresses on the TAKAII.com website. We will be using image scanning software from PS.Collective on our online shop, meaning you can preview a 3D activewear render, upload pictures of yourself, then we can derive your measurements and create our activewear made to measure just for you!
-</p>
-      <div className={styles.image20}>
-        <video className={styles.image21} muted loop autoPlay>
-          <source src="./magazine/3/images/111_112/video4.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <img src="/magazine/3/images/111_112/image5.png" className={styles.image22}/>
-      <div className={styles.image23}>
-        <video className={styles.image24} muted loop autoPlay>
-          <source src="./magazine/3/images/111_112/video5.mp4" type="video/mp4" />
-        </video>
+      <img src="/magazine/3/images/111_112/image3.png" className={styles.image8}/>
+      <div className={styles.image10}>
+        <video className={styles.image11} muted loop autoPlay>
+            <source src="./magazine/3/images/111_112/video2.mp4" type="video/mp4" />
+          </video>
       </div>
     </div>
   )

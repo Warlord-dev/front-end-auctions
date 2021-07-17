@@ -1,34 +1,27 @@
 import React from 'react'
 import styles from './page97.module.scss'
-import Link from 'next/link';
 
 const Page97 = () => {
   return (
-    <div className={styles.wrapper}>
-      <img src="/magazine/3/images/109_110/image7.png" className={styles.image1}/>
-      <p className={styles.text1}>XENOTECH</p> 
-      <p className={styles.text2}>XENOTECH</p> 
-      <p className={styles.text3}>XENOTECH</p> 
-      <p className={styles.text4}>XENOTECH</p> 
+    <div className={styles.wrapper}>     
+      <img src="/magazine/3/images/107_108/image2.png" className={styles.image1}/>
       <div className={styles.image2}></div>
-      <p className={styles.text5}> In the previous content I broke down how the XENOTECH virtual world would be structured. The primary NFTs that users would interact with are clothing stores, apartments, and clothing wearables.</p> 
-      <p className={styles.text6}>Clothing Stores</p> 
-      <p className={styles.text7}>Clothing Stores</p>
-      <div className={styles.image3}></div> 
-      <p className={styles.text8}>Across the city there would be 3D retail spaces that designers and brands could rent or purchase (as NFTs) and subsequently customize and launch clothing stores for both their digital and physical products. Depending on the scenario, these stores would either be persistently open to the public, or they could be scheduled NFT ticketed pop-up store events. Scarcity is a crucial characteristic of streetwear and fashion and the reason that people will line up and even camp on the street overnight for a Supreme drop.</p> 
-      <div className={styles.image4}></div>
-      <p className={styles.text9}>In a virtual world, a brand could replicate this sort of scarcity thrill for clothing drops by pre-selling a limited number of tickets (NFTs or social tokens) that would grant their holders private access to the 3D clothing store upon the drop. Upon purchasing an NFT clothing garment from a brand, a customer could then view the garment in their inventory and equip it on their avatar. Users could also purchase their own NFT apartment within the virtual world where they could display their clothing garments and other 3D NFT objects.</p> 
-      <div className={styles.image5}>
-        <video className={styles.image6} muted loop autoPlay>
-            <source src="./magazine/3/images/109_110/video1.mp4" type="video/mp4" />
-          </video>
-      </div>
-      <img src="/magazine/3/images/109_110/image3.png" className={styles.image8}/>
-      <div className={styles.image10}>
-        <video className={styles.image11} muted loop autoPlay>
-            <source src="./magazine/3/images/109_110/video2.mp4" type="video/mp4" />
-          </video>
-      </div>
+      <p className={styles.text2}>It’s always been a tricky proposition for crypto projects to be distributing new tokens to the right individuals, and liquidity mining has since been one of the more sustainable approaches. In essence, liquidity mining works by distributing tokens to those who deposit their crypto assets into a liquidity pool. The new tokens are then distributed algorithmically to each individual’s corresponding stake in the pool algorithmically.
+      <br/><br/>
+These tokens can also be in the form of other tokens like Uniswap (if you are a liquidity provider). Consequently, you will be able to deposit such tokens into other pools to repeat the process and earn returns on your investment.
+<br/><br/>
+We could also think about governance as a use case. In some cases, there’s a very high threshold of token votes needed to be able to put forward a formal governance proposal. If the funds are pooled together instead, participants can rally behind a common cause they deem important for the protocol.
+<br/><br/>
+Governance<br/>
+Governance is yet another use case for liquidity pools. Some protocols require a high threshold of token votes to formulate a proper governance proposal. When funds are pooled together, individuals can garner and unite over a particular cause that they may determine as critical for the protocol.
+<br/><br/>
+Tranching and synthetic assets<br/>
+Yet another use for liquidity pools is tranching, or what involves separating and categorizing financial products depending on their risk and return profiles. Such products allow liquidity pools to choose one.
+<br/><br/>
+Synthetic assets such as those that are pegged to a particular asset are also dependent on liquidity pools in order for them to be minted on-chain. These are essentially akin to traditional financial derivatives that derive their value from other assets like stocks, bonds, commodities, precious metals, or currencies to trade them without necessarily holding the real asset.
+<br/><br/>
+DeFi-ning appeal<br/>
+Since May 2020, the total value locked in DeFi protocols like Uniswap, Compound, Maker, and Aave ballooned from a shade under $1 billion to do an 88x—or $88 billion in total locked value in the entire space—at its very peak last May 2021. Annual percentage yields have skyrocketed through the roof as users began to engage in yield farming as fast as they can. That’s a far cry from the minuscule APYs on a basic savings account. </p> 
     </div>
   )
 }

@@ -3,17 +3,41 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 982px;
+  height: 2725px;
   overflow: hidden;
-  background-color: #BEFFC5;
+  background-color: white;
   color: white;
   display: flex;
   position: relative;
-  .image1 {
-    position: absolute;
-    width: 375px;
-    height: 982px;
-    left: 0px;
-    top: 0px;
-  }
+
+ .image1 {
+  position: relative;
+  width: 375px;
+  height: 2725px;
+ }
+ .image2 {
+  position: absolute;
+  width: 308px;
+  height: 2582px;
+  left: 33px;
+  top: 68px;
+  
+  background: #01D195;
+ }
+ .text1 {
+  position: absolute;
+  width: 245px;
+  height: 1119px;
+  left: 65px;
+  top: 127px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  
+  color: #FFFFFF;
+ }
 }

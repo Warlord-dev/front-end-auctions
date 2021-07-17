@@ -6,87 +6,26 @@ const Page9394 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/3/images/93_94/image1.png" className={styles.image1}/>
-      <img src="/magazine/3/images/93_94/image2.png" className={styles.image2}/>
       <div className={styles.image3}></div>
-      <p className={styles.text1}>The full scope of the Web3 Fashion 101 is being curated, designed and itemised by the Global Designer Network (GDN). Each designer in the network has crafted a mix of resources, materials and content from different aspects of fashion, 3D modeling, design, NFTs, decentralised technologies across the entire pipeline process. </p>   
-      <p className={styles.text2}>Through DIGIFIZZY, the GDN is uncovering the first look of the 101! </p>   
-      <p className={styles.text3}>FIRST LOOK!</p>   
-      <p className={styles.text4}>FIRST LOOK!</p>   
-      <p className={styles.text5}>FIRST LOOK!</p>   
-      <Link href="https://www.instagram.com/shiu_studio/ ">
-        <a target="_blank">
-        <img src="/magazine/3/images/93_94/image3.png" className={styles.image4}/>
-        </a>
-      </Link>
-      
-      <p className={styles.text6}>Shiu Studios</p>   
-      <img src="/magazine/3/images/93_94/image7.png" className={styles.image8}/>
-      <img src="/magazine/3/images/93_94/image5.png" className={styles.image6}/>
-      <img src="/magazine/3/images/93_94/image4.png" className={styles.image5}/>
-      <p className={styles.text7}>Avatar created by Zbrush</p>   
-      <img src="/magazine/3/images/93_94/image6.png" className={styles.image7}/>
-      <img src="/magazine/3/images/93_94/image8.png" className={styles.image9}/>
-      <img src="/magazine/3/images/93_94/image9.png" className={styles.image10}/>
-      <img src="/magazine/3/images/93_94/image10.png" className={styles.image11}/>
-      <Link href="https://www.instagram.com/dollushka/?hl=en">
-        <a target="_blank">
-        <img src="/magazine/3/images/93_94/image11.png" className={styles.image12}/>
-        </a>
-      </Link>
-      
-      <img src="/magazine/3/images/93_94/image12.png" className={styles.image13}/>
-      <img src="/magazine/3/images/93_94/image13.png" className={styles.image14}/>
-      <p className={styles.text8}>Nina Doll</p>   
-      <img src="/magazine/3/images/93_94/image14.png" className={styles.image15}/>
-      <p className={styles.text9}>I’m Davide Carbone aka LivingSparks, an electronic engineer specialized in research and technological innovation.
+      <img src="/magazine/3/images/93_94/image2.png" className={styles.image2}/>
+      <p className={styles.text1}>How does anyone make a market? 
 <br/><br/>
-I’m specialized in generative materials, using mostly artificial intelligence networks. I’ve developed all the software I use to generate materials and textures. I start by writing a raw neural network, finding and tuning parameters in order to obtain pleasant patterns and texture. After I process the texture to add generative normals for the material and enrich them with details and roughness.</p>   
-      <p className={styles.text10}>I’m Davide Carbone aka LivingSparks, an electronic engineer specialized in research and technological innovation.
+Often it is used to describe activity that occurs between buyers and sellers of financial instruments, where the ‘market makers’ are those that provide readily available consistent liquidity to either side of a trade and assist in defining the overall market structure. 
+<br/><br/>
+This is incredibly important. Without strong systems in place to support and facilitate ease of participation for anyone desiring to interact with a particular market, not only does it make it incredibly difficult for that market to grow and expand, but, more destructively, ultimately the very definition of a market ceases to exist.  </p> 
+      <p className={styles.text2}>MARKET MAKING FOR WEB3 FASHION</p> 
+      <img src="/magazine/3/images/93_94/image3.png" className={styles.image4}/>
+      <p className={styles.text3}>GLOBAL DESIGNER NETWORK (GDN)</p> 
+      <p className={styles.text4}>The Global Designer Network is making the market for web3 fashion. We are dynamically seeding the initial foundations and building blocks so that anyone that desires to, can start onboarding with a clear roadmap and pathway to success, elevation and prosperity. 
       <br/><br/>
-I’m specialized in generative materials, using mostly artificial intelligence networks. I’ve developed all the software I use to generate materials and textures. I start by writing a raw neural network, finding and tuning parameters in order to obtain pleasant patterns and texture. After I process the texture to add generative normals for the material and enrich them with details and roughness.</p>  
-      
-      <Link href="https://www.instagram.com/livingsparks/?hl=en">
+As an essential primary step to this, we are composing the WEB3 FASHION 101— a concentrated glossary and reference platform filled with resources, content, assets, materials and supplies that can be used by any designer, creator, consumer, fashion or metaverse lover either beginning or continuing their journey in the world of web3 fashion, inclusive of NFTs, DeFi, digital fashion, hybrid digi-physical, gaming, 3D applications etc. </p> 
+      <Link href="https://designers.digitalax.xyz/">
         <a target="_blank">
-        <img src="/magazine/3/images/93_94/image15.png" className={styles.image16}/>
+        <img src="/magazine/3/images/93_94/image4.png" className={styles.image5}/>
         </a>
       </Link>
-      <p className={styles.text11}>LivingSparks</p>   
-      <div className={styles.image17}>
-        <video className={styles.image18} muted loop autoPlay>
-          <source src="./magazine/3/images/93_94/video1.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className={styles.image19}>
-        <video className={styles.image20} muted loop autoPlay>
-          <source src="./magazine/3/images/93_94/video2.mp4" type="video/mp4" />
-        </video>
-      </div>
-      
-      <p className={styles.text12}>DERIVATIVE</p>   
-      <p className={styles.text13}>Powerful environment for artists and creators, no code needed.  </p>   
-      <p className={styles.text14}>PYCHEUNG</p>   
-      <p className={styles.text15}>For checking various sizes and repetition of my patterns</p>   
-      
-      <p className={styles.text16}>COLAB</p>   
-      <p className={styles.text17}>Google Platform to play with python on a web browser </p>   
-      <Link href="https://derivative.ca/ ">
-        <a target="_blank">
-          <img src="/magazine/3/images/93_94/image16.png" className={styles.image21}/>
-        </a>
-      </Link>
-      <Link href="https://www.pycheung.com/checker/">
-        <a target="_blank">
-          <img src="/magazine/3/images/93_94/image17.png" className={styles.image22}/>
-        </a>
-      </Link>
-      <Link href="https://colab.research.google.com/">
-        <a target="_blank">
-          <img src="/magazine/3/images/93_94/image18.png" className={styles.image23}/>
-        </a>
-      </Link>
-      <img src="/magazine/3/images/93_94/image19.png" className={styles.image24}/>
-      <img src="/magazine/3/images/93_94/image19.png" className={styles.image25}/>
-      <img src="/magazine/3/images/93_94/image19.png" className={styles.image26}/>
+      <p className={styles.text5}>COMPOSING THE</p> 
+      <img src="/magazine/3/images/93_94/image5.png" className={styles.image6}/>
     </div>
   );
 };

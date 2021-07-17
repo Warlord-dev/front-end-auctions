@@ -18,7 +18,6 @@ Victor<br/><br/>
 Haruto  Inoue<br/><br/>
 Cameron Sato<br/><br/>
 Miko Matsumura
-
 </p>       
         <p className={styles.text5}>Stan McLygin<br/><br/>
 Glitch Faced King<br/><br/>
@@ -34,33 +33,31 @@ Xenotech <br/><br/>
 Charbakd</p>      
         <p className={styles.text7}>Bancor Network <br/><br/>
 Fei Protocol<br/><br/>
-Rarible <br/><br/>
-Vesper Finance <br/><br/>
+Idle Finance<br/><br/>
 Ren Project <br/><br/>
-Hamzah Khan <br/><br/>
-
+Hamzah Khan<br/><br/>
+POAP 
 </p>     
-        <p className={styles.text8}>
-        Opyn<br/><br/>
+        <p className={styles.text8}>Opyn<br/><br/>
 Mason Nystrom<br/><br/>
 Ruler Protocol<br/><br/>
-Zapper Finance<br/><br/>
+AAVE<br/><br/>
 Polygon<br/><br/>
-InstaDAPP
-</p>      
+InstaDApp</p>      
         <p className={styles.text9}>Pickle Finance<br/><br/>
 ForceDAO<br/><br/>
 IMPSSBL<br/><br/>
 Anna Chilli<br/><br/>
 HAPI<br/><br/>
-Hacken
-</p>      
+Hacken<br/><br/>
+MalerDAO</p>      
         <p className={styles.text10}>PureFi<br/><br/>
 ABigNeonGlitter<br/><br/>
 Nabi<br/><br/>
 Katriane<br/><br/>
 An Nguyen<br/><br/>
-howiseedatworld</p>   
+howiseedatworld<br/><br/>
+Rari Capital</p>   
         <p className={styles.text11}>BUGAS<br/><br/>
 Tom Pastor<br/><br/>
 Hugo Richel<br/><br/>

@@ -1,44 +1,26 @@
 import React from 'react'
 import styles from './page75.module.scss'
-import Link from 'next/link';
 
 const Page75 = () => {
   return (
-    <div className={styles.wrapper}>
-       <div className={styles.image4}>
-          <video className={styles.image5} muted loop autoPlay>
-            <source src="./magazine/3/images/85_86/video1.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className={styles.image6}></div>
-        <Link href="https://github.com/XtraCube">
-          <a target="_blank">
-            <p className={styles.text1}>XTRACUBE</p> 
-          </a>
-        </Link>
-        <img src="/magazine/3/images/85_86/image5.png" className={styles.image7}/>
-        <div className={styles.image8}></div>
-        <p className={styles.text2}>I've been modding since around November 2020</p>
-        <p className={styles.text3}>and started because 1) I had an interest in programming | 2) I saw mods on youtube and wanted to make some myself. 
-<br/><br/>
-I'm not really sure where I want to go in terms of modding. I want to try keeping AOU alive, and I wouldn't mind making some more money off of mods if I ever get back into that.</p> 
-      <img src="/magazine/3/images/85_86/image3.gif" className={styles.image9}/>
-      <img src="/magazine/3/images/85_86/image4.gif" className={styles.image15}/>
-      <div className={styles.image10}>
-        <iframe width="378" height="196" src="https://www.youtube.com/embed/wIwCeexQoxQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    <div className={styles.wrapper}>     
+       <div className={styles.image2}>
+        <video className={styles.image3} muted loop autoPlay>
+          <source src="./magazine/3/images/83_84/video1.mp4" type="video/mp4" />
+        </video>
       </div>
-      <img src="/magazine/3/images/85_86/image4.png" className={styles.image12}/>
-      <img src="/magazine/3/images/85_86/image4.png" className={styles.image13}/>
-      <img src="/magazine/3/images/85_86/image4.png" className={styles.image14}/>
-      <p className={styles.text4}>Among Us Spectators Feature for Ghosts; Scan the Entire Crew</p>
-      <p className={styles.text5}>THE COLOR SWAP</p>
-      <p className={styles.text6}>COOLIO</p>
-      <p className={styles.text7}>COOLIO</p>
-      <p className={styles.text8}>COOLIO</p>
-      <p className={styles.text9}>XTRACUBE Mod Featured by De Nogla!</p>
-      <img src="/magazine/3/images/85_86/image6.png" className={styles.image16}/>
-      <img src="/magazine/3/images/85_86/image6.png" className={styles.image17}/>
-      <img src="/magazine/3/images/85_86/image6.png" className={styles.image18}/>
+      <p className={styles.text1}>Gatekeeper Gardens</p>
+      <p className={styles.text3}>Sifting through the web2 weeds— spotlighting stories from the walled gardens where they love to tangle and lurk. </p>
+      <p className={styles.text7}>AWS.</p>
+      <p className={styles.text4}>These days, it seems that there is no end to the constant hurdles being put in place to separate customers from compassionate, intellectually sound humans for customer service agents.  Instead, most of us are used to interacting with some AI chatbot that in almost everyway is a complete black box— this is made abundantly clear when any question outside a generic conversation A/B decision tree. </p>
+      <img src="/magazine/3/images/83_84/image2.png" className={styles.image4}/>
+      <p className={styles.text5}>This is not the bitter complaint of a customer who has been burned once. Rather, it’s much more of a look into an insidious, looming and almost invisible problem. The very algorithms that we see at work everyday in the world around us, directly shape and influence the constraints and limits to our capacity. It might have once made sense to be hopeful but how extreme logical automation could actually improve the experience of humanity, but this is naive. Because, who designs these algorithms? At this point it’s shitty algorithms designing more shitty algorithms. And the problem has come that now these shitty algorithms are eating the internal workings and decision making processes of global and international mega companies.
+<br/><br/>
+One of those is the everything store; Amazon. And at the heart of this is its all powerful physical and digital cloud brain trust— AWS. The entire customer service and support supply chain is black boxed to the point where it is unlikely that any human being has any idea how the full system works.</p>
+      <p className={styles.text6}>And with so many global interactions and transactions taking place every minute within this system, it’s scary to think of the scale of impact that a centralised line of code with near zero human oversight can have in dominating control on the outcomes of so many people and lives. More problems are being created than being solved, and it only further reinforces that while some algorithms attempt to eat the world it is really decentralisation that needs to eat them. Bon Appétit!  </p>
+      <img src="/magazine/3/images/83_84/image5.png" className={styles.image5}/>
+      <img src="/magazine/3/images/83_84/image3.png" className={styles.image6}/>
+      <p className={styles.text2}>Destroy the wall</p>
     </div>
   )
 }

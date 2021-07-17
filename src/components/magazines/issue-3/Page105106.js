@@ -1,48 +1,50 @@
 import React from 'react';
 import styles from './page105106.module.scss';
-import Link from 'next/link';
 
 const Page105106 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/103_104/image1.png" className={styles.image1}/>
-      <div className={styles.image2}></div>
-      <div className={styles.image3}></div>
-      <p className={styles.text1}>This kills the intermediary. Smart contracts can be developed to match customers. There’s entirely no need for a couple of strangers heading down to the bank branch to borrow or to lend and the bank to essentially match the lender with the borrower on top of a hefty fee. The smart contract enables the lender to deposit their money directly on the blockchain for the borrower to withdraw under a predetermined set of criteria baked into the code.
-      <br/><br/>
-DeFi use cases are growing exponentially, ranging from options trading platforms, lending protocols, prediction markets, decentralized exchanges, liquidity mining protocols, stablecoins, and payment integrations, among others.
+      <img src="/magazine/3/images/107_108/image1.png" className={styles.image1}/>
+     <div className={styles.image2}></div>
+     <div className={styles.image3}></div>
+     <p className={styles.text1}>DeFi vs. CeFi</p> 
+     <p className={styles.text2}>Peezy R.</p> 
+     <p className={styles.text3}>DeFi’s proponents have made a strong case that the emerging use case for cryptocurrencies casts a wide net for individuals and institutions to participate in a financial ecosystem that’s permissionless and disintermediated—one that they would never have even dreamed of being able to access until the advent of blockchain technology came about (and had a baby and called it DeFi.)
 <br/><br/>
-DeFi empowers the user to take the basic elements of the financial markets and its existing infrastructure, which includes credit activities or transactions like exchanging and settlements through software that runs entirely on the internet, devoid of any institutional baggage that CeFi markets invariably have baked in.
+For its fledgling participants, DeFi presents an opportunity that would enable them not just to serve as a hedge against the traditional financial system’s known pitfalls but as a way to actually support livelihoods and uplift economic conditions for its participants rather than just some grubby Wall Street fat cat. It’s an opportunity that matches the Silicon Valley ethos of building, breaking, and rebuilding things as well as empower individuals, with a disdain for centralized, top-down structures—without saying anything about how Silicon Valley itself became centralized (that’s a story for another day). Good stuff.
 <br/><br/>
-For instance, a crypto holder could theoretically place funds into a decentralized lending protocol like Aave to earn interest at significantly higher rates than your garden variety savings account could ever give—but with consequently greater risk.
+Like many things about blockchain and financial technology, DeFi might invariably sound like esoteric, perplexing claptrap to the uninitiated. And this supposed “barrier” to entry has invariably led to said individuals eschewing entering the DeFi space altogether.
 <br/><br/>
-But on a more concrete level: how can you make money with DeFi right now?
+Yes, everyone can participate in DeFi—but like anything, the know-how is sold separately.
 <br/><br/>
-Making bank with DeFi<br/>
-There are more than a few ways to skin a cat, and there are just as many ways to make bank in DeFi.
+Let’s face it: DeFi is indeed a potentially world-changing application of blockchain technology as we know it. But the learning curve is real.
 <br/><br/>
-Liquidity Pools<br/>
-And it all starts with one of its fundamental technologies that make up DeFi as we know it today: liquidity pools. Liquidity pools power credit (borrow/lend) protocols, yield farming, automated market makers, synthetic derivatives, and insurance, among several new applications. They drive almost every facet of DeFi and will remain to do so in the coming years.
+Don’t worry, fam, we got you—we’ve all been there.
 <br/><br/>
-The premise is simple: liquidity pools are basically a pool of funds put together in a permissionless environment where any individual can add or remove liquidity. And it is the basis of numerous iterations for generating yield.
+Fortunately, DeFi isn’t rocket science. 
 <br/><br/>
-One of the most well-known iterations of DeFi is yield farming. Liquidity pools comprise the backbone of the Yearn yield-generating platform, where individuals can deposit their funds into pools used to generate yield for every participant.</p> 
-      <p className={styles.text2}>It’s always been a tricky proposition for crypto projects to be distributing new tokens to the right individuals, and liquidity mining has since been one of the more sustainable approaches. In essence, liquidity mining works by distributing tokens to those who deposit their crypto assets into a liquidity pool. The new tokens are then distributed algorithmically to each individual’s corresponding stake in the pool algorithmically.
-      <br/><br/>
-These tokens can also be in the form of other tokens like Uniswap (if you are a liquidity provider). Consequently, you will be able to deposit such tokens into other pools to repeat the process and earn returns on your investment.
+You don’t need a master’s degree in blockchain technology to get started right now. 
 <br/><br/>
-We could also think about governance as a use case. In some cases, there’s a very high threshold of token votes needed to be able to put forward a formal governance proposal. If the funds are pooled together instead, participants can rally behind a common cause they deem important for the protocol.
+You don’t need to be a computer whiz to understand the underlying mechanisms that support DeFi.
 <br/><br/>
-Governance<br/>
-Governance is yet another use case for liquidity pools. Some protocols require a high threshold of token votes to formulate a proper governance proposal. When funds are pooled together, individuals can garner and unite over a particular cause that they may determine as critical for the protocol.
+You don’t need to jump through all sorts of regulatory and institutional hoops designed to make your money work for you as you would have to with a bank, a fund, or a financial institution.</p> 
+      <p className={styles.text4}>You don’t need millions of dollars to “get into” DeFi. No high finance apparatchik is going to turn you down because you have a bad credit score or because you aren’t “worthy enough” to be given the privilege of being served  (“As cold as a banker’s heart” isn’t an idiomatic expression for nothing.)
 <br/><br/>
-Tranching and synthetic assets<br/>
-Yet another use for liquidity pools is tranching, or what involves separating and categorizing financial products depending on their risk and return profiles. Such products allow liquidity pools to choose one.
+Granted, basic financial literacy is always a plus—but not a hard-and-fast prerequisite to participate in this exciting new financial paradigm.
 <br/><br/>
-Synthetic assets such as those that are pegged to a particular asset are also dependent on liquidity pools in order for them to be minted on-chain. These are essentially akin to traditional financial derivatives that derive their value from other assets like stocks, bonds, commodities, precious metals, or currencies to trade them without necessarily holding the real asset.
+And one of the best ways to get started with DeFi is to understand how it distinguishes itself from its brother, centralized finance (CeFi)—the long-standing, bloated, and rigid financial framework that DeFi is in the process of disrupting. And with $55 billion in total locked value as of this writing (and growing), it is perhaps high time we shed some light on this aspect of DeFi. 
 <br/><br/>
-DeFi-ning appeal<br/>
-Since May 2020, the total value locked in DeFi protocols like Uniswap, Compound, Maker, and Aave ballooned from a shade under $1 billion to do an 88x—or $88 billion in total locked value in the entire space—at its very peak last May 2021. Annual percentage yields have skyrocketed through the roof as users began to engage in yield farming as fast as they can. That’s a far cry from the minuscule APYs on a basic savings account. </p> 
+A brief history of CeFi<br/>
+Financial transactions we would have otherwise called “banking” have always been around ever since the first known form of human currency was recorded in history. Since then, banking has grown into an unbridled economic force driven by big finance—the gargantuan institutions that serve individuals or provide loans to a country teetering on economic breakdown.
+<br/><br/>
+But as with any industry, centralization paralyzes customers who are left at the mercy of gatekeepers lacking transparency. This leaves them without the security they need to empower themselves to take control of their own wealth and welfare. 
+<br/><br/>
+It is ultimately this excessively centralized, immobilizing structure, one that’s experiencing rapidly decelerating trust in—one that DeFi seeks to change.
+<br/><br/>
+How does DeFi work?<br/>
+DeFi has no formal dictionary definition, so to speak, but in general, it involves leveraging the blockchain to support credit functions, loans, borrowing, lending, and enable auctions; to trade in esoteric derivatives; to trade crypto assets against each other, or to engage in novel iterations of insurance. The potential profit opportunities arising from DeFi lie largely in part due to the disintermediation of traditional finance, including their exorbitant fees and its soviet regulations.
+<br/><br/>
+In a nutshell, smart contracts on the blockchain are what power decentralized finance, allowing for the creation of layers upon layers of complex, synergistic transaction systems. </p> 
     </div>
   );
 };

@@ -1,33 +1,73 @@
 import React from 'react'
 import styles  from './page45.module.scss'
+import Link from 'next/link';
 
 const Page45 = () => {
   return (
     <div className={styles.wrapper}>
-      <p className={styles.text2}>The hallmark characteristic of smart contracts on Ethereum, for instance, has a wide spectrum of old and new financial services baked into Turing-complete code instead of a teller, clerk, or corporate drone. This means very little, if any, to pay the piper.
+        <img src="/magazine/3/images/51_52/image7.png" className={styles.image2}/> 
+       <img src="/magazine/3/images/51_52/image8.png" className={styles.image4}/> 
+       <Link href="https://purefi.io/">
+        <a target="_blank">
+          <p className={styles.text4}>PureFi</p>  
+        </a>
+      </Link>
+      <p className={styles.text5}>PureFi</p>  
+      <p className={styles.text6}>PureFi</p>  
+      <img src="/magazine/3/images/51_52/image5.png" className={styles.image5}/>  
+      <p className={styles.text9}>Slava Demchuk,<br/>Co-founder</p>  
+      <p className={styles.text10}>PureFi started their journey at the end of 2020 but the team had been together for more than 2 years prior, working on our other projects - AMLBot and AMLSafe.</p>  
+      <p className={styles.text11}>DEFI X AML</p>  
+      <p className={styles.text12}>DEFI X AML</p>  
+      <p className={styles.text13}>DEFI X AML</p>  
+      <img src="/magazine/3/images/51_52/image3.png" className={styles.image3}/>  
+      <p className={styles.text14}>PureFi is the only DeFi AML protocol for cryptocurrency onboarding. Developed by AMLBot with Hacken being a partner in strategy, security, and business development. 
       <br/><br/>
-DeFi is poised to trigger the proverbial paradigm shift as the broader technological revolution powered by constantly increasing smartphone use and internet connectivity across all swathes of the global economy, developing or otherwise, and as the towers of crypto and blockchain combine. Furthermore, as adoption increases and spreads and new digital worlds emerge from the stranglehold of web2, DeFi is integral to the metaverse equation, as it underpins the financial backbone of the metaversal economy—not to mention a truly global digital banking and financial revolution.
+It aims to provide a full-cycle solution for cryptoasset analytics and AML/KYC procedures on the DeFi market. 
 <br/><br/>
-DeFi and its various services
-DeFi leverages blockchain technologies, all of which have non-DeFi use cases, that are nevertheless prerequisites within the realm of DeFi. Here are some of the primary services available in the DeFi realm.
+PureFi within a set of smart contracts will connect KYC/AML providers with DeFi users and DexEs/Defi projects in order to provide cryptoasset analytics and protect honest DeFi market players from “dirty money” risks. 
 <br/><br/>
-Stablecoins. Stablecoins serve as the bridge between fiat and crypto, and are therefore fundamental to DeFi. They were intended to retain a largely consistent value, typically denominated in USD or other fiat currencies. For instance, Dai, issued by MakerDAO, is a collateral-backed stablecoin pegged to the dollar. Dai, like other stablecoins such as Tether (USDT), is a key ingredient to the DeFi formula. The scope of Dai’s adoption makes it one of the most utilized products in the crypto sphere.
+For example, the liquidity pool user will be able to avoid the risk of having an illegal money trail using the Verifiable Credentials certificate with his full-fledged AML/KYC data.</p>  
+      <p className={styles.text15}>PureFi is the only DeFi AML protocol for cryptocurrency onboarding. Developed by AMLBot with Hacken being a partner in strategy, security, and business development. 
+      <br/><br/>
+It aims to provide a full-cycle solution for cryptoasset analytics and AML/KYC procedures on the DeFi market. 
 <br/><br/>
-MakerDAO is an Ethereum-based protocol that issues the Dai stablecoin that facilitates collateral-backed loans without an intermediary. The platform allows borrowers to use unstable cryptocurrencies into Dai.
+PureFi within a set of smart contracts will connect KYC/AML providers with DeFi users and DexEs/Defi projects in order to provide cryptoasset analytics and protect honest DeFi market players from “dirty money” risks. 
 <br/><br/>
-Credit. Whenever individuals need a line of credit for any reason, the first place they go to is their bank. DeFi disintermediates that by enabling anyone to be a lender. DeFi credit involves creating interest-bearing financial products that must be fully amortized, and aligning both lenders and borrowers to facilitate their issuance. Aave is a non-custodial protocol allowing users to borrow assets and generate income on deposits.
+For example, the liquidity pool user will be able to avoid the risk of having an illegal money trail using the Verifiable Credentials certificate with his full-fledged AML/KYC data.</p>  
+      <p className={styles.text16}>We want to make crypto and DeFi more accessible to everyone. 
+      <br/><br/>
+Unfortunately, this journey is not an easy one! 
 <br/><br/>
-Derivatives. These are sophisticated financial transactions that go beyond the definition of lending, which could be based on a function of a particular asset (or group thereof). Their value can be based on practically anything from the outcome of an event, to the value of a stock, commodity, or digital asset based on current or future prices. In the context of DeFi, derivatives service providers match buyers and sellers and backed collateral pools that are incentivized.
-Synthetix is an Ethereum-based decentralized platform developed for synthetic asset issuance. The platform allows users to gain exposure to on-chain synthetic assets that track the prices of digital assets, stocks, commodities, currencies, and indices.
+AML Compliance is one of the key requirements that institutions have to comply with. 
 <br/><br/>
-Decentralized exchanges. Decentralized exchanges allow traders to exchange one digital asset for another. DeFi exchanges often use decentralized order books or by algorithmically setting prices and matching orders.
-UniSwap is a fully decentralized automated market maker whose on-chain protocol facilitates transactions between tokens on the Ethereum blockchain. Instead of order books, UniSwap utilizes liquidity pools.
-Insurance. DeFi insurance services are centered on mitigating risks directly to decentralized finance, such as hacks, smart contract failures. In the event of a covered scenario analogous to any of the above, these services offer protection by offering a trade between a huge lump-sum payment in exchange for a monthly premium.
+By providing such a solution we open doors for many institutional players that were afraid to step into the market due to the reputation of crypto being associated with dirty money. 
 <br/><br/>
-Union Protocol offers DeFi participants a wide array of coverage against a number of risks related to smart contracts.
-Asset management. The emergence of DeFi asset management tools, infrastructure, and creators drastically reduced the barrier of entry to many investors who couldn’t have participated otherwise in traditional finance, as well as investors who have never gotten a chance to do so for whatever reason—in a transparent, trustless manner.
+We actually started our journey with an AML Tool for “traditional” cryptos - AMLBot. Achieving high success with it, we decided to tackle DeFi next!</p>  
+      <p className={styles.text17}>We want to make crypto and DeFi more accessible to everyone. 
+      <br/><br/>
+Unfortunately, this journey is not an easy one! 
 <br/><br/>
-Yearn.finance is a group of protocols designed to help users make the most out of their earnings on crypto assets through credit services and trades. Yearn offers community-driven yield farming vaults, among other asset management services.</p>  
+AML Compliance is one of the key requirements that institutions have to comply with. 
+<br/><br/>
+By providing such a solution we open doors for many institutional players that were afraid to step into the market due to the reputation of crypto being associated with dirty money. 
+<br/><br/>
+We actually started our journey with an AML Tool for “traditional” cryptos - AMLBot. Achieving high success with it, we decided to tackle DeFi next!</p>  
+      <p className={styles.text20}>Our main goal in Purefi is to enable DeFi market participants to engage in a trustless environment and still remain anonymous. We aim to protect not to control - and therefore, we provide VC certificates using a zero-knowledge proof concept (that means a PureFi user would be able to share only requested data i.e. origin of funds, risk score etc.) without disclosing all the information from the VC.
+      <br/><br/>
+  With our help, anyone is able not only to get risk score analysis but also to generate a VC certificate (zero-knowledge proof concept) which includes information about the origin of the funds, KYC, and other metadata. the VC certificate is stored by users and proves the “purity” by providing any requested information contained within the VC. 
+  <br/><br/>
+  privacy, anonymity and decentralization are the core principles of the idea of the crypto as a whole.  </p>  
+      <p className={styles.text21}>Needless to say, the PureFi project has been live for less than three months. We are focused now on development: preparing a set of lending-borrowing contracts for the Protocol, $UFI token development and integration, creating AML/KYC standards and so on… And we have an IDO coming in the end of July!</p> 
+      <p className={styles.text22}>The DeFi space is targeted very much at the retail finance sector. 
+      <br/><br/>
+PureFi is focused more on onboarding institutional entities into crypto.
+<br/><br/>
+<span className={styles.text23}> what does that mean for the entire web3 space? </span>
+<br/><br/>
+institutional money is one of the keys to mainstream adoption. 
+<br/><br/>
+It means wider adoption and access for the larger projects/companies. Many of them are not comfortable with crypto, and DeFi in particular, due to the absences of regulation and AML procedures. But this is changing and we are striving to take the lead in the DeFi space by building adequate infrastructure for the institutions to onboard and enter. </p>  
     </div>
   )
 }

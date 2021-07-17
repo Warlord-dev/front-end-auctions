@@ -5,33 +5,36 @@ import styles from './page7576.module.scss';
 const Page7576 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.image1}></div>
-      <p className={styles.text1}>Enter decentralized finance.<br/>
-The traditional finance (TradFi) sector is transforming from the morass of financial intermediation towards DeFi, or entirely decentralized financial activities that democratize finance, reduce inequality, and offer a way in which participants can take agency and gain greater freedom of action in determining their personal finance without central authorities and regulations breathing down their necks.
-<br/><br/>
-DeFi builds on the initial headwinds made by the launch of Bitcoin and Ethereum, decentralizing the computing load needed to run blockchains. DeFi offers the same state-of-the-art financial products once reserved only to those deemed worthy by the gatekeepers of finance, putting users in direct control of their finances, and reorganizing incentivization models to token holders, further rewarding them and building stronger communities and governance frameworks. DeFi is a complete about-face on the centralization of monetary and fiscal policy to create an entirely new, parallel financial ecosystem suitable for anyone and everyone to participate in—governed by the miracle of smart contracts.
-<br/><br/>
-These are all made possible through decentralized apps (dapps), which are built primarily on the Ethereum blockchain, and smart contracts that enable the programming of financial transactions between users. In doing so, DeFi seeks to disintermediate finance by replacing traditionally exclusive exchanges, asset managers, banks, VCs, and other actors with code.
-<br/><br/>
-DeFi offers credit products such as loans, and users can participate in borrowing and lending activities. Both borrowers and lenders stand to gain from obtaining and providing loans denominated in either crypto or fiat through collateral. For instance, DeFi protocols like bZx allow lending and borrowing activities related to margin trading. Another example of this is TrueFi, which is an uncollateralized lending protocol allowing lenders to gain long-term, competitive returns, while offering borrowers capital.</p>
-      <p className={styles.text2}>Moreover, DeFi protocols like Curve or Compound allow users to lock funds in smart contracts to engage in lending and borrowing activities to generate yields TradFi actors can only dream of. They’re shaking.
+      <img src="/magazine/3/images/75_76/image1.png" className={styles.image1}/>
+     <img src="/magazine/3/images/75_76/image2.png" className={styles.image2}/>
+      <div className={styles.image3}>
+        <video className={styles.image4} muted loop autoPlay>
+          <source src="./magazine/3/images/75_76/video1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <p className={styles.text1}>Tools for capturing the valuE In change</p>
+      <p className={styles.text2}>Dov B.</p>
+      <p className={styles.text3}>Life is inherently asymmetrical. Nowhere is this more evident than the flawed, chaotic plane of “life” that so many of us exist in.
       <br/><br/>
-E-wallets are fast gaining adoption, and the process of using cryptocurrency wallets has become so much simpler than it used to be. Other DeFi protocols offer debit cards that can be used in day-to-day transactions. This has opened the door to DeFi’s wider adoption.
+Despite the entirely understandable human need for order, stability, and predictability—and therefore, symmetry—in everything we do, we’re out here on our own, flapping in the wind, constantly dangling on the edge of this precarious mortal coil.
 <br/><br/>
-Many investors looking to enter the DeFi space are reluctant to do so because of its volatility. However, collateral-backed stablecoins (pegged to fiat, crypto, or commodities), which are an essential function of DeFi, serve as its operational backbone to guarantee stability amidst potentially wild price swings.
+Symmetry is something we inherently strive for, whether in our relationships, career, finances, business, and health.
 <br/><br/>
-Non-fungible tokens (NFTs), meanwhile, commodify digital assets and guarantee their authenticity on the immutable blockchain, and their use is extending outside just digital collectibles, but now also as financial products.
+But the asymmetrical nature of life results in a constant struggle to capture value in anything and everything that we do. It’s the wild card that throws this world of ours in the dysfunctional state it’s currently in.
 <br/><br/>
-In the end, the returns from using traditional finance, dysfunctional as it is, just pale in comparison to DeFi—apart from its liquid, composable, and digital nature, only needing an internet connection and a smartphone to get started.
+However, this fundamentally unpredictable world is what separates the wheat from the chaff—even from a strictly evolutionary perspective, species evolve to become more resilient as a result of stressful, traumatic external changes. It’s the Darwinian precept of natural selection played out in every human endeavor throughout history.</p>
+      <p className={styles.text4}>A flawed, asymmetrical world<br/>
+Think of how many services we use that require so many complex ways of gatekeeping and rent-seeking behavior. Think of how many services we use that leave a person’s fate to some recalcitrant bureaucrat or pencil-pushing twerp in a suit behind a counter, anxiously awaiting their almighty pen stroke to determine whether you can get an educational or housing loan. That’s not even mentioning how restrictive the world of traditional finance is—if you don’t have the money, you get jack squat. It’s all constant intermediation, all the time. 
 <br/><br/>
-TL;DR: DeFi aims to offer financial services to everyone with a smartphone and an internet connection without discrimination, exorbitant fees, and obstacles in an open, trustless, permissionless manner.
+We live in a bizarro world where middleman upon middleman upon middleman worsen the state of things across society, culture, technology, government, economics, and finance—in a world where the shadowy cabal of bankers, financiers, wheeler-dealers, academics, and their enablers that feel they have the carte blanche to determine whether an individual is worthy to serve, apart from shaking them down for their privilege of dealing with this insidious crew. 
 <br/><br/>
-The onboarding challenge<br/>
-DeFi isn’t without its challenges. The learning curve is steep, and the field is practically in its infancy. And, if you aren’t yet a crypto native, it might take a little more time to get the hang of using DeFi products. Individuals stand to gain tremendous value from DeFi and its related web3 technologies (and their emerging use cases), but onboarding will be necessary for them to take advantage of the opportunities DeFi brings to the table.
+Technology is a concrete example of an antifragile sector: progress is dependent on constant tinkering and taking on asymmetrical risk—and blockchain technologies, as well as the builders, creators, and developers in the space, are exemplars of forward-thinking progress that thrives and evolves in the face of uncertainty.
 <br/><br/>
-But beyond the products, protocols, and tech, perhaps we must refocus on solving the onboarding question; and in doing so, focus more on the community, the individuals that should stand to gain the most by participating in it. Mainly, how can it serve them? How can it fulfill their needs? How can it help them attain financial freedom? These are the questions that so many individuals looking at DeFi want to know. It’s not always about coin price, total market capitalization, or chart performance that’s going to lead to widespread adoption. It’s the fundamental question of how it can improve people’s lives.
+Nowhere is this fragility more evident than the traditional sectors of banking and finance, which have been immensely affected by the ongoing paradigm shift towards digitalization. Bank branches across the United States, Europe, and the rest of the world are closing down. And one can’t help but feel the sun starting to set ever so slightly on a monolithic industry that’s systematically exclusive, with costs so high, and gains so low.
 <br/><br/>
-In the end, DeFi is a tool to help capture value that is very much attainable and within their grasp, rather than the end to itself. </p>
+It’s a system whose restrictive KYC and AML regulations, particularly in developing economies deny services to those who can’t provide documents—and there are $380 billion reasons why this unbanked sector might look elsewhere for a better alternative.
+<br/><br/>
+The advent of decentralized finance (DeFi) is changing that.</p>
     </div>
   );
 };

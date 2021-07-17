@@ -6,54 +6,94 @@ const Page5152 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/3/images/51_52/image1.png" className={styles.image1}/>  
-      <p className={styles.text1}>Why DeFi? <br/>
-In many ways, much of what drives the DeFi ecosystem’s unprecedented growth is tied to the inherently flawed, inadequate, or fragile systems of monolithic, centralized, and traditional “big finance.”
-<br/><br/>
-Such historical inefficiencies are responsible for the operational risks we associate with finance, such as fraud, data breaches, white-collar crime, and its undesirable ilk.
-<br/><br/>
-The decentralized manner in which DeFi operates seeks to correct the operational risks associated with conventional finance.
-<br/><br/>
-DeFi’s increasing popularity has offered tremendous potential in correcting the pitfalls of traditional finance as far as access to banking and financial services is concerned. With over 2 billion individuals currently without access to either, it’s tantalizing to think how DeFi might be able to empower billions to take control of their finances without all the hoops they need to jump through to get served—while participating in an inclusive, antifragile industry that can potentially generate the income needed to improve their financial situation.
-<br/><br/>
-Meanwhile, DeFi offers a more customized, flexible user experience for the rest of the banked population, giving them access to the same products and services (if not strictly better ones) and giving them the reps they need to understand the basics of finance.
-<br/><br/>
-DeFi operationalizes the basic tenets of blockchain decentralization as applied to a spectrum of banking and financial services, made possible by developing dapps built on its public infrastructure.
-<br/><br/>
-And DeFi posits a plausible solution to the constantly widening gap in the distribution of wealth among the nations—which was essentially a direct result of the centralized, circuitous, and monolithic nature of the financial services industry. DeFi is just the disruption the industry needs to remediate the age-old problem of economic inequality, which is itself rooted in the nature of the financial beast.
-<br/><br/>
-The tantalizing promise of DeFi<br/>
-DeFi posits a decentralized alternative built on the principles of fairness, inclusivity, openness, anonymity, and transparency. There’s no endless cabal of repugnant and pompous intermediaries to deal with to make your hard-earned money work for you. There’s no “install this app and register to use our services so we can sell you more things you don’t need.” Peter doesn’t need to go through arduous KYC processes to pay Paul. There are no ridiculous barriers to entry to participate—social/industry clout, wealth, and location be damned. In DeFi, inclusion, fairness, and equity are real.
-<br/><br/>
-DeFi is the antithesis of traditional finance. Here’s why:
-<br/><br/>
-DeFi is permissionless. Anyone with an internet connection can access DeFi apps. There’s no KYC, there’s no endless bureaucracy, and there are no credit checks. There are no gatekeepers—users get to directly interact with DeFi smart contracts on blockchain protocols straight from their wallets.<br/>
-DeFi is trustless. No centralized authority needs to be trusted to guarantee the validity of transactions.<br/>
-DeFi is transparent. DeFi dapps are built on transparent, immutable, and auditable blockchains, primarily Ethereum.<br/>
-DeFi is programmable. Unlike traditional finance, where any innovation, creation, or development needs to go through layers and layers of complex rules, regulations, and obstacles, DeFi devs can engineer, combine, and freely put together financial services of their choice at a substantially lesser cost. Just like Lego pieces can be composed, so can DeFi applications.<br/>
-DeFi is resistant to censorship. No centralized authority can reverse transactions, nor can some gormless, faceless corporation allow or deny services to anyone.<br/>
-DeFi is efficient. </p>  
-      <div className={styles.image2}></div>
-      <p className={styles.text2}>The hallmark characteristic of smart contracts on Ethereum, for instance, has a wide spectrum of old and new financial services baked into Turing-complete code instead of a teller, clerk, or corporate drone. This means very little, if any, to pay the piper.
+      <img src="/magazine/3/images/51_52/image2.png" className={styles.image2}/> 
+      <img src="/magazine/3/images/51_52/image3.png" className={styles.image3}/>  
+      <img src="/magazine/3/images/51_52/image4.png" className={styles.image4}/> 
+      <img src="/magazine/3/images/51_52/image5.png" className={styles.image5}/>  
+      <p className={styles.text9}>Slava Demchuk,<br/>Co-founder</p>  
+       <Link href="https://purefi.io/">
+        <a target="_blank">
+          <p className={styles.text4}>PureFi</p>  
+        </a>
+      </Link>
+      <p className={styles.text5}>PureFi</p>  
+      <p className={styles.text6}>PureFi</p>  
+      <p className={styles.text7}>PureFi</p>  
+      <p className={styles.text8}>PureFi</p>  
+      <p className={styles.text10}>PureFi started their journey at the end of 2020 but the team had been together for more than 2 years prior, working on our other projects - AMLBot and AMLSafe.</p>  
+      <p className={styles.text11}>DEFI X AML</p>  
+      <p className={styles.text12}>DEFI X AML</p>  
+      <p className={styles.text13}>DEFI X AML</p>  
+      <p className={styles.text14}>PureFi is the only DeFi AML protocol for cryptocurrency onboarding. Developed by AMLBot with Hacken being a partner in strategy, security, and business development. 
       <br/><br/>
-DeFi is poised to trigger the proverbial paradigm shift as the broader technological revolution powered by constantly increasing smartphone use and internet connectivity across all swathes of the global economy, developing or otherwise, and as the towers of crypto and blockchain combine. Furthermore, as adoption increases and spreads and new digital worlds emerge from the stranglehold of web2, DeFi is integral to the metaverse equation, as it underpins the financial backbone of the metaversal economy—not to mention a truly global digital banking and financial revolution.
+It aims to provide a full-cycle solution for cryptoasset analytics and AML/KYC procedures on the DeFi market. 
 <br/><br/>
-DeFi and its various services<br/>
-DeFi leverages blockchain technologies, all of which have non-DeFi use cases, that are nevertheless prerequisites within the realm of DeFi. Here are some of the primary services available in the DeFi realm.
+PureFi, within a set of smart contracts will connect KYC/AML providers with DeFi users and DexEs/Defi projects in order to provide cryptoasset analytics and protect honest DeFi market players from “dirty money” risks. 
 <br/><br/>
-Stablecoins. Stablecoins serve as the bridge between fiat and crypto, and are therefore fundamental to DeFi. They were intended to retain a largely consistent value, typically denominated in USD or other fiat currencies. For instance, Dai, issued by MakerDAO, is a collateral-backed stablecoin pegged to the dollar. Dai, like other stablecoins such as Tether (USDT), is a key ingredient to the DeFi formula. The scope of Dai’s adoption makes it one of the most utilized products in the crypto sphere. MakerDAO is an Ethereum-based protocol that issues the Dai stablecoin that facilitates collateral-backed loans without an intermediary. The platform allows borrowers to use unstable cryptocurrencies into Dai.
+For example, the liquidity pool user will be able to avoid the risk of having an illegal money trail using the Verifiable Credentials certificate with their fully-fledged AML/KYC data.</p>  
+      <p className={styles.text15}>PureFi is the only DeFi AML protocol for cryptocurrency onboarding. Developed by AMLBot with Hacken being a partner in strategy, security, and business development. 
+      <br/><br/>
+It aims to provide a full-cycle solution for cryptoasset analytics and AML/KYC procedures on the DeFi market. 
 <br/><br/>
-Credit. Whenever i<br/><br/>ndividuals need a line of credit for any reason, the first place they go to is their bank. DeFi disintermediates that by enabling anyone to be a lender. DeFi credit involves creating interest-bearing financial products that must be fully amortized, and align both lenders and borrowers to facilitate their issuance. Aave is a non-custodial protocol allowing users to borrow assets and generate income on deposits.
+PureFi, within a set of smart contracts will connect KYC/AML providers with DeFi users and DexEs/Defi projects in order to provide cryptoasset analytics and protect honest DeFi market players from “dirty money” risks. 
+<br/><br/>
+For example, the liquidity pool user will be able to avoid the risk of having an illegal money trail using the Verifiable Credentials certificate with their fully-fledged AML/KYC data.</p>  
+      <p className={styles.text16}>We want to make crypto and DeFi more accessible to everyone. 
+      <br/><br/>
+Unfortunately, this journey is not an easy one! 
+<br/><br/>
+AML Compliance is one of the key requirements that institutions have to comply with. 
+<br/><br/>
+By providing such a solution we open doors for many institutional players that were afraid to step into the market due to the reputation of crypto being associated with dirty money. 
+<br/><br/>
+We actually started our journey with an AML Tool for “traditional” cryptos - AMLBot. Achieving high success with it, we decided to tackle DeFi next!</p>  
+      <p className={styles.text17}>We want to make crypto and DeFi more accessible to everyone. 
 
-Derivatives. These are sophisticated financial transactions that go beyond the definition of lending, which could be based on a function of a particular asset (or group thereof). Their value can be based on practically anything from the outcome of an event, to the value of a stock, commodity, or digital asset based on current or future prices. In the context of DeFi, derivatives service providers match buyers and sellers and back collateral pools that are incentivized.<br/>
-Synthetix is an Ethereum-based decentralized platform developed for synthetic asset issuance. The platform allows users to gain exposure to on-chain synthetic assets that track the prices of digital assets, stocks, commodities, currencies, and indices.
+Unfortunately, this journey is not an easy one! 
+
+AML Compliance is one of the key requirements that institutions have to comply with. 
+
+By providing such a solution we open doors for many institutional players that were afraid to step into the market due to the reputation of crypto being associated with dirty money. 
+
+We actually started our journey with an AML Tool for “traditional” cryptos - AMLBot. Achieving high success with it, we decided to tackle DeFi next!</p>  
+      <p className={styles.text18}>The DeFi space is targeted very much at the retail finance sector. PureFi is focused more on onboarding institutional entities into crypto. 
 <br/><br/>
-Decentralized exchanges. Decentralized exchanges allow traders to exchange one digital asset for another. DeFi exchanges often use decentralized order books or by algorithmically setting prices and matching orders. UniSwap is a fully decentralized automated market maker whose on-chain protocol facilitates transactions between tokens on the Ethereum blockchain. Instead of order books, UniSwap utilizes liquidity pools.
+<span className={styles.text19}>what does that mean for the entire web3 space?</span>
+<br/><br/>institutional money is one of the keys to mainstream adoption. 
 <br/><br/>
-Insurance. DeFi insurance services are centered on mitigating risks directly to decentralized finance, such as hacks, smart contract failures. In the event of a covered scenario analogous to any of the above, these services offer protection by offering a trade between a huge lump-sum payment in exchange for a monthly premium. Union Protocol offers DeFi participants a wide array of coverage against a number of risks related to smart contracts.
+It means wider adoption and access for the larger projects/companies. Many of them are not comfortable with crypto, and DeFi in particular, due to the absences of regulation and AML procedures. But this is changing and we are striving to take the lead in the DeFi space by building adequate infrastructure for the institutions to onboard and enter. 
+
+</p>  
+      <p className={styles.text20}>Our main goal in Purefi is to enable DeFi market participants to engage in a trustless environment and still remain anonymous. We aim to protect not to control - and therefore, we provide VC certificates using a zero-knowledge proof concept (that means a PureFi user would be able to share only requested data i.e. origin of funds, risk score etc.) without disclosing all the information from the VC.
+      <br/><br/>
+  With our help, anyone is able to not only get risk a score analysis but also to generate a VC certificate (zero-knowledge proof concept) which includes information about the origin of the funds, KYC, and other metadata. the VC certificate is stored by users and proves the “purity” by providing any requested information contained within the VC. 
+  <br/><br/>
+  privacy, anonymity and decentralization are the core principles of the idea of the crypto as a whole.</p>  
+      <p className={styles.text21}>Needless to say, the PureFi project has been live for less than three months. We are focused now on development: preparing a set of lending-borrowing contracts for the Protocol, $UFI token development and integration, creating AML/KYC standards and so on… And we have an IDO coming at the end of July!</p> 
+      <p className={styles.text22}>From Hype to Reality</p>  
+      <p className={styles.text23}>Peezy R</p>  
+      <p className={styles.text2}>A Deeper Dive into DeFi</p>  
+      <p className={styles.text3}>Fads are collective behaviors shaped within a social group that exaggeratedly, zealously follow them for a short timeframe. Such behaviors come and go, just as the tide ebbs and flows along the coastline, and as fast as it happens. Blink and you’ll miss it—once the sheen comes off, fads fade into the annals of history.
+      <br/><br/>
+Hype, on the other hand, is simply marketing. To paraphrase from Fellini, it’s the desperate attempt of an artist to convince journalists that what they made is worth the ordeal of having to review it. 
 <br/><br/>
-Asset management. The emergence of DeFi asset management tools, infrastructure, and creators drastically reduces the barrier of entry to many investors who couldn’t have participated otherwise in traditional finance, as well as investors who have never gotten a chance to do so for whatever reason—in a transparent, trustless manner.
+Trends, on the other hand, are prevailing tendencies or inclinations as to where a situation is going, or in the way people are behaving. Trends manifest themselves in observable manners across history, culture, society, economics, finance, and technology—and they gain more power as they grow over time. That’s because trends create a domino effect the more individuals commit to engaging in them, regardless of where they develop—rather than the ephemera that fads ultimately are.
 <br/><br/>
-Yearn.finance is a group of protocols designed to help users make the most out of their earnings on crypto assets through credit services and trades. Yearn offers community-driven yield farming vaults, among other asset management services.</p>  
+Well, one of trend is emerging in finance—itself a traditionally highly centralized sector whose centralization was thought to be beneficial to maintain the stability of complex, intertwined global financial markets. 
+<br/><br/>
+And, thanks to the possibilities offered by the technological adroitness of the blockchain, paired with increasing cryptocurrency adoption (and unprecedented media mileage), this has turned the gilded gates of traditional finance inside out, and has given birth to a truly borderless and open finance revolution spearheaded by the framework known as decentralized finance (DeFi).
+<br/><br/>
+DeFi is a hotbed of disruption sitting smack dab in the middle of the blockchain, digital assets, and finance. And its underlying protocols have disrupted financial technology by offering a mix of familiar and novel services hitherto untapped by the global population. 
+<br/><br/>
+Decentralized applications, or Dapps, allow individuals to access financial services running the gamut of finance, such as payments, investments, credit, and insurance, among many others, mainly on the Ethereum blockchain settlement layer through smart contracts. Smart contracts allow developers to bake in sophisticated features going above and beyond sending and receiving cryptocurrencies.
+<br/><br/>
+Between September 2017 and the time of this writing, the total value of cryptocurrencies locked up in DeFi protocols stood from about US$4 million to an eye-watering US$51.9 billion. The DeFi market peaked at a high of US$88.4 billion during its zenith last May 2021. The numbers are staggering—but we’ve yet to scratch the tip of the iceberg.
+<br/><br/>
+From decentralized exchanges, credit, insurance, to the unprecedented NFT boom, DeFi has become a buzzword because of the possibilities, and it’s not surprising that it’s in the middle of every crypto-related conversation.
+<br/><br/>
+Even as the dust settles, and the ecstatic, yet illogical exuberance wears off, the afterglow remains. But the reality is set: DeFi is here to stay, and an actual, ridiculously lucrative industry has essentially passed the acid test of viability, traction, and sustainability. 
+<br/><br/>
+In essence, we’re at the crossroads of transitioning from hype to reality—as DeFi continues its disruption across the financial services industry.</p>  
     </div>
   );
 };
