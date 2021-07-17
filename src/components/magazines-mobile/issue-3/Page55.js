@@ -4,23 +4,16 @@ import Link from 'next/link';
 
 const Page55 = () => {
   return (
-    <div className={styles.wrapper}>      
-      <div className={styles.image2}>
-        <video className={styles.image3} muted loop autoPlay>
-          <source src="./magazine/3/images/61_62/video1.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <p className={styles.text2}>I have been a fashion designer since 2015 and decided to learn 3D design in 2018. As an artist, I am passionate about all the little things in life. My inspiration mainly comes from different shapes; architecture, food, music and people. I want to bring all the perspective of life to my work to create unique pieces. 
-<br/><br/>
-Art is so much fun in the digital world, no boundaries, no pressure and a free mind. A place for me to express myself. 
-<br/><br/>
-I have a love for imperfection and perfection. I bring both aspects into my art to create something completely new. This balance is the ying and yang of the perfect world. To be continued […]</p>     
-      
-      <Link href="https://www.instagram.com/an.nyen/?hl=en">
+    <div className={styles.wrapper}>
+       <img src="/magazine/3/images/61_62/image1.png" className={styles.image1}/>
+      <img src="/magazine/3/images/61_62/image3.png" className={styles.image3}/>
+      <p className={styles.text2}>BUTTERFLY</p>   
+      <Link href="https://www.instagram.com/the_world_of_nabi/?hl=en">
         <a target="_blank">
-          <p className={styles.text3}>An Nguyen.</p>  
+          <p className={styles.text3}>NABI</p>   
         </a>
       </Link>
+      <p className={styles.text4}>Nabi, based out of Mumbai, India, is a queer digital artist, embroidery designer and multi-disciplinary creator that straddles between hyper-reality and traditional craftsmanship. Nabi has primarily built his universe based on tribal and indigenous mythology, legends and his love for pop culture which played a very important role in paving a direction for his visual narrative and the story telling aspect in his works. His deviation towards otherworlds is very prominent and the idea of escaping to these worlds became his major passion and interest. He uses various medias that have become a vital component in his practice. Nabi excels in the practice of merging digital art, illustration and photography with his in-depth knowledge of traditional hand embroidery. Nabi has worked with global powerhouses in their own fields of art, drag, technology and fashion, including; v magazine violet chachki sophia, the robot alok vaid menon. </p>     
     </div>
   )
 }

@@ -2,37 +2,20 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 1612px;
+  
+  height: 477px;
   overflow: hidden;
-  background-color: #0000FF;
+  background-color: white;
   color: white;
+  display: flex;
+  position: relative;
 
   .image1 {
     position: absolute;
-    width: 69px;
-    height: 1612px;
-    left: 0px;
-    top: 0px;
-    
-    background: #000000;
-  }
-  .text1 {
-    position: absolute;
-    width: 248px;
-    height: 1316px;
-    left: 97px;
-    top: 48px;
-    
-    font-family: Milonga;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 120.53%;
-    /* or 20px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
+    width: 477px;
+    height: 375px;
+    left: -51px;
+    top: 51px;
+    transform: rotate(-90deg);
   }
 }

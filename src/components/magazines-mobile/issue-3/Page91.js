@@ -1,33 +1,47 @@
 import React from 'react'
 import styles from './page91.module.scss'
 import Link from 'next/link';
+import UnlockPage from '../common/UnlockPage-Three';
+import Router, { useRouter } from 'next/router'
+import { useSelector } from 'react-redux';
 
 const Page91 = () => {
+ 
   return (
     <div className={styles.wrapper}>
-     <img src="/magazine/3/images/103_104/image2.png" className={styles.image1}/>
-     <div className={styles.image2}></div>
-     <p className={styles.text1}>DeFi vs. CeFi</p> 
-     <p className={styles.text2}>Peezy R.</p> 
-     <p className={styles.text3}>DeFi’s proponents have made a strong case that the emerging use case for cryptocurrencies casts a wide net for individuals and institutions to participate in a financial ecosystem that’s permissionless and disintermediated—one that they would never have even dreamed of being able to access until the advent of blockchain technology came about (and had a baby and called it DeFi.)
-<br/><br/>
-For its fledgling participants, DeFi presents an opportunity that would enable them not just to serve as a hedge against the traditional financial system’s known pitfalls but as a way to actually support livelihoods and uplift economic conditions for its participants rather than just some grubby Wall Street fat cat. It’s an opportunity that matches the Silicon Valley ethos of building, breaking, and rebuilding things as well as empower individuals, with a disdain for centralized, top-down structures—without saying anything about how Silicon Valley itself became centralized (that’s a story for another day). Good stuff.
-<br/><br/>
-Like many things about blockchain and financial technology, DeFi might invariably sound like esoteric, perplexing claptrap to the uninitiated. And this supposed “barrier” to entry has invariably led to said individuals eschewing entering the DeFi space altogether.
-<br/><br/>
-Yes, everyone can participate in DeFi—but like anything, the know-how is sold separately.
-<br/><br/>
-Let’s face it: DeFi is indeed a potentially world-changing application of blockchain technology as we know it. But the learning curve is real.
-<br/><br/>
-Don’t worry, fam, we got you—we’ve all been there.
-<br/><br/>
-Fortunately, DeFi isn’t rocket science. 
-<br/><br/>
-You don’t need a master’s degree in blockchain technology to get started right now. 
-<br/><br/>
-You don’t need to be a computer whiz to understand the underlying mechanisms that support DeFi.
-<br/><br/>
-You don’t need to jump through all sorts of regulatory and institutional hoops designed to make your money work for you as you would have to with a bank, a fund, or a financial institution.</p> 
+    <img src="/magazine/3/images/101_102/image22.png" className={styles.image1}/>
+      <div className={styles.image13}></div>
+      <p className={styles.text3}>For garment simulation, I use CLO 3D. Animation and avatars from daz studio. Marvelous designer is another option for garment simulation. In daz studio, I morph the avatar into the desired looks I want before exporting as an obj file of course with the collected maps to use in CLO 3D. The avatar should be in A pose for easy garment simulation. Then I pose the avatar from my collection of poses and also export as an OBJ. For my animation, I use animate 2. Tip: always add an empty block before adding your motions when exporting animations into CLO.</p>  
+      <img src="/magazine/3/images/101_102/image23.png" className={styles.image14}/>
+      <div className={styles.image9}>
+        <video className={styles.image10} muted loop autoPlay>
+          <source src="./magazine/3/images/101_102/video2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <img src="/magazine/3/images/101_102/image7.png" className={styles.image12}/>
+      <img src="/magazine/3/images/101_102/image6.png" className={styles.image11}/>
+      <p className={styles.text1}>Aisha</p>  
+      <div className={styles.image23}>
+        <video className={styles.image24} muted loop autoPlay>
+          <source src="./magazine/3/images/101_102/video3.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div className={styles.image25}>
+        <video className={styles.image26} muted loop autoPlay>
+          <source src="./magazine/3/images/101_102/video4.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <img src="/magazine/3/images/101_102/image18.png" className={styles.image30}/>
+      <img src="/magazine/3/images/101_102/image16.png" className={styles.image28}/>
+      <img src="/magazine/3/images/101_102/image15.png" className={styles.image27}/>
+      <p className={styles.text7}>Paola Olaguivel</p>  
+      <div className={styles.image34}></div>
+      <p className={styles.text9}>I think that fashion today is no longer something exclusively for people in the flesh who know how to draw very well and, still venture to say, sew. From now on we are in the middle of a new era of how to present products and creations while still being very interactive in everything.</p>  
+      <p className={styles.text8}>ABigNeonGlitter</p>  
+      <img src="/magazine/3/images/101_102/image19.png" className={styles.image31}/>
+      <img src="/magazine/3/images/101_102/image17.png" className={styles.image29}/>
+      <img src="/magazine/3/images/101_102/image21.png" className={styles.image33}/>
+      <img src="/magazine/3/images/101_102/image20.png" className={styles.image32}/>
     </div>
   )
 }

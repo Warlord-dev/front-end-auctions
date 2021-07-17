@@ -4,14 +4,14 @@ import Link from 'next/link';
 
 const Page56 = () => {
   return (
-    <div className={styles.wrapper}>
-      <img src="/magazine/3/images/63_64/image1.png" className={styles.image1}/> 
-      <p className={styles.text1}>I'm a fashion and costume designer with a Master's from IED Milano. Since childhood, I have loved to sew and come up with different models.When home supplies ran out, I decided it was time to make it a profession of it. I have a clothing brand for which I make mini collections of unique things, dance clothes and I also design costumes for theaters. Recently I fell in love with virtual fashion and now I am developing in this direction.</p>   
-      <Link href="https://www.instagram.com/bugazdesign/">
+    <div className={styles.wrapper}>      
+      <img src="/magazine/3/images/61_62/image2.png" className={styles.image2}/>  
+       <Link href="https://www.instagram.com/hubbabubbabee/?hl=en">
         <a target="_blank">
-          <p className={styles.text2}>BUGAS</p>   
+          <p className={styles.text5}>Katriane</p>   
         </a>
-      </Link> 
+      </Link>
+      <p className={styles.text6}>Katriane is a Womenswear Designer & 3D Concept Artist with an extensive history of working in the apparel industry  across Asia, Europe, and USA. This innovative young designer’s inspiration comes from a passion for the purity in  shape and integrity in texture, forming an aesthetic of feminine confidence that utilises clear-cut construction to uniquely  accentuate and flatter the female silhouette. Fashion is for Katriane,  "a means to generate a vocabulary where personality and identity can be freely outspoken”. </p>   
     </div>
   )
 }

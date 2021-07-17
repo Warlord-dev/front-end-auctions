@@ -6,122 +6,115 @@ const Page9798 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/3/images/97_98/image1.png" className={styles.image1}/>
-      <Link href="https://www.instagram.com/veletagram/">
-        <a target="_blank">
-        <img src="/magazine/3/images/97_98/image2.png" className={styles.image2}/>
-        </a>
-      </Link>
-      
-      <p className={styles.text1}>DomingoBeta</p> 
-      <img src="/magazine/3/images/97_98/image4.png" className={styles.image4}/>
-      <img src="/magazine/3/images/97_98/image3.png" className={styles.image3}/>
-      <img src="/magazine/3/images/97_98/image5.png" className={styles.image5}/>
-      <img src="/magazine/3/images/97_98/image6.png" className={styles.image6}/>
-      <img src="/magazine/3/images/97_98/image7.png" className={styles.image7}/>
-      <img src="/magazine/3/images/97_98/image8.png" className={styles.image8}/>
-      <div className={styles.image9}></div>
-      <div className={styles.image10}></div>
-      <p className={styles.text2}>Blender is my favorite 3D software for creation. I’m constantly creating assets to use in my future artworks, so when I sketch or plan my next pieces, I know what type of things I could use to improve creative time.</p> 
-      <p className={styles.text3}>For material creation, I use the Blender powerful procedural system, I’m a die hard fan of complex nodetrees and abstract materials. Always looking to optimize times and tools that help me go further, I use an addon called MBS of Syncretic 3D— it’s a material building suite that lets you create incredible materials with just a couple of node groups. Here’s an example of one of the materials used in the composition.</p> 
-      
-      <Link href="https://www.instagram.com/jak_3d/">
-        <a target="_blank">
-        <img src="/magazine/3/images/97_98/image9.png" className={styles.image11}/>
-        </a>
-      </Link>
-      <p className={styles.text4}>Kima_jak3d</p> 
-      <p className={styles.text5}>TIME LAPSE</p> 
-      <img src="/magazine/3/images/97_98/image10.png" className={styles.image12}/>
-      <div className={styles.image14}>
-        <video className={styles.image15} muted loop autoPlay>
+      <img src="/magazine/3/images/97_98/image14.png" className={styles.image22}/>
+      <img src="/magazine/3/images/97_98/image2.png" className={styles.image2}/>
+      <div className={styles.image3}>
+        <video className={styles.image4} muted loop autoPlay>
           <source src="./magazine/3/images/97_98/video1.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className={styles.image16}></div>
-      <Link href="https://www.instagram.com/di.universe/ ">
-        <a target="_blank">
-        <img src="/magazine/3/images/97_98/image11.png" className={styles.image17}/>
-        </a>
-      </Link>
-      
-      <p className={styles.text6}>Di.universe</p> 
-      <Link href="https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:1097760?tab=details">
-        <a target="_blank">
-        <img src="/magazine/3/images/97_98/image12.png" className={styles.image18}/>
-        </a>
-      </Link>
-      
-      <p className={styles.text7}>Minted on Rarible</p> 
-      <p className={styles.text8}>To create digital clothes, we used exclusively the Clo3d software, in which patterns were made, the background, light and render were adjusted.  The modeling process was lengthened solely because we were trying to achieve the desired effect by tweaking the fur so that it looks like thin feathers.  In general, it took 3-5 hours to create and approve each model + render.</p> 
-      <p className={styles.text9}>Fur fox - custom fur preset. <br/>
-Parameters: <br/>
-Fur parameters: <br/>
-Melanin - 0,20<br/>
-Pheomelanin - 0,50<br/>
-Glossines - 0,90<br/>
-Glossines boost - 1,00<br/>
-<br/><br/>
-Base:<br/>
-Length - 12,00<br/>
-Thickness - 3,000<br/>
-Bend - 0,70<br/>
-Taper - 0,80<br/>
-Density - 30<br/>
-Segments - 5</p> 
-      <p className={styles.text10}>Gravity:<br/>
-Force - 10,00<br/>
-Vector x - 0,00<br/>
-Vector y - (-1,00)<br/>
-Vector z - 0,00<br/>
-<br/>
-Curl:<br/>
-Radius - 0,100<br/>
-Number - 5,00<br/>
-Variance:<br/>
-Length - 1,00<br/>
-Thickness - 1,00<br/>
-Direction - 1,00<br/>
-Gravity - 0,80<br/>
-Curl radius - 1,00<br/>
-Physical property: </p> 
-      <img src="/magazine/3/images/97_98/image13.png" className={styles.image19}/>
-      <img src="/magazine/3/images/97_98/image14.png" className={styles.image20}/>
-      <div className={styles.image21}>
-        <video className={styles.image22} muted loop autoPlay>
+      <div className={styles.image8}>
+        <video className={styles.image9} muted loop autoPlay>
           <source src="./magazine/3/images/97_98/video2.mp4" type="video/mp4" />
         </video>
       </div>
-      <Link href="https://instagram.com/illustrationsbyjessicajames">
+      <div className={styles.image6}></div>
+      <Link href="https://www.instagram.com/fabeeobreen/?hl=en">
         <a target="_blank">
-        <img src="/magazine/3/images/97_98/image15.png" className={styles.image23}/>
+        <img src="/magazine/3/images/97_98/image4.png" className={styles.image7}/>
         </a>
       </Link>
       
-      <p className={styles.text11}>Process Video</p> 
-      <p className={styles.text12}>Jessica James</p> 
-      <div className={styles.image24}></div>
-      <p className={styles.text14}>I usually start each project with a mind map most times, writing ideas down as they come to me just so I can understand what I want to create and this helps in achieving a rough sketch. Depending on the goal of the final project, it may take between 4hrs to weeks to put everything together. After I'm done with sketching, I start with the 3d prototyping, this process includes custom avatar creation based on the project in daz studio and blender, I always like to create custom make-up looks for my digital avatars so I use substance painter or procreate to achieve this.</p> 
-      <img src="/magazine/3/images/97_98/image18.png" className={styles.image27}/>
-      <img src="/magazine/3/images/97_98/image20.png" className={styles.image29}/>
-      <img src="/magazine/3/images/97_98/image16.png" className={styles.image25}/>
-      <img src="/magazine/3/images/97_98/image17.png" className={styles.image26}/>
-      <Link href="https://www.instagram.com/ava3ddesigners/?hl=en">
+      <p className={styles.text1}>Fabeeo Breen</p> 
+      <p className={styles.text2}>Curiosity is my engine, I always wanted to control as many aspects as possible of digital image generation and manipulation.
+My key skill is the ability to use and combine multiple softwares, allowing myself to explore different areas of the CGI field, with a strong objective-driven attitude.
+<br/><br/>
+After 12+ years’ experience in virtual worlds and 5+ years into VFX for the cinema industry, I founded in 2018 the "Fabeeo Breen" brand:
+<br/><br/>
+Fabeeo Breen is a Digital Fashion Brand Specialized in innovation and the virtualization of the fashion industry, aiming at setting forth a new way of crafting and perceiving fashion in the digital era.</p> 
+      <img src="/magazine/3/images/97_98/image5.png" className={styles.image10}/>
+      <img src="/magazine/3/images/97_98/image6.png" className={styles.image11}/>
+      
+      <Link href="https://www.instagram.com/lucii_digital/?hl=en">
         <a target="_blank">
-        <img src="/magazine/3/images/97_98/image19.png" className={styles.image28}/>
+        <img src="/magazine/3/images/97_98/image7.png" className={styles.image12}/>
         </a>
       </Link>
+      <img src="/magazine/3/images/97_98/image8.png" className={styles.image13}/>
+      <img src="/magazine/3/images/97_98/image9.png" className={styles.image14}/>
       
-      <p className={styles.text13}>AVA Designers</p> 
-      <div className={styles.image30}>
-        <video className={styles.image31} muted loop autoPlay>
+      <Link href="https://www.instagram.com/marcello.baldari.art/?hl=en">
+        <a target="_blank">
+        <img src="/magazine/3/images/97_98/image10.png" className={styles.image15}/>
+        </a>
+      </Link>
+      <div className={styles.image16}></div>
+      <img src="/magazine/3/images/97_98/image11.png" className={styles.image17}/>
+      <img src="/magazine/3/images/97_98/image12.png" className={styles.image18}/>
+      <img src="/magazine/3/images/97_98/image13.png" className={styles.image19}/>
+      <div className={styles.image20}>
+        <video className={styles.image21} muted loop autoPlay>
           <source src="./magazine/3/images/97_98/video3.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className={styles.image32}>
-        <video className={styles.image33} muted loop autoPlay>
+      <p className={styles.text3}>NIKE Adapt BB</p> 
+      <p className={styles.text4}>NIKE Adapt BB</p> 
+      <p className={styles.text5}>NIKE Adapt BB</p> 
+      <p className={styles.text6}>This model is made entirely on Zbrush and the rendered in Keyshot.</p> 
+      <p className={styles.text7}>Lucii</p> 
+      <p className={styles.text8}>Marcello Baldari</p> 
+      <p className={styles.text18}>Mo’Casso</p> 
+      <p className={styles.text9}>The softwares I use for the production of the dress are Marvelous and Clo3D. For accessories and footwear, on the other hand, I use Zbrush and Maya. I start by creating the 2D pattern and then I dress the avatar. Afterwards I improve the fit, until I'm satisfied with the result.</p> 
+      <img src="/magazine/3/images/97_98/image15.png" className={styles.image23}/>
+      
+      <Link href="https://www.instagram.com/mocasso_of_nfts/?hl=en">
+        <a target="_blank">
+        <img src="/magazine/3/images/97_98/image16.png" className={styles.image24}/>
+        </a>
+      </Link>
+      <img src="/magazine/3/images/97_98/image17.png" className={styles.image25}/>
+      <p className={styles.text10}>This has been my cycle for the last decade without even realizing what I was helping to build with every edit, and now those pearly gates are wide open, waiting for me to take my next step and bring those vivid dreams into realities...well into digital fashion realities. </p> 
+      <img src="/magazine/3/images/97_98/image18.png" className={styles.image26}/>
+      <img src="/magazine/3/images/97_98/image19.png" className={styles.image27}/>
+      
+      <Link href="https://www.instagram.com/stellaachenbach/?hl=en">
+        <a target="_blank">
+        <img src="/magazine/3/images/97_98/image20.png" className={styles.image28}/>
+        </a>
+      </Link>
+      <img src="/magazine/3/images/97_98/image21.png" className={styles.image29}/>
+      <img src="/magazine/3/images/97_98/image24.png" className={styles.image33}/>
+      <div className={styles.image30}></div>
+      <img src="/magazine/3/images/97_98/image22.png" className={styles.image31}/>
+      <img src="/magazine/3/images/97_98/image23.png" className={styles.image32}/>
+      <p className={styles.text11}>My most go-to resources are Pinterest, Unsplash, Wired, National Geographic, Google Scholar, NASA, and many more. I usually gather many more visuals to establish a mood board. Every time I look at the board, I keep deleting the images that seem repetitive or out of place. It is not an exact science, but it helps to keep focused. To my students I usually tell them to not </p> 
+      <p className={styles.text12}>use more than 6 images and 5 colors. Additionally, I tell them to refrain from putting smartphone designs in a mood board. It is often not as inspiring and can lead to accidental generic copying. I find textures and non-related imagery often unlocks far more creativity than just taking reference from a similar object as to what you aspire your final design to be.</p> 
+      <p className={styles.text13}>Stella Achenbach</p> 
+      <p className={styles.text15}>If you only have yourself to ask, the ten principles of good design by Dieter Rams can be helpful to get you thinking. I try to fulfill at least three of them. The points that were most important to me in this case:
+<br/>Good design is aesthetic
+<br/>Good design is honest
+<br/>Good design is thorough down to the last detail
+</p> 
+      <p className={styles.text14}>If you only have yourself to ask, the ten principles of good design by Dieter Rams can be helpful to get you thinking. I try to fulfill at least three of them. The points that were most important to me in this case:
+<br/>Good design is aesthetic
+<br/>Good design is honest
+<br/>Good design is thorough down to the last detail
+</p> 
+<p className={styles.text20}>If you only have yourself to ask, the ten principles of good design by Dieter Rams can be helpful to get you thinking. I try to fulfill at least three of them. The points that were most important to me in this case:
+<br/>Good design is aesthetic
+<br/>Good design is honest
+<br/>Good design is thorough down to the last detail
+</p> 
+      <img src="/magazine/3/images/97_98/image25.png" className={styles.image37}/>
+      <div className={styles.image34}>
+        <video className={styles.image35} muted loop autoPlay>
           <source src="./magazine/3/images/97_98/video4.mp4" type="video/mp4" />
         </video>
       </div>
+      <img src="/magazine/3/images/97_98/image26.png" className={styles.image36}/>
+      <p className={styles.text16}>Trying Out Different Lighting Variations</p> 
+      <p className={styles.text17}>Trying Out Different Lighting Variations</p> 
+      <p className={styles.text19}>The creation process can take several hours, it all depends on the amount of details and elements you want to add to the garment. For the concept and creation part of the pattern it took about 4 hours and another 4 to improve the fit</p> 
     </div>
   );
 };

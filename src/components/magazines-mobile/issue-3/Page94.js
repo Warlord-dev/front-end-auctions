@@ -4,25 +4,30 @@ import Link from 'next/link';
 
 const Page94 = () => {
   return (
-    <div className={styles.wrapper}>
-     <img src="/magazine/3/images/103_104/image2.png" className={styles.image1}/>
-      <div className={styles.image2}></div>
-      <p className={styles.text2}>It’s always been a tricky proposition for crypto projects to be distributing new tokens to the right individuals, and liquidity mining has since been one of the more sustainable approaches. In essence, liquidity mining works by distributing tokens to those who deposit their crypto assets into a liquidity pool. The new tokens are then distributed algorithmically to each individual’s corresponding stake in the pool algorithmically.
-      <br/><br/>
-These tokens can also be in the form of other tokens like Uniswap (if you are a liquidity provider). Consequently, you will be able to deposit such tokens into other pools to repeat the process and earn returns on your investment.
+    <div className={styles.wrapper}>     
+      <img src="/magazine/3/images/107_108/image2.png" className={styles.image1}/>
+     <div className={styles.image2}></div>
+     <p className={styles.text1}>DeFi vs. CeFi</p> 
+     <p className={styles.text2}>Peezy R.</p> 
+     <p className={styles.text3}>DeFi’s proponents have made a strong case that the emerging use case for cryptocurrencies casts a wide net for individuals and institutions to participate in a financial ecosystem that’s permissionless and disintermediated—one that they would never have even dreamed of being able to access until the advent of blockchain technology came about (and had a baby and called it DeFi.)
 <br/><br/>
-We could also think about governance as a use case. In some cases, there’s a very high threshold of token votes needed to be able to put forward a formal governance proposal. If the funds are pooled together instead, participants can rally behind a common cause they deem important for the protocol.
+For its fledgling participants, DeFi presents an opportunity that would enable them not just to serve as a hedge against the traditional financial system’s known pitfalls but as a way to actually support livelihoods and uplift economic conditions for its participants rather than just some grubby Wall Street fat cat. It’s an opportunity that matches the Silicon Valley ethos of building, breaking, and rebuilding things as well as empower individuals, with a disdain for centralized, top-down structures—without saying anything about how Silicon Valley itself became centralized (that’s a story for another day). Good stuff.
 <br/><br/>
-Governance<br/>
-Governance is yet another use case for liquidity pools. Some protocols require a high threshold of token votes to formulate a proper governance proposal. When funds are pooled together, individuals can garner and unite over a particular cause that they may determine as critical for the protocol.
+Like many things about blockchain and financial technology, DeFi might invariably sound like esoteric, perplexing claptrap to the uninitiated. And this supposed “barrier” to entry has invariably led to said individuals eschewing entering the DeFi space altogether.
 <br/><br/>
-Tranching and synthetic assets<br/>
-Yet another use for liquidity pools is tranching, or what involves separating and categorizing financial products depending on their risk and return profiles. Such products allow liquidity pools to choose one.
+Yes, everyone can participate in DeFi—but like anything, the know-how is sold separately.
 <br/><br/>
-Synthetic assets such as those that are pegged to a particular asset are also dependent on liquidity pools in order for them to be minted on-chain. These are essentially akin to traditional financial derivatives that derive their value from other assets like stocks, bonds, commodities, precious metals, or currencies to trade them without necessarily holding the real asset.
+Let’s face it: DeFi is indeed a potentially world-changing application of blockchain technology as we know it. But the learning curve is real.
 <br/><br/>
-DeFi-ning appeal<br/>
-Since May 2020, the total value locked in DeFi protocols like Uniswap, Compound, Maker, and Aave ballooned from a shade under $1 billion to do an 88x—or $88 billion in total locked value in the entire space—at its very peak last May 2021. Annual percentage yields have skyrocketed through the roof as users began to engage in yield farming as fast as they can. That’s a far cry from the minuscule APYs on a basic savings account. </p> 
+Don’t worry, fam, we got you—we’ve all been there.
+<br/><br/>
+Fortunately, DeFi isn’t rocket science. 
+<br/><br/>
+You don’t need a master’s degree in blockchain technology to get started right now. 
+<br/><br/>
+You don’t need to be a computer whiz to understand the underlying mechanisms that support DeFi.
+<br/><br/>
+You don’t need to jump through all sorts of regulatory and institutional hoops designed to make your money work for you as you would have to with a bank, a fund, or a financial institution.</p> 
     </div>
   )
 }

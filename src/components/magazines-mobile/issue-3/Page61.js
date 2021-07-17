@@ -5,12 +5,9 @@ import Link from 'next/link';
 const Page61 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/69_70/image1.png" className={styles.image1}/>
-      <Link href="https://www.instagram.com/lilium.labs/">
-        <a target="_blank">
-        <p className={styles.text1}>Lilium Labs</p> 
-        </a>
-      </Link>
+      <img src="/magazine/3/images/67_68/image1.png" className={styles.image3}/>
+      <p className={styles.text3}>Tom Pastor</p> 
+      <p className={styles.text4}>Lisa Gen</p> 
     </div>
   )
 }

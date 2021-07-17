@@ -3,98 +3,71 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 1528px;
+  height: 1477px;
   overflow: hidden;
-  background-color: white;
+  background: radial-gradient(124.88% 124.88% at 0% 50.03%, #CC3330 0%, #93EF97 42.5%, rgba(184, 85, 18, 0.6) 68.75%);
   color: white;
   display: flex;
   position: relative;
   
-  .image1 {
-    position: relative;
-    width: 375px;
-    height: 1528px;
-    left: 0;
-    top: 0;
-  }
-  .text1 {
-    position: absolute;
-    width: 324px;
-    height: 111px;
-    left: 47px;
-    top: 1213px;
-    
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 30px;
-    /* or 100% */
-    
-    
-    color: #00A2B1;
-    
-    text-shadow: rgb(0, 102, 255) 1px 0px 0px, rgb(0, 102, 255) 0.540302px 0.841471px 0px, rgb(0, 102, 255) -0.416147px 0.909297px 0px, rgb(0, 102, 255) -0.989992px 0.14112px 0px, rgb(0, 102, 255) -0.653644px -0.756802px 0px, rgb(0, 102, 255) 0.283662px -0.958924px 0px, rgb(0, 102, 255) 0.96017px -0.279415px 0px;
-    text-shadow: 0px 4px 4px #490055;
-  }
-  .text2 {
-    position: absolute;
-    width: 324px;
-    height: 111px;
-    left: 47px;
-    top: 1268px;
-    
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 85px;
-    /* or 283% */
-    
-    text-shadow: rgb(0, 102, 255) 1px 0px 0px, rgb(0, 102, 255) 0.540302px 0.841471px 0px, rgb(0, 102, 255) -0.416147px 0.909297px 0px, rgb(0, 102, 255) -0.989992px 0.14112px 0px, rgb(0, 102, 255) -0.653644px -0.756802px 0px, rgb(0, 102, 255) 0.283662px -0.958924px 0px, rgb(0, 102, 255) 0.96017px -0.279415px 0px;
-    color: #00A2B1;
-  }
-  .anim {
-    position: absolute;
-    width: 375px;
-    height: 149px;
-    left: 0;
-    top: 1359px;
-    padding: 0 20px;
-  }
-  .blue {
-    width: 2rem;
-    height: 2rem;
-    background-color: #206EFF;
-  }
-  .green {
-    width: 2rem;
-    height: 2rem;
-    background-color: #31FFA6;
-  }
-  .red {
-    width: 2rem;
-    height: 2rem;
-    background-color: #FF324A;
-  }
-  .slider {
-    width: 100%;
-    margin-top: 30px;
-  }
-  .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    
-    .button {
-      margin: 0 2px;
-      background: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
-      border-width: 2px;
-      border-style: outset;
-      border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-      border-image: initial;
-      padding: 5px;
+ .image3 {
+  position: absolute;
+  width: 333px;
+  height: 97px;
+  left: 59px;
+  top: 65px;
+ }
+ .image2 {
+  position: absolute;
+  width: 1327px;
+  height: 710px;
+  left: -394.98px;
+  top: 463.9px;
+  transform: rotate(70deg);
+ }
+ .image15 {
+  position: absolute;
+  width: 241px;
+  height: 52px;
+  left: 0px;
+  top: 246px;
+ }
+ .image5 {
+  position: absolute;
+  width: 169.85px;
+  height: 216.28px;
+  left: 131px;
+  top: 294px;
+ }
+ .play1 {
+  position: absolute;
+  width: 114px;
+  height: 133px;
+  left: 22px;
+  top: 306px;
+ }
+ .image6 {
+  position: absolute;
+  width: 244px;
+  height: 71px;
+  left: 93px;
+  top: 761px;
+ }
+ .image7 {
+  position: absolute;
+  width: 375px;
+  height: 399px;
+  left: 0px;
+  top: 871px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    overflow: hidden;
+    border: 4px solid #FFFFFF;
+    box-sizing: border-box;
+    .image8 {
+      height: 100%;
+      position: absolute;
     }
   }
 }

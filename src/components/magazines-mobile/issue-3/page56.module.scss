@@ -3,54 +3,48 @@
 .wrapper {
   @include magazineWrapper();
   height: 583px;
-  background-color: black;
+  background-color: white;
   color: white;
   display: flex;
   position: relative;
 
- .image1 {
-  position: absolute;
-  width: 940px;
-  height: 733px;
-  left: -172px;
-  top: -49px;
- }
- .text1 {
-  position: absolute;
-  width: 127px;
-  height: 108px;
-  left: 20px;
-  top: 14px;
-  
-  font-family: Indie Flower;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 8px;
-  line-height: 110%;
-  /* or 9px */
-  
-  
-  color: #FFFFFF;
- }
- .text2 {
+  .text5 {
     position: absolute;
-    width: 83px;
-    height: 22px;
-    left: 20px;
-    top: 127px;
+    width: 159px;
+    height: 44px;
+    left: 200px;
+    top: 17px;
     
-    font-family: Indie Flower;
+    font-family: Just Another Hand;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 40px;
     line-height: 110%;
-    /* identical to box height, or 22px */
+    /* identical to box height, or 88px */
     
+    text-align: right;
     
-    color: #897075;
+    color: #FFFFFF;
     transition: transform .2s;
     &:hover {
         transform: scale(1.1);
     }
+  }
+  .text6 {
+    position: absolute;
+    width: 91px;
+    height: 229px;
+    left: 266px;
+    top: 52px;
+    
+    font-family: Just Another Hand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 110%;
+    
+    text-align: right;
+    
+    color: #FFFFFF;
   }
 }
