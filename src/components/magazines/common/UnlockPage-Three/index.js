@@ -21,13 +21,7 @@ const UnlockPageThree = props => {
       </div>
       <img src="/images/bottom-text.png" className={styles.bottom_text}/>
       <button className={styles.unlock} onClick={() => {
-        if(issueId === 1) {
-          Router.push('/unlockable')
-        } else if(issueId === 2) {
-          Router.push('/unlockable/2')
-        } else if(issueId === 3) {
-          Router.push('/unlockable/3')
-        }
+          Router.push('https://digifizzy.xyz/unlockable/3')
       }}>
         Unlock
       </button>

@@ -37,7 +37,7 @@ This fashion isn’t just ordinary fashion. It onboards you into an entire world
       
       <img src="/magazine/3/images/37_38/image10.png" className={styles.image17}/>
       <div className={styles.rotate}>
-      <Link href="https://rarible.com/">
+      <Link href="https://www.rari.capital/">
         <a target="_blank">
           <img src="/magazine/3/images/37_38/image11.png" className={styles.image18}/>
         </a>
