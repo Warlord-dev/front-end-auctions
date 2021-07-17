@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import styles from './styles.module.scss';
 import NftBanners from '@components/nft-banners';
 import IssueCard from '@components/IssueCard';
-import details from '@constants/nft_subscription_issue1';
+import { info, details } from '@constants/nft_subscription_issues';
 
 const Unlockables = () => {
   const router = useRouter();
@@ -13,24 +13,17 @@ const Unlockables = () => {
       <NftBanners />
       <div className={styles.bodyWrapper}>
         <div className={styles.issues}>
-          <div className={styles.issue}>
-            <IssueCard
-              video={details[0][0].url[0]}
-              id="ONE"
-              title="DIGIFIZZY"
-              link1="unlockable/1"
-              link2="unlockable/1"
-            />
-          </div>
-          <div className={styles.issue}>
-            <IssueCard
-              video={details[1][0].url[0]}
-              id="TWO"
-              title="DIGIFIZZY"
-              link1="unlockable/2"
-              link2="unlockable/2"
-            />
-          </div>
+          {details.map((issue, index) => (
+            <div className={styles.issue} key={info[index].id}>
+              <IssueCard
+                video={issue[0].url[0]}
+                id={info[index].id}
+                title={info[index].title}
+                link1={`unlockable/${index + 1}`}
+                link2={`unlockable/${index + 1}`}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

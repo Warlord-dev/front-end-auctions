@@ -74,4 +74,18 @@
         }
 
     }
+
+    .poapWrapper {
+      margin-top: 1rem;
+      display: flex;
+
+      .poapClaimButton {
+        background: #3650AE;
+        color: #00F0FF;
+      }
+
+      img {
+        transform: translateY(-30%);
+      }
+    }
 }

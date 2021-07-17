@@ -12,7 +12,7 @@ import accountActions from '@actions/user.actions';
 import api from '@services/api/api.service';
 import Loader from '@components/loader';
 import styles from './styles.module.scss';
-import details from '@constants/nft_subscription_issue1'
+import { details } from '@constants/nft_subscription_issues'
 import NftSubscriptionCard from '@components/nftsubscriptioncard';
 
 const Profile = ({ history }) => {

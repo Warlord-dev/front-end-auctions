@@ -23,12 +23,21 @@
     }
 
     .issues {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
       align-items: center;
 
+      @include media-sm {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include media-lg {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
       .issue {
-        margin-right: 1rem;
+        height: 100%;
       }
     }
   }

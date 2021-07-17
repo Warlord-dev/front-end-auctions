@@ -3,7 +3,7 @@ import BottomLine from '@components/bottom-line';
 import styles from './styles.module.scss';
 import { useRouter } from 'next/router';
 import NftBanners from '@components/nft-banners';
-import details from '@constants/nft_subscription_issue1';
+import { info, details } from '@constants/nft_subscription_issues';
 
 const Unlockable = () => {
   const router = useRouter();
