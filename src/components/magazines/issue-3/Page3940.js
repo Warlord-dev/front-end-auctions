@@ -16,7 +16,7 @@ const Page3940 = () => {
       </div>
       <div className={styles.image37}>
         <video className={styles.image38} muted loop autoPlay>
-          <source src="./magazine/3/images/39_40/fashiondefi.mp4" type="video/mp4" />
+          <source src="./magazine/3/images/39_40/video2.mp4" type="video/mp4" />
         </video>
       </div>
       <p className={styles.text1}>Hybrid Digital Physical NFT Fashion Collections. </p>  
