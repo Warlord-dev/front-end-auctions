@@ -29,7 +29,7 @@ const Page3738 = () => {
       <img src="/magazine/3/images/37_38/image9.png" className={styles.image16}/>
       <p className={styles.text8}>Converting desire into action through DeFi Fashion.</p> 
       <p className={styles.text9}>Wear to DeFi.</p> 
-      <p className={styles.text10}>WTF is DeFi and why is it so hard to use? What if you what you could earn more from what you wear?</p> 
+      <p className={styles.text10}>WTF is DeFi and why is it so hard to use? What if you could earn more from what you wear?</p> 
       <p className={styles.text11}>We are melting the centralised exploitative crown to weave the fabric of a generative ecosystem. </p> 
       <p className={styles.text12}>DIGITALAX and the Global Designer Network DAO have partnered with top DeFi protocols creating hybrid digital-physical NFT fashion collections with DeFi functionality. 
 <br/><br/>
