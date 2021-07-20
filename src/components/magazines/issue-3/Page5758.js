@@ -32,7 +32,7 @@ Before this, a lot of the promise of the applications of web3 technology seemed 
       <img src="/magazine/3/images/57_58/image9.png" className={styles.image12}/>  
       <Link href="https://rarible.com/">
         <a target="_blank">
-          <p className={styles.text12}>Rarible.</p>   
+          <p className={styles.text12}>Rari Capital</p>   
         </a>
       </Link>
       <p className={styles.text31}>Jai Bhavnani</p>   
