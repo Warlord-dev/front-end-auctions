@@ -2,7 +2,7 @@
 
 .wrapper {
     @include magazineWrapper();  
-    background: #F9D94A;
+    background: black;
     
     .image1 {
         position: absolute;
@@ -291,15 +291,15 @@
     }
     .text12 {
         position: absolute;
-        width: 381px;
-        height: 84px;
-        left: 1539px;
-        top: -4px;
+        width: 427px;
+        height: 60px;
+        left: 1521px;
+        top: 19px;
         
         font-family: Pilat Extended;
         font-style: normal;
         font-weight: 900;
-        font-size: 70px;
+        font-size: 50px;
         line-height: 120.53%;
         /* or 84px */
         
@@ -526,7 +526,7 @@
         /* or 84px */
         
         
-        color: #000000;
+        color: white;
     }
     .text29 {
         position: absolute;
@@ -545,7 +545,7 @@
         display: flex;
         align-items: center;
         
-        color: #000000;
+        color: white;
     }
     .text30 {
         position: absolute;
@@ -562,7 +562,7 @@
         /* or 84px */
         
         
-        color: #000000;
+        color: white;
     }
     .text31 {
         position: absolute;

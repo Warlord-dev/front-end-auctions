@@ -30,9 +30,9 @@ Before this, a lot of the promise of the applications of web3 technology seemed 
       <img src="/magazine/3/images/57_58/image7.png" className={styles.image10}/>  
       <img src="/magazine/3/images/57_58/image8.png" className={styles.image11}/> 
       <img src="/magazine/3/images/57_58/image9.png" className={styles.image12}/>  
-      <Link href="https://rarible.com/">
+      <Link href="https://www.rari.capital/">
         <a target="_blank">
-          <p className={styles.text12}>Rarible.</p>   
+          <p className={styles.text12}>Rari Capital</p>   
         </a>
       </Link>
       <p className={styles.text31}>Jai Bhavnani</p>   
@@ -49,7 +49,7 @@ Before this, a lot of the promise of the applications of web3 technology seemed 
       <p className={styles.text27}>Hell yeah.</p>
       <p className={styles.text28}>DEFI</p>
       <p className={styles.text29}>DAO</p>
-      <p className={styles.text30}>NFT</p>
+      <p className={styles.text30}>YIELD</p>
     </div>
   );
 };
