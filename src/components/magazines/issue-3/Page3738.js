@@ -37,11 +37,6 @@ This fashion isn’t just ordinary fashion. It onboards you into an entire world
       
       <img src="/magazine/3/images/37_38/image10.png" className={styles.image17}/>
       <div className={styles.rotate}>
-      <Link href="https://www.rari.capital/">
-        <a target="_blank">
-          <img src="/magazine/3/images/37_38/image11.png" className={styles.image18}/>
-        </a>
-      </Link>
       <Link href="https://bancor.network/">
         <a target="_blank">
           <img src="/magazine/3/images/37_38/image12.png" className={styles.image19}/>
@@ -55,11 +50,6 @@ This fashion isn’t just ordinary fashion. It onboards you into an entire world
       <Link href="https://instadapp.io/">
         <a target="_blank">
           <img src="/magazine/3/images/37_38/image15.png" className={styles.image22}/>
-        </a>
-      </Link>
-      <Link href="https://instadapp.io/">
-        <a target="_blank">
-          <img src="/magazine/3/images/37_38/image16.png" className={styles.image23}/>
         </a>
       </Link>
       <Link href="https://www.forcedao.com/">
