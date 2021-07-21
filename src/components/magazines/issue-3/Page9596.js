@@ -41,9 +41,8 @@ const Page9596 = () => {
       <p className={styles.text9}>I’m Davide Carbone aka LivingSparks, an electronic engineer specialized in research and technological innovation.
 <br/><br/>
 I’m specialized in generative materials, using mostly artificial intelligence networks. I’ve developed all the software I use to generate materials and textures. I start by writing a raw neural network, finding and tuning parameters in order to obtain pleasant patterns and texture. After I process the texture to add generative normals for the material and enrich them with details and roughness.</p>   
-      <p className={styles.text10}>I’m Davide Carbone aka LivingSparks, an electronic engineer specialized in research and technological innovation.
-      <br/><br/>
-I’m specialized in generative materials, using mostly artificial intelligence networks. I’ve developed all the software I use to generate materials and textures. I start by writing a raw neural network, finding and tuning parameters in order to obtain pleasant patterns and texture. After I process the texture to add generative normals for the material and enrich them with details and roughness.</p>  
+      <img src="/magazine/3/images/95_96/DeepArt014 1.png" className={styles.image27} />
+      <img src="/magazine/3/images/95_96/DeepArt001 1.png" className={styles.image28} />
       
       <Link href="https://www.instagram.com/livingsparks/?hl=en">
         <a target="_blank">
