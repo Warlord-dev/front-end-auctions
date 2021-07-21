@@ -14,7 +14,7 @@ const Page103104 = () => {
     <div className={styles.wrapper}>
       <img src="/magazine/3/images/103_104/image1.png" className={styles.image1} />
       <img src="/magazine/3/images/103_104/image2.png" className={styles.image2} />
-      <p className={styles.text1}>Becoming A Student of Your Game.</p>
+      <p className={styles.text1}>Becoming A Student of the Game.</p>
       <p className={styles.text2}>
         The house always wins.
         <br />
