@@ -2,26 +2,59 @@ import React, { useState } from 'react';
 import styles from './page103104.module.scss';
 import { useSelector } from 'react-redux';
 import UnlockPage from '../common/UnlockPage-Three';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 const Page103104 = () => {
-  const [usually] = useState("{usually}")
-  const router = useRouter()
+  const [usually] = useState('{usually}');
+  const router = useRouter();
   const { slug } = router.query;
-  const issueId = slug && slug.length > 0
-  ? slug[0] : magazineIssues[0].issueId
+  const issueId = slug && slug.length > 0 ? slug[0] : magazineIssues[0].issueId;
   const { contentUnlocked } = useSelector((state) => state.global.toJS());
   return (
     <div className={styles.wrapper}>
-     <img src="/magazine/3/images/103_104/image1.png" className={styles.image1}/>
-      <img src="/magazine/3/images/103_104/image2.png" className={styles.image2}/>
-      <p className={styles.text1}>Becoming A Student of the Game.</p> 
-      <p className={styles.text2}>Life comes with no instruction manual and the advice given along the way is all over the place; others try to impose their views and thoughts, not out of maliciousness {usually}, but rather out of conviction that they think they know what is best or good for us, despite it often being a case of either naive intervensionism or the green lumber phallacy (i.e. attempting to draw conclusions from what they know or have experienced as holding the same contextual weight within our own situations). 
-<br/><br/>
-My mindset on a lot of things, and most certainly when building DIGITALAX, is how to build in a way that is antifragile; by doing this, an instruction set is really not needed. Predicting is a fool’s game and only leads to the initiating of a perpetual oscilliation between signal and noise, where in almost all cases the two cannot be distinguished from each other, leading to more often than not a mistakening of noise for signal. And, if this mistake is made too often, which it will be, catastrophe will ensue. 
-<br/><br/>
-A sustainable, antifragile ecosystem must be set up like a variance swap— where puts and calls are incramentally placed around your current spot, ensuring the capture of the delta between the current spot and the final state can be absolutely maximised, despite where, what or when that state may be. Ultimately, it’s detached from the outcome and instead attentively focused around the exposure and increasing the access to optionality at any given time. This is not just relevant for ecosystem building, but rather, it’s relevant for anything that desires to be done right. Internal antifragility I would argue is one of the hardest characteristics to obtain, and then continue to maintain, however, if it is achieved the exposure to positive convexity far outweighs the “work done” for achieving it — if you know you are on the right track and have set out to do something unbelievabley world changing then you can’t expect others to understand it, let alone support it. But being antifragile means that you really don’t care— the words or actions of the world won’t deter you, your mission is too intrinsic, and you will keep pushing forward no matter what, because after all you know that it is the only right path forward. Anything else and you are just cheating yourself and accepting an easy way out. And antifragility at that core level is indestructable, it’s the ultimate authentically undeniable ace up the sleeve. </p> 
-      <p className={styles.text3}>- Emma-Jane MacKinnon-Lee</p> 
+      <img src="/magazine/3/images/103_104/image1.png" className={styles.image1} />
+      <img src="/magazine/3/images/103_104/image2.png" className={styles.image2} />
+      <p className={styles.text1}>Becoming A Student of the Game.</p>
+      <p className={styles.text2}>
+        The house always wins.
+        <br />
+        <br />
+        Designing a system that guarantees net profit regardless of external conditions or outcomes
+        is not something that only the gambling houses can pull off. Sure, Sheldon Adelson might
+        have gone into the game from a predatory casino perspective, leveraging human desire for
+        generating countless derechos of devastation. But, we too can become the house— the house of
+        our own lives— and, instead of wreaking destruction, we can rather inflate positive delta
+        that is instrumentally valuable and tremendously gainful.
+        <br />
+        <br />
+        Having a mastery over the meta-game means that we don’t need to know or get caught up in the
+        volatility of the slot machines, the stack height of our chips, or the slight hand of the
+        dealers. We can feel our own reality to play our own game. If we know our meta-how and have
+        enough fluidity to dance with dynanism then we can map the catalysts and deltas to
+        themselves. We can create a Y Combinator of positive cascades in each of our own lives for
+        ensuring a net profit, no matter the situation or context.
+        <br />
+        <br />
+        And, in order to make this a truth, in order to win, we must maintain ownership of
+        ourselves. Only when we play our own game are we positioning ourselves for guaranteed yield.
+        We can turn the gears that propel stimulating change. Knowing our meta so well that we don’t
+        need to get locked into one idea or scramble for frame control.
+        <br />
+        <br />
+        In fact, it’s not about control, it’s about ownership– very different. We must embrace
+        giving away control of everything else around us. Because, ultimately, we don’t have control
+        of anything, only ourselves. And if we establish the soundness and antifragility of our own
+        model then we can start earlier, start well ahead. We can continue to play our own game and
+        become damn good at it.
+        <br />
+        <br />
+        We all have what it takes to win, but so many of us fall into the myth of pioneering. Anyone
+        can do what it takes, but only very few decide to actually do it. My desire is to actually
+        do it. To make sure I have ownership of myself above all else, to play my own game. Because
+        only then can I commit to warranting impactful yield for all those that too desire to be
+        their own house.{' '}
+      </p>
+      <p className={styles.text3}>- Emma-Jane MacKinnon-Lee</p>
       {!contentUnlocked && <UnlockPage issueId={issueId} />}
     </div>
   );
