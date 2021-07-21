@@ -41,8 +41,12 @@ const Page4142 = () => {
       <img src="/magazine/3/images/39_40/image18.png" className={styles.image35}/>  
       <img src="/magazine/3/images/39_40/image21.png" className={styles.image36}/>  
       <img src="/magazine/3/images/39_40/image19.png" className={styles.image37}/>  
-      <p className={styles.text18}> GET DEFI DRIP </p>
-      <p className={styles.text17}> GET DEFI DRIP </p>
+      <Link href="https://drip.digitalax.xyz/">
+        <a target="_blank" className={styles.link1}>
+          <p className={styles.text18}> GET DEFI DRIP </p>
+          <p className={styles.text17}> GET DEFI DRIP </p>
+        </a>
+      </Link>
       <p className={styles.text19}> Using fashion to onboard millions into DeFi by directly serving their desires.  </p>
       <img src="/magazine/3/images/39_40/image27.png" className={styles.image41} />
     </div>

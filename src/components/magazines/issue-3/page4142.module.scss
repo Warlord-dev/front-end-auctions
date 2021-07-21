@@ -562,4 +562,16 @@
     left: 1052px;
     top: 542px;
   }
+
+  .link1 {
+    p {
+      transition: transform .2s;
+      transform-origin: center;
+    }
+    &:hover {
+      p {
+        transform: scale(1.1)
+      }
+    }
+  }
 }
