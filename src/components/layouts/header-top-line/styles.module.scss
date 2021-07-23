@@ -25,7 +25,7 @@
   }
 }
 
-.collapseIcon{
+.collapseIcon {
   display: none;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .bridgeHeader.floatingNav {
-  background-color: black!important;
+  background-color: black !important;
 }
 
 .leftBox {
@@ -84,13 +84,13 @@
       display: none;
     }
 
-   .collapseIcon {
+    .collapseIcon {
       position: absolute;
       display: block;
       top: 27px;
       right: 27px;
     }
-  }  
+  }
 }
 
 .rightBox {
@@ -103,7 +103,7 @@
 }
 
 .bridgeHeader {
-  background-color: transparent!important;
+  background-color: transparent !important;
 
   .link {
     color: white;
@@ -119,7 +119,7 @@
   }
 
   .signBtn button {
-    color: black;
+    color: white;
   }
 }
 
@@ -142,17 +142,17 @@
   }
 }
 
-.signBtn{
+.signBtn {
   @media screen and (max-width: 640px) {
-      margin-right: 20px;
-      position: absolute;
-      top: 10px;
-      right: 40px;
+    margin-right: 20px;
+    position: absolute;
+    top: 10px;
+    right: 40px;
 
-      .buttonWrapper {
-        position: relative;
-        padding-top: 7px;
-      }
+    .buttonWrapper {
+      position: relative;
+      padding-top: 7px;
+    }
   }
 }
 
@@ -217,7 +217,7 @@
   line-height: 36px;
 }
 
-.expandedMenu{
+.expandedMenu {
   display: block;
   margin-top: 30px;
   a {
