@@ -2,7 +2,6 @@
 @import '../../../../assets/scss/helpers/helpers.scss';
 
 .leftBox {
-  min-width: 618px;
   margin-right: 85px;
   flex-basis: 50%;
   flex-shrink: 0;
@@ -63,12 +62,12 @@
     width: 0;
     height: 0;
     border-right: 16px solid transparent;
-    border-top: 16px solid #FD6553;
+    border-top: 16px solid #fd6553;
     display: block;
   }
 
   .bannerText {
-    background-color: #FD6553;
+    background-color: #fd6553;
     display: block;
     padding: 2px 0px 2px 4px;
   }

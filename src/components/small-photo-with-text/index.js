@@ -15,18 +15,37 @@ const SmallPhotoWithText = ({
   addressLink,
   addressText,
   children,
-}) => (
-  <div className={cn(styles.designerPhotoWrapper, className)}>
-    {photo && !photoIsLink && (
-      <>
-        <img className={styles.designerPhoto} src={photo} alt="" />
-        <p className={cn(styles.designerName, styles.designerNameLink)}>{name}</p>
-      </>
-    )}
-    {name !== 'Digitalax' ? (
-      <>
-        {photo && photoIsLink && (
-          <Link href={`${DESIGNERS}${id}`}>
+}) => {
+  return (
+    <div className={cn(styles.designerPhotoWrapper, className)}>
+      {photo && !photoIsLink && (
+        <>
+          <img className={styles.designerPhoto} src={photo} alt="" />
+          <p className={cn(styles.designerName, styles.designerNameLink)}>{name}</p>
+        </>
+      )}
+      {name !== 'Digitalax' ? (
+        <>
+          {photo && photoIsLink && (
+            <Link href={`${DESIGNERS}${id}`}>
+              <a className={styles.photoLinkWrapper}>
+                <img
+                  className={cn(styles.designerPhoto, styles.designerPhotoLink)}
+                  src={photo}
+                  alt=""
+                />
+              </a>
+            </Link>
+          )}
+          {id && (
+            <Link href={`${DESIGNERS}${id}`}>
+              <a className={cn(styles.designerName, styles.designerNameLink)}>{name}</a>
+            </Link>
+          )}
+        </>
+      ) : (
+        <>
+          {photo && photoIsLink && (
             <a className={styles.photoLinkWrapper}>
               <img
                 className={cn(styles.designerPhoto, styles.designerPhotoLink)}
@@ -34,47 +53,34 @@ const SmallPhotoWithText = ({
                 alt=""
               />
             </a>
-          </Link>
-        )}
-        {id && (
-          <Link href={`${DESIGNERS}${id}`}>
-            <a className={cn(styles.designerName, styles.designerNameLink)}>{name}</a>
-          </Link>
-        )}
-      </>
-    ) : (
-      <>
-        {photo && photoIsLink && (
-          <a className={styles.photoLinkWrapper}>
-            <img
-              className={cn(styles.designerPhoto, styles.designerPhotoLink)}
-              src={photo}
-              alt=""
-            />
-          </a>
-        )}
-        {id && <a className={cn(styles.designerName, styles.designerNameLink)}>{name}</a>}
-      </>
-    )}
-    {address && (
-      <p className={cn(styles.hashAddress, 'smallPhotoWithText__hashAddress')} title={address}>
-        {address}
-      </p>
-    )}
-    {addressLink && (
-      <a
-        className={styles.hashAddress}
-        href={addressLink}
-        target="_blank"
-        rel="noreferrer"
-        title={addressText}
-      >
-        {addressText}
-      </a>
-    )}
-    {children}
-  </div>
-);
+          )}
+          {id && (
+            <a className={cn(styles.designerName, styles.designerNameLink, styles.textUppercase)}>
+              {name}
+            </a>
+          )}
+        </>
+      )}
+      {address && (
+        <p className={cn(styles.hashAddress, 'smallPhotoWithText__hashAddress')} title={address}>
+          {address}
+        </p>
+      )}
+      {addressLink && (
+        <a
+          className={styles.hashAddress}
+          href={addressLink}
+          target="_blank"
+          rel="noreferrer"
+          title={addressText}
+        >
+          {addressText}
+        </a>
+      )}
+      {children}
+    </div>
+  );
+};
 
 SmallPhotoWithText.propTypes = {
   className: PropTypes.string,

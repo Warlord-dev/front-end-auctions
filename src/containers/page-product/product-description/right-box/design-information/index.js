@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
-const DesignInformation = ({ currentClothesInfo, estimateAPY }) => (
+const DesignInformation = ({ collectionId, currentClothesInfo, estimateAPY }) => (
   <div className={cn(styles.wrapper, 'animate__animated animate__fadeIn')}>
     <p className={styles.description}>{currentClothesInfo?.description}</p>
     <div className={styles.footerWrapper}>
@@ -11,16 +11,18 @@ const DesignInformation = ({ currentClothesInfo, estimateAPY }) => (
         <div className={styles.header}>
           <span className={styles.col1}>GAME CLASSIFIER</span>
           <span className={styles.col2}>SKIN ID</span>
-          <span className={styles.col3}>HAT ID</span>
+          {parseInt(collectionId) < 3 ? <span className={styles.col3}>HAT ID</span> : null}
         </div>
         <div className={styles.body}>
           <div className={styles.row}>
             <div className={styles.col1}>
-              Among Us Sheriff Mod
+              {parseInt(collectionId) < 3 ? 'Among Us Sheriff Mod' : 'Minecraft Bed Wars'}
               <span>ESPA Tournaments</span>
             </div>
             <span className={styles.col2}>{currentClothesInfo.skinId}</span>
-            <span className={styles.col3}>{currentClothesInfo.hatId}</span>
+            {parseInt(collectionId) < 3 ? (
+              <span className={styles.col3}>{currentClothesInfo.hatId}</span>
+            ) : null}
           </div>
         </div>
       </div>

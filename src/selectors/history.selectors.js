@@ -10,7 +10,7 @@ export const getSemiRareHistoryByTokenId = (id) => (state) =>
 export const getSemiRareHistoryByTokenIds = (ids) => (state) =>
   ids.reduce(
     (acc, id) => acc.concat(state.history.getIn(['semiRareHistoryByTokenId', id]) || []),
-    []
+    [],
   );
 export const getAllCommonHistoryByTokenId = (state) => state.history.get('commonHistoryByTokenId');
 export const getCommonHistoryByTokenId = (id) => (state) =>
@@ -18,5 +18,5 @@ export const getCommonHistoryByTokenId = (id) => (state) =>
 export const getCommonHistoryByTokenIds = (ids) => (state) =>
   ids.reduce(
     (acc, id) => acc.concat(state.history.getIn(['commonHistoryByTokenId', id]) || []),
-    []
+    [],
   );

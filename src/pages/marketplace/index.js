@@ -11,6 +11,3 @@ const Index = () => {
 };
 
 export default memo(Index);
-
-
-

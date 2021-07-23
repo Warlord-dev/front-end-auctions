@@ -23,6 +23,8 @@ import CardList from './card-list';
 import CardListDigi from './card-list-digi';
 import styles from './styles.module.scss';
 import apiService from '@services/api/api.service';
+import globalActions from '@actions/global.actions';
+import amongUsAuctions from '@constants/amongus_auctions.json';
 
 const PageProductsList = ({ collectionId }) => {
   const dispatch = useDispatch();
@@ -31,103 +33,122 @@ const PageProductsList = ({ collectionId }) => {
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
   const globalStats = useSelector(getGlobalStats).toJS();
   const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
+  const [collectionLoaded, setCollectionLoaded] = useState(false);
+  const [auctionLoaded, setAuctionLoaded] = useState(false);
   const chainId = useSelector(getChainId);
-  const currentAuctions = auctions.toJS();
+  let currentAuctions = auctions.toJS();
   const currentCollections = collections.toJS();
   const [showGraphIds, setShowGraphIds] = useState([]);
 
+
+  if (collectionId === '1') {
+    currentAuctions = amongUsAuctions;
+  }
+
   useSubscription(
     {
-      request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
-      next: (data) => dispatch(auctionPageActions.updateMonthStats(data.days)),
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS)
+          : wsApi.onDaysChangeV2(MAIN_GRAPH_COUNT_DAYS),
+      next: (data) => {
+        dispatch(auctionPageActions.updateMonthStats(data?.days || []));
+      },
     },
-    [chainId]
+    [chainId],
   );
 
   useSubscription(
     {
-      request: wsApi.onDaysChange(TOTAL_VOLUME_DAYS),
-      next: (data) => dispatch(auctionPageActions.updateWeekStats(data.days)),
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.onDaysChange(TOTAL_VOLUME_DAYS)
+          : wsApi.onDaysChangeV2(TOTAL_VOLUME_DAYS),
+      next: (data) => {
+        dispatch(auctionPageActions.updateWeekStats(data?.days || []));
+      },
     },
-    [chainId]
+    [chainId],
   );
 
   useSubscription(
     {
-      request: wsApi.onNFTGlobalStats(),
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.onNFTGlobalStats()
+          : wsApi.onNFTGlobalStatsV2(),
       next: (data) => {
         dispatch(
           auctionPageActions.updateGlobalStats(
-            data.digitalaxGarmentNFTGlobalStats.length > 0
-              ? data.digitalaxGarmentNFTGlobalStats[0]
-              : []
-          )
+            (data?.digitalaxGarmentNFTGlobalStats || []).length > 0
+              ? Object.values(data)[0][0]
+              : [],
+          ),
         );
       },
     },
-    [chainId]
+    [chainId],
   );
 
   useSubscription(
     {
-      request: wsApi.getAllDigitalaxGarmentsCollections(),
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.getAllDigitalaxGarmentsCollections()
+          : wsApi.getAllDigitalaxGarmentsCollectionsV2(),
       next: (data) => {
-        dispatch(collectionActions.mapData(data.digitalaxGarmentCollections));
+        dispatch(globalActions.setIsLoading(false));
+        dispatch(collectionActions.mapData(data?.digitalaxGarmentCollections || []));
       },
     },
-    [chainId]
+    [],
   );
 
   useSubscription(
     {
-      request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id))
+          : wsApi.onDigitalaxMarketplaceOffersV2(currentCollections.map((val) => val.id)),
       next: (data) => {
-        dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
+        dispatch(collectionActions.updateMarketplaceOffers(data?.digitalaxMarketplaceOffers || []));
       },
     },
-    [chainId, currentCollections]
+    [chainId, currentCollections],
+  );
+
+  console.log({ currentCollections });
+
+  useSubscription(
+    {
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.onAllAuctionsChange()
+          : wsApi.onAllAuctionsChangeV2(),
+      next: (data) => {
+        dispatch(globalActions.setIsLoading(false));
+        dispatch(auctionPageActions.updateAuctions(data?.digitalaxGarmentAuctions || []));
+      },
+    },
+    [],
   );
 
   useSubscription(
     {
-      request: wsApi.onAllAuctionsChange(),
-      next: (data) => dispatch(auctionPageActions.updateAuctions(data.digitalaxGarmentAuctions)),
+      request:
+        collectionId === '1' || collectionId === '2'
+          ? wsApi.onAuctionsHistoryByIds(showGraphIds)
+          : wsApi.onAuctionsHistoryByIdsV2(showGraphIds),
+      next: (data) => {
+        dispatch(auctionPageActions.updateHistory(data?.digitalaxGarmentAuctionHistories || []));
+      },
     },
-    [chainId]
-  );
-
-  useSubscription(
-    {
-      request: wsApi.onAuctionsHistoryByIds(showGraphIds),
-      next: (data) =>
-        dispatch(auctionPageActions.updateHistory(data.digitalaxGarmentAuctionHistories)),
-    },
-    [chainId, showGraphIds]
-  );
-
-  useEffect(
-    () => () => {
-      if (!auctions) {
-        dispatch(auctionPageActions.reset());
-      }
-    },
-    []
+    [chainId, showGraphIds],
   );
 
   useEffect(() => {
-    const fetchInitialAuctions = async () => {
-      const { digitalaxGarmentAuctions } = await apiService.getLiveAuctions();
-      dispatch(auctionPageActions.updateAuctions(digitalaxGarmentAuctions));
-    }
-    const fetchInitialCollections = async () => {
-      const { digitalaxGarmentCollections } = await apiService.getGarmentsCollections();
-      dispatch(collectionActions.mapData(digitalaxGarmentCollections));
-    }
-
-    fetchInitialAuctions();
-    fetchInitialCollections();
+    dispatch(globalActions.setIsLoading(true));
   }, []);
-
 
   const nowTimestamp = Date.now();
 
@@ -143,7 +164,7 @@ const PageProductsList = ({ collectionId }) => {
     items.reduce(
       (acc, auction) =>
         auction.totalNetBidActivity ? acc.plus(new BigNumber(auction.totalNetBidActivity)) : acc,
-      new BigNumber(0)
+      new BigNumber(0),
     );
 
   const totalWeekValue = sumTopBids(weekResultedAuctions);
@@ -184,27 +205,29 @@ const PageProductsList = ({ collectionId }) => {
   return (
     <>
       <div className={styles.textContent}>
-        <TextContent/>
+        <TextContent />
       </div>
-      {collectionId === '1' ? (
+      {collectionId !== '2' ? (
         <CardList
+          collectionId={collectionId}
           auctions={currentAuctions}
           collections={currentCollections.filter(
             (collection) =>
-              collection.garments.length && !digitalIds.includes(collection.garments[0].designer)
+              collection.garments.length && !digitalIds.includes(collection.garments[0].designer),
           )}
           showGraphIds={showGraphIds}
           setShowGraphIds={setShowGraphIds}
         />
       ) : (
         <CardListDigi
+          collectionId={collectionId}
           auctions={currentAuctions}
           collections={
             collectionId === '2'
               ? currentCollections.filter(
                   (collection) =>
                     collection.garments.length &&
-                    digitalIds.includes(collection.garments[0].designer)
+                    digitalIds.includes(collection.garments[0].designer),
                 )
               : currentCollections
           }

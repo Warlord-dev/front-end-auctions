@@ -11,12 +11,18 @@ import {
   getDesignersByIds,
   getAuctionsHistoryByIds,
   getAuctionContracts,
-  getDigitalaxCollectorV2,
   getDigitalaxCollector,
   getDigitalaxGarmentsCollections,
   getCollectorsById,
-  getCollectorsV2ById
+  getDigitalaxMarketplacePurchaseHistory,
 } from '@services/api/gql.queries.api.service';
+import {
+  getDigitalaxGarmentNFTV2GlobalStat,
+  getDigitalaxGarmentsCollectionsV2,
+  getDigitalaxMarketplaceV2PurchaseHistory,
+  getLiveAuctionsV2,
+  getCollectorsByIdV2,
+} from './gql.queries.v2.api.service';
 
 class APIService {
   constructor() {
@@ -42,13 +48,9 @@ class APIService {
   async getGarmentsCollections() {
     return request(this.url, getDigitalaxGarmentsCollections);
   }
-  
-  async getCollectorsById(address) {
-    return request(this.url, getCollectorsById, {id: address});
-  }
 
-  async getCollectorsV2ById(address) {
-    return request(this.url, getCollectorsV2ById, {id: address});
+  async getCollectorsById(address) {
+    return request(this.url, getCollectorsById, { id: address });
   }
 
   async getAuctionsByIds(ids) {
@@ -75,12 +77,40 @@ class APIService {
     return request(this.url, getAuctionContracts);
   }
 
-  async getDigitalaxCollectorV2(address) {
-    return request(this.url, getDigitalaxCollectorV2, { id: address });
-  }
-
   async getDigitalaxCollector(address) {
     return request(this.url, getDigitalaxCollector, { id: address });
+  }
+
+  async getMarketplacePurchaseHistory(address, id) {
+    return request(this.url, getDigitalaxMarketplacePurchaseHistory, {
+      buyer: address,
+      garmentId: id,
+    });
+  }
+
+  // v2
+
+  async getLiveAuctionsV2() {
+    return request(this.url, getLiveAuctionsV2);
+  }
+
+  async getGarmentsCollectionsV2() {
+    return request(this.url, getDigitalaxGarmentsCollectionsV2);
+  }
+
+  async getCollectorsV2ById(address) {
+    return request(this.url, getCollectorsByIdV2, { id: address });
+  }
+
+  async getMarketplacePurchaseHistoryV2(address, id) {
+    return request(this.url, getDigitalaxMarketplaceV2PurchaseHistory, {
+      buyer: address,
+      garmentId: id,
+    });
+  }
+
+  async getMonaPerEth() {
+    return request(config.API_URLS['mumbai'], getDigitalaxGarmentNFTV2GlobalStat);
   }
 
   async getEthRate() {

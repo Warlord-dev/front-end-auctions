@@ -190,27 +190,8 @@ export const getResultedAuctionsByEndTimeGt = gql`
   }
 `;
 
-export const getDigitalaxCollectorV2 = gql`
-  query digitalaxCollectorV2($id: ID!) {
-    digitalaxCollectorV2(id: $id) {
-      id
-      parentsOwned {
-        id
-        description
-        designer
-        tokenUri
-        animation
-        image
-        owner
-        name
-      }
-    }
-  }
-`;
-
 export const getDigitalaxGarmentsCollections = gql`
-query getDigitalaxGarmentsCollections
-  {
+  query getDigitalaxGarmentsCollections {
     digitalaxGarmentCollections(first: 1000) {
       id
       garmentAuctionID
@@ -254,7 +235,7 @@ export const getDigitalaxCollector = gql`
 
 export const getCollectorsById = gql`
   query getCollectorsById($id: ID!) {
-    digitalaxCollectors(where: {id: $id}) {
+    digitalaxCollectors(where: { id: $id }) {
       id
       parentsOwned {
         id
@@ -264,7 +245,7 @@ export const getCollectorsById = gql`
         animation
         tokenUri
         primarySalePrice
-        attributes{
+        attributes {
           id
           type
           value
@@ -274,24 +255,25 @@ export const getCollectorsById = gql`
   }
 `;
 
-export const getCollectorsV2ById = gql`
-  query getCollectorsV2ById($id: ID!) {
-    digitalaxCollectorV2S(where: {id: $id}) {
+
+export const getDigitalaxMarketplacePurchaseHistory = gql`
+query digitalaxMarketplacePurchaseHistories($buyer: ID!, $garmentId: Int!) {
+  digitalaxMarketplacePurchaseHistories(where: { buyer: $buyer, garmentAuctionId: $garmentId }){
+    id
+    eventName
+    timestamp
+    transactionHash
+    token {
       id
-      parentsOwned {
-        id
-        name
-        image
-        description
-        animation
-        tokenUri
-        primarySalePrice
-        attributes{
-          id
-          type
-          value
-        }
-      }
     }
+    buyer
+    value
+    isPaidWithMona
+    monaTransferredAmount
+    garmentAuctionId
+    platformFee
+    discountToPayMona
+    rarity
   }
+}
 `;

@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 import kebabCase from 'lodash.kebabcase';
 import ImportantProductInformation from '@containers/important-product-information';
 import SmallPhotoWithText from '@components/small-photo-with-text';
-import { getDesignerInfoById } from '@selectors/designer.selectors';
+import { getDesignerInfoById, getDesignerInfoByName } from '@selectors/designer.selectors';
 import { getCardProductChartOptions } from '@services/graph.service';
 import { create2KURL } from '@services/imgix.service';
 import { getImageForCardProduct } from '@helpers/photo.helpers';
@@ -21,8 +21,11 @@ import { useTokenInfo } from '@hooks/token.info.hooks';
 import styles from './styles.module.scss';
 
 const CardProduct = ({
+  collectionId,
   history,
   auctionId,
+  auctionIndex,
+  garmentId,
   garment,
   tabIndex,
   className,
@@ -32,6 +35,7 @@ const CardProduct = ({
   const TABS = [EXCLUSIVE_RARITY, SEMI_RARE_RARITY, COMMON_RARITY];
   const COLORS = [styles.color1, styles.color2, styles.color3];
   const [isOpen, setIsOpen] = useState(false);
+  const [number, setNumber] = useState(0)
 
   const options = getCardProductChartOptions(history);
 
@@ -39,60 +43,106 @@ const CardProduct = ({
     return null;
   }
 
-  const tokenInfo = null;
-  const designerInfo = useSelector(getDesignerInfoById(garment.designer));
+  const designerInfo = useSelector(
+    getDesignerInfoByName(
+      tabIndex === 3
+        ? 'Digitalax'
+        : collectionId === '1'
+        ? 'Cosmos'
+        : garment.attributes && garment.attributes[0]
+        ? garment.attributes[0].value
+        : '',
+      true,
+    ),
+  );
+
+  const isLinkAvailable = garmentId !== undefined
+    && auctionIndex !== undefined
+    && auctionId !== undefined
+
+  const photoWrapper = () => {
+    return (
+      <a className={styles.clothesPhotoWrapper}>
+        <span className={cn(styles.garmentTypeWrapper, COLORS[tabIndex])}>
+          <span className={styles.bannerText}>{TABS[tabIndex]}</span>
+          <span className={styles.gap} />
+        </span>
+        {parseInt(garment.id, 10) >= 20 && parseInt(garment.id, 10) <= 28 && (
+          <video autoPlay muted loop className={styles.clothesPhoto}>
+            <source src={`/video/${garment.id}.mp4`} type="video/mp4" />
+          </video>
+        )}
+        {(parseInt(garment.id, 10) < 20 || parseInt(garment.id, 10) > 28) &&
+          (imageUrl ? (
+            isVideo ? (
+              <LazyLoad>
+                <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
+                  <source
+                    src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
+                    type="video/mp4"
+                  />
+                </video>
+              </LazyLoad>
+            ) : (
+              <div className={styles.clothesPhotoSubWrapper}>
+                <Image
+                  className={styles.clothesPhoto}
+                  src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
+                  alt={garment.id}
+                  width={'100%'}
+                  height={'100%'}
+                />
+              </div>
+            )
+          ) : null)}
+        {collectionId === '1' && !garment.id ? (
+          <LazyLoad>
+            <video
+              autoPlay
+              muted
+              loop
+              className={styles.clothesPhoto}
+              key={garment.animation_url}
+            >
+              <source
+                src={garment.animation_url.replace('gateway.pinata', 'digitalax.mypinata')}
+                type="video/mp4"
+              />
+            </video>
+          </LazyLoad>
+        ) : null}
+      </a>
+    )
+  }
 
   const [imageUrl, isVideo] = getImageForCardProduct(garment);
-
   return (
     <li className={cn(styles.item, className)}>
-      <Link href={`${PRODUCTS}${auctionId}${tabIndex}`}>
-        <a className={styles.clothesName}>
-          {garment.name ? garment.name : `ID:${garment.id}`}
-        </a>
+      { isLinkAvailable ? <Link
+        href={`${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`}
+      > 
+        <a className={styles.clothesName}>{garment.name ? garment.name : `ID:${garment.id}`}</a>
       </Link>
+      : <a className={styles.clothesName}>{garment.name ? garment.name : `ID:${garment.id}`}</a>
+      }
       <SmallPhotoWithText
         className={styles.designerWrapper}
         id={designerInfo ? kebabCase(designerInfo.designerName) : ''}
         name={designerInfo?.designerName}
-        photo={designerInfo?.designerPhoto}
+        photo={designerInfo?.designerPhoto || ''}
         photoIsLink
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link href={`${PRODUCTS}${auctionId}${tabIndex}`}>
-            <a className={styles.clothesPhotoWrapper}>
-              <span className={cn(styles.garmentTypeWrapper, COLORS[tabIndex])}>
-                <span className={styles.bannerText}>{TABS[tabIndex]}</span>
-                <span className={styles.gap} />
-              </span>
-              {parseInt(garment.id, 10) >= 20 && parseInt(garment.id, 10) <= 28 && (
-                <video autoPlay muted loop className={styles.clothesPhoto}>
-                  <source src={`/video/${garment.id}.mp4`} type="video/mp4" />
-                </video>
-              )}
-              {(parseInt(garment.id, 10) < 20 || parseInt(garment.id, 10) > 28) &&
-                (imageUrl ? (
-                  isVideo ? (
-                    <LazyLoad>
-                      <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
-                        <source src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')} type="video/mp4" />
-                      </video>
-                    </LazyLoad>
-                  ) : (
-                    <div className={styles.clothesPhotoSubWrapper}>
-                    <Image
-                      className={styles.clothesPhoto}
-                      src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
-                      alt={garment.id}
-                      width={'100%'}
-                      height={'100%'}
-                    />
-                    </div>
-                  )
-                ) : null)}
-            </a>
+          { isLinkAvailable ? <Link
+            href={isLinkAvailable ? `${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}` : ''}
+          >
+            {
+              photoWrapper()
+            }
           </Link>
+          : photoWrapper()
+          }
           {isOpen && (
             <div className={cn(styles.chart, { [styles.chartActive]: isOpen })}>
               <HighchartsReact highcharts={Highcharts} options={options} />
@@ -114,14 +164,21 @@ const CardProduct = ({
             </button>
           )}
         </div>
-        <ImportantProductInformation garment={garment} auctionId={auctionId} tabIndex={tabIndex} />
+        <ImportantProductInformation
+          collectionId={collectionId}
+          garment={garment}
+          garmentId={garmentId}
+          auctionIndex={auctionIndex}
+          auctionId={auctionId}
+          tabIndex={tabIndex}
+        />
       </div>
     </li>
   );
 };
 
 CardProduct.propTypes = {
-  auctionId: PropTypes.object.isRequired,
+  auctionId: PropTypes.string,
   garment: PropTypes.object.isRequired,
   tabIndex: PropTypes.number.isRequired,
   history: PropTypes.array,

@@ -20,8 +20,11 @@ import { useTokenInfo } from '@hooks/token.info.hooks';
 import styles from './styles.module.scss';
 
 const CardProductDigi = ({
+  collectionId,
   history,
   auctionId,
+  auctionIndex,
+  garmentId,
   garment,
   tabIndex,
   className,
@@ -46,7 +49,9 @@ const CardProductDigi = ({
 
   return (
     <li className={cn(styles.item, className)}>
-      <Link href={`${PRODUCTS}${auctionId}${tabIndexD}`}>
+      <Link
+        href={`${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndexD}`}
+      >
         <a className={styles.clothesName}>
           {tokenInfo && tokenInfo.name ? tokenInfo.name : `ID:${garment.id}`}
         </a>
@@ -60,7 +65,9 @@ const CardProductDigi = ({
       />
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
-          <Link href={`${PRODUCTS}${auctionId}${tabIndexD}`}>
+          <Link
+            href={`${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndexD}`}
+          >
             <a className={styles.clothesPhotoWrapper}>
               <span className={cn(styles.garmentTypeWrapper, COLORS[tabIndexD])}>
                 <span className={styles.bannerText}>{TABS[tabIndexD]}</span>
@@ -75,12 +82,15 @@ const CardProductDigi = ({
                 (tokenInfo && imageUrl ? (
                   isVideo ? (
                     <video autoPlay muted loop className={styles.clothesPhoto} key={imageUrl}>
-                      <source src={imageUrl} type="video/mp4" />
+                      <source
+                        src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
+                        type="video/mp4"
+                      />
                     </video>
                   ) : (
                     <Image
                       className={styles.clothesPhoto}
-                      src={create2KURL(imageUrl)}
+                      src={imageUrl.replace('gateway.pinata', 'digitalax.mypinata')}
                       alt={garment.id}
                     />
                   )
@@ -108,7 +118,14 @@ const CardProductDigi = ({
             </button>
           )}
         </div>
-        <ImportantProductInformation garment={garment} auctionId={auctionId} tabIndex={tabIndexD} />
+        <ImportantProductInformation
+          collectionId={collectionId}
+          garment={garment}
+          auctionId={auctionId}
+          auctionIndex={auctionIndex}
+          garmentId={garmentId}
+          tabIndex={tabIndexD}
+        />
       </div>
     </li>
   );
