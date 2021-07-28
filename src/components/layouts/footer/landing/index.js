@@ -31,7 +31,7 @@ const LandingFooter = () => {
             <a href='https://twitter.com/DIGITALAX_' target='_blank'>
               <img src='/images/social-icons/twitter.svg' alt='twitter-icon' className={'twitter-icon'} />
             </a>
-            <a href='https://www.instagram.com/digitalax_' target='_blank'>
+            <a href='https://www.instagram.com/_digitalax' target='_blank'>
               <img src='/images/social-icons/instagram.svg' alt='instagram-icon' className={'instagram-icon'} />
             </a>
             <a href='https://www.linkedin.com/company/digitalax-digital-fashion/' target='_blank'>
