@@ -25,7 +25,7 @@ const SOCIAL_MEDIA = [
   },
   {
     item: <Instagram />,
-    href: 'https://www.instagram.com/digitalax_',
+    href: 'https://www.instagram.com/_digitalax',
   },
   {
     item: <Github />,
