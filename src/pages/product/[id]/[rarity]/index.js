@@ -23,7 +23,8 @@ const Product = () => {
           const { digitalaxGarmentV2Collection } = await getGarmentV2ByCollectionId(chainId, id);
           setProduct({
             id: digitalaxGarmentV2Collection.id,
-            garment: digitalaxGarmentV2Collection.garments[0]
+            garment: digitalaxGarmentV2Collection.garments[0],
+            designer: digitalaxGarmentV2Collection.designer
           });
         } else {
           const { digitalaxGarmentV2Auction } = await getGarmentV2ByAuctionId(chainId, id);
@@ -86,15 +87,12 @@ const Product = () => {
           <div className={styles.designerBody}>
             <div className={styles.title}> designer </div>
             <div className={styles.data}>
-              <ImageCard />
+              <ImageCard imgUrl={product?.designer?.image} />
               <div className={styles.infoWrapper}>
                 <InfoCard libon="./images/metaverse/party_glasses.png">
-                  <div className={styles.name}> designer name </div>
+                  <div className={styles.name}> {product?.designer?.name} </div>
                   <div className={styles.description}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue ac
-                    elit id sodales. Suspendisse convallis pretium arcu, vel porta ipsum facilisis
-                    vitae. In eu ex erat. Nam convallis dolor sed tortor condimentum, sit amet
-                    finibus nunc lacinia.
+                    {product?.designer?.description}
                   </div>
                 </InfoCard>
               </div>

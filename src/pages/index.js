@@ -35,13 +35,18 @@ const LandingPage = () => {
       let collections = [],
         bundles = [];
       digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
+        const collectionPrice = digitalaxCollectionGroup.collections.reduce((a, b) => a + Number(b.valueSold), 0);
+        const auctionPrice = digitalaxCollectionGroup.auctions.reduce((a, b) => a + Number(b.topBid), 0);
+        const bundlePrice = digitalaxCollectionGroup.digiBundle.valueSold;
         collections.push({
           ...digitalaxCollectionGroup.collections[0].garments[0],
           id: digitalaxCollectionGroup.id,
+          sold: (collectionPrice + auctionPrice) / 1e18
         });
         bundles.push({
           ...digitalaxCollectionGroup.digiBundle.garments[0],
           id: digitalaxCollectionGroup.id,
+          sold: bundlePrice / 1e18
         });
       });
       setCollectionGroups(collections);

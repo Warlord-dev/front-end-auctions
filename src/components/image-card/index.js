@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getRarityId, reviseUrl } from '@utils/helpers';
 import styles from './styles.module.scss';
 
-const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true }) => {
+const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true, imgUrl = null }) => {
   const router = useRouter();
   const account = useSelector(getAccount);
   const dispatch = useDispatch();
@@ -53,6 +53,7 @@ const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true })
               </video>
             </LazyLoad>
           ) : null}
+          {imgUrl ? <img src={reviseUrl(imgUrl)} className={styles.image} /> : null}
           {showButton && <div className={styles.buyNow}>
             <NewButton
               text={data?.rarity === 'Exclusive' ? 'Place A Bid' : 'Buy Now'}

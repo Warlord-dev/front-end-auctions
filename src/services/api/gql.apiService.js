@@ -25,7 +25,11 @@ export const COLLECTION_GROUPS = gql`
   query digitalaxCollectionGroups {
     digitalaxCollectionGroups(first: 1000) {
       id
-      collections(first: 1) {
+      auctions {
+        id
+        topBid
+      }
+      collections {
         id
         garments(first: 1) {
           id
@@ -34,6 +38,7 @@ export const COLLECTION_GROUPS = gql`
           name
           designer
         }
+        valueSold
       }
       digiBundle {
         id
@@ -44,6 +49,7 @@ export const COLLECTION_GROUPS = gql`
           name
           designer
         }
+        valueSold
       }
     }
   }
@@ -90,7 +96,12 @@ export const GARMENTV2_BY_COLLECTION_ID = gql`
         animation
         description
         primarySalePrice
-        designer
+      }
+      designer {
+        id
+        name
+        description
+        image
       }
     }
   }
@@ -106,6 +117,12 @@ export const GARMENTV2_BY_AUCTION_ID = gql`
         animation
         description
         primarySalePrice
+      }
+      designer {
+        id
+        name
+        description
+        image
       }
     }
   }

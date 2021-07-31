@@ -20,7 +20,7 @@ const CollectionInfoCard = ({ collection }) => {
             </a>
           </Link>
           <div className={styles.pricesWrapper}>
-            <PriceCard mode={1} mainText="39.93 $MONA" subText="total sold" />
+            <PriceCard mode={1} mainText={`${collection.sold} $MONA`} subText="total sold" />
             <PriceCard mode={1} mainText="$22447.97" subText="dollar equivalent" />
           </div>
         </div>
