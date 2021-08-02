@@ -1,0 +1,140 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  color: white;
+  display: flex;
+  position: relative;
+  background-color: #FFFFFF;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 806px;
+    height: 167px;
+    left: 55px;
+    top: 60px;
+    
+    font-family: League Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 80%;
+    /* or 80px */
+    
+    
+    color: #FF4A7E;
+    // text-shadow: -5px 0 #00D0DA, 0 5px #00D0DA, 5px 0 #00D0DA, 0 -5px #00D0DA;
+    // text-shadow: 0px 4px 4px #00D0DA, 0px 4px 4px #00D0DA, 0px 4px 4px #00D0DA, 0px 4px 4px #00D0DA;
+    -webkit-text-stroke: 5px #00D0DA;
+  }
+
+  h2 {
+    position: absolute;
+    width: 806px;
+    height: 176px;
+    left: 55px;
+    top: 137px;
+    
+    font-family: League Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 160px;
+    line-height: 150%;
+    /* or 240px */
+    
+    
+    color: #FF4A7E;
+    text-shadow: -3px 0 #00D0DA, 0 3px #00D0DA, 3px 0 #00D0DA, 0 -3px #00D0DA;
+
+    -webkit-text-stroke: 5px #00D0DA;
+  }
+
+  h3 {
+    position: absolute;
+    width: 806px;
+    height: 300px;
+    left: 55px;
+    top: 283px;
+    
+    font-family: League Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 150%;
+    /* identical to box height, or 300px */
+    
+    
+    color: #FF4A7E;
+    text-shadow: -2px 0 #00D0DA, 0 2px #00D0DA, 2px 0 #00D0DA, 0 -2px #00D0DA;
+    -webkit-text-stroke: 5px #00D0DA;
+  }
+
+  h4 {
+    position: absolute;
+    width: 143px;
+    height: 50px;
+    left: 671px;
+    top: 533px;
+    
+    font-family: League Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 80%;
+    /* or 48px */
+    
+    
+    color: #00D0DA;
+    // text-shadow: -2px 0 #00D0DA, 0 2px #00D0DA, 2px 0 #00D0DA, 0 -2px #00D0DA;
+    // -webkit-text-stroke: 5px #00D0DA;
+  }
+
+  .rectangle {
+    position: absolute;
+    width: 699px;
+    height: 1121px;
+    left: 1074px;
+    top: 188px;
+    
+    background: #00D0DA;
+    border: 10px solid #000000;
+    box-sizing: border-box;    
+  }
+
+  p {
+    position: absolute;
+    width: 580px;
+    height: 972px;
+    left: 1134px;
+    top: 261px;
+    
+    font-family: Lacquer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 150%;
+    /* or 33px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+}
+

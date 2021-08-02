@@ -1,0 +1,323 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+  .image2 {
+    position: absolute;
+    width: 703px;
+    height: 199px;
+    left: -17px;
+    top: 31px;    
+  }
+  .image3 {
+    position: absolute;
+    width: 842px;
+    height: 292px;
+    left: 0px;
+    top: 1230px;
+  }
+  .image4 {
+    position: absolute;
+    width: 961px;
+    height: 1514px;
+    left: 960px;
+    top: 0px;
+  }
+  .image5 {
+    position: absolute;
+    width: 213px;
+    height: 213px;
+    left: 1659px;
+    top: 57px;
+  }
+  .image6 {
+    position: absolute;
+    width: 250px;
+    height: 243px;
+    left: 965px;
+    top: 326px;
+  }
+  .image7 {
+    position: absolute;
+    width: 509px;
+    left: 984px;
+    top: 559px;
+  }
+  .text1 {
+    position: absolute;
+    width: 503px;
+    height: 112px;
+    left: 1014px;
+    top: 57px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text2 {
+    position: absolute;
+    width: 122px;
+    height: 40px;
+    left: 1527px;
+    top: 61px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+  .text3 {
+    position: absolute;
+    width: 636px;
+    height: 124px;
+    left: 1014px;
+    top: 133px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text4 {
+    position: absolute;
+    width: 177px;
+    height: 27px;
+    left: 1667px;
+    top: 289px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text5 {
+    position: absolute;
+    width: 396px;
+    height: 112px;
+    left: 1180px;
+    top: 338px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 110%;
+    /* or 66px */
+    
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text6 {
+    position: absolute;
+    width: 278px;
+    height: 40px;
+    left: 1188px;
+    top: 470px;
+    
+    font-family: Knife Princess;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+    
+    
+    color: #FFFFFF;
+  }
+  .text7 {
+    position: absolute;
+    width: 312px;
+    height: 27px;
+    left: 1210px;
+    top: 521px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+    color: #FFFFFF;
+  }
+  .text8 {
+    position: absolute;
+    width: 380px;
+    height: 261px;
+    left: 1515px;
+    top: 420px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text9 {
+    position: absolute;
+    width: 401px;
+    height: 118px;
+    left: 1453px;
+    top: 733px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text10 {
+    position: absolute;
+    width: 401px;
+    height: 132px;
+    left: 1007px;
+    top: 739px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(234, 0, 210) 1px 0px 0px, rgb(234, 0, 210) 0.540302px 0.841471px 0px, rgb(234, 0, 210) -0.416147px 0.909297px 0px, rgb(234, 0, 210) -0.989992px 0.14112px 0px, rgb(234, 0, 210) -0.653644px -0.756802px 0px, rgb(234, 0, 210) 0.283662px -0.958924px 0px, rgb(234, 0, 210) 0.96017px -0.279415px 0px;
+  }
+  .text11 {
+    position: absolute;
+    width: 412px;
+    height: 617px;
+    left: 1007px;
+    top: 834px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+  .text12 {
+    position: absolute;
+    width: 324px;
+    height: 72px;
+    left: 1460px;
+    top: 856px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-shadow: rgb(0, 146, 32) 1px 0px 0px, rgb(0, 146, 32) 0.540302px 0.841471px 0px, rgb(0, 146, 32) -0.416147px 0.909297px 0px, rgb(0, 146, 32) -0.989992px 0.14112px 0px, rgb(0, 146, 32) -0.653644px -0.756802px 0px, rgb(0, 146, 32) 0.283662px -0.958924px 0px, rgb(0, 146, 32) 0.96017px -0.279415px 0px;
+    color: #FFFFFF;
+  }
+  .text13 {
+    position: absolute;
+    width: 440px;
+    height: 118px;
+    left: 1460px;
+    top: 921px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+    color: #FFFFFF;
+  }
+  .text14 {
+    position: absolute;
+    width: 431px;
+    height: 132px;
+    left: 1460px;
+    top: 1070px;
+    
+    font-family: Masterblast;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-shadow: rgb(255, 0, 46) 1px 0px 0px, rgb(255, 0, 46) 0.540302px 0.841471px 0px, rgb(255, 0, 46) -0.416147px 0.909297px 0px, rgb(255, 0, 46) -0.989992px 0.14112px 0px, rgb(255, 0, 46) -0.653644px -0.756802px 0px, rgb(255, 0, 46) 0.283662px -0.958924px 0px, rgb(255, 0, 46) 0.96017px -0.279415px 0px;
+    color: #FFFFFF;
+  }
+  .text15 {
+    position: absolute;
+    width: 440px;
+    height: 343px;
+    left: 1460px;
+    top: 1105px;
+    
+    font-family: DM Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+    color: #FFFFFF;
+  }
+}

@@ -248,6 +248,8 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Pacifico"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Lacquer"></link>
           
           {/* ipfs next.js fix */}
           <style

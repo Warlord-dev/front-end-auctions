@@ -1,0 +1,153 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();  
+    background-color: #FFFFFF;
+    
+    .image1 {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 0px;
+        top: 0px;
+    }
+    .image2 {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+    }
+    .image3 {
+        position: absolute;
+        width: 518px;
+        height: 76px;
+        left: 37px;
+        top: 37px;
+    }
+    .text1 {
+        position: absolute;
+        width: 756px;
+        height: 88px;
+        left: 75px;
+        top: 96px;
+        
+        font-family: Julietta Messie Demo;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 110%;
+        /* identical to box height, or 88px */
+        
+        
+        color: #E394FF;
+    }
+    .image4 {
+        position: absolute;
+        width: 960px;
+        height: 128px;
+        left: 0px;
+        top: 1369px;
+        
+        background: #664444;
+    }
+    .text2 {
+        position: absolute;
+        width: 114px;
+        height: 40px;
+        left: -47px;
+        top: 1413px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 15px;
+        line-height: 110%;
+        /* or 17px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+        transform: rotate(90deg);        
+    }
+    .text3 {
+        position: absolute;
+        width: 114px;
+        height: 44px;
+        left: -5px;
+        top: 1411px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 110%;
+        /* identical to box height, or 44px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+        transform: rotate(90deg);
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.1) rotate(90deg);
+        }
+    }
+    .text4 {
+        position: absolute;
+        width: 860px;
+        height: 91px;
+        left: 80px;
+        top: 1387px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 110%;
+        /* or 13px */
+        
+        
+        color: #FFFFFF;
+    }
+    .text5 {
+        position: absolute;
+        width: 159px;
+        height: 88px;
+        left: 1738px;
+        top: 23px;
+        
+        font-family: Just Another Hand;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 110%;
+        /* identical to box height, or 88px */
+        
+        text-align: right;
+        
+        color: #FFFFFF;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    .text6 {
+        position: absolute;
+        width: 248px;
+        height: 229px;
+        left: 1649px;
+        top: 102px;
+        
+        font-family: Just Another Hand;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 110%;
+        /* or 22px */
+        
+        text-align: right;
+        
+        color: #FFFFFF;
+    }
+}

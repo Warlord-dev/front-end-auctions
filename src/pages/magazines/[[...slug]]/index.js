@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Router, { useRouter } from 'next/router'
 import WebViewer from '@containers/web-view'
 import MagazineViewer from '@containers/magazine-view'
-import MagazineMobile from '../../../containers/magazine-mobile'
+import MagazineMobile from '@containers/magazine-mobile'
 import MapViewer from '@containers/map-view'
 import magazineIssues from '@constants/magazines'
 

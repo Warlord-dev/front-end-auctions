@@ -1,0 +1,83 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #FFFFFF;
+
+    .image1 {
+      position: absolute;
+      width: 960px;
+      height: 1497px;
+      left: 0px;
+      top: 0px;
+    }
+    .text1 {
+      position: absolute;
+      width: 449px;
+      height: 88px;
+      left: 49px;
+      top: 31px;
+      
+      font-family: League Gothic;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 110%;
+      /* or 44px */
+      
+      
+      color: #CB5858;
+    }
+    .image2 {
+      position: absolute;
+      width: 960px;
+      height: 1497px;
+      left: 960px;
+      top: 0px;
+      overflow: hidden;
+      .image3 {
+        position: absolute;
+        height: 1497px;
+        left:-120px;
+        top: 0px;
+      }
+    }
+    .text2 {
+      position: absolute;
+      width: 338px;
+      height: 108px;
+      left: 983px;
+      top: 1281px;
+      
+      font-family: Space Mono;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 8px;
+      line-height: 110%;
+      /* or 9px */
+      
+      
+      color: #FFFFFF;
+    }
+    .text3 {
+      position: absolute;
+      width: 632px;
+      height: 66px;
+      left: 983px;
+      top: 1392px;
+      
+      font-family: Space Mono;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 60px;
+      line-height: 110%;
+      /* identical to box height, or 66px */
+      
+      
+      color: #FFFFFF;
+      transition: transform .2s;
+      &:hover {
+          transform: scale(1.1);
+      }
+    }
+}

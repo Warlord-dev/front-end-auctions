@@ -1,0 +1,541 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #FFFFFF;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+  .text1 {
+    position: absolute;
+    width: 417px;
+    height: 150px;
+    left: 98px;
+    top: 29px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 75px;
+    
+    color: #FFFFFF;
+  }
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 53px;
+    left: 0px;
+    top: 316px;
+    
+    background: #FFFFFF;
+  }
+  .image5 {
+    position: absolute;
+    width: 996px;
+    height: 1215px;
+    left: -22px;
+    top: 282px;
+  }
+  .image3 {
+    position: absolute;
+    width: 691px;
+    height: 669px;
+    left: -19px;
+    top: -337px;
+  }
+  .text2 {
+    position: absolute;
+    width: 377px;
+    height: 150px;
+    left: 63px;
+    top: 403px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    
+    color: #FFFFFF;
+    .bold {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  .image4 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+  .image6 {
+    position: absolute;
+    width: 456px;
+    height: 283.72px;
+    left: 24px;
+    top: 343px;    
+  }
+  .image7 {
+    position: absolute;
+    width: 456px;
+    height: 283.72px;
+    left: 480px;
+    top: 425px;    
+  }
+  .image8 {
+    position: absolute;
+    width: 456px;
+    height: 283.72px;
+    left: 24px;
+    top: 627px;
+  }
+  .image9 {
+    position: absolute;
+    width: 456px;
+    height: 283.72px;
+    left: 480px;
+    top: 748px;
+  }
+  .image10 {
+    position: absolute;
+    width: 456px;
+    height: 283.72px;
+    left: 24px;
+    top: 1172px;
+  }
+  .image11 {
+    position: absolute;
+    width: 456px;
+    height: 295px;
+    left: 480px;
+    top: 1036px;
+  }
+  .text3 {
+    position: absolute;
+    width: 377px;
+    height: 180px;
+    left: 531px;
+    top: 469px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    
+    color: #FFFFFF;
+    .bold {
+      font-weight: bold;
+    }
+  }
+  .text4 {
+    position: absolute;
+    width: 377px;
+    height: 210px;
+    left: 63px;
+    top: 657px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    
+    color: #FFFFFF;
+    .bold {
+      font-weight: bold;
+    }
+  }
+  .text5 {
+    position: absolute;
+    width: 377px;
+    height: 189px;
+    left: 525px;
+    top: 785px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    
+    color: #FFFFFF;
+    .bold {
+      font-weight: bold;
+    }
+  }
+  .text6 {
+    position: absolute;
+    width: 377px;
+    height: 162px;
+    left: 63px;
+    top: 1230px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    
+    color: #FFFFFF;
+    .bold {
+      font-weight: bold;
+    }
+  }
+  .text7 {
+    position: absolute;
+    width: 397px;
+    height: 208px;
+    left: 511px;
+    top: 1069px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 25px;
+    
+    color: #FFFFFF;
+    .bold {
+      font-weight: bold;
+    }
+  }
+  .image12 {
+    position: absolute;
+    width: 215px;
+    height: 217px;
+    left: 388px;
+    top: 297px;
+  }
+  .image13 {
+    position: absolute;
+    width: 348px;
+    height: 350px;
+    left: 281px;
+    top: 675px;
+  }
+  .image14 {
+    position: absolute;
+    width: 215px;
+    height: 217px;
+    left: 347px;
+    top: 1298px;
+  }
+  .image15 {
+    position: absolute;
+    width: 216px;
+    height: 216px;
+    left: -33px;
+    top: 1064px;
+  }
+  .image16 {
+    position: absolute;
+    width: 824px;
+    height: 490px;
+    left: 1028px;
+    top: -215px;
+  }
+  .text8 {
+    position: absolute;
+    width: 713px;
+    height: 38px;
+    left: 1083px;
+    top: 21px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 37px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .image17 {
+    position: absolute;
+    width: 820px;
+    height: 820px;
+    left: 1030px;
+    top: 381px;
+  }
+  .image18 {
+    position: absolute;
+    width: 110px;
+    height: 109.95px;
+    left: 40px;
+    top: 205px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image19 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 166px;
+    top: 63px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image20 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 400px;
+    top: 10px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image21 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 1382px;
+    top: 347px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image22 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 644px;
+    top: 100px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image23 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 585px;
+    top: 60px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image24 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 756px;
+    top: 289px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image30 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 16px;
+    top: 502px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image25 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 749px;
+    top: 497px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image26 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 635px;
+    top: 675px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image27 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 1420px;
+    top: 1118px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image28 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 412px;
+    top: 768px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image29 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 167px;
+    top: 708px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .image31 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 259px;
+    box-shadow: 0px 4px 20px 10px #FF00F5;
+    border-radius: 100%;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .text9 {
+    position: absolute;
+    width: 724px;
+    height: 105px;
+    left: 1078px;
+    top: 49px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 105px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .text10 {
+    position: absolute;
+    width: 713px;
+    height: 76px;
+    left: 1083px;
+    top: 154px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 37px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .text11 {
+    position: absolute;
+    width: 632px;
+    height: 60px;
+    left: 1113px;
+    top: 274px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .image32 {
+    position: absolute;
+    width: 584px;
+    height: 584px;
+    left: 1137px;
+    top: 513px;
+  }
+  .text12 {
+    position: absolute;
+    width: 817px;
+    height: 210px;
+    left: 1033px;
+    top: 1255px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .rotate {
+    position: absolute;
+    width: 874px;
+    height: 900px;
+    left: 1003px;
+    top: 344px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 30s linear infinite;
+  }
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

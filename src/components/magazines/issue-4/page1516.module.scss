@@ -1,0 +1,239 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #FFFFFF;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 948px;
+    height: 1507px;
+    left: 0px;
+    top: 0px;
+  }
+  .image2 {
+    position: absolute;
+    width: 972px;
+    height: 1505px;
+    left: 948px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 68px;
+    height: 30px;
+    left: 27px;
+    top: 16px;
+    
+    font-family: A DAY WITHOUT SUN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* identical to box height, or 30px */
+    
+    
+    color: #FF0000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 227px;
+    height: 40px;
+    left: -66.5px;
+    top: 139.5px;
+    
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FF0000;
+    
+    transform: rotate(-90deg);
+  }
+
+  .image3 {
+    position: absolute;
+    width: 443px;
+    height: 418px;
+    left: 1293px;
+    top: 1079px;
+    
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .image4 {
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    left: 1567px;
+    top: 30px;
+    
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .image5 {
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    left: 1427px;
+    top: 16px;
+    
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .image6 {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    left: 1824px;
+    top: 0px;
+    
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .image7 {
+    position: absolute;
+    width: 282px;
+    height: 283px;
+    left: 960px;
+    top: 1098px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 599px;
+    height: 132px;
+    left: 980px;
+    top: 136px;
+    
+    font-family: Empirez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 110%;
+    /* identical to box height, or 132px */
+    
+    
+    color: #3A6B6B;
+    
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0px 4px 30px #000000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 564.71px;
+    height: 700.3px;
+    left: 1112.44px;
+    top: 329.28px;
+    
+    font-family: Think Thick;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 7px;
+    line-height: 13px;
+    transform: rotate(-5deg);
+    /* or 33px */
+    
+    
+    color: #FFB9B9;    
+    .title {
+      font-family: Cool Chaos;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  .text5 {
+    position: absolute;
+    width: 152.97px;
+    height: 49.61px;
+    left: 1151.87px;
+    top: 1045.8px;
+    
+    font-family: Cool Chaos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
+    
+    
+    color: #FFB9B9;
+    transform: rotate(-5deg);
+  }
+  .image8 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 1208px;
+    top: 335px;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .image9 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 1275px;
+    top: 570px;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .image10 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 1260px;
+    top: 760px;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text6 {
+    position: absolute;
+    width: 966px;
+    height: 88px;
+    left: 1556px;
+    top: 1381px;
+    
+    font-family: Empirez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+    /* identical to box height, or 88px */
+    
+    
+    color: #3A6B6B;
+    
+    text-shadow: rgb(255, 255, 255) 3px 0px 0px, rgb(255, 255, 255) 2.83487px 0.981584px 0px, rgb(255, 255, 255) 2.35766px 1.85511px 0px, rgb(255, 255, 255) 1.62091px 2.52441px 0px, rgb(255, 255, 255) 0.705713px 2.91581px 0px, rgb(255, 255, 255) -0.287171px 2.98622px 0px, rgb(255, 255, 255) -1.24844px 2.72789px 0px, rgb(255, 255, 255) -2.07227px 2.16926px 0px, rgb(255, 255, 255) -2.66798px 1.37182px 0px, rgb(255, 255, 255) -2.96998px 0.42336px 0px, rgb(255, 255, 255) -2.94502px -0.571704px 0px, rgb(255, 255, 255) -2.59586px -1.50383px 0px, rgb(255, 255, 255) -1.96093px -2.27041px 0px, rgb(255, 255, 255) -1.11013px -2.78704px 0px, rgb(255, 255, 255) -0.137119px -2.99686px 0px, rgb(255, 255, 255) 0.850987px -2.87677px 0px, rgb(255, 255, 255) 1.74541px -2.43999px 0px, rgb(255, 255, 255) 2.44769px -1.73459px 0px, rgb(255, 255, 255) 2.88051px -0.838247px 0px;
+  }
+
+  .image11 {
+    position: absolute;
+    width: 20.15px;
+    height: 20.15px;
+    left: 1275px;
+    top: 1060px;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

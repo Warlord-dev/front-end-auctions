@@ -1,0 +1,228 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .image4 {
+      height: 100%;
+    }
+  }
+  .image2 {
+    position: absolute;
+    width: 515px;
+    height: 2px;
+    left: 702.5px;
+    top: 257.5px;
+    transform: rotate(90deg);
+  }
+  .image3 {
+    position: absolute;
+    width: 116px;
+    height: 423px;
+    left: 903px;
+    top: 1074px;
+  }
+  .text1 {
+    position: absolute;
+    width: 1331px;
+    height: 400px;
+    left: 294px;
+    top: 591px;
+    
+    font-family: Heaven Wanders DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 100%;
+    /* or 200px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .image5 {
+    position: absolute;
+    width: 327px;
+    height: 525px;
+    left: -113.08px;
+    top: -38.91px;
+    transform: rotate(20deg);
+  }
+  .image6 {
+    position: absolute;
+    width: 327px;
+    height: 525px;
+    left: 561px;
+    top: 1023px;
+  }
+  .text2 {
+    position: absolute;
+    width: 650.31px;
+    height: 90px;
+    left: 251.06px;
+    top: 21.29px;
+    
+    font-family: Comic Sans MS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 100%;
+    /* or 45px */
+    
+    
+    color: #FFFFFF;
+    transform: rotate(-7deg);
+  }
+  .text3 {
+    position: absolute;
+    width: 649.48px;
+    height: 124.15px;
+    left: 253.14px;
+    top: 123.86px;
+    
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+    
+    
+    color: #FFFFFF;
+    transform: rotate(-7deg);
+  }
+  .text4 {
+    position: absolute;
+    width: 842.02px;
+    height: 493.2px;
+    left: 98.91px;
+    top: 237.01px;
+    
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+    
+    
+    color: #FFFFFF;
+    transform: rotate(-7deg);
+  }
+  .text5 {
+    position: absolute;
+    width: 467.82px;
+    height: 775.1px;
+    left: 74.49px;
+    top: 601.62px;
+    
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+    
+    
+    color: #FFFFFF;
+    transform: rotate(-7deg);
+  }
+  .image7 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(0, 0, 0, 0.46);
+  }
+  .text6 {
+    position: absolute;
+    width: 311px;
+    height: 60px;
+    left: 1205px;
+    top: 39px;
+    
+    font-family: Cochin;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    
+    color: #FFFFFF;
+  }
+  .text7 {
+    position: absolute;
+    width: 311px;
+    height: 60px;
+    left: 1543px;
+    top: 39px;
+    
+    font-family: Cochin;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    
+    color: #FFFFFF;
+  }
+  .text8 {
+    position: absolute;
+    width: 842px;
+    height: 462px;
+    left: 1040px;
+    top: 117px;
+    
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+    
+    
+    color: #FFFFFF;
+  }
+  .text9 {
+    position: absolute;
+    width: 403px;
+    height: 661px;
+    left: 1479px;
+    top: 585px;
+    
+    font-family: Ayuthaya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+    
+    
+    color: #FFFFFF;
+  }
+  .image8 {
+    position: absolute;
+    width: 917.46px;
+    height: 683.12px;
+    left: 1034px;
+    top: 932px;
+  }
+}

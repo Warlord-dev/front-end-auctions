@@ -1,0 +1,243 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    background-color: #000000;
+
+  .image1 {
+    position: absolute;
+    width: 858px;
+    height: 871.25px;
+    left: 21px;
+    top: -369px;
+  }
+  .image2 {
+    position: absolute;
+    width: 262px;
+    height: 1640px;
+    left: -48px;
+    top: -2px;
+  }
+  .text1 {
+    position: absolute;
+    width: 718px;
+    height: 185px;
+    left: 242px;
+    top: 570px;
+    
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+    /* or 80px */
+    
+    
+    color: #FFFFFF;
+  }
+  .text2 {
+    position: absolute;
+    width: 149px;
+    height: 733px;
+    left: 245px;
+    top: 785px;
+    
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100%;
+    /* or 100px */
+    
+    
+    color: #0500FF;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #0400ff;
+    -webkit-text-fill-color: #0400ff;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -48px;
+    filter: blur(2px);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 326px;
+    left: 960px;
+    top: -2px;
+  }
+  .text3 {
+    position: absolute;
+    width: 348px;
+    height: 84px;
+    left: 981px;
+    top: 27px;
+    
+    font-family: Cormorant Infant;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 120.53%;
+    /* or 84px */
+    
+    
+    color: #FFFFFF;
+  }
+  .image4 {
+    position: absolute;
+    width: 91px;
+    height: 99px;
+    left: 1271px;
+    top: 27px;
+  }
+  .text4 {
+    position: absolute;
+    width: 500px;
+    height: 126px;
+    left: 981px;
+    top: 97px;
+    
+    font-family: Counter-Strike;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 90%;
+    /* or 63px */
+    
+    
+    color: #B00000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-fill-color: #b00000;
+  }
+  .text5 {
+    position: absolute;
+    width: 158px;
+    height: 200px;
+    left: 1451px;
+    top: 14px;
+    
+    font-family: Chilanka;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 120.53%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+  .text6 {
+    position: absolute;
+    width: 316px;
+    height: 72px;
+    left: 1271px;
+    top: 223px;
+    
+    font-family: Chilanka;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    
+    color: #FFFFFF;
+    
+  }
+  .image5 {
+    position: absolute;
+    width: 278px;
+    height: 363px;
+    left: 960px;
+    top: 214px;
+  }
+  .image6 {
+    position: absolute;
+    width: 961px;
+    height: 1499px;
+    left: 960px;
+    top: -2px;
+  }
+  .image7 {
+    position: absolute;
+    width: 459px;
+    height: 534px;
+    left: 1462px;
+    top: 963px;
+    overflow: hidden;
+    .image15 {
+        width: 100%;
+    }
+  }
+  .image17 {
+    width: 100%;
+  }
+  .image8 {
+    position: absolute;
+    width: 1096px;
+    height: 693px;
+    left: 412px;
+    top: 875px;
+  }
+  .text7 {
+    position: absolute;
+    width: 916px;
+    height: 72px;
+    left: 1004px;
+    top: 875px;
+    
+    font-family: Coda Caption;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+    
+    
+    color: #FF0000;
+  }
+  .image9 {
+    position: absolute;
+    width: 309px;
+    height: 387px;
+    left: 1611px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .image10 {
+      height: 100%;
+    }
+    .playbutton1 {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      right: 12px;
+      top: 5px;
+    }
+  }
+  .image12 {
+    position: absolute;
+    width: 960px;
+    height: 521px;
+    left: 960px;
+    top: 317px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .image14 {
+      height: 100%;
+    }
+    .playbutton2 {
+      position: absolute;
+      width: 62px;
+      height: 62px;
+      right: 23px;
+      bottom: 28px;
+    }
+  }
+}

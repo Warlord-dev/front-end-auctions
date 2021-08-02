@@ -1,0 +1,95 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3174px;
+  background-color: #FFFFFF;
+  color: white;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    left: 0px;
+    top: 0px;
+  }
+  .image2 {
+    position: absolute;
+    width: 568px;
+    height: 381px;
+    left: -96px;
+    top: 379px;
+  }
+  .image3 {
+    position: absolute;
+    width: 554px;
+    height: 554px;
+    left: -82px;
+    top: 760px;
+  }
+  .image4 {
+    position: absolute;
+    width: 396px;
+    height: 555px;
+    left: -10px;
+    top: 1313px;
+  }
+  .image5 {
+    position: absolute;
+    width: 387px;
+    height: 342px;
+    left: -6px;
+    top: 1867px;    
+  }
+  .image6 {
+    position: absolute;
+    width: 387px;
+    height: 402px;
+    left: 1px;
+    top: 2209px;
+  }
+  .image7 {
+    position: absolute;
+    width: 374px;
+    height: 564px;
+    left: 1px;
+    top: 2612px;    
+  }
+  .text1 {
+    position: absolute;
+    width: 68px;
+    height: 30px;
+    left: 272px;
+    top: 2893px;
+    
+    font-family: A DAY WITHOUT SUN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* identical to box height, or 30px */
+    
+    
+    color: #FF0000;
+  }
+  .text2 {
+    position: absolute;
+    width: 227px;
+    height: 40px;
+    left: 178.5px;
+    top: 3016.5px;    
+    
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FF0000;
+    
+    transform: rotate(-90deg);
+  }
+}

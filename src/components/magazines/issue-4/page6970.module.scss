@@ -1,0 +1,117 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    .image2 {
+      position: absolute;
+      height: 1497px;
+      left: -75px;
+      top: 0px;
+    }
+  }
+  .text1 {
+    position: absolute;
+    width: 217px;
+    height: 55px;
+    left: 23px;
+    top: 19px;
+    
+    font-family: Londrina Shadow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    /* identical to box height, or 55px */
+    
+    color: #FFFFFF;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+  .text2 {
+    position: absolute;
+    width: 256px;
+    height: 55px;
+    left: 23px;
+    top: 74px;
+
+    font-family: Londrina Shadow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    /* identical to box height, or 55px */
+
+    color: #FFFFFF;
+  }
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+  .text3 {
+    position: absolute;
+    width: 219px;
+    height: 110px;
+    left: 1004px;
+    top: 12px;
+    
+    font-family: ThickDeco;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    /* or 55px */
+    
+    
+    color: #457CAC;
+  }
+  .text4 {
+    position: absolute;
+    width: 378px;
+    height: 156px;
+    left: 1513px;
+    top: 1248px;
+
+    font-family: ThickDeco;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    /* or 12px */
+
+
+    color: #FFFFFF;
+  }
+  .text5 {
+    position: absolute;
+    width: 327px;
+    height: 55px;
+    left: 1513px;
+    top: 1410px;
+
+    font-family: ThickDeco;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    /* identical to box height, or 55px */
+
+
+    color: #457CAC;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+}

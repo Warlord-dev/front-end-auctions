@@ -1,0 +1,295 @@
+@import './styles.module.scss';
+
+.wrapper {
+    @include magazineWrapper();    
+    background: #FFFFFF;
+
+    .image1 {
+        position: absolute;
+        width: 954px;
+        height: 70px;
+        left: 0px;
+        top: 1339px;
+        
+        background: #2DBFED;
+    }
+    .image2 {
+        position: absolute;
+        width: 954px;
+        height: 70px;
+        left: 0px;
+        top: 1427px;
+        
+        background: #2DBFED;
+    }
+    .image3 {
+        position: absolute;
+        width: 1236px;
+        height: 1513px;
+        left: -276px;
+        top: -8px;        
+    }
+    .image4 {
+        position: absolute;
+        width: 960px;
+        height: 1497px;
+        left: 960px;
+        top: 0px;
+        .image5 {
+            position: absolute;
+            height: 100%;
+        }
+    }
+    .image6 {
+        position: absolute;
+        width: 960px;
+        height: 90px;
+        left: 960px;
+        top: 0;
+        
+        background: #FF3D00;
+    }
+    .text1 {
+        position: absolute;
+        width: 914px;
+        height: 95px;
+        left: 960px;
+        top: -16px;
+        
+        font-family: CropFontXtra;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 120px;
+        line-height: 120.53%;
+        /* or 145px */
+        
+        text-align: center;
+        
+        color: #B51212;
+        
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: #ffffff;
+        -webkit-text-fill-color: #b51212;
+        transition: transform .2s;
+        &:hover {
+          transform: scale(1.1);
+        }
+    }
+    .image7 {
+        position: absolute;
+        width: 938px;
+        height: 1367px;
+        left: 957px;
+        top: 102px;
+    }
+    .image8 {
+        position: absolute;
+        width: 497px;
+        height: 497px;
+        left: 1012px;
+        top: 110px;
+        border-radius: 100%;
+        background: #000000;
+    }
+    .text2 {
+        position: absolute;
+        width: 272px;
+        height: 55px;
+        left: 1121px;
+        top: 161px;
+        
+        font-family: Griffy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 120.53%;
+        /* or 31px */
+        
+        text-align: center;
+        
+        color: #DCFF03;
+    }
+    .text3 {
+        position: absolute;
+        width: 396px;
+        height: 278px;
+        left: 1058px;
+        top: 220px;
+        
+        font-family: Griffy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 120.53%;
+        /* or 31px */
+        
+        text-align: center;
+        
+        color: #DCFF03;
+    }
+    .text4 {
+        position: absolute;
+        width: 396px;
+        height: 116px;
+        left: 1484px;
+        top: 829px;
+        
+        font-family: Gravitas One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 120.53%;
+        /* or 31px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    .text5 {
+        position: absolute;
+        width: 396px;
+        height: 55px;
+        left: 1382px;
+        top: 1035px;
+        
+        font-family: Gravitas One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 120.53%;
+        /* or 31px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    .text6 {
+        position: absolute;
+        width: 127px;
+        height: 34px;
+        left: 989px;
+        top: 915px;
+        
+        font-family: Hind Siliguri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 120.53%;
+        /* or 31px */
+        
+        text-align: center;
+        
+        color: #06FFE1;
+    }
+    .text7 {
+        position: absolute;
+        width: 127px;
+        height: 34px;
+        left: 1089px;
+        top: 915px;
+        
+        font-family: Hind Siliguri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 120.53%;
+        /* or 31px */
+        
+        text-align: center;
+        
+        color: #06FFE1;        
+    }
+    .text8 {
+        position: absolute;
+        width: 127px;
+        height: 34px;
+        left: 1192px;
+        top: 915px;
+        
+        font-family: Hind Siliguri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 120.53%;
+        /* or 31px */
+        
+        text-align: center;
+        
+        color: #06FFE1;
+    }
+    .text9 {
+        position: absolute;
+        width: 256px;
+        height: 149px;
+        left: 1010px;
+        top: 1306px;
+        
+        font-family: Fira Code;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 120.53%;
+        /* or 31px */
+        
+        
+        color: #062EFF;
+    }
+    .image9 {
+        position: absolute;
+        width: 365px;
+        height: 282px;
+        left: 1527px;
+        top: 475px;
+        
+        border: 10px solid #000000;
+        box-sizing: border-box;
+    }
+    .image10 {
+        position: absolute;
+        width: 496px;
+        height: 236px;
+        left: 1255px;
+        top: 1261px;
+        overflow: hidden;
+        border: 10px solid #000000;
+        box-sizing: border-box;
+        .image11 {
+            width: 100%;
+        }
+    }
+    .image12 {
+        position: absolute;
+        width: 162px;
+        height: 162px;
+        left: 1438px;
+        top: 678px;
+        transform: rotate(-10deg);
+    }
+    .image13 {
+        position: absolute;
+        width: 156.71px;
+        height: 162px;
+        left: 1331.88px;
+        top: 876px;
+        
+        transform: matrix(-0.98, 0.17, 0.17, 0.98, 0, 0);
+    }
+    .image14 {
+        position: absolute;
+        width: 125px;
+        height: 110px;
+        left: 1123px;
+        top: 1370px;
+        
+        transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+    .image15 {
+        position: absolute;
+        width: 365px;
+        height: 282px;
+        left: 1010px;
+        top: 945px;
+        border: 10px solid #000000;
+        box-sizing: border-box;
+    }
+}

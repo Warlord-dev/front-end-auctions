@@ -1,0 +1,148 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #000000;
+
+  .image1 {
+    position: absolute;
+    width: 1378px;
+    height: 1497px;
+    left: -150px;
+    top: 0px;    
+  }
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 1498px;
+    left: 960px;
+    top: 0px;
+    
+    background: #000000;
+  }
+  .text1 {
+    position: absolute;
+    width: 844px;
+    height: 329px;
+    left: 1013px;
+    top: 36px;
+    
+    font-family: Suez One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 120.53%;
+    /* or 25px */
+    
+    letter-spacing: 0.07em;
+    
+    color: #FFFFFF;
+  }
+  .text2 {
+    position: absolute;
+    width: 806px;
+    height: 269px;
+    left: 1063px;
+    top: 360px;
+    
+    font-family: PÕRTO;
+    font-size: 100px;
+    line-height: 120.53%;
+    /* or 121px */
+    
+    text-align: right;
+    letter-spacing: 0.1em;
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+  }
+  .image4 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 1208px;
+    top: 423px;
+  }
+  .text3 {
+    position: absolute;
+    width: 888px;
+    height: 110px;
+    left: 1092px;
+    top: 603px;
+    
+    font-family: PÕRTO;
+    font-size: 70px;
+    line-height: 120.53%;
+    /* or 84px */
+    
+    letter-spacing: 0.08em;
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+  }
+  .text4 {
+    position: absolute;
+    width: 868px;
+    height: 329px;
+    left: 989px;
+    top: 705px;
+    
+    font-family: Snippet;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120.53%;
+    /* or 28px */
+    
+    text-align: right;
+    letter-spacing: 0.07em;
+    
+    color: #FFFFFF;
+    
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+  }
+  .image5 {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    left: 948px;
+    top: 1032px;
+    transition: transform .2s; /* Animation */
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .text5 {
+    position: absolute;
+    width: 630px;
+    height: 115px;
+    left: 1219px;
+    top: 1082px;
+    
+    font-family: PÕRTO;
+    font-size: 100px;
+    line-height: 120.53%;
+    /* or 121px */
+    
+    text-align: right;
+    letter-spacing: 0.1em;
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+    color: #FFFFFF;
+  }
+  .image6 {
+    position: absolute;
+    width: 654px;
+    height: 394px;
+    left: 1203px;
+    top: 1115px;
+  }
+}

@@ -1,0 +1,105 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #FFFFFF;
+
+    .image1 {
+        position: absolute;
+        width: 1497px;
+        height: 294px;
+        left: -601.5px;
+        top: 601.5px;
+        transform: rotate(-90deg);
+    }
+    .image2 {
+        position: absolute;
+        width: 1300px;
+        height: 1497px;
+        left: 294px;
+        top: 0px;
+    }
+    .image3 {
+        position: absolute;
+        width: 326px;
+        height: 1497px;
+        left: 1594px;
+        top: 0px;
+        overflow: hidden;
+        .image4 {
+            position: absolute;
+            height: 100%;
+            left: -440px;
+        }
+    }
+    .text1 {
+        position: absolute;
+        width: 592px;
+        height: 120px;
+        left: 334px;
+        top: 19px;
+        
+        font-family: Knife Princess;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 120.53%;
+        /* or 60px */
+        
+        
+        color: #FFFFFF;
+    }
+    .text2 {
+        position: absolute;
+        width: 73px;
+        height: 24px;
+        left: 334px;
+        top: 150px;
+        
+        font-family: Knife Princess;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 120.53%;
+        /* or 24px */
+        
+        
+        color: #FFFFFF;
+    }
+    .text3 {
+        position: absolute;
+        width: 505px;
+        height: 1072px;
+        left: 367px;
+        top: 369px;
+        
+        font-family: Milonga;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 27px;
+        line-height: 120.53%;
+        /* or 33px */
+        
+        text-align: center;
+        
+        color: #000000;
+    }
+    .text4 {
+        position: absolute;
+        width: 505px;
+        height: 1072px;
+        left: 1025px;
+        top: 369px;
+        
+        font-family: Milonga;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 120.53%;
+        /* or 23px */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+}
