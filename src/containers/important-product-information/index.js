@@ -63,7 +63,7 @@ const ImportantProductInformation = ({
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
   const clothesId = garment.id;
-
+  
   const auction = useSelector(getAuctionById(auctionId));
   const historyTokenId = useSelector(getAllHistoryByTokenId);
   const history = historyTokenId.get(auctionId);
@@ -377,7 +377,7 @@ const ImportantProductInformation = ({
 };
 
 ImportantProductInformation.propTypes = {
-  auctionId: PropTypes.string.isRequired,
+  auctionId: PropTypes.string,
   tabIndex: PropTypes.number,
   garment: PropTypes.object.isRequired,
   estimateApyText: PropTypes.string,

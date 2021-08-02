@@ -44,8 +44,8 @@ const collections = [
   },
   {
     id: 1,
-    text: 'Collection: Kodomodachi x Charli Cohen',
-    designer: 'Kodomodachi',
+    text: 'Collection: Cosmos x Charli Cohen',
+    designer: 'Cosmos',
     image1: 'https://digitalax.mypinata.cloud/ipfs/QmYvo2f6NfCD75nL49Gy5wi1jEYSh8z7wTHJjnJbV9KJt3',
     image: 'https://digitalax.mypinata.cloud/ipfs/QmaXujooccp7MsnNSk6M3A6oxGiPnsvTwwu8hutefFgDEJ',
   },

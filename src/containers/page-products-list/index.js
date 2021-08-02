@@ -40,6 +40,7 @@ const PageProductsList = ({ collectionId }) => {
   const currentCollections = collections.toJS();
   const [showGraphIds, setShowGraphIds] = useState([]);
 
+
   if (collectionId === '1') {
     currentAuctions = amongUsAuctions;
   }

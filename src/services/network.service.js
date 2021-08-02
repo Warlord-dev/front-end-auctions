@@ -6,7 +6,6 @@ export const getEnabledNetworks = () =>
 
 export const getEnabledNetworkByChainId = (chainId) =>
   getEnabledNetworks().find((network) => Number(network.hex) === Number(chainId));
-
 export const requestSwitchNetwork = () => {
   window.ethereum
     .request({
