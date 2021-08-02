@@ -1,76 +1,102 @@
 @import './styles.module.scss';
 
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-602px); }
+}
+
 .wrapper {
   @include magazineWrapper();
-  background: linear-gradient(180deg, #EF5296 0%, #CA47A9 46.88%, #E869A2 100%);background-color: white;
-  color: #FFFFFF;
+  background-color: black;
+  color: white;
   display: flex;
   position: relative;
 
+  .backImage1 {
+    position: absolute;
+    width: 960px;
+    height: 1519px;
+    left: 0px;
+    top: -22px;
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 808px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+
+  .leftSideFrame {
+    position: absolute;
+    width: 149px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    background-color: #ff3636;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .rightSideFrame {
+    position: absolute;
+    width: 152px;
+    height: 1497px;
+    left: 1768px;
+    top: 0px;
+    background-color: #ff3636;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .animationFrame {
+    animation: scrolling 4s linear infinite;
+  }
+
+
+  .leftSideImageWrapper {
+    position: absolute;
+    width: 92.28px;
+    left: 31px;
+    top: 36px;
+  }
+
+  .rightSideImageWrapper {
+    position: absolute;
+    width: 83px;
+    height: 1660px;
+    right: 31px;
+    top: 36px;
+  }
+
   .image1 {
     position: absolute;
-    width: 146px;
-    height: 139px;
-    left: 768px;
-    top: 16px;    
+    width: 1623px;
+    height: 1497px;
+    left: 143px;
+    top: 0px;
   }
-  .image2 {
-    position: absolute;
-    width: 344px;
-    height: 471px;
-    left: -27px;
-    top: 1139px;
-  }
-  .image3 {
-    position: absolute;
-    width: 1250.4px;
-    height: 1656px;
-    left: 891px;
-    top: -79px;
-  }
+
   .text1 {
     position: absolute;
-    width: 544px;
-    height: 1244px;
-    left: 208px;
-    top: 114px;
+    width: 428px;
+    height: 367px;
+    left: 188px;
+    top: 22px;
     
-    font-family: Nunito Sans;
+    font-family: Encode Sans Semi Expanded;
     font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 150%;
-    /* or 24px */
-    
-    text-align: center;
-    
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 120.53%;
+    /* or 121px */    
     color: #FFFFFF;
-  }
-  .image4 {
-    position: absolute;
-    width: 598px;
-    height: 1208px;
-    left: 1143px;
-    top: 114px;
     
-    background: rgba(0, 0, 0, 0.51);
-  }
-  .text2 {
-    position: absolute;
-    width: 544px;
-    height: 1145px;
-    left: 1170px;
-    top: 145px;
-    
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 150%;
-    /* or 24px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;    
+    $stroke-color: #00BEDD;
+    text-shadow:  -5px -5px $stroke-color, -5px 5px $stroke-color, 5px -5px $stroke-color, 
+    -5px 0 $stroke-color, 0 5px $stroke-color, 5px 0 $stroke-color, 5px 5px $stroke-color, 0 -5px $stroke-color;
+    // -webkit-text-stroke: 5px #00BEDD;
   }
 }

@@ -250,6 +250,10 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Lacquer"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@700"></link>
           
           {/* ipfs next.js fix */}
           <style
