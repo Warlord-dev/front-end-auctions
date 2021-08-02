@@ -58,23 +58,6 @@ const Products = () => {
   const collections = useSelector(getAllCollections).toJS();
   const marketplaceOffers = useSelector(getAllMarketplaceOffers).toJS();
   const chainId = useSelector(getChainId);
-  // const currentCollections = useMemo(() => {
-  //   const jsCollection = collections.toJS();
-  //   return jsCollection.filter((val) => val.garmentAuctionID === auctionId);
-  // }, [collections]);
-
-  // const currentMarketplaceOffers = useMemo(() => {
-  //   const jsOffers = marketplaceOffers.toJS();
-  //   if (id !== '4') {
-  //     return jsOffers.filter((val) => val.garmentCollection.garmentAuctionID === auctionId);
-  //   } else {
-  //     return jsOffers.filter(
-  //       (val) =>
-  //         val.garmentCollection.garments.length &&
-  //         val.garmentCollection.garments[0].name.includes('DIGI'),
-  //     );
-  //   }
-  // }, [marketplaceOffers]);
 
   useSubscription(
     {
@@ -92,9 +75,7 @@ const Products = () => {
   useSubscription(
     {
       request:
-        id === '1' || id === '2'
-          ? wsApi.onDigitalaxGarmentsCollectionChange(auctionId)
-          : id === '4'
+          id === '4'
           ? wsApi.getAllDigitalaxGarmentsCollectionsV2()
           : wsApi.onDigitalaxGarmentsCollectionChangeV2(auctionId),
       next: (data) => {
@@ -107,16 +88,22 @@ const Products = () => {
   useSubscription(
     {
       request:
-        id === '1' || id === '2'
-          ? wsApi.onDigitalaxMarketplaceOffers(collections.map((val) => val.id))
-          : id === '4'
-          ? wsApi.getAllDigitalaxMarketplaceOffersV2()
-          : wsApi.onDigitalaxMarketplaceOffersV2(collections.map((val) => val.id)),
+          wsApi.onDigitalaxMarketplaceOffersV2(collections.map((val) => val.id)),
       next: (data) => {
         dispatch(collectionActions.updateMarketplaceOffers(data?.digitalaxMarketplaceOffers || []));
       },
     },
     [chainId, collections],
+  );
+  
+  useSubscription(
+    {
+      request: wsApi.onDigitalaxMarketplaceOffers(collections.filter(val => parseInt(val.id) >= 10).map((val) => val.id[1])),
+      next: (data) => {
+        dispatch(collectionActions.updateMarketplaceOffersV1(data?.digitalaxMarketplaceOffers || []));
+      }
+    },
+    [chainId, collections]
   );
 
   useSubscription(

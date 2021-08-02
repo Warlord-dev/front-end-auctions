@@ -6,6 +6,7 @@ import TransformModules from '../utils/transform-modules';
 const DEFAULT_FIELDS = Map({
   digitalaxGarmentCollections: List([]),
   marketplaceOffers: List([]),
+  marketplaceOffersV1: List([]),
 });
 
 export default createModule({
