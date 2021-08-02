@@ -91,7 +91,7 @@ const ImportantProductInformation = ({
     ? currentCollections.find((collection) => collection.id === currentOffer.id)
     : null;
 
-  let priceEth = garment.primarySalePrice / 10 ** 18;
+  let priceEth = currentOffer?.primarySalePrice / 10 ** 18;
   if (tabIndex === 0) {
     priceEth = convertToEth(auction?.topBid || 0);
   } else if (collectionId === '3') {

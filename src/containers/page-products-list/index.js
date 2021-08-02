@@ -48,7 +48,7 @@ const PageProductsList = ({ collectionId }) => {
   useSubscription(
     {
       request:
-        collectionId === '1' || collectionId === '2'
+        collectionId === '2'
           ? wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS)
           : wsApi.onDaysChangeV2(MAIN_GRAPH_COUNT_DAYS),
       next: (data) => {
@@ -61,7 +61,7 @@ const PageProductsList = ({ collectionId }) => {
   useSubscription(
     {
       request:
-        collectionId === '1' || collectionId === '2'
+        collectionId === '2'
           ? wsApi.onDaysChange(TOTAL_VOLUME_DAYS)
           : wsApi.onDaysChangeV2(TOTAL_VOLUME_DAYS),
       next: (data) => {
@@ -74,7 +74,7 @@ const PageProductsList = ({ collectionId }) => {
   useSubscription(
     {
       request:
-        collectionId === '1' || collectionId === '2'
+        collectionId === '2'
           ? wsApi.onNFTGlobalStats()
           : wsApi.onNFTGlobalStatsV2(),
       next: (data) => {
@@ -93,7 +93,7 @@ const PageProductsList = ({ collectionId }) => {
   useSubscription(
     {
       request:
-        collectionId === '1' || collectionId === '2'
+        collectionId === '2'
           ? wsApi.getAllDigitalaxGarmentsCollections()
           : wsApi.getAllDigitalaxGarmentsCollectionsV2(),
       next: (data) => {
@@ -107,7 +107,7 @@ const PageProductsList = ({ collectionId }) => {
   useSubscription(
     {
       request:
-        collectionId === '1' || collectionId === '2'
+        collectionId === '2'
           ? wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id))
           : wsApi.onDigitalaxMarketplaceOffersV2(currentCollections.map((val) => val.id)),
       next: (data) => {
@@ -117,12 +117,10 @@ const PageProductsList = ({ collectionId }) => {
     [chainId, currentCollections],
   );
 
-  console.log({ currentCollections });
-
   useSubscription(
     {
       request:
-        collectionId === '1' || collectionId === '2'
+        collectionId === '2'
           ? wsApi.onAllAuctionsChange()
           : wsApi.onAllAuctionsChangeV2(),
       next: (data) => {
@@ -136,7 +134,7 @@ const PageProductsList = ({ collectionId }) => {
   useSubscription(
     {
       request:
-        collectionId === '1' || collectionId === '2'
+        collectionId === '2'
           ? wsApi.onAuctionsHistoryByIds(showGraphIds)
           : wsApi.onAuctionsHistoryByIdsV2(showGraphIds),
       next: (data) => {
