@@ -1422,6 +1422,18 @@ class MyDocument extends Document {
               font-family: "Sora";
               src: url("./fonts/Sora-Regular.ttf");
             }
+
+            @font-face {
+              font-family: 'Thicker Trial';
+              src: url('./fonts/Thicker-Black-trial.ttf');
+              font-weight: 900;
+            }
+            
+            @font-face {
+              font-family: 'Super Thin';
+              src: url('./fonts/Super Thin.ttf');
+              font-weight: 400;
+            }
           `,
             }}
           />
