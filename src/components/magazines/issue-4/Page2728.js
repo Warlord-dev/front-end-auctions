@@ -29,7 +29,9 @@ const Page2728 = () => {
         amazon.        
       </h1>
       <img src='./magazine/4/images/2728_background1.png' className={styles.image1} />
-      
+      <h2>
+        Open Source Oasis        
+      </h2>
     </div>
   )
 }

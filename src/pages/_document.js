@@ -254,6 +254,16 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@700"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Barriecito"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Baskervville"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Aubrey"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Atma"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700"></link>
           
           {/* ipfs next.js fix */}
           <style
@@ -1433,6 +1443,16 @@ class MyDocument extends Document {
               font-family: 'Super Thin';
               src: url('./fonts/Super Thin.ttf');
               font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Bodoni 72 Oldstyle';
+              src: url('./fonts/Bodoni 72 OS.ttc');
+            }
+
+            @font-face {
+              font-family: 'BM HANNA_TTF';
+              src: url('./fonts/BM-HANNA.ttf');
             }
           `,
             }}
