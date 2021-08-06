@@ -65,3 +65,12 @@ export const closeBuyNowCooldownModal = () => (dispatch) => dispatch(closeModal(
 
 export const openBuyNowLimitModal = (params) => (dispatch) => dispatch(openModal('isLimit', 'hideScroll', params));
 export const closeBuyNowLimitModal = () => (dispatch) => dispatch(closeModal('isLimit', 'addScroll'));
+
+export const openBidHistoryModal = (params) => (dispatch) => dispatch(openModal('isBidHistory', 'hideScroll', params));
+export const closeBidHistoryModal = () => (dispatch) => dispatch(closeModal('isBidHistory', 'addScroll'));
+
+export const openPurchaseHistoryModal = (params) => (dispatch) => dispatch(openModal('isPurchaseHistory', 'hideScroll', params));
+export const closePurchaseHistoryModal = () => (dispatch) => dispatch(closeModal('isPurchaseHistory', 'addScroll'));
+
+export const openSwitchNetworkModal = (params) => (dispatch) => dispatch(openModal('isSwitchNetwork', 'hideScroll', params));
+export const closeSwitchNetworkModal = () => (dispatch) => dispatch(closeModal('isSwitchNetwork', 'addScroll'));

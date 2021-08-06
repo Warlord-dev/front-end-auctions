@@ -1,4 +1,5 @@
 @import '../../../assets/scss/helpers/grid.scss';
+@import '../../../assets/scss/helpers/helpers.scss';
 
 .button {
   position: relative;
@@ -9,7 +10,8 @@
   border: none;
   outline: none;
   color: white;
-  transition: all 0.3s ease;
+
+  @include transition();
 
   @include sm-width {
     width: 200px;
@@ -27,14 +29,22 @@
     font-weight: bold;
     font-family: 'Bebas Neue';
     position: absolute;
+    text-align: center;
     left: 50%;
     top: 50%;
     z-index: 10;
     transform: translate(-50%, -50%);
   }
 
-  &:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+  &[disabled] {
+    cursor: not-allowed;
+    span {
+      opacity: 0.6;
+    }
+  }
+
+  &:hover:not([disabled]) {
+    @include scale();
+    @include transition();
   }
 }

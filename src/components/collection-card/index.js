@@ -3,7 +3,10 @@ import React from 'react';
 import CollectionInfoCard from './collection-info-card';
 import styles from './styles.module.scss';
 
-const CollectionCard = ({ collection }) => {
+const CollectionCard = ({ collection, isBundle = false }) => {
+  if (isBundle) {
+    console.log({collection})
+  }
   return (
     <>
       <div className={styles.wrapper}>
@@ -22,7 +25,7 @@ const CollectionCard = ({ collection }) => {
             </video>
           </div>
         </div>
-        <CollectionInfoCard collection={collection} />
+        <CollectionInfoCard collection={collection} isBundle={isBundle} />
       </div>
     </>
   );

@@ -6,7 +6,7 @@ import ImageCard from '@components/image-card';
 import ProductCard from '@components/product-card';
 import styles from './index.module.scss';
 import Container from '@components/container';
-import { getCollectionGroupById } from '@services/api/apiService';
+import { getCollectionGroupById, getDigitalaxMarketplaceV2Offers } from '@services/api/apiService';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import HeroSection from '@components/hero-section';
@@ -23,6 +23,7 @@ const All = () => {
   useEffect(() => {
     const fetchCollectionGroup = async () => {
       const { digitalaxCollectionGroup } = await getCollectionGroupById(chainId, id);
+      const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offers(chainId);
       let aucs = [],
         colls = [];
       digitalaxCollectionGroup.auctions.forEach((auction) => {
@@ -37,6 +38,7 @@ const All = () => {
           garment: {
             ...collection.garments[0],
           },
+          primarySalePrice: digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id).primarySalePrice,
           id: collection.id,
           rarity: collection.rarity,
         });
@@ -69,11 +71,9 @@ const All = () => {
             </video>
             <Container>
               <div className={styles.body}>
-                <ProductInfoCard product={auctions[index]} />
-                {/* <ImageCard data={auctions[index]} showName /> */}
+                <ProductInfoCard product={auctions[index]} price={auctions[index].topBid} />
                 {index + 1 < auctions.length ? (
-                  <ProductInfoCard product={auctions[index]} />
-                  // <ImageCard data={auctions[index + 1]} showName />
+                  <ProductInfoCard product={auctions[index + 1]} price={auctions[index + 1].topBid} />
                 ) : null}
               </div>
             </Container>
@@ -90,11 +90,9 @@ const All = () => {
             </video>
             <Container>
               <div className={styles.body}>
-                <ProductInfoCard product={collections[index]} />
-                {/* <ImageCard data={collections[index]} showName /> */}
+                <ProductInfoCard product={collections[index]} price={collections[index].primarySalePrice} />
                 {index + 1 < collections.length ? (
-                  <ProductInfoCard product={collections[index]} />
-                  // <ImageCard data={collections[index + 1]} showName />
+                  <ProductInfoCard product={collections[index + 1]} price={collections[index].primarySalePrice} />
                 ) : null}
               </div>
             </Container>

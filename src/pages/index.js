@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Router, useRouter } from 'next/router';
 import Head from 'next/head';
-import { getCollectionGroups } from '@services/api/apiService';
+import { getCollectionGroups, getDigitalaxGarmentNftV2GlobalStats } from '@services/api/apiService';
 import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
@@ -9,6 +9,8 @@ import NewButton from '@components/buttons/newbutton';
 import Container from '@components/container';
 import CollectionList from '@components/collection-list';
 import HeroBar from '@components/hero-bar';
+import globalActions from '@actions/global.actions';
+import { convertToEth } from '@helpers/price.helpers';
 
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
@@ -32,6 +34,9 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchCollectionGroups = async () => {
       const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
+      const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats(chainId);
+      globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth));
+
       let collections = [],
         bundles = [];
       digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
@@ -45,10 +50,12 @@ const LandingPage = () => {
         });
         bundles.push({
           ...digitalaxCollectionGroup.digiBundle.garments[0],
+          productId: digitalaxCollectionGroup.digiBundle.id,
           id: digitalaxCollectionGroup.id,
           sold: bundlePrice / 1e18
         });
       });
+      console.log({bundles});
       setCollectionGroups(collections);
       setBundleGroups(bundles);
     };
@@ -112,7 +119,7 @@ const LandingPage = () => {
           </div>
           <div className={styles.bundleWrapper}>
             <h1 className={styles.title}> bundle </h1>
-            <CollectionList items={bundleGroups} />
+            <CollectionList items={bundleGroups} isBundle />
           </div>
         </Container>
       </section>

@@ -1,0 +1,57 @@
+.footer {
+  margin-top: -24px;
+  .footerCaption {
+    margin-top: 48px;
+    font-size: 0.75rem;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+    b {
+      font-size: 1rem;
+    }
+
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.selectWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 1.875rem;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  margin-bottom: 27px;
+  text-transform: uppercase;
+}
+
+.inputWithArrows {
+  margin-right: 12px;
+}
+
+.button {
+  min-width: 170px;
+  height: 44px;
+}
+
+.error {
+  font-size: 0.5625rem;
+  letter-spacing: 0.12em;
+  max-width: 260px;
+  margin-top: 6px;
+  line-height: 170%;
+  text-decoration: underline;
+}

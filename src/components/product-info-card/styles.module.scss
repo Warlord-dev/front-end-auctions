@@ -1,32 +1,29 @@
 @import '../../assets/scss/helpers/grid.scss';
 
 .wrapper {
-
-  
-
   .infoCardWrapper {
     margin: auto;
     @include sm-width {
       width: 400px;
     }
-  
+
     @include md-width {
       width: 500px;
     }
-  
+
     @include lg-width {
       width: 350px;
     }
-  
+
     @include xl-width {
       width: 400px;
     }
-  
+
     @include xxl-width {
       width: 500px;
     }
   }
-  
+
   .imageWrapper {
     margin-bottom: 1rem;
   }
@@ -37,8 +34,13 @@
     gap: 1rem;
     margin-bottom: 1rem;
 
+    button {
+      width: 100%;
+      min-width: unset;
+    }
+
     p {
-      color: white!important;
+      color: white !important;
     }
   }
 

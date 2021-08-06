@@ -10,6 +10,7 @@ const Button = ({ className, background, onClick, children, isDisabled }) => (
       {
         [styles.transparent]: background === 'transparent',
         [styles.black]: background === 'black',
+        [styles.pink]: background === 'pink',
       },
       className,
     )}
@@ -22,7 +23,7 @@ const Button = ({ className, background, onClick, children, isDisabled }) => (
 
 Button.propTypes = {
   className: PropTypes.string,
-  background: PropTypes.oneOf(['transparent', 'black']),
+  background: PropTypes.oneOf(['transparent', 'black', 'pink']),
   onClick: PropTypes.func,
   isDisabled: PropTypes.bool,
   children: PropTypes.any,

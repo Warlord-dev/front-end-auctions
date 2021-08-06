@@ -13,6 +13,9 @@ const DEFAULT_FIELDS = Map({
   isShowPreviewMaterial: false,
   isCoolDown: false,
   isLimit: false,
+  isBidHistory: false,
+  isPurchaseHistory: false,
+  isSwitchNetwork: false,
   params: null,
 });
 

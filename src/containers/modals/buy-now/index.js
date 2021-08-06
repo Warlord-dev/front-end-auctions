@@ -26,8 +26,12 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
 
   const handleClose = () => {
     dispatch(closeBuynowModal());
-    dispatch(openESPAReadyModal());
   };
+  
+  const handleSuccess = () => {
+    handleClose();
+    dispatch(openESPAReadyModal());
+  }
 
   const handleClick = (mode) => {
     setShowError(null);
@@ -40,7 +44,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
             setApproved(true);
             setIsDisabled(false);
           } else {
-            handleClose();
+            handleSuccess();
           }
         })
         .catch((e) => {
@@ -53,7 +57,6 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   useEffect(() => {
     async function getMonaApproval() {
       dispatch(bidActions.getApprovedInMona()).then((val) => {
-        console.log('this is approve in mona', val);
         setApproved(val);
       });
     }
@@ -78,14 +81,16 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
           <div className={styles.footer}>
             <p className={styles.footerCaption}>
               <span>
-                Need to top up on $MONA? Get it <a>here.</a>
+              Need to top up $MONA? You can get it from <a href="" target="_blank">Uniswap</a>{' '}
+              and bridge it to Polygon with our customer <a href="" target="_blank">Multi-Token Bridge</a>. 
+              Or, purchase it directly from <a href="" target="_blank">Quickswap</a>.
               </span>
             </p>
             <div className={styles.selectWrapper}>
-              <span>{priceEth / 10 ** 18} $MONA</span>
+              <span>{priceEth} $MONA</span>
               <Button
                 isDisabled={isDisabled || !isMatic}
-                background="black"
+                background="pink"
                 onClick={() => handleClick(approved ? 1 : 0)}
                 className={styles.button}
               >

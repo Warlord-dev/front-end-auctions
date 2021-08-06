@@ -18,7 +18,7 @@
 }
 
 .transparent {
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
   background: transparent;
   transition: color 0.3, background-color 0.3;
 
@@ -43,10 +43,23 @@
     @include active();
   }
 
-  &[disabled]  {
+  &[disabled] {
     background-color: rgba(#111, 0.9);
     color: $darkGray3;
   }
 }
 
+.pink {
+  background: #ff2095;
+  color: white;
+  border: 0;
 
+  &:not([disabled]) {
+    @include active();
+  }
+
+  &[disabled] {
+    background-color: rgba(#ff2095, 0.9);
+    color: $darkGray3;
+  }
+}

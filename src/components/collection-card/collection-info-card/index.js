@@ -3,8 +3,13 @@ import InfoCard from '@components/info-card';
 import Link from 'next/link';
 import PriceCard from '@components/price-card';
 import styles from './styles.module.scss';
+import { useSelector } from 'react-redux';
+import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 
-const CollectionInfoCard = ({ collection }) => {
+const CollectionInfoCard = ({ collection, isBundle = false }) => {
+  const monaPerEth = useSelector(getMonaPerEth);
+  const exchangeRate = useSelector(getExchangeRateETH);
+
   return (
     <div className={styles.wrapper}>
       <InfoCard
@@ -13,7 +18,7 @@ const CollectionInfoCard = ({ collection }) => {
         mainColor="rgba(148, 140, 71, 0.47)"
       >
         <div className={styles.cardBodyWrapper}>
-          <Link href={`/marketplace/rarity/${collection.id}`}>
+          <Link href={!isBundle ? `/marketplace/rarity/${collection.id}` : `/product/${collection.productId}/3`}>
             <a className={styles.link}>
               view collection
               <img src="./images/metaverse/yellow-right-arrow.png" />
@@ -21,7 +26,7 @@ const CollectionInfoCard = ({ collection }) => {
           </Link>
           <div className={styles.pricesWrapper}>
             <PriceCard mode={1} mainText={`${collection.sold} $MONA`} subText="total sold" />
-            <PriceCard mode={1} mainText="$22447.97" subText="dollar equivalent" />
+            <PriceCard mode={1} mainText={`$${(parseFloat(monaPerEth) * exchangeRate * collection.sold).toFixed(2)}`} subText="dollar equivalent" />
           </div>
         </div>
       </InfoCard>

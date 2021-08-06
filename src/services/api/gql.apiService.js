@@ -69,6 +69,9 @@ export const COLLECTION_GROUP_BY_ID = gql`
           designer
           description
         }
+        topBid
+        startTime
+        endTime
       }
       collections {
         id
@@ -79,6 +82,7 @@ export const COLLECTION_GROUP_BY_ID = gql`
           name
           designer
           description
+          primarySalePrice
         }
         rarity
       }
@@ -103,6 +107,12 @@ export const GARMENTV2_BY_COLLECTION_ID = gql`
         description
         image
       }
+      developer {
+        id
+        name
+        description
+        image
+      }
     }
   }
 `;
@@ -111,6 +121,9 @@ export const GARMENTV2_BY_AUCTION_ID = gql`
   query digitalaxGarmentV2Auction($id: ID!) {
     digitalaxGarmentV2Auction(id: $id) {
       id
+      startTime
+      endTime
+      topBid
       garment {
         id
         name
@@ -124,6 +137,83 @@ export const GARMENTV2_BY_AUCTION_ID = gql`
         description
         image
       }
+      developer {
+        id
+        name
+        description
+        image
+      }
     }
   }
 `;
+
+export const DIGITALAX_MARKETPLACE_V2_OFFER = gql`
+  query digitalaxMarketplaceV2Offers($garmentCollection: String!) {
+    digitalaxMarketplaceV2Offers(where: { garmentCollection: $garmentCollection }) {
+      id
+      primarySalePrice
+      startTime
+      endTime
+      amountSold
+      garmentCollection {
+        garments(first: 1000) {
+          id
+        }
+      }
+    }
+  }
+`
+
+export const DIGITALAX_MARKETPLACE_V2_OFFERS = gql`
+  query digitalaxMarketplaceV2Offers {
+    digitalaxMarketplaceV2Offers (first: 1000) {
+      id
+      primarySalePrice
+      startTime
+      endTime
+      amountSold
+      garmentCollection {
+        id
+      }
+    }
+  }
+`;
+
+export const DIGITALAX_MARKETPLACE_V2_PURCHASE_HISTORIES = gql`
+  query digitalaxMarketplaceV2PurchaseHistories($ids: [ID!]) {
+    digitalaxMarketplaceV2PurchaseHistories(where: {token_in: $ids}) {
+      id
+      timestamp
+      transactionHash
+      buyer
+      eventName
+      value
+    }
+  }
+`;
+
+export const DIGITALAX_GARMENT_V2_PURCHASE_HISTORIES = gql`
+  query digitalaxGarmentV2PurchaseHistories($id: ID, ) {
+    digitalaxGarmentV2AuctionHistories(where: {token: $id, value_not: null}) {
+      id
+      timestamp
+      transactionHash
+      value
+      bidder {
+        id
+      }
+      token {
+        id
+      }
+    }
+  }
+`
+
+export const DIGITALAX_GARMENT_NFT_V2_GLOBAL_STATS = gql`
+  query digitalaxGarmentNFTV2GlobalStats {
+    digitalaxGarmentNFTV2GlobalStats(first: 1) {
+      id
+      monaPerEth
+    }
+  }
+`

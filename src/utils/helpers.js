@@ -14,3 +14,13 @@ export const getRarityId = (rarity) => {
     return 3;
   }
 };
+
+export const getRarity = (rarity) => {
+  if (rarity === 1) {
+    return 'Exclusive';
+  } else if (rarity === 2) {
+    return 'Semi Rare';
+  } else {
+    return 'Common';
+  }
+}

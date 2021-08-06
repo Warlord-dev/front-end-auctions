@@ -73,6 +73,7 @@
   align-items: center;
   justify-content: flex-end;
   flex: 1;
+  padding-right: 1rem;
 
   @media screen and (max-width: 640px) {
     flex-direction: row;
@@ -99,16 +100,17 @@
   color: white;
 }
 
+.switchNetwork {
+  color: white;
+  background: transparent;
+  margin-right: 1rem;
+}
+
 .bridgeHeader {
   background-color: transparent !important;
 
   .link {
     color: white;
-  }
-
-  .switchNetwork {
-    color: white;
-    background: transparent;
   }
 
   .hashAddress {

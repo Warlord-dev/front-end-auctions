@@ -1,0 +1,21 @@
+.textCenter {
+  text-align: center;
+}
+
+.tableWrapper {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.historyTable {
+  width: 100%;
+  color: white;
+  text-align: center;
+
+  th,
+  tr,
+  td {
+    padding: 0.5rem;
+    text-align: center;
+  }
+}

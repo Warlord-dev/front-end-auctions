@@ -1,4 +1,4 @@
-import { openBuynowModal, openConnectMetamaskModal } from '@actions/modals.actions';
+import { openBuynowModal, openConnectMetamaskModal, openPlaceBidModal, openSwitchNetworkModal } from '@actions/modals.actions';
 import NewButton from '@components/buttons/newbutton';
 import { getAccount } from '@selectors/user.selectors';
 import LazyLoad from 'react-lazyload';
@@ -7,10 +7,12 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRarityId, reviseUrl } from '@utils/helpers';
 import styles from './styles.module.scss';
+import { getChainId } from '@selectors/global.selectors';
 
-const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true, imgUrl = null }) => {
+const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true, imgUrl = null, price, disable = false }) => {
   const router = useRouter();
   const account = useSelector(getAccount);
+  const chainId = useSelector(getChainId);
   const dispatch = useDispatch();
   const libons = [
     './images/metaverse/exc-libon.png',
@@ -23,12 +25,25 @@ const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true, i
       router.push(`/product/${data.id}/${getRarityId(data.rarity)}`)
     } else {
       if (account) {
-        dispatch(
-          openBuynowModal({
-            id: data.id,
-            priceEth: data.garment.primarySalePrice
-          })
-        )
+        if (chainId === '0x89') {
+          if (libon !== 1) {
+            dispatch(
+              openBuynowModal({
+                id: data.id,
+                priceEth: price
+              })
+            )
+          } else {
+            dispatch(
+              openPlaceBidModal({
+                id: data.id,
+                priceEth: price
+              })
+            )
+          }
+        } else {
+          dispatch(openSwitchNetworkModal());
+        }
       } else {
         dispatch(openConnectMetamaskModal());
       }
@@ -56,8 +71,9 @@ const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true, i
           {imgUrl ? <img src={reviseUrl(imgUrl)} className={styles.image} /> : null}
           {showButton && <div className={styles.buyNow}>
             <NewButton
-              text={data?.rarity === 'Exclusive' ? 'Place A Bid' : 'Buy Now'}
+              text={data?.rarity === 'Exclusive' || libon === 1 ? 'Place A Bid' : 'Buy Now'}
               onClick={onBuyNow}
+              disable={disable}
             />
           </div>}
         </div>

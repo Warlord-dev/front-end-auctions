@@ -11,6 +11,8 @@ import ModalESPAReady from "./modal-espa-ready";
 import ModalConnectMatic from "./modal-connect-matic";
 import BuyNowCooldown from './modal-cooldown';
 import BuyNowLimit from './modal-limit';
+import History from "./history";
+import SwitchNetworkModal from "./switch-network";
 
 const Modals = () => {
   const modals = useSelector((state) => state.modals.toJS());
@@ -25,7 +27,10 @@ const Modals = () => {
     isShowPreviewMaterial,
     isShowModalESPAReady,
     isLimit,
-    isCoolDown
+    isCoolDown,
+    isBidHistory,
+    isPurchaseHistory,
+    isSwitchNetwork,
   } = modals;
 
   return (
@@ -41,6 +46,9 @@ const Modals = () => {
       {isShowPreviewMaterial && <PreviewMaterial />}
       {isCoolDown && <BuyNowCooldown />}
       {isLimit && <BuyNowLimit />}
+      {isBidHistory && <History type={1} />}
+      {isPurchaseHistory && <History type={2} />}
+      {isSwitchNetwork && <SwitchNetworkModal />}
     </>
   );
 };

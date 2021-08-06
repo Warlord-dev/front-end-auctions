@@ -1,10 +1,18 @@
+@mixin scale() {
+  transform: scale(1.05);
+}
+
+@mixin transition() {
+  transition: all 0.3s ease;
+}
+
 @mixin reset-button() {
   background-color: transparent;
   outline: 0;
   border: 0;
 
   &:focus {
-      outline: none;
+    outline: none;
   }
 }
 
@@ -27,13 +35,13 @@
   &::-webkit-scrollbar-thumb {
     cursor: pointer;
     border-radius: 5px;
-    background: rgba(0,0,0,.25);
-    -webkit-transition: color .2s ease;
-    transition: color .2s ease
+    background: rgba(0, 0, 0, 0.25);
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
   }
 
   &::-webkit-scrollbar-track {
-    background: rgba(0,0,0,.1);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 0;
   }
 }

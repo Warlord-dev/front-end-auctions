@@ -1,4 +1,5 @@
 @import '../../../../assets/scss/helpers/grid.scss';
+@import '../../../../assets/scss/helpers/helpers.scss';
 
 .wrapper {
   section {
@@ -24,11 +25,11 @@
       @include md-width {
         padding: 7.5rem 7.5rem;
       }
-      
+
       @include xl-width {
         padding: 7.5rem 5rem;
       }
-      
+
       @include xxl-width {
         padding: 7.5rem 5rem;
       }
@@ -37,27 +38,74 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 5rem;
-        
+        position: relative;
+        z-index: 10;
+
         @include lg-width {
           grid-template-columns: auto 40%;
         }
-        
+
         @include lg-width {
           gap: 5rem;
         }
-        
+
         @include xl-width {
           gap: 7.5rem;
         }
-        
+
         @include xxl-width {
           gap: 10rem;
         }
-        
+
+        .imageCardWrapper {
+          .rarity {
+            width: 100%;
+            left: 50%;
+            padding: 2rem 0;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-size: 30px;
+            font-family: m12;
+            // transform: translate(-50%, -100%);
+            -webkit-text-stroke: 2px rgb(156, 40, 255);
+
+            @include md-width {
+              font-size: 30px;
+            }
+
+            @include lg-width {
+              font-size: 40px;
+            }
+
+            @include xl-width {
+              font-size: 50px;
+            }
+
+            @include xxl-width {
+              font-size: 60px;
+            }
+          }
+
+          .timeWrapper {
+            width: 250px;
+            margin: auto;
+            margin-top: 3rem;
+          }
+        }
+
         .infoWrapper {
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
+
+          .amount {
+            color: white;
+            font-family: Gilroy;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 2rem;
+          }
         }
 
         .infoCard {
@@ -89,37 +137,51 @@
 
         .actions {
           margin-top: 3rem;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
           z-index: 10;
-
-          .gamePad {
-            position: relative;
-            height: 100px;
-          }
 
           .buttonWrapper {
             display: flex;
             flex-direction: column;
 
             button {
-              width: 220px;
-              margin: auto;
+              width: 100% !important;
+              min-width: unset !important;
             }
 
-            a {
-              text-transform: uppercase;
-              text-align: center;
-              color: white;
+            .buttonLabel {
               font-family: Inter;
+              font-style: normal;
               font-weight: 800;
-              font-size: 17px;
-
-              &:hover {
-                text-decoration: underline;
-              }
+              font-size: 9px;
+              text-transform: uppercase;
+              line-height: 11px;
+              letter-spacing: 0.56em;
+              text-align: center;
+              color: #ffffff;
             }
+          }
+        }
+
+        .viewBidHistory {
+          position: relative;
+          background: rgba(128, 150, 230, 0.51);
+          color: white;
+          font-size: 24px;
+          padding: 0.75rem 1rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-family: 'Bebas Neue';
+          border: none;
+          margin-top: 1rem;
+
+          @include transition();
+
+          &:hover {
+            @include scale();
+            @include transition();
           }
         }
       }
@@ -132,15 +194,15 @@
       @include xs-width {
         padding: 2rem;
       }
-      
+
       @include md-width {
         padding: 7.5rem 7.5rem;
       }
-      
+
       @include xl-width {
         padding: 7.5rem 5rem;
       }
-      
+
       @include xxl-width {
         padding: 7.5rem 5rem;
       }
@@ -155,7 +217,7 @@
       }
 
       .data {
-        padding: 3rem 5rem;
+        padding: 3rem 0rem;
         display: grid;
         grid-template-columns: 1fr;
         gap: 5rem;
@@ -163,19 +225,19 @@
         @include lg-width {
           grid-template-columns: auto 40%;
         }
-        
+
         @include lg-width {
           padding: 3rem 0rem;
           gap: 5rem;
         }
-        
+
         @include xl-width {
-          padding: 3rem 5rem;
+          padding: 3rem 0rem;
           gap: 7.5rem;
         }
-        
+
         @include xxl-width {
-          padding: 3rem 5rem;
+          padding: 3rem 0rem;
           gap: 10rem;
         }
 

@@ -50,40 +50,48 @@ const MarketplaceRarity = () => {
       <div className={styles.wrapper}>
         <HeroSection />
 
-        <section className={styles.exclusiveSection}>
-          <img src="./images/metaverse/marketplace-texture.png" className={styles.texture} />
-          <Container>
-            <div className={styles.cardWrapper}>
-              <ProductCard products={auctions} rarity={'Exclusive'} />
-            </div>
-          </Container>
-        </section>
+        {auctions?.length ? (
+          <section className={styles.exclusiveSection}>
+            <img src="./images/metaverse/marketplace-texture.png" className={styles.texture} />
+            <Container>
+              <div className={styles.cardWrapper}>
+                <ProductCard products={auctions} rarity={'Exclusive'} />
+              </div>
+            </Container>
+          </section>
+        ) : null}
 
-        <section className={styles.semiSection}>
-          <img src="./images/metaverse/marketplace-texture.png" className={styles.texture} />
-          <Container>
-            <div className={styles.cardWrapper}>
-              <ProductCard
-                products={
-                  collections.filter((collection) => collection.rarity === 'Semi-Rare') || []
-                }
-                rarity={'Semi-Rare'}
-              />
-            </div>
-          </Container>
-        </section>
+        {collections?.length ? (
+          <section className={styles.semiSection}>
+            <img src="./images/metaverse/marketplace-texture.png" className={styles.texture} />
+            <Container>
+              <div className={styles.cardWrapper}>
+                <ProductCard
+                  products={
+                    collections.filter((collection) => collection.rarity === 'Semi-Rare') || []
+                  }
+                  rarity={'Semi-Rare'}
+                />
+              </div>
+            </Container>
+          </section>
+        ) : null}
 
-        <section className={styles.commonSection}>
-          <img src="./images/metaverse/marketplace-texture.png" className={styles.texture} />
-          <Container>
-            <div className={styles.cardWrapper}>
-              <ProductCard
-                products={collections.filter((collection) => collection.rarity === 'Common') || []}
-                rarity={'Common'}
-              />
-            </div>
-          </Container>
-        </section>
+        {collections?.length ? (
+          <section className={styles.commonSection}>
+            <img src="./images/metaverse/marketplace-texture.png" className={styles.texture} />
+            <Container>
+              <div className={styles.cardWrapper}>
+                <ProductCard
+                  products={
+                    collections.filter((collection) => collection.rarity === 'Common') || []
+                  }
+                  rarity={'Common'}
+                />
+              </div>
+            </Container>
+          </section>
+        ) : null}
       </div>
     </>
   );

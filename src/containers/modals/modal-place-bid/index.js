@@ -118,7 +118,7 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
               </div>
               <Button
                 isDisabled={isDisabled || !isMatic}
-                background="black"
+                background="pink"
                 onClick={() => handleClick()}
                 className={styles.button}
               >
