@@ -128,10 +128,17 @@
             align-items: center;
           }
 
-          .skinName,
-          .designer,
-          .developer {
+          .skinName {
             margin-bottom: 0.5rem;
+          }
+
+          .description {
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 23px;
+            text-transform: none;
           }
         }
 

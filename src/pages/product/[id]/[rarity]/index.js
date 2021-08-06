@@ -144,22 +144,10 @@ const Product = () => {
                 <InfoCard libon="./images/metaverse/Gamepad 1.png">
                   <div className={styles.infoCard}>
                     <div className={styles.skinName}>
-                      <div className={styles.label}>Skin Name: </div>
                       <div className={styles.text}> {product?.garment?.name} </div>
                     </div>
-                    <div className={styles.designer}>
-                      <div className={styles.label}>Designer: </div>
-                      <div className={styles.info}>
-                        <img src={product?.designer?.image} />
-                        <div className={styles.name}> {product?.designer?.name} </div>
-                      </div>
-                    </div>
-                    <div className={styles.developer}>
-                      <div className={styles.label}> Developer/Modder: </div>
-                      <div className={styles.info}>
-                        <img src={product?.developer?.image} />
-                        <div className={styles.name}> {product?.developer?.name} </div>
-                      </div>
+                    <div className={styles.description}>
+                      {product?.garment?.description}
                     </div>
                   </div>
                 </InfoCard>
