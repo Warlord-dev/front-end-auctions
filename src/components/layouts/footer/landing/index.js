@@ -31,21 +31,17 @@ const LandingFooter = () => {
             <a href='https://twitter.com/DIGITALAX_' target='_blank'>
               <img src='/images/social-icons/twitter.svg' alt='twitter-icon' className={'twitter-icon'} />
             </a>
-            <a href='https://www.instagram.com/digitalax_' target='_blank'>
+            <a href='https://www.instagram.com/_digitalax' target='_blank'>
               <img src='/images/social-icons/instagram.svg' alt='instagram-icon' className={'instagram-icon'} />
             </a>
             <a href='https://www.linkedin.com/company/digitalax-digital-fashion/' target='_blank'>
               <img src='/images/social-icons/linkedin_logo.png' alt='linkedin-icon' className={styles.linkedinIcon} />
             </a>
             <a href='https://www.tiktok.com/@digitalax?' target='_blank'>
-              <img src='/images/social-icons/tiktok.svg' alt='tiktok-icon' style={{
-                marginRight: 20
-              }} className={'tiktok-icon'} />
+              <img src='/images/social-icons/tiktok.svg' alt='tiktok-icon' className={styles.tiktokIcon} />
             </a>
             <a href='https://www.twitch.tv/digitalax' target='_blank'>
-              <img src='/images/social-icons/twitch.svg' alt='twitch-icon' style={{
-                marginRight: 20
-              }} className={'twitch-icon'} />
+              <img src='/images/social-icons/twitch.svg' alt='twitch-icon' className={styles.twitchIcon} />
             </a>
             <a href='https://discord.com/invite/DKbSqRGtKv' target='_blank'>
               <img src='/images/social-icons/discord.svg' alt='discord-icon' className='discord-icon' />
@@ -59,7 +55,13 @@ const LandingFooter = () => {
             <a href='https://digitalax.medium.com/' target='_blank'>
               <img src='/images/social-icons/medium-small.png' alt='medium-icon' className={styles.mediumIcon} />
             </a>
-            </div>
+            <a href='https://t.me/digitalaxTG' target='_blank'>
+              <img src='/images/social-icons/telegram-circle.png' alt='telegram-icon-1' className={styles.mediumIcon} />
+            </a>
+            <a href='https://t.me/digitalaxannouncements' target='_blank'>
+              <img src='/images/social-icons/telegram-circle.png' alt='telegram-icon-2' className={styles.mediumIcon} />
+            </a>
+          </div>
           
           <div className={[styles.dFlex, styles.faqLine].join(' ')}>
             <a href='https://blog.digitalax.xyz' target='_blank'>

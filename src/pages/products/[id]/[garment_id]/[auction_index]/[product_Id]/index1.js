@@ -28,7 +28,7 @@ const Products = () => {
     garment = {
       name: 'Genesis DIGI Bundle',
       description:
-        'The DIGI Bundle is the ultimate Esports, Gaming, Digital Fashion package. It contains 4 unique surprises that cross the digital-physical realms. 1. The Player Access Card (PAC) provides an in-game flare for the Esports tournaments, giving Players a higher chance of being allocated the Imposter role. 2. Special Edition Digital Fashion NFT designed by Kodomodachi that can be taken into the Among Us Sheriff Mod. 3. Physical Charli Cohen Unisex Jacket that incorporates the on-chain issued Genesis Charli Cohen pattern.  Every jacket is different, no two jackets are the same. 4. Best Plays of the Game Memorabilia NFT from the Among Us Sheriff Mod tournaments and airdropped after the tournament rounds.',
+        'The DIGI Bundle is the ultimate Esports, Gaming, Digital Fashion package. It contains 4 unique surprises that cross the digital-physical realms. 1. The Player Access Card (PAC) provides an in-game flare for the Esports tournaments, giving Players a higher chance of being allocated the Imposter role. 2. Special Edition Digital Fashion NFT designed by Cosmos that can be taken into the Among Us Sheriff Mod. 3. Physical Charli Cohen Unisex Jacket that incorporates the on-chain issued Genesis Charli Cohen pattern.  Every jacket is different, no two jackets are the same. 4. Best Plays of the Game Memorabilia NFT from the Among Us Sheriff Mod tournaments and airdropped after the tournament rounds.',
       'external url': 'https://skins.digitalax.xyz/',
       animation: 'https://gateway.pinata.cloud/ipfs/QmRdxLAmXR36dNr6cKJeXNyEzSd1JKYMmzbQipHv3HZ1b1',
       image: 'https://gateway.pinata.cloud/ipfs/Qmc9oYm7Vb4zK1EBw6QJGwRPg4BQbdx5bx5kfWWhHgZAHp',
@@ -58,23 +58,6 @@ const Products = () => {
   const collections = useSelector(getAllCollections).toJS();
   const marketplaceOffers = useSelector(getAllMarketplaceOffers).toJS();
   const chainId = useSelector(getChainId);
-  // const currentCollections = useMemo(() => {
-  //   const jsCollection = collections.toJS();
-  //   return jsCollection.filter((val) => val.garmentAuctionID === auctionId);
-  // }, [collections]);
-
-  // const currentMarketplaceOffers = useMemo(() => {
-  //   const jsOffers = marketplaceOffers.toJS();
-  //   if (id !== '4') {
-  //     return jsOffers.filter((val) => val.garmentCollection.garmentAuctionID === auctionId);
-  //   } else {
-  //     return jsOffers.filter(
-  //       (val) =>
-  //         val.garmentCollection.garments.length &&
-  //         val.garmentCollection.garments[0].name.includes('DIGI'),
-  //     );
-  //   }
-  // }, [marketplaceOffers]);
 
   useSubscription(
     {
@@ -92,9 +75,7 @@ const Products = () => {
   useSubscription(
     {
       request:
-        id === '1' || id === '2'
-          ? wsApi.onDigitalaxGarmentsCollectionChange(auctionId)
-          : id === '4'
+          id === '4'
           ? wsApi.getAllDigitalaxGarmentsCollectionsV2()
           : wsApi.onDigitalaxGarmentsCollectionChangeV2(auctionId),
       next: (data) => {
@@ -107,16 +88,22 @@ const Products = () => {
   useSubscription(
     {
       request:
-        id === '1' || id === '2'
-          ? wsApi.onDigitalaxMarketplaceOffers(collections.map((val) => val.id))
-          : id === '4'
-          ? wsApi.getAllDigitalaxMarketplaceOffersV2()
-          : wsApi.onDigitalaxMarketplaceOffersV2(collections.map((val) => val.id)),
+          wsApi.onDigitalaxMarketplaceOffersV2(collections.map((val) => val.id)),
       next: (data) => {
         dispatch(collectionActions.updateMarketplaceOffers(data?.digitalaxMarketplaceOffers || []));
       },
     },
     [chainId, collections],
+  );
+  
+  useSubscription(
+    {
+      request: wsApi.onDigitalaxMarketplaceOffers(collections.filter(val => parseInt(val.id) >= 10).map((val) => val.id[1])),
+      next: (data) => {
+        dispatch(collectionActions.updateMarketplaceOffersV1(data?.digitalaxMarketplaceOffers || []));
+      }
+    },
+    [chainId, collections]
   );
 
   useSubscription(

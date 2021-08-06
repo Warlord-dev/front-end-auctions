@@ -66,7 +66,7 @@ const LandingPage = () => {
   const structuredData = {
     '@context': 'http://schema.org',
     '@type': 'Skins Landing page',
-    title: 'Digitalax - The Digital Fashion Engine',
+    title: 'Digitalax - Web3 Fashion Economy',
     description:
       'Take your digital fashion skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game. ESPA is the first casual esports platform, with direct integration with DIGITALAX NFT skins on Matic Network. ',
   };
@@ -78,7 +78,7 @@ const LandingPage = () => {
           name="description"
           content="Take your digital fashion skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game. ESPA is the first casual esports platform, with direct integration with DIGITALAX NFT skins on Matic Network. "
         />
-        <meta property="og:title" content="Digitalax - The Digital Fashion Engine" />
+        <meta property="og:title" content="Digitalax - Web3 Fashion Economy" />
         <meta
           property="og:description"
           content="Take your digital fashion skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game. ESPA is the first casual esports platform, with direct integration with DIGITALAX NFT skins on Matic Network. "

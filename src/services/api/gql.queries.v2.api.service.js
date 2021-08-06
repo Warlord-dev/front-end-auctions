@@ -214,7 +214,7 @@ export const getDigitalaxGarmentsCollectionsV2 = gql`
       id
       garmentAuctionID
       rarity
-      garments(first: 1000) {
+      garments(first: 1) {
         id
         designer
         owner

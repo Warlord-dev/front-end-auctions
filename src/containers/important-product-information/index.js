@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import config from '@utils/config';
 import Router from 'next/router';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
@@ -39,8 +40,10 @@ import { useSubscription } from '@hooks/subscription.hooks';
 import { utils as ethersUtils } from 'ethers';
 
 import styles from './styles.module.scss';
-import { getAllCollections, getAllMarketplaceOffers } from '@selectors/collection.selectors';
+import { getAllCollections, getAllMarketplaceOffers, getAllMarketplaceOffersV1 } from '@selectors/collection.selectors';
 import { COMMON_RARITY, EXCLUSIVE_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
+import { getEnabledNetworkByChainId } from '@services/network.service';
+import { getContract } from '@services/contract.service';
 
 const ImportantProductInformation = ({
   collectionId,
@@ -60,7 +63,7 @@ const ImportantProductInformation = ({
   const dispatch = useDispatch();
   const account = useSelector(getAccount);
   const clothesId = garment.id;
-
+  
   const auction = useSelector(getAuctionById(auctionId));
   const historyTokenId = useSelector(getAllHistoryByTokenId);
   const history = historyTokenId.get(auctionId);
@@ -72,21 +75,35 @@ const ImportantProductInformation = ({
 
   const collections = useSelector(getAllCollections);
   const offers = useSelector(getAllMarketplaceOffers);
+  const v1Offers = useSelector(getAllMarketplaceOffersV1);
   const currentCollections = collections.toJS();
 
   const currentOffer = useMemo(() => {
     const jsOffers = offers.toJS();
-    return jsOffers.find(
+    const jsV1Offers = v1Offers.toJS();
+    let jsOffer = jsOffers.find(
       (val) =>
-        val.garmentCollection.garmentAuctionID === auctionId &&
-        val.garmentCollection.rarity ===
-          (tabIndex === 2 ? COMMON_RARITY : tabIndex === 1 ? SEMI_RARE_RARITY : EXCLUSIVE_RARITY),
+      val.garmentCollection.garmentAuctionID === auctionId &&
+      val.garmentCollection.rarity ===
+        (tabIndex === 2 ? COMMON_RARITY : tabIndex === 1 ? SEMI_RARE_RARITY : EXCLUSIVE_RARITY),
     );
-  }, [offers]);
+    if (collectionId === '1' && jsOffer) {
+      const jsV1Offer = jsV1Offers.find((val) => val.id === jsOffer.id[1]);
+      if (jsV1Offer) {
+        jsOffer.amountSold = parseInt(jsOffer.amountSold) + parseInt(jsV1Offer.amountSold);
+      }
+    }
+    return jsOffer;
+  }, [offers, v1Offers]);
 
   let collection = currentOffer
     ? currentCollections.find((collection) => collection.id === currentOffer.id)
     : null;
+
+  let priceEth = currentOffer?.primarySalePrice / 10 ** 18;
+  if (tabIndex === 0) {
+    priceEth = convertToEth(auction?.topBid || 0);
+  }
 
   const estimateApy = useAPY(garment.primarySalePrice);
 
@@ -95,8 +112,9 @@ const ImportantProductInformation = ({
   const timerToSoldButton = useRef(null);
   let canShowWithdrawBtn = false;
   let showSoldButton = false;
-
+  
   const chainId = useSelector(getChainId);
+  const network = getEnabledNetworkByChainId(chainId);
   const isMatic = chainId === '0x13881' || chainId === '0x89';
   clearTimeout(timer.current);
   clearTimeout(timerToSoldButton.current);
@@ -117,10 +135,6 @@ const ImportantProductInformation = ({
     },
     [chainId, auctionId],
   );
-
-  // if (!auction) {
-  //   return null;
-  // }
 
   const expirationDate = auction?.endTime * 1000;
 
@@ -149,13 +163,7 @@ const ImportantProductInformation = ({
         )
         .sort((a, b) => b.timestamp - a.timestamp)
     : [];
-  let priceEth = garment.primarySalePrice / 10 ** 18;
-  if (tabIndex === 0) {
-    priceEth = convertToEth(auction?.topBid || 0);
-  } else if (collectionId === '3') {
-    if (collection?.rarity === 'Common') priceEth = 0.015;
-    else priceEth = 0.45;
-  }
+
   const minBid = new BigNumber(priceEth).plus(new BigNumber(minBidIncrement));
 
   let isMakeBid = false;
@@ -369,7 +377,7 @@ const ImportantProductInformation = ({
 };
 
 ImportantProductInformation.propTypes = {
-  auctionId: PropTypes.string.isRequired,
+  auctionId: PropTypes.string,
   tabIndex: PropTypes.number,
   garment: PropTypes.object.isRequired,
   estimateApyText: PropTypes.string,

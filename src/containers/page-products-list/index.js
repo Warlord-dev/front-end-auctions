@@ -40,6 +40,7 @@ const PageProductsList = ({ collectionId }) => {
   const currentCollections = collections.toJS();
   const [showGraphIds, setShowGraphIds] = useState([]);
 
+
   if (collectionId === '1') {
     currentAuctions = amongUsAuctions;
   }
@@ -92,9 +93,7 @@ const PageProductsList = ({ collectionId }) => {
   useSubscription(
     {
       request:
-        collectionId === '1' || collectionId === '2'
-          ? wsApi.getAllDigitalaxGarmentsCollections()
-          : wsApi.getAllDigitalaxGarmentsCollectionsV2(),
+          wsApi.getAllDigitalaxGarmentsCollectionsV2(),
       next: (data) => {
         dispatch(globalActions.setIsLoading(false));
         dispatch(collectionActions.mapData(data?.digitalaxGarmentCollections || []));
@@ -106,9 +105,7 @@ const PageProductsList = ({ collectionId }) => {
   useSubscription(
     {
       request:
-        collectionId === '1' || collectionId === '2'
-          ? wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id))
-          : wsApi.onDigitalaxMarketplaceOffersV2(currentCollections.map((val) => val.id)),
+          wsApi.onDigitalaxMarketplaceOffersV2(currentCollections.map((val) => val.id)),
       next: (data) => {
         dispatch(collectionActions.updateMarketplaceOffers(data?.digitalaxMarketplaceOffers || []));
       },
@@ -116,7 +113,15 @@ const PageProductsList = ({ collectionId }) => {
     [chainId, currentCollections],
   );
 
-  console.log({ currentCollections });
+  useSubscription(
+    {
+      request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.filter(val => parseInt(val.id) >= 10).map((val) => val.id[1])),
+      next: (data) => {
+        dispatch(collectionActions.updateMarketplaceOffersV1(data?.digitalaxMarketplaceOffers || []));
+      }
+    },
+    [chainId, currentCollections]
+  );
 
   useSubscription(
     {
@@ -145,9 +150,28 @@ const PageProductsList = ({ collectionId }) => {
     [chainId, showGraphIds],
   );
 
-  useEffect(() => {
-    dispatch(globalActions.setIsLoading(true));
-  }, []);
+  // useEffect(() => {
+  //   dispatch(globalActions.setIsLoading(true));
+
+  //   const fetchCollections = async () => {
+  //     const { digitalaxGarmentV2Collections } = await apiService.getGarmentsCollectionsV2();
+  //     dispatch(collectionActions.mapData(digitalaxGarmentV2Collections || []));
+  //     dispatch(globalActions.setIsLoading(false));
+  //   }
+
+  //   fetchCollections();
+  // }, []);
+
+  // useEffect(() => {
+  //   const fetchMarketplceOffers = async () => {
+  //     const { digitalaxMarketplaceV2Offers } = apiService.getMarketplaceOffersV2(currentCollections.map((val) => val.id));
+  //     dispatch(collectionActions.updateMarketplaceOffers(digitalaxMarketplaceV2Offers || []));
+  //   }
+
+  //   if (currentCollections.length) {
+  //     fetchMarketplceOffers();
+  //   }
+  // }, [chainId, currentCollections]);
 
   const nowTimestamp = Date.now();
 
@@ -212,7 +236,7 @@ const PageProductsList = ({ collectionId }) => {
           auctions={currentAuctions}
           collections={currentCollections.filter(
             (collection) =>
-              collection.garments.length && !digitalIds.includes(collection.garments[0].designer),
+              collection.garments.length && !digitalIds.includes(collection.garments[0].designer) && (collectionId === '1' ? parseInt(collection.id) >= 10 : parseInt(collection.id) < 10),
           )}
           showGraphIds={showGraphIds}
           setShowGraphIds={setShowGraphIds}
