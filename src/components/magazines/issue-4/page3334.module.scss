@@ -211,16 +211,69 @@
     top: 220px;    
   }
 
+  .image2 {
+    position: absolute;
+    width: 47px;
+    height: 227px;
+    left: 538px;
+    top: 220px;    
+  }
+
   .text2 {
+    position: absolute;
+    width: 402px;
+    height: 188px;
+    left: 500px;
+    top: 860px;
     
+    font-family: Metrophobic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 120.53%;
+   
+    text-align: center;
+    color: #1E0CA2;
+    
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
   }
 
   .text3 {
-
+    position: absolute;
+    width: 167px;
+    height: 20px;
+    left: 599px;
+    top: 439px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #000000;
+    
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
   }
 
   .text4 {
-
+    position: absolute;
+    width: 568px;
+    height: 72px;
+    left: 17px;
+    top: 857px;
+    
+    font-family: Long Cang;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    /* or 72px */
+    
+    text-align: center;
+    
+    color: #D95CE7;
   }
 
   .text5 {

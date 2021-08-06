@@ -2,4 +2,155 @@
 
 .wrapper {
   @include magazineWrapper();
+  background-color: white;
+
+  .video1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    
+    object-fit: cover;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    background: rgba(40, 12, 56, 0.2);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 572px;
+    height: 160px;
+    left: 1001px;
+    top: 26px;
+    
+    font-family: DJB Emilys Garden;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 85px;
+    
+    color: #FFFFFF;
+    text-shadow: -1px 0 #EC0000, 0 1px #EC0000, 1px 0 #EC0000, 0 -1px #EC0000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 891px;
+    height: 92px;
+    left: 1001px;
+    top: 232px;
+
+    font-family: Inter;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #FFFFFF;
+    text-shadow: -0.5px 0 #A400BE, 0 0.5px #A400BE, 0.5px 0 #A400BE, 0 -0.5px #A400BE;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 336px;
+    height: 92px;
+    left: 1531px;
+    top: 301px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 85px;
+    /* or 170% */
+
+    text-align: right;
+
+    color: #FFFFFF;
+
+    text-shadow: -1px 0 #A400BE, 0 1px #A400BE, 1px 0 #A400BE, 0 -1px #A400BE;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 874px;
+    height: 108px;
+    left: 994px;
+    top: 372px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+
+    text-align: right;
+
+    color: #FFFFFF;
+    text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
+  }
+
+  .text5 {
+
+    position: absolute;
+    width: 653px;
+    height: 543px;
+    left: 1214px;
+    top: 519px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+
+    text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 599px;
+    height: 391px;
+    left: 989px;
+    top: 992px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+
+    color: #FFFFFF;
+
+    text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 925px;
+    height: 160px;
+    left: 960px;
+    top: 1392px;
+    
+    font-family: DJB Emilys Garden;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 85px;
+    
+    color: #FFFFFF;
+    
+    text-shadow: -1px 0 #EC0000, 0 1px #EC0000, 1px 0 #EC0000, 0 -1px #EC0000;
+  }
 }

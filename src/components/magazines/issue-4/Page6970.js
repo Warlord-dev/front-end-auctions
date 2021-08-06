@@ -5,30 +5,38 @@ import Link from 'next/link';
 const Page6970 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.image1}>
-        <video className={styles.image2} muted loop autoPlay>
-          <source src="./magazine/3/images/69_70/video1.mp4" type="video/mp4" />
-        </video>
+      <img className={styles.image1} src='/magazine/4/images/6970_background1.png' />
+      <video autoPlay muted loop className={styles.video1}>
+        <source src='./magazine/4/videos/6970_video1.mp4' />
+      </video>
+
+      <Link href='https://www.instagram.com/3d_maslennikov/'>
+        <a target='_blank'>
+          <div className={styles.text1}>
+            Maslennikov        
+          </div>
+        </a>
+      </Link>
+
+      <div className={styles.text2}>
+        My name is Yaroslav Maslennikov. I was born in Ukraine from Donetsk. Now I live in Russia in the city of Kursk. I have a Bachelor of Apparel Design Engineering. In my free time I do various designs. In the future I am looking to design game models. I’m always ready to collaborate with other designers!
       </div>
-      <Link href="https://www.instagram.com/hugorichel/">
-        <a target="_blank">
-        <p className={styles.text1}>Hugo Richel</p> 
+
+      <div className={styles.text3}>
+        Eternal Connection
+      </div>
+
+      <Link href='https://www.instagram.com/3dninjah/'>
+        <a target='_blank'>
+          <div className={styles.text4}>
+            3DNINJAH
+          </div>
         </a>
       </Link>
-      <p className={styles.text2}>SUTAN FILTER</p> 
-      <img src="/magazine/3/images/69_70/image1.png" className={styles.image3}/> 
-      <p className={styles.text3}> Blue Averan</p> 
-      <p className={styles.text4}>
-I’m Tiago Filipe (or James Phillip). I’m a self taught  3D artist living in Portugal. I love fashion, but I don’t have any background in it.
- <br/><br/>
-I discovered DazStudio in 2018 and, since I didn’t own many assets, I decided to learn how to create 3D clothes to use in my characters when creating art. I've learnt Marvelous Designer and Autodesk Maya to create 3D Outfits for DazStudio.
-<br/><br/>
-Now I'm a PA (Published Artist) at Renderosity always looking to improve my store with new outfits. I look for inspiration in the web in sites like Pinterest and sometimes i try to recreate designs from known Fashion Designers like Dior, Versace or Alexander McQueen</p> 
-      <Link href="https://www.instagram.com/tiago.filipe.silva/?hl=en">
-        <a target="_blank">
-        <p className={styles.text5}>Tiago Filipe</p>  
-        </a>
-      </Link>
+
+      <div className={styles.text5}>
+        I am an Egyptian 3D Artist with more than 6 years of experience. My style is often Dark, spiritual and glowy, where I focus on converting my emotions into my work. My main softwares are: Cinema 4d - Zbrush - After effects. I’ve always been passionate about art, and now I make my own.
+      </div>
     </div>
   );
 };

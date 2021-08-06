@@ -4,7 +4,8 @@ import styles from './page7374.module.scss';
 const Page7374 = () => {
   return (
     <div className={styles.wrapper}>
-     <img src="/magazine/3/images/73_74/image1.png" className={styles.image1}/>
+      <img className={styles.image1} src='/magazine/4/images/7374_background1.png' />
+      <img className={styles.image2} src='/magazine/4/images/7374_background2.png' />
     </div>
   );
 };

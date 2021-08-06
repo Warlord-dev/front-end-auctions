@@ -264,56 +264,28 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Atma"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Metrophobic"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Long+Cang"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Port+Lligat+Slab"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Bitter:wght@900"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=din+condensed"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Esteban"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Faustina"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"></link>
           
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
               __html: `
-            @font-face {
-              font-family: "inter";
-              font-display: swap;
-              src: url("./fonts/inter-400.woff2") format("woff2"),
-              url("./fonts/inter-400.woff") format("woff");
-              font-weight: normal;
-              font-style: normal;
-            } 
-          
-            @font-face {
-              font-family: "inter";
-              font-display: swap;
-              src: url("./fonts/inter-600.woff2") format("woff2"),
-              url("./fonts/inter-600.woff") format("woff");
-              font-weight: 600;
-              font-style: normal;
-            }
             
-            @font-face {
-              font-family: "inter";
-              font-display: swap;
-              src: url("./fonts/inter-700.woff2") format("woff2"),
-                url("./fonts/inter-700.woff") format("woff");
-              font-weight: 700;
-              font-style: normal;
-            }
-          
-            @font-face {
-              font-family: "inter";
-              font-display: swap;
-              src: url("./fonts/inter-800.woff2") format("woff2"),
-                url("./fonts/inter-800.woff") format("woff");
-              font-weight: 800;
-              font-style: normal;
-            }
-            
-            @font-face {
-              font-family: "inter";
-              font-display: swap;
-              src: url("./fonts/inter-900.woff2") format("woff2"),
-                url("./fonts/inter-900.woff") format("woff");
-              font-weight: 900;
-              font-style: normal;
-            }
-
             @font-face {
               font-family: "Internal Rainbows";
               src: url("./fonts/Internal Rainbows.otf");
@@ -531,6 +503,12 @@ class MyDocument extends Document {
               font-family: 'Blacker Display';
               font-weight: 700;
               src: url("./fonts/Blacker-Display-Bold-trial.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Blacker Display';
+              font-weight: 900;
+              src: url("./fonts/Blacker-Display-Heavy-trial.ttf");
             }
           
             @font-face {
@@ -1454,6 +1432,13 @@ class MyDocument extends Document {
               font-family: 'BM HANNA_TTF';
               src: url('./fonts/BM-HANNA.ttf');
             }
+
+            @font-face {
+              font-family: 'Digital Numbers';
+              font-style: normal;
+              font-weight: normal;
+              src: url('./fonts/DigitalNumbers-Regular.woff') format('woff');
+              }
           `,
             }}
           />

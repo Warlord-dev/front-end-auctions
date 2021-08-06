@@ -5,24 +5,27 @@ import Link from 'next/link';
 const Page6768 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.image1}>
-        <video className={styles.image2} muted loop autoPlay>
-          <source src="./magazine/3/images/67_68/video1.mp4" type="video/mp4" />
-        </video>
+      <img className={styles.image1} src='/magazine/4/images/6768_background1.png' />
+      <img className={styles.image2} src='/magazine/4/images/6768_background2.png' />
+      <img className={styles.image3} src='/magazine/4/images/6768_image1.png' />
+
+      <div className={styles.text1}>
+        Throughout the Metaverse        
       </div>
-      <Link href="https://www.instagram.com/howiseedatworld/?hl=en">
-        <a target="_blank">
-          <p className={styles.text1}>Hellion</p>   
+      <div className={styles.text2}>
+        ABOVE THE CLOUDS. Inspired by the desire to travel and the feeling when you look out the window on a plane, a weightless chiffon dress with an angelic undertone.      
+      </div>
+      <Link href='https://www.instagram.com/lovetomorrow3d/'>
+        <a target='_blank'>
+          <div className={styles.text3}>
+            Love, Tomorrow
+          </div>
         </a>
       </Link>
-      <p className={styles.text2}>howiseedatworld</p>  
-      <img src="/magazine/3/images/67_68/image1.png" className={styles.image3}/>
-      <Link href="https://www.instagram.com/lisa_gen_paris_/">
-        <a target="_blank">
-        <p className={styles.text3}>Tom Pastor</p> 
-        </a>
-      </Link>
-      <p className={styles.text4}>Lisa Gen</p> 
+
+      <div className={styles.text4}>
+        Woodland. Meadow of romantic dresses. 
+      </div>
     </div>
   );
 };
