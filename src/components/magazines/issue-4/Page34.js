@@ -3,7 +3,6 @@ import styles from './page34.module.scss'
 const Page34 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/03_04/image3.png" className={styles.image3} />
       <p className={styles.text1}>The Time Dealer.</p>
       <p className={styles.text2}>
         Time is the most abundant asset in our universe. The most abundant, yet probably the most
@@ -51,7 +50,7 @@ const Page34 = () => {
         We can deal time, on our terms.{' '}
       </p>
       <p className={styles.text12}>- Emma-Jane MacKinnon-Lee</p>
-      <img src="/magazine/4/images/0304_background.jpg" className={styles.image1} />
+      <img src="./magazine/4/images/0304_background.jpg" className={styles.image1} />
 
       <div className={styles.image2}></div>
       <p className={styles.text3}>contributors</p>
@@ -74,6 +73,7 @@ const Page34 = () => {
         <br />
         {/* Miko Matsumura */}
       </p>
+      (GDN) Glitch Faced King James Lin Aditya
       <p className={styles.text5}>
         Stan McLygin
         <br />
@@ -101,51 +101,41 @@ const Page34 = () => {
         Rafi 0x
         <br />
         <br />
-        XtraCube
-        <br />
-        <br />
         Thakane/Takii
-        <br />
-        <br />
-        Xenotech <br />
-        <br />
-        Charbakd
       </p>
       <p className={styles.text7}>
-        Bancor Network <br />
-        <br />
-        Fei Protocol
+        OurZora 
         <br />
         <br />
-        Idle Finance
+        Web3 Fashion Week
         <br />
         <br />
-        Ren Project <br />
-        <br />
-        Hamzah Khan
+        Mirror.xyz
         <br />
         <br />
-        POAP
+        Strawberry Sith <br />
+        <br />
+        Pinata Cloud
+        <br />
+        <br />
+        Lolli
       </p>
       <p className={styles.text8}>
-        Opyn
+        Charbakd
         <br />
         <br />
-        Mason Nystrom
+        Jaymes 
         <br />
         <br />
-        Ruler Protocol
+        (Pirate Ape Yacht Club)
         <br />
         <br />
-        AAVE
+        Heapons
         <br />
         <br />
-        Polygon
-        <br />
-        <br />
-        InstaDApp
+        BasedUser
       </p>
-      <p className={styles.text9}>
+      {/* <p className={styles.text9}>
         Pickle Finance
         <br />
         <br />
@@ -204,7 +194,7 @@ const Page34 = () => {
         <br />
         <br />
         Pat Lok
-      </p>
+      </p> */}
     </div>
   )
 }

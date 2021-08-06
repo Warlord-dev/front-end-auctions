@@ -40,18 +40,21 @@ const Page7576 = () => {
       <div className={styles.text4}>
 
       </div>
+
       <div className={styles.text5}>
 
       </div>
       <div className={styles.text6}>
 
       </div>
+
       <div className={styles.text7}>
 
       </div>
       <div className={styles.text8}>
 
       </div>
+      
       <div className={styles.text9}>
 
       </div>

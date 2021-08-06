@@ -1,0 +1,46 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #FFFFFF;
+
+  .image1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px
+  }
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1496px;
+    left: 960px;
+    top: 0px;
+  }
+  .image3 {
+    position: absolute;
+    width: 820px;
+    height: 755px;
+    left: 70px;
+    top: 73px;
+    
+    background: #00B7E5;
+  }
+  .text1 {
+    position: absolute;
+    width: 577px;
+    height: 1170px;
+    left: 192px;
+    top: 164px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}
