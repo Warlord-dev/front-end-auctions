@@ -1,42 +1,65 @@
-import Link from 'next/link';
-import React from 'react';
-import styles from './page7576.module.scss';
+import Link from 'next/link'
+import React from 'react'
+import styles from './page7576.module.scss'
 
 const Page7576 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/75_76/image1.png" className={styles.image1}/>
-     <img src="/magazine/3/images/75_76/image2.png" className={styles.image2}/>
-      <div className={styles.image3}>
-        <video className={styles.image4} muted loop autoPlay>
-          <source src="./magazine/3/images/75_76/video1.mp4" type="video/mp4" />
-        </video>
+      <img src='./magazine/4/images/7576_background.png' className={styles.image12} />
+      <div className={styles.back1}></div>
+      <img src='./magazine/4/images/7576_image1.png' className={styles.image5} />
+      <img src='./magazine/4/images/7576_image2.png' className={styles.image6} />
+      <img src='./magazine/4/images/7576_image3.png' className={styles.image7} />
+      <img src='./magazine/4/images/7576_image5.png' className={styles.image8} />
+      <div className={styles.back2}></div>
+      <img src='./magazine/4/images/7576_bitcoin_image.png' className={styles.image1} />
+      <img src='./magazine/4/images/7576_bitcoin_image.png' className={styles.image2} />
+      <img src='./magazine/4/images/7576_bitcoin_image.png' className={styles.image3} />
+      <img src='./magazine/4/images/7576_bitcoin_image.png' className={styles.image4} />
+      <img src='./magazine/4/images/7576_image4.png' className={styles.image9} />
+      <img src='./magazine/4/images/7576_image7.png' className={styles.image10} />
+      <Link href='https://twitter.com/alexadelman'>
+        <a target='_blank'>
+          <img src='./magazine/4/images/7576_image6.png' className={styles.image11} />
+        </a>
+      </Link>
+      <h1>
+        WEB3 WIZARDS        
+      </h1>
+      <div className={styles.text1}>
+        DECO Definers.
       </div>
-      <p className={styles.text1}>Tools for capturing the valuE In change</p>
-      <p className={styles.text2}>Dov B.</p>
-      <p className={styles.text3}>Life is inherently asymmetrical. Nowhere is this more evident than the flawed, chaotic plane of “life” that so many of us exist in.
-      <br/><br/>
-Despite the entirely understandable human need for order, stability, and predictability—and therefore, symmetry—in everything we do, we’re out here on our own, flapping in the wind, constantly dangling on the edge of this precarious mortal coil.
-<br/><br/>
-Symmetry is something we inherently strive for, whether in our relationships, career, finances, business, and health.
-<br/><br/>
-But the asymmetrical nature of life results in a constant struggle to capture value in anything and everything that we do. It’s the wild card that throws this world of ours in the dysfunctional state it’s currently in.
-<br/><br/>
-However, this fundamentally unpredictable world is what separates the wheat from the chaff—even from a strictly evolutionary perspective, species evolve to become more resilient as a result of stressful, traumatic external changes. It’s the Darwinian precept of natural selection played out in every human endeavor throughout history.</p>
-      <p className={styles.text4}>A flawed, asymmetrical world<br/>
-Think of how many services we use that require so many complex ways of gatekeeping and rent-seeking behavior. Think of how many services we use that leave a person’s fate to some recalcitrant bureaucrat or pencil-pushing twerp in a suit behind a counter, anxiously awaiting their almighty pen stroke to determine whether you can get an educational or housing loan. That’s not even mentioning how restrictive the world of traditional finance is—if you don’t have the money, you get jack squat. It’s all constant intermediation, all the time. 
-<br/><br/>
-We live in a bizarro world where middleman upon middleman upon middleman worsen the state of things across society, culture, technology, government, economics, and finance—in a world where the shadowy cabal of bankers, financiers, wheeler-dealers, academics, and their enablers that feel they have the carte blanche to determine whether an individual is worthy to serve, apart from shaking them down for their privilege of dealing with this insidious crew. 
-<br/><br/>
-Technology is a concrete example of an antifragile sector: progress is dependent on constant tinkering and taking on asymmetrical risk—and blockchain technologies, as well as the builders, creators, and developers in the space, are exemplars of forward-thinking progress that thrives and evolves in the face of uncertainty.
-<br/><br/>
-Nowhere is this fragility more evident than the traditional sectors of banking and finance, which have been immensely affected by the ongoing paradigm shift towards digitalization. Bank branches across the United States, Europe, and the rest of the world are closing down. And one can’t help but feel the sun starting to set ever so slightly on a monolithic industry that’s systematically exclusive, with costs so high, and gains so low.
-<br/><br/>
-It’s a system whose restrictive KYC and AML regulations, particularly in developing economies deny services to those who can’t provide documents—and there are $380 billion reasons why this unbanked sector might look elsewhere for a better alternative.
-<br/><br/>
-The advent of decentralized finance (DeFi) is changing that.</p>
-    </div>
-  );
-};
+      <div className={styles.text2}>
+        Most of us remember the craziness of DeFi Summer mid 2020, where we all sat in awe watching the Total Value Locked (TVL) across DeFi protocols exponentially skyrocket from tens of millions to tens of billions in just a few short months. It was an incredibly significant moment for the entirity of the crypto community, where effective usage of blockchain and web3 took a new turn for the better in actually directly being beneficial to a broader retail market, beyond just speculation and hype of new token launches or fancy tech savvy protocols with implementation scheduled for “sometime in the next 2-5 years”. 
+        <br /><br />
+        Before this, a lot of the promise of the applications of web3 technology seemed too far removed from everyday life to have a consequential and serious impact on us, our families and our ability to sustain and continue to level up in increasing our own agency and potentiality for greater opportunity. DeFi changed a lot of this in a real way. It channelled the technology into a use case that made it no longer about the technology, the product, or what the product was doing; but rather, it made it about serving our needs and helping us get to where we wanted to go with less friction, less barriers, less need to worry about gatekeepers. So, for this edition of Web3 Wizards we take our hats off to those that pioneered the industry before anyone really even knew what it was. 
+      </div>
+      <div className={styles.text3}>
+        
+      </div>
+      <div className={styles.text4}>
 
-export default Page7576;
+      </div>
+      <div className={styles.text5}>
+
+      </div>
+      <div className={styles.text6}>
+
+      </div>
+      <div className={styles.text7}>
+
+      </div>
+      <div className={styles.text8}>
+
+      </div>
+      <div className={styles.text9}>
+
+      </div>
+      <div className={styles.text10}>
+
+      </div>
+    </div>
+  )
+}
+
+export default Page7576

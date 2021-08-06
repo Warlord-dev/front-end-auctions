@@ -34,6 +34,17 @@ const Page4950 = () => {
       <div className={styles.text7}>
         Destroy the wall
       </div>
+
+      <img src='./magazine/4/images/4950_instagram.png' className={styles.image1} />
+      <img src='./magazine/4/images/4950_instagram.png' className={styles.image2} />
+      <img src='./magazine/4/images/4950_instagram.png' className={styles.image3} />
+      <img src='./magazine/4/images/4950_instagram.png' className={styles.image4} />
+      <img src='./magazine/4/images/4950_instagram.png' className={styles.image5} />
+      <img src='./magazine/4/images/4950_instagram.png' className={styles.image6} />
+      <img src='./magazine/4/images/4950_instagram.png' className={styles.image7} />
+      <img src='./magazine/4/images/4950_instagram.png' className={styles.image8} />
+      <img src='./magazine/4/images/4950_instagram.png' className={styles.image9} />
+      <img src='./magazine/4/images/4950_instagram.png' className={styles.image10} />
     </div>
   )
 }
