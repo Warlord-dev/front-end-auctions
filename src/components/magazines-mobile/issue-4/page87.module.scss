@@ -1,0 +1,270 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 4695px;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+ 
+  .image1 {
+    position: relative;
+    width: 375px;
+    height: 4695px;
+  }
+  .image22 {
+    position: absolute;
+    width: 599px;
+    height: 759px;
+    left: -112px;
+    top: -136px;
+  }
+  .image23 {
+    position: absolute;
+    width: 281px;
+    height: 276px;
+    left: -2.27px;
+    top: -17.27px;
+    transform: rotate(-20deg);
+  }
+  .image24 {
+    position: absolute;
+    width: 232px;
+    height: 232px;
+    left: 138px;
+    top: 182px;
+  }
+  .text18 {
+    position: absolute;
+    width: 112px;
+    height: 20px;
+    left: 39px;
+    top: 376px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    
+    color: #CA00CE;
+  }
+  .image25 {
+    position: absolute;
+    width: 319.19px;
+    height: 100.07px;
+    left: 43.49px;
+    top: 406.57px;
+    transform: rotate(-20deg);
+  }
+  .text10 {
+    position: absolute;
+    width: 347px;
+    height: 200px;
+    left: 9px;
+    top: 645px;
+    
+    font-family: Pangolin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+  .image32 {
+    position: absolute;
+    width: 288px;
+    height: 210px;
+    left: 68px;
+    top: 932px;
+  }
+  .image26 {
+    position: absolute;
+    width: 300px;
+    height: 161px;
+    left: 33px;
+    top: 1164px;
+  }
+  .image29 {
+    position: absolute;
+    width: 261px;
+    height: 176px;
+    left: 95px;
+    top: 1347px;
+  }
+  .image28 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 33px;
+    top: 1545px;
+  }
+  .text13 {
+    position: absolute;
+    width: 377px;
+    height: 49px;
+    left: 33px;
+    top: 1795px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    
+    color: #FF44A2;
+  }
+  .image27 {
+    position: absolute;
+    width: 347px;
+    height: 331.82px;
+    left: 9px;
+    top: 1844px;
+  }
+  .image31 {
+    position: absolute;
+    width: 380px;
+    height: 117px;
+    left: -5px;
+    top: 1866px;
+  }
+  .image30 {
+    position: absolute;
+    width: 380px;
+    height: 874px;
+    left: -5px;
+    top: 2054px;
+    
+    background: #E58598;
+  }
+  .text11 {
+    position: absolute;
+    width: 274px;
+    height: 238px;
+    left: 33px;
+    top: 2129px;
+    
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+  }
+  .image33 {
+    position: absolute;
+    width: 347px;
+    height: 331.82px;
+    left: 0px;
+    top: 2534px;
+  }
+  .text14 {
+    position: absolute;
+    width: 305px;
+    height: 140px;
+    left: 35px;
+    top: 2647px;
+    
+    font-family: Inconsolata;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 14px;
+    
+    color: #1500ff;
+  }
+  .text15 {
+    position: absolute;
+    width: 305px;
+    height: 140px;
+    left: 39px;
+    top: 2980px;
+    
+    font-family: Inconsolata;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 14px;
+    
+    color: #FFFFFF;
+  }
+  .image37 {
+    position: absolute;
+    width: 347px;
+    height: 331.82px;
+    left: 109px;
+    top: 3609px;
+  }
+  .text16 {
+    position: absolute;
+    width: 117px;
+    height: 49px;
+    left: 35px;
+    top: 3661px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #FB33FF;
+  }
+  .text17 {
+    position: absolute;
+    width: 117px;
+    height: 49px;
+    left: 35px;
+    top: 3767px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #FB33FF;
+  }
+  .image36 {
+    position: absolute;
+    width: 369px;
+    height: 369px;
+    left: 39px;
+    top: 3930px;
+  }
+  .image34 {
+    position: absolute;
+    width: 374px;
+    height: 240px;
+    left: 0px;
+    top: 4356px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .image35 {
+      width: 100%;
+    }
+  }
+  .image37 {
+    position: absolute;
+    width: 345px;
+    height: 489px;
+    left: 15px;
+    top: 3120px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+}

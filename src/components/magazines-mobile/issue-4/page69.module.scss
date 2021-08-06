@@ -1,0 +1,38 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 1612px;
+  overflow: hidden;
+  background-color: #0000FF;
+  color: white;
+
+  .image1 {
+    position: absolute;
+    width: 69px;
+    height: 1612px;
+    left: 0px;
+    top: 0px;
+    
+    background: #000000;
+  }
+  .text1 {
+    position: absolute;
+    width: 248px;
+    height: 1316px;
+    left: 97px;
+    top: 48px;
+    
+    font-family: Milonga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 120.53%;
+    /* or 20px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}

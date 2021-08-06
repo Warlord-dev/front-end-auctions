@@ -1,0 +1,151 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3153px;
+  background-color: #FFFFFF;
+  color: white;
+  position: relative;
+
+  .text3 {
+    position: absolute;
+    width: 285px;
+    height: 352px;
+    left: 45px;
+    top: 72px;
+    
+    font-family: Song Myung;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    
+    color: #9F3E9B;
+    .text4 {
+      font-family: SeoulNamsan;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 22.5px;
+    }
+  }
+  .image11 {
+    position: absolute;
+    width: 375px;
+    height: 2200px;
+    left: 0px;
+    top: 953px;
+    
+    background: linear-gradient(180deg, #FC0FF2 0%, #130017 100%);
+  }
+  .image12 {
+    position: absolute;
+    width: 376px;
+    height: 38px;
+    left: 0px;
+    top: 1351px;
+    
+    background: #741370;
+  }
+  .text5 {
+    position: absolute;
+    width: 298px;
+    height: 267px;
+    left: 39px;
+    top: 994px;
+    
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    
+    
+    color: #F4FF76;
+  }
+  .image13 {
+    position: absolute;
+    width: 138px;
+    height: 205px;
+    left: 13px;
+    top: 1320px;
+  }
+  .text6 {
+    position: absolute;
+    width: 194px;
+    height: 388px;
+    left: 162px;
+    top: 1332px;
+    
+    font-family: PLAYPULL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 25.5px;
+    /* or 45px */
+    
+    
+    color: #FFFFFF;
+    .text7 {
+      font-family: Nunito Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .text9 {
+    position: absolute;
+    width: 287px;
+    height: 388px;
+    left: 44px;
+    top: 1536px;
+    
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    
+    
+    color: #FFFFFF;
+  }
+  .text8 {
+    position: absolute;
+    width: 300px;
+    height: 439px;
+    left: 44px;
+    top: 2017px;
+    
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    
+    
+    color: #FFFFFF;
+  }
+  .image15 {
+    position: absolute;
+    width: 376px;
+    height: 38px;
+    left: 0px;
+    top: 2791px;
+    
+    background: #741370;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+  .image14 {
+    position: absolute;
+    width: 524px;
+    height: 486px;
+    left: 0px;
+    top: 2732px;
+  }
+}
