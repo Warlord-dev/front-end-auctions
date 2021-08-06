@@ -1,12 +1,127 @@
 @import './styles.module.scss';
-@keyframes scrolling {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-1400px); }
-}
+
 .wrapper {
   @include magazineWrapper();
-  background-color: #1D1916;
-  color: black;
-  display: flex;
-  position: relative;
+  background-color: white;
+  
+  .back1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;    
+  }
+
+  .diamond1 {
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    left: 1427px;
+    top: 16px;    
+  }
+
+  .diamond2 {
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    left: 1567px;
+    top: 30px;        
+  }
+
+  .diamond3 {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    left: 1824px;
+    top: 0px;
+  }
+
+  .diamond4 {
+    position: absolute;
+    width: 443px;
+    height: 418px;
+    left: 1293px;
+    top: 1079px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 599px;
+    height: 132px;
+    left: 980px;
+    top: 136px;
+    
+    font-family: Empirez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 110%;
+    /* identical to box height, or 132px */
+    
+    
+    color: #3A6B6B;
+    
+    -webkit-text-stroke: #FFFFFF;
+    -webkit-text-stroke-width: 3px;
+    text-shadow: 0px 4px 30px #000000;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 564.71px;
+    height: 700.3px;
+    left: 1083px;
+    top: 355.22px;
+
+    font-family: 'Think Thick';
+    font-size: 7px;
+    line-height: 12.6px;
+    
+    color: #FFB9B9;
+    
+    transform: rotate(-5deg);
+    transform-origin: 0 0;
+    
+    span {
+      font-family: 'Cool Chaos';
+      font-size: 30px;
+      line-height: 33px;
+
+      img {
+        margin-left: 10px;
+      }
+    }
+  }
+  
+  .text2 {
+    position: absolute;
+    width: 152.97px;
+    height: 49.61px;
+    left: 1150px;
+    top: 1052.56px;
+    
+    font-family: 'Cool Chaos';
+    font-size: 30px;
+    line-height: 110%;
+    
+    color: #FFB9B9;
+    
+    transform: rotate(-5deg);
+    transform-origin: 0 0;
+    span {
+      font-family: 'Thick';
+    }
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 282px;
+    height: 283px;
+    left: 960px;
+    top: 1098px;    
+  }
 }
