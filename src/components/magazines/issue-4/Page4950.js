@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './page4950.module.scss'
 
 const Page4950 = () => {
@@ -45,6 +46,28 @@ const Page4950 = () => {
       <img src='./magazine/4/images/4950_instagram.png' className={styles.image8} />
       <img src='./magazine/4/images/4950_instagram.png' className={styles.image9} />
       <img src='./magazine/4/images/4950_instagram.png' className={styles.image10} />
+
+      <img src='./magazine/4/images/4950_background1.png' className={styles.background1} />
+      <img src='./magazine/4/images/4950_zero.png' className={styles.image11} />
+      <img src='./magazine/4/images/4950_zero.png' className={styles.image12} />
+      <img src='./magazine/4/images/4950_zero.png' className={styles.image13} />
+      <img src='./magazine/4/images/4950_zero.png' className={styles.image14} />
+      <img src='./magazine/4/images/4950_zero.png' className={styles.image15} />
+      <img src='./magazine/4/images/4950_zero.png' className={styles.image16} />
+      <img src='./magazine/4/images/4950_zero.png' className={styles.image17} />
+      <img src='./magazine/4/images/4950_zero.png' className={styles.image18} />
+
+      <Link href='https://www.originprotocol.com/en'>
+        <a target='_blank'>
+          <div className={styles.text8}>
+            ORIGIN PROTOCOL
+          </div>
+        </a>
+      </Link>
+
+      <div className={styles.text9}>
+        ORIGIN PROTOCOL
+      </div>
     </div>
   )
 }

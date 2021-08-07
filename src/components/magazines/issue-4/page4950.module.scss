@@ -235,4 +235,112 @@
     left: 1772px;
     top: 1273px;
   }
+
+  .background1 {
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image11 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 6px;    
+  }
+
+  .image12 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 206px;
+  }
+
+  .image13 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 406px;
+  }
+
+  .image14 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 606px;
+  }
+
+  .image15 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 806px;
+  }
+
+  .image16 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 1006px;
+  }
+
+  .image17 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 1206px;
+  }
+
+  .image18 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 1406px;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 379px;
+    height: 89px;
+    left: 16px;
+    top: 0px;
+    
+    font-family: Electrolize;
+    font-size: 70px;
+    line-height: 120.53%;
+    
+    color: #FFFFFF;    
+  }
+  
+  .text9 {
+    position: absolute;
+    width: 379px;
+    height: 89px;
+    left: 574px;
+    top: 1338px;
+    
+    font-family: Electrolize;
+    font-size: 70px;
+    line-height: 120.53%;  
+    
+    color: #FFFFFF;
+  }
+
+  a {
+    div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
 }

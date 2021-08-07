@@ -8,19 +8,19 @@ const Page3940 = () => {
       <h1>
         FASHION FOR THE METAVERSE      
       </h1>
-      <div class={styles.text1}>
+      <div className={styles.text1}>
         WHAT ARE YOU WEARING?        
       </div>
-      <div class={styles.text2}>
+      <div className={styles.text2}>
         WHAT ARE YOU WEARING?        
       </div>
-      <div class={styles.text3}>
+      <div className={styles.text3}>
         WHAT ARE YOU WEARING?        
       </div>
-      <div class={styles.text4}>
+      <div className={styles.text4}>
         WHAT ARE YOU WEARING?        
       </div>
-      <div class={styles.text5}>
+      <div className={styles.text5}>
         WHAT ARE YOU WEARING?        
       </div>
       <div className={styles.back1}></div>
