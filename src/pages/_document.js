@@ -1446,11 +1446,16 @@ class MyDocument extends Document {
             }
 
             @font-face {
+              font-family: 'Umar College';
+              src: url('./fonts/Umar College.ttf');
+            }
+
+            @font-face {
               font-family: 'Digital Numbers';
               font-style: normal;
               font-weight: normal;
               src: url('./fonts/DigitalNumbers-Regular.woff') format('woff');
-              }
+            }
           `,
             }}
           />
