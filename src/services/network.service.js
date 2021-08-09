@@ -28,12 +28,7 @@ export const requestSwitchNetwork = () => {
 };
 
 export const getAPIUrlByChainId = (chainId) => {
-  const network = getEnabledNetworkByChainId(chainId);
-
-  if (!network || !config.API_URLS[network?.alias]) {
-    return config.API_URLS[config.DEFAULT_NETWORK];
-  }
-  return config.API_URLS[network?.alias];
+  return config.API_URLS['matic'];
 };
 
 export const getExplorerUrlByChainId = (chainId) => {
