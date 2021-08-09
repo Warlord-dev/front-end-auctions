@@ -117,6 +117,21 @@ export const GARMENTV2_BY_COLLECTION_ID = gql`
   }
 `;
 
+export const GARMENT_BY_COLLECTION_ID = gql`
+  query digitalaxGarmentCollection($id: ID!) {
+    digitalaxGarmentCollection(id: $id) {
+      id
+      garments(first: 1) {
+        id
+        name
+        animation
+        description
+        primarySalePrice
+      }
+    }
+  }
+`;
+
 export const GARMENTV2_BY_AUCTION_ID = gql`
   query digitalaxGarmentV2Auction($id: ID!) {
     digitalaxGarmentV2Auction(id: $id) {
@@ -142,6 +157,24 @@ export const GARMENTV2_BY_AUCTION_ID = gql`
         name
         description
         image
+      }
+    }
+  }
+`;
+
+export const GARMENT_BY_AUCTION_ID = gql`
+  query digitalaxGarmentAuction($id: ID!) {
+    digitalaxGarmentAuction(id: $id) {
+      id
+      startTime
+      endTime
+      topBid
+      garment {
+        id
+        name
+        animation
+        description
+        primarySalePrice
       }
     }
   }
@@ -193,7 +226,7 @@ export const DIGITALAX_MARKETPLACE_V2_PURCHASE_HISTORIES = gql`
 `;
 
 export const DIGITALAX_GARMENT_V2_PURCHASE_HISTORIES = gql`
-  query digitalaxGarmentV2PurchaseHistories($id: ID, ) {
+  query digitalaxGarmentV2PurchaseHistories($id: ID) {
     digitalaxGarmentV2AuctionHistories(where: {token: $id, value_not: null}) {
       id
       timestamp
@@ -207,7 +240,24 @@ export const DIGITALAX_GARMENT_V2_PURCHASE_HISTORIES = gql`
       }
     }
   }
-`
+`;
+
+export const DIGITALAX_GARMENT_PURCHASE_HISTORIES = gql`
+  query digitalaxGarmentPurchaseHistories($id: ID!) {
+    digitalaxGarmentAuctionHistories(where: {token: $id, value_not: null}) {
+      id
+      timestamp
+      transactionHash
+      value
+      bidder {
+        id
+      }
+      token {
+        id
+      }
+    }
+  }
+`;
 
 export const DIGITALAX_GARMENT_NFT_V2_GLOBAL_STATS = gql`
   query digitalaxGarmentNFTV2GlobalStats {
@@ -216,4 +266,23 @@ export const DIGITALAX_GARMENT_NFT_V2_GLOBAL_STATS = gql`
       monaPerEth
     }
   }
-`
+`;
+
+export const DIGITALAX_GARMENT_AUCTIONS = gql`
+  query digitalaxGarmentAuctions {
+    digitalaxGarmentAuctions(first: 4) {
+      id
+      garment {
+        id
+        animation
+        image
+        name
+        designer
+        description
+      }
+      topBid
+      startTime
+      endTime
+    }
+  }
+`;

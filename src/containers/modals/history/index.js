@@ -11,6 +11,7 @@ import {
 } from '@actions/modals.actions';
 import { getModalParams } from '@selectors/modal.selectors';
 import {
+  getDigitalaxGarmentPurchaseHistories,
   getDigitalaxGarmentV2PurchaseHistories,
   getDigitalaxMarketplaceV2PurchaseHistories,
 } from '@services/api/apiService';
@@ -36,9 +37,15 @@ const History = ({ className, title, type }) => {
     if (tokenIds.length) {
       const fetchHistories = async () => {
         if (type === 1) {
-          const { digitalaxGarmentV2AuctionHistories } =
-            await getDigitalaxGarmentV2PurchaseHistories(chainId, tokenIds[0]);
-          setHistory(digitalaxGarmentV2AuctionHistories);
+          if (parseInt(tokenIds[0]) <= 4) {
+            const { digitalaxGarmentAuctionHistories } =
+              await getDigitalaxGarmentPurchaseHistories(chainId, tokenIds[0]);
+            setHistory(digitalaxGarmentAuctionHistories);
+          } else {
+            const { digitalaxGarmentV2AuctionHistories } =
+              await getDigitalaxGarmentV2PurchaseHistories(chainId, tokenIds[0]);
+            setHistory(digitalaxGarmentV2AuctionHistories);
+          }
           setLoading(false);
         } else {
           const { digitalaxMarketplaceV2PurchaseHistories } =

@@ -3,7 +3,7 @@ import HeroBar from '@components/hero-bar';
 import HeroSection from '@components/hero-section';
 import ProductCard from '@components/product-card';
 import { getChainId } from '@selectors/global.selectors';
-import { getCollectionGroupById } from '@services/api/apiService';
+import { getCollectionGroupById, getDigitalaxGarmentAuctions } from '@services/api/apiService';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -19,15 +19,27 @@ const MarketplaceRarity = () => {
   useEffect(() => {
     const fetchCollectionGroup = async () => {
       const { digitalaxCollectionGroup } = await getCollectionGroupById(chainId, id);
-      let aucs = [],
-        colls = [];
-      digitalaxCollectionGroup.auctions.forEach((auction) => {
-        aucs.push({
-          ...auction,
-          rarity: 'Exclusive',
-        });
-      });
+      let aucs = [];
+      let colls = [];
 
+      if (id === '0') {
+        const { digitalaxGarmentAuctions } = await getDigitalaxGarmentAuctions(chainId);
+        digitalaxGarmentAuctions.forEach((auction) => {
+          aucs.push({
+            ...auction,
+            rarity: 'Exclusive',
+          });
+        });
+      } else {
+        digitalaxCollectionGroup.auctions.forEach((auction) => {
+          aucs.push({
+            ...auction,
+            rarity: 'Exclusive',
+          });
+        });
+        
+      }
+      
       digitalaxCollectionGroup.collections.forEach((collection) => {
         colls.push({
           garment: {
@@ -37,9 +49,9 @@ const MarketplaceRarity = () => {
           rarity: collection.rarity,
         });
       });
-
-      setCollections(colls);
+      
       setAuctions(aucs);
+      setCollections(colls);
     };
 
     fetchCollectionGroup();

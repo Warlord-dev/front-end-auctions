@@ -5,13 +5,16 @@ import {
   COLLECTIONSV2,
   COLLECTION_GROUPS,
   COLLECTION_GROUP_BY_ID,
+  DIGITALAX_GARMENT_AUCTIONS,
   DIGITALAX_GARMENT_NFT_V2_GLOBAL_STATS,
+  DIGITALAX_GARMENT_PURCHASE_HISTORIES,
   DIGITALAX_GARMENT_V2_PURCHASE_HISTORIES,
   DIGITALAX_MARKETPLACE_V2_OFFER,
   DIGITALAX_MARKETPLACE_V2_OFFERS,
   DIGITALAX_MARKETPLACE_V2_PURCHASE_HISTORIES,
   GARMENTV2_BY_AUCTION_ID,
   GARMENTV2_BY_COLLECTION_ID,
+  GARMENT_BY_AUCTION_ID,
 } from './gql.apiService';
 
 const apiRequest = (chainId, gql, params) => request(getAPIUrlByChainId(chainId), gql, params);
@@ -43,5 +46,14 @@ export const getDigitalaxMarketplaceV2PurchaseHistories = async (chainId, ids) =
 export const getDigitalaxGarmentV2PurchaseHistories = async (chainId, id) =>
   apiRequest(chainId, DIGITALAX_GARMENT_V2_PURCHASE_HISTORIES, { id });
 
+export const getDigitalaxGarmentPurchaseHistories = async (chainId, id) =>
+  apiRequest(chainId, DIGITALAX_GARMENT_PURCHASE_HISTORIES, { id });
+
 export const getDigitalaxGarmentNftV2GlobalStats = async (chainId) =>
   apiRequest(chainId, DIGITALAX_GARMENT_NFT_V2_GLOBAL_STATS);
+
+export const getDigitalaxGarmentAuctions = async (chainId) =>
+  apiRequest(chainId, DIGITALAX_GARMENT_AUCTIONS);
+
+export const getGarmentByAuctionId = async (chainId, id) =>
+  apiRequest(chainId, GARMENT_BY_AUCTION_ID, { id });

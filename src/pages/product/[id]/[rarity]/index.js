@@ -9,6 +9,7 @@ import NewButton from '@components/buttons/newbutton';
 import Container from '@components/container';
 import {
   getDigitalaxMarketplaceV2Offer,
+  getGarmentByAuctionId,
   getGarmentV2ByAuctionId,
   getGarmentV2ByCollectionId,
 } from '@services/api/apiService';
@@ -60,9 +61,15 @@ const Product = () => {
             });
           }
         } else {
-          const { digitalaxGarmentV2Auction } = await getGarmentV2ByAuctionId(chainId, id);
-          setTokenIds([digitalaxGarmentV2Auction.garment.id]);
-          setProduct(digitalaxGarmentV2Auction);
+          if (parseInt(id) > 4) {
+            const { digitalaxGarmentV2Auction } = await getGarmentV2ByAuctionId(chainId, id);
+            setTokenIds([digitalaxGarmentV2Auction.garment.id]);
+            setProduct(digitalaxGarmentV2Auction);
+          } else {
+            const { digitalaxGarmentAuction } = await getGarmentByAuctionId(chainId, id);
+            setTokenIds([digitalaxGarmentAuction.garment.id]);
+            setProduct(digitalaxGarmentAuction);
+          }
         }
       };
 
