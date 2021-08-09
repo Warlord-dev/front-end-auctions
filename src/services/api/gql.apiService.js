@@ -31,6 +31,7 @@ export const COLLECTION_GROUPS = gql`
         designer {
           id
           name
+          image
         }
       }
       collections {
@@ -44,6 +45,7 @@ export const COLLECTION_GROUPS = gql`
         designer {
           id
           name
+          image
         }
         valueSold
       }
@@ -58,6 +60,7 @@ export const COLLECTION_GROUPS = gql`
         designer {
           id
           name
+          image
         }
         valueSold
       }

@@ -12,8 +12,8 @@ const CollectionCard = ({ collection, isBundle = false }) => {
       <div className={styles.wrapper}>
         <div className={styles.title}>{collection?.name || 'COLLECTION NAME'}</div>
         <div className={styles.designerWrapper}>
-          <img src="./images/Lorena-Bellow.jpeg" />
-          <div className={styles.name}> {collection?.designer} </div>
+          <img src={collection?.designer?.image} />
+          <div className={styles.name}> {collection?.designer.name} </div>
         </div>
         <div className={styles.imageWrapper}>
           <div className={styles.image}>
