@@ -1,0 +1,14 @@
+.wrapper {
+  // background: url('/images/back3.png');
+  position: absolute;
+  background: transparent;
+  width: 960px;
+  height: 1497px;
+  left: 960px;
+  top: 0;
+  background-size: cover;
+  canvas {
+    width: 100%;
+  }
+}
+

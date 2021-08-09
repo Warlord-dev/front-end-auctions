@@ -292,6 +292,14 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jua"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Gayathri"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@700"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Coustard:wght@900"></link>
 
           {/* ipfs next.js fix */}
           <style
@@ -1455,6 +1463,11 @@ class MyDocument extends Document {
               font-style: normal;
               font-weight: normal;
               src: url('./fonts/DigitalNumbers-Regular.woff') format('woff');
+            }
+
+            @font-face {
+              font-family: 'BAZAR COSTA';
+              src: url('./fonts/BAZAR COSTA.ttf');
             }
           `,
             }}

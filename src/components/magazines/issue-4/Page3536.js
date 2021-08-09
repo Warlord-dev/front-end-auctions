@@ -1,10 +1,12 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './page3536.module.scss'
 
 const Page3536 = () => {
   return (
     <div className={styles.wrapper}>
       <img className={styles.back1} src='./magazine/4/images/3536_background1.png' />
+      <img className={styles.back2} src='./magazine/4/images/3536_background2.png' />
       <img className={styles.diamond1} src='./magazine/4/images/3536_diamond.png' />
       <img className={styles.diamond2} src='./magazine/4/images/3536_diamond.png' />
       <img className={styles.diamond3} src='./magazine/4/images/3536_diamond.png' />
@@ -27,6 +29,22 @@ const Page3536 = () => {
         - rafi_<span>0</span>X<img src='./magazine/4/images/3536_twitter.png'/>
       </div>
       <img className={styles.image1} src='./magazine/4/images/3536_image1.png' />
+      <img className={styles.image2} src='./magazine/4/images/3536_image2.png' />
+      <img className={styles.image3} src='./magazine/4/images/3536_image2.png' />
+      <img className={styles.image4} src='./magazine/4/images/3536_image2.png' />
+      <img className={styles.image5} src='./magazine/4/images/3536_image2.png' />
+      <img className={styles.image6} src='./magazine/4/images/3536_image2.png' />
+      <img className={styles.image7} src='./magazine/4/images/3536_image2.png' />
+      <img className={styles.image8} src='./magazine/4/images/3536_image2.png' />
+      <img className={styles.image9} src='./magazine/4/images/3536_image2.png' />
+      <img className={styles.image10} src='./magazine/4/images/3536_image2.png' />
+      <Link href='https://zora.co/'>
+        <a target='_blank'>
+          <div className={styles.text3}>
+            OURZORA
+          </div>
+        </a>
+      </Link>
     </div>
   )
 }

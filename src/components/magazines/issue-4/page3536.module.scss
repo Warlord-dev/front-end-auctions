@@ -11,6 +11,14 @@
     left: 960px;
     top: 0px;    
   }
+  
+  .back2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
 
   .diamond1 {
     position: absolute;
@@ -123,5 +131,98 @@
     height: 283px;
     left: 960px;
     top: 1098px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 581px;
+    height: 581px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 521px;
+    top: -97px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 640px;
+    top: 92px;     
+  }
+
+  .image5 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 581px;
+    top: 335px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 271px;
+    height: 271px;
+    left: 504px;
+    top: 595px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 271px;
+    height: 271px;
+    left: 316px;
+    top: 831px; 
+  }
+
+  .image8 {
+    position: absolute;
+    width: 271px;
+    height: 271px;
+    left: 129px;
+    top: 1059px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 271px;
+    height: 271px;
+    left: -49px;
+    top: 1290px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 737px;
+    top: 1284px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 546px;
+    height: 111px;
+    left: 231px;
+    top: 1367px;
+
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 120.53%;
+
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    color: #000000;
   }
 }

@@ -28,6 +28,8 @@ const Page3940 = () => {
         <source src='./magazine/4/videos/3940_video1.mp4' type='video/mp4' />
       </video>
       <img className={styles.image2} src='./magazine/4/images/3940_image2.png' />
+      <img className={styles.image3} src='./magazine/4/images/3940_image3.png' />
+      <img className={styles.image4} src='./magazine/4/images/3940_image4.png' />
     </div>
   )
 }
