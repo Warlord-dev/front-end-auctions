@@ -28,6 +28,10 @@ export const COLLECTION_GROUPS = gql`
       auctions {
         id
         topBid
+        designer {
+          id
+          name
+        }
       }
       collections {
         id
@@ -36,7 +40,10 @@ export const COLLECTION_GROUPS = gql`
           animation
           image
           name
-          designer
+        }
+        designer {
+          id
+          name
         }
         valueSold
       }
@@ -47,7 +54,10 @@ export const COLLECTION_GROUPS = gql`
           animation
           image
           name
-          designer
+        }
+        designer {
+          id
+          name
         }
         valueSold
       }

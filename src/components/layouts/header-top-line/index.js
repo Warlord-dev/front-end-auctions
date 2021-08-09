@@ -107,7 +107,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         <div className={cn(styles.links, isCollapse ? styles.expandedMenu : '')}>
           <Link href="https://drip.digitalax.xyz/">
             <a className={styles.link} target="_blank">
-              rep your style irl
+              rep your style IRL
             </a>
           </Link>
           <Link href="https://marketplace.digitalax.xyz">

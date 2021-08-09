@@ -45,17 +45,18 @@ const LandingPage = () => {
         const bundlePrice = digitalaxCollectionGroup.digiBundle.valueSold;
         collections.push({
           ...digitalaxCollectionGroup.collections[0].garments[0],
+          designer: digitalaxCollectionGroup.collections[0].designer.name,
           id: digitalaxCollectionGroup.id,
           sold: (collectionPrice + auctionPrice) / 1e18
         });
         bundles.push({
           ...digitalaxCollectionGroup.digiBundle.garments[0],
           productId: digitalaxCollectionGroup.digiBundle.id,
+          designer: digitalaxCollectionGroup.digiBundle.designer.name,
           id: digitalaxCollectionGroup.id,
           sold: bundlePrice / 1e18
         });
       });
-      console.log({bundles});
       setCollectionGroups(collections);
       setBundleGroups(bundles);
     };
