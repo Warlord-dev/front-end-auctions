@@ -3,4 +3,12 @@
 .wrapper {
   @include magazineWrapper();
   background: #FFFFFF;
+
+  .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1497px;
+  }
 }

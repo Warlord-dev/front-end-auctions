@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './page7172.module.scss';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
+import styles from './page7172.module.scss'
 
 const Page7172 = () => {
   return (
@@ -29,7 +29,7 @@ const Page7172 = () => {
         Blanc de Blanc is a digital fashion atelier. We lead fashion brands into the digital fashion world, where all of our collections are created digital only. We strongly believe that digital is a new chapter for the fashion industry that should be embraced. Our big idea is to change user’s behaviours, guiding them to act sustainability and decrease the waste from physical clothing usage.        
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Page7172;
+export default Page7172
