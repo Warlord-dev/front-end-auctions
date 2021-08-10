@@ -1471,6 +1471,16 @@ class MyDocument extends Document {
               font-family: 'BAZAR COSTA';
               src: url('./fonts/BAZAR COSTA.ttf');
             }
+
+            @font-face {
+              font-family: 'MUSICNET';
+              src: url('./fonts/MUSICNET.ttf');
+            }
+
+            @font-face {
+              font-family: 'JMH Extra Wide';
+              src: url('./fonts/JMH Extra Wide.ttf');
+            }
           `,
             }}
           />

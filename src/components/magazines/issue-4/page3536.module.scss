@@ -20,6 +20,27 @@
     top: 0px;    
   }
 
+  h2 {
+    position: absolute;
+    width: 966px;
+    height: 88px;
+    left: 1556px;
+    top: 1381px;
+    
+    font-family: Empirez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+    /* identical to box height, or 88px */
+    
+    
+    color: #3A6B6B;
+    
+    // border: 3px solid #FFFFFF;
+    -webkit-text-stroke: 3px white;    
+  }
+
   .diamond1 {
     position: absolute;
     width: 152px;

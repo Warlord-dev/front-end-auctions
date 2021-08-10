@@ -2,5 +2,187 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #000000;
+  background: #FFFFFF;
+
+  a {
+    div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+
+  .back1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(0, 41, 255, 0.81);
+  }
+
+  .textBack1 {
+    position: absolute;
+    left: 10px;
+    top: 0px;    
+  }
+
+  .textBack2 {
+    position: absolute;
+    left: 426px;
+    top: 0px; 
+  }
+
+  .textBack3 {
+    position: absolute;
+    left: 1121px;
+    top: 0px;
+  }
+
+  .textBack4 {
+    position: absolute;
+    left: 1121px;
+    top: 720px;
+  }
+
+  .textBack5 {
+    position: absolute;
+    left: 1537px;
+    top: 720px;
+  }
+
+  .textBack6 {
+    position: absolute;
+    left: 10px;
+    top: 864px;
+  }
+
+  .textBack7 {
+    position: absolute;
+    left: 426px;
+    top: 864px;
+  }
+
+  .textBack8 {
+    position: absolute;
+    left: 1537px;
+    top: 0px;
+  }
+
+  .musicFont {
+    div {
+      font-family: MUSICNET;
+      font-size: 60px;
+      line-height: 120.53%;
+      width: 486px;
+      height: 144px;
+    }
+  }
+
+  .greenColor {
+    div {
+      color: #00FF669F;
+    }
+  }
+
+  .whiteColor {
+    div {
+      color: #FFFFFFAF;
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 352px;
+    left: 227px;
+    height: 1497px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 352px;
+    left: 784px;
+    height: 1497px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 352px;
+    left: 1338px;
+    height: 1497px;
+    top: 0px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    left: 27px;
+    top: 16px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    left: 704px;
+    top: 16px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    left: 960px;
+    top: 1214px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 1043px;
+    left: 0px;
+    top: 454px;
+    
+    background: rgba(3, 3, 3, 0.37);    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 779px;
+    height: 912px;
+    left: 27px;
+    top: 500px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 811px;
+    height: 48px;
+    left: 20px;
+    top: 1420px;
+    
+    font-family: JMH Extra Wide;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    
+    color: #FFFFFF;
+  }
 }

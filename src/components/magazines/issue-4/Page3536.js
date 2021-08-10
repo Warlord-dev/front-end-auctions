@@ -7,6 +7,9 @@ const Page3536 = () => {
     <div className={styles.wrapper}>
       <img className={styles.back1} src='./magazine/4/images/3536_background1.png' />
       <img className={styles.back2} src='./magazine/4/images/3536_background2.png' />
+      <h2>
+        diamond ha        
+      </h2>
       <img className={styles.diamond1} src='./magazine/4/images/3536_diamond.png' />
       <img className={styles.diamond2} src='./magazine/4/images/3536_diamond.png' />
       <img className={styles.diamond3} src='./magazine/4/images/3536_diamond.png' />
