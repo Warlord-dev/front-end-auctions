@@ -1491,6 +1491,11 @@ class MyDocument extends Document {
               font-family: 'Strawberry';
               src: url('./fonts/Strawberry.ttf');
             }
+
+            @font-face {
+              font-family: 'Chalkduster';
+              src: url('./fonts/Chalkduster.ttf');
+            }
           `,
             }}
           />
