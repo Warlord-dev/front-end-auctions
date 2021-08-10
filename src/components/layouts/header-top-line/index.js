@@ -88,9 +88,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     dispatch(accountActions.logout());
   };
 
-  return isLandingPage ? (
-    <LandingHeader />
-  ) : (
+  return (
     <div
       className={cn(
         className,
@@ -110,7 +108,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
               rep your style IRL
             </a>
           </Link>
-          <Link href="https://marketplace.digitalax.xyz">
+          <Link href="https://skins.digitalax.xyz">
             <a className={styles.link} target="_blank">
               OG marketplace
             </a>

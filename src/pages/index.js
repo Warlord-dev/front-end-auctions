@@ -11,6 +11,7 @@ import CollectionList from '@components/collection-list';
 import HeroBar from '@components/hero-bar';
 import globalActions from '@actions/global.actions';
 import { convertToEth } from '@helpers/price.helpers';
+import Link from 'next/link';
 
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
@@ -32,36 +33,36 @@ const LandingPage = () => {
   }, []);
 
   useEffect(() => {
-    const fetchCollectionGroups = async () => {
-      const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
-      const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats(chainId);
-      globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth));
+    // const fetchCollectionGroups = async () => {
+    //   const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
+    //   const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats(chainId);
+    //   globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth));
 
-      let collections = [],
-        bundles = [];
-      digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
-        const collectionPrice = digitalaxCollectionGroup.collections.reduce((a, b) => a + Number(b.valueSold), 0);
-        const auctionPrice = digitalaxCollectionGroup.auctions.reduce((a, b) => a + Number(b.topBid), 0);
-        const bundlePrice = digitalaxCollectionGroup.digiBundle.valueSold;
-        collections.push({
-          ...digitalaxCollectionGroup.collections[0].garments[0],
-          designer: digitalaxCollectionGroup.collections[0].designer,
-          id: digitalaxCollectionGroup.id,
-          sold: (collectionPrice + auctionPrice) / 1e18
-        });
-        bundles.push({
-          ...digitalaxCollectionGroup.digiBundle.garments[0],
-          productId: digitalaxCollectionGroup.digiBundle.id,
-          designer: digitalaxCollectionGroup.digiBundle.designer,
-          id: digitalaxCollectionGroup.id,
-          sold: bundlePrice / 1e18
-        });
-      });
-      setCollectionGroups(collections);
-      setBundleGroups(bundles);
-    };
+    //   let collections = [],
+    //     bundles = [];
+    //   digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
+    //     const collectionPrice = digitalaxCollectionGroup.collections.reduce((a, b) => a + Number(b.valueSold), 0);
+    //     const auctionPrice = digitalaxCollectionGroup.auctions.reduce((a, b) => a + Number(b.topBid), 0);
+    //     const bundlePrice = digitalaxCollectionGroup.digiBundle.valueSold;
+    //     collections.push({
+    //       ...digitalaxCollectionGroup.collections[0].garments[0],
+    //       designer: digitalaxCollectionGroup.collections[0].designer,
+    //       id: digitalaxCollectionGroup.id,
+    //       sold: (collectionPrice + auctionPrice) / 1e18
+    //     });
+    //     bundles.push({
+    //       ...digitalaxCollectionGroup.digiBundle.garments[0],
+    //       productId: digitalaxCollectionGroup.digiBundle.id,
+    //       designer: digitalaxCollectionGroup.digiBundle.designer,
+    //       id: digitalaxCollectionGroup.id,
+    //       sold: bundlePrice / 1e18
+    //     });
+    //   });
+    //   setCollectionGroups(collections);
+    //   setBundleGroups(bundles);
+    // };
 
-    fetchCollectionGroups();
+    // fetchCollectionGroups();
   }, []);
 
   const structuredData = {
@@ -99,63 +100,38 @@ const LandingPage = () => {
         />
       </Head>
       <section className={styles.heroSection}>
-        <img src="/images/metaverse/metaverse-logo.png" className={styles.heroImage} />
+        <img src="/images/metaverse/HomeLogo.png" className={styles.heroImage} />
+        <img src="/images/metaverse/Group 1025.png" className={styles.heroBackImage} />
         <a href="#amongus" className={styles.amongus}>
-          among us
+          new arrivals
         </a>
         <a href="#minecraft" className={styles.minecraft}>
-          minecraft
+          new updates
         </a>
         <a href="#roblox" className={styles.roblox}>
-          roblox
+          about espa
         </a>
-        <HeroBar />
+        <HeroBar className={styles.homeHeroBar} />
       </section>
 
-      <section className={styles.collectionSection}>
-        <Container>
-          <div className={styles.collectionWrapper}>
-            <h1 className={styles.title}> collection </h1>
-            <CollectionList items={collectionGroups} />
-          </div>
-          <div className={styles.bundleWrapper}>
-            <h1 className={styles.title}> bundle </h1>
-            <CollectionList items={bundleGroups} isBundle />
-          </div>
-        </Container>
+      <section className={styles.viewAllSkinsSection}>
+        <img src="/images/metaverse/viewallskinsbg.png" className={styles.back} />
+        <Link href='/marketplace'>
+          <img src="/images/metaverse/view all skins.png" className={styles.viewAllLink} />
+        </Link>
       </section>
 
-      <section className={styles.amongusSection} id="amongus">
-        <img src="./images/metaverse/section-texture.png" className={styles.back} />
-        <img src="./images/metaverse/amongus-logo.png" className={styles.logo} />
-        <video autoPlay loop muted playsInline>
-          <source src="/video/among-us.mp4" type="video/mp4" />
-        </video>
-        <div className={styles.suitUp}>
-          <NewButton text="Suit up" onClick={() => router.push('/marketplace/all/0')} />
-        </div>
+      <section className={styles.newArrivalsSection}>
+        <img src="/images/metaverse/Group 1026.png" className={styles.back} />
+    
       </section>
 
-      <section className={styles.mineCraftSection} id="minecraft">
-        <img src="./images/metaverse/section-texture.png" className={styles.back} />
-        <img src="./images/metaverse/minecraft-logo.png" className={styles.logo} />
-        <video autoPlay loop muted playsInline>
-          <source src="/video/among-us.mp4" type="video/mp4" />
-        </video>
-        <div className={styles.suitUp}>
-          <NewButton text="Suit up" onClick={() => router.push('/marketplace/all/1')} />
-        </div>
+      <section className={styles.newUpdatesSection}>
+        <img src="/images/metaverse/newUpdates.png" className={styles.back} />
       </section>
 
-      <section className={styles.robloxSection} id="roblox">
-        <img src="./images/metaverse/section-texture.png" className={styles.back} />
-        <video autoPlay loop muted playsInline>
-          <source src="/video/roblox.mp4" type="video/mp4" />
-        </video>
-        <img src="./images/metaverse/roblox-logo.png" className={styles.logo} />
-        <div className={styles.suitUp}>
-          <NewButton text="Suit up" onClick={() => router.push('/marketplace/all/2')} />
-        </div>
+      <section className={styles.aboutEspaSection}>
+        <img src="/images/metaverse/Group 1027.png" className={styles.back} />
       </section>
     </div>
   );
