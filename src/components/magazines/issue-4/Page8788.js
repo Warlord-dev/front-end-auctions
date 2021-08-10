@@ -14,7 +14,7 @@ const Page8788 = () => {
       <img src='/magazine/4/images/8788_image1.png' className={styles.image1} />
       <img src='/magazine/4/images/8788_image2.png' className={styles.image2} />
       <img src='/magazine/4/images/8788_image3.gif' className={styles.image3} />
-      <Link href='https://soundcloud.com/doscmusic'>
+      <Link href='https://mirror.xyz/'>
         <a target='_blank'>
           <div className={styles.text1}>
             MIRROR.XYZ        
