@@ -1481,6 +1481,16 @@ class MyDocument extends Document {
               font-family: 'JMH Extra Wide';
               src: url('./fonts/JMH Extra Wide.ttf');
             }
+
+            @font-face {
+              font-family: 'Writers original';
+              src: url('./fonts/writers_original.ttf');
+            }
+
+            @font-face {
+              font-family: 'Strawberry';
+              src: url('./fonts/Strawberry.ttf');
+            }
           `,
             }}
           />

@@ -7,7 +7,6 @@ const Page8182 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='/magazine/4/images/8182_image1.png' className={styles.image1} />
-      
     </div>
   )
 }
