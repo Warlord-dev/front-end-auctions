@@ -1,480 +1,491 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crushed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Emblema+One&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  background: white;
+  
+  background: #FFFFFF;
 
   a {
-    div {
+    div, img {
       transition: transform .2s;
       &:hover {
-        transform: scale(1.01);
+        transform: scale(1.05);
       }
     }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 1245px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
   }
 
   .rect1 {
     position: absolute;
     width: 960px;
-    height: 1497px;
-    left: 0px;
+    height: 103px;
+    left: 960px;
     top: 0px;
     
-    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(67, 42, 216, 0.65) 100%);    
+    background: #CC00FF;  
   }
 
   .rect2 {
     position: absolute;
     width: 960px;
-    height: 804px;
+    height: 103px;
     left: 960px;
-    top: -1px;
+    top: 103px;
     
-    background: radial-gradient(50% 50% at 50% 50%, #6D6F12 0%, #000000 100%);    
+    background: #8300A4;
   }
 
   .rect3 {
     position: absolute;
     width: 960px;
-    height: 694px;
+    height: 103px;
     left: 960px;
-    top: 803px;
-    
-    background: radial-gradient(50% 50% at 50% 50%, #A68123 0%, #000000 100%);    
+    top: 206px;
+
+    background: #000000;
   }
 
-  .image1 {
+  .rect4 {
     position: absolute;
     width: 960px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
+    height: 1188px;
+    left: 960px;
+    top: 309px;
+    
+    background: #4B3600;
+  }
+
+  .rect5 {
+    position: absolute;
+    width: 960px;
+    height: 138px;
+    left: 960px;
+    top: 1359px;
+
+    background: #CC00FF;
   }
 
   .image2 {
     position: absolute;
-    width: 344px;
-    height: 398px;
-    left: 0px;
-    top: 0px;    
+    width: 130px;
+    height: 102.92px;
+    left: 960px;
+    top: 127px;
   }
 
   .image3 {
     position: absolute;
-    width: 358px;
-    height: 239px;
-    left: 568px;
-    top: 389px;
-  }
-
-  .circle1 {
-    position: absolute;
-    width: 332px;
-    height: 332px;
-    left: 1398px;
-    top: 926px;
-    border-radius: 50%;
-    
-    background: #0836D8;    
-  }
-
-  .circle2 {
-    position: absolute;
-    width: 233px;
-    height: 233px;
-    left: 1447px;
-    top: 975px;
-    border-radius: 50%;
-    background: #03A4E3;
-  }
-
-  .circle3 {
-    position: absolute;
-    width: 145px;
-    height: 145px;
-    left: 1491px;
-    top: 1019px;
-    border-radius: 50%;
-    background: #02DAE3;
+    width: 130px;
+    height: 102.92px;
+    left: 1082px;
+    top: 236px;
   }
 
   .image4 {
     position: absolute;
-    width: 299px;
-    height: 174px;
-    left: 1597px;
-    top: 927px;
+    width: 130px;
+    height: 102.78px;
+    left: 1465px;
+    top: 0px;
   }
 
   .image5 {
     position: absolute;
-    width: 182px;
-    height: 182px;
-    left: 980px;
-    top: 920px;
+    width: 130px;
+    height: 102.92px;
+    left: 1471px;
+    top: 236px;
     
-    transform: rotate(-20deg);
   }
 
   .image6 {
     position: absolute;
-    width: 88.85px;
-    height: 88.85px;
-    left: 1248.5px;
-    top: 1238px;
-    transform: rotate(80deg);    
-    transform-origin: 0 0;
+    width: 285px;
+    height: 285px;
+    left: 1635px;
+    top: -3px;
   }
 
   .image7 {
     position: absolute;
-    width: 88.85px;
-    height: 88.85px;
-    left: 1679px;
-    top: 1188.5px;
+    width: 130px;
+    height: 102.92px;
+    left: 1739px;
+    top: 321px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 500px;
+    height: 83px;
+    left: 1395px;
+    top: 456px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 274px;
+    height: 217px;
+    left: 1611px;
+    top: 595px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 257px;
+    height: 22px;
+    left: 1634px;
+    top: 817px;
     
-    transform: rotate(-80deg);
-    transform-origin: 0 0;
   }
 
-  .video1 {
+  .image11 {
     position: absolute;
-    width: 960px;
-    height: 514px;
-    left: 960px;
-    top: 289px;
-    object-fit: fill;
+    width: 182px;
+    height: 144px;
+    left: 1111px;
+    top: 1146px;
   }
 
-  .video2 {
+  .image12 {
     position: absolute;
-    width: 328px;
-    height: 324px;
-    left: 1264px;
-    top: 1173px;
-    object-fit: fill;
+    width: 130px;
+    height: 102.92px;
+    left: 983px;
+    top: 1271px;
+  }
 
-    border: 7px solid #00FFC2;
-    box-sizing: border-box;
+  .image13 {
+    position: absolute;
+    width: 157px;
+    height: 123px;
+    left: 1021px;
+    top: 1367px;
+  }
+
+  .image14 {
+    position: absolute;
+    width: 130px;
+    height: 102.92px;
+    left: 1770px;
+    top: 1199px;
+  }
+
+  .image15 {
+    position: absolute;
+    width: 112px;
+    height: 89px;
+    left: 1788px;
+    top: 1311px;
+  }
+
+  .image16 {
+    position: absolute;
+    width: 91px;
+    height: 72px;
+    left: 1816px;
+    top: 1407px;
   }
 
   .text1 {
     position: absolute;
-    width: 554px;
-    height: 160px;
-    left: 382px;
-    top: 20px;
+    width: 549px;
+    height: 57px;
+    left: 998px;
+    top: 19px;
     
-    font-family: Cormorant Upright;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 45px;
-    line-height: 120.53%;  
-    color: #3038FF;
+    font-family: Umar College;
+    font-size: 70px;
+    line-height: 110%;
+        
+    color: #FFFFFF;    
   }
 
   .text2 {
     position: absolute;
-    width: 554px;
-    height: 160px;
-    left: 379px;
-    top: 20px;
+    width: 549px;
+    height: 88px;
+    left: 1174px;
+    top: 119px;
     
-    font-family: Cormorant Upright;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 45px;
-    line-height: 120.53%;
+    font-family: Umar College;
+    font-size: 70px;
+    line-height: 110%;
     
-    color: #000000;
+    color: #FFFFFF;    
   }
 
   .text3 {
     position: absolute;
-    width: 294px;
-    height: 66px;
-    left: 617px;
-    top: 150px;
+    width: 750px;
+    height: 98px;
+    left: 983px;
+    top: 349px;
     
-    font-family: Copperplate;
+    font-family: Poppins;
     font-style: normal;
     font-weight: bold;
-    font-size: 55px;
-    line-height: 120.53%;  
-    color: #2400FF;
-    -webkit-text-stroke: 2px #000000;
+    font-size: 12px;
+    line-height: 120.53%;
+    
+    color: #FFFFFF;    
   }
 
   .text4 {
     position: absolute;
-    width: 298px;
-    height: 51px;
-    left: 643px;
-    top: 200px;
-    
-    font-family: Copperplate;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 42px;
-    line-height: 120.53%;
-    color: #2400FF;
-    -webkit-text-stroke: 2px #000000;
-  }
-
-  .text5 {
-    position: absolute;
-    width: 314px;
-    height: 108px;
-    left: 30px;
-    top: 589px;
-    
-    font-family: Copperplate;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 90%;
-    color: #2400FF;
-    -webkit-text-stroke: 1px #F04CC5;
-  }
-
-  .text6 {
-    position: absolute;
-    width: 319px;
+    width: 412px;
     height: 84px;
-    left: 587px;
-    top: 628px;
+    left: 983px;
+    top: 456px;
     
-    font-family: Copperplate;
+    font-family: Poppins;
     font-style: normal;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 12px;
     line-height: 120.53%;
-    text-align: center;
-    color: #2400FF;
-    -webkit-text-stroke: 2px #F04CC5;
-  }
-
-  .text7 {
-    position: absolute;
-    width: 870px;
-    height: 360px;
-    left: 36px;
-    top: 705px;
     
-    font-family: Crushed;
-    font-size: 20px;
-    line-height: 120.53%;
     color: #FFFFFF;
-
-    span {
-      color: #8F00FF;
-    }
-  }
-
-  .text8 {
-    position: absolute;
-    width: 883px;
-    height: 216px;
-    left: 36px;
-    top: 1083px;
-    
-    font-family: Cutive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 120.53%;
-    color: #FFFFFF;
-  }
-
-  .text9 {
-    position: absolute;
-    width: 267px;
-    height: 144px;
-    left: 30px;
-    top: 1318px;
-    
-    font-family: Copperplate;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 120.53%;
-    color: #2400FF;
-    
-    -webkit-text-stroke: 2px #F04CC5;
-  }
-
-  .text10 {
-    position: absolute;
-    width: 554px;
-    height: 156px;
-    left: 360px;
-    top: 1307px;
-    font-family: Electrolize;
-    font-size: 18px;
-    line-height: 120.53%;
-    text-align: right;
-    
-    color: #000000;
-
-    span {
-      font-family: Emblema One;
-      font-size: 20px;
-    }
-  }
-
-  .text11 {
-    position: absolute;
-    width: 916px;
-    height: 121px;
-    left: 982px;
-    top: 5px;
-    
-    font-family: Caudex;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 100px;
-    line-height: 120.53%;
-    
-    text-align: center;
-    
-    background: linear-gradient(90deg, #FF3A3A 2.51%, #AB0000 91.48%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .text12 {
-    position: absolute;
-    width: 916px;
-    height: 81px;
-    left: 982px;
-    top: 125px;
-    
-    font-family: Caudex;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 67px;
-    line-height: 120.53%;
-    
-    text-align: center;
-    color: #FFFFFF;
-  }
-
-  .text13 {
-    position: absolute;
-    width: 916px;
-    height: 60px;
-    left: 980px;
-    top: 210px;
-    
-    font-family: Caudex;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
-    line-height: 120.53%;
-    text-align: center;
-    
-    color: #FF8A00;
 
     a {
-      color: #FF8A00;
+      color: white;
       text-decoration: underline;
     }
     
   }
 
-  .text14 {
+  .text5 {
     position: absolute;
-    width: 860px;
-    height: 72px;
-    left: 998px;
-    top: 855px;
+    width: 902px;
+    height: 106px;
+    left: 983px;
+    top: 557px;
     
-    font-family: Caudex;
+    font-family: Poppins;
     font-style: normal;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 120.53%;
-    color: #FFFFFF;
     
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 585px;
+    height: 54px;
+    left: 983px;
+    top: 607px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 120.53%;
+
+    color: #E7A3FF;    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 620px;
+    height: 176px;
+    left: 983px;
+    top: 670px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 120.53%;
+    
+    color: #FFFFFF;    
+  }
+
+  .text8 {
+    position: absolute;
+    width: 741px;
+    height: 48px;
+    left: 983px;
+    top: 855px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 120.53%;
+    
+    color: #CC00FF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 922px;
+    height: 105px;
+    left: 983px;
+    top: 908px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 120.53%;
+    
+    color: #FFFFFF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 558px;
+    height: 56px;
+    left: 983px;
+    top: 994px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 120.53%;
+    /* or 14px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 233px;
+    height: 156px;
+    left: 983px;
+    top: 1067px;
+    
+    font-family: Umar College;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    /* or 44px */
+    
+    
+    color: #FF3C3C;
+    
+  }
+
+  .text12 {
+    position: absolute;
+    width: 209px;
+    height: 336px;
+    left: 1320px;
+    top: 1057px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 120.53%;
+    
+    text-align: center;
+    
+    color: #FF0000;
+    text-shadow: -1px 0 white, 0 -1px white, 1px 0 white, 0 1px white;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 308px;
+    height: 45px;
+    left: 1589px;
+    top: 984px;
+    
+    font-family: Umar College;
+    font-size: 20px;
+    line-height: 110%;
+    
+    text-align: right;
+    
+    color: #FFED00;    
+  }
+
+  .text14 {
+    position: absolute;
+    width: 360px;
+    height: 129px;
+    left: 1537px;
+    top: 1037px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 120.53%;
+    /* or 16px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
   }
 
   .text15 {
     position: absolute;
-    width: 121px;
-    height: 144px;
-    left: 1187px;
-    top: 951px;
+    width: 218px;
+    height: 160px;
+    left: 1540px;
+    top: 1187px;
     
-    font-family: Roboto;
-    font-style: italic;
+    font-family: Poppins;
+    font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-    color: #FFD600;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    text-align: right;
+    
+    color: #FFC700;
+    
   }
 
   .text16 {
     position: absolute;
-    width: 253px;
-    height: 36px;
-    left: 968px;
-    top: 1110px;
+    width: 601px;
+    height: 108px;
+    left: 1179px;
+    top: 1377px;
     
-    font-family: Carrois Gothic SC;
-    font-size: 30px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
     line-height: 120.53%;
-    text-align: center;
+    /* or 18px */
     
-    color: #FF8A00;
+    text-align: right;
+    
+    color: #FFFFFF;
   }
 
   .text17 {
     position: absolute;
-    width: 188px;
-    height: 216px;
-    left: 970px;
-    top: 1191px;
+    width: 46px;
+    height: 20px;
+    left: 1845px;
+    top: 843px;
     
-    font-family: Chalkduster;
-    font-size: 20px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
     line-height: 120.53%;
+    /* or 20px */
+    
     text-align: right;
     
     color: #FFFFFF;
-  }
-
-  .text18 {
-    position: absolute;
-    width: 138px;
-    height: 96px;
-    left: 1767px;
-    top: 1169px;
-    
-    font-family: Chalkduster;
-    font-size: 20px;
-    line-height: 120.53%;
-    text-align: right;
-    color: #FFFFFF;
-  }
-
-  .playButton {
-    position: absolute;
-    width: 125px;
-    height: 125px;
-    left: 511px;
-    top: 200px;
-    background: transparent;
-    border: none;
-
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 }

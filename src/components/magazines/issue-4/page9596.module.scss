@@ -2,7 +2,17 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: white;
+  background: #FFFFFF;
+
+  a {
+    div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
 
   .back1 {
     position: absolute;
@@ -11,37 +21,37 @@
     left: 0px;
     top: 0px;
     
-    background: rgba(255, 202, 15, 0.81);    
+    background: rgba(0, 41, 255, 0.81);
   }
 
   .textBack1 {
     position: absolute;
     left: 10px;
-    top: 0px;
+    top: 0px;    
   }
 
   .textBack2 {
     position: absolute;
     left: 426px;
-    top: 0px;
+    top: 0px; 
   }
 
   .textBack3 {
     position: absolute;
     left: 1121px;
-    top: 720px;
+    top: 0px;
   }
 
   .textBack4 {
     position: absolute;
-    left: 1537px;
+    left: 1121px;
     top: 720px;
   }
-  
+
   .textBack5 {
     position: absolute;
-    left: 1121px;
-    top: 0px;
+    left: 1537px;
+    top: 720px;
   }
 
   .textBack6 {
@@ -72,9 +82,9 @@
     }
   }
 
-  .redColor {
+  .greenColor {
     div {
-      color: #FF5C009F;
+      color: #00FF669F;
     }
   }
 
@@ -87,28 +97,36 @@
   .image1 {
     position: absolute;
     width: 352px;
-    height: 1497px;
     left: 227px;
-    top: 0px;        
+    height: 1497px;
+    top: 0px;
   }
 
   .image2 {
     position: absolute;
     width: 352px;
-    height: 1497px;
     left: 784px;
+    height: 1497px;
     top: 0px;
   }
 
   .image3 {
     position: absolute;
     width: 352px;
-    height: 1497px;
     left: 1338px;
+    height: 1497px;
     top: 0px;
   }
 
   .image4 {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    left: 27px;
+    top: 16px;
+  }
+
+  .image5 {
     position: absolute;
     width: 256px;
     height: 256px;
@@ -116,7 +134,7 @@
     top: 16px;
   }
 
-  .image5 {
+  .image6 {
     position: absolute;
     width: 256px;
     height: 256px;
@@ -126,55 +144,45 @@
 
   .rect1 {
     position: absolute;
-    width: 954px;
-    height: 429px;
+    width: 960px;
+    height: 1043px;
     left: 0px;
-    top: 1068px;
-
-    background: rgba(3, 3, 3, 0.37);
+    top: 454px;
+    
+    background: rgba(3, 3, 3, 0.37);    
   }
 
-  .image6 {
+  .text1 {
     position: absolute;
-    width: 333px;
-    height: 333px;
-    left: 20px;
-    top: 1083px;    
+    width: 779px;
+    height: 912px;
+    left: 27px;
+    top: 500px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
   }
 
-  h1 {
+  .text2 {
     position: absolute;
-    width: 552px;
-    height: 60px;
+    width: 811px;
+    height: 48px;
     left: 20px;
-    top: 1421px;
+    top: 1420px;
     
     font-family: JMH Extra Wide;
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 120.53%;
-    color: #FFFFFF;
-
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  h2 {
-    position: absolute;
-    width: 550px;
-    height: 365px;
-    left: 377px;
-    top: 1077px;
+    /* or 24px */
     
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 120.53%;
-    color: #FFFFFF;
     
+    color: #FFFFFF;
   }
 }

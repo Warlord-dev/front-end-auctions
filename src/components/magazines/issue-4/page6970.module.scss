@@ -11,7 +11,7 @@
       }
     }
   }
-  
+
   .image1 {
     position: absolute;
     width: 960px;
@@ -20,95 +20,89 @@
     top: 0px;    
   }
 
-  .video1 {
+  .image2 {
     position: absolute;
     width: 960px;
-    height: 1540px;
+    height: 1497px;
     left: 960px;
-    top: -20px;
-    object-fit: cover;
+    top: 0px;    
+  }
+  
+  .image3 {
+    position: absolute;
+    width: 518px;
+    height: 76px;
+    left: 37px;
+    top: 37px;     
   }
 
   .text1 {
     position: absolute;
-    width: 528px;
-    height: 72px;
-    left: 24px;
-    top: 18px;
+    width: 756px;
+    height: 88px;
+    left: 75px;
+    top: 96px;
     
-    font-family: 'Digital Numbers';
+    font-family: Julietta Messie Demo;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
-    line-height: 120.53%;
-    
-    color: #FFFFFF;    
+    font-size: 80px;
+    line-height: 110%;
+
+    color: #0060F1;    
   }
 
   .text2 {
     position: absolute;
-    width: 504px;
-    height: 64px;
-    left: 22px;
-    top: 100px;
+    width: 258px;
+    height: 92px;
+    left: 671px;
+    top: 429px;
     
-    font-family: Electrolize;
+    font-family: Bitter;
     font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 120.53%;
-
-    color: #FF00C7;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 110%;
+    
+    text-align: right;
+    
+    color: #004BDC;    
   }
 
   .text3 {
     position: absolute;
-    width: 263px;
-    height: 48px;
-    top: 23px;
-    left: 1622px;
+    width: 226px;
+    height: 70px;
+    left: 703px;
+    top: 521px;
     
-    font-family: DigitalRiver;
+    font-family: Blacker Display;
     font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 120.53%;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
     
-    color: #FFFFFF;
+    text-align: right;
+    
+    color: #FFFFFF;    
   }
 
   .text4 {
     position: absolute;
-    width: 140px;
-    height: 48px;
-    top: 1347px;
-    left: 1755px;
+    width: 206px;
+    height: 92px;
+    left: 995px;
+    top: 1417px;
     
-    font-family: DigitalRiver;
+    font-family: Bitter;
     font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 120.53%;
-
-    color: #FF0000;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 110%;
+        
+    color: #DE14FF;
   }
-
-  .text5 {
-    position: absolute;
-    width: 286px;
-    height: 84px;
-    top: 1395px;
-    left: 1608px;
-    
-    font-family: DIN Alternate;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 120.53%;
-    /* or 14px */
-    
-    text-align: right;
-    
-    color: #FFFFFF;
-  }
+  
 }

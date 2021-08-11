@@ -2,35 +2,72 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 805px;
-  background-color: #000000;
+  height: 1051px;
+  background-color: #fff;
   color: black;
   display: flex;
   position: relative;
 
   .image1 {
     position: absolute;
-    width: 320.77px;
-    height: 447px;
-    left: 27px;
-    top: 72px;    
+    left: 0;
+    top: 0;
+    width: 375px;
+    height: 1051px;
   }
-  .text1 {
+  
+  h1 {
     position: absolute;
-    width: 258px;
-    height: 96px;
-    left: 58px;
-    top: 541px;
+    width: 806px;
+    height: 64px;
+    left: 44px;
+    top: 42px;
     
-    font-family: Convergence;
-    font-style: normal;
-    font-weight: normal;
+    font-family: League Gothic;
+    font-size: 50px;
+    line-height: 80%;
+    color: #FF4A7E;
+    -webkit-text-stroke: 2px #00D0DA;
+  }
+  
+  h2 {
+    position: absolute;
+    width: 311px;
+    height: 176px;
+    left: 44px;
+    top: 61px;
+    
+    font-family: League Gothic;
+    font-size: 70px;
+    line-height: 150%;
+    color: #FF4A7E;
+    -webkit-text-stroke: 1px #00D0DA;
+  }
+  
+  h3 {
+    position: absolute;
+    width: 806px;
+    height: 120px;
+    left: 44px;
+    top: 117px;
+    
+    font-family: League Gothic;
+    font-size: 80px;
+    line-height: 150%;
+    color: #FF4A7E;
+    -webkit-text-stroke: 1px #00D0DA;
+  }
+  
+  h4 {
+    position: absolute;
+    width: 143px;
+    height: 50px;
+    left: 280px;
+    top: 305px;
+    
+    font-family: League Gothic;
     font-size: 40px;
-    line-height: 120.53%;
-    /* or 48px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
+    line-height: 80%;
+    color: #00D0DA;
   }
 }

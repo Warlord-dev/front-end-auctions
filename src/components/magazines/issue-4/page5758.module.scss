@@ -1,11 +1,10 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 
 .wrapper {
-  @include magazineWrapper();  
-  background: black;
-  
-  .image1 {
+  @include magazineWrapper();    
+  background: #FFFFFF;
+
+  .backgroundImage {
     position: absolute;
     left: 0;
     top: 0;
@@ -13,19 +12,94 @@
     height: 1497px;
   }
 
-  .text1 {
+  .image1 {
     position: absolute;
-    width: 362px;
-    height: 113px;
-    left: 37px;
-    top: 36px;
-    
-    font-family: UnifrakturMaguntia;
-    font-size: 50px;
-    line-height: 100%;
-    color: #000000;
-    
-    text-shadow: -1px 0 #00E0FF, 0, -1px #00E0FF, 1px 0 #00E0FF, 0 1px #00E0FF;
+    width: 325px;
+    height: 324px;
+    left: 0px;
+    top: 1173px;
         
   }
+
+  .image2 {
+    position: absolute;
+    width: 253px;
+    height: 253px;
+    left: 218px;
+    top: 1233px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 751px;
+    height: 149px;
+    left: 236px;
+    top: 144px;
+    
+    font-family: Buda;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 100px;
+    line-height: 120.53%;
+    /* or 121px */
+    
+    
+    color: #FFE193;
+        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 751px;
+    height: 149px;
+    left: 236px;
+    top: 144px;
+    
+    font-family: Buda;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 100px;
+    line-height: 120.53%;
+    /* or 121px */
+    
+    
+    color: #FFE193;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 751px;
+    height: 149px;
+    left: 59px;
+    top: 15px;
+    
+    font-family: Buda;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 100px;
+    line-height: 120.53%;
+    /* or 121px */
+    
+    
+    color: #FFE193;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 751px;
+    height: 149px;
+    left: 59px;
+    top: 15px;
+    
+    font-family: Buda;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 100px;
+    line-height: 120.53%;
+    /* or 121px */
+    
+    
+    color: #FFE193;
+  }
 }
+

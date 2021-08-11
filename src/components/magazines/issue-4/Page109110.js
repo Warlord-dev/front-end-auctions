@@ -1,23 +1,35 @@
-import React from 'react';
-import styles from './page109110.module.scss';
+import React from 'react'
+import styles from './page109110.module.scss'
+import UnlockPage from '../common/UnlockPage-Three'
+import { useSelector } from 'react-redux'
+import { useRouter } from 'next/router'
 
 const Page109110 = () => {
+  const router = useRouter()
+  const { slug } = router.query
+  const issueId = slug && slug.length > 0 ? slug[0] : magazineIssues[0].issueId
+  const { contentUnlocked } = useSelector((state) => state.global.toJS())
+
   return (
     <div className={styles.wrapper}>
-       <img src="/magazine/3/images/109_110/image1.png" className={styles.image1}/>
-       <img src="/magazine/3/images/109_110/image2.png" className={styles.image2}/>
-       <div className={styles.image3}></div>
-       <p className={styles.text1}>Plus, with stablecoins, users practically slash their risk next to zero such that even if the tokens they farm lose value, they still profit from lending their liquidity. It’s no surprise more and more individuals, regardless of background, are attracted to DeFi’s promise to uplift their economic situation.
-<br/><br/>
-However, DeFi does have more than a modicum of risk involved. That’s because as the space is so young, even the most popular DeFi protocols are built by small, nimble teams working with a tight budget, which might expose their project to a spanner in the smart contract works. Even the most valuable, transparent protocols have been hacked.
-<br/><br/>
-Scams are rife, and there is no shortage of hacks, and fraudulent projects have been reported on a regular basis. 
-<br/><br/>
-In the end, the risks are an acceptable tradeoff for the promise that decentralization brings to finance, especially the billions upon billions of essentially disenfranchised, unbanked, and excluded individuals who stand to gain the most out of it.
-<br/><br/>
-Every upheaval starts has to start somewhere—and we’re seeing the initial salvos of change being fired into the air. It’s a good time to be into DeFi—no matter who you are.</p> 
+      <div className={styles.text1}>
+        The house always wins. 
+        <br /><br />
+        Designing a system that guarantees net profit regardless of external conditions or outcomes is not something that only the gambling houses can pull off. Sure, Sheldon Adelson might have gone into the game from a predatory casino perspective, leveraging human desire for generating countless derechos of devastation. But, we too can become the house— the house of our own lives— and, instead of wreaking destruction, we can rather inflate positive delta that is instrumentally valuable and tremendously gainful.
+        <br /><br />
+        Having a mastery over the meta-game means that we don’t need to know or get caught up in the volatility of the slot machines, the stack height of our chips, or the slight hand of the dealers. We can feel our own reality to play our own game. If we know our meta-how and have enough fluidity to dance with dynanism then we can map the catalysts and deltas to themselves. We can create a Y Combinator of positive cascades in each of our own lives for ensuring a net profit, no matter the situation or context. 
+        <br /><br />
+        And, in order to make this a truth, in order to win, we must maintain ownership of ourselves. Only when we play our own game are we positioning ourselves for guaranteed yield. We can turn the gears that propel stimulating change. Knowing our meta so well that we don’t need to get locked into one idea or scramble for frame control. 
+        <br /><br />
+        In fact, it’s not about control, it’s about ownership– very different. We must embrace giving away control of everything else around us. Because, ultimately, we don’t have control of anything, only ourselves. And if we establish the soundness and antifragility of our own model then we can start earlier, start well ahead. We can continue to play our own game and become damn good at it.
+        <br /><br />
+        We all have what it takes to win, but so many of us fall into the myth of pioneering. Anyone can do what it takes, but only very few decide to actually do it. My desire is to actually do it. To make sure I have ownership of myself above all else, to play my own game. Because only then can I commit to warranting impactful yield for all those that too desire to be their own house. 
+      </div>
+      <img src='/magazine/4/images/109110_background.png' className={styles.backgroundImage}/>
+      {!contentUnlocked && <UnlockPage issueId={issueId} />}
     </div>
-  );
-};
+    
+  )
+}
 
-export default Page109110;
+export default Page109110

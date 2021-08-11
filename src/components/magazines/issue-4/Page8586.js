@@ -1,146 +1,108 @@
-import React, { useRef, useState } from 'react'
-import Link from 'next/link'
+import React from 'react'
 import styles from './page8586.module.scss'
-
+import Link from 'next/link'
 
 const Page8586 = () => {
-  const audioRef = useRef()
-  const [isPlaying, setIsPlaying] = useState(false)
-
-  const startAudio = () => {
-    audioRef.current.play()
-    setIsPlaying(true)
-  }
-
-  const pauseAudio = () => {
-    audioRef.current.pause()
-    setIsPlaying(false)
-  }
-
   return (
     <div className={styles.wrapper}>
+      <img src='/magazine/4/images/8586_image1.png' className={styles.image1}/>
       <div className={styles.rect1}></div>
       <div className={styles.rect2}></div>
       <div className={styles.rect3}></div>
-      <img className={styles.image1} src='/magazine/4/images/8586_image1.png' />
-      <img className={styles.image2} src='/magazine/4/images/8586_image2.png' />
-      <img className={styles.image3} src='/magazine/4/images/8586_image3.png' />
+      <div className={styles.rect4}></div>
+      <div className={styles.rect5}></div>
 
-      <div className={styles.circle1}></div>
-      <div className={styles.circle2}></div>
-      <div className={styles.circle3}></div>
-
-      <img className={styles.image4} src='/magazine/4/images/8586_image4.png' />
-      <img className={styles.image5} src='/magazine/4/images/8586_image5.png' />
-      <img className={styles.image6} src='/magazine/4/images/8586_image6.png' />
-      <img className={styles.image7} src='/magazine/4/images/8586_image6.png' />
-
-      <video autoPlay muted loop className={styles.video1}>
-        <source src='/magazine/4/videos/8586_video1.mp4' type='video/mp4' />
-      </video>
-      <video autoPlay muted loop className={styles.video2}>
-        <source src='/magazine/4/videos/8586_video2.mp4' type='video/mp4' />
-      </video>
-
-      <Link href='https://github.com/Heapons'>
+      <img src='/magazine/4/images/8586_image2.png' className={styles.image2}/>
+      <img src='/magazine/4/images/8586_image3.png' className={styles.image3}/>
+      <img src='/magazine/4/images/8586_image4.png' className={styles.image4}/>
+      <img src='/magazine/4/images/8586_image5.png' className={styles.image5}/>
+      <img src='/magazine/4/images/8586_image6.png' className={styles.image6}/>
+      <img src='/magazine/4/images/8586_image7.png' className={styles.image7}/>
+      <img src='/magazine/4/images/8586_image8.png' className={styles.image8}/>
+      <img src='/magazine/4/images/8586_image9.png' className={styles.image9}/>
+      <img src='/magazine/4/images/8586_image10.png' className={styles.image10}/>
+      <img src='/magazine/4/images/8586_image11.png' className={styles.image11}/>
+      <Link href='https://www.ganggarrison.com/forums/index.php?topic=38509.msg1297609#msg1297609'>
         <a target='_blank'>
-          <div className={styles.textWrapper}>
-            <div className={styles.text1}>
-              Heapons Returns With An OG SoundTrack + the Story of Serider.         
-            </div>
-            <div className={styles.text2}>
-              Heapons Returns With An OG SoundTrack + the Story of Serider.         
-            </div>
+          <img src='/magazine/4/images/8586_image12.png' className={styles.image12}/>
+        </a>
+      </Link>
+      <img src='/magazine/4/images/8586_image13.png' className={styles.image13}/>
+      <img src='/magazine/4/images/8586_image14.png' className={styles.image14}/>
+      <img src='/magazine/4/images/8586_image15.png' className={styles.image15}/>
+      <img src='/magazine/4/images/8586_image16.png' className={styles.image16}/>
+
+      <Link href='https://github.com/BasedUser'>
+        <a target='_blank'>
+          <div className={styles.text1}>
+            BaSEDUSER
           </div>
         </a>
       </Link>
+      <div className={styles.text2}>
+        BaSEDUSER
+      </div>
+
       <div className={styles.text3}>
-        Wanderer
+        so... gang garrison 2 was released in 2008, it was a really tiny game and it was made more of a joke - it was basically playable, 
+        but there's a lot of things it didn't have as a multiplayer game....like chat...or hell even a voting system or a proper server.
+        <br /><br />
+        as time went on people made some plugins for both the server and client to download. things went all and well, 
+        a bit of forking happened from the original chat plugin (those are actually just mods, 
+        but we differentiate sourcemods from loaded scripts by calling them plugins). enter 2017, 
+        i join in and notice the game had a lot of boring vanilla stuff.....        
       </div>
       <div className={styles.text4}>
-        KEY: E MINOR
+        then i start this server called&nbsp;
+        <Link href='https://www.ganggarrison.com/forums/index.php?topic=37526.0'>
+          <a target='_blank'>Carry or be Carried</a>
+        </Link>&nbsp;
+        which had a lot of cool plugins making it more of like TF2, but you could also carry teammates around - it was fun. 
+        <br /><br />
+        things go on and on until i realise "hey, i should make a quick
       </div>
       <div className={styles.text5}>
-        Heapons on founding Serider
+        skip a few years later, and i make a big mod. it's another chat plugin, this time, it had a catch, you didn't need the server to download the chat plugin.  so this meant you didn't need to restart the game to get on another server (server plugins like chat were sent to clients, and due to how mods work you have to restart the game to clean it off of them). 
       </div>
-      <Link href='https://discord.gg/nUfHJX2yEF'>
-        <a target='_blank'>
-          <div className={styles.text6}>
-            SERIDER
-          </div>
-        </a>
-      </Link>
+      <div className={styles.text6}>
+        the most challenging part was the execution of my chat plugin. 
+      </div>
       <div className={styles.text7}>
-        I was 12-13 years old at the time. I was bored as usual, but then I remembered about a game named Gang Garrison 2. Being hesitant at first, I decided to give it a shot anyway. I played and had a bit of fun. But then I saw how empty the game was, and I thought of making my own server. Thing is I didn't even know how to create my own server, especially on my own laptop like that. But one day, I've 'accidentally' managed to make my server visible to the public, and a guy joined, sounds cliché, Ikr lol/ I was happy so I decided to host more often. As time went on my server was one of the most popular and even more players were playing the game afterwards, I've met AKVARI. 
+        gang garrison 2 uses a protocol called TCP to communicate - it's like you give the game, everyone on it a queue of packets to digest.
         <br /><br />
-        <span>
-          Actually wait, something happened before that, I named my server 'Serider' 
-          because I wanted something that sounded like a 'server'...so I thought 'Server + Side', and then I had Serider. 
-        </span>
-        <br /><br />
-        So back to the tracks, as I was saying I met AKVARI not too long after we eventually became really good friends and then I thought of making my own clan, heck, even community. I decided to stick to the 'Serider' name so it 'globalizes' everything. My clan, my community, and my server. I made AKVARI the co-leader of Serider, and he was doing a pretty good job at it, he even recruited people and organized events, then more and more members came, people started to hear of us and then I met even more people, made even more friends, etc.
+        the problem is, since there is no dedicated packet for chat, you need to find another packet that everyone would see exactly and without error. it turns out that there's two contenders for this status - the name change packet (which changes a player's name on the screen), and the show bubble packet (which shows an emote-like bubble next to the player's character); and unfortunately the name change packet is ratelimited to once per 10 seconds
+        luckily for me, emotes weren't rate limited, and there's 62 of them in-game, which would in theory give me a throughput of slightly under 6 bits per emote, but at a total transfer efficiency of 6/24=25% (one byte each for packet, player and bubble ids). 
       </div>
       <div className={styles.text8}>
-        Did it ever happen to you, to complain about a company, like, 'do they even listen to us?', 'man, I wish they did this' well. 
-        <br /><br />
-        I want to satisfy people who think like that. I want to push my imagination to its limits, and eventually give people what they'd need/enjoy and listen to them, of course. one another goal of mine was to provide resources to people whether because they need to conveniently find everything they may need in one place or because they just can't access them and thus, The Ultimate Resources Kit was born:
+        unfortunately using all 58 emotes would require a lot of math, which I chose not to use due to the inefficient game engine, so i opted for 32 to transfer 5 bits each. 
       </div>
-      <Link href='https://github.com/Serider-Team/The-Ultimate-Resources-Kit'>
-        <a target='_blank'>
-          <div className={styles.text9}>
-            ULTIMATE RESOURCE KIT
-          </div>
-        </a>
-      </Link>
+      <div className={styles.text9}>
+        every single character was turned into a bit array, bitshifted into discrete bubbles, and turned into a packet of its own, which was then sent over the bubbles packet. the funniest thing is that because it's not ratelimited, you could send however much text you wanted, and because of the relatively fast bitshifting implementation it wouldn't lag as much. these are the kind of bodges you have to do in an old protocol to achieve relatively modern features. the closest example i can give which does sort of the same thing is a WoW plugin that allowed to communicate with the other faction using - you guessed it - the same sort of arbitrary tunnel. 
+      </div>
       <div className={styles.text10}>
-        <span>Open Source Gaming</span><br />
-        I'm always down for sharing knowledge and power. Like, in the remixing community, people's main argument for not sharing project files is 'but there are people who never put any effort in their content, and we want to avoid the plague' but what I think is that it's inevitable you can't just restrict genuine people from making a good use of it, whenever possible, at least
+        GG2 is incredibly easy to script for, it's free and open source and then there's also the seasoned community that's there to help you with any bugs...my point is that you should always ask the community if there's something wrong with your mod, no matter the game, they'll always help you out, even in the most weird situations
       </div>
       <div className={styles.text11}>
-        The First Dungeon        
+        CHECK OUT EMOTE CHAT HERE
       </div>
       <div className={styles.text12}>
-        Open Source 2D Battle Royale
+        having used a distribution of linux for the past year I can say many problems can be fixed with a little bit of social interaction - after all, devs are also people, if not artists
       </div>
       <div className={styles.text13}>
-        Ideated & Engineered by&nbsp;
-        <Link href='https://github.com/ThijmenHappy'>
-          <a target='_blank'>
-            Thijmen Happy 
-          </a>
-        </Link>
+        thoughts on open source gaming?
       </div>
       <div className={styles.text14}>
-        Survive as the last man standing. The timer is on; every 1 minute a part of the dungeon will close & become dangerous to be in, dealing you damage. You can pickup weapons and ammo all over the dungeon and you will get the loot that other players drop if you eliminate them.
+        open source is probably our future, to be honest - its decentralized nature means we can advance way faster than companies as a whole, but we've also seen good proprietary games before - say, Minecraft - its modding scene is infamous, and I hope that eventually all games at least have the capability to achieve such a massive modding scene - hell, all we need is good APIs and these random projects which build up to a bigger whole
       </div>
       <div className={styles.text15}>
-        Hello I am Thijmen Happy. I am a indie game developer who is currently working on a battle royale game named The First Dungeon. I use the Unity Game Engine and have been for the last couple of years.
+        BasedUser runs a server on the IRC network called pissnet. Over 400 users. You can check it out here. irc.letspiss.net is the roundrobin server (connects to a node to balance the load), baseduser.eu.org is his server.
       </div>
       <div className={styles.text16}>
-        Thijmen Happy 
+        i'm working on making a mini-computer with a teensy 4.1. it's got a 600MHz Cortex-M7, 1MB of RAM, it also has a SD card slot for storage and a micro-USB port for communication. i'll be surprised if it runs a minimal linux build at optimal speed, and if it doesn't, I'll need to write all the handling to the 4*4 keypad and the 320x240 display and all of the other, I/O myself, but that's a story for another day
       </div>
       <div className={styles.text17}>
-        Unique Collectible PFP Avatars (Also Featured During W3FW...get a unique avatar with every Fashion Week NFT Purchase!)
+        = NO
       </div>
-      <div className={styles.text18}>
-        LAUNCHING WITH ESPA. COMING SOON!
-      </div>
-
-       <button 
-        className={[styles.playButton, isPlaying ? styles.isPlaying : ''].join(' ')}
-        onClick={() => {
-          isPlaying ? pauseAudio() : startAudio()
-        }}
-      >
-        {
-          <img src={`./magazine/4/images/8586_${isPlaying ? 'pausebutton' : 'playbutton'}.png`} />
-        }
-        
-      </button>
-
-      <audio ref={audioRef} loop>
-        <source src='./magazine/4/sounds/8586_sound1.mp3' type='audio/mpeg' />
-      </audio>
     </div>
   )
 }

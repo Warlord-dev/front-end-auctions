@@ -20,105 +20,95 @@
     top: 0px;    
   }
 
-  .image2 {
+  .video1 {
     position: absolute;
     width: 960px;
-    height: 1497px;
+    height: 1540px;
     left: 960px;
-    top: 0px;    
+    top: -20px;
+    object-fit: cover;
   }
 
   .text1 {
     position: absolute;
-    width: 334px;
-    height: 48px;
-    left: 26px;
-    top: 1310px;
+    width: 528px;
+    height: 72px;
+    left: 24px;
+    top: 18px;
     
-    font-family: DIN Condensed;
+    font-family: 'Digital Numbers';
     font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
+    font-weight: normal;
+    font-size: 60px;
     line-height: 120.53%;
-    /* or 48px */
     
-    
-    color: #7EE8FF;    
+    color: #FFFFFF;    
   }
 
   .text2 {
     position: absolute;
-    width: 632px;
-    height: 126px;
-    left: 26px;
-    top: 1358px;
+    width: 504px;
+    height: 64px;
+    left: 22px;
+    top: 100px;
     
-    font-family: Esteban;
+    font-family: Electrolize;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 120.53%;
-    /* or 18px */
-    
-    
-    color: #FFFFFF;
-    
+
+    color: #FF00C7;
   }
 
   .text3 {
     position: absolute;
-    width: 150px;
+    width: 263px;
     height: 48px;
-    left: 988px;
-    top: 27px;
+    top: 23px;
+    left: 1622px;
     
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: DigitalRiver;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
     line-height: 120.53%;
-    /* or 48px */
     
-    
-    color: #FFD2FD;
+    color: #FFFFFF;
   }
 
   .text4 {
     position: absolute;
-    width: 194px;
-    height: 36px;
-    left: 1706px;
-    top: 1311px;
+    width: 140px;
+    height: 48px;
+    top: 1347px;
+    left: 1755px;
     
-    font-family: Faustina;
+    font-family: DigitalRiver;
     font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
+    font-weight: normal;
+    font-size: 40px;
     line-height: 120.53%;
-    /* or 36px */
-    
-    text-align: right;
-    
-    color: #F4CAFF;
+
+    color: #FF0000;
   }
 
   .text5 {
     position: absolute;
-    width: 449px;
-    height: 126px;
-    left: 1451px;
-    top: 1353px;
+    width: 286px;
+    height: 84px;
+    top: 1395px;
+    left: 1608px;
     
-    font-family: Poppins;
+    font-family: DIN Alternate;
     font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 12px;
     line-height: 120.53%;
-    /* or 18px */
+    /* or 14px */
     
     text-align: right;
     
     color: #FFFFFF;
-    
   }
 }

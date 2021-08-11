@@ -1,44 +1,33 @@
-import React from 'react';
-import styles from './page6970.module.scss';
-import Link from 'next/link';
+import React from 'react'
+import styles from './page6970.module.scss'
+import Link from 'next/link'
 
 const Page6970 = () => {
   return (
     <div className={styles.wrapper}>
       <img className={styles.image1} src='/magazine/4/images/6970_background1.png' />
-      <video autoPlay muted loop className={styles.video1}>
-        <source src='./magazine/4/videos/6970_video1.mp4' />
-      </video>
+      <img className={styles.image2} src='/magazine/4/images/6970_background2.png' />
+      <img className={styles.image3} src='/magazine/4/images/6970_image1.png' />
 
-      <Link href='https://www.instagram.com/3d_maslennikov/'>
-        <a target='_blank'>
-          <div className={styles.text1}>
-            Maslennikov        
-          </div>
-        </a>
-      </Link>
-
+      <div className={styles.text1}>
+        Throughout the Metaverse        
+      </div>
       <div className={styles.text2}>
-        My name is Yaroslav Maslennikov. I was born in Ukraine from Donetsk. Now I live in Russia in the city of Kursk. I have a Bachelor of Apparel Design Engineering. In my free time I do various designs. In the future I am looking to design game models. I’m always ready to collaborate with other designers!
+        ABOVE THE CLOUDS. Inspired by the desire to travel and the feeling when you look out the window on a plane, a weightless chiffon dress with an angelic undertone.      
       </div>
-
-      <div className={styles.text3}>
-        Eternal Connection
-      </div>
-
-      <Link href='https://www.instagram.com/3dninjah/'>
+      <Link href='https://www.instagram.com/lovetomorrow3d/'>
         <a target='_blank'>
-          <div className={styles.text4}>
-            3DNINJAH
+          <div className={styles.text3}>
+            Love, Tomorrow
           </div>
         </a>
       </Link>
 
-      <div className={styles.text5}>
-        I am an Egyptian 3D Artist with more than 6 years of experience. My style is often Dark, spiritual and glowy, where I focus on converting my emotions into my work. My main softwares are: Cinema 4d - Zbrush - After effects. I’ve always been passionate about art, and now I make my own.
+      <div className={styles.text4}>
+        Woodland. Meadow of romantic dresses. 
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Page6970;
+export default Page6970

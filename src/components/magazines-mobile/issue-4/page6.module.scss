@@ -2,8 +2,8 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 1318px;
-  background-color: #000000;
+  height: 2842px;
+  background-color: #fff;
   color: #FFFFFF;
   position: relative;
 
@@ -13,23 +13,5 @@
     height: 1183px;
     left: 20px;
     top: 76px;
-  }
-  .text2 {
-    position: absolute;
-    width: 208px;
-    height: 933px;
-    left: 83px;
-    top: 221px;
-    
-    font-family: Asap;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 120.53%;
-    /* or 22px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
   }
 }

@@ -1,10 +1,17 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@700&display=swap');
 
 .wrapper {
-  @include magazineWrapper(); 
+  @include magazineWrapper();
+
+  a {
+    div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
   .image1 {
     position: absolute;
     width: 960px;
@@ -21,54 +28,14 @@
     top: 0px;    
   }
 
-  a {
-    div {
-      transition: transform .2s;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  }
-
   .text1 {
     position: absolute;
-    width: 333px;
-    height: 42px;
-    left: 32px;
-    top: 10px;
-    
-    font-family: 'Cormorant Unicase';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 35px;
-    line-height: 120.53%;
-    color: #FFFFFF;        
-  }
-
-  .text2 {
-    position: absolute;
-    width: 346px;
-    height: 188px;
-    left: 33px;
-    top: 52px;
-    
-    font-family: Cormorant Unicase;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 8px;
-    line-height: 120.53%;
-    
-    color: #E1CBCE;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 193px;
+    width: 334px;
     height: 48px;
-    left: 998px;
-    top: 1351px;
+    left: 26px;
+    top: 1310px;
     
-    font-family: Cousine;
+    font-family: DIN Condensed;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
@@ -76,21 +43,82 @@
     /* or 48px */
     
     
-    color: #38C0B0;
+    color: #7EE8FF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 632px;
+    height: 126px;
+    left: 26px;
+    top: 1358px;
+    
+    font-family: Esteban;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 150px;
+    height: 48px;
+    left: 988px;
+    top: 27px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+    
+    
+    color: #FFD2FD;
   }
 
   .text4 {
     position: absolute;
-    width: 884px;
-    height: 98px;
-    left: 998px;
-    top: 1399px;
+    width: 194px;
+    height: 36px;
+    left: 1706px;
+    top: 1311px;
     
-    font-family: Cherry Swash;
+    font-family: Faustina;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 30px;
     line-height: 120.53%;
-    color: #0029FF;
+    /* or 36px */
+    
+    text-align: right;
+    
+    color: #F4CAFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 449px;
+    height: 126px;
+    left: 1451px;
+    top: 1353px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+    
   }
 }

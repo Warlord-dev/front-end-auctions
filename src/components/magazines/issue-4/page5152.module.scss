@@ -1,169 +1,346 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper();    
-  background: #000000;
+  @include magazineWrapper();
+  background-color: white;
 
   .video1 {
     position: absolute;
-    width: 858px;
-    height: 871.25px;
-    left: 21px;
-    top: -369px;    
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    
+    object-fit: cover;
   }
 
-  .image1 {
+  .rect1 {
     position: absolute;
-    width: 262px;
-    height: 1640px;
-    left: -48px;
-    top: -2px;    
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    background: rgba(40, 12, 56, 0.2);
   }
 
   .text1 {
     position: absolute;
-    width: 77px;
-    height: 849px;
-    left: 242px;
-    top: 602px;
-
-    font-family: THIS FONT IS EMPTY1;
+    width: 572px;
+    height: 160px;
+    left: 1001px;
+    top: 26px;
+    
+    font-family: DJB Emilys Garden;
     font-style: normal;
-    font-weight: bold;
-    font-size: 80px;
-    line-height: 100%;
-    word-wrap: break-word;
-
-    color: #FFE600;
-    text-shadow: -3px 0 #FFE600, 0 3px #FFE600, 3px 0 #FFE600, 0 -3px #FFE600;
-
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    filter: blur(2px);
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 85px;
+    
+    color: #FFFFFF;
+    text-shadow: -1px 0 #EC0000, 0 1px #EC0000, 1px 0 #EC0000, 0 -1px #EC0000;
   }
 
   .text2 {
     position: absolute;
-    width: 718px;
-    height: 185px;
-    left: 319px;
-    top: 608px;
-    
-    font-family: THIS FONT IS EMPTY1;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 75px;
-    line-height: 100%;
+    width: 891px;
+    height: 92px;
+    left: 1001px;
+    top: 232px;
+
+    font-family: Inter;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+
     color: #FFFFFF;
-  }
-
-  .image2 {
-    position: absolute;
-    width: 1114px;
-    height: 1497px;
-    left: 806px;
-    top: 0px;    
-  }
-
-  .image3 {
-    position: absolute;
-    width: 947px;
-    height: 884px;
-    left: 480px;
-    top: 648px;
+    text-shadow: -0.5px 0 #A400BE, 0 0.5px #A400BE, 0.5px 0 #A400BE, 0 -0.5px #A400BE;
   }
 
   .text3 {
     position: absolute;
-    width: 534px;
-    height: 99px;
-    left: 1348px;
-    top: 27px;
-    
-    font-family: Dro;
+    width: 336px;
+    height: 92px;
+    left: 1531px;
+    top: 301px;
+
+    font-family: Inter;
     font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 60px;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 85px;
+    /* or 170% */
+
     text-align: right;
-    
-    color: #FF6FB4;
-    
-    text-shadow: -3px 0 #5E008A, 0 -3px #5E008A, 3px 0 #5E008A, 0 3px #5E008A;
+
+    color: #FFFFFF;
+
+    text-shadow: -1px 0 #A400BE, 0 1px #A400BE, 1px 0 #A400BE, 0 -1px #A400BE;
   }
 
   .text4 {
     position: absolute;
-    width: 848px;
-    height: 226px;
-    left: 1071px;
-    top: 384px;
-    
-    font-family: Thonburi;
+    width: 874px;
+    height: 108px;
+    left: 994px;
+    top: 372px;
+
+    font-family: Inter;
     font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 100%;
-    /* or 20px */
-    
-    
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+
+    text-align: right;
+
     color: #FFFFFF;
+    text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
   }
 
   .text5 {
+
     position: absolute;
-    width: 848px;
-    height: 229px;
-    left: 1071px;
-    top: 622px;
+    width: 653px;
+    height: 543px;
+    left: 1214px;
+    top: 519px;
     
-    font-family: Thonburi;
+    font-family: Inter;
     font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 100%;
-    /* or 20px */
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
     
+    text-align: right;
     
     color: #FFFFFF;
+
+    text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
   }
 
   .text6 {
     position: absolute;
-    width: 679px;
-    height: 214px;
-    left: 1204px;
-    top: 877px;
-    
-    font-family: Thonburi;
+    width: 599px;
+    height: 391px;
+    left: 989px;
+    top: 992px;
+
+    font-family: Inter;
     font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 100%;
-    /* or 20px */
-    
-    text-align: right;
-    
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+
     color: #FFFFFF;
-    
+
+    text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
   }
 
   .text7 {
     position: absolute;
-    width: 433px;
-    height: 223px;
-    left: 1450px;
-    top: 1189px;
+    width: 925px;
+    height: 160px;
+    left: 960px;
+    top: 1392px;
     
-    font-family: Thonburi;
+    font-family: DJB Emilys Garden;
     font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 100%;
-    /* or 20px */
-    
-    text-align: right;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 85px;
     
     color: #FFFFFF;
     
+    text-shadow: -1px 0 #EC0000, 0 1px #EC0000, 1px 0 #EC0000, 0 -1px #EC0000;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 200px;
+    height: 202px;
+    left: 989px;
+    top: 509px;        
+  }
+  
+  .image2 {
+    position: absolute;
+    width: 113px;
+    height: 114px;
+    left: 977px;
+    top: 741px;
+  }
+  
+  .image3 {
+    position: absolute;
+    width: 113px;
+    height: 114px;
+    left: 1090px;
+    top: 858px;
+    
+  }
+  
+  .image4 {
+    position: absolute;
+    width: 219px;
+    height: 221px;
+    left: 1631px;
+    top: 1013px;
+    
+  }
+  
+  .image5 {
+    position: absolute;
+    width: 113px;
+    height: 114px;
+    left: 989px;
+    top: 1238px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 113px;
+    height: 114px;
+    left: 1132px;
+    top: 1238px;    
+  }
+  
+  .image7 {
+    position: absolute;
+    width: 113px;
+    height: 114px;
+    left: 1275px;
+    top: 1238px;
+  }
+  
+  .image8 {
+    position: absolute;
+    width: 174px;
+    height: 176px;
+    left: 1422px;
+    top: 1207px;
+  }
+  
+  .image9 {
+    position: absolute;
+    width: 78px;
+    height: 79px;
+    left: 1662px;
+    top: 1273px;
+  }
+  
+  .image10 {
+    position: absolute;
+    width: 78px;
+    height: 79px;
+    left: 1772px;
+    top: 1273px;
+  }
+
+  .background1 {
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image11 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 6px;    
+  }
+
+  .image12 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 206px;
+  }
+
+  .image13 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 406px;
+  }
+
+  .image14 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 606px;
+  }
+
+  .image15 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 806px;
+  }
+
+  .image16 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 1006px;
+  }
+
+  .image17 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 1206px;
+  }
+
+  .image18 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 380px;
+    top: 1406px;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 379px;
+    height: 89px;
+    left: 16px;
+    top: 0px;
+    
+    font-family: Electrolize;
+    font-size: 70px;
+    line-height: 120.53%;
+    
+    color: #FFFFFF;    
+  }
+  
+  .text9 {
+    position: absolute;
+    width: 379px;
+    height: 89px;
+    left: 574px;
+    top: 1338px;
+    
+    font-family: Electrolize;
+    font-size: 70px;
+    line-height: 120.53%;  
+    
+    color: #FFFFFF;
+  }
+
+  a {
+    div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }

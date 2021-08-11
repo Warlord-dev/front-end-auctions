@@ -1,66 +1,240 @@
 @import './styles.module.scss';
 
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-1497px); }
+}
+
 .wrapper {
   @include magazineWrapper();
-  background-color: black;
+
+  background-color: white;
 
   .back1 {
     position: absolute;
     width: 960px;
     height: 1497px;
     left: 0px;
-    top: 0px;    
-    background-color: white;
+    top: 0px;
+    
+    background: rgba(136, 63, 255, 0.81);    
   }
-
-  .background1 {
+  
+  .image1 {
     position: absolute;
-    width: 960px;
+    width: 764px;
     height: 1497px;
-    left: 0px;
-    top: 0px;    
+    left: 956px;
+    top: 0px;
   }
-
-  .background2 {
+  
+  .image2 {
     position: absolute;
-    width: 960px;
+    width: 760px;
     height: 1497px;
     left: 960px;
-    top: 0px;    
+    top: 0px;
+  }
+
+  .textBack {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+  }
+
+  .textBack2 {
+    position: absolute;
+    left: 426px;
+    top: 0px;
+  }
+
+  .musicFont {
+    div {
+      font-family: MUSICNET;
+      font-size: 60px;
+      line-height: 120.53%;
+      width: 486px;
+      height: 144px;
+    }
+  }
+
+  .yellowColor {
+    div {
+      color: #FAFF058F;
+    }
+  }
+
+  .whiteColor {
+    div {
+      color: #FFFFFF8F;
+    }
+  }
+
+  .radial1 {
+    position: absolute;
+    width: 352px;
+    height: 1497px;
+    left: 227px;
+    top: 0px;
+  }
+
+  .radial2 {
+    position: absolute;
+    width: 185px;
+    height: 1497px;
+    left: 775px;
+    top: 0px;
+    
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #4075FF 0%, rgba(244, 239, 255, 0.09) 74.48%);    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    left: 684px;
+    top: 12px;    
+  }
+
+  .textBack3 {
+    position: absolute;
+    left: 10px;
+    top: 864px;
+  }
+
+  .textBack4 {
+    position: absolute;
+    left: 426px;
+    top: 864px;
   }
 
   .text1 {
     position: absolute;
-    width: 793px;
-    height: 288px;
-    left: 996px;
-    top: 188px;
+    width: 573px;
+    height: 121px;
+    left: 960px;
+    top: -43px;
     
-    font-family: Corben;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 60px;
-    line-height: 120.53%;
-   
-    color: #FFFFFF;
-    span {
-      color: #FF0000;
-    }    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;   
+    
+    color: #1400FF;    
   }
 
   .text2 {
     position: absolute;
-    width: 153px;
-    height: 24px;
-    left: 1253px;
-    top: 484px;
+    width: 573px;
+    height: 121px;
+    left: 1128px;
+    top: -43px;
     
-    font-family: Corben;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
+    font-family: Covered By Your Grace;
+    font-size: 100px;
     line-height: 120.53%;
-   
-    color: #9D2626;    
+    color: #1400FF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1434px;
+    top: -43px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF; 
+  }
+
+  .text4 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1019px;
+    top: 43px;
+    
+    font-family: Covered By Your Grace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #594AFF;
+    
+    text-shadow: -2px 0 white, 0 -2px white, 2px 0 white, 0 2px white;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1325px;
+    top: 43px;
+    
+    font-family: Covered By Your Grace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #594AFF;
+    
+    text-shadow: -2px 0 white, 0 -2px white, 2px 0 white, 0 2px white;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 960px;
+    top: 133px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1199px;
+    top: 133px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1508px;
+    top: 133px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;
+  }
+
+  .animationFrame {
+    animation: scrolling 8s linear infinite;
+  }
+
+  .rightSideImageWrapper {
+    background: #2CC5E7;
+    position: absolute;
+    width: 200px;
+    height: 2994px;
+    left: 1720px;
+    top: 0px;
+
+    img:last-of-type {
+      margin-top: -5px;
+    }
   }
 }

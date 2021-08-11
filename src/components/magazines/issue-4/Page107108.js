@@ -1,34 +1,24 @@
 import React from 'react'
 import styles from './page107108.module.scss'
-import UnlockPage from '../common/UnlockPage-Three'
-import { useSelector } from 'react-redux'
-import { useRouter } from 'next/router'
 
 const Page107108 = () => {
-  const router = useRouter()
-  const { slug } = router.query
-  const issueId = slug && slug.length > 0 ? slug[0] : magazineIssues[0].issueId
-  const { contentUnlocked } = useSelector((state) => state.global.toJS())
-
   return (
     <div className={styles.wrapper}>
+      <img src='/magazine/4/images/107108_image1.png' className={styles.image1}/>
+      <video autoPlay muted loop className={styles.video1}>
+       <source src='./magazine/4/videos/107108_video1.mp4' type='video/mp4' />
+      </video>
+      
       <div className={styles.text1}>
-        The house always wins. 
-        <br /><br />
-        Designing a system that guarantees net profit regardless of external conditions or outcomes is not something that only the gambling houses can pull off. Sure, Sheldon Adelson might have gone into the game from a predatory casino perspective, leveraging human desire for generating countless derechos of devastation. But, we too can become the house— the house of our own lives— and, instead of wreaking destruction, we can rather inflate positive delta that is instrumentally valuable and tremendously gainful.
-        <br /><br />
-        Having a mastery over the meta-game means that we don’t need to know or get caught up in the volatility of the slot machines, the stack height of our chips, or the slight hand of the dealers. We can feel our own reality to play our own game. If we know our meta-how and have enough fluidity to dance with dynanism then we can map the catalysts and deltas to themselves. We can create a Y Combinator of positive cascades in each of our own lives for ensuring a net profit, no matter the situation or context. 
-        <br /><br />
-        And, in order to make this a truth, in order to win, we must maintain ownership of ourselves. Only when we play our own game are we positioning ourselves for guaranteed yield. We can turn the gears that propel stimulating change. Knowing our meta so well that we don’t need to get locked into one idea or scramble for frame control. 
-        <br /><br />
-        In fact, it’s not about control, it’s about ownership– very different. We must embrace giving away control of everything else around us. Because, ultimately, we don’t have control of anything, only ourselves. And if we establish the soundness and antifragility of our own model then we can start earlier, start well ahead. We can continue to play our own game and become damn good at it.
-        <br /><br />
-        We all have what it takes to win, but so many of us fall into the myth of pioneering. Anyone can do what it takes, but only very few decide to actually do it. My desire is to actually do it. To make sure I have ownership of myself above all else, to play my own game. Because only then can I commit to warranting impactful yield for all those that too desire to be their own house. 
+        Decentralised commerce facilitates global trade through its traceability. For instance, the ability to determine the exact state your cargo was shipped in–its origin, its provenance, its information, and its trustworthiness– is something that can be built using blockchain technologies to authenticate the lineage of a piece of clothing–or anything for that matter.
+        <br/><br/>
+        Moreover, NFTs also allow brands and creators to protect their intellectual property from counterfeiting as a result of the same consequence. Each piece of apparel’s exact ownership lineage can be tracked to its source. Replicas and knockoffs wouldn’t have a reference on the blockchain’s publicly accessible ledger, making them easier to eradicate.
+        <br/><br/>
+        Decentralised commerce, as enabled by Web 3.0, allows for a commercial model where customers have full ownership of their data and use it as they see fit, rather than sweating on the capricious whims of Amazon. And we’re seeing the first fruits of DeCo starting to emerge. No longer does anyone need to deal with another intermediary manipulating and extracting value at every stop of the supply chain. We’ve seen this happen in finance with the rise of DeFi: decentralised exchanges such as QuickSwap, NFT and collectibles marketplaces like OpenSea, SuperRare, and Rarible, to decentralised iterations of Amazon like Particl, which doesn’t spy on its users, apart from the creation of community-focused DeCo platforms, one of which is Origin a protocol which allows merchants to run their own decentralised marketplaces they have full control of, apart from being free and resistant to censorship. Moreover, brands will now have the opportunity to tell their brand story as opposed to the Web 2.0 gatekeepers holding complete control over a third-party seller’s fate. Origin also allows brands to accept a wide array of ERC-20 tokens as well as traditional payment options such as credit cards. Paired with a fulfillment service like ShipBob, which essentially unbundles the vaunted fulfillment layer of Amazon and seeks to improve it. The possibilities are endless.
+        <br/><br/>
+        But DeCo goes beyond mere iconoclasm, breaking legacy platforms, and creating slapdash decentralised iterations for the Amazons of the world. It takes the creation of interoperable, infinitely composable components that evolve and diffuse to eventually coalesce into new forms. Let the building begin.
       </div>
-      <img src='/magazine/4/images/107108_background.png' className={styles.backgroundImage}/>
-      {!contentUnlocked && <UnlockPage issueId={issueId} />}
     </div>
-    
   )
 }
 

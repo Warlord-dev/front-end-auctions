@@ -1,51 +1,48 @@
-import React, { useRef, useState }  from 'react';
-import styles from './page6566.module.scss';
-import Link from 'next/link';
+import React from 'react'
+import styles from './page6566.module.scss'
 
 const Page6566 = () => {
- 
+
   return (
     <div className={styles.wrapper}>
       <img className={styles.image1} src='/magazine/4/images/6566_background1.png' />
       <img className={styles.image2} src='/magazine/4/images/6566_background2.png' />
-
       <div className={styles.rect1}></div>
       <div className={styles.text1}>
-        Online payment systems often grind friction in global commerce, with disenfranchising effects to those that can afford it the least. 
+        By 2022, global e-commerce sales are expected to be worth more than a staggering $5.4 trillion. E-commerce accounted for 18% of all worldwide sales last year, and it’s constantly increasing by substantial year-on-year volumes. It’s massive. It’s evident to any entrepreneur worth their salt that online is the way to go if they want their business to grow.
         <br /><br />
-        Take, for instance, the $500 billion that flows across borders in the form of remittances, the majority of which are money transfers from migrant workers to their families in their home countries sent regularly. 
+        It’s obvious what the benefits are for sellers on e-commerce platforms—they allow them to adjust to customer’s expectations and purchasing habits. Everybody’s buying something online. You need to align with your clients if you are to succeed—as fickle as they could be. 
         <br /><br />
-        Once all the intermediaries have been paid off for vouching for your transaction, sending costs can rise as high as 17%. That’s about $40 billion in aggregate costs yearly.
+        The next reason is to expand your client base. E-commerce is borderless, and your garden-variety brick-and-mortar needs a buyer to actually pop in.
         <br /><br />
-        The thing is, those 15-17% fees add up, especially for countries like the Philippines, where remittances bolster a fractious economy—to the tune of 10% of the country’s GDP.
+        Literally anybody can put up a store in seconds. Everything is standardized nowadays, with more than a few platforms to use pre-approved marketplace templates and get the show on the road within a few hours on Shopify. Alternatively, you can set up a merchant account on Amazon and begin listing your inventory within minutes. It’s so easy to start selling online at any capacity.
         <br /><br />
-        Remittances, like online payments, travel across continents, currencies, and financial institutions—all of which set up substantial hurdles for every stakeholder involved in the process
+        All well and good. But we do know that things are never as cut-and-dried as they seem. 
         <br /><br />
-        Like e-commerce payment processors, remittances fees are a source of financial friction for low-to-medium income families who depend on remittances for their livelihood. That extra 7% the processor takes is a lot of money in a country where the minimum daily wage is $10. That’s constant friction for immigrants who need to transmit much smaller “micro” transactions on a more frequent basis. The system taxes the weakest that rely on them the most. Where have I heard that before?
+        That’s because every merchant will be familiar with the problem child of every online purchase—that of the traditional online payment systems that constrain them due to jurisdictional obstacles that differ from country to country.
         <br /><br />
-        One of the main causes of payment friction in commerce is the fact that online payment systems aren’t interoperable. They’re all siloed, they’re all stuck in each of their own walled gardens, making synergistic connections between financial institutions and systems a haphazardly stitched-together circuitous patchwork of workarounds without anything unifying them to move money around in a truly frictionless manner.
-        <br /><br />
-        Part of the problem is that systems are not interoperable. To send money to different corners of the world without blockchain, a whole patchwork has been haphazardly knitted together over the decades to achieve some semblance of financial interoperability between financial institutions, correspondent banks and money transfer operators along the value chain. 
+        Traditional online payments like credit cards, debit cards, PayPal, Stripe, and their ilk. 
       </div>
       <div className={styles.rect2}></div>
       <div className={styles.text2}>
-        Connecting these disparate systems, particularly in underserved markets, where the local currency is not globally
-        traded, has created friction that results in long delays and high fees at each link of this chain.
+        Therein lies the rub—because the very system that enables entrepreneurs to reach new markets, clients, and customers are the same ones that weigh them down. Payment processors on the other hand are a constant source of friction for merchants.
         <br /><br />
-        The complex network of correspondent banks each have their own set of tedious bureaucratic regulations governing the use and processing of data, which requires a sophisticated level of expertise to navigate. A misspelled field or an errant stroke can lead to a whole lot of friction, or when they fill out a form in the wrong format. It’s even harder to automate cross-border payments when the infrastructure is fragmented and lacking in oversight. 
+        It’s a shambles. Online payment systems evolve at the speed of a glacier—and they run antithetical to the industry they claim to support.
         <br /><br />
-        Ultimately, it’s nigh impossible to remove friction from traditional commerce and finance when friction is practically baked into its code. 
+        Hear me out a second.
         <br /><br />
-        The open networks that underpin web3 ensure that they can build on the technology to take the concept to the next level. The interoperability that such networks promise to allow for constant evolution. Building such infrastructure into a walled garden would run counter to the ideals of decentralisation.  
+        New sellers generate lower volumes—and payment processors will only be too happy to part you from your money on constantly increasing prices like a noose tightening around sellers’ necks. Survive if they let you. 
         <br /><br />
-        DeFi is emerging as a potential solution to offer the financial services we often take for granted to the 1.7 billion unbanked individuals who can’t access financial services because they lack the necessary documentation, the means, or the bother of jumping through hoops designed to keep some of them out. That’s not to mention the 4 billion who are yet to gain internet access. DeFi democratises access to the financial instruments we take for granted to billions who have never had the displeasure of spending 5 minutes inside a bank branch—not to mention something to hedge their livelihoods with.
+        Low volume sellers naturally have no history, and if you plan to sell across borders, you will pay far out the ass on fees. E-commerce platforms want you to grow, but payment processors are seriously weighing you down with sundries left and right. 
         <br /><br />
-        Decentralised commerce and decentralised finance are undergoing a spurt of exhilarating growth, and both DeCo and DeFi represent the natural order of progress in their industries. There is but one way to go.
+        Domestic transactions tack on an additional 3-5% in intermediary fees. That isn’t chump change.
         <br /><br />
-        The first rays of the new rising sun are dawning on the dreary dystopia of Commerce and Web 2. It’s high time to smell the coffee and get a clue.
+        Then, another problem inherent in payments are chargebacks, or reversals in favour of the client. These pesky happenstances can occur for legitimate reasons as a result of a glitch in the supply chain matrix, where a merchant couldn’t fulfil an order for any reason. Most of the time, however, chargebacks are fraud-related, meaning a customer couldn’t recognize a payment or their credit card was stolen. That’s wasted time, money, and resources—in the form of lost revenue, a luxury new sellers can ill afford—and that doesn’t exactly paint a bright picture on their brand’s reputation. That’s not to mention the turnaround time with which international payments can be settled, which can take over a week to complete in some cases.
+        <br /><br />
+        It’s utterly contradictory.
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Page6566;
+export default Page6566

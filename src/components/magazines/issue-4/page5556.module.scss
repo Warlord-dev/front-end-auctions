@@ -1,105 +1,14 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper();    
+  @include magazineWrapper();
   background: #FFFFFF;
 
-  .backgroundImage {
+  .image {
     position: absolute;
     left: 0;
     top: 0;
     width: 1920px;
     height: 1497px;
   }
-
-  .image1 {
-    position: absolute;
-    width: 325px;
-    height: 324px;
-    left: 0px;
-    top: 1173px;
-        
-  }
-
-  .image2 {
-    position: absolute;
-    width: 253px;
-    height: 253px;
-    left: 218px;
-    top: 1233px;
-  }
-
-  .text1 {
-    position: absolute;
-    width: 751px;
-    height: 149px;
-    left: 236px;
-    top: 144px;
-    
-    font-family: Buda;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 100px;
-    line-height: 120.53%;
-    /* or 121px */
-    
-    
-    color: #FFE193;
-        
-  }
-
-  .text2 {
-    position: absolute;
-    width: 751px;
-    height: 149px;
-    left: 236px;
-    top: 144px;
-    
-    font-family: Buda;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 100px;
-    line-height: 120.53%;
-    /* or 121px */
-    
-    
-    color: #FFE193;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 751px;
-    height: 149px;
-    left: 59px;
-    top: 15px;
-    
-    font-family: Buda;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 100px;
-    line-height: 120.53%;
-    /* or 121px */
-    
-    
-    color: #FFE193;
-  }
-
-  .text4 {
-    position: absolute;
-    width: 751px;
-    height: 149px;
-    left: 59px;
-    top: 15px;
-    
-    font-family: Buda;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 100px;
-    line-height: 120.53%;
-    /* or 121px */
-    
-    
-    color: #FFE193;
-  }
 }
-

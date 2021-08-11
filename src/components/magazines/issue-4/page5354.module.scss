@@ -1,14 +1,169 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper();
-  background: #FFFFFF;
+  @include magazineWrapper();    
+  background: #000000;
 
-  .image {
+  .video1 {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 1920px;
+    width: 858px;
+    height: 871.25px;
+    left: 21px;
+    top: -369px;    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 262px;
+    height: 1640px;
+    left: -48px;
+    top: -2px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 77px;
+    height: 849px;
+    left: 242px;
+    top: 602px;
+
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+    word-wrap: break-word;
+
+    color: #FFE600;
+    text-shadow: -3px 0 #FFE600, 0 3px #FFE600, 3px 0 #FFE600, 0 -3px #FFE600;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: blur(2px);
+  }
+
+  .text2 {
+    position: absolute;
+    width: 718px;
+    height: 185px;
+    left: 319px;
+    top: 608px;
+    
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 75px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 1114px;
     height: 1497px;
+    left: 806px;
+    top: 0px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 947px;
+    height: 884px;
+    left: 480px;
+    top: 648px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 534px;
+    height: 99px;
+    left: 1348px;
+    top: 27px;
+    
+    font-family: Dro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 60px;
+    text-align: right;
+    
+    color: #FF6FB4;
+    
+    text-shadow: -3px 0 #5E008A, 0 -3px #5E008A, 3px 0 #5E008A, 0 3px #5E008A;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 848px;
+    height: 226px;
+    left: 1071px;
+    top: 384px;
+    
+    font-family: Thonburi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 848px;
+    height: 229px;
+    left: 1071px;
+    top: 622px;
+    
+    font-family: Thonburi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 679px;
+    height: 214px;
+    left: 1204px;
+    top: 877px;
+    
+    font-family: Thonburi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 433px;
+    height: 223px;
+    left: 1450px;
+    top: 1189px;
+    
+    font-family: Thonburi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+    
   }
 }

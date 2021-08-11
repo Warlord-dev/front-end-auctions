@@ -5,19 +5,34 @@ const Page105106 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='/magazine/4/images/105106_image1.png' className={styles.image1}/>
-      <video autoPlay muted loop className={styles.video1}>
-       <source src='./magazine/4/videos/105106_video1.mp4' type='video/mp4' />
-      </video>
-      
+      <img src='/magazine/4/images/105106_image2.png' className={styles.image2}/>
+      <img src='/magazine/4/images/105106_image3.png' className={styles.image3}/>
+      <div className={styles.rect1}></div>
+      <div className={styles.rect2}></div>
+      <div className={styles.rect3}></div>
+
       <div className={styles.text1}>
-        Decentralised commerce facilitates global trade through its traceability. For instance, the ability to determine the exact state your cargo was shipped in–its origin, its provenance, its information, and its trustworthiness– is something that can be built using blockchain technologies to authenticate the lineage of a piece of clothing–or anything for that matter.
-        <br/><br/>
-        Moreover, NFTs also allow brands and creators to protect their intellectual property from counterfeiting as a result of the same consequence. Each piece of apparel’s exact ownership lineage can be tracked to its source. Replicas and knockoffs wouldn’t have a reference on the blockchain’s publicly accessible ledger, making them easier to eradicate.
-        <br/><br/>
-        Decentralised commerce, as enabled by Web 3.0, allows for a commercial model where customers have full ownership of their data and use it as they see fit, rather than sweating on the capricious whims of Amazon. And we’re seeing the first fruits of DeCo starting to emerge. No longer does anyone need to deal with another intermediary manipulating and extracting value at every stop of the supply chain. We’ve seen this happen in finance with the rise of DeFi: decentralised exchanges such as QuickSwap, NFT and collectibles marketplaces like OpenSea, SuperRare, and Rarible, to decentralised iterations of Amazon like Particl, which doesn’t spy on its users, apart from the creation of community-focused DeCo platforms, one of which is Origin a protocol which allows merchants to run their own decentralised marketplaces they have full control of, apart from being free and resistant to censorship. Moreover, brands will now have the opportunity to tell their brand story as opposed to the Web 2.0 gatekeepers holding complete control over a third-party seller’s fate. Origin also allows brands to accept a wide array of ERC-20 tokens as well as traditional payment options such as credit cards. Paired with a fulfillment service like ShipBob, which essentially unbundles the vaunted fulfillment layer of Amazon and seeks to improve it. The possibilities are endless.
-        <br/><br/>
-        But DeCo goes beyond mere iconoclasm, breaking legacy platforms, and creating slapdash decentralised iterations for the Amazons of the world. It takes the creation of interoperable, infinitely composable components that evolve and diffuse to eventually coalesce into new forms. Let the building begin.
+        The litany of rent-seeking middlemen extracting their pound of flesh for putting two and two together profit from the value of trust—whether processing payments across borders, processing remittances, linking buyers and sellers, or keeping your personally identifiable information safe. Trust is the bedrock of commerce, and decentralised trust systems can perform that mechanism at an infinitely lower cost than another centralised regulatory organ or agency. Moreover, projects engaged in decentralised commerce allow them to pass their savings to their users, therefore providing greater scalability—towards building an open, completely transparent, non-exploitative, less extractive infrastructure for conducting global business.
+        <br /><br />
+        Nevertheless, there is yet plenty of work lying ahead to realise the vision of a decentralised manner of conducting commerce, but the tools that could enable its construction already exist, and it’s reasonably hardened enough to take the show on the road and hit the big time. Decentralisation is starting to gain traction as the antidote to Big Tech’s overreach on its predatory model of 
       </div>
+
+      <div className={styles.text2}>
+        exploiting their users’ privacy by spying on their online habits and swiping their personal information (often without their consent) to sell them more products and services. It’s increasingly being seen as the antidote to the poison of this exploitative and manipulative system.
+        <br /><br />
+        Additionally, trends dictate the winds of commerce. We’ve seen this with the increased demand from fair-trade products, greater ownership of customer data, and the rising sense of cynicism and distrust for faceless corporations—all of which flow into the unquestionably unique value proposition that DeCo possesses.
+        <br /><br />
+        Decentralisation’s impact on commerce will redefine the way we conduct business entirely like the rest of the world marches onwards to a digital, decentralised global economy.
+        <br /><br />
+        E-commerce, as we know it today, is slow. Transactions are a convoluted mess passed around like a hot potato across non-interoperable payment gateways, a cross-section of digital storefronts, and a network of banks, all of which process information in their unique ways. One misstep at any step of the circuitous process throws a spanner in the works. 
+      </div>
+
+      <div className={styles.text3}>
+        The beauty of Web 3.0 is that its solutions are endlessly interoperable. They can be iterated in as many ways as it could support DeCo’s ultimate goal: an open, fair, and transparent way of exchanging products and services, one where its stakeholders benefit along with the ecosystem that enables it, not to mention one that incentivises them to act in line with its long-term objectives, rather than merely the size of their shareholders’ dividends and their directors’ fat bonuses.
+        <br /><br />
+        Information is asymmetrical among stakeholders in a traditional centralized and non-standardized supply chain. Buyers don’t know where their suppliers source their products. Suppliers don’t know where manufacturers obtain their raw materials. Every stakeholder is left to their own devices as far as managing data is concerned.
+      </div>
+
     </div>
   )
 }

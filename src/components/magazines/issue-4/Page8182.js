@@ -1,93 +1,83 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './page8182.module.scss'
-import Link from 'next/link'
-
 
 const Page8182 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/4/images/8182_image1.png' className={styles.image1} />
-      <img src='/magazine/4/images/8182_image2.png' className={styles.image2} />
-      <div className={styles.rect1}></div>
-      <img src='/magazine/4/images/8182_image3.png' className={styles.image3} />
+      <img className={styles.image1} src='/magazine/4/images/8182_image1.png' />
+      <img className={styles.image2} src='/magazine/4/images/8182_image2.png' />
+      <img className={styles.image3} src='/magazine/4/images/8182_image3.png' />
+      <img className={styles.image4} src='/magazine/4/images/8182_image4.png' />
+      <img className={styles.image5} src='/magazine/4/images/8182_image5.png' />
+      <img className={styles.image6} src='/magazine/4/images/8182_image6.png' />
+      <img className={styles.image7} src='/magazine/4/images/8182_image7.png' />
+      <img className={styles.image8} src='/magazine/4/images/8182_image6.png' />
+      <img className={styles.image9} src='/magazine/4/images/8182_image8.png' />
+      <img className={styles.image10} src='/magazine/4/images/8182_image9.png' />
 
       <div className={styles.text1}>
-        E-SPORTS PLAYER OF THE MONTH        
+        Go Behind the Scenes with Exclusive NFT Content and Experiences
       </div>
-
       <div className={styles.text2}>
-        VOID
+        Go Behind the Scenes with Exclusive NFT Content and Experiences
       </div>
-
       <div className={styles.text3}>
-        Originally a substitute on Team Kongdoo for Fissure, Void has proved his way to the top, and now considered one of the most skilled in the Overwatch League. He’s set his path competing with the Shanghai Dragons and still with plenty ahead to achieve, but at this rate, it appears the best is yet to come. 
+        DECO <br />
+        ONLY FANS
       </div>
-
       <div className={styles.text4}>
-        metaverse ready score: 4
+        XENOTECH
       </div>
-
       <div className={styles.text5}>
-        ZHAR
+        XENOTECH
       </div>
-
       <div className={styles.text6}>
-        E-SPORTS RISING STAR OF THE MONTH
+        We are continuing on with our DECO “Decentralised Commerce” Only Fans with the DIGITALAX Ambassadors; using native web3 distribution models and creator monetisation paths, all underwritten by NFTs.
+        <br /><br />
+        <span>
+          In web2 it’s entirely altruistic, you are depending on a one way incentive where the giver feels good for an obscure reason enough so to give to you. It’s a shot in the dark, and there is no clear path from 0 to 1, no clear solution to the cold start problem. In the web3 model, mutual incentives are aligned, where the creator can actually implement sustainability without excessive and unnecessary blocking points like paywalls and ad based models. It allows them to spin up personalised decentralised channels and invite people behind the scenes for exclusive content, unlockable drops and experience based backstage passes.
+        </span>
       </div>
-
       <div className={styles.text7}>
-        metaverse ready score: 5
+        In the previous content I broke down how the XENOTECH virtual world would be structured. The primary NFTs that users would interact with are clothing stores, apartments, and clothing wearables.         
       </div>
-
       <div className={styles.text8}>
-        19 year old South Korean League of Legends player Keria (Ryu Min-seok), has been a force to be reckoned with since he came out of DragonX with a move to the main roster in 2019, at just 17 years of age. Since then he’s continued to prove himself on T1 as one of their best young supports making up the bottom lane, as the entire team raises expectations for the upcoming Worlds. 
+        Paranoid Park
+      </div>
+      <div className={styles.text9}>
+        Though I don't have a huge background in gaming, I am fascinated with the concept of the virtual world-- especially one that is more than just a game. Virtual worlds for commerce, art, and education are particularly interesting to me and areas that I will dedicate myself to building. I have spent a lot of time conceptualizing a Metaverse platform / ecosystem based around the 3D city prototype I had built out, one that is particularly focused on 3D fashion.
       </div>
 
-      <div className={styles.text9}>
-        E-SPORTS BUZZZZ
-      </div>
+      <img className={styles.playbutton} src='/magazine/4/images/8182_playbutton.png' />
+
+      <div className={styles.circle}></div>
+
       <div className={styles.text10}>
-        E-SPORTS BUZZZZ
+        DECO<br />
+        ONLY FANS
       </div>
       <div className={styles.text11}>
-        E-SPORTS BUZZZZ
+        DECO<br />
+        ONLY FANS
       </div>
       <div className={styles.text12}>
-        E-SPORTS BUZZZZ
+        Go Behind the Scenes with Exclusive NFT Content and Experiences
       </div>
-      
       <div className={styles.text13}>
-        WILD tour brazil
+        Go Behind the Scenes with Exclusive NFT Content and Experiences
       </div>
-      
       <div className={styles.text14}>
-        Riot has announced their regional  competitive circuit for Wild Rift with Wild Tour Brazil. It’s another avenue for esports competitors to the global stage as the tournament circuit begins with four open qualifiers that culminate not only in the Wild Rift Tour finale but also a chance for a slot in the inaugural Wild Rift World Championship 2021.
-        <br /><br />
-        Brazil was one of the countries that Riot picked to launch its Wild Rift alpha testing last year, and since then a strong mobile MOBA gaming community has been formed. It only makes the case more interesting and compelling for Play to Earn models and the idea of decentralising access to esports as the prize money on offer (US$11,000/R$55,000) has many chasing for a slot in the qualifiers. 
-        <br /><br />
-        If these communities could start truly earning a steady and sustainable livelihood through play, bettering their lives in 
+        Growing up as a world citizen has formed my way of thinking to be a connector. I was born in Lesotho, and grew up changing countries around the world every 3-4 years. One side of my family coming from Lesotho and the other side from UK/Spain meant that I would experience the contrast between rural African life and city life in Europe, where many things are taken for granted.         
       </div>
-      
       <div className={styles.text15}>
-        parallel to doing what they love and know, then their prospects for more customised opportunities that suit each of them best only expands.
+        THAKANE 
       </div>
-      
       <div className={styles.text16}>
-        Weplay on binance
+        X
       </div>
-      
       <div className={styles.text17}>
-        Esports media holding company WePlay Esports is set to go live with their first NFT launch on the Binance NFT marketplace. Is this set of collectibles part of a bigger shift for the entire esports industry? 
+        TAKAII
       </div>
-      
-      <div className={styles.text18}>
-        Fsports  fashion week
-      </div>
-      
-      <div className={styles.text19}>
-        Esports’ close ties with celebrity and influencer culture just got closer, where Esports Fashion Week announced their latest partnership with Ford Models for fertilising personal brand building amongst pro gamers and their large fan bases. Whether or not social tokens is a next step after this remains unknown for now. However, either way, it’s definitely becoming apparent to many the need for more efficient and lucrative tools in building strengthened and aligned communities— maybe it’s an agency doing that work for now, but soon, don’t be surprised if the mechanics are automated by a few lines of Solidity.  
-      </div>
-
     </div>
   )
 }
