@@ -1,72 +1,90 @@
-import React from 'react';
-import styles from './page3.module.scss';
+import React from 'react'
+import styles from './page3.module.scss'
 
 const Page3 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/03_04/image4.png" className={styles.image1}/>   
-         
-         <div className={styles.image2}></div>
-         <p className={styles.text3}>contributors</p>      
-         <p className={styles.text4}>Emma-Jane MacKinnon-Lee<br/><br/>
- Isramae Visales <br/><br/>
- Peezy R<br/><br/>
- Victor<br/><br/>
- Haruto  Inoue<br/><br/>
- Cameron Sato<br/><br/>
- Miko Matsumura
- 
- </p>       
-         <p className={styles.text5}>Stan McLygin<br/><br/>
- Glitch Faced King<br/><br/>
- James Lin<br/><br/>
- Eric Song <br/><br/>
- Aditya<br/><br/>
- Global Designer Network <br/><br/>(GDN)</p>   
-         <p className={styles.text6}>Ana Rivera<br/><br/>
- Rafi 0x<br/><br/>
- XtraCube<br/><br/>
- Thakane/Takii<br/><br/>
- Xenotech <br/><br/>
- Charbakd</p>      
-         <p className={styles.text7}>Bancor Network <br/><br/>
- Fei Protocol<br/><br/>
- Rarible <br/><br/>
- Vesper Finance <br/><br/>
- Ren Project <br/><br/>
- Hamzah Khan <br/><br/>
- 
- </p>     
-         <p className={styles.text8}>
-         Opyn<br/><br/>
- Mason Nystrom<br/><br/>
- Ruler Protocol<br/><br/>
- Zapper Finance<br/><br/>
- Polygon<br/><br/>
- InstaDAPP
- </p>      
-         <p className={styles.text9}>Pickle Finance<br/><br/>
- ForceDAO<br/><br/>
- IMPSSBL<br/><br/>
- Anna Chilli<br/><br/>
- HAPI<br/><br/>
- Hacken
- </p>      
-         <p className={styles.text10}>PureFi<br/><br/>
- ABigNeonGlitter<br/><br/>
- Nabi<br/><br/>
- Katriane<br/><br/>
- An Nguyen<br/><br/>
- howiseedatworld</p>   
-         <p className={styles.text11}>BUGAS<br/><br/>
- Tom Pastor<br/><br/>
- Hugo Richel<br/><br/>
- Tiago Filipe<br/><br/>
- Lilium Labs<br/><br/>
- Pat Lok
- </p>   
+      <img src='/magazine/4/images/0304_background.jpg' className={styles.image1}/>   
+      <div className={styles.image2}></div>
+      <p className={styles.text3}>contributors</p>      
+      <p className={styles.text4}>
+        Emma-Jane MacKinnon-Lee
+        <br />
+        <br />
+        Isramae Visales <br />
+        <br />
+        Peezy R<br />
+        <br />
+        Victor
+        <br />
+        <br />
+        Haruto Inoue
+        <br />
+        <br />
+        Cameron Sato
+        <br />
+        <br />
+      </p>       
+      <p className={styles.text5}>
+        Stan McLygin
+        <br />
+        <br />
+        The Global Designer Network <br />
+        <br />
+        (GDN)
+        <br />
+        <br />
+        Glitch Faced King
+        <br />
+        <br />
+        James Lin
+        <br />
+        <br />
+        Aditya
+      </p>   
+        <p className={styles.text6}>
+        Ana Rivera
+        <br />
+        <br />
+        Rafi 0x
+        <br />
+        <br />
+        Thakane/Takii
+      </p>
+      <p className={styles.text7}>
+        OurZora 
+        <br />
+        <br />
+        Web3 Fashion Week
+        <br />
+        <br />
+        Mirror.xyz
+        <br />
+        <br />
+        Strawberry Sith <br />
+        <br />
+        Pinata Cloud
+        <br />
+        <br />
+        Lolli
+      </p>
+      <p className={styles.text8}>
+        Charbakd
+        <br />
+        <br />
+        Jaymes 
+        <br />
+        <br />
+        (Pirate Ape Yacht Club)
+        <br />
+        <br />
+        Heapons
+        <br />
+        <br />
+        BasedUser
+      </p>
     </div>
-  );
-};
+  )
+}
 
-export default Page3;
+export default Page3

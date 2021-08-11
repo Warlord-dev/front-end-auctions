@@ -73,7 +73,6 @@ const Page34 = () => {
         <br />
         {/* Miko Matsumura */}
       </p>
-      (GDN) Glitch Faced King James Lin Aditya
       <p className={styles.text5}>
         Stan McLygin
         <br />

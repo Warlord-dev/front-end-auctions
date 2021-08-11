@@ -1,12 +1,22 @@
-import React from 'react';
-import styles from './page1.module.scss';
+import React from 'react'
+import styles from './page1.module.scss'
 
 const Page1 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/3/images/01_02/image2.jpg" className={styles.image} />
-    </div>
-  );
-};
+      <h1>
+        DECO        
+      </h1>
 
-export default Page1;
+      <h2>
+        Colon  | New layers of programmable digital value added to the creation, distribution, buying, and selling of digital and physical goods through NFT marketplaces and related decentralized technologies.
+      </h2>
+
+      <h3>
+        Decentralised Commerce
+      </h3>
+    </div>
+  )
+}
+
+export default Page1
