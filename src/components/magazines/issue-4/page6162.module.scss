@@ -53,13 +53,8 @@
     top: 1081px;
     
     font-family: Indie Flower;
-    font-style: normal;
-    font-weight: normal;
     font-size: 60px;
     line-height: 60px;
-    /* or 100% */
-    
-    
     color: #FFA114;
     
     -webkit-text-stroke: 1px #00FFFF;
@@ -78,9 +73,6 @@
     font-weight: normal;
     font-size: 80px;
     line-height: 60px;
-    /* or 75% */
-    
-    
     color: #FFA114;
     
     -webkit-text-stroke: 1px #00FFFF;
@@ -116,9 +108,6 @@
     font-weight: bold;
     font-size: 70px;
     line-height: 80px;
-    /* or 114% */
-    
-    
     color: #FFFFFF;    
   }
 
@@ -134,11 +123,7 @@
     font-weight: bold;
     font-size: 70px;
     line-height: 80px;
-    /* or 114% */
-
-
     color: #FFFFFF;
-
   }
 
   .text6 {
@@ -153,9 +138,6 @@
     font-weight: bold;
     font-size: 70px;
     line-height: 80px;
-    /* or 114% */
-    
-    
     color: #FFFFFF;    
   }
 
@@ -171,9 +153,6 @@
     font-weight: bold;
     font-size: 70px;
     line-height: 80px;
-    /* or 114% */
-    
-    
     color: #FFFFFF;    
   }
 
@@ -208,11 +187,7 @@
     font-weight: bold;
     font-size: 70px;
     line-height: 80px;
-    /* or 114% */
-    
-    
     color: #FF0000;
-        
   }
 
   .text10 {
@@ -227,11 +202,7 @@
     font-weight: bold;
     font-size: 70px;
     line-height: 80px;
-    /* or 114% */
-    
-    
     color: #FF0000;
-        
   }
 
   .text11 {
@@ -248,5 +219,22 @@
     line-height: 80px;
 
     color: #FF0000;    
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 419px;
+    height: 149px;
+    left: 24px;
+    top: 1330px;
+    background-color: #1a212c;    
+  }
+
+  .audioPanel {
+    position: absolute;
+    width: 419px;
+    height: 149px;
+    left: 24px;
+    top: 1330px;
   }
 }

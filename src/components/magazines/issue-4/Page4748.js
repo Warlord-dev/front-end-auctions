@@ -5,7 +5,8 @@ import styles from './page4748.module.scss'
 const Page4748 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.back1}></div>
+      <img className={styles.image1} src='/magazine/4/images/' />
+      {/* <div className={styles.back1}></div>
       <img className={styles.image1} src='/magazine/4/images/4748_image1.png' />
       <img className={styles.image2} src='/magazine/4/images/4748_image2.png' />
       <img className={styles.image3} src='/magazine/4/images/4748_image3.png' />
@@ -30,7 +31,7 @@ const Page4748 = () => {
 
       <div className={styles.playButton}>
         <img className={styles.imagePlay} src='/magazine/4/images/4748_playbutton.png' />
-      </div>
+      </div> */}
     </div>
   )
 }

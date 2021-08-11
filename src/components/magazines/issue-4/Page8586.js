@@ -139,7 +139,7 @@ const Page8586 = () => {
       </button>
 
       <audio ref={audioRef} loop>
-        <source src='./magazine/4/sound/8586_sound1.mp3' type='audio/mpeg' />
+        <source src='./magazine/4/sounds/8586_sound1.mp3' type='audio/mpeg' />
       </audio>
     </div>
   )

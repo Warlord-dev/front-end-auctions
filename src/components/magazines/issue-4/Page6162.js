@@ -1,4 +1,5 @@
 import React from 'react'
+import AudioPanel from '@components/audio-panel'
 import styles from './page6162.module.scss'
 
 const Page6162 = () => {
@@ -44,7 +45,12 @@ const Page6162 = () => {
       <div className={styles.text11}>
         Payment Friction in Commerce
       </div>
-      
+
+      <div className={styles.rect1}></div>
+      <AudioPanel
+        audioSrc='./magazine/4/sounds/8586_sound1.mp3'
+        wrapperClass={styles.audioPanel}
+      />
     </div>
   )
 }

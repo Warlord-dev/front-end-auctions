@@ -1496,6 +1496,11 @@ class MyDocument extends Document {
               font-family: 'Chalkduster';
               src: url('./fonts/Chalkduster.ttf');
             }
+
+            @font-face {
+              font-family: 'DARTHCHOWDER';
+              src: url('./fonts/DARTHCHOWDER-normal.otf');
+            }
           `,
             }}
           />
