@@ -2,426 +2,51 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3975px;
-  background-color: white;
+  height: 3165px;
+  background: rgba(0, 142, 173, 0.79);
   color: white;
   position: relative;
 
   .image1 {
     position: absolute;
-    width: 375px;
-    height: 3975px;
-    left: 0px;
-    top: 0px;
+    width: 960px;
+    height: 1493px;
+    left: -293px;
+    top: -514px;    
   }
+
+  .image2 {
+    position: absolute;
+    width: 375px;
+    height: 876px;
+    left: 0px;
+    top: 2345px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 337px;
+    height: 2180px;
+    left: 19px;
+    top: 498px;
+    
+    background: #00D0DA;
+    border: 10px solid #000000;
+    box-sizing: border-box;    
+  }
+
   .text1 {
     position: absolute;
-    width: 289px;
-    height: 100px;
-    left: 43px;
-    top: 38px;
+    width: 274px;
+    height: 972px;
+    left: 50px;
+    top: 525px;
     
-    font-family: Archie Websters;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 110%;
-    /* or 77px */
+    font-family: Lacquer;
+    font-size: 22px;
+    line-height: 150%;
     
     text-align: center;
-    
-    color: #FFFFFF;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 700px;
-    height: 66px;
-    left: 29px;
-    top: 2479px;
-    
-    font-family: Archie Websters;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100px;
-    line-height: 110%;
-    /* or 110px */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 700px;
-    height: 66px;
-    left: 21px;
-    top: 2618px;
-    
-    font-family: Archie Websters;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100px;
-    line-height: 110%;
-    /* or 110px */
-    
-    
-    color: #FFFFFF;
-  }
-
-  .image10 {
-    position: absolute;
-    width: 79px;
-    height: 79px;
-    left: 43px;
-    top: 183px;
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  .image11 {
-    position: absolute;
-    width: 79px;
-    height: 79px;
-    left: 50px;
-    top: 452px;
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  .image12 {
-    position: absolute;
-    width: 79px;
-    height: 79px;
-    left: 171px;
-    top: 1230px;
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  .image13 {
-    position: absolute;
-    width: 79px;
-    height: 79px;
-    left: 46px;
-    top: 1994px;
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  .image14 {
-    position: absolute;
-    width: 79px;
-    height: 79px;
-    left: 35px;
-    top: 3054px;
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  .image15 {
-    position: absolute;
-    width: 79px;
-    height: 79px;
-    left: 41px;
-    top: 3585px;
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  .text19 {
-    position: absolute;
-    width: 193px;
-    height: 143px;
-    left: 139px;
-    top: 175px;
-    
-    font-family: Mad Galaxy Demo;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 16px;
-    text-align: left;
-    /* or 19px */
-    
-    
-    color: #FFFFFF;
-    .text20 {
-      font-family: Mada;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 16.5px;
-    }
-  }
-  .text21 {
-    position: absolute;
-    width: 274px;
-    height: 107px;
-    left: 50px;
-    top: 279px;
-    
-    font-family: Mada;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 110%;
-    /* or 17px */
-    
-    
-    color: #FFFFFF;
-  }
-  .text22 {
-    position: absolute;
-    width: 185px;
-    height: 109px;
-    left: 147px;
-    top: 449px;
-    
-    font-family: Mad Galaxy Demo;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 16px;
-    /* or 19px */
-    
-    
-    color: #FFFFFF;
-    .text23 {
-      font-family: Mada;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 16.5px;
-    }
-  }
-  .text33 {
-    position: absolute;
-    width: 280px;
-    height: 212px;
-    left: 50px;
-    top: 551px;
-    
-    font-family: Mada;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 110%;
-    /* or 17px */
-    
-    
-    color: #FFFFFF;
-  }
-  .image16 {
-    position: absolute;
-    width: 170px;
-    height: 170px;
-    left: 125px;
-    top: 1026px;
-  } 
-  .text4 {
-    position: absolute;
-    width: 23px;
-    height: 630px;
-    left: 50px;
-    top: 1060px;
-
-    font-family: Archie Websters;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 80px;
-    line-height: 0;
-    /* or 88px */
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    letter-spacing: -20px;
-    color: #FFFFFF;
-  }
-  .text24 {
-    position: absolute;
-    width: 195px;
-    height: 372px;
-    left: 137px;
-    top: 1326px;
-    
-    font-family: Mad Galaxy Demo;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 110%;
-    /* or 19px */
-    
-    
-    color: #FFFFFF;
-    .text25 {
-      font-family: Mada;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 16.5px;
-    }
-  }
-  .text26 {
-    position: absolute;
-    width: 193px;
-    height: 113px;
-    left: 134px;
-    top: 1980px;
-    
-    font-family: Mad Galaxy Demo;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 16px;
-    /* or 19px */
-    
-    
-    color: #FFFFFF;
-    .text34 {
-      font-family: Mada;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 16.5px;
-    }
-  }
-  .text27 {
-    position: absolute;
-    width: 281px;
-    height: 442px;
-    left: 46px;
-    top: 2084px;
-    
-    font-family: Mada;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 110%;
-    /* or 17px */
-    
-    
-    color: #FFFFFF;
-  }
-  .text28 {
-    position: absolute;
-    width: 217px;
-    height: 101px;
-    left: 124px;
-    top: 3054px;
-    
-    font-family: Mad Galaxy Demo;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 16px;
-    /* or 19px */
-    
-    
-    color: #FFFFFF;
-    .text29 {
-      font-family: Mada;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 16.5px;
-    }
-  }
-  .text35 {
-    position: absolute;
-    width: 301px;
-    height: 302px;
-    left: 41px;
-    top: 3142px;
-    
-    font-family: Mada;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 110%;
-    /* or 17px */
-    
-    
-    color: #FFFFFF;
-  }
-  .text30 {
-    position: absolute;
-    width: 301px;
-    height: 302px;
-    left: 41px;
-    top: 3142px;
-    
-    font-family: Mada;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 110%;
-    /* or 17px */
-    
-    
-    color: #FFFFFF;
-  }
-  .text31 {
-    position: absolute;
-    width: 198px;
-    height: 128px;
-    left: 134px;
-    top: 3594px;
-    
-    font-family: Mad Galaxy Demo;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 110%;
-    /* or 19px */
-    
-    
-    color: #FFFFFF;
-    .text32 {
-      font-family: Mada;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 16.5px;
-    }
-  }
-  .text36 {
-    position: absolute;
-    width: 700px;
-    height: 66px;
-    left: 21px;
-    top: 2757px;
-    
-    font-family: Archie Websters;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100px;
-    line-height: 110%;
-    /* or 110px */
-    
-    
     color: #FFFFFF;    
-  }
-  .text37 {
-    position: absolute;
-    width: 700px;
-    height: 66px;
-    left: 13px;
-    top: 2896px;
-    
-    font-family: Archie Websters;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100px;
-    line-height: 110%;
-    /* or 110px */
-    
-    
-    color: #FFFFFF;
   }
 }

@@ -96,7 +96,8 @@
     line-height: 41px;
 
     color: #00C4B8;
-    -webkit-text-stroke: 5px #000000;
+    text-shadow: -5px 0 black, 0 -5px black, 5px 0 black, 0 5px black, -4px -2px black, -2px -4px black,
+      2px 4px black, 4px 2px black, 2px -4px black, -4px 2px black, -2px 4px black, 4px -2px black;
   }
 
   .text2 {
