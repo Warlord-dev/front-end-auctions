@@ -35,32 +35,37 @@ const Page7576 = () => {
         Before this, a lot of the promise of the applications of web3 technology seemed too far removed from everyday life to have a consequential and serious impact on us, our families and our ability to sustain and continue to level up in increasing our own agency and potentiality for greater opportunity. DeFi changed a lot of this in a real way. It channelled the technology into a use case that made it no longer about the technology, the product, or what the product was doing; but rather, it made it about serving our needs and helping us get to where we wanted to go with less friction, less barriers, less need to worry about gatekeepers. So, for this edition of Web3 Wizards we take our hats off to those that pioneered the industry before anyone really even knew what it was. 
       </div>
       <div className={styles.text3}>
-        
+        Juan Benet.        
       </div>
       <div className={styles.text4}>
-
+        Project: IPFS.
       </div>
 
       <div className={styles.text5}>
-
+        Witek Radomski.
       </div>
       <div className={styles.text6}>
-
+        Project: ERC-1155.
       </div>
 
       <div className={styles.text7}>
-
+        Fabian Vogelsteller.
       </div>
       <div className={styles.text8}>
-
+        Project: ERC-20.
       </div>
       
       <div className={styles.text9}>
-
+        Brandon Ramirez.
       </div>
       <div className={styles.text10}>
-
+        Project: The Graph.
       </div>
+
+      <img src='./magazine/4/images/7576_image8.png' className={styles.image11} />
+      <img src='./magazine/4/images/7576_image9.png' className={styles.image12} />
+      <img src='./magazine/4/images/7576_image10.png' className={styles.image13} />
+      <img src='./magazine/4/images/7576_image11.png' className={styles.image14} />
     </div>
   )
 }

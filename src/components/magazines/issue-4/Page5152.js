@@ -18,7 +18,7 @@ const Page5152 = () => {
       </div>
 
       <img className={styles.image2} src='./magazine/4/images/5152_image2.png' />
-      <img className={styles.image3} src='./magazine/4/images/5152_image3.png' />
+      
 
       <div className={styles.text3}>
         PLAY  TO EARN ECONOMY 
@@ -35,6 +35,8 @@ const Page5152 = () => {
       <div className={styles.text7}>
         INTERNATIONAL PLAYERS INTERNATIONAL PLAYERSINTERNATIONAL PLAYERS INTERNATIONAL PLAYERSINTERNATIONAL PLAYERSINTERNATIONAL PLAYERS INTERNATIONAL PLAYERS INTERNATIONAL PLAYERSINTERNATIONAL PLAYERS INTERNATIONAL PLAYERSINTERNATIONAL PLAYERSINTERNATIONAL PLAYERS INTERNATIONAL PLAYERS INTERNATIONAL PLAYERSINTERNATIONAL PLAYERS INTERNATIONAL PLAYERSINTERNATIONAL
       </div>
+
+      <img className={styles.image3} src='./magazine/4/images/5152_image3.png' />
     </div>
   )
 }

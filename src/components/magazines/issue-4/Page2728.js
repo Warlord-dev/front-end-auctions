@@ -32,6 +32,44 @@ const Page2728 = () => {
       <h2>
         Open Source Oasis        
       </h2>
+      <div className={styles.text2}>
+        <span>stakerwatch</span><br/>
+        With Layer 2s and side chains being all the rave, have you ever wondered what the flow of activity and token transfers really is between Ethereum mainnet and these 
+      </div>
+      <div className={styles.text3}>
+        other protocols? Stakewatch has deployed an interactive web interface for tracking exactly this, but, in a human friendly way with Ethhole.link. The total value tracked is calculated by tokens deposit to bridge contracts and the staked tokens on Ethereum. 
+      </div>
+      <div className={styles.text4}>
+        <span>Illuminate finance</span><br/>
+        For the majority of people, understanding complex algorithmic DeFi protocols isn’t something that can just be contemplated over in simple time. Yield farming, staking, yield aggregators, swaps, flash loans etc. come as a completely new language, heuristic and behavior. And, especially as DeFi grows and scales in terms of the number of projects and protocols building and releasing products in the space; it becomes even more difficult to separate the signal from the noise and know exactly where one should go to find reasonably protected exposure to gainz. 
+        <br/><br/>
+        Aggregators are a fundamental building block for scaling DeFi and crypto to a wider audience, and Illuminate is supporting this cause by offering a Fixed Yield Aggregator that finds the best current fixed rate yield across a number of different protocols, simplifying the experience for users as they start exploring this new field. 
+      </div>
+      <div className={styles.text5}>
+        <span>Thx</span><br/>
+        We’ve all heard the gamification buzzword a bunch of times. But what does it mean and why do we need it? Well, ultimately, it’s all about guiding the user’s experience in a way that is more engaging and appealing for them, so that they can achieve the outcome, goal or skill better, faster and with a much higher guarantee of root rentention. 
+        <br/><br/>
+        THX is bringing gamification to the blockchain, running on Polygon, where their API allows for easily embedded blockchain powered gamification in any application. Their focus is particularly centred around strengthening DAO communities through gamification, specifically when it comes to voting, money management and use cases around loyalty programs. 
+        <br/><br/>
+        They also currently have discord integration compatibility— highly relevant for a lot of DAOs building their communities today. 
+      </div>
+      <div className={styles.text6}>
+        L i b r e S o f t w a r e
+      </div>
+      <div className={styles.text7}>
+        L i b r e S o f t w a r e
+      </div>
+      <div className={styles.text8}>
+        L i b r e S o f t w a r e
+      </div>
+      <div className={styles.text9}>
+        <span>KOTAL</span><br/>
+        The open source alternative to Infura— Kotal is an API gateway for deploying self managing blockchain infrastructure. Anything from Ethereum 2 beacon and validation nodes to Filecoin nodes and private Ethereum networks. It’s cloud agnostic, running on any public or private cloud that supports Kubernetes and it allows for key reuseability across multiple blockchain nodes and networks.
+      </div>
+
+      <img src='./magazine/4/images/2728_image2.png' className={styles.image2} />
+      <img src='./magazine/4/images/2728_image3.png' className={styles.image3} />
+      <img src='./magazine/4/images/2728_image4.png' className={styles.image4} />
     </div>
   )
 }

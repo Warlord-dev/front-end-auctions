@@ -1501,6 +1501,11 @@ class MyDocument extends Document {
               font-family: 'DARTHCHOWDER';
               src: url('./fonts/DARTHCHOWDER-normal.otf');
             }
+
+            @font-face {
+              font-family: 'Dro';
+              src: url('./fonts/DroDEMO-KCFonts.ttf');
+            }
           `,
             }}
           />
