@@ -2,4 +2,11 @@
 
 .wrapper {
   @include magazineWrapper();
+  .image1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
 }
