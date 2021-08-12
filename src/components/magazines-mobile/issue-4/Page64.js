@@ -5,12 +5,7 @@ import Link from 'next/link';
 const Page64 = () => {
   return (
     <div className={styles.wrapper}>
-     <img src="/magazine/3/images/71_72/image1.png" className={styles.image1}/>
-      <Link href="https://www.instagram.com/lilium.labs/">
-        <a target="_blank">
-        <p className={styles.text1}>Lilium Labs</p> 
-        </a>
-      </Link>
+      <img className={styles.image1} src='/magazine/4/images/7172_background1.png' />
     </div>
   )
 }

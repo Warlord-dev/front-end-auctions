@@ -1,13 +1,42 @@
 @import './styles.module.scss';
-@keyframes scrolling {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-605px); }
-}
 
 .wrapper {
   @include magazineWrapper();
-  height: 3093px;
-  background-color: white;
+  height: 2218px;
+  background: linear-gradient(180deg, #3F40BF 0%, rgba(54, 55, 157, 0.9) 100%);
   color: black;
   position: relative;
+
+  .text1 {
+    position: absolute;
+    width: 292px;
+    left: 55px;
+    top: 46px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    background: linear-gradient(180deg, #FF9153 0%, #FF00B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 315px;
+    height: 223px;
+    left: 43px;
+    top: 1909px;
+    
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 100px;
+    background: linear-gradient(180deg, #FFC700 0%, #FF5C00 54.17%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

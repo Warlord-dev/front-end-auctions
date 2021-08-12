@@ -2,20 +2,16 @@
 
 .wrapper {
   @include magazineWrapper();
-  
-  height: 477px;
-  overflow: hidden;
-  background-color: white;
+  height: 647px;
+  background-color: black;
   color: white;
-  display: flex;
   position: relative;
 
   .image1 {
     position: absolute;
-    width: 477px;
-    height: 375px;
-    left: -51px;
-    top: 51px;
-    transform: rotate(-90deg);
+    width: 375px;
+    height: 647px;
+    left: 0px;
+    top: 0px;
   }
 }

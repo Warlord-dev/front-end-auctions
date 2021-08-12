@@ -1,97 +1,20 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 4840px;
+  height: 494px;
   background-color: white;
   color: black;
   position: relative;
   white-space: normal;
   text-align: left;
 
-  .video1 {
+  .image1 {
     position: absolute;
-    width: 375px;
-    height: 4840px;
-    left: 0px;
-    top: 0px;
-  }
-  .image7 {
-    position: absolute;
-    width: 375px;
-    height: 4922px;
-    left: 0px;
-    top: -82px;
-    
-    background: rgba(0, 0, 0, 0.46);
-  }
-  .text1 {
-    position: absolute;
-    width: 364px;
-    height: 120px;
-    left: 6px;
-    top: 34px;
-    
-    font-family: Heaven Wanders DEMO;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 100%;
-    /* or 60px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
-  .image5 {
-    position: absolute;
-    width: 327px;
-    height: 525px;
-    left: -87.08px;
-    top: 151.09px;
-    transform: rotate(20deg);
-  }
-  .text2 {
-    position: absolute;
-    width: 274.03px;
-    height: 90px;
-    left: 80.46px;
-    top: 472.36px;
-    
-    font-family: Comic Sans MS;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 100%;
-    /* or 30px */
-    
-    
-    color: #FFFFFF;
-    transform: rotate(-7deg);
-  }
-  .text3 {
-    position: absolute;
-    width: 197px;
-    height: 2836px;
-    left: 76px;
-    top: 593px;
-    
-    font-family: Ayuthaya;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 150%;
-    /* or 25px */
-    
-    
-    color: #FFFFFF;
-  }
-  .image3 {
-    position: absolute;
-    width: 116px;
-    height: 423px;
-    left: 130px;
-    top: 4417px;
+    width: 494px;
+    height: 375px;
+    left: -59.5px;
+    top: 59.5px;
+    transform: rotate(-90deg);
   }
 }

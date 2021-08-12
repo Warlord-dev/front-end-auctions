@@ -1,8 +1,37 @@
 @import './styles.module.scss';
 .wrapper {
   @include magazineWrapper();
-  height: 494px;
+  height: 3659px;
   background-color: white;
   color: black;
   position: relative;
+
+  .video1 {
+    position: relative;
+    width: 375px;
+    height: 4840px;
+    left: 0;
+    top: 0;
+    object-fit: cover;    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 116px;
+    height: 423px;
+    left: 130px;
+    top: 3236px;    
+  }
+
+  .line1 {
+    position: absolute;
+    width: 423px;
+    height: 0px;
+    left: 187px;
+    top: 3236px;
+    
+    border: 1px solid #FFFFFF;
+    transform: rotate(90deg);
+    transform-origin: 0 0;    
+  }
 }

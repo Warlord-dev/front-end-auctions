@@ -2,18 +2,19 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 583px;
-  overflow: hidden;
+  
+  height: 647px;
   background-color: black;
   color: white;
   display: flex;
   position: relative;
 
-  .image2 {
+  .video1 {
     position: absolute;
-    width: 449px;
-    height: 583px;
-    left: -40px;
-    top: 0px;
+    width: 375px;
+    height: 667px;
+    left: 0px;
+    top: -10px;
+    object-fit: cover;    
   }
 }

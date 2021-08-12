@@ -1,11 +1,55 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 4899px;
+  height: 4840px;
   background-color: white;
   color: black;
   position: relative;
   text-align: left;
+
+  .video1 {
+    position: relative;
+    width: 375px;
+    height: 4840px;
+    left: 0;
+    top: 0;
+    object-fit: cover;    
+  }
+
+  h1 {
+    position: absolute;
+    width: 364px;
+    height: 120px;
+    left: 6px;
+    top: 34px;
+    
+    font-family: Heaven Wanders DEMO;
+    font-size: 60px;
+    line-height: 100%;   
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 116px;
+    height: 423px;
+    left: 130px;
+    top: 4417px;    
+  }
+
+  .line1 {
+    position: absolute;
+    width: 423px;
+    height: 0px;
+    left: 187px;
+    top: 4417px;
+    
+    border: 1px solid #FFFFFF;
+    transform: rotate(90deg);
+    transform-origin: 0 0;    
+  }
 }

@@ -2,10 +2,83 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 4957px;
-  background-color: white;
+  height: 2773px;
+  background: linear-gradient(180deg, #3F40BF 0%, rgba(54, 55, 157, 0.9) 100%);
   color: white;
   position: relative;
   white-space: normal;
   text-align: left;
+
+  .text1 {
+    position: absolute;
+    width: 239px;
+    height: 534px;
+    left: 24px;
+    top: 20px;
+    
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 300px;
+    line-height: 270px;
+    background: linear-gradient(180deg, #FFC700 0%, #FF5C00 54.17%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 148px;
+    height: 259px;
+    left: 201px;
+    top: 51px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: right;
+    
+    color: #FF7A00;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 304px;
+    left: 30px;
+    top: 594px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: right;
+
+    background: linear-gradient(180deg, #FF9900 0%, #FF9153 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 304px;
+    left: 30px;
+    top: 1089px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    /* or 118% */
+    
+    text-align: right;
+    background: linear-gradient(180deg, #FF9153 0%, #FF00B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
 }
