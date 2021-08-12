@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Page22 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/25_26/image1.png" className={styles.image1}/>
+      
     </div>
   )
 }

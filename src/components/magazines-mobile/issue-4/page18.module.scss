@@ -1,10 +1,84 @@
 @import './styles.module.scss';
 
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-605px); }
+}
+
 .wrapper {
   @include magazineWrapper();
-  height: 2831px;
-  background: linear-gradient(180deg, #EF5296 0%, #CA47A9 46.88%, #E869A2 100%);
-  color: #FFFFFF;
-  display: flex;
+
+  height: 3093px;
+  background-color: white;
+  color: black;
   position: relative;
+  white-space: normal;
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 2784px;
+    left: 0px;
+    top: 155px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 375px;
+    height: 1361px;
+    left: 0px;
+    top: 201px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 375px;
+    height: 1361px;
+    left: 0px;
+    top: 1578px;
+  }
+
+  .topSideFrame {
+    position: absolute;
+    width: 1497px;
+    height: 155px;
+    left: 0;
+    top: 0;
+    background-color: #ff3636;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+  }
+
+  .bottomSideFrame {
+    position: absolute;
+    width: 1497px;
+    height: 155px;
+    left: 0;
+    bottom: 0;
+    background-color: #ff3636;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+  }
+
+  .animationFrame {
+    animation: scrolling 4s linear infinite;
+  }
+
+  .topSideImageWrapper {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    width: 2400px;
+    height: 47px;
+    display: flex;
+  }
+
+  .bottomSideImageWrapper {
+    position: absolute;
+    left: 0px;
+    width: 2400px;
+    top: 2990px;
+    height: 47px;
+    display: flex;
+  }
 }
