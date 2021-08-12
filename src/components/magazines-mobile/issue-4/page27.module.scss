@@ -1,11 +1,617 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 3398px;
-  background-color: #27AFF7;
+  height: 6281px;
+  background-color: #FFFFFF;
   color: black;
   position: relative;
   white-space: normal;
+
+  .rect1 {
+    position: absolute;
+    width: 375px;
+    height: 340px;
+    left: 0px;
+    top: 378px;
+    
+    background: rgba(99, 223, 156, 0.36);    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 375px;
+    height: 95px;
+    left: 0px;
+    top: 4589px;
+    
+    background: rgba(252, 109, 255, 0.53);    
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 375px;
+    height: 95px;
+    left: 0px;
+    top: 4719px;
+    
+    background: rgba(82, 30, 83, 0.53);    
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 114px;
+    height: 1000px;
+    left: 152px;
+    top: 4814px;
+    
+    background: #2C80FF;    
+  }
+
+  .line1 {
+    position: absolute;
+    width: 375px;
+    height: 0px;
+    left: 0px;
+    top: 432px;
+    background: #000000;
+    border: 5px solid #000000;    
+  }
+
+  .line2 {
+    position: absolute;
+    width: 375px;
+    height: 0px;
+    left: 0px;
+    top: 1740px;
+    
+    border: 5px solid #000000;
+  }
+
+  .line3 {
+    position: absolute;
+    width: 375px;
+    height: 0px;
+    left: 0px;
+    top: 1777px;
+    
+    border: 5px solid #000000;
+  }
+
+  .line4 {
+    position: absolute;
+    width: 192px;
+    height: 0px;
+    left: 310px;
+    top: 6067px;
+    
+    border: 5px solid #000000;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+  }
+
+  .line5 {
+    position: absolute;
+    width: 198px;
+    height: 0px;
+    left: 359px;
+    top: 6073px;
+    
+    border: 5px solid #000000;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+  }
+
+  .line6 {
+    position: absolute;
+    width: 375px;
+    height: 0px;
+    left: 0px;
+    top: 6067px;
+    
+    border: 5px solid #000000;
+  }
+
+  .line7 {
+    position: absolute;
+    width: 375px;
+    height: 0px;
+    left: 0px;
+    top: 6214px;
+    
+    border: 5px solid #000000;
+  }
+
+  .line8 {
+    position: absolute;
+    width: 375px;
+    height: 0px;
+    left: 0px;
+    top: 6240px;
+    
+    border: 5px solid #000000;
+  }
+
+  .line9 {
+    position: absolute;
+    width: 870px;
+    height: 0px;
+    left: 0px;
+    top: 6266px;
+    
+    border: 5px solid #000000;
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 368px;
+    height: 368px;
+    left: 3px;
+    top: 2260px;
+    
+    background: rgba(94, 29, 57, 0.49);
+    border-radius: 50%;
+    border: 4px solid #000000;
+    box-sizing: border-box;    
+  }
+  
+  .image1 {
+    position: absolute;
+    width: 187px;
+    height: 89px;
+    left: 164px;
+    top: 459px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 483px;
+    height: 690px;
+    left: -66px;
+    top: 586px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 524px;
+    height: 418px;
+    left: -60px;
+    top: 1815px;
+  }
+
+  .video1 {
+    position: absolute;
+    width: 378px;
+    height: 380px;
+    left: -3px;
+    top: 2764px;
+    object-fit: fill;    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 362px;
+    height: 628px;
+    left: 8px;
+    top: 3389px;    
+  }
+
+  .video2 {
+    position: absolute;
+    width: 382px;
+    height: 364px;
+    left: -3px;
+    top: 4968px;    
+  }
+
+  .video3 {
+    position: absolute;
+    width: 425px;
+    height: 405px;
+    left: -38px;
+    top: 5470px;    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 171px;
+    height: 90px;
+    left: 17px;
+    top: 5932px;    
+  }
+
+  .image6 {
+    position: absolute;
+    width: 77px;
+    height: 787px;
+    left: 267px;
+    top: 4040px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 171px;
+    height: 90px;
+    left: 17px;
+    top: 5932px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 322px;
+    height: 151px;
+    left: 19px;
+    top: 31px;
+    
+    font-family: Artypa;
+    font-size: 50px;
+    line-height: 65px;
+    text-align: center;
+    color: #001E25;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 398px;
+    height: 141px;
+    left: 19px;
+    top: 151px;
+    
+    font-family: The ART;
+    font-size: 80px;
+    line-height: 92px;
+    
+    color: #00C566;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 177px;
+    height: 178px;
+    left: 164px;
+    top: 254px;
+    
+    font-family: Arthure;
+    font-size: 140px;
+    line-height: 186px;
+    
+    color: #00C566;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 147px;
+    height: 67px;
+    left: 41px;
+    top: 470px;
+    
+    font-family: Averia Libre;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #000000;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 451px;
+    height: 91px;
+    left: 57px;
+    top: 1609px;
+    
+    font-family: Baskerville;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 120.53%;
+    /* or 60px */
+    
+    
+    color: #6F00FD;
+    
+    transform: rotate(-90deg);
+    transform-origin: 0 0;    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 166px;
+    height: 130px;
+    left: 185px;
+    top: 1325px;
+    
+    font-family: Barriecito;
+    font-size: 50px;
+    line-height: 120.53%;
+    color: #C30406;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 166px;
+    height: 130px;
+    left: 185px;
+    top: 1438px;
+    
+    font-family: Barriecito;
+    font-size: 50px;
+    line-height: 120.53%;
+    color: #C30406;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 166px;
+    height: 130px;
+    left: 185px;
+    top: 1561px;
+       
+    font-family: Barriecito;
+    font-size: 50px;
+    line-height: 120.53%;
+    color: #C30406;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 217px;
+    height: 199px;
+    left: 124px;
+    top: 2498px;
+    
+    font-family: 'Bodoni 72 Oldstyle';
+    font-size: 50px;
+    line-height: 120.53%;
+    color: #000000;
+    
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 147px;
+    height: 67px;
+    left: 192px;
+    top: 2452px;
+    
+    font-family: Averia Libre;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #000000;    
+  }
+
+  .text11 {
+    position: absolute;
+    width: 214px;
+    height: 144px;
+    left: 135px;
+    top: 2559px;
+    
+    font-family: BM HANNA_TTF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    /* or 72px */
+    
+    
+    color: #000000;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 245px;
+    height: 20px;
+    left: 205px;
+    top: 3171px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #000000;
+    
+  }
+
+  .text13 {
+    position: absolute;
+    width: 135px;
+    height: 96px;
+    left: 13px;
+    top: 3217px;
+
+    font-family: Aubrey;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(0, 0, 0, 0.19);    
+  }
+
+  .text14 {
+    position: absolute;
+    width: 135px;
+    height: 96px;
+    left: 13px;
+    top: 3192px;
+    
+    font-family: Aubrey;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(0, 0, 0, 0.45);
+  }
+
+  .text15 {
+    position: absolute;
+    width: 135px;
+    height: 96px;
+    left: 13px;
+    top: 3167px;
+    
+    font-family: Aubrey;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(0, 0, 0, 0.67);
+  }
+
+  .text16 {
+    position: absolute;
+    width: 375px;
+    height: 144px;
+    left: 0px;
+    top: 3218px;
+    
+    font-family: Aubrey;
+    font-size: 80px;
+    line-height: 120.53%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(90deg, #5768FF 2.38%, #00B1A7 96.87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 141px;
+    height: 20px;
+    left: 117px;
+    top: 4040px;
+    
+    font-family: Inter;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #000000;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 504px;
+    height: 140px;
+    left: 23px;
+    top: 4544px;
+    
+    font-family: Baloo Chettan 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 100%;
+    color: #944562;
+    
+    text-shadow: -1px 0 #FFE601, 0 -1px #FFE601, 1px 0 #FFE601, 0 1px #FFE601;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+  }
+
+  .text19 {
+    position: absolute;
+    width: 468px;
+    height: 48px;
+    left: 172px;
+    top: 4562px;
+    
+    font-family: Athelas;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120.53%;
+    text-align: right;
+    color: #149D21;
+    
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+  }
+
+  .text20 {
+    position: absolute;
+    width: 399px;
+    height: 144px;
+    left: 20px;
+    top: 4824px;
+    
+    font-family: Atma;
+    font-size: 100px;
+    line-height: 120.53%;   
+    display: flex;
+    align-items: flex-end;
+    
+    
+    background: linear-gradient(90deg, #FFB800 2.38%, #B10000 96.87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;
+  }
+
+  .text21 {
+    position: absolute;
+    width: 184px;
+    height: 48px;
+    left: 175px;
+    top: 5367px;
+    
+    font-family: Aubrey;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #FF0000;
+  }
+
+  .text22 {
+    position: absolute;
+    width: 141px;
+    height: 20px;
+    left: 175px;
+    top: 5415px;
+    
+    font-family: Inter;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #000000;
+  }
+
+  .text23 {
+    position: absolute;
+    width: 141px;
+    height: 20px;
+    left: 32px;
+    top: 5899px;
+    
+    font-family: Inter;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #000000;
+  }
+
+  .text24 {
+    position: absolute;
+    width: 345px;
+    height: 120px;
+    left: 14px;
+    top: 6082px;
+    
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 120.53%;
+    color: #272ADF;
+  }
+
+  .text25 {
+    position: absolute;
+    width: 345px;
+    height: 120px;
+    left: 14px;
+    top: 6142px;
+    
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 120.53%;
+    color: #EC65F7;
+  }
 }

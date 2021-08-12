@@ -1,12 +1,80 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 3398px;
+  height: 3374px;
   color: white;
   background-color: #27AFF7;
   position: relative;
   white-space: normal;
   text-align: left;
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 3374px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    left: 205px;
+    top: 263px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 346px;
+    height: 169px;
+    left: 29px;
+    top: 94px;
+    
+    font-family: Archie Websters;
+    font-size: 130px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 23px;
+    height: 630px;
+    left: 278px;
+    top: 505px;
+    
+    font-family: Archie Websters;
+    font-size: 80px;
+    line-height: 110%;
+    word-wrap: break-word;
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 700px;
+    height: 66px;
+    left: 35px;
+    top: 1751px;
+    
+    font-family: Archie Websters;
+    font-size: 100px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 700px;
+    height: 52px;
+    left: 23px;
+    top: 1893px;
+    
+    font-family: Archie Websters;
+    font-size: 100px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
 }
