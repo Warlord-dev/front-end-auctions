@@ -3,10 +3,26 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 1970px;
+  height: 2570px;
   background-color: white;
   color: white;
   position: relative;
   white-space: normal;
   text-align: left;
+
+  .background {
+    position: absolute;
+    width: 375px;
+    height: 2570px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 399px;
+    left: 0px;
+    top: 21px;    
+  }
 }

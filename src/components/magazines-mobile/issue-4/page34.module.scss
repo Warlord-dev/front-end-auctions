@@ -2,10 +2,106 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2385px;
+  height: 973px;
   background-color: black;
   color: white;
   position: relative;
   white-space: normal;
   text-align: left;
+
+  .background {
+    position: absolute;
+    width: 375px;
+    height: 973px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 403px;
+    height: 155px;
+    left: 0px;
+    top: 0px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 100%;
+    /* or 80px */
+    
+    
+    color: #FAFF00;
+        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 403px;
+    height: 155px;
+    left: -112px;
+    top: 164px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 100%;
+    /* or 80px */
+    
+    
+    color: #FAFF00;
+    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 403px;
+    height: 155px;
+    left: 267px;
+    top: 186px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 100%;
+    /* or 80px */
+    
+    
+    color: #FAFF00;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 403px;
+    height: 156px;
+    left: -86px;
+    top: 341px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 100%;
+    /* or 80px */
+    
+    text-align: center;
+    
+    color: #FAFF00;
+    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 306px;
+    height: 244px;
+    left: 15px;
+    top: 748px;
+    font-family: CF Punk Fashion PERSONAL;
+    font-size: 60px;
+    line-height: 100%;
+    color: #FAFF00;
+  }
 }

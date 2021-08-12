@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './page30.module.scss'
 
 const Page30 = () => {
@@ -11,7 +12,11 @@ const Page30 = () => {
       <img className={styles.image5} src='/magazine/4/images/3536_image2.png' />
       <img className={styles.image6} src='/magazine/4/images/3536_image2.png' />
       <img className={styles.image7} src='/magazine/4/images/3536_image2.png' />
-      <h1>OURZORA</h1>
+      <Link href='https://zora.co/'>
+        <a target='_blank'>
+          <h1>OURZORA</h1>
+        </a>
+      </Link>
     </div>
   )
 }

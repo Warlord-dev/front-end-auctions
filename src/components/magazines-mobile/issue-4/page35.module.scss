@@ -2,10 +2,36 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3972px;
+  height: 1102px;
   background-color: black;
   color: white;
   position: relative;
   white-space: normal;
   text-align: left;
+
+  .image1 {
+    position: absolute;
+    width: 348px;
+    height: 46px;
+    left: 14px;
+    top: 15px;    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 375px;
+    height: 261px;
+    left: 0px;
+    top: 227px;
+    object-fit: cover;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 375px;
+    height: 330px;
+    left: 0px;
+    top: 772px;
+    
+  }
 }
