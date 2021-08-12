@@ -2,171 +2,81 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2436px;
-  background-color: #FFFFFF;
+  height: 1410px;
+  background-color: #FA00FF;
   color: white;
   position: relative;
 
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 1410px;
+    left: 0px;
+    top: 0px;
+  }
+
   .image2 {
     position: absolute;
-    width: 972px;
-    height: 2436px;
-    left: -141px;
-    top: 0px;
-  }  
+    width: 183px;
+    height: 161px;
+    left: 227px;
+    top: 0px;    
+  }
+
   .image3 {
     position: absolute;
-    width: 305px;
-    height: 305px;
-    left: 188px;
-    top: -22px;
+    width: 216px;
+    height: 190px;
+    left: 38px;
+    top: 122px;
   }
+
   .image4 {
     position: absolute;
-    width: 152px;
-    height: 152px;
-    left: 36px;
-    top: 0px;
+    width: 105px;
+    height: 92px;
+    left: -12px;
+    top: 353px;
   }
+
   .image5 {
     position: absolute;
-    width: 96px;
-    height: 96px;
-    left: 112px;
-    top: 131px;
+    width: 105px;
+    height: 92px;
+    left: 266px;
+    top: 919px;
+    
   }
+
   .image6 {
     position: absolute;
-    width: 443px;
-    height: 418px;
-    left: 40px;
-    top: 2153px;
+    width: 105px;
+    height: 92px;
+    left: -26px;
+    top: 1004px;
   }
-  .text3 {
-    position: absolute;
-    width: 599px;
-    height: 88px;
-    left: 16px;
-    top: 269px;
-    
-    font-family: Empirez;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 80px;
-    line-height: 110%;
-    /* identical to box height, or 132px */
-    
-    
-    color: #3A6B6B;
-    
-    -webkit-text-stroke: 2px white;
-    text-shadow: 0px 4px 30px #000000;
-  }
-  .text4 {
-    position: absolute;
-    width: 220.45px;
-    height: 552.83px;
-    left: 50.32px;
-    top: 386.39px;
-    
-    font-family: Think Thick;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 7px;
-    line-height: 13.5px;
-    transform: rotate(-3deg);
-    /* or 33px */
-    
-    
-    color: #FFB9B9;    
-    .title {
-      font-family: Cool Chaos;
-      font-size: 30px;
-      line-height: 33px;
-      font-weight: bold;
-    }
-  }
-  .image8 {
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    left: 157px;
-    top: 388px;
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  .image9 {
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    left: 236px;
-    top: 940px;
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  .image10 {
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    left: 232px;
-    top: 1360px;
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
+
   .image7 {
     position: absolute;
-    width: 190px;
-    height: 191px;
-    left: 0px;
-    top: 1962px;
+    width: 105px;
+    height: 92px;
+    left: 132px;
+    top: 1096px;
   }
-  .text5 {
+
+  .image8 {
     position: absolute;
-    width: 152.97px;
-    height: 49.61px;
-    left: 185.87px;
-    top: 2001.57px;
-    
-    font-family: Cool Chaos;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 110%;
-    /* or 33px */
-    
-    
-    color: #FFB9B9;
-    transform: rotate(-5deg);
+    width: 216px;
+    height: 190px;
+    left: -29px;
+    top: 1256px;
   }
-  .image11 {
+
+  .image9 {
     position: absolute;
-    width: 20.15px;
-    height: 20.15px;
-    left: 205px;
-    top: 2048px;
-  }
-  .text6 {
-    position: absolute;
-    width: 966px;
-    height: 88px;
-    left: 11px;
-    top: 2348px;
-    
-    font-family: Empirez;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 80px;
-    line-height: 110%;
-    /* identical to box height, or 88px */
-    
-    
-    color: #3A6B6B;
-    text-shadow: rgb(255, 255, 255) 3px 0px 0px, rgb(255, 255, 255) 2.83487px 0.981584px 0px, rgb(255, 255, 255) 2.35766px 1.85511px 0px, rgb(255, 255, 255) 1.62091px 2.52441px 0px, rgb(255, 255, 255) 0.705713px 2.91581px 0px, rgb(255, 255, 255) -0.287171px 2.98622px 0px, rgb(255, 255, 255) -1.24844px 2.72789px 0px, rgb(255, 255, 255) -2.07227px 2.16926px 0px, rgb(255, 255, 255) -2.66798px 1.37182px 0px, rgb(255, 255, 255) -2.96998px 0.42336px 0px, rgb(255, 255, 255) -2.94502px -0.571704px 0px, rgb(255, 255, 255) -2.59586px -1.50383px 0px, rgb(255, 255, 255) -1.96093px -2.27041px 0px, rgb(255, 255, 255) -1.11013px -2.78704px 0px, rgb(255, 255, 255) -0.137119px -2.99686px 0px, rgb(255, 255, 255) 0.850987px -2.87677px 0px, rgb(255, 255, 255) 1.74541px -2.43999px 0px, rgb(255, 255, 255) 2.44769px -1.73459px 0px, rgb(255, 255, 255) 2.88051px -0.838247px 0px;
+    width: 399px;
+    height: 520px;
+    left: -12px;
+    top: 445px;
   }
 }

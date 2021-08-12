@@ -12,4 +12,47 @@
   color: black;
   position: relative;
   white-space: normal;
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 1666px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 375px;
+    height: 1666px;
+    left: 0px;
+    top: 1666px;    
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 316px;
+    height: 2333px;
+    left: 29px;
+    top: 280px;
+    
+    background: #00D0DA;
+    border: 10px solid #000000;
+    box-sizing: border-box;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 267px;
+    height: 1096px;
+    left: 54px;
+    top: 313px;
+    
+    font-family: Lacquer;
+    font-size: 22px;
+    line-height: 150%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
 }

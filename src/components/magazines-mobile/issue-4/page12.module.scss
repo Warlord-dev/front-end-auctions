@@ -1,97 +1,56 @@
 @import './styles.module.scss';
 
-@keyframes scrolling {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-605px); }
-}
-
-
 .wrapper {
   @include magazineWrapper();
-  height: 3090px;
+  height: 2893px;
   background-color: white;
   color: black;
   position: relative;
-  
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 1666px;
+    left: 0px;
+    top: 0px;
+  }
+
   .image2 {
     position: absolute;
-    width: 320px;
-    height: 3018px;
-    left: 28px;
-    top: 35px;
-    
-    background: #9F95DB;
+    width: 375px;
+    height: 1666px;
+    left: 0px;
+    top: 1666px;   
   }
-  .text4 {
+
+  .rect1 {
     position: absolute;
-    width: 276px;
-    height: 120px;
-    left: 50px;
-    top: 77px;
+    width: 316px;
+    height: 2489px;
+    left: 29px;
+    top: 280px;
     
-    font-family: Nella Sue Demo;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 120.53%;
-    /* or 60px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
+    background: #00D0DA;
+    border: 10px solid #000000;
+    box-sizing: border-box;    
   }
-  .text5 {
+
+  .text1 {
     position: absolute;
-    width: 250px;
-    height: 339px;
-    left: 63px;
-    top: 231px;
-    
-    font-family: Jockey One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 150%;
-    /* or 22px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
-  .text6 {
-    position: absolute;
-    width: 250px;
-    height: 767px;
-    left: 63px;
-    top: 892px;
-    
-    font-family: Jacques Francois;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 150%;
-    /* or 22px */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
-  .text7 {
-    position: absolute;
-    width: 250px;
-    height: 772px;
+    width: 252px;
+    height: 1096px;
     left: 61px;
-    top: 1962px;
+    top: 313px;
     
-    font-family: Jacques Francois;
+    font-family: Lacquer;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 22px;
     line-height: 150%;
-    /* or 22px */
+    /* or 33px */
     
     text-align: center;
     
-    color: #FFFFFF;
+    color: #FFFFFF;    
   }
 }
