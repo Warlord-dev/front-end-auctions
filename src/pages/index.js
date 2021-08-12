@@ -201,6 +201,35 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
+      <section className={styles.weekNtfs}>
+        <img src="/images/weekNtfstext.png" />
+        <div className={styles.row50}>
+          <div className={styles.imgWrapperWeekNtfs}>
+            <img src="/images/weekNtfsframe.png" />
+            <p>wear to defi stake your nft for $mona HERE</p>
+          </div>
+          <div className={styles.imgWrapperWeekNtfs}>
+            <img src="/images/weekNtfsframe.png" />
+            <p>Unique pfp collectible avatar W/ in-game utility</p>
+          </div>
+          <div className={styles.imgWrapperWeekNtfs}>
+            <img src="/images/weekNtfsframe.png" />
+            <p>Original 3d model fbx file included</p>
+          </div>
+          <div className={styles.imgWrapperWeekNtfs}>
+            <img src="/images/weekNtfsframe.png" />
+            <p>Fractional garment ownership erc-1155 open source pattern</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.liveSection}>
+        <span>
+          <img className={styles.liveText} src="/images/liveText.png" />
+          <img src="/images/liveArea.png" />
+        </span>
+      </section>
     </div>
   );
 };
