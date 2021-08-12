@@ -1,0 +1,57 @@
+@keyframes scrolling {
+  0% {
+    transform: translateX(-1342px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+
+  .animationForm {
+    display: flex;
+    animation: scrolling 12s linear infinite;
+
+    .node {
+      display: flex;
+      align-items: center;
+
+      .toptext{
+        width: 800px;
+      }
+
+      .text {
+        text-transform: uppercase;
+        text-align: center;
+        color: transparent;
+        font-weight: 600;
+        font-family: m12;
+        padding: 1.5rem 3rem;
+        -webkit-text-stroke: 1px rgb(125, 254, 220);
+        word-break: unset;
+        white-space: nowrap;
+
+        @media (min-width: 1440px) {
+          font-size: 70px;
+        }
+
+        @media (max-width: 1440px) {
+          font-size: 70px;
+        }
+
+        @media (max-width: 1200px) {
+          font-size: 70px;
+        }
+
+        @media (max-width: 920px) {
+          font-size: 70px;
+        }
+      }
+    }
+  }
+}

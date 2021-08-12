@@ -99,6 +99,22 @@
     }
   }
 
+  .bannerSection {
+    position: relative;
+    background-image: url('/images/metaverse/bluebg.png');
+    background-repeat: none;
+    background-size: contain;
+    background-color: #451f68;
+  }
+
+  .bannerPinkSection {
+    position: relative;
+    background-image: url('/images/metaverse/pinkbg.png');
+    background-repeat: none;
+    background-size: contain;
+    background-color: #451f68;
+  }
+
   .newUpdatesSection {
     .back {
       width: 100%;
