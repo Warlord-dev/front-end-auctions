@@ -1,0 +1,123 @@
+@import '../../assets/scss/helpers/grid.scss';
+
+.productDetails {
+  .productDetailsBody {
+    background-image: url('../../../public/images/metaverse/product_detail_body.png');
+    background-repeat: repeat;
+    background-size: 100%;
+    padding-top: 2rem;
+    margin-top: -4rem;
+    padding-bottom: 10rem;
+
+    @include sm-width {
+      padding-bottom: 22rem;
+    }
+
+    .title {
+      width: 80%;
+      margin-left: 3rem;
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .imageLeftGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 6rem;
+      margin-bottom: 2rem;
+      align-items: center;
+
+      @include md-width {
+        grid-template-columns: 35% auto;
+      }
+
+      @media (max-width: 576px) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .image {
+        width: 100%;
+        border: 1px solid white;
+        height: 500px;
+      }
+    }
+
+    .imageRightGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 6rem;
+      margin-bottom: 2rem;
+      align-items: center;
+
+      @include md-width {
+        grid-template-columns: auto 35%;
+      }
+
+      @media (max-width: 576px) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .image {
+        width: 100%;
+        border: 1px solid white;
+        height: 500px;
+      }
+    }
+  }
+
+  .text {
+    .heading {
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+
+      @include md-width {
+        font-size: 23px;
+      }
+
+      @include lg-width {
+        font-size: 28px;
+      }
+
+      @include xl-width {
+        font-size: 33px;
+      }
+
+      color: #ffffff;
+    }
+
+    .textBody {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+
+      @include md-width {
+        font-size: 15px;
+      }
+
+      @include lg-width {
+        font-size: 19px;
+      }
+
+      @include xl-width {
+        font-size: 24px;
+      }
+
+      color: #ffffff;
+    }
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .footer {
+    margin-top: -50%;
+    margin-bottom: -1rem;
+    width: 100%;
+  }
+}

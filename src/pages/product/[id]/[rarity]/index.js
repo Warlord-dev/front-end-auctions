@@ -17,6 +17,7 @@ import { getChainId } from '@selectors/global.selectors';
 import PriceCard from '@components/price-card';
 import { getRarity } from '@utils/helpers';
 import { openBidHistoryModal, openPurchaseHistoryModal } from '@actions/modals.actions';
+import ProductDetails from '@components/product-details';
 
 const Product = () => {
   const router = useRouter();
@@ -132,11 +133,15 @@ const Product = () => {
             <div className={styles.mainBody}>
               <div className={styles.imageCardWrapper}>
                 <div className={styles.rarity}> {getRarity(parseInt(rarity))} </div>
-                <ImageCard 
-                  data={product} 
-                  price={getPrice() / 10 ** 18} 
-                  libon={parseInt(rarity)} 
-                  disable={parseInt(rarity) === 1 && Date.now() > product.endTime * 1000 || offer?.amountSold >= offer?.totalAmount} />
+                <ImageCard
+                  data={product}
+                  price={getPrice() / 10 ** 18}
+                  libon={parseInt(rarity)}
+                  disable={
+                    (parseInt(rarity) === 1 && Date.now() > product.endTime * 1000) ||
+                    offer?.amountSold >= offer?.totalAmount
+                  }
+                />
               </div>
               <div className={styles.infoWrapper}>
                 <div className={styles.amount}>
@@ -153,9 +158,7 @@ const Product = () => {
                     <div className={styles.skinName}>
                       <div className={styles.text}> {product?.garment?.name} </div>
                     </div>
-                    <div className={styles.description}>
-                      {product?.garment?.description}
-                    </div>
+                    <div className={styles.description}>{product?.garment?.description}</div>
                   </div>
                 </InfoCard>
                 <div className={styles.actions}>
@@ -206,30 +209,27 @@ const Product = () => {
         </>
       ) : null}
 
-      {product?.developer ? (
-        <>
-          <section className={styles.developerSection}>
-            <video autoPlay loop muted className={styles.video}>
-              <source src="./images/metaverse/developer-bg.mp4" type="video/mp4" />
-            </video>
-            <Container>
-              <div className={styles.developerBody}>
-                <div className={styles.title}> developer </div>
-                <div className={styles.data}>
-                  <ImageCard showButton={false} imgUrl={product?.developer?.image} />
-                  <div className={styles.infoWrapper}>
-                    <InfoCard libon="./images/metaverse/party_glasses.png">
-                      <div className={styles.name}> {product?.developer?.name} </div>
-                      <div className={styles.description}>{product?.developer?.description}</div>
-                    </InfoCard>
-                  </div>
-                </div>
-              </div>
-            </Container>
-          </section>
-          <HeroBar />
-        </>
-      ) : null}
+      <section className={styles.globalDesignerNetwork}>
+        <img src="/images/metaverse/global_designer_network.png" className={styles.title} />
+        <div className={styles.text}>
+          The Global Designer Network is initiating as an on-chain DAO. The Global Designer Network
+          is initiating as an on-chain DAO. The Global Designer Network is initiating as an on-chain
+          DAO. The Global Designer Network is initiating as an on-chain DAO. The Global Designer
+          Network is initiating as an on-chain DAO. The Global Designer Network is initiating as an
+          on-chain DAO. The Global Designer Network is initiating as an on-chain DAO. The Global
+          Designer Network is initiating as an on-chain DAO. The Global Designer Network is
+          initiating as an on-chain DAO. The Global Designer Network is initiating as an on-chain
+          DAO. The Global Designer Network is initiating as an on-chain DAO. The Global Designer
+          Network is initiating as an on-chain DAO.
+        </div>
+        <a href="/" target="_blank" className={styles.link}>
+          <div className={styles.linkWrapper}>
+            <div className={styles.body}>read more about the gdn dao</div>
+          </div>
+        </a>
+      </section>
+
+      <ProductDetails />
     </div>
   );
 };
