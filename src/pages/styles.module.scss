@@ -11,6 +11,22 @@
     text-align: center;
     margin-top: 87px;
     overflow: hidden;
+    .heroSectionLink {
+      color: white;
+      position: absolute;
+      top: 38%;
+      left: 0;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 27px;
+      line-height: 40px;
+      color: #ffffff;
+      margin-right: 20px;
+      color: #ffffff;
+      width: 210px;
+      text-align: left;
+    }
 
     .amongus,
     .minecraft,
@@ -75,7 +91,7 @@
     }
     .designer {
       position: absolute;
-      bottom: 68px;
+      bottom: 120px;
       left: 80px;
       font-family: Poppins;
       font-style: normal;
@@ -96,6 +112,18 @@
     width: 100%;
     position: relative;
     background: white;
+    .fashionWeekLink {
+      color: white;
+      position: absolute;
+      top: 38%;
+      left: 50px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 27px;
+      line-height: 40px;
+      color: #ffffff;
+    }
     .topImageTitle {
       position: absolute;
       width: 92%;
@@ -372,6 +400,11 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: #ffffff;
+        a {
+          color: white;
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
     .row50 {
@@ -385,7 +418,8 @@
 
   .liveSection {
     text-align: center;
-    padding: 130px 0px;
+    padding-top: 130px;
+    padding-bottom: 90px;
     span {
       position: relative;
       display: block;

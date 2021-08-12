@@ -107,9 +107,9 @@ const LandingPage = () => {
 
         <div className={styles.designer}>
           {/* <Link href="https://twitter.com/glycemag"> */}
-          <a target="_blank">
+          <a target="_blank" className={styles.heroSectionLink}>
             Web3 Fashion <br />
-            Market{' '}
+            Market >
           </a>
           {/* </Link> */}
         </div>
@@ -125,6 +125,7 @@ const LandingPage = () => {
         <marquee>
           <img className={styles.bottomImageText} src="/images/fashionActionText.png" />
         </marquee>
+        <h3 className={styles.fashionWeekLink}>Shop the GDN Auction ></h3>
         <div className={styles.readmoreText}>
           Read more about our <br /> DAO here.
         </div>
@@ -207,7 +208,9 @@ const LandingPage = () => {
         <div className={styles.row50}>
           <div className={styles.imgWrapperWeekNtfs}>
             <img src="/images/weekNtfsframe.png" />
-            <p>wear to defi stake your nft for $mona HERE</p>
+            <p>
+              wear to defi stake your nft for $mona <a>HERE</a>
+            </p>
           </div>
           <div className={styles.imgWrapperWeekNtfs}>
             <img src="/images/weekNtfsframe.png" />
