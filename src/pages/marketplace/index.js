@@ -11,6 +11,7 @@ import CollectionList from '@components/collection-list';
 import HeroBar from '@components/hero-bar';
 import globalActions from '@actions/global.actions';
 import { convertToEth } from '@helpers/price.helpers';
+import HeroSection from '@components/hero-section';
 
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
@@ -61,63 +62,14 @@ const LandingPage = () => {
 
   return (
     <div className={styles.wrapper}>
-      <section className={styles.heroSection}>
-        <img src="/images/metaverse/metaverse-logo.png" className={styles.heroImage} />
-        <a href="#amongus" className={styles.amongus}>
-          among us
-        </a>
-        <a href="#minecraft" className={styles.minecraft}>
-          minecraft
-        </a>
-        <a href="#roblox" className={styles.roblox}>
-          roblox
-        </a>
-        <HeroBar />
-      </section>
+      <HeroSection logo="/images/metaverse/marketplaceLogo.png" />
 
       <section className={styles.collectionSection}>
-        <Container>
-          <div className={styles.collectionWrapper}>
-            <h1 className={styles.title}> collection </h1>
-            <CollectionList items={collectionGroups} />
-          </div>
-          <div className={styles.bundleWrapper}>
-            <h1 className={styles.title}> bundle </h1>
-            <CollectionList items={bundleGroups} isBundle />
-          </div>
-        </Container>
-      </section>
-
-      <section className={styles.amongusSection} id="amongus">
-        <img src="./images/metaverse/section-texture.png" className={styles.back} />
-        <img src="./images/metaverse/amongus-logo.png" className={styles.logo} />
-        <video autoPlay loop muted playsInline>
-          <source src="/video/among-us.mp4" type="video/mp4" />
-        </video>
-        <div className={styles.suitUp}>
-          <NewButton text="Suit up" onClick={() => router.push('/marketplace/all/0')} />
+        <div className={styles.collectionWrapper}>
+          <CollectionList items={collectionGroups} />
         </div>
-      </section>
-
-      <section className={styles.mineCraftSection} id="minecraft">
-        <img src="./images/metaverse/section-texture.png" className={styles.back} />
-        <img src="./images/metaverse/minecraft-logo.png" className={styles.logo} />
-        <video autoPlay loop muted playsInline>
-          <source src="/video/among-us.mp4" type="video/mp4" />
-        </video>
-        <div className={styles.suitUp}>
-          <NewButton text="Suit up" onClick={() => router.push('/marketplace/all/1')} />
-        </div>
-      </section>
-
-      <section className={styles.robloxSection} id="roblox">
-        <img src="./images/metaverse/section-texture.png" className={styles.back} />
-        <video autoPlay loop muted playsInline>
-          <source src="/video/roblox.mp4" type="video/mp4" />
-        </video>
-        <img src="./images/metaverse/roblox-logo.png" className={styles.logo} />
-        <div className={styles.suitUp}>
-          <NewButton text="Suit up" onClick={() => router.push('/marketplace/all/2')} />
+        <div className={styles.bundleWrapper}>
+          <CollectionList items={bundleGroups} isBundle />
         </div>
       </section>
     </div>

@@ -9,7 +9,7 @@ import { getRarityId } from '@utils/helpers';
 import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import { useRouter } from 'next/router';
 
-const ProductInfoCard = ({ product, price }) => {
+const ProductInfoCard = ({ product, price, showCollectionName = false, showRarity = false, }) => {
   const router = useRouter();
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
@@ -50,7 +50,11 @@ const ProductInfoCard = ({ product, price }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.imageWrapper}>
-        <ImageCard data={product} showDesigner showButton={false} />
+        <ImageCard data={product} 
+          showDesigner 
+          showCollectionName={showCollectionName} 
+          showRarity={showRarity}
+          showButton={false} />
       </div>
       <div className={styles.infoCardWrapper}>
         <InfoCard borderColor="#9c28ff" boxShadow="rgba(197, 32, 129, 0.5)">

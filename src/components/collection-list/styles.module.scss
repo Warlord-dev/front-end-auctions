@@ -1,7 +1,37 @@
+@import '../../assets/scss/helpers/grid.scss';
+
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10rem;
+  .collectionRowSection {
+    position: relative;
+    margin-bottom: -5px;
+    overflow: hidden;
+
+    .backVideo {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .body {
+      display: grid;
+      padding: 7.5rem 5rem;
+      grid-template-columns: 1fr;
+      gap: 5rem;
+
+      @include lg-width {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include md-width {
+        padding: 7.5rem 0;
+      }
+
+      @include xl-width {
+        padding: 7.5rem 5rem;
+      }
+    }
+  }
 
   @media (min-width: 1440px) {
     gap: 10rem;

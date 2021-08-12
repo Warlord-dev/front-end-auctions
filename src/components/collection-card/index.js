@@ -4,13 +4,10 @@ import CollectionInfoCard from './collection-info-card';
 import styles from './styles.module.scss';
 
 const CollectionCard = ({ collection, isBundle = false }) => {
-  if (isBundle) {
-    console.log({collection})
-  }
   return (
     <>
       <div className={styles.wrapper}>
-        <div className={styles.title}>{collection?.name || 'COLLECTION NAME'}</div>
+        <div className={styles.title}>{collection?.name}</div>
         <div className={styles.designerWrapper}>
           <img src={collection?.designer?.image} />
           <div className={styles.name}> {collection?.designer.name} </div>

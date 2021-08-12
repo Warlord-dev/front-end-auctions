@@ -13,20 +13,20 @@ const CollectionInfoCard = ({ collection, isBundle = false }) => {
   return (
     <div className={styles.wrapper}>
       <InfoCard
-        borderColor="#fcee18"
-        boxShadow="rgba(252, 238, 24, 0.5)"
-        mainColor="rgba(148, 140, 71, 0.47)"
+        borderColor="#9c28ff"
+        boxShadow="rgba(197, 32, 129, 0.5)"
+        mainColor="rgba(189, 61, 169, 0.47)"
       >
         <div className={styles.cardBodyWrapper}>
-          <Link href={!isBundle ? `/marketplace/rarity/${collection.id}` : `/product/${collection.productId}/3`}>
+          <Link href={!isBundle ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
             <a className={styles.link}>
               view collection
-              <img src="./images/metaverse/yellow-right-arrow.png" />
+              <img src="./images/metaverse/right-arrow-pink.png" />
             </a>
           </Link>
           <div className={styles.pricesWrapper}>
-            <PriceCard mode={1} mainText={`${collection.sold} $MONA`} subText="total sold" />
-            <PriceCard mode={1} mainText={`$${(parseFloat(monaPerEth) * exchangeRate * collection.sold).toFixed(2)}`} subText="dollar equivalent" />
+            <PriceCard mode={0} mainText={`${collection.sold} $MONA`} subText="total sold" />
+            <PriceCard mode={0} mainText={`$${(parseFloat(monaPerEth) * exchangeRate * collection.sold).toFixed(2)}`} subText="dollar equivalent" />
           </div>
         </div>
       </InfoCard>

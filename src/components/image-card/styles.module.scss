@@ -44,6 +44,16 @@
     }
   }
 
+  .collectionName {
+    color: white;
+    position: relative;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
   .designerWrapper {
     position: relative;
     display: flex;
@@ -67,19 +77,6 @@
     }
   }
 
-  // .name {
-  //   position: relative;
-  //   color: white;
-  //   font-family: Gilroy;
-  //   font-style: normal;
-  //   font-weight: 800;
-  //   font-size: 36px;
-  //   line-height: 44px;
-  //   margin-bottom: 1rem;
-  //   margin-left: 2rem;
-  //   width: calc(100% - 4rem);
-  // }
-
   .bodyWrapper {
     position: relative;
     padding: 2rem;
@@ -88,12 +85,18 @@
     box-shadow: inset 0px 0px 30px 20px rgba(197, 32, 129, 0.5),
       0px 0px 30px 20px rgba(197, 32, 129, 0.5);
 
-    .libon {
+    .rarity {
       position: absolute;
-      top: 0;
+      top: -10px;
       right: 0;
-      width: 30%;
-      transform: translate(44%, -46%);
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 27px;
+      color: #ffffff;
+      font-family: m12;
+      -webkit-text-stroke: 1px rgb(156, 40, 255);
     }
 
     .video {

@@ -1,32 +1,23 @@
+@import '../../assets/scss/helpers/grid.scss';
+
 .heroSection {
   position: relative;
   background-color: black;
-  padding: 5rem 0;
   margin-top: 76px;
   overflow: hidden;
 
-  .logoWrapper {
+  .back {
     position: relative;
-    margin: auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    width: 70%;
-
-    .mainLogo {
-      width: 100%;
-    }
-  }
-
-  .flag {
-    position: absolute;
+    width: 100%;
     top: 0;
-    left: 10px;
-    width: 10%;
+    min-height: 200px;
   }
-  .gpad {
+
+  .logo {
     position: absolute;
-    bottom: calc(10rem + 66px);
-    left: 75%;
-    width: 10%;
+    top: 5rem;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
   }
 }

@@ -74,6 +74,16 @@ export const COLLECTION_GROUP_BY_ID = gql`
       id
       auctions {
         id
+        designer {
+          id
+          name
+          image
+        }
+        developer {
+          id
+          name
+          image
+        }
         garment {
           id
           animation
@@ -88,6 +98,16 @@ export const COLLECTION_GROUP_BY_ID = gql`
       }
       collections {
         id
+        designer {
+          id
+          name
+          image
+        }
+        developer {
+          id
+          name
+          image
+        }
         garments(first: 1) {
           id
           animation

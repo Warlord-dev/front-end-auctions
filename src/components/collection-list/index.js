@@ -1,4 +1,5 @@
 import CollectionCard from '@components/collection-card';
+import Container from '@components/container';
 import React from 'react';
 import styles from './styles.module.scss';
 
@@ -6,9 +7,24 @@ const CollectionList = ({ items, isBundle = false }) => {
   return (
     <>
       <div className={styles.wrapper}>
-        {items.map((item) => (
-          <CollectionCard collection={item} isBundle={isBundle} />
-        ))}
+        {items.map((item, index) => {
+          if (index % 2 === 1) return <></>;
+          return (
+            <section className={styles.collectionRowSection} key={item.id}>
+              <video autoPlay muted loop className={styles.backVideo}>
+                <source src="./images/metaverse/all_skins.mp4" type="video/mp4" />
+              </video>
+              <Container>
+                <div className={styles.body}>
+                  <CollectionCard collection={items[index]} isBundle={isBundle} />
+                  {index + 1 < items.length ? (
+                    <CollectionCard collection={items[index + 1]} isBundle={isBundle} />
+                  ) : null}
+                </div>
+              </Container>
+            </section>
+          );
+        })}
       </div>
     </>
   );

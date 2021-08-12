@@ -1,27 +1,6 @@
-@import '../../assets/scss/helpers/grid.scss';
+@import '../../../assets/scss/helpers/grid.scss';
 
 .wrapper {
-  .browseRarity {
-    position: absolute;
-    right: 2rem;
-    bottom: 0rem;
-    padding: 0 1rem;
-    color: white;
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    background: #a500fd;
-    display: flex;
-    align-items: center;
-
-    img {
-      width: 3rem;
-      margin-left: 0.5rem;
-    }
-  }
-
   .productsSection {
     position: relative;
     margin-bottom: -5px;
