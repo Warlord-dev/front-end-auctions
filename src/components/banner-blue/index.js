@@ -16,21 +16,25 @@ const ProductCard = ({ products, rarity }) => {
           <BannerButton text='SHOP physical WEB3 FASHION'/>
         </div>
         <div className={styles.imageCardWrapper}>
-          <img
-            src="./images/metaverse/left-arrow-blue.png"
-            onClick={() => {
-              if (selected > 0) setSelected(selected - 1);
-            }}
-          />
+          
           <div className={styles.imageInnerWrapper}>
+            <img
+              src="./images/metaverse/left-arrow-blue.png"
+              className={styles.leftArrow}
+              onClick={() => {
+                if (selected > 0) setSelected(selected - 1);
+              }}
+            />
             <BannerCard blue={true} libon={getRarityId(rarity)} data={products[selected]} />
+            <img
+              src="./images/metaverse/right-arrow-blue.png"
+              className={styles.rightArrow}
+              onClick={() => {
+                if (selected < products.length - 1) setSelected(selected + 1);
+              }}
+            />
           </div>
-          <img
-            src="./images/metaverse/right-arrow-blue.png"
-            onClick={() => {
-              if (selected < products.length - 1) setSelected(selected + 1);
-            }}
-          />
+          
         </div>
       </div>
     </div>
