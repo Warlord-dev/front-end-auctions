@@ -158,7 +158,7 @@ const LandingPage = () => {
         </marquee>
         <div className={styles.row50}>
           <div className={styles.col50}>
-            <img className={styles.bottomImageText} src="/images/physicalFashion.png" />
+            <img className={styles.bottomImageTitle} src="/images/physicalFashion.png" />
             <br />
             <button className={styles.wideButtonBlock}>
               SHOP physical WEB3 FASHION{' '}
@@ -167,7 +167,7 @@ const LandingPage = () => {
           </div>
           <div className={styles.col50}>
             <div className={styles.sqaureSlideArrows}>
-              <img className={styles.bottomImageText} src="/images/fashionweb3frame.png" />
+              <img className={styles.bottomImageSquare} src="/images/fashionweb3frame.png" />
               <a className={styles.arrowRight}>
                 <img className={styles.bottomImageText} src="/images/blueArrow.png" />
               </a>
@@ -183,7 +183,7 @@ const LandingPage = () => {
         <div className={styles.row50}>
           <div className={styles.col50}>
             <div className={styles.sqaureSlideArrows}>
-              <img className={styles.bottomImageText} src="/images/digitalFrame.png" />
+              <img className={styles.bottomImageSquare} src="/images/digitalFrame.png" />
               <a className={styles.arrowRight}>
                 <img className={styles.bottomImageText} src="/images/digitalArrow.png" />
               </a>
@@ -193,7 +193,7 @@ const LandingPage = () => {
             </div>
           </div>
           <div className={styles.col50}>
-            <img className={styles.bottomImageText} src="/images/digitalFashion.png" />
+            <img className={styles.bottomImageTitle} src="/images/digitalFashion.png" />
             <br />
             <button className={styles.wideButtonBlock}>
               SHOP DIGITAL WEB3 FASHION
@@ -204,7 +204,7 @@ const LandingPage = () => {
       </section>
 
       <section className={styles.weekNtfs}>
-        <img src="/images/weekNtfstext.png" />
+        <img className={styles.imgTitleWeekNtfs} src="/images/weekNtfstext.png" />
         <div className={styles.row50}>
           <div className={styles.imgWrapperWeekNtfs}>
             <img src="/images/weekNtfsframe.png" />
@@ -230,7 +230,7 @@ const LandingPage = () => {
       <section className={styles.liveSection}>
         <span>
           <img className={styles.liveText} src="/images/liveText.png" />
-          <img src="/images/liveArea.png" />
+          <img className={styles.liveArea} src="/images/liveArea.png" />
         </span>
       </section>
     </div>

@@ -106,12 +106,25 @@
         color: #ffffff;
       }
     }
+    @media (max-width: 768px) {
+      .designer {
+        bottom: 50px !important;
+        left: 28px !important;
+        a {
+          line-height: 16px;
+          font-size: 18px;
+        }
+      }
+    }
+    @media (max-width: 640px) {
+      margin-top: -1px !important;
+    }
   }
 
   .fashionWeekScheduleSection {
     width: 100%;
     position: relative;
-    background: white;
+    // background: white;
     .fashionWeekLink {
       color: white;
       position: absolute;
@@ -129,7 +142,7 @@
       width: 92%;
       padding-left: 3rem;
       top: -10px;
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         height: 20px;
       }
     }
@@ -168,12 +181,51 @@
     }
     marquee {
       position: absolute;
-      bottom: 230px;
+      bottom: 298px;
       left: 0;
       right: 0;
       margin: auto;
       .bottomImageText {
         height: 70px;
+      }
+    }
+    @media (max-width: 1400px) {
+      marquee {
+        bottom: 130px !important;
+        img {
+          height: 50px !important;
+        }
+      }
+    }
+    @media (max-width: 1400px) {
+      marquee {
+        bottom: 140px !important;
+      }
+    }
+    @media (max-width: 1000px) {
+      marquee {
+        bottom: 100px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .fashionWeekLink {
+        line-height: 16px;
+        font-size: 18px;
+        left: 34px;
+      }
+      marquee {
+        bottom: 123px !important;
+        img {
+          height: 30px !important;
+        }
+      }
+    }
+    @media (max-width: 575px) {
+      marquee {
+        bottom: 56px !important;
+        img {
+          height: 20px !important;
+        }
       }
     }
   }
@@ -219,6 +271,58 @@
       padding: 20px 0px;
       width: 60%;
     }
+    @media (max-width: 1600px) {
+      li:nth-of-type(3) {
+        img {
+          right: 250% !important;
+        }
+      }
+    }
+    @media (max-width: 1500px) {
+      li:nth-of-type(3) {
+        img {
+          right: 200% !important;
+        }
+      }
+    }
+    @media (max-width: 1300px) {
+      li:nth-of-type(3) {
+        img {
+          right: 150% !important;
+        }
+      }
+    }
+    @media (max-width: 1040px) {
+      li {
+        img {
+          right: 120px !important;
+          width: 80px !important;
+        }
+      }
+      li:nth-of-type(2) {
+        img {
+          right: 80px !important;
+        }
+      }
+      li:nth-of-type(3) {
+        img {
+          right: 140% !important;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .rightArrowBtn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      li {
+        img {
+          left: 0 !important;
+          // width: 50px !important;
+        }
+      }
+    }
   }
 
   .physicalFashion {
@@ -227,11 +331,14 @@
     background-size: cover;
     position: relative;
     background-color: white;
+    marquee {
+      display: visible !important;
+    }
     .wideButtonBlock {
       font-family: Inter;
       font-style: normal;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 20px;
       line-height: 36px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -262,6 +369,12 @@
       right: 110px;
       margin-bottom: 20px;
       margin-top: 38px;
+      @media (max-width: 768px) {
+        right: 10px;
+        .bottomImageSquare {
+          width: 90% !important;
+        }
+      }
       .arrowRight {
         cursor: pointer;
         img {
@@ -290,6 +403,60 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      .bottomImageTitle {
+        width: 100%;
+      }
+      .bottomImageSquare {
+        width: 100%;
+      }
+    }
+    @media (max-width: 768px) {
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      padding: 0px !important;
+      .bottomImageTitle {
+        width: 90% !important;
+      }
+      .row50 {
+        flex-direction: column;
+      }
+      marquee {
+        img {
+          height: 37px;
+        }
+      }
+    }
+    @media (max-width: 640px) {
+      .sqaureSlideArrows {
+        text-align: center;
+        a {
+          img {
+            width: 80px;
+          }
+        }
+        .arrowRight {
+          img {
+            right: -28px !important;
+          }
+        }
+        .arrowLeft {
+          img {
+            left: -36px;
+          }
+        }
+      }
+    }
+    @media (max-width: 400px) {
+      .sqaureSlideArrows {
+        right: 0;
+        text-align: center;
+        a {
+          display: none;
+        }
+      }
+      .wideButtonBlock {
+        font-size: 12px;
+      }
     }
   }
 
@@ -304,7 +471,7 @@
       font-family: Inter;
       font-style: normal;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -356,13 +523,73 @@
           margin: auto;
         }
       }
-    }
+      @media (max-width: 768px) {
+        left: 0;
+        margin-bottom: 30px;
+        margin-top: 26px;
 
+        .bottomImageSquare {
+          width: 90% !important;
+        }
+        .bottomImageTitle {
+          width: 60% !important;
+        }
+      }
+    }
     .row50 {
       text-align: left;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      .bottomImageTitle {
+        width: 100%;
+      }
+      .bottomImageSquare {
+        width: 100%;
+      }
+    }
+    @media (max-width: 768px) {
+      background-position: right;
+      .bottomImageTitle {
+        width: 80% !important;
+        margin-left: 50px;
+      }
+      .row50 {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 640px) {
+      .sqaureSlideArrows {
+        text-align: center;
+        a {
+          img {
+            width: 80px;
+          }
+        }
+        .arrowRight {
+          img {
+            right: -28px !important;
+          }
+        }
+        .arrowLeft {
+          img {
+            left: -36px;
+          }
+        }
+      }
+    }
+    @media (max-width: 400px) {
+      .sqaureSlideArrows {
+        right: 0;
+        text-align: center;
+        a {
+          display: none;
+        }
+      }
+      .wideButtonBlock {
+        font-size: 12px;
+        margin-left: 20px;
+      }
     }
   }
 
@@ -378,8 +605,10 @@
     padding: 0px 50px;
     padding-bottom: 100px;
     padding-top: 264px;
+
     .imgWrapperWeekNtfs {
       position: relative;
+
       p {
         width: 278px;
         left: 0;
@@ -413,6 +642,33 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+    }
+    .liveArea {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      padding-top: 160px;
+      .row50 {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .imgTitleWeekNtfs {
+        width: 100%;
+      }
+      .imgWrapperWeekNtfs {
+        img {
+          width: 300px;
+        }
+        p {
+          font-size: 20px;
+          width: 200px;
+          line-height: 36px;
+        }
+      }
+    }
+    @media (max-width: 640px) {
+      margin-top: -12px;
     }
   }
 
@@ -427,6 +683,22 @@
         position: absolute;
         top: -180px;
         left: 48px;
+        width: 56%;
+      }
+      .liveArea {
+        width: 57%;
+      }
+    }
+    @media (max-width: 768px) {
+      padding-top: 90px;
+      padding-bottom: 60px;
+      .liveText {
+        top: -40px !important;
+        width: 60% !important;
+        left: -14px !important;
+      }
+      .liveArea {
+        width: 63% !important;
       }
     }
   }
