@@ -80,45 +80,13 @@
   //   width: calc(100% - 4rem);
   // }
 
-  .bodyWrapperPink{
-    position: relative;
-    padding: 2rem;
-    border-radius: 2rem;
-    border: 2px solid #7a3bef;
-    box-shadow: inset 0px 0px 30px 20px rgba(230, 83, 248, 1),
-      0px 0px 30px 20px rgba(230, 83, 248, 1);
-
-    .libon {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 30%;
-      transform: translate(44%, -46%);
-    }
-
-    .video {
-      width: 100%;
-    }
-
-    .image {
-      width: 100%;
-    }
-
-    .buyNow {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translate(-50%, 50%);
-    }
-  }
 
   .bodyWrapper{
     position: relative;
     padding: 2rem;
-    border-radius: 2rem;
     border: 2px solid #ffffff;
-    box-shadow: inset 0px 0px 30px 20px rgba(10, 115, 240, 1),
-      0px 0px 30px 20px rgba(10, 115, 240, 1);
+    box-shadow: inset 0px 0px 30px 20px rgba(255, 255, 255, .6),
+      0px 0px 30px 20px rgba(255, 255, 255, .6);
 
     .libon {
       position: absolute;

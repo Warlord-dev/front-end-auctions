@@ -9,7 +9,7 @@ import { getRarityId, reviseUrl } from '@utils/helpers';
 import styles from './styles.module.scss';
 import { getChainId } from '@selectors/global.selectors';
 
-const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true, imgUrl = null, price, disable = false, blue = true }) => {
+const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true, imgUrl = null, price, disable = false}) => {
   const router = useRouter();
   const account = useSelector(getAccount);
   const chainId = useSelector(getChainId);
@@ -59,7 +59,7 @@ const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true, i
             <div className={styles.name}>{data?.garment.name} </div>
           </div>
         ) : null}
-        <div className={(blue)?styles.bodyWrapper:styles.bodyWrapperPink}>
+        <div className={styles.bodyWrapper}>
           {data ? (
             <LazyLoad>
               <video key={data.id} autoPlay muted loop className={styles.video}>

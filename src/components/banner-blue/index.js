@@ -23,7 +23,7 @@ const ProductCard = ({ products, rarity }) => {
             }}
           />
           <div className={styles.imageInnerWrapper}>
-            <BannerCard libon={getRarityId(rarity)} data={products[selected]} />
+            <BannerCard blue={true} libon={getRarityId(rarity)} data={products[selected]} />
           </div>
           <img
             src="./images/metaverse/right-arrow-blue.png"

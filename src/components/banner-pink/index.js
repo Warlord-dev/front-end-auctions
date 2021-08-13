@@ -13,16 +13,16 @@ const ProductCard = ({ products, rarity }) => {
       <div className={styles.bodyWrapper}>
         <div className={styles.imageCardWrapper}>
           <img
-            src="./images/metaverse/left-arrow-blue.png"
+            src="./images/metaverse/left-arrow-pink.png"
             onClick={() => {
               if (selected > 0) setSelected(selected - 1);
             }}
           />
           <div className={styles.imageInnerWrapper}>
-            <BannerCard libon={getRarityId(rarity)} data={products[selected]} />
+            <BannerCard blue={false} libon={getRarityId(rarity)} data={products[selected]} />
           </div>
           <img
-            src="./images/metaverse/right-arrow-blue.png"
+            src="./images/metaverse/right-arrow-pink.png"
             onClick={() => {
               if (selected < products.length - 1) setSelected(selected + 1);
             }}
