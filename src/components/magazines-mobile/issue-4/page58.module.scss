@@ -1,71 +1,42 @@
 @import './styles.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-
-  height: 583px;
+  height: 3123px;
   background-color: white;
   color: white;
   position: relative;
 
-  font-family: Days One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 100%;
-
-  .image2 {
+  .image1 {
     position: absolute;
     width: 375px;
-    height: 583px;
+    height: 3450px;
     left: 0px;
     top: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    .image3 {
-      position: absolute;
-      height: 100%;
-    }
   }
-  .text2 {
+
+  .rect1 {
     position: absolute;
-    width: 137px;
-    height: 154px;
-    left: 17px;
-    top: 388px;
+    width: 309px;
+    height: 2949px;
+    left: 33px;
+    top: 60px;
     
-    font-family: Space Mono;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 6px;
-    line-height: 110%;
-    /* or 7px */
-    
-    
-    color: #FFFFFF;
+    background: #53DC3C;    
   }
-  .text3 {
+
+  .text1 {
     position: absolute;
-    width: 632px;
-    height: 22px;
-    left: 17px;
-    top: 544px;
+    width: 239px;
+    height: 1075px;
+    left: 66px;
+    top: 109px;
     
-    font-family: Space Mono;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 110%;
-    /* identical to box height, or 66px */
+    font-family: Port Lligat Slab;
+    font-size: 30px;
+    line-height: 27px;
+    color: black;
     
-    
-    color: #FFFFFF;
-    transition: transform .2s;
-      &:hover {
-          transform: scale(1.1);
-      }
+    text-align: center;    
   }
 }

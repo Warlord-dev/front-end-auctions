@@ -3,52 +3,39 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 585px;
+  height: 3800px;
   overflow: hidden;
-  background-color: black;
-  color: white;
+  color: black;
   display: flex;
   position: relative;
 
-  .image3 {
+  .image1 {
     position: absolute;
     width: 375px;
-    height: 585px;
+    height: 3800px;
     left: 0px;
-    top: 0px
+    top: 0px;
   }
-  .text3 {
+
+  .rect1 {
     position: absolute;
-    width: 82px;
-    height: 38px;
-    left: 9px;
-    top: 500px;
+    width: 309px;
+    height: 3670px;
+    left: 33px;
+    top: 60px;
     
-    font-family: Joti One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 110%;
-    /* or 19px */
-    
-    
-    color: #000000;
+    background: #FF8A00;    
   }
-  .text4 {
+
+  .text1 {
     position: absolute;
-    width: 82px;
-    height: 19px;
-    left: 9px;
-    top: 538px;
+    width: 239px;
+    left: 68px;
+    top: 94px;
     
-    font-family: Joti One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 110%;
-    /* identical to box height, or 19px */
-    
-    
-    color: #000000;
+    font-family: Port Lligat Slab;
+    font-size: 30px;
+    line-height: 27px;
+    text-align: center;
   }
 }

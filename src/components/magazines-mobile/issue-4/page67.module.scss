@@ -14,4 +14,52 @@
     left: 0px;
     top: 0px;
   }
+
+  h1 {
+    position: absolute;
+    width: 150px;
+    height: 48px;
+    left: 12px;
+    top: 17px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #FFD2FD;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 129px;
+    height: 24px;
+    left: 233px;
+    top: 474px;
+    
+    font-family: Faustina;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120.53%;
+    text-align: right;
+    
+    color: #F4CAFF;
+    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 288px;
+    height: 126px;
+    left: 74px;
+    top: 503px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120.53%;
+    text-align: right;
+    
+    color: #FFFFFF;
+  }
 }
