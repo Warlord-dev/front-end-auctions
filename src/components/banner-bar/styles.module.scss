@@ -1,3 +1,5 @@
+@import '../../assets/scss/helpers/grid.scss';
+
 @keyframes scrolling {
   0% {
     transform: translateX(-1342px);
@@ -52,6 +54,37 @@
           font-size: 70px;
         }
       }
+    }
+  }
+}
+
+.wrapper2 {
+  width: 100%;
+  background-color: black;
+  height: 70px;
+  z-index: 2;
+
+  .node{
+    margin: auto;
+    z-index: 2;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;      
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 600px;
+    margin-top: 10px;
+    @include xs-width {
+      width: 300px;
+    }
+  }
+
+  img{
+    width: 600px;
+
+    @include xs-width {
+      width: 300px;
     }
   }
 }

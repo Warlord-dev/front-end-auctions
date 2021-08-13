@@ -8,6 +8,7 @@ import Container from '@components/container';
 import BannerBlue from '@components/banner-blue';
 import BannerPink from '@components/banner-pink';
 import FashionCard from '@components/fashion-card';
+import FashionList from '@components/fashion-list';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import { getCollectionGroupById, getDigitalaxGarmentAuctions } from '@services/api/apiService';
@@ -107,7 +108,7 @@ const LandingPage = () => {
       </section>
 
       <section className={styles.bannerSection}>
-        <BannerBar className={styles.homeHeroBar} />
+        <BannerBar className={styles.homeHeroBar} type={1}/>
         <Container>
           <div className={styles.cardWrapper}>
             <BannerBlue
@@ -133,35 +134,8 @@ const LandingPage = () => {
         </Container>
       </section>
 
-      <section className={styles.bgBotSection}>
-        <img src="/images/metaverse/bgbot.png" className={styles.back} />
-        <img src="/images/metaverse/glitch.png" className={styles.glitch} />
-      </section>
+      <FashionList fashionData={fashionData} collections={collections}/>
 
-      
-      <section className={styles.fashionListSection}>
-        <img src="/images/metaverse/webtitle.png" className={styles.webtitle} />
-        {fashionData.map((item,index) => (
-        <Container>
-          <div className={styles.cardWrapper}>
-            <FashionCard
-              item={item}
-              leftImage={(index%2 == 0)?true:false}
-              products={
-                collections.filter((collection) => collection.rarity === 'Semi-Rare') || []
-              }
-              rarity={'Semi-Rare'}
-            />
-          </div>
-        </Container>
-        ))}
-        <img src="/images/metaverse/glitch.png" className={styles.glitch} />
-      </section>
-      
-
-      <section className={styles.viewAllSkinsSection}>
-        <img src="/images/metaverse/bgbot.png" className={styles.back} />
-      </section>
     </div>
   );
 };

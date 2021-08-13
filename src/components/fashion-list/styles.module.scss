@@ -1,0 +1,60 @@
+@import '../../assets/scss/helpers/grid.scss';
+
+.fashionListSection {
+    position: relative;
+    background-image: url('/images/metaverse/starbg.png');
+    background-repeat: none;
+    background-size: contain;
+    background-color: #451f68;
+    padding-bottom: 100px;
+
+    .webtitle{
+      width: 80%;
+      padding: 2rem;
+    }
+
+    .glitch {
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      cursor: pointer;
+    }
+  }
+
+.viewAllSkinsSection {
+    position: relative;
+    height: 100px;
+    .back {
+      position: relative;
+      width: 100%;
+    }
+
+    .viewAllLink {
+      height: 100%;
+      position: absolute;
+      transform: translateX(calc(50vw - 50%));
+      top: 0;
+      left: 0;
+      cursor: pointer;
+    }
+
+    
+  }
+
+  .bgBotSection{
+    height: 141px;
+    position: relative;
+
+    @include xs-width {
+      width: 100%;
+    }
+
+    .glitch {
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      cursor: pointer;
+    }
+  }
