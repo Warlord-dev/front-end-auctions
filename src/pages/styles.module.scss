@@ -11,6 +11,22 @@
     text-align: center;
     margin-top: 87px;
     overflow: hidden;
+    .heroSectionLink {
+      color: white;
+      position: absolute;
+      top: 38%;
+      left: 0;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 27px;
+      line-height: 40px;
+      color: #ffffff;
+      margin-right: 20px;
+      color: #ffffff;
+      width: 210px;
+      text-align: left;
+    }
 
     @include xs-width {
       margin-top: 75px;
@@ -77,15 +93,625 @@
       top: 0;
       left: 0;
     }
+    .designer {
+      position: absolute;
+      bottom: 120px;
+      left: 80px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 23px;
+      display: flex;
+      justify-content: flex-start;
+
+      a {
+        margin-right: 20px;
+        color: #ffffff;
+      }
+    }
+    @media (max-width: 768px) {
+      .designer {
+        bottom: 50px !important;
+        left: 28px !important;
+        a {
+          line-height: 16px;
+          font-size: 18px;
+        }
+      }
+    }
+    @media (max-width: 640px) {
+      margin-top: -1px !important;
+    }
   }
 
+  .fashionWeekScheduleSection {
+    width: 100%;
+    position: relative;
+    // background: white;
+    .fashionWeekLink {
+      color: white;
+      position: absolute;
+      top: 38%;
+      left: 50px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 27px;
+      line-height: 40px;
+      color: #ffffff;
+    }
+    .topImageTitle {
+      position: absolute;
+      width: 92%;
+      padding-left: 3rem;
+      top: -10px;
+      @media (max-width: 768px) {
+        height: 20px;
+      }
+    }
+    .backImage {
+      width: 100%;
+    }
+    .readmoreText {
+      position: absolute;
+      width: 25.12vw;
+      left: 52.3vw;
+      top: 7.5vw;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1vw;
+      line-height: 126%;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      color: #34005c;
+      text-decoration: underline;
+    }
+    .markText {
+      position: absolute;
+      width: 25.12vw;
+      left: 47vw;
+      top: 11.5vw;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.3vw;
+      line-height: 116%;
+      display: flex;
+      align-items: center;
+      text-align: right;
+    }
+    marquee {
+      position: absolute;
+      bottom: 298px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      .bottomImageText {
+        height: 70px;
+      }
+    }
+    @media (max-width: 1400px) {
+      marquee {
+        bottom: 130px !important;
+        img {
+          height: 50px !important;
+        }
+      }
+    }
+    @media (max-width: 1400px) {
+      marquee {
+        bottom: 140px !important;
+      }
+    }
+    @media (max-width: 1000px) {
+      marquee {
+        bottom: 100px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .fashionWeekLink {
+        line-height: 16px;
+        font-size: 18px;
+        left: 34px;
+      }
+      marquee {
+        bottom: 123px !important;
+        img {
+          height: 30px !important;
+        }
+      }
+    }
+    @media (max-width: 575px) {
+      marquee {
+        bottom: 56px !important;
+        img {
+          height: 20px !important;
+        }
+      }
+    }
+  }
+
+  .seenAndBeeSeenSection {
+    background-image: url('../../public/images/bg4.png');
+    text-align: center;
+    background-size: cover;
+    position: relative;
+    .rightArrowBtn {
+      position: absolute;
+      right: 0;
+      top: 0px;
+      bottom: 0;
+      margin: auto;
+      height: fit-content;
+      li {
+        img {
+          cursor: pointer;
+          width: 120px;
+          padding: 0px;
+          position: relative;
+          right: 170%;
+          transition: 0.5s all ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      li:nth-of-type(2) {
+        img {
+          right: 80px;
+        }
+      }
+      li:nth-of-type(3) {
+        img {
+          right: 270%;
+        }
+      }
+    }
+
+    img {
+      padding: 20px 0px;
+      width: 60%;
+    }
+    @media (max-width: 1600px) {
+      li:nth-of-type(3) {
+        img {
+          right: 250% !important;
+        }
+      }
+    }
+    @media (max-width: 1500px) {
+      li:nth-of-type(3) {
+        img {
+          right: 200% !important;
+        }
+      }
+    }
+    @media (max-width: 1300px) {
+      li:nth-of-type(3) {
+        img {
+          right: 150% !important;
+        }
+      }
+    }
+    @media (max-width: 1040px) {
+      li {
+        img {
+          right: 120px !important;
+          width: 80px !important;
+        }
+      }
+      li:nth-of-type(2) {
+        img {
+          right: 80px !important;
+        }
+      }
+      li:nth-of-type(3) {
+        img {
+          right: 140% !important;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .rightArrowBtn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      li {
+        img {
+          left: 0 !important;
+          // width: 50px !important;
+        }
+      }
+    }
+  }
+
+  .physicalFashion {
+    background-image: url('../../public/images/fashionweb3bg.png');
+    text-align: center;
+    background-size: cover;
+    position: relative;
+    background-color: white;
+    marquee {
+      display: visible !important;
+    }
+    .wideButtonBlock {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 36px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #000000;
+      padding: 10px;
+      border-radius: 20px;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      position: relative;
+      margin-left: 30px;
+      &:hover {
+        img {
+          right: -53px;
+        }
+      }
+      img {
+        transition: 0.5s all ease-in-out;
+        position: absolute;
+        top: -11px;
+        height: 78px;
+        right: -50px;
+      }
+    }
+    .sqaureSlideArrows {
+      position: relative;
+      right: 110px;
+      margin-bottom: 20px;
+      margin-top: 38px;
+      @media (max-width: 768px) {
+        right: 10px;
+        .bottomImageSquare {
+          width: 90% !important;
+        }
+      }
+      .arrowRight {
+        cursor: pointer;
+        img {
+          transform: rotate(180deg);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          right: -108px;
+        }
+      }
+      .arrowLeft {
+        cursor: pointer;
+        img {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -110px;
+          margin: auto;
+        }
+      }
+    }
+
+    .row50 {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .bottomImageTitle {
+        width: 100%;
+      }
+      .bottomImageSquare {
+        width: 100%;
+      }
+    }
+    @media (max-width: 768px) {
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      padding: 0px !important;
+      .bottomImageTitle {
+        width: 90% !important;
+      }
+      .row50 {
+        flex-direction: column;
+      }
+      marquee {
+        img {
+          height: 37px;
+        }
+      }
+    }
+    @media (max-width: 640px) {
+      .sqaureSlideArrows {
+        text-align: center;
+        a {
+          img {
+            width: 80px;
+          }
+        }
+        .arrowRight {
+          img {
+            right: -28px !important;
+          }
+        }
+        .arrowLeft {
+          img {
+            left: -36px;
+          }
+        }
+      }
+    }
+    @media (max-width: 400px) {
+      .sqaureSlideArrows {
+        right: 0;
+        text-align: center;
+        a {
+          display: none;
+        }
+      }
+      .wideButtonBlock {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .digitalFashion {
+    background-image: url('../../public/images/digitalFashionbg.png');
+    text-align: center;
+    background-size: cover;
+    position: relative;
+    padding: 80px 0px;
+    background-color: white;
+    .wideButtonBlock {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #000000;
+      padding: 10px;
+      border-radius: 20px;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      position: relative;
+      margin-left: 100px;
+      &:hover {
+        img {
+          right: -53px;
+        }
+      }
+      img {
+        transition: 0.5s all ease-in-out;
+        position: absolute;
+        top: -11px;
+        height: 78px;
+        right: -50px;
+      }
+    }
+    .sqaureSlideArrows {
+      position: relative;
+      left: 164px;
+      margin-bottom: 20px;
+      margin-top: 38px;
+      .arrowRight {
+        cursor: pointer;
+        img {
+          transform: rotate(180deg);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          right: -108px;
+        }
+      }
+      .arrowLeft {
+        cursor: pointer;
+        img {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -110px;
+          margin: auto;
+        }
+      }
+      @media (max-width: 768px) {
+        left: 0;
+        margin-bottom: 30px;
+        margin-top: 26px;
+
+        .bottomImageSquare {
+          width: 90% !important;
+        }
+        .bottomImageTitle {
+          width: 60% !important;
+        }
+      }
+    }
+    .row50 {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .bottomImageTitle {
+        width: 100%;
+      }
+      .bottomImageSquare {
+        width: 100%;
+      }
+    }
+    @media (max-width: 768px) {
+      background-position: right;
+      .bottomImageTitle {
+        width: 80% !important;
+        margin-left: 50px;
+      }
+      .row50 {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 640px) {
+      .sqaureSlideArrows {
+        text-align: center;
+        a {
+          img {
+            width: 80px;
+          }
+        }
+        .arrowRight {
+          img {
+            right: -28px !important;
+          }
+        }
+        .arrowLeft {
+          img {
+            left: -36px;
+          }
+        }
+      }
+    }
+    @media (max-width: 400px) {
+      .sqaureSlideArrows {
+        right: 0;
+        text-align: center;
+        a {
+          display: none;
+        }
+      }
+      .wideButtonBlock {
+        font-size: 12px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .weekNtfs {
+    background-image: url('../../public/images/weekNtfsbg.png');
+    text-align: center;
+    background-size: cover;
+    position: relative;
+    padding: 80px 0px;
+    overflow: hidden;
+    background-color: white;
+    text-align: left;
+    padding: 0px 50px;
+    padding-bottom: 100px;
+    padding-top: 264px;
+
+    .imgWrapperWeekNtfs {
+      position: relative;
+
+      p {
+        width: 278px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        position: absolute;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 33px;
+        line-height: 50px;
+        text-align: center;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #ffffff;
+        a {
+          color: white;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+    .row50 {
+      margin-top: 20px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .liveArea {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      padding-top: 160px;
+      .row50 {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .imgTitleWeekNtfs {
+        width: 100%;
+      }
+      .imgWrapperWeekNtfs {
+        img {
+          width: 300px;
+        }
+        p {
+          font-size: 20px;
+          width: 200px;
+          line-height: 36px;
+        }
+      }
+    }
+    @media (max-width: 640px) {
+      margin-top: -12px;
+    }
+  }
+
+  .liveSection {
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 90px;
+    span {
+      position: relative;
+      display: block;
+      .liveText {
+        position: absolute;
+        top: -180px;
+        left: 48px;
+        width: 56%;
+      }
+      .liveArea {
+        width: 57%;
+      }
+    }
+    @media (max-width: 768px) {
+      padding-top: 90px;
+      padding-bottom: 60px;
+      .liveText {
+        top: -40px !important;
+        width: 60% !important;
+        left: -14px !important;
+      }
+      .liveArea {
+        width: 63% !important;
+      }
+    }
+  }
   .viewAllSkinsSection {
     position: relative;
     .back {
       position: relative;
       width: 100%;
     }
-
     .viewAllLink {
       height: 100%;
       position: absolute;
@@ -94,11 +720,9 @@
       left: 0;
       cursor: pointer;
     }
-
-    
   }
 
-  .bgBotSection{
+  .bgBotSection {
     height: 141px;
     position: relative;
 
@@ -114,7 +738,6 @@
       cursor: pointer;
     }
   }
-
   .newArrivalsSection {
     .back {
       width: 100%;
@@ -146,7 +769,7 @@
     background-color: #451f68;
     padding-bottom: 100px;
 
-    .webtitle{
+    .webtitle {
       width: 80%;
       padding: 2rem;
     }
@@ -166,22 +789,18 @@
       position: relative;
     }
   }
-
   .aboutEspaSection {
     .back {
       width: 100%;
       position: relative;
     }
   }
-
   .amongusSection {
     position: relative;
     text-align: center;
-
     .back {
       width: 100%;
     }
-
     .logo {
       position: absolute;
       margin-top: 1rem;
@@ -190,14 +809,12 @@
       top: 0;
       width: 80%;
     }
-
     video {
       width: 100%;
       position: absolute;
       bottom: 0;
       left: 0;
     }
-
     .suitUp {
       position: absolute;
       top: 60%;
@@ -205,16 +822,13 @@
       transform: translate(-50%, -50%);
     }
   }
-
   .mineCraftSection {
     position: relative;
     text-align: center;
     background-color: #bf4fc2;
-
     .back {
       width: 100%;
     }
-
     .logo {
       position: absolute;
       left: 50%;
@@ -223,14 +837,12 @@
       width: 80%;
       z-index: 1;
     }
-
     video {
       width: 100%;
       position: absolute;
       bottom: 0;
       left: 0;
     }
-
     .suitUp {
       position: absolute;
       top: 60%;
@@ -238,16 +850,13 @@
       transform: translate(-50%, -50%);
     }
   }
-
   .robloxSection {
     position: relative;
     text-align: center;
     background-color: #14244d;
-
     .back {
       width: 100%;
     }
-
     .logo {
       position: absolute;
       left: 50%;
@@ -256,14 +865,12 @@
       z-index: 1;
       width: 60%;
     }
-
     video {
       width: 100%;
       position: absolute;
       top: 200;
       left: 0;
     }
-
     .suitUp {
       position: absolute;
       top: 60%;

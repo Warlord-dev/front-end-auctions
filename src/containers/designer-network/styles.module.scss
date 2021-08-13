@@ -1,0 +1,14 @@
+.wrapper {
+  background: url('/images/back3.png');
+  background-size: cover;
+  canvas {
+    width: 100%;
+  }
+}
+.wrapperSquareItems {
+  position: absolute;
+  top: 0;
+  canvas {
+    width: 100%;
+  }
+}

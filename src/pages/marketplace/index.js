@@ -22,27 +22,35 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchCollectionGroups = async () => {
       const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
-      const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats(chainId);
+      const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats(
+        chainId,
+      );
       globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth));
 
       let collections = [],
         bundles = [];
       digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
-        const collectionPrice = digitalaxCollectionGroup.collections.reduce((a, b) => a + Number(b.valueSold), 0);
-        const auctionPrice = digitalaxCollectionGroup.auctions.reduce((a, b) => a + Number(b.topBid), 0);
+        const collectionPrice = digitalaxCollectionGroup.collections.reduce(
+          (a, b) => a + Number(b.valueSold),
+          0,
+        );
+        const auctionPrice = digitalaxCollectionGroup.auctions.reduce(
+          (a, b) => a + Number(b.topBid),
+          0,
+        );
         const bundlePrice = digitalaxCollectionGroup.digiBundle.valueSold;
         collections.push({
           ...digitalaxCollectionGroup.collections[0].garments[0],
           designer: digitalaxCollectionGroup.collections[0].designer,
           id: digitalaxCollectionGroup.id,
-          sold: (collectionPrice + auctionPrice) / 1e18
+          sold: (collectionPrice + auctionPrice) / 1e18,
         });
         bundles.push({
           ...digitalaxCollectionGroup.digiBundle.garments[0],
           productId: digitalaxCollectionGroup.digiBundle.id,
           designer: digitalaxCollectionGroup.digiBundle.designer,
           id: digitalaxCollectionGroup.id,
-          sold: bundlePrice / 1e18
+          sold: bundlePrice / 1e18,
         });
       });
       setCollectionGroups(collections);

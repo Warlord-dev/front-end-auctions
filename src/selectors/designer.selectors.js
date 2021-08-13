@@ -10,12 +10,15 @@ export const getDesignerInfoById = (id) => (state) =>
     .find(
       (item) =>
         (item.ids && item.ids.find((itemId) => itemId.toLowerCase() === id.toLowerCase())) ||
-        item.id.toLowerCase() === id.toLowerCase()
+        item.id.toLowerCase() === id.toLowerCase(),
     );
 export const getAllDesigners = () => (state) => state.designer.get('infoByDesignerId');
-export const getDesignerInfoByName = (name, isEqualCheck = false) => (state) =>
-  state.designer
-    .get('infoByDesignerId')
-    .find((item) =>
-      !isEqualCheck ? kebabCase(item.designerName) === name : item.designerName === name
-    );
+export const getDesignerInfoByName =
+  (name, isEqualCheck = false) =>
+  (state) =>
+    state.designer
+      .get('infoByDesignerId')
+      .find((item) =>
+        !isEqualCheck ? kebabCase(item.designerName) === name : item.designerName === name,
+      );
+export const getAllDesignerIDs = () => (state) => state.designer.get('designerIDs');

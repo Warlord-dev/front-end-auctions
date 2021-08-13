@@ -9,6 +9,8 @@ import NewButton from '@components/buttons/newbutton';
 import Container from '@components/container';
 import CollectionList from '@components/collection-list';
 import HeroBar from '@components/hero-bar';
+import DesignerList from '@containers/designer-network';
+import DesignerSquareList from '@containers/designer-network/imageCard';
 import globalActions from '@actions/global.actions';
 import { convertToEth } from '@helpers/price.helpers';
 import Link from 'next/link';
@@ -37,7 +39,6 @@ const LandingPage = () => {
     //   const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
     //   const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats(chainId);
     //   globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth));
-
     //   let collections = [],
     //     bundles = [];
     //   digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
@@ -61,7 +62,6 @@ const LandingPage = () => {
     //   setCollectionGroups(collections);
     //   setBundleGroups(bundles);
     // };
-
     // fetchCollectionGroups();
   }, []);
 
@@ -100,38 +100,138 @@ const LandingPage = () => {
         />
       </Head>
       <section className={styles.heroSection}>
-        <img src="/images/metaverse/HomeLogo.png" className={styles.heroImage} />
-        <img src="/images/metaverse/Group 1025.png" className={styles.heroBackImage} />
-        <a href="#amongus" className={styles.amongus}>
-          new arrivals
-        </a>
-        <a href="#minecraft" className={styles.minecraft}>
-          new updates
-        </a>
-        <a href="#roblox" className={styles.roblox}>
-          about espa
-        </a>
-        <HeroBar className={styles.homeHeroBar} />
+        <video width="100%" autoPlay muted loop playsInline>
+          <source src="/video/web3fashionweek.mp4" type="video/mp4" />
+        </video>
+        <DesignerSquareList />
+
+        <div className={styles.designer}>
+          {/* <Link href="https://twitter.com/glycemag"> */}
+          <a target="_blank" className={styles.heroSectionLink}>
+            Web3 Fashion <br />
+            Market >
+          </a>
+          {/* </Link> */}
+        </div>
       </section>
 
-      <section className={styles.viewAllSkinsSection}>
-        <img src="/images/metaverse/viewallskinsbg.png" className={styles.back} />
-        <Link href='/marketplace'>
-          <img src="/images/metaverse/view all skins.png" className={styles.viewAllLink} />
-        </Link>
+      <section className={styles.globalDesignerNetwork}>
+        <DesignerList />
       </section>
 
-      <section className={styles.newArrivalsSection}>
-        <img src="/images/metaverse/Group 1026.png" className={styles.back} />
-    
+      <section className={styles.fashionWeekScheduleSection}>
+        <img className={styles.topImageTitle} src="/images/fashionActionTitle.png" />
+        <img className={styles.backImage} src="/images/fashionAction.png" />
+        <marquee>
+          <img className={styles.bottomImageText} src="/images/fashionActionText.png" />
+        </marquee>
+        <h3 className={styles.fashionWeekLink}>Shop the GDN Auction ></h3>
+        <div className={styles.readmoreText}>
+          Read more about our <br /> DAO here.
+        </div>
+        <div className={styles.markText}>
+          The Global Designer Network is initiating as an on-chain DAO.
+        </div>
       </section>
 
-      <section className={styles.newUpdatesSection}>
-        <img src="/images/metaverse/newUpdates.png" className={styles.back} />
+      <section className={styles.seenAndBeeSeenSection}>
+        <img src="/images/beseentext.png" />
+        <ul className={styles.rightArrowBtn}>
+          <li>
+            {' '}
+            <img className={styles.backImage} src="/images/arrowLink.png" />
+          </li>
+          <li>
+            {' '}
+            <img className={styles.backImage} src="/images/arrowLink.png" />
+          </li>
+          <li>
+            {' '}
+            <img className={styles.backImage} src="/images/arrowLink.png" />
+          </li>
+        </ul>
       </section>
 
-      <section className={styles.aboutEspaSection}>
-        <img src="/images/metaverse/Group 1027.png" className={styles.back} />
+      <section className={styles.physicalFashion}>
+        <marquee>
+          <img className={styles.bottomImageText} src="/images/fashionweb3.png" />
+        </marquee>
+        <div className={styles.row50}>
+          <div className={styles.col50}>
+            <img className={styles.bottomImageTitle} src="/images/physicalFashion.png" />
+            <br />
+            <button className={styles.wideButtonBlock}>
+              SHOP physical WEB3 FASHION{' '}
+              <img className={styles.bottomImageText} src="/images/arrowLink.png" />
+            </button>
+          </div>
+          <div className={styles.col50}>
+            <div className={styles.sqaureSlideArrows}>
+              <img className={styles.bottomImageSquare} src="/images/fashionweb3frame.png" />
+              <a className={styles.arrowRight}>
+                <img className={styles.bottomImageText} src="/images/blueArrow.png" />
+              </a>
+              <a className={styles.arrowLeft}>
+                <img className={styles.bottomImageText} src="/images/blueArrow.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.digitalFashion}>
+        <div className={styles.row50}>
+          <div className={styles.col50}>
+            <div className={styles.sqaureSlideArrows}>
+              <img className={styles.bottomImageSquare} src="/images/digitalFrame.png" />
+              <a className={styles.arrowRight}>
+                <img className={styles.bottomImageText} src="/images/digitalArrow.png" />
+              </a>
+              <a className={styles.arrowLeft}>
+                <img className={styles.bottomImageText} src="/images/digitalArrow.png" />
+              </a>
+            </div>
+          </div>
+          <div className={styles.col50}>
+            <img className={styles.bottomImageTitle} src="/images/digitalFashion.png" />
+            <br />
+            <button className={styles.wideButtonBlock}>
+              SHOP DIGITAL WEB3 FASHION
+              <img className={styles.bottomImageText} src="/images/arrowLink.png" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.weekNtfs}>
+        <img className={styles.imgTitleWeekNtfs} src="/images/weekNtfstext.png" />
+        <div className={styles.row50}>
+          <div className={styles.imgWrapperWeekNtfs}>
+            <img src="/images/weekNtfsframe.png" />
+            <p>
+              wear to defi stake your nft for $mona <a>HERE</a>
+            </p>
+          </div>
+          <div className={styles.imgWrapperWeekNtfs}>
+            <img src="/images/weekNtfsframe.png" />
+            <p>Unique pfp collectible avatar W/ in-game utility</p>
+          </div>
+          <div className={styles.imgWrapperWeekNtfs}>
+            <img src="/images/weekNtfsframe.png" />
+            <p>Original 3d model fbx file included</p>
+          </div>
+          <div className={styles.imgWrapperWeekNtfs}>
+            <img src="/images/weekNtfsframe.png" />
+            <p>Fractional garment ownership erc-1155 open source pattern</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.liveSection}>
+        <span>
+          <img className={styles.liveText} src="/images/liveText.png" />
+          <img className={styles.liveArea} src="/images/liveArea.png" />
+        </span>
       </section>
     </div>
   );
