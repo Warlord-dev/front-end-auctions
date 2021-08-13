@@ -133,7 +133,7 @@ const LandingPage = () => {
         </Container>
       </section>
 
-      <section className={styles.viewAllSkinsSection}>
+      <section className={styles.bgBotSection}>
         <img src="/images/metaverse/bgbot.png" className={styles.back} />
         <img src="/images/metaverse/glitch.png" className={styles.glitch} />
       </section>

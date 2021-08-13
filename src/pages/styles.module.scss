@@ -12,6 +12,10 @@
     margin-top: 87px;
     overflow: hidden;
 
+    @include xs-width {
+      margin-top: 75px;
+    }
+
     .amongus,
     .minecraft,
     .roblox {
@@ -89,6 +93,17 @@
       top: 0;
       left: 0;
       cursor: pointer;
+    }
+
+    
+  }
+
+  .bgBotSection{
+    height: 141px;
+    position: relative;
+
+    @include xs-width {
+      width: 100%;
     }
 
     .glitch {

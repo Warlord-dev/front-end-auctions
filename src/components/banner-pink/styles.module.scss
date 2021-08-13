@@ -68,12 +68,18 @@
         position: absolute;
         left:-80px;
         top: 40%;
+        @include xs-width {
+          display: none;
+        }
       }
 
       .rightArrow{
         position: absolute;
         right:-80px;
         top: 40%;
+        @include xs-width {
+          display: none;
+        }
       }
 
       

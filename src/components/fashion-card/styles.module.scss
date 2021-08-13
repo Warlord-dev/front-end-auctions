@@ -7,10 +7,7 @@
     align-items: center;
 
     .descriptionWrapper {
-      grid-row: 2;
-      @include lg-width {
-        grid-row: 1;
-      }
+
 
       .body {
         padding: 1rem;
@@ -79,11 +76,6 @@
       display: flex;
       align-items: center;
       margin: auto;
-
-      grid-row: 2;
-      @include lg-width {
-        grid-row: 1;
-      }
 
       .imageInnerWrapper {
         position: relative;
@@ -227,11 +219,6 @@
       display: flex;
       align-items: center;
       margin: auto;
-
-      grid-row: 2;
-      @include lg-width {
-        grid-row: 1;
-      }
 
       .imageInnerWrapper {
         position: relative;
