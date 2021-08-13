@@ -1,0 +1,51 @@
+@import '../../../assets/scss/helpers/grid.scss';
+@import '../../../assets/scss/helpers/helpers.scss';
+
+.button {
+  position: relative;
+  color: white;
+  background: transparent;
+  width: 300px;
+  min-width: 150px;
+  border: none;
+  outline: none;
+  color: white;
+  margin-left: 4rem;
+
+  @include transition();
+
+  @include sm-width {
+    width: 400px;
+    min-width: 200px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Inter';
+    position: absolute;
+    text-align: center;
+    left: 42%;
+    width: 400px;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    span {
+      opacity: 0.6;
+    }
+  }
+
+  &:hover:not([disabled]) {
+    @include scale();
+    @include transition();
+  }
+}

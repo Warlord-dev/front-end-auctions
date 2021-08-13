@@ -1,0 +1,87 @@
+@import '../../assets/scss/helpers/grid.scss';
+
+.wrapper {
+  .bodyWrapper {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+
+    .descriptionWrapper {
+      grid-row: 2;
+      @include lg-width {
+        grid-row: 1;
+      }
+    }
+
+    .heroImage {
+      z-index: 10;
+      width: 100%;
+    }
+
+    @include md-width {
+      grid-template-columns: 1fr;
+    }
+
+    @include lg-width {
+      grid-template-columns: 55% auto;
+    }
+
+    .imageCardWrapper {
+      display: flex;
+      align-items: center;
+      margin: auto;
+
+      .imageInnerWrapper {
+        position: relative;
+        padding: 5rem 0;
+
+         & > img {
+          cursor: pointer;
+          width: 30px;
+          transition: all 0.3s ease;
+
+          @include sm-width {
+            width: 30px;
+          }
+
+          @include md-width {
+            width: 50px;
+          }
+
+          @include lg-width {
+            width: 60px;
+          }
+
+          @include xl-width {
+            width: 80px;
+          }
+
+          &:hover {
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+          }
+        }
+      }
+
+      .leftArrow{
+        position: absolute;
+        left:-80px;
+        top: 40%;
+        @include xs-width {
+          display: none;
+        }
+      }
+
+      .rightArrow{
+        position: absolute;
+        right:-80px;
+        top: 40%;
+        @include xs-width {
+          display: none;
+        }
+      }
+
+     
+    }
+  }
+}

@@ -12,6 +12,10 @@
     margin-top: 87px;
     overflow: hidden;
 
+    @include xs-width {
+      margin-top: 75px;
+    }
+
     .amongus,
     .minecraft,
     .roblox {
@@ -90,12 +94,69 @@
       left: 0;
       cursor: pointer;
     }
+
+    
+  }
+
+  .bgBotSection{
+    height: 141px;
+    position: relative;
+
+    @include xs-width {
+      width: 100%;
+    }
+
+    .glitch {
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      cursor: pointer;
+    }
   }
 
   .newArrivalsSection {
     .back {
       width: 100%;
       position: relative;
+    }
+  }
+
+  .bannerSection {
+    position: relative;
+    background-image: url('/images/metaverse/bluebg.png');
+    background-repeat: none;
+    background-size: 100% 100%;
+    background-color: #451f68;
+  }
+
+  .bannerPinkSection {
+    position: relative;
+    background-image: url('/images/metaverse/pinkbg.png');
+    background-repeat: none;
+    background-size: 100% 100%;
+    background-color: #451f68;
+  }
+
+  .fashionListSection {
+    position: relative;
+    background-image: url('/images/metaverse/starbg.png');
+    background-repeat: none;
+    background-size: contain;
+    background-color: #451f68;
+    padding-bottom: 100px;
+
+    .webtitle{
+      width: 80%;
+      padding: 2rem;
+    }
+
+    .glitch {
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      cursor: pointer;
     }
   }
 
