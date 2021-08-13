@@ -14,6 +14,9 @@ import DesignerSquareList from '@containers/designer-network/imageCard';
 import globalActions from '@actions/global.actions';
 import { convertToEth } from '@helpers/price.helpers';
 import Link from 'next/link';
+import BannerBar from '@components/banner-bar';
+import BannerBlue from '@components/banner-blue';
+import BannerPink from '@components/banner-pink';
 
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
@@ -35,34 +38,34 @@ const LandingPage = () => {
   }, []);
 
   useEffect(() => {
-    // const fetchCollectionGroups = async () => {
-    //   const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
-    //   const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats(chainId);
-    //   globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth));
-    //   let collections = [],
-    //     bundles = [];
-    //   digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
-    //     const collectionPrice = digitalaxCollectionGroup.collections.reduce((a, b) => a + Number(b.valueSold), 0);
-    //     const auctionPrice = digitalaxCollectionGroup.auctions.reduce((a, b) => a + Number(b.topBid), 0);
-    //     const bundlePrice = digitalaxCollectionGroup.digiBundle.valueSold;
-    //     collections.push({
-    //       ...digitalaxCollectionGroup.collections[0].garments[0],
-    //       designer: digitalaxCollectionGroup.collections[0].designer,
-    //       id: digitalaxCollectionGroup.id,
-    //       sold: (collectionPrice + auctionPrice) / 1e18
-    //     });
-    //     bundles.push({
-    //       ...digitalaxCollectionGroup.digiBundle.garments[0],
-    //       productId: digitalaxCollectionGroup.digiBundle.id,
-    //       designer: digitalaxCollectionGroup.digiBundle.designer,
-    //       id: digitalaxCollectionGroup.id,
-    //       sold: bundlePrice / 1e18
-    //     });
-    //   });
-    //   setCollectionGroups(collections);
-    //   setBundleGroups(bundles);
-    // };
-    // fetchCollectionGroups();
+    const fetchCollectionGroups = async () => {
+      const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
+      const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats(chainId);
+      globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth));
+      let collections = [],
+        bundles = [];
+      digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
+        const collectionPrice = digitalaxCollectionGroup.collections.reduce((a, b) => a + Number(b.valueSold), 0);
+        const auctionPrice = digitalaxCollectionGroup.auctions.reduce((a, b) => a + Number(b.topBid), 0);
+        const bundlePrice = digitalaxCollectionGroup.digiBundle.valueSold;
+        collections.push({
+          ...digitalaxCollectionGroup.collections[0].garments[0],
+          designer: digitalaxCollectionGroup.collections[0].designer,
+          id: digitalaxCollectionGroup.id,
+          sold: (collectionPrice + auctionPrice) / 1e18
+        });
+        bundles.push({
+          ...digitalaxCollectionGroup.digiBundle.garments[0],
+          productId: digitalaxCollectionGroup.digiBundle.id,
+          designer: digitalaxCollectionGroup.digiBundle.designer,
+          id: digitalaxCollectionGroup.id,
+          sold: bundlePrice / 1e18
+        });
+      });
+      setCollectionGroups(collections);
+      setBundleGroups(bundles);
+    };
+    fetchCollectionGroups();
   }, []);
 
   const structuredData = {
@@ -152,55 +155,27 @@ const LandingPage = () => {
         </ul>
       </section>
 
-      <section className={styles.physicalFashion}>
-        <marquee>
-          <img className={styles.bottomImageText} src="/images/fashionweb3.png" />
-        </marquee>
-        <div className={styles.row50}>
-          <div className={styles.col50}>
-            <img className={styles.bottomImageTitle} src="/images/physicalFashion.png" />
-            <br />
-            <button className={styles.wideButtonBlock}>
-              SHOP physical WEB3 FASHION{' '}
-              <img className={styles.bottomImageText} src="/images/arrowLink.png" />
-            </button>
+      <section className={styles.bannerSection}>
+        <BannerBar className={styles.homeHeroBar} type={1}/>
+        <Container>
+          <div className={styles.cardWrapper}>
+            <BannerBlue
+              products={collectionGroups}
+              rarity={'Semi-Rare'}
+            />
           </div>
-          <div className={styles.col50}>
-            <div className={styles.sqaureSlideArrows}>
-              <img className={styles.bottomImageSquare} src="/images/fashionweb3frame.png" />
-              <a className={styles.arrowRight}>
-                <img className={styles.bottomImageText} src="/images/blueArrow.png" />
-              </a>
-              <a className={styles.arrowLeft}>
-                <img className={styles.bottomImageText} src="/images/blueArrow.png" />
-              </a>
-            </div>
-          </div>
-        </div>
+        </Container>
       </section>
 
-      <section className={styles.digitalFashion}>
-        <div className={styles.row50}>
-          <div className={styles.col50}>
-            <div className={styles.sqaureSlideArrows}>
-              <img className={styles.bottomImageSquare} src="/images/digitalFrame.png" />
-              <a className={styles.arrowRight}>
-                <img className={styles.bottomImageText} src="/images/digitalArrow.png" />
-              </a>
-              <a className={styles.arrowLeft}>
-                <img className={styles.bottomImageText} src="/images/digitalArrow.png" />
-              </a>
-            </div>
+      <section className={styles.bannerPinkSection}>
+        <Container>
+          <div className={styles.cardWrapper}>
+            <BannerPink
+              products={collectionGroups}
+              rarity={'Semi-Rare'}
+            />
           </div>
-          <div className={styles.col50}>
-            <img className={styles.bottomImageTitle} src="/images/digitalFashion.png" />
-            <br />
-            <button className={styles.wideButtonBlock}>
-              SHOP DIGITAL WEB3 FASHION
-              <img className={styles.bottomImageText} src="/images/arrowLink.png" />
-            </button>
-          </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.weekNtfs}>

@@ -611,10 +611,47 @@
     padding-top: 264px;
 
     .imgWrapperWeekNtfs {
+      box-sizing: border-box;
+      width: 25%;
       position: relative;
 
+      @include xs-width {
+        width: 100%;
+      }
+
+      @include sm-width {
+        width: 100%;
+      }
+
+      @include md-width {
+        width: 50%;
+      }
+
+      @include lg-width {
+        width: 25%;
+      }
+
+      img{
+        width: 100%;
+        @include xs-width {
+          width: 100% !important;
+        }
+
+        @include sm-width {
+          width: 100% !important;
+        }
+
+        @include md-width {
+          width: 50%;
+        }
+
+        @include lg-width {
+          width: 25%;
+        }
+      }
+
       p {
-        width: 278px;
+        width: 66%;
         left: 0;
         right: 0;
         top: 0;
@@ -627,12 +664,29 @@
         font-family: Poppins;
         font-style: normal;
         font-weight: bold;
-        font-size: 33px;
-        line-height: 50px;
+        font-size: 20px;
+        line-height: 39px;
         text-align: center;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: #ffffff;
+
+        @include xs-width {
+          width: 100%;
+        }
+
+        @include sm-width {
+          width: 100%;
+        }
+
+        @include md-width {
+          width: 50%;
+        }
+
+        @include lg-width {
+          width: 60%;
+        }
+
         a {
           color: white;
           cursor: pointer;
