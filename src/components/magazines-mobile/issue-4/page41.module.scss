@@ -7,4 +7,63 @@
   color: black;
   display: flex;
   position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 431px;
+    height: 144px;
+    left: -28px;
+    top: 37px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 1090px;
+    height: 1736px;
+    left: -288px;
+    top: 407px;    
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 375px;
+    height: 215px;
+    left: 0px;
+    top: 181px;
+    
+    background: #C4C4C4;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 261px;
+    height: 261px;
+    left: -69px;
+    top: 637px;    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 261px;
+    height: 261px;
+    left: 114px;
+    top: 1152px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 261px;
+    height: 261px;
+    left: 73px;
+    top: 1312px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 261px;
+    height: 261px;
+    left: 273px;
+    top: 1492px;
+    
+  }
 }

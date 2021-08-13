@@ -2,92 +2,198 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2557px;
+  height: 3324px;
   background-color: white;
   color: white;
   position: relative;
 
+  .video1 {
+    position: absolute;
+    width: 375px;
+    height: 3324px;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+  }
+
+  .back {
+    position: absolute;
+    width: 375px;
+    height: 3324px;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(40, 12, 56, 0.2);    
+  }
+
   .image1 {
     position: absolute;
-    width: 658px;
-    height: 859px;
-    left: -221px;
-    top: -97px;
+    width: 200px;
+    height: 202px;
+    left: 20px;
+    top: 854px;
+        
   }
-  .text23 {
+
+  .image2 {
     position: absolute;
-    width: 112px;
-    height: 42px;
-    left: 26px;
-    top: 145px;
+    width: 113px;
+    height: 114px;
+    left: 240px;
+    top: 942px;
     
-    font-family: Cherry Bomb;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 120.53%;
-    /* or 24px */
-    
-    text-align: center;
-    
-    color: #F82020;
-    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
   }
+
+  .image3 {
+    position: absolute;
+    width: 219px;
+    height: 221px;
+    left: 20px;
+    top: 2509px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 113px;
+    height: 114px;
+    left: 239px;
+    top: 2730px;    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 113px;
+    height: 114px;
+    left: 73px;
+    top: 2787px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 78px;
+    height: 79px;
+    left: 73px;
+    top: 2973px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 174px;
+    height: 176px;
+    left: 176px;
+    top: 2925px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 367px;
+    height: 160px;
+    left: 32px;
+    top: 18px;
+    
+    font-family: DJB Emilys Garden;
+    font-size: 50px;
+    line-height: 85px;
+    
+    color: #FFFFFF;
+    text-shadow: -2px 0 #EC0000, 0 2px #EC0000, 2px 0 #EC0000, 0 -2px #EC0000;    
+  }
+
   .text2 {
     position: absolute;
-    width: 313px;
-    height: 42px;
-    left: 2px;
-    top: 804px;
+    width: 310px;
+    height: 82px;
+    left: 32px;
+    top: 209px;
     
-    font-family: Cherry Bomb;
-    font-style: normal;
+    font-family: Inter;
+    font-style: italic;
     font-weight: normal;
-    font-size: 33px;
-    line-height: 120.53%;
-    /* or 40px */
-    
-    text-align: center;
-    
-    color: #F82020;
-    
-    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-shadow: -0.5px 0 #A400BE, 0 0.5px #A400BE, 0.5px 0 #A400BE, 0 -0.5px #A400BE;
   }
-  .text22 {
-    position: absolute;
-    width: 231px;
-    height: 85px;
-    left: 117px;
-    top: 888px;
-    
-    font-family: Cherry Bomb;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 33px;
-    line-height: 120.53%;
-    /* or 40px */
-    
-    text-align: center;
-    
-    color: #F82020;
-    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
-  }
+
   .text3 {
     position: absolute;
-    width: 308px;
-    height: 852px;
-    left: 31px;
-    top: 993px;
+    width: 336px;
+    height: 92px;
+    left: 17px;
+    top: 384px;
     
-    font-family: Griffy;
+    font-family: Inter;
     font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 120.53%;
-    /* or 18px */
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 85px;
+    text-align: right;
     
-    text-align: center;
+    color: #FFFFFF;
+    text-shadow: -1px 0 #A400BE, 0 1px #A400BE, 1px 0 #A400BE, 0 -1px #A400BE;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 317px;
+    height: 108px;
+    left: 20px;
+    top: 476px;
     
-    color: #000000;
+    font-family: Inter;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: right;
+    
+    color: #FFFFFF;
+    
+    text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 314px;
+    height: 543px;
+    left: 14px;
+    top: 1115px;
+    
+    font-family: Inter;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: right;
+    
+    color: #FFFFFF;
+    
+    text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 304px;
+    height: 391px;
+    left: 24px;
+    top: 2059px;
+    
+    font-family: Inter;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: right;
+    color: #FFFFFF;
+    
+    text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 925px;
+    height: 160px;
+    left: 37px;
+    top: 3125px;
+    
+    font-family: DJB Emilys Garden;
+    font-size: 40px;
+    line-height: 85px;
+    color: #FFFFFF;
+    text-shadow: -2px 0 #EC0000, 0 2px #EC0000, 2px 0 #EC0000, 0 -2px #EC0000;
   }
 }

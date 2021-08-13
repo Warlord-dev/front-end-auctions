@@ -3,7 +3,7 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 2839px;
+  height: 3450px;
   background: white;
   color: white;
   display: flex;
@@ -12,125 +12,42 @@
   .image1 {
     position: absolute;
     width: 375px;
-    height: 3600px;
+    height: 3450px;
     left: 0px;
     top: 0px;
-    
-    background: radial-gradient(50% 50% at 50% 50%, #FFBF5F 0%, #9C7A5D 43.61%, #3E0000 100%);
   }
-  .text2 {
+
+  .image2 {
     position: absolute;
-    width: 355px;
-    height: 75px;
-    left: 10px;
-    top: 41px;
+    width: 82.86px;
+    height: 132.35px;
+    left: 71.23px;
+    top: 2587px;
     
-    font-family: Neon Nanoborg;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 90%;
-    /* or 63px */
-    
-    text-align: center;
-    
-    color: #FF0F00;
+    transform: rotate(20.91deg);
+    transform-origin: 0 0;
   }
-  .text7 {
+
+  .image3 {
     position: absolute;
-    width: 316px;
-    height: 154px;
-    left: 30px;
-    top: 116px;
+    width: 139.56px;
+    height: 222.92px;
+    left: 244.56px;
+    top: 2522px;
     
-    font-family: Play;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: center;
-    
-    color: #FFFFFF;
+    transform: rotate(20.91deg);
+    transform-origin: 0 0;
   }
+
   .image4 {
     position: absolute;
-    width: 376px;
-    height: 223px;
-    left: 0px;
-    top: 356px;
-  }
-  .image5 {
-    position: absolute;
-    width: 455px;
-    height: 385px;
-    left: -40px;
-    top: 931px;
-  }
-  .text4 {
-    position: absolute;
-    width: 228px;
-    height: 228px;
-    left: 42px;
-    top: 617px;
+    width: 320.19px;
+    height: 511.45px;
+    left: 128.53px;
+    top: 2780px;
     
-    font-family: Odibee Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 33px;
-    
-    color: #E68BD2;
+    transform: rotate(20.91deg);
+    transform-origin: 0 0;
   }
-  .text5 {
-    position: absolute;
-    width: 239px;
-    height: 277px;
-    left: 95px;
-    top: 1375px;
-    
-    font-family: Odibee Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 33px;
-    
-    color: #79B3B5;
-  }
-  .image6 {
-    position: absolute;
-    width: 455px;
-    height: 298px;
-    left: 0px;
-    top: 1881px;
-    
-    background: #0F1E16;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  .image7 {
-    position: absolute;
-    width: 326px;
-    height: 327px;
-    left: 45px;
-    top: 1736px;
-    overflow: hidden;
-    .image8 {
-        position: absolute;
-        width: 100%;
-    }
-  }
-  .text6 {
-    position: absolute;
-    width: 228px;
-    height: 277px;
-    left: 92px;
-    top: 2238px;
-    
-    font-family: Odibee Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 33px;
-    
-    color: #FFFFFF;
-  }
+
 }
