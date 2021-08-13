@@ -12,21 +12,25 @@ const ProductCard = ({ products, rarity }) => {
     <div className={styles.wrapper}>
       <div className={styles.bodyWrapper}>
         <div className={styles.imageCardWrapper}>
-          <img
-            src="./images/metaverse/left-arrow-pink.png"
-            onClick={() => {
-              if (selected > 0) setSelected(selected - 1);
-            }}
-          />
+          
           <div className={styles.imageInnerWrapper}>
+            <img
+              src="./images/metaverse/left-arrow-pink.png"
+              className={styles.leftArrow}
+              onClick={() => {
+                if (selected > 0) setSelected(selected - 1);
+              }}
+            />
             <BannerCard blue={false} libon={getRarityId(rarity)} data={products[selected]} />
+            <img
+              src="./images/metaverse/right-arrow-pink.png"
+              className={styles.rightArrow}
+              onClick={() => {
+                if (selected < products.length - 1) setSelected(selected + 1);
+              }}
+            />
           </div>
-          <img
-            src="./images/metaverse/right-arrow-pink.png"
-            onClick={() => {
-              if (selected < products.length - 1) setSelected(selected + 1);
-            }}
-          />
+          
           
         </div>
         <div className={styles.descriptionWrapper}>
