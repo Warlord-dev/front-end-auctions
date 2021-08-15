@@ -63,8 +63,12 @@ const Page4546 = () => {
       </div>
 
       <div className={styles.text10}>
-        AUGUST 23RD - 27TH AUGUST 23RD - 27THAUGUST 23RD - 27THAUGUST 23RD - 27THAUGUST 23RD - 27THAUGUST 23RD - 27THAUGUST 23RD - 27THAUGUST 23RD - 27THAUGUST 23RD - 27THAUGUST 23RD - 27TH AUGUST 23RD - 27TH
+        this week starts with fashion but it doesn’t end there. because to come into this industry one dimension of design is not enough. listen in on voices across defi, nfts, deco, ar, vr, avatars, gaming, and esports as w3fw shows you what is the new meta.
       </div>
+
+      <video autoPlay muted loop className={styles.video1}>
+        <source src='./magazine/4/videos/4546_video1.mp4' type='video/mp4' />
+      </video>
       
     </div>
   )

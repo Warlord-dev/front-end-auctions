@@ -3,9 +3,9 @@
 .wrapper {
   @include magazineWrapper();
   background: linear-gradient(180deg, #3F40BF 0%, rgba(54, 55, 157, 0.9) 100%);
-  color: black;
   display: flex;
   position: relative;
+  color: #FFFFFF;
 
   .text1 {
     position: absolute;
@@ -61,21 +61,18 @@
     font-family: Archie Websters;
     font-size: 130px;
     line-height: 110%;
-    
-    color: #FFFFFF;    
   }
 
   .text2 {
     position: absolute;
-    width: 266px;
-    height: 87px;
-    left: 1611px;
-    top: 73px;
+    width: 229px;
+    height: 121px;
+    left: 1670px;
+    top: 74px;
     
     font-family: Mada;
     font-size: 15px;
     line-height: 110%;
-    color: #FFFFFF;
     
     span {
       font-family: Mad Galaxy Demo;
@@ -85,33 +82,26 @@
 
   .text3 {
     position: absolute;
-    width: 364px;
-    height: 107px;
-    left: 1522px;
-    top: 163px;
+    width: 346px;
+    height: 201px;
+    left: 1538px;
+    top: 195px;
     
     font-family: Mada;
-    font-style: normal;
-    font-weight: normal;
     font-size: 15px;
     line-height: 110%;
-    /* or 17px */
-    
-    
-    color: #FFFFFF;
   }
 
   .text4 {
     position: absolute;
-    width: 266px;
-    height: 372px;
-    left: 1203px;
-    top: 573px;
+    width: 383px;
+    height: 122px;
+    left: 1119px;
+    top: 256px;
     
     font-family: Mada;
     font-size: 15px;
     line-height: 110%;
-    color: #FFFFFF;
     
     span {
       font-family: Mad Galaxy Demo;
@@ -119,17 +109,28 @@
     }
   }
 
-  .text5 {
+  .text42 {
     position: absolute;
-    width: 266px;
-    height: 442px;
-    left: 1596px;
-    top: 573px;
+    width: 463px;
+    height: 304px;
+    left: 1011px;
+    top: 378px;
     
     font-family: Mada;
     font-size: 15px;
     line-height: 110%;
-    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 260px;
+    height: 510px;
+    left: 1587px;
+    top: 537px;
+    
+    font-family: Mada;
+    font-size: 15px;
+    line-height: 110%;
     
     span {
       font-family: Mad Galaxy Demo;
@@ -140,64 +141,48 @@
   .text6 {
     position: absolute;
     width: 700px;
-    height: 66px;
-    left: 1003px;
-    top: 1041px;
+    height: 52px;
+    left: 1517px;
+    top: 1076px;
     
     font-family: Archie Websters;
     font-size: 100px;
     line-height: 110%;
-    
-    color: #FFFFFF;
   }
 
   .text7 {
     position: absolute;
     width: 700px;
     height: 52px;
-    left: 1546px;
-    top: 1041px;
-    
+    left: 983px;
+    top: 1215px;
+
     font-family: Archie Websters;
-    font-style: normal;
-    font-weight: normal;
     font-size: 100px;
     line-height: 110%;
-    /* or 110px */
-    
-    
-    color: #FFFFFF;
   }
 
   .text8 {
     position: absolute;
     width: 700px;
     height: 52px;
-    left: 991px;
-    top: 1183px;
-    
+    left: 1517px;
+    top: 1215px;
     font-family: Archie Websters;
-    font-style: normal;
-    font-weight: normal;
     font-size: 100px;
     line-height: 110%;
-    /* or 110px */
-    
-    
-    color: #FFFFFF;
   }
 
   .text9 {
     position: absolute;
-    width: 427px;
+    width: 731px;
     height: 128px;
-    left: 1467px;
-    top: 1343px;
+    left: 1145px;
+    top: 1346px;
     
     font-family: Mada;
     font-size: 15px;
     line-height: 110%;
-    color: #FFFFFF;
     
     span {
       font-family: Mad Galaxy Demo;
@@ -205,27 +190,102 @@
     }
   }
 
+  .text10 {
+    position: absolute;
+    width: 442px;
+    height: 270px;
+    left: 1011px;
+    top: 901px;
+    
+    font-family: Mada;
+    font-size: 15px;
+    line-height: 110%;
+    
+    span {
+      font-family: Mad Galaxy Demo;
+      font-size: 17px;
+    }    
+  }
+
   .image2 {
     position: absolute;
     width: 79px;
     height: 79px;
-    left: 1515px;
-    top: 70px;    
+    left: 1556px;
+    top: 88px;    
   }
 
   .image3 {
     position: absolute;
-    width: 79px;
-    height: 79px;
-    left: 1105px;
-    top: 573px;
+    width: 66px;
+    height: 84px;
+    left: 1022px;
+    top: 272px;    
   }
 
   .image4 {
     position: absolute;
     width: 79px;
+    height: 87px;
+    left: 1587px;
+    top: 433px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 149px;
+    height: 40px;
+    left: 1009px;
+    top: 844px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 91.15px;
     height: 79px;
-    left: 1374px;
-    top: 1334px;
+    left: 1011px;
+    top: 1355px;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 700px;
+    height: 66px;
+    left: 983px;
+    top: 708px;
+    font-family: Archie Websters;
+    font-size: 100px;
+    line-height: 110%;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 23px;
+    height: 630px;
+    left: 1505px;
+    top: 447px;
+    
+    font-family: Archie Websters;
+    font-size: 80px;
+    line-height: 110%;
+    word-wrap: break-word;
+    color: #FFFFFF;    
+  }
+
+  .image7 {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    left: 1765px;
+    top: 398px;
+  }
+
+  a {
+    img {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }

@@ -263,12 +263,20 @@
     font-family: DARTHCHOWDER;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 35px;
     
     color: #34005C;
 
     -webkit-text-stroke: 1px #F05050;
     text-shadow: 0px 4px 20px rgba(255, 0, 0, 0.7);    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 689px;
+    height: 338px;
+    left: 1095px;
+    top: 300px;    
   }
 }

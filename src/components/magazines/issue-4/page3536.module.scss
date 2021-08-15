@@ -239,11 +239,15 @@
     font-size: 100px;
     line-height: 120.53%;
 
-    transition: transform .2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-
     color: #000000;
+  }
+
+  a {
+    img, div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.1);
+      }  
+    }
   }
 }

@@ -8,8 +8,20 @@ const Page4344 = () => {
       <div className={styles.back1}></div>
       <div className={styles.back2}></div>
       <img className={styles.image1} src='/magazine/4/images/4344_image1.png' />
-      <img className={styles.image2} src='/magazine/4/images/4344_image2.png' />
-      <img className={styles.image3} src='/magazine/4/images/4344_image3.png' />
+
+      <img className={styles.image21} src='/magazine/4/images/4344_image2.png' />
+      <img className={styles.image22} src='/magazine/4/images/4344_image2.png' />
+      <img className={styles.image23} src='/magazine/4/images/4344_image2.png' />
+      <img className={styles.image24} src='/magazine/4/images/4344_image2.png' />
+
+      <img className={styles.image31} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image32} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image33} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image34} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image35} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image36} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image37} src='/magazine/4/images/4344_image3.png' />
+
       <img className={styles.image4} src='/magazine/4/images/4344_image4.png' />
       <img className={styles.image5} src='/magazine/4/images/4344_image5.png' />
       <img className={styles.image6} src='/magazine/4/images/4344_image6.png' />
@@ -19,9 +31,7 @@ const Page4344 = () => {
       </video>
 
       <img className={styles.image71} src='/magazine/4/images/4344_image7.png' />
-      <img className={styles.image72} src='/magazine/4/images/4344_image7.png' />
-      <img className={styles.image73} src='/magazine/4/images/4344_image7.png' />
-      <img className={styles.image74} src='/magazine/4/images/4344_image7.png' />
+
 
       <img className={styles.protocol1} src='/magazine/4/images/4344_protocol_1.png' />
       <img className={styles.protocol2} src='/magazine/4/images/4344_protocol_2.png' />

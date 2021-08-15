@@ -299,11 +299,16 @@ class MyDocument extends Document {
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@700"></link>
           <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600"></link>
+          <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Coustard:wght@900"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Buda:wght@300"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Donegal+One"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700"></link>
 
           {/* ipfs next.js fix */}
           <style

@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react'
+import React  from 'react'
+import Link from 'next/link'
 import styles from './page2728.module.scss'
 
 const Page2728 = () => {
@@ -33,25 +34,32 @@ const Page2728 = () => {
         Open Source Oasis        
       </h2>
       <div className={styles.text2}>
-        <span>stakerwatch</span><br/>
-        With Layer 2s and side chains being all the rave, have you ever wondered what the flow of activity and token transfers really is between Ethereum mainnet and these 
+        <span>Yin Finance</span><br/>
+        Yin is using NFTs to bring more liquidity to DeFi. They provide a suite of products for liquidity and yield management, whereby NFTs are used within the smart contract architecture to effectively secure a 
       </div>
       <div className={styles.text3}>
-        other protocols? Stakewatch has deployed an interactive web interface for tracking exactly this, but, in a human friendly way with Ethhole.link. The total value tracked is calculated by tokens deposit to bridge contracts and the staked tokens on Ethereum. 
-      </div>
-      <div className={styles.text4}>
-        <span>Illuminate finance</span><br/>
-        For the majority of people, understanding complex algorithmic DeFi protocols isn’t something that can just be contemplated over in simple time. Yield farming, staking, yield aggregators, swaps, flash loans etc. come as a completely new language, heuristic and behavior. And, especially as DeFi grows and scales in terms of the number of projects and protocols building and releasing products in the space; it becomes even more difficult to separate the signal from the noise and know exactly where one should go to find reasonably protected exposure to gainz. 
+        user’s ownership of their unique and personalised treasury and smart vaults. 
         <br/><br/>
-        Aggregators are a fundamental building block for scaling DeFi and crypto to a wider audience, and Illuminate is supporting this cause by offering a Fixed Yield Aggregator that finds the best current fixed rate yield across a number of different protocols, simplifying the experience for users as they start exploring this new field. 
+        One of these products, CHI, allows users to subscribe to
+        programmable strategy NFTs,  whereby YIN designs the LP formula and liquidity strategies from which a user can build upon. This could be something as simple as automatic reinvestments on Uniswap V3 to something more encompassing, like that of combining strategies to short volatility. Either way, it’s another clear way that DeFi composability allows us to put our money to work and see direct rewards from it.       
+      </div>
+
+      <div className={styles.text4}>
+        <span>SAFIENT</span><br/>
+        Not your keys, not your coins. One of the most well popularised mantras throughout crypto. But what does that mean for inheritance planning? It’s not a question that a lot of us think about, however, if web3 is to continue to scale and grow then we need to catalyse more engineering and product solutions outside of just larger infrastructure plays.  
+      </div>
+      <div className={styles.text42}>
+        Addressing specialised use cases is important. Real people need to interact with the technology in order for it to increase in adoption. And inheritance planning is a very real undertaking. If we aren’t able to maintain security and ownership over our crypto, whilst at the same time taking into consideration what we would want to happen to it in case of an unfortunate event, then adoption gets  more difficult. 
+        <br/><br/>
+        Safient is a crypto asset safe and inheritance protocol that helps users securely manage all the critical information that is needed to access and recover the assets so that your loved ones can inherit them with 100% surety incase of any tragic event. It works through the creation of safes on the protocol that ensure you maintain complete access and control over your assets i.e. there is no intermediate custody. Beneficiaries can then be delegated and added to the safe, where they can request access to the funds at any time. Upon request verification and review is undergone by “trustless safe guardians” from the Kleros decentralised court, ensuring the validity of the claim and resolving transparently any arising disputes.         
       </div>
       <div className={styles.text5}>
-        <span>Thx</span><br/>
-        We’ve all heard the gamification buzzword a bunch of times. But what does it mean and why do we need it? Well, ultimately, it’s all about guiding the user’s experience in a way that is more engaging and appealing for them, so that they can achieve the outcome, goal or skill better, faster and with a much higher guarantee of root rentention. 
+        <span>treejer</span><br/>
+        Treejer is taking climate action and powering it with blockchain technology. The protocol establishes a secure link for wiring payments and crediting ownership between those that fund tree planting with those that plant them— even if that is in really remote geographic locations. 
         <br/><br/>
-        THX is bringing gamification to the blockchain, running on Polygon, where their API allows for easily embedded blockchain powered gamification in any application. Their focus is particularly centred around strengthening DAO communities through gamification, specifically when it comes to voting, money management and use cases around loyalty programs. 
+        These traceable trees enable greater economic inclusion for rural communities, mainly located in underdeveloped and developing countries, where often a lot of the voluntary tree planting takes place. 
         <br/><br/>
-        They also currently have discord integration compatibility— highly relevant for a lot of DAOs building their communities today. 
+        Carbon footprints can now be reduced in a more transparent manner that extends throughout the entire life of the planted tree. The ERC-20 O2 proves the existence of a planted tree, whereby the token is minted at a rate based on allometric equations of each species and verified thr
       </div>
       <div className={styles.text6}>
         L i b r e S o f t w a r e
@@ -63,13 +71,49 @@ const Page2728 = () => {
         L i b r e S o f t w a r e
       </div>
       <div className={styles.text9}>
-        <span>KOTAL</span><br/>
-        The open source alternative to Infura— Kotal is an API gateway for deploying self managing blockchain infrastructure. Anything from Ethereum 2 beacon and validation nodes to Filecoin nodes and private Ethereum networks. It’s cloud agnostic, running on any public or private cloud that supports Kubernetes and it allows for key reuseability across multiple blockchain nodes and networks.
+        <span>NIFTY INK</span><br/>
+        The open bazaar of NFT art marketplaces— that’s Nifty Ink. It allows anyone to create cool digital art NFTs in a  user friendly prioritised way.  Once created the artwork is minted on the xDAI chain and verified for selling on the Nifty Ink marketplace, with the ability to be bridged to the Ethereum mainnet. Beyond this though, the real innovation of the platform is it’s ease of use and implementation of web2 style trojan horse features. On page load an Ethereum keypair is automatically generated and used to sign transactions for minting any NFTs. Think of it like a quick web wallet so that the Creator can prioritise their art over the complexities of navigating distributed login applications. 
+      </div>
+      <div className={styles.text10}>
+        <span>VOODFY</span><br/>
+        There are about 122 million daily active users on Youtube and 15 million on Twitch— so it comes at no surprise that the web3 version of these platforms is being built. Voodfy is a decentralised video hosting platform. It’s completely free and supports both audio, video and live streaming. 
+        <br/><br/>
+        Having more web3 enabled platforms available to creators, beyond the NFT marketplaces that we see in action today, is essential when we think about  properly underwriting the “creative” element of the new creator economy. It’s not enough to just launch social tokens or mint NFTs. Creators need a suite of comprehensive tools at the ready, giving them the productive freedom to form new ingenious combinations and methods for monetising on their content in a way that is personalised to their communities, fans and followers. 
+      </div>
+      <div className={styles.text11}>
+        L i b r e S o f t w a r e
+      </div>
+      <div className={styles.text12}>
+        Open Web
       </div>
 
-      <img src='./magazine/4/images/2728_image2.png' className={styles.image2} />
-      <img src='./magazine/4/images/2728_image3.png' className={styles.image3} />
-      <img src='./magazine/4/images/2728_image4.png' className={styles.image4} />
+      <Link href='https://yin.finance/'>
+        <a target='_blank'>
+          <img src='./magazine/4/images/2728_image2.png' className={styles.image2} />
+        </a>
+      </Link>
+        
+      <Link href='https://safient.io/'>
+        <a target='_blank'>
+        <img src='./magazine/4/images/2728_image3.png' className={styles.image3} />          
+        </a>
+      </Link>
+      <Link href='https://treejer.com/'>
+        <a target='_blank'>
+          <img src='./magazine/4/images/2728_image4.png' className={styles.image4} />    
+        </a>
+      </Link>
+      <Link href='https://www.voodfy.com/'>
+        <a target='_blank'>
+          <img src='./magazine/4/images/2728_image5.png' className={styles.image5} />    
+        </a>
+      </Link>
+      <Link href='https://nifty.ink'>
+        <a target='_blank'>
+          <img src='./magazine/4/images/2728_image6.png' className={styles.image6} />    
+        </a>
+      </Link>
+      <img src='./magazine/4/images/2728_diamond.png' className={styles.image7} />
     </div>
   )
 }
