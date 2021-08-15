@@ -302,6 +302,8 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Coustard:wght@900"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Buda:wght@300"></link>
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700"></link>
 
           {/* ipfs next.js fix */}
           <style

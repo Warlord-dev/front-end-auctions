@@ -101,6 +101,15 @@ const Page34 = () => {
         <br />
         <br />
         Thakane/Takii
+        <br />
+        <br />
+        Fabian Vogelsteller
+        <br />
+        <br />
+        Donald Iljazi
+        <br />
+        <br />
+        xlvrbk
       </p>
       <p className={styles.text7}>
         OurZora 
@@ -109,21 +118,21 @@ const Page34 = () => {
         Web3 Fashion Week
         <br />
         <br />
-        Mirror.xyz
+        g.mirror.xyz
         <br />
         <br />
         Strawberry Sith <br />
         <br />
-        Pinata Cloud
+        Kyle Tut
         <br />
         <br />
-        Lolli
+        Alex Adelman
       </p>
       <p className={styles.text8}>
         Charbakd
         <br />
         <br />
-        Jaymes 
+        Jaymes.eth 
         <br />
         <br />
         (Pirate Ape Yacht Club)
@@ -133,67 +142,61 @@ const Page34 = () => {
         <br />
         <br />
         BasedUser
+        <br />
+        <br />
+        Witek Radomski
       </p>
-      {/* <p className={styles.text9}>
-        Pickle Finance
+      <p className={styles.text9}>
+        Crypto Deevo
         <br />
         <br />
-        ForceDAO
+        Blanc de Blanc
         <br />
         <br />
-        IMPSSBL
+        The Black Lab Studio
         <br />
         <br />
-        Anna Chilli
+        Unhueman
         <br />
         <br />
-        HAPI
+        Xenotech
         <br />
         <br />
-        Hacken
-        <br />
-        <br />
-        MalerDAO
+        DOSC
       </p>
       <p className={styles.text10}>
-        PureFi
+        Coleman Maher
         <br />
         <br />
-        ABigNeonGlitter
+        Gabby Dizon
         <br />
         <br />
-        Nabi
+        Jiho
         <br />
         <br />
-        Katriane
+        Love Tomorrow
         <br />
         <br />
-        An Nguyen
+        Maslennikov
         <br />
         <br />
-        howiseedatworld
-        <br />
-        <br />
-        Rari Capital
+        3DNINJAH
       </p>
       <p className={styles.text11}>
-        BUGAS
+        Paul Leath 
         <br />
         <br />
-        Tom Pastor
+        Christopher Leath
         <br />
         <br />
-        Hugo Richel
+        Arturo Garce
         <br />
         <br />
-        Tiago Filipe
+        Glitched Face King
         <br />
         <br />
-        Lilium Labs
-        <br />
-        <br />
-        Pat Lok
-      </p> */}
+        Global Designer Network
+      </p>
     </div>
   )
 }

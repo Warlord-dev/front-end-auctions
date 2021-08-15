@@ -6,4 +6,207 @@
   background-color: #A368FF;
   color: white;
   position: relative;
+
+  .back {
+    position: absolute;
+    width: 375px;
+    height: 2613px;
+    left: 0;
+    top: 0;
+    background: rgba(163, 104, 255, 0.5);    
+  }
+
+  .bitcoin1 {
+    position: absolute;
+    width: 71px;
+    height: 69px;
+    left: 211px;
+    top: 1px;    
+  }
+
+  .bitcoin2 {
+    position: absolute;
+    width: 82px;
+    height: 80px;
+    left: 64px;
+    top: 297px;
+  }
+
+  .bitcoin3 {
+    position: absolute;
+    width: 121px;
+    height: 117px;
+    left: 338px;
+    top: 270px;
+  }
+
+  .bitcoin4 {
+    position: absolute;
+    width: 132px;
+    height: 128px;
+    left: 224px;
+    top: 599px;
+    
+  }
+
+  .bitcoin5 {
+    position: absolute;
+    width: 82px;
+    height: 80px;
+    left: 146px;
+    top: 1049px;
+  }
+
+  .bitcoin6 {
+    position: absolute;
+    width: 132px;
+    height: 128px;
+    left: 59px;
+    top: 1318px;
+  }
+
+  .bitcoin7 {
+    position: absolute;
+    width: 132px;
+    height: 128px;
+    left: 306px;
+    top: 1351px;
+  }
+
+  .bitcoin8 {
+    position: absolute;
+    width: 82px;
+    height: 80px;
+    left: -15px;
+    top: 1826px;
+  }
+
+  .bitcoin9 {
+    position: absolute;
+    width: 132px;
+    height: 128px;
+    left: 145px;
+    top: 2128px;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 259px;
+    height: 366px;
+    left: 236px;
+    top: -83px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 128px;
+    height: 181px;
+    left: 330px;
+    top: 522px;
+    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 259px;
+    height: 366px;
+    left: 71px;
+    top: 636px;
+    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 259px;
+    height: 366px;
+    left: 318px;
+    top: 669px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 259px;
+    height: 366px;
+    left: 157px;
+    top: 1446px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 180.56px;
+    height: 306.91px;
+    left: 136.49px;
+    top: 255.96px;
+    
+    transform: rotate(-20deg);
+    transform-origin: 0 0;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 180.56px;
+    height: 306.91px;
+    left: 67.97px;
+    top: 414.84px;
+    
+    transform-origin: 0 0;
+    transform: rotate(20deg);
+  }
+
+  .image8 {
+    position: absolute;
+    width: 180.56px;
+    height: 306.91px;
+    left: -28.51px;
+    top: 974.96px;
+    
+    transform-origin: 0 0;
+    transform: rotate(-20deg);
+  }
+
+  .image9 {
+    position: absolute;
+    width: 180.56px;
+    height: 306.91px;
+    left: 218.49px;
+    top: 1007.96px;
+    
+    transform-origin: 0 0;
+    transform: rotate(-20deg);
+  }
+
+  .image10 {
+    position: absolute;
+    width: 180.56px;
+    height: 306.91px;
+    left: 57.49px;
+    top: 1784.96px;
+    
+    transform-origin: 0 0;
+    transform: rotate(-20deg);
+  }
+
+  .image11 {
+    position: absolute;
+    width: 138px;
+    height: 214px;
+    left: 8px;
+    top: 109px;    
+  }
+
+  .image12 {
+    position: absolute;
+    width: 236px;
+    height: 106px;
+    left: 0px;
+    top: -3px;
+  }
+
+  .image13 {
+    position: absolute;
+    width: 107px;
+    height: 108px;
+    left: 211px;
+    top: 43px;
+  }
 }

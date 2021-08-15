@@ -79,6 +79,13 @@
     top: 0px;
   }
 
+  .image2 {
+    position: absolute;
+    top: 590px;
+    left: 535px;
+    transform: rotate(103.68deg);    
+  }
+
   .text1 {
     position: absolute;
     width: 428px;
@@ -97,6 +104,65 @@
     $stroke-color: #00BEDD;
     text-shadow:  -5px -5px $stroke-color, -5px 5px $stroke-color, 5px -5px $stroke-color, 
     -5px 0 $stroke-color, 0 5px $stroke-color, 5px 0 $stroke-color, 5px 5px $stroke-color, 0 -5px $stroke-color;
-    // -webkit-text-stroke: 5px #00BEDD;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 400px;
+    height: 138px;
+    left: 351px;
+    top: 515px;
+    
+    font-family: Encode Sans Semi Expanded;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    text-shadow: -2px 0 #FF0303, 0 -2px #FF0303, 2px 0 #FF0303, 0 2px #FF0303;
+  }
+
+  .text3 {
+    position: absolute;
+    left: 61.51%;
+    right: 9.9%;
+    top: 26.52%;
+    bottom: 8.35%;
+    
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .circle1 {
+    position: absolute;
+    left: 50%;
+    right: -4.01%;
+    top: 17.23%;
+    bottom: 0%;
+    
+    background: rgba(0, 0, 0, 0.54);
+    border: 10px solid #FF0000;
+    border-radius: 50%;
+    box-sizing: border-box;    
+  }
+
+  .playButton {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+    left: 385px;
+    top: 670px;    
+    background: transparent;
+    border: none;
+    
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
