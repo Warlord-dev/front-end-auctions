@@ -2,7 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-  background-color: white;
+  color: #FFFFFF;
 
   .video1 {
     position: absolute;
@@ -36,7 +36,6 @@
     font-size: 100px;
     line-height: 85px;
     
-    color: #FFFFFF;
     text-shadow: -1px 0 #EC0000, 0 1px #EC0000, 1px 0 #EC0000, 0 -1px #EC0000;
   }
 
@@ -49,11 +48,9 @@
 
     font-family: Inter;
     font-style: italic;
-    font-weight: normal;
     font-size: 25px;
     line-height: 30px;
 
-    color: #FFFFFF;
     text-shadow: -0.5px 0 #A400BE, 0 0.5px #A400BE, 0.5px 0 #A400BE, 0 -0.5px #A400BE;
   }
 
@@ -65,16 +62,10 @@
     top: 301px;
 
     font-family: Inter;
-    font-style: normal;
     font-weight: 800;
     font-size: 50px;
     line-height: 85px;
-    /* or 170% */
-
     text-align: right;
-
-    color: #FFFFFF;
-
     text-shadow: -1px 0 #A400BE, 0 1px #A400BE, 1px 0 #A400BE, 0 -1px #A400BE;
   }
 
@@ -84,21 +75,14 @@
     height: 108px;
     left: 994px;
     top: 372px;
-
     font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
     font-size: 17px;
     line-height: 30px;
-
     text-align: right;
-
-    color: #FFFFFF;
     text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
   }
 
   .text5 {
-
     position: absolute;
     width: 653px;
     height: 543px;
@@ -106,15 +90,10 @@
     top: 519px;
     
     font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
     font-size: 17px;
     line-height: 30px;
     
     text-align: right;
-    
-    color: #FFFFFF;
-
     text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
   }
 
@@ -122,17 +101,12 @@
     position: absolute;
     width: 599px;
     height: 391px;
-    left: 989px;
-    top: 992px;
+    left: 988px;
+    top: 1000px;
 
     font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
     font-size: 17px;
     line-height: 30px;
-
-    color: #FFFFFF;
-
     text-shadow: -0.3px 0 #A400BE, 0 0.3px #A400BE, 0.3px 0 #A400BE, 0 -0.3px #A400BE;
   }
 
@@ -144,14 +118,9 @@
     top: 1392px;
     
     font-family: DJB Emilys Garden;
-    font-style: normal;
-    font-weight: normal;
     font-size: 100px;
     line-height: 85px;
-    
-    color: #FFFFFF;
-    
-    text-shadow: -1px 0 #EC0000, 0 1px #EC0000, 1px 0 #EC0000, 0 -1px #EC0000;
+    text-shadow: -2px 0 #EC0000, 0 2px #EC0000, 2px 0 #EC0000, 0 -2px #EC0000;
   }
 
   .image1 {
@@ -307,6 +276,31 @@
     top: 1406px;
   }
 
+  .image19 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -4px;
+    top: 1327px;
+  }
+
+  .image20 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 180px;
+    top: 1327px;
+  }
+
+  .image21 {
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    left: -74px;
+    top: 171px;
+    
+  }
+
   .text8 {
     position: absolute;
     width: 379px;
@@ -317,8 +311,6 @@
     font-family: Electrolize;
     font-size: 70px;
     line-height: 120.53%;
-    
-    color: #FFFFFF;    
   }
   
   .text9 {
@@ -331,8 +323,6 @@
     font-family: Electrolize;
     font-size: 70px;
     line-height: 120.53%;  
-    
-    color: #FFFFFF;
   }
 
   a {
@@ -341,6 +331,130 @@
       &:hover {
         transform: scale(1.1);
       }
+    }
+  }
+
+  .text10 {
+    position: absolute;
+    width: 232px;
+    height: 218px;
+    left: 199px;
+    top: 169px;
+    
+    font-family: Electrolize;
+    font-size: 40px;
+    line-height: 120.53%;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 345px;
+    height: 504px;
+    left: 24px;
+    top: 468px;
+    
+    font-family: Electrolize;
+    font-size: 20px;
+    line-height: 120.53%;
+    font-weight: 400;
+
+    span {
+      font-family: Elsie Swash Caps;
+      font-weight: 900;
+    
+    }
+  }
+
+  .text12 {
+    position: absolute;
+    width: 345px;
+    height: 238px;
+    left: 24px;
+    top: 734px;
+
+    font-family: Electrolize;
+    font-size: 20px;
+    line-height: 120.53%;
+    font-weight: 400;
+
+    span {
+      font-family: Elsie Swash Caps;
+      font-weight: 900;
+    
+    }
+  }
+
+  .text13 {
+    position: absolute;
+    width: 345px;
+    height: 238px;
+    left: 24px;
+    top: 1007px;    
+    font-family: Electrolize;
+    font-size: 20px;
+    line-height: 120.53%;
+    font-weight: 400;
+
+    span {
+      font-family: Elsie Swash Caps;
+      font-weight: 900;
+    
+    }
+  }
+
+  .text14 {
+    position: absolute;
+    width: 345px;
+    height: 238px;
+    left: 591px;
+    top: 58px;    
+    font-family: Electrolize;
+    font-size: 20px;
+    line-height: 120.53%;
+    font-weight: 400;
+
+    span {
+      font-family: Elsie Swash Caps;
+      font-weight: 900;
+    
+    }
+  }
+
+  .text15 {
+    position: absolute;
+    width: 345px;
+    height: 238px;
+    left: 591px;
+    top: 456px;
+    
+    font-family: Electrolize;
+    font-size: 20px;
+    line-height: 120.53%;
+    font-weight: 400;
+
+    span {
+      font-family: Elsie Swash Caps;
+      font-weight: 900;
+    
+    }
+  }
+
+  .text16 {
+    position: absolute;
+    width: 345px;
+    height: 238px;
+    left: 591px;
+    top: 892px;
+    
+    font-family: Electrolize;
+    font-size: 20px;
+    line-height: 120.53%;
+    font-weight: 400;
+
+    span {
+      font-family: Elsie Swash Caps;
+      font-weight: 900;
+    
     }
   }
 }

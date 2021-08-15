@@ -22,15 +22,15 @@ const Page5152 = () => {
         INSTAGRAM.
       </div>
       <div className={styles.text4}>
-        These days, it seems that there is no end to the constant hurdles being put in place to separate customers from compassionate, intellectually sound humans for customer service agents.  Instead, most of us are used to interacting with some AI chatbot that in almost everyway is a complete black box— this is made abundantly clear when any question outside a generic conversation A/B decision tree is injected. 
+        We often talk about how valuable our personal data is while at the same time how little we personally value it. Beastly gigantic tech companies grew to their worlds devouring size by feasting on our data while we happily took heart emoji as our consolation prize. The best example of this is Facebook's "Buy, Copy, Kill". And that's exactly they've been doing for the past decade. It's literally killing the entire VR industry right now.
       </div>
       <div className={styles.text5}>
-        This is not the bitter complaint of a customer who has been burned once. Rather, it’s much more of a look into an insidious, looming and almost invisible problem. The very algorithms that we see at work everyday in the world around us, directly shape and influence the constraints and limits to our capacity. It might have once made sense to be hopeful about how extreme logical automation could actually improve the experience of humanity, but this is naive. Because, who designs these algorithms? At this point it’s shitty algorithms designing more shitty algorithms. And the problem has come that now these shitty algorithms are eating the internal workings and decision making processes of global and international mega companies.
+        The big billion dollar buy that kicked off wave after wave of these ecosystem destroying games for narrow gains was of course Instagram. It turned the app from the first mobile instigator of creativity for photographers, creators, designers finally able to engage in the full spectrum of activity from amateur to pro by taking their works to social and friend circles first. The founder Systrom always intended it to be a kind of image heaven. 
         <br /><br />
-        One of those is the everything store; Amazon. And at the heart of this is its all powerful physical and digital cloud brain trust— AWS. The entire customer service and support supply chain is black boxed to the point where it is unlikely that any human being has any idea how the full system works.
+        That priority changed pretty quickly after Zuckerberg bought the app and the number one goal became to collect data and maximise advertising revenue through misguided notions of how to do that. And since then it’s only gotten worse, because not only did it start off with self-negating intentions but it has also coincided with the rise of really shitty machine learning algorithms eating everything from customer service, the order in which we see our content to literally disappearing people’s accounts. And when the user asks what the hell is up it’s another really really unintelligent machine learning algorithm or just a lengthy google search rabbit hole to bring you to the conclusion that probably 
       </div>
       <div className={styles.text6}>
-        And with so many global interactions and transactions taking place every minute within this system, it’s scary to think of the scale of impact that a centralised line of code with near zero human oversight can have in dominating control on the outcomes of so many people and lives. More problems are being created than being solved, and it only further reinforces that while some algorithms attempt to eat the world it is really decentralisation that needs to eat them. Bon Appétit!  
+        some random “system maintenance” glitched all the data and there is nothing to be done about it. Let’s be frank, facebook and co doesn’t give a damn about you or any of us. And there’s nothing you can do about it... yet. We just need to launch those web3 social media apps and do it right this time. Ones that aren’t just copy paste of the legacy apps and transacting on a blockchain and ones that aren’t bought and backed by VCs. The only way to do this right is to have it owned by the users and no one else. 
       </div>
       <div className={styles.text7}>
         Destroy the wall
@@ -56,6 +56,10 @@ const Page5152 = () => {
       <img src='./magazine/4/images/5152_zero.png' className={styles.image16} />
       <img src='./magazine/4/images/5152_zero.png' className={styles.image17} />
       <img src='./magazine/4/images/5152_zero.png' className={styles.image18} />
+      <img src='./magazine/4/images/5152_zero.png' className={styles.image19} />
+      <img src='./magazine/4/images/5152_zero.png' className={styles.image20} />
+
+      <img src='./magazine/4/images/5152_image1.png' className={styles.image21} />
 
       <Link href='https://www.originprotocol.com/en'>
         <a target='_blank'>
@@ -68,6 +72,49 @@ const Page5152 = () => {
       <div className={styles.text9}>
         ORIGIN PROTOCOL
       </div>
+      
+      <div className={styles.text10}>
+        Speed Breakdown w/ <br />
+        Coleman Maher          
+      </div>
+      
+      <div className={styles.text11}>
+        <span>What's the most important thing for anyone to know about Origin? </span>
+        <br /><br />
+        Origin is the only crypto startup with a token that has heavyweight consumer tech founders, including a co-founder of PayPal and the 1st engineer at YouTube, that is working to bring crypto into the mainstream.        
+      </div>
+      
+      <div className={styles.text12}>
+        <span>What is your take on decentralised commerce? </span>
+        <br /><br />
+        Decentralised commerce is a necessary development for free and open markets. It will allow buyers and sellers to resist censorship and being de-platformed. Simply put, it is the future of commerce.
+      </div>
+      
+      <div className={styles.text13}>
+        <span>When you talk about decentralised shops on AWS? What does this entail? What is the decentralisation component here?</span>
+        <br /><br />
+        Users can host Dshop on IPFS, a decentralised storage protocol, or use AWS or other centralised services to launch their Dshops if that is their preference. Dshops accept cryptocurrency by default over centralised payments.        
+      </div>
+      
+      <div className={styles.text14}>
+        <span>How do you feel about Shopify announcing that they are integrating NFTs on Flow blockchain?</span>
+        <br /><br />
+        We think it is great that traditional centralised platforms and companies are exploring NFTs and crypto. It brings new people and new investors and eyeballs into crypto. However, we prefer completely decentralised solutions and standards and this is why we are building on Ethereum. Long term, we think this is the right decision.  
+      </div>
+      
+      <div className={styles.text15}>
+        <span>What NFT use cases on Origin are bringing the most value to creators? </span>
+        <br /><br />
+        3LAU, an acclaimed DJ, music producer, and crypto influencer launched a tokenised music album on Origin NFT Launchpad. This brought in nearly $12 million and is still the record holder for a music NFT drop. The drop gave exclusive access to unreleased remixes and in-person experiences solely reserved for NFT holders. Utilising the scarcity of NFTs and combining this with real-world utility is one way we are pushing the industry forward.  
+      </div>
+      
+      <div className={styles.text16}>
+        <span>What are the most interesting projects building on Origin? Why?</span>
+        <br /><br />
+        Origin Dollar, or OUSD, is the only stablecoin that earns a yield while in your wallet. It gives you totally passive and easy exposure to the best and safest yields DeFi yield farming has to offer. Also, Origin NFT Launchpad, which allows creators to create totally custom and direct-to-fan NFT launches and experiences. Origin NFT Launchpad has already broken records and made international headlines with its NFT drops.        
+      </div>
+
+
     </div>
   )
 }

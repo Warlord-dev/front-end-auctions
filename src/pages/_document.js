@@ -111,7 +111,7 @@ class MyDocument extends Document {
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Electrolize"></link>
           <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps"></link>
+          href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Encode+Sans"></link>
           <link rel="stylesheet"
