@@ -12,6 +12,10 @@ const Page109110 = () => {
 
   return (
     <div className={styles.wrapper}>
+      <img src='/magazine/4/images/109110_image1.png' className={styles.image1}/>
+      <h1>
+        Remove the Ceiling by removing the Floor.         
+      </h1>
       <div className={styles.text1}>
         The house always wins. 
         <br /><br />
@@ -24,6 +28,9 @@ const Page109110 = () => {
         In fact, it’s not about control, it’s about ownership– very different. We must embrace giving away control of everything else around us. Because, ultimately, we don’t have control of anything, only ourselves. And if we establish the soundness and antifragility of our own model then we can start earlier, start well ahead. We can continue to play our own game and become damn good at it.
         <br /><br />
         We all have what it takes to win, but so many of us fall into the myth of pioneering. Anyone can do what it takes, but only very few decide to actually do it. My desire is to actually do it. To make sure I have ownership of myself above all else, to play my own game. Because only then can I commit to warranting impactful yield for all those that too desire to be their own house. 
+      </div>
+      <div className={styles.text2}>
+        - Emma-Jane MacKinnon-Lee
       </div>
       <img src='/magazine/4/images/109110_background.png' className={styles.backgroundImage}/>
       {!contentUnlocked && <UnlockPage issueId={issueId} />}

@@ -51,7 +51,6 @@ const Page4950 = () => {
           ? <img className={styles.imagePlay} src='/magazine/4/images/4950_playbutton.png' />
           : <img className={styles.imagePause} src='/magazine/4/images/4950_pausebutton.png' />
         }
-        
       </div>
 
       <audio ref={audioRef} loop>

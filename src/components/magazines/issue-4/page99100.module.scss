@@ -237,4 +237,212 @@
       margin-top: -5px;
     }
   }
+
+  .rect1 {
+    position: absolute;
+    width: 676px;
+    height: 703px;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(3, 3, 3, 0.37);    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 1009px;
+    height: 431px;
+    left: -18px;
+    top: 755px;
+        
+  }
+
+  .image5 {
+    position: absolute;
+    width: 1009px;
+    height: 431px;
+    left: -18px;
+    top: 1073px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 333px;
+    height: 333px;
+    left: 45px;
+    top: 31px;    
+  }
+
+  .text9 {
+    position: absolute;
+    width: 285px;
+    height: 309px;
+    left: 388px;
+    top: 30px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    
+    color: #FFFFFF;
+        
+  }
+
+  .text10 {
+    position: absolute;
+    width: 630px;
+    height: 365px;
+    left: 35px;
+    top: 372px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120.53%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text11 {
+    position: absolute;
+    width: 785px;
+    height: 225px;
+    left: 10px;
+    top: 673px;
+    
+    font-family: Milonga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140px;
+    line-height: 120.53%;
+    /* or 169px */
+    
+    text-align: right;
+    
+    color: #F7B100;
+    
+    -webkit-text-stroke: 4px black;
+  }
+
+  .playButton1 {
+    position: absolute;
+    width: 157px;
+    height: 157px;
+    left: 586px;
+    top: 1008px;
+    cursor: pointer;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+ 
+  .imageBack {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imagePlay {
+    position: absolute;
+    width: 69px;
+    height: 80px;
+    left: 55px;
+    top: 35px;
+  }
+  
+  .imagePause {
+    position: absolute;
+    width: 65px;
+    height: 71px;
+    left: 47px;
+    top: 40px;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 671px;
+    height: 1126px;
+    left: 1004px;
+    top: 253px;
+    
+    font-family: 'Pixel Berry 08/84 Ltd.Edition';
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+
+  .image7 {
+    position: absolute;
+    width: 645px;
+    height: 185px;
+    left: 1015px;
+    top: 1313px;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 101px;
+    height: 69px;
+    left: 1050px;
+    top: 1355px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 120.53%;
+    /* or 10px */
+    
+    text-align: center;
+    
+    color: #000000;    
+  }
+
+  .text14 {
+    position: absolute;
+    width: 101px;
+    height: 69px;
+    left: 1287px;
+    top: 1360px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 120.53%;
+    /* or 10px */
+    
+    text-align: center;
+    
+    color: #000000;
+    
+  }
+
+  .text15 {
+    position: absolute;
+    width: 121px;
+    height: 69px;
+    left: 1511px;
+    top: 1350px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #000000;
+  }
 }
