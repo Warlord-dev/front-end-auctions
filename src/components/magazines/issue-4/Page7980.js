@@ -7,6 +7,10 @@ const Page7980 = () => {
     <div className={styles.wrapper}>
       <img className={styles.image1} src='/magazine/4/images/7980_background.png' />
       <img className={styles.image2} src='/magazine/4/images/7980_image1.png' />
+      <img className={styles.image3} src='/magazine/4/images/7980_image2.png' />
+      <img className={styles.image4} src='/magazine/4/images/7980_image3.png' />
+      <img className={styles.image5} src='/magazine/4/images/7980_image4.png' />
+      <img className={styles.image6} src='/magazine/4/images/7980_image5.png' />
 
       <div className={styles.text1}>
         NFT BUNDLES        
@@ -23,17 +27,24 @@ const Page7980 = () => {
         3 x BUNDLES: COMMON, SEMI-RARE, EXCLUSIVE.         
       </div>
       <div className={styles.text5}>
-        aBIGNEONGLITTER 3D ART COLLECTIBLES
+        unique pfp in-game characters, the first dungeon
       </div>
       <div className={styles.text6}>
-        DECO ONLY FANS UNLOCKABLE EXCLUSIVE CONTENT & EXPERIENCES
+        20 years of san francisco music audio nft collection
       </div>
       <div className={styles.text7}>
-        XENOTECH
+        eXCLUSIVE DCL W3FW SKIN, AR FILTER TRY ON AND PHYSICAL FASHION STAKEABLE NFT VARSITY JACKET
       </div>
       <div className={styles.text8}>
-        TAKAII        
+        defi fashion week digitalS
       </div>
+      <div className={styles.text9}>
+        DECO ONLY FANS UNLOCKABLE EXCLUSIVE CONTENT & EXPERIENCES
+      </div>
+      <div className={styles.text10}>
+        XENOTECH
+      </div>
+
 
     </div>
   )

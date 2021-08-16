@@ -77,39 +77,74 @@
   .text5 {
     position: absolute;
     width: 749px;
-    height: 66px;
-    left: 1070px;
-    top: 370px;
+    height: 99px;
+    left: 72px;
+    top: 520px;
     
     font-family: Neon Vortex;
     font-size: 30px;
     line-height: 110%;
-
     color: #FFFFFF;
   }
 
   .text6 {
     position: absolute;
-    width: 623px;
-    height: 99px;
-    left: 1012px;
-    top: 1061px;
+    width: 749px;
+    height: 66px;
+    left: 315px;
+    top: 1048px;
     
     font-family: Neon Vortex;
-    font-style: normal;
-    font-weight: normal;
     font-size: 30px;
-    line-height: 110%;    
-    
+    line-height: 110%;
     color: #FFFFFF;
   }
 
   .text7 {
     position: absolute;
+    width: 749px;
+    height: 132px;
+    left: 1101px;
+    top: 83px;
+    
+    font-family: Neon Vortex;
+    font-size: 30px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 749px;
+    height: 33px;
+    left: 1185px;
+    top: 512px;
+    
+    font-family: Neon Vortex;
+    font-size: 30px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 623px;
+    height: 99px;
+    left: 1100px;
+    top: 873px;
+    
+    font-family: Neon Vortex;
+    font-size: 30px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text10 {
+    position: absolute;
     width: 240px;
     height: 76px;
-    left: 1029px;
-    top: 1382px;
+    left: 1268px;
+    top: 1370px;
     
     font-family: Poppins;
     font-style: normal;
@@ -120,35 +155,47 @@
     
     color: #FFFFFF;
     -webkit-text-stroke: #FF0000;
-    -webkit-text-stroke-width: 5px;
-  }
-
-  .text8 {
-    position: absolute;
-    width: 240px;
-    height: 76px;
-    left: 1282px;
-    top: 1382px;
-    
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 100%;    
-    text-align: right;
-    
-    color: #FFFFFF;
-    -webkit-text-stroke: #BD00FF;
-    -webkit-text-stroke-width: 5px;
-    
+    -webkit-text-stroke-width: 5px;    
   }
 
   .image2 {
     position: absolute;
     width: 243px;
     height: 149px;
-    left: 1635px;
-    top: 1309px;    
+    left: 1607px;
+    top: 1152px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 301px;
+    height: 342px;
+    left: 72px;
+    top: 630px;    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 317px;
+    height: 342px;
+    left: 373px;
+    top: 630px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 289px;
+    height: 342px;
+    left: 690px;
+    top: 630px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 335px;
+    height: 439px;
+    left: 1100px;
+    top: 1004px;
   }
   
 }

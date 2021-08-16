@@ -273,8 +273,6 @@ class MyDocument extends Document {
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Bitter:wght@900"></link>
           <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=din+condensed"></link>
-          <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Esteban"></link>
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Faustina"></link>
@@ -310,6 +308,7 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Donegal+One"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tillana:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"></link>
 
           {/* ipfs next.js fix */}
           <style
@@ -1402,13 +1401,19 @@ class MyDocument extends Document {
             }
 
             @font-face {
-              font-family: "Post No Bills Colombo SemiBold";
+              font-family: "Post No Bills Colombo";
               src: url("./fonts/PostNoBillsColombo-Regular.woff");
               font-weight: 400;
             }
+            
+            @font-face {
+              font-family: "Post No Bills Colombo";
+              src: url("./fonts/postnobillscolombo-bold.ttf");
+              font-weight: 700;
+            }
 
             @font-face {
-              font-family: "Post No Bills Colombo ExtraBold";
+              font-family: "Post No Bills Colombo";
               src: url("./fonts/PostNoBillsColombo-ExtraBold.ttf");
               font-weight: 800;
             }
@@ -1518,6 +1523,12 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Zorque';
               src: url('./fonts/zorque.otf');
+            }
+
+            @font-face {
+              font-family: 'DIN Condensed';
+              font-weight: 700;
+              src: url('./fonts/DINCondensed-Bold.ttf');
             }
           `,
             }}

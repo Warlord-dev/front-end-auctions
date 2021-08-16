@@ -1,19 +1,38 @@
-import React from 'react'
+import React, { useRef, useState }  from 'react'
 import styles from './page8182.module.scss'
 
 const Page8182 = () => {
+  const audioRef = useRef()
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const startAudio = () => {
+    audioRef.current.play()
+    setIsPlaying(true)
+  }
+
+  const pauseAudio = () => {
+    audioRef.current.pause()
+    setIsPlaying(false)
+  }
+
   return (
     <div className={styles.wrapper}>
       <img className={styles.image1} src='/magazine/4/images/8182_image1.png' />
       <img className={styles.image2} src='/magazine/4/images/8182_image2.png' />
+      <img className={styles.image21} src='/magazine/4/images/8182_image21.png' />
       <img className={styles.image3} src='/magazine/4/images/8182_image3.png' />
       <img className={styles.image4} src='/magazine/4/images/8182_image4.png' />
       <img className={styles.image5} src='/magazine/4/images/8182_image5.png' />
       <img className={styles.image6} src='/magazine/4/images/8182_image6.png' />
       <img className={styles.image7} src='/magazine/4/images/8182_image7.png' />
-      <img className={styles.image8} src='/magazine/4/images/8182_image6.png' />
-      <img className={styles.image9} src='/magazine/4/images/8182_image8.png' />
-      <img className={styles.image10} src='/magazine/4/images/8182_image9.png' />
+      <img className={styles.image9} src='/magazine/4/images/8182_image9.png' />
+      <img className={styles.image8} src='/magazine/4/images/8182_image8.png' />
+
+      <div className={styles.circle}></div>
+
+      <img className={styles.image10} src='/magazine/4/images/8182_image10.png' />
+      <img className={styles.image11} src='/magazine/4/images/8182_image11.png' />
+      
 
       <div className={styles.text1}>
         Go Behind the Scenes with Exclusive NFT Content and Experiences
@@ -39,18 +58,26 @@ const Page8182 = () => {
         </span>
       </div>
       <div className={styles.text7}>
-        In the previous content I broke down how the XENOTECH virtual world would be structured. The primary NFTs that users would interact with are clothing stores, apartments, and clothing wearables.         
+        This content is not directly related to Digital Fashion, but since I've been traveling I haven't had access to my computer to 3D model. Instead, with my laptop, I started working on a side project based around what I think the Metaverse version of GoodReads would look like. This project was inspired by how limited and outdated the UI of GoodReads is and how I desperately I want a book management / tracking tool that exist spatially—one that is accessible through web browsers, VR, and AR. 
       </div>
       <div className={styles.text8}>
-        Paranoid Park
+        The 3D Bookshelf
+      </div>
+      <div className={styles.text81}>
+        The 3D Bookshelf
+      </div>
+      <div className={styles.text82}>
+        The 3D Bookshelf
+      </div>
+      <div className={styles.text83}>
+        The 3D Bookshelf
+      </div>
+      <div className={styles.text84}>
+        The 3D Bookshelf
       </div>
       <div className={styles.text9}>
-        Though I don't have a huge background in gaming, I am fascinated with the concept of the virtual world-- especially one that is more than just a game. Virtual worlds for commerce, art, and education are particularly interesting to me and areas that I will dedicate myself to building. I have spent a lot of time conceptualizing a Metaverse platform / ecosystem based around the 3D city prototype I had built out, one that is particularly focused on 3D fashion.
+        Another thing I have been practicing is modeling ancient Roman/Greek and Renaissance inspired architecture.
       </div>
-
-      <img className={styles.playbutton} src='/magazine/4/images/8182_playbutton.png' />
-
-      <div className={styles.circle}></div>
 
       <div className={styles.text10}>
         DECO<br />
@@ -67,17 +94,75 @@ const Page8182 = () => {
         Go Behind the Scenes with Exclusive NFT Content and Experiences
       </div>
       <div className={styles.text14}>
-        Growing up as a world citizen has formed my way of thinking to be a connector. I was born in Lesotho, and grew up changing countries around the world every 3-4 years. One side of my family coming from Lesotho and the other side from UK/Spain meant that I would experience the contrast between rural African life and city life in Europe, where many things are taken for granted.         
+        This was an EP I produced — inspired by the events of 9/11 which had a pretty big impact on my life.
       </div>
       <div className={styles.text15}>
-        THAKANE 
+        ESCAPE INTO XENOTECH’S IMMERSIVE CONTENT EXPERIENCEs 
       </div>
       <div className={styles.text16}>
-        X
+        I am focused on developing a roadmap for XENOTECH to ultimately become a blockchain based social commerce virtual world geared towards Digital / Physical clothing designers and brands. It is essential for this virtual world to exist in an Open and interoperable Metaverse where it can serve as a hub for digital fashion related products (garments, game-skins, etc.) and experiences (fashion shows, events, games, etc.) to take place and ultimately be distributed across the wider interoperable Metaverse.
       </div>
       <div className={styles.text17}>
-        TAKAII
+        XENOTECH
       </div>
+
+      <div className={styles.textCatac1}>
+        CATACLYSM        
+      </div>
+
+      <div className={styles.textCatac2}>
+        CATACLYSM        
+      </div>
+
+      <div className={styles.textCatac3}>
+        CATACLYSM        
+      </div>
+
+      <div className={styles.textCatac4}>
+        CATACLYSM        
+      </div>
+
+      <div className={styles.textCatac5}>
+        CATACLYSM        
+      </div>
+
+      <div className={styles.textCatac6}>
+        CATACLYSM        
+      </div>
+
+      <div className={styles.textCatac7}>
+        CATACLYSM        
+      </div>
+
+      <div className={styles.textCatac8}>
+        CATACLYSM        
+      </div>
+      
+      <div className={styles.textCatac9}>
+        CATACLYSM        
+      </div>
+
+      <video autoPlay muted loop className={styles.video1}>
+        <source src='./magazine/4/videos/8182_video1.mp4' />
+      </video>
+
+      <div
+        className={styles.playButton}
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio()
+        }}
+      >
+        {
+          !isPlaying
+          ? <img src='/magazine/4/images/8182_playbutton.png' />
+          : <img src='/magazine/4/images/8182_pausebutton.png' />
+        }
+        
+      </div>
+
+      <audio ref={audioRef} loop>
+        <source src='/magazine/4/sounds/8182_sound1.mp3' type='audio/mpeg' />
+      </audio>
     </div>
   )
 }

@@ -39,12 +39,14 @@ const Page5960 = () => {
       </div>
 
       <div className={styles.text7}>
-        Exhibited at Art Dubai by Tropical Futures Institute. It is mainly about my commitment to a parcel of land that my family owns, where I have started to grow a cacao farm. It is a way to communicate to my ancestors to thank them for this opportunity.        
+        Exhibited at Art Dubai by Tropical Futures Institute. 
+        It is mainly about my commitment to a parcel of land that my family owns, 
+        where I have started to grow a cacao farm. It is a way to communicate to my ancestors to thank them for this opportunity.        
       </div>
 
       <div className={styles.text8}>
-        Interact with the community.<br />
-        Study the underlying tech.<br />
+        Interact wit<span className={styles.green}>h the</span><span className={styles.blue}> community.</span><br />
+        Study the u<span className={styles.yellow}>nderlying tech.</span><br />
         Experiment.
       </div>
 
