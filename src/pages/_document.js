@@ -309,6 +309,7 @@ class MyDocument extends Document {
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Donegal+One"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca"></link>
 
           {/* ipfs next.js fix */}
           <style
@@ -1512,6 +1513,11 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Dro';
               src: url('./fonts/DroDEMO-KCFonts.ttf');
+            }
+
+            @font-face {
+              font-family: 'Zorque';
+              src: url('./fonts/zorque.otf');
             }
           `,
             }}
