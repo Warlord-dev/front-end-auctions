@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './page8384.module.scss'
-import Link from 'next/link'
-
 
 const Page8384 = () => {
   return (
@@ -10,17 +8,18 @@ const Page8384 = () => {
       <img src='/magazine/4/images/8384_image2.png' className={styles.image2} />
       <div className={styles.rect1}></div>
       <img src='/magazine/4/images/8384_image3.png' className={styles.image3} />
+      <img src='/magazine/4/images/8384_image4.png' className={styles.image4} />
 
       <div className={styles.text1}>
-        E-SPORTS PLAYER OF THE MONTH        
-      </div>
-
-      <div className={styles.text2}>
         VOID
       </div>
 
+      <div className={styles.text2}>
+        E-SPORTS PLAYER OF THE MONTH
+      </div>
+
       <div className={styles.text3}>
-        Originally a substitute on Team Kongdoo for Fissure, Void has proved his way to the top, and now considered one of the most skilled in the Overwatch League. He’s set his path competing with the Shanghai Dragons and still with plenty ahead to achieve, but at this rate, it appears the best is yet to come. 
+      Originally a substitute on Team Kongdoo for Fissure, Void has proved his way to the top, and now considered one of the most skilled in the Overwatch League. He’s set his path competing with the Shanghai Dragons and still with plenty ahead to achieve, but at this rate, it appears the best is yet to come.
       </div>
 
       <div className={styles.text4}>
@@ -28,11 +27,11 @@ const Page8384 = () => {
       </div>
 
       <div className={styles.text5}>
-        ZHAR
+        SNIP3RDOWN
       </div>
 
       <div className={styles.text6}>
-        E-SPORTS RISING STAR OF THE MONTH
+        E-SPORTS PLAYER OF THE MONTH
       </div>
 
       <div className={styles.text7}>
@@ -40,7 +39,7 @@ const Page8384 = () => {
       </div>
 
       <div className={styles.text8}>
-        19 year old South Korean League of Legends player Keria (Ryu Min-seok), has been a force to be reckoned with since he came out of DragonX with a move to the main roster in 2019, at just 17 years of age. Since then he’s continued to prove himself on T1 as one of their best young supports making up the bottom lane, as the entire team raises expectations for the upcoming Worlds. 
+        Snip3rdown is no greenhorn. He is one of the most successful players in Halo esports history, with almost 13 years of competitive record up his sleeve— 24x Halo champion and 2x xGame medalist. One of his most notable traits however has been the steady positive endurance that he’s maintained since his beginnings in the industry. He emphasises keeping a positive outlook, addressing weaknesses, and focusing on mental preparation before any match— something that is often all too overlooked when it comes to elite athlete performance performance. 
       </div>
 
       <div className={styles.text9}>
@@ -57,35 +56,29 @@ const Page8384 = () => {
       </div>
       
       <div className={styles.text13}>
-        WILD tour brazil
+        coinfund leading 2.3 million investment
       </div>
       
       <div className={styles.text14}>
-        Riot has announced their regional  competitive circuit for Wild Rift with Wild Tour Brazil. It’s another avenue for esports competitors to the global stage as the tournament circuit begins with four open qualifiers that culminate not only in the Wild Rift Tour finale but also a chance for a slot in the inaugural Wild Rift World Championship 2021.
+        CoinFund is powering the next wave of crypto x esports, leading a $2.3 million investment round going towards building out a new blockchain gaming community platform that will allow players to organise video game tournaments, integrated with instant crypto reward payouts.
         <br /><br />
-        Brazil was one of the countries that Riot picked to launch its Wild Rift alpha testing last year, and since then a strong mobile MOBA gaming community has been formed. It only makes the case more interesting and compelling for Play to Earn models and the idea of decentralising access to esports as the prize money on offer (US$11,000/R$55,000) has many chasing for a slot in the qualifiers. 
-        <br /><br />
-        If these communities could start truly earning a steady and sustainable livelihood through play, bettering their lives in 
-      </div>
-      
-      <div className={styles.text15}>
-        parallel to doing what they love and know, then their prospects for more customised opportunities that suit each of them best only expands.
+        Often noted as a gateway for crypto mass adoption, the gaming industry has been picking up web3 speed as of late, particularly when it comes to the integration of NFTs to verify the ownership of in-game assets. CoinFund’s platform plans to also experiment further with NFTs for esports. But rather than just a ledger of player inventory, esports presents a unique opportunity for accelerating new influencer content monetisation models, allowing players to spin up unique only-fans style NFT drops targeted at fans, followers and industry die hards. 
       </div>
       
       <div className={styles.text16}>
-        Weplay on binance
+        XQC Fights back
       </div>
       
       <div className={styles.text17}>
-        Esports media holding company WePlay Esports is set to go live with their first NFT launch on the Binance NFT marketplace. Is this set of collectibles part of a bigger shift for the entire esports industry? 
+        xQc is one of Twitch’s most popular players, but also, according to the platform, most controversial. He recently received another ban from Twitch when he streamed the Olympics for one of his “reaction video”. It seems a bit extensive to issue a DMCA over something like this. But more than that it points to a deeper rot within the industry of destroying new talent out of fear that someone doing organic marketing for you for free will somehow diminish your brand value. 
       </div>
       
       <div className={styles.text18}>
-        Fsports  fashion week
+        activision bans more than 60,000 cod accounts
       </div>
       
       <div className={styles.text19}>
-        Esports’ close ties with celebrity and influencer culture just got closer, where Esports Fashion Week announced their latest partnership with Ford Models for fertilising personal brand building amongst pro gamers and their large fan bases. Whether or not social tokens is a next step after this remains unknown for now. However, either way, it’s definitely becoming apparent to many the need for more efficient and lucrative tools in building strengthened and aligned communities— maybe it’s an agency doing that work for now, but soon, don’t be surprised if the mechanics are automated by a few lines of Solidity.  
+        Setting a new record for mass user account bans, Activision Blizzard barred 60,000 Call of Duty Warzone accounts in the same day earlier this year admist major cheating accounts. Keeping a game community fairly governered with balanced mechanics is important for maintaining the core love for the gameplay. However, it poses an interesting question for blockchain games; is it only the interface that will ban the players in the onset of permissionless protocols?
       </div>
 
     </div>

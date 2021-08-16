@@ -5,12 +5,20 @@
   @include magazineWrapper();
 
   a {
-    div {
+    img {
       transition: transform .2s;
       &:hover {
         transform: scale(1.05);
       }
     }
+  }
+
+  .firstHalf {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
   }
 
   .back1 {
@@ -21,18 +29,6 @@
     top: 0px;
     
     background: rgba(255, 0, 0, 0.81);    
-  }
-
-  .textBack1 {
-    position: absolute;
-    left: 10px;
-    top: 0px;     
-  }
-
-  .textBack2 {
-    position: absolute;
-    left: 426px;
-    top: 0px;
   }
 
   .textBack3 {
@@ -51,18 +47,6 @@
     position: absolute;
     left: 1537px;
     top: 720px;
-  }
-
-  .textBack6 {
-    position: absolute;
-    left: 10px;
-    top: 864px;
-  }
-
-  .textBack7 {
-    position: absolute;
-    left: 426px;
-    top: 864px;
   }
 
   .textBack8 {
@@ -93,18 +77,27 @@
     }
   }
 
+  .video1 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 960px;
+    height: 1497px;
+    object-fit: cover;
+  }
+
   .image1 {
     position: absolute;
-    width: 352px;
-    left: 227px;
-    height: 1497px;
-    top: 0px;    
+    width: 764px;
+    height: 805px;
+    left: 0px;
+    top: 706px;    
   }
 
   .image2 {
     position: absolute;
-    width: 352px;
-    left: 784px;
+    width: 277px;
+    left: 859px;
     height: 1497px;
     top: 0px;     
   }
@@ -112,9 +105,9 @@
   .image3 {
     position: absolute;
     width: 733px;
-    height: 742px;
-    left: 960px;
-    top: -112px;
+    height: 786px;
+    left: 1318px;
+    top: -25px;
   }
 
   .image4 {
@@ -127,36 +120,26 @@
 
   .image5 {
     position: absolute;
-    width: 316px;
-    height: 316px;
-    left: 644px;
-    top: 304px;
+    width: 650px;
+    height: 800px;
+    left: 408px;
+    top: 256px;
   }
 
   .image6 {
     position: absolute;
-    width: 320px;
-    height: 572px;
-    left: 1577px;
-    top: 37px;
+    width: 334px;
+    height: 291px;
+    left: 598px;
+    top: 1170px;
   }
 
   .rect1 {
     position: absolute;
     width: 960px;
-    height: 639px;
-    left: 0px;
-    top: 304px;
-    
-    background: rgba(3, 3, 3, 0.37);    
-  }
-
-  .rect2 {
-    position: absolute;
-    width: 960px;
-    height: 657px;
+    height: 1495px;
     left: 960px;
-    top: -26px;
+    top: 0px;
     
     background: rgba(3, 3, 3, 0.37);
   }
@@ -165,24 +148,16 @@
     position: absolute;
     width: 256px;
     height: 256px;
-    left: 704px;
-    top: 16px;
-  }
-
-  .image8 {
-    position: absolute;
-    width: 256px;
-    height: 256px;
-    left: 960px;
-    top: 1214px;
+    left: 1653px;
+    top: 21px;
   }
 
   .text1 {
     position: absolute;
     width: 580px;
     height: 145px;
-    left: 34px;
-    top: 19px;
+    left: 983px;
+    top: 24px;
     
     font-family: Lilita One;
     font-size: 60px;
@@ -194,91 +169,122 @@
 
   .text2 {
     position: absolute;
-    width: 434px;
-    height: 36px;
-    left: 34px;
-    top: 303px;
+    width: 907px;
+    height: 342px;
+    left: 25px;
+    top: 1px;
     
-    font-family: JMH Extra Wide;
-    font-size: 30px;
-    line-height: 120.53%;
-    color: #FFFFFF;
+    font-family: Strawberry;
+    font-size: 130px;
+    line-height: 110%;
+    
+    color: #000000;
+    -webkit-text-stroke: 3px #FF0000;
   }
 
   .text3 {
     position: absolute;
-    width: 598px;
-    height: 225px;
-    left: 37px;
-    top: 351px;
-    
+    width: 575px;
+    height: 489px;
+    left: 988px;
+    top: 184px;
+
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 120.53%;
-    /* or 17px */
-    
-    
     color: #FFFFFF;
   }
 
   .text4 {
     position: absolute;
-    width: 591px;
-    height: 78px;
-    left: 37px;
-    top: 579px;
+    width: 787px;
+    height: 489px;
+    left: 988px;
+    top: 288px;
     
     font-family: Poppins;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 120.53%;
     color: #FFFFFF;
   }
 
   .text5 {
     position: absolute;
-    width: 923px;
-    height: 321px;
-    left: 37px;
-    top: 630px;
+    width: 899px;
+    height: 735px;
+    left: 988px;
+    top: 540px;
     
     font-family: Poppins;
-    font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 120.53%;
-    /* or 17px */
-    
-    
     color: #FFFFFF;
   }
 
   .text6 {
     position: absolute;
-    width: 552px;
-    height: 60px;
-    left: 1074px;
-    top: 24px;
+    width: 395px;
+    height: 342px;
+    left: 25px;
+    top: 275px;
     
-    font-family: JMH Extra Wide;
-    font-size: 25px;
-    line-height: 120.53%;
-    color: #FFFFFF;
+    font-family: Strawberry;
+    font-size: 90px;
+    line-height: 110%;
+    
+    color: #FF9E9E;
+    -webkit-text-stroke: 3px #FF0000;
   }
 
   .text7 {
     position: absolute;
-    width: 292px;
-    height: 455px;
-    left: 1180px;
-    top: 121px;
+    width: 80%;
+    height: 100%;
+    left: 10%;
+    top: 0;
+
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Strait;
+    font-size: 80px;
+    line-height: 110%;
+    text-align: center;
     
-    font-family: Poppins;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 120.53%;
-    color: #FFFFFF;
+    color: #FF9E9E;
+  }
+
+  .playButton {
+    position: absolute;
+    width: 344px;
+    height: 344px;
+    left: 289px;
+    top: 512px;
+    cursor: pointer;
+
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 344px;
+    height: 344px;
+    left: 0px;
+    top: 0px;
+    
+    background: #FE0000;
+    border: 10px solid #FF8989;
+    box-sizing: border-box;
+    border-radius: 172px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25);    
   }
 }
