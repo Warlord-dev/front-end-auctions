@@ -89,48 +89,52 @@ const DesignerList = () => {
   const canvasRef = useRef();
   const raf = useRef();
 
-  useEffect(async () => {
-    var bubbleImage = new Image();
-    var photoImages = Array(images.length)
-      .fill()
-      .map((item, index) =>  new Image());
-    
-    photoImages.map((item, index) => item.src = images[index].imageUrl)
-
-    const { digitalaxGarmentV2Collections } = await getCollectionV2ByIds(chainId, digitalIds);
-    var collections = Array(digitalaxGarmentV2Collections.length)
-      .fill()
-      .map((item, index) => {
-        const image = new Image();
-        image.src = digitalaxGarmentV2Collections[index].garments[0].image;
-        return image;
-      });
-    
-    photoImages = [...photoImages, ...collections];
-
-    const canvasObj = canvasRef.current;
-    const context = canvasObj ? canvasObj.getContext('2d') : null;
-
-    function draw() {
-      context.clearRect(0, 0, canvasObj.width, canvasObj.height);
-      designerCircles.forEach((item, index) => {
-        designerCircles[index].draw(context, bubbleImage, photoImages[index]);
-        designerCircles[index].move(canvasObj.width, canvasObj.height, designerCircles);
-      });
-      raf.current = window.requestAnimationFrame(draw);
+  useEffect(() => {
+    const initialize = async () => {
+      var bubbleImage = new Image();
+      var photoImages = Array(images.length)
+        .fill()
+        .map((item, index) =>  new Image());
+      
+      photoImages.map((item, index) => item.src = images[index].imageUrl)
+  
+      const { digitalaxGarmentV2Collections } = await getCollectionV2ByIds(chainId, digitalIds);
+      var collections = Array(digitalaxGarmentV2Collections.length)
+        .fill()
+        .map((item, index) => {
+          const image = new Image();
+          image.src = digitalaxGarmentV2Collections[index].garments[0].image;
+          return image;
+        });
+      
+      photoImages = [...photoImages, ...collections];
+  
+      const canvasObj = canvasRef.current;
+      const context = canvasObj ? canvasObj.getContext('2d') : null;
+  
+      function draw() {
+        context.clearRect(0, 0, canvasObj.width, canvasObj.height);
+        designerCircles.forEach((item, index) => {
+          designerCircles[index].draw(context, bubbleImage, photoImages[index]);
+          designerCircles[index].move(canvasObj.width, canvasObj.height, designerCircles);
+        });
+        raf.current = window.requestAnimationFrame(draw);
+      }
+  
+      function init() {
+        bubbleImage.src = '/images/squareframe.png';
+        designerCircles.forEach((item, index) => designerCircles[index].init(index));
+        window.cancelAnimationFrame(raf.current);
+        raf.current = window.requestAnimationFrame(draw);
+      }
+  
+      if (context) init();
+      return () => {
+        window.cancelAnimationFrame(raf.current);
+      };
     }
 
-    function init() {
-      bubbleImage.src = '/images/squareframe.png';
-      designerCircles.forEach((item, index) => designerCircles[index].init(index));
-      window.cancelAnimationFrame(raf.current);
-      raf.current = window.requestAnimationFrame(draw);
-    }
-
-    if (context) init();
-    return () => {
-      window.cancelAnimationFrame(raf.current);
-    };
+    initialize();
   }, []);
 
   return (

@@ -63,8 +63,6 @@ const LandingPage = () => {
     fetchCollectionGroups();
   }, []);
 
-  console.log({collectionGroups})
-
   return (
     <div className={styles.wrapper}>
       <HeroSection logo="/images/metaverse/marketplaceLogo.png" />
