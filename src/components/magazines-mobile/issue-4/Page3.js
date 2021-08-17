@@ -42,14 +42,23 @@ const Page3 = () => {
         <br />
         Aditya
       </p>   
-        <p className={styles.text6}>
+      <p className={styles.text6}>
         Ana Rivera
         <br />
         <br />
         Rafi 0x
         <br />
         <br />
-        Thakane/Takii
+        Thijmen Happy
+        <br />
+        <br />
+        Fabian Vogelsteller
+        <br />
+        <br />
+        Donald Iljazi 
+        <br />
+        <br />
+        xlvrbk
       </p>
       <p className={styles.text7}>
         OurZora 
@@ -58,21 +67,22 @@ const Page3 = () => {
         Web3 Fashion Week
         <br />
         <br />
-        Mirror.xyz
+        g.mirror.xyz
         <br />
         <br />
-        Strawberry Sith <br />
-        <br />
-        Pinata Cloud
+        Strawberry Sith
         <br />
         <br />
-        Lolli
+        Kyle Tut
+        <br />
+        <br />
+        Alex Adelman
       </p>
       <p className={styles.text8}>
         Charbakd
         <br />
         <br />
-        Jaymes 
+        Jaymes.eth 
         <br />
         <br />
         (Pirate Ape Yacht Club)
@@ -82,6 +92,60 @@ const Page3 = () => {
         <br />
         <br />
         BasedUser
+        <br />
+        <br />
+        Witek Radomski
+      </p>
+      <p className={styles.text9}>
+        Crypto Deevo
+        <br />
+        <br />
+        Blanc de Blanc
+        <br />
+        <br />
+        The Black Lab Studio
+        <br />
+        <br />
+        Unhueman
+        <br />
+        <br />
+        Xenotech
+        <br />
+        <br />
+        DOSC
+      </p>
+      <p className={styles.text10}>
+        Coleman Maher
+        <br />
+        <br />
+        Gabby Dizon
+        <br />
+        <br />
+        Jiho
+        <br />
+        <br />
+        Love Tomorrow
+        <br />
+        <br />
+        Maslennikov
+        <br />
+        <br />
+        3DNINJAH        
+      </p>
+      <p className={styles.text11}>
+        Paul Leath 
+        <br />
+        <br />
+        Christopher Leath
+        <br />
+        <br />
+        Arturo Garce
+        <br />
+        <br />
+        Glitched Face King
+        <br />
+        <br />
+        Global Designer Network        
       </p>
     </div>
   )

@@ -2,7 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 1497px;
+  height: 3215px;
   color: black;
   position: relative;
   overflow: hidden;
@@ -10,7 +10,7 @@
   .image1 {
     position: absolute;
     width: 375px;
-    height: 1497px;
+    height: 3215px;
     left: 0px;
     top: 0px;
     
@@ -95,17 +95,81 @@
   .text7 {
     position: absolute;
     width: 387px;
-    height: 336px;
-    left: -6px;
-    top: 1050px;
+    height: 303px;
+    left: -12px;
+    top: 1161px;
     
     font-family: Sweetly Broken;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
     line-height: 50%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 387px;
+    height: 480px;
+    left: -12px;
+    top: 1488px;
+    
+    font-family: Sweetly Broken;
+    font-size: 40px;
+    line-height: 50%;
     /* or 48px */
     
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text9 {
+    position: absolute;
+    width: 387px;
+    height: 288px;
+    left: 0px;
+    top: 1850px;
+    
+    font-family: Sweetly Broken;
+    font-size: 40px;
+    line-height: 50%;
+    /* or 48px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 387px;
+    height: 480px;
+    left: -2px;
+    top: 2250px;
+    
+    font-family: Sweetly Broken;
+    font-size: 40px;
+    line-height: 50%;
+    /* or 48px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 387px;
+    height: 288px;
+    left: -12px;
+    top: 2633px;
+    
+    font-family: Sweetly Broken;
+    font-size: 40px;
+    line-height: 50%;
     text-align: center;
     
     color: #FFFFFF;

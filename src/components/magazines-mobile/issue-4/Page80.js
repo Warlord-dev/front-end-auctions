@@ -1,32 +1,76 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useRef, useState }  from 'react'
+import Link from 'next/link'
 import styles from './page80.module.scss'
-import UnlockPage from '../common/UnlockPage'
 
 const Page80 = () => {
+  const audioRef = useRef()
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const startAudio = () => {
+    audioRef.current.play()
+    setIsPlaying(true)
+  }
+
+  const pauseAudio = () => {
+    audioRef.current.pause()
+    setIsPlaying(false)
+  }
+
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/89_90/image8.png" className={styles.image4}/>
-       <p className={styles.text1}>E-SPORTS PLAYER OF THE MONTH</p>
-      <p className={styles.text2}>NISHA</p>
-      <p className={styles.text3}>Polish player, Michał "Nisha" Jankowski, holds a top ranking in the Esports world. He’s known for his Dota 2 gaming talent, having risen with the surge of Team Kinguin, where Nisha first appeared at ESL One Katowice in 2018. He is now competing with Team Secret and considered one of the best in his class with wins across the PVP Esports Championships, Chongqing Major and MDL Disneyland Paris Major, ESL One Katowice. </p>
-      <p className={styles.text4}>metaverse ready score: 7</p>
-      <p className={styles.text5}>E-SPORTS RISING STAR OF THE MONTH</p>
-      <p className={styles.text6}>keria</p>
-      <img src="/magazine/3/images/89_90/image6.png" className={styles.image6}/>
-      <img src="/magazine/3/images/89_90/image7.png" className={styles.image7}/>
-      <p className={styles.text7}>metaverse ready score: 5</p>
-      <p className={styles.text8}>19 year old South Korean League of Legends player Keria (Ryu Min-seok), has been a force to be reckoned with since he came out of DragonX with a move to the main roster in 2019, at just 17 years of age. Since then he’s continued to prove himself on T1 as one of their best young supports making up the bottom lane, as the entire team raises expectations for the upcoming Worlds. </p>
-      <p className={styles.text10}>WILD tour brazil</p>
-      <p className={styles.text11}>Riot has announced their regional  competitive circuit for Wild Rift with Wild Tour Brazil. It’s another avenue for esports competitors to the global stage as the tournament circuit begins with four open qualifiers that culminate not only in the Wild Rift Tour finale but also a chance for a slot in the inaugural Wild Rift World Championship 2021.
-<br/><br/>
-Brazil was one of the countries that Riot picked to launch its Wild Rift alpha testing last year, and since then a strong mobile MOBA gaming community has been formed. It only makes the case more interesting and compelling for Play to Earn models and the idea of decentralising access to esports as the prize money on offer (US$11,000/R$55,000) has many chasing for a slot in the qualifiers. 
-<br/><br/>
-If these communities could start truly earning a steady and sustainable livelihood through play, bettering their lives in </p>
-      <p className={styles.text12}>Weplay on binance</p>
-      <p className={styles.text13}>Esports media holding company WePlay Esports is set to go live with their first NFT launch on the Binance NFT marketplace. Is this set of collectibles part of a bigger shift for the entire esports industry? </p>
-      <p className={styles.text14}>Fsports  fashion week</p>
-      <p className={styles.text15}>Esports’ close ties with celebrity and influencer culture just got closer, where Esports Fashion Week announced their latest partnership with Ford Models for fertilising personal brand building amongst pro gamers and their large fan bases. Whether or not social tokens is a next step after this remains unknown for now. However, either way, it’s definitely becoming apparent to many the need for more efficient and lucrative tools in building strengthened and aligned communities— maybe it’s an agency doing that work for now, but soon, don’t be surprised if the mechanics are automated by a few lines of Solidity.  </p>
+      <img src='/magazine/4/images/8788_image1_mobile.png' className={styles.image1} />
+      <img src='/magazine/4/images/8788_image3.png' className={styles.image2} />
+
+      <Link href='https://github.com/Heapons'>
+        <a target='_blank'>
+          <div className={styles.text1}>
+            Heapons Returns With An OG SoundTrack + the Story of Serider.         
+          </div>
+          <div className={styles.text2}>
+            Heapons Returns With An OG SoundTrack + the Story of Serider.         
+          </div>
+        </a>
+      </Link>
+      
+      <Link href='https://discord.gg/nUfHJX2yEF'>
+        <a target='_blank'>
+          <div className={styles.text3}>
+            Heapons on founding Serider
+          </div>
+        </a>
+      </Link>
+      <div className={styles.text4}>
+        Did it ever happen to you, to complain about a company, like, "do they even listen to us?", "man, I wish they did this" well. 
+
+        I want to satisfy people who think like that. I want to push my imagination to its limits, and eventually give people what they'd need/enjoy and listen to them, of course. one another goal of mine was to provide resources to people whether because they need to conveniently find everything they may need in one place or because they just can't access them and thus, The Ultimate Resources Kit was born:
+      </div>
+      <Link href='https://github.com/Serider-Team/The-Ultimate-Resources-Kit'>
+        <a target='_blank'>
+          <div className={styles.text5}>
+            ULTIMATE RESOURCE KIT
+          </div>
+        </a>
+      </Link>
+      <div className={styles.text6}>
+        <span>Open Source Gaming</span><br />
+        I'm always down for sharing knowledge and power. Like, in the remixing community, people's main argument for not sharing project files is "but there are people who never put any effort in their content, and we want to avoid the plague" but what I think is that it's inevitable you can't just restrict genuine people from making a good use of it, whenever possible, at least
+      </div>
+
+      <button 
+        className={[styles.playButton, isPlaying ? styles.isPlaying : ''].join(' ')}
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio()
+        }}
+      >
+        {
+          <img src={`./magazine/4/images/8788_${isPlaying ? 'pausebutton' : 'playbutton'}.png`} />
+        }
+        
+      </button>
+
+      <audio ref={audioRef} loop>
+        <source src='./magazine/4/sounds/8788_sound1.mp3' type='audio/mpeg' />
+      </audio>
     </div>
   )
 }
