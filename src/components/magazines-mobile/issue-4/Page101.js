@@ -1,34 +1,24 @@
 import React from 'react'
 import styles from './page101.module.scss'
-import Link from 'next/link';
 
 const Page101 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/111_112/image7.png" className={styles.image1}/>
-     <div className={styles.image5}>
-        <video className={styles.image6} muted loop autoPlay>
-            <source src="./magazine/3/images/111_112/video1.mp4" type="video/mp4" />
-          </video>
+      <div className={styles.text1}>
+        The house always wins. 
+        <br /><br />
+        Designing a system that guarantees net profit regardless of external conditions or outcomes is not something that only the gambling houses can pull off. Sure, Sheldon Adelson might have gone into the game from a predatory casino perspective, leveraging human desire for generating countless derechos of devastation. But, we too can become the house— the house of our own lives— and, instead of wreaking destruction, we can rather inflate positive delta that is instrumentally valuable and tremendously gainful.
+        <br /><br />
+        Having a mastery over the meta-game means that we don’t need to know or get caught up in the volatility of the slot machines, the stack height of our chips, or the slight hand of the dealers. We can feel our own reality to play our own game. If we know our meta-how and have enough fluidity to dance with dynanism then we can map the catalysts and deltas to themselves. We can create a Y Combinator of positive cascades in each of our own lives for ensuring a net profit, no matter the situation or context. 
+        <br /><br />
+        And, in order to make this a truth, in order to win, we must maintain ownership of ourselves. Only when we play our own game are we positioning ourselves for guaranteed yield. We can turn the gears that propel stimulating change. Knowing our meta so well that we don’t need to get locked into one idea or scramble for frame control. 
+        <br /><br />
+        In fact, it’s not about control, it’s about ownership– very different. We must embrace giving away control of everything else around us. Because, ultimately, we don’t have control of anything, only ourselves. And if we establish the soundness and antifragility of our own model then we can start earlier, start well ahead. We can continue to play our own game and become damn good at it.
+        <br /><br />
+        We all have what it takes to win, but so many of us fall into the myth of pioneering. Anyone can do what it takes, but only very few decide to actually do it. My desire is to actually do it. To make sure I have ownership of myself above all else, to play my own game. Because only then can I commit to warranting impactful yield for all those that too desire to be their own house. 
       </div>
-      <img src="/magazine/3/images/111_112/image4.png" className={styles.image9}/>
-      <p className={styles.text10}>NFT CLOTHING</p> 
-      <p className={styles.text11}>NFT CLOTHING</p> 
-      <div className={styles.image12}></div>
-      <p className={styles.text12}>Clothing, especially interoperable digital clothing, is a key aspect of the Open-Metaverse. Currently there are so many barriers faced by people who wish to create digital clothing. It requires an investment in a decent computer, as well as dedicated time to learning 3D modeling programs like CLO3D and Blender. There should be a dedicated simple 3D modeling interface that would allow users (without 3D experience) to easily create custom digital clothing garments based on open-sourced templates and patterns that could then be minted as NFTs and accessible within the virtual world in a few clicks. By making the experience simple and intuitive it would introduce a whole new class of digital fashion designers / brands who previously lacked access or skills regarding 3D programs.</p> 
-      <div className={styles.image13}></div>
-      <p className={styles.text13}>For a designer or brand, ideally the journey could be as simple as: 
-<br/><br/>
-1. selecting a open-sourced pre-designed garment template (blank shirt, hoodie, pants, shoes, etc...) <br/>
-2. customizing the garment with their own graphics, materials, textures. <br/>
-3. minting the garment as an NFT directly in the interface.<br/>
-4. displaying the garment for sale inside of the digital clothing retail space (NFT land)</p> 
-      <img src="/magazine/3/images/111_112/image5.png" className={styles.image14}/>
-      <img src="/magazine/3/images/111_112/image6.png" className={styles.image15}/>
-      <div className={styles.image16}>
-        <video className={styles.image17} muted loop autoPlay>
-            <source src="./magazine/3/images/111_112/video3.mp4" type="video/mp4" />
-          </video>
+      <div className={styles.text2}>
+        - Emma-Jane MacKinnon-Lee
       </div>
     </div>
   )

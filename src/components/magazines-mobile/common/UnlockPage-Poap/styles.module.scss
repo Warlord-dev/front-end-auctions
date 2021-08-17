@@ -20,8 +20,6 @@
   font-weight: bold;
   font-size: 30px;
   line-height: 120.53%;
-  /* or 36px */
-  
   text-align: center;
   
   color: #FFFFFF;
@@ -35,12 +33,8 @@
   top: 614px;
   
   font-family: Courier;
-  font-style: normal;
-  font-weight: normal;
   font-size: 15px;
   line-height: 120.53%;
-  /* or 18px */
-  
   text-align: center;
   
   color: #FFFFFF; 
@@ -73,6 +67,7 @@
     background: rgba(145, 50, 113, 1); 
   }
 }
+
 .badge {
   position: absolute;
   width: 139px;
@@ -80,6 +75,7 @@
   left: 214px;
   top: 889px;
 }
+
 .arrow {
   position: absolute;
   width: 80px;
@@ -88,6 +84,7 @@
   top: 875px;
   transform: rotate(-90deg);
 }
+
 .bottom {
   position: absolute;
   width: 375px;
@@ -97,10 +94,29 @@
   
   background: rgba(145, 0, 113, 0.8);
 }
+
 .bottom_text {
   position: absolute;
   width: 204px;
   height: 115px;
   left: 100px;
   top: 1149px;
+}
+
+.text1 {
+  position: absolute;
+  width: 203.74px;
+  height: 115px;
+  left: 100.26px;
+  top: 1149px;
+
+  font-family: Courier;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 120.53%;
+  text-align: center;
+  
+  color: #FFFFFF;
+  text-shadow: -0.5px -0.5px #00FFF0;
 }

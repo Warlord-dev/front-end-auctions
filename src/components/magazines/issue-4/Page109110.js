@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './page109110.module.scss'
-import UnlockPage from '../common/UnlockPage-Three'
+import UnlockPage from '../common/UnlockPage-Poap'
 import { useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
 

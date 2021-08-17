@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './page91.module.scss'
-import Link from 'next/link';
-import UnlockPage from '../common/UnlockPage-Three';
+import Link from 'next/link'
+import UnlockPage from '../common/UnlockPage-Poap'
 import Router, { useRouter } from 'next/router'
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux'
 
 const Page91 = () => {
  

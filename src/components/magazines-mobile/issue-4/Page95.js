@@ -1,29 +1,33 @@
 import React from 'react'
 import styles from './page95.module.scss'
-import Link from 'next/link';
 
 const Page95 = () => {
   return (
     <div className={styles.wrapper}>
-     <img src="/magazine/3/images/107_108/image2.png" className={styles.image1}/>
-      <div className={styles.image3}></div>
-      <p className={styles.text4}>You don’t need millions of dollars to “get into” DeFi. No high finance apparatchik is going to turn you down because you have a bad credit score or because you aren’t “worthy enough” to be given the privilege of being served  (“As cold as a banker’s heart” isn’t an idiomatic expression for nothing.)
-<br/><br/>
-Granted, basic financial literacy is always a plus—but not a hard-and-fast prerequisite to participate in this exciting new financial paradigm.
-<br/><br/>
-And one of the best ways to get started with DeFi is to understand how it distinguishes itself from its brother, centralized finance (CeFi)—the long-standing, bloated, and rigid financial framework that DeFi is in the process of disrupting. And with $55 billion in total locked value as of this writing (and growing), it is perhaps high time we shed some light on this aspect of DeFi. 
-<br/><br/>
-A brief history of CeFi<br/>
-Financial transactions we would have otherwise called “banking” have always been around ever since the first known form of human currency was recorded in history. Since then, banking has grown into an unbridled economic force driven by big finance—the gargantuan institutions that serve individuals or provide loans to a country teetering on economic breakdown.
-<br/><br/>
-But as with any industry, centralization paralyzes customers who are left at the mercy of gatekeepers lacking transparency. This leaves them without the security they need to empower themselves to take control of their own wealth and welfare. 
-<br/><br/>
-It is ultimately this excessively centralized, immobilizing structure, one that’s experiencing rapidly decelerating trust in—one that DeFi seeks to change.
-<br/><br/>
-How does DeFi work?<br/>
-DeFi has no formal dictionary definition, so to speak, but in general, it involves leveraging the blockchain to support credit functions, loans, borrowing, lending, and enable auctions; to trade in esoteric derivatives; to trade crypto assets against each other, or to engage in novel iterations of insurance. The potential profit opportunities arising from DeFi lie largely in part due to the disintermediation of traditional finance, including their exorbitant fees and its soviet regulations.
-<br/><br/>
-In a nutshell, smart contracts on the blockchain are what power decentralized finance, allowing for the creation of layers upon layers of complex, synergistic transaction systems. </p> 
+      <img className={styles.image1} src='./magazine/4/images/103104_image1.png' />
+      <img className={styles.image2} src='./magazine/4/images/103104_image2.png' />
+      <img className={styles.image3} src='./magazine/4/images/103104_image3_mobile.png' />
+
+      <img className={styles.image4} src='./magazine/4/images/103104_image4.png' />
+      <img className={styles.image5} src='./magazine/4/images/103104_image4.png' />
+      <img className={styles.image6} src='./magazine/4/images/103104_image4.png' />
+      <img className={styles.image7} src='./magazine/4/images/103104_image4.png' />
+      <img className={styles.image8} src='./magazine/4/images/103104_image4.png' />
+      <img className={styles.image9} src='./magazine/4/images/103104_image4.png' />
+
+      <img className={styles.image10} src='./magazine/4/images/107108_image1_mobile.png' />
+      <div className={styles.text1}>
+        The breadth and depth with which Amazon has pervaded modern life—and its preeminent status as the undisputed alpha of Commerce 2.0—is unprecedented in the long, rich, and glorious history of good ol’ ‘Murican-style capitalism.
+        <br /><br />
+        It’s absurd to think that one man controls 40% of e-commerce in an entity as vast as the United States. Amazon’s advertising business is bigger than the entirety of Big Blue—IBM—combined. 
+        <br /><br />
+        Indeed, online retail giants like Amazon and Alibaba—Web and Commerce 2.0 monopolies unto themselves—have become part and parcel of modern political and economic discourse due to the scope with which they impact economic and industrial policy, apart from concerns about overreach in privacy, corporate malfeasance, and anti-competitive behaviour.        
+      </div>
+      <div className={styles.text2}>
+        It’s no surprise why these monolithic entities and the virtual totalitarian dictatorships that they are—Big Tech—have caught the glare of another: Big Government.
+        <br /><br />
+        Nevertheless, the ongoing travails of the Googles, Apples, and Ubers of the world have brought back the focus on the draconian policies, varying hurdles to jump through to use the platform, unethical labour practices, unfair compensation, and wanton disregard for the environment that govern such         
+      </div>
     </div>
   )
 }

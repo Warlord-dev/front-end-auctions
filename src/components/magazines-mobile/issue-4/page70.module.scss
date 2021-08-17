@@ -2,7 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 2613px;
+  height: 3366px;
   background-color: #A368FF;
   color: white;
   position: relative;
@@ -208,5 +208,208 @@
     height: 108px;
     left: 211px;
     top: 43px;
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 319px;
+    height: 323px;
+    left: -29px;
+    top: 109px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.28);    
+  }
+
+  .circle2 {
+    position: absolute;
+    width: 597px;
+    height: 565px;
+    left: -52px;
+    top: 409px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.28);
+  }
+
+  .circle3 {
+    position: absolute;
+    width: 789px;
+    height: 789px;
+    left: -176px;
+    top: 934px;
+    border-radius: 50%;  
+    background: rgba(0, 0, 0, 0.28);    
+  }
+
+  .circle4 {
+    position: absolute;
+    width: 789px;
+    height: 789px;
+    left: -194px;
+    top: 1665px;
+    border-radius: 50%;    
+    background: rgba(0, 0, 0, 0.28);
+  }
+
+  .circle5 {
+    position: absolute;
+    width: 943px;
+    height: 943px;
+    left: -271px;
+    top: 2423px;
+    border-radius: 50%;    
+    background: rgba(0, 0, 0, 0.28);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 247px;
+    height: 210px;
+    left: 15px;
+    top: 173px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 282px;
+    height: 168px;
+    left: 53px;
+    top: 487px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 313px;
+    height: 252px;
+    left: 53px;
+    top: 644px;
+    
+    font-family: Bangla MN;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 327px;
+    height: 252px;
+    left: 37px;
+    top: 991px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text5 {
+    position: absolute;
+    width: 327px;
+    height: 154px;
+    left: 37px;
+    top: 1227px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;        
+  }
+
+  .text6 {
+    position: absolute;
+    width: 299px;
+    height: 280px;
+    left: 37px;
+    top: 1364px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 292px;
+    height: 280px;
+    left: 33px;
+    top: 1732px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text8 {
+    position: absolute;
+    width: 317px;
+    height: 378px;
+    left: 33px;
+    top: 2023px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 291px;
+    height: 728px;
+    left: 37px;
+    top: 2493px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+
+    color: #FFFFFF;
+
+    span {
+      font-weight: bold;
+    }
   }
 }

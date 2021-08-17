@@ -3,8 +3,7 @@
 .wrapper {
   @include magazineWrapper();
 
-  height: 2653px;
-  overflow: hidden;
+  height: 2745px;
   background-color: #000000;
   color: white;
   display: flex;
@@ -12,32 +11,113 @@
 
   .image1 {
     position: absolute;
-    width: 375px;
-    height: 2653px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
+    width: 146px;
+    height: 2745px;
   }
+
+  .image2 {
+    position: absolute;
+    width: 678px;
+    height: 2757px;
+    left: 145px;
+    top: -12px;
+  }
+
   .image3 {
     position: absolute;
-    width: 308px;
-    height: 2552px;
-    left: 33px;
-    top: 70px;
-    
-    background: #E93504;
+    width: 375px;
+    height: 1010px;
+    left: 0px;
+    top: 0px;    
   }
-  .text4 {
+
+  .image4 {
     position: absolute;
-    width: 245px;
-    height: 1119px;
-    left: 65px;
-    top: 129px;
+    width: 106px;
+    height: 194px;
+    left: 19px;
+    top: 774px;    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 106px;
+    height: 194px;
+    left: 19px;
+    top: 1006px;    
+  }
+
+  .image6 {
+    position: absolute;
+    width: 106px;
+    height: 194px;
+    left: 19px;
+    top: 1238px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 106px;
+    height: 194px;
+    left: 19px;
+    top: 1464px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 106px;
+    height: 194px;
+    left: 19px;
+    top: 1687px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 106px;
+    height: 194px;
+    left: 19px;
+    top: 1903px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 375px;
+    height: 214px;
+    left: 0px;
+    top: 2531px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 211px;
+    height: 434px;
+    left: 150px;
+    top: 791px;
     
-    font-family: Roboto;
+    font-family: Inter;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 27px;
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 358px;
+    height: 434px;
+    left: 9px;
+    top: 2109px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
     text-align: center;
     
     color: #FFFFFF;
