@@ -199,7 +199,6 @@ const LandingPage = () => {
           <video autoPlay muted loop className={styles.liveArea}>
             <source src="/images/metaverse/Web Fashion Week.mp4" type="video/mp4" />
           </video>
-          {/* <img className={styles.liveArea} src="/images/liveArea.png" /> */}
         </span>
       </section>
     </div>
