@@ -17,6 +17,7 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
 
   useEffect(() => {
     if (product?.endTime && product.rarity === 'Exclusive') {
+      getTimeFormat();
       setInterval(() => {
         getTimeFormat();
       }, 60000);
@@ -36,13 +37,11 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
     if (timeStamp > product.endTime * 1000) {
       return ;
     } else {
-      const offset = - (product.endTime * 1000 - timeStamp);
+      const offset = (product.endTime * 1000 - timeStamp);
       const days = parseInt(offset / 86400000);
       const hours = parseInt((offset % 86400000) / 3600000);
       const minutes = parseInt((offset % 3600000) / 60000);
       setTime(`${`00${days}`.slice(-2)}:${`00${hours}`.slice(-2)}:${`00${minutes}`.slice(-2)}`);
-      setHours(`00${hours}`.slice(-2));
-      setMinutes(`00${minutes}`.slice(-2));
     }
   }
 

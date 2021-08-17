@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FashionImageCard from '@components/fashion-image-card';
-import DescriptionCard from '@components/description-card';
-import BannerButton from '@components/buttons/bannerbutton';
 import styles from './styles.module.scss';
-import { getRarityId } from '@utils/helpers';
 
-const ProductCard = ({ products, rarity, leftImage, item }) => {
-  const [selected, setSelected] = useState(0);
-
+const FashionCard = ({ leftImage, item, image }) => {
   return (
     <div className={styles.wrapper}>
       {leftImage &&
@@ -15,7 +10,7 @@ const ProductCard = ({ products, rarity, leftImage, item }) => {
         <div className={styles.imageCardWrapper}>
 
           <div className={styles.imageInnerWrapper}>
-            <FashionImageCard blue={false} libon={getRarityId(rarity)} data={products[selected]} />
+            <FashionImageCard videoUrl={image} />
           </div>
           
         </div>
@@ -45,7 +40,7 @@ const ProductCard = ({ products, rarity, leftImage, item }) => {
         <div className={styles.imageCardWrapper}>
 
           <div className={styles.imageInnerWrapper}>
-            <FashionImageCard blue={false} libon={getRarityId(rarity)} data={products[selected]} />
+            <FashionImageCard videoUrl={image} />
           </div>
           
         </div>
@@ -55,4 +50,4 @@ const ProductCard = ({ products, rarity, leftImage, item }) => {
   );
 };
 
-export default ProductCard;
+export default FashionCard;

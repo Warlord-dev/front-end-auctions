@@ -33,12 +33,12 @@ const Product = () => {
   const [days, setDays] = useState('00');
   const [hours, setHours] = useState('00');
   const [minutes, setMinutes] = useState('00');
-  const [fashionData, setFashionData] = useState([
+  const fashionData = [
     {
       title: 'DeFi Staking Functionality',
       description: `All NFTs can be staked in the DIGITALAX NFT Staking Contracts on Polygon for $MONA yield. This forms part of the broader Fashion x DeFi merger that DIGITALAX has undertaken to bring greater utility to metaversal fashion and also welcome multitudes more into web3 and DeFi. 
 
-      What if you could earn more from what you wear? Wear to DeFi lets you put your fashion to work for you. We are melting the centralised exploitative crown to weave the fabric of a generative ecosystem.
+      What if you could earn more from what you wear? Wear to DeFi lets you put your fashion to work for you. We are melting the centralised exploitative crown to weave the fabric of a generative ecosystem.      
       `
     },
     {
@@ -46,8 +46,8 @@ const Product = () => {
       description: `With every NFT enjoy a custom unique PFP Collectible Avatar that can be taken into The First Dungeon— an open source 2D battle royale game developed by Thijmen Happy. The game is launching through DIGITALAX’s ESPA esports platform mid September. 
 
       Take your character in-game to engage in The First Dungeon casual esports battles, rank on the leaderboard and earn $MONA as you level up from 0 to 1.  
-
-      See more about The First Dungeon here. `
+      
+      See more about The First Dungeon here. Your collectible is airdropped to you within 12 hours of purchase. `
     },
     {
       title: '3D Model FBX File Included',
@@ -58,8 +58,16 @@ const Product = () => {
       description: `Fractional Garment Ownership (FGO) sets forth the standard and dress code for the manufacture of digital fashion along the content supply chain. FGO leverages ERC Protocol standards across the Ethereum Blockchain and Polygon (Matic Network) for breaking down a master ERC-721 digital garment into its programmable and composable ERC-1155 elements of materials, patterns and textures.
 
       Here, we are using a variant on the ERC-998 standard, where each ERC-721 token can hold a balance of ERC-1155 NFTs. We coin this respectively the Parent and Child NFTs. This allows for other designers to leverage off of the open source digital libraries, incorporating the patterns, materials and textures into their master garments.`
-      },
-  ]);
+    },
+    {
+      title: 'DressX Try On Functionality',
+      description: `Take your digital fashion item and wear across the social media metaverse. DressX’s try on technology allows you to overlay your digital fashion itme onto a photo of your choosing. It’s the outift that doesn’t exist— physically at least! `
+    },
+    {
+      title: 'Decentraland In-Game Digital Fashion Outfit',
+      description: `Exclusive W3FW Decentraland In-Game Digital Fashion Memorabilia Bomber Jacket! View it also through the DressX AR Try On filter and head over to DRIP to purchase the physical varsity jacket version to rep IRL!`
+    }
+  ];
 
   useEffect(() => {
     if (id) {
@@ -110,6 +118,7 @@ const Product = () => {
 
   useEffect(() => {
     if (product?.endTime) {
+      getTimeFormat();
       setInterval(() => {
         getTimeFormat();
       }, 60000);

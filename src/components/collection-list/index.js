@@ -3,7 +3,7 @@ import Container from '@components/container';
 import React from 'react';
 import styles from './styles.module.scss';
 
-const CollectionList = ({ items, isBundle = false }) => {
+const CollectionList = ({ items }) => {
   return (
     <>
       <div className={styles.wrapper}>
@@ -16,9 +16,9 @@ const CollectionList = ({ items, isBundle = false }) => {
               </video>
               <Container>
                 <div className={styles.body}>
-                  <CollectionCard collection={items[index]} isBundle={isBundle} />
+                  <CollectionCard collection={items[index]} />
                   {index + 1 < items.length ? (
-                    <CollectionCard collection={items[index + 1]} isBundle={isBundle} />
+                    <CollectionCard collection={items[index + 1]} />
                   ) : null}
                 </div>
               </Container>

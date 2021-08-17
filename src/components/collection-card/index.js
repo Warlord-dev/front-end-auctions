@@ -3,14 +3,14 @@ import React from 'react';
 import CollectionInfoCard from './collection-info-card';
 import styles from './styles.module.scss';
 
-const CollectionCard = ({ collection, isBundle = false }) => {
+const CollectionCard = ({ collection }) => {
   return (
     <>
       <div className={styles.wrapper}>
         <div className={styles.title}>{collection?.name}</div>
         <div className={styles.designerWrapper}>
           <img src={collection?.designer?.image} />
-          <div className={styles.name}> {collection?.designer.name} </div>
+          <div className={styles.name}> {collection?.designer?.name} </div>
         </div>
         <div className={styles.imageWrapper}>
           <div className={styles.image}>
@@ -22,7 +22,7 @@ const CollectionCard = ({ collection, isBundle = false }) => {
             </video>
           </div>
         </div>
-        <CollectionInfoCard collection={collection} isBundle={isBundle} />
+        <CollectionInfoCard collection={collection} />
       </div>
     </>
   );

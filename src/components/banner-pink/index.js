@@ -4,6 +4,7 @@ import DescriptionCard from '@components/description-card';
 import BannerButton from '@components/buttons/bannerbutton';
 import styles from './styles.module.scss';
 import { getRarityId } from '@utils/helpers';
+import Link from 'next/link';
 
 const ProductCard = ({ products, rarity }) => {
   const [selected, setSelected] = useState(0);
@@ -34,8 +35,12 @@ const ProductCard = ({ products, rarity }) => {
           
         </div>
         <div className={styles.descriptionWrapper}>
-          <img src="/images/metaverse/digital-fashion.png" className={styles.heroImage} />
-          <BannerButton text='SHOP digital WEB3 FASHION'/>
+          <Link href="/marketplace">
+            <div>
+              <img src="/images/metaverse/digital-fashion.png" className={styles.heroImage} />
+              <BannerButton text='SHOP digital WEB3 FASHION'/>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

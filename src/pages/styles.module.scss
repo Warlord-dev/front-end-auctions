@@ -9,7 +9,7 @@
   .heroSection {
     position: relative;
     text-align: center;
-    margin-top: 87px;
+    margin-top: 76px;
     overflow: hidden;
     .heroSectionLink {
       color: white;
@@ -611,8 +611,8 @@
     padding-top: 264px;
 
     .imgTitleWeekNtfs {
-        width: 80%;
-      }
+      width: 80%;
+    }
 
     .imgWrapperWeekNtfs {
       box-sizing: border-box;
@@ -635,7 +635,7 @@
         width: 25%;
       }
 
-      img{
+      img {
         width: 100%;
         @include xs-width {
           width: 100% !important;

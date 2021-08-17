@@ -2,9 +2,12 @@ import React, { memo, useEffect, useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { getAllDesignerIDs } from '@selectors/designer.selectors';
 import styles from './styles.module.scss';
+import physicals from '../../data/drip.json';
+import { getCollectionV2ByIds } from '@services/api/apiService';
+import { getChainId } from '@selectors/global.selectors';
 
 const canvasWidth = 1920;
-const canvasHeight = 1927;
+const canvasHeight = 1000;
 const bubbleSize = 400;
 const photoSize = 340;
 
@@ -31,9 +34,6 @@ const designerCircle = {
     )
       return;
 
-    // if (photoImg) {
-    //   ctx.drawImage(photoImg, this.x - photoSize / 2, this.y - photoSize / 2, photoSize, photoSize);
-    // }
     ctx.drawImage(
       bubbleImg,
       this.x - bubbleSize / 2,
@@ -41,6 +41,9 @@ const designerCircle = {
       bubbleSize,
       bubbleSize,
     );
+    if (photoImg) {
+      ctx.drawImage(photoImg, this.x - (photoSize - 30) / 2, this.y - (photoSize - 30) / 2, photoSize - 30, photoSize - 30);
+    }
   },
 
   move: function (width, height, list) {
@@ -77,40 +80,33 @@ const designerCircle = {
 };
 
 const DesignerList = () => {
-  const designers = useSelector(getAllDesignerIDs());
-  const [designerCircles, setDesignerCircles] = useState(
-    Array(designers.size)
+  const images = physicals;
+  const chainId = useSelector(getChainId);
+  const digitalIds = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
+  const designerCircles = Array(images.length + 9)
       .fill()
-      .map((item) => Object.assign({}, designerCircle)),
-  );
+      .map((item) => Object.assign({}, designerCircle));
   const canvasRef = useRef();
   const raf = useRef();
 
-  useEffect(() => {
+  useEffect(async () => {
     var bubbleImage = new Image();
-    var photoImages = Array(designers.size)
+    var photoImages = Array(images.length)
       .fill()
-      .map((item) => new Image());
+      .map((item, index) =>  new Image());
+    
+    photoImages.map((item, index) => item.src = images[index].imageUrl)
 
-    Promise.all(
-      designers.map((designer) => {
-        return fetch(`https://digitalax.mypinata.cloud/ipfs/${designer.CID}`).then((response) =>
-          response.json(),
-        );
-      }),
-    ).then((designerInfos) => {
-      designerInfos.map((item, index) => {
-        const designerInfo = designers.get(index);
-
-        photoImages[index].src =
-          designerInfo && designerInfo.photo ? `/images/${designerInfo.photo}` : item.image_url;
-        return {
-          src: item.image_url,
-          width: 100,
-          height: 100,
-        };
+    const { digitalaxGarmentV2Collections } = await getCollectionV2ByIds(chainId, digitalIds);
+    var collections = Array(digitalaxGarmentV2Collections.length)
+      .fill()
+      .map((item, index) => {
+        const image = new Image();
+        image.src = digitalaxGarmentV2Collections[index].garments[0].image;
+        return image;
       });
-    });
+    
+    photoImages = [...photoImages, ...collections];
 
     const canvasObj = canvasRef.current;
     const context = canvasObj ? canvasObj.getContext('2d') : null;

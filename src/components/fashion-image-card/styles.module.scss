@@ -4,6 +4,10 @@
   width: 100%;
   margin: auto;
 
+  .image {
+    width: 100%;
+  }
+
   @include sm-width {
     width: 400px;
 
@@ -67,26 +71,12 @@
     }
   }
 
-  // .name {
-  //   position: relative;
-  //   color: white;
-  //   font-family: Gilroy;
-  //   font-style: normal;
-  //   font-weight: 800;
-  //   font-size: 36px;
-  //   line-height: 44px;
-  //   margin-bottom: 1rem;
-  //   margin-left: 2rem;
-  //   width: calc(100% - 4rem);
-  // }
-
-
-  .bodyWrapper{
+  .bodyWrapper {
     position: relative;
     padding: 2rem;
     border: 2px solid #ffffff;
-    box-shadow: inset 0px 0px 30px 20px rgba(255, 255, 255, .6),
-      0px 0px 30px 20px rgba(255, 255, 255, .6);
+    box-shadow: inset 0px 0px 30px 20px rgba(255, 255, 255, 0.6),
+      0px 0px 30px 20px rgba(255, 255, 255, 0.6);
 
     .libon {
       position: absolute;
@@ -98,6 +88,11 @@
 
     .video {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     .image {

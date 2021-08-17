@@ -66,7 +66,8 @@ class BidActions extends BaseActions {
     return async (_, getState) => {
       const account = getState().user.get('account');
       const chainId = getState().global.get('chainId');
-      const auctionContractAddress = getState().global.get('auctionContractAddress');
+      const network = getEnabledNetworkByChainId(chainId);
+      const auctionContractAddress = config.AUCTION_CONTRACT_ADDRESS[network.alias];
       const monaContractAddress = await getMonaContractAddressByChainId(chainId);
       const monaContract = await getMonaTokenContract(monaContractAddress);
       const allowedValue = await monaContract.methods

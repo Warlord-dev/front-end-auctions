@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 
-const CollectionInfoCard = ({ collection, isBundle = false }) => {
+const CollectionInfoCard = ({ collection }) => {
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
 
@@ -18,7 +18,7 @@ const CollectionInfoCard = ({ collection, isBundle = false }) => {
         mainColor="rgba(189, 61, 169, 0.47)"
       >
         <div className={styles.cardBodyWrapper}>
-          <Link href={!isBundle ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
+          <Link href={collection?.isAuction ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
             <a className={styles.link}>
               view collection
               <img src="./images/metaverse/right-arrow-pink.png" />

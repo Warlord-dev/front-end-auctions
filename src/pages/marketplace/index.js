@@ -15,9 +15,8 @@ import HeroSection from '@components/hero-section';
 
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
-  const router = useRouter();
   const [collectionGroups, setCollectionGroups] = useState([]);
-  const [bundleGroups, setBundleGroups] = useState([]);
+  const [auctionsGroups, setAuctionGroups] = useState([]);
 
   useEffect(() => {
     const fetchCollectionGroups = async () => {
@@ -27,8 +26,8 @@ const LandingPage = () => {
       );
       globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth));
 
-      let collections = [],
-        bundles = [];
+      let collections = []
+      let auctions = []
       digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
         const collectionPrice = digitalaxCollectionGroup.collections.reduce(
           (a, b) => a + Number(b.valueSold),
@@ -38,35 +37,33 @@ const LandingPage = () => {
           (a, b) => a + Number(b.topBid),
           0,
         );
-        const bundlePrice = digitalaxCollectionGroup.digiBundle.valueSold;
-        collections.push({
-          ...digitalaxCollectionGroup.collections[0].garments[0],
-          designer: digitalaxCollectionGroup.collections[0].designer,
-          id: digitalaxCollectionGroup.id,
-          sold: (collectionPrice + auctionPrice) / 1e18,
-        });
-        bundles.push({
-          ...digitalaxCollectionGroup.digiBundle.garments[0],
-          productId: digitalaxCollectionGroup.digiBundle.id,
-          designer: digitalaxCollectionGroup.digiBundle.designer,
-          id: digitalaxCollectionGroup.id,
-          sold: bundlePrice / 1e18,
-        });
+        if (digitalaxCollectionGroup.collections.length && digitalaxCollectionGroup.collections[0].id !== '0') {
+          collections.push({
+            ...digitalaxCollectionGroup.collections[0].garments[0],
+            designer: digitalaxCollectionGroup.collections[0].designer,
+            id: digitalaxCollectionGroup.id,
+            sold: (collectionPrice + auctionPrice) / 1e18,
+            isAuction: false,
+          });
+        }
+        if (digitalaxCollectionGroup.auctions.length && digitalaxCollectionGroup.auctions[0].id !== '0') {
+          auctions.push({
+            ...digitalaxCollectionGroup.auctions[0].garment,
+            designer: digitalaxCollectionGroup.auctions[0].designer,
+            id: digitalaxCollectionGroup.id,
+            sold: (collectionPrice + auctionPrice) / 1e18,
+            isAuction: true
+          });
+        }
       });
       setCollectionGroups(collections);
-      setBundleGroups(bundles);
+      setAuctionGroups(auctions);
     };
 
     fetchCollectionGroups();
   }, []);
 
-  const structuredData = {
-    '@context': 'http://schema.org',
-    '@type': 'Skins Landing page',
-    title: 'Digitalax - Web3 Fashion Economy',
-    description:
-      'Take your digital fashion skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game. ESPA is the first casual esports platform, with direct integration with DIGITALAX NFT skins on Matic Network. ',
-  };
+  console.log({collectionGroups})
 
   return (
     <div className={styles.wrapper}>
@@ -75,9 +72,7 @@ const LandingPage = () => {
       <section className={styles.collectionSection}>
         <div className={styles.collectionWrapper}>
           <CollectionList items={collectionGroups} />
-        </div>
-        <div className={styles.bundleWrapper}>
-          <CollectionList items={bundleGroups} isBundle />
+          <CollectionList items={auctionsGroups} />
         </div>
       </section>
     </div>

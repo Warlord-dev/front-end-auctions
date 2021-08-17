@@ -14,6 +14,7 @@ import {
   DIGITALAX_MARKETPLACE_V2_PURCHASE_HISTORIES,
   GARMENTV2_BY_AUCTION_ID,
   GARMENTV2_BY_COLLECTION_ID,
+  GARMENTV2_BY_COLLECTION_IDS,
   GARMENT_BY_AUCTION_ID,
 } from './gql.apiService';
 
@@ -30,6 +31,9 @@ export const getCollectionGroupById = async (chainId, id) =>
 
 export const getGarmentV2ByCollectionId = async (chainId, id) =>
   apiRequest(chainId, GARMENTV2_BY_COLLECTION_ID, { id });
+
+export const getCollectionV2ByIds = async (chainId, ids) =>
+  apiRequest(chainId, GARMENTV2_BY_COLLECTION_IDS, { ids });
 
 export const getGarmentV2ByAuctionId = async (chainId, id) =>
   apiRequest(chainId, GARMENTV2_BY_AUCTION_ID, { id });

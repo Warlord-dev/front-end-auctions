@@ -12,8 +12,10 @@ const ProductCard = ({ products, rarity }) => {
     <div className={styles.wrapper}>
       <div className={styles.bodyWrapper}>
         <div className={styles.descriptionWrapper}>
-          <img src="/images/metaverse/physical-fashion.png" className={styles.heroImage} />
-          <BannerButton text='SHOP physical WEB3 FASHION'/>
+          <a href="https://drip.digitalax.xyz" target="_blank">
+            <img src="/images/metaverse/physical-fashion.png" className={styles.heroImage} />
+            <BannerButton text='SHOP physical WEB3 FASHION'/>
+          </a>
         </div>
         <div className={styles.imageCardWrapper}>
           
@@ -25,7 +27,11 @@ const ProductCard = ({ products, rarity }) => {
                 if (selected > 0) setSelected(selected - 1);
               }}
             />
-            <BannerCard blue={true} libon={getRarityId(rarity)} data={products[selected]} />
+            {products[selected].imageUrl ? (
+              <BannerCard blue={true} libon={getRarityId(rarity)} imgUrl={products[selected].imageUrl} />
+            ): (
+              <BannerCard blue={true} libon={getRarityId(rarity)} data={products[selected]} />
+            )}
             <img
               src="./images/metaverse/right-arrow-blue.png"
               className={styles.rightArrow}

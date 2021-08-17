@@ -68,6 +68,7 @@ const ModalPlaceBid = ({ className, title, textForSelect, buttonText }) => {
     function getMonaApproval() {
       dispatch(bidActions.getAllowanceForAcution()).then((val) => {
         const jsAllowedValue = parseFloat(ethersUtils.formatEther(val));
+        console.log({jsAllowedValue})
         if (jsAllowedValue < 10000000000) setApproved(false);
         else setApproved(true);
       });

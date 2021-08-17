@@ -33,6 +33,12 @@ export const COLLECTION_GROUPS = gql`
           name
           image
         }
+        garment {
+          id
+          animation
+          image
+          name
+        }
       }
       collections {
         id
@@ -149,6 +155,19 @@ export const GARMENTV2_BY_COLLECTION_ID = gql`
     }
   }
 `;
+
+export const GARMENTV2_BY_COLLECTION_IDS = gql`
+query digitalaxGarmentV2Collections($ids: [ID!]) {
+  digitalaxGarmentV2Collections(where: {id_in: $ids}) {
+    id
+    garments(first: 1) {
+      id
+      image
+      animation
+    }
+  }
+}
+`
 
 export const GARMENT_BY_COLLECTION_ID = gql`
   query digitalaxGarmentCollection($id: ID!) {

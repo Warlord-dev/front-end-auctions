@@ -70,7 +70,7 @@ const ImageCard = ({
         ): null}
         {showDesigner ? (
           <div className={styles.designerWrapper}>
-            <img src={data?.designer.image} className={styles.photo} />
+            <img src={data?.designer?.image} className={styles.photo} />
             <div className={styles.name}>{data?.designer?.name} </div>
           </div>
         ) : null}

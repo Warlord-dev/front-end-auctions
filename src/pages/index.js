@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Router, useRouter } from 'next/router';
 import Head from 'next/head';
-import { getCollectionGroups, getDigitalaxGarmentNftV2GlobalStats } from '@services/api/apiService';
+import { getCollectionGroups, getCollectionV2ByIds, getDigitalaxGarmentNftV2GlobalStats } from '@services/api/apiService';
 import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
@@ -10,19 +10,19 @@ import Container from '@components/container';
 import CollectionList from '@components/collection-list';
 import HeroBar from '@components/hero-bar';
 import DesignerList from '@containers/designer-network';
-import DesignerSquareList from '@containers/designer-network/imageCard';
+import GarmentSquareList from '@containers/designer-network/imageCard';
 import globalActions from '@actions/global.actions';
 import { convertToEth } from '@helpers/price.helpers';
 import Link from 'next/link';
 import BannerBar from '@components/banner-bar';
 import BannerBlue from '@components/banner-blue';
 import BannerPink from '@components/banner-pink';
+import pysicals from '../data/drip.json';
 
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
-  const router = useRouter();
-  const [collectionGroups, setCollectionGroups] = useState([]);
-  const [bundleGroups, setBundleGroups] = useState([]);
+  const [digital, setDigital] = useState([]);
+  const digitalIds = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
 
   useEffect(() => {
     import('react-facebook-pixel')
@@ -39,31 +39,8 @@ const LandingPage = () => {
 
   useEffect(() => {
     const fetchCollectionGroups = async () => {
-      const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
-      const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats(chainId);
-      globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth));
-      let collections = [],
-        bundles = [];
-      digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
-        const collectionPrice = digitalaxCollectionGroup.collections.reduce((a, b) => a + Number(b.valueSold), 0);
-        const auctionPrice = digitalaxCollectionGroup.auctions.reduce((a, b) => a + Number(b.topBid), 0);
-        const bundlePrice = digitalaxCollectionGroup.digiBundle.valueSold;
-        collections.push({
-          ...digitalaxCollectionGroup.collections[0].garments[0],
-          designer: digitalaxCollectionGroup.collections[0].designer,
-          id: digitalaxCollectionGroup.id,
-          sold: (collectionPrice + auctionPrice) / 1e18
-        });
-        bundles.push({
-          ...digitalaxCollectionGroup.digiBundle.garments[0],
-          productId: digitalaxCollectionGroup.digiBundle.id,
-          designer: digitalaxCollectionGroup.digiBundle.designer,
-          id: digitalaxCollectionGroup.id,
-          sold: bundlePrice / 1e18
-        });
-      });
-      setCollectionGroups(collections);
-      setBundleGroups(bundles);
+      const { digitalaxGarmentV2Collections } = await getCollectionV2ByIds(chainId, digitalIds);
+      setDigital(digitalaxGarmentV2Collections.map(collection => collection.garments[0]));
     };
     fetchCollectionGroups();
   }, []);
@@ -106,15 +83,15 @@ const LandingPage = () => {
         <video width="100%" autoPlay muted loop playsInline>
           <source src="/video/web3fashionweek.mp4" type="video/mp4" />
         </video>
-        <DesignerSquareList />
+        <GarmentSquareList />
 
         <div className={styles.designer}>
-          {/* <Link href="https://twitter.com/glycemag"> */}
-          <a target="_blank" className={styles.heroSectionLink}>
-            Web3 Fashion <br />
-            Market >
-          </a>
-          {/* </Link> */}
+          <Link href="/collections">
+            <a className={styles.heroSectionLink}>
+              Web3 Fashion <br />
+              Market >
+            </a>
+          </Link>
         </div>
       </section>
 
@@ -142,15 +119,27 @@ const LandingPage = () => {
         <ul className={styles.rightArrowBtn}>
           <li>
             {' '}
-            <img className={styles.backImage} src="/images/arrowLink.png" />
+            <Link href="/collections">
+              <a>
+                <img className={styles.backImage} src="/images/arrowLink.png" />
+              </a>
+            </Link>
           </li>
           <li>
             {' '}
-            <img className={styles.backImage} src="/images/arrowLink.png" />
+            <Link href="/collections">
+              <a>
+                <img className={styles.backImage} src="/images/arrowLink.png" />
+              </a>
+            </Link>
           </li>
           <li>
             {' '}
-            <img className={styles.backImage} src="/images/arrowLink.png" />
+            <Link href="/collections">
+              <a>
+                <img className={styles.backImage} src="/images/arrowLink.png" />
+              </a>
+            </Link>
           </li>
         </ul>
       </section>
@@ -160,7 +149,7 @@ const LandingPage = () => {
         <Container>
           <div className={styles.cardWrapper}>
             <BannerBlue
-              products={collectionGroups}
+              products={pysicals}
               rarity={'Semi-Rare'}
             />
           </div>
@@ -171,7 +160,7 @@ const LandingPage = () => {
         <Container>
           <div className={styles.cardWrapper}>
             <BannerPink
-              products={collectionGroups}
+              products={digital}
               rarity={'Semi-Rare'}
             />
           </div>
@@ -184,7 +173,7 @@ const LandingPage = () => {
           <div className={styles.imgWrapperWeekNtfs}>
             <img src="/images/weekNtfsframe.png" />
             <p>
-              wear to defi stake your nft for $mona <a>HERE</a>
+              wear to defi stake your nft for $mona <a href="https://staking.digitalax.xyz">HERE</a>
             </p>
           </div>
           <div className={styles.imgWrapperWeekNtfs}>
@@ -205,7 +194,10 @@ const LandingPage = () => {
       <section className={styles.liveSection}>
         <span>
           <img className={styles.liveText} src="/images/liveText.png" />
-          <img className={styles.liveArea} src="/images/liveArea.png" />
+          <video autoPlay muted loop className={styles.liveArea}>
+            <source src="/images/metaverse/Web Fashion Week.mp4" type="video/mp4" />
+          </video>
+          {/* <img className={styles.liveArea} src="/images/liveArea.png" /> */}
         </span>
       </section>
     </div>
