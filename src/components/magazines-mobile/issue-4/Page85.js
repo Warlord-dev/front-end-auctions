@@ -1,59 +1,57 @@
-import React from 'react'
+import React, { useRef, useState }  from 'react'
+import Link from 'next/link'
 import styles from './page85.module.scss'
-import Link from 'next/link';
+
 
 const Page85 = () => {
+  const audioRef = useRef()
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const startAudio = () => {
+    audioRef.current.play()
+    setIsPlaying(true)
+  }
+
+  const pauseAudio = () => {
+    audioRef.current.pause()
+    setIsPlaying(false)
+  }
+
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/95_96/image22.png" className={styles.image1}/>
-      <img src="/magazine/3/images/95_96/image9.png" className={styles.image10}/>
-      <img src="/magazine/3/images/95_96/image10.png" className={styles.image11}/>
-      <img src="/magazine/3/images/95_96/image11.png" className={styles.image12}/>
-      <img src="/magazine/3/images/95_96/image14.png" className={styles.image15}/>
-      <img src="/magazine/3/images/95_96/image12.png" className={styles.image13}/>
-      <img src="/magazine/3/images/95_96/image13.png" className={styles.image14}/>
-      <p className={styles.text9}>I’m Davide Carbone aka LivingSparks, an electronic engineer specialized in research and technological innovation.
-<br/><br/>
-I’m specialized in generative materials, using mostly artificial intelligence networks. I’ve developed all the software I use to generate materials and textures. I start by writing a raw neural network, finding and tuning parameters in order to obtain pleasant patterns and texture. After I process the texture to add generative normals for the material and enrich them with details and roughness.</p>   
-      <p className={styles.text10}>I’m Davide Carbone aka LivingSparks, an electronic engineer specialized in research and technological innovation.
-      <br/><br/>
-I’m specialized in generative materials, using mostly artificial intelligence networks. I’ve developed all the software I use to generate materials and textures. I start by writing a raw neural network, finding and tuning parameters in order to obtain pleasant patterns and texture. After I process the texture to add generative normals for the material and enrich them with details and roughness.</p>  
-      <img src="/magazine/3/images/95_96/image15.png" className={styles.image16}/>
-      <p className={styles.text11}>LivingSparks</p>   
-      <div className={styles.image17}>
-        <video className={styles.image18} muted loop autoPlay>
-          <source src="./magazine/3/images/95_96/video1.mp4" type="video/mp4" />
-        </video>
+      <video autoPlay muted loop className={styles.video1}>
+        <source src='/magazine/4/videos/9394_video1.mp4' type='video/mp4' />
+      </video>
+      <img className={styles.image1} src='/magazine/4/images/9394_image4.gif' />
+      <img className={styles.image2} src='./magazine/4/images/9394_image1.png' />
+
+      <div className={styles.text1}>
+        STRAWBERRY SITH
       </div>
-      <div className={styles.image19}>
-        <video className={styles.image20} muted loop autoPlay>
-          <source src="./magazine/3/images/95_96/video2.mp4" type="video/mp4" />
-        </video>
+      <div className={styles.text2}>
+        Virtual commerce
       </div>
-      <p className={styles.text14}>PYCHEUNG</p>   
-      <p className={styles.text15}>for checking various sizes and repetition of my patterns</p>   
-      <Link href="https://www.pycheung.com/checker/">
-        <a target="_blank">
-          <img src="/magazine/3/images/95_96/image17.png" className={styles.image22}/>
+      <Link href='https://twitter.com/StrawberrySith'>
+        <a target='_blank'>
+          <img src='/magazine/4/images/9394_image5.png' className={styles.image3} />
         </a>
       </Link>
-      <img src="/magazine/3/images/95_96/image19.png" className={styles.image24}/>
-      <Link href="https://derivative.ca/ ">
-        <a target="_blank">
-          <img src="/magazine/3/images/95_96/image16.png" className={styles.image21}/>
-        </a>
-      </Link>
-      <Link href="https://colab.research.google.com/">
-        <a target="_blank">
-          <img src="/magazine/3/images/95_96/image18.png" className={styles.image23}/>
-        </a>
-      </Link>
-      <img src="/magazine/3/images/95_96/image19.png" className={styles.image25}/>
-      <img src="/magazine/3/images/95_96/image19.png" className={styles.image26}/>
-      <p className={styles.text12}>DERIVATIVE</p>   
-      <p className={styles.text13}>Powerful environment for artists and creative, no code needed. </p>   
-      <p className={styles.text16}>COLAB</p>   
-      <p className={styles.text17}>Google Platform to play with python on a web browser </p>   
+
+      <div
+        className={styles.playButton}
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio()
+        }}
+      >
+        <div className={styles.circle1}></div>
+        <div className={styles.text3}>
+          { !isPlaying ? ' Listen in' : 'PAUSE' }
+        </div>
+      </div>
+
+      <audio ref={audioRef} loop>
+        <source src='/magazine/4/sounds/9394_sound1.mp3' type='audio/mpeg' />
+      </audio>
     </div>
   )
 }

@@ -1,131 +1,135 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
 
 .wrapper {
   @include magazineWrapper();
 
-  height: 3769px;
-  overflow: scroll;
+  height: 2350px;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
 
-  .image2 {
+  .image1 {
     position: relative;
     width: 375px;
-    height: 3769px;
+    height: 2850px;
   }
-  .image6 {
+
+  .image2 {
     position: absolute;
-    width: 343px;
-    height: 521px;
-    left: 16px;
-    top: 3195px;    
+    left: 0;
+    top: 0;
+    width: 375px;
+    height: 623px;
   }
+
+  .image3 {
+    position: absolute;
+    left: 11px;
+    top: 11.16px;
+    width: 140px;
+    height: 199.88px;    
+  }
+
+  .image4 {
+    position: absolute;
+    left: 0%;
+    top: 146.11px;
+    width: 171px;
+    height: 173.5px;
+  }
+
+  h1 {
+    position: absolute;
+    left: -28.53%;
+    right: -50.67%;
+    top: 1.5%;
+    bottom: 95.12%;
+    
+    font-family: Writers original;
+    font-size: 40px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #A700AA;
+    text-shadow: -3px 0 white, 0 -3px white, 3px 0 white, 0 3px white;
+  }
+
+  h2 {
+    position: absolute;
+    left: -0.53%;
+    right: -19.2%;
+    top: 3.8%;
+    bottom: 94.54%;
+    
+    font-family: Writers original;
+    font-size: 20px;
+    line-height: 120.53%;    
+    text-align: center;
+    
+    color: #DB00FF;
+  }
+
   .text1 {
     position: absolute;
-    width: 304px;
-    height: 329px;
-    left: 33px;
-    top: 78px;
+    left: 10.67%;
+    right: 9.33%;
+    top: 295px;
+    bottom: 73.98%;
     
-    font-family: Suez One;
-    font-style: normal;
-    font-weight: normal;
+    font-family: Julee;
+    font-size: 21px;
+    line-height: 120.53%;
+    text-align: center;
+    color: #9600DC;
+  }
+
+  .text2 {
+    position: absolute;
+    left: 10.67%;
+    right: 9.33%;
+    top: 638px;
+    bottom: 56.8%;
+    
+    font-family: Julee;
+    font-size: 21px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #9600DC;
+  }
+
+  .text3 {
+    position: absolute;
+    left: 10.93%;
+    right: 10.4%;
+    top: 1010px;
+    bottom: 51.77%;
+    
+    font-family: Julee;
     font-size: 21px;
     line-height: 120.53%;
     /* or 25px */
     
-    letter-spacing: 0.07em;
+    text-align: center;
     
-    color: #FFFFFF;
+    color: #9600DC;
+    
   }
-  .text2 {
-    position: absolute;
-    width: 330px;
-    height: 269px;
-    left: 0px;
-    top: 942px;
-    
-    font-family: PÕRTO;
-    font-size: 70px;
-    line-height: 120.53%;
-    /* or 84px */
-    
-    text-align: right;
-    letter-spacing: 0.1em;
-    
-    color: #FFFFFF;
-    
-    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
-  }
-  .image4 {
-    position: absolute;
-    width: 194px;
-    height: 194px;
-    left: 0px;
-    top: 1050px;
-  }
-  .text3 {
-    position: absolute;
-    width: 288px;
-    height: 409px;
-    left: 44px;
-    top: 1351px;
-    
-    font-family: PÕRTO;
-    font-size: 70px;
-    line-height: 120.53%;
-    /* or 84px */
-    
-    letter-spacing: 0.08em;
-    
-    color: #FFFFFF;
-    
-    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
-  }
+
   .text4 {
     position: absolute;
-    width: 295px;
-    height: 329px;
-    left: 37px;
-    top: 1711px;
+    left: 6.13%;
+    right: 6.13%;
+    top: 1555px;
+    bottom: 4.68%;
     
-    font-family: Snippet;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 23px;
+    font-family: Julee;
+    font-size: 21px;
     line-height: 120.53%;
-    /* or 28px */
+    text-align: center;
     
-    letter-spacing: 0.07em;
-    
-    color: #FFFFFF;
-    
-    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
-  }
-  .image5 {
-    position: absolute;
-    width: 330px;
-    height: 330px;
-    left: 0px;
-    top: 2683px;
-  }
-  .text5 {
-    position: absolute;
-    width: 338px;
-    height: 115px;
-    left: -8px;
-    top: 3080px;
-    
-    font-family: PÕRTO;
-    font-size: 70px;
-    line-height: 120.53%;
-    /* or 84px */
-    
-    text-align: right;
-    letter-spacing: 0.1em;
-    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
-    color: #FFFFFF;
+    color: #9600DC;
   }
 }

@@ -1,309 +1,117 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
 
 .wrapper {
   @include magazineWrapper();
-  height: 4239px;
+  height: 1183px;
   overflow: hidden;
   background-color: white;
   color: white;
   display: flex;
   position: relative;
 
-  .image1 {
-    position: relative;
+  .video1 {
+    position: absolute;
     width: 375px;
-    height: 4239px;
+    height: 1183px;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;    
   }
-  .image10 {
+
+  .image1 {
     position: absolute;
-    width: 336px;
-    height: 251px;
-    left: 39px;
-    top: 137px;
+    width: 650px;
+    height: 800px;
+    left: 100px;
+    top: 27px;    
   }
-  .image11 {
+  
+  .image2 {
     position: absolute;
-    width: 347px;
-    height: 395px;
-    left: -85px;
-    top: 426px;    
+    width: 415px;
+    height: 437px;
+    left: -40px;
+    top: 746px;    
   }
-  .image12 {
+
+  .image3 {
     position: absolute;
-    width: 219px;
-    height: 219px;
-    left: 168px;
-    top: 361px;    
+    width: 178px;
+    height: 155px;
+    left: 179px;
+    top: 783px;    
   }
-  .image15 {
+
+  .text1 {
     position: absolute;
-    width: 293px;
-    height: 335px;
-    left: 168px;
-    top: 641px;
-  }
-  .image13 {
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    left: -32px;
-    top: 832px;
-  }
-  .image14 {
-    position: absolute;
-    width: 239px;
-    height: 272px;
-    left: 136px;
-    top: 1010px;
-  }
-  .text9 {
-    position: absolute;
-    width: 287px;
-    height: 440px;
-    left: 39px;
-    top: 1385px;
+    width: 278px;
+    height: 80px;
+    left: 20px;
+    top: 27px;
     
-    font-family: Mukta Malar;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
+    font-family: Strawberry;
+    font-size: 50px;;
     line-height: 110%;
-    /* or 22px */
     
-    
-    color: #00FFFF;
+    color: #000000;
+    -webkit-text-stroke: 1px #FF0000;
   }
-  .text10 {
+
+  .text2 {
     position: absolute;
-    width: 287px;
-    height: 440px;
-    left: 39px;
-    top: 1825px;
+    width: 215px;
+    height: 342px;
+    left: 20px;
+    top: 133px;
     
-    font-family: Mukta Malar;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
+    font-family: Strawberry;
+    font-size: 50px;;
     line-height: 110%;
-    /* or 22px */
     
-    
-    color: #00FFFF;
+    color: #FF9E9E;
+    -webkit-text-stroke: 1px #FF0000;
   }
-  .image16 {
+
+  .circle1 {
     position: absolute;
-    width: 185px;
-    height: 185px;
-    left: 158px;
-    top: 2253px;
-  }
-  .text11 {
-    position: absolute;
-    width: 377px;
-    height: 49px;
-    left: 48px;
-    top: 2438px;
+    width: 216px;
+    height: 216px;
+    left: 0px;
+    top: 0px;
     
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 36px;
+    background: #FE0000;
+    border: 10px solid #FF8989;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25);    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    left: 10%;
+    top: 0;
+
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Strait;
+    font-size: 50px;
+    line-height: 110%;
     text-align: center;
     
-    color: #FFFFFF;
+    color: #FF9E9E;
   }
-  .image17 {
+
+  .playButton {
     position: absolute;
-    width: 250px;
-    height: 240px;
-    left: 39px;
-    top: 2516px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border: 8px solid #DD0AFF;
-    box-sizing: border-box;
-    .image18 {
-      width: 100%;
-    }
+    width: 216px;
+    height: 216px;
+    left: 19px;
+    top: 475px;
   }
-  .text14 {
-    position: absolute;
-    width: 248px;
-    height: 59px;
-    left: 48px;
-    top: 2801px;
-    
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 23px;
-    line-height: 110%;
-    /* or 25px */
-    
-    
-    color: #FF9C9C;
-  }
-  .text15 {
-    position: absolute;
-    width: 248px;
-    height: 59px;
-    left: 68px;
-    top: 2957px;
-    
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 110%;
-    /* or 17px */
-    
-    
-    color: #FFFFFF;
-  }
-  .image22 {
-    position: absolute;
-    width: 119px;
-    height: 106px;
-    left: 156px;
-    top: 2822px;
-  }
-  .image24 {
-    position: absolute;
-    width: 72px;
-    height: 72px;
-    left: 68px;
-    top: 2856px;
-    transition: transform .2s;
-    &:hover {
-        transform: scale(1.1);
-    }
-  }
-  .image21 {
-    position: absolute;
-    width: 99px;
-    height: 99px;
-    left: 68px;
-    top: 3082px;
-    transition: transform .2s;
-    &:hover {
-        transform: scale(1.1);
-    }
-  }
-  .image25 {
-    position: absolute;
-    width: 69px;
-    height: 72px;
-    left: 181px;
-    top: 3082px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  }
-  .text13 {
-    position: absolute;
-    width: 248px;
-    height: 154px;
-    left: 68px;
-    top: 3104px;
-    
-    font-family: Mukta Malar;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
-    display: flex;
-    align-items: flex-end;
-    
-    color: #FFFFFF;
-  }
-  .text12 {
-    position: absolute;
-    width: 248px;
-    height: 59px;
-    left: 176px;
-    top: 3157px;
-    
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 23px;
-    line-height: 110%;
-    /* or 25px */
-    
-    
-    color: #FF9C9C;
-  }
-  .image19 {
-    position: absolute;
-    width: 375px;
-    height: 404px;
-    left: 0px;
-    top: 3346px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border: 5px solid #9DF9FF;
-    box-sizing: border-box;
-    .image20 {
-      height: 100%;
-    } 
-  }
-  .image23 {
-    position: absolute;
-    width: 125px;
-    height: 125px;
-    left: 54px;
-    top: 3788px;
-    transition: transform .2s;
-    &:hover {
-        transform: scale(1.1);
-    }
-  }
-  .image26 {
-    position: absolute;
-    width: 69px;
-    height: 72px;
-    left: 196px;
-    top: 3815px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  }
-  .text16 {
-    position: absolute;
-    width: 248px;
-    height: 50px;
-    left: 80px;
-    top: 3927px;
-    
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 23px;
-    line-height: 110%;
-    /* or 25px */
-    
-    
-    color: #FF9C9C;
-  }
-  .text17 {
-    position: absolute;
-    width: 248px;
-    height: 154px;
-    left: 80px;
-    top: 3871px;
-    
-    font-family: Mukta Malar;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
-    display: flex;
-    align-items: flex-end;
-    
-    color: #FFFFFF;
-  }
- 
 }

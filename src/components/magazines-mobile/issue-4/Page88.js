@@ -1,72 +1,307 @@
-import React from 'react'
+import React, { useRef, useState }  from 'react'
+import Link from 'next/link'
 import styles from './page88.module.scss'
-import Link from 'next/link';
 
 const Page88 = () => {
+  const audioRef = useRef()
+
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const startAudio = () => {
+    audioRef.current.play()
+    setIsPlaying(true)
+  }
+
+  const pauseAudio = () => {
+    audioRef.current.pause()
+    setIsPlaying(false)
+  }
+
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/3/images/99_100/image21.png" className={styles.image1}/>
-      <img src="/magazine/3/images/99_100/image2.png" className={styles.image2}/>
-      <img src="/magazine/3/images/99_100/image5.png" className={styles.image5}/>
-      <img src="/magazine/3/images/99_100/image4.png" className={styles.image4}/>
-      <img src="/magazine/3/images/99_100/image3.png" className={styles.image3}/>
-      <img src="/magazine/3/images/99_100/image6.png" className={styles.image6}/>
-      <img src="/magazine/3/images/99_100/image7.png" className={styles.image7}/>
-      <div className={styles.image9}></div>
-      <div className={styles.image10}></div>
-      <p className={styles.text2}>Blender is my favorite 3D software for creation. I’m constantly creating assets to use in my future artworks, so when I sketch or plan my next pieces, I know what type of things I could use to improve creative time.</p> 
-      <p className={styles.text3}>For material creation, I use the Blender powerful procedural system, I’m a die hard fan of complex nodetrees and abstract materials. Always looking to optimize times and tools that help me go further, I use an addon called MBS of Syncretic 3D— it’s a material building suite that lets you create incredible materials with just a couple of node groups. Here’s an example of one of the materials used in the composition.</p> 
-      <img src="/magazine/3/images/99_100/image9.png" className={styles.image11}/>
-      <p className={styles.text5}>TIME LAPSE</p> 
-      <div className={styles.image16}></div>
-      <img src="/magazine/3/images/99_100/image10.png" className={styles.image12}/>
-      <div className={styles.image14}>
-        <video className={styles.image15} muted loop autoPlay>
-          <source src="./magazine/3/images/99_100/video1.mp4" type="video/mp4" />
-        </video>
+      <div className={styles.textPatternWrapper}>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
+        <div className={styles.textPattern}>
+          Rhythm to the verse  Rhythm to the verse
+        </div>
       </div>
-      <div className={styles.image34}></div>
-      <img src="/magazine/3/images/99_100/image11.png" className={styles.image17}/>
-      <Link href="https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:1097760?tab=details">
-        <a target="_blank">
-        <img src="/magazine/3/images/99_100/image12.png" className={styles.image18}/>
+
+      <div className={styles.rect1}></div>
+      <div className={styles.circle1}></div>
+      <div className={styles.circle2}></div>
+      <div className={styles.circle3}></div>
+      <div className={styles.circle4}></div>
+
+      <img className={styles.image1} src='/magazine/4/images/9596_image4.png' />
+      
+      <Link href='https://www.mixcloud.com/paulleath/'>
+        <a target='_blank'>
+          <div className={styles.text1}>
+            PAUL LEATH
+          </div>
         </a>
       </Link>
-      <p className={styles.text6}>Di.universe</p> 
-      <p className={styles.text7}>Minted on Rarible</p> 
-      <p className={styles.text8}>To create digital clothes, we used exclusively the Clo3d software, in which patterns were made, the background, light and render were adjusted.  The modeling process was lengthened solely because we were trying to achieve the desired effect by tweaking the fur so that it looks like thin feathers.  In general, it took 3-5 hours to create and approve each model + render.</p> 
-      <div className={styles.image24}></div>
-      <p className={styles.text9}>Fur fox - custom fur preset. <br/>
-Parameters: <br/>
-Fur parameters: <br/>
-Melanin - 0,20<br/>
-Pheomelanin - 0,50<br/>
-Glossines - 0,90<br/>
-Glossines boost - 1,00<br/>
-<br/><br/>
-Base:<br/>
-Length - 12,00<br/>
-Thickness - 3,000<br/>
-Bend - 0,70<br/>
-Taper - 0,80<br/>
-Density - 30<br/>
-Segments - 5</p> 
-      <p className={styles.text10}>Gravity:<br/>
-Force - 10,00<br/>
-Vector x - 0,00<br/>
-Vector y - (-1,00)<br/>
-Vector z - 0,00<br/>
-<br/>
-Curl:<br/>
-Radius - 0,100<br/>
-Number - 5,00<br/>
-Variance:<br/>
-Length - 1,00<br/>
-Thickness - 1,00<br/>
-Direction - 1,00<br/>
-Gravity - 0,80<br/>
-Curl radius - 1,00<br/>
-Physical property: </p> 
+      <div className={styles.text2}>
+        Paul Leath has taken on several roles with his involvement in the electronic community, promoter, agent, manager and record distribution. During this entire span, always producing and deejaying.
+        <br /><br />
+        New projects currently involve the development and expansion of El Otro Mundo Productions. The "umbrella" of every project involves members of the collective.
+        <br /><br />
+        El Otro Mundo Recordings is the original label from El Otro Mundo Productions started by his brother, Christopher aka El Gato.  Friction Recordings is a sub-label created by Paul, focusing on the driving aspects of techno and house. The concept of Friction is used in our design and production. It is part of this world that stimulates while keeping us "grounded.
+        <br /><br />
+        Currently working with DJ Emma Jean for a DJ/Producer project named Black Boxx.
+      </div>
+
+      <div className={styles.text3}>
+        MINDMELD
+      </div>
+      <div className={styles.text4}>
+        MINDMELD
+      </div>
+      <div className={styles.text5}>
+        MINDMELD
+      </div>
+      <div className={styles.text6}>
+        MINDMELD
+      </div>
+      <div className={styles.text7}>
+        MINDMELD
+      </div>
+      <div className={styles.text8}>
+        MINDMELD
+      </div>
+      <div className={styles.text9}>
+        MINDMELD
+      </div>
+      <div className={styles.text10}>
+        MINDMELD
+      </div>
+      <div className={styles.text11}>
+        MINDMELD
+      </div>
+
+      <img className={styles.image2} src='/magazine/4/images/99100_image3.png' />
+      <img className={styles.image3} src='/magazine/4/images/9596_image5.gif' />
+
+      <div
+        className={styles.playButton}
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio()
+        }}
+      >
+        <img className={styles.imageBack} src='/magazine/4/images/9596_button_back.png' />
+        {
+          !isPlaying
+          ? <img className={styles.imagePlay} src='/magazine/4/images/9596_playbutton.png' />
+          : <img className={styles.imagePause} src='/magazine/4/images/9596_pausebutton.png' />
+        }
+      </div>
+
+      <audio ref={audioRef} loop>
+        <source src='/magazine/4/sounds/9596_sound2.mp3' type='audio/mpeg' />
+      </audio>
     </div>
   )
 }
