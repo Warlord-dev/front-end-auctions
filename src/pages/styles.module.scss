@@ -26,6 +26,11 @@
       color: #ffffff;
       width: 210px;
       text-align: left;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
 
     @include xs-width {
@@ -132,7 +137,7 @@
     .fashionWeekLink {
       color: white;
       position: absolute;
-      top: 38%;
+      top: 75%;
       left: 50px;
       font-family: Poppins;
       font-style: normal;
@@ -140,6 +145,12 @@
       font-size: 27px;
       line-height: 40px;
       color: #ffffff;
+      cursor: pointer;
+      transition: 0.5s all ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
     .topImageTitle {
       position: absolute;
@@ -183,53 +194,39 @@
       align-items: center;
       text-align: right;
     }
+  }
+  marquee {
+    margin: auto;
+    background: white;
+    margin: -5px 0;
+
+    .bottomImageText {
+      height: 70px;
+    }
+  }
+  @media (max-width: 1400px) {
     marquee {
-      position: absolute;
-      bottom: 298px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      .bottomImageText {
-        height: 70px;
+      img {
+        height: 50px !important;
       }
     }
-    @media (max-width: 1400px) {
-      marquee {
-        bottom: 130px !important;
-        img {
-          height: 50px !important;
-        }
+  }
+  @media (max-width: 768px) {
+    .fashionWeekLink {
+      line-height: 16px;
+      font-size: 18px;
+      left: 34px;
+    }
+    marquee {
+      img {
+        height: 30px !important;
       }
     }
-    @media (max-width: 1400px) {
-      marquee {
-        bottom: 140px !important;
-      }
-    }
-    @media (max-width: 1000px) {
-      marquee {
-        bottom: 100px !important;
-      }
-    }
-    @media (max-width: 768px) {
-      .fashionWeekLink {
-        line-height: 16px;
-        font-size: 18px;
-        left: 34px;
-      }
-      marquee {
-        bottom: 123px !important;
-        img {
-          height: 30px !important;
-        }
-      }
-    }
-    @media (max-width: 575px) {
-      marquee {
-        bottom: 56px !important;
-        img {
-          height: 20px !important;
-        }
+  }
+  @media (max-width: 575px) {
+    marquee {
+      img {
+        height: 20px !important;
       }
     }
   }

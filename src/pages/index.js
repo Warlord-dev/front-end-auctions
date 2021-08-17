@@ -102,10 +102,9 @@ const LandingPage = () => {
       <section className={styles.fashionWeekScheduleSection}>
         <img className={styles.topImageTitle} src="/images/fashionActionTitle.png" />
         <img className={styles.backImage} src="/images/fashionAction.png" />
-        <marquee>
-          <img className={styles.bottomImageText} src="/images/fashionActionText.png" />
-        </marquee>
-        <h3 className={styles.fashionWeekLink}>Shop the GDN Auction ></h3>
+        <Link href="/collections">
+          <h3 className={styles.fashionWeekLink}>Shop the GDN Auction ></h3>
+        </Link>
         <div className={styles.readmoreText}>
           Read more about our <br /> DAO here.
         </div>
@@ -113,6 +112,9 @@ const LandingPage = () => {
           The Global Designer Network is initiating as an on-chain DAO.
         </div>
       </section>
+      <marquee>
+        <img className={styles.bottomImageText} src="/images/fashionActionText.png" />
+      </marquee>
 
       <section className={styles.seenAndBeeSeenSection}>
         <img src="/images/beseentext.png" />
