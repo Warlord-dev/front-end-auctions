@@ -19,7 +19,13 @@ const UnlockPageThree = props => {
       <img src="/images/arrow.png" className={styles.arrow}/>
       <div className={styles.bottom}>
       </div>
-      <img src="/images/bottom-text.png" className={styles.bottom_text}/>
+      { issueId == 3 && <img src='/images/bottom-text.png' className={styles.bottom_text} /> }
+      { 
+        issueId == 4 && 
+        <div className={styles.text1}>
+          COLLECT YOUR FREE DIGIFIZZY ISSUE FOUR POAP BY CLICKING ON UNLOCK!
+        </div>
+      }
       <button className={styles.unlock} onClick={() => {
           Router.push('https://digifizzy.xyz/unlockable/3')
       }}>
