@@ -31,6 +31,9 @@ const Page4344 = () => {
       </video>
 
       <img className={styles.image71} src='/magazine/4/images/4344_image7.png' />
+      <img className={styles.image72} src='/magazine/4/images/4344_image7.png' />
+      <img className={styles.image73} src='/magazine/4/images/4344_image7.png' />
+      <img className={styles.image74} src='/magazine/4/images/4344_image7.png' />
 
 
       <img className={styles.protocol1} src='/magazine/4/images/4344_protocol_1.png' />
@@ -49,7 +52,63 @@ const Page4344 = () => {
       <img className={styles.protocol14} src='/magazine/4/images/4344_protocol_14.png' />
       <img className={styles.protocol15} src='/magazine/4/images/4344_protocol_15.png' />
 
+      <video autoPlay muted loop className={styles.video2}>
+        <source src='./magazine/4/videos/4344_video2.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video3}>
+        <source src='./magazine/4/videos/4344_video3.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video4}>
+        <source src='./magazine/4/videos/4344_video4.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video5}>
+        <source src='./magazine/4/videos/4344_video5.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video6}>
+        <source src='./magazine/4/videos/4344_video6.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video7}>
+        <source src='./magazine/4/videos/4344_video7.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video8}>
+        <source src='./magazine/4/videos/4344_video8.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video9}>
+        <source src='./magazine/4/videos/4344_video11.mp4' type='video/mp4' />
+      </video>
+      
+      <video autoPlay muted loop className={styles.video10}>
+        <source src='./magazine/4/videos/4344_video9.mp4' type='video/mp4' />
+      </video>
+      
+      <video autoPlay muted loop className={styles.video11}>
+        <source src='./magazine/4/videos/4344_video10.mp4' type='video/mp4' />
+      </video>
 
+      <img className={styles.image8} src='/magazine/4/images/4344_image8.png' />
+
+      <div className={styles.text1}>
+        COMPLETE WEB3 FASHION DIGITAL AR, IN-GAME AND PHYSICAL IRL MEMORABILIA VARSITY JACKETS
+      </div>
+      <div className={styles.text2}>
+        DEFI 101 WORKSHOPS FOR CREATORS
+      </div>
+      <div className={styles.text3}>
+        BRIDGING DEFI TO THE METAVERSE
+      </div>
+
+      <img className={styles.image9} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image10} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image11} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image12} src='/magazine/4/images/4344_image9.gif' />
+
+      <video autoPlay muted loop className={styles.video12}>
+        <source src='./magazine/4/videos/4344_video12.mp4' type='video/mp4' />
+      </video>
+
+      <video autoPlay muted loop className={styles.video13}>
+        <source src='./magazine/4/videos/4344_video2.mp4' type='video/mp4' />
+      </video>
     </div>
     
   )
