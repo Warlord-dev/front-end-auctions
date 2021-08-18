@@ -10,14 +10,14 @@ const AllIssues = () => {
         <div className={styles.mainText}>ALL ISSUES.</div>
         <div className={styles.subText}>DigiFizzy. Magazine for the Metaverse.</div>
         <div className={styles.issues}>
-          {info.reverse().map((issue, index) => (
+          {info.map((issue, index) => (
             <div className={styles.issue} key={issue.id}>
               <IssueCard
                 image={issue.image}
                 id={issue.id}
                 title={issue.title}
-                link1={`/magazines/${info.length - index}`}
-                link2={`/unlockable/${info.lenght - index}`}
+                link1={`/magazines/${index + 1}`}
+                link2={`/unlockable/${index + 1}`}
               />
             </div>
           ))}
