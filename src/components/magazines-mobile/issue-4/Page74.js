@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './page74.module.scss'
 
 const Page74 = () => {
@@ -20,18 +21,31 @@ const Page74 = () => {
       <img className={styles.image7} src='/magazine/4/images/8182_image4.png' />
       <img className={styles.image8} src='/magazine/4/images/8182_image6.png' />
 
-      <div className={styles.text2}>
-        Go Behind the Scenes with Exclusive NFT Content and Experiences
-      </div>
-      <div className={styles.text1}>
-        Go Behind the Scenes with Exclusive NFT Content and Experiences        
-      </div>
-      <div className={styles.text3}>
-        SEE MORE
-      </div>
-      <div className={styles.text4}>
-        SEE MORE
-      </div>
+      <Link href='https://digifizzy.xyz/unlockable/1/'>
+        <a target='_blank'>
+          <div>
+            <div className={styles.text2}>
+              Go Behind the Scenes with Exclusive NFT Content and Experiences
+            </div>
+            <div className={styles.text1}>
+              Go Behind the Scenes with Exclusive NFT Content and Experiences        
+            </div>
+          </div>
+        </a>
+      </Link>
+      <Link href='https://digifizzy.xyz/unlockable/1/'>
+        <a target='_blank'>
+          <div>
+            <div className={styles.text3}>
+              SEE MORE
+            </div>
+            <div className={styles.text4}>
+              SEE MORE
+            </div>
+          </div>
+        </a>
+      </Link>
+      
       <div className={styles.text5}>
         XENOTECH
       </div>

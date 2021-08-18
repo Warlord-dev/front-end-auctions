@@ -1,0 +1,104 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 3115px;
+  background-color: #FF2727;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .rect1 {
+    position: absolute;
+    width: 338px;
+    height: 474px;
+    left: 19px;
+    top: 246px;
+    
+    background: rgba(0, 0, 0, 0.24);
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 323px;
+    height: 478px;
+    left: 34px;
+    top: 1340px;
+    
+    background: rgba(0, 0, 0, 0.24);
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 478px;
+    height: 76px;
+    left: -88px;
+    top: 39px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 100%;
+    text-align: right;
+    
+    color: #FFFFFF;
+    
+    -webkit-text-stroke: 5px #11FF29;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 478px;
+    height: 76px;
+    left: -88px;
+    top: 115px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 100%;
+    text-align: right;
+    
+    color: #FFFFFF;
+  
+    -webkit-text-stroke: 5px #11FF29;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 282px;
+    height: 450px;
+    left: 44px;
+    top: 258px;
+    
+    font-family: Gelasio;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 269px;
+    height: 437px;
+    left: 61px;
+    top: 1365px;
+    
+    font-family: Gelasio;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+  }
+}
