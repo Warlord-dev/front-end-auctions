@@ -13,7 +13,7 @@ const Unlockables = () => {
       <NftBanners />
       <div className={styles.bodyWrapper}>
         <div className={styles.issues}>
-          {details.map((issue, index) => (
+          {details.reverse().map((issue, index) => (
             <div className={styles.issue} key={info[index].id}>
               <IssueCard
                 video={issue[0].url[0]}
