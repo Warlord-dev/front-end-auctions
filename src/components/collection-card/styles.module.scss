@@ -1,3 +1,5 @@
+@import '../../assets/scss/helpers/grid.scss';
+
 @keyframes rightMove {
   0% {
     transform: translate(0);
@@ -9,6 +11,8 @@
 }
 
 .wrapper {
+  margin: auto;
+
   .title {
     font-family: Gilroy;
     font-style: normal;
@@ -94,6 +98,46 @@
     }
   }
 
+  @include sm-width {
+    width: 400px;
+
+    .imageWrapper {
+      height: 400px !important;
+    }
+  }
+
+  @include md-width {
+    width: 500px;
+
+    .imageWrapper {
+      height: 500px !important;
+    }
+  }
+
+  @include lg-width {
+    width: 350px;
+
+    .imageWrapper {
+      height: 350px !important;
+    }
+  }
+
+  @include xl-width {
+    width: 400px;
+
+    .imageWrapper {
+      height: 400px !important;
+    }
+  }
+
+  @include xxl-width {
+    width: 500px;
+
+    .imageWrapper {
+      height: 500px !important;
+    }
+  }
+
   .imageWrapper {
     position: relative;
     background: transparent;
@@ -106,37 +150,17 @@
     margin-bottom: 4rem;
     padding: 2rem;
 
-    // @media (min-width: 1440px) {
-    //   box-shadow: inset 0px 0px 30px 20px rgba(252, 238, 24, 0.5),
-    //     0px 0px 30px 20px rgba(252, 238, 24, 0.5);
-    // }
-
-    // @media (max-width: 1440px) {
-    //   box-shadow: inset 0px 0px 25px 15px rgba(252, 238, 24, 0.5),
-    //     0px 0px 25px 15px rgba(252, 238, 24, 0.5);
-    // }
-
-    // @media (max-width: 1200px) {
-    //   box-shadow: inset 0px 0px 25px 15px rgba(252, 238, 24, 0.5),
-    //     0px 0px 25px 15px rgba(252, 238, 24, 0.5);
-    // }
-
-    // @media (max-width: 920px) {
-    //   box-shadow: inset 0px 0px 20px 10px rgba(252, 238, 24, 0.5),
-    //     0px 0px 20px 10px rgba(252, 238, 24, 0.5);
-    // }
-
-    // @media (max-width: 768px) {
-    //   box-shadow: inset 0px 0px 15px 5px rgba(252, 238, 24, 0.5),
-    //     0px 0px 15px 5px rgba(252, 238, 24, 0.5);
-    // }
-
     .image {
       overflow: hidden;
       width: 100%;
 
       video {
-        width: inherit;
+        width: calc(100% - 4rem);
+        height: calc(100% - 4rem);
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        object-fit: cover;
       }
     }
   }

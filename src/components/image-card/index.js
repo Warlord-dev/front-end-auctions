@@ -77,14 +77,18 @@ const ImageCard = ({
         <div className={styles.bodyWrapper}>
           {showRarity ? <div className={styles.rarity}> {data?.rarity || data?.garment?.rarity} </div> : null}
           {data ? (
-            <LazyLoad>
-              <video key={data.id} autoPlay muted loop className={styles.video}>
-                <source
-                  src={reviseUrl(data.garment ? data.garment.animation : data.animation)}
-                  type="video/mp4"
-                />
-              </video>
-            </LazyLoad>
+            <>
+            {data.garment?.animation?.length || data.animation?.length ? (
+              <LazyLoad>
+                <video key={data.id} autoPlay muted loop className={styles.video}>
+                  <source
+                    src={reviseUrl(data.garment ? data.garment.animation : data.animation)}
+                    type="video/mp4"
+                  />
+                </video>
+              </LazyLoad>
+            ) : <img src={data.garment ? data.garment.image : data.image} className={styles.image} />}
+            </>
           ) : null}
           {imgUrl ? <img src={reviseUrl(imgUrl)} className={styles.image} /> : null}
           {showButton && (

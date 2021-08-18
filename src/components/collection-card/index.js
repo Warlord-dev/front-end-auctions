@@ -8,10 +8,10 @@ const CollectionCard = ({ collection }) => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.title}>{collection?.name}</div>
-        <div className={styles.designerWrapper}>
+        {/* <div className={styles.designerWrapper}>
           <img src={collection?.designer?.image} />
           <div className={styles.name}> {collection?.designer?.name} </div>
-        </div>
+        </div> */}
         <div className={styles.imageWrapper}>
           <div className={styles.image}>
             <video autoPlay muted loop>

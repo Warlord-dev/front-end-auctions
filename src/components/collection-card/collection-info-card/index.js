@@ -9,7 +9,7 @@ import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 const CollectionInfoCard = ({ collection }) => {
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
-
+  
   return (
     <div className={styles.wrapper}>
       <InfoCard

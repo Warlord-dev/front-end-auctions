@@ -29,14 +29,18 @@ const LandingPage = () => {
       let collections = []
       let auctions = []
       digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
-        const collectionPrice = digitalaxCollectionGroup.collections.reduce(
-          (a, b) => a + Number(b.valueSold),
-          0,
-        );
-        const auctionPrice = digitalaxCollectionGroup.auctions.reduce(
-          (a, b) => a + Number(b.topBid),
-          0,
-        );
+        const collectionPrice = digitalaxCollectionGroup.collections
+          .filter(collection => collection.id !== '0')
+          .reduce(
+            (a, b) => a + Number(b.valueSold),
+            0,
+          );
+        const auctionPrice = digitalaxCollectionGroup.auctions
+          .filter(auction => auction.id !== '0')
+          .reduce(
+            (a, b) => a + Number(b.topBid),
+            0,
+          );
         if (digitalaxCollectionGroup.collections.length && digitalaxCollectionGroup.collections[0].id !== '0') {
           collections.push({
             ...digitalaxCollectionGroup.collections[0].garments[0],
@@ -69,8 +73,7 @@ const LandingPage = () => {
 
       <section className={styles.collectionSection}>
         <div className={styles.collectionWrapper}>
-          <CollectionList items={collectionGroups} />
-          <CollectionList items={auctionsGroups} />
+          <CollectionList items={[...auctionsGroups, ...collectionGroups]} />
         </div>
       </section>
     </div>
