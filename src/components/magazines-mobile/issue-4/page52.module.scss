@@ -2,14 +2,14 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 3450px;
+  height: 2229px;
   display: flex;
   position: relative;
 
   .image1 {
     position: relative;
     width: 375px;
-    height: 3450px;
+    height: 2229px;
     left: 0;
     top: 0;
   }

@@ -1545,6 +1545,11 @@ class MyDocument extends Document {
               font-family: 'ROMANUS';
               src: url('./fonts/ROMANUS.otf');
             }
+
+            @font-face {
+              font-family: 'Bangla MN';
+              src: url('./fonts/Bangla MN.ttf');
+            }
           `,
             }}
           />
