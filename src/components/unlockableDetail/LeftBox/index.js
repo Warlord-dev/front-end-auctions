@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import styles from './styles.module.scss';
 
 const LeftBox = ({ details, activeImage, setActiveImage }) => {
-  const image = details.url;
-
   const isVideo = (url) => {
     const convertedUrl = url.toLowerCase();
-    if (convertedUrl.includes('mp4') || convertedUrl.includes('mov') || convertedUrl.includes('m4v')) return true;
+    if (
+      convertedUrl.includes('mp4') ||
+      convertedUrl.includes('mov') ||
+      convertedUrl.includes('m4v') ||
+      convertedUrl.includes('ipfs')
+    )
+      return true;
     return false;
   };
 

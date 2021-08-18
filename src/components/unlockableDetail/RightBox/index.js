@@ -145,9 +145,7 @@ const RightBox = ({ details, id, activeImage }) => {
       </div>
       <div className={styles.poapWrapper}>
         <a href="https://poap.website/digifizzy3" target="_blank">
-          <Button className={styles.poapClaimButton}>
-            CLAIM ISSUE 3 POAP!
-          </Button>
+          <Button className={styles.poapClaimButton}>CLAIM ISSUE 4 POAP!</Button>
         </a>
         <img src="/images/poap.png" />
       </div>
