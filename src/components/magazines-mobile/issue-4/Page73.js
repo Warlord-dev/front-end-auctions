@@ -17,6 +17,7 @@ const Page73 = () => {
 
       <img className={styles.image1} src='/magazine/4/images/7980_image10.png' />
       <img className={styles.image2} src='/magazine/4/images/7980_image11.png' />
+      <img className={styles.image6} src='/magazine/4/images/7980_image14.png' />
       <img className={styles.image3} src='/magazine/4/images/7980_image12.png' />
       <img className={styles.image4} src='/magazine/4/images/7980_image13.png' />
       <img className={styles.image5} src='/magazine/4/images/7980_image5.png' />

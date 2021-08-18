@@ -15,7 +15,7 @@ const Page47 = () => {
         INTERNATIONAL PLAYERS
       </div>
       <div className={styles.text2}>
-        PHILLIPINES
+        PHILIPPINES
       </div>
     </div>
   )

@@ -83,9 +83,9 @@ const Page33 = () => {
         Beyond this, decentralized commerce enables unique applications that are not imaginable in Web2. These can include metaverse commerce, liquid digital markets for anything and even include digital identities for physical products.
       </div>
       <div className={styles.text5}>
-        5. Could you tell us more about the recent launch of your virtual lifestyle portal 
+        5. Could you tell us more about the recent launch of your virtual lifestyle portal?
         <br /><br /><br />
-        We are pioneering the world’s first virtual lifestyle and commerce playground connecting  the metaverse with the universe. This initial space, which we are calling Portal, exists in Decentraland, a decentralized 3D virtual reality platform where we made a record-breaking virtual real estate purchase. Portal, connected by Boson Protocol, will enable brands, artists and creators to sell to individuals through in-game purchases of NFTs that are then redeemable for real-world products, services and experiences.
+        We are pioneering the world’s first virtual lifestyle and commerce playground connecting the metaverse with the universe. This initial space, which we are calling Portal, exists in Decentraland, a decentralized 3D virtual reality platform where we made a record-breaking virtual real estate purchase. Portal, connected by Boson Protocol, will enable brands, artists and creators to sell to individuals through in-game purchases of NFTs that are then redeemable for real-world products, services and experiences.
         <br /><br />
         Portal will be a creative and social space that will bring together forward-thinking designers and creators with innovative brands to create never-before-seen experiences. It will be a virtual wonderland full of brand experiences and rewards that will unlock the purchase of unique physical items. We are inviting brands and creators to express their interest in our Portal retail and event spaces, boutiques, arena and branded marketplace.
       </div>

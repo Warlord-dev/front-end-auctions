@@ -35,19 +35,61 @@
 
   h2 {
     position: absolute;
-    width: 261px;
+    width: 264px;
     height: 226px;
-    left: 57px;
-    top: 907px;
+    left: 43px;
+    top: 877px;
     
     font-family: Thonburi;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
-    line-height: 100%;
-    /* or 20px */
+    line-height: 120%;
+    color: #FFFFFF;
+  }
+
+  h3 {
+    position: absolute;
+    width: 269px;
+    height: 226px;
+    left: 43px;
+    top: 1654px;
     
+    font-family: Thonburi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FFFFFF;    
+  }
+
+  h4 {
+    position: absolute;
+    width: 271px;
+    height: 226px;
+    left: 43px;
+    top: 2557px;
     
+    font-family: Thonburi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FFFFFF;
+  }
+
+  h5 {
+    position: absolute;
+    width: 276px;
+    height: 226px;
+    left: 43px;
+    top: 2884px;
+    
+    font-family: Thonburi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
     color: #FFFFFF;
   }
 }

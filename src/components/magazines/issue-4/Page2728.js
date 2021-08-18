@@ -59,7 +59,7 @@ const Page2728 = () => {
         <br/><br/>
         These traceable trees enable greater economic inclusion for rural communities, mainly located in underdeveloped and developing countries, where often a lot of the voluntary tree planting takes place. 
         <br/><br/>
-        Carbon footprints can now be reduced in a more transparent manner that extends throughout the entire life of the planted tree. The ERC-20 O2 proves the existence of a planted tree, whereby the token is minted at a rate based on allometric equations of each species and verified thr
+        Carbon footprints can now be reduced in a more transparent manner that extends throughout the entire life of the planted tree. The ERC-20 O2 proves the existence of a planted tree, whereby the token is minted at a rate based on allometric equations of each species and verified through oracle groups. It’s a completely new and innovative way of combining economic value with gamified environmental sustainability. 
       </div>
       <div className={styles.text6}>
         L i b r e S o f t w a r e

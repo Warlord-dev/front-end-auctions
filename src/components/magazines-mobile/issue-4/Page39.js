@@ -4,7 +4,7 @@ import styles from './page39.module.scss'
 const Page39 = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.back}></div> 
+      <div className={styles.back}></div>
       <img className={styles.back2} src='/magazine/4/images/4344_image6_mobile.png' />
       <video autoPlay muted loop className={styles.video1}>
         <source src='./magazine/4/videos/4344_video1.mp4' type='video/mp4' />
@@ -13,7 +13,6 @@ const Page39 = () => {
       <img className={styles.image71} src='/magazine/4/images/4344_image7.png' />
       <img className={styles.image72} src='/magazine/4/images/4344_image7.png' />
       <img className={styles.image73} src='/magazine/4/images/4344_image7.png' />
-      <img className={styles.image74} src='/magazine/4/images/4344_image7.png' />
 
       <img className={styles.protocol1} src='/magazine/4/images/4344_protocol_1.png' />
       <img className={styles.protocol2} src='/magazine/4/images/4344_protocol_2.png' />
@@ -30,6 +29,31 @@ const Page39 = () => {
       <img className={styles.protocol13} src='/magazine/4/images/4344_protocol_13.png' />
       <img className={styles.protocol14} src='/magazine/4/images/4344_protocol_14.png' />
       <img className={styles.protocol15} src='/magazine/4/images/4344_protocol_15.png' />
+
+      <div className={styles.text1}>
+        COMPLETE WEB3 FASHION DIGITAL AR, IN-GAME AND PHYSICAL IRL MEMORABILIA VARSITY JACKETS        
+      </div>
+      <img className={styles.image1} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image2} src='/magazine/4/images/4344_image3.png' />
+      <img className={styles.image3} src='/magazine/4/images/4344_image3.png' />
+
+      <div className={styles.text2}>
+        DEFI 101 WORKSHOPS FOR CREATORS        
+      </div>
+      <div className={styles.text3}>
+        BRIDGING DEFI TO THE METAVERSE        
+      </div>
+
+      <video autoPlay muted loop className={styles.video2}>
+        <source src='./magazine/4/videos/4344_video12.mp4' type='video/mp4' />
+      </video>
+
+      <video autoPlay muted loop className={styles.video3}>
+        <source src='./magazine/4/videos/4344_video2.mp4' type='video/mp4' />
+      </video>
+
+      <img className={styles.image4} src='/magazine/4/images/4344_image9.gif' />
+      
     </div>
   )
 }

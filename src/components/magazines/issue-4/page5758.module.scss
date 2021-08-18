@@ -60,9 +60,6 @@
     font-weight: 300;
     font-size: 100px;
     line-height: 120.53%;
-    /* or 121px */
-    
-    
     color: #FFE193;
   }
 
@@ -78,9 +75,6 @@
     font-weight: 300;
     font-size: 100px;
     line-height: 120.53%;
-    /* or 121px */
-    
-    
     color: #FFE193;
   }
 
@@ -96,9 +90,6 @@
     font-weight: 300;
     font-size: 100px;
     line-height: 120.53%;
-    /* or 121px */
-    
-    
     color: #FFE193;
   }
 
@@ -152,28 +143,28 @@
     background: #BE35FF;
   }
 
-  .text1 {
+  .text5 {
     position: absolute;
     width: 544px;
     height: 241px;
     left: 40px;
     top: 277px;
     
-    font-family: 'Zilla Slab Highlight';
+    font-family: 'Zilla Slab';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
   }
 
-  .text2 {
+  .text6 {
     position: absolute;
     width: 544px;
     height: 241px;
     left: 377px;
     top: 580px;
     
-    font-family: 'Zilla Slab Highlight';
+    font-family: 'Zilla Slab';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -183,14 +174,14 @@
     
   }
 
-  .text3 {
+  .text7 {
     position: absolute;
     width: 544px;
     height: 241px;
     left: 39px;
     top: 909px;
     
-    font-family: 'Zilla Slab Highlight';
+    font-family: 'Zilla Slab';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -200,14 +191,14 @@
     
   }
 
-  .text4 {
+  .text8 {
     position: absolute;
     width: 544px;
     height: 241px;
     left: 1000px;
     top: 341px;
     
-    font-family: 'Zilla Slab Highlight';
+    font-family: 'Zilla Slab';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -217,14 +208,14 @@
     
   }
 
-  .text5 {
+  .text9 {
     position: absolute;
     width: 544px;
     height: 241px;
     left: 1337px;
     top: 750px;
     
-    font-family: 'Zilla Slab Highlight';
+    font-family: 'Zilla Slab';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -236,10 +227,12 @@
 
   h1 {
     span {
-      background-color: white;
       display: inline;
-      color: #BE35FF;    
+      // color: white;
+      background-color: white;
+      color: #BE35FF;
     }
+    
   }
 }
 

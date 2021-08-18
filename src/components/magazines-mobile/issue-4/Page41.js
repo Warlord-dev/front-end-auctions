@@ -12,6 +12,18 @@ const Page41 = () => {
       <img className={styles.image4} src='/magazine/4/images/4546_image4.png' />
       <img className={styles.image5} src='/magazine/4/images/4546_image4.png' />
       <img className={styles.image6} src='/magazine/4/images/4546_image4.png' />
+
+      <video autoPlay muted loop className={styles.video1}>
+        <source src='./magazine/4/videos/4546_video1.mp4' type='video/mp4' />
+      </video>
+
+      <div className={styles.text1}>
+        AUGUST 23RD - 27TH        
+      </div>
+      <div className={styles.text2}>
+        this week starts with fashion but it doesn’t end there. because to come into this industry one dimension of design is not enough. 
+        listen in on voices across defi, nfts, deco, ar, vr, avatars, gaming, and esports as w3fw shows you what is the new meta. 
+      </div>
     </div>
   )
 }
