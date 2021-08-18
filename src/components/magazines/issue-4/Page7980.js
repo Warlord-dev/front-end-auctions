@@ -68,6 +68,7 @@ const Page7980 = () => {
       <img className={styles.image17} src='/magazine/4/images/7980_image11.png' />
       <img className={styles.image18} src='/magazine/4/images/7980_image12.png' />
       <img className={styles.image19} src='/magazine/4/images/7980_image13.png' />
+      <img className={styles.image20} src='/magazine/4/images/7980_image14.png' />
 
 
     </div>
