@@ -1,55 +1,34 @@
-import React from 'react';
-import styles from './page111112.module.scss';
+import React from 'react'
+import styles from './page111112.module.scss'
 
 const Page111112 = () => {
   return (
     <div className={styles.wrapper}>
-       <img src="/magazine/3/images/111_112/image1.png" className={styles.image1}/>
-         <p className={styles.text1}>XENOTECH</p> 
-         <p className={styles.text2}>XENOTECH</p> 
-         <p className={styles.text3}>XENOTECH</p> 
-         <p className={styles.text4}>XENOTECH</p> 
-         <div className={styles.image2}></div>
-         <p className={styles.text5}> In the previous content I broke down how the XENOTECH virtual world would be structured. The primary NFTs that users would interact with are clothing stores, apartments, and clothing wearables.</p> 
-         <p className={styles.text6}>Clothing Stores</p> 
-         <p className={styles.text7}>Clothing Stores</p> 
-         <div className={styles.image3}></div>
-         <p className={styles.text8}>Across the city there would be 3D retail spaces that designers and brands could rent or purchase (as NFTs) and subsequently customize and launch clothing stores for both their digital and physical products. Depending on the scenario, these stores would either be persistently open to the public, or they could be scheduled NFT ticketed pop-up store events. Scarcity is a crucial characteristic of streetwear and fashion and the reason that people will line up and even camp on the street overnight for a Supreme drop.</p> 
-         <div className={styles.image4}></div>
-         <p className={styles.text9}>In a virtual world, a brand could replicate this sort of scarcity thrill for clothing drops by pre-selling a limited number of tickets (NFTs or social tokens) that would grant their holders private access to the 3D clothing store upon the drop. Upon purchasing an NFT clothing garment from a brand, a customer could then view the garment in their inventory and equip it on their avatar. Users could also purchase their own NFT apartment within the virtual world where they could display their clothing garments and other 3D NFT objects.</p> 
-         <div className={styles.image5}>
-          <video className={styles.image6} muted loop autoPlay>
-              <source src="./magazine/3/images/111_112/video1.mp4" type="video/mp4" />
-            </video>
-        </div>
-        <img src="/magazine/3/images/111_112/image2.png" className={styles.image7}/>
-        <img src="/magazine/3/images/111_112/image3.png" className={styles.image8}/>
-        <img src="/magazine/3/images/111_112/image4.png" className={styles.image9}/>
-        <div className={styles.image10}>
-          <video className={styles.image11} muted loop autoPlay>
-              <source src="./magazine/3/images/111_112/video2.mp4" type="video/mp4" />
-            </video>
-        </div>
-        <p className={styles.text10}>NFT CLOTHING</p> 
-        <p className={styles.text11}>NFT CLOTHING</p> 
-        <div className={styles.image12}></div>
-        <p className={styles.text12}>Clothing, especially interoperable digital clothing, is a key aspect of the Open-Metaverse. Currently there are so many barriers faced by people who wish to create digital clothing. It requires an investment in a decent computer, as well as dedicated time to learning 3D modeling programs like CLO3D and Blender. There should be a dedicated simple 3D modeling interface that would allow users (without 3D experience) to easily create custom digital clothing garments based on open-sourced templates and patterns that could then be minted as NFTs and accessible within the virtual world in a few clicks. By making the experience simple and intuitive it would introduce a whole new class of digital fashion designers / brands who previously lacked access or skills regarding 3D programs.</p> 
-        <div className={styles.image13}></div>
-        <p className={styles.text13}>For a designer or brand, ideally the journey could be as simple as: 
-<br/><br/>
-1. selecting a open-sourced pre-designed garment template (blank shirt, hoodie, pants, shoes, etc...) <br/>
-2. customizing the garment with their own graphics, materials, textures. <br/>
-3. minting the garment as an NFT directly in the interface.<br/>
-4. displaying the garment for sale inside of the digital clothing retail space (NFT land)</p> 
-      <img src="/magazine/3/images/111_112/image5.png" className={styles.image14}/>
-      <img src="/magazine/3/images/111_112/image6.png" className={styles.image15}/>
-      <div className={styles.image16}>
-        <video className={styles.image17} muted loop autoPlay>
-            <source src="./magazine/3/images/111_112/video3.mp4" type="video/mp4" />
-          </video>
+      <img src='/magazine/4/images/111112_background.png' className={styles.background}/>
+      <div className={styles.rect1}></div>
+      <div className={styles.rect2}></div>
+
+      <div className={styles.text1}>
+        The Creator Economy + Decentralised Commerce
+      </div>
+      <div className={styles.text2}>
+        One of the internet’s monikers during its initial 90s web1 run was the “information superhighway” – a term attributed to former US Senator and Vice President Al Gore when he dreamt of an infobahn whose impact would reach far beyond the halls of academia, towards stimulating economic and educational growth in America (and eventually the rest of the world).
+        <br /><br />
+        Fast forward thirty years after, the information superhighway has developed at the speed of sound, giving rise to entirely new paradigms of web applications, with the advent of web2 and its centralised exponents – and the emergence of web3, or the internet of value powered by decentralised technology. 
+        <br /><br />
+        Decentralised technology offers a tantalizing opportunity for individuals to partake in economic and financial activities otherwise only brokered by financial institutions without intermediation. These include activities such as exchanging, lending, borrowing, and investing possible all within a technological milieu that goes beyond promoting the unhampered transfer of information, but also of value.
+        <br /><br />
+        The intersection of web2 social media platforms and the pivot towards user-generated content in the present context of the internet has given traction to the creator economy – a new model of monetisation enabling individuals to benefit from the content they create, or the passions they dearly hold. This might include the creation of personalized content, knowledge, skills, and other services and products. These include your modern-day vloggers, streamers, drop-shippers, podcasters, writers, digital artists, fashion designers, online store owners, and indie game developers – just to name a few. They’re in every vertical imaginable.
+      </div>
+      <div className={styles.text3}>
+        And why not? With one click, anyone with just an internet connection and something to say can support themselves with the myriad of platforms like Patreon and OnlyFans – whether they’re performing for millions of followers or 50 dyed-in-the-wool patrons of the most discerning taste. That’s not to mention income streams arising from ad revenue, paywalls, selling instructional courses, digital content, brand partnerships, and sponsorships. It’s given rise to over 50 million individuals essentially becoming highly sought-after businesses and brands unto themselves.
+        <br /><br />
+        The hype is reaching fever pitch as social media platforms left and right engage in total war to retain creators on their platforms, each providing a bevy of incentives, funds, and features to have them stay on. Meanwhile, exciting new startups have come forth out of the fertile environment to provide creators with the tools they need to continue to make their living as the emerging voices and leaders of the communities propagating around every thinkable niche in the nascent web3 plane. 
+        <br /><br />
+        It hasn’t been smooth sailing for creators by no stretch of the imagination. Like gig economy participants, creators are largely dependent on their relationship with the platform – particularly when it comes to compensation and take rates (and the fast-rising barriers to entry). That’s not to mention the fact that monetisation policy is unilaterally dictated by the platform – there’s no creator bigger than any one platform. Not even the former 45th President and shitposter-in-chief – whose engagement figures should be a success by every imaginable metric – was immune to being de-platformed at the drop of a hat. Cross the bridge, pay the toll. That goes for the centralized platforms that currently hold sway in the nascent creator economy.
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Page111112;
+export default Page111112
