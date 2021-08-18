@@ -1,0 +1,94 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  color: white;
+  display: flex;
+  position: relative;
+  background-color: #fff;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0;
+    top: 0;
+  }
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 472px;
+    height: 453px;
+    left: 424px;
+    top: 45px;
+    
+    font-family: Lacquer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #000000;    
+  }
+
+  h2 {
+    position: absolute;
+    width: 375px;
+    height: 549px;
+    left: 30px;
+    top: 948px;
+    
+    font-family: Lacquer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #000000;    
+  }
+
+  .rectangle {
+    position: absolute;
+    width: 699px;
+    height: 1121px;
+    left: 1074px;
+    top: 188px;
+    
+    background: #00D0DA;
+    border: 10px solid #000000;
+    box-sizing: border-box;    
+  }
+
+  p {
+    position: absolute;
+    width: 580px;
+    height: 972px;
+    left: 1134px;
+    top: 261px;
+    
+    font-family: Lacquer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 150%;
+    /* or 33px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+}
+

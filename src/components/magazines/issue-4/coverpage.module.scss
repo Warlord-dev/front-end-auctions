@@ -1,0 +1,361 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  color: white;
+  display: flex;
+  position: relative;
+  background-color: #E5E5E5;
+
+  .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 960px;
+    height: 1497px;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 202px;
+    height: 232px;
+    left: 9px;
+    top: 20px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 285px;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(86, 30, 30, 0.61);
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 960px;
+    height: 83px;
+    left: 0px;
+    top: 328px;
+    
+    background: rgba(199, 101, 101, 0.67);
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 960px;
+    height: 83px;
+    left: 0px;
+    top: 443px;
+    
+    background: rgba(199, 177, 101, 0.67);
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 960px;
+    height: 83px;
+    left: 0px;
+    top: 559px;
+    
+    background: rgba(34, 147, 140, 0.67);
+  }
+
+  .rect5 {
+    position: absolute;
+    width: 960px;
+    height: 83px;
+    left: 0px;
+    top: 673px;
+    
+    background: rgba(147, 34, 54, 0.67);
+  }
+
+  .rect6 {
+    position: absolute;
+    width: 960px;
+    height: 110px;
+    left: 0px;
+    top: 1387px;
+    
+    background: rgba(199, 101, 101, 0.67);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 767px;
+    height: 184px;
+    left: 227px;
+    top: 20px;
+
+    font-family: BAZAR COSTA;
+    font-size: 80px;
+    line-height: 92px;
+
+    color: #00C4B8;
+    -webkit-text-stroke: 5px #000000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 696px;
+    height: 54px;
+    left: 231px;
+    top: 215px;
+    
+    font-family: Gayathri;
+    font-size: 30px;
+    line-height: 90%;
+    /* or 27px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 49px;
+    height: 576px;
+    left: 32px;
+    top: 493px;
+    
+    font-family: Jua;
+    font-size: 60px;
+    line-height: 80%;
+    
+    text-align: center;    
+    color: #FFFFFF;
+    
+    word-wrap: break-word;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 49px;
+    height: 432px;
+    left: 74px;
+    top: 637px;
+    
+    font-family: Jua;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 80%;
+        
+    text-align: center;
+    color: #FFFFFF;
+    word-wrap: break-word;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 708px;
+    height: 98px;
+    left: 131px;
+    top: 915px;
+    
+    font-family: Burst My Bubble;
+    font-size: 130px;
+    line-height: 30px;
+
+    color: #3F0000;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 653px;
+    height: 100px;
+    left: 131px;
+    top: 969px;
+    
+    font-family: Neon Vortex;
+    font-size: 50px;
+    line-height: 50px;
+    color: #28FF71;
+    
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 548px;
+    height: 112px;
+    left: 32px;
+    top: 1094px;
+    
+    font-family: Cool Chaos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 80%;
+    
+    color: #FA00FF;
+    
+    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+    
+  }
+
+  .text8 {
+    position: absolute;
+    width: 548px;
+    height: 56px;
+    left: 32px;
+    top: 1225px;
+    
+    font-family: Corben;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 80%;
+    /* identical to box height, or 56px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 501px;
+    height: 162px;
+    left: 32px;
+    top: 1306px;
+    
+    font-family: Fresca;
+    font-size: 90px;
+    line-height: 90%;
+    /* or 81px */
+    
+    
+    color: #3F0000;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 283px;
+    height: 117px;
+    left: 449px;
+    top: 1301px;
+    
+    font-family: Fresca;
+    font-size: 130px;
+    line-height: 90%;   
+    text-align: right;
+    
+    color: #FF5252;
+    
+  }
+
+  .text11 {
+    position: absolute;
+    width: 439px;
+    height: 45px;
+    left: 377px;
+    top: 1417px;
+    
+    font-family: Fresca;
+    font-size: 50px;
+    line-height: 90%;
+
+    color: #BC0000;    
+  }
+
+  .text12 {
+    position: absolute;
+    width: 47px;
+    height: 648px;
+    left: 841px;
+    top: 814px;
+    
+    font-family: Internal Rainbows;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    
+    color: #074DFF;
+    word-wrap: break-word;
+  }
+  
+  .text13 {
+    position: absolute;
+    width: 47px;
+    height: 648px;
+    left: 847px;
+    top: 814px;
+    
+    font-family: Internal Rainbows;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    
+    color: #00916E;
+    word-wrap: break-word;
+  }
+  
+  .text14 {
+    position: absolute;
+    width: 47px;
+    height: 648px;
+    left: 856px;
+    top: 814px;
+    
+    font-family: Internal Rainbows;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    
+    color: #00F59D;
+    word-wrap: break-word;
+  }
+  
+  .text15 {
+    position: absolute;
+    width: 13px;
+    height: 324px;
+    left: 909px;
+    top: 1121px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    word-wrap: break-word;
+    text-shadow: 0px 4px 4px rgba(241, 241, 241, 0.25), 0px 4px 4px rgba(211, 211, 211, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25);    
+  }
+  
+  .text16 {
+    position: absolute;
+    width: 13px;
+    height: 324px;
+    left: 912px;
+    top: 1121px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+    
+    text-align: center;
+    
+    color: #00E693;
+    word-wrap: break-word;
+    text-shadow: 0px 4px 4px rgba(241, 241, 241, 0.25), 0px 4px 4px rgba(211, 211, 211, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25);
+  }
+
+}
+

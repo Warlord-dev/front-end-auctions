@@ -1,0 +1,188 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3368px;
+  background-color: black;
+  color: black;
+  position: relative;
+
+  .back {
+    position: absolute;
+    width: 375px;
+    height: 3368px;
+    left: 0;
+    top: 0;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 320px;
+    height: 53px;
+    left: 28px;
+    top: 26px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    left: 32px;
+    top: 150px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    left: 32px;
+    top: 846px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    left: 32px;
+    top: 1631px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    left: 32px;
+    top: 2348px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 339px;
+    height: 21px;
+    left: 50px;
+    top: 479px;
+    
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 25px;
+    
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 276px;
+    height: 163px;
+    left: 50px;
+    top: 508px;
+    
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 18px;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 259px;
+    height: 22px;
+    left: 50px;
+    top: 1158px;
+    
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 25px;
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 276px;
+    height: 173px;
+    left: 50px;
+    top: 1212px;
+    
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 18px;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 341px;
+    height: 22px;
+    left: 50px;
+    top: 1947px;
+    
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 25px;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 286px;
+    height: 162px;
+    left: 50px;
+    top: 1980px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 259px;
+    height: 21px;
+    left: 50px;
+    top: 2668px;
+    
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 25px;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text8 {
+    position: absolute;
+    width: 276px;
+    height: 256px;
+    left: 50px;
+    top: 2761px;
+    
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 18px;
+    
+    color: #FFFFFF;
+  }
+
+  a {
+    text-decoration: underline;
+    color: white;
+  }
+}

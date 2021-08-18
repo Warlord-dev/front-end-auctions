@@ -1,0 +1,106 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #FFFFFF;
+  color: white;
+  display: flex;
+  position: relative;
+
+  a {
+    img {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    bottom: 0px;
+  }
+  
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 1700px;
+    top: 22px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 718px;
+    height: 93px;
+    left: 993px;
+    top: 37px;
+    
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 74px;
+    line-height: 120.53%;
+    color: #B3FF53;
+    -webkit-text-stroke: 3px white;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 718px;
+    height: 86px;
+    left: 993px;
+    top: 130px;
+    
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 120.53%;
+    color: #E6A759;
+    -webkit-text-stroke: 3px white;
+  }
+
+  .text3 {
+    position: absolute;
+    left: 51.72%;
+    right: 3.12%;
+    top: 16.3%;
+    bottom: 33.6%;
+    
+    font-family: fairy wings;
+    font-size: 23px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    
+    text-shadow: -1px 0 white, 0 -1px white, 1px 0 white, 0 1px white;
+  }
+
+  .text4 {
+    position: absolute;
+    left: 51.72%;
+    right: 3.12%;
+    top: 70.52%;
+    bottom: -20.62%;
+    
+    font-family: fairy wings;
+    font-size: 23px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    
+    text-shadow: -1px 0 white, 0 -1px white, 1px 0 white, 0 1px white;
+    transform: rotate(-7deg);
+    transform-origin: 0 0;
+  }
+}

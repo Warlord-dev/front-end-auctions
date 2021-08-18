@@ -1,0 +1,152 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  h1 {
+    position: absolute;
+    width: 620px;
+    height: 375px;
+    left: 29px;
+    top: 1105px;
+    
+    font-family: CF Punk Fashion PERSONAL;
+    font-size: 120px;
+    line-height: 100%;
+    
+    color: #FAFF00;
+  }
+  
+  .text1 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 17px;
+    top: 17px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FAFF00;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 603px;
+    top: 46px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FAFF00;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: -155px;
+    top: 269px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FAFF00;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 428px;
+    top: 303px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FAFF00;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: -115px;
+    top: 542px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FAFF00;
+  }
+
+  .back1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    background-color: black;
+  }
+
+  .video1 {
+    position: absolute;
+    width: 960px;
+    height: 599px;
+    left: 960px;
+    top: 303px;
+    object-fit: cover;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 598px;
+    left: 960px;
+    top: 899px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 833px;
+    height: 83px;
+    left: 1023px;
+    top: 46px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 316px;
+    height: 125px;
+    left: 994px;
+    top: 1006px;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 840px;
+    height: 166px;
+    left: 1039px;
+    top: 139px;
+    
+    font-family: Cormorant Garamond;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120.53%;    
+    color: #FFFFFF;
+  }
+}

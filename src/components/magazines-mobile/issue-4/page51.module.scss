@@ -1,0 +1,44 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3450px;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: relative;
+    width: 375px;
+    height: 3450px;
+    left: 0;
+    top: 0;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 109px;
+    height: 109px;
+    left: 187px;
+    top: 46px;        
+  }
+
+  .image3 {
+    position: absolute;
+    width: 325px;
+    height: 324px;
+    left: -48px;
+    top: 2909px;
+    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 253px;
+    height: 253px;
+    left: 94px;
+    top: 3144px;
+    
+  }
+}

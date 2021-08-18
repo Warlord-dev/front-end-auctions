@@ -1,0 +1,124 @@
+.wrapper {
+  position: absolute;
+  width: 960px;
+  height: 330px;
+  left: 960px;
+  top: 156px;
+  
+  background: rgba(145, 0, 113, 0.8);
+}
+
+.title {
+  position: absolute;
+  width: 487px;
+  height: 36px;
+  left: 1196px;
+  top: 197px;
+  
+  font-family: Courier;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 120.53%;
+  /* or 36px */
+  
+  
+  color: #FFFFFF;
+  
+}
+
+.description {
+  position: absolute;
+  width: 621px;
+  height: 72px;
+  left: 1129px;
+  top: 256px;
+  
+  font-family: Courier;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 120.53%;
+  /* or 18px */
+  
+  text-align: center;
+  
+  color: #FFFFFF;  
+}
+
+.unlock {
+  position: absolute;
+  width: 153px;
+  height: 44px;
+  left: 1363px;
+  top: 361px;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 120.53%;
+  text-align: center;
+  color: #FFFFFF;
+
+  background: rgba(145, 0, 113, 0.8);  
+
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to bottom, white, black);
+  &:hover {
+    border-image-source: linear-gradient(to bottom, black, white);
+  }
+  &:active {
+    background: rgba(145, 50, 113, 1); 
+  }
+}
+.badge {
+  position: absolute;
+  width: 139px;
+  height: 183px;
+  left: 1760px;
+  top: 212px;
+}
+.arrow {
+  position: absolute;
+  width: 80px;
+  height: 77px;
+  left: 1552px;
+  top: 328px;
+  transform: rotate(180deg);
+}
+.bottom {
+  position: absolute;
+  width: 960px;
+  height: 62px;
+  left: 960px;
+  top: 424px;
+  
+  background: rgba(145, 0, 113, 0.8);
+}
+.bottom_text {
+  position: absolute;
+  width: 782px;
+  height: 23px;
+  left: 1049px;
+  top: 444px;
+}
+
+.text1 {
+  position: absolute;
+  width: 781px;
+  height: 23px;
+  left: 1050px;
+  top: 444px;
+  
+  font-family: Courier;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 120.53%;
+  text-align: center;
+  
+  color: #FFFFFF;
+  text-shadow: -0.5px -0.5px #00FFF0;
+}

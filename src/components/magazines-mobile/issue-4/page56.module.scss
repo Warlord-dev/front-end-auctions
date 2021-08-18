@@ -1,0 +1,83 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2753px;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 2753px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 375px;
+    height: 682px;
+    left: 0px;
+    top: 1811px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 322px;
+    height: 51px;
+    left: 26px;
+    top: 1663px;
+    
+    font-family: Indie Flower;
+    font-size: 60px;
+    line-height: 60px;
+    color: #FFA114;
+    
+    -webkit-text-stroke: 1px #00FFFF;
+    text-shadow: 0px 4px 4px #490055;      
+  }
+
+  .text2 {
+    position: absolute;
+    width: 357px;
+    height: 111px;
+    left: 26px;
+    top: 1811px;
+
+    font-family: Indie Flower;
+    font-size: 70px;
+    line-height: 60px;
+    color: #FFA114;
+
+    -webkit-text-stroke: 1px #00FFFF;
+    text-shadow: 0px 4px 4px #490055;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 629px;
+    height: 111px;
+    left: 29px;
+    top: 2322px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 85px;
+    color: #FFFFFF;
+    
+    text-shadow: 0px -1px black, -1px 0px black, 1px 0px black, 0px 1px black;
+  }
+
+  .audioPanel {
+    position: absolute;
+    width: 377px;
+    height: 149px;
+    left: 0px;
+    top: 2416px;
+  }
+}

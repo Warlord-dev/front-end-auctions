@@ -1,0 +1,206 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: linear-gradient(180deg, #3F40BF 0%, rgba(54, 55, 157, 0.9) 100%);
+  color: black;
+  display: flex;
+  position: relative;
+
+  .text1 {
+    position: absolute;
+    width: 239px;
+    height: 534px;
+    left: 64px;
+    top: 12px;
+    
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 300px;
+    line-height: 270px;
+
+    background: -webkit-linear-gradient(#FFC700, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 490px;
+    height: 259px;
+    left: 233px;
+    top: 42px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;  
+    text-align: right;
+    color: #FF7A00;
+    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 486px;
+    height: 320px;
+    left: 233px;
+    top: 301px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    /* or 118% */
+    
+    text-align: right;
+
+    background: -webkit-linear-gradient(#FF9900, #FF9153);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 672px;
+    height: 881px;
+    left: 47px;
+    top: 635px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    
+    text-align: right;
+
+    background: -webkit-linear-gradient(#FF9153, #FF00B8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 607px;
+    height: 181px;
+    left: 748px;
+    top: 635px;
+    
+    font-family: Thicker Trial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 100px;
+    /* or 111% */
+    
+    
+    color: #FFFFFF;
+    
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+
+    span {
+      font-size: 134px;
+    }
+  }
+
+  .text6 {
+    position: absolute;
+    width: 646px;
+    height: 119px;
+    left: 820px;
+    top: 1461px;
+    
+    font-family: Super Thin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 150px;
+        
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+
+    background: -webkit-linear-gradient(180deg, #FF5C00, #FF00B8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 554px;
+    height: 200px;
+    left: 990px;
+    top: 1461px;
+    
+    font-family: Super Thin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 200px;
+    
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+
+    background: -webkit-linear-gradient(180deg, #FF5C00, #FF00B8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 672px;
+    height: 1113px;
+    left: 1188px;
+    top: 70px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+
+    background: -webkit-linear-gradient(#FF9153, #FF00B8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 511px;
+    height: 209px;
+    left: 1190px;
+    top: 1285px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+
+    background: -webkit-linear-gradient(#FF9153, #FF00B8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 165px;
+    height: 278px;
+    left: 1715px;
+    top: 1206px;
+    
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 300px;
+    line-height: 270px;
+
+    background: -webkit-linear-gradient(#FFC700, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

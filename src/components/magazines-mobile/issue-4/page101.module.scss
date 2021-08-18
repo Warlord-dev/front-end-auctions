@@ -1,0 +1,38 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 2387px;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .text1 {
+    position: absolute;
+    width: 280px;
+    height: 1061px;
+    left: 48px;
+    top: 34px;
+    
+    font-family: Courier New;
+    font-size: 18px;
+    line-height: 120.53%;    
+    color: #000000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 375px;
+    height: 44px;
+    left: 45px;
+    top: 2256px;
+
+    font-family: Courier New;
+    font-size: 18px;
+    line-height: 120.53%;    
+    color: #000000;
+  }
+}

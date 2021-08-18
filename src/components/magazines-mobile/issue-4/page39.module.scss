@@ -1,0 +1,190 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 1517px;
+  background-color: white;  
+  color: black;
+  display: flex;
+  position: relative;
+
+  .back {
+    background: rgba(189, 61, 169, 0.47);
+    height: 1517px;
+    width: 375px;
+    left: 0;
+    top: 0;
+  }
+
+  .back2 {
+    position: absolute;
+    width: 327px;
+    height: 1497px;
+    left: 48px;
+    top: 237px;    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 419px;
+    height: 237px;
+    left: -22px;
+    top: 0px;
+    object-fit: fill;    
+  }
+
+  .image71 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 89px;
+    top: 877px;    
+  }
+
+  .image72 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 89px;
+    top: 933px;
+    
+  }
+
+  .image73 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 89px;
+    top: 989px;
+    
+  }
+
+  .image74 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 89px;
+    top: 1045px;
+  }
+
+  .protocol1 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 265px;
+  }
+
+  .protocol2 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 136px;
+    top: 265px;
+    
+  }
+
+  .protocol3 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 252px;
+    top: 265px;
+  }
+
+  .protocol4 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 378px;
+  }
+
+  .protocol5 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 136px;
+    top: 378px;
+  }
+
+  .protocol6 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 252px;
+    top: 378px;
+  }
+
+  .protocol7 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 493px;
+  }
+
+  .protocol8 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 136px;
+    top: 493px;
+  }
+
+  .protocol9 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 252px;
+    top: 493px;
+  }
+
+  .protocol10 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 609px;
+  }
+
+  .protocol11 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 136px;
+    top: 609px;
+  }
+
+  .protocol12 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 252px;
+    top: 609px;
+  }
+
+  .protocol13 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 722px;
+  }
+
+  .protocol14 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 136px;
+    top: 722px;
+  }
+
+  .protocol15 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 252px;
+    top: 722px;
+  }
+}

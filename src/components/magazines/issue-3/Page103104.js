@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
-import styles from './page103104.module.scss';
-import { useSelector } from 'react-redux';
-import UnlockPage from '../common/UnlockPage-Three';
-import { useRouter } from 'next/router';
+import React, { useState } from 'react'
+import styles from './page103104.module.scss'
+import { useSelector } from 'react-redux'
+import UnlockPage from '../common/UnlockPage-Poap'
+import { useRouter } from 'next/router'
 
 const Page103104 = () => {
-  const [usually] = useState('{usually}');
-  const router = useRouter();
-  const { slug } = router.query;
-  const issueId = slug && slug.length > 0 ? slug[0] : magazineIssues[0].issueId;
-  const { contentUnlocked } = useSelector((state) => state.global.toJS());
+  const [usually] = useState('{usually}')
+  const router = useRouter()
+  const { slug } = router.query
+  const issueId = slug && slug.length > 0 ? slug[0] : magazineIssues[0].issueId
+  const { contentUnlocked } = useSelector((state) => state.global.toJS())
+  
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/3/images/103_104/image1.png" className={styles.image1} />

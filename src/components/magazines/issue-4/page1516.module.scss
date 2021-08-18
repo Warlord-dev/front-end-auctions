@@ -1,0 +1,183 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #FFFFFF;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .back1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(180deg, #FF208B 0%, #E777FF 53.12%, #000000 98.96%);        
+  }
+  
+  .back2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    
+    background: #FA00FF;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 798px;
+    left: 0px;
+    bottom: 0px;  
+  }
+  
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+  
+  .image3 {
+    position: absolute;
+    width: 799px;
+    height: 1041px;
+    left: 1037px;
+    top: 163px;
+  }
+
+  .flower1 {
+    position: absolute;
+    width: 216px;
+    height: 190px;
+    left: 1010px;
+    top: 33px;      
+  }
+
+  .flower2 {
+    position: absolute;
+    width: 105px;
+    height: 92px;
+    left: 1440px;
+    top: 10px;
+  }
+
+  .flower3 {
+    position: absolute;
+    width: 216px;
+    height: 190px;
+    left: 1704px;
+    top: 94px;
+  }
+
+  .flower4 {
+    position: absolute;
+    width: 105px;
+    height: 92px;
+    left: 960px;
+    top: 264px;
+    
+  }
+
+  .flower5 {
+    position: absolute;
+    width: 105px;
+    height: 92px;
+    left: 1761px;
+    top: 702px;
+    
+  }
+
+  .flower6 {
+    position: absolute;
+    width: 183px;
+    height: 161px;
+    left: 960px;
+    top: 815px;
+  }
+
+  .flower7 {
+    position: absolute;
+    width: 105px;
+    height: 92px;
+    left: 1814px;
+    top: 930px;
+  }
+
+  .flower8 {
+    position: absolute;
+    width: 216px;
+    height: 190px;
+    left: 1650px;
+    top: 1079px;
+  }
+
+  .flower9 {
+    position: absolute;
+    width: 105px;
+    height: 92px;
+    left: 1143px;
+    top: 1204px;
+    
+  }
+
+  .flower10 {
+    position: absolute;
+    width: 216px;
+    height: 190px;
+    left: 960px;
+    top: 1307px;
+    
+  }
+
+  .flower11 {
+    position: absolute;
+    width: 157px;
+    height: 138px;
+    left: 1431px;
+    top: 1285px;
+  }
+
+  .flower12 {
+    position: absolute;
+    width: 105px;
+    height: 92px;
+    left: 1705px;
+    top: 1377px;
+  }
+
+  .frame {
+    position: absolute;
+    width: 699px;
+    height: 657px;
+    left: 130px;
+    top: 45px;
+    
+    background: #00D0DA;
+    border: 10px solid #000000;
+    box-sizing: border-box;    
+  }
+
+  .text {
+    position: absolute;
+    width: 580px;
+    height: 567px;
+    left: 190px;
+    top: 82px;
+    
+    font-family: Lacquer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 25px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+}

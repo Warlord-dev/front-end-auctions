@@ -1,0 +1,82 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 1410px;
+  background-color: #FA00FF;
+  color: white;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 1410px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 183px;
+    height: 161px;
+    left: 227px;
+    top: 0px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 216px;
+    height: 190px;
+    left: 38px;
+    top: 122px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 105px;
+    height: 92px;
+    left: -12px;
+    top: 353px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 105px;
+    height: 92px;
+    left: 266px;
+    top: 919px;
+    
+  }
+
+  .image6 {
+    position: absolute;
+    width: 105px;
+    height: 92px;
+    left: -26px;
+    top: 1004px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 105px;
+    height: 92px;
+    left: 132px;
+    top: 1096px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 216px;
+    height: 190px;
+    left: -29px;
+    top: 1256px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 399px;
+    height: 520px;
+    left: -12px;
+    top: 445px;
+  }
+}

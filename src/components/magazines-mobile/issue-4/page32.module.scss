@@ -1,0 +1,70 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2570px;
+  background-color: white;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .background {
+    position: absolute;
+    width: 375px;
+    height: 2570px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 399px;
+    left: 0px;
+    top: 21px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 301px;
+    height: 198px;
+    left: 37px;
+    top: 420px;
+    
+    font-family: Think Thick;
+    font-size: 10px;
+    line-height: 180%;
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 298px;
+    height: 673px;
+    left: 37px;
+    top: 630px;
+    
+    font-family: Think Thick;
+    font-size: 11px;
+    line-height: 180%;
+    color: #FFFFFF;
+
+    .pink {
+      color: #EC00C6;
+    }
+
+    .lightPink {
+      color: #FFB7B7;
+    }
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 224px;
+    height: 122px;
+    left: 143px;
+    top: 63px;
+  }
+}

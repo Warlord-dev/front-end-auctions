@@ -1,0 +1,131 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  height: 3620px;
+  color: black;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 3620px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 581px;
+    height: 581px;
+    left: -169px;
+    top: 0px;        
+  }
+
+  .image3 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 31px;
+    top: 1083px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 150px;
+    top: 1272px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 91px;
+    top: 1515px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 271px;
+    height: 271px;
+    left: 63px;
+    top: 2300px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 271px;
+    height: 271px;
+    left: -115px;
+    top: 2531px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 546px;
+    height: 111px;
+    left: 47px;
+    top: 2859px;
+    
+    font-family: Cormorant Upright;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 120.53%;
+
+    color: #000000;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 288.73px;
+    height: 266.06px;
+    left: 35px;
+    top: 608.7px;
+    
+    font-family: Suez One;
+    font-size: 18px;
+    line-height: 180%;
+    color: #FFFFFF;
+    
+    transform: rotate(-5deg);
+    transform-origin: 0 0;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 276.49px;
+    height: 895.21px;
+    left: 58px;
+    top: 1780.65px;
+    
+    font-family: Suez One;
+    font-size: 18px;
+    line-height: 180%;
+    color: #FFFFFF;
+    
+    transform: rotate(-2deg);
+    transform-origin: 0 0;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 283.67px;
+    height: 484.88px;
+    left: 26px;
+    top: 3051.72px;
+    
+    font-family: Suez One;
+    font-size: 18px;
+    line-height: 180%;
+    color: #FFFFFF;
+    
+    transform: rotate(-5deg);
+    transform-origin: 0 0;
+  }
+}

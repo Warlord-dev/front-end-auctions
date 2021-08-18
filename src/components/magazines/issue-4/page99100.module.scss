@@ -1,0 +1,448 @@
+@import './styles.module.scss';
+
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-1497px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+
+  background-color: white;
+
+  .back1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(136, 63, 255, 0.81);    
+  }
+  
+  .image1 {
+    position: absolute;
+    width: 764px;
+    height: 1497px;
+    left: 956px;
+    top: 0px;
+  }
+  
+  .image2 {
+    position: absolute;
+    width: 760px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .textBack {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+  }
+
+  .textBack2 {
+    position: absolute;
+    left: 426px;
+    top: 0px;
+  }
+
+  .musicFont {
+    div {
+      font-family: MUSICNET;
+      font-size: 60px;
+      line-height: 120.53%;
+      width: 486px;
+      height: 144px;
+    }
+  }
+
+  .yellowColor {
+    div {
+      color: #FAFF058F;
+    }
+  }
+
+  .whiteColor {
+    div {
+      color: #FFFFFF8F;
+    }
+  }
+
+  .radial1 {
+    position: absolute;
+    width: 352px;
+    height: 1497px;
+    left: 227px;
+    top: 0px;
+  }
+
+  .radial2 {
+    position: absolute;
+    width: 185px;
+    height: 1497px;
+    left: 775px;
+    top: 0px;
+    
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #4075FF 0%, rgba(244, 239, 255, 0.09) 74.48%);    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    left: 684px;
+    top: 12px;    
+  }
+
+  .textBack3 {
+    position: absolute;
+    left: 10px;
+    top: 864px;
+  }
+
+  .textBack4 {
+    position: absolute;
+    left: 426px;
+    top: 864px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 960px;
+    top: -43px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;   
+    
+    color: #1400FF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1128px;
+    top: -43px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1434px;
+    top: -43px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF; 
+  }
+
+  .text4 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1019px;
+    top: 43px;
+    
+    font-family: Covered By Your Grace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #594AFF;
+    
+    text-shadow: -2px 0 white, 0 -2px white, 2px 0 white, 0 2px white;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1325px;
+    top: 43px;
+    
+    font-family: Covered By Your Grace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #594AFF;
+    
+    text-shadow: -2px 0 white, 0 -2px white, 2px 0 white, 0 2px white;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 960px;
+    top: 133px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1199px;
+    top: 133px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 1508px;
+    top: 133px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;
+  }
+
+  .animationFrame {
+    animation: scrolling 8s linear infinite;
+  }
+
+  .rightSideImageWrapper {
+    background: #2CC5E7;
+    position: absolute;
+    width: 200px;
+    height: 2994px;
+    left: 1720px;
+    top: 0px;
+
+    img:last-of-type {
+      margin-top: -5px;
+    }
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 676px;
+    height: 703px;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(3, 3, 3, 0.37);    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 1009px;
+    height: 431px;
+    left: -18px;
+    top: 755px;
+        
+  }
+
+  .image5 {
+    position: absolute;
+    width: 1009px;
+    height: 431px;
+    left: -18px;
+    top: 1073px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 333px;
+    height: 333px;
+    left: 45px;
+    top: 31px;    
+  }
+
+  .text9 {
+    position: absolute;
+    width: 285px;
+    height: 309px;
+    left: 388px;
+    top: 30px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    
+    color: #FFFFFF;
+        
+  }
+
+  .text10 {
+    position: absolute;
+    width: 630px;
+    height: 365px;
+    left: 35px;
+    top: 372px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120.53%;
+    /* or 17px */
+    
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text11 {
+    position: absolute;
+    width: 785px;
+    height: 225px;
+    left: 10px;
+    top: 673px;
+    
+    font-family: Milonga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140px;
+    line-height: 120.53%;
+    /* or 169px */
+    
+    text-align: right;
+    
+    color: #F7B100;
+    
+    -webkit-text-stroke: 4px black;
+  }
+
+  .playButton1 {
+    position: absolute;
+    width: 157px;
+    height: 157px;
+    left: 586px;
+    top: 1008px;
+    cursor: pointer;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+ 
+  .imageBack {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imagePlay {
+    position: absolute;
+    width: 69px;
+    height: 80px;
+    left: 55px;
+    top: 35px;
+  }
+  
+  .imagePause {
+    position: absolute;
+    width: 65px;
+    height: 71px;
+    left: 47px;
+    top: 40px;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 671px;
+    height: 1126px;
+    left: 1004px;
+    top: 253px;
+    
+    font-family: 'Pixel Berry 08/84 Ltd.Edition';
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+
+  .image7 {
+    position: absolute;
+    width: 645px;
+    height: 185px;
+    left: 1015px;
+    top: 1313px;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 101px;
+    height: 69px;
+    left: 1050px;
+    top: 1355px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 120.53%;
+    /* or 10px */
+    
+    text-align: center;
+    
+    color: #000000;    
+  }
+
+  .text14 {
+    position: absolute;
+    width: 101px;
+    height: 69px;
+    left: 1287px;
+    top: 1360px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 120.53%;
+    /* or 10px */
+    
+    text-align: center;
+    
+    color: #000000;
+    
+  }
+
+  .text15 {
+    position: absolute;
+    width: 121px;
+    height: 69px;
+    left: 1511px;
+    top: 1350px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #000000;
+  }
+}

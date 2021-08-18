@@ -1,0 +1,359 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 4092px;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .rect1 {
+    position: absolute;
+    width: 375px;
+    height: 4092px;
+    left: 0px;
+    top: 0px;
+    
+    background: #FFA800;    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 603px;
+    height: 565px;
+    left: -70px;
+    top: 4px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 412px;
+    height: 412px;
+    left: -158px;
+    top: -70px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 1429px;
+    height: 1429px;
+    left: -461px;
+    top: 778px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 452px;
+    height: 424px;
+    left: -38px;
+    top: 3195px;
+  }
+
+  .video1 {
+    position: absolute;
+    width: 375px;
+    height: 244px;
+    left: 0px;
+    top: 736px;
+    object-fit: fill;    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 351px;
+    height: 234px;
+    left: 0px;
+    top: 2514px;    
+  }
+
+  .image6 {
+    position: absolute;
+    width: 365px;
+    height: 244px;
+    left: 10px;
+    top: 2748px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 348px;
+    height: 232px;
+    left: 0px;
+    top: 2992px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 364px;
+    height: 322px;
+    left: 6px;
+    top: 3738px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 351.16px;
+    height: 118.61px;
+    left: 29.18px;
+    top: 132.62px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 100%;
+    color: #FFFFFF;
+    text-shadow: -1px 0 black, 0 -1px black, 1px 0 black, 0 1px black;
+    transform: matrix(1, -0.18, -0.02, 0.99, 0, 0);    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 351.16px;
+    height: 118.61px;
+    left: 24.44px;
+    top: 130.98px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 100%;
+    color: #FF0000;
+    text-shadow: -1px 0 black, 0 -1px black, 1px 0 black, 0 1px black;
+    transform: matrix(1, -0.18, -0.02, 0.99, 0, 0);    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 240px;
+    height: 144px;
+    left: 70px;
+    top: 353px;
+    
+    font-family: Noto Sans Armenian;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 90%;
+    color: #FFFFFF;    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 240px;
+    height: 144px;
+    left: 73px;
+    top: 358px;
+    
+    font-family: Noto Sans Armenian;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 90%;
+    color: #FFC83A;    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 478px;
+    height: 76px;
+    left: -147px;
+    top: 582px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100%;
+    text-align: right;
+    
+    color: #FFFFFF;
+    -webkit-text-stroke: 5px #FF0000;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 478px;
+    height: 76px;
+    left: -147px;
+    top: 647px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100%;
+    text-align: right;
+    
+    color: #FFFFFF;
+    -webkit-text-stroke: 5px #FF0000;    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 312px;
+    height: 221px;
+    left: -27px;
+    top: 1025px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 100%;
+    text-align: right;
+    
+    color: #FFFFFF;    
+  }
+
+  .text8 {
+    position: absolute;
+    width: 273px;
+    height: 218px;
+    left: 53px;
+    top: 1257px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    text-align: right;
+    
+    color: #000000;
+
+    span {
+      color: #FF0000;
+    }
+        
+  }
+
+  .text9 {
+    position: absolute;
+    width: 434px;
+    height: 76px;
+    left: 19px;
+    top: 1776px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 100%;
+    color: #FFFFFF;     
+  }
+
+  .text10 {
+    position: absolute;
+    width: 290px;
+    height: 400px;
+    left: 45px;
+    top: 1871px;
+    
+    font-family: PT Sans Caption;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF; 
+  }
+
+  .text11 {
+    position: absolute;
+    width: 434px;
+    height: 76px;
+    left: -228px;
+    top: 2290px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    color: #FF0000;        
+  }
+
+  .text12 {
+    position: absolute;
+    width: 434px;
+    height: 76px;
+    left: 174px;
+    top: 2290px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    color: #4D9A00;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 434px;
+    height: 76px;
+    left: -228px;
+    top: 2344px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+    
+    
+    color: #FF0000;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 434px;
+    height: 76px;
+    left: 174px;
+    top: 2344px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 434px;
+    height: 76px;
+    left: -11px;
+    top: 2410px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 341px;
+    height: 60px;
+    left: 53px;
+    top: 3656px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+}

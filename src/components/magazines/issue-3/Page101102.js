@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import styles from './page101102.module.scss';
-import Link from 'next/link';
-import { useSelector } from 'react-redux';
-import UnlockPage from '../common/UnlockPage-Three';
-import Router, { useRouter } from 'next/router'
+import React from 'react'
+import styles from './page101102.module.scss'
+import Link from 'next/link'
 
 const Page101102 = () => {
   
@@ -91,7 +88,7 @@ const Page101102 = () => {
       <p className={styles.text9}>I think that fashion today is no longer something exclusively for people in the flesh who know how to draw very well and, still venture to say, sew. From now on we are in the middle of a new era of how to present products and creations while still being very interactive in everything.</p>  
       <p className={styles.text10}>Aisha</p>  
     </div>
-  );
-};
+  )
+}
 
-export default Page101102;
+export default Page101102

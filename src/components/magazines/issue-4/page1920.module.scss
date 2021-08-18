@@ -1,0 +1,173 @@
+@import './styles.module.scss';
+
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-602px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backImage1 {
+    position: absolute;
+    width: 960px;
+    height: 1519px;
+    left: 0px;
+    top: -22px;
+  }
+
+  .backImage2 {
+    position: absolute;
+    width: 808px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+
+  .leftSideFrame {
+    position: absolute;
+    width: 149px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    background-color: #ff3636;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .rightSideFrame {
+    position: absolute;
+    width: 152px;
+    height: 1497px;
+    left: 1768px;
+    top: 0px;
+    background-color: #ff3636;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .animationFrame {
+    animation: scrolling 4s linear infinite;
+  }
+
+
+  .leftSideImageWrapper {
+    position: absolute;
+    width: 92.28px;
+    left: 31px;
+    top: 36px;
+  }
+
+  .rightSideImageWrapper {
+    position: absolute;
+    width: 83px;
+    height: 1660px;
+    right: 31px;
+    top: 36px;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 1623px;
+    height: 1497px;
+    left: 143px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    top: 590px;
+    left: 535px;
+    transform: rotate(103.68deg);    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 428px;
+    height: 367px;
+    left: 188px;
+    top: 22px;
+    
+    font-family: Encode Sans Semi Expanded;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 120.53%;
+    /* or 121px */    
+    color: #FFFFFF;
+    
+    $stroke-color: #00BEDD;
+    text-shadow:  -5px -5px $stroke-color, -5px 5px $stroke-color, 5px -5px $stroke-color, 
+    -5px 0 $stroke-color, 0 5px $stroke-color, 5px 0 $stroke-color, 5px 5px $stroke-color, 0 -5px $stroke-color;
+
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 400px;
+    height: 138px;
+    left: 351px;
+    top: 515px;
+    
+    font-family: Encode Sans Semi Expanded;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    text-shadow: -2px 0 #FF0303, 0 -2px #FF0303, 2px 0 #FF0303, 0 2px #FF0303;
+  }
+
+  .text3 {
+    position: absolute;
+    left: 61.51%;
+    right: 9.9%;
+    top: 26.52%;
+    bottom: 8.35%;
+    
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .circle1 {
+    position: absolute;
+    left: 50%;
+    right: -4.01%;
+    top: 17.23%;
+    bottom: 0%;
+    
+    background: rgba(0, 0, 0, 0.54);
+    border: 10px solid #FF0000;
+    border-radius: 50%;
+    box-sizing: border-box;    
+  }
+
+  .playButton {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+    left: 385px;
+    top: 670px;    
+    background: transparent;
+    border: none;
+    
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

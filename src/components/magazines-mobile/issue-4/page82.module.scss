@@ -1,0 +1,268 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 2850px;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: relative;
+    width: 375px;
+    height: 2850px;
+  }
+
+  .image2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 375px;
+    height: 623px;
+  }
+
+  .image3 {
+    position: absolute;
+    left: 11px;
+    top: 11.16px;
+    width: 140px;
+    height: 199.88px;    
+  }
+
+  .image4 {
+    position: absolute;
+    left: 0%;
+    top: 146.11px;
+    width: 171px;
+    height: 173.5px;
+  }
+
+  h1 {
+    position: absolute;
+    left: -28.53%;
+    right: -50.67%;
+    top: 1.5%;
+    bottom: 95.12%;
+    
+    font-family: Writers original;
+    font-size: 40px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #A700AA;
+    text-shadow: -3px 0 white, 0 -3px white, 3px 0 white, 0 3px white;
+  }
+
+  h2 {
+    position: absolute;
+    left: -0.53%;
+    right: -19.2%;
+    top: 3.8%;
+    bottom: 94.54%;
+    
+    font-family: Writers original;
+    font-size: 20px;
+    line-height: 120.53%;    
+    text-align: center;
+    
+    color: #DB00FF;
+  }
+
+  .text1 {
+    position: absolute;
+    left: 39px;
+    width: 306px;
+    top: 330px;
+    height: 207.94px;
+    
+    font-family: Julee;
+    font-size: 17px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #9600DC;    
+  }
+
+  .text2 {
+    position: absolute;
+    left: 8.27%;
+    right: 8%;
+    top: 633px;
+    bottom: 68.26%;
+    
+    font-family: Julee;
+    font-size: 17px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #9600DC;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 322px;
+    height: 970.37px;
+    top: 753px;
+    left: 32px;
+    
+    font-family: Julee;
+    font-size: 17px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #9600DC;    
+  }
+
+  .writeText1 {
+    position: absolute;
+    left: 16.27%;
+    right: 6.13%;
+    top: 1920px;
+    bottom: 35.9%;
+    
+    font-family: Writers original;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 67px;
+    line-height: 120.53%;
+    /* identical to box height, or 81px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .writeText2 {
+    position: absolute;
+    left: -14.93%;
+    right: -12.8%;
+    top: 2010px;
+    bottom: 32.46%;
+    
+    font-family: Writers original;
+    font-size: 100px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #A700AA;
+  }
+
+  .writeText3 {
+    position: absolute;
+    left: -25.87%;
+    right: -1.87%;
+    top: 2120px;
+    bottom: 27.23%;
+    
+    font-family: Writers original;
+    font-size: 50px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #A700AA;
+  }
+
+  .writeText4 {
+    position: absolute;
+    left: -2.93%;
+    right: -24.8%;
+    top: 2200px;
+    bottom: 24.03%;
+    
+    font-family: Writers original;
+    font-size: 60px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #DD0FFF;
+  }
+
+  .writeText5 {
+    position: absolute;
+    left: 2.93%;
+    right: 19.47%;
+    top: 2290px;
+    bottom: 19.94%;
+    
+    font-family: Writers original;
+    font-size: 67px;
+    line-height: 120.53%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .writeText6 {
+    position: absolute;
+    left: -28.27%;
+    right: 0.53%;
+    top: 2400px;
+    bottom: 15.5%;
+    
+    font-family: Writers original;
+    font-size: 100px;
+    line-height: 120.53%;
+    text-align: center;
+    color: #A700AA;    
+  }
+
+  .writeText7 {
+    position: absolute;
+    left: -39.2%;
+    right: 11.47%;
+    top: 2520px;
+    bottom: 10.26%;
+    
+    font-family: Writers original;
+    font-size: 50px;
+    line-height: 120.53%;
+    text-align: center;
+    color: #A700AA;    
+  }
+
+  .writeText8 {
+    position: absolute;
+    left: -16.27%;
+    right: -11.47%;
+    top: 2600px;
+    bottom: 7.07%;
+    
+    font-family: Writers original;
+    font-size: 60px;
+    line-height: 120.53%;
+    text-align: center;
+    color: #DD0FFF;
+  }
+
+  .writeText9 {
+    position: absolute;
+    left: 15.73%;
+    right: 6.67%;
+    top: 2680px;
+    bottom: 3.24%;
+    
+    font-family: Writers original;
+    font-size: 67px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .writeText10 {
+    position: absolute;
+    left: -15.47%;
+    right: -12.27%;
+    top: 2800px;
+    bottom: -1.21%;
+    
+    font-family: Writers original;
+    font-size: 100px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #A700AA;
+  }
+}

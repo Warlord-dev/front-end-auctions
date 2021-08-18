@@ -1,0 +1,53 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 3450px;
+  background: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 3450px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 82.86px;
+    height: 132.35px;
+    left: 71.23px;
+    top: 2587px;
+    
+    transform: rotate(20.91deg);
+    transform-origin: 0 0;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 139.56px;
+    height: 222.92px;
+    left: 244.56px;
+    top: 2522px;
+    
+    transform: rotate(20.91deg);
+    transform-origin: 0 0;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 320.19px;
+    height: 511.45px;
+    left: 128.53px;
+    top: 2780px;
+    
+    transform: rotate(20.91deg);
+    transform-origin: 0 0;
+  }
+
+}

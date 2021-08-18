@@ -1,0 +1,397 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .backVideo {
+    width: 100%;
+    height: 100%;
+    // transform: scale(1);
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0px;
+  }
+  h1 {
+    position: absolute;
+    width: 1331px;
+    height: 400px;
+    left: 294px;
+    top: 590px;
+
+    font-family: Heaven Wanders DEMO;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 100%;
+    /* or 200px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 116px;
+    height: 423px;
+    left: 903px;
+    top: 1074px;
+  }
+
+  .middleLine1 {
+    position: absolute;
+    width: 0px;
+    height: 515px;
+    left: 960px;
+    top: 0px;
+
+    border: 1px solid #FFFFFF;
+  }
+
+  .middleLine2 {
+    position: absolute;
+    width: 0px;
+    height: 423px;
+    left: 960px;
+    top: 1074px;
+    
+    border: 0.5px solid #FFFFFF;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 273px;
+    height: 102px;
+    left: 1337px;
+    top: 159px;
+        
+  }
+
+  .image3 {
+    position: absolute;
+    width: 273px;
+    height: 102px;
+    left: 1610px;
+    top: 159px;
+    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 507px;
+    height: 339px;
+    left: 905px;
+    top: 137px;
+    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 242px;
+    height: 162px;
+    left: 1038px;
+    top: 434px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 784px;
+    height: 782px;
+    left: 1135px;
+    top: 715px;
+  }
+
+  .pageWrapper {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 759px;
+    height: 54px;
+    left: -235px;
+    top: 0px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(255, 255, 255, 0.5);
+    
+    transform: matrix(1, 0, 0, -1, 0, 0);    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 759px;
+    height: 54px;
+    left: 356px;
+    top: 0px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(255, 255, 255, 0.5);
+    
+    transform: matrix(1, 0, 0, -1, 0, 0);    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 759px;
+    height: 62px;
+    left: 38px;
+    top: 48px;
+    
+    font-family: Donegal One; 
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 759px;
+    height: 62px;
+    left: 623px;
+    top: 48px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 759px;
+    height: 54px;
+    left: 38px;
+    top: 148px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(255, 255, 255, 0.5);
+    
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform-origin: 0 0;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 759px;
+    height: 54px;
+    left: 623px;
+    top: 148px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(255, 255, 255, 0.5);
+    
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform-origin: 0 0;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 759px;
+    height: 62px;
+    left: -235px;
+    top: 148px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 759px;
+    height: 62px;
+    left: 356px;
+    top: 148px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 759px;
+    height: 54px;
+    left: -235px;
+    top: 248px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(255, 255, 255, 0.5);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform-origin: 0 0;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 759px;
+    height: 54px;
+    left: 356px;
+    top: 248px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(255, 255, 255, 0.5);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform-origin: 0 0;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 891px;
+    height: 337px;
+    left: 35px;
+    top: 261px;
+    
+    font-family: Fira Code;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+
+  .text12 {
+    position: absolute;
+    width: 457px;
+    height: 199px;
+    left: 35px;
+    top: 576px;
+    
+    font-family: Fira Code;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+
+  .text13 {
+    position: absolute;
+    width: 637px;
+    height: 251px;
+    left: 35px;
+    top: 772px;
+    
+    font-family: Fira Code;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 844px;
+    height: 525px;
+    left: 35px;
+    top: 972px;
+    
+    font-family: Fira Code;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 871px;
+    height: 100px;
+    left: 1003px;
+    top: 33px;
+    
+    font-family: Fira Code;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 551px;
+    height: 267px;
+    left: 1345px;
+    top: 318px;
+    
+    font-family: Poor Story;
+    font-size: 23px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 455px;
+    height: 267px;
+    left: 1439px;
+    top: 570px;
+    
+    font-family: Poor Story;
+    font-size: 23px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    
+  }
+
+  .text18 {
+    position: absolute;
+    width: 779px;
+    height: 462px;
+    left: 1086px;
+    top: 1030px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    
+  }
+
+  h2 {
+    position: absolute;
+    width: 529px;
+    height: 76px;
+    left: 1345px;
+    top: 248px;
+    
+    font-family: Frank Ruhl Libre;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 120.53%;    
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+  }
+}

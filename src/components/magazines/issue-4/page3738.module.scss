@@ -1,0 +1,213 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #FFFFFF;
+
+  .back {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+  
+  .back2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 414px;
+    height: 226px;
+    left: 362px;
+    top: 59px;    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    
+    background: rgba(255, 0, 0, 0.18);    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 301px;
+    height: 345px;
+    left: 625px;
+    top: 300px;
+    
+    font-family: Think Thick;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 180%;
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 883px;
+    height: 673px;
+    left: 31px;
+    top: 748px;
+    
+    font-family: Think Thick;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 180%;   
+    color: #FFFFFF;
+
+    span.red {
+      color: #EC00C6;
+    }
+    
+    span.pink {
+      color: #FFB7B7;
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 784px;
+    height: 146px;
+    left: 988px;
+    top: 1px;
+    
+    font-family: Tillana;
+    font-size: 60px;
+    line-height: 180%;
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 784px;
+    height: 146px;
+    left: 1431px;
+    top: 0px;
+    
+    font-family: Tillana;
+    font-size: 60px;
+    line-height: 180%;
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 784px;
+    height: 146px;
+    left: 1046px;
+    top: 72px;
+    
+    font-family: Tillana;
+    font-size: 60px;
+    line-height: 180%;
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 784px;
+    height: 146px;
+    left: 1500px;
+    top: 72px;
+    
+    font-family: Tillana;
+    font-size: 60px;
+    line-height: 180%;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 418px;
+    height: 252px;
+    left: 1480px;
+    top: 175px;
+    
+    font-family: SeoulHangang CBL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+        
+  }
+
+  .text8 {
+    position: absolute;
+    width: 418px;
+    height: 192px;
+    left: 984px;
+    top: 708px;
+    
+    font-family: SeoulHangang CBL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    
+    color: #FFFFFF;    
+  }
+
+  .text9 {
+    position: absolute;
+    width: 418px;
+    height: 156px;
+    left: 988px;
+    top: 959px;
+    
+    font-family: SeoulHangang CBL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    
+    color: #FFFFFF;    
+  }
+
+  .text10 {
+    position: absolute;
+    width: 418px;
+    height: 276px;
+    left: 1477px;
+    top: 903px;
+    
+    font-family: SeoulHangang CBL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+        
+  }
+
+  .text11 {
+    position: absolute;
+    width: 418px;
+    height: 216px;
+    left: 1490px;
+    top: 1222px;
+    
+    font-family: SeoulHangang CBL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+    
+  }
+}

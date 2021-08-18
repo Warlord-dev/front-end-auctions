@@ -1,0 +1,120 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 4338px;
+  background: linear-gradient(180deg, #3F40BF 0%, rgba(54, 55, 157, 0.9) 100%);
+  color: black;
+  position: relative;
+  white-space: normal;
+
+  .text1 {
+    position: absolute;
+    width: 607px;
+    height: 181px;
+    left: 97px;
+    top: 675px;
+    
+    font-family: Thicker Trial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 100px;
+    color: #FFFFFF;
+    
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+
+    span {
+      font-size: 134px;
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 299px;
+    left: 44px;
+    top: 730px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    background: linear-gradient(180deg, #FF9153 0%, #FF00B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 287px;
+    height: 209px;
+    left: 44px;
+    top: 3046px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    background: linear-gradient(180deg, #FF9153 0%, #FF00B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 165px;
+    height: 278px;
+    left: 184px;
+    top: 3298px;
+    
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 300px;
+    line-height: 270px;
+    background: linear-gradient(180deg, #FFC700 0%, #FF5C00 54.17%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 646px;
+    height: 150px;
+    left: 30px;
+    top: 4276px;
+    
+    font-family: Super Thin;
+    font-size: 150px;
+    line-height: 150px;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    background: linear-gradient(90deg, #FF00B8 0%, #FF5C00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 554px;
+    height: 200px;
+    left: 180px;
+    top: 4276px;
+    
+    font-family: Super Thin;
+    font-size: 200px;
+    line-height: 200px;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    background: linear-gradient(90deg, #FF00B8 0%, #FF5C00 61.76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

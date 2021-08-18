@@ -1,0 +1,24 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3450px;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: relative;
+    width: 375px;
+    height: 3450px;
+    left: 0;
+    top: 0;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 109px;
+    height: 109px;
+    left: 230px;
+    top: 41px;    
+  }
+}

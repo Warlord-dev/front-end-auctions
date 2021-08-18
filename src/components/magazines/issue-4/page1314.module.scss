@@ -1,0 +1,87 @@
+@import './styles.module.scss';
+
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-602px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+  
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0;
+    top: 0;
+  }
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .rectangle1 {
+    position: absolute;
+    width: 699px;
+    height: 1175px;
+    left: 99px;
+    top: 159px;
+    
+    background: #00D0DA;
+    border: 10px solid #000000;
+    box-sizing: border-box;
+  }
+  
+  .rectangle2 {
+    position: absolute;
+    width: 699px;
+    height: 1175px;
+    left: 1121px;
+    top: 159px;
+    
+    background: #00D0DA;
+    border: 10px solid #000000;
+    box-sizing: border-box;  
+  }
+
+  .text1 {
+    position: absolute;
+    width: 580px;
+    height: 1096px;
+    left: 159px;
+    top: 200px;
+    
+    font-family: Lacquer;
+    font-size: 22px;
+    line-height: 150%;
+    text-align: center;
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 580px;
+    height: 1096px;
+    left: 1181px;
+    top: 200px;
+    
+    font-family: Lacquer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 150%;
+    /* or 33px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+  
+}

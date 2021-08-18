@@ -1,0 +1,49 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 3450px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  display: flex;
+  position: relative;
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 4424px;
+    left: -404px;
+    top: -130px;
+    
+    background: #F29100;
+    border-radius: 50%;    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 515px;
+    height: 4394px;
+    left: 147px;
+    top: -419px;
+    
+    background: #FFDB5E;
+    border-radius: 50%;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 362px;
+    height: 113px;
+    left: 28px;
+    top: 241px;
+    
+    font-family: UnifrakturMaguntia;
+    font-size: 50px;
+    line-height: 100%;
+    color: #000000;
+    
+    text-shadow: -1px 0 #00E0FF, 0 -1px #00E0FF, 1px 0 #00E0FF, 0 1px #00E0FF;
+  }
+}

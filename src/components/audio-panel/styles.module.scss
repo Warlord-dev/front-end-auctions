@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  input {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .buttons {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+    .button {
+      margin: 0 2px;
+      background: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+      border-width: 2px;
+      border-style: outset;
+      border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+      border-image: initial;
+      padding: 5px 10px;
+      font-size: 20px;
+    }
+  }
+}
