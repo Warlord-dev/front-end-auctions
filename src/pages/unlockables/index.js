@@ -14,13 +14,13 @@ const Unlockables = () => {
       <div className={styles.bodyWrapper}>
         <div className={styles.issues}>
           {details.reverse().map((issue, index) => (
-            <div className={styles.issue} key={info[index].id}>
+            <div className={styles.issue} key={info[details.length - index - 1].id}>
               <IssueCard
                 video={issue[0].url[0]}
-                id={info[index].id}
-                title={info[index].title}
-                link1={`unlockable/${index + 1}`}
-                link2={`unlockable/${index + 1}`}
+                id={info[details.length - 1 - index].id}
+                title={info[details.length - 1 - index].title}
+                link1={`unlockable/${details.length - index}`}
+                link2={`unlockable/${details.length - index}`}
               />
             </div>
           ))}
