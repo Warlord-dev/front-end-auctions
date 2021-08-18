@@ -9,6 +9,15 @@
   white-space: normal;
   text-align: left;
 
+  .rect1 {
+    position: absolute;
+    width: 375px;
+    height: 330px;
+    left: 0px;
+    top: 772px;
+    background-color: white;
+  }
+
   .image1 {
     position: absolute;
     width: 348px;
@@ -22,7 +31,7 @@
     width: 375px;
     height: 261px;
     left: 0px;
-    top: 227px;
+    top: 511px;
     object-fit: cover;    
   }
 
@@ -33,5 +42,20 @@
     left: 0px;
     top: 772px;
     
+  }
+
+  .text1 {
+    position: absolute;
+    width: 315px;
+    height: 166px;
+    left: 31px;
+    top: 80px;
+    
+    font-family: Cormorant Garamond;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
   }
 }

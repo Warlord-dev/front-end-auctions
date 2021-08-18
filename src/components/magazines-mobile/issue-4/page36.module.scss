@@ -2,7 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-  height: 1605px;
+  height: 2247px;
   background-color: black;
   color: white;
   position: relative;
@@ -49,5 +49,20 @@
     left: 0px;
     top: 179px;
     object-fit: cover;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 260px;
+    height: 539px;
+    left: 58px;
+    top: 627px;
+    
+    font-family: Cormorant Garamond;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;        
   }
 }

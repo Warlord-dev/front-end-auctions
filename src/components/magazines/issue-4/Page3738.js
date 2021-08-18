@@ -109,7 +109,7 @@ const Page3738 = () => {
         Both of these concepts combined will allow merchants and consumers to take part in highly efficient financial markets for physical things, giving superpowers to Web3 commerce.
       </div>
       <div className={styles.text11}>
-        5. Could you tell us more about the recent launch of your virtual lifestyle portal 
+        5. Could you tell us more about the recent launch of your virtual lifestyle portal?
         <br /><br /><br />
         We are pioneering the world’s first virtual lifestyle and commerce playground connecting  the metaverse with the universe. This initial space, which we are calling Portal, exists in Decentraland, a decentralized 3D virtual reality platform where we made a record-breaking virtual real estate purchase. Portal, connected by Boson Protocol, will enable brands, artists and creators to sell to individuals through in-game purchases of NFTs that are then redeemable for real-world products, services and experiences.
         <br /><br />

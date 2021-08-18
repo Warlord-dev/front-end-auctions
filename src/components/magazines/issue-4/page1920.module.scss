@@ -104,6 +104,11 @@
     $stroke-color: #00BEDD;
     text-shadow:  -5px -5px $stroke-color, -5px 5px $stroke-color, 5px -5px $stroke-color, 
     -5px 0 $stroke-color, 0 5px $stroke-color, 5px 0 $stroke-color, 5px 5px $stroke-color, 0 -5px $stroke-color;
+
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .text2 {

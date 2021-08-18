@@ -62,7 +62,7 @@ const Page4950 = () => {
       </div>
       
       <div className={styles.text8}>
-        Gaming is where cutting-edge technology becomes social, fun, and human. In a games, someone can intuitively use their NFTs to solve game challenges, show off their digital fashion, or achieve an edge over other players. It's the most promising medium to explore creative applications of the idea of the metaverse, since games can be a canvas for both developers and gamers to experiment and play.
+        Gaming is where cutting-edge technology becomes social, fun, and human. In games, someone can intuitively use their NFTs to solve game challenges, show off their digital fashion, or achieve an edge over other players. It's the most promising medium to explore creative applications of the idea of the metaverse, since games can be a canvas for both developers and gamers to experiment and play.
       </div>
       
       <div className={styles.text9}>

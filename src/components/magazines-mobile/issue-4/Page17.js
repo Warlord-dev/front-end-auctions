@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import Link from 'next/link'
 import styles from './page17.module.scss'
 
 const Page17 = () => {
+
+  const audioRef = useRef()
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const startAudio = () => {
+    audioRef.current.play()
+    setIsPlaying(true)
+  }
+
+  const pauseAudio = () => {
+    audioRef.current.pause()
+    setIsPlaying(false)
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.topSideFrame}></div>
@@ -25,9 +40,35 @@ const Page17 = () => {
         <img src='./magazine/1/images/mobile/howtogetintext.png' />
         <img src='./magazine/1/images/mobile/howtogetintext.png' />
       </div>
-      <div className={styles.text1}>
-        Pinata Cloud        
+
+      <Link href='https://pinata.cloud/'>
+        <a target='_blank'>
+          <div className={styles.text1}>
+            Pinata Cloud        
+          </div>
+        </a>
+      </Link>
+
+      <img src='/magazine/4/images/1920_arrow.png' className={styles.image5} />
+
+      <div className={styles.text2}>
+        Kyle Tut, CEO & Co-Founder @ Pinata       
       </div>
+
+      <button 
+        className={[styles.playButton, isPlaying ? styles.isPlaying : ''].join(' ')}
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio()
+        }}
+      >        
+        {
+          <img src={`./magazine/4/images/1920_${isPlaying ? 'pausebutton' : 'playbutton'}.png`} />
+        } 
+      </button>
+
+      <audio ref={audioRef} loop>
+        <source src='./magazine/4/sounds/1920_sound1.m4a' type='audio/mpeg' />
+      </audio>
     </div>
   )
 }

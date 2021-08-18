@@ -112,11 +112,55 @@
     font-weight: bold;
     font-size: 70px;
     line-height: 120.53%;
-    /* or 84px */
-    
-    
     color: #FFFFFF;
     
     text-shadow: -4px 0 #00BEDD, 0 -4px #00BEDD, 4px 0 #00BEDD, 0 4px #00BEDD, -4px -4px #00BEDD, -4px 4px #00BEDD, 4px -4px #00BEDD, 4px 4px #00BEDD;
+  }
+
+  .image5 {
+    position: absolute;
+    left: 354.59px;
+    top: 1007.17px;
+    width: 109.46px;
+    height: 210.05px;
+
+    transform: rotate(103.68deg);
+    transform-origin: 0 0;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 375px;
+    height: 138px;
+    left: 26px;
+    top: 829px;
+    
+    font-family: Encode Sans Semi Expanded;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120.53%;
+
+    color: #FFFFFF;
+    -webkit-text-stroke: 2px #FF0303;
+  }
+
+  .playButton {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+    left: 133px;
+    top: 1096px;
+    
+    background: transparent;
+    border: none;
+    
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
   }
 }

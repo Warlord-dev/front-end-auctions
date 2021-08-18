@@ -52,4 +52,124 @@
     transform: rotate(90deg);
     transform-origin: 0 0;    
   }
+
+  .rect1 {
+    position: absolute;
+    width: 375px;
+    height: 4840px;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(0, 0, 0, 0.25);    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 759px;
+    height: 54px;
+    left: -305px;
+    top: 232px;
+
+    font-family: Donegal One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+
+
+    color: rgba(255, 255, 255, 0.5);
+
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform-origin: 0 0;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 759px;
+    height: 62px;
+    left: -32px;
+    top: 230px;
+    
+    font-family: Donegal One; 
+    font-size: 40px;
+    line-height: 120.53%; 
+    color: #FFFFFF;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 759px;
+    height: 54px;
+    left: -32px;
+    top: 330px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(255, 255, 255, 0.5);
+    
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform-origin: 0 0;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 759px;
+    height: 54px;
+    left: -305px;
+    top: 384px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(255, 255, 255, 0.5);
+    
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform-origin: 0 0;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 759px;
+    height: 62px;
+    left: -32px;
+    top: 382px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 759px;
+    height: 54px;
+    left: -32px;
+    top: 482px;
+    
+    font-family: Donegal One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: rgba(255, 255, 255, 0.5);
+    
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform-origin: 0 0;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 255px;
+    height: 2303px;
+    left: 59px;
+    top: 572px;
+    
+    font-family: Fira Code;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
 }

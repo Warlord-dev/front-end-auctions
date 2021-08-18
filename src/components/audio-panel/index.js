@@ -5,11 +5,12 @@ const AudioPanel = props => {
   const { wrapperClass, audioSrc } = props
   const refAudio = useRef()
   const [isPlaying, setIsPlaying] = useState(false)
+  const [sliderValue, setSliderValue] = useState(0)
 
   const handleProgress = () => {
     refAudio.current.onplay = () => {
       refAudio.current.addEventListener('timeupdate', () => {
-        document.getElementById('myRange').value = Math.floor(refAudio.current.currentTime / refAudio.current.duration * 100)
+        setSliderValue(Math.floor(refAudio.current.currentTime / refAudio.current.duration * 100))
       }, true)
     }
   }
@@ -26,8 +27,15 @@ const AudioPanel = props => {
         max='100'
         className={styles.slider}
         id='myRange'
-        value={0}
-        onChange={e => console.log(setControl(['seek', e.currentTarget.value]))}
+        value={sliderValue}
+        onChange={
+          e => {
+            refAudio.current.pause()
+            refAudio.current.currentTime = e.currentTarget.value * (refAudio.current.duration / 100)
+            setSliderValue(e.currentTarget.value)
+            isPlaying && refAudio.current.play()
+          }
+        }
       />
       <div className={styles.buttons}>
         <button

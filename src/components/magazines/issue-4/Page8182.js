@@ -1,4 +1,5 @@
 import React, { useRef, useState }  from 'react'
+import Link from 'next/link'
 import styles from './page8182.module.scss'
 
 const Page8182 = () => {
@@ -33,13 +34,19 @@ const Page8182 = () => {
       <img className={styles.image10} src='/magazine/4/images/8182_image10.png' />
       <img className={styles.image11} src='/magazine/4/images/8182_image11.png' />
       
+      <Link href='https://digifizzy.xyz/unlockable/4/'>
+        <a target='_blank'>
+          <div>
+            <div className={styles.text1}>
+              Go Behind the Scenes with Exclusive NFT Content and Experiences
+            </div>
+            <div className={styles.text2}>
+              Go Behind the Scenes with Exclusive NFT Content and Experiences
+            </div>
+          </div>
+        </a>
+      </Link>
 
-      <div className={styles.text1}>
-        Go Behind the Scenes with Exclusive NFT Content and Experiences
-      </div>
-      <div className={styles.text2}>
-        Go Behind the Scenes with Exclusive NFT Content and Experiences
-      </div>
       <div className={styles.text3}>
         DECO <br />
         ONLY FANS
@@ -87,12 +94,18 @@ const Page8182 = () => {
         DECO<br />
         ONLY FANS
       </div>
-      <div className={styles.text12}>
-        Go Behind the Scenes with Exclusive NFT Content and Experiences
-      </div>
-      <div className={styles.text13}>
-        Go Behind the Scenes with Exclusive NFT Content and Experiences
-      </div>
+      <Link href='https://digifizzy.xyz/unlockable/4/'>
+        <a target='_blank'>
+          <div>
+            <div className={styles.text12}>
+              Go Behind the Scenes with Exclusive NFT Content and Experiences
+            </div>
+            <div className={styles.text13}>
+              Go Behind the Scenes with Exclusive NFT Content and Experiences
+            </div>
+          </div>
+        </a>
+      </Link>
       <div className={styles.text14}>
         This was an EP I produced — inspired by the events of 9/11 which had a pretty big impact on my life.
       </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './page31.module.scss'
 
 const Page31 = () => {
@@ -16,18 +17,41 @@ const Page31 = () => {
       </div>
 
       <div className={styles.text2}>
-        <span>Alchemix<img src='./magazine/4/images/3536_twitter.png'/></span><br />
-        Alchemix is no exception amongst the mix of DeFi protocols pushing innovation to the bleeding edge. Their product, in short, can be described most simply as self-repaying loans. To put this more accurately, their token $ALCX gives an advance on future yields; whereby funds are deposited into Yearn vaults for generating yield and then a synthetic stable coin alUSD is minted against this and given to users in exchange for their deposits, representing the advance on the future yield. For example, a user could deposit 1000 $DAI as collateral into an Alchemix vault and receive 500 $alUSD in exchange, and as the 1000 deposited $DAI generates yield, this yield automatically repays the 500 $alUSD debt. Hence, the “debt that repays itself” part. As yield on the deposited funds progressively repays the $alUSD debt, the underlying $DAI gets progressively unlocked. Alternatively, at any time the user can repay the outstanding debt with either $alUSD or with $DAI and unlock all remaining collateral. Yet, the best part is that there is no risk of liquidation for the user throughout this process as they are depositing a stablecoin as their collateral and receiving a stablecoin back for their loan. 
+        <span>XDEFI Wallet
+          <Link href='https://twitter.com/xdefi_wallet'>
+            <a target='_blank'>
+              <img src='./magazine/4/images/3536_twitter.png'/>
+            </a>
+          </Link>
+        </span><br />
+        XDeFi Wallet is the ultimate cross compatible secure custody gateway to the decentralised web, built with DeFi power users in mind. The wallet is chain agnostic with support for Ethereum, Binance Smart Chain and Polygon Network among others. We’ve all experienced the headache of web3 asset management; some of us learnt the hardway through unfortunate hacks, loss of private keys or even as of more recently, IRL social engineering. We often don’t think about just how much goes into establishing secure non-custodial wallet solutions, and then to have this be fully interoperable through an intuitive interface just makes everything that much more complex. Think about how much logic the web queries, smart contract audits and the hours of user testing for slight UX improvements. XDeFi Wallet is still in BETA, but if you have had the chance to take a look under the hood of what they have come up with so far, it represents a very cool engineering step forward for the entire space.
         <br /><br />
-        <span>ABRACADABRA<img src='./magazine/4/images/3536_twitter.png'/></span><br />
-        Abracadabra allows its users to take loans using their existing interest bearing tokens (ibTKNs) as collateral, to either leverage up their yield, or invest in other assets while their collateral keeps growing. Ultimately, it unlocks an additional layer of utility and composability for tokens that would anyway just be sitting in a user’s wallet idle. For example: a user may have 10k USDT deposited in a yearn v2 vault earning 10% per year, represented by yvUSDT tokens. They can now deposit their yvUSDT on Abracadabra and take out a loan for up to 90% of that amount, or $9k, at an 0.8% interest rate. The loan is given out in Abracadabra’s collateralised USD pegged stable coin $MIM. The user can do as they please with their $MIM, including that of continuing to leverage up their position, and all without a significant liquidation threat, given that the collateral is a stable-coin based ibTKN. 
+        <span>Party PARROT
+          <Link href='https://twitter.com/Rafi_0x/status/1405929490547712017'>
+            <a target='_blank'>
+              <img src='./magazine/4/images/3536_twitter.png'/>
+            </a>
+          </Link>
+        </span><br />
+        Party Parrot is a stablecoin project built on Solana. Much like MakerDAO, users can deposit different assets as collateral to mint a collateralised stablecoin $PAI. Parrot will allow Ethereum DeFi assets such as Sushi & Curve LP tokens, Aave & Compound interest bearing tokens, etc to be used as collateral to mint $PAI on Solana. This means users won’t have to choose between yield farming on ETH or on Solana. They’ll be able to do both—  its an ingenious solution for bridging liquidity from Ethereum to Solana. Parrot is also establishing into a broader lending market, and finally into a vAMM margin trading protocol, using $PAI as its main unit of account. So Parrot has geared up to become a full-fledged DeFi hub for Solana.
         <br /><br />
-        <span>antimatter<img src='./magazine/4/images/3536_twitter.png'/></span><br />
-        Antimatter is a DeFi options protocol using a polarised token approach where puts and calls are created through freely transferable and tradeable tokens i.e. tokenised options. It works whereby each option product always consists of a positive (long put/call option) and a negative (short put/call option) element, with the sum of the two always equal to a set value C. If the sum of both tokens is ever different to that of C, then an arbitrage opportunity is created and the market corrects itself. All this opens the doors to multiple hedging, arbitrage and leveraging strategies, and yet the best part is that all the complexity can be abstracted away, as the action is centred around only the buying and selling of the two simple positive and negative element tokens. Their token $MATTER is used for paying fees for the creation of new option markets, earning a share of the funding fees paid by token holders, platform Governance, and with additional utility to be added over time as the platform grows and scales. Token holders will be able to earn additional $MATTER, by staking their tokens, through liquidity mining LP tokens, and by earning rewards for governance participation, options trading, creation and redemption. 
+        <span>Parallel nft
+          <Link href='https://twitter.com/Rafi_0x/status/1422969655715577860'>
+            <a target='_blank'>
+              <img src='./magazine/4/images/3536_twitter.png'/>
+            </a>
+          </Link>
+        </span><br />
+        Parallel will be a collectable card game using NFTs (think Magic The Gathering with NFTs) and imo it has the potential to play a big role in bringing mass adoption to NFTs. Instead of doing something like “a normal card game, but with NFTs instead of physical cards”, Parallel is really exploring the full potential of what mixing NFTs, AR and physical cards can bring. AR will be a major part of the game, and all NFT cards will be redeemable for physical cards, which apart from being collectibles on their own, will also act as AR markers. In the game story, Parallels are groups of humans that evolved separately across the universe over thousands of years, and are now fighting to take back control of Earth. There are 5 different Parallels to choose from: Earthen, Marcolian, Augencore, Kathari and Shroud. Each Parallel has their own set of cards, and in order to play the game, each player will need a deck of 40 cards containing only one of the 5 Parallel types + Universal cards. So Universal cards act a bit like a joker, and are the only ones that can work with any deck. Even though there is no official information on that yet, the game should also have a native currency, $PRIME, and one of the ways to earn $PRIME will likely be through the use of Prime Key cards, for which there is a limited supply of 1500.  Users should be able to burn Prime Keys for a percentage of the $PRIME supply, or combine them with Catalyst Drives (supply of 250) to create Prime Drives, which are expected to give holders passive income in $PRIME (but again, there is no official info released on that yet). 
       </div>
 
       <div className={styles.text3}>
         - rafi_0X
+        <Link href='https://twitter.com/Rafi_0x'>
+          <a target='_blank'>
+            <img src='./magazine/4/images/3536_twitter.png'/>
+          </a>
+        </Link>
       </div>
 
       <div className={styles.text4}>

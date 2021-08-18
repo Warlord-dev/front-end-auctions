@@ -4,13 +4,13 @@
   @include magazineWrapper();
   background-color: white;
   display: flex;
-  height: 1517px;
+  height: 3048px;
   position: relative;
 
   .back1 {
     position: absolute;
     width: 375px;
-    height: 1517px;
+    height: 3048px;
     left: 0px;
     top: 0px;
     
@@ -47,5 +47,93 @@
     height: 178px;
     left: 96px;
     top: 729px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 17px;
+    top: 192px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 146px;
+    top: 419px;        
+  }
+
+  .image6 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 17px;
+    top: 654px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 146px;
+    top: 888px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 146px;
+    top: 1205px;    
+  }
+
+  .image9 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 17px;
+    top: 1443px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 126px;
+    top: 1685px;
+  }
+
+  .image11 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 29px;
+    top: 1964px;
+  }
+
+  .image12 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 108px;
+    top: 2222px;
+  }
+
+  .image13 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 146px;
+    top: 2501px;
+  }
+
+  .image14 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 12px;
+    top: 2759px;
   }
 }

@@ -4,6 +4,15 @@
   @include magazineWrapper();
   background-color: #FFA800;
 
+  a {
+    div {
+      transition: transform .2s;
+      &:hover > div {
+        transform: scale(1.1);
+      }      
+    }
+  }
+
   .image1 {
     position: absolute;
     width: 1920px;

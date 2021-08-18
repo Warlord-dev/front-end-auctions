@@ -1,4 +1,5 @@
-import React, { useRef, useState }  from 'react'
+import React, { useRef, useState } from 'react'
+import Link from 'next/link'
 import styles from './page1920.module.scss'
 
 const Page1920 = () => {
@@ -36,7 +37,11 @@ const Page1920 = () => {
         <img src='./magazine/1/images/howtogetintext 1.png' />
       </div>
       <img src='/magazine/4/images/1920_arrow.png' className={styles.image2}/>
-      <div className={styles.text1}>Pinata Cloud</div>
+      <Link href='https://pinata.cloud/'>
+        <a target='_blank'>
+          <div className={styles.text1}>Pinata Cloud</div>
+        </a>
+      </Link>
       <div className={styles.text2}>
         Kyle Tut, CEO & Co-Founder @ Pinata        
       </div>
@@ -47,7 +52,7 @@ const Page1920 = () => {
         <br /><br />
         This is where solutions like Pinata come into play. They leverage decentralised storage providers like IPFS (Interplanetary File System) to allow for hosting of your data on a distributed system that doesn’t have a singular point of failure. Some of the most popular NFT platforms were still hosting metadata in web2 non-immutable data bases until recently. You might have seen the literal image rug pulls on Opensea where entire collections were replaced by images of rugs.
         <br /><br />
-        Web3 data storage is a huge step in the right direction in order to shepherd all aspects of decentralised into common place everyday use.         
+        Web3 data storage is a huge step in the right direction in order to shepherd all aspects of decentralisation into common place everyday use.         
       </div>
 
       <button 

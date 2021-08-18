@@ -22,7 +22,7 @@ const Page5556 = () => {
         sitting down with axie cofounder, Jiho, IT’S CLEAR THAT IT’S SO MUCH MORE THAN JUST THE AXIE PLAYER COUNT THAT IS GOING UP, BUT RATHER AN ENTIRE MATURING DIGITAL LAYER THAT IS being stiched together through every trade and interaction here, made from the byproducts of previous, more capitve economic eras, and accerating how quickly we all move beyond them.
       </div>
       <div className={styles.text2}>
-        We will see new nations form out of digital economies, complete with their own systems of governance and property rights. Trust in traditional institutions is collapsing and digitally native economeis will fill the power vacuums that form. The metaverse will be somewhere that we can live, work, and play. P2E will attract hundreds of millions of dreamers to digital economies.
+        We will see new nations form out of digital economies, complete with their own systems of governance and property rights. Trust in traditional institutions is collapsing and digitally native economies will fill the power vacuums that form. The metaverse will be somewhere that we can live, work, and play. P2E will attract hundreds of millions of dreamers to digital economies.
         <br /><br />
         -Jiho
       </div>

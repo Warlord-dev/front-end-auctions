@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import Link from 'next/link'
 import styles from './page5960.module.scss'
 
 const Page5960 = () => {
+  const videoRef = useRef()
+
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const startAudio = () => {
+    videoRef.current.muted = false
+    setIsPlaying(true)
+  }
+
+  const pauseAudio = () => {
+    videoRef.current.muted = true
+    setIsPlaying(false)
+  }
+
   return (
     <div className={styles.wrapper}>
       <img src='/magazine/4/images/5960_image1.png' className={styles.image1}/>
@@ -14,7 +28,7 @@ const Page5960 = () => {
       <img src='/magazine/4/images/5960_image3.png' className={styles.image3}/>
       <img src='/magazine/4/images/5960_image5.png' className={styles.image5}/>
 
-      <video autoPlay muted loop className={styles.video1}>
+      <video autoPlay muted loop className={styles.video1} ref={videoRef}>
         <source src='./magazine/4/videos/5960_video1.mp4' type='video/mp4' />
       </video>
 
@@ -113,6 +127,20 @@ const Page5960 = () => {
           </div>
         </a>
       </Link>
+
+      <div
+        className={styles.playButton}
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio()
+        }}
+      >
+        <img className={styles.imageBack} src='/magazine/4/images/5960_button_back.png' />
+        {
+          !isPlaying
+          ? <img className={styles.imagePlay} src='/magazine/4/images/5960_playbutton.png' />
+          : <img className={styles.imagePause} src='/magazine/4/images/5960_pausebutton.png' />
+        }
+      </div>
     </div>
   )
 }

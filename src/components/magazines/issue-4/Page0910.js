@@ -5,7 +5,7 @@ const Page0910 = () => {
     <div className={styles.wrapper}>         
       <img src='/magazine/4/images/0910_background.png' className={styles.image1}/>
       <h1>
-        The explosive growth of decentralised finance, or DeFi, is proof positive of this. DeFi opens the door to anyone with an internet connection and a mobile device to participate in wealth-generating activities, no matter how big or small, through smart contracts on the Ethereum blockchain. Smart contracts essentially take over the functions that financial intermediaries like your brokers and bankers would have, allowing you to make potentially eye-watering returns on your investment—without anyone’s permission.
+        The explosive growth of decentralised finance, or DeFi, is proof positive of this. DeFi opens the door to anyone with an internet connection and a mobile device to participate in wealth-generating activities, no matter how big or small, through smart contracts on the blockchain. Smart contracts essentially take over the functions that financial intermediaries like your brokers and bankers would have, allowing you to make potentially eye-watering returns on your investment—without anyone’s permission.
         <br /><br />
         Well, the same thing is happening with commerce.
       </h1>

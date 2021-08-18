@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './page7980.module.scss'
 
 
@@ -6,7 +7,11 @@ const Page7980 = () => {
   return (
     <div className={styles.wrapper}>
       <img className={styles.image1} src='/magazine/4/images/7980_background.png' />
-      <img className={styles.image2} src='/magazine/4/images/7980_image1.png' />
+      <Link href='https://digifizzy.xyz/unlockable/4/'>
+        <a target='_blank'>
+          <img className={styles.image2} src='/magazine/4/images/7980_image1.png' />
+        </a>
+      </Link>
       <img className={styles.image3} src='/magazine/4/images/7980_image2.png' />
       <img className={styles.image4} src='/magazine/4/images/7980_image3.png' />
       <img className={styles.image5} src='/magazine/4/images/7980_image4.png' />

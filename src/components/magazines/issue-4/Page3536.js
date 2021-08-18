@@ -34,7 +34,7 @@ const Page3536 = () => {
               </a>
           </Link>
         </span><br/>
-        Party Parrot is a stablecoin project built on Solana. Much like MakerDAO, users can deposit different assets as collateral to mint an collateralised stablecoin $PAI. Parrot will allow Ethereum DeFi assets such as Sushi & Curve LP tokens, Aave & Compound interest bearing tokens, etc to be used as collateral to mint $PAI on Solana. This means users won’t have to choose between yield farming on ETH or on Solana. They’ll be able to do both—  its an ingenious solution for bridging liquidity from Ethereum to Solana. Parrot is also establishing into a broader lending market, and finally into a vAMM margin trading protocol, using $PAI as its main unit of account. So Parrot has geared up to become a full-fledged DeFi hub for Solana. 
+        Party Parrot is a stablecoin project built on Solana. Much like MakerDAO, users can deposit different assets as collateral to mint a collaterised stablecoin $PAI. Parrot will allow Ethereum DeFi assets such as Sushi & Curve LP tokens, Aave & Compound interest bearing tokens, etc to be used as collateral to mint $PAI on Solana. This means users won’t have to choose between yield farming on ETH or on Solana. They’ll be able to do both—  its an ingenious solution for bridging liquidity from Ethereum to Solana. Parrot is also establishing into a broader lending market, and finally into a vAMM margin trading protocol, using $PAI as its main unit of account. So Parrot has geared up to become a full-fledged DeFi hub for Solana. 
         <br/><br/><br/>
         <span>Parallel nft
           <Link href='https://twitter.com/Rafi_0x/status/1422969655715577860'>
@@ -43,12 +43,12 @@ const Page3536 = () => {
             </a>
         </Link>
         </span><br/>
-        Parallel will be a collectable card game using NFTs (think Magic The Gathering with NFTs) and imo it has the potential to play a big role in bringing mass adoption to NFTs. Instead of doing something like “a normal card game, but with NFTs instead of physical cards”, Parallel is really exploring the full potential of what mixing NFTs, AR and physical cards can bring. R will be a major part of the game, and all NFT cards will be redeemable for physical cards, which apart from being collectibles on their own, will also act as AR markers. In the game story, Parallels are groups of humans that evolved separately across the universe over thousands of years, and are now fighting to take back control of Earth. There are 5 different Parallels to choose from: Earthen, Marcolian, Augencore, Kathari and Shroud. Each Parallel has their own set of cards, and in order to play the game, each player will need a deck of 40 cards containing only one of the 5 Parallel types + Universal cards. So Universal cards act a bit like a joker, and are the only ones that can work with any deck. Even though there is no official information on that yet, the game should also have a native currency, $PRIME, and one of the ways to earn $PRIME will likely be through the use of Prime Key cards, for which there is a limited supply of 1500.  Users should be able to burn Prime Keys for a percentage of the $PRIME supply, or combine them with Catalyst Drives (supply of 250) to create Prime Drives, which are expected to give holders passive income in $PRIME (but again, there is no official info released on that yet). 
+        Parallel will be a collectable card game using NFTs (think Magic The Gathering with NFTs) and imo it has the potential to play a big role in bringing mass adoption to NFTs. Instead of doing something like “a normal card game, but with NFTs instead of physical cards”, Parallel is really exploring the full potential of what mixing NFTs, AR and physical cards can bring. AR will be a major part of the game, and all NFT cards will be redeemable for physical cards, which apart from being collectibles on their own, will also act as AR markers. In the game story, Parallels are groups of humans that evolved separately across the universe over thousands of years, and are now fighting to take back control of Earth. There are 5 different Parallels to choose from: Earthen, Marcolian, Augencore, Kathari and Shroud. Each Parallel has their own set of cards, and in order to play the game, each player will need a deck of 40 cards containing only one of the 5 Parallel types + Universal cards. So Universal cards act a bit like a joker, and are the only ones that can work with any deck. Even though there is no official information on that yet, the game should also have a native currency, $PRIME, and one of the ways to earn $PRIME will likely be through the use of Prime Key cards, for which there is a limited supply of 1500.  Users should be able to burn Prime Keys for a percentage of the $PRIME supply, or combine them with Catalyst Drives (supply of 250) to create Prime Drives, which are expected to give holders passive income in $PRIME (but again, there is no official info released on that yet). 
         <br/><br/><br/><br/>
       </div>
       <div className={styles.text2}>
         - rafi_<span>0</span>X
-          <Link href='https://twitter.com/Rafi_0x/status/1422969655715577860'>
+          <Link href='https://twitter.com/Rafi_0x'>
             <a target='_blank'>
               <img src='./magazine/4/images/3536_twitter.png'/>
             </a>
@@ -81,7 +81,7 @@ const Page3536 = () => {
         OurZora is a decentralised auction protocol and open bazaar for art, fashion and musical artists. It establishes universally perpetual markets for Creators and is really attractive to the indie design 
       </div>
       <div className={styles.text7}>
-        scene, where unlike a lot of marketplaces in the space, decentralisation and open source and core pillars of the mission and also the engineering implementation.  
+        scene, where unlike a lot of marketplaces in the space, decentralisation and open source are core pillars of the mission and also the engineering implementation.  
       </div>
       <div className={styles.text8}>
         Where is OurZora going to be in a year from now? It’s hard to tell. But the ethos and roadmap so far point to it being one of the largest players in supporting Artists globally in being able to fork the protocol and continue to build out their own personalised NFT distribution interfaces. 

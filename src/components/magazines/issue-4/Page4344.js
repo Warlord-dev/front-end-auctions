@@ -85,7 +85,7 @@ const Page4344 = () => {
         <source src='./magazine/4/videos/4344_video10.mp4' type='video/mp4' />
       </video>
 
-      <img className={styles.image8} src='/magazine/4/images/4344_image8.png' />
+      {/* <img className={styles.image8} src='/magazine/4/images/4344_image8.png' /> */}
 
       <div className={styles.text1}>
         COMPLETE WEB3 FASHION DIGITAL AR, IN-GAME AND PHYSICAL IRL MEMORABILIA VARSITY JACKETS
@@ -108,6 +108,10 @@ const Page4344 = () => {
 
       <video autoPlay muted loop className={styles.video13}>
         <source src='./magazine/4/videos/4344_video2.mp4' type='video/mp4' />
+      </video>
+      
+      <video autoPlay muted loop className={styles.video14}>
+        <source src='./magazine/4/videos/4344_video13.mp4' type='video/mp4' />
       </video>
     </div>
     

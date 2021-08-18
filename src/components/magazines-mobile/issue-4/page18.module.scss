@@ -81,4 +81,32 @@
     height: 47px;
     display: flex;
   }
+
+  .circle1 {
+    position: absolute;
+    left: -52.27%;
+    right: -124.27%;
+    top: 11.83%;
+    bottom: 19.79%;
+    
+    background: rgba(0, 0, 0, 0.54);
+    border-radius: 50%;
+    border: 10px solid #FF0000;
+    box-sizing: border-box;    
+  }
+  
+  .text1 {
+    position: absolute;
+    left: 15.47%;
+    right: 4.53%;
+    top: 17.65%;
+    bottom: 50.82%;
+    
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
 }
