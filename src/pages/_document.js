@@ -313,6 +313,7 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Romanesco"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{

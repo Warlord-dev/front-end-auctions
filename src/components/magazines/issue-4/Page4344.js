@@ -107,7 +107,7 @@ const Page4344 = () => {
       </video>
 
       <video autoPlay muted loop className={styles.video13}>
-        <source src='./magazine/4/videos/4344_video2.mp4' type='video/mp4' />
+        <source src='./magazine/4/videos/4344_video14.mp4' type='video/mp4' />
       </video>
       
       <video autoPlay muted loop className={styles.video14}>

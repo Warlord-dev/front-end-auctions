@@ -24,14 +24,12 @@
     top: 407px;    
   }
 
-  .rect1 {
+  .video1 {
     position: absolute;
     width: 375px;
     height: 215px;
     left: 0px;
     top: 181px;
-    
-    background: #C4C4C4;    
   }
 
   .image3 {
@@ -39,31 +37,65 @@
     width: 261px;
     height: 261px;
     left: -69px;
-    top: 637px;    
+    top: 637px;   
   }
 
   .image4 {
     position: absolute;
     width: 261px;
     height: 261px;
-    left: 114px;
-    top: 1152px;
+    left: 52px;
+    top: 1763px;
   }
 
   .image5 {
     position: absolute;
     width: 261px;
     height: 261px;
-    left: 73px;
-    top: 1312px;
+    left: 11px;
+    top: 1923px;
   }
 
   .image6 {
     position: absolute;
     width: 261px;
     height: 261px;
-    left: 273px;
-    top: 1492px;
+    left: 211px;
+    top: 2103px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 288px;
+    height: 114px;
+    left: 44px;
+    top: 435px;
     
+    font-family: DARTHCHOWDER;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+    
+    color: #34005C;
+
+    -webkit-text-stroke: 1px #F05050;
+    text-shadow: 0px 4px 20px rgba(255, 0, 0, 0.7);    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 261px;
+    height: 459px;
+    left: 57px;
+    top: 959px;
+    
+    font-family: DARTHCHOWDER;
+    font-size: 35px;
+    line-height: 35px;
+    
+    color: #34005C;
+    
+    -webkit-text-stroke: 1px #F05050;
+    text-shadow: 0px 4px 20px rgba(255, 0, 0, 0.7);    
   }
 }

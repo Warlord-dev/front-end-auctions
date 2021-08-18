@@ -23,6 +23,41 @@ const Page38 = () => {
       <img className={styles.image13} src='/magazine/4/images/4344_image3.png' />
       <img className={styles.image14} src='/magazine/4/images/4344_image3.png' />
 
+      <video autoPlay muted loop className={styles.video1}>
+        <source src='./magazine/4/videos/4344_video2.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video2}>
+        <source src='./magazine/4/videos/4344_video3.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video3}>
+        <source src='./magazine/4/videos/4344_video4.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video4}>
+        <source src='./magazine/4/videos/4344_video5.mp4' type='video/mp4' />
+      </video>
+
+      <video autoPlay muted loop className={styles.video5}>
+        <source src='./magazine/4/videos/4344_video6.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video6}>
+        <source src='./magazine/4/videos/4344_video7.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video7}>
+        <source src='./magazine/4/videos/4344_video8.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video8}>
+        <source src='./magazine/4/videos/4344_video11.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video9}>
+        <source src='./magazine/4/videos/4344_video9.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video10}>
+        <source src='./magazine/4/videos/4344_video10.mp4' type='video/mp4' />
+      </video>
+      <video autoPlay muted loop className={styles.video11}>
+        <source src='./magazine/4/videos/4344_video13.mp4' type='video/mp4' />
+      </video>
+
     </div>
      
   )

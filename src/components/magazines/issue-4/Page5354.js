@@ -11,7 +11,7 @@ const Page5354 = () => {
       <img className={styles.image1} src='./magazine/4/images/5354_image1.png' />
 
       <div className={styles.text1}>
-      PHILIPPINES
+        PHILIPPINES
       </div>
       <div className={styles.text2}>
         INTERNATIONAL PLAYERS

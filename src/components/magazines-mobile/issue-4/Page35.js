@@ -12,7 +12,7 @@ const Page35 = () => {
       
       <img className={styles.image2} src='./magazine/4/images/3940_image2_mobile.png' />
       <div className={styles.text1}>
-        This week isn’t about the fashion. It’s about the wearing of it and what that does for each of us. The designers, collectors, buyers and weavers of new mediums across the physical and digital realms.  Web3 fashion week is about decentralising the entire industry so that anyone can be empowered by what we wear and not just in a sentimental way. Fashion can literally be put to work for us. We can create far more value from it outside of black-box IP and how good we look and feel in it. DIGITALAX and the Global Designer Network are designing fashion that does this exactly.         
+        This week isn’t about the fashion. It’s about the wearing of it and what that does for each of us. The designers, collectors, buyers and weavers of new mediums across the physical and digital realms.  Web3 Fashion Week is about decentralising the entire industry so that anyone can be empowered by what we wear and not just in a sentimental way. Fashion can literally be put to work for us. We can create far more value from it outside of black-box IP and how good we look and feel in it. DIGITALAX and the Global Designer Network are designing fashion that does this exactly.
       </div>
     </div>
   )

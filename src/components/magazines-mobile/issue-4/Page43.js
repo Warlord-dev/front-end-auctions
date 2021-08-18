@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './page43.module.scss'
 
 const Page43 = () => {
+  const audioRef = useRef()
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const startAudio = () => {
+    audioRef.current.play()
+    setIsPlaying(true)
+  }
+
+  const pauseAudio = () => {
+    audioRef.current.pause()
+    setIsPlaying(false)
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.back}>
@@ -63,6 +76,23 @@ const Page43 = () => {
       <div className={styles.playButton}>
         <img className={styles.imagePlay} src='/magazine/4/images/4950_playbutton.png' />
       </div>
+
+      <div
+        className={styles.playButton}
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio()
+        }}
+      >
+        {
+          !isPlaying
+          ? <img className={styles.imagePlay} src='/magazine/4/images/4950_playbutton.png' />
+          : <img className={styles.imagePause} src='/magazine/4/images/4950_pausebutton.png' />
+        }
+      </div>
+
+      <audio ref={audioRef} loop>
+        <source src='./magazine/4/sounds/4950_sound1.mp3' type='audio/mpeg' />
+      </audio>
     </div>
   )
 }

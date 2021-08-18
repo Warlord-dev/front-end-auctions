@@ -30,17 +30,17 @@ const Page46 = () => {
       </div>
 
       <div className={styles.text4}>
-        These days, it seems that there is no end to the constant hurdles being put in place to separate customers from compassionate, intellectually sound humans for customer service agents.  Instead, most of us are used to interacting with some AI chatbot that in almost everyway is a complete black box— this is made abundantly clear when any question outside a generic conversation A/B decision tree is injected. 
+        We often talk about how valuable our personal data is while at the same time how little we personally value it. Beastly gigantic tech companies grew to their worlds devouring size by feasting on our data while we happily took heart emoji as our consolation prize. The best example of this is Facebook's "Buy, Copy, Kill". And that's exactly they've been doing for the past decade. It's literally killing the entire VR industry right now.
       </div>
 
       <div className={styles.text5}>
-        This is not the bitter complaint of a customer who has been burned once. Rather, it’s much more of a look into an insidious, looming and almost invisible problem. The very algorithms that we see at work everyday in the world around us, directly shape and influence the constraints and limits to our capacity. It might have once made sense to be hopeful about how extreme logical automation could actually improve the experience of humanity, but this is naive. Because, who designs these algorithms? At this point it’s shitty algorithms designing more shitty algorithms. And the problem has come that now these shitty algorithms are eating the internal workings and decision making processes of global and international mega companies.
+        The big billion dollar buy that kicked off wave after wave of these ecosystem destroying games for narrow gains was of course Instagram. It turned the app from the first mobile instigator of creativity for photographers, creators, designers finally able to engage in the full spectrum of activity from amateur to pro by taking their works to social and friend circles first. The founder Systrom always intended it to be a kind of image heaven. 
         <br /><br />
-        One of those is the everything store; Amazon. And at the heart of this is its all powerful physical and digital cloud brain trust— AWS. The entire customer service and support supply chain is black boxed to the point where it is unlikely that any human being has any idea how the full system works.
+        That priority changed pretty quickly after Zuckerberg bought the app and the number one goal became to collect data and maximise advertising revenue through misguided notions of how to do that. And since then it’s only gotten worse, because not only did it start off with self-negating intentions but it has also coincided with the rise of really shitty machine learning algorithms eating everything from customer service, the order in which we see our content to literally disappearing people’s accounts. And when the user asks what the hell is up it’s another really really unintelligent machine learning algorithm or just a lengthy google search rabbit hole to bring you to the conclusion that probably 
       </div>
 
       <div className={styles.text6}>
-        And with so many global interactions and transactions taking place every minute within this system, it’s scary to think of the scale of impact that a centralised line of code with near zero human oversight can have in dominating control on the outcomes of so many people and lives. More problems are being created than being solved, and it only further reinforces that while some algorithms attempt to eat the world it is really decentralisation that needs to eat them. Bon Appétit!  
+        some random “system maintenance” glitched all the data and there is nothing to be done about it. Let’s be frank, facebook and co doesn’t give a damn about you or any of us. And there’s nothing you can do about it... yet. We just need to launch those web3 social media apps and do it right this time. Ones that aren’t just copy paste of the legacy apps and transacting on a blockchain and ones that aren’t bought and backed by VCs. The only way to do this right is to have it owned by the users and no one else. 
       </div>
 
       <div className={styles.text7}>
