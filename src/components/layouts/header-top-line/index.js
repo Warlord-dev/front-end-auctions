@@ -105,24 +105,24 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
         <div className={cn(styles.links, isCollapse ? styles.expandedMenu : '')}>
           <Link href="https://drip.digitalax.xyz/">
             <a className={styles.link} target="_blank">
-              rep your style IRL
+              PHYSICAL WEB3 FASHION
             </a>
           </Link>
           <Link href="https://skins.digitalax.xyz">
             <a className={styles.link} target="_blank">
-              OG marketplace
+              DIGITAL WEB3 FASHION
             </a>
           </Link>
-          <Link href="https://designers.digitalax.xyz/global">
+          <Link href="http://globaldesignernetwork.xyz/global">
             <a className={styles.link} target="_blank">
-              Global Designer Network
+              GLOBAL DESIGNER NETWORK
             </a>
           </Link>
-          <Link href="/swap">
-            <a className={styles.link}>Token Swap</a>
+          <Link href="https://staking.digitalax.xyz/">
+            <a className={styles.link}>STAKE FASHION NFT</a>
           </Link>
           <Link href="/bridge">
-            <a className={styles.link}>Matic-Eth Bridge</a>
+            <a className={styles.link}>BRIDGE MONA</a>
           </Link>
         </div>
         {network?.alias !== 'matic' ? (

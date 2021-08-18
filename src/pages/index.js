@@ -105,9 +105,11 @@ const LandingPage = () => {
         <Link href="/collections">
           <h3 className={styles.fashionWeekLink}>Shop the GDN Auction ></h3>
         </Link>
-        <div className={styles.readmoreText}>
-          Read more about our <br /> DAO here.
-        </div>
+        <a href="https://blog.digitalax.xyz/global-designer-network-dao-auction-governance-token-launch-w3fw-abe09ce1c5d0" target="_blank">
+          <div className={styles.readmoreText}>
+            Read more about our <br /> DAO here.
+          </div>
+        </a>
         <div className={styles.markText}>
           The Global Designer Network is initiating as an on-chain DAO.
         </div>

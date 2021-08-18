@@ -260,7 +260,7 @@ const Product = () => {
           DAO. The Global Designer Network is initiating as an on-chain DAO. The Global Designer
           Network is initiating as an on-chain DAO.
         </div>
-        <a href="/" target="_blank" className={styles.link}>
+        <a href="https://blog.digitalax.xyz/global-designer-network-dao-auction-governance-token-launch-w3fw-abe09ce1c5d0" target="_blank" className={styles.link}>
           <div className={styles.linkWrapper}>
             <BannerButton text='read more about the gdn dao'/>
           </div>

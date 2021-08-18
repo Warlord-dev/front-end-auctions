@@ -179,6 +179,11 @@
       text-align: left;
       color: #34005c;
       text-decoration: underline;
+      transition: 0.5s all ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
     .markText {
       position: absolute;
