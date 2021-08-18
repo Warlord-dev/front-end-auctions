@@ -34,7 +34,7 @@ const UnlockPageThree = props => {
         } else if (issueId == 3) {
           Router.push('/unlockable/3')
         } else if (issueId == 4) {
-          Router.push('/unlockable/4')
+          Router.push('/unlockable/1')
         }
       }}>
         Unlock

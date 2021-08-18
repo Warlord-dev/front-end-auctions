@@ -34,7 +34,7 @@ const Page8182 = () => {
       <img className={styles.image10} src='/magazine/4/images/8182_image10.png' />
       <img className={styles.image11} src='/magazine/4/images/8182_image11.png' />
       
-      <Link href='https://digifizzy.xyz/unlockable/4/'>
+      <Link href='https://digifizzy.xyz/unlockable/1/'>
         <a target='_blank'>
           <div>
             <div className={styles.text1}>
@@ -94,7 +94,7 @@ const Page8182 = () => {
         DECO<br />
         ONLY FANS
       </div>
-      <Link href='https://digifizzy.xyz/unlockable/4/'>
+      <Link href='https://digifizzy.xyz/unlockable/1/'>
         <a target='_blank'>
           <div>
             <div className={styles.text12}>

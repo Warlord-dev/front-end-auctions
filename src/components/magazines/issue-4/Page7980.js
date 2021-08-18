@@ -7,7 +7,7 @@ const Page7980 = () => {
   return (
     <div className={styles.wrapper}>
       <img className={styles.image1} src='/magazine/4/images/7980_background.png' />
-      <Link href='https://digifizzy.xyz/unlockable/4/'>
+      <Link href='https://digifizzy.xyz/unlockable/1/'>
         <a target='_blank'>
           <img className={styles.image2} src='/magazine/4/images/7980_image1.png' />
         </a>

@@ -30,7 +30,7 @@ const UnlockPageThree = props => {
         className={styles.unlock} 
         onClick={() => {
           issueId == 3 && Router.push('https://digifizzy.xyz/unlockable/3')
-          issueId == 4 && Router.push('https://digifizzy.xyz/unlockable/4')
+          issueId == 4 && Router.push('https://digifizzy.xyz/unlockable/1')
         }}
       >
         Unlock
