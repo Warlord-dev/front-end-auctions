@@ -39,7 +39,7 @@ const Page8384 = () => {
       </div>
 
       <div className={styles.text8}>
-        Snip3rdown is no greenhorn. He is one of the most successful players in Halo esports history, with almost 13 years of competitive record up his sleeve— 24x Halo champion and 2x xGame medalist. One of his most notable traits however has been the steady positive endurance that he’s maintained since his beginnings in the industry. He emphasises keeping a positive outlook, addressing weaknesses, and focusing on mental preparation before any match— something that is often all too overlooked when it comes to elite athlete performance performance. 
+        Snip3rdown is no greenhorn. He is one of the most successful players in Halo esports history, with almost 13 years of competitive record up his sleeve— 24x Halo champion and 2x xGame medalist. One of his most notable traits however has been the steady positive endurance that he’s maintained since his beginnings in the industry. He emphasises keeping a positive outlook, addressing weaknesses, and focusing on mental preparation before any match— something that is often all too overlooked when it comes to elite athlete performance. 
       </div>
 
       <div className={styles.text9}>
@@ -70,7 +70,7 @@ const Page8384 = () => {
       </div>
       
       <div className={styles.text17}>
-        xQc is one of Twitch’s most popular players, but also, according to the platform, most controversial. He recently received another ban from Twitch when he streamed the Olympics for one of his “reaction video”. It seems a bit extensive to issue a DMCA over something like this. But more than that it points to a deeper rot within the industry of destroying new talent out of fear that someone doing organic marketing for you for free will somehow diminish your brand value. 
+        xQc is one of Twitch’s most popular players, but also, according to the platform, most controversial. He recently received another ban from Twitch when he streamed the Olympics for one of his “reaction videos”. It seems a bit extensive to issue a DMCA over something like this. But more than that it points to a deeper rot within the industry of destroying new talent out of fear that someone doing organic marketing for you for free will somehow diminish your brand value. 
       </div>
       
       <div className={styles.text18}>

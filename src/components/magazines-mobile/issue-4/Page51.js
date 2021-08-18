@@ -25,7 +25,7 @@ const Page51 = () => {
         <span>
           How do you think p2e reinforces defi composability and a player building a robust digital identity?
           <br /><br />
-          Play-to-earn as a concept is a combination of NFTs (permanent assets that hold value) and Defi (generating yield). Guilds take advantage of composability by purchasing assets in different play-to-earn games and adding value to the game economy by bringing their communities over to these games. Players can express their identity either explicitly (as a cross-world compatible avatar), or implicitly (via on- an off-chain reputation tied to identity).
+          Play-to-earn as a concept is a combination of NFTs (permanent assets that hold value) and Defi (generating yield). Guilds take advantage of composability by purchasing assets in different play-to-earn games and adding value to the game economy by bringing their communities over to these games. Players can express their identity either explicitly (as a cross-world compatible avatar), or implicitly (via on- and off-chain reputation tied to identity).
         </span>
       </div>
       <div className={styles.text3}>
