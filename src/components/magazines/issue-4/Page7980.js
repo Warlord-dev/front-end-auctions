@@ -44,6 +44,25 @@ const Page7980 = () => {
       <div className={styles.text10}>
         XENOTECH
       </div>
+      <div className={styles.text11}>
+        Web3 wizards collectibles
+      </div>
+
+      <img className={styles.image7} src='/magazine/4/images/7778_image8.png' />
+      <img className={styles.image8} src='/magazine/4/images/7778_image9.png' />
+      <img className={styles.image9} src='/magazine/4/images/7778_image10.png' />
+      <img className={styles.image10} src='/magazine/4/images/7778_image11.png' />
+      
+      <img className={styles.image11} src='/magazine/4/images/7980_image51.png' />
+      <img className={styles.image12} src='/magazine/4/images/7980_image6.png' />
+      <img className={styles.image13} src='/magazine/4/images/7980_image7.png' />
+      <img className={styles.image14} src='/magazine/4/images/7980_image8.png' />
+      <img className={styles.image15} src='/magazine/4/images/7980_image9.png' />
+
+      <img className={styles.image16} src='/magazine/4/images/7980_image10.png' />
+      <img className={styles.image17} src='/magazine/4/images/7980_image11.png' />
+      <img className={styles.image18} src='/magazine/4/images/7980_image12.png' />
+      <img className={styles.image19} src='/magazine/4/images/7980_image13.png' />
 
 
     </div>

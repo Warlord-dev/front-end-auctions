@@ -1227,6 +1227,7 @@ class MyDocument extends Document {
 
             @font-face {
               font-family: "Muna";
+              font-weight: 700;
               src: url("./fonts/Muna-Bold.ttf");
             }
 
@@ -1530,6 +1531,11 @@ class MyDocument extends Document {
               font-family: 'DIN Condensed';
               font-weight: 700;
               src: url('./fonts/DINCondensed-Bold.ttf');
+            }
+
+            @font-face {
+              font-family: 'SeoulHangang CBL';
+              src: url('./fonts/SeoulHangangCondensed-BoldL.ttf');
             }
           `,
             }}

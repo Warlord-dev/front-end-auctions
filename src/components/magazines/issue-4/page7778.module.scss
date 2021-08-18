@@ -114,8 +114,8 @@
     position: absolute;
     width: 228px;
     height: 228px;
-    left: 453px;
-    top: 97px;
+    left: 712px;
+    top: -11px;
   }
 
   .image12 {
@@ -321,6 +321,159 @@
     height: 360px;
     left: 1495px;
     top: 1111px;
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 319px;
+    height: 323px;
+    left: 92px;
+    top: 193px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.28);    
+  }
+
+  .circle2 {
+    position: absolute;
+    width: 597px;
+    height: 565px;
+    left: 354px;
+    top: -58px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.28);
+  }
+
+  .circle3 {
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    left: 211px;
+    top: 421px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.28);
+  }
+
+  .circle4 {
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    left: -262px;
+    top: 1068px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.28);
+  }
+
+  .circle5 {
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    left: 211px;
+    top: 920px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.28);
+  }
+
+  .text11 {
+    position: absolute;
+    width: 247px;
+    height: 210px;
+    left: 136px;
+    top: 257px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    
+    color: #FFFFFF;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text12 {
+    position: absolute;
+    width: 282px;
+    height: 168px;
+    left: 431px;
+    top: 71px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text13 {
+    position: absolute;
+    width: 502px;
+    height: 154px;
+    left: 431px;
+    top: 228px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 511px;
+    height: 168px;
+    left: 333px;
+    top: 523px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text15 {
+    position: absolute;
+    width: 535px;
+    height: 238px;
+    left: 333px;
+    top: 705px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 816px;
+    height: 322px;
+    left: 85px;
+    top: 1156px;
+    
+    font-family: Bangla MN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 110%;
+    color: #FFFFFF;
+    span {
+      font-weight: bold;
+    }
   }
   
 }
