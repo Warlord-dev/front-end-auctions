@@ -21,7 +21,7 @@ const Page92 = () => {
         Chainlink
       </div>
       <div className={styles.text6}>
-        Alot of us know Chainlink for it’s oracles, bridging real world data into the blockchain realms. However, one of the protocols most significant innovations to date is probably it’s most overlooked and unusued product; Dynamic NFTs. 
+        Alot of us know Chainlink for it’s oracles, bridging real world data into the blockchain realms. However, one of the protocols most significant innovations to date is probably it’s most overlooked and unused product; Dynamic NFTs. 
         <br /><br />
         That might twist some delicate part of the inside of your skull. Because, NFTs are immutable right? I mean everything in blockchain ultimately is. Yet, data flows don’t have to be. Securing the pipes shouldn’t preclude the flow of what’s within. And Chainlink is providing a very real solution to this. In fact, it goes beyond providing some cool generative art metadata.
         <br /><br />
