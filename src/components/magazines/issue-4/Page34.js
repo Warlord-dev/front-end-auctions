@@ -51,6 +51,7 @@ const Page34 = () => {
       </p>
       <p className={styles.text12}>- Emma-Jane MacKinnon-Lee</p>
       <img src="./magazine/4/images/0304_background.jpg" className={styles.image1} />
+      <img src="./magazine/4/images/0304_image1.png" className={styles.image3} />
 
       <div className={styles.image2}></div>
       <p className={styles.text3}>contributors</p>

@@ -130,6 +130,10 @@ const Page117118 = () => {
       <img src='/magazine/4/images/117118_image3.png' className={styles.image14} />
       <img src='/magazine/4/images/117118_image4.png' className={styles.image15} />
 
+      <video autoPlay muted loop className={styles.video1}>
+       <source src='./magazine/4/videos/117118_video1.mp4' type='video/mp4' />
+      </video>
+
       <iframe
         className={styles.video2}
         src='https://www.youtube.com/embed/OxpjvxpWZfM?autoplay=1&mute=1&controls=0&playlist=DrXMso6lctE&loop=1'

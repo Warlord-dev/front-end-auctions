@@ -101,5 +101,145 @@
     
     color: #FFE193;
   }
+
+  .rect1 {
+    position: absolute;
+    width: 623px;
+    height: 299px;
+    left: 0px;
+    top: 246px;
+    
+    background: #BE35FF;    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 623px;
+    height: 299px;
+    left: 337px;
+    top: 562px;
+    
+    background: #BE35FF;
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 623px;
+    height: 254px;
+    left: -1px;
+    top: 878px;
+    
+    background: #BE35FF;
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 623px;
+    height: 340px;
+    left: 960px;
+    top: 310px;
+    
+    background: #BE35FF;
+  }
+
+  .rect5 {
+    position: absolute;
+    width: 623px;
+    height: 340px;
+    left: 1297px;
+    top: 719px;
+    
+    background: #BE35FF;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 544px;
+    height: 241px;
+    left: 40px;
+    top: 277px;
+    
+    font-family: 'Zilla Slab Highlight';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 544px;
+    height: 241px;
+    left: 377px;
+    top: 580px;
+    
+    font-family: 'Zilla Slab Highlight';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 544px;
+    height: 241px;
+    left: 39px;
+    top: 909px;
+    
+    font-family: 'Zilla Slab Highlight';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 544px;
+    height: 241px;
+    left: 1000px;
+    top: 341px;
+    
+    font-family: 'Zilla Slab Highlight';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 544px;
+    height: 241px;
+    left: 1337px;
+    top: 750px;
+    
+    font-family: 'Zilla Slab Highlight';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #FFFFFF;
+    
+  }
+
+  h1 {
+    span {
+      background-color: white;
+      display: inline;
+      color: #BE35FF;    
+    }
+  }
 }
 
