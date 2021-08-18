@@ -1,4 +1,5 @@
 import React, { useRef, useState }   from 'react'
+import Link from 'next/link'
 import styles from './page75.module.scss'
 
 const Page75 = () => {
@@ -44,12 +45,18 @@ const Page75 = () => {
       <div className={styles.text4}>
         I am focused on developing a roadmap for XENOTECH to ultimately become a blockchain based social commerce virtual world geared towards Digital / Physical clothing designers and brands. It is essential for this virtual world to exist in an Open and interoperable Metaverse where it can serve as a hub for digital fashion related products (garments, game-skins, etc.) and experiences (fashion shows, events, games, etc.) to take place and ultimately be distributed across the wider interoperable Metaverse.
       </div>
-      <div className={styles.text6}>
-        Go Behind the Scenes with Exclusive NFT Content and Experiences
-      </div>
-      <div className={styles.text5}>
-        Go Behind the Scenes with Exclusive NFT Content and Experiences
-      </div>
+      <Link href='https://digifizzy.xyz/unlockable/1/'>
+        <a target='_blank'>
+          <div>
+            <div className={styles.text6}>
+              Go Behind the Scenes with Exclusive NFT Content and Experiences
+            </div>
+            <div className={styles.text5}>
+              Go Behind the Scenes with Exclusive NFT Content and Experiences
+            </div>
+          </div>
+        </a>
+      </Link>
       <div className={styles.text7}>
         DECO<br />
         ONLY FANS
