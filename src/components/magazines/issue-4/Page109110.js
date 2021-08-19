@@ -14,20 +14,20 @@ const Page109110 = () => {
     <div className={styles.wrapper}>
       <img src='/magazine/4/images/109110_image1.png' className={styles.image1}/>
       <h1>
-        Remove the Ceiling by removing the Floor.         
+        Our End Game.         
       </h1>
       <div className={styles.text1}>
-        The house always wins. 
+        What are the most important three turns of a ski run?
         <br /><br />
-        Designing a system that guarantees net profit regardless of external conditions or outcomes is not something that only the gambling houses can pull off. Sure, Sheldon Adelson might have gone into the game from a predatory casino perspective, leveraging human desire for generating countless derechos of devastation. But, we too can become the house— the house of our own lives— and, instead of wreaking destruction, we can rather inflate positive delta that is instrumentally valuable and tremendously gainful.
+        It’s an interesting question to sit with and was posed by  ’60s Olympic skiing legend Billy Kidd.
         <br /><br />
-        Having a mastery over the meta-game means that we don’t need to know or get caught up in the volatility of the slot machines, the stack height of our chips, or the slight hand of the dealers. We can feel our own reality to play our own game. If we know our meta-how and have enough fluidity to dance with dynanism then we can map the catalysts and deltas to themselves. We can create a Y Combinator of positive cascades in each of our own lives for ensuring a net profit, no matter the situation or context. 
+        The answer; the last three before you get back on the lift for another run. 
         <br /><br />
-        And, in order to make this a truth, in order to win, we must maintain ownership of ourselves. Only when we play our own game are we positioning ourselves for guaranteed yield. We can turn the gears that propel stimulating change. Knowing our meta so well that we don’t need to get locked into one idea or scramble for frame control. 
+        Why? Because finishing strong equips us with our own on-demand high quality iterative function. A function that we can condense overtime, making it more and more potent— weaponising it so that we can deliberately harness unconscious learning. Mastering our own feedback and measurement. And it’s not just relevant to skiing. You can give examples from any field. In a world where we are constantly pulled into the external and experience persistent low grade inputs every second, we must train to know where to look. Identifying what actually matters the most. Where to keep the focus. And if we can close full loops at strength then we can aclimatise to more intense conditions, align peak energy periods with peak creative work, identify more deeply our own peak states and leverage the entanglement between the brilliance and the madness.  
         <br /><br />
-        In fact, it’s not about control, it’s about ownership– very different. We must embrace giving away control of everything else around us. Because, ultimately, we don’t have control of anything, only ourselves. And if we establish the soundness and antifragility of our own model then we can start earlier, start well ahead. We can continue to play our own game and become damn good at it.
+        It is something that I have come to focus on more deeply in building DIGITALAX. Deliberate practice on how to switch into peak performance state on-demand without slippage in my quality of presence. Because you can’t predict when that is needed. And a lot of the time you are either ready or you are not.
         <br /><br />
-        We all have what it takes to win, but so many of us fall into the myth of pioneering. Anyone can do what it takes, but only very few decide to actually do it. My desire is to actually do it. To make sure I have ownership of myself above all else, to play my own game. Because only then can I commit to warranting impactful yield for all those that too desire to be their own house. 
+        And it helps in giving a broader perspective. How do you choose the best of many competing truths? First, recognize you have a choice. Then that there many. Run this as an iterative function on repeat through round after round of indefinite games. The output is more flexibility with time. My gains are the option to play with perspective, and through that time. Looking back now, we can take our time to see more of the information the earlier present didn't allow for. And from that larger perspective, choose, choose, choose, and do it some more. This is how reframing the past allows us to change it –– because it was already a selection game all along. Here's where I can fall in love with the end game. 
       </div>
       <div className={styles.text2}>
         - Emma-Jane MacKinnon-Lee
