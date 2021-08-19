@@ -101,4 +101,121 @@
     color: #FFFFFF;
     
   }
+
+  .image1 {
+    position: absolute;
+    width: 297px;
+    height: 297px;
+    left: 19px;
+    top: 988px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 184px;
+    height: 184px;
+    left: 12px;
+    top: 2267px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 184px;
+    height: 184px;
+    left: 188px;
+    top: 2420px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 184px;
+    height: 184px;
+    left: 0px;
+    top: 2541px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 184px;
+    height: 184px;
+    left: -44px;
+    top: 2911px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 184px;
+    height: 184px;
+    left: 188px;
+    top: 2931px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 282px;
+    height: 208px;
+    left: 93px;
+    top: 750px;    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 380px;
+    height: 273px;
+    left: -2px;
+    top: 1960px;
+    object-fit: cover;    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 179px;
+    height: 170px;
+    left: 78px;
+    top: 1055px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #000000;    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 273px;
+    height: 140px;
+    left: 72px;
+    top: 2757px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFF16F;
+  }
+
+  .textPatternWrapper {
+    position: absolute;
+    top: 1873px;
+    left: 50px;
+    opacity: 0.8;
+
+    .textPattern {
+      width: 558px;
+      height: 76px;
+      margin-left: 0px;
+      margin-top: 20px;
+      
+      font-family: Gelasio;
+      font-size: 60px;
+      line-height: 76px;
+
+      color: #009B7F;
+    }
+  }
 }
