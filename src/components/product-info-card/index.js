@@ -29,7 +29,7 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
   };
 
   const getPrice = () => {
-    return `${price / 10 ** 18} MONA ($${(parseFloat(monaPerEth) * exchangeRate * price / 10 ** 18).toFixed(2)})`
+    return `${(price / 10 ** 18).toFixed(2)} MONA ($${(parseFloat(monaPerEth) * exchangeRate * price / 10 ** 18).toFixed(2)})`
   }
 
   const getTimeFormat = () => {
