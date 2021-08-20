@@ -25,7 +25,7 @@ const CollectionCard = ({ collection }) => {
                 <source src={collection?.animation} type="video/mp4" />
               </video>
             ) : (
-              <img src={collection?.image} className={styles.image} />
+              <img src={collection?.image} className={styles.innerImage} />
             )}
           </div>
         </div>

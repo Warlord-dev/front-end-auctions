@@ -50,8 +50,6 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
     }
   };
 
-  console.log({product});
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.imageWrapper}>

@@ -155,6 +155,13 @@
     .image {
       overflow: hidden;
       width: 100%;
+      height: 100%;
+
+      .innerImage {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
 
       video {
         width: calc(100% - 4rem);

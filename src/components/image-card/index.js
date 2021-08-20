@@ -29,6 +29,7 @@ const ImageCard = ({
   const router = useRouter();
   const account = useSelector(getAccount);
   const chainId = useSelector(getChainId);
+  const {asPath} = router;
   const dispatch = useDispatch();
   const [zoomMedia, setZoomMedia] = useState(false);
 
@@ -97,7 +98,7 @@ const ImageCard = ({
             >
               {data.garment?.animation?.length || data.animation?.length ? (
                 <LazyLoad>
-                  <video key={data.id} autoPlay muted loop className={styles.video}>
+                  <video key={data.id} autoPlay muted={!asPath.includes('product')} loop className={styles.video}>
                     <source
                       src={reviseUrl(data.garment ? data.garment.animation : data.animation)}
                       type="video/mp4"
