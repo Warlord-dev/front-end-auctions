@@ -22,7 +22,7 @@ import pysicals from '../data/drip.json';
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
   const [digital, setDigital] = useState([]);
-  const digitalIds = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
+  const digitalIds = ['223', '224', '225', '226', '227', '228', '229', '230', '231'];
 
   useEffect(() => {
     import('react-facebook-pixel')
@@ -40,6 +40,7 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchCollectionGroups = async () => {
       const { digitalaxGarmentV2Collections } = await getCollectionV2ByIds(chainId, digitalIds);
+      console.log({digitalaxGarmentV2Collections})
       setDigital(digitalaxGarmentV2Collections.map(collection => collection.garments[0]));
     };
     fetchCollectionGroups();

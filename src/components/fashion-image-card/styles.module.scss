@@ -8,6 +8,15 @@
     width: 100%;
   }
 
+  @include xs-width {
+    width: 80vw;
+    height: 80vw;
+
+    .bodyWrapper {
+      height: 100%;
+    }
+  }
+
   @include sm-width {
     width: 400px;
 

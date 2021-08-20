@@ -35,7 +35,7 @@
         position: relative;
         padding: 5rem 0;
 
-         & > img {
+        & > img {
           cursor: pointer;
           width: 30px;
           transition: all 0.3s ease;
@@ -57,31 +57,59 @@
           }
 
           &:hover {
-            transform: scale(1.1);
+            transform: translateY(-50%) scale(1.05);
             transition: all 0.3s ease;
           }
         }
       }
 
-      .leftArrow{
+      .leftArrow {
         position: absolute;
-        left:-80px;
-        top: 40%;
+        z-index: 10;
+        left: -80px;
+        top: 50%;
+        transform: translateY(-50%);
+
         @include xs-width {
-          display: none;
+          left: -25px;
+        }
+
+        @include sm-width {
+          left: -25px;
+        }
+
+        @include md-width {
+          left: -50px;
+        }
+
+        @include lg-width {
+          left: -80px;
         }
       }
 
-      .rightArrow{
+      .rightArrow {
         position: absolute;
-        right:-80px;
-        top: 40%;
+        z-index: 10;
+        right: -80px;
+        top: 50%;
+        transform: translateY(-50%);
+
         @include xs-width {
-          display: none;
+          right: -25px;
+        }
+
+        @include sm-width {
+          right: -25px;
+        }
+
+        @include md-width {
+          right: -50px;
+        }
+
+        @include lg-width {
+          right: -80px;
         }
       }
-
-     
     }
   }
 }

@@ -161,6 +161,8 @@ const Product = () => {
     }
   };
 
+  console.log({product})
+
   return (
     <div className={styles.wrapper}>
       <section className={styles.mainSection}>

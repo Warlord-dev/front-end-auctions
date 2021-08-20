@@ -195,6 +195,7 @@ export const GARMENTV2_BY_AUCTION_ID = gql`
       garment {
         id
         name
+        image
         animation
         description
         primarySalePrice
@@ -225,6 +226,7 @@ export const GARMENT_BY_AUCTION_ID = gql`
       garment {
         id
         name
+        image
         animation
         description
         primarySalePrice

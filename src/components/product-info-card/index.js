@@ -9,7 +9,7 @@ import { getRarityId } from '@utils/helpers';
 import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import { useRouter } from 'next/router';
 
-const ProductInfoCard = ({ product, price, showCollectionName = false, showRarity = false, }) => {
+const ProductInfoCard = ({ product, price, showCollectionName = false, showRarity = false }) => {
   const router = useRouter();
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
@@ -25,35 +25,41 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
   }, [product]);
 
   const onBuyNow = () => {
-    router.push(`/product/${product?.id}/${getRarityId(product?.rarity)}`).then(() => window.scrollTo(0, 0));
+    router
+      .push(`/product/${product?.id}/${getRarityId(product?.rarity)}`)
+      .then(() => window.scrollTo(0, 0));
   };
 
   const getPrice = () => {
-    return `${(price / 10 ** 18).toFixed(2)} MONA ($${(parseFloat(monaPerEth) * exchangeRate * price / 10 ** 18).toFixed(2)})`
-  }
+    return `${(price / 10 ** 18).toFixed(2)} MONA ($${(
+      (parseFloat(monaPerEth) * exchangeRate * price) /
+      10 ** 18
+    ).toFixed(2)})`;
+  };
 
   const getTimeFormat = () => {
     const timeStamp = Date.now();
     if (timeStamp > product.endTime * 1000) {
-      return ;
+      return;
     } else {
-      const offset = (product.endTime * 1000 - timeStamp);
+      const offset = product.endTime * 1000 - timeStamp;
       const days = parseInt(offset / 86400000);
       const hours = parseInt((offset % 86400000) / 3600000);
       const minutes = parseInt((offset % 3600000) / 60000);
       setTime(`${`00${days}`.slice(-2)}:${`00${hours}`.slice(-2)}:${`00${minutes}`.slice(-2)}`);
     }
-  }
-
+  };
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.imageWrapper}>
-        <ImageCard data={product}
-          showDesigner 
-          showCollectionName={showCollectionName} 
+        <ImageCard
+          data={product}
+          showDesigner
+          showCollectionName={showCollectionName}
           showRarity={showRarity}
-          showButton={false} />
+          showButton={false}
+        />
       </div>
       <div className={styles.infoCardWrapper}>
         <InfoCard borderColor="#9c28ff" boxShadow="rgba(197, 32, 129, 0.5)">
@@ -64,7 +70,11 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
                 <PriceCard mainText={getPrice()} />
               </div>
               <div className={styles.buttonWrapper}>
-                <NewButton text={'Place a Bid'} onClick={onBuyNow} />
+                <NewButton
+                  disable={Date.now() > product.endTime * 1000}
+                  text={Date.now() > product.endTime * 1000 ? 'Sold' : 'Place a Bid'}
+                  onClick={onBuyNow}
+                />
               </div>
             </>
           ) : (

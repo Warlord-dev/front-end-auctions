@@ -82,7 +82,7 @@ const designerCircle = {
 const DesignerList = () => {
   const images = physicals;
   const chainId = useSelector(getChainId);
-  const digitalIds = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
+  const digitalIds = ['223', '224', '225', '226', '227', '228', '229', '230', '231'];
   const designerCircles = Array(images.length + 9)
       .fill()
       .map((item) => Object.assign({}, designerCircle));

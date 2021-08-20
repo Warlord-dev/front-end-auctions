@@ -20,14 +20,16 @@ const ImageCard = ({ data, showDesigner = false, imgUrl = null, blue = true }) =
           </div>
         ) : null}
         <div className={(blue)?styles.bodyWrapper:styles.bodyWrapperPink}>
-          {data ? (
-            <LazyLoad>
-              <video key={data.id} autoPlay muted loop className={styles.video}>
-                <source src={reviseUrl(data.garment ? data.garment.animation : data.animation)} type="video/mp4" />
-              </video>
-            </LazyLoad>
-          ) : null}
-          {imgUrl ? <img src={reviseUrl(imgUrl)} className={styles.image} /> : null}
+          <div className={styles.mediaWrapper}>
+            {data ? (
+              <LazyLoad>
+                <video key={data.id} autoPlay muted loop className={styles.video}>
+                  <source src={reviseUrl(data.garment ? data.garment.animation : data.animation)} type="video/mp4" />
+                </video>
+              </LazyLoad>
+            ) : null}
+            {imgUrl ? <img src={reviseUrl(imgUrl)} className={styles.image} /> : null}
+          </div>
         </div>
       </div>
     </>
