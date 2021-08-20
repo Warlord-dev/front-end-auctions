@@ -209,7 +209,7 @@ const Product = () => {
                   </div>
                   <div className={styles.buttonWrapper}>
                     <PriceCard
-                      mainText={`${getPrice() / 10 ** 18} MONA`}
+                      mainText={`${(getPrice() / 10 ** 18).toFixed(2)} MONA`}
                       subText={parseInt(rarity) === 1 ? 'highest bid' : 'sale price'}
                     />
                   </div>

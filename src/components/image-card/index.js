@@ -32,7 +32,7 @@ const ImageCard = ({
 
   const onBuyNow = () => {
     if (!router.asPath.includes('product')) {
-      router.push(`/product/${data.id}/${getRarityId(data.rarity)}`);
+      router.push(`/product/${data.id}/${getRarityId(data.rarity)}`).then(() => window.scrollTo(0, 0));
     } else {
       if (account) {
         if (chainId === '0x89') {
@@ -65,7 +65,7 @@ const ImageCard = ({
       <div className={styles.wrapper}>
         {showCollectionName ? (
           <div className={styles.collectionName}>
-            {data?.name}
+            {data?.garment ? data.garment.name : data.name}
           </div>
         ): null}
         {showDesigner ? (

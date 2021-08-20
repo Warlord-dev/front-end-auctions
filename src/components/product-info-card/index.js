@@ -25,7 +25,7 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
   }, [product]);
 
   const onBuyNow = () => {
-    router.push(`/product/${product?.id}/${getRarityId(product?.rarity)}`)
+    router.push(`/product/${product?.id}/${getRarityId(product?.rarity)}`).then(() => window.scrollTo(0, 0));
   };
 
   const getPrice = () => {
@@ -49,7 +49,7 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
   return (
     <div className={styles.wrapper}>
       <div className={styles.imageWrapper}>
-        <ImageCard data={product} 
+        <ImageCard data={product}
           showDesigner 
           showCollectionName={showCollectionName} 
           showRarity={showRarity}

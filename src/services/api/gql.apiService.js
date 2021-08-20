@@ -136,6 +136,7 @@ export const GARMENTV2_BY_COLLECTION_ID = gql`
       garments(first: 1) {
         id
         name
+        image
         animation
         description
         primarySalePrice

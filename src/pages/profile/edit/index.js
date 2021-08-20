@@ -172,7 +172,7 @@ const EditProfile = ({ history }) => {
             <Button
               className={styles.backProfileButton}
               background="black"
-              onClick={() => Router.push('/profile')}
+              onClick={() => Router.push('/profile').then(() => window.scrollTo(0, 0))}
             >
               BACK TO PROFILE
             </Button>

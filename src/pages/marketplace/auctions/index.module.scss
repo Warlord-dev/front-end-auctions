@@ -45,6 +45,7 @@
       display: grid;
       padding: 7.5rem 5rem;
       grid-template-columns: 1fr;
+      align-items: flex-end;
       gap: 5rem;
 
       @include lg-width {

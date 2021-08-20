@@ -96,7 +96,7 @@ const Profile = ({ history }) => {
         <Button
           className={styles.modalButton}
           background="black"
-          onClick={() => Router.push('/profile/edit')}
+          onClick={() => Router.push('/profile/edit').then(() => window.scrollTo(0, 0))}
         >
           Edit Profile
         </Button>

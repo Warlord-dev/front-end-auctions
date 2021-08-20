@@ -12,6 +12,7 @@
 
 .wrapper {
   margin: auto;
+  margin-bottom: 0;
 
   .title {
     font-family: Gilroy;
@@ -25,19 +26,19 @@
     color: #ffffff;
 
     @media (min-width: 1440px) {
-      font-size: 26px;
+      font-size: 35px;
     }
 
     @media (max-width: 1440px) {
-      font-size: 23px;
+      font-size: 30px;
     }
 
     @media (max-width: 1200px) {
-      font-size: 20px;
+      font-size: 26px;
     }
 
     @media (max-width: 920px) {
-      font-size: 18px;
+      font-size: 20px;
     }
 
     @media (max-width: 768px) {
@@ -142,6 +143,7 @@
     position: relative;
     background: transparent;
     background-size: 100%;
+    height: 80vw;
     background-repeat: no-repeat;
     border: 2px solid #9c28ff;
     box-shadow: inset 0px 0px 30px 20px rgba(197, 32, 129, 0.5),

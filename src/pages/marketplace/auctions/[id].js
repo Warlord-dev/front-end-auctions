@@ -17,7 +17,6 @@ const Auctions = () => {
   const chainId = useSelector(getChainId);
   const [auctions, setAuctions] = useState([]);
   const { id } = route.query;
-  const mainLogos = ['/images/metaverse/amongus-logo1.png'];
 
   useEffect(() => {
     const fetchCollectionGroup = async () => {
@@ -53,12 +52,14 @@ const Auctions = () => {
                   product={auctions[index]}
                   price={auctions[index].topBid}
                   showRarity
+                  showCollectionName
                 />
                 {index + 1 < auctions.length ? (
                   <ProductInfoCard
                     product={auctions[index + 1]}
                     price={auctions[index + 1].topBid}
                     showRarity
+                    showCollectionName
                   />
                 ) : null}
               </div>

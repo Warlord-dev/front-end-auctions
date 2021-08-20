@@ -9,47 +9,7 @@ import { getRarityId, reviseUrl } from '@utils/helpers';
 import styles from './styles.module.scss';
 import { getChainId } from '@selectors/global.selectors';
 
-const ImageCard = ({ libon = 0, data, showDesigner = false, showButton = true, imgUrl = null, price, disable = false, blue = true }) => {
-  const router = useRouter();
-  const account = useSelector(getAccount);
-  const chainId = useSelector(getChainId);
-  const dispatch = useDispatch();
-  const libons = [
-    './images/metaverse/exc-libon.png',
-    './images/metaverse/semi-libon.png',
-    './images/metaverse/common-libon.png',
-  ];
-
-  const onBuyNow = () => {
-    if (!router.asPath.includes('product')) {
-      router.push(`/product/${data.id}/${getRarityId(data.rarity)}`)
-    } else {
-      if (account) {
-        if (chainId === '0x89') {
-          if (libon !== 1) {
-            dispatch(
-              openBuynowModal({
-                id: data.id,
-                priceEth: price
-              })
-            )
-          } else {
-            dispatch(
-              openPlaceBidModal({
-                id: data.id,
-                priceEth: price
-              })
-            )
-          }
-        } else {
-          dispatch(openSwitchNetworkModal());
-        }
-      } else {
-        dispatch(openConnectMetamaskModal());
-      }
-    }
-  }
-
+const ImageCard = ({ data, showDesigner = false, imgUrl = null, blue = true }) => {
   return (
     <>
       <div className={styles.wrapper}>

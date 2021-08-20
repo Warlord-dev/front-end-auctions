@@ -61,12 +61,14 @@ const Collections = () => {
                 <ProductInfoCard
                   product={collections[index]}
                   price={collections[index].primarySalePrice}
+                  showCollectionName
                   showRarity
                 />
                 {index + 1 < collections.length ? (
                   <ProductInfoCard
                     product={collections[index + 1]}
                     price={collections[index].primarySalePrice}
+                    showCollectionName
                     showRarity
                   />
                 ) : null}

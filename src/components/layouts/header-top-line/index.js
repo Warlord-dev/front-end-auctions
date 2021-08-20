@@ -81,7 +81,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
 
   const handleProfileClick = () => {
     setIsShowMenu(false);
-    Router.push('/profile');
+    Router.push('/profile').then(() => window.scrollTo(0, 0));
   };
   const handleLogoutClick = () => {
     setIsShowMenu(false);

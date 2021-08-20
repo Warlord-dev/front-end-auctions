@@ -350,7 +350,7 @@ const ImportantProductInformation = ({
                 onClick={() =>
                   Router.push(
                     `${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`,
-                  )
+                  ).then(() => window.scrollTo(0, 0))
                 }
               >
                 <span>SOLD</span>
@@ -365,7 +365,7 @@ const ImportantProductInformation = ({
             onClick={() =>
               Router.push(
                 `${PRODUCTS}${collectionId}/${garmentId}/${auctionIndex}/${auctionId}${tabIndex}`,
-              )
+              ).then(() => window.scrollTo(0, 0))
             }
           >
             <span>BUY NOW</span>
