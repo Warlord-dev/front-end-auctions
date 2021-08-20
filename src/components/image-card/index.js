@@ -8,11 +8,12 @@ import NewButton from '@components/buttons/newbutton';
 import { getAccount } from '@selectors/user.selectors';
 import LazyLoad from 'react-lazyload';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRarityId, reviseUrl } from '@utils/helpers';
 import styles from './styles.module.scss';
 import { getChainId } from '@selectors/global.selectors';
+import Button from '@components/buttons/button'
 
 const ImageCard = ({
   libon = 0,
@@ -29,6 +30,7 @@ const ImageCard = ({
   const account = useSelector(getAccount);
   const chainId = useSelector(getChainId);
   const dispatch = useDispatch();
+  const [zoomMedia, setZoomMedia] = useState(false);
 
   const onBuyNow = () => {
     if (!router.asPath.includes('product')) {
@@ -60,6 +62,15 @@ const ImageCard = ({
     }
   };
 
+  const onClickZoomOut = () => {
+    console.log('zoom run!')
+    setZoomMedia(true)
+  }
+
+  const onClickZoomIn = () => {
+    setZoomMedia(false)
+  }
+
   return (
     <>
       <div className={styles.wrapper}>
@@ -77,19 +88,35 @@ const ImageCard = ({
         <div className={styles.bodyWrapper}>
           {showRarity ? <div className={styles.rarity}> {data?.rarity || data?.garment?.rarity} </div> : null}
           {data ? (
-            <>
-            {data.garment?.animation?.length || data.animation?.length ? (
-              <LazyLoad>
-                <video key={data.id} autoPlay muted loop className={styles.video}>
-                  <source
-                    src={reviseUrl(data.garment ? data.garment.animation : data.animation)}
-                    type="video/mp4"
-                  />
-                </video>
-              </LazyLoad>
-            ) : <img src={data.garment ? data.garment.image : data.image} className={styles.image} />}
-            </>
+            <div 
+              className={zoomMedia ? styles.zoomWrapper : styles.mediaWrapper}
+              onClick={() => onClickZoomIn()}
+            >
+            {
+              data.garment?.animation?.length || data.animation?.length
+              ? (
+                  <LazyLoad>
+                    <video key={data.id} autoPlay muted loop className={styles.video}>
+                      <source
+                        src={reviseUrl(data.garment ? data.garment.animation : data.animation)}
+                        type="video/mp4"
+                      />
+                    </video>
+                  </LazyLoad>
+                ) 
+              : <img src={data.garment ? data.garment.image : data.image} className={styles.image} />
+            }
+            </div>
           ) : null}
+          {
+          showButton && 
+            <Button
+              className={styles.zoomButton}
+              onClick={() => onClickZoomOut()}
+            >
+              <img src='/images/zoom_btn.png' />
+            </Button>
+          }
           {imgUrl ? <img src={reviseUrl(imgUrl)} className={styles.image} /> : null}
           {showButton && (
             <div className={styles.buyNow}>

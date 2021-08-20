@@ -101,11 +101,14 @@
     }
 
     .video {
-      width: calc(100% - 4rem);
-      height: calc(100% - 4rem);
+      // width: calc(100% - 4rem);
+      // height: calc(100% - 4rem);
+      // position: absolute;
+      // top: 2rem;
+      // left: 2rem;
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: 2rem;
-      left: 2rem;
       object-fit: cover;
     }
 
@@ -118,6 +121,48 @@
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 50%);
+    }
+
+    .zoomButton {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      border: none;
+      padding: 0;
+      
+      transition: 0.3s;
+      &:hover {
+        background: transparent;
+        transform: scale(1.1);
+      }
+    }
+
+    .mediaWrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      // transition: all 0.3s;
+      video {
+        object-fit: cover;
+      }
+    }
+
+    .zoomWrapper {
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      position: fixed;
+      background: rgba(0, 0, 0, 0.9);
+      // transition: all 0.3s;
+      
+
+      video {
+        margin-top: 100px;
+        height: 80vh;
+        object-fit: contain;
+      }
     }
   }
 }
