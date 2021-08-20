@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 import CollectionInfoCard from './collection-info-card';
 import styles from './styles.module.scss';
@@ -14,19 +13,20 @@ const CollectionCard = ({ collection }) => {
     'Jewelry and Accessories',
     'International',
     'Fashion x Art',
-  ]
+  ];
   return (
     <>
       <div className={styles.wrapper}>
         <div className={styles.title}>{collectionNames[parseInt(collection?.id) - 3]}</div>
         <div className={styles.imageWrapper}>
           <div className={styles.image}>
-            <video autoPlay muted loop>
-              <source
-                src={collection?.animation.replace('gateway.pinata', 'digitalax.mypinata')}
-                type="video/mp4"
-              />
-            </video>
+            {collection?.animation ? (
+              <video autoPlay muted loop>
+                <source src={collection?.animation} type="video/mp4" />
+              </video>
+            ) : (
+              <img src={collection?.image} className={styles.image} />
+            )}
           </div>
         </div>
         <CollectionInfoCard collection={collection} />

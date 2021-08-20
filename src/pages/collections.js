@@ -1,17 +1,12 @@
 import React, { memo, useEffect, useState } from 'react';
-import Router from 'next/router';
-import Head from 'next/head';
 import styles from './styles.module.scss';
-import UButton from '@components/buttons/ubutton';
-import MobilePanel from '@components/mobile-panel';
 import Container from '@components/container';
 import BannerBlue from '@components/banner-blue';
 import BannerPink from '@components/banner-pink';
-import FashionCard from '@components/fashion-card';
 import FashionList from '@components/fashion-list';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
-import { getCollectionGroupById, getCollectionV2ByIds, getDigitalaxGarmentAuctions } from '@services/api/apiService';
+import { getCollectionV2ByIds } from '@services/api/apiService';
 import BannerBar from '@components/banner-bar';
 import physicals from '../data/drip.json';
 
@@ -52,7 +47,7 @@ const LandingPage = () => {
     }
   ];
   const chainId = useSelector(getChainId);
-  const digitalIds = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
+  const digitalIds = ['358', '359', '360', '361', '362', '363', '364', '365', '366'];
   const [digital, setDigital] = useState([]);
 
   useEffect(() => {

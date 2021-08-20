@@ -23,7 +23,7 @@ export const COLLECTIONSV2 = gql`
 
 export const COLLECTION_GROUPS = gql`
   query digitalaxCollectionGroups {
-    digitalaxCollectionGroups(where: {id_gt: 2}) {
+    digitalaxCollectionGroups(first: 100, skip: 2) {
       id
       auctions {
         id

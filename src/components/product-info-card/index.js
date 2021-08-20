@@ -9,7 +9,7 @@ import { getRarityId } from '@utils/helpers';
 import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import { useRouter } from 'next/router';
 
-const ProductInfoCard = ({ product, price, showCollectionName = false, showRarity = false }) => {
+const ProductInfoCard = ({ product, price, showCollectionName = false, showRarity = false, isAuction = false }) => {
   const router = useRouter();
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
@@ -26,7 +26,7 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
 
   const onBuyNow = () => {
     router
-      .push(`/product/${product?.id}/${getRarityId(product?.rarity)}`)
+      .push(`/product/${product?.id}/${getRarityId(product?.rarity)}/${isAuction ? 1 : 0}`)
       .then(() => window.scrollTo(0, 0));
   };
 
@@ -50,6 +50,8 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
     }
   };
 
+  console.log({product});
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.imageWrapper}>
@@ -59,11 +61,12 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
           showCollectionName={showCollectionName}
           showRarity={showRarity}
           showButton={false}
+          isAuction={isAuction}
         />
       </div>
       <div className={styles.infoCardWrapper}>
         <InfoCard borderColor="#9c28ff" boxShadow="rgba(197, 32, 129, 0.5)">
-          {getRarityId(product?.rarity) === 1 ? (
+          {isAuction ? (
             <>
               <div className={styles.infoWrapper}>
                 <PriceCard mainText={time} />

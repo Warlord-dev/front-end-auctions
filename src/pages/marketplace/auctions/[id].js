@@ -53,6 +53,7 @@ const Auctions = () => {
                   price={auctions[index].topBid}
                   showRarity
                   showCollectionName
+                  isAuction
                 />
                 {index + 1 < auctions.length ? (
                   <ProductInfoCard
@@ -60,6 +61,7 @@ const Auctions = () => {
                     price={auctions[index + 1].topBid}
                     showRarity
                     showCollectionName
+                    isAuction
                   />
                 ) : null}
               </div>

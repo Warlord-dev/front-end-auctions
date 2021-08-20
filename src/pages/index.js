@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Router, useRouter } from 'next/router';
+import { Router } from 'next/router';
 import Head from 'next/head';
-import { getCollectionGroups, getCollectionV2ByIds, getDigitalaxGarmentNftV2GlobalStats } from '@services/api/apiService';
+import { getCollectionV2ByIds } from '@services/api/apiService';
 import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
-import NewButton from '@components/buttons/newbutton';
 import Container from '@components/container';
-import CollectionList from '@components/collection-list';
-import HeroBar from '@components/hero-bar';
 import DesignerList from '@containers/designer-network';
 import GarmentSquareList from '@containers/designer-network/imageCard';
-import globalActions from '@actions/global.actions';
-import { convertToEth } from '@helpers/price.helpers';
 import Link from 'next/link';
 import BannerBar from '@components/banner-bar';
 import BannerBlue from '@components/banner-blue';
@@ -22,7 +17,7 @@ import pysicals from '../data/drip.json';
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
   const [digital, setDigital] = useState([]);
-  const digitalIds = ['223', '224', '225', '226', '227', '228', '229', '230', '231'];
+  const digitalIds = ['358', '359', '360', '361', '362', '363', '364', '365', '366'];
 
   useEffect(() => {
     import('react-facebook-pixel')
@@ -40,7 +35,6 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchCollectionGroups = async () => {
       const { digitalaxGarmentV2Collections } = await getCollectionV2ByIds(chainId, digitalIds);
-      console.log({digitalaxGarmentV2Collections})
       setDigital(digitalaxGarmentV2Collections.map(collection => collection.garments[0]));
     };
     fetchCollectionGroups();

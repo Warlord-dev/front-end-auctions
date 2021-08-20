@@ -66,7 +66,7 @@ const ModalSignUp = ({ className, title }) => {
       {createPortal(
         <Modal
           onClose={() => handleClose()}
-          title={title}
+          title={signMsg ? 'Welcome Back!' : title}
           className={(className, styles.modalWrapper)}
         >
           <span>{`CURRENT ETH ADDRESS: ${account ? account : 'WALLET NOT CONNECTED'}`}</span>

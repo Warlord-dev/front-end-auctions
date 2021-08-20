@@ -81,9 +81,19 @@ const designerCircle = {
 
 const DesignerList = () => {
   const images = physicals;
-  const chainId = useSelector(getChainId);
-  const digitalIds = ['223', '224', '225', '226', '227', '228', '229', '230', '231'];
-  const designerCircles = Array(images.length + 9)
+  const digitalIds = [
+    '/images/skins/1.png',
+    '/images/skins/2.png',
+    '/images/skins/3.png',
+    '/images/skins/4.png',
+    '/images/skins/5.png',
+    '/images/skins/6.png',
+    '/images/skins/7.png',
+    '/images/skins/8.png',
+    '/images/skins/9.png',
+    '/images/skins/10.png',
+  ];
+  const designerCircles = Array(images.length + 10)
       .fill()
       .map((item) => Object.assign({}, designerCircle));
   const canvasRef = useRef();
@@ -98,12 +108,11 @@ const DesignerList = () => {
       
       photoImages.map((item, index) => item.src = images[index].imageUrl)
   
-      const { digitalaxGarmentV2Collections } = await getCollectionV2ByIds(chainId, digitalIds);
-      var collections = Array(digitalaxGarmentV2Collections.length)
+      var collections = Array(digitalIds.length)
         .fill()
         .map((item, index) => {
           const image = new Image();
-          image.src = digitalaxGarmentV2Collections[index].garments[0].image;
+          image.src = digitalIds[index];
           return image;
         });
       

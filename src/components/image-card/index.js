@@ -16,7 +16,6 @@ import { getChainId } from '@selectors/global.selectors';
 import Button from '@components/buttons/button';
 
 const ImageCard = ({
-  libon = 0,
   data,
   showDesigner = false,
   showCollectionName = false,
@@ -25,6 +24,7 @@ const ImageCard = ({
   imgUrl = null,
   price,
   disable = false,
+  isAuction = false,
 }) => {
   const router = useRouter();
   const account = useSelector(getAccount);
@@ -35,12 +35,12 @@ const ImageCard = ({
   const onBuyNow = () => {
     if (!router.asPath.includes('product')) {
       router
-        .push(`/product/${data.id}/${getRarityId(data.rarity)}`)
+        .push(`/product/${data.id}/${getRarityId(data.rarity)}/${isAuction ? 1 : 0}`)
         .then(() => window.scrollTo(0, 0));
     } else {
       if (account) {
         if (chainId === '0x89') {
-          if (libon !== 1) {
+          if (!isAuction) {
             dispatch(
               openBuynowModal({
                 id: data.id,
@@ -65,7 +65,6 @@ const ImageCard = ({
   };
 
   const onClickZoomOut = () => {
-    console.log('zoom run!');
     setZoomMedia(true);
   };
 
@@ -123,7 +122,7 @@ const ImageCard = ({
             <div className={styles.buyNow}>
               <NewButton
                 text={
-                  data?.rarity === 'Exclusive' || libon === 1
+                  isAuction
                     ? disable
                       ? 'Sold'
                       : 'Place A Bid'
