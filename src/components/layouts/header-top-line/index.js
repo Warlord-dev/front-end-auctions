@@ -14,7 +14,6 @@ import accountActions from '@actions/user.actions';
 import { getEnabledNetworkByChainId, requestSwitchNetwork } from '@services/network.service';
 
 import Logo from './logo';
-import LandingHeader from './landing';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {

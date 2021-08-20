@@ -26,11 +26,7 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchCollectionGroups = async () => {
       const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
-      const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats(
-        chainId,
-      );
-      globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth));
-
+      
       let collections = []
       let auctions = []
       digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {

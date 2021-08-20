@@ -24,6 +24,7 @@ import { useRouter } from 'next/router';
 import api from '@services/api/api.service';
 import ws from '@services/api/ws.service';
 import { convertToEth } from '@helpers/price.helpers';
+import { getDigitalaxGarmentNftV2GlobalStats } from '@services/api/apiService';
 
 if (config.SENTRY_DSN) {
   Sentry.init({
@@ -35,11 +36,12 @@ if (config.SENTRY_DSN) {
 const InitWrapper = (props) => {
   const dispatch = useDispatch();
   const isInitialized = useSelector(getIsInitialized);
+  const chainId = useSelector(getChainId);
 
   useEffect(() => {
     dispatch(globalActions.initApp());
     const fetchMonaPerEth = async () => {
-      const { digitalaxGarmentNFTV2GlobalStats } = await api.getMonaPerEth();
+      const { digitalaxGarmentNFTV2GlobalStats } = await getDigitalaxGarmentNftV2GlobalStats();
       dispatch(
         globalActions.setMonaPerEth(convertToEth(digitalaxGarmentNFTV2GlobalStats[0].monaPerEth)),
       );
