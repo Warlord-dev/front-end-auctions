@@ -27,7 +27,7 @@ const Page34 = () => {
         the champion moment can be instigated through our selective ability to hit the magic reset button.
         Because the past is never where you think that you left it. This is a tool that allows us to bypass 
         irrational fantasies and skip right to the good stuff. The post select. We can shape our desires and
-        realities even as it they shape us. This isn’t simply a matter of delicate interpretation. It’s how 
+        realities even as they shape us. This isn’t simply a matter of delicate interpretation. It’s how 
         the complete spread from our neurons to the encompassing universe work. Backwards causation gives a
         broader perspective. We zoom out in order to zoom in. 
         <br />
