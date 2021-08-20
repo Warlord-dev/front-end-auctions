@@ -16,7 +16,7 @@ const Page34 = () => {
         <br />
         <br />
         As we cultivate this new phase of matter it’s easy to get pulled into a gravity well of 
-        collapsing paridigms and tempt drifting past the event horizon. Because being content with how 
+        collapsing paradigms and tempt drifting past the event horizon. Because being content with how 
         things are is how we slip into an area of low mass, there’s nothing to bump into or push off from. 
         It’s a grey zone of rebalancing. There’s no clash to stir up catalysts of new innovation and new 
         hope. Again and again for many this slow fade into inertia just keeps repeating. 
@@ -33,7 +33,7 @@ const Page34 = () => {
         <br />
         <br />
         Fortunately, decentralised tech in commerce gives us these kind of super post selecting powers, where 
-        we can build around a core itterable loop of economic activity that creates wealth in the core of 
+        we can build around a core iterable loop of economic activity that creates wealth in the core of 
         the entire mechanism, gaining time, space and greater tranformational ability as the friction points 
         of the system are radically reduced and our ability to communicate, transact, trade, buy, sell, wear 
         generously compounds on the fundamental value collectively generated. 
