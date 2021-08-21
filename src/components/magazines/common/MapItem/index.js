@@ -14,8 +14,9 @@ const MapItem = props => {
 
   const getPagePreview = (issueId, pageNum) => {
     if (
-      issueId !== '1'
-      && issueId !== '2' && issueId !== '3' ) return <></>
+      issueId !== '1' && issueId !== '2' &&
+      issueId !== '3' && issueId !== '4'
+    ) return <></>
     return (
       <WebPageWrapper secondPart={(pageNum + (pageNum > 0)) % 2} zoom={0.15}>
         {pageList[((pageNum + 1) / 2) | 0]}
