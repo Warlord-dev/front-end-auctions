@@ -2,6 +2,7 @@
 @import '../../../../../assets/scss/helpers/helpers.scss';
 
 .wrapper {
+  background: black;
   section {
     position: relative;
     overflow: hidden;
@@ -191,6 +192,8 @@
       }
     }
 
+
+
     .designerBody,
     .developerBody {
       position: relative;
@@ -210,6 +213,9 @@
       @include xxl-width {
         padding: 7.5rem 5rem;
       }
+
+
+
 
       .title {
         font-size: 60px;
@@ -325,5 +331,9 @@
         }
       }
     }
+  }
+
+  .margin50 {
+    margin-top: 50px;
   }
 }
