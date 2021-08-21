@@ -54,15 +54,14 @@ const ProductDetails = () => {
             <div className={styles.imageLeftGrid}>
               <div className={styles.image}></div>
               <div className={styles.text}>
-                <div className={styles.heading}>3D Model FBX File Included</div>
+                <div className={styles.heading}>3D Model File Included</div>
                 <div className={styles.textBody}>
                   All of the DIGITALAX digital fashion garment and accessory ERC-721 NFTs are backed
-                  by the underlying 3D model FBX file, stored in IPFS. This forms part of the
+                  by the underlying 3D model file, stored in IPFS. This forms part of the
                   platform’s broader pursuit for decentralising content distribution and access to
-                  it. The FBX file is one of the most popular and widely used 3D data interchange
-                  formats between 3D editors and game engines. There are still efficiency problems
-                  that exist with it, which DIGITALAX is working to solve through it’s DASH File
-                  Format architecture.
+                  it. The interchange of 3D files across different platforms and applications is still 
+                  inefficient in holding source file fidelity. DIGITALAX is working to solve through it’s 
+                  DASH File Format architecture.
                 </div>
               </div>
             </div>
