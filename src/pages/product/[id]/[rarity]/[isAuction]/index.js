@@ -200,12 +200,6 @@ const Product = () => {
                 </InfoCard>
                 <div className={styles.actions}>
                   <div className={styles.buttonWrapper}>
-                    <a href="https://espa.digitalax.xyz/" target="_blank">
-                      <NewButton text="wear in game" />
-                    </a>
-                    <span className={styles.buttonLabel}> play in espa esports </span>
-                  </div>
-                  <div className={styles.buttonWrapper}>
                     <PriceCard
                       mainText={`${(getPrice() / 10 ** 18).toFixed(2)} MONA`}
                       subText={parseInt(isAuction) === 1 ? 'highest bid' : 'sale price'}

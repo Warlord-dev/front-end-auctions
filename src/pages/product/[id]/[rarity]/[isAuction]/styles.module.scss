@@ -145,18 +145,15 @@
         .actions {
           margin-top: 3rem;
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: 1fr;
           gap: 1rem;
           z-index: 10;
 
           .buttonWrapper {
             display: flex;
             flex-direction: column;
-
-            button {
-              width: 100% !important;
-              min-width: unset !important;
-            }
+            width: 200px;
+            margin: auto;
 
             .buttonLabel {
               font-family: Inter;
