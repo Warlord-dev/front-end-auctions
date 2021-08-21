@@ -19,6 +19,7 @@ import { getRarity } from '@utils/helpers';
 import { openBidHistoryModal, openPurchaseHistoryModal } from '@actions/modals.actions';
 import FashionList from '@components/fashion-list';
 import BannerBar from '@components/banner-bar';
+import secondDesignerData from 'src/data/second-designers.json';
 
 const Product = () => {
   const router = useRouter();
@@ -31,6 +32,7 @@ const Product = () => {
   const [days, setDays] = useState('00');
   const [hours, setHours] = useState('00');
   const [minutes, setMinutes] = useState('00');
+  const [secondDesigner, setSecondDesigner] = useState(null)
   const fashionData = [
     {
       title: 'DeFi Staking Functionality',
@@ -112,6 +114,27 @@ const Product = () => {
 
       fetchGarmentV2ByID();
     }
+
+    const secondDesigner = secondDesignerData.find(item => {
+      return item.id == id && item.rarity == rarity && item.isAuction == isAuction
+    })
+
+    if (secondDesigner && secondDesigner.designer) {
+      fetch(secondDesigner.designer).then(
+        (response) => response.json()
+      ).then(designerData => {
+        console.log('designerData: ', designerData)
+        setSecondDesigner({
+          name: designerData['Designer ID'],
+          description: designerData['description'],
+          image: designerData['image_url']
+        })
+      })
+
+      
+    } else {
+      setSecondDesigner(null)
+    }
   }, []);
 
   useEffect(() => {
@@ -158,6 +181,8 @@ const Product = () => {
       setMinutes(`00${minutes}`.slice(-2));
     }
   };
+
+  console.log('secondDesigner: ', secondDesigner)
 
   return (
     <div className={styles.wrapper}>
@@ -236,6 +261,29 @@ const Product = () => {
               </div>
             </Container>
           </section>
+
+          {
+            secondDesigner &&
+            <section className={[styles.designerSection, styles.margin50].join(' ')}>
+              <video autoPlay loop muted className={styles.video}>
+                <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
+              </video>
+              <Container>
+                <div className={styles.designerBody}>
+                  <div className={styles.title}> designer </div>
+                  <div className={styles.data}>
+                    <ImageCard showButton={false} imgUrl={secondDesigner.image} />
+                    <div className={styles.infoWrapper}>
+                      <InfoCard libon="./images/metaverse/party_glasses.png">
+                        <div className={styles.name}> {secondDesigner.name} </div>
+                        <div className={styles.description}>{secondDesigner.description}</div>
+                      </InfoCard>
+                    </div>
+                  </div>
+                </div>
+              </Container>
+            </section>
+          }
         </>
       ) : null}
 

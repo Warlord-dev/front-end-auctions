@@ -8,7 +8,7 @@ import NewButton from '@components/buttons/newbutton';
 import { getAccount } from '@selectors/user.selectors';
 import LazyLoad from 'react-lazyload';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRarityId, reviseUrl } from '@utils/helpers';
 import styles from './styles.module.scss';
@@ -32,6 +32,20 @@ const ImageCard = ({
   const {asPath} = router;
   const dispatch = useDispatch();
   const [zoomMedia, setZoomMedia] = useState(false);
+  const videoTagRef = useRef();
+  const [hasAudio, setHasAudio] = useState(false)
+  const [videoMuted, setVideoMuted] = useState(true)
+
+  function getAudio (video) {
+
+    console.log('video.mozHasAudio: ', video.mozHasAudio)
+    console.log('Boolean(video.webkitAudioDecodedByteCount): ', video.webkitAudioDecodedByteCount)
+    console.log('Boolean(video.audioTracks && video.audioTracks.length): ', Boolean(video.audioTracks && video.audioTracks.length))
+    
+    return video.mozHasAudio ||
+    Boolean(video.webkitAudioDecodedByteCount) ||
+    Boolean(video.audioTracks && video.audioTracks.length);
+}
 
   const onBuyNow = () => {
     if (!router.asPath.includes('product')) {
@@ -73,6 +87,13 @@ const ImageCard = ({
     setZoomMedia(false);
   };
 
+  const onClickMute = () => {
+    videoTagRef.current.pause();
+    setVideoMuted(!videoMuted)
+    videoTagRef.current.play();
+  }
+
+
   return (
     <>
       <div className={styles.wrapper}>
@@ -98,7 +119,25 @@ const ImageCard = ({
             >
               {data.garment?.animation?.length || data.animation?.length ? (
                 <LazyLoad>
-                  <video key={data.id} autoPlay muted={!asPath.includes('product')} loop className={styles.video}>
+                  {/* <video key={data.id} autoPlay muted={!asPath.includes('product')} loop className={styles.video} */}
+                  <video key={data.id} autoPlay muted={videoMuted} loop className={styles.video}
+                  ref={videoTagRef}
+                  preload={'auto'}
+                  onLoadedData={
+                    () => {
+                      if (!asPath.includes('product')) return
+                      // console.log('videoTagRef: ', videoTagRef.current)
+                      var video = videoTagRef.current;
+                      // console.log('video: ', video)
+                      if (getAudio(video)) {
+                          // console.log('video has audio')
+                          setHasAudio(true)
+                      } else {
+                        setHasAudio(false)
+                          // console.log(`video doesn't have audio`)
+                      }
+                    }
+                  }>
                     <source
                       src={reviseUrl(data.garment ? data.garment.animation : data.animation)}
                       type="video/mp4"
@@ -116,6 +155,16 @@ const ImageCard = ({
           {showButton && (
             <Button className={styles.zoomButton} onClick={() => onClickZoomOut()}>
               <img src="/images/zoom_btn.png" />
+            </Button>
+          )}
+          {hasAudio && (
+            <Button className={styles.muteButton} onClick={() => onClickMute()}>
+              {
+                videoMuted
+                ? <img src="/images/audio-off.png" />
+                : <img src="/images/audio-on.png" />
+              }
+              
             </Button>
           )}
           {imgUrl ? <img src={reviseUrl(imgUrl)} className={styles.image} /> : null}
