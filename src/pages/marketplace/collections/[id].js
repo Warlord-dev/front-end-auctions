@@ -67,7 +67,7 @@ const Collections = () => {
                 {index + 1 < collections.length ? (
                   <ProductInfoCard
                     product={collections[index + 1]}
-                    price={collections[index].primarySalePrice}
+                    price={collections[index + 1].primarySalePrice}
                     showCollectionName
                     showRarity
                   />
