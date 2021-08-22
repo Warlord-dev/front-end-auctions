@@ -97,7 +97,7 @@ const LandingPage = () => {
       <section className={styles.fashionWeekScheduleSection}>
         <img className={styles.topImageTitle} src="/images/fashionActionTitle.png" />
         <img className={styles.backImage} src="/images/fashionAction.png" />
-        <Link href="/collections">
+        <Link href="/marketplace/auctions/3/">
           <h3 className={styles.fashionWeekLink}>Shop the GDN Auction ></h3>
         </Link>
         <a href="https://blog.digitalax.xyz/global-designer-network-dao-auction-governance-token-launch-w3fw-abe09ce1c5d0" target="_blank">

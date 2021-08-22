@@ -29,7 +29,7 @@ const Auctions = () => {
         });
       });
 
-      setAuctions(aucs);
+      setAuctions([aucs.find(auc => auc.garment?.id === '133247'), ...aucs.filter(auc => auc.garment?.id !== '133247')]);
     };
 
     fetchCollectionGroup();

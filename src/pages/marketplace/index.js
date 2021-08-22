@@ -13,10 +13,14 @@ const LandingPage = () => {
   const [collectionGroups, setCollectionGroups] = useState([]);
   const [auctionsGroups, setAuctionGroups] = useState([]);
   const previewIds = {
-    '3': 5,
+    '3': 49,
+    '4': 2,
     '8': 5,
-    '6': 19,
-    '7': 14
+    '6': 22,
+    '7': 19,
+    '8': 4,
+    '10': 4,
+
   }
 
   const getPreviewId = (id) => {

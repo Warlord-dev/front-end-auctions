@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
-import HeroBar from '@components/hero-bar';
-import ImageCard from '@components/image-card';
-import ProductCard from '@components/product-card';
 import styles from './styles.module.scss';
 import Container from '@components/container';
 import { getCollectionGroupById, getDigitalaxMarketplaceV2Offers } from '@services/api/apiService';
@@ -17,7 +13,6 @@ const Collections = () => {
   const chainId = useSelector(getChainId);
   const [collections, setCollections] = useState([]);
   const { id } = route.query;
-  const mainLogos = ['/images/metaverse/amongus-logo1.png'];
 
   useEffect(() => {
     const fetchCollectionGroup = async () => {
