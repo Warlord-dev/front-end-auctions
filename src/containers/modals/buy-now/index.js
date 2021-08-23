@@ -6,7 +6,7 @@ import { getMonaPerEth, getChainId } from '@selectors/global.selectors';
 import PropTypes from 'prop-types';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
-import { closeBuynowModal, openESPAReadyModal } from '@actions/modals.actions';
+import { closeBuynowModal, openESPAReadyModal, openPurchaseSuccessModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
 import styles from './styles.module.scss';
@@ -14,7 +14,6 @@ import styles from './styles.module.scss';
 const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   const dispatch = useDispatch();
   const requests = useRef([]);
-  const monaPerEth = useSelector(getMonaPerEth);
 
   const { id, priceEth } = useSelector(getModalParams);
   const chainId = useSelector(getChainId);
@@ -30,7 +29,8 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   
   const handleSuccess = () => {
     handleClose();
-    dispatch(openESPAReadyModal());
+    dispatch(openPurchaseSuccessModal());
+    // dispatch(openESPAReadyModal());
   }
 
   const handleClick = (mode) => {

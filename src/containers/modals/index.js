@@ -13,6 +13,7 @@ import BuyNowCooldown from './modal-cooldown';
 import BuyNowLimit from './modal-limit';
 import History from "./history";
 import SwitchNetworkModal from "./switch-network";
+import PurchaseSuccess from "./purchase-success";
 
 const Modals = () => {
   const modals = useSelector((state) => state.modals.toJS());
@@ -31,6 +32,7 @@ const Modals = () => {
     isBidHistory,
     isPurchaseHistory,
     isSwitchNetwork,
+    isPurchaseSuccess,
   } = modals;
 
   return (
@@ -49,6 +51,7 @@ const Modals = () => {
       {isBidHistory && <History type={1} />}
       {isPurchaseHistory && <History type={2} />}
       {isSwitchNetwork && <SwitchNetworkModal />}
+      {isPurchaseSuccess && <PurchaseSuccess />}
     </>
   );
 };

@@ -74,3 +74,6 @@ export const closePurchaseHistoryModal = () => (dispatch) => dispatch(closeModal
 
 export const openSwitchNetworkModal = (params) => (dispatch) => dispatch(openModal('isSwitchNetwork', 'hideScroll', params));
 export const closeSwitchNetworkModal = () => (dispatch) => dispatch(closeModal('isSwitchNetwork', 'addScroll'));
+
+export const openPurchaseSuccessModal = (params) => (dispatch) => dispatch(openModal('isPurchaseSuccess', 'hideScroll', params));
+export const closePurchaseSuccessModal = () => (dispatch) => dispatch(closeModal('isPurchaseSuccess', 'addScroll'));

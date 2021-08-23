@@ -2,6 +2,7 @@ import {
   openBuynowModal,
   openConnectMetamaskModal,
   openPlaceBidModal,
+  openPurchaseSuccessModal,
   openSwitchNetworkModal,
 } from '@actions/modals.actions';
 import NewButton from '@components/buttons/newbutton';

@@ -16,6 +16,7 @@ const DEFAULT_FIELDS = Map({
   isBidHistory: false,
   isPurchaseHistory: false,
   isSwitchNetwork: false,
+  isPurchaseSuccess: false,
   params: null,
 });
 
