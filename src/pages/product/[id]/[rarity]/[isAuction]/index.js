@@ -13,7 +13,7 @@ import {
   getGarmentV2ByAuctionId,
   getGarmentV2ByCollectionId,
 } from '@services/api/apiService';
-import { getChainId } from '@selectors/global.selectors';
+import { getChainId, getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import PriceCard from '@components/price-card';
 import { getRarity } from '@utils/helpers';
 import { openBidHistoryModal, openPurchaseHistoryModal } from '@actions/modals.actions';
@@ -32,14 +32,16 @@ const Product = () => {
   const [days, setDays] = useState('00');
   const [hours, setHours] = useState('00');
   const [minutes, setMinutes] = useState('00');
-  const [secondDesigner, setSecondDesigner] = useState(null)
+  const [secondDesigner, setSecondDesigner] = useState(null);
+  const monaPerEth = useSelector(getMonaPerEth);
+  const exchangeRate = useSelector(getExchangeRateETH);
   const fashionData = [
     {
       title: 'DeFi Staking Functionality',
       description: `All NFTs can be staked in the DIGITALAX NFT Staking Contracts on Polygon for $MONA yield. This forms part of the broader Fashion x DeFi merger that DIGITALAX has undertaken to bring greater utility to metaversal fashion and also welcome multitudes more into web3 and DeFi. 
 
       What if you could earn more from what you wear? Wear to DeFi lets you put your fashion to work for you. We are melting the centralised exploitative crown to weave the fabric of a generative ecosystem.      
-      `
+      `,
     },
     {
       title: 'Unique PFP Collectible Avatar W/ In-Game Utility',
@@ -47,26 +49,26 @@ const Product = () => {
 
       Take your character in-game to engage in The First Dungeon casual esports battles, rank on the leaderboard and earn $MONA as you level up from 0 to 1.  
       
-      See more about The First Dungeon here. Your collectible is airdropped to you within 12 hours of purchase. `
+      See more about The First Dungeon here. Your collectible is airdropped to you within 12 hours of purchase. `,
     },
     {
-      title: '3D Model FBX File Included',
-      description: `All of the DIGITALAX digital fashion garment and accessory ERC-721 NFTs are backed by the underlying 3D model FBX file, stored in IPFS. This forms part of the platform’s broader pursuit for decentralising content distribution and access to it. The FBX file is one of the most popular and widely used 3D data interchange formats between 3D editors and game engines. There are still efficiency problems that exist with it, which DIGITALAX is working to solve through it’s DASH File Format architecture. `
+      title: <> <u>3D Model File</u> Included</>,
+      description: `All of the DIGITALAX digital fashion garment and accessory ERC-721 NFTs are backed by the underlying 3D model FBX file, stored in IPFS. This forms part of the platform’s broader pursuit for decentralising content distribution and access to it. The FBX file is one of the most popular and widely used 3D data interchange formats between 3D editors and game engines. There are still efficiency problems that exist with it, which DIGITALAX is working to solve through it’s DASH File Format architecture. `,
     },
     {
       title: 'Fractional Garment ERC-1155 Open Source Pattern',
       description: `Fractional Garment Ownership (FGO) sets forth the standard and dress code for the manufacture of digital fashion along the content supply chain. FGO leverages ERC Protocol standards across the Ethereum Blockchain and Polygon (Matic Network) for breaking down a master ERC-721 digital garment into its programmable and composable ERC-1155 elements of materials, patterns and textures.
 
-      Here, we are using a variant on the ERC-998 standard, where each ERC-721 token can hold a balance of ERC-1155 NFTs. We coin this respectively the Parent and Child NFTs. This allows for other designers to leverage off of the open source digital libraries, incorporating the patterns, materials and textures into their master garments.`
+      Here, we are using a variant on the ERC-998 standard, where each ERC-721 token can hold a balance of ERC-1155 NFTs. We coin this respectively the Parent and Child NFTs. This allows for other designers to leverage off of the open source digital libraries, incorporating the patterns, materials and textures into their master garments.`,
     },
     {
       title: 'DressX Try On Functionality',
-      description: `Take your digital fashion item and wear across the social media metaverse. DressX’s try on technology allows you to overlay your digital fashion itme onto a photo of your choosing. It’s the outift that doesn’t exist— physically at least! `
+      description: `Take your digital fashion item and wear across the social media metaverse. DressX’s try on technology allows you to overlay your digital fashion itme onto a photo of your choosing. It’s the outift that doesn’t exist— physically at least! `,
     },
     {
       title: 'Decentraland In-Game Digital Fashion Outfit',
-      description: `Exclusive W3FW Decentraland In-Game Digital Fashion Memorabilia Bomber Jacket! View it also through the DressX AR Try On filter and head over to DRIP to purchase the physical varsity jacket version to rep IRL!`
-    }
+      description: `Exclusive W3FW Decentraland In-Game Digital Fashion Memorabilia Bomber Jacket! View it also through the DressX AR Try On filter and head over to DRIP to purchase the physical varsity jacket version to rep IRL!`,
+    },
   ];
 
   useEffect(() => {
@@ -115,25 +117,22 @@ const Product = () => {
       fetchGarmentV2ByID();
     }
 
-    const secondDesigner = secondDesignerData.find(item => {
-      return item.id == id && item.rarity == rarity && item.isAuction == isAuction
-    })
+    const secondDesigner = secondDesignerData.find((item) => {
+      return item.id == id && item.rarity == rarity && item.isAuction == isAuction;
+    });
 
     if (secondDesigner && secondDesigner.designer) {
-      fetch(secondDesigner.designer).then(
-        (response) => response.json()
-      ).then(designerData => {
-        console.log('designerData: ', designerData)
-        setSecondDesigner({
-          name: designerData['Designer ID'],
-          description: designerData['description'],
-          image: designerData['image_url']
-        })
-      })
-
-      
+      fetch(secondDesigner.designer)
+        .then((response) => response.json())
+        .then((designerData) => {
+          setSecondDesigner({
+            name: designerData['Designer ID'],
+            description: designerData['description'],
+            image: designerData['image_url'],
+          });
+        });
     } else {
-      setSecondDesigner(null)
+      setSecondDesigner(null);
     }
   }, []);
 
@@ -182,8 +181,6 @@ const Product = () => {
     }
   };
 
-  console.log('secondDesigner: ', secondDesigner)
-
   return (
     <div className={styles.wrapper}>
       <section className={styles.mainSection}>
@@ -226,7 +223,11 @@ const Product = () => {
                 <div className={styles.actions}>
                   <div className={styles.buttonWrapper}>
                     <PriceCard
-                      mainText={`${(getPrice() / 10 ** 18).toFixed(2)} MONA`}
+                      mainText={`${(getPrice() / 10 ** 18).toFixed(2)} MONA ($${(
+                        (getPrice() / 10 ** 18) *
+                        parseFloat(monaPerEth) *
+                        exchangeRate
+                      ).toFixed(2)})`}
                       subText={parseInt(isAuction) === 1 ? 'highest bid' : 'sale price'}
                     />
                   </div>
@@ -262,8 +263,7 @@ const Product = () => {
             </Container>
           </section>
 
-          {
-            secondDesigner &&
+          {secondDesigner && (
             <section className={[styles.designerSection, styles.margin50].join(' ')}>
               <video autoPlay loop muted className={styles.video}>
                 <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
@@ -283,32 +283,37 @@ const Product = () => {
                 </div>
               </Container>
             </section>
-          }
+          )}
         </>
       ) : null}
 
       <section className={styles.globalDesignerNetwork}>
         <img src="/images/metaverse/global_designer_network.png" className={styles.title} />
         <div className={styles.text}>
-          The Global Designer Network is initiating as an on-chain DAO. The Global Designer Network
-          is initiating as an on-chain DAO. The Global Designer Network is initiating as an on-chain
-          DAO. The Global Designer Network is initiating as an on-chain DAO. The Global Designer
-          Network is initiating as an on-chain DAO. The Global Designer Network is initiating as an
-          on-chain DAO. The Global Designer Network is initiating as an on-chain DAO. The Global
-          Designer Network is initiating as an on-chain DAO. The Global Designer Network is
-          initiating as an on-chain DAO. The Global Designer Network is initiating as an on-chain
-          DAO. The Global Designer Network is initiating as an on-chain DAO. The Global Designer
-          Network is initiating as an on-chain DAO.
+          These radical fashion anarchists have dared to come together, while maintaining self
+          sovereign independence, to disrupt the entire fashion industry as we know it and create
+          greater wealth for all of web3 in the process. The highlight of W3FW is the GDN Endowment
+          Auction for forming as an on-chain DAO. This is not just another DAO as a mechanism. We
+          live decentralisation as a movement. This DAO is revolutionary without remorse. Every
+          member is coming together, whilst maintaining sovereign independence, to outcompete the
+          old industries and practices. Goodbye tradfash. Hello real web3 metaversal fashion. The
+          DAO treasury will be responsible for actively growing and building out the network’s
+          reach, distribution and impact through. 60% of proceeds from this Auction will go to the
+          GDN DAO treasury as the network moves completely on-chain and leads up to the launch of
+          the $GDN governance token.
         </div>
-        <a href="https://blog.digitalax.xyz/global-designer-network-dao-auction-governance-token-launch-w3fw-abe09ce1c5d0" target="_blank" className={styles.link}>
+        <a
+          href="https://blog.digitalax.xyz/global-designer-network-dao-auction-governance-token-launch-w3fw-abe09ce1c5d0"
+          target="_blank"
+          className={styles.link}
+        >
           <div className={styles.linkWrapper}>
-            <BannerButton text='read more about the gdn dao'/>
+            <BannerButton text="read more about the gdn dao" />
           </div>
         </a>
       </section>
 
-      <FashionList fashionData={fashionData} collections={product}/>
-
+      <FashionList fashionData={fashionData} collections={product} />
     </div>
   );
 };

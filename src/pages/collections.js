@@ -28,7 +28,7 @@ const LandingPage = () => {
       See more about The First Dungeon here. Your collectible is airdropped to you within 12 hours of purchase. `
     },
     {
-      title: '3D Model FBX File Included',
+      title: <> <u>3D Model File</u> Included</>,
       description: `All of the DIGITALAX digital fashion garment and accessory ERC-721 NFTs are backed by the underlying 3D model FBX file, stored in IPFS. This forms part of the platform’s broader pursuit for decentralising content distribution and access to it. The FBX file is one of the most popular and widely used 3D data interchange formats between 3D editors and game engines. There are still efficiency problems that exist with it, which DIGITALAX is working to solve through it’s DASH File Format architecture. `
     },
     {
