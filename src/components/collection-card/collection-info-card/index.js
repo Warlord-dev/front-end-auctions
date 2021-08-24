@@ -25,7 +25,7 @@ const CollectionInfoCard = ({ collection }) => {
             </a>
           </Link>
           <div className={styles.pricesWrapper}>
-            <PriceCard mode={0} mainText={`${collection.sold} $MONA`} subText="total sold" />
+            <PriceCard mode={0} mainText={`${parseFloat(collection.sold).toFixed(2)} $MONA`} subText="total sold" />
             <PriceCard mode={0} mainText={`$${(parseFloat(monaPerEth) * exchangeRate * collection.sold).toFixed(2)}`} subText="dollar equivalent" />
           </div>
         </div>
