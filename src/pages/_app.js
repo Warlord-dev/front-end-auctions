@@ -20,6 +20,7 @@ import { useRouter } from 'next/router';
 
 import config from '../utils/config';
 import '../assets/scss/global.scss';
+import styles from './styles.module.scss'
 
 if (config.SENTRY_DSN) {
   Sentry.init({
@@ -37,11 +38,21 @@ const InitWrapper = (props) => {
   }, []);
 
   if (!isInitialized) {
-    return null;
+    return <InitLoader />
   }
 
   return props.children;
 };
+
+const InitLoader = () => {
+  return (
+    <div className={styles.initLoaderWrapper}>
+      <video autoPlay muted loop className={styles.loadingVideo}>
+        <source src='/video/init-loading.mp4' type='video/mp4' />
+      </video>
+    </div>
+  )
+}
 
 const NetworkWrapper = (props) => {
   const chainId = useSelector(getChainId);
