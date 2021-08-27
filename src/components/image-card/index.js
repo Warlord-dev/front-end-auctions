@@ -25,6 +25,7 @@ const ImageCard = ({
   imgUrl = null,
   price,
   disable = false,
+  withLink = false,
   isAuction = false,
 }) => {
   const router = useRouter();
@@ -94,6 +95,14 @@ const ImageCard = ({
     videoTagRef.current.play();
   }
 
+  const onBodyClick = () => {
+    if (withLink) {
+      router
+        .push(`/product/${data.id}/${getRarityId(data.rarity)}/${isAuction ? 1 : 0}`)
+        .then(() => window.scrollTo(0, 0));
+    }
+  }
+
 
   return (
     <>
@@ -109,7 +118,7 @@ const ImageCard = ({
             <div className={styles.name}>{data?.designer?.name} </div>
           </div>
         ) : null}
-        <div className={styles.bodyWrapper}>
+        <div className={styles.bodyWrapper} onClick={onBodyClick}>
           {showRarity ? (
             <div className={styles.rarity}> {data?.rarity || data?.garment?.rarity} </div>
           ) : null}

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import CollectionInfoCard from './collection-info-card';
 import styles from './styles.module.scss';
@@ -19,15 +20,17 @@ const CollectionCard = ({ collection }) => {
       <div className={styles.wrapper}>
         <div className={styles.title}>{collectionNames[parseInt(collection?.id) - 3]}</div>
         <div className={styles.imageWrapper}>
-          <div className={styles.image}>
-            {collection?.animation ? (
-              <video autoPlay muted loop>
-                <source src={collection?.animation} type="video/mp4" />
-              </video>
-            ) : (
-              <img src={collection?.image} className={styles.innerImage} />
-            )}
-          </div>
+          <Link href={collection?.isAuction ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
+            <div className={styles.image}>
+              {collection?.animation ? (
+                <video autoPlay muted loop>
+                  <source src={collection?.animation} type="video/mp4" />
+                </video>
+              ) : (
+                <img src={collection?.image} className={styles.innerImage} />
+              )}
+            </div>
+            </Link>
         </div>
         <CollectionInfoCard collection={collection} />
       </div>

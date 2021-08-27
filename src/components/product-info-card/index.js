@@ -60,6 +60,7 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
           showRarity={showRarity}
           showButton={false}
           isAuction={isAuction}
+          withLink
         />
       </div>
       <div className={styles.infoCardWrapper}>
