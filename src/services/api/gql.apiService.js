@@ -254,7 +254,7 @@ export const DIGITALAX_MARKETPLACE_V2_OFFER = gql`
 
 export const DIGITALAX_MARKETPLACE_V2_OFFERS = gql`
   query digitalaxMarketplaceV2Offers {
-    digitalaxMarketplaceV2Offers (first: 1000) {
+    digitalaxMarketplaceV2Offers (first: 1000, where: {garmentCollection_gte: "0"}) {
       id
       primarySalePrice
       startTime
