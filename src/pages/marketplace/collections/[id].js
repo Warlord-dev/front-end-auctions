@@ -21,14 +21,14 @@ const Collections = () => {
       let colls = [];
 
       digitalaxCollectionGroup.collections.forEach((collection) => {
+        const foundOfferItem = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id)
         colls.push({
           designer: collection.designer,
           developer: collection.developer,
           garment: {
             ...collection.garments[0],
           },
-          primarySalePrice: digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id)
-            .primarySalePrice,
+          primarySalePrice: foundOfferItem ? foundOfferItem.primarySalePrice : 0,
           id: collection.id,
           rarity: collection.rarity,
         });
