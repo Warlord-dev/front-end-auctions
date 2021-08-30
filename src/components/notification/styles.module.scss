@@ -1,8 +1,12 @@
 .wrapper {
-  background: white;
+  background: black;
+  background-image: url('../../../public/images/metaverse/modal_texture.png');
   padding: 22px 70px 22px 40px;
+  color: white;
   position: relative;
-  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 30px 10px #ffffff;
   min-width: 445px;
 }
 
@@ -19,6 +23,7 @@
   border: 0;
   right: 23px;
   top: 29px;
+  color: white;
 }
 
 .title {

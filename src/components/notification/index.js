@@ -18,7 +18,7 @@ const Notification = ({
   return (
     <div className={cn(styles.wrapper, className)}>
       <button className={styles.closeIcon} onClick={() => closeNotification()}>
-        <img className={styles.img} src="./images/icons/close-button.svg" alt="close-icon" />
+        X
       </button>
       <p className={styles.title}>{title}</p>
       {!!text.length && text.map((item) => <p key={item} className={styles.text}>{item}</p>)}

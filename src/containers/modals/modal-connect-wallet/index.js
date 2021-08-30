@@ -34,12 +34,6 @@ const ModalConnectWallet = ({ className, title }) => {
           <div className={styles.modalItem} onClick={() => handleClick(WALLET_METAMASK)}>
             <span className={styles.modalsTextForIcon}>Metamask</span>
             <img className={styles.modalIcon} src="/images/icons/metamask.svg" alt="metamask" />
-            {isShowNotificationConnectMetamask && (
-              <Notification
-                text={['You have to install the metamask extension.']}
-                className={styles.notificationBox}
-              />
-            )}
           </div>
           <div className={styles.modalItem} onClick={() => handleClick(WALLET_ARKANE)}>
             <span className={styles.modalsTextForIcon}>Arkane Wallet</span>
@@ -47,8 +41,14 @@ const ModalConnectWallet = ({ className, title }) => {
               className={styles.modalIcon}
               src="https://raw.githubusercontent.com/ArkaneNetwork/content-management/master/logo/Arkane_only_A.svg"
               alt="arkane"
-            />
+              />
           </div>
+          {isShowNotificationConnectMetamask && (
+            <Notification
+              text={['You have to install the metamask extension.']}
+              className={styles.notificationBox}
+            />
+          )}
         </Modal>,
         document.body
       )}
