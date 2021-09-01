@@ -177,24 +177,32 @@ export const getDigitalaxSubscriptionCollectorSimple = gql`
         primarySalePrice
         tokenUri
         designer
+        image
+        animation
+        name
+        description
+        attributes {
+          type
+          value
+        }
       }
     }
   }
 `;
 
 export const getDigitalaxSubscriptionCollector = gql`
-query digitalaxSubscriptionCollector($address: ID!){
-  digitalaxSubscriptionCollector(id: $address){
-    id
-    childrenOwned{
-      childId
-      amount
-      tokenUri
-      owner
+  query digitalaxSubscriptionCollector($address: ID!) {
+    digitalaxSubscriptionCollector(id: $address) {
+      id
+      childrenOwned {
+        childId
+        amount
+        tokenUri
+        owner
+      }
     }
   }
-}
-`
+`;
 
 export const getDigitalaxSubscriptionPurchaseHistory = gql`
   query digitalaxSubscriptionPurchaseHistory($tokenId: ID!) {

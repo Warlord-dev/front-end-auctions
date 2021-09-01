@@ -11,6 +11,7 @@ import {
   openNftSubscriptionReadyModal,
 } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
+import global from '@actions/global.actions';
 import { getModalParams } from '@selectors/modal.selectors';
 import styles from './styles.module.scss';
 
@@ -33,6 +34,7 @@ const BuyNowNftSubscription = ({ className, title, buttonText1, buttonText2 }) =
 
   const handleCloseSuccess = () => {
     handleClose();
+    dispatch(global.setContentUnlocked(true));
     dispatch(openNftSubscriptionReadyModal());
   };
 
@@ -59,7 +61,7 @@ const BuyNowNftSubscription = ({ className, title, buttonText1, buttonText2 }) =
 
   useEffect(() => {
     async function getMonaApproval() {
-      dispatch(bidActions.getApprovedInMona()).then((val) => {
+      dispatch(bidActions.getApprovedInMonaNft()).then((val) => {
         setApproved(val);
       });
     }

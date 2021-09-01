@@ -6,16 +6,15 @@ import PropTypes from 'prop-types';
 import Button from '@components/buttons/button';
 import Modal from '@components/modal';
 import { closeNftSubscriptionReadyModal } from '@actions/modals.actions';
-import global from '@actions/global.actions';
 import styles from './styles.module.scss';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const ModalNftSubscriptionAReady = ({ className, title, buttonText }) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const { issueId } = router.query;
   const handleClose = () => {
-    dispatch(global.setContentUnlocked(true));
     dispatch(closeNftSubscriptionReadyModal());
   };
 

@@ -12,7 +12,7 @@ export const details = [
         'Winged Glassversarial',
         'Web3 DeFi Fashion Female Collectible',
       ],
-      issueIndex: 'Issue Three',
+      issueIndex: 'Issue Four',
       url: [
         '/images/nft/4/common/Untitled (1) (2).mp4',
         '/images/nft/4/common/Untitled video (2).mp4',
@@ -47,7 +47,7 @@ export const details = [
         '20 Years of SF Dance Music Arturo Mood Audio NFT',
         '20 Years of SF Dance Music Arturo Communication NFT',
       ],
-      issueIndex: 'Issue Three',
+      issueIndex: 'Issue Four',
       url: [
         '/images/nft/4/semi/Untitled (2) (2).mp4',
         '/images/nft/4/common/Untitled video (2).mp4',
@@ -90,7 +90,7 @@ export const details = [
         '20 Years of SF Dance Music DOSC Audio NFT',
         '20 Years of SF Dance Music J-Kind Audio NFT',
       ],
-      issueIndex: 'Issue Three',
+      issueIndex: 'Issue Four',
       url: [
         '/images/nft/4/exc/Untitled (3) (2).mp4',
         '/images/nft/4/common/Untitled video (2).mp4',

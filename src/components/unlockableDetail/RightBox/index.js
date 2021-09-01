@@ -118,6 +118,10 @@ const RightBox = ({ details, id, activeImage }) => {
     }
   };
 
+  const onUnlockChild = () => {
+    router.push('/profile');
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
@@ -131,6 +135,12 @@ const RightBox = ({ details, id, activeImage }) => {
         {details.price} $MONA
         {/* <span>{`${amountSold} of ${details.amountAvailable}`}</span>{' '} */}
       </div>
+      {contentUnlocked ? (
+        <Button className={styles.unlockChildButton} onClick={onUnlockChild}>
+          {' '}
+          UNLOCK 1155 TRESURES{' '}
+        </Button>
+      ) : null}
       <div className={styles.actionGroup}>
         <Button isDisabled={!buyAvailable} background="black" onClick={onUnlock}>
           {buyAvailable ? 'UNLOCK' : <div className={styles.spinner} />}

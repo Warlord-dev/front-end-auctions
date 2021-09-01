@@ -12,42 +12,57 @@ import accountActions from '@actions/user.actions';
 import api from '@services/api/api.service';
 import Loader from '@components/loader';
 import styles from './styles.module.scss';
-import { details } from '@constants/nft_subscription_issues'
+import { details } from '@constants/nft_subscription_issues';
 import NftSubscriptionCard from '@components/nftsubscriptioncard';
+import { getSubscriptionNFTAddressByChainId } from '@services/network.service';
+import { getSubscriptionNFTContract } from '@services/contract.service';
+import { getChainId } from '@selectors/global.selectors';
+import { openConnectMetamaskModal } from '@actions/modals.actions';
 
 const Profile = ({ history }) => {
   const user = useSelector(getUser);
   const dispatch = useDispatch();
+  const chainId = useSelector(getChainId);
   const [activeTab, setActiveTab] = useState(0);
-  const [nftCollectionIds, setNftCollectionIds] = useState([]);
+  const [dizifizzyItems, setDizifizzyItems] = useState([]);
+  const [skins, setSkins] = useState([]);
+  const [ids, setIds] = useState([]);
 
   if (!user) {
     dispatch(accountActions.checkStorageAuth());
   }
   const account = user.get('wallet');
   const nfts = useNFTs(account);
-  
+
   useEffect(() => {
     const fetchSubscriptionStatus = async () => {
       const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
+      const items1 = [];
+      const items2 = [];
       const ids = [];
       for (let i = 0; i < digitalaxSubscriptionCollectors.length; i += 1) {
         for (let j = 0; j < digitalaxSubscriptionCollectors[i].parentsOwned.length; j += 1) {
-          let id = 0;
-          if (digitalaxSubscriptionCollectors[i].parentsOwned[j].id >= 100001 && digitalaxSubscriptionCollectors[i].parentsOwned[j].id <= 100730) {
-            id = 1;
-          } else if ((digitalaxSubscriptionCollectors[i].parentsOwned[j].id >= 100731 && digitalaxSubscriptionCollectors[i].parentsOwned[j].id <= 100930) || (
-            digitalaxSubscriptionCollectors[i].parentsOwned[j].id >= 100981 && digitalaxSubscriptionCollectors[i].parentsOwned[j].id <= 101300
-          )) {
-            id = 2;
-          } else if (digitalaxSubscriptionCollectors[i].parentsOwned[j].id >= 100931 && digitalaxSubscriptionCollectors[i].parentsOwned[j].id <= 100980) {
-            id = 3;
+          if (
+            digitalaxSubscriptionCollectors[i].parentsOwned[j].attributes.filter(
+              (attribute) => attribute.type === 'DigiFizzy Pioneers'
+            ).length
+          ) {
+            const name = digitalaxSubscriptionCollectors[i].parentsOwned[j].name;
+            items1.push(digitalaxSubscriptionCollectors[i].parentsOwned[j]);
+            for (let k = 0; k < details.length; k += 1) {
+              if (name.includes(details[k][0].issueIndex)) {
+                ids.push(k + 1);
+                break;
+              }
+            }
+          } else {
+            items2.push(digitalaxSubscriptionCollectors[i].parentsOwned[j]);
           }
-          if (id && !ids.includes(id))
-            ids.push(id);
         }
       }
-      setNftCollectionIds(ids);
+      setDizifizzyItems(items1);
+      setSkins(items2);
+      setIds(ids);
     };
 
     fetchSubscriptionStatus();
@@ -68,6 +83,19 @@ const Profile = ({ history }) => {
   const onCopyWalletAddress = () => {
     copy(account);
     toast('Wallet Address is copied to the clipboard');
+  };
+
+  const burn721 = async (id) => {
+    if (account) {
+      const subscriptionNftAddress = getSubscriptionNFTAddressByChainId(chainId);
+      const contract = await getSubscriptionNFTContract(subscriptionNftAddress);
+      const res = await contract.methods.burn(id).send({
+        from: account,
+      });
+      return res;
+    } else {
+      dispatch(openConnectMetamaskModal());
+    }
   };
 
   if (!user || !nfts) {
@@ -127,17 +155,20 @@ const Profile = ({ history }) => {
         <div className={styles.tabBody}>
           {activeTab === 0 ? (
             <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
-              {nfts.map((nft) => (
+              {skins.map((nft) => (
                 <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
               ))}
             </ul>
           ) : (
             <div className={styles.subscriptionWrapper}>
-              {nftCollectionIds.map((nftId) => (
+              {dizifizzyItems.map((nft, index) => (
                 <>
-                  {details[parseInt(nftId) - 1].url.map((img) => (
-                    <NftSubscriptionCard key={`nft_subscription_${nftId}`} id={parseInt(nftId)} details={details[parseInt(nftId) - 1]} url={img} />
-                  ))}
+                  <NftSubscriptionCard
+                    key={`nft_subscription_${nft.id}`}
+                    id={ids[index]}
+                    details={nft}
+                    burn721={burn721}
+                  />
                 </>
               ))}
             </div>
