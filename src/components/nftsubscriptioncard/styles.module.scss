@@ -8,6 +8,26 @@
         object-fit: cover;
     }
 
+    .imageWrapper {
+        position: relative;
+
+        .burn721Button {
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            background: #FF4B4B;
+            color: white;
+            padding: .5rem 1rem;
+            border: none;
+            outline: none;
+    
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+
     .actions {
         background: #FFFFFF;
         padding: 1rem;

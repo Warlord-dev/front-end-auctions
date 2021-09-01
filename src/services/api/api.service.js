@@ -13,7 +13,7 @@ import {
   getAuctionContracts,
   getDigitalaxSubscriptionCollectorSimple,
   getDigitalaxSubscriptionPurchaseHistory,
-  getDigitalaxSubscriptionMarketplaceOffer
+  getDigitalaxSubscriptionMarketplaceOffer,
 } from '@services/api/gql.queries.api.service';
 
 class APIService {
@@ -30,11 +30,13 @@ class APIService {
   }
 
   async getSubscriptionNftStatus(address) {
-    return request(MATIC_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionCollectorSimple, { address });
+    return request(this.url, getDigitalaxSubscriptionCollectorSimple, { address });
   }
 
   async getDigitalaxSubscriptionPurchase(tokenId) {
-    return request(MATIC_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionPurchaseHistory, { tokenId });
+    return request(this.url, getDigitalaxSubscriptionPurchaseHistory, {
+      tokenId,
+    });
   }
 
   async getAuctionsHistoryByTimestampGt(timestamp) {
@@ -42,7 +44,9 @@ class APIService {
   }
 
   async getDigitalaxSubscriptionOffer(tokenId) {
-    return request(MATIC_HTTP_NFT_NETWORK_URL, getDigitalaxSubscriptionMarketplaceOffer, { tokenId });
+    return request(this.url, getDigitalaxSubscriptionMarketplaceOffer, {
+      tokenId,
+    });
   }
 
   async getLiveAuctions() {
@@ -74,9 +78,9 @@ class APIService {
   }
 
   async getEthRate() {
-    return fetch(
-      `${config.EXCHANGE_API}/simple/price?ids=ethereum&vs_currencies=usd`
-    ).then((response) => response.json());
+    return fetch(`${config.EXCHANGE_API}/simple/price?ids=ethereum&vs_currencies=usd`).then(
+      (response) => response.json()
+    );
   }
 }
 

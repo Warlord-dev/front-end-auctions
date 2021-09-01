@@ -68,12 +68,10 @@ export const getMarketplaceContractAddressByChainId = (chainId) => {
 
 export const getMarketplaceContractNFTAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
-  console.log(network);
-  console.log(config.DIGITALAX_SUBSCRIPTION_MARKETPLACE);
   return config.DIGITALAX_SUBSCRIPTION_MARKETPLACE[network.alias];
 };
 
-export const getMonaContractNFTAddressByChainId = (chainId) => {
+export const getSubscriptionNFTAddressByChainId = (chainId) => {
   const network = getEnabledNetworkByChainId(chainId);
 
   return config.DIGITALAX_SUBSCRIPTION_NFT[network.alias];

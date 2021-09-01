@@ -36,11 +36,11 @@ export const getMarketplaceContract = async (ContractAddress) => {
 
 export const getMarketplaceNFTContract = async (ContractAddress) => {
   return await new window.web3.eth.Contract(digitalaxSubscriptionMarketplaceAbi, ContractAddress);
-}
+};
 
-export const getMonaTokenNFTContract = async (ContractAddress) => {
+export const getSubscriptionNFTContract = async (ContractAddress) => {
   return await new window.web3.eth.Contract(digitalaxSubscriptionNftAbi, ContractAddress);
-}
+};
 
 export const getMonaTokenContract = async (ContractAddress) => {
   const jsonInterface = [
