@@ -18,7 +18,7 @@ const CollectionInfoCard = ({ collection }) => {
         mainColor="rgba(189, 61, 169, 0.47)"
       >
         <div className={styles.cardBodyWrapper}>
-          <Link href={collection?.isAuction ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
+          <Link href={parseInt(collection?.id) <= 1 ? `/marketplace/all/${collection.id}` : collection?.isAuction ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
             <a className={styles.link}>
               view collection
               <img src="./images/metaverse/right-arrow-pink.png" />

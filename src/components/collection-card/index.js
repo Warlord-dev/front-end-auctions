@@ -5,6 +5,9 @@ import styles from './styles.module.scss';
 
 const CollectionCard = ({ collection }) => {
   const collectionNames = [
+    'Among Us',
+    'MineCraft',
+    '',
     'GDN DAO Endowment Auction',
     'Haute Couture',
     'Crazy Shoes',
@@ -15,12 +18,13 @@ const CollectionCard = ({ collection }) => {
     'International',
     'Fashion x Art',
   ];
+
   return (
     <>
       <div className={styles.wrapper}>
-        <div className={styles.title}>{collectionNames[parseInt(collection?.id) - 3]}</div>
+        <div className={styles.title}>{collectionNames[parseInt(collection?.id)]}</div>
         <div className={styles.imageWrapper}>
-          <Link href={collection?.isAuction ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
+          <Link href={parseInt(collection?.id) <= 1 ? `/marketplace/all/${collection.id}` : collection?.isAuction ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
             <div className={styles.image}>
               {collection?.animation ? (
                 <video autoPlay muted loop>

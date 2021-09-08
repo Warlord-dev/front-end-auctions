@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { getCollectionGroups, getDigitalaxGarmentNftV2GlobalStats } from '@services/api/apiService';
+import { getCollectionGroups, getDigitalaxGarmentCollections } from '@services/api/apiService';
 import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import CollectionList from '@components/collection-list';
-import globalActions from '@actions/global.actions';
-import { convertToEth } from '@helpers/price.helpers';
 import HeroSection from '@components/hero-section';
 
 const LandingPage = () => {
@@ -30,9 +28,19 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchCollectionGroups = async () => {
       const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
+      const { digitalaxGarmentCollections } = await getDigitalaxGarmentCollections(chainId);
       
       let collections = []
       let auctions = []
+      const amongUsPrice = digitalaxGarmentCollections.reduce((a, b) => a + Number(b.valueSold), 0);
+      auctions.push({
+        ...digitalaxGarmentCollections[0].garments[0],
+        designer: null,
+        id: '0',
+        sold: amongUsPrice / 1e18,
+        isAuction: false
+      });
+
       digitalaxCollectionGroups.forEach((digitalaxCollectionGroup) => {
         const collectionPrice = digitalaxCollectionGroup.collections
           .filter(collection => collection.id !== '0')

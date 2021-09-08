@@ -27,6 +27,7 @@ const ImageCard = ({
   disable = false,
   withLink = false,
   isAuction = false,
+  v1 = false,
 }) => {
   const router = useRouter();
   const account = useSelector(getAccount);
@@ -40,10 +41,6 @@ const ImageCard = ({
 
   function getAudio (video) {
 
-    console.log('video.mozHasAudio: ', video.mozHasAudio)
-    console.log('Boolean(video.webkitAudioDecodedByteCount): ', video.webkitAudioDecodedByteCount)
-    console.log('Boolean(video.audioTracks && video.audioTracks.length): ', Boolean(video.audioTracks && video.audioTracks.length))
-    
     return video.mozHasAudio ||
     Boolean(video.webkitAudioDecodedByteCount) ||
     Boolean(video.audioTracks && video.audioTracks.length);
@@ -52,7 +49,7 @@ const ImageCard = ({
   const onBuyNow = () => {
     if (!router.asPath.includes('product')) {
       router
-        .push(`/product/${data.id}/${getRarityId(data.rarity)}/${isAuction ? 1 : 0}`)
+        .push(`/product/${v1 ? `v1-${data?.id}` : data?.id}/${getRarityId(data.rarity)}/${isAuction ? 1 : 0}`)
         .then(() => window.scrollTo(0, 0));
     } else {
       if (account) {
@@ -103,7 +100,6 @@ const ImageCard = ({
     }
   }
 
-
   return (
     <>
       <div className={styles.wrapper}>
@@ -114,8 +110,8 @@ const ImageCard = ({
         ) : null}
         {showDesigner ? (
           <div className={styles.designerWrapper}>
-            <img src={data?.designer?.image} className={styles.photo} />
-            <div className={styles.name}>{data?.designer?.name} </div>
+            <img src={v1 ? '/images/metaverse/mirth.png' : data?.designer?.image} className={styles.photo} />
+            <div className={styles.name}>{v1 ? 'Mirth' : data?.designer?.name} </div>
           </div>
         ) : null}
         <div className={styles.bodyWrapper} onClick={onBodyClick}>

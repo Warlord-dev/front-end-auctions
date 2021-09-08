@@ -4,12 +4,13 @@ import { useRouter } from 'next/router';
 import ImageCard from '@components/image-card';
 import styles from './styles.module.scss';
 import InfoCard from '@components/info-card';
-import NewButton from '@components/buttons/newbutton';
 import BannerButton from '@components/buttons/bannerbutton';
 import Container from '@components/container';
 import {
+  getDigitalaxMarketplaceOffer,
   getDigitalaxMarketplaceV2Offer,
   getGarmentByAuctionId,
+  getGarmentByCollectionId,
   getGarmentV2ByAuctionId,
   getGarmentV2ByCollectionId,
 } from '@services/api/apiService';
@@ -70,10 +71,31 @@ const Product = () => {
       description: `Exclusive W3FW Decentraland In-Game Digital Fashion Memorabilia Bomber Jacket! View it also through the DressX AR Try On filter and head over to DRIP to purchase the physical varsity jacket version to rep IRL!`,
     },
   ];
-
+  
   useEffect(() => {
-    if (id) {
-      const fetchGarmentV2ByID = async () => {
+    const fetchGarmentV2ByID = async () => {
+      if (id.indexOf('v1') >= 0) {
+        const v1Id = id.split('-')[1];
+        const { digitalaxGarmentCollection } = await getGarmentByCollectionId(chainId, v1Id);
+        if (digitalaxGarmentCollection.id) {
+          const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffer(chainId, digitalaxGarmentCollection.id);
+          setTokenIds(digitalaxMarketplaceOffers[0].garmentCollection?.garments?.map((garment) => garment.id));
+          setOffer({
+            id: digitalaxMarketplaceOffers[0].id,
+            primarySalePrice: digitalaxMarketplaceOffers[0].primarySalePrice,
+            startTime: digitalaxMarketplaceOffers[0].startTime,
+            endTime: digitalaxMarketplaceOffers[0].startTime,
+            amountSold: digitalaxMarketplaceOffers[0].amountSold,
+            totalAmount: 64,
+          });
+          setProduct({
+            id: digitalaxGarmentCollection.id,
+            garment: digitalaxGarmentCollection.garments[0],
+            designer: null,
+            developer: null,
+          });
+        }
+      } else if (id) {
         if (!parseInt(isAuction)) {
           const { digitalaxGarmentV2Collection } = await getGarmentV2ByCollectionId(chainId, id);
           if (digitalaxGarmentV2Collection.id) {
@@ -114,8 +136,8 @@ const Product = () => {
         }
       };
 
-      fetchGarmentV2ByID();
     }
+    fetchGarmentV2ByID();
 
     const secondDesigner = secondDesignerData.find((item) => {
       return item.id == id && item.rarity == rarity && item.isAuction == isAuction;
@@ -161,6 +183,7 @@ const Product = () => {
       dispatch(
         openPurchaseHistoryModal({
           tokenIds,
+          v1: id.includes('v1')
         }),
       );
     }

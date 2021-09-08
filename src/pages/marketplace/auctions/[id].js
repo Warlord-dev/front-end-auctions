@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
-import HeroBar from '@components/hero-bar';
-import ImageCard from '@components/image-card';
-import ProductCard from '@components/product-card';
 import styles from './index.module.scss';
 import Container from '@components/container';
 import { getCollectionGroupById, getDigitalaxMarketplaceV2Offers } from '@services/api/apiService';

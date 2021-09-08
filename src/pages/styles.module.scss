@@ -2,9 +2,58 @@
 
 .wrapper {
   background-color: black;
+  background-image: url('/images/metaverse/viewallskinsbg (1).png');
+  background-size: 100%;
+  background-repeat: repeat;
   color: white;
   width: 100%;
   font-family: 'Inter';
+
+  .homeHeroSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('/images/metaverse/modal_texture.png');
+    padding: 0rem 7.5rem;
+    padding-top: 10rem;
+    padding-bottom: 7.5rem;
+
+    .heroLogo {
+      width: 60%;
+    }
+
+    .heroSectionLink {
+      color: white;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 27px;
+      line-height: 40px;
+      color: #ffffff;
+      margin-right: 20px;
+      color: #ffffff;
+      text-align: left;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .collectionsWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: transparent;
+    column-gap: 5rem;
+    row-gap: 10rem;
+    padding: 7rem 2rem;
+
+    @include lg-width {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
   .heroSection {
     position: relative;
