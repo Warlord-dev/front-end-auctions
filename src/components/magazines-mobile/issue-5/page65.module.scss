@@ -1,0 +1,67 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  
+  height: 647px;
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .video1 {
+    position: absolute;
+    width: 375px;
+    height: 667px;
+    left: 0px;
+    top: -10px;
+    object-fit: cover;    
+  }
+
+  h1 {
+    position: absolute;
+    width: 263px;
+    height: 48px;
+    left: 20px;
+    top: 10px;
+    
+    font-family: DigitalRiver;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    text-align: left;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 140px;
+    height: 48px;
+    right: 20px;
+    top: 500px;
+    
+    font-family: DigitalRiver;
+    font-size: 40px;
+    line-height: 120.53%;  
+    color: #FF0000;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 286px;
+    height: 84px;
+    right: 20px;
+    top: 550px;
+    
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 120.53%;
+    /* or 14px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+    
+  }
+}

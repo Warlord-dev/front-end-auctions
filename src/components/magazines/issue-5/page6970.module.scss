@@ -1,0 +1,108 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  a {
+    div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;    
+  }
+  
+  .image3 {
+    position: absolute;
+    width: 518px;
+    height: 76px;
+    left: 37px;
+    top: 37px;     
+  }
+
+  .text1 {
+    position: absolute;
+    width: 756px;
+    height: 88px;
+    left: 75px;
+    top: 96px;
+    
+    font-family: Julietta Messie Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+
+    color: #0060F1;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 258px;
+    height: 92px;
+    left: 671px;
+    top: 429px;
+    
+    font-family: Bitter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 110%;
+    
+    text-align: right;
+    
+    color: #004BDC;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 226px;
+    height: 70px;
+    left: 703px;
+    top: 521px;
+    
+    font-family: Blacker Display;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 206px;
+    height: 92px;
+    left: 995px;
+    top: 1417px;
+    
+    font-family: Bitter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 110%;
+        
+    color: #DE14FF;
+  }
+  
+}

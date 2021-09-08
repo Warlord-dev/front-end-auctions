@@ -1,0 +1,292 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2716px;
+  background-color: white;  
+  color: black;
+  display: flex;
+  position: relative;
+
+  .back {
+    background: rgba(189, 61, 169, 0.47);
+    height: 2716px;
+    width: 375px;
+    left: 0;
+    top: 0;
+  }
+
+  .back2 {
+    position: absolute;
+    width: 327px;
+    height: 1497px;
+    left: 48px;
+    top: 237px;    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 419px;
+    height: 237px;
+    left: -22px;
+    top: 0px;
+    object-fit: fill;    
+  }
+
+  .image71 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 59px;
+    top: 1142px;
+  }
+
+  .image72 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 59px;
+    top: 1198px;
+  }
+
+  .image73 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 59px;
+    top: 1255px;
+  }
+
+  .protocol1 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 550px;
+  }
+
+  .protocol2 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 136px;
+    top: 550px;
+    
+  }
+
+  .protocol3 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 252px;
+    top: 550px;
+  }
+
+  .protocol4 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 650px;
+  }
+
+  .protocol5 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 136px;
+    top: 650px;
+  }
+
+  .protocol6 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 252px;
+    top: 650px;
+  }
+
+  .protocol7 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 750px;
+  }
+
+  .protocol8 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 136px;
+    top: 750px;
+  }
+
+  .protocol9 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 252px;
+    top: 750px;
+  }
+
+  .protocol10 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 850px;
+  }
+
+  .protocol11 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 136px;
+    top: 850px;
+  }
+
+  .protocol12 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 252px;
+    top: 850px;
+  }
+
+  .protocol13 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18px;
+    top: 950px;
+  }
+
+  .protocol14 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 136px;
+    top: 950px;
+  }
+
+  .protocol15 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 252px;
+    top: 950px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 324px;
+    height: 112px;
+    left: 26px;
+    top: 49px;
+    
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    -webkit-text-stroke: 1px #000000;
+    text-shadow: 0px 4px 4px #FF0D0D;    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    left: 7px;
+    top: 161px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    left: 7px;
+    top: 1643px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    left: 7px;
+    top: 2055px;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 256px;
+    height: 224px;
+    left: 56px;
+    top: 1362px;
+    
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    -webkit-text-stroke: 1px #000000;
+    text-shadow: 0px 4px 4px #FF0D0D;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 329px;
+    height: 22px;
+    left: 18px;
+    top: 1480px;
+    
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    -webkit-text-stroke: 1px #000000;
+    text-shadow: 0px 4px 4px #FF0D0D;
+  }
+
+  .video2 {
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    left: 7px;
+    top: 1643px;
+    padding: 40px;
+    object-fit: cover;
+  }
+
+  .video3 {
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    left: 7px;
+    top: 2055px;
+    padding: 40px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    left: 7px;
+    top: 161px;
+    padding: 40px; 
+  }
+}

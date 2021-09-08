@@ -1,0 +1,38 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .video1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    object-fit: cover;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 939px;
+    height: 419px;
+    left: 27px;
+    top: 1078px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 743px;
+    height: 741px;
+    left: 114px;
+    top: 52px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    
+    color: #FFFFFF;    
+  }
+}

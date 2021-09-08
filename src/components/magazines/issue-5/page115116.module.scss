@@ -1,0 +1,38 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .background {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1497px;    
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 744px;
+    height: 1234px;
+    left: 103px;
+    top: 132px;
+    
+    background: #E335FF;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 542px;
+    height: 926px;
+    left: 204px;
+    top: 205px;
+    
+    font-family: Cutive;
+    font-size: 20px;
+    line-height: 120.53%;    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+}

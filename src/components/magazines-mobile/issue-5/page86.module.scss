@@ -1,0 +1,136 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 4884px;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .rect1 {
+    position: absolute;
+    width: 568px;
+    height: 5041px;
+    left: -63px;
+    top: -157px;
+    
+    background: rgba(255, 0, 0, 0.81);    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 480px;
+    height: 4925px;
+    left: -52px;
+    top: -41px;
+    
+    background: rgba(3, 3, 3, 0.37);
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 979px;
+    height: 3343px;
+    left: -313px;
+    top: 1883px;
+    border-radius: 50%;
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #8951FF 0%, rgba(244, 239, 255, 0.09) 74.48%);    
+  }
+
+  .circle2 {
+    position: absolute;
+    width: 733px;
+    height: 786px;
+    left: -63px;
+    top: -97px;
+    border-radius: 50%;
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #8951FF 0%, rgba(244, 239, 255, 0.09) 74.48%);
+  }
+
+  .textPatternWrapper {
+    position: absolute;
+    top: 0px;
+    opacity: 0.5;
+
+    .textPattern {
+      width: 486px;
+      height: 24px;
+      margin-left: -93px;
+      margin-top: 20px;
+      
+      font-family: MUSICNET;
+      font-size: 20px;
+      line-height: 120.53%;
+      color: #0066FF;
+    }
+  }
+
+  .textPatternWrapper2 {
+    position: absolute;
+    top: 1060px;
+    opacity: 0.5;
+
+    .textPattern {
+      width: 486px;
+      height: 24px;
+      margin-left: -93px;
+      margin-top: 20px;
+      
+      font-family: MUSICNET;
+      font-size: 20px;
+      line-height: 120.53%;
+      color: #FFFFFF;
+    }
+  }
+
+  h1 {
+    position: absolute;
+    width: 319px;
+    height: 145px;
+    left: 28px;
+    top: 64px;
+    
+    font-family: Lilita One;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    
+    -webkit-text-stroke: 2px #00FFC2;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 268px;
+    height: 2585px;
+    left: 67px;
+    top: 398px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    left: 219px;
+    top: 214px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    left: 60px;
+    top: 4606px;
+    
+  }
+}

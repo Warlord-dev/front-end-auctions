@@ -1,0 +1,206 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 2923px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  display: flex;
+  position: relative;
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 4424px;
+    left: -404px;
+    top: -130px;
+    
+    background: #F29100;
+    border-radius: 50%;    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 515px;
+    height: 4394px;
+    left: 147px;
+    top: -419px;
+    
+    background: #FFDB5E;
+    border-radius: 50%;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 331px;
+    height: 113px;
+    left: 28px;
+    top: 62px;
+    
+    font-family: UnifrakturMaguntia;
+    font-size: 50px;
+    line-height: 100%;
+    color: #000000;
+    
+    text-shadow: -1px 0 #00E0FF, 0 -1px #00E0FF, 1px 0 #00E0FF, 0 1px #00E0FF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 186px;
+    height: 106px;
+    left: 25px;
+    top: 150px;
+    
+    font-family: League Gothic;
+    font-size: 100px;
+    line-height: 120.53%;
+
+    background: linear-gradient(180deg, #FE0D0D 0%, #FFFFFF 70.31%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -webkit-text-stroke: 2px#000000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 186px;
+    height: 106px;
+    left: 25px;
+    top: 235px;
+    
+    font-family: League Gothic;
+    font-size: 100px;
+    line-height: 120.53%;
+
+    background: linear-gradient(180deg, #FE0D0D 0%, #FFFFFF 70.31%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -webkit-text-stroke: 2px#000000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 186px;
+    height: 106px;
+    left: 25px;
+    top: 328px;
+    
+    font-family: League Gothic;
+    font-size: 100px;
+    line-height: 120.53%;
+
+    background: linear-gradient(180deg, #FE0D0D 0%, #FFFFFF 70.31%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -webkit-text-stroke: 2px#000000;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 186px;
+    height: 106px;
+    left: 218px;
+    top: 182px;
+    
+    font-family: League Gothic;
+    font-size: 100px;
+    line-height: 120.53%;
+
+    background: linear-gradient(180deg, #FE0D0D 0%, #FFFFFF 70.31%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -webkit-text-stroke: 2px#000000;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 186px;
+    height: 106px;
+    left: 218px;
+    top: 265px;
+    
+    font-family: League Gothic;
+    font-size: 100px;
+    line-height: 120.53%;
+
+    background: linear-gradient(180deg, #FE0D0D 0%, #FFFFFF 70.31%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -webkit-text-stroke: 2px#000000;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 235.96px;
+    height: 660px;
+    left: 25px;
+    top: 483.06px;
+    
+    font-family: League Gothic;
+    font-size: 25px;
+    line-height: 120.53%;
+    color: #0500FF;
+    transform: rotate(-12deg);
+    transform-origin: 0 0;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 299.44px;
+    height: 450px;
+    left: 25px;
+    top: 1129.31px;
+    
+    font-family: League Gothic;
+    font-size: 25px;
+    line-height: 120.53%;
+    color: #FF00A8;
+    transform: rotate(-7deg);
+    transform-origin: 0 0;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 284.27px;
+    height: 244.91px;
+    left: 25px;
+    top: 1576.36px;
+    
+    font-family: League Gothic;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #000000;
+        
+    transform: rotate(-10deg);
+    transform-origin: 0 0;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 304px;
+    height: 330px;
+    left: 25px;
+    top: 2378px;
+    
+    font-family: League Gothic;
+    font-size: 25px;
+    line-height: 120.53%;
+    color: #000000;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 435px;
+    height: 245px;
+    left: -16px;
+    top: 2061px;    
+  }
+}

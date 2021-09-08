@@ -1,0 +1,226 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+
+  a {
+    img {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.05);
+      }      
+    }
+  }
+
+  .back1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+    background-color: white;
+  }
+
+  .background1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .background2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 793px;
+    height: 288px;
+    left: 996px;
+    top: 188px;
+    
+    font-family: Corben;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 120.53%;
+   
+    color: #FFFFFF;
+    span {
+      color: #FF0000;
+    }    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 153px;
+    height: 24px;
+    left: 1253px;
+    top: 484px;
+    
+    font-family: Corben;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120.53%;
+   
+    color: #9D2626;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 604px;
+    height: 240px;
+    left: 177px;
+    top: 68px;
+    
+    font-family: Trocchi;
+    font-size: 80px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 604px;
+    height: 25px;
+    left: 177px;
+    top: 346px;
+    
+    font-family: Trocchi;
+    font-size: 25px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 53px;
+    top: 371px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 652px;
+    top: 453px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 350px;
+    top: 679px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 106px;
+    top: 1012px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 687px;
+    top: 957px;
+  }
+
+  .label1 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: 0px;
+    top: 624px;
+    
+    font-family: Trocchi;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .label2 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: 599px;
+    top: 706px;
+    
+    font-family: Trocchi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .label3 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: 297px;
+    top: 932px;
+    
+    font-family: Trocchi;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .label4 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: 53px;
+    top: 1265px;
+    
+    font-family: Trocchi;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .label5 {
+    position: absolute;
+    width: 327px;
+    height: 24px;
+    left: 633px;
+    top: 1209px;
+    
+    font-family: Trocchi;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}

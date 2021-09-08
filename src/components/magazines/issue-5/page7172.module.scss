@@ -1,0 +1,114 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  a {
+    div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 960px;
+    height: 1540px;
+    left: 960px;
+    top: -20px;
+    object-fit: cover;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 528px;
+    height: 72px;
+    left: 24px;
+    top: 18px;
+    
+    font-family: 'Digital Numbers';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 504px;
+    height: 64px;
+    left: 22px;
+    top: 100px;
+    
+    font-family: Electrolize;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 120.53%;
+
+    color: #FF00C7;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 263px;
+    height: 48px;
+    top: 23px;
+    left: 1622px;
+    
+    font-family: DigitalRiver;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 140px;
+    height: 48px;
+    top: 1347px;
+    left: 1755px;
+    
+    font-family: DigitalRiver;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 120.53%;
+
+    color: #FF0000;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 286px;
+    height: 84px;
+    top: 1395px;
+    left: 1608px;
+    
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 120.53%;
+    /* or 14px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+  }
+}

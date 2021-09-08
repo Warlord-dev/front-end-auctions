@@ -1,0 +1,256 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3530px;
+  color: white;
+  background-color: #27AFF7;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 3530px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    left: 205px;
+    top: 263px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 346px;
+    height: 169px;
+    left: 29px;
+    top: 94px;
+    
+    font-family: Archie Websters;
+    font-size: 130px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 23px;
+    height: 630px;
+    left: 331px;
+    top: 505px;
+    
+    font-family: Archie Websters;
+    font-size: 80px;
+    line-height: 110%;
+    word-wrap: break-word;
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 700px;
+    height: 66px;
+    left: 31px;
+    top: 1623px;
+    
+    font-family: Archie Websters;
+    font-size: 100px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 700px;
+    height: 52px;
+    left: 19px;
+    top: 1765px;
+    
+    font-family: Archie Websters;
+    font-size: 100px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 66px;
+    height: 84px;
+    left: 46px;
+    top: 431px;
+        
+  }
+
+  .image4 {
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    left: 40px;
+    top: 1173px;
+    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 149px;
+    height: 40px;
+    left: 30px;
+    top: 1926px;
+    
+  }
+
+  .image6 {
+    position: absolute;
+    width: 79px;
+    height: 87px;
+    left: 32px;
+    top: 2411px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 91.15px;
+    height: 79px;
+    left: 41px;
+    top: 3017px;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 180px;
+    height: 108px;
+    left: 131px;
+    top: 431px;
+    
+    font-family: Mada;
+    font-size: 15px;
+    line-height: 110%;
+    color: #FFFFFF;
+    
+    span {
+      font-family: Mad Galaxy Demo;
+      font-size: 17px;
+    }
+  }
+  
+  .text6 {
+    position: absolute;
+    width: 278px;
+    height: 304px;
+    left: 34px;
+    top: 532px;
+    
+    font-family: Mada;
+    font-size: 15px;
+    line-height: 110%;
+    color: #FFFFFF;    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 159px;
+    height: 121px;
+    left: 145px;
+    top: 1164px;
+
+    font-family: Mada;
+    font-size: 15px;
+
+    span {
+      font-family: Mad Galaxy Demo;
+      font-size: 17px;
+    }
+    
+    line-height: 110%;
+    color: #FFFFFF;
+        
+  }
+
+  .text8 {
+    position: absolute;
+    width: 292px;
+    height: 201px;
+    left: 30px;
+    top: 1264px;
+    
+    font-family: Mada;
+    font-size: 15px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 289px;
+    height: 270px;
+    left: 32px;
+    top: 1983px;
+    
+
+    font-family: Mada;
+    font-size: 15px;
+
+    span {
+      font-family: Mad Galaxy Demo;
+      font-size: 17px;
+    }
+    color: #FFFFFF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 291px;
+    height: 510px;
+    left: 32px;
+    top: 2506px;
+    
+    font-family: Mada;
+    font-size: 15px;
+
+    span {
+      font-family: Mad Galaxy Demo;
+      font-size: 17px;
+    }
+
+    line-height: 110%;
+    color: #FFFFFF;    
+  }
+
+  .text11 {
+    position: absolute;
+    width: 151px;
+    height: 128px;
+    left: 166px;
+    top: 3025px;
+    
+    font-family: Mada;
+    font-size: 15px;
+
+    span {
+      font-family: Mad Galaxy Demo;
+      font-size: 17px;
+    }
+
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 294px;
+    height: 128px;
+    left: 31px;
+    top: 3115px;
+    
+    font-family: Mada;
+    font-size: 15px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+}

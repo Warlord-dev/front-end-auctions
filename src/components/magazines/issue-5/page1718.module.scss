@@ -1,0 +1,29 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #FFFFFF;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .rect1 {
+    position: absolute;
+    width: 883px;
+    height: 1420px;
+    left: 29px;
+    top: 38px;
+    
+    background: #D595DB;    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 883px;
+    height: 1420px;
+    left: 1007px;
+    top: 38px;
+    
+    background: #D595DB;
+  }
+}

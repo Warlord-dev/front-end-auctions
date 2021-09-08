@@ -1,0 +1,160 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3343px;
+  background-color: black;
+  color: white;
+  position: relative;
+  white-space: normal;
+  text-align: left;
+
+  .background {
+    position: absolute;
+    width: 375px;
+    height: 3343px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 864px;
+    left: 0px;
+    top: 1739px;    
+  }
+
+  .protocolText1 {
+    position: absolute;
+    width: 784px;
+    height: 146px;
+    left: 15px;
+    top: 28px;
+    
+    font-family: Tillana;
+    font-size: 40px;
+    line-height: 180%;
+    color: #FFFFFF;    
+  }
+
+  .protocolText2 {
+    position: absolute;
+    width: 784px;
+    height: 146px;
+    left: 82px;
+    top: 77px;
+    
+    font-family: Tillana;
+    font-size: 40px;
+    line-height: 180%;
+    color: #FFFFFF;
+  }
+
+  .protocolText3 {
+    position: absolute;
+    width: 784px;
+    height: 146px;
+    left: 15px;
+    top: 126px;
+    
+    font-family: Tillana;
+    font-size: 40px;
+    line-height: 180%;
+    color: #FFFFFF;
+  }
+
+  .protocolText4 {
+    position: absolute;
+    width: 784px;
+    height: 146px;
+    left: 15px;
+    top: 175px;
+    
+    font-family: Tillana;
+    font-size: 40px;
+    line-height: 180%;
+    color: #FFFFFF;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 295px;
+    height: 288px;
+    left: 44px;
+    top: 275px;
+    
+    font-family: SeoulHangang CBL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 293px;
+    height: 252px;
+    left: 44px;
+    top: 1031px;
+    
+    font-family: SeoulHangang CBL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 277px;
+    height: 396px;
+    left: 44px;
+    top: 1355px;
+    
+    font-family: SeoulHangang CBL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 269px;
+    height: 240px;
+    left: 44px;
+    top: 2546px;
+    
+    font-family: SeoulHangang CBL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 261px;
+    height: 312px;
+    left: 44px;
+    top: 2858px;
+    
+    font-family: SeoulHangang CBL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+    
+  }
+}

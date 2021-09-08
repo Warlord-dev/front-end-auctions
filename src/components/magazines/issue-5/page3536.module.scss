@@ -1,0 +1,333 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  
+  .back1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;    
+  }
+  
+  .back2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  h2 {
+    position: absolute;
+    width: 966px;
+    height: 88px;
+    left: 1556px;
+    top: 1381px;
+    
+    font-family: Empirez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+    /* identical to box height, or 88px */
+    
+    
+    color: #3A6B6B;
+    
+    // border: 3px solid #FFFFFF;
+    -webkit-text-stroke: 3px white;    
+  }
+
+  .diamond1 {
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    left: 1427px;
+    top: 16px;    
+  }
+
+  .diamond2 {
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    left: 1567px;
+    top: 30px;        
+  }
+
+  .diamond3 {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    left: 1824px;
+    top: 0px;
+  }
+
+  .diamond4 {
+    position: absolute;
+    width: 443px;
+    height: 418px;
+    left: 1293px;
+    top: 1079px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 599px;
+    height: 132px;
+    left: 980px;
+    top: 136px;
+    
+    font-family: Empirez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 110%;
+    /* identical to box height, or 132px */
+    
+    
+    color: #3A6B6B;
+    
+    -webkit-text-stroke: #FFFFFF;
+    -webkit-text-stroke-width: 3px;
+    text-shadow: 0px 4px 30px #000000;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 564.71px;
+    height: 700.3px;
+    left: 1083px;
+    top: 355.22px;
+
+    font-family: 'Think Thick';
+    font-size: 7px;
+    line-height: 12.6px;
+    
+    color: #FFB9B9;
+    
+    transform: rotate(-5deg);
+    transform-origin: 0 0;
+    
+    span {
+      font-family: 'Cool Chaos';
+      font-size: 30px;
+      line-height: 33px;
+
+      img {
+        margin-left: 10px;
+      }
+    }
+  }
+  
+  .text2 {
+    position: absolute;
+    width: 152.97px;
+    height: 49.61px;
+    left: 1150px;
+    top: 1052.56px;
+    
+    font-family: 'Cool Chaos';
+    font-size: 30px;
+    line-height: 110%;
+    
+    color: #FFB9B9;
+    
+    transform: rotate(-5deg);
+    transform-origin: 0 0;
+    span {
+      font-family: 'Thick';
+    }
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 282px;
+    height: 283px;
+    left: 960px;
+    top: 1098px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 581px;
+    height: 581px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 521px;
+    top: -97px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 640px;
+    top: 92px;     
+  }
+
+  .image5 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 581px;
+    top: 335px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 271px;
+    height: 271px;
+    left: 504px;
+    top: 595px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 271px;
+    height: 271px;
+    left: 316px;
+    top: 831px; 
+  }
+
+  .image8 {
+    position: absolute;
+    width: 271px;
+    height: 271px;
+    left: 129px;
+    top: 1059px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 271px;
+    height: 271px;
+    left: -49px;
+    top: 1290px;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 737px;
+    top: 1284px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 546px;
+    height: 111px;
+    left: 231px;
+    top: 1367px;
+
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 120.53%;
+
+    color: #000000;
+  }
+
+  a {
+    img, div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.1);
+      }  
+    }
+  }
+
+  .text4 {
+    position: absolute;
+    width: 460.59px;
+    height: 266.06px;
+    left: 21px;
+    top: 606.14px;
+    
+    font-family: Suez One;
+    font-size: 18px;
+    line-height: 180%;
+    color: #FFFFFF;
+    
+    transform: rotate(-5deg);
+    transform-origin: 0 0;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 298.25px;
+    height: 484.88px;
+    left: 42px;
+    top: 856.99px;
+    
+    font-family: Suez One;
+    font-size: 18px;
+    line-height: 180%;
+    color: #FFFFFF;
+    
+    transform: rotate(-5deg);
+    transform-origin: 0 0;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 137.53px;
+    height: 895.21px;
+    left: 791px;
+    top: 325.8px;
+    
+    font-family: Suez One;
+    font-size: 18px;
+    line-height: 180%;
+    color: #FFFFFF;
+    transform: rotate(-2deg);
+    transform-origin: 0 0;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 201.23px;
+    height: 895.21px;
+    left: 759px;
+    top: 808.02px;
+    
+    
+    font-family: Suez One;
+    font-size: 18px;
+    line-height: 180%;
+    color: #FFFFFF;
+    
+    transform: rotate(-2deg);
+    transform-origin: 0 0;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 336.06px;
+    height: 484.88px;
+    left: 427px;
+    top: 1127.34px;
+    
+    font-family: Suez One;
+    font-size: 18px;
+    line-height: 180%;
+    color: #FFFFFF;
+    
+    transform: rotate(-5deg);
+    transform-origin: 0 0;
+  }
+}

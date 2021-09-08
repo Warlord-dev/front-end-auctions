@@ -1,0 +1,159 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  height: 2429px;
+  overflow: hidden;
+  background-color: #9E63FF;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .textPatternWrapper {
+    position: absolute;
+    top: 20px;
+    opacity: 0.5;
+
+    .textPattern {
+      width: 486px;
+      height: 24px;
+      margin-left: -78px;
+      margin-top: 20px;
+      
+      font-family: MUSICNET;
+      font-size: 20px;
+      line-height: 120.53%;
+      color: #FF5C00;
+    }
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 1887px;
+    left: -289px;
+    top: -9px;
+    
+    background: rgba(3, 3, 3, 0.37);    
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 352px;
+    height: 1822px;
+    left: 3px;
+    top: -106px;
+    border-radius: 50%;
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #577EFF 0%, rgba(244, 239, 255, 0.09) 73.44%);    
+  }
+
+  .circle2 {
+    position: absolute;
+    width: 352px;
+    height: 1822px;
+    left: 3px;
+    top: 614px;
+    border-radius: 50%;
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #577EFF 0%, rgba(244, 239, 255, 0.09) 73.44%);
+  }
+
+  .circle3 {
+    position: absolute;
+    width: 352px;
+    height: 1822px;
+    left: 3px;
+    top: 1356px;
+    border-radius: 50%;
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #577EFF 0%, rgba(244, 239, 255, 0.09) 73.44%);    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 333px;
+    height: 333px;
+    left: 21px;
+    top: 32px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 285px;
+    height: 656px;
+    left: 42px;
+    top: 407px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+
+  h1 {
+    position: absolute;
+    width: 310px;
+    height: 225px;
+    left: -8px;
+    top: 1456px;
+    
+    font-family: Milonga;
+    font-size: 100px;
+    line-height: 120.53%;
+    text-align: right;
+    
+    color: #F7B100;
+    
+    // text-shadow: -2px 0 black, 0 -2px black, 2px 0 black, 0 2px black;
+    -webkit-text-stroke: 1px black;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 1009px;
+    height: 431px;
+    left: -326px;
+    top: 1657px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 1009px;
+    height: 431px;
+    left: -259px;
+    top: 1998px;    
+  }
+
+  .playButton {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    left: 126px;
+    top: 1748px;
+  }
+
+  .imageBack {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imagePlay {
+    position: absolute;
+    width: 43px;
+    height: 50px;
+    left: 37px;
+    top: 25px;
+  }
+  
+  .imagePause {
+    position: absolute;
+    width: 45px;
+    height: 51px;
+    left: 30px;
+    top: 25px;
+  }
+}

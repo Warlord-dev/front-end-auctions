@@ -1,0 +1,479 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crushed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Emblema+One&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  background: white;
+
+  a {
+    div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(67, 42, 216, 0.65) 100%);    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 960px;
+    height: 804px;
+    left: 960px;
+    top: -1px;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #6D6F12 0%, #000000 100%);    
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 960px;
+    height: 694px;
+    left: 960px;
+    top: 803px;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #A68123 0%, #000000 100%);    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 344px;
+    height: 398px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 358px;
+    height: 239px;
+    left: 568px;
+    top: 389px;
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 332px;
+    height: 332px;
+    left: 1398px;
+    top: 926px;
+    border-radius: 50%;
+    
+    background: #0836D8;    
+  }
+
+  .circle2 {
+    position: absolute;
+    width: 233px;
+    height: 233px;
+    left: 1447px;
+    top: 975px;
+    border-radius: 50%;
+    background: #03A4E3;
+  }
+
+  .circle3 {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    left: 1491px;
+    top: 1019px;
+    border-radius: 50%;
+    background: #02DAE3;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 299px;
+    height: 174px;
+    left: 1597px;
+    top: 927px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 182px;
+    height: 182px;
+    left: 980px;
+    top: 920px;
+    
+    transform: rotate(-20deg);
+  }
+
+  .image6 {
+    position: absolute;
+    width: 88.85px;
+    height: 88.85px;
+    left: 1248.5px;
+    top: 1238px;
+    transform: rotate(80deg);    
+    transform-origin: 0 0;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 88.85px;
+    height: 88.85px;
+    left: 1679px;
+    top: 1188.5px;
+    
+    transform: rotate(-80deg);
+    transform-origin: 0 0;
+  }
+
+  .video1 {
+    position: absolute;
+    width: 960px;
+    height: 514px;
+    left: 960px;
+    top: 289px;
+    object-fit: fill;
+  }
+
+  .video2 {
+    position: absolute;
+    width: 328px;
+    height: 324px;
+    left: 1264px;
+    top: 1173px;
+    object-fit: fill;
+
+    border: 7px solid #00FFC2;
+    box-sizing: border-box;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 554px;
+    height: 160px;
+    left: 382px;
+    top: 20px;
+    
+    font-family: Cormorant Upright;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 120.53%;  
+    color: #3038FF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 554px;
+    height: 160px;
+    left: 379px;
+    top: 20px;
+    
+    font-family: Cormorant Upright;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 120.53%;
+    
+    color: #000000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 294px;
+    height: 66px;
+    left: 617px;
+    top: 150px;
+    
+    font-family: Copperplate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 120.53%;  
+    color: #2400FF;
+    -webkit-text-stroke: 2px #000000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 298px;
+    height: 51px;
+    left: 643px;
+    top: 200px;
+    
+    font-family: Copperplate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 120.53%;
+    color: #2400FF;
+    -webkit-text-stroke: 2px #000000;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 314px;
+    height: 108px;
+    left: 30px;
+    top: 589px;
+    
+    font-family: Copperplate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 90%;
+    color: #2400FF;
+    -webkit-text-stroke: 1px #F04CC5;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 319px;
+    height: 84px;
+    left: 587px;
+    top: 628px;
+    
+    font-family: Copperplate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 120.53%;
+    text-align: center;
+    color: #2400FF;
+    -webkit-text-stroke: 2px #F04CC5;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 870px;
+    height: 360px;
+    left: 36px;
+    top: 705px;
+    
+    font-family: Crushed;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+
+    span {
+      color: #8F00FF;
+    }
+  }
+
+  .text8 {
+    position: absolute;
+    width: 883px;
+    height: 216px;
+    left: 36px;
+    top: 1083px;
+    
+    font-family: Cutive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 267px;
+    height: 144px;
+    left: 30px;
+    top: 1318px;
+    
+    font-family: Copperplate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120.53%;
+    color: #2400FF;
+    
+    -webkit-text-stroke: 2px #F04CC5;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 554px;
+    height: 156px;
+    left: 360px;
+    top: 1307px;
+    font-family: Electrolize;
+    font-size: 18px;
+    line-height: 120.53%;
+    text-align: right;
+    
+    color: #000000;
+
+    span {
+      font-family: Emblema One;
+      font-size: 20px;
+    }
+  }
+
+  .text11 {
+    position: absolute;
+    width: 916px;
+    height: 121px;
+    left: 982px;
+    top: 5px;
+    
+    font-family: Caudex;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 120.53%;
+    
+    text-align: center;
+    
+    background: linear-gradient(90deg, #FF3A3A 2.51%, #AB0000 91.48%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 916px;
+    height: 81px;
+    left: 982px;
+    top: 125px;
+    
+    font-family: Caudex;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 67px;
+    line-height: 120.53%;
+    
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 916px;
+    height: 60px;
+    left: 980px;
+    top: 210px;
+    
+    font-family: Caudex;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #FF8A00;
+
+    a {
+      color: #FF8A00;
+      text-decoration: underline;
+    }
+    
+  }
+
+  .text14 {
+    position: absolute;
+    width: 860px;
+    height: 72px;
+    left: 998px;
+    top: 855px;
+    
+    font-family: Caudex;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    
+  }
+
+  .text15 {
+    position: absolute;
+    width: 121px;
+    height: 144px;
+    left: 1187px;
+    top: 951px;
+    
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFD600;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 253px;
+    height: 36px;
+    left: 968px;
+    top: 1110px;
+    
+    font-family: Carrois Gothic SC;
+    font-size: 30px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #FF8A00;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 188px;
+    height: 216px;
+    left: 970px;
+    top: 1191px;
+    
+    font-family: Chalkduster;
+    font-size: 20px;
+    line-height: 120.53%;
+    text-align: right;
+    
+    color: #FFFFFF;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 138px;
+    height: 96px;
+    left: 1767px;
+    top: 1169px;
+    
+    font-family: Chalkduster;
+    font-size: 20px;
+    line-height: 120.53%;
+    text-align: right;
+    color: #FFFFFF;
+  }
+
+  .playButton {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    left: 511px;
+    top: 200px;
+    background: transparent;
+    border: none;
+
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

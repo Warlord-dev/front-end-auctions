@@ -1,0 +1,184 @@
+@import './styles.module.scss';
+
+@keyframes scrolling {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-1010px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3277px;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 3277px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: -95px;
+    top: -22px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 73px;
+    top: -22px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: -36px;
+    top: 64px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #594AFF;
+    
+    text-shadow: -2px 0 white, 0 -2px white, 2px 0 white, 0 2px white;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: -95px;
+    top: 154px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 573px;
+    height: 121px;
+    left: 144px;
+    top: 154px;
+    
+    font-family: Covered By Your Grace;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #1400FF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 206px;
+    height: 1126px;
+    left: 21px;
+    top: 282px;
+    
+    font-family: 'Pixel Berry 08/84 Ltd.Edition';
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+
+  .animationFrame {
+    animation: scrolling 8s linear infinite;
+  }
+
+  .rightSideImageWrapper {
+    background: #2CC5E7;
+    position: absolute;
+    width: 138px;
+    height: 1010px;
+    left: 237px;
+    top: 0px;
+    
+    img {
+      width: 138px;
+      object-fit: fill;
+
+      &:last-of-type {
+        margin-top: -5px;
+      }
+    }
+  }
+
+  .image2 {
+    position: absolute;
+    width: 188px;
+    height: 987px;
+    left: 90px;
+    top: 2183px;    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 101px;
+    height: 69px;
+    left: 135px;
+    top: 2230px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #000000;    
+  }
+
+  .text8 {
+    position: absolute;
+    width: 101px;
+    height: 69px;
+    left: 135px;
+    top: 2630px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #000000;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 121px;
+    height: 69px;
+    left: 125px;
+    top: 3005px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 120.53%;
+    text-align: center;
+    
+    color: #000000;
+  }
+}

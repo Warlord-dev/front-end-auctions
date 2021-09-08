@@ -1,0 +1,117 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .back1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 958px;
+    top: 0px;
+
+    background: linear-gradient(90deg, #81DDFA 0%, #7B1DC5 100%);
+  }
+
+  .image1 {
+    position: absolute;
+    width: 715px;
+    height: 156px;
+    left: 129px;
+    top: 65px;
+    z-index: 2;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 975px;
+    left: 958px;
+    top: -3px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 975px;
+    left: 958px;
+    top: 969px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 1186px;
+    height: 188px;
+    left: 738px;
+    top: 183px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 422px;
+    height: 67px;
+    left: -152px;
+    top: 0px;
+        
+  }
+
+  .image6 {
+    position: absolute;
+    width: 422px;
+    height: 67px;
+    left: 276px;
+    top: 221px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 1186px;
+    height: 188px;
+    left: 1009px;
+    top: 772px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 1186px;
+    height: 188px;
+    left: 1602px;
+    top: 1240px;
+  }
+ 
+  .image9 {
+    position: absolute;
+    width: 422px;
+    height: 67px;
+    left: 603px;
+    top: 221px;
+  }
+
+  .video1 {
+    position: absolute;
+    width: 958px;
+    height: 567px;
+    left: 0px;
+    top: 305px;
+    object-fit: cover;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 840px;
+    height: 539px;
+    left: 59px;
+    top: 921px;
+    
+    font-family: Cormorant Garamond;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+}

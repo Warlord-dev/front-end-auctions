@@ -1,0 +1,183 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  color: white;
+  display: flex;
+  position: relative;
+  background-color: #FFFFFF;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    background-color: #FF9900;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 724px;
+    height: 332px;
+    left: 42px;
+    top: 79px;
+    
+    font-family: Arima Madurai;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 140px;
+    color: #BA0000;
+    text-shadow: -5px 0 #FF0000, 0 -5px #FF0000, 5px 0 #FF0000, 0 5px #FF0000, 
+    -5px -5px #FF0000, -5px 5px #FF0000, 5px -5px #FF0000, 5px 5px #FF0000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 724px;
+    height: 332px;
+    left: 292px;
+    top: 336px;
+    
+    font-family: Arima Madurai;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 140px;
+    color: #0075FF;
+    text-shadow: -5px 0 #FF0000, 0 -5px #FF0000, 5px 0 #FF0000, 0 5px #FF0000, 
+    -5px -5px #FF0000, -5px 5px #FF0000, 5px -5px #FF0000, 5px 5px #FF0000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 724px;
+    height: 332px;
+    left: 24px;
+    top: 621px;
+    
+    font-family: Arima Madurai;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 140px;
+    color: #0075FF;
+    text-shadow: -5px 0 #FF0000, 0 -5px #FF0000, 5px 0 #FF0000, 0 5px #FF0000, 
+    -5px -5px #FF0000, -5px 5px #FF0000, 5px -5px #FF0000, 5px 5px #FF0000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 724px;
+    height: 332px;
+    left: 24px;
+    top: 859px;
+    
+    font-family: Arima Madurai;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 140px;
+    color: #FFFFFF;
+    text-shadow: -5px 0 #FF0000, 0 -5px #FF0000, 5px 0 #FF0000, 0 5px #FF0000, 
+    -5px -5px #FF0000, -5px 5px #FF0000, 5px -5px #FF0000, 5px 5px #FF0000;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 724px;
+    height: 332px;
+    left: 292px;
+    top: 1025px;
+    
+    font-family: Arima Madurai;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 140px;
+    color: #BA0000;
+    text-shadow: -5px 0 #FF0000, 0 -5px #FF0000, 5px 0 #FF0000, 0 5px #FF0000, 
+    -5px -5px #FF0000, -5px 5px #FF0000, 5px -5px #FF0000, 5px 5px #FF0000;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 668px;
+    height: 231px;
+    left: 1021px;
+    top: 661px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 150%;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 874px;
+    height: 713px;
+    left: 1018px;
+    top: 784px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 150%;
+    color: #FFFFFF;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 820px;
+    height: 432px;
+    left: 200px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: -108px;
+    top: 268px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 548px;
+    top: 668px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 738px;
+    height: 533px;
+    left: -77px;
+    top: 1066px;    
+  }
+
+  .image6 {
+    position: absolute;
+    width: 1193px;
+    height: 1045px;
+    right: 0px;
+    top: 0px;    
+  }
+
+}
+

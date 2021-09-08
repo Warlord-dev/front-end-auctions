@@ -1,0 +1,114 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2511px;
+  background-color: white;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: relative;
+    width: 375px;
+    height: 2551px;
+    left: 0;
+    top: 0;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 109px;
+    height: 109px;
+    left: 187px;
+    top: 46px;        
+  }
+
+  .image3 {
+    position: absolute;
+    width: 325px;
+    height: 324px;
+    left: -17px;
+    top: 1878px;    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 253px;
+    height: 253px;
+    left: 125px;
+    top: 2113px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 375px;
+    height: 507px;
+    left: 0px;
+    top: 100px;
+    
+    background: #BE35FF;    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 386px;
+    height: 516px;
+    left: -11px;
+    top: 690px;
+    
+    background: #BE35FF;
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 386px;
+    height: 516px;
+    left: -11px;
+    top: 1289px;
+    
+    background: #BE35FF;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 291px;
+    height: 241px;
+    left: 40px;
+    top: 131px;
+    
+    font-family: 'Zilla Slab';
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 302px;
+    height: 241px;
+    left: 29px;
+    top: 715px;
+    
+    font-family: 'Zilla Slab';
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 302px;
+    height: 241px;
+    left: 29px;
+    top: 1360px;
+    
+    font-family: 'Zilla Slab';
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  span {
+    display: inline;
+    background-color: #FFFFFF;
+    color: #BE35FF;
+  }
+}

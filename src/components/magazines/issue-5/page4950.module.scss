@@ -1,0 +1,267 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #fff;
+  .back1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: linear-gradient(180deg, #F1B670 0%, rgba(255, 254, 252, 0.03) 100%);    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 1904px;
+    height: 1479px;
+    left: 7px;
+    top: 18px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 238px;
+    height: 238px;
+    left: 683px;
+    top: 216px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    left: 1323px;
+    top: 603px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 173px;
+    height: 260px;
+    left: 391px;
+    top: 112px;
+    
+    font-family: Inter;
+    font-size: 40px;
+    line-height: 120.53%;
+    
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 276px;
+    height: 89px;
+    left: 683px;
+    top: 45px;
+    
+    font-family: Coustard;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 276px;
+    height: 89px;
+    left: 683px;
+    top: 124px;
+    
+    font-family: Coustard;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 120.53%;
+    /* or 36px */
+    
+    
+    color: #FF6060;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 219px;
+    height: 260px;
+    left: 1345px;
+    top: 503px;
+    
+    font-family: Inter;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 224px;
+    height: 260px;
+    left: 49px;
+    top: 952px;
+    
+    font-family: Artisual Deco DEMO;
+    font-size: 23px;
+    line-height: 120.53%;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 224px;
+    height: 260px;
+    left: 694px;
+    top: 965px;
+    
+    font-family: Artisual Deco DEMO;
+    font-size: 39px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 224px;
+    height: 260px;
+    left: 1012px;
+    top: 43px;
+    
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #000000;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 224px;
+    height: 260px;
+    left: 1662px;
+    top: 47px;
+    
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #000000;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 224px;
+    height: 504px;
+    left: 1010px;
+    top: 496px;
+    
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #000000; 
+  }
+
+  .text10 {
+    position: absolute;
+    width: 224px;
+    height: 337px;
+    left: 1010px;
+    top: 985px;
+    
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+
+  .text11 {
+    position: absolute;
+    width: 246px;
+    height: 306px;
+    left: 1327px;
+    top: 979px;
+    
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #000000;    
+  }
+
+  .text12 {
+    position: absolute;
+    width: 186px;
+    height: 306px;
+    left: 1683px;
+    top: 992px;
+    
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 120.53%;    
+    color: #FFFFFF;
+        
+  }
+
+  .text13 {
+    position: absolute;
+    width: 173px;
+    height: 174px;
+    left: 1673px;
+    top: 512px;
+    
+    font-family: Inter;
+    font-size: 65px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 173px;
+    height: 174px;
+    left: 1673px;
+    top: 698px;
+    
+    font-family: Inter;
+    font-size: 65px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .playButton {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 379px;
+    top: 599px;
+    border-radius: 97px;
+    
+    background: #000000;
+
+    .imagePlay {
+      margin-left: 55px;
+      margin-top: 30px;
+    }
+
+    .imagePause {
+      margin-left: 47px;
+      margin-top: 37px;
+    }
+
+    transition: transform .2s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}

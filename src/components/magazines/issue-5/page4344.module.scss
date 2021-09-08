@@ -1,0 +1,550 @@
+@import './styles.module.scss';
+.wrapper {
+  @include magazineWrapper();    
+  
+  background-color: white;
+  display: flex;
+  position: relative;
+
+  .back1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(128, 150, 230, 0.51);
+  }
+
+  .back2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    
+    background: rgba(189, 61, 169, 0.47);
+  }
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image21 {
+    position: absolute;
+    width: 270.47px;
+    height: 268.6px;
+    left: 55px;
+    top: 56px;
+  }
+
+  .image22 {
+    position: absolute;
+    width: 270.47px;
+    height: 268.6px;
+    left: 24px;
+    top: 500px;
+  }
+
+  .image23 {
+    position: absolute;
+    width: 270.47px;
+    height: 268.6px;
+    left: 336px;
+    top: 365px;
+  }
+
+  .image24 {
+    position: absolute;
+    width: 270.47px;
+    height: 268.6px;
+    left: 659px;
+    top: 231px;
+  }
+
+  .image31 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 44px;
+    top: 896px;
+  }
+
+  .image32 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 55px;
+    top: 1228px;
+  }
+
+  .image33 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 342px;
+    top: 698px;
+  }
+
+  .image34 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 351px;
+    top: 1073px;
+  }
+
+  .image35 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 659px;
+    top: 587px;
+  }
+
+  .image36 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 659px;
+    top: 897px;    
+  }
+
+  .image37 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 655px;
+    top: 1228px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 507px;
+    height: 83px;
+    left: 424px;
+    top: 45px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 505px;
+    height: 180px;
+    left: 424px;
+    top: 100px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 892px;
+    height: 1497px;
+    left: 1030px;
+    top: 0px;
+  }
+
+  .video1 {
+    position: absolute;
+    width: 960px;
+    height: 544px;
+    left: 960px;
+    top: 0px;
+    
+    object-fit: cover;
+  }
+
+
+  .image71 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 1647px;
+    top: 559px;
+  }
+
+  .image72 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 1647px;
+    top: 615px;
+    
+  }
+
+  .image73 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 1647px;
+    top: 671px;
+  }
+
+  .image74 {
+    position: absolute;
+    width: 260px;
+    height: 56.05px;
+    left: 1647px;
+    top: 726px;
+  }
+
+  .protocol1 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 965px;
+    top: 569px;    
+  }
+
+  .protocol2 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1083px;
+    top: 569px;
+  }
+
+  .protocol3 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1201px;
+    top: 569px;
+  }
+
+  .protocol4 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1319px;
+    top: 569px;
+  }
+
+  .protocol5 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1437px;
+    top: 569px;
+  }
+
+  .protocol6 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 965px;
+    top: 682px    
+  }
+
+  .protocol7 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1083px;
+    top: 682px;
+  }
+
+  .protocol8 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1201px;
+    top: 682px;
+    
+  }
+
+  .protocol9 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1319px;
+    top: 682px;
+  }
+
+  .protocol10 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1437px;
+    top: 682px;
+    
+  }
+
+  .protocol11 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 965px;
+    top: 797px;
+  }
+
+  .protocol12 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1083px;
+    top: 797px;
+  }
+
+  .protocol13 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1201px;
+    top: 797px;
+  }
+
+  .protocol14 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1319px;
+    top: 797px;
+  }
+
+  .protocol15 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1437px;
+    top: 797px;
+  }
+
+  .video2 {
+    position: absolute;
+    width: 270.47px;
+    height: 268.6px;
+    left: 55px;
+    top: 56px;
+    object-fit: cover;
+    padding: 30px;
+  }
+
+  .video3 {
+    position: absolute;
+    width: 270.47px;
+    height: 268.6px;
+    left: 336px;
+    top: 365px;
+    object-fit: fill;
+    padding: 30px;
+  }
+
+  .video4 {
+    position: absolute;
+    width: 270.47px;
+    height: 268.6px;
+    left: 659px;
+    top: 231px;
+    object-fit: fill;
+    padding: 30px;
+  }
+
+  .video5 {
+    position: absolute;
+    width: 270.47px;
+    height: 268.6px;
+    left: 24px;
+    top: 500px;
+    object-fit: fill;
+    padding: 30px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 342px;
+    top: 698px;
+    object-fit: fill;
+    padding: 30px;
+  }
+
+  .video6 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 44px;
+    top: 896px;
+    object-fit: cover;
+    padding: 30px;
+  }
+
+  .video7 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 55px;
+    top: 1228px;
+    object-fit: fill;
+    padding: 30px;        
+  }
+
+  .video8 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 659px;
+    top: 587px;
+    object-fit: fill;
+    padding: 30px;        
+    
+  }
+
+  .video9 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 351px;
+    top: 1073px;
+    object-fit: fill;
+    padding: 30px;        
+    
+  }
+
+  .video10 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 659px;
+    top: 897px;
+    object-fit: fill;
+    padding: 30px;
+  }
+  
+  .video11 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 655px;
+    top: 1228px;
+    object-fit: cover;
+    padding: 30px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 909px;
+    height: 112px;
+    left: 985px;
+    top: 24px;
+    
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0px 4px 4px #FF0D0D;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 528px;
+    height: 22px;
+    left: 995px;
+    top: 931px;
+    
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0px 4px 4px #FF0D0D;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 528px;
+    height: 22px;
+    left: 995px;
+    top: 975px;
+    
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0px 4px 4px #FF0D0D;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 386px;
+    height: 386px;
+    left: 1247px;
+    top: 107px;    
+  }
+
+  .image10 {
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    left: 1030px;
+    top: 1045px;
+    
+  }
+
+  .image11 {
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    left: 1545px;
+    top: 907px;
+  }
+
+  .image12 {
+    position: absolute;
+    width: 386px;
+    height: 386px;
+    left: 1247px;
+    top: 107px;
+    padding: 40px;    
+  }
+
+  .video12 {
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    left: 1030px;
+    top: 1045px;
+    padding: 40px;
+    object-fit: cover;
+  }
+
+  .video13 {
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    left: 1545px;
+    top: 907px;
+    padding: 40px;
+    object-fit: cover;
+  }
+
+  .video14 {
+    position: absolute;
+    width: 269px;
+    height: 269px;
+    left: 342px;
+    top: 698px;
+    object-fit: cover;
+    padding: 30px;   
+  }
+}

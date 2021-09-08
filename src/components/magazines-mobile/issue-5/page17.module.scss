@@ -1,0 +1,166 @@
+@import './styles.module.scss';
+
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-605px); }
+}
+
+.wrapper {
+  @include magazineWrapper();
+  height: 3093px;
+  background-color: white;
+  color: black;
+  position: relative;
+  white-space: normal;
+
+  .image1 {
+    position: absolute;
+    width: 375px;
+    height: 2784px;
+    left: 0px;
+    top: 155px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 375px;
+    height: 1361px;
+    left: 0px;
+    top: 201px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 375px;
+    height: 1361px;
+    left: 0px;
+    top: 1578px;
+  }
+
+  .image4 {
+    position: absolute;
+    left: 0.49%;
+    right: 38.44%;
+    top: 14.71%;
+    bottom: 74.32%;
+    
+    transform: rotate(15deg);
+    transform-origin: 0 0;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 375px;
+    height: 2148px;
+    left: 0px;
+    top: 791px;    
+  }
+
+  .topSideFrame {
+    position: absolute;
+    width: 1497px;
+    height: 155px;
+    left: 0;
+    top: 0;
+    background-color: #ff3636;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+  }
+
+  .bottomSideFrame {
+    position: absolute;
+    width: 1497px;
+    height: 155px;
+    left: 0;
+    bottom: 0;
+    background-color: #ff3636;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+  }
+
+  .animationFrame {
+    animation: scrolling 4s linear infinite;
+  }
+
+  .topSideImageWrapper {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    width: 2400px;
+    height: 47px;
+    display: flex;
+  }
+
+  .bottomSideImageWrapper {
+    position: absolute;
+    left: 0px;
+    width: 2400px;
+    top: 2990px;
+    height: 47px;
+    display: flex;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 428px;
+    height: 367px;
+    left: 64px;
+    top: 301px;
+    
+    font-family: Encode Sans Semi Expanded;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    
+    text-shadow: -4px 0 #00BEDD, 0 -4px #00BEDD, 4px 0 #00BEDD, 0 4px #00BEDD, -4px -4px #00BEDD, -4px 4px #00BEDD, 4px -4px #00BEDD, 4px 4px #00BEDD;
+  }
+
+  .image5 {
+    position: absolute;
+    left: 354.59px;
+    top: 1007.17px;
+    width: 109.46px;
+    height: 210.05px;
+
+    transform: rotate(103.68deg);
+    transform-origin: 0 0;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 375px;
+    height: 138px;
+    left: 26px;
+    top: 829px;
+    
+    font-family: Encode Sans Semi Expanded;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120.53%;
+
+    color: #FFFFFF;
+    -webkit-text-stroke: 2px #FF0303;
+  }
+
+  .playButton {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+    left: 133px;
+    top: 1096px;
+    
+    background: transparent;
+    border: none;
+    
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+}

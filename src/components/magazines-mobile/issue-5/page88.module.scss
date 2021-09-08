@@ -1,0 +1,297 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  height: 2632px;
+  background-color: rgba(0, 41, 255, 0.81);
+  color: white;
+  display: flex;
+  position: relative;
+
+  .textPatternWrapper {
+    position: absolute;
+    top: 0px;
+    opacity: 0.5;
+
+    .textPattern {
+      width: 486px;
+      height: 24px;
+      margin-left: -78px;
+      margin-top: 20px;
+      
+      font-family: MUSICNET;
+      font-size: 20px;
+      line-height: 120.53%;
+      color: #00FF66;
+    }
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 375px;
+    height: 1387px;
+    left: 0px;
+    top: 417px;
+    
+    background: rgba(3, 3, 3, 0.37);    
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 733px;
+    height: 742px;
+    left: -173px;
+    top: 445px;
+    border-radius: 50%;
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #8951FF 0%, rgba(244, 239, 255, 0.09) 74.48%);    
+  }
+
+  .circle2 {
+    position: absolute;
+    width: 733px;
+    height: 742px;
+    left: -245px;
+    top: 1360px;
+    border-radius: 50%;
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #8951FF 0%, rgba(244, 239, 255, 0.09) 74.48%);
+  }
+
+  .circle3 {
+    position: absolute;
+    width: 352px;
+    height: 1822px;
+    left: 164px;
+    top: 755px;
+    border-radius: 50%;
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #FA00FF 0%, rgba(244, 239, 255, 0.09) 74.48%, rgba(244, 239, 255, 0.09) 100%);    
+  }
+
+  .circle4 {
+    position: absolute;
+    width: 352px;
+    height: 873px;
+    left: 0px;
+    top: 1847px;
+    border-radius: 50%;
+    background: radial-gradient(89.98% 89.98% at 50% 50%, #FA00FF 0%, rgba(244, 239, 255, 0.09) 74.48%, rgba(244, 239, 255, 0.09) 100%);
+  }
+
+  .image1 {
+    position: absolute;
+    width: 320px;
+    height: 572px;
+    left: 28px;
+    top: 35px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 177px;
+    height: 31px;
+    left: 47px;
+    top: 647px;
+    
+    font-family: JMH Extra Wide;
+    font-size: 8px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 292px;
+    height: 455px;
+    left: 47px;
+    top: 678px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 336px;
+    height: 121px;
+    left: -4px;
+    top: 1371px;
+    
+    font-family: Medula One;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 2px #FFF386;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 336px;
+    height: 121px;
+    left: -69px;
+    top: 1458px;
+    
+    font-family: Medula One;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 2px #FFF386;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 336px;
+    height: 121px;
+    left: 217px;
+    top: 1454px;
+    
+    font-family: Medula One;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 2px #FFF386;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 336px;
+    height: 121px;
+    left: -155px;
+    top: 1556px;
+    
+    font-family: Medula One;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 2px #FFF386;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 336px;
+    height: 121px;
+    left: 129px;
+    top: 1553px;
+    
+    font-family: Medula One;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 2px #FFF386;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 336px;
+    height: 121px;
+    left: -214px;
+    top: 1660px;
+    
+    font-family: Medula One;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 2px #FFF386;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 336px;
+    height: 121px;
+    left: 83px;
+    top: 1660px;
+    
+    font-family: Medula One;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 2px #FFF386;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 336px;
+    height: 121px;
+    left: -124px;
+    top: 1755px;
+    
+    font-family: Medula One;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 2px #FFF386;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 336px;
+    height: 121px;
+    left: 181px;
+    top: 1755px;
+    
+    font-family: Medula One;
+    font-size: 100px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 2px #FFF386;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    left: 101px;
+    top: 2370px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 1000px;
+    height: 500px;
+    left: -249px;
+    top: 1794px;    
+  }
+
+  .playButton {
+    position: absolute;
+    width: 157px;
+    height: 157px;
+    left: 85px;
+    top: 1165px;
+  }
+
+  .imageBack {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imagePlay {
+    position: absolute;
+    width: 69px;
+    height: 80px;
+    left: 55px;
+    top: 35px;
+  }
+  
+  .imagePause {
+    position: absolute;
+    width: 65px;
+    height: 71px;
+    left: 47px;
+    top: 40px;
+  }
+}

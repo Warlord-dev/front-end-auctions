@@ -1,0 +1,96 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@700&display=swap');
+
+.wrapper {
+  @include magazineWrapper(); 
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;    
+  }
+
+  a {
+    div {
+      transition: transform .2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .text1 {
+    position: absolute;
+    width: 333px;
+    height: 42px;
+    left: 32px;
+    top: 10px;
+    
+    font-family: 'Cormorant Unicase';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 120.53%;
+    color: #FFFFFF;        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 346px;
+    height: 188px;
+    left: 33px;
+    top: 52px;
+    
+    font-family: Cormorant Unicase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 120.53%;
+    
+    color: #E1CBCE;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 193px;
+    height: 48px;
+    left: 998px;
+    top: 1351px;
+    
+    font-family: Cousine;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120.53%;
+    /* or 48px */
+    
+    
+    color: #38C0B0;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 884px;
+    height: 98px;
+    left: 998px;
+    top: 1399px;
+    
+    font-family: Cherry Swash;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 120.53%;
+    color: #0029FF;
+  }
+}
