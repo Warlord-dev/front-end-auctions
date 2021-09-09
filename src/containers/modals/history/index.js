@@ -13,6 +13,7 @@ import { getModalParams } from '@selectors/modal.selectors';
 import {
   getDigitalaxGarmentPurchaseHistories,
   getDigitalaxGarmentV2PurchaseHistories,
+  getDigitalaxMarketplacePurchaseHistories,
   getDigitalaxMarketplaceV2PurchaseHistories,
 } from '@services/api/apiService';
 import { getChainId } from '@selectors/global.selectors';
@@ -20,7 +21,7 @@ import Loader from '@components/loader';
 
 const History = ({ className, title, type }) => {
   const dispatch = useDispatch();
-  const { tokenIds } = useSelector(getModalParams);
+  const { tokenIds, v1 } = useSelector(getModalParams);
   const chainId = useSelector(getChainId);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -48,9 +49,14 @@ const History = ({ className, title, type }) => {
           }
           setLoading(false);
         } else {
-          const { digitalaxMarketplaceV2PurchaseHistories } =
-            await getDigitalaxMarketplaceV2PurchaseHistories(chainId, tokenIds);
-          setHistory(digitalaxMarketplaceV2PurchaseHistories);
+          if (!v1) {
+            const { digitalaxMarketplaceV2PurchaseHistories } =
+              await getDigitalaxMarketplaceV2PurchaseHistories(chainId, tokenIds);
+              setHistory(digitalaxMarketplaceV2PurchaseHistories);
+          } else {
+            const { digitalaxMarketplacePurchaseHistories } = await getDigitalaxMarketplacePurchaseHistories(chainId, tokenIds);
+            setHistory(digitalaxMarketplacePurchaseHistories);
+          }
           setLoading(false);
         }
       };

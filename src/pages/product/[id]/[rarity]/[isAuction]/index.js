@@ -4,12 +4,13 @@ import { useRouter } from 'next/router';
 import ImageCard from '@components/image-card';
 import styles from './styles.module.scss';
 import InfoCard from '@components/info-card';
-import NewButton from '@components/buttons/newbutton';
 import BannerButton from '@components/buttons/bannerbutton';
 import Container from '@components/container';
 import {
+  getDigitalaxMarketplaceOffer,
   getDigitalaxMarketplaceV2Offer,
   getGarmentByAuctionId,
+  getGarmentByCollectionId,
   getGarmentV2ByAuctionId,
   getGarmentV2ByCollectionId,
 } from '@services/api/apiService';
@@ -70,10 +71,31 @@ const Product = () => {
       description: `Exclusive W3FW Decentraland In-Game Digital Fashion Memorabilia Bomber Jacket! View it also through the DressX AR Try On filter and head over to DRIP to purchase the physical varsity jacket version to rep IRL!`,
     },
   ];
-
+  
   useEffect(() => {
-    if (id) {
-      const fetchGarmentV2ByID = async () => {
+    const fetchGarmentV2ByID = async () => {
+      if (id.indexOf('v1') >= 0) {
+        const v1Id = id.split('-')[1];
+        const { digitalaxGarmentCollection } = await getGarmentByCollectionId(chainId, v1Id);
+        if (digitalaxGarmentCollection.id) {
+          const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffer(chainId, digitalaxGarmentCollection.id);
+          setTokenIds(digitalaxMarketplaceOffers[0].garmentCollection?.garments?.map((garment) => garment.id));
+          setOffer({
+            id: digitalaxMarketplaceOffers[0].id,
+            primarySalePrice: digitalaxMarketplaceOffers[0].primarySalePrice,
+            startTime: digitalaxMarketplaceOffers[0].startTime,
+            endTime: digitalaxMarketplaceOffers[0].startTime,
+            amountSold: digitalaxMarketplaceOffers[0].amountSold,
+            totalAmount: 64,
+          });
+          setProduct({
+            id: digitalaxGarmentCollection.id,
+            garment: digitalaxGarmentCollection.garments[0],
+            designer: null,
+            developer: null,
+          });
+        }
+      } else if (id) {
         if (!parseInt(isAuction)) {
           const { digitalaxGarmentV2Collection } = await getGarmentV2ByCollectionId(chainId, id);
           if (digitalaxGarmentV2Collection.id) {
@@ -114,8 +136,8 @@ const Product = () => {
         }
       };
 
-      fetchGarmentV2ByID();
     }
+    fetchGarmentV2ByID();
 
     const secondDesigner = secondDesignerData.find((item) => {
       return item.id == id && item.rarity == rarity && item.isAuction == isAuction;
@@ -161,6 +183,7 @@ const Product = () => {
       dispatch(
         openPurchaseHistoryModal({
           tokenIds,
+          v1: id.includes('v1')
         }),
       );
     }
@@ -287,33 +310,37 @@ const Product = () => {
         </>
       ) : null}
 
-      <section className={styles.globalDesignerNetwork}>
-        <img src="/images/metaverse/global_designer_network.png" className={styles.title} />
-        <div className={styles.text}>
-          These radical fashion anarchists have dared to come together, while maintaining self
-          sovereign independence, to disrupt the entire fashion industry as we know it and create
-          greater wealth for all of web3 in the process. The highlight of W3FW is the GDN Endowment
-          Auction for forming as an on-chain DAO. This is not just another DAO as a mechanism. We
-          live decentralisation as a movement. This DAO is revolutionary without remorse. Every
-          member is coming together, whilst maintaining sovereign independence, to outcompete the
-          old industries and practices. Goodbye tradfash. Hello real web3 metaversal fashion. The
-          DAO treasury will be responsible for actively growing and building out the network’s
-          reach, distribution and impact through. 60% of proceeds from this Auction will go to the
-          GDN DAO treasury as the network moves completely on-chain and leads up to the launch of
-          the $GDN governance token.
-        </div>
-        <a
-          href="https://blog.digitalax.xyz/global-designer-network-dao-auction-governance-token-launch-w3fw-abe09ce1c5d0"
-          target="_blank"
-          className={styles.link}
-        >
-          <div className={styles.linkWrapper}>
-            <BannerButton text="read more about the gdn dao" />
-          </div>
-        </a>
-      </section>
+      {!id.includes('v1') && id !== '1' ? (
+        <>
+          <section className={styles.globalDesignerNetwork}>
+            <img src="/images/metaverse/global_designer_network.png" className={styles.title} />
+            <div className={styles.text}>
+              These radical fashion anarchists have dared to come together, while maintaining self
+              sovereign independence, to disrupt the entire fashion industry as we know it and create
+              greater wealth for all of web3 in the process. The highlight of W3FW is the GDN Endowment
+              Auction for forming as an on-chain DAO. This is not just another DAO as a mechanism. We
+              live decentralisation as a movement. This DAO is revolutionary without remorse. Every
+              member is coming together, whilst maintaining sovereign independence, to outcompete the
+              old industries and practices. Goodbye tradfash. Hello real web3 metaversal fashion. The
+              DAO treasury will be responsible for actively growing and building out the network’s
+              reach, distribution and impact through. 60% of proceeds from this Auction will go to the
+              GDN DAO treasury as the network moves completely on-chain and leads up to the launch of
+              the $GDN governance token.
+            </div>
+            <a
+              href="https://blog.digitalax.xyz/global-designer-network-dao-auction-governance-token-launch-w3fw-abe09ce1c5d0"
+              target="_blank"
+              className={styles.link}
+            >
+              <div className={styles.linkWrapper}>
+                <BannerButton text="read more about the gdn dao" />
+              </div>
+            </a>
+          </section>
 
-      <FashionList fashionData={fashionData} collections={product} />
+          <FashionList fashionData={fashionData} collections={product} />
+        </>
+      ) : null}
     </div>
   );
 };

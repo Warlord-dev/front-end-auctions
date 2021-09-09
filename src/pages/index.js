@@ -1,23 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Router } from 'next/router';
 import Head from 'next/head';
-import { getCollectionV2ByIds } from '@services/api/apiService';
+import { getCollectionGroups, getDigitalaxGarmentCollections, getDigitalaxMarketplaceOffers, getDigitalaxMarketplaceV2Offers } from '@services/api/apiService';
 import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import Container from '@components/container';
-import DesignerList from '@containers/designer-network';
-import GarmentSquareList from '@containers/designer-network/imageCard';
 import Link from 'next/link';
-import BannerBar from '@components/banner-bar';
-import BannerBlue from '@components/banner-blue';
-import BannerPink from '@components/banner-pink';
-import pysicals from '../data/drip.json';
+import ProductInfoCard from '@components/product-info-card';
 
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
-  const [digital, setDigital] = useState([]);
-  const digitalIds = ['358', '359', '360', '361', '362', '363', '364', '365', '366'];
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     import('react-facebook-pixel')
@@ -34,8 +28,71 @@ const LandingPage = () => {
 
   useEffect(() => {
     const fetchCollectionGroups = async () => {
-      const { digitalaxGarmentV2Collections } = await getCollectionV2ByIds(chainId, digitalIds);
-      setDigital(digitalaxGarmentV2Collections.map(collection => collection.garments[0]));
+      const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
+      const { digitalaxGarmentCollections } = await getDigitalaxGarmentCollections(chainId);
+      const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffers(chainId);
+      const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offers(chainId);
+
+      const prods = [];
+
+      [...digitalaxCollectionGroups.slice(1), digitalaxCollectionGroups[0]]
+        .forEach((collectionGroup) => {
+          if (collectionGroup.auctions.length > 1 || collectionGroup.auctions.length === 1 && collectionGroup.auctions[0].id !== '0') {
+            collectionGroup.auctions.forEach((auction) => {
+              prods.push({
+                id: auction.id,
+                designer: auction.designer,
+                topBid: auction.topBid,
+                garment: auction.garment,
+                rarity: 'Exclusive',
+                auction: true,
+                version: 2,
+              });
+            });
+          }
+          if (collectionGroup.collections.length > 1 || collectionGroup.collections.length === 1 && collectionGroup.collections[0].id !== '0') {
+            collectionGroup.collections.forEach((collection) => {
+              const offer = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id);
+              prods.push({
+                id: collection.id,
+                designer: collection.designer,
+                rarity: collection.rarity,
+                garment: collection.garments[0],
+                primarySalePrice: offer ? offer.primarySalePrice : 0,
+                auction: false,
+                version: 2,
+              });
+            });
+          }
+          if (collectionGroup.digiBundle.length > 1 || collectionGroup.digiBundle.length === 1 && collectionGroup.digiBundle[0].id !== '0') {
+            collectionGroup.digiBundle.forEach((collection) => {
+              const offer = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id);
+              prods.push({
+                id: collection.id,
+                designer: collection.designer,
+                primarySalePrice: offer ? offer.primarySalePrice : 0,
+                rarity: collection.rarity,
+                garment: collection.garments[0],
+                auction: false,
+                version: 2,
+              });
+            });
+          }
+        });
+
+      digitalaxGarmentCollections.forEach((collection) => {
+        const offer = digitalaxMarketplaceOffers.find((offer) => offer.id === collection.id);
+        prods.push({
+          id: collection.id,
+          garment: collection.garments[0],
+          primarySalePrice: offer ? offer.primarySalePrice : 0,
+          rarity: collection.rarity,
+          auction: false,
+          version: 1,
+        });
+      });
+
+      setProducts(prods);
     };
     fetchCollectionGroups();
   }, []);
@@ -74,130 +131,33 @@ const LandingPage = () => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
-      <section className={styles.heroSection}>
-        <video width="100%" autoPlay muted loop playsInline>
-          <source src="/video/web3fashionweek.mp4" type="video/mp4" />
-        </video>
-        <GarmentSquareList />
+      <section className={styles.homeHeroSection}>
+        <img src="/images/metaverse/web3fashion.png" className={styles.heroLogo} />
 
-        <div className={styles.designer}>
-          <Link href="/collections">
-            <a className={styles.heroSectionLink}>
-              Web3 Fashion <br />
-              Market >
-            </a>
-          </Link>
-        </div>
-      </section>
-
-      <section className={styles.globalDesignerNetwork}>
-        <DesignerList />
-      </section>
-
-      <section className={styles.fashionWeekScheduleSection}>
-        <img className={styles.topImageTitle} src="/images/fashionActionTitle.png" />
-        <img className={styles.backImage} src="/images/fashionAction.png" />
-        <Link href="/marketplace/auctions/3/">
-          <h3 className={styles.fashionWeekLink}>Shop the GDN Auction ></h3>
+        <Link href="/collections">
+          <a className={styles.heroSectionLink}>
+            View All Collections >
+          </a>
         </Link>
-        <a href="https://blog.digitalax.xyz/global-designer-network-dao-auction-governance-token-launch-w3fw-abe09ce1c5d0" target="_blank">
-          <div className={styles.readmoreText}>
-            Read more about our <br /> DAO here.
-          </div>
-        </a>
-        <div className={styles.markText}>
-          The Global Designer Network is initiating as an on-chain DAO.
-        </div>
-      </section>
-      <marquee>
-        <img className={styles.bottomImageText} src="/images/fashionActionText.png" />
-      </marquee>
-
-      <section className={styles.seenAndBeeSeenSection}>
-        <img src="/images/beseentext.png" />
-        <ul className={styles.rightArrowBtn}>
-          <li>
-            {' '}
-            <Link href="/collections">
-              <a>
-                <img className={styles.backImage} src="/images/arrowLink.png" />
-              </a>
-            </Link>
-          </li>
-          <li>
-            {' '}
-            <Link href="/collections">
-              <a>
-                <img className={styles.backImage} src="/images/arrowLink.png" />
-              </a>
-            </Link>
-          </li>
-          <li>
-            {' '}
-            <Link href="/collections">
-              <a>
-                <img className={styles.backImage} src="/images/arrowLink.png" />
-              </a>
-            </Link>
-          </li>
-        </ul>
       </section>
 
-      <section className={styles.bannerSection}>
-        <BannerBar className={styles.homeHeroBar} type={1}/>
-        <Container>
-          <div className={styles.cardWrapper}>
-            <BannerBlue
-              products={pysicals}
-              rarity={'Semi-Rare'}
-            />
-          </div>
-        </Container>
-      </section>
-
-      <section className={styles.bannerPinkSection}>
-        <Container>
-          <div className={styles.cardWrapper}>
-            <BannerPink
-              products={digital}
-              rarity={'Semi-Rare'}
-            />
-          </div>
-        </Container>
-      </section>
-
-      <section className={styles.weekNtfs}>
-        <img className={styles.imgTitleWeekNtfs} src="/images/weekNtfstext.png" />
-        <div className={styles.row50}>
-          <div className={styles.imgWrapperWeekNtfs}>
-            <img src="/images/weekNtfsframe.png" />
-            <p>
-              wear to defi stake your nft for $mona <a href="https://staking.digitalax.xyz">HERE</a>
-            </p>
-          </div>
-          <div className={styles.imgWrapperWeekNtfs}>
-            <img src="/images/weekNtfsframe.png" />
-            <p>Unique pfp collectible avatar W/ in-game utility</p>
-          </div>
-          <div className={styles.imgWrapperWeekNtfs}>
-            <img src="/images/weekNtfsframe.png" />
-            <p>Original 3d model fbx file included</p>
-          </div>
-          <div className={styles.imgWrapperWeekNtfs}>
-            <img src="/images/weekNtfsframe.png" />
-            <p>Fractional garment ownership erc-1155 open source pattern</p>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.liveSection}>
-        <span>
-          <img className={styles.liveText} src="/images/liveText.png" />
-          <video autoPlay muted loop className={styles.liveArea}>
-            <source src="/images/metaverse/Web Fashion Week.mp4" type="video/mp4" />
-          </video>
-        </span>
-      </section>
+      <Container>
+        <section className={styles.collectionsWrapper}>
+          {products.map((prod) => {
+            return (
+              <>
+                <ProductInfoCard
+                  product={prod}
+                  price={prod.auction ? prod.topBid : prod.primarySalePrice}
+                  v1={prod.version === 1}
+                  showRarity
+                  isAuction={prod.auction}
+                />
+              </>
+            )
+          })}
+        </section>
+      </Container>
     </div>
   );
 };

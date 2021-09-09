@@ -2,9 +2,75 @@
 
 .wrapper {
   background-color: black;
+  background-image: url('/images/metaverse/viewallskinsbg (1).png');
+  background-size: 100%;
+  background-repeat: repeat;
   color: white;
   width: 100%;
   font-family: 'Inter';
+
+  .homeHeroSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('/images/metaverse/modal_texture.png');
+    padding: 0rem 2.5rem;
+    padding-top: 10rem;
+    padding-bottom: 7.5rem;
+
+    @include md-width {
+      flex-direction: row;
+      padding: 0rem 7.5rem;
+      padding-top: 10rem;
+      padding-bottom: 7.5rem;
+    }
+
+    .heroLogo {
+      width: 100%;
+
+      @include md-width {
+        width: 60%;
+      }
+    }
+
+    .heroSectionLink {
+      color: white;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 27px;
+      line-height: 40px;
+      color: #ffffff;
+      margin-right: 20px;
+      color: #ffffff;
+      text-align: left;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+
+      @include md-width {
+        margin-top: 0;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .collectionsWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: transparent;
+    column-gap: 5rem;
+    row-gap: 10rem;
+    padding: 7rem 2rem;
+
+    @include lg-width {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
   .heroSection {
     position: relative;

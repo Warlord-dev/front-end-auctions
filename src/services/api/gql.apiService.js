@@ -23,7 +23,7 @@ export const COLLECTIONSV2 = gql`
 
 export const COLLECTION_GROUPS = gql`
   query digitalaxCollectionGroups {
-    digitalaxCollectionGroups(first: 100, skip: 2) {
+    digitalaxCollectionGroups(first: 100, skip: 1) {
       id
       auctions {
         id
@@ -42,6 +42,7 @@ export const COLLECTION_GROUPS = gql`
       }
       collections {
         id
+        rarity
         garments(first: 1) {
           id
           animation
@@ -57,6 +58,7 @@ export const COLLECTION_GROUPS = gql`
       }
       digiBundle {
         id
+        rarity
         garments(first: 1) {
           id
           animation
@@ -73,6 +75,33 @@ export const COLLECTION_GROUPS = gql`
     }
   }
 `;
+
+export const DIGITALAX_GARMENT_COLLECTIONS = gql`
+query digitalaxGarmentCollections {
+  digitalaxGarmentCollections(first:10) {
+    id
+    rarity
+    valueSold
+    garments(first: 1) {
+      id
+      animation
+      name
+    }
+  }
+}
+`;
+
+export const DIGITALAX_MARKETPLACE_OFFERS = gql`
+query digitalaxMarketplaceOffers {
+  digitalaxMarketplaceOffers(first: 10) {
+    id
+    primarySalePrice
+    garmentCollection {
+      id
+    }
+  }
+}
+`
 
 export const COLLECTION_GROUP_BY_ID = gql`
   query digitalaxCollectionGroup($id: ID!) {
@@ -252,6 +281,22 @@ export const DIGITALAX_MARKETPLACE_V2_OFFER = gql`
   }
 `
 
+export const DIGITALAX_MARKETPLACE_OFFER = gql`
+query digitalaxMarketplaceOffers($garmentCollection: String!) {
+  digitalaxMarketplaceOffers(where: { garmentCollection: $garmentCollection }) {
+    id
+    primarySalePrice
+    startTime
+    amountSold
+    garmentCollection {
+      garments(first: 1000) {
+        id
+      }
+    }
+  }
+}
+`
+
 export const DIGITALAX_MARKETPLACE_V2_OFFERS = gql`
   query digitalaxMarketplaceV2Offers {
     digitalaxMarketplaceV2Offers (first: 1000, where: {garmentCollection_gte: "0"}) {
@@ -279,6 +324,19 @@ export const DIGITALAX_MARKETPLACE_V2_PURCHASE_HISTORIES = gql`
     }
   }
 `;
+
+export const DIGITALAX_MARKETPLACE_PURCHASE_HISTORIES = gql`
+query digitalaxMarketplacePurchaseHistories($ids: [ID!]) {
+  digitalaxMarketplacePurchaseHistories(where: {token_in: $ids}) {
+    id
+    timestamp
+    transactionHash
+    buyer
+    eventName
+    value
+  }
+}
+`
 
 export const DIGITALAX_GARMENT_V2_PURCHASE_HISTORIES = gql`
   query digitalaxGarmentV2PurchaseHistories($id: ID) {

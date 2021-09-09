@@ -9,7 +9,7 @@ import { getRarityId } from '@utils/helpers';
 import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import { useRouter } from 'next/router';
 
-const ProductInfoCard = ({ product, price, showCollectionName = false, showRarity = false, isAuction = false }) => {
+const ProductInfoCard = ({ product, price, showCollectionName = false, showRarity = false, isAuction = false, v1 = false }) => {
   const router = useRouter();
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
@@ -26,7 +26,7 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
 
   const onBuyNow = () => {
     router
-      .push(`/product/${product?.id}/${getRarityId(product?.rarity)}/${isAuction ? 1 : 0}`)
+      .push(`/product/${v1 ? `v1-${product?.id}` : product?.id}/${getRarityId(product?.rarity)}/${isAuction ? 1 : 0}`)
       .then(() => window.scrollTo(0, 0));
   };
 
@@ -61,6 +61,7 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
           showButton={false}
           isAuction={isAuction}
           withLink
+          v1={v1}
         />
       </div>
       <div className={styles.infoCardWrapper}>
