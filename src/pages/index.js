@@ -25,6 +25,24 @@ const LandingPage = () => {
         });
       });
   }, []);
+      
+  const shuffle = (array) => {
+    var currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
 
   useEffect(() => {
     const fetchCollectionGroups = async () => {
@@ -35,7 +53,9 @@ const LandingPage = () => {
 
       const prods = [];
 
-      [...digitalaxCollectionGroups.slice(1), digitalaxCollectionGroups[0]]
+      const reoderedCollectionGroups = [...digitalaxCollectionGroups.slice(1), digitalaxCollectionGroups[0]];
+
+      shuffle(reoderedCollectionGroups)
         .forEach((collectionGroup) => {
           if (collectionGroup.auctions.length > 1 || collectionGroup.auctions.length === 1 && collectionGroup.auctions[0].id !== '0') {
             collectionGroup.auctions.forEach((auction) => {
