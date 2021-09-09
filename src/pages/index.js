@@ -28,56 +28,57 @@ const LandingPage = () => {
 
   useEffect(() => {
     const fetchCollectionGroups = async () => {
-      const { digitalaxCollectionGroups } = await getCollectionGroups(chainId)
-      const { digitalaxGarmentCollections } = await getDigitalaxGarmentCollections(chainId)
+      const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
+      const { digitalaxGarmentCollections } = await getDigitalaxGarmentCollections(chainId);
       const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffers(chainId);
       const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offers(chainId);
 
       const prods = [];
 
-      digitalaxCollectionGroups.forEach((collectionGroup) => {
-        if (collectionGroup.auctions.length > 1 || collectionGroup.auctions.length === 1 && collectionGroup.auctions[0].id !== '0') {
-          collectionGroup.auctions.forEach((auction) => {
-            prods.push({
-              id: auction.id,
-              designer: auction.designer,
-              topBid: auction.topBid,
-              garment: auction.garment,
-              rarity: 'Exclusive',
-              auction: true,
-              version: 2,
+      [...digitalaxCollectionGroups.slice(1), digitalaxCollectionGroups[0]]
+        .forEach((collectionGroup) => {
+          if (collectionGroup.auctions.length > 1 || collectionGroup.auctions.length === 1 && collectionGroup.auctions[0].id !== '0') {
+            collectionGroup.auctions.forEach((auction) => {
+              prods.push({
+                id: auction.id,
+                designer: auction.designer,
+                topBid: auction.topBid,
+                garment: auction.garment,
+                rarity: 'Exclusive',
+                auction: true,
+                version: 2,
+              });
             });
-          });
-        }
-        if (collectionGroup.collections.length > 1 || collectionGroup.collections.length === 1 && collectionGroup.collections[0].id !== '0') {
-          collectionGroup.collections.forEach((collection) => {
-            const offer = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id);
-            prods.push({
-              id: collection.id,
-              designer: collection.designer,
-              rarity: collection.rarity,
-              garment: collection.garments[0],
-              primarySalePrice: offer ? offer.primarySalePrice : 0,
-              auction: false,
-              version: 2,
+          }
+          if (collectionGroup.collections.length > 1 || collectionGroup.collections.length === 1 && collectionGroup.collections[0].id !== '0') {
+            collectionGroup.collections.forEach((collection) => {
+              const offer = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id);
+              prods.push({
+                id: collection.id,
+                designer: collection.designer,
+                rarity: collection.rarity,
+                garment: collection.garments[0],
+                primarySalePrice: offer ? offer.primarySalePrice : 0,
+                auction: false,
+                version: 2,
+              });
             });
-          });
-        }
-        if (collectionGroup.digiBundle.length > 1 || collectionGroup.digiBundle.length === 1 && collectionGroup.digiBundle[0].id !== '0') {
-          collectionGroup.digiBundle.forEach((collection) => {
-            const offer = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id);
-            prods.push({
-              id: collection.id,
-              designer: collection.designer,
-              primarySalePrice: offer ? offer.primarySalePrice : 0,
-              rarity: collection.rarity,
-              garment: collection.garments[0],
-              auction: false,
-              version: 2,
+          }
+          if (collectionGroup.digiBundle.length > 1 || collectionGroup.digiBundle.length === 1 && collectionGroup.digiBundle[0].id !== '0') {
+            collectionGroup.digiBundle.forEach((collection) => {
+              const offer = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id);
+              prods.push({
+                id: collection.id,
+                designer: collection.designer,
+                primarySalePrice: offer ? offer.primarySalePrice : 0,
+                rarity: collection.rarity,
+                garment: collection.garments[0],
+                auction: false,
+                version: 2,
+              });
             });
-          });
-        }
-      });
+          }
+        });
 
       digitalaxGarmentCollections.forEach((collection) => {
         const offer = digitalaxMarketplaceOffers.find((offer) => offer.id === collection.id);

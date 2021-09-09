@@ -310,33 +310,37 @@ const Product = () => {
         </>
       ) : null}
 
-      <section className={styles.globalDesignerNetwork}>
-        <img src="/images/metaverse/global_designer_network.png" className={styles.title} />
-        <div className={styles.text}>
-          These radical fashion anarchists have dared to come together, while maintaining self
-          sovereign independence, to disrupt the entire fashion industry as we know it and create
-          greater wealth for all of web3 in the process. The highlight of W3FW is the GDN Endowment
-          Auction for forming as an on-chain DAO. This is not just another DAO as a mechanism. We
-          live decentralisation as a movement. This DAO is revolutionary without remorse. Every
-          member is coming together, whilst maintaining sovereign independence, to outcompete the
-          old industries and practices. Goodbye tradfash. Hello real web3 metaversal fashion. The
-          DAO treasury will be responsible for actively growing and building out the network’s
-          reach, distribution and impact through. 60% of proceeds from this Auction will go to the
-          GDN DAO treasury as the network moves completely on-chain and leads up to the launch of
-          the $GDN governance token.
-        </div>
-        <a
-          href="https://blog.digitalax.xyz/global-designer-network-dao-auction-governance-token-launch-w3fw-abe09ce1c5d0"
-          target="_blank"
-          className={styles.link}
-        >
-          <div className={styles.linkWrapper}>
-            <BannerButton text="read more about the gdn dao" />
-          </div>
-        </a>
-      </section>
+      {!id.includes('v1') && id !== '1' ? (
+        <>
+          <section className={styles.globalDesignerNetwork}>
+            <img src="/images/metaverse/global_designer_network.png" className={styles.title} />
+            <div className={styles.text}>
+              These radical fashion anarchists have dared to come together, while maintaining self
+              sovereign independence, to disrupt the entire fashion industry as we know it and create
+              greater wealth for all of web3 in the process. The highlight of W3FW is the GDN Endowment
+              Auction for forming as an on-chain DAO. This is not just another DAO as a mechanism. We
+              live decentralisation as a movement. This DAO is revolutionary without remorse. Every
+              member is coming together, whilst maintaining sovereign independence, to outcompete the
+              old industries and practices. Goodbye tradfash. Hello real web3 metaversal fashion. The
+              DAO treasury will be responsible for actively growing and building out the network’s
+              reach, distribution and impact through. 60% of proceeds from this Auction will go to the
+              GDN DAO treasury as the network moves completely on-chain and leads up to the launch of
+              the $GDN governance token.
+            </div>
+            <a
+              href="https://blog.digitalax.xyz/global-designer-network-dao-auction-governance-token-launch-w3fw-abe09ce1c5d0"
+              target="_blank"
+              className={styles.link}
+            >
+              <div className={styles.linkWrapper}>
+                <BannerButton text="read more about the gdn dao" />
+              </div>
+            </a>
+          </section>
 
-      <FashionList fashionData={fashionData} collections={product} />
+          <FashionList fashionData={fashionData} collections={product} />
+        </>
+      ) : null}
     </div>
   );
 };
