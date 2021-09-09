@@ -310,7 +310,7 @@ const Product = () => {
         </>
       ) : null}
 
-      {!id.includes('v1') && id !== '1' ? (
+      {!id.includes('v1') && ((parseInt(id) >= 11 && parseInt(id) < 100294) || (parseInt(id) > 130000)) ? (
         <>
           <section className={styles.globalDesignerNetwork}>
             <img src="/images/metaverse/global_designer_network.png" className={styles.title} />

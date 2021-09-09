@@ -67,7 +67,7 @@ const Auctions = () => {
 
   return (
     <div className={styles.wrapper}>
-       <HeroSection logo="/images/metaverse/auctionsLogo.png" />
+       <HeroSection width={id ==='0' ? '60%' : '80%'} logo={id === '0' ? '/images/metaverse/amongus-logo1.png' : '/images/metaverse/minecraft-logo.png'} />
 
       {auctions.map((auction, index) => {
         if (index % 2 === 1) return <> </>;
