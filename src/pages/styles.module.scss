@@ -12,15 +12,27 @@
   .homeHeroSection {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background-image: url('/images/metaverse/modal_texture.png');
-    padding: 0rem 7.5rem;
+    padding: 0rem 2.5rem;
     padding-top: 10rem;
     padding-bottom: 7.5rem;
 
+    @include md-width {
+      flex-direction: row;
+      padding: 0rem 7.5rem;
+      padding-top: 10rem;
+      padding-bottom: 7.5rem;
+    }
+
     .heroLogo {
-      width: 60%;
+      width: 100%;
+
+      @include md-width {
+        width: 60%;
+      }
     }
 
     .heroSectionLink {
@@ -34,10 +46,15 @@
       margin-right: 20px;
       color: #ffffff;
       text-align: left;
+      margin-top: 1rem;
       transition: all 0.3s ease;
 
+      @include md-width {
+        margin-top: 0;
+      }
+
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }
