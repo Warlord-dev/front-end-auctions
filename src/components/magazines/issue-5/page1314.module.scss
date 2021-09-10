@@ -7,4 +7,105 @@
   display: flex;
   position: relative;
   
+  .background1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 960px;
+    height: 1497px;
+  }
+  
+  .background2 {
+    position: absolute;
+    left: 960px;
+    top: 0;
+    width: 960px;
+    height: 1497px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 933px;
+    height: 135px;
+    left: -102px;
+    top: 1136px;
+
+    font-family: Inter;
+    font-size: 80px;
+    line-height: 148px;
+    text-align: center;
+
+    color: #00FF47;
+
+    -webkit-text-stroke: 1px #FF0000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 933px;
+    height: 135px;
+    left: 13px;
+    top: 1249px;
+    
+    font-family: Faster One;
+    font-size: 100px;
+    line-height: 106px;
+    text-align: center;
+    
+    color: #FFE600;
+    -webkit-text-stroke: 1px #FF0000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 933px;
+    height: 135px;
+    left: 13px;
+    top: 1362px;
+    
+    font-family: Faster One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 106px;
+    text-align: center;
+    
+    color: #FFE600;
+    -webkit-text-stroke: 1px #FF0000;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 109px;
+    height: 128px;
+    left: 744px;
+    top: 1121px;    
+  }
+
+  .playButton {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    left: 724px;
+    top: 18px;
+    border-radius: 105px;
+    
+    background: #000000;
+
+    .imagePlay {
+      margin-left: 60px;
+      margin-top: 37px;
+    }
+
+    .imagePause {
+      margin-left: 58px;
+      margin-top: 38px;
+    }
+
+    transition: transform .2s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './coverpage.module.scss'
 const CoverPage = () => {
+  console.log('this is loaded.')
   return (
     <div className={styles.wrapper}>         
       <img className={styles.background} src='/magazine/4/images/cover_background.png' />

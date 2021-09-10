@@ -314,6 +314,7 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Romanesco"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jim+Nightshade"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -1549,6 +1550,11 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Bangla MN';
               src: url('./fonts/Bangla MN.ttf');
+            }
+
+            @font-face {
+              font-family: 'POLYA Regular';
+              src: url('./fonts/POLYA.otf');
             }
           `,
             }}
