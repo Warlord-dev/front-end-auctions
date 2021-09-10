@@ -12,25 +12,27 @@ const MetamaskLogo = props => {
 
   useEffect(() => {
     if (container.current.children.length < 1) {
-      viewer = ModelViewer({
+      // setTimeout(() => {
+        viewer = ModelViewer({
 
-        // Dictates whether width & height are px or multiplied
-        pxNotRatio: true,
-        width: 330,
-        height: 330,
-        // pxNotRatio: false,
-        // width: 0.9,
-        // height: 0.9,
-    
-        // To make the face follow the mouse.
-        followMouse: true,
-        // followMotion: true,
-        // head should slowly drift (overrides lookAt)
-        slowDrift: false,
-    
-      })
-
-      container.current.appendChild(viewer.container)
+          // Dictates whether width & height are px or multiplied
+          pxNotRatio: true,
+          width: 330,
+          height: 330,
+          // pxNotRatio: false,
+          // width: 0.9,
+          // height: 0.9,
+      
+          // To make the face follow the mouse.
+          followMouse: true,
+          // followMotion: true,
+          // head should slowly drift (overrides lookAt)
+          slowDrift: false,
+      
+        })
+  
+        container.current.appendChild(viewer.container)
+      // }, 1000)
     }
     
     return () => {
