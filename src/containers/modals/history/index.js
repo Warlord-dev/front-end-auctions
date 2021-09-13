@@ -65,6 +65,14 @@ const History = ({ className, title, type }) => {
     }
   }, []);
 
+  const sortHistory = (data) => {
+    return data.sort((a, b) => {
+      if (parseInt(a.timestamp) > parseInt(b.timestamp)) return 1;
+      if (parseInt(a.timestamp) == parseInt(b.timestamp)) return 0;
+      return -1;
+    })
+  }
+
   return (
     <>
       {loading ? (
@@ -87,7 +95,7 @@ const History = ({ className, title, type }) => {
                     <th> DATE </th>
                   </thead>
                   <tbody>
-                    {history.map((tx) => (
+                    {sortHistory(history).map((tx) => (
                       <tr>
                         <td> {tx.value / 10 ** 18} $MONA </td>
                         <td>
