@@ -315,6 +315,9 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Romanesco"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jim+Nightshade"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Halant:wght@700"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hammersmith+One"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
