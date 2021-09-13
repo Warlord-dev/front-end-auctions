@@ -17,6 +17,7 @@ const CollectionCard = ({ collection }) => {
     'Jewelry and Accessories',
     'International',
     'Fashion x Art',
+    'Seasonal Styles',
   ];
 
   return (
