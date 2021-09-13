@@ -6,6 +6,7 @@ import {
   openSwitchNetworkModal,
 } from '@actions/modals.actions';
 import NewButton from '@components/buttons/newbutton';
+import Link from 'next/link';
 import { getAccount } from '@selectors/user.selectors';
 import LazyLoad from 'react-lazyload';
 import { useRouter } from 'next/router';
@@ -92,12 +93,85 @@ const ImageCard = ({
     videoTagRef.current.play();
   }
 
-  const onBodyClick = () => {
-    if (withLink) {
-      router
-        .push(`/product/${data.id}/${getRarityId(data.rarity)}/${isAuction ? 1 : 0}`)
-        .then(() => window.scrollTo(0, 0));
-    }
+  const renderImage = () => {
+    return (
+      <div className={styles.bodyWrapper}>
+        {showRarity ? (
+          <div className={styles.rarity}> {data?.rarity || data?.garment?.rarity} </div>
+        ) : null}
+        {data ? (
+          <div
+            className={zoomMedia ? styles.zoomWrapper : styles.mediaWrapper}
+            onClick={() => onClickZoomIn()}
+          >
+            {data.garment?.animation?.length || data.animation?.length ? (
+              <LazyLoad>
+                {/* <video key={data.id} autoPlay muted={!asPath.includes('product')} loop className={styles.video} */}
+                <video key={data.id} autoPlay muted={videoMuted} loop className={styles.video}
+                ref={videoTagRef}
+                preload={'auto'}
+                onLoadedData={
+                  () => {
+                    if (!asPath.includes('product')) return
+                    // console.log('videoTagRef: ', videoTagRef.current)
+                    var video = videoTagRef.current;
+                    // console.log('video: ', video)
+                    if (getAudio(video)) {
+                        // console.log('video has audio')
+                        setHasAudio(true)
+                    } else {
+                      setHasAudio(false)
+                        // console.log(`video doesn't have audio`)
+                    }
+                  }
+                }>
+                  <source
+                    src={reviseUrl(data.garment ? data.garment.animation : data.animation)}
+                    type="video/mp4"
+                  />
+                </video>
+              </LazyLoad>
+            ) : (
+              <img
+                src={data.garment ? data.garment.image : data.image}
+                className={styles.image}
+              />
+            )}
+          </div>
+        ) : null}
+        {showButton && (
+          <Button className={styles.zoomButton} onClick={() => onClickZoomOut()}>
+            <img src="/images/zoom_btn.png" />
+          </Button>
+        )}
+        {hasAudio && (
+          <Button className={styles.muteButton} onClick={() => onClickMute()}>
+            {
+              videoMuted
+              ? <img src="/images/audio-off.png" />
+              : <img src="/images/audio-on.png" />
+            }
+            
+          </Button>
+        )}
+        {imgUrl ? <img src={reviseUrl(imgUrl)} className={styles.image} /> : null}
+        {showButton && (
+          <div className={styles.buyNow}>
+            <NewButton
+              text={
+                isAuction
+                  ? disable
+                    ? 'Sold'
+                    : 'Place A Bid'
+                  : 'Buy Now'
+              }
+              onClick={onBuyNow}
+              disable={disable}
+            />
+          </div>
+        )}
+      </div>
+    )
   }
 
   return (
@@ -114,82 +188,11 @@ const ImageCard = ({
             <div className={styles.name}>{v1 ? 'Mirth' : data?.designer?.name} </div>
           </div>
         ) : null}
-        <div className={styles.bodyWrapper} onClick={onBodyClick}>
-          {showRarity ? (
-            <div className={styles.rarity}> {data?.rarity || data?.garment?.rarity} </div>
-          ) : null}
-          {data ? (
-            <div
-              className={zoomMedia ? styles.zoomWrapper : styles.mediaWrapper}
-              onClick={() => onClickZoomIn()}
-            >
-              {data.garment?.animation?.length || data.animation?.length ? (
-                <LazyLoad>
-                  {/* <video key={data.id} autoPlay muted={!asPath.includes('product')} loop className={styles.video} */}
-                  <video key={data.id} autoPlay muted={videoMuted} loop className={styles.video}
-                  ref={videoTagRef}
-                  preload={'auto'}
-                  onLoadedData={
-                    () => {
-                      if (!asPath.includes('product')) return
-                      // console.log('videoTagRef: ', videoTagRef.current)
-                      var video = videoTagRef.current;
-                      // console.log('video: ', video)
-                      if (getAudio(video)) {
-                          // console.log('video has audio')
-                          setHasAudio(true)
-                      } else {
-                        setHasAudio(false)
-                          // console.log(`video doesn't have audio`)
-                      }
-                    }
-                  }>
-                    <source
-                      src={reviseUrl(data.garment ? data.garment.animation : data.animation)}
-                      type="video/mp4"
-                    />
-                  </video>
-                </LazyLoad>
-              ) : (
-                <img
-                  src={data.garment ? data.garment.image : data.image}
-                  className={styles.image}
-                />
-              )}
-            </div>
-          ) : null}
-          {showButton && (
-            <Button className={styles.zoomButton} onClick={() => onClickZoomOut()}>
-              <img src="/images/zoom_btn.png" />
-            </Button>
-          )}
-          {hasAudio && (
-            <Button className={styles.muteButton} onClick={() => onClickMute()}>
-              {
-                videoMuted
-                ? <img src="/images/audio-off.png" />
-                : <img src="/images/audio-on.png" />
-              }
-              
-            </Button>
-          )}
-          {imgUrl ? <img src={reviseUrl(imgUrl)} className={styles.image} /> : null}
-          {showButton && (
-            <div className={styles.buyNow}>
-              <NewButton
-                text={
-                  isAuction
-                    ? disable
-                      ? 'Sold'
-                      : 'Place A Bid'
-                    : 'Buy Now'
-                }
-                onClick={onBuyNow}
-                disable={disable}
-              />
-            </div>
-          )}
-        </div>
+        {withLink ? <Link href={`/product/${data?.id}/${getRarityId(data?.rarity)}/${isAuction ? 1 : 0}`}>
+          <a target="_blank">
+            {renderImage()}
+          </a>
+        </Link> : renderImage()}
       </div>
     </>
   );

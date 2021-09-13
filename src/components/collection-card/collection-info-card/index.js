@@ -19,7 +19,7 @@ const CollectionInfoCard = ({ collection }) => {
       >
         <div className={styles.cardBodyWrapper}>
           <Link href={parseInt(collection?.id) <= 1 ? `/marketplace/all/${collection.id}` : collection?.isAuction ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
-            <a className={styles.link}>
+            <a className={styles.link} target="_blank">
               view collection
               <img src="./images/metaverse/right-arrow-pink.png" />
             </a>

@@ -152,6 +152,11 @@
     margin-bottom: 4rem;
     padding: 2rem;
 
+    .soldOut {
+      z-index: 10;
+      float: right;
+    }
+
     .image {
       overflow: hidden;
       width: 100%;
