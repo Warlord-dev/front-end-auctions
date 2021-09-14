@@ -1,0 +1,83 @@
+.wrapper {
+  background: linear-gradient(90deg, #FF9B7B 0%, #CE648E 100%);
+
+  .container {
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 90px;
+      line-height: 127px;
+      width: 100%;
+      text-align: left;
+      /* identical to box height */
+  
+      color: #FFFFFF;
+    }
+  
+    .description {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 25px;
+      line-height: 30px;
+      /* or 117% */
+  
+      color: #FFFFFF;
+    }
+  
+    .contentWrapper {
+      display: grid;
+      margin: 10rem 0;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+  
+      .member {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+  
+        .image {
+          width: 360px;
+          height: 360px;
+          border-radius: 180px;
+        }
+  
+        .name {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 30px;
+          line-height: 35px;
+          /* identical to box height, or 117% */
+  
+          text-align: center;
+  
+          color: #FFFFFF;
+          margin-bottom: 1rem;
+        }
+  
+        .role {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 30px;
+          line-height: 35px;
+          /* identical to box height, or 117% */
+  
+          text-align: center;
+  
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+}
