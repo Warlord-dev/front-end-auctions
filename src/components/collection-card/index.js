@@ -32,18 +32,16 @@ const CollectionCard = ({ collection }) => {
             disable
           /> : null}
           <Link href={parseInt(collection?.id) <= 1 ? `/marketplace/all/${collection.id}` : collection?.isAuction ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
-            <a target="_blank">
-              <div className={styles.image}>
-                {collection?.animation ? (
-                  <video autoPlay muted loop>
-                    <source src={collection?.animation} type="video/mp4" />
-                  </video>
-                ) : (
-                  <img src={collection?.image} className={styles.innerImage} />
-                )}
-              </div>
-            </a>
-            </Link>
+            <div className={styles.image}>
+              {collection?.animation ? (
+                <video autoPlay muted loop>
+                  <source src={collection?.animation} type="video/mp4" />
+                </video>
+              ) : (
+                <img src={collection?.image} className={styles.innerImage} />
+              )}
+            </div>
+          </Link>
         </div>
         <CollectionInfoCard collection={collection} />
       </div>

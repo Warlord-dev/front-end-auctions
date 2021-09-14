@@ -189,9 +189,7 @@ const ImageCard = ({
           </div>
         ) : null}
         {withLink ? <Link href={`/product/${data?.id}/${getRarityId(data?.rarity)}/${isAuction ? 1 : 0}`}>
-          <a target="_blank">
-            {renderImage()}
-          </a>
+          {renderImage()}
         </Link> : renderImage()}
       </div>
     </>
