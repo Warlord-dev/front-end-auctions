@@ -61,14 +61,6 @@ const LandingPage = () => {
 
   return (
     <div className={styles.wrapper}>
-      <section className={styles.heroSection}>
-        <section className={styles.robloxSection} id="roblox">
-          <img src="./images/metaverse/section-texture.png" className={styles.back} />
-          <video autoPlay loop muted playsInline>
-            <source src="/images/metaverse/!RENDER.mp4" type="video/mp4" />
-          </video>
-        </section>
-      </section>
 
       <section className={styles.bannerSection}>
         <BannerBar className={styles.homeHeroBar} type={1}/>
@@ -97,7 +89,14 @@ const LandingPage = () => {
         </Container>
       </section>
 
-      <FashionList fashionData={fashionData} />
+      <section className={styles.heroSection}>
+        <section className={styles.robloxSection} id="roblox">
+          <img src="./images/metaverse/section-texture.png" className={styles.back} />
+          <video autoPlay loop muted playsInline>
+            <source src="/images/metaverse/!RENDER.mp4" type="video/mp4" />
+          </video>
+        </section>
+      </section>
 
     </div>
   );

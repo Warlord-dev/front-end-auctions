@@ -19,9 +19,6 @@
     padding: 0rem 2.5rem;
     padding-top: 10rem;
     padding-bottom: 7.5rem;
-    // position: sticky;
-    // top: 70px;
-    // z-index: 10000;
 
     @include md-width {
       flex-direction: row;
@@ -34,7 +31,8 @@
       width: 100%;
 
       @include md-width {
-        width: 60%;
+        width: 50%;
+        margin-right: 2rem;
       }
     }
 
@@ -78,7 +76,6 @@
   .heroSection {
     position: relative;
     text-align: center;
-    margin-top: 76px;
     overflow: hidden;
     .heroSectionLink {
       color: white;
@@ -875,6 +872,7 @@
   }
 
   .bannerSection {
+    margin-top: 76px;
     position: relative;
     background-image: url('/images/metaverse/bluebg.png');
     background-repeat: none;
