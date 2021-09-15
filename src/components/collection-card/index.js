@@ -26,7 +26,7 @@ const CollectionCard = ({ collection }) => {
       <div className={styles.wrapper}>
         <div className={styles.title}>{collectionNames[parseInt(collection?.id)]}</div>
         <div className={styles.imageWrapper}>
-          {collection.id === '3' ? <NewButton
+          {collection.endTime && parseInt(collection.endTime) < Date.now() / 1000 ? <NewButton
             className={styles.soldOut}
             text="Sold out"
             disable

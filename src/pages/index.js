@@ -8,10 +8,14 @@ import { getChainId } from '@selectors/global.selectors';
 import Container from '@components/container';
 import Link from 'next/link';
 import ProductInfoCard from '@components/product-info-card';
+import Filters from '@components/filters';
+import { filterProducts } from '@utils/helpers';
 
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
   const [products, setProducts] = useState([]);
+  const [filter, setFilter] = useState('');
+  const [sortBy, setSortBy] = useState(null);
 
   useEffect(() => {
     import('react-facebook-pixel')
@@ -63,6 +67,8 @@ const LandingPage = () => {
                 id: auction.id,
                 designer: auction.designer,
                 topBid: auction.topBid,
+                startTime: auction.startTime,
+                endTime: auction.endTime,
                 garment: auction.garment,
                 rarity: 'Exclusive',
                 auction: true,
@@ -77,6 +83,7 @@ const LandingPage = () => {
                 id: collection.id,
                 designer: collection.designer,
                 rarity: collection.rarity,
+                startTime: offer.startTime,
                 garment: collection.garments[0],
                 primarySalePrice: offer ? offer.primarySalePrice : 0,
                 auction: false,
@@ -90,6 +97,7 @@ const LandingPage = () => {
               prods.push({
                 id: collection.id,
                 designer: collection.designer,
+                startTime: offer.startTime,
                 primarySalePrice: offer ? offer.primarySalePrice : 0,
                 rarity: collection.rarity,
                 garment: collection.garments[0],
@@ -104,6 +112,11 @@ const LandingPage = () => {
         const offer = digitalaxMarketplaceOffers.find((offer) => offer.id === collection.id);
         prods.push({
           id: collection.id,
+          designer: {
+            name: 'Mirth',
+            image: '/images/metaverse/mirth.png'
+          },
+          startTime: offer.startTime,
           garment: collection.garments[0],
           primarySalePrice: offer ? offer.primarySalePrice : 0,
           rarity: collection.rarity,
@@ -154,16 +167,20 @@ const LandingPage = () => {
       <section className={styles.homeHeroSection}>
         <img src="/images/metaverse/web3fashion.png" className={styles.heroLogo} />
 
-        <Link href="/collections">
-          <a className={styles.heroSectionLink}>
-            View All Collections >
-          </a>
-        </Link>
+        <div className={styles.actionsWrapper}>
+          <Link href="/collections">
+            <a className={styles.heroSectionLink}>
+              View All Collections >
+            </a>
+          </Link>
+
+          <Filters filter={filter} filterChange={setFilter} sortByChange={setSortBy} />
+        </div>
       </section>
 
       <Container>
         <section className={styles.collectionsWrapper}>
-          {products.map((prod) => {
+          {filterProducts(products, filter, sortBy).map((prod) => {
             return (
               <>
                 <ProductInfoCard
@@ -171,6 +188,7 @@ const LandingPage = () => {
                   price={prod.auction ? prod.topBid : prod.primarySalePrice}
                   v1={prod.version === 1}
                   showRarity
+                  showCollectionName
                   isAuction={prod.auction}
                 />
               </>

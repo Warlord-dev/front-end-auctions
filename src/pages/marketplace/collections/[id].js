@@ -7,11 +7,14 @@ import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import HeroSection from '@components/hero-section';
 import ProductInfoCard from '@components/product-info-card';
+import { filterProducts } from '@utils/helpers';
 
 const Collections = () => {
   const route = useRouter();
   const chainId = useSelector(getChainId);
   const [collections, setCollections] = useState([]);
+  const [filter, setFilter] = useState('');
+  const [sortBy, setSortBy] = useState(null);
   const { id } = route.query;
 
   useEffect(() => {
@@ -21,14 +24,15 @@ const Collections = () => {
       let colls = [];
 
       digitalaxCollectionGroup.collections.forEach((collection) => {
-        const foundOfferItem = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id)
+        const foundOfferItem = digitalaxMarketplaceV2Offers.find(
+          (offer) => offer.id === collection.id,
+        );
         colls.push({
           designer: collection.designer,
           developer: collection.developer,
-          garment: {
-            ...collection.garments[0],
-          },
+          garment: collection.garments[0],
           primarySalePrice: foundOfferItem ? foundOfferItem.primarySalePrice : 0,
+          auction: false,
           id: collection.id,
           rarity: collection.rarity,
         });
@@ -40,11 +44,18 @@ const Collections = () => {
     fetchCollectionGroup();
   }, []);
 
+  const filteredProducts = filterProducts(collections, filter, sortBy) || [];
+
   return (
     <div className={styles.wrapper}>
-      <HeroSection logo="/images/metaverse/marketplaceLogo.png" />
+      <HeroSection
+        logo="/images/metaverse/marketplaceLogo.png"
+        filter={filter}
+        setFilter={(v) => setFilter(v)}
+        setSortBy={(v) => setSortBy(v)}
+      />
 
-      {collections.map((collection, index) => {
+      {filteredProducts.map((collection, index) => {
         if (index % 2 === 1) return <></>;
         return (
           <section className={styles.productsSection} key={collection.id}>
@@ -54,15 +65,15 @@ const Collections = () => {
             <Container>
               <div className={styles.body}>
                 <ProductInfoCard
-                  product={collections[index]}
-                  price={collections[index].primarySalePrice}
+                  product={filteredProducts[index]}
+                  price={filteredProducts[index].primarySalePrice}
                   showCollectionName
                   showRarity
                 />
-                {index + 1 < collections.length ? (
+                {index + 1 < filteredProducts.length ? (
                   <ProductInfoCard
-                    product={collections[index + 1]}
-                    price={collections[index + 1].primarySalePrice}
+                    product={filteredProducts[index + 1]}
+                    price={filteredProducts[index + 1].primarySalePrice}
                     showCollectionName
                     showRarity
                   />

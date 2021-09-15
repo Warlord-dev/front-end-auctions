@@ -29,8 +29,6 @@ const LandingPage = () => {
       const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
       const { digitalaxGarmentCollections } = await getDigitalaxGarmentCollections(chainId);
       const amongUsPrice = digitalaxGarmentCollections.reduce((a, b) => a + Number(b.valueSold), 0);
-      console.log({ digitalaxCollectionGroups });
-      console.log({ digitalaxGarmentCollections });
 
       const collections = [];
       const auctions = [];
@@ -70,6 +68,7 @@ const LandingPage = () => {
         ) {
           auctions.push({
             ...digitalaxCollectionGroup.auctions[getPreviewId(digitalaxCollectionGroup.id)].garment,
+            endTime: digitalaxCollectionGroup.auctions[getPreviewId(digitalaxCollectionGroup.id)].endTime,
             designer:
               digitalaxCollectionGroup.auctions[getPreviewId(digitalaxCollectionGroup.id)].designer,
             id: digitalaxCollectionGroup.id,

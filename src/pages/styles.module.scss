@@ -19,6 +19,9 @@
     padding: 0rem 2.5rem;
     padding-top: 10rem;
     padding-bottom: 7.5rem;
+    // position: sticky;
+    // top: 70px;
+    // z-index: 10000;
 
     @include md-width {
       flex-direction: row;

@@ -7,12 +7,15 @@ import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import HeroSection from '@components/hero-section';
 import ProductInfoCard from '@components/product-info-card';
+import { filterProducts } from '@utils/helpers';
 
 const Auctions = () => {
   const route = useRouter();
   const chainId = useSelector(getChainId);
   const [auctions, setAuctions] = useState([]);
   const [collections, setCollections] = useState([]);
+  const [filter, setFilter] = useState('');
+  const [sortBy, setSortBy] = useState(null);
   const { id } = route.query;
 
   useEffect(() => {
@@ -24,6 +27,7 @@ const Auctions = () => {
         digitalaxCollectionGroup.auctions.forEach((auction) => {
           aucs.push({
             ...auction,
+            auction: true,
             rarity: 'Exclusive',
           });
         });
@@ -35,6 +39,8 @@ const Auctions = () => {
           colls.push({
             designer: collection.designer,
             developer: collection.developer,
+            auction: false,
+            startTime: foundOfferItem.startTime,
             garment: {
               ...collection.garments[0],
             },
@@ -50,9 +56,15 @@ const Auctions = () => {
           const offer = digitalaxMarketplaceOffers.find((offer) => offer.id === collection.id);
           colls.push({
             id: collection.id,
+            designer: {
+              name: 'Mirth',
+              image: '/images/metaverse/mirth.png'
+            },
             garment: collection.garments[0],
+            startTime: offer.startTime,
             primarySalePrice: offer ? offer.primarySalePrice : 0,
             rarity: collection.rarity,
+            auction: false,
             version: 1,
           });
         });
@@ -65,35 +77,43 @@ const Auctions = () => {
     fetchCollectionGroup();
   }, []);
 
+  const filteredProducts = filterProducts([...auctions, ...collections], filter, sortBy) || [];
+
   return (
     <div className={styles.wrapper}>
-       <HeroSection width={id ==='0' ? '60%' : '80%'} logo={id === '0' ? '/images/metaverse/amongus-logo1.png' : '/images/metaverse/minecraft-logo.png'} />
+       <HeroSection 
+          width={id ==='0' ? '60%' : '80%'}
+          logo={id === '0' ? '/images/metaverse/amongus-logo1.png' : '/images/metaverse/minecraft-logo.png'} 
+          filter={filter}
+          setFilter={(v) => setFilter(v)}
+          setSortBy={(v) => setSortBy(v)}
+        />
 
-      {auctions.map((auction, index) => {
+      {filteredProducts.map((prod, index) => {
         if (index % 2 === 1) return <> </>;
         return (
-          <section className={styles.productsSection} key={auction.id}>
+          <section className={styles.productsSection} key={prod.id}>
             <video autoPlay muted loop className={styles.backVideo}>
               <source src="./images/metaverse/all_skins.mp4" type="video/mp4" />
             </video>
             <Container>
               <div className={styles.body}>
                 <ProductInfoCard
-                  product={auctions[index]}
-                  v1={auctions[index].version === 1}
-                  price={auctions[index].topBid}
+                  product={filteredProducts[index]}
+                  v1={filteredProducts[index].version === 1}
+                  price={filteredProducts[index].topBid || filteredProducts[index].primarySalePrice}
                   showRarity
                   showCollectionName
-                  isAuction
+                  isAuction={filteredProducts[index].auction}
                 />
-                {index + 1 < auctions.length ? (
+                {index + 1 < filteredProducts.length ? (
                   <ProductInfoCard
-                    product={auctions[index + 1]}
-                    v1={auctions[index].version === 1}
-                    price={auctions[index + 1].topBid}
+                    product={filteredProducts[index + 1]}
+                    v1={filteredProducts[index].version === 1}
+                    price={filteredProducts[index].topBid || filteredProducts[index].primarySalePrice}
                     showRarity
                     showCollectionName
-                    isAuction
+                    isAuction={filteredProducts[index].auction}
                   />
                 ) : null}
               </div>
@@ -101,7 +121,7 @@ const Auctions = () => {
           </section>
         );
       })}
-      {collections.map((collection, index) => {
+      {/* {collections.map((collection, index) => {
         if (index % 2 === 1) return <></>;
         return (
           <section className={styles.productsSection} key={collection.id}>
@@ -130,7 +150,7 @@ const Auctions = () => {
             </Container>
           </section>
         );
-      })}
+      })} */}
     </div>
   );
 };
