@@ -1,5 +1,6 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper(); 
+  @include magazineWrapper();
+  background: black;
 }

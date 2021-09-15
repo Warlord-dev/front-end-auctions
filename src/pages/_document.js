@@ -194,7 +194,7 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@700"></link>  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Odibee+Sans"></link>  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700"></link>  
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali:wght@700"></link> 
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gravitas+One"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700"></link> 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One"></link> 
@@ -318,6 +318,12 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Halant:wght@700"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hammersmith+One"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MedievalSharp"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Meera+Inimai"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spartan:wght@900"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manuale"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cantarell"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -1558,6 +1564,48 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'POLYA Regular';
               src: url('./fonts/POLYA.otf');
+            }
+
+            @font-face {
+              font-family: 'Wafer';
+              src: url('./fonts/Wafer-Regular.ttf');
+            }
+
+            @font-face {
+              font-family: 'Iowan Old Style';
+              src: url("./fonts/Iowan Old Style.ttf");
+              font-weight: 400;
+            }
+
+            @font-face {
+              font-family: 'Open Bars';
+              src: url("./fonts/OpenBars.ttf");
+            }
+
+            @font-face {
+              font-family: 'Iowan Old Style';
+              src: url("./fonts/Iowan Old Style Bold.otf");
+              font-weight: 700;
+            }
+
+            @font-face {
+              font-family: 'Mad Mecha';
+              src: url("./fonts/Mad Mecha.ttf");
+            }
+
+            @font-face {
+              font-family: 'Elysian Fields';
+              src: url("./fonts/Elysian Fields.otf");
+            }
+
+            @font-face {
+              font-family: 'BLINKIES';
+              src: url("./fonts/BLINKIES.ttf");
+            }
+
+            @font-face {
+              font-family: 'Cochin';
+              src: url("./fonts/Cochin-LT-Font.ttf");
             }
           `,
             }}

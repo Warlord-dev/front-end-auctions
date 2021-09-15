@@ -19,6 +19,100 @@ const Page2930 = () => {
 
       <div className={styles.circle1}></div>
 
+      <div className={styles.text1}>
+        Crypto Art         
+      </div>
+      <div className={styles.text2}>
+        Hall of
+      </div>
+      <div className={styles.text3}>
+        Fame
+      </div>
+      <div className={styles.text4}>
+        ñïgh†mårê
+      </div>
+      <div className={styles.text5}>
+        MrKinur MrKinur MrKinur
+      </div>
+
+      <div className={styles.text6}>
+        August 16th 2021
+      </div>
+
+      <div className={styles.text7}>
+        Kozachok
+      </div>
+
+      <div className={styles.text8}>
+        Kozachok
+      </div>
+
+      <div className={styles.text9}>
+        Kozachok
+      </div>
+
+      <div className={styles.text10}>
+        Living in a Bad Movie
+      </div>
+
+      <div className={styles.text11}>
+        Minted on HEN        
+      </div>
+
+      <div className={styles.text12}>
+        MASCHERA #2
+      </div>
+
+      <div className={styles.text13}>
+        22UNITS
+      </div>
+
+      <div className={styles.text14}>
+        <span className={styles.font70}>God of</span><br />
+        <span className={styles.font50}>secret</span><br />
+        <span className={styles.font35}>mountain</span>
+      </div>
+
+      <div className={styles.text15}>
+        Adriano Cadau
+      </div>
+
+      <div className={styles.text16}>
+        April 15th 2021
+      </div>
+
+      <div className={styles.text17}>
+        Butcher in my neighborhood // Low Content No. 29
+      </div>
+
+      <div className={styles.text18}>
+        juliantomas
+      </div>
+
+      <div className={styles.text19}>
+        Minted on HEN
+      </div>
+
+      <div className={styles.text20}>
+        Bug's Funeral / M7 Planet
+      </div>
+
+      <div className={styles.text21}>
+        Bug's Funeral / M7 Planet
+      </div>
+
+      <div className={styles.text22}>
+        Bug's Funeral / M7 Planet
+      </div>
+
+      <div className={styles.text23}>
+        riniifish
+      </div>
+
+      <div className={styles.text24}>
+        Sept 2nd 2021
+      </div>
+
       <Link href='https://www.hicetnunc.xyz/objkt/260507'>
         <a target='_blank'>
           <video autoPlay muted loop className={styles.video1}>
@@ -55,6 +149,16 @@ const Page2930 = () => {
           <img src='./magazine/5/images/2930_image4.png' className={styles.image4} />
         </a>
       </Link>
+
+      <img src='./magazine/4/images/3334_image2.png' className={styles.image5} />
+      <img src='./magazine/4/images/3334_image2.png' className={styles.image6} />
+      <img src='./magazine/4/images/3334_image2.png' className={styles.image7} />
+
+      <img src='./magazine/4/images/2930_image2.png' className={styles.image8} />
+      <img src='./magazine/4/images/2930_image2.png' className={styles.image9} />
+
+      <img src='./magazine/5/images/2930_image6.png' className={styles.image10} />
+      <div className={styles.rect2}></div>
     </div>
   )
 }

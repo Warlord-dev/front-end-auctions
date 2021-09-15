@@ -5,7 +5,7 @@ const Page8182 = () => {
   
   return (
     <div className={styles.wrapper}>
-      
+      <img src='/magazine/5/images/8182_image1.jpg' className={styles.image1} />      
     </div>
   )
 }
