@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import styles from './page2324.module.scss'
 
 

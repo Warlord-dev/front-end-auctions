@@ -51,11 +51,33 @@ const Page4344 = () => {
       </div>
       <div className={styles.text9}>
         In this model,
-        a user with a 1000 personhood score who contributes contributions that would generate $100 in matching would get 100% of their contribution matched.
-        a user with a 100 personhood score who contributes contributions that would generate $100 in matching would get 100% of their contribution matched.
-        a user with a 10 personhood score who contributes contributions that would generate $100 in matching would get 13% of their contribution matched.
-        and so on…
+        <ul>
+          <li>
+            a user with a 1000 personhood score who contributes contributions that would generate $100 in matching would get 100% of their contribution matched.
+          </li>
+          <li>
+            a user with a 100 personhood score who contributes contributions that would generate $100 in matching would get 100% of their contribution matched.
+          </li>
+          <li>
+            a user with a 10 personhood score who contributes contributions that would generate $100 in matching would get 13% of their contribution matched.
+          </li>
+          <li>
+            and so on…
+          </li>
+        </ul>
       </div>
+
+      <div className={styles.circle1}></div>
+      <div className={styles.circleText1}>
+        Collect POAP!        
+      </div>
+      <div className={styles.circleText2}>
+        yay        
+      </div>
+      <a href='https://poap.website/identityacrossthemetaverse' target='_blank'>
+        <img src='/images/poap-logo.png' className={styles.poapImage} />
+      </a>
+
     </div>    
   )
 }

@@ -89,8 +89,8 @@
     line-height: 100%;
     /* identical to box height, or 50px */
     background: -webkit-linear-gradient(#FF00B8, #A40031);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     transition: transform .4s;
     &:hover {
