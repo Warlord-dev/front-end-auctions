@@ -77,14 +77,19 @@ const Page4748 = () => {
       <video autoPlay muted loop className={styles.video2} ref={ref2}>
         <source src='./magazine/5/videos/4748_video2.mp4' type='video/mp4' />
       </video>
-      <button onClick={() => {
+      <button
+        onClick={() => {
           if (!play2) {
             ref2.current.muted = false
           } else {
             ref2.current.muted = true
           }
           setPlay2(!play2)
-        }} className={styles.playbutton2}><img src={`./magazine/5/images/4748_${play2 ? 'pausebutton' : 'playbutton'}.png`} /></button>
+        }}
+        className={styles.playbutton2}
+      >
+        <img src={`./magazine/5/images/4748_${play2 ? 'pausebutton' : 'playbutton'}.png`} />
+      </button>
 
       <div className={styles.circle1}></div>
       <div className={styles.circle2}></div>

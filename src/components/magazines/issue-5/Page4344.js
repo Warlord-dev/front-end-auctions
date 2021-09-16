@@ -9,9 +9,11 @@ const Page4344 = () => {
       <img src='./magazine/5/images/4344_image1.png' className={styles.image1} />
       <img src='./magazine/5/images/4344_image1.png' className={styles.image3} />
 
-      <div className={styles.text1}>
-        Owocki Presents 
-      </div>
+      <a href='https://twitter.com/owocki' target='_blank'>
+        <div className={styles.text1}>
+          Owocki Presents 
+        </div>
+      </a>
       <div className={styles.text2}>
         Decentralised Reputation
       </div>
