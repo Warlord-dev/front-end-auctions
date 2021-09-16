@@ -69,7 +69,7 @@ const Page1516 = () => {
           </div>
         </a>
       </Link>
-      
+      <img src='/magazine/5/images/1516_image1.png' className={styles.image1} />
     </div>
   )
 }

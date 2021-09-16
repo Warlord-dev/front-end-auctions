@@ -15,269 +15,161 @@
     height: 1497px;
   }
 
-  .image1 {
-    position: absolute;
-    width: 202px;
-    height: 232px;
-    left: 9px;
-    top: 20px;
-  }
-
-  .rect1 {
-    position: absolute;
-    width: 960px;
-    height: 285px;
-    left: 0px;
-    top: 0px;
-    
-    background: rgba(86, 30, 30, 0.61);
-  }
-
-  .rect2 {
-    position: absolute;
-    width: 960px;
-    height: 83px;
-    left: 0px;
-    top: 328px;
-    
-    background: rgba(199, 101, 101, 0.67);
-  }
-
-  .rect3 {
-    position: absolute;
-    width: 960px;
-    height: 83px;
-    left: 0px;
-    top: 443px;
-    
-    background: rgba(199, 177, 101, 0.67);
-  }
-
-  .rect4 {
-    position: absolute;
-    width: 960px;
-    height: 83px;
-    left: 0px;
-    top: 559px;
-    
-    background: rgba(34, 147, 140, 0.67);
-  }
-
-  .rect5 {
-    position: absolute;
-    width: 960px;
-    height: 83px;
-    left: 0px;
-    top: 673px;
-    
-    background: rgba(147, 34, 54, 0.67);
-  }
-
-  .rect6 {
-    position: absolute;
-    width: 960px;
-    height: 110px;
-    left: 0px;
-    top: 1387px;
-    
-    background: rgba(199, 101, 101, 0.67);
-  }
-
   .text1 {
     position: absolute;
-    width: 767px;
-    height: 184px;
-    left: 227px;
-    top: 20px;
-
-    font-family: BAZAR COSTA;
-    font-size: 80px;
-    line-height: 92px;
-
-    color: #00C4B8;
-    -webkit-text-stroke: 5px #000000;
+    width: 665px;
+    height: 124px;
+    left: 327px;
+    top: 9px;
+    
+    font-family: Arthure;
+    font-size: 160px;
+    line-height: 213px;
+    
+    color: #000000;
   }
 
   .text2 {
     position: absolute;
-    width: 696px;
-    height: 54px;
-    left: 231px;
-    top: 215px;
+    width: 665px;
+    height: 124px;
+    left: 332px;
+    top: 9px;
     
-    font-family: Gayathri;
-    font-size: 30px;
-    line-height: 90%;
-    /* or 27px */
-    
-    
+    font-family: Arthure;
+    font-size: 160px;
+    line-height: 213px;
     color: #FFFFFF;
   }
 
   .text3 {
     position: absolute;
-    width: 49px;
-    height: 576px;
-    left: 32px;
-    top: 493px;
+    width: 863px;
+    height: 124px;
+    left: 163px;
+    top: 151px;
     
-    font-family: Jua;
-    font-size: 60px;
-    line-height: 80%;
+    font-family: Arthure;
+    font-size: 300px;
+    line-height: 399px;
     
-    text-align: center;    
-    color: #FFFFFF;
-    
-    word-wrap: break-word;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #000000;    
   }
 
   .text4 {
     position: absolute;
-    width: 49px;
-    height: 432px;
-    left: 74px;
-    top: 637px;
+    width: 814px;
+    height: 313px;
+    left: 178px;
+    top: 151px;
     
-    font-family: Jua;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 80%;
-        
-    text-align: center;
+    font-family: Arthure;
+    font-size: 300px;
+    line-height: 399px;
     color: #FFFFFF;
-    word-wrap: break-word;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    
   }
 
   .text5 {
     position: absolute;
-    width: 708px;
-    height: 98px;
-    left: 131px;
-    top: 915px;
+    width: 538px;
+    height: 313px;
+    left: 107px;
+    top: 855px;
     
-    font-family: Burst My Bubble;
-    font-size: 130px;
-    line-height: 30px;
-
-    color: #3F0000;
+    font-family: Kumar One;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    text-shadow: -1px 0 black, 0 -1px black, 1px 0 black, 0 1px black;        
   }
 
   .text6 {
     position: absolute;
-    width: 653px;
-    height: 100px;
-    left: 131px;
-    top: 969px;
+    width: 540px;
+    height: 96px;
+    left: 107px;
+    top: 988px;
     
-    font-family: Neon Vortex;
-    font-size: 50px;
-    line-height: 50px;
-    color: #28FF71;
+    font-family: Thasadith;
+    font-size: 60px;
+    line-height: 80%;
+    color: #FFFFFF;
     
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    // -webkit-text-stroke: 3px #B110D6;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -3px 0 #B110D6, 0 -3px #B110D6, 3px 0 #B110D6, 0 3px #B110D6, -3px -3px #B110D6, -3px 3px #B110D6, 3px -3px #B110D6;
   }
 
   .text7 {
     position: absolute;
-    width: 548px;
-    height: 112px;
-    left: 32px;
-    top: 1094px;
-    
-    font-family: Cool Chaos;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 70px;
-    line-height: 80%;
-    
-    color: #FA00FF;
-    
-    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
-    
+    width: 447px;
+    height: 104px;
+    left: 107px;
+    top: 1102px;
+
+    font-family: Knewave;
+    font-size: 40px;
+    line-height: 50px;
+    color: #FFFFFF;
+    -webkit-text-stroke: 3px black;
   }
 
   .text8 {
     position: absolute;
-    width: 548px;
-    height: 56px;
-    left: 32px;
-    top: 1225px;
+    width: 373px;
+    height: 151px;
+    left: 107px;
+    top: 1224px;
     
-    font-family: Corben;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 70px;
-    line-height: 80%;
-    /* identical to box height, or 56px */
-    
-    
-    color: #FFFFFF;
+    font-family: Boldfinger;
+    font-size: 45px;
+    line-height: 50px;
+    color: #FFD954;
+    -webkit-text-stroke: 1px #005CE7;
   }
 
   .text9 {
     position: absolute;
-    width: 501px;
-    height: 162px;
-    left: 32px;
-    top: 1306px;
+    width: 624px;
+    height: 128px;
+    left: 107px;
+    top: 1332px;
     
-    font-family: Fresca;
-    font-size: 90px;
-    line-height: 90%;
-    /* or 81px */
-    
-    
-    color: #3F0000;
+    font-family: Ander Hedge;
+    font-size: 80px;
+    line-height: 60px;
+    color: #000000;
   }
 
   .text10 {
     position: absolute;
-    width: 283px;
-    height: 117px;
-    left: 449px;
-    top: 1301px;
+    width: 50px;
+    height: 768px;
+    left: 32px;
+    top: 684px;
     
-    font-family: Fresca;
-    font-size: 130px;
-    line-height: 90%;   
-    text-align: right;
-    
-    color: #FF5252;
-    
-  }
-
-  .text11 {
-    position: absolute;
-    width: 439px;
-    height: 45px;
-    left: 377px;
-    top: 1417px;
-    
-    font-family: Fresca;
-    font-size: 50px;
-    line-height: 90%;
-
-    color: #BC0000;    
+    font-family: Corben;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 80%;
+    word-break: break-all;
+    color: #C15614;
+    -webkit-text-stroke: 3px #B110D6;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .text12 {
     position: absolute;
     width: 47px;
     height: 648px;
-    left: 841px;
-    top: 814px;
+    left: 817px;
+    top: 842px;
     
     font-family: Internal Rainbows;
-    font-style: normal;
-    font-weight: normal;
     font-size: 60px;
     line-height: 120.53%;
     
-    color: #074DFF;
+    color: #005460;
     word-wrap: break-word;
   }
   
@@ -285,16 +177,14 @@
     position: absolute;
     width: 47px;
     height: 648px;
-    left: 847px;
-    top: 814px;
+    left: 823px;
+    top: 842px;
     
     font-family: Internal Rainbows;
-    font-style: normal;
-    font-weight: normal;
     font-size: 60px;
     line-height: 120.53%;
     
-    color: #00916E;
+    color: #FFDE36;
     word-wrap: break-word;
   }
   
@@ -302,16 +192,14 @@
     position: absolute;
     width: 47px;
     height: 648px;
-    left: 856px;
-    top: 814px;
+    left: 832px;
+    top: 842px;
     
     font-family: Internal Rainbows;
-    font-style: normal;
-    font-weight: normal;
     font-size: 60px;
     line-height: 120.53%;
     
-    color: #00F59D;
+    color: #B112D0;
     word-wrap: break-word;
   }
   
@@ -319,42 +207,102 @@
     position: absolute;
     width: 13px;
     height: 324px;
-    left: 909px;
-    top: 1121px;
+    left: 907px;
+    top: 1149px;
     
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 120.53%;
-    /* or 36px */
-    
     text-align: center;
     
     color: #FFFFFF;
     word-wrap: break-word;
-    text-shadow: 0px 4px 4px rgba(241, 241, 241, 0.25), 0px 4px 4px rgba(211, 211, 211, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25);    
+    text-shadow: 0px 4px 4px rgba(241, 241, 241, 0.25), 0px 4px 4px rgba(211, 211, 211, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25);
   }
   
   .text16 {
     position: absolute;
     width: 13px;
     height: 324px;
-    left: 912px;
-    top: 1121px;
+    left: 913px;
+    top: 1149px;
     
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 120.53%;
-    /* or 36px */
-    
     text-align: center;
     
-    color: #00E693;
+    color: #FF0000;
     word-wrap: break-word;
     text-shadow: 0px 4px 4px rgba(241, 241, 241, 0.25), 0px 4px 4px rgba(211, 211, 211, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.25);
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+    left: 620px;
+    top: 602px;
+    
+    background: #6534FF;
+    border: 4px solid #FCCDD3;
+    border-radius: 50%;    
+  }
+
+  .circleText1 {
+    position: absolute;
+    width: 136px;
+    height: 119px;
+    left: 615px;
+    top: 670.51px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 30px;
+    text-align: center;
+    color: #FCCDD3;
+    -webkit-text-stroke:  1px #FCCDD3;
+    transform-origin: 0 0;
+    transform: rotate(-20deg);    
+  }
+
+  .circleText2 {
+    position: absolute;
+    width: 152px;
+    height: 119px;
+    left: 637px;
+    top: 689px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .poapImage {
+    position: absolute;
+    width: 343px;
+    height: 343px;
+    left: 573px;
+    top: 544.5px;
+    
+    transform-origin: 0 0;
+    transform: rotate(-30deg);
+
+    // transition: all 0.3s;
+    // &:hover {
+    //   transition: all 0.3s;
+    //   transform: rotate(-20deg) scale(1.1);
+    // }
   }
 
 }

@@ -4,57 +4,46 @@ const CoverPage = () => {
   console.log('this is loaded.')
   return (
     <div className={styles.wrapper}>         
-      <img className={styles.background} src='/magazine/4/images/cover_background.png' />
-      <div className={styles.rect1}></div>
-      <div className={styles.rect2}></div>
-      <div className={styles.rect3}></div>
-      <div className={styles.rect4}></div>
-      <div className={styles.rect5}></div>
-      <div className={styles.rect6}></div>
-      <img className={styles.image1} src='/magazine/4/images/cover_image1.png' />
-
+      <img className={styles.background} src='/magazine/5/images/cover_background.png' />
       <div className={styles.text1}>
-        The Infinite Bazaar
+        The Metaverse 
       </div>
       <div className={styles.text2}>
-        A return to hope, exuberance, artisanship, and trust in decentralized technological commerce.
+        The Metaverse 
       </div>
       <div className={styles.text3}>
-        ERC
-        <br /><br />
-        PROTOCOL
+        Multipass 
       </div>
       <div className={styles.text4}>
-        S<br />
-        T<br />
-        A<br />
-        N<br />
-        D<br />
-        A<br />
-        RD<br />
-        S
+        Multipass 
       </div>
       <div className={styles.text5}>
-        GDN DAO
+        METAMASK. <br />
+        The Face of Web3
       </div>
       <div className={styles.text6}>
-        web3 <br />
-        fashion week        
+        Crypto, DeFi & US Regulations
       </div>
       <div className={styles.text7}>
-        Decentralised data with pinata
+        Cryptopunks with Jordan Lyall
       </div>
       <div className={styles.text8}>
-        Philippines
+        This Outfit Does Not Exist
       </div>
       <div className={styles.text9}>
-        Play to Earn Economy
+        Santiago Siri and Web3 Authentication
       </div>
       <div className={styles.text10}>
-        PAYC
-      </div>
-      <div className={styles.text11}>
-        Pirate Ape Yacht Club
+        PFP
+        <br /><br />
+        S<br />
+        O<br />
+        C<br />
+        I<br />
+        A<br />
+        L<br />
+        <br />
+        CLUBS
       </div>
       <div className={styles.text12}>
         DIGIFIZZY
@@ -66,11 +55,22 @@ const CoverPage = () => {
         DIGIFIZZY
       </div>
       <div className={styles.text15}>
-        IssueFour
+        IssueFive
       </div>
       <div className={styles.text16}>
-        IssueFour
+        IssueFive
       </div>
+
+      <div className={styles.circle1}></div>
+      <div className={styles.circleText1}>
+        6       
+      </div>
+      <div className={styles.circleText2}>
+        POAPS TO COLLECT INSIDE!    
+      </div>
+      <a href='https://poap.website/identityacrossthemetaverse' target='_blank'>
+        <img src='/images/poap-logo.png' className={styles.poapImage} />
+      </a>
     </div>
   )
 }

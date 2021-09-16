@@ -135,10 +135,107 @@
 
   .metaMask {
     position: absolute;
-    width: 1000px;
-    height: 1000px;
-    left: 1016px;
+    width: 327px;
+    height: 333px;
+    left: 316px;
     top: 42px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 430px;
+    height: 84px;
+    left: 1298px;
+    top: 40px;
+
+    font-family: Lekton;
+    font-size: 100px;
+    line-height: 100px;
+
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 430px;
+    height: 84px;
+    left: 1298px;
+    top: 142px;
     
+    font-family: Lekton;
+    font-size: 100px;
+    line-height: 100px;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 715px;
+    height: 675px;
+    left: 194px;
+    top: 406px;
+    
+    font-family: 'Nova Round';
+    font-size: 21px;
+    line-height: 25px;
+    
+    color: #5D007D;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 440px;
+    height: 387px;
+    left: 481px;
+    top: 1081px;
+    
+    font-family: 'Nova Round';
+    font-size: 23px;
+    line-height: 28px;
+    
+    color: #5D007D;    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 715px;
+    height: 947px;
+    left: 1021px;
+    top: 296px;
+    
+    font-family: 'Nova Round';
+    font-size: 21px;
+    line-height: 25px;
+    
+    color: #5D007D;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 715px;
+    height: 276px;
+    left: 1021px;
+    top: 1081px;
+    
+    font-family: 'Nova Round';
+    font-size: 21px;
+    line-height: 25px;
+    
+    color: #5D007D;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 750px;
+    height: 73px;
+    left: 990px;
+    top: 1386px;
+    
+    font-family: Lekton;
+    font-size: 90px;
+    line-height: 90px;
+    
+    color: #FFFFFF;    
   }
 }
