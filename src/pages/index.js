@@ -174,7 +174,9 @@ const LandingPage = () => {
             </a>
           </Link>
 
-          <Filters filter={filter} filterChange={setFilter} sortByChange={setSortBy} />
+          <div className={styles.filtersWrapper}>
+            <Filters filter={filter} filterChange={setFilter} sortByChange={setSortBy} />
+          </div>
         </div>
       </section>
 
