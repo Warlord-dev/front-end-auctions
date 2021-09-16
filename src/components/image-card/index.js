@@ -184,8 +184,8 @@ const ImageCard = ({
         ) : null}
         {showDesigner ? (
           <div className={styles.designerWrapper}>
-            <img src={v1 ? '/images/metaverse/mirth.png' : data?.designer?.image} className={styles.photo} />
-            <div className={styles.name}>{v1 ? 'Mirth' : data?.designer?.name} </div>
+            <img src={data?.designer?.image} className={styles.photo} />
+            <div className={styles.name}>{data?.designer?.name} </div>
           </div>
         ) : null}
         {withLink ? <Link href={`/product/${data?.id}/${getRarityId(data?.rarity)}/${isAuction ? 1 : 0}`}>

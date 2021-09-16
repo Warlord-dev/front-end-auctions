@@ -28,6 +28,8 @@ export const COLLECTION_GROUPS = gql`
       auctions {
         id
         topBid
+        startTime
+        endTime
         designer {
           id
           name

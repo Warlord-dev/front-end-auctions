@@ -7,11 +7,14 @@ import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import HeroSection from '@components/hero-section';
 import ProductInfoCard from '@components/product-info-card';
+import { filterProducts } from '@utils/helpers';
 
 const Auctions = () => {
   const route = useRouter();
   const chainId = useSelector(getChainId);
   const [auctions, setAuctions] = useState([]);
+  const [filter, setFilter] = useState('');
+  const [sortBy, setSortBy] = useState(null);
   const { id } = route.query;
 
   useEffect(() => {
@@ -21,21 +24,32 @@ const Auctions = () => {
       digitalaxCollectionGroup.auctions.forEach((auction) => {
         aucs.push({
           ...auction,
+          auction: true,
           rarity: 'Exclusive',
         });
       });
 
-      setAuctions([aucs.find(auc => auc.garment?.id === '133247'), ...aucs.filter(auc => auc.garment?.id !== '133247')]);
+      setAuctions([
+        aucs.find((auc) => auc.garment?.id === '133247'),
+        ...aucs.filter((auc) => auc.garment?.id !== '133247'),
+      ]);
     };
 
     fetchCollectionGroup();
   }, []);
 
+  const filteredProducts = filterProducts(auctions, filter, sortBy) || [];
+
   return (
     <div className={styles.wrapper}>
-      <HeroSection logo="/images/metaverse/auctionsLogo.png" />
+      <HeroSection
+        logo="/images/metaverse/auctionsLogo.png"
+        filter={filter}
+        setFilter={(v) => setFilter(v)}
+        setSortBy={(v) => setSortBy(v)}
+      />
 
-      {auctions.map((auction, index) => {
+      {filteredProducts.map((auction, index) => {
         if (index % 2 === 1) return <> </>;
         return (
           <section className={styles.productsSection} key={auction.id}>
@@ -45,16 +59,16 @@ const Auctions = () => {
             <Container>
               <div className={styles.body}>
                 <ProductInfoCard
-                  product={auctions[index]}
-                  price={auctions[index].topBid}
+                  product={filteredProducts[index]}
+                  price={filteredProducts[index].topBid}
                   showRarity
                   showCollectionName
                   isAuction
                 />
-                {index + 1 < auctions.length ? (
+                {index + 1 < filteredProducts.length ? (
                   <ProductInfoCard
-                    product={auctions[index + 1]}
-                    price={auctions[index + 1].topBid}
+                    product={filteredProducts[index + 1]}
+                    price={filteredProducts[index + 1].topBid}
                     showRarity
                     showCollectionName
                     isAuction
