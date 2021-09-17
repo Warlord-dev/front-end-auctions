@@ -69,7 +69,9 @@ const MyApp = ({ Component, pageProps, store, err }) => {
   const router = useRouter();
   const pathname = router.pathname;
   const isMagazineContents = pathname.substr(0, 10) === '/magazines'
-  
+  // const width = window.innerWidth
+  // const isMobile = width <= 768
+
   if (err) {
     Sentry.captureException(err, {
       extra: {},
@@ -85,12 +87,12 @@ const MyApp = ({ Component, pageProps, store, err }) => {
         <link rel="icon" type="image/png" href="/images/icons/favicon-digitalax.ico" />
       </Head>
       <InitWrapper>
-        {!isMagazineContents && <HeaderTopLine /> }
+        <HeaderTopLine isMagazineContents={isMagazineContents} />
         <Modals />
         <NetworkWrapper>
           <Component {...pageProps} />
         </NetworkWrapper>
-        {!isMagazineContents && <Footer /> }
+        <Footer  isMagazineContents={isMagazineContents} />
       </InitWrapper>
       <ToastContainer />
     </Provider>

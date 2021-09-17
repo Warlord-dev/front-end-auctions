@@ -53,7 +53,7 @@ const Page1314 = () => {
           <img src='/magazine/5/images/1314_image2.png' className={styles.image2} />
         </a>
       </Link>
-      <Link href='https://cryptotesters.com/%E2%80%8B'>
+      <Link href='https://cryptotesters.com/'>
         <a target='_blank'>
           <img src='/magazine/5/images/1314_image3.png' className={styles.image3} />
         </a>

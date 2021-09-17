@@ -1,0 +1,40 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #5FFF5B;
+
+  .image1 {
+    position: absolute;
+    width: 1807px;
+    height: 1497px;
+    left: 56px;
+    top: 0px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 662px;
+    height: 1123px;
+    left: 160px;
+    top: 199px;
+    
+    font-family: Poppins;
+    font-size: 40px;
+    line-height: 100%;
+    color: #FF8181;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 662px;
+    height: 1123px;
+    left: 1122px;
+    top: 151px;
+    
+    font-family: Poppins;
+    font-size: 40px;
+    line-height: 100%;
+    color: #FF8181;
+  }
+}
