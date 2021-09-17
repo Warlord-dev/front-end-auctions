@@ -13,8 +13,8 @@ const KeyboardEventHandler = dynamic(() => import('react-keyboard-event-handler'
 
 const WebViewer = forwardRef((props, refs) => {
   const { onSwitchViewer, initPage, issueId, onChangePageNumber } = props;
-  // const { contentUnlocked } = useSelector((state) => state.global.toJS());
-  const contentUnlocked = true
+  const { contentUnlocked } = useSelector((state) => state.global.toJS());
+  // const contentUnlocked = true
   const [zoom, setZoom] = useState(1);
   const [currentPage, setCurrentPage] = useState(0);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
