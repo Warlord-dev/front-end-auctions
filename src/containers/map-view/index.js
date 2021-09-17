@@ -3,7 +3,7 @@ import windowSize from 'react-window-size'
 import styles from './styles.module.scss'
 import MapItem from '../../components/magazines/common/MapItem'
 import ViewerSwitch from '../../components/magazines/common/ViewerSwitch'
-import ViewerSwitchMobile from '@components/magazines-mobile/common/ViewerSwitch'
+// import ViewerSwitchMobile from '@components/magazines-mobile/common/ViewerSwitch'
 
 const mapList = [
   {
