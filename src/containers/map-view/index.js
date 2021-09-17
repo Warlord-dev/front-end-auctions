@@ -441,13 +441,13 @@ const MapViewer = forwardRef((props, ref) => {
         </div>
       </div>
       {
-        width < 768 ?
-        <ViewerSwitchMobile 
-          mapSwitch
-          viewers={['webview', 'magazineview', 'exit']}
-          onSwitchViewer={onSwitchViewer}
-        /> :
-          <ViewerSwitch 
+        // width < 768 ?
+        // <ViewerSwitchMobile 
+        //   mapSwitch
+        //   viewers={['webview', 'magazineview', 'exit']}
+        //   onSwitchViewer={onSwitchViewer}
+        // /> :
+        <ViewerSwitch 
           mapSwitch
           viewers={['webview', 'magazineview', 'exit']}
           onSwitchViewer={onSwitchViewer}

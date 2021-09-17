@@ -82,6 +82,9 @@ const Page2526 = () => {
       <div className={styles.text7}>
         The Face of Web3        
       </div>
+      <a href='https://twitter.com/rachelcope' target='_blank'>
+        <img src='./magazine/5/images/2526_image3.png' className={styles.image3} />
+      </a>
     </div>
   )
 }
