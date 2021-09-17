@@ -1,6 +1,7 @@
 import React from 'react'
-import styles from './page8586.module.scss'
 import Link from 'next/link'
+import styles from './page8586.module.scss'
+
 
 const Page8586 = () => {
   return (

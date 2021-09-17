@@ -331,6 +331,8 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nova+Round"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BioRhyme:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syncopate"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -1624,6 +1626,18 @@ class MyDocument extends Document {
               font-family: 'Gemunu Libre';
               font-weight: 600;
               src: url("./fonts/GemunuLibre-SemiBold.ttf");
+            }
+
+            @font-face {
+              font-family: 'Planet Benson';
+              font-weight: 600;
+              src: url("./fonts/planet benson 2.ttf");
+            }
+
+            @font-face {
+              font-family: 'Karla Tamil Upright';
+              font-weight: 400;
+              src: url("./fonts/Karla Tamil Upright 400.ttf");
             }
           `,
             }}

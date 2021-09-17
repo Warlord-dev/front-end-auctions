@@ -5,8 +5,6 @@ import styles from './page4748.module.scss'
 const Page4748 = () => {
   const [play1, setPlay1] = useState(false)
   const [play2, setPlay2] = useState(false)
-  const refAudio = useRef()
-  const refAudio1 = useRef()
   const ref1 = useRef()
   const ref2 = useRef()
 
