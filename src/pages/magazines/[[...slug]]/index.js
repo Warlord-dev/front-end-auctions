@@ -24,42 +24,47 @@ const MagazinePages = () => {
 
   useEffect(() => {
     const fetchDigitalaxSubscriptionCollectors = async () => {
-      const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
-      const issueIndex = magazineIssues.findIndex((item) => item.issueId === issueId);
-      let contentUnlocked = false;
+      try {
+        const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
+        const issueIndex = magazineIssues.findIndex((item) => item.issueId === issueId);
+        let contentUnlocked = false;
 
-      if (
-        digitalaxSubscriptionCollectors[0] &&
-        digitalaxSubscriptionCollectors[0].parentsOwned.filter((value) =>
-          value.name.includes(`DIGIFIZZY ${details[issueIndex][0].issueIndex}`)
-        ).length
-      ) {
-        dispatch(globalActions.setContentUnlocked(true));
-        contentUnlocked = true;
-      } else {
-        dispatch(globalActions.setContentUnlocked(false));
+        if (
+          digitalaxSubscriptionCollectors[0] &&
+          digitalaxSubscriptionCollectors[0].parentsOwned.filter((value) =>
+            value.name.includes(`DIGIFIZZY ${details[issueIndex][0].issueIndex}`)
+          ).length
+        ) {
+          dispatch(globalActions.setContentUnlocked(true));
+          contentUnlocked = true;
+        } else {
+          dispatch(globalActions.setContentUnlocked(false));
+        }
+
+        if (issueIndex < 0) {
+          Router.push(`/magazines/${magazineIssues[0].issueId}`);
+          return;
+        }
+
+        const pageNumber =
+          slug.length > 1
+            ? slug[1] === 'hidden'
+              ? magazineIssues[issueIndex].freePageCount + 1
+              : parseInt(slug[1])
+            : 0;
+
+        if (pageNumber > magazineIssues[issueIndex].freePageCount && !contentUnlocked) {
+          console.log('redirecting... to : ', magazineIssues[issueIndex].freePageCount);
+          Router.push(`/magazines/${issueId}/${magazineIssues[issueIndex].freePageCount}`);
+          return;
+        } else {
+          console.log('pageNumber: ', pageNumber);
+          setCurrentPage(pageNumber);
+        }
+      } catch (e) {
+        console.log('e: ', e)
       }
-
-      if (issueIndex < 0) {
-        Router.push(`/magazines/${magazineIssues[0].issueId}`);
-        return;
-      }
-
-      const pageNumber =
-        slug.length > 1
-          ? slug[1] === 'hidden'
-            ? magazineIssues[issueIndex].freePageCount + 1
-            : parseInt(slug[1])
-          : 0;
-
-      if (pageNumber > magazineIssues[issueIndex].freePageCount && !contentUnlocked) {
-        console.log('redirecting... to : ', magazineIssues[issueIndex].freePageCount);
-        Router.push(`/magazines/${issueId}/${magazineIssues[issueIndex].freePageCount}`);
-        return;
-      } else {
-        console.log('pageNumber: ', pageNumber);
-        setCurrentPage(pageNumber);
-      }
+      
     };
 
     fetchDigitalaxSubscriptionCollectors();
