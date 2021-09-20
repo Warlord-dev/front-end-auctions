@@ -27,6 +27,7 @@
         font-weight: 600;
         font-style: italic;
         text-transform: uppercase;
+        text-align: center;
 
         @include lg-width {
           font-size: 16px;

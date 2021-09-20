@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link'
 import InfoCard from '@components/info-card';
 import ImageCard from '@components/image-card';
 import PriceCard from '@components/price-card';
@@ -24,12 +25,6 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
     }
   }, [product]);
 
-  const onBuyNow = () => {
-    router
-      .push(`/product/${v1 ? `v1-${product?.id}` : product?.id}/${getRarityId(product?.rarity)}/${isAuction ? 1 : 0}`)
-      .then(() => window.scrollTo(0, 0));
-  };
-
   const getPrice = () => {
     return `${(price / 10 ** 18).toFixed(2)} MONA ($${(
       (parseFloat(monaPerEth) * exchangeRate * price) /
@@ -51,7 +46,7 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.productInfoCardwrapper}>
       <div className={styles.imageWrapper}>
         <ImageCard
           data={product}
@@ -73,17 +68,24 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
                 <PriceCard mainText={getPrice()} />
               </div>
               <div className={styles.buttonWrapper}>
-                <NewButton
-                  disable={Date.now() > product.endTime * 1000}
-                  text={Date.now() > product.endTime * 1000 ? 'Sold' : 'Place a Bid'}
-                  onClick={onBuyNow}
-                />
+                <Link href={`/product/${v1 ? `v1-${product?.id}` : product?.id}/${getRarityId(product?.rarity)}/${isAuction ? 1 : 0}`}>
+                  <a>
+                    <NewButton
+                      disable={Date.now() > product.endTime * 1000}
+                      text={Date.now() > product.endTime * 1000 ? 'Sold' : 'Place a Bid'}
+                    />
+                  </a>
+                </Link>
               </div>
             </>
           ) : (
             <div className={styles.infoWrapper}>
               <PriceCard mainText={getPrice()} />
-              <NewButton text={'Buy Now'} onClick={onBuyNow} />
+              <Link href={`/product/${v1 ? `v1-${product?.id}` : product?.id}/${getRarityId(product?.rarity)}/${isAuction ? 1 : 0}`}>
+                <a>
+                  <NewButton text={'Buy Now'} />
+                </a>
+              </Link>
             </div>
           )}
         </InfoCard>

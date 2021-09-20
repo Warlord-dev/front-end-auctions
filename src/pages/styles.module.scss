@@ -36,6 +36,14 @@
       }
     }
 
+    .actionsWrapper {
+      margin-top: 2rem;
+
+      @include sm-width {
+        margin-top: 0;
+      }
+    }
+
     .heroSectionLink {
       color: white;
       font-family: Poppins;
@@ -43,8 +51,6 @@
       font-weight: bold;
       font-size: 27px;
       line-height: 40px;
-      color: #ffffff;
-      margin-right: 20px;
       color: #ffffff;
       text-align: left;
       margin-top: 1rem;

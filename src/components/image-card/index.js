@@ -93,6 +93,8 @@ const ImageCard = ({
     videoTagRef.current.play();
   }
 
+  console.log({data})
+
   const renderImage = () => {
     return (
       <div className={styles.bodyWrapper}>
@@ -176,7 +178,7 @@ const ImageCard = ({
 
   return (
     <>
-      <div className={styles.wrapper}>
+      <div className={styles.imageCardWrapper}>
         {showCollectionName ? (
           <div className={styles.collectionName}>
             {data?.garment ? data.garment.name : data.name}
@@ -189,7 +191,9 @@ const ImageCard = ({
           </div>
         ) : null}
         {withLink ? <Link href={`/product/${data?.id}/${getRarityId(data?.rarity)}/${isAuction ? 1 : 0}`}>
-          {renderImage()}
+          <a>
+            {renderImage()}
+          </a>
         </Link> : renderImage()}
       </div>
     </>

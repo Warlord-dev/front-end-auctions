@@ -12,9 +12,9 @@ const HeroSection = ({ children, logo, width = '80%', filter, setFilter, setSort
         <section className={styles.heroSection}>
           <img src="/images/metaverse/marketplaceBack.png" className={styles.back} />
           <img src={logo} className={styles.logo} style={{ width: width }} />
-          <HeroBar filter={filter} setFilter={setFilter} setSortBy={setSortBy} />
           {children}
         </section>
+        <HeroBar filter={filter} setFilter={setFilter} setSortBy={setSortBy} />
       </div>
     </>
   );

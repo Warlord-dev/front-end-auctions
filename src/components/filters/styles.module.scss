@@ -1,8 +1,17 @@
 .actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
 
   .filterWrapper {
+    @media (max-width: 576px) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
     
     .filterLabel {
       font-family: Inter;
@@ -29,12 +38,20 @@
       box-sizing: border-box;
       border-radius: 21px;
       
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+      
       input {
         background: transparent;
         border: none;
         outline: none;
         font-size: 16px;
         color: white;
+
+        @media (max-width: 576px) {
+          flex-grow: 1;
+        }
       }
 
       img {
@@ -47,6 +64,11 @@
 
   .sortWrapper {
     margin-left: 2rem;
+
+    @media (max-width: 576px) {
+      width: 100%;
+      margin-left: 0;
+    }
     .sortLabel {
       font-family: Inter;
       font-style: normal;
@@ -77,6 +99,10 @@
         border: none;
         font-size: 16px;
         text-transform: uppercase;
+        
+        @media (max-width: 576px) {
+          width: 100%;
+        }
       }
     }
   }

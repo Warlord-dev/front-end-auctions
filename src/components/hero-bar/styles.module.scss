@@ -3,7 +3,13 @@
   position: relative;
   overflow: hidden;
   background-color: #ba0c76;
-  height: 100px;
+  background-image: url('/images/metaverse/viewallskinsbg.png');
+  background-size: cover;
+  padding: 1.5rem 5rem;
+
+  @media (max-width: 576px) {
+    padding: 1rem;
+  }
 
   .back {
     width: 100%;
@@ -11,9 +17,9 @@
   }
 
   .filter {
-    position: absolute;
-    right: 100px;
-    top: 50%;
-    transform: translateY(-50%);
+    // position: absolute;
+    // right: 100px;
+    // top: 50%;
+    // transform: translateY(-50%);
   }
 }

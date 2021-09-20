@@ -22,10 +22,14 @@
 
     .body {
       display: grid;
-      padding: 7.5rem 5rem;
+      padding: 2rem;
       grid-template-columns: 1fr;
       align-items: flex-end;
       gap: 5rem;
+
+      @include sm-width {
+        padding: 5rem 3rem;
+      }
 
       @include lg-width {
         grid-template-columns: repeat(2, 1fr);

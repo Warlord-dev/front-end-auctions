@@ -29,13 +29,10 @@ const PurchaseSuccess = ({ className }) => {
           <div className={styles.footer}>
             <p className={styles.footerCaption}>
               <span>
-                Congratulations! Welcome to the Revolution. Your Decentraland in-game wearable and
-                unique PFP game character will be airdropped to your wallet in a few hours! Also,
-                you will receive an email shortly with instructions for how to wear your fashion
-                digitally!
+                Congratulations! Welcome to the Revolution.
               </span>
               <p>
-                In the meantime you can stake your fashion for $MONA yield <a href="https://staking.digitalax.xyz/" target="_blank">here!</a>
+                You can stake your fashion for $MONA yield <a href="https://staking.digitalax.xyz/" target="_blank">here!</a>
               </p>
             </p>
             <div className={styles.selectWrapper}>
