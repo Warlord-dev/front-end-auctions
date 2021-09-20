@@ -3,19 +3,7 @@ import Link from 'next/link'
 import styles from './page1314.module.scss'
 
 const Page1314 = () => {
-  const audioRef = useRef()
-  const [isPlaying, setIsPlaying] = useState(false)
-
-  const startAudio = () => {
-    audioRef.current.play()
-    setIsPlaying(true)
-  }
-
-  const pauseAudio = () => {
-    audioRef.current.pause()
-    setIsPlaying(false)
-  }
-
+  
   return (
     <div className={styles.wrapper}>
       <img src='/magazine/5/images/1314_background1.jpg' className={styles.background1} />
@@ -30,23 +18,6 @@ const Page1314 = () => {
         SANTIAGO SIRI
       </div>
       <img src='/magazine/5/images/1314_image1.png' className={styles.image1} />
-
-      <div
-        className={styles.playButton}
-        onClick={() => {
-          isPlaying ? pauseAudio() : startAudio()
-        }}
-      >
-        {
-          !isPlaying
-          ? <img className={styles.imagePlay} src='/magazine/5/images/1314_playbutton.png' />
-          : <img className={styles.imagePause} src='/magazine/5/images/1314_pausebutton.png' />
-        }
-      </div>
-
-      <audio ref={audioRef} loop>
-        <source src='./magazine/4/sounds/4950_sound1.mp3' type='audio/mpeg' />
-      </audio>
 
       <Link href='https://li.finance/about'>
         <a target='_blank'>
@@ -121,6 +92,18 @@ const Page1314 = () => {
       <div className={styles.text16}>
         <span>UPALA</span><br />
         Extremely fitting to the focus on identity for this issue of DIGIFIZZY, Upala is a Proof-of-PersonHood system that provides human uniqueness score to DApps and beyond. The score given represents how much financial cost, in $, it would take to forge the account. It’s an interesting concept and brings a unique flavor to how we validate good actors online, whereby group consensus and skin in the game through payments is leveraged to curate people and “explode” pools when malicious actors are found in the system. 
+      </div>
+      <div className={styles.rect1}>
+
+      </div>
+      <div className={styles.text17}>
+        I got the opportunity to have a conversation with Santi last week and unfortunately the audio quality was ngmi. We can all thank the fast degrading low quality of web2 audio recording and centrally controlled internet service latency. Sorry about Santi, because, it was a fantastic conversation and you are someone that we all really look up to. So instead, I will share with you what I learned from this conversation and what you can do to support Santi’s efforts for bringing democracy and basic income to the entire world. 
+        <br /><br />
+        Well, the very first takeaway is that Facebook and the Chinese Communist Party really aren’t all that different. The fact is that total control of every morsel and facet of data, communication and access to tools and content in our lives, digital or IRL, is not something that we should all just sit back and accept. It’s the salami slicing strategy that these neo corporate gatekeepers and centralised powers have engaged in throughout the industrial and early information age that has mushroomed into the complicit complacency to hit the morphine drip once too often. And this isn’t just a matter of alliteration but rather a human rights issue. This is how all of us should be viewing any inability to have access to, ownership of, and tangible grease on our hands of the manifest reality that our data is actually ours. And it’s not just human rights for altruistic regions, but also for the sake of pure profit. Because what decentralisation has proven is that free markets and free people with swift and trustable coordination, which is fundamentally what blockchain achieves, out compete controlled dictatorships everytime. But it’s not just free markets and free people with swift and trustable coordination but also genuinely democratic ownership, meaning everyone has the right and functional ability to own their own assets. State capitalism isn’t capitalism, and in the case of the CCP and Facebook it’s hard to even call them state capitalists anymore as they descend further and further into martial control and economic theatrics. 
+        <br /><br />
+        Santi is actually using the blockchain, Ethereum community and the broader set of materials available in web3 to shift how we take on these gatekeepers and actually win. Through Proof of Humanity, $UBI and Democracy Earth he has empowered 20,000 people so far, and many more to come, to gain a floor independent from centralised outsider control. You can start creating this floor for yourself with Santi here and here. 
+        <br /><br />
+        So to wrap this all up, Santi we stand side by side with you in pursuing this dream. And for anyone that wants to keep up, just check the ledger. 
       </div>
     </div>
   )

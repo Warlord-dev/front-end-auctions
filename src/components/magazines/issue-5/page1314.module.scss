@@ -359,4 +359,33 @@
       font-size: 17px;      
     }
   }
+
+  .rect1 {
+    position: absolute;
+    width: 368px;
+    height: 1115px;
+    left: 592px;
+    top: 0px;
+    
+    background: #000000;    
+  }
+
+  .text17 {
+    position: absolute;
+    width: 304px;
+    height: 1002px;
+    left: 624px;
+    top: 14px;
+    
+    font-family: Times;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    text-align: center;
+    
+    color: #FF7A00;    
+  }
 }
