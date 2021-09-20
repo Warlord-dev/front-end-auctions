@@ -68,7 +68,7 @@ const MagazinePages = () => {
     };
 
     fetchDigitalaxSubscriptionCollectors();
-  }, [slug]);
+  }, [slug, account]);
 
   const switchViewer = (viewer) => {
     if (viewer === 'exit') {
