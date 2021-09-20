@@ -23,7 +23,6 @@ const FashionList = ({ fashionData }) => {
 
       
       <section className={styles.fashionListSection}>
-        <img src="/images/metaverse/webtitle.png" className={styles.webtitle} />
         {fashionData.map((item,index) => (
           <Container key={index}>
             <div className={styles.cardWrapper}>
