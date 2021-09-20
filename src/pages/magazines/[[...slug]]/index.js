@@ -25,22 +25,26 @@ const MagazinePages = () => {
   useEffect(() => {
     const fetchDigitalaxSubscriptionCollectors = async () => {
       try {
-        const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
-        const issueIndex = magazineIssues.findIndex((item) => item.issueId === issueId);
+        console.log('account: ', account)
         let contentUnlocked = false;
+          const issueIndex = magazineIssues.findIndex((item) => item.issueId === issueId);
 
-        if (
-          digitalaxSubscriptionCollectors[0] &&
-          digitalaxSubscriptionCollectors[0].parentsOwned.filter((value) =>
-            value.name.includes(`DIGIFIZZY ${details[issueIndex][0].issueIndex}`)
-          ).length
-        ) {
-          dispatch(globalActions.setContentUnlocked(true));
-          contentUnlocked = true;
-        } else {
-          dispatch(globalActions.setContentUnlocked(false));
+        if (account) {
+          const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
+
+          if (
+            digitalaxSubscriptionCollectors[0] &&
+            digitalaxSubscriptionCollectors[0].parentsOwned.filter((value) =>
+              value.name.includes(`DIGIFIZZY ${details[issueIndex][0].issueIndex}`)
+            ).length
+          ) {
+            dispatch(globalActions.setContentUnlocked(true));
+            contentUnlocked = true;
+          } else {
+            dispatch(globalActions.setContentUnlocked(false));
+          }
         }
-
+        
         if (issueIndex < 0) {
           Router.push(`/magazines/${magazineIssues[0].issueId}`);
           return;
