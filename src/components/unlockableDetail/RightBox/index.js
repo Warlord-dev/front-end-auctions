@@ -154,8 +154,8 @@ const RightBox = ({ details, id, activeImage }) => {
         ) : null}
       </div>
       <div className={styles.poapWrapper}>
-        <a href="https://poap.website/digifizzy4" target="_blank">
-          <Button className={styles.poapClaimButton}>CLAIM ISSUE 4 POAP!</Button>
+        <a href="https://poap.website/digifizzyissue5" target="_blank">
+          <Button className={styles.poapClaimButton}>CLAIM ISSUE 5 POAP!</Button>
         </a>
         <img src="/images/poap.png" />
       </div>
