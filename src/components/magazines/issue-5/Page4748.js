@@ -155,7 +155,7 @@ const Page4748 = () => {
         <br /><br />
         Relating back to Digi-Fizzy, where the fizzy side has always been shrouded in secrecy (often due to a mismatch between espoused brand ‘ethics’ and behaviours in reality) the blockchain means that full transparency is inevitable. 
         <br /><br />
-        What’s more, where your stakeholders and shareholders are a community with bottom-up, ethical, decentralised values (who as I mentioned before have the abilities to control the workings of the platform) and fully visibility into brand behaviours, ethical, empowering action is not just a nice-to-have. It’s a do-or-die. 
+        What’s more, where your stakeholders and shareholders are a community with bottom-up, ethical, decentralised values (who as I mentioned before have the abilities to control the workings of the platform) and full visibility into brand behaviours, ethical, empowering action is not just a nice-to-have. It’s a do-or-die. 
         <br /><br />
         Consumers:<br />
         Manifesting as an attraction to both the golden ratio, and to the ancient value of the flex, a need to breed means there will always be a status component attached to the way we look. What’s more, as human beings, expressing our individuality cosmetically is one of the most vital means of interacting with others; explaining who we are, demonstrating affiliations and bonding. 
@@ -180,7 +180,7 @@ const Page4748 = () => {
         As I previously mentioned, the fashion industry’s environmental creds leave much to be desired, in part this is due to speed to market needed to keep up (with the Kardashians), but equally because the industry relies on furthering the mindset that what you bought 3-6 months ago is no longer good enough, and equally tries to stimulate demand, through clever and creative advertising, rather than respond to it. 
       </div>
       <div className={styles.text10}>
-        One of the most exciting opportunities for Web3 plays in this space is to redirect the human need for the re-formation of identity(/conspicuous consumption), from their human person to their avatar. We’re told we constantly need to evolve, and blocking that out is nearly impossible, but if your avatar only wears its skin 7 times during their lifetime, the effect on the planet is vastly superior to if its human counterpart does the same. 
+        One of the most exciting opportunities for Web3 plays in this space is to redirect the human need for the re-formation of identity (conspicuous consumption), from their human person to their avatar. We’re told we constantly need to evolve, and blocking that out is nearly impossible, but if your avatar only wears its skin 7 times during their lifetime, the effect on the planet is vastly superior to if its human counterpart does the same. 
       </div>
       <div className={styles.text21}>
         Integrating the fizzy element can also reap rewards. A digi-fizzy combo allows brands to produce on a more demand led model. By using either phygital fashion, or in-game worlds, to assess demand for a particular collection or piece, a brand can get closer to producing the amount that’s going to be sold. Going one step further, digi can serve as a pre-order for fizzy, helping the fashion industry move towards the Made-To-Order, demand responsive model, that lay’s at slow fashion’s core.
