@@ -4,21 +4,19 @@ const Page34 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='./magazine/5/images/0304_image1.png' className={styles.image4} />
-      <p className={styles.text1}>The Time Dealer.</p>
+      <p className={styles.text1}>Building in the Bazaar.</p>
       <p className={styles.text2}>
-        Time is the most abundant asset in our universe. The most abundant, yet probably the most underutilised. That might sound like a somewhat intentionally mystifying statement, but it’s not. Because far too many of us are dictated by it. We accept the points of freedom and points of constraint that it imposes over our lives, and we mould so much of our existence around it, whether we like it or not; from it determing what we call  “breakfast”, to the 9 - 5,  to the broader meta timeline of go to school, get a job, have a weekend, achieve a work-life balance, repeat...completely chained to the reason.
+        Web3 at its core is an open bazaar of chaotic live fire markets, bustling open source development, vast creativity and decentralised tinkering of the very source code that gives so much vitality and wealth to NFTs, DeFi, Decentralised Commerce, DAOs and more. 
         <br /><br />
-        So, how do we break this frame? How do we unfreeze this underutilised asset and inject volume and liquidity into every aspect of it? How do we literally make the market so that we can start dealing it? So that we can actually start living with real agency. 
+        Amongst all the noise there is an elegant coherence of signal, coordinating rapid code improvement and effective debugging so that designers, creators, players and everyday people are able to better start finding their way in this new world and embrace the market for its entire range of most important features and the full set of tools of what it can offer us.
         <br /><br />
-        Because, after all, if we can’t learn to deal time, learn to manipulate it to our advantage, to create and destroy it, then we will always be running against the clock— exerting energy and going against favourable inertia. I, myself, have always been incredibly time conscious. It was never a feeling of anxiety, but, rather a consistently irrepressible urgency to stay ahead. To make sure that at each moment I am not just unintentionally taking this asset for granted, or yielding to someone else’s preconceived frame of how I should act, operate, or be in any moment. 
+        This complete breadth of optionality becomes so much more interesting given that in web3, for the first time, everything can be directly incentivised through streamlining the mechanisms for value exchange, securing it all through decentralisation and eliminating barriers to the creation of goods and services that you actually own— the bedrock and foundation to the open metaverse. 
         <br /><br />
-        When I have the means to take a leap, take action, and have huge impact in my life that can help so many people— why accept anything less? Why wait to take action? And why allow time to play any role in oppressing the outcome. 
+        And it is only in building in such an open way that truly gives this market, and everyone a part of it, continuous opportunities to get better, at whatever that might be. Mistakes, big or small, core or peripheral, point us in the way toward getting better. Being able to confront the mistakes so publically, fess up to what went wrong, and then go at it again in completely new and different ways ensures we dig into the root causes and address those before iterating to the next stage.   
         <br /><br />
-        It starts by smashing through the binary. It’s not about accepting it as is or even going against it. It’s about rewinding the conditions so that we can start early. We can find the pressure points of the sytem and apply the slightest adjustments to then change any thing, person or concept that is being foisted upon us. This way, time becomes just another highly desirable tool with deep cross context interoperability. 
+        Our mistakes in this market are ultimately what point the way to the best solutions— the solutions unshrouded by personal ego, cognitive dissonance or political bureaucracy. And it’s not just pointing the way to best solutions, but also just as much pointing the way so we can embrace the best versions of who we are and continually evolve to become. 
         <br /><br />
-        This is why DeFi and web3 are just so revolutionary. Because these protocols, gadgets, DAPPs, custom built incentives and the open infrastructure that it’s all formulated upon allows us to establish our own rules. Whether that be in our path to achieving financial freedom or just removing consistent points of friction in commerce, business, our lives and more. Either way, we can establish our own rules. We no longer play someone else’s game. 
-        <br /><br />
-        We can deal time, on our terms. 
+        In this dynamically occupied metaversal bazaar, our identities, self interest and self sovereignty are now directly under our own agency, instead of the centralised systems that don’t work or actively work against us to the benefit of the very few. Its this rightful ownership that allows us to start truly forging the narratives and stories that we want to be a part of and contribute to, that we are indespensible and consequential to.
       </p>
       <p className={styles.text12}>- Emma-Jane MacKinnon-Lee</p>
       <img src='./magazine/5/images/0304_background.jpg' className={styles.image1} />
