@@ -69,7 +69,7 @@ const Page1314 = () => {
       </div>
       <div className={styles.text10}>
         <span>Li Finance</span><br />
-        Imagine a cross-chain 1inch— that’s Li Finance. Their thesis centres around providing instant liquidity with a next-gen UX by aggregating networks, DEXes and liquidity providers so that any to any swaps become as easy as it is to figure out that as collecting bags in a bull market.         
+        Imagine a cross-chain 1inch— that’s Li Finance. Their thesis centres around providing instant liquidity with a next-gen UX by aggregating networks, DEXes and liquidity providers so that any to any swaps become as easy as it is to figure out than as collecting bags in a bull market.         
       </div>
       <div className={styles.text11}>
         And the best part is that Li Finance isn’t just available as a DAPP but also as a widget so that other DAPP devs can leverage the tool and keep their users on their respective platforms when engaging in swapping actions. Providing simplified and more user friendly tools and UIs is essential for scaling web3 to the average market participant, and the work from the Li Finance team is adding greater support to help get us there. 
