@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
-import { getViewMethod } from '@selectors/global.selectors'
+import { getCurrentPage, getViewMethod } from '@selectors/global.selectors'
 const ModelViewer = require('@metamask/logo')
 
 const MetamaskLogo = props => {
   const { className, refreshNum } = props
   const container = useRef()
   const viewMethod = useSelector(getViewMethod)
+  const currentPage = useSelector(getCurrentPage)
 
   let viewer = null
 
@@ -33,7 +34,15 @@ const MetamaskLogo = props => {
   }
   useEffect(() => {
     if (viewMethod === 'magazineview') {
-      setTimeout(addFox, 1000)
+      if (currentPage == 25) {
+        setTimeout(addFox, 1000)
+      } else {
+        if (viewer) {
+          viewer.stopAnimation()
+          container.current.removeChild(viewer.container)
+        }  
+      }
+      
     } else {
       addFox()
     }
@@ -45,7 +54,7 @@ const MetamaskLogo = props => {
 
       }
     }
-  }, [viewMethod, refreshNum])
+  }, [viewMethod, refreshNum, currentPage])
   return (
     <div
       className={[className].join(' ')}

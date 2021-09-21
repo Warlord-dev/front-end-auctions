@@ -160,6 +160,12 @@ class GlobalActions extends BaseActions {
       dispatch(this.setValue('viewMethod', value));
     }
   }
+
+  setCurrentPage(value) {
+    return async (dispatch) => {
+      dispatch(this.setValue('currentPage', value));
+    }
+  }
 }
 
 export default new GlobalActions(globalReducer);

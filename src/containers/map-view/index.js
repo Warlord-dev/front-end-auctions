@@ -415,21 +415,21 @@ const mapList = [
     content: [
       {
         pageNum: 0,
-        x: '60',
-        y: '5',
-        rotate: '-30',
+        x: '55',
+        y: '10',
+        rotate: '10',
       },
       {
         pageNum: 3,
-        x: '15',
-        y: '20',
-        rotate: '-18',
+        x: '10',
+        y: '25',
+        rotate: '0',
       },
       {
         pageNum: 13,
         x: '7',
-        y: '70',
-        rotate: '15',
+        y: '78',
+        rotate: '-15',
       },
       {
         pageNum: 17,
@@ -440,13 +440,13 @@ const mapList = [
       {
         pageNum: 23,
         x: '42',
-        y: '20',
+        y: '24',
         rotate: '-5',
       },
       {
         pageNum: 29,
         x: '59',
-        y: '30',
+        y: '35',
         rotate: '0',
       },
       {
@@ -457,15 +457,15 @@ const mapList = [
       },
       {
         pageNum: 45,
-        x: '50',
-        y: '70',
-        rotate: '0',
+        x: '55',
+        y: '72',
+        rotate: '-10',
       },
       {
         pageNum: 50,
-        x: '72',
-        y: '37',
-        rotate: '-40',
+        x: '85',
+        y: '45',
+        rotate: '-20',
       },
       {
         pageNum: 57,
@@ -516,7 +516,7 @@ const mapList = [
 const MapViewer = forwardRef((props, ref) => {
   const { issueId, windowWidth, onClickItem, onSwitchViewer } = props
   const currentMap = mapList.find(item => item.issueId === issueId)
-  console.log('currentMap: ', currentMap)
+  // console.log('currentMap: ', currentMap)
   const width = window.innerWidth
   return (
     <>
