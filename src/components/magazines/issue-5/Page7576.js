@@ -27,7 +27,7 @@ const Page7576 = () => {
         <br /><br /><br />
         it’s time to investigate the regulators. 
         <br /><br /><br />
-        just as Mark Cuban suggested to Brian Armstrong, it’s time for coinbase to sue the SEC and time for all Americans that care about innovation and economic viability to funnel some of the bags being earnt from defi and NFTs into political action because ultimately that it is the only arena that will determine whether we have smart regulation or are all in an economy that has become a sinking ship. 
+        just as Mark Cuban suggested to Brian Armstrong, it’s time for coinbase to sue the SEC and time for all Americans that care about innovation and economic viability to funnel some of the bags being earnt from defi and NFTs into political action, because ultimately that it is the only arena that will determine whether we have smart regulation or are all in an economy that has become a sinking ship. 
         <br /><br />
         It’s time to pick up a bucket, flush out the old water and set sail for a better horizon. I sincerely hope for all of our sakes that there are better days ahead. If not, America will just have to accept fading into irrelevance than anyone thinks is possible, just like every empire before it. We’re a sitting duck. whether america as a nation state still has enough of it to bounce back or we are witnessing the emergence of the network state replacing the nation state is still yet to be seen. 
       </div>
@@ -39,13 +39,13 @@ const Page7576 = () => {
       <img src='/magazine/5/images/7576_image6.png' className={styles.image9} />
 
       <div className={styles.text4}>
-        My first memory of art is my mother sitting at the kitchen table painting ducks. my first memory of myself creating is drawing little girls faces when I was about 7 yrs old. 
+        My first memory of art is my mother sitting at the kitchen table painting ducks. My first memory of myself creating is drawing little girls faces when I was about 7 yrs old. 
         <br /><br />
         My art process varies greatly. I find inspiration everywhere, in people, in nature, in emotions. I use a variety of tools. From airbrushing to oils on canvas to procreate on ipad. 
         <br /><br />
         I entered nfts by accident. I was an artist that was into crypto currencies when I stumbled into cryptoart and minting works on blockchain. I dont know how I created demand for my work other than being myself making friends building a community and never giving up.
         <br /><br />
-        I am mostly joyous when I see others succeed. Its what we all want to happen. It can get to you if you have been at it a very long time with a dry spell in between you have to be mentally prepared for that and realize that feeling is on you, you are incontrol of it and how you let it effect you. 
+        I am mostly joyous when I see others succeed. Its what we all want to happen. It can get to you if you have been at it a very long time with a dry spell in between you have to be mentally prepared for that and realize that feeling is on you, you are in control of it and how you let it effect you. 
         <br /><br />
         I love the wild west feel of everything in this space and watching it explode and go places I never thought it would. The surprises are very exciting.        
       </div>
