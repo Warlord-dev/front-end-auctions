@@ -22,7 +22,7 @@ const Page1718 = () => {
         How to guarantee access?
       </div>
       <div className={styles.text3}>
-        The NFT game is already turning into a game of flipping, favouring the elite. We need better mechanics for wealth distribution. 
+        The NFT world is already turning into a game of flipping, favouring the elite. We need better mechanics for wealth distribution. 
       </div>
       <div className={styles.text4}>
         The Floor Price RugPull        
@@ -54,7 +54,7 @@ const Page1718 = () => {
         <br /><br />
         Ultimately a lot of what drives primary market sales in this market, so far, is secondary market sales. Which might seem a bit confusing if you are not a time traveller. Because, the first sale is dependent on the second, third and so on. But this is why either it is critical to develop real relationships with a digitally local community of buyers and creators, or, to team up with wealthy individuals in private to paint the tape. Either way, the prospect of future sales is what is rapidly raising the floor prices of present sales to be out of control. It’s a speculative promise of what could be. One version with merit, the other one with slight of hand. 
         <br /><br />
-        To remain inclusive to anyone that wants to be part of  NFTs, DeFi and the like we must keep broadening the base and enhancing transparency. This is really the only way that we can break away from a top down pyramid structure into one of pure dynamic creative circulation where wealth can be actively generated, sauced and distributed to everyone engaged in the market. Because if it is just about raising the floor then the appeal gets  stale pretty quickly and it only remains a financial game of deep leverage. Get wrekt. 
+        To remain inclusive to anyone that wants to be part of  NFTs, DeFi and the like we must keep broadening the base and enhancing transparency. This is really the only way that we can break away from a top down pyramid structure into one of pure dynamic creative circulation where wealth can be actively generated, sourced and distributed to everyone engaged in the market. Because if it is just about raising the floor then the appeal gets  stale pretty quickly and it only remains a financial game of deep leverage. Get wrekt. 
       </div>
     </div>
   )
