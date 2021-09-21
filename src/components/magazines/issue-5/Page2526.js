@@ -78,7 +78,7 @@ const Page2526 = () => {
         <br /><br />
         Seed phrase friction is definitely one of the most challenging experiences for users new to MetaMask. Phishers are always looking for ways to convince users to reveal their seed phrase resulting in loss of funds. Or users fail to properly backup their seed phrase and cannot recover their accounts.
         <br /><br />
-        Over the last few quarters, we have incorporated more seed phrase education within the onboarding flow and in-app. But ultimately, we are looking at other key management and social recovery strategies  to help reduce the friction of the seed phrase and make it easier for users to recovery their wallet, while keeping it decentralized.
+        Over the last few quarters, we have incorporated more seed phrase education within the onboarding flow and in-app. But ultimately, we are looking at other key management and social recovery strategies  to help reduce the friction of the seed phrase and make it easier for users to recover their wallet, while keeping it decentralized.
         <br /><br />
         While the seed phrase is definitely a friction point, we recently talked to a number of users in emerging markets and many of those users have a deeper understanding of the value of key ownership and keeping their seed phrase safe. A user in Nigeria said he keeps it in a notebook that he carries all the time and even sleeps with.          
       </div>
