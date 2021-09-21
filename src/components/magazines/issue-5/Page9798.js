@@ -20,12 +20,9 @@ const Page9798 = () => {
         <br /><br />
         The Web3 Fashion 101 is a concentrated glossary and reference platform filled with resources, content, assets, materials and supplies that can be used by any designer, creator, consumer, fashion or metaverse lover either beginning or continuing their journey in the world of web3 fashion, inclusive of NFTs, DeFi, digital fashion, hybrid digi-physical, gaming, 3D applications etc. 
         <br /><br />
-        You can track the Web3 Fashion 101 being contributed to and changed overtime by the GDN on https://designers.digitalax.xyz/ under each designer’s profile.        
+        You can track the Web3 Fashion 101 being contributed to and changed overtime by the GDN on <a href='https://designers.digitalax.xyz/' target='_blank'>https://designers.digitalax.xyz/</a> under each designer’s profile.        
       </div>
 
-      <div className={styles.text2}>
-        You can track your fav GDN members as they grow out their on-chain material, pattern and texture libraries through FGO, add how-to’s for garment creations, tips on NFT minting and wealth generation as a web3 designer, and grow out their collectible NFT fashion content that you can purchase from the very home of the DIGITALAX Polygon fashion marketplace!        
-      </div>
       <a href='https://designers.digitalax.xyz/global/' target='_blank'>
         <div className={styles.text3}>
           Start checking it out here!
@@ -63,6 +60,10 @@ const Page9798 = () => {
 
       <img src='/magazine/5/images/9798_image6.png' className={styles.image12} />
       <img src='/magazine/5/images/9798_image5.png' className={styles.image11} />
+
+      <div className={styles.text2}>
+        You can track your fav GDN members as they grow out their on-chain material, pattern and texture libraries through FGO, add how-to’s for garment creations, tips on NFT minting and wealth generation as a web3 designer, and grow out their collectible NFT fashion content that you can purchase from the very home of the DIGITALAX Polygon fashion marketplace!        
+      </div>
 
       <div className={styles.circle1}></div>
       <div className={styles.circleText1}>

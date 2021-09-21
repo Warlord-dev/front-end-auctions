@@ -33,6 +33,10 @@ const Page9596 = () => {
 
       <img src='/magazine/5/images/9596_image5.png' className={styles.image11} />
       <img src='/magazine/5/images/9596_image6.png' className={styles.image12} />
+
+      <div className={styles.text3}>
+        Looks By Mirth/Kodo
+      </div>
     </div>
   )
 }

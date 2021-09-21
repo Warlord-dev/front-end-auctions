@@ -36,9 +36,11 @@ const Page99100 = () => {
       <div className={styles.text4}>
         To continue to introduce the GDN to the world, we have started a new podcast series so that everyone can learn more about why our designers are so special. Get intimate with web3 fashion. And, you can start listening to some of the first of these episodes here! 
       </div>
-      <div className={styles.text5}>
-        Listen In Here to TOW3T.
-      </div>
+      <a href='https://soundcloud.com/talesofweb3tailors' target='_blank'>
+        <div className={styles.text5}>
+          Listen In Here to TOW3T.
+        </div>
+      </a>
     </div>
   )
 }

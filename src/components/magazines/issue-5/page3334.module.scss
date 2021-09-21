@@ -263,12 +263,13 @@
     background: black;
   }
 
-  .image1 {
+  .video2 {
     position: absolute;
     width: 609px;
     height: 501px;
     left: 12px;
-    top: 209px;    
+    top: 209px;
+    object-fit: cover;
   }
 
   .image2 {

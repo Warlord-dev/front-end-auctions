@@ -34,7 +34,9 @@ const Page3334 = () => {
 
       <Link href='https://makersplace.com/nottodaynonono/perfect-breakfast-1-of-1-78082/'>
         <a target='_blank'>
-          <img src='./magazine/5/images/3334_image1.png' className={styles.image1} />
+          <video autoPlay muted loop className={styles.video2}>
+            <source src='./magazine/5/videos/3334_video2.mp4' type='video/mp4' />
+          </video>
         </a>
       </Link>
       <Link href='https://foundation.app/@heartfulrosee/demon-girl-80277'>

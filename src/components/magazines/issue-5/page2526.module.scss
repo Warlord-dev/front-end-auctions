@@ -179,8 +179,11 @@
     font-family: 'Nova Round';
     font-size: 21px;
     line-height: 25px;
+    color: white;
     
-    color: #5D007D;
+    span {
+      color: #5D007D;
+    }
   }
 
   .text4 {
@@ -194,7 +197,11 @@
     font-size: 23px;
     line-height: 28px;
     
-    color: #5D007D;    
+    color: white;
+    
+    span {
+      color: #5D007D;
+    }  
   }
 
   .text5 {
@@ -207,8 +214,11 @@
     font-family: 'Nova Round';
     font-size: 21px;
     line-height: 25px;
+    color: white;
     
-    color: #5D007D;
+    span {
+      color: #5D007D;
+    }  
   }
 
   .text6 {
@@ -221,8 +231,11 @@
     font-family: 'Nova Round';
     font-size: 21px;
     line-height: 25px;
+    color: white;
     
-    color: #5D007D;
+    span {
+      color: #5D007D;
+    }  
   }
 
   .text7 {
@@ -245,5 +258,15 @@
     height: 274px;
     left: 187px;
     top: 1103px;    
+  }
+
+  a {
+    div, img {
+      transition: 0.3s all;
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(1.1);
+      }
+    }
   }
 }

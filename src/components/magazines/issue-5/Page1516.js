@@ -44,9 +44,9 @@ const Page1516 = () => {
       <div className={styles.text4}>
         <span>
         Do you think that this shift will not only affect corporate culture but most importantly actually empower a lot more people to truly take ownership and agency of our own lives?
+        </span>
         <br /><br />
         I hope so! I think as we become more crypto native, we’ll feel less satisfied with consumption that doesn’t result in ownership. A simple example of this is something like a Substack subscription. In web3, rather than having readers pay a monthly subscription to access content, you have models where readers need to own tokens. Once your mental model changes to ownership, something like a subscription seems like a ripoff. But that’s such a simple example -- this same logic applies to the organizations we work at and the groups we belong to.
-        </span>
       </div>
       <Link href='https://twitter.com/chaserchapman'>
         <a target='_blank'>

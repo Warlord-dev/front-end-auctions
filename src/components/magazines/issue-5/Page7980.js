@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './page7980.module.scss'
 
 
@@ -77,12 +78,18 @@ const Page7980 = () => {
         3D PASS + IN-GAME
       </div>
       
-      <div className={styles.text18}>
-        SEE MORE
-      </div>
-      <div className={styles.text19}>
-        SEE MORE
-      </div>
+      <Link href='/unlockable/1' >
+        <a target='blank'>
+          <div className={styles.seeMoreWrapper}>
+            <div className={styles.text18}>
+              SEE MORE
+            </div>
+            <div className={styles.text19}>
+              SEE MORE
+            </div>
+          </div>
+        </a>
+      </Link>
     </div>
   )
 }

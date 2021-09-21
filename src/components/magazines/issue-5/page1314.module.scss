@@ -54,6 +54,12 @@
     
     color: #FFE600;
     -webkit-text-stroke: 1px #FF0000;
+
+    transition: 0.3s all;
+    &:hover {
+      transform: scale(0.9);
+      transition: 0.3s all;
+    }
   }
 
   .text3 {
@@ -72,6 +78,11 @@
     
     color: #FFE600;
     -webkit-text-stroke: 1px #FF0000;
+    transition: 0.3s all;
+    &:hover {
+      transform: scale(0.9);
+      transition: 0.3s all;
+    }
   }
 
   .image1 {
@@ -386,6 +397,11 @@
     
     text-align: center;
     
-    color: #FF7A00;    
+    color: #FF7A00;
+
+    a {
+      color: #FF7A00;
+      text-decoration: underline;
+    }
   }
 }

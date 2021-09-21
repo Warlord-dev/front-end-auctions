@@ -334,6 +334,7 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syncopate"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{

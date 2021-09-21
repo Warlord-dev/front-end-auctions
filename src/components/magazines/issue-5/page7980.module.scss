@@ -391,8 +391,8 @@
     position: absolute;
     width: 240px;
     height: 144px;
-    left: 1655px;
-    top: 1306px;
+    left: 0px;
+    top: 0px;
 
     font-family: Noto Sans Armenian;
     font-style: normal;
@@ -409,8 +409,8 @@
     position: absolute;
     width: 240px;
     height: 144px;
-    left: 1658px;
-    top: 1311px;
+    left: 3px;
+    top: 5px;
     
     font-family: Noto Sans Armenian;
     font-style: normal;
@@ -421,5 +421,19 @@
     
     
     color: #26C000;
+  }
+
+  .seeMoreWrapper {
+    position: absolute;
+    width: 243px;
+    height: 149px;
+    left: 1655px;
+    top: 1306px;
+
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(1.1);
+    }
   }
 }

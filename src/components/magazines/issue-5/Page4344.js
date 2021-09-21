@@ -32,7 +32,7 @@ const Page4344 = () => {
         <br /><br />
         The last Gitcoin Grants round had 250k contributions from 50k users.  We have sybil resistance data on each of these transactions.  My hope is that Gitcoin can leverage its momentum, data, and other assets to jumpstart sybil resistance for the entire ecosystem.
         <br /><br />
-        We are wrapping all of that momentum into something called https://proofofpersonhood.com/
+        We are wrapping all of that momentum into something called <a href='https://proofofpersonhood.com/' target='_blank'>https://proofofpersonhood.com/</a>
         <br /><br />
         Proof of Personhood Passport (PoPP) is a transportable proof of personhood identity for the web3 space.  It leverages the same identity you already use on Gitcoin Grants, and the Gitcoin Grants social graph to produce a privacy-preserving sybil resistance identity that other dApps can use. 
         <br /><br />

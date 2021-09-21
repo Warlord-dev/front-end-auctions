@@ -21,6 +21,13 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText, isMagaz
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isCollapse, setIsCollapse] = useState(false);
 
+  const router = useRouter();
+  const pathname = router.pathname;
+  const isMobile = window.innerWidth > 768 ? false : true;
+  
+  const [isShowMenu, setIsShowMenu] = useState(false);
+
+
   useEffect(() => {
     const handleScroll = throttle(() => {
       const offset = 0;
@@ -48,9 +55,6 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText, isMagaz
     return getEnabledNetworkByChainId(chainId);
   }, [chainId]);
 
-  const router = useRouter();
-  const pathname = router.pathname;
-  const isMobile = window.innerWidth > 768 ? false : true;
 
   if (isMagazineContents && !isMobile) {
     return null
@@ -78,8 +82,6 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText, isMagaz
   const onIconHander = () => {
     setIsCollapse(!isCollapse);
   };
-
-  const [isShowMenu, setIsShowMenu] = useState(false);
 
   const handleProfileClick = () => {
     setIsShowMenu(false);

@@ -68,7 +68,12 @@
     
     color: #FFDAFE;
     -webkit-text-stroke: 1px #FFB1FC;
-    // border: 1px solid #FFB1FC;    
+    // border: 1px solid #FFB1FC;
+
+    a {
+      color: #FFDAFE;
+      text-decoration: underline;
+    }
   }
 
   .text2 {

@@ -174,4 +174,14 @@
     text-decoration: underline;
     text-shadow: -3px 0 #FAFF00, 0 -3px #FAFF00, 3px 0 #FAFF00, 0 3px #FAFF00, -3px -3px #FAFF00, -3px 3px #FAFF00, 3px -3px #FAFF00, 3px 3px #FAFF00;
   }
+
+  a {
+    div {
+      transition: 0.3s all;
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(1.1);
+      }
+    }
+  }
 }

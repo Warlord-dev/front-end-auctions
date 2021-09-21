@@ -27,16 +27,27 @@ const Page7778 = () => {
       </Link>
 
 
+      <video autoPlay muted loop className={styles.video1}>
+        <source src={`/magazine/5/videos/109110_video1.mp4`} type="video/mp4" />
+      </video>
+
+      <video autoPlay muted loop className={styles.video2}>
+        <source src={`/magazine/5/videos/109110_video2.mp4`} type="video/mp4" />
+      </video>
 
       <img src='/magazine/5/images/7778_image4.png' className={styles.image8} />
       <img src='/magazine/5/images/7778_image5.png' className={styles.image9} />
 
-      <img src='/magazine/5/images/7778_image6.png' className={styles.image10} />
+      {/* <img src='/magazine/5/images/7778_image6.png' className={styles.image10} /> */}
       <img src='/magazine/5/images/7778_image7.png' className={styles.image11} />
       <img src='/magazine/5/images/7778_image8.png' className={styles.image12} />
-      <img src='/magazine/5/images/7778_image9.png' className={styles.image13} />
+      {/* <img src='/magazine/5/images/7778_image9.png' className={styles.image13} /> */}
       <img src='/magazine/5/images/7778_image10.png' className={styles.image14} />
       <img src='/magazine/5/images/7778_image11.png' className={styles.image15} />
+
+      <a href='https://www.cryptovoxels.com/play?coords=W@796E,461N' target='_blank'>
+        <img src='/magazine/5/images/7778_image12.png' className={styles.image16} />
+      </a>
 
       <div className={styles.text3}>
         DECO <br />

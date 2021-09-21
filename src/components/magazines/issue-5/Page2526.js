@@ -29,12 +29,16 @@ const Page2526 = () => {
         <img src='./magazine/1/images/howtogetintext 1.png' />
       </div>
       <MetamaskLogo className={styles.metaMask} />
-      <div className={styles.text1}>
-        METAMASK
-      </div>
-      <div className={styles.text2}>
-        METAMASK
-      </div>
+      <a href='https://metamask.io/' target='_blank'>
+        <div className={styles.text1}>
+          METAMASK
+        </div>
+      </a>
+      <a href='https://metamask.io/' target='_blank'>
+        <div className={styles.text2}>
+          METAMASK
+        </div>
+      </a>
       <div className={styles.text3}>
         <span>
           UX in crypto has always been a big talking point. How important do you think useability for a mainstream user is for interacting with tokenised identity online? 

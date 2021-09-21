@@ -11,7 +11,9 @@ const Page7374 = () => {
       <img src='/magazine/5/images/7374_image4.png' className={styles.image4} />
       <img src='/magazine/5/images/7374_image5.png' className={styles.image5} />
 
-      <img src='/magazine/5/images/7374_image6.gif' className={styles.image6} />
+      <a href='https://twitter.com/CixLiv' target='_blank'>
+        <img src='/magazine/5/images/7374_image6.gif' className={styles.image6} />
+      </a>
       <div className={styles.rect2}></div>
 
       <div className={styles.text1}>

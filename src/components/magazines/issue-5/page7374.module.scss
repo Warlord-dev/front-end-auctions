@@ -88,6 +88,12 @@
     height: 489px;
     left: -29px;
     top: 1008px;
+
+    transition: 0.3s all;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s all;
+    }
   }
 
   .text2 {

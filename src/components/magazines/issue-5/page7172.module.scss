@@ -49,8 +49,8 @@
     position: absolute;
     width: 718px;
     height: 185px;
-    left: 319px;
-    top: 526px;
+    left: 462px;
+    top: 1464px;
 
     font-family: THIS FONT IS EMPTY1;
     font-style: normal;
@@ -58,6 +58,8 @@
     font-size: 75px;
     line-height: 100%;
     color: #FFFFFF;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
   }
 
   .text2 {

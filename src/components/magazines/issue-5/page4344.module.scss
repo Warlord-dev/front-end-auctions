@@ -111,10 +111,13 @@
     font-size: 20px;
     line-height: 22px;
     color: #FF0000;
-    
-    // -webkit-text-stroke: 0.4px #FFFFFF;
+  
     text-shadow: -0.4px 0 white, 0 -0.4px white, 0.4px 0 white, 0 0.4px white;
-    // border: 0.4px solid #FFFFFF;
+    
+    a {
+      color: #FF0000;
+      text-decoration: underline;
+    }
   }
 
   .text6 {
