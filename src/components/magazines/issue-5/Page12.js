@@ -4,8 +4,7 @@ const Page12 = () => {
   return (
     <div className={styles.wrapper}>
       <h1>DID</h1>
-      <p className={styles.text1}>Comma  | Decentralised Finance refers to financial systems, products and/or services that eliminate centralised authorities, gatekeeping middlemen, and redundant and disposable friction points. DeFi allows anyone with access to web3 to participate as a point of value exchange in a truly person to person network. </p>
-      <p className={styles.text3}>Decentralised Identity</p>
+      <p className={styles.text1}>Comma  | The inalienable right to self sovereign ownership. It’s the recognition that life, liberty and the pursuit of happiness are rooted in the practicle exercise of property and free exchange. DID is the skeleton key to your personal realms.</p>
     </div>
   );
 };
