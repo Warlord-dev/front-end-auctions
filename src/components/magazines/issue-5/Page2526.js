@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MetamaskLogo from '@components/metamask-logo'
 import styles from './page2526.module.scss'
 
 const Page2526 = () => {
+  const [refreshNum, setRefreshNum] = useState(0)
+
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} onMouseMove={() => {
+      if (refreshNum === 0) {
+        setRefreshNum(1)
+      }
+    }}>
       <img src='./magazine/5/images/2526_image2.png' className={styles.fox1} />
       <img src='./magazine/5/images/2526_image2.png' className={styles.fox2} />
       <img src='./magazine/5/images/2526_image2.png' className={styles.fox3} />
@@ -28,7 +34,7 @@ const Page2526 = () => {
         <img src='./magazine/1/images/howtogetintext 1.png' />
         <img src='./magazine/1/images/howtogetintext 1.png' />
       </div>
-      <MetamaskLogo className={styles.metaMask} />
+      <MetamaskLogo className={styles.metaMask} refreshNum={refreshNum}/>
       <a href='https://metamask.io/' target='_blank'>
         <div className={styles.text1}>
           METAMASK

@@ -154,6 +154,12 @@ class GlobalActions extends BaseActions {
       dispatch(this.setValue('contentUnlocked', value));
     }
   }
+
+  setViewMethod(value) {
+    return async (dispatch) => {
+      dispatch(this.setValue('viewMethod', value));
+    }
+  }
 }
 
 export default new GlobalActions(globalReducer);

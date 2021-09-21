@@ -1,21 +1,22 @@
 import React, { useEffect, useRef } from 'react'
+import { useSelector } from 'react-redux'
+import { getViewMethod } from '@selectors/global.selectors'
 const ModelViewer = require('@metamask/logo')
 
-
 const MetamaskLogo = props => {
-  const { className } = props
+  const { className, refreshNum } = props
   const container = useRef()
+  const viewMethod = useSelector(getViewMethod)
 
   let viewer = null
-  
-  useEffect(() => {
-    if (container.current.children.length < 1) {
-      console.log('----------here : ', container.current.children)
+
+  const addFox = () => {
+    if (container && container.current.children.length < 1) {
       viewer = ModelViewer({
         // Dictates whether width & height are px or multiplied
         pxNotRatio: true,
-        width: 330,
-        height: 330,
+        width: 500,
+        height: 500,
         // pxNotRatio: false,
         // width: 0.9,
         // height: 0.9,
@@ -27,14 +28,24 @@ const MetamaskLogo = props => {
         slowDrift: false,
     
       })
-
       container.current.appendChild(viewer.container)
+    }
+  }
+  useEffect(() => {
+    if (viewMethod === 'magazineview') {
+      setTimeout(addFox, 1000)
+    } else {
+      addFox()
     }
     
     return () => {
-      viewer && viewer.stopAnimation()
+      if (viewer) {
+        viewer.stopAnimation()
+        container.current.removeChild(viewer.container)
+
+      }
     }
-  }, [])
+  }, [viewMethod, refreshNum])
   return (
     <div
       className={[className].join(' ')}

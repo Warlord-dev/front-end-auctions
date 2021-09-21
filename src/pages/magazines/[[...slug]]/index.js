@@ -10,14 +10,15 @@ import magazineIssues from '@constants/magazines';
 import { details } from '@constants/nft_subscription_issues';
 import { getAccount } from '@selectors/user.selectors';
 import globalActions from '@actions/global.actions';
+import { getViewMethod } from '@selectors/global.selectors';
 
 const MagazinePages = () => {
   const router = useRouter();
   const dispatch = useDispatch();
-  const [viewMethod, setViewMethod] = useState('magazineview');
   const { slug } = router.query;
   const [currentPage, setCurrentPage] = useState(-1);
   const account = useSelector(getAccount);
+  const viewMethod = useSelector(getViewMethod);
   const width = window.innerWidth;
 
   const issueId = slug && slug.length > 0 ? slug[0] : magazineIssues[0].issueId;
@@ -62,7 +63,6 @@ const MagazinePages = () => {
           Router.push(`/magazines/${issueId}/${magazineIssues[issueIndex].freePageCount}`);
           return;
         } else {
-          console.log('pageNumber: ', pageNumber);
           setCurrentPage(pageNumber);
         }
       } catch (e) {
@@ -79,7 +79,7 @@ const MagazinePages = () => {
       Router.push('/');
       return;
     }
-    setViewMethod(viewer);
+    dispatch(globalActions.setViewMethod(viewer));
   };
 
   if (currentPage < 0) {
@@ -122,7 +122,7 @@ const MagazinePages = () => {
       issueId={issueId}
       onClickItem={(pageNumber) => {
         setCurrentPage(pageNumber);
-        setViewMethod('webview');
+        dispatch(globalActions.setViewMethod('webview'));
       }}
       onSwitchViewer={switchViewer}
     ></MapViewer>
