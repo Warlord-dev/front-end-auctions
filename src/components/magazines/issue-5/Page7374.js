@@ -34,7 +34,7 @@ const Page7374 = () => {
         absolute power corrupts absolutely. 
       </div>
       <div className={styles.text4}>
-        the industry destroying, economy crippling, and consumer / investor harming effects of overly broad, arbitrary, power hungry, and inscrutable regulatory action needs to be called out for what it is. simply being appointed as a commissioner on a regulatory body does not somehow grant the auora of virtue and immunity from critique. All the moreso in a nation and economy founded on principle that “we people are the ultimate owners and arbiters or what is just.” here in the us, the sec works for us— even 
+        the industry destroying, economy crippling, and consumer / investor harming effects of overly broad, arbitrary, power hungry, and inscrutable regulatory action needs to be called out for what it is. simply being appointed as a commissioner on a regulatory body does not somehow grant the auora of virtue and immunity from critique. All the moreso in a nation and economy founded on principle that “we people are the ultimate owners and arbiters or what is just.” here in the us, the sec works for us— even if that is often completely dismissed as wishful thinking.
       </div>
       <div className={styles.text5}>
         When regulators attempt in overreach beyond their jurisdiction it poses the question of cui bono? who benefits and who are they actually benefitting? because it is certainly not the people, not the consumers or the investors. In fact it creates huge chilling effects to American innovation. Being the global tech leader is not guaranteed. 
