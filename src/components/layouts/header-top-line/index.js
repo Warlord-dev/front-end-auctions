@@ -17,9 +17,16 @@ import Logo from './logo';
 import LandingHeader from './landing';
 import styles from './styles.module.scss';
 
-const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
+const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText, isMagazineContents }) => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isCollapse, setIsCollapse] = useState(false);
+
+  const router = useRouter();
+  const pathname = router.pathname;
+  const isMobile = window.innerWidth > 768 ? false : true;
+  
+  const [isShowMenu, setIsShowMenu] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -38,6 +45,8 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     };
   }, [hasScrolled]);
 
+
+
   const dispatch = useDispatch();
   const user = useSelector(getUser);
   const chainId = useSelector(getChainId);
@@ -46,9 +55,10 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     return getEnabledNetworkByChainId(chainId);
   }, [chainId]);
 
-  const router = useRouter();
-  const pathname = router.pathname;
-  const isMobile = window.innerWidth > 768 ? false : true;
+
+  if (isMagazineContents && !isMobile) {
+    return null
+  }
 
   const isLandingPage = pathname === '/';
 
@@ -72,8 +82,6 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const onIconHander = () => {
     setIsCollapse(!isCollapse);
   };
-
-  const [isShowMenu, setIsShowMenu] = useState(false);
 
   const handleProfileClick = () => {
     setIsShowMenu(false);

@@ -3,7 +3,7 @@ import windowSize from 'react-window-size'
 import styles from './styles.module.scss'
 import MapItem from '../../components/magazines/common/MapItem'
 import ViewerSwitch from '../../components/magazines/common/ViewerSwitch'
-import ViewerSwitchMobile from '@components/magazines-mobile/common/ViewerSwitch'
+// import ViewerSwitchMobile from '@components/magazines-mobile/common/ViewerSwitch'
 
 const mapList = [
   {
@@ -409,6 +409,107 @@ const mapList = [
         rotate: '-12',
       }
     ]
+  },
+  {
+    issueId: '5',
+    content: [
+      {
+        pageNum: 0,
+        x: '60',
+        y: '5',
+        rotate: '-30',
+      },
+      {
+        pageNum: 3,
+        x: '15',
+        y: '20',
+        rotate: '-18',
+      },
+      {
+        pageNum: 13,
+        x: '7',
+        y: '70',
+        rotate: '15',
+      },
+      {
+        pageNum: 17,
+        x: '27',
+        y: '10',
+        rotate: '20',
+      },
+      {
+        pageNum: 23,
+        x: '42',
+        y: '20',
+        rotate: '-5',
+      },
+      {
+        pageNum: 29,
+        x: '59',
+        y: '30',
+        rotate: '0',
+      },
+      {
+        pageNum: 37,
+        x: '78',
+        y: '22',
+        rotate: '-12',
+      },
+      {
+        pageNum: 45,
+        x: '50',
+        y: '70',
+        rotate: '0',
+      },
+      {
+        pageNum: 50,
+        x: '72',
+        y: '37',
+        rotate: '-40',
+      },
+      {
+        pageNum: 57,
+        x: '15',
+        y: '62',
+        rotate: '-10',
+      },
+      {
+        pageNum: 67,
+        x: '88',
+        y: '10',
+        rotate: '15',
+      },
+      {
+        pageNum: 72,
+        x: '25',
+        y: '42',
+        rotate: '22',
+      },
+      {
+        pageNum: 77,
+        x: '32',
+        y: '70',
+        rotate: '-17',
+      },
+      {
+        pageNum: 81,
+        x: '45',
+        y: '52',
+        rotate: '9',
+      },
+      {
+        pageNum: 83,
+        x: '85',
+        y: '72',
+        rotate: '11',
+      },
+      {
+        pageNum: 93,
+        x: '70',
+        y: '58',
+        rotate: '-12',
+      }
+    ]
   }
 ]
 
@@ -441,13 +542,13 @@ const MapViewer = forwardRef((props, ref) => {
         </div>
       </div>
       {
-        width < 768 ?
-        <ViewerSwitchMobile 
-          mapSwitch
-          viewers={['webview', 'magazineview', 'exit']}
-          onSwitchViewer={onSwitchViewer}
-        /> :
-          <ViewerSwitch 
+        // width < 768 ?
+        // <ViewerSwitchMobile 
+        //   mapSwitch
+        //   viewers={['webview', 'magazineview', 'exit']}
+        //   onSwitchViewer={onSwitchViewer}
+        // /> :
+        <ViewerSwitch 
           mapSwitch
           viewers={['webview', 'magazineview', 'exit']}
           onSwitchViewer={onSwitchViewer}

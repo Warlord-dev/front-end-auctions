@@ -1,0 +1,150 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: white;
+
+  .image1 {
+    position: absolute;
+    width: 965px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 639px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 858px;
+    left: 960px;
+    top: 639px;
+    
+    background: #000000;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 507px;
+    height: 1097px;
+    right: 0px;
+    top: 137px;
+        
+  }
+
+  .image4 {
+    position: absolute;
+    width: 516px;
+    height: 377px;
+    left: 960px;
+    bottom: 0px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 288px;
+    height: 263px;
+    right: 0;
+    bottom: 0;
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 688px;
+    height: 997px;
+    left: 139px;
+    top: 32px;
+    
+    background: rgba(0, 0, 0, 0.46);    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 666px;
+    height: 986px;
+    left: 150px;
+    top: 56px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    
+    color: #FF5F5F;    
+  }
+
+  .image6 {
+    position: absolute;
+    width: 489px;
+    height: 489px;
+    left: -29px;
+    top: 1008px;
+
+    transition: 0.3s all;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s all;
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 544px;
+    height: 185px;
+    left: 991px;
+    top: 21px;
+    
+    font-family: Sweetly Broken;
+    font-size: 50px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 412px;
+    height: 185px;
+    left: 1001px;
+    top: 386px;
+    
+    font-family: Syncopate;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 412px;
+    height: 477px;
+    left: 1001px;
+    top: 666px;
+    
+    font-family: Syncopate;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 412px;
+    height: 311px;
+    left: 1436px;
+    top: 1198px;
+    
+    font-family: Syncopate;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+}

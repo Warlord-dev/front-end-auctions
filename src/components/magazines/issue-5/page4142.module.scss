@@ -1,0 +1,288 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 1005px;
+    height: 1497px;
+    right: 0px;
+    top: 0;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 712px;
+    height: 1329px;
+    left: 105px;
+    top: 84px;
+    
+    background: rgba(0, 0, 0, 0.5);    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 440px;
+    height: 403px;
+    left: 960px;
+    top: 0px;
+    
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 440px;
+    height: 348px;
+    left: 960px;
+    top: 510px;
+    
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 308px;
+    height: 224px;
+    left: 960px;
+    top: 1012px;
+    
+    background: rgba(255, 255, 255, 0.6);    
+  }
+
+  .rect5 {
+    position: absolute;
+    width: 440px;
+    height: 261px;
+    left: 1480px;
+    top: 178px;
+    
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .rect6 {
+    position: absolute;
+    width: 440px;
+    height: 422px;
+    left: 1480px;
+    top: 537px;
+    
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .rect7 {
+    position: absolute;
+    width: 586px;
+    height: 381px;
+    left: 1339px;
+    top: 1071px;
+    
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 635px;
+    height: 1200px;
+    left: 139px;
+    top: 107px;
+    
+    font-family: Ceviche One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 31px;
+    text-align: center;
+    
+    color: #FF2BC4;        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 358px;
+    height: 378px;
+    left: 1001px;
+    top: 27px;
+    
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    
+    color: #5034FF;
+    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 358px;
+    height: 308px;
+    left: 1001px;
+    top: 537px;
+    
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    
+    color: #5034FF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 237px;
+    height: 168px;
+    left: 1001px;
+    top: 1032px;
+    
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    
+    color: #5034FF;    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 358px;
+    height: 210px;
+    left: 1521px;
+    top: 205px;
+    
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    
+    color: #5034FF;
+    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 358px;
+    height: 384px;
+    left: 1521px;
+    top: 564px;
+    
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #5034FF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 523px;
+    height: 350px;
+    left: 1385px;
+    top: 1087px;
+    
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    
+    color: #5034FF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 213px;
+    height: 91px;
+    left: 1664px;
+    top: 16px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 90px;
+    text-align: right;
+    
+    color: #6851FF;
+    -webkit-text-stroke: 2px black;
+    box-sizing: border-box;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    left: 1373px;
+    top: 33px;    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    left: 1771px;
+    top: 398px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    left: 1323px;
+    top: 816px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    left: 1783px;
+    top: 929px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    left: 1162px;
+    top: 1207px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    left: 1255px;
+    top: 1365px;    
+  }
+
+  a {
+    div, img {
+      transition: 0.3s all;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.3s all;
+      }
+    }
+  }
+}

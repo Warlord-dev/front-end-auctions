@@ -1,0 +1,15 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+.wrapper {
+  @include magazineWrapper();  
+  background: black;
+  
+  .image1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+}

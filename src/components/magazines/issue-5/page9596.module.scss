@@ -1,0 +1,152 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #000000;
+
+  .image1 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 46px;
+    top: 29px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 263px;
+    top: 29px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 480px;
+    top: 29px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 217px;
+    height: 217px;
+    left: 697px;
+    top: 29px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 709px;
+    top: 587px;
+        
+  }
+
+  .image6 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 709px;
+    top: 744px;
+    
+  }
+
+  .image7 {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    left: 709px;
+    top: 901px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 268px;
+    height: 240px;
+    left: 46px;
+    top: 1203px;
+    box-shadow: 0px 4px 20px 10px #FFFFFF;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 268px;
+    height: 240px;
+    left: 346px;
+    top: 1203px;
+    box-shadow: 0px 4px 20px 10px #FFFFFF;
+  }
+
+  .image10 {
+    position: absolute;
+    width: 268px;
+    height: 240px;
+    left: 646px;
+    top: 1203px;
+    box-shadow: 0px 4px 20px 10px #FFFFFF;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 799px;
+    height: 295px;
+    left: 80px;
+    top: 292px;
+    
+    font-family: Times New Roman;
+    font-size: 30px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 617px;
+    height: 500px;
+    left: 80px;
+    top: 636px;
+    
+    font-family: Times New Roman;
+    font-size: 30px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .image11 {
+    position: absolute;
+    width: 960px;
+    height: 857px;
+    left: 960px;
+    top: 0px;        
+  }
+
+  .image12 {
+    position: absolute;
+    width: 960px;
+    height: 634px;
+    left: 960px;
+    top: 857px;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 293px;
+    height: 31px;
+    left: 1612px;
+    top: 1443px;
+    
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;    
+  }
+}

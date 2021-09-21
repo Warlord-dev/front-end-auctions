@@ -1,0 +1,67 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();    
+  background: #A5824E;
+
+  .video1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 908px;
+    height: 160px;
+    left: 26px;
+    top: -25px;
+    
+    font-family: 'Mad Mecha';
+    font-size: 170px;
+    line-height: 183px;
+    text-align: center;
+    
+    color: #49D3B1;
+    -webkit-text-stroke: 3px #FCF868;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 891px;
+    height: 1374px;
+    left: 994px;
+    top: 48px;
+    
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 104%;
+    color: #FFE600;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  a {
+    div {
+      transition: 0.3s all;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.3s all;
+      }
+    }
+  }
+}
+

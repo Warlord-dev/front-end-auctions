@@ -1,0 +1,252 @@
+@import './styles.module.scss';
+.wrapper {
+  @include magazineWrapper();    
+  
+  background-color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    right: 0px;
+    top: 0px;
+    box-shadow: 0px 4px 20px 10px #000000;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 495px;
+    height: 659px;
+    left: 232px;
+    top: 329px;
+    box-shadow: 0px 4px 20px 10px #000000;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 408px;
+    height: 68px;
+    left: -16px;
+    top: 16px;
+    
+    font-family: Secular One;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    
+    color: #FFFFFF;
+
+    transition: all 0.3s;
+    &:hover {
+      transition: all 0.3s;
+      transform: scale(1.1);
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 408px;
+    height: 123px;
+    left: -16px;
+    top: 55px;
+    
+    font-family: Didact Gothic;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #F25C31;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 527px;
+    height: 110px;
+    left: 388px;
+    top: 46px;
+    
+    font-family: Didact Gothic;
+    font-size: 23px;
+    line-height: 22px;
+    /* or 96% */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 914px;
+    height: 132px;
+    left: 23px;
+    top: 197px;
+    
+    font-family: Didact Gothic;
+    font-size: 20px;
+    line-height: 22px;
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 914px;
+    height: 484px;
+    left: 36px;
+    top: 1013px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    color: #FF0000;
+  
+    text-shadow: -0.4px 0 white, 0 -0.4px white, 0.4px 0 white, 0 0.4px white;
+    
+    a {
+      color: #FF0000;
+      text-decoration: underline;
+    }
+  }
+
+  .text6 {
+    position: absolute;
+    width: 704px;
+    height: 286px;
+    left: 986px;
+    top: 18px;
+    
+    font-family: Didact Gothic;
+    font-size: 20px;
+    line-height: 22px;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 207px;
+    height: 792px;
+    left: 1058px;
+    top: 712px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 193px;
+    height: 924px;
+    left: 1310px;
+    top: 557px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 193px;
+    height: 440px;
+    left: 1555px;
+    top: 686px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+
+    ul {
+      li {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+    left: 1617px;
+    top: 1258px;
+    
+    background: #6534FF;
+    border: 4px solid #FCCDD3;
+    border-radius: 50%;    
+  }
+
+  .circleText1 {
+    position: absolute;
+    width: 167.74px;
+    height: 119px;
+    left: 1612px;
+    top: 1326.51px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+    
+    color: #FCCDD3;
+    -webkit-text-stroke:  1px #FCCDD3;
+    transform-origin: 0 0;
+    transform: rotate(-20deg);    
+  }
+
+  .circleText2 {
+    position: absolute;
+    width: 152px;
+    height: 119px;
+    left: 1659px;
+    top: 1388px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .poapImage {
+    position: absolute;
+    width: 154.85px;
+    height: 154.85px;
+    left: 1735px;
+    top: 1292.96px;
+    
+    transform-origin: 0 0;
+    transform: rotate(-20deg);
+
+    transition: all 0.3s;
+    &:hover {
+      transition: all 0.3s;
+      transform: rotate(-20deg) scale(1.1);
+    }
+  }
+}

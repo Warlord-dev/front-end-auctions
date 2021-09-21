@@ -1,0 +1,184 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  color: black;
+  display: flex;
+  position: relative;
+
+  .background1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    right: 0px;
+    top: 0px;    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;    
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(156, 156, 156, 0.62);    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 394px;
+    height: 624px;
+    left: 25px;
+    top: 131px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    span {
+      color: #5BFDA6;
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 392px;
+    height: 576px;
+    left: 25px;
+    top: 814px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    span {
+      color: #5BFDA6;
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 457px;
+    height: 960px;
+    left: 457px;
+    top: 118px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: right;
+    
+    color: #000000;
+    span {
+      color: #5BFDA6;
+    }
+  }
+
+  .text4 {
+    position: absolute;
+    width: 464px;
+    height: 384px;
+    left: 457px;
+    top: 1096px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: right;
+    
+    color: #000000;
+    span {
+      color: #5BFDA6;
+    }   
+  }
+
+  .text5 {
+    position: absolute;
+    height: 75px;
+    left: -81px;
+    top: 23px;
+    
+    font-family: Jim Nightshade;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 150%;
+    /* identical to box height, or 75px */
+    
+    text-align: right;
+    
+    color: #000000;    
+  }
+
+  .text6 {
+    position: absolute;
+    height: 75px;
+    left: 262px;
+    top: 23px;
+    
+    font-family: Jim Nightshade;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 150%;
+    /* identical to box height, or 75px */
+    
+    text-align: right;
+    
+    color: #000000;
+  }
+
+  .text7 {
+    position: absolute;
+    height: 75px;
+    left: 599px;
+    top: 23px;
+    
+    font-family: Jim Nightshade;
+    font-size: 50px;
+    line-height: 150%;   
+    text-align: right;
+    
+    color: #000000;
+    
+  }
+
+  a {
+    div {
+      cursor: pointer;
+      transition: transform .2s;
+  
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 570px;
+    height: 591px;
+    left: 1271.23px;
+    top: 314.83px;
+    
+    transform-origin: 0 0;
+    transform: rotate(-15deg);    
+  }
+}

@@ -1,58 +1,20 @@
 import React, { useState } from 'react'
-import SwipePage from '@components/swipe'
-import getPageList from '@components/magazines-mobile/PageList'
-import MobilePageWrapper from '@components/magazines-mobile/common/MobilePageWrapper'
-import ViewerSwitch from '@components/magazines-mobile/common/ViewerSwitch'
-
 import styles from './styles.module.scss'
 
 const MobileViewer = props => {
-  const {
-    issueId,
-    pageNumber,
-    children,
-    onSwitchViewer
-  } = props
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
-  const pageList = getPageList(issueId)
-
-  const getChildrenList = () => {
-    const childrenList = []
-
-    pageList.forEach((item, index) => {
-      childrenList.push(
-        <MobilePageWrapper>
-          {item}
-        </MobilePageWrapper>
-      )
-    })
-    return childrenList
-  }
-
   return (
     <>
       <div className={styles.mobileViewerWrapper}>
-        <div className={styles.leftLine}></div>
-        <div className={styles.rightLine}></div>
-        <ViewerSwitch 
-          viewers={['exit', 'mapview']}
-          onSwitchViewer={onSwitchViewer}
-        />
-        <div 
-          className={styles.contentWrapper}
-          style={{
-            width: '100%',
-          }}
-        >
-          <SwipePage 
-          >
-            {
-              getChildrenList()
-            }
-          </SwipePage>
+        <img src='/images/mobile-background.png' className={styles.background}/>
+        <div className={styles.textWrapper}>
+          DIGIFIZZY is the first immersive metaverse magazine and to make the experience as immersive as possible we mod a lot of rich graphics together! 
+          <br /><br />
+          Unfortunately that means that it’s not so compatible with mobile— in fact viewing it on mobile is kind of a pain!
+          <br /><br />
+          So, with that said, it’s best to view on computer!
+          <br /><br />
+          Open the magazine when your at a desktop/laptop and start getting lost in the pages!          
         </div>
-
       </div>
 
     </>
