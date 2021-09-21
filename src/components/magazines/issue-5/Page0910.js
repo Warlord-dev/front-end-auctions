@@ -22,7 +22,7 @@ const Page0910 = () => {
         <br /><br />
         Is web3 devolving into a race to the bottom, with cynical cash grabs and creeping centralization at every turn?
         <br /><br />
-        Are we returning to the decidedly web2, walled-garden approach where we build towards exclusion and letting money and status override the principles with which web3 was founded on? 
+        Are we returning to the decidedly web2, walled-garden approach where we build towards exclusion and let money and status override the principles with which web3 was founded on? 
         <br /><br />
         Does it all boil down to just the fortunate bros going “lol hfsp” and “ngmi” in a world where the barrier to participating in NFTs and DeFi are increasing by the literal second – and in doing so, pricing out web3 outsiders and disincentivizing them from joining a FOMO- and exclusivity-driven metaverse favoring a select few? Why even bother?
         <br /><br />
