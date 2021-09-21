@@ -79,7 +79,7 @@ const Page4142 = () => {
         <br /><br />
         Our aim is to empower developers and make it easy to implement future-proof login for users. With just a few lines of code, developers can add a variety of passwordless login methods in minutes and easily customize the user-friendly login experience. Magic plays nicely with the broader low-code/no-code trend. 
         <br /><br />
-        It’s an amazing thing to be able to free time up for teams of all sizes and enable them launch and grow faster.
+        It’s an amazing thing to be able to free time up for teams of all sizes and enable them to launch and grow faster.
         <br /><br />
         We also help developers improve conversion rates on the onboarding flow. We spend a lot of time and effort optimizing for conversion rate at each step. It’s super exciting when customers share these wins; one customer told us conversion rate skyrocketed to over 90%. We’re energized to help more and more customers across Web2 and Web3 all around the world.
         <br /><br />
