@@ -32,7 +32,7 @@ const Page2122 = () => {
       <div className={styles.text2}>
         Meanwhile, while the internet has democratized the way we share information, as with any complex structure involving the marriage of society and technology, its tendency is to consolidate power that can pervert everything under its gravity.
         <br /><br />
-        The very same technologies designed to democratize, liberate, and equalize has been subverted by the corporations and repressive governments that benefit from the Orwellian and totalitarian dystopia we find ourselves in – straight out of 1984. Our personal information is under the absolute control of other parties – it’s not ours. 
+        The very same technologies designed to democratize, liberate, and equalize have been subverted by the corporations and repressive governments that benefit from the Orwellian and totalitarian dystopia we find ourselves in – straight out of 1984. Our personal information is under the absolute control of other parties – it’s not ours. 
         <br /><br />
         This has led to a global shift in identity approaches and the value it adds to humanity and society – as the principles of decentralization start to revolutionize the way we manage our identities.
         <br /><br />
