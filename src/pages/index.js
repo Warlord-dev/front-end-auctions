@@ -51,7 +51,7 @@ const LandingPage = () => {
               className={styles.mainMagazine}
               src="/images/nft/4/main.png"
               onClick={() => {
-                router.push('/magazines/4');
+                router.push('/magazines/5');
               }}
             />
           </div>
