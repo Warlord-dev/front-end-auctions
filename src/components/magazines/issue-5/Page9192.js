@@ -64,8 +64,6 @@ const Page9192 = () => {
         I've always seen music production as a way to leverage my computer engineering education and love of music into a more creative outlet. Crypto, blockchain, and web3 immediately sparked my interest because a lot of the concepts resonated with me considering my educational background.
         <br /><br />
         Web3 taking over the music industry relies completely on scalability and overall popularity in my opinion. Otherwise, it would be difficult for indie artists to compete with larger labels/artists if gas fees continue to increase.
-        <br />
-        Also here are some links if you want to include them
       </div>
       <div className={styles.audioWrapper}>
       <iframe
