@@ -20,7 +20,7 @@ const Page0910 = () => {
         <br /><br />
         Where is all this building heading to? For all the billions of dollars that have changed hands, and in spite of the rising pushback against the Facebooks and the Googles of the world, are we headed towards a “decentralization theater” where the leading projects in the space live long enough to see themselves become the villains – much like their despised web2 counterparts once did? 
         <br /><br />
-        Is web3 devolving into a race to the bottom, what with cynical cash grabs and creeping centralization at every turn?
+        Is web3 devolving into a race to the bottom, with cynical cash grabs and creeping centralization at every turn?
         <br /><br />
         Are we returning to the decidedly web2, walled-garden approach where we build towards exclusion and letting money and status override the principles with which web3 was founded on? 
         <br /><br />
