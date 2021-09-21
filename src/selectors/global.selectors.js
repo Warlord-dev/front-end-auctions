@@ -6,3 +6,4 @@ export const getBidWithdrawalLockTime = (state) => state.global.get('bidWithdraw
 export const getRewards = (state) => state.global.get('rewards');
 export const getMonaPerEth = (state) => state.global.get('monaPerEth');
 export const getViewMethod = (state) => state.global.get('viewMethod');
+export const getCurrentPage = (state) => state.global.get('currentPage');

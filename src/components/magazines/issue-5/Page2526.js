@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import MetamaskLogo from '@components/metamask-logo'
+// import MetamaskLogo from '@components/metamask-logo'
 import styles from './page2526.module.scss'
 
 const Page2526 = () => {
@@ -34,7 +34,9 @@ const Page2526 = () => {
         <img src='./magazine/1/images/howtogetintext 1.png' />
         <img src='./magazine/1/images/howtogetintext 1.png' />
       </div>
-      <MetamaskLogo className={styles.metaMask} refreshNum={refreshNum}/>
+      <img src='./magazine/5/images/2526_image4.png' className={styles.metamask1} />
+      <img src='./magazine/5/images/2526_image4.png' className={styles.metamask2} />
+      {/* <MetamaskLogo className={styles.metaMask} refreshNum={refreshNum}/> */}
       <a href='https://metamask.io/' target='_blank'>
         <div className={styles.text1}>
           METAMASK

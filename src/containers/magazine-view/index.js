@@ -1,11 +1,13 @@
-import React, { forwardRef, useState, useEffect } from 'react'
+import React, { forwardRef, useState, useEffect, useCallback } from 'react'
+import { useSelector } from 'react-redux'
 import HTMLFlipBook from 'react-pageflip'
 import MagazinePageWrapper from '@components/magazines/common/MagazinePageWrapper'
 import getPageList from '@components/magazines/PageList'
 import ViewerSwitch from '@components/magazines/common/ViewerSwitch'
 import magazineIssues from '@constants/magazines'
+import { getCurrentPage } from '@selectors/global.selectors'
+import globalActions from '@actions/global.actions'
 import styles from './styles.module.scss'
-import { useSelector } from 'react-redux'
 
 const MagazineViewer = forwardRef((props, refs) => {
   const { issueId, initPage, onSwitchViewer } = props
@@ -14,6 +16,7 @@ const MagazineViewer = forwardRef((props, refs) => {
   const [zoom, setZoom] = useState(1)
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
   const pageList = getPageList(issueId)
+  const currentPage = useSelector(getCurrentPage)
 
   const currentIssue = magazineIssues.find((item) => item.issueId === issueId) || magazineIssues[0]
 
@@ -54,6 +57,11 @@ const MagazineViewer = forwardRef((props, refs) => {
     }
   }, [])
 
+  const onFlip = useCallback((e) => {
+    globalActions.setCurrentPage(e.data)
+    console.log('Current page: ' + e.data)
+}, []);
+
   return (
     <>
       <div className={styles.magazineViewerWrapper}>
@@ -73,6 +81,8 @@ const MagazineViewer = forwardRef((props, refs) => {
             mobileScrollSupport={true}
             disableFlipByClick={true}
             swipeDistance={100}
+            onFlip={onFlip}
+
           >
             {getChildrenList()}
           </HTMLFlipBook>
