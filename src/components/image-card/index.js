@@ -45,7 +45,7 @@ const ImageCard = ({
     return video.mozHasAudio ||
     Boolean(video.webkitAudioDecodedByteCount) ||
     Boolean(video.audioTracks && video.audioTracks.length);
-}
+  }
 
   const onBuyNow = () => {
     if (!router.asPath.includes('product')) {
@@ -92,8 +92,6 @@ const ImageCard = ({
     setVideoMuted(!videoMuted)
     videoTagRef.current.play();
   }
-
-  console.log({data})
 
   const renderImage = () => {
     return (

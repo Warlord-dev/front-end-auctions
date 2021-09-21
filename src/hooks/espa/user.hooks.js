@@ -22,8 +22,10 @@ export function useUserNameAvailable(username) {
       }
 
       timer.current = setTimeout(() => {
-        api.checkUserName(username)
-        .then(isAvailable => setUserNameAvailable(isAvailable));
+        if (username.length <= 10) {
+          api.checkUserName(username)
+            .then(isAvailable => setUserNameAvailable(isAvailable));
+        }
       }, 1000);
     }
   }, [username]);
