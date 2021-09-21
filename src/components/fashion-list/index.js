@@ -7,7 +7,7 @@ import FashionCard from '@components/fashion-card';
 const FashionList = ({ fashionData }) => {
   const videoUrls = [
     '/images/metaverse/product_detail1.mp4',
-    '/images/metaverse/product_detail2.mp4',
+    '/images/metaverse/product_detail3.mp4',
     '/images/metaverse/product_detail6.png',
     '/images/metaverse/product_detail3.mp4',
     '/images/metaverse/product_detail4.mp4',
@@ -23,7 +23,6 @@ const FashionList = ({ fashionData }) => {
 
       
       <section className={styles.fashionListSection}>
-        <img src="/images/metaverse/webtitle.png" className={styles.webtitle} />
         {fashionData.map((item,index) => (
           <Container key={index}>
             <div className={styles.cardWrapper}>
