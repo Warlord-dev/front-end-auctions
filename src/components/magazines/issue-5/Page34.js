@@ -86,6 +86,9 @@ const Page34 = () => {
         Global Designer Network
         <br />
         <br />
+        Zack
+        <br />
+        <br />
         {/* Alex Adelman */}
       </p>
       <p className={styles.text8}>
@@ -143,7 +146,7 @@ const Page34 = () => {
         Ana Rivera
         <br />
         <br />
-        Viking Rookie
+        Rachel Cope
         <br />
         <br />
         Chaim Holtjer
