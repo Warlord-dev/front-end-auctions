@@ -76,7 +76,7 @@ const Page4344 = () => {
       <div className={styles.circleText2}>
         yay        
       </div>
-      <a href='https://poap.website/identityacrossthemetaverse' target='_blank'>
+      <a href='https://poap.website/decentralisedreputation' target='_blank'>
         <img src='/images/poap-logo.png' className={styles.poapImage} />
       </a>
 
