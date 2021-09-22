@@ -25,7 +25,7 @@ const CoverPage = () => {
         Crypto, DeFi & US Regulations
       </div>
       <div className={styles.text7}>
-        Cryptopunks with Jordan Lyall
+        BAYC with OHHSHINY
       </div>
       <div className={styles.text8}>
         This Outfit Does Not Exist
@@ -68,7 +68,7 @@ const CoverPage = () => {
       <div className={styles.circleText2}>
         POAPS TO COLLECT INSIDE!    
       </div>
-      <a href='https://poap.website/identityacrossthemetaverse' target='_blank'>
+      <a href='https://digifizzy.xyz/magazines/5/' target='_blank'>
         <img src='/images/poap-logo.png' className={styles.poapImage} />
       </a>
     </div>
