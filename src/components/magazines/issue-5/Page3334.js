@@ -39,7 +39,7 @@ const Page3334 = () => {
           </video>
         </a>
       </Link>
-      <Link href='https://foundation.app/@heartfulrosee/demon-girl-80277'>
+      <Link href='https://foundation.app/@Yinkore_/primary-colours-88532'>
         <a target='_blank'>
           <img src='./magazine/5/images/3334_image2.png' className={styles.image2} />
         </a>
@@ -87,7 +87,7 @@ const Page3334 = () => {
         PETER FRANCE
       </div>
       <div className={styles.text7}>
-        rose <span>Demon Girl</span>
+        yinkore  <span>Primary Colours</span>
       </div>
       <div className={styles.text8}>
         2 Sep 2021
