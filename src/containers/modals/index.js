@@ -14,6 +14,7 @@ import BuyNowLimit from './modal-limit';
 import History from "./history";
 import SwitchNetworkModal from "./switch-network";
 import PurchaseSuccess from "./purchase-success";
+import ModalBespoke from "./modal-bespoke";
 
 const Modals = () => {
   const modals = useSelector((state) => state.modals.toJS());
@@ -33,6 +34,7 @@ const Modals = () => {
     isPurchaseHistory,
     isSwitchNetwork,
     isPurchaseSuccess,
+    isShowModalBespoke,
   } = modals;
 
   return (
@@ -52,6 +54,7 @@ const Modals = () => {
       {isPurchaseHistory && <History type={2} />}
       {isSwitchNetwork && <SwitchNetworkModal />}
       {isPurchaseSuccess && <PurchaseSuccess />}
+      {isShowModalBespoke && <ModalBespoke />}
     </>
   );
 };

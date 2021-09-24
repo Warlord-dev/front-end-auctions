@@ -102,6 +102,11 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
       </div>
       <div className={styles.rightBox}>
         <div className={cn(styles.links, isCollapse ? styles.expandedMenu : '')}>
+          <Link href="https://designers.digitalax.xyz/getdressed/">
+            <a className={styles.link} target="_blank">
+              Get Custom Dressed
+            </a>
+          </Link>
           <Link href="https://drip.digitalax.xyz/">
             <a className={styles.link} target="_blank">
               PHYSICAL WEB3 FASHION
@@ -221,6 +226,11 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
               {linkText}
             </a>
           )}
+          <Link href="https://designers.digitalax.xyz/getdressed/">
+            <a className={styles.link} target="_blank">
+              Get Custom Dressed
+            </a>
+          </Link>
           <Link href="/global">
             <a className={styles.link}>Global Designer Network</a>
           </Link>

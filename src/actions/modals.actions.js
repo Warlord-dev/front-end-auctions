@@ -77,3 +77,6 @@ export const closeSwitchNetworkModal = () => (dispatch) => dispatch(closeModal('
 
 export const openPurchaseSuccessModal = (params) => (dispatch) => dispatch(openModal('isPurchaseSuccess', 'hideScroll', params));
 export const closePurchaseSuccessModal = () => (dispatch) => dispatch(closeModal('isPurchaseSuccess', 'addScroll'));
+
+export const openBespokeModal = (params) => (dispatch) => dispatch(openModal('isShowModalBespoke', 'hideScroll', params));
+export const closeBespokeModal = () => (dispatch) => dispatch(closeModal('isShowModalBespoke', 'addScroll'));

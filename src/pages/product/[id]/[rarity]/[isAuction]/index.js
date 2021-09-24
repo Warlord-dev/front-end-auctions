@@ -17,7 +17,7 @@ import {
 import { getChainId, getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import PriceCard from '@components/price-card';
 import { getRarity } from '@utils/helpers';
-import { openBidHistoryModal, openPurchaseHistoryModal } from '@actions/modals.actions';
+import { openBespokeModal, openBidHistoryModal, openPurchaseHistoryModal } from '@actions/modals.actions';
 import FashionList from '@components/fashion-list';
 import BannerBar from '@components/banner-bar';
 import secondDesignerData from 'src/data/second-designers.json';
@@ -173,6 +173,10 @@ const Product = () => {
     }
   };
 
+  const onBespokeBtn = () => {
+    dispatch(openBespokeModal());
+  }
+
   const getTimeFormat = () => {
     const timeStamp = Date.now();
     if (timeStamp > product.endTime * 1000) {
@@ -210,6 +214,7 @@ const Product = () => {
                 />
               </div>
               <div className={styles.infoWrapper}>
+                
                 <div className={styles.amount}>
                   {parseInt(isAuction) !== 1 ? (
                     <>
@@ -241,6 +246,9 @@ const Product = () => {
                 </div>
                 <button type="button" className={styles.viewBidHistory} onClick={onHistory}>
                   view {parseInt(isAuction) === 1 ? 'bid' : 'purchase'} history
+                </button>
+                <button type="button" className={styles.bespokeBtn} onClick={onBespokeBtn}>
+                  Want something more Bespoke?
                 </button>
               </div>
             </div>

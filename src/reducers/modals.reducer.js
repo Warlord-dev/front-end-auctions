@@ -17,6 +17,7 @@ const DEFAULT_FIELDS = Map({
   isPurchaseHistory: false,
   isSwitchNetwork: false,
   isPurchaseSuccess: false,
+  isShowModalBespoke: false,
   params: null,
 });
 
