@@ -148,6 +148,12 @@ class MyDocument extends Document {
               src: url("./fonts/transamerica.ttf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: "Rose Cake - Personal Use";
+              src: url("./fonts/Rose Cake - Personal Use.otf");
+              font-weight: 400;
+            }
           
           `,
             }}
