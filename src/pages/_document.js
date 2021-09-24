@@ -150,7 +150,7 @@ class MyDocument extends Document {
             }
 
             @font-face {
-              font-family: "Rose Cake - Personal Use";
+              font-family: "Rose Cake";
               src: url("./fonts/Rose Cake - Personal Use.otf");
               font-weight: 400;
             }
