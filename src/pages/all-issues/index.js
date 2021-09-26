@@ -16,7 +16,7 @@ const AllIssues = () => {
                 image={issue.image}
                 id={issue.id}
                 title={issue.title}
-                link1={`/magazines/${index + 1}`}
+                link1={`/magazines/${5 - index}`}
                 link2={`/unlockable/${index + 1}`}
               />
             </div>
