@@ -1,9 +1,0 @@
-@import './styles.module.scss';
-.wrapper {
-  @include magazineWrapper();
-  height: 960px;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-}

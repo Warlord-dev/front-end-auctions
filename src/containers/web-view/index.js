@@ -14,6 +14,7 @@ const KeyboardEventHandler = dynamic(() => import('react-keyboard-event-handler'
 const WebViewer = forwardRef((props, refs) => {
   const { onSwitchViewer, initPage, issueId, onChangePageNumber } = props;
   const { contentUnlocked } = useSelector((state) => state.global.toJS());
+  // const contentUnlocked = true
   const [zoom, setZoom] = useState(1);
   const [currentPage, setCurrentPage] = useState(0);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
@@ -130,7 +131,7 @@ const WebViewer = forwardRef((props, refs) => {
           className={[styles.contentWrapper, zoom < 1 ? styles.center : ''].join(' ')}
           ref={contentWrapperRef}
           style={{
-            width: `${getPageWidth(windowHeight) * totalPageCount}px`,
+            width: `${getPageWidth(windowHeight) * totalPageCount + 100}px`,
             height: `${(windowHeight - 20) * zoom}px`,
           }}
         >

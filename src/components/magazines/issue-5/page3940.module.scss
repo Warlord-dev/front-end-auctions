@@ -1,0 +1,98 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+
+  .image1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1497px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 637px;
+    height: 1296px;
+    left: 161px;
+    top: 0px;
+    
+    background: rgba(0, 0, 0, 0.5);    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 637px;
+    height: 1296px;
+    left: 1121px;
+    top: 82px;
+    
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 579px;
+    height: 307px;
+    left: 203px;
+    top: -34px;
+    
+    font-family: Ceviche One;
+    font-size: 30px;
+    line-height: 31px;
+    
+    color: #FF2BC4;        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 381px;
+    height: 577px;
+    left: 401px;
+    top: 302px;
+    
+    font-family: Ceviche One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 31px;
+    
+    color: #FF2BC4;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 563px;
+    height: 417px;
+    left: 202px;
+    top: 842px;
+    
+    font-family: Ceviche One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 31px;
+    
+    color: #FF2BC4;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 563px;
+    height: 1200px;
+    left: 1158px;
+    top: 129px;
+    
+    font-family: Ceviche One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 31px;
+    text-align: center;
+    
+    color: #FF2BC4;
+    
+  }
+}

@@ -24,6 +24,7 @@
     "@loadable/component": "^5.15.0",
     "@maticnetwork/maticjs": "^2.0.37",
     "@maticnetwork/walletconnect-provider": "^0.0.1-beta.1",
+    "@metamask/logo": "^3.0.1",
     "@pinata/sdk": "^1.1.11",
     "@sentry/browser": "^5.18.0",
     "@uniswap/sdk": "^3.0.3",

@@ -10,67 +10,76 @@ import magazineIssues from '@constants/magazines';
 import { details } from '@constants/nft_subscription_issues';
 import { getAccount } from '@selectors/user.selectors';
 import globalActions from '@actions/global.actions';
+import { getViewMethod } from '@selectors/global.selectors';
 
 const MagazinePages = () => {
   const router = useRouter();
   const dispatch = useDispatch();
-  const [viewMethod, setViewMethod] = useState('magazineview');
   const { slug } = router.query;
   const [currentPage, setCurrentPage] = useState(-1);
   const account = useSelector(getAccount);
+  const viewMethod = useSelector(getViewMethod);
   const width = window.innerWidth;
 
   const issueId = slug && slug.length > 0 ? slug[0] : magazineIssues[0].issueId;
 
   useEffect(() => {
     const fetchDigitalaxSubscriptionCollectors = async () => {
-      const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
-      const issueIndex = magazineIssues.findIndex((item) => item.issueId === issueId);
-      let contentUnlocked = false;
+      try {
+        console.log('account: ', account)
+        let contentUnlocked = false;
+          const issueIndex = magazineIssues.findIndex((item) => item.issueId === issueId);
 
-      if (
-        digitalaxSubscriptionCollectors[0] &&
-        digitalaxSubscriptionCollectors[0].parentsOwned.filter((value) =>
-          value.name.includes(`DIGIFIZZY ${details[issueIndex][0].issueIndex}`)
-        ).length
-      ) {
-        dispatch(globalActions.setContentUnlocked(true));
-        contentUnlocked = true;
-      } else {
-        dispatch(globalActions.setContentUnlocked(false));
+        if (account) {
+          const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
+
+          if (
+            digitalaxSubscriptionCollectors[0] &&
+            digitalaxSubscriptionCollectors[0].parentsOwned.filter((value) =>
+              value.name.includes(`DIGIFIZZY ${details[issueIndex][0].issueIndex}`)
+            ).length
+          ) {
+            dispatch(globalActions.setContentUnlocked(true));
+            contentUnlocked = true;
+          } else {
+            dispatch(globalActions.setContentUnlocked(false));
+          }
+        }
+        
+        if (issueIndex < 0) {
+          Router.push(`/magazines/${magazineIssues[0].issueId}`);
+          return;
+        }
+
+        const pageNumber =
+          slug.length > 1
+            ? slug[1] === 'hidden'
+              ? magazineIssues[issueIndex].freePageCount + 1
+              : parseInt(slug[1])
+            : 0;
+
+        if (pageNumber > magazineIssues[issueIndex].freePageCount && !contentUnlocked) {
+          console.log('redirecting... to : ', magazineIssues[issueIndex].freePageCount);
+          Router.push(`/magazines/${issueId}/${magazineIssues[issueIndex].freePageCount}`);
+          return;
+        } else {
+          setCurrentPage(pageNumber);
+        }
+      } catch (e) {
+        console.log('e: ', e)
       }
-
-      if (issueIndex < 0) {
-        Router.push(`/magazines/${magazineIssues[0].issueId}`);
-        return;
-      }
-
-      const pageNumber =
-        slug.length > 1
-          ? slug[1] === 'hidden'
-            ? magazineIssues[issueIndex].freePageCount + 1
-            : parseInt(slug[1])
-          : 0;
-
-      if (pageNumber > magazineIssues[issueIndex].freePageCount && !contentUnlocked) {
-        console.log('redirecting... to : ', magazineIssues[issueIndex].freePageCount);
-        Router.push(`/magazines/${issueId}/${magazineIssues[issueIndex].freePageCount}`);
-        return;
-      } else {
-        console.log('pageNumber: ', pageNumber);
-        setCurrentPage(pageNumber);
-      }
+      
     };
 
     fetchDigitalaxSubscriptionCollectors();
-  }, [slug]);
+  }, [slug, account]);
 
   const switchViewer = (viewer) => {
     if (viewer === 'exit') {
       Router.push('/');
       return;
     }
-    setViewMethod(viewer);
+    dispatch(globalActions.setViewMethod(viewer));
   };
 
   if (currentPage < 0) {
@@ -113,7 +122,7 @@ const MagazinePages = () => {
       issueId={issueId}
       onClickItem={(pageNumber) => {
         setCurrentPage(pageNumber);
-        setViewMethod('webview');
+        dispatch(globalActions.setViewMethod('webview'));
       }}
       onSwitchViewer={switchViewer}
     ></MapViewer>

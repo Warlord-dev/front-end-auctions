@@ -1,0 +1,215 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();    
+  background: #fff;
+
+  .rect1 {
+    position: absolute;
+    width: 872px;
+    height: 153px;
+    left: 990px;
+    top: 106px;
+    
+    background: #000000;    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 288px;
+    height: 49px;
+    left: 960px;
+    top: 322px;
+    
+    background: #000000;
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 447px;
+    height: 126px;
+    left: 960px;
+    top: 842px;
+    
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 410px;
+    height: 126px;
+    left: 1510px;
+    top: 917px;
+    
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .rect5 {
+    position: absolute;
+    width: 410px;
+    height: 117px;
+    left: 960px;
+    top: 1146px;
+    
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .rect6 {
+    position: absolute;
+    width: 410px;
+    height: 117px;
+    left: 1136px;
+    top: 1273px;
+    
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .rect7 {
+    position: absolute;
+    width: 410px;
+    height: 92px;
+    left: 960px;
+    top: 1393px;
+    
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 583px;
+    height: 100px;
+    left: 990px;
+    top: 22px;
+    
+    font-family: Modak;
+    font-size: 100px;
+    line-height: 100%;
+    color: #FFFFFF;
+    text-shadow: -1px 0 black, 0 -1px black, 1px 0 black, 0 1px black;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 851px;
+    height: 86px;
+    left: 1002px;
+    top: 121px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 100%;
+    color: #BE03FF;
+    -webkit-text-stroke: 1px #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 237px;
+    height: 86px;
+    left: 985px;
+    top: 327px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 100%;
+    color: #BE03FF;
+    -webkit-text-stroke: 1px #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 431px;
+    height: 107px;
+    left: 976px;
+    top: 853px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px #FF0000;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 422px;
+    height: 82px;
+    left: 1482px;
+    top: 926px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 100%;
+    text-align: right;
+    
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px #00E0FF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 422px;
+    height: 82px;
+    left: 970px;
+    top: 1156px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 100%;
+    color: #FFFFFF;
+    
+    -webkit-text-stroke: 1px #00E0FF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 388px;
+    height: 82px;
+    left: 1146px;
+    top: 1283px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 100%;
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px #DBFF00;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 388px;
+    height: 82px;
+    left: 970px;
+    top: 1403px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 100%;
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px #FF006B;
+  }
+
+  a {
+    div {
+      transition: 0.3s all;
+      &:hover {
+        transform: scale(0.9);
+        transition: 0.3s all;
+      }
+    }
+  }
+}

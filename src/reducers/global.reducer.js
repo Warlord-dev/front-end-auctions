@@ -13,6 +13,8 @@ const DEFAULT_FIELDS = Map({
   contentUnlocked: false,
   rewards: 0,
   monaPerEth: 0,
+  viewMethod: 'magazineview',
+  currentPage: 0
 });
 
 export default createModule({

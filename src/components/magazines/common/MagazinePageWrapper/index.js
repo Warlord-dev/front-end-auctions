@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react'
-import windowSize from 'react-window-size'
 import styled from 'styled-components'
-import styles from './styles.module.scss'
 
 const MagazinePageWrapperDiv = styled.div`
   background-color: black;
@@ -30,8 +28,6 @@ const MagazinePageWrapper = forwardRef((props, ref) => {
     windowHeight
   } = props
 
-  // console.log('windowHeight: ', windowHeight)
-
   return (
     <MagazinePageWrapperDiv zoom={zoom || 1} ref={ref} windowHeight={windowHeight - 20} >
       <ContentWrapperDiv
@@ -43,18 +39,6 @@ const MagazinePageWrapper = forwardRef((props, ref) => {
       </ContentWrapperDiv>
     </MagazinePageWrapperDiv>
   )
-  // return (
-  //   <div ref={ref} className={styles.magazinePageWrapper}>
-  //     <div className={
-  //       [
-  //         styles.contentWrapper, 
-  //         secondPart && styles.secondPart
-  //       ].join(' ')
-  //     }>
-  //     { props.children }
-  //     </div>
-  //   </div>
-  // )
 })
 
 export default MagazinePageWrapper
