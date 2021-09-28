@@ -81,9 +81,9 @@ const Page1314 = () => {
       <div className={styles.text13}>
         how to keep up with that new project alpha like everyone else in the market? Ever wished that crypto had a native product hunt type dapp? 
         <br /><br />
-        Well, Cryptotesters is here to help with all of your market and project discovery, navigation and validation needs! They are slowing transforming into a one stop shop for newcomers and curious web3 minds. But it’s not just a static interface, Cryptotesters is also assisting projects with their marketing, branding and communication, specifically to provide clear and simple messaging to those users that are still understanding more about  the space and sifting through the potential less well inclined projects for those that are truly building this new era. 
+        Well, Cryptotesters is here to help with all of your market and project discovery, navigation and validation needs! They are slowly transforming into a one stop shop for newcomers and curious web3 minds. But it’s not just a static interface, Cryptotesters is also assisting projects with their marketing, branding and communication, specifically to provide clear and simple messaging to those users that are still understanding more about  the space and sifting through the potential less well inclined projects for those that are truly building this new era. 
         <br /><br />
-        Further, the Cryptotesters team is also putting together recommendation lists, basic “how tos”, community review tools and additional content such as blogs and podcasts. It won’t be long before they have enough building blocks to go full web3 and launch a project token for incentivising decentralised content curation and checks and balances on it. 
+        Further, the Cryptotesters team is also putting together recommendation lists, basic “how to's”, community review tools and additional content such as blogs and podcasts. It won’t be long before they have enough building blocks to go full web3 and launch a project token for incentivising decentralised content curation and checks and balances on it. 
       </div>
       <div className={styles.text14}>
         <span>Flashnft</span><br />
