@@ -266,10 +266,14 @@ const Product = () => {
               <div className={styles.designerBody}>
                 <div className={styles.title}> designer </div>
                 <div className={styles.data}>
-                  <ImageCard showButton={false} imgUrl={product?.designer?.image} />
+                  <a href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`} target="_blank">
+                    <ImageCard showButton={false} imgUrl={product?.designer?.image} />
+                  </a>
                   <div className={styles.infoWrapper}>
                     <InfoCard libon="./images/metaverse/party_glasses.png">
-                      <div className={styles.name}> {product?.designer?.name} </div>
+                      <a href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`} target="_blank">
+                        <div className={styles.name}> {product?.designer?.name} </div>
+                      </a>
                       <div className={styles.description}>{product?.designer?.description}</div>
                     </InfoCard>
                   </div>

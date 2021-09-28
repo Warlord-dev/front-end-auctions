@@ -276,6 +276,10 @@
           align-items: center;
         }
 
+        a:hover{
+          opacity: 0.9;
+        }
+
         .name {
           text-transform: uppercase;
           color: white;

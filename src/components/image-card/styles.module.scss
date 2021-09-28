@@ -57,6 +57,22 @@
     line-height: 44px;
   }
 
+  .designerLink {
+
+    .designerWrapper .photo,
+    .designerWrapper .name {
+      transition: all 0.4s ease;
+    }
+    
+    &:hover {
+      .designerWrapper .photo,
+      .designerWrapper .name {
+        transform: scale(1.05);
+        transition: all 0.4s ease;
+      }
+    }
+  }
+
   .designerWrapper {
     position: relative;
     display: flex;

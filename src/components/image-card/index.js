@@ -183,10 +183,12 @@ const ImageCard = ({
           </div>
         ) : null}
         {showDesigner ? (
-          <div className={styles.designerWrapper}>
-            <img src={data?.designer?.image} className={styles.photo} />
-            <div className={styles.name}>{data?.designer?.name} </div>
-          </div>
+          <a href={`https://designers.digitalax.xyz/designers/${data?.designer?.name}`} target="_blank" className={styles.designerLink}>
+            <div className={styles.designerWrapper}>
+              <img src={data?.designer?.image} className={styles.photo} />
+              <div className={styles.name}>{data?.designer?.name} </div>
+            </div>
+          </a>
         ) : null}
         {withLink ? <Link href={`/product/${data?.id}/${getRarityId(data?.rarity)}/${isAuction ? 1 : 0}`}>
           <a>
