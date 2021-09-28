@@ -28,7 +28,7 @@ const Page1718 = () => {
         The Floor Price RugPull        
       </div>
       <div className={styles.text5}>
-        We’ve been hearing a lot lately that NFTs are generating financial freedom for the masses. But how do we ensure that this doesn’t just become a game of replacing the old with the old wearing new masks. Because it’s so easy to slip into this framework, become comfortable with it and then plod along unti the next set of masks and rugs are ready.  
+        We’ve been hearing a lot lately that NFTs are generating financial freedom for the masses. But how do we ensure that this doesn’t just become a game of replacing the old with the old wearing new masks. Because it’s so easy to slip into this framework, become comfortable with it and then plod along until the next set of masks and rugs are ready.  
         <br /><br />
         Amples of high net worth individuals getting together in web based social clubs to collude in driving floor prices higher, painting the tape, overlooks the massively larger amount of profit potential available for all when the real power of decentralisation is appreciated. 
       </div>
