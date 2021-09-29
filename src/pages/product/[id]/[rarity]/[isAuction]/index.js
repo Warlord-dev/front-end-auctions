@@ -288,6 +288,11 @@ const Product = () => {
                       </a>
                       <div className={styles.description}>{product?.designer?.description}</div>
                     </InfoCard>
+                    <a href='https://designers.digitalax.xyz/getdressed' target='_blank'>
+                      <button type="button" className={styles.getDressedButton}>
+                        GET BESPOKE DRESSED BY THIS DESIGNER!
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>

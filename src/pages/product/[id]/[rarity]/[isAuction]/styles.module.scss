@@ -347,7 +347,31 @@
 
         .infoWrapper {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          a {
+            margin-top: 20px;
+
+            .getDressedButton {
+              background: #BD3DA9;
+              border: none;
+              font-family: Gilroy;
+              font-style: normal;
+              font-weight: 800;
+              font-size: 16px;
+              color: white;
+  
+              padding: 12px 10px;
+              
+              @include transition();
+
+              &:hover {
+                @include scale();
+                @include transition();
+              }
+            }
+          }
         }
 
         a:hover{
