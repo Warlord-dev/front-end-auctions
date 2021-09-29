@@ -223,8 +223,15 @@ const Product = () => {
                   ) : (
                     <>{`${days}:${hours}:${minutes}`}</>
                   )}
+                  <div className={styles.helper}>
+                    <span className={styles.questionMark}>?</span>
+                    <span className={styles.description}>
+                      You can also stake this NFT for yield + get the original source file. Check <a>here</a>.
+                    </span>
+                  </div>
                 </div>
-                <InfoCard libon="./images/metaverse/Gamepad 1.png">
+
+                <InfoCard>
                   <div className={styles.infoCard}>
                     <div className={styles.skinName}>
                       <div className={styles.text}> {product?.garment?.name} </div>

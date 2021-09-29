@@ -126,6 +126,58 @@
             font-size: 40px;
             font-weight: bold;
             margin-bottom: 2rem;
+            display: flex;
+
+            .helper {
+              cursor: pointer;
+              display: flex;
+              height: 52px;
+              margin-top: -30px;
+              align-items: center;
+
+              .questionMark {
+                border: 1px solid white;
+                border-radius: 50%;
+                width: 27px;
+                height: 27px;
+                font-size: 23px;
+  
+                display: flex;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+              }
+
+              .description {
+                display: none;
+                background: #C047E7;
+                border: 2px solid #C047E7;
+                width: 300px;
+                padding: 7px 12px;
+                justify-content: center;
+                align-items: center;
+                font-family: Gilroy;
+                font-weight: 800;
+                font-size: 14px;
+
+                margin-left: 10px;
+                height: 52px;
+
+                a {
+                  text-decoration: underline;
+                  color: white;
+                }
+              }
+
+              &:hover {
+                .description {
+                  display: block;
+                } 
+              }
+            }
           }
         }
 
