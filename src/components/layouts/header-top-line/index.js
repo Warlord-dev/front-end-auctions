@@ -228,7 +228,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           )}
           <Link href="https://designers.digitalax.xyz/getdressed/">
             <a className={styles.link} target="_blank">
-              Get Custom Dressed
+              GET CUSTOM DRESSED
             </a>
           </Link>
           <Link href="/global">
