@@ -226,7 +226,7 @@ const Product = () => {
                   <div className={styles.helper}>
                     <span className={styles.questionMark}>?</span>
                     <span className={styles.description}>
-                      You can also stake this NFT for yield + get the original source file. Check <a>here</a>.
+                      You can also stake this NFT for yield + get the original source file. Check <a href='https://staking.digitalax.xyz/' target='_blank'>here</a>.
                     </span>
                   </div>
                 </div>
@@ -257,6 +257,11 @@ const Product = () => {
                 <button type="button" className={styles.bespokeBtn} onClick={onBespokeBtn}>
                   Want something more Bespoke?
                 </button>
+                <a href='https://staking.digitalax.xyz/' target='_blank'>
+                  <button type="button" className={styles.stakeBtn}>
+                    STAKE YOUR FASHION FOR $MONA YIELD
+                  </button>
+                </a>
               </div>
             </div>
           </div>
