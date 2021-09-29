@@ -19,6 +19,7 @@ const CollectionCard = ({ collection }) => {
     'International',
     'Fashion x Art',
     'Seasonal Styles',
+    'Fantastical Chic',
   ];
 
   return (
