@@ -81,9 +81,9 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
           <div className={styles.footer}>
             <p className={styles.footerCaption}>
               <span>
-              Need to top up $MONA? You can get it from <a href="" target="_blank">Uniswap</a>{' '}
-              and bridge it to Polygon with our customer <a href="" target="_blank">Multi-Token Bridge</a>. 
-              Or, purchase it directly from <a href="" target="_blank">Quickswap</a>.
+              Need to top up $MONA? You can get it from <a href="https://uniswap.org/" target="_blank">Uniswap</a>{' '}
+              and bridge it to Polygon with our customer <a href="https://skins.digitalax.xyz/bridge/" target="_blank">Multi-Token Bridge</a>. 
+              Or, purchase it directly from <a href="https://quickswap.exchange/" target="_blank">Quickswap</a>.
               </span>
             </p>
             <div className={styles.selectWrapper}>
