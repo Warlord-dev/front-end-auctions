@@ -192,6 +192,10 @@ const Product = () => {
     }
   };
 
+  const onClickLove = () => {
+    console.log('click love button!')
+  }
+
   return (
     <div className={styles.wrapper}>
       <section className={styles.mainSection}>
@@ -227,6 +231,30 @@ const Product = () => {
                     <span className={styles.questionMark}>?</span>
                     <span className={styles.description}>
                       You can also stake this NFT for yield + get the original source file. Check <a href='https://staking.digitalax.xyz/' target='_blank'>here</a>.
+                    </span>
+                  </div>
+                </div>
+
+                <div className={styles.lovesWrapper}>
+                  <button type='button' className={styles.loveButton} onClick={onClickLove}>
+                    <img src='/images/like_icon.png' />
+                  </button>
+
+                  <div className={styles.likeCount}>
+                    {
+                      6
+                    }
+                    <span>
+                      LOVES
+                    </span>
+                  </div>
+                  <img src='/images/view_icon.png' />
+                  <div className={styles.viewCount}>
+                    {
+                      24
+                    }
+                    <span>
+                      VIEWS
                     </span>
                   </div>
                 </div>
