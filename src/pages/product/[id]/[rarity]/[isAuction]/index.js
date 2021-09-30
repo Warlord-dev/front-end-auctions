@@ -4,8 +4,9 @@ import { useRouter } from 'next/router';
 import ImageCard from '@components/image-card';
 import styles from './styles.module.scss';
 import InfoCard from '@components/info-card';
-import BannerButton from '@components/buttons/bannerbutton';
 import Container from '@components/container';
+import UserList from '@components/user-list';
+
 import {
   getDigitalaxMarketplaceOffer,
   getDigitalaxMarketplaceV2Offer,
@@ -310,11 +311,20 @@ const Product = () => {
                     <ImageCard showButton={false} imgUrl={product?.designer?.image} />
                   </a>
                   <div className={styles.infoWrapper}>
+                    <div className={styles.wearersLabel}>
+                      current wearer/S
+                    </div>
+                    <UserList className={styles.userList} userLimit={7} />
                     <InfoCard libon="./images/metaverse/party_glasses.png">
                       <a href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`} target="_blank">
                         <div className={styles.name}> {product?.designer?.name} </div>
                       </a>
                       <div className={styles.description}>{product?.designer?.description}</div>
+                      <a href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`} target="_blank">
+                        <button type="button" className={styles.profileButton}>
+                          View Full Profile
+                        </button>
+                      </a>
                     </InfoCard>
                     <a href='https://designers.digitalax.xyz/getdressed' target='_blank'>
                       <button type="button" className={styles.getDressedButton}>
@@ -336,12 +346,30 @@ const Product = () => {
                 <div className={styles.designerBody}>
                   <div className={styles.title}> designer </div>
                   <div className={styles.data}>
-                    <ImageCard showButton={false} imgUrl={secondDesigner.image} />
+                    <a href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`} target="_blank">
+                      <ImageCard showButton={false} imgUrl={secondDesigner.image} />
+                    </a>
                     <div className={styles.infoWrapper}>
+                      <div className={styles.wearersLabel}>
+                        current wearer/S
+                      </div>
+                      <UserList className={styles.userList} userLimit={7}  />
                       <InfoCard libon="./images/metaverse/party_glasses.png">
-                        <div className={styles.name}> {secondDesigner.name} </div>
+                        <a href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`} target="_blank">
+                          <div className={styles.name}> {secondDesigner.name} </div>
+                        </a>
                         <div className={styles.description}>{secondDesigner.description}</div>
+                        <a href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`} target="_blank">
+                          <button type="button" className={styles.profileButton}>
+                            View Full Profile
+                          </button>
+                        </a>
                       </InfoCard>
+                      <a href='https://designers.digitalax.xyz/getdressed' target='_blank'>
+                        <button type="button" className={styles.getDressedButton}>
+                          GET BESPOKE DRESSED BY THIS DESIGNER!
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -396,6 +396,23 @@
           flex-direction: column;
           justify-content: center;
 
+          .wearersLabel {
+            text-transform: uppercase;
+            font-family: Gilroy;
+            font-weight: 800;
+            font-size: 10px;
+            line-height: 18px;
+            letter-spacing: 0.12em;
+            color: white;
+            margin-left: 10px;
+            margin-bottom: 2px;
+          }
+
+          .userList {
+            margin-bottom: 40px;
+            margin-left: 10px;
+          }
+
           a {
             margin-top: 20px;
 
@@ -439,6 +456,24 @@
           font-size: 1rem;
           line-height: 18px;
           color: white;
+        }
+
+        .profileButton {
+          background: #000000;
+          border-radius: 29px;
+          color: white;
+
+          font-family: Gilroy;
+          font-weight: 800;
+          font-size: 15px;
+          line-height: 18px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+
+          border: none;
+          padding: 7px 12px;  
+          margin-top: 10px;
         }
       }
     }
