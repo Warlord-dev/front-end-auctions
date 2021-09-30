@@ -18,7 +18,12 @@ import {
 import { getChainId, getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import PriceCard from '@components/price-card';
 import { getRarity } from '@utils/helpers';
-import { openBespokeModal, openBidHistoryModal, openPurchaseHistoryModal } from '@actions/modals.actions';
+import { 
+  openBespokeModal,
+  openBidHistoryModal,
+  openPurchaseHistoryModal,
+  openCurrentWearersModal
+} from '@actions/modals.actions';
 import FashionList from '@components/fashion-list';
 import BannerBar from '@components/banner-bar';
 import secondDesignerData from 'src/data/second-designers.json';
@@ -197,6 +202,13 @@ const Product = () => {
     console.log('click love button!')
   }
 
+  const onClickSeeAllWearers = () => {
+    console.log('click See All Wearers!')
+    console.log('tokenIds: ', tokenIds)
+
+    // dispatch(openCurrentWearersModal());
+  }
+
   return (
     <div className={styles.wrapper}>
       <section className={styles.mainSection}>
@@ -314,7 +326,11 @@ const Product = () => {
                     <div className={styles.wearersLabel}>
                       current wearer/S
                     </div>
-                    <UserList className={styles.userList} userLimit={7} />
+                    <UserList
+                      className={styles.userList}
+                      userLimit={7}
+                      onClickSeeAll={onClickSeeAllWearers}
+                    />
                     <InfoCard libon="./images/metaverse/party_glasses.png">
                       <a href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`} target="_blank">
                         <div className={styles.name}> {product?.designer?.name} </div>
@@ -353,7 +369,11 @@ const Product = () => {
                       <div className={styles.wearersLabel}>
                         current wearer/S
                       </div>
-                      <UserList className={styles.userList} userLimit={7}  />
+                      <UserList
+                        className={styles.userList} 
+                        userLimit={7} 
+                        onClickSeeAll={onClickSeeAllWearers}
+                      />
                       <InfoCard libon="./images/metaverse/party_glasses.png">
                         <a href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`} target="_blank">
                           <div className={styles.name}> {secondDesigner.name} </div>
