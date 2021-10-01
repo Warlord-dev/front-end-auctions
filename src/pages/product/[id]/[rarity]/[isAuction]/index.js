@@ -51,6 +51,7 @@ const Product = () => {
   const exchangeRate = useSelector(getExchangeRateETH);
   const [loveCount, setLoveCount] = useState(0);
   const [viewCount, setViewCount] = useState(0);
+  const [owners, setOwners] = useState([]);
   const fashionData = [
     {
       title: 'DeFi Staking Functionality',
@@ -74,14 +75,40 @@ const Product = () => {
   const account = useSelector(getAccount);
   const user = getUser();
   const secretKey = user ? user.randomString : null;
+
+  const getOwners = (garments, itemSold, users) => {
+    if (!garments) return []
+    console.log('itemSold:', itemSold)
+    const owners = garments.slice(0, itemSold).map(garment => garment.owner.toLowerCase())
+    const arranged = owners.filter((item, pos) => {
+      return owners.indexOf(item) == pos;
+    })
+    return arranged.map(garment => {
+      const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment)
+      return {
+        ...user
+      }
+    })
+  }
  
   useEffect(() => {
     const fetchGarmentV2ByID = async () => {
+      const users = await digitalaxApi.getAllUsersName()
+
       if (id.indexOf('v1') >= 0) {
         const v1Id = id.split('-')[1];
         const { digitalaxGarmentCollection } = await getGarmentByCollectionId(chainId, v1Id);
         if (digitalaxGarmentCollection.id) {
           const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffer(chainId, digitalaxGarmentCollection.id);
+          console.log('digitalaxMarketplaceOffers: ', digitalaxMarketplaceOffers)
+          setOwners(
+            getOwners(
+              digitalaxMarketplaceOffer[0].garmentCollection?.garments, 
+              digitalaxMarketplaceOffers[0].amountSold, 
+              users
+            )
+          )
+          // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
           setTokenIds(digitalaxMarketplaceOffers[0].garmentCollection?.garments?.map((garment) => garment.id));
           setOffer({
             id: digitalaxMarketplaceOffers[0].id,
@@ -106,6 +133,15 @@ const Product = () => {
               chainId,
               digitalaxGarmentV2Collection.id,
             );
+
+            console.log('digitalaxMarketplaceV2Offers: ', digitalaxMarketplaceV2Offers)
+            setOwners(
+              getOwners(
+                digitalaxMarketplaceV2Offers[0].garmentCollection?.garments,
+                digitalaxMarketplaceV2Offers[0].amountSold,
+                users
+              )
+            )
             setTokenIds(
               digitalaxMarketplaceV2Offers[0].garmentCollection?.garments?.map(
                 (garment) => garment.id,
@@ -237,16 +273,17 @@ const Product = () => {
   }
 
   const onClickLove = () => {
-    console.log('click love button!')
     addLove()
   }
 
   const onClickSeeAllWearers = () => {
-    console.log('click See All Wearers!')
-    console.log('tokenIds: ', tokenIds)
+    // console.log('click See All Wearers!')
+    // console.log('tokenIds: ', tokenIds)
 
     // dispatch(openCurrentWearersModal());
   }
+
+  // console.log('owners: ', owners)
 
   return (
     <div className={styles.wrapper}>
@@ -362,14 +399,19 @@ const Product = () => {
                     <ImageCard showButton={false} imgUrl={product?.designer?.image} />
                   </a>
                   <div className={styles.infoWrapper}>
-                    <div className={styles.wearersLabel}>
+                    {
+                      owners.length ? <div className={styles.wearersLabel}>
                       current wearer/S
-                    </div>
-                    <UserList
-                      className={styles.userList}
-                      userLimit={7}
-                      onClickSeeAll={onClickSeeAllWearers}
-                    />
+                      </div> : <></>
+                    }
+                    {
+                      owners.length ? <UserList
+                        className={styles.userList}
+                        userLimit={7}
+                        users={owners}
+                        onClickSeeAll={onClickSeeAllWearers}
+                      /> : <></>
+                    }
                     <InfoCard libon="./images/metaverse/party_glasses.png">
                       <a href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`} target="_blank">
                         <div className={styles.name}> {product?.designer?.name} </div>
@@ -405,14 +447,19 @@ const Product = () => {
                       <ImageCard showButton={false} imgUrl={secondDesigner.image} />
                     </a>
                     <div className={styles.infoWrapper}>
-                      <div className={styles.wearersLabel}>
-                        current wearer/S
-                      </div>
-                      <UserList
-                        className={styles.userList} 
-                        userLimit={7} 
-                        onClickSeeAll={onClickSeeAllWearers}
-                      />
+                      {
+                        owners.length ? <div className={styles.wearersLabel}>
+                          current wearer/S
+                        </div> : <></>
+                      }
+                      {
+                        owners.length ? <UserList
+                          className={styles.userList}
+                          users={owners}
+                          userLimit={7} 
+                          onClickSeeAll={onClickSeeAllWearers}
+                        /> : <></>
+                      }
                       <InfoCard libon="./images/metaverse/party_glasses.png">
                         <a href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`} target="_blank">
                           <div className={styles.name}> {secondDesigner.name} </div>

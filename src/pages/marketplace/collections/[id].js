@@ -19,16 +19,16 @@ const Collections = () => {
   const [sortBy, setSortBy] = useState(null);
   const { id } = route.query;
 
-  const getGarmentsWithOwnerInfo = (garments, users) => {
-    if (!garments) return []
-    return garments.map(garment => {
-      const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment.owner.toLowerCase())
-      return {
-        ...garment,
-        ...user
-      }
-    })
-  }
+  // const getGarmentsWithOwnerInfo = (garments, users) => {
+  //   if (!garments) return []
+  //   return garments.map(garment => {
+  //     const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment.owner.toLowerCase())
+  //     return {
+  //       ...garment,
+  //       ...user
+  //     }
+  //   })
+  // }
 
   const getOwners = (garments, itemSold, users) => {
     if (!garments) return []
@@ -60,7 +60,7 @@ const Collections = () => {
           designer: collection.designer,
           developer: collection.developer,
           garment: collection.garments[0],
-          garments: getGarmentsWithOwnerInfo(foundOfferItem.garmentCollection.garments, users),
+          // garments: getGarmentsWithOwnerInfo(foundOfferItem.garmentCollection.garments, users),
           owners: getOwners(foundOfferItem.garmentCollection.garments, foundOfferItem.amountSold, users),
           primarySalePrice: foundOfferItem ? foundOfferItem.primarySalePrice : 0,
           auction: false,

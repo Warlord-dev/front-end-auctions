@@ -280,7 +280,8 @@ export const DIGITALAX_MARKETPLACE_V2_OFFER = gql`
       amountSold
       garmentCollection {
         garments(first: 1000) {
-          id
+          id,
+          owner
         }
       }
     }
@@ -296,7 +297,8 @@ query digitalaxMarketplaceOffers($garmentCollection: String!) {
     amountSold
     garmentCollection {
       garments(first: 1000) {
-        id
+        id,
+        owner
       }
     }
   }

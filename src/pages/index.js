@@ -49,16 +49,16 @@ const LandingPage = () => {
     return array;
   }
 
-  const getGarmentsWithOwnerInfo = (garments, users) => {
-    if (!garments) return []
-    return garments.map(garment => {
-      const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment.owner.toLowerCase())
-      return {
-        ...garment,
-        ...user
-      }
-    })
-  }
+  // const getGarmentsWithOwnerInfo = (garments, users) => {
+  //   if (!garments) return []
+  //   return garments.map(garment => {
+  //     const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment.owner.toLowerCase())
+  //     return {
+  //       ...garment,
+  //       ...user
+  //     }
+  //   })
+  // }
 
   const getOwners = (garments, itemSold, users) => {
     if (!garments) return []
@@ -114,7 +114,7 @@ const LandingPage = () => {
                 rarity: collection.rarity,
                 startTime: offer.startTime,
                 garment: collection.garments[0],
-                garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
+                // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
                 owners: getOwners(offer.garmentCollection.garments, offer.amountSold, users),
                 primarySalePrice: offer ? offer.primarySalePrice : 0,
                 auction: false,
@@ -132,7 +132,7 @@ const LandingPage = () => {
                 primarySalePrice: offer ? offer.primarySalePrice : 0,
                 rarity: collection.rarity,
                 garment: collection.garments[0],
-                garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
+                // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
                 owners: getOwners(offer.garmentCollection.garments, offer.amountSold, users),
                 auction: false,
                 version: 2,
@@ -152,7 +152,7 @@ const LandingPage = () => {
           },
           startTime: offer.startTime,
           garment: collection.garments[0],
-          garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
+          // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
           owners: getOwners(offer.garmentCollection.garments, offer.amountSold, users),
           primarySalePrice: offer ? offer.primarySalePrice : 0,
           rarity: collection.rarity,
