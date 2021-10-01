@@ -6,7 +6,15 @@ const Filters = ({ filter, filterChange, sortByChange }) => {
     <>
       <div className={styles.actions}>
         <div className={styles.filterWrapper}>
-          <div className={styles.filterLabel}>filter</div>
+          <div className={styles.filterLabel}>
+            filter
+            <div className={styles.helper}>
+              <span className={styles.questionMark}>?</span>
+              <span className={styles.description}>
+                FILTER BY DESIGNER, OUTFIT NAME OR COLLECTOR ID
+              </span>
+            </div>
+          </div>
           <div className={styles.filterInput}>
             <input
               className={styles.filter}
