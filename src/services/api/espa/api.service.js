@@ -136,6 +136,15 @@ class EspaApiService {
     }
   }
 
+  async getAllUsersName() {
+    try {
+      const allUsers = await get('/get-all-users-name');
+      return allUsers;
+    } catch (e) {
+      return [];
+    }
+  }
+
   async addLove(account, signMsg, viewsType, viewsId) {
     try {
       const data = await post('/add-love', {

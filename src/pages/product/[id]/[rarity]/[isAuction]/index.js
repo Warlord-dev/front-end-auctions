@@ -17,7 +17,7 @@ import {
   getGarmentByAuctionId,
   getGarmentByCollectionId,
   getGarmentV2ByAuctionId,
-  getGarmentV2ByCollectionId,
+  getGarmentV2ByCollectionId
 } from '@services/api/apiService';
 
 import digitalaxApi from '@services/api/espa/api.service'
@@ -74,7 +74,7 @@ const Product = () => {
   const account = useSelector(getAccount);
   const user = getUser();
   const secretKey = user ? user.randomString : null;
-  
+ 
   useEffect(() => {
     const fetchGarmentV2ByID = async () => {
       if (id.indexOf('v1') >= 0) {
@@ -162,7 +162,6 @@ const Product = () => {
 
     const fetchViews = async () => {
       const viewData = await digitalaxApi.getViews('product', id);
-      console.log('viewData: ', viewData)
       setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0)
       setViewCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].viewCount : 0)
       

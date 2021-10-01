@@ -9,6 +9,7 @@ import {
   DIGITALAX_GARMENT_COLLECTIONS,
   DIGITALAX_GARMENT_NFT_V2_GLOBAL_STATS,
   DIGITALAX_GARMENT_PURCHASE_HISTORIES,
+  DIGITALAX_GARMENT_V2S,
   DIGITALAX_GARMENT_V2_PURCHASE_HISTORIES,
   DIGITALAX_MARKETPLACE_OFFER,
   DIGITALAX_MARKETPLACE_OFFERS,
@@ -80,3 +81,6 @@ export const getDigitalaxGarmentAuctions = async (chainId) =>
 
 export const getGarmentByAuctionId = async (chainId, id) =>
   apiRequest(chainId, GARMENT_BY_AUCTION_ID, { id });
+
+export  const getDigitalaxGarmentV2s = async (chainId, ids) =>
+  apiRequest(chainId, DIGITALAX_GARMENT_V2S, { ids })
