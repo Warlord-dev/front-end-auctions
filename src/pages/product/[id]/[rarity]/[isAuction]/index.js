@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
-import ImageCard from '@components/image-card';
 import styles from './styles.module.scss';
+
+import ImageCard from '@components/image-card';
 import InfoCard from '@components/info-card';
 import Container from '@components/container';
 import UserList from '@components/user-list';
+import FashionList from '@components/fashion-list';
+import BannerBar from '@components/banner-bar';
+import PriceCard from '@components/price-card';
 
 import {
   getDigitalaxMarketplaceOffer,
@@ -15,18 +19,21 @@ import {
   getGarmentV2ByAuctionId,
   getGarmentV2ByCollectionId,
 } from '@services/api/apiService';
+
+import digitalaxApi from '@services/api/espa/api.service'
+
 import { getChainId, getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
-import PriceCard from '@components/price-card';
-import { getRarity } from '@utils/helpers';
+import { getAccount } from '@selectors/user.selectors';
+import { getUser } from '@helpers/user.helpers';
+import { getRarity } from '@utils/helpers'
 import { 
   openBespokeModal,
   openBidHistoryModal,
   openPurchaseHistoryModal,
   openCurrentWearersModal
 } from '@actions/modals.actions';
-import FashionList from '@components/fashion-list';
-import BannerBar from '@components/banner-bar';
 import secondDesignerData from 'src/data/second-designers.json';
+
 
 const Product = () => {
   const router = useRouter();
@@ -42,6 +49,8 @@ const Product = () => {
   const [secondDesigner, setSecondDesigner] = useState(null);
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
+  const [loveCount, setLoveCount] = useState(0);
+  const [viewCount, setViewCount] = useState(0);
   const fashionData = [
     {
       title: 'DeFi Staking Functionality',
@@ -61,6 +70,10 @@ const Product = () => {
       description: `All of the DIGITALAX digital fashion garment and accessory ERC-721 NFTs are backed by the underlying 3D model FBX file, stored in IPFS. This forms part of the platform’s broader pursuit for decentralising content distribution and access to it. The FBX file is one of the most popular and widely used 3D data interchange formats between 3D editors and game engines. There are still efficiency problems that exist with it, which DIGITALAX is working to solve through it’s DASH File Format architecture. `,
     },
   ];
+
+  const account = useSelector(getAccount);
+  const user = getUser();
+  const secretKey = user ? user.randomString : null;
   
   useEffect(() => {
     const fetchGarmentV2ByID = async () => {
@@ -146,6 +159,25 @@ const Product = () => {
     } else {
       setSecondDesigner(null);
     }
+
+    const fetchViews = async () => {
+      const viewData = await digitalaxApi.getViews('product', id);
+      console.log('viewData: ', viewData)
+      setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0)
+      setViewCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].viewCount : 0)
+      
+    }
+
+    const addViewCount = async () => {
+      const data = await digitalaxApi.addView('product', id);
+      if (data) {
+        setViewCount(data.viewCount)
+      }
+    }
+
+    fetchViews();
+    addViewCount();
+
   }, []);
 
   useEffect(() => {
@@ -198,8 +230,16 @@ const Product = () => {
     }
   };
 
+  const addLove = async () => {
+    const data = await digitalaxApi.addLove(account, secretKey, 'product', id)
+    if (data && data['success']) {
+      setLoveCount(loveCount + 1)
+    }
+  }
+
   const onClickLove = () => {
     console.log('click love button!')
+    addLove()
   }
 
   const onClickSeeAllWearers = () => {
@@ -255,7 +295,7 @@ const Product = () => {
 
                   <div className={styles.likeCount}>
                     {
-                      6
+                      loveCount
                     }
                     <span>
                       LOVES
@@ -264,7 +304,7 @@ const Product = () => {
                   <img src='/images/view_icon.png' />
                   <div className={styles.viewCount}>
                     {
-                      24
+                      viewCount
                     }
                     <span>
                       VIEWS
