@@ -20,6 +20,7 @@ const CollectionCard = ({ collection }) => {
     'Fashion x Art',
     'Seasonal Styles',
     'Fantastical Chic',
+    'Trash Fashion',
   ];
 
   return (
