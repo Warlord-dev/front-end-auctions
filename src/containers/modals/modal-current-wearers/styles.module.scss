@@ -17,5 +17,11 @@
   td {
     padding: 0.5rem;
     text-align: center;
+
+    .ownerAvatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+    }
   }
 }

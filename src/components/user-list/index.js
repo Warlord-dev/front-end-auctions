@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 const UserList = props => {
   const { userLimit, className, users, onClickSeeAll } = props
   // const users = [1,2,3,4,5,6,7,8,9,10]
+  console.log('users: ', users)
   const length = Math.min(users.length, userLimit || 1)
   
   return (
@@ -12,9 +13,10 @@ const UserList = props => {
       <div className={styles.usersWrapper}>
         {
           users.slice(0, length).map((item, index) => {
+            console.log('item: ', item)
             const { avatar } = item
             return (
-              <a href=''>
+              <a href='' key={item.name}>
                 <img src={`${avatar && avatar != '' ? avatar : '/images/user-avatar.png'}`} key={index} />
               </a>
             )

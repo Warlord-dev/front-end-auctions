@@ -12,3 +12,4 @@ export const getDtxEthIds = (state) => state.global.get('dtxEthIds');
 export const getDtxMaticIds = (state) => state.global.get('dtxMaticIds');
 export const getEthNfts = (state) => state.global.get('ethNfts');
 export const getMaticNfts = (state) => state.global.get('maticNfts');
+export const getAllUsers = (state) => state.global.get('allUsers');

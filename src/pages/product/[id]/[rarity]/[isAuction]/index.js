@@ -32,6 +32,9 @@ import {
   openPurchaseHistoryModal,
   openCurrentWearersModal
 } from '@actions/modals.actions';
+
+import globalActions from '@actions/global.actions'
+
 import secondDesignerData from 'src/data/second-designers.json';
 
 
@@ -94,6 +97,7 @@ const Product = () => {
   useEffect(() => {
     const fetchGarmentV2ByID = async () => {
       const users = await digitalaxApi.getAllUsersName()
+      dispatch(globalActions.setAllUsers(users))
 
       if (id.indexOf('v1') >= 0) {
         const v1Id = id.split('-')[1];
@@ -277,10 +281,13 @@ const Product = () => {
   }
 
   const onClickSeeAllWearers = () => {
-    // console.log('click See All Wearers!')
-    // console.log('tokenIds: ', tokenIds)
+    console.log('click See All Wearers!')
+    console.log('tokenIds: ', tokenIds)
 
-    // dispatch(openCurrentWearersModal());
+    dispatch(openCurrentWearersModal({
+      tokenIds,
+      v1: id.includes('v1')
+    }));
   }
 
   // console.log('owners: ', owners)

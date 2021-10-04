@@ -413,8 +413,10 @@ export const DIGITALAX_GARMENT_AUCTIONS = gql`
 `;
 
 export const DIGITALAX_GARMENT_V2S = gql`
-  query digitalaxGarmentV2S(where: {id: $ids}) {
-    id
-    owner
+  query digitalaxGarmentV2S($ids: [ID!]) {
+    digitalaxGarmentV2S(where: {id_in: $ids}) {
+      id
+      owner
+    }
   }
 `;
