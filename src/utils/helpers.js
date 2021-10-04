@@ -28,7 +28,11 @@ export const getRarity = (rarity) => {
 export const filterProducts = (prods, filter, sortBy) => {
   let filteredProducts = [...prods];
   if (filter.length) {
-    filteredProducts = prods.filter((prod) => prod.designer?.name.toLowerCase().includes(filter.toLowerCase()) || prod.garment?.name.toLowerCase().includes(filter.toLowerCase()))
+    filteredProducts = prods.filter(
+      (prod) => prod.designer?.name.toLowerCase().includes(filter.toLowerCase()) 
+      || prod.garment?.name.toLowerCase().includes(filter.toLowerCase())
+      || prod.owners?.find(item => item.username && item.username.toLowerCase().includes(filter.toLowerCase()))
+    )
   }
   if (sortBy) {
     switch(sortBy) {

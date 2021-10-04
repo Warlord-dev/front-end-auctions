@@ -18,6 +18,7 @@ const DEFAULT_FIELDS = Map({
   isSwitchNetwork: false,
   isPurchaseSuccess: false,
   isShowModalBespoke: false,
+  isShowModalCurrentWearers: false,
   params: null,
 });
 

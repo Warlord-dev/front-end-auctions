@@ -98,7 +98,8 @@
         .infoWrapper {
           display: flex;
           flex-direction: column;
-          justify-content: flex-end;
+          justify-content: flex-start;
+          padding-top: 100px;
 
           .bespokeBtn {
             background: rgba(63, 159, 248, 0.51);
@@ -119,13 +120,132 @@
               @include transition();
             }
           }
+          
+          .stakeBtn {
+            background: rgba(27, 65, 200, 0.51);
+            position: relative;
+            color: white;
+            font-size: 24px;
+            padding: 0.75rem 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: 'Bebas Neue';
+            margin-top: 1rem;
+            border: none;
+            width: 100%;
+
+            @include transition();
+
+            &:hover {
+              @include scale();
+              @include transition();
+            }
+          }
 
           .amount {
             color: white;
             font-family: Gilroy;
             font-size: 40px;
             font-weight: bold;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            width: 200%;
+
+            .helper {
+              cursor: pointer;
+              display: flex;
+              height: 52px;
+              margin-top: -30px;
+              align-items: center;
+
+              .questionMark {
+                border: 1px solid white;
+                border-radius: 50%;
+                width: 27px;
+                height: 27px;
+                font-size: 23px;
+  
+                display: flex;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+              }
+
+              .description {
+                display: none;
+                background: #C047E7;
+                border: 2px solid #C047E7;
+                width: 300px;
+                padding: 7px 12px;
+                justify-content: center;
+                align-items: center;
+                font-family: Gilroy;
+                font-weight: 800;
+                font-size: 14px;
+
+                margin-left: 10px;
+                height: 52px;
+
+                a {
+                  text-decoration: underline;
+                  color: white;
+                }
+              }
+
+              &:hover {
+                .description {
+                  display: block;
+                } 
+              }
+            }
+          }
+
+          .lovesWrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            button {
+              background: transparent;
+              border: none;
+
+              transition: 0.3s all;
+              &:hover {
+                transform: scale(1.1);
+                transition: 0.3s all;
+              }
+            }
+
+            .likeCount {
+              color: #FFFFFF;
+              font-family: Inter;
+              font-weight: bold;
+              font-size: 33px;
+              margin-left: 10px;
+
+              span {
+                margin-left: 5px;
+                margin-right: 15px;
+                font-size: 20px;
+              }
+            }
+
+            .viewCount {
+              color: #FFFFFF;
+              font-family: Inter;
+              font-weight: bold;
+              font-size: 33px;
+              margin-left: 10px;
+              
+              span {
+                margin-left: 5px;
+                margin-right: 15px;
+                font-size: 20px;
+              }
+            }
           }
         }
 
@@ -273,7 +393,48 @@
 
         .infoWrapper {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          .wearersLabel {
+            text-transform: uppercase;
+            font-family: Gilroy;
+            font-weight: 800;
+            font-size: 10px;
+            line-height: 18px;
+            letter-spacing: 0.12em;
+            color: white;
+            margin-left: 10px;
+            margin-bottom: 2px;
+          }
+
+          .userList {
+            margin-bottom: 40px;
+            margin-left: 10px;
+          }
+
+          a {
+            margin-top: 20px;
+
+            .getDressedButton {
+              background: #BD3DA9;
+              border: none;
+              font-family: Gilroy;
+              font-style: normal;
+              font-weight: 800;
+              font-size: 16px;
+              color: white;
+  
+              padding: 12px 10px;
+
+              @include transition();
+
+              &:hover {
+                @include scale();
+                @include transition();
+              }
+            }
+          }
         }
 
         a:hover{
@@ -295,6 +456,24 @@
           font-size: 1rem;
           line-height: 18px;
           color: white;
+        }
+
+        .profileButton {
+          background: #000000;
+          border-radius: 29px;
+          color: white;
+
+          font-family: Gilroy;
+          font-weight: 800;
+          font-size: 15px;
+          line-height: 18px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+
+          border: none;
+          padding: 7px 12px;  
+          margin-top: 10px;
         }
       }
     }

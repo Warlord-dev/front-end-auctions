@@ -10,6 +10,7 @@ import Link from 'next/link';
 import ProductInfoCard from '@components/product-info-card';
 import Filters from '@components/filters';
 import { filterProducts } from '@utils/helpers';
+import digitalaxApi from '@services/api/espa/api.service'
 
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
@@ -48,12 +49,37 @@ const LandingPage = () => {
     return array;
   }
 
+  // const getGarmentsWithOwnerInfo = (garments, users) => {
+  //   if (!garments) return []
+  //   return garments.map(garment => {
+  //     const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment.owner.toLowerCase())
+  //     return {
+  //       ...garment,
+  //       ...user
+  //     }
+  //   })
+  // }
+
+  const getOwners = (garments, itemSold, users) => {
+    if (!garments) return []
+    const owners = garments.slice(0, itemSold).map(garment => garment.owner.toLowerCase())
+    const arranged = [...new Set(owners)]
+    return arranged.map(garment => {
+      const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment) || {}
+      return {
+        ...garment,
+        ...user
+      }
+    })
+  }
+
   useEffect(() => {
     const fetchCollectionGroups = async () => {
       const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
       const { digitalaxGarmentCollections } = await getDigitalaxGarmentCollections(chainId);
       const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffers(chainId);
       const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offers(chainId);
+      const users = await digitalaxApi.getAllUsersName()
 
       const prods = [];
 
@@ -76,15 +102,20 @@ const LandingPage = () => {
               });
             });
           }
+
           if (collectionGroup.collections.length > 1 || collectionGroup.collections.length === 1 && collectionGroup.collections[0].id !== '0') {
-            collectionGroup.collections.forEach((collection) => {
+            collectionGroup.collections.forEach((collection) => 
+            {
               const offer = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id);
+              // console.log('offer: ', offer.garmentCollection)
               prods.push({
                 id: collection.id,
                 designer: collection.designer,
                 rarity: collection.rarity,
                 startTime: offer.startTime,
                 garment: collection.garments[0],
+                // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
+                owners: getOwners(offer.garmentCollection.garments, offer.amountSold, users),
                 primarySalePrice: offer ? offer.primarySalePrice : 0,
                 auction: false,
                 version: 2,
@@ -101,6 +132,8 @@ const LandingPage = () => {
                 primarySalePrice: offer ? offer.primarySalePrice : 0,
                 rarity: collection.rarity,
                 garment: collection.garments[0],
+                // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
+                owners: getOwners(offer.garmentCollection.garments, offer.amountSold, users),
                 auction: false,
                 version: 2,
               });
@@ -110,6 +143,7 @@ const LandingPage = () => {
 
       digitalaxGarmentCollections.forEach((collection) => {
         const offer = digitalaxMarketplaceOffers.find((offer) => offer.id === collection.id);
+        // console.log('offer: ', offer)
         prods.push({
           id: collection.id,
           designer: {
@@ -118,6 +152,8 @@ const LandingPage = () => {
           },
           startTime: offer.startTime,
           garment: collection.garments[0],
+          // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
+          owners: getOwners(offer.garmentCollection.garments, offer.amountSold, users),
           primarySalePrice: offer ? offer.primarySalePrice : 0,
           rarity: collection.rarity,
           auction: false,
@@ -137,6 +173,8 @@ const LandingPage = () => {
     description:
       'Take your digital fashion skins to the next level: directly into indie games & mods, where players from amateur to pro can start to earn a livelihood through play, without sacrificing our love of the game. ESPA is the first casual esports platform, with direct integration with DIGITALAX NFT skins on Matic Network. ',
   };
+
+  // console.log('products: ', products)
 
   return (
     <div className={styles.wrapper}>

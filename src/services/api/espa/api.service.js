@@ -123,6 +123,53 @@ class EspaApiService {
       return '';
     }
   }
+
+  async getViews(viewsType, viewsId) {
+    try {
+      const views = await get('/get-views-by-id', {
+        viewsType,
+        viewsId
+      });
+      return views;
+    } catch (e) {
+      return [];
+    }
+  }
+
+  async getAllUsersName() {
+    try {
+      const allUsers = await get('/get-all-users-name');
+      return allUsers;
+    } catch (e) {
+      return [];
+    }
+  }
+
+  async addLove(account, signMsg, viewsType, viewsId) {
+    try {
+      const data = await post('/add-love', {
+        wallet: account,
+        randomString: signMsg,
+        viewsType,
+        viewsId
+      });
+      return data;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  async addView(viewsType, viewsId) {
+    try {
+      const data = await post('/add-view', {
+        viewsType,
+        viewsId
+      });
+      return data;
+    } catch (e) {
+      return null;
+    }
+  }
 }
 
 export default new EspaApiService();
