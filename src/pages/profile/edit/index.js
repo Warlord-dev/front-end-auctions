@@ -166,15 +166,16 @@ const EditProfile = ({ history }) => {
             </div>
           </div>
           <div className={styles.buttonsWrapper}>
-            <Button className={styles.saveButton} background="black" onClick={saveProfile}>
-              SAVE
-            </Button>
             <Button
               className={styles.backProfileButton}
               background="black"
               onClick={() => Router.push('/profile').then(() => window.scrollTo(0, 0))}
             >
               BACK TO PROFILE
+            </Button>
+
+            <Button className={styles.saveButton} background="black" onClick={saveProfile}>
+              SAVE
             </Button>
           </div>
           {isLoading && <Loader size="large" className={styles.pageLoader} />}
