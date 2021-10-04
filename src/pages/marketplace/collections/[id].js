@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import styles from './styles.module.scss';
+
 import Container from '@components/container';
-import { getCollectionGroupById, getDigitalaxMarketplaceV2Offers } from '@services/api/apiService';
-import { useSelector } from 'react-redux';
-import { getChainId } from '@selectors/global.selectors';
 import HeroSection from '@components/hero-section';
 import ProductInfoCard from '@components/product-info-card';
+import { getCollectionGroupById, getDigitalaxMarketplaceV2Offers } from '@services/api/apiService';
+import digitalaxApi from '@services/api/espa/api.service'
+import { getChainId } from '@selectors/global.selectors';
 import { filterProducts } from '@utils/helpers';
 
 const Collections = () => {
@@ -17,10 +19,37 @@ const Collections = () => {
   const [sortBy, setSortBy] = useState(null);
   const { id } = route.query;
 
+  // const getGarmentsWithOwnerInfo = (garments, users) => {
+  //   if (!garments) return []
+  //   return garments.map(garment => {
+  //     const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment.owner.toLowerCase())
+  //     return {
+  //       ...garment,
+  //       ...user
+  //     }
+  //   })
+  // }
+
+  const getOwners = (garments, itemSold, users) => {
+    if (!garments) return []
+    const owners = garments.slice(0, itemSold).map(garment => garment.owner.toLowerCase())
+    const arranged = [...new Set(owners)]
+    return arranged.map(garment => {
+      const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment) || {}
+      return {
+        ...garment,
+        ...user
+      }
+    })
+  }
+
   useEffect(() => {
     const fetchCollectionGroup = async () => {
       const { digitalaxCollectionGroup } = await getCollectionGroupById(chainId, id);
       const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offers(chainId);
+
+      const users = await digitalaxApi.getAllUsersName()
+
       let colls = [];
 
       digitalaxCollectionGroup.collections.forEach((collection) => {
@@ -31,6 +60,8 @@ const Collections = () => {
           designer: collection.designer,
           developer: collection.developer,
           garment: collection.garments[0],
+          // garments: getGarmentsWithOwnerInfo(foundOfferItem.garmentCollection.garments, users),
+          owners: getOwners(foundOfferItem.garmentCollection.garments, foundOfferItem.amountSold, users),
           primarySalePrice: foundOfferItem ? foundOfferItem.primarySalePrice : 0,
           auction: false,
           id: collection.id,

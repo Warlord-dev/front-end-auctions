@@ -19,6 +19,7 @@ const DEFAULT_FIELDS = Map({
   dtxMaticIds: List([]),
   ethNfts: List([]),
   maticNfts: List([]),
+  allUsers: List([])
 });
 
 export default createModule({

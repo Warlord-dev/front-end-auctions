@@ -195,6 +195,12 @@ class GlobalActions extends BaseActions {
       dispatch(this.setValue('maticNfts', values));
     };
   }
+
+  setAllUsers(values) {
+    return (dispatch) => {
+      dispatch(this.setValue('allUsers', values));
+    };
+  }
 }
 
 export default new GlobalActions(globalReducer);

@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
-import ImageCard from '@components/image-card';
 import styles from './styles.module.scss';
+
+import ImageCard from '@components/image-card';
 import InfoCard from '@components/info-card';
-import BannerButton from '@components/buttons/bannerbutton';
 import Container from '@components/container';
+import UserList from '@components/user-list';
+import FashionList from '@components/fashion-list';
+import BannerBar from '@components/banner-bar';
+import PriceCard from '@components/price-card';
+
 import {
   getDigitalaxMarketplaceOffer,
   getDigitalaxMarketplaceV2Offer,
@@ -14,16 +19,22 @@ import {
   getGarmentV2ByAuctionId,
   getGarmentV2ByCollectionId,
 } from '@services/api/apiService';
+
+import digitalaxApi from '@services/api/espa/api.service';
+
 import { getChainId, getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
-import PriceCard from '@components/price-card';
+import { getAccount } from '@selectors/user.selectors';
+import { getUser } from '@helpers/user.helpers';
 import { getRarity } from '@utils/helpers';
 import {
   openBespokeModal,
   openBidHistoryModal,
   openPurchaseHistoryModal,
+  openCurrentWearersModal,
 } from '@actions/modals.actions';
-import FashionList from '@components/fashion-list';
-import BannerBar from '@components/banner-bar';
+
+import globalActions from '@actions/global.actions';
+
 import secondDesignerData from 'src/data/second-designers.json';
 
 const Product = () => {
@@ -40,6 +51,9 @@ const Product = () => {
   const [secondDesigner, setSecondDesigner] = useState(null);
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
+  const [loveCount, setLoveCount] = useState(0);
+  const [viewCount, setViewCount] = useState(0);
+  const [owners, setOwners] = useState([]);
   const fashionData = [
     {
       title: 'DeFi Staking Functionality',
@@ -60,8 +74,30 @@ const Product = () => {
     },
   ];
 
+  const account = useSelector(getAccount);
+  const user = getUser();
+  const secretKey = user ? user.randomString : null;
+
+  const getOwners = (garments, itemSold, users) => {
+    if (!garments) return [];
+    console.log('itemSold:', itemSold);
+    const owners = garments.slice(0, itemSold).map((garment) => garment.owner.toLowerCase());
+    const arranged = owners.filter((item, pos) => {
+      return owners.indexOf(item) == pos;
+    });
+    return arranged.map((garment) => {
+      const user = users.find((item) => item.wallet && item.wallet.toLowerCase() == garment) || {};
+      return {
+        ...user,
+      };
+    });
+  };
+
   useEffect(() => {
     const fetchGarmentV2ByID = async () => {
+      const users = await digitalaxApi.getAllUsersName();
+      dispatch(globalActions.setAllUsers(users));
+
       if (id.indexOf('v1') >= 0) {
         const v1Id = id.split('-')[1];
         const { digitalaxGarmentCollection } = await getGarmentByCollectionId(chainId, v1Id);
@@ -70,6 +106,15 @@ const Product = () => {
             chainId,
             digitalaxGarmentCollection.id,
           );
+          console.log('digitalaxMarketplaceOffers: ', digitalaxMarketplaceOffers);
+          setOwners(
+            getOwners(
+              digitalaxMarketplaceOffer[0].garmentCollection?.garments,
+              digitalaxMarketplaceOffers[0].amountSold,
+              users,
+            ),
+          );
+          // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
           setTokenIds(
             digitalaxMarketplaceOffers[0].garmentCollection?.garments?.map((garment) => garment.id),
           );
@@ -95,6 +140,15 @@ const Product = () => {
             const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offer(
               chainId,
               digitalaxGarmentV2Collection.id,
+            );
+
+            console.log('digitalaxMarketplaceV2Offers: ', digitalaxMarketplaceV2Offers);
+            setOwners(
+              getOwners(
+                digitalaxMarketplaceV2Offers[0].garmentCollection?.garments,
+                digitalaxMarketplaceV2Offers[0].amountSold,
+                users,
+              ),
             );
             setTokenIds(
               digitalaxMarketplaceV2Offers[0].garmentCollection?.garments?.map(
@@ -148,6 +202,22 @@ const Product = () => {
     } else {
       setSecondDesigner(null);
     }
+
+    const fetchViews = async () => {
+      const viewData = await digitalaxApi.getViews('product', id);
+      setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0);
+      setViewCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].viewCount : 0);
+    };
+
+    const addViewCount = async () => {
+      const data = await digitalaxApi.addView('product', id);
+      if (data) {
+        setViewCount(data.viewCount);
+      }
+    };
+
+    fetchViews();
+    addViewCount();
   }, []);
 
   useEffect(() => {
@@ -200,6 +270,31 @@ const Product = () => {
     }
   };
 
+  const addLove = async () => {
+    const data = await digitalaxApi.addLove(account, secretKey, 'product', id);
+    if (data && data['success']) {
+      setLoveCount(loveCount + 1);
+    }
+  };
+
+  const onClickLove = () => {
+    addLove();
+  };
+
+  const onClickSeeAllWearers = () => {
+    console.log('click See All Wearers!');
+    console.log('tokenIds: ', tokenIds);
+
+    dispatch(
+      openCurrentWearersModal({
+        tokenIds,
+        v1: id.includes('v1'),
+      }),
+    );
+  };
+
+  // console.log('owners: ', owners)
+
   return (
     <div className={styles.wrapper}>
       <section className={styles.mainSection}>
@@ -230,8 +325,35 @@ const Product = () => {
                   ) : (
                     <>{`${days}:${hours}:${minutes}`}</>
                   )}
+                  <div className={styles.helper}>
+                    <span className={styles.questionMark}>?</span>
+                    <span className={styles.description}>
+                      You can also stake this NFT for yield + get the original source file. Check{' '}
+                      <a href="https://staking.digitalax.xyz/" target="_blank">
+                        here
+                      </a>
+                      .
+                    </span>
+                  </div>
                 </div>
-                <InfoCard libon="./images/metaverse/Gamepad 1.png">
+
+                <div className={styles.lovesWrapper}>
+                  <button type="button" className={styles.loveButton} onClick={onClickLove}>
+                    <img src="/images/like_icon.png" />
+                  </button>
+
+                  <div className={styles.likeCount}>
+                    {loveCount}
+                    <span>LOVES</span>
+                  </div>
+                  <img src="/images/view_icon.png" />
+                  <div className={styles.viewCount}>
+                    {viewCount}
+                    <span>VIEWS</span>
+                  </div>
+                </div>
+
+                <InfoCard>
                   <div className={styles.infoCard}>
                     <div className={styles.skinName}>
                       <div className={styles.text}> {product?.garment?.name} </div>
@@ -257,6 +379,11 @@ const Product = () => {
                 <button type="button" className={styles.bespokeBtn} onClick={onBespokeBtn}>
                   Want something more Bespoke?
                 </button>
+                <a href="https://staking.digitalax.xyz/" target="_blank">
+                  <button type="button" className={styles.stakeBtn}>
+                    STAKE YOUR FASHION FOR $MONA YIELD
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -280,6 +407,21 @@ const Product = () => {
                     <ImageCard showButton={false} imgUrl={product?.designer?.image} />
                   </a>
                   <div className={styles.infoWrapper}>
+                    {owners.length ? (
+                      <div className={styles.wearersLabel}>current wearer/S</div>
+                    ) : (
+                      <></>
+                    )}
+                    {owners.length ? (
+                      <UserList
+                        className={styles.userList}
+                        userLimit={7}
+                        users={owners}
+                        onClickSeeAll={onClickSeeAllWearers}
+                      />
+                    ) : (
+                      <></>
+                    )}
                     <InfoCard libon="./images/metaverse/party_glasses.png">
                       <a
                         href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
@@ -288,7 +430,20 @@ const Product = () => {
                         <div className={styles.name}> {product?.designer?.name} </div>
                       </a>
                       <div className={styles.description}>{product?.designer?.description}</div>
+                      <a
+                        href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
+                        target="_blank"
+                      >
+                        <button type="button" className={styles.profileButton}>
+                          View Full Profile
+                        </button>
+                      </a>
                     </InfoCard>
+                    <a href="https://designers.digitalax.xyz/getdressed" target="_blank">
+                      <button type="button" className={styles.getDressedButton}>
+                        GET BESPOKE DRESSED BY THIS DESIGNER!
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -304,12 +459,50 @@ const Product = () => {
                 <div className={styles.designerBody}>
                   <div className={styles.title}> designer </div>
                   <div className={styles.data}>
-                    <ImageCard showButton={false} imgUrl={secondDesigner.image} />
+                    <a
+                      href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
+                      target="_blank"
+                    >
+                      <ImageCard showButton={false} imgUrl={secondDesigner.image} />
+                    </a>
                     <div className={styles.infoWrapper}>
+                      {owners.length ? (
+                        <div className={styles.wearersLabel}>current wearer/S</div>
+                      ) : (
+                        <></>
+                      )}
+                      {owners.length ? (
+                        <UserList
+                          className={styles.userList}
+                          users={owners}
+                          userLimit={7}
+                          onClickSeeAll={onClickSeeAllWearers}
+                        />
+                      ) : (
+                        <></>
+                      )}
                       <InfoCard libon="./images/metaverse/party_glasses.png">
-                        <div className={styles.name}> {secondDesigner.name} </div>
+                        <a
+                          href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
+                          target="_blank"
+                        >
+                          <div className={styles.name}> {secondDesigner.name} </div>
+                        </a>
                         <div className={styles.description}>{secondDesigner.description}</div>
+                        <a
+                          href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
+                          target="_blank"
+                        >
+                          <button type="button" className={styles.profileButton}>
+                            View Full Profile
+                          </button>
+                        </a>
                       </InfoCard>
+                      <a href="https://designers.digitalax.xyz/getdressed" target="_blank">
+                        <button type="button" className={styles.getDressedButton}>
+                          GET BESPOKE DRESSED BY THIS DESIGNER!
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>

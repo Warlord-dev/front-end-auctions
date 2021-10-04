@@ -80,3 +80,6 @@ export const closePurchaseSuccessModal = () => (dispatch) => dispatch(closeModal
 
 export const openBespokeModal = (params) => (dispatch) => dispatch(openModal('isShowModalBespoke', 'hideScroll', params));
 export const closeBespokeModal = () => (dispatch) => dispatch(closeModal('isShowModalBespoke', 'addScroll'));
+
+export const openCurrentWearersModal = (params) => (dispatch) => dispatch(openModal('isShowModalCurrentWearers', 'hideScroll', params));
+export const closeCurrentWearersModal = () => (dispatch) => dispatch(closeModal('isShowModalCurrentWearers', 'addScroll'));

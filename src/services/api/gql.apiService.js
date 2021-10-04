@@ -99,7 +99,11 @@ query digitalaxMarketplaceOffers {
     id
     primarySalePrice
     garmentCollection {
-      id
+      id,
+      garments {
+        id,
+        owner
+      }
     }
   }
 }
@@ -276,7 +280,8 @@ export const DIGITALAX_MARKETPLACE_V2_OFFER = gql`
       amountSold
       garmentCollection {
         garments(first: 1000) {
-          id
+          id,
+          owner
         }
       }
     }
@@ -292,7 +297,8 @@ query digitalaxMarketplaceOffers($garmentCollection: String!) {
     amountSold
     garmentCollection {
       garments(first: 1000) {
-        id
+        id,
+        owner
       }
     }
   }
@@ -309,6 +315,10 @@ export const DIGITALAX_MARKETPLACE_V2_OFFERS = gql`
       amountSold
       garmentCollection {
         id
+        garments(first: 1000) {
+          id,
+          owner
+        }
       }
     }
   }
@@ -398,6 +408,15 @@ export const DIGITALAX_GARMENT_AUCTIONS = gql`
       topBid
       startTime
       endTime
+    }
+  }
+`;
+
+export const DIGITALAX_GARMENT_V2S = gql`
+  query digitalaxGarmentV2S($ids: [ID!]) {
+    digitalaxGarmentV2S(where: {id_in: $ids}) {
+      id
+      owner
     }
   }
 `;
