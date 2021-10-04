@@ -40,7 +40,11 @@ const Auctions = () => {
   return (
     <div className={styles.wrapper}>
       <HeroSection
-        logo="/images/metaverse/auctionsLogo.png"
+        logo={
+          id === '3'
+            ? '/images/metaverse/auctionsLogo.png'
+            : '/images/metaverse/marketplaceLogo.png'
+        }
         filter={filter}
         setFilter={(v) => setFilter(v)}
         setSortBy={(v) => setSortBy(v)}
