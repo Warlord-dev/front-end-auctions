@@ -35,7 +35,7 @@ const Collections = () => {
     const owners = garments.slice(0, itemSold).map(garment => garment.owner.toLowerCase())
     const arranged = [...new Set(owners)]
     return arranged.map(garment => {
-      const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment)
+      const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment) || {}
       return {
         ...garment,
         ...user

@@ -84,7 +84,7 @@ const Product = () => {
       return owners.indexOf(item) == pos;
     })
     return arranged.map(garment => {
-      const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment)
+      const user = users.find(item => item.wallet && item.wallet.toLowerCase() == garment) || {}
       return {
         ...user
       }
