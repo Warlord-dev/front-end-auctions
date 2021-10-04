@@ -29,33 +29,46 @@ const Auctions = () => {
       let colls = [];
       if (parseInt(id) >= 1) {
         const { digitalaxCollectionGroup } = await getCollectionGroupById(chainId, id);
-        digitalaxCollectionGroup.auctions.forEach((auction) => {
-          aucs.push({
-            ...auction,
-            auction: true,
-            rarity: 'Exclusive',
+        if (
+          !(
+            digitalaxCollectionGroup.auctions.length === 1 &&
+            digitalaxCollectionGroup.auctions[0].id === '0'
+          )
+        ) {
+          digitalaxCollectionGroup.auctions.forEach((auction) => {
+            aucs.push({
+              ...auction,
+              auction: true,
+              rarity: 'Exclusive',
+            });
           });
-        });
+        }
 
         const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offers(chainId);
-
-        digitalaxCollectionGroup.collections.forEach((collection) => {
-          const foundOfferItem = digitalaxMarketplaceV2Offers.find(
-            (offer) => offer.id === collection.id,
-          );
-          colls.push({
-            designer: collection.designer,
-            developer: collection.developer,
-            auction: false,
-            startTime: foundOfferItem.startTime,
-            garment: {
-              ...collection.garments[0],
-            },
-            primarySalePrice: foundOfferItem ? foundOfferItem.primarySalePrice : 0,
-            id: collection.id,
-            rarity: collection.rarity,
+        if (
+          !(
+            digitalaxCollectionGroup.collections.length === 1 &&
+            digitalaxCollectionGroup.collections[0].id === '0'
+          )
+        ) {
+          digitalaxCollectionGroup.collections.forEach((collection) => {
+            const foundOfferItem = digitalaxMarketplaceV2Offers.find(
+              (offer) => offer.id === collection.id,
+            );
+            colls.push({
+              designer: collection.designer,
+              developer: collection.developer,
+              auction: false,
+              startTime: foundOfferItem.startTime,
+              garment: {
+                ...collection.garments[0],
+              },
+              primarySalePrice: foundOfferItem ? foundOfferItem.primarySalePrice : 0,
+              id: collection.id,
+              rarity: collection.rarity,
+            });
           });
-        });
+        }
       } else {
         const { digitalaxGarmentCollections } = await getDigitalaxGarmentCollections(chainId);
         const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffers(chainId);
