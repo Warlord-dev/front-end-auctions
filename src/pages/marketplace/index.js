@@ -68,7 +68,8 @@ const LandingPage = () => {
         ) {
           auctions.push({
             ...digitalaxCollectionGroup.auctions[getPreviewId(digitalaxCollectionGroup.id)].garment,
-            endTime: digitalaxCollectionGroup.auctions[getPreviewId(digitalaxCollectionGroup.id)].endTime,
+            endTime:
+              digitalaxCollectionGroup.auctions[getPreviewId(digitalaxCollectionGroup.id)].endTime,
             designer:
               digitalaxCollectionGroup.auctions[getPreviewId(digitalaxCollectionGroup.id)].designer,
             id: digitalaxCollectionGroup.id,
@@ -103,7 +104,7 @@ const LandingPage = () => {
             <CollectionList
               items={[
                 ...collectionGroups.slice(0, -2),
-                auctionsGroups[0],
+                ...auctionsGroups,
                 ...collectionGroups.slice(-2),
               ]}
             />

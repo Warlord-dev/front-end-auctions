@@ -29,10 +29,7 @@ const Auctions = () => {
         });
       });
 
-      setAuctions([
-        aucs.find((auc) => auc.garment?.id === '133247'),
-        ...aucs.filter((auc) => auc.garment?.id !== '133247'),
-      ]);
+      setAuctions(aucs);
     };
 
     fetchCollectionGroup();
