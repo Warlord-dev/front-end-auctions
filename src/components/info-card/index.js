@@ -7,6 +7,7 @@ const InfoCard = ({
   borderColor = '#c52081',
   boxShadow = 'rgba(197, 32, 129, 0.5)',
   mainColor = 'rgba(189, 61, 169, 0.47)',
+  bodyClass = ''
 }) => {
   return (
     <div
@@ -17,7 +18,7 @@ const InfoCard = ({
       }}
     >
       {libon ? <img src={libon} className={styles.libon} /> : null}
-      <div className={styles.body} style={{ backgroundColor: mainColor }}>
+      <div className={[styles.body, bodyClass].join(' ')} style={{ backgroundColor: mainColor }}>
         {children}
       </div>
     </div>

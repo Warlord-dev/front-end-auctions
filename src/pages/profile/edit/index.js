@@ -108,7 +108,7 @@ const EditProfile = ({ history }) => {
   return (
     <div className={styles.container}>
       <div className={styles.cardWrapper}>
-        <InfoCard mainColor={'rgba(247, 207, 207, 0.47)'}>
+        <InfoCard mainColor={'rgba(247, 207, 207, 0.47)'} bodyClass={styles.padding5}>
           <div className={styles.profileWrapper}>
             <div className={styles.avatarWrapper}>
               <img src={user.avatar ? user.avatar : '../../../images/user-photo.svg'} />
@@ -137,12 +137,12 @@ const EditProfile = ({ history }) => {
                 <span>CHANGE EMAIL</span>
                 <input value={user.email} onChange={(e) => onChange(e, 'email')} />
               </div>
-              <div className={styles.inputSection}>
+              {/* <div className={styles.inputSection}>
                 <span>GAME TAGS</span>
                 <p>LIST YOUR FAVOURITE GAMES. SEPARATE BY COMMAS.</p>
                 <input value={user.gameTags} onChange={(e) => onChange(e, 'gameTags')} />
-              </div>
-              <div className={styles.inputSection}>
+              </div> */}
+              {/* <div className={styles.inputSection}>
                 <div className={styles.ipAddrLabel}>
                   <span>IP ADDRESS</span>
                   <span className={styles.questionMark}>?</span>
@@ -162,7 +162,7 @@ const EditProfile = ({ history }) => {
                     DETECT IP
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className={styles.buttonsWrapper}>
