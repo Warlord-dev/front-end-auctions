@@ -28,12 +28,10 @@ const CollectionCard = ({ collection }) => {
       <div className={styles.wrapper}>
         <div className={styles.title}>{collectionNames[parseInt(collection?.id)]}</div>
         <div className={styles.imageWrapper}>
-          {collection.endTime && parseInt(collection.endTime) < Date.now() / 1000 ? <NewButton
-            className={styles.soldOut}
-            text="Sold out"
-            disable
-          /> : null}
-          <Link href={parseInt(collection?.id) <= 1 ? `/marketplace/all/${collection.id}` : collection?.isAuction ? `/marketplace/auctions/${collection.id}` : `/marketplace/collections/${collection.id}`}>
+          {collection.endTime && parseInt(collection.endTime) < Date.now() / 1000 ? (
+            <NewButton className={styles.soldOut} text="Sold out" disable />
+          ) : null}
+          <Link href={`/marketplace/all/${collection.id}`}>
             <a className={styles.image}>
               {collection?.animation ? (
                 <video autoPlay muted loop>

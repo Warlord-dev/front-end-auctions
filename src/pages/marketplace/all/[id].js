@@ -2,7 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from './index.module.scss';
 import Container from '@components/container';
-import { getCollectionGroupById, getDigitalaxGarmentCollections, getDigitalaxMarketplaceOffers, getDigitalaxMarketplaceV2Offers } from '@services/api/apiService';
+import {
+  getCollectionGroupById,
+  getDigitalaxGarmentCollections,
+  getDigitalaxMarketplaceOffers,
+  getDigitalaxMarketplaceV2Offers,
+} from '@services/api/apiService';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import HeroSection from '@components/hero-section';
@@ -22,7 +27,7 @@ const Auctions = () => {
     const fetchCollectionGroup = async () => {
       let aucs = [];
       let colls = [];
-      if (id === '1') {
+      if (parseInt(id) >= 1) {
         const { digitalaxCollectionGroup } = await getCollectionGroupById(chainId, id);
         digitalaxCollectionGroup.auctions.forEach((auction) => {
           aucs.push({
@@ -31,11 +36,13 @@ const Auctions = () => {
             rarity: 'Exclusive',
           });
         });
-  
+
         const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offers(chainId);
-  
+
         digitalaxCollectionGroup.collections.forEach((collection) => {
-          const foundOfferItem = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id)
+          const foundOfferItem = digitalaxMarketplaceV2Offers.find(
+            (offer) => offer.id === collection.id,
+          );
           colls.push({
             designer: collection.designer,
             developer: collection.developer,
@@ -58,7 +65,7 @@ const Auctions = () => {
             id: collection.id,
             designer: {
               name: 'Mirth',
-              image: '/images/metaverse/mirth.png'
+              image: '/images/metaverse/mirth.png',
             },
             garment: collection.garments[0],
             startTime: offer.startTime,
@@ -77,17 +84,24 @@ const Auctions = () => {
     fetchCollectionGroup();
   }, []);
 
+  const getLogo = () => {
+    if (id === '0') return '/images/metaverse/amongus-logo1.png';
+    if (id === '1') return '/images/metaverse/minecraft-logo.png';
+    if (id === '3') return '/images/metaverse/auctionsLogo.png';
+    return '/images/metaverse/marketplaceLogo.png';
+  };
+
   const filteredProducts = filterProducts([...auctions, ...collections], filter, sortBy) || [];
 
   return (
     <div className={styles.wrapper}>
-       <HeroSection 
-          width={id ==='0' ? '60%' : '80%'}
-          logo={id === '0' ? '/images/metaverse/amongus-logo1.png' : '/images/metaverse/minecraft-logo.png'} 
-          filter={filter}
-          setFilter={(v) => setFilter(v)}
-          setSortBy={(v) => setSortBy(v)}
-        />
+      <HeroSection
+        width={id === '0' ? '60%' : '80%'}
+        logo={getLogo()}
+        filter={filter}
+        setFilter={(v) => setFilter(v)}
+        setSortBy={(v) => setSortBy(v)}
+      />
 
       {filteredProducts.map((prod, index) => {
         if (index % 2 === 1) return <> </>;
@@ -110,7 +124,9 @@ const Auctions = () => {
                   <ProductInfoCard
                     product={filteredProducts[index + 1]}
                     v1={filteredProducts[index].version === 1}
-                    price={filteredProducts[index].topBid || filteredProducts[index].primarySalePrice}
+                    price={
+                      filteredProducts[index].topBid || filteredProducts[index].primarySalePrice
+                    }
                     showRarity
                     showCollectionName
                     isAuction={filteredProducts[index].auction}

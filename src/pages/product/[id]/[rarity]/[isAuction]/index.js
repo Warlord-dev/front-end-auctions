@@ -17,7 +17,11 @@ import {
 import { getChainId, getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import PriceCard from '@components/price-card';
 import { getRarity } from '@utils/helpers';
-import { openBespokeModal, openBidHistoryModal, openPurchaseHistoryModal } from '@actions/modals.actions';
+import {
+  openBespokeModal,
+  openBidHistoryModal,
+  openPurchaseHistoryModal,
+} from '@actions/modals.actions';
 import FashionList from '@components/fashion-list';
 import BannerBar from '@components/banner-bar';
 import secondDesignerData from 'src/data/second-designers.json';
@@ -55,15 +59,20 @@ const Product = () => {
       description: `All of the DIGITALAX digital fashion garment and accessory ERC-721 NFTs are backed by the underlying 3D model FBX file, stored in IPFS. This forms part of the platform’s broader pursuit for decentralising content distribution and access to it. The FBX file is one of the most popular and widely used 3D data interchange formats between 3D editors and game engines. There are still efficiency problems that exist with it, which DIGITALAX is working to solve through it’s DASH File Format architecture. `,
     },
   ];
-  
+
   useEffect(() => {
     const fetchGarmentV2ByID = async () => {
       if (id.indexOf('v1') >= 0) {
         const v1Id = id.split('-')[1];
         const { digitalaxGarmentCollection } = await getGarmentByCollectionId(chainId, v1Id);
         if (digitalaxGarmentCollection.id) {
-          const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffer(chainId, digitalaxGarmentCollection.id);
-          setTokenIds(digitalaxMarketplaceOffers[0].garmentCollection?.garments?.map((garment) => garment.id));
+          const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffer(
+            chainId,
+            digitalaxGarmentCollection.id,
+          );
+          setTokenIds(
+            digitalaxMarketplaceOffers[0].garmentCollection?.garments?.map((garment) => garment.id),
+          );
           setOffer({
             id: digitalaxMarketplaceOffers[0].id,
             primarySalePrice: digitalaxMarketplaceOffers[0].primarySalePrice,
@@ -118,9 +127,8 @@ const Product = () => {
             setProduct(digitalaxGarmentAuction);
           }
         }
-      };
-
-    }
+      }
+    };
     fetchGarmentV2ByID();
 
     const secondDesigner = secondDesignerData.find((item) => {
@@ -167,7 +175,7 @@ const Product = () => {
       dispatch(
         openPurchaseHistoryModal({
           tokenIds,
-          v1: id.includes('v1')
+          v1: id.includes('v1'),
         }),
       );
     }
@@ -175,7 +183,7 @@ const Product = () => {
 
   const onBespokeBtn = () => {
     dispatch(openBespokeModal());
-  }
+  };
 
   const getTimeFormat = () => {
     const timeStamp = Date.now();
@@ -214,7 +222,6 @@ const Product = () => {
                 />
               </div>
               <div className={styles.infoWrapper}>
-                
                 <div className={styles.amount}>
                   {parseInt(isAuction) !== 1 ? (
                     <>
@@ -266,12 +273,18 @@ const Product = () => {
               <div className={styles.designerBody}>
                 <div className={styles.title}> designer </div>
                 <div className={styles.data}>
-                  <a href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`} target="_blank">
+                  <a
+                    href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
+                    target="_blank"
+                  >
                     <ImageCard showButton={false} imgUrl={product?.designer?.image} />
                   </a>
                   <div className={styles.infoWrapper}>
                     <InfoCard libon="./images/metaverse/party_glasses.png">
-                      <a href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`} target="_blank">
+                      <a
+                        href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
+                        target="_blank"
+                      >
                         <div className={styles.name}> {product?.designer?.name} </div>
                       </a>
                       <div className={styles.description}>{product?.designer?.description}</div>
@@ -306,7 +319,8 @@ const Product = () => {
         </>
       ) : null}
 
-      {!id.includes('v1') && ((parseInt(id) >= 11 && parseInt(id) < 100294) || (parseInt(id) > 130000)) ? (
+      {!id.includes('v1') &&
+      ((parseInt(id) >= 11 && parseInt(id) < 100294) || parseInt(id) > 130000) ? (
         <>
           <FashionList fashionData={fashionData} collections={product} />
         </>
