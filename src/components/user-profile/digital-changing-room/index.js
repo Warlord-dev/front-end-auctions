@@ -70,7 +70,7 @@ const DigitalChangingRoom = props => {
   }
   
   const onClickNext = () => {
-    if (currentPage * showPerPage >= ownedNFTs.length) return
+    if ((currentPage + 1) * showPerPage  >= ownedNFTs.length) return
     setCurrentPage(currentPage + 1)
   }
 
