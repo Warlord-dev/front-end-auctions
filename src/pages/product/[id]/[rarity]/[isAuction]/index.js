@@ -205,9 +205,9 @@ const Product = () => {
 
     const fetchViews = async () => {
       const viewData = await digitalaxApi.getViews('product', id);
-      setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0);
-      setViewCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].viewCount : 0);
-    };
+      setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0)
+      setViewCount(viewData && viewData[0] && viewData[0].viewCount ? viewData[0].viewCount : 0)
+    }
 
     const addViewCount = async () => {
       const data = await digitalaxApi.addView('product', id);

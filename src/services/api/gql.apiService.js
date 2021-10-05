@@ -420,3 +420,91 @@ export const DIGITALAX_GARMENT_V2S = gql`
     }
   }
 `;
+
+// For Profile Page
+
+// DIGITALAX GARMENTS (eth, polygon)
+export const DIGITALAX_GARMENTS_BY_OWNER = gql`
+  query digitalaxGarments($owner: ID!) {
+    digitalaxGarments(where: {owner: $owner}) {
+      id
+      owner
+    	designer
+      tokenUri
+      image
+      animation
+      name
+      description
+    }
+  }
+`;
+
+// (polygon only)
+export const DIGITALAX_GARMENT_V2S_BY_OWNER = gql`
+  query digitalaxGarmentV2S($owner: ID!) {
+    digitalaxGarmentV2S(where: {owner: $owner}) {
+      id
+      owner
+    	designer
+      tokenUri
+      image
+      animation
+      name
+      description
+    }
+  }
+`;
+
+// (polygon digi bundle)
+export const DIGITALAX_SUBSCRIPTIONS_BY_OWNER = gql`
+  query digitalaxSubscriptions($owner: ID!) {
+    digitalaxSubscriptions(where: {owner: $owner}) {
+      id
+      name
+      owner
+      tokenUri
+      image
+      animation
+      designer
+    }
+  }
+`;
+
+// staked fashion NFTs polygon
+export const DIGITALAX_NFT_STAKER_BY_ADDRESS = gql`
+  query digitalaxNFTStakers($staker: ID!) {
+    digitalaxNFTStakers(where: {id: $staker}) {
+      id
+      garments {
+        id
+        owner
+        designer
+        tokenUri
+        image
+        animation
+        name
+        description
+      }
+    }
+  }
+`;
+
+// staked fashion NFTs ethereum
+export const DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS = gql`
+  query digitalaxGarmentStakedTokens($staker: ID!) {
+    digitalaxGarmentStakedTokens(where: {staker: $staker}) {
+      id
+      staker
+    }
+  }
+`;
+
+// staked genesis NFTs ethereum
+export const DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS = gql`
+  query digitalaxGenesisStakedTokens($staker: ID!) {
+    digitalaxGenesisStakedTokens(where: {staker: $staker}) {
+      id
+      staker
+    }
+  }
+`;

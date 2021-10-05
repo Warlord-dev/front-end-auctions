@@ -22,6 +22,11 @@ import {
   GARMENTV2_BY_COLLECTION_IDS,
   GARMENT_BY_AUCTION_ID,
   GARMENT_BY_COLLECTION_ID,
+
+  DIGITALAX_GARMENTS_BY_OWNER,
+  DIGITALAX_GARMENT_V2S_BY_OWNER,
+  DIGITALAX_SUBSCRIPTIONS_BY_OWNER
+
 } from './gql.apiService';
 
 const apiRequest = (chainId, gql, params) => request(getAPIUrlByChainId(chainId), gql, params);
@@ -84,3 +89,13 @@ export const getGarmentByAuctionId = async (chainId, id) =>
 
 export  const getDigitalaxGarmentV2s = async (chainId, ids) =>
   apiRequest(chainId, DIGITALAX_GARMENT_V2S, { ids })
+
+// For Profile Page
+export  const getDigitalaxGarmentsByOwner = async (chainId, owner) =>
+  apiRequest(chainId, DIGITALAX_GARMENTS_BY_OWNER, { owner })
+
+export  const getDigitalaxGarmentV2sByOwner = async (chainId, owner) =>
+  apiRequest(chainId, DIGITALAX_GARMENT_V2S_BY_OWNER, { owner })
+  
+export  const getDigitalaxSubscriptionsByOwner = async (chainId, owner) =>
+  apiRequest(chainId, DIGITALAX_SUBSCRIPTIONS_BY_OWNER, { owner })

@@ -1,0 +1,29 @@
+.wrapper {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    button {
+      background: transparent;
+      border: none;
+
+      transition: 0.3s all;
+      
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(1.1);
+      }
+    }
+
+    .label {
+      width: 374px;
+      font-family: Gilroy;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+}

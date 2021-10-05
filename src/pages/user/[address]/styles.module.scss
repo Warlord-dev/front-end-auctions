@@ -1,0 +1,35 @@
+@import '../../../assets/scss/helpers/grid.scss';
+
+.wrapper {
+  margin: auto;
+  position: relative;
+  background-image: url('../../../../public/images/metaverse/profile-bg.png');
+  background-size: cover;
+  padding: 150px 1rem 100px;
+  min-height: 800px;
+
+  @include sm-width {
+    padding: 170px 0 120px;
+    width: unset;
+  }
+
+  .digitalChangingRoom {
+    margin-top: 50px;
+  }
+
+  .loader {
+    margin: auto;
+  }
+
+  .notValidUser {
+    margin: auto;
+    color: white;
+    text-align: center;
+
+    font-family: Gilroy;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+  }
+}
