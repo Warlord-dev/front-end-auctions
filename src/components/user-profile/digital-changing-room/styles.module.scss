@@ -9,7 +9,7 @@
       border: none;
 
       transition: 0.3s all;
-      
+
       &:hover {
         transition: 0.3s all;
         transform: scale(1.1);
@@ -24,6 +24,28 @@
       line-height: 48px;
       text-align: center;
       color: #FFFFFF;
+    }
+  }
+
+  .content {
+    margin-top: 80px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .nftItem {
+      width: 40vw;
+      height: 40vw;
+      margin-left: 2vw;
+      margin-right: 2vw;
+      margin-bottom: 5vw;
+
+      @media (max-width: 767px) {
+        width: 300px;
+        height: 300px;
+      }
     }
   }
 }

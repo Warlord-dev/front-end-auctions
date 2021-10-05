@@ -425,8 +425,8 @@ export const DIGITALAX_GARMENT_V2S = gql`
 
 // DIGITALAX GARMENTS (eth, polygon)
 export const DIGITALAX_GARMENTS_BY_OWNER = gql`
-  query digitalaxGarments($owner: ID!) {
-    digitalaxGarments(where: {owner: $owner}) {
+  query digitalaxGarments($owner: ID!, $first: Int!, $lastID: ID!) {
+    digitalaxGarments(first: $first, where: {owner: $owner, id_gt: $lastID}) {
       id
       owner
     	designer
@@ -441,8 +441,8 @@ export const DIGITALAX_GARMENTS_BY_OWNER = gql`
 
 // (polygon only)
 export const DIGITALAX_GARMENT_V2S_BY_OWNER = gql`
-  query digitalaxGarmentV2S($owner: ID!) {
-    digitalaxGarmentV2S(where: {owner: $owner}) {
+  query digitalaxGarmentV2S($owner: ID!, $first: Int!, $lastID: ID!) {
+    digitalaxGarmentV2S(first: $first, where: {owner: $owner, id_gt: $lastID}) {
       id
       owner
     	designer
@@ -471,7 +471,7 @@ export const DIGITALAX_SUBSCRIPTIONS_BY_OWNER = gql`
 `;
 
 // staked fashion NFTs polygon
-export const DIGITALAX_NFT_STAKER_BY_ADDRESS = gql`
+export const DIGITALAX_NFT_STAKERS_BY_ADDRESS = gql`
   query digitalaxNFTStakers($staker: ID!) {
     digitalaxNFTStakers(where: {id: $staker}) {
       id

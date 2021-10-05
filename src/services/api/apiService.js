@@ -22,11 +22,13 @@ import {
   GARMENTV2_BY_COLLECTION_IDS,
   GARMENT_BY_AUCTION_ID,
   GARMENT_BY_COLLECTION_ID,
-
+  // For Profile Page
   DIGITALAX_GARMENTS_BY_OWNER,
   DIGITALAX_GARMENT_V2S_BY_OWNER,
-  DIGITALAX_SUBSCRIPTIONS_BY_OWNER
-
+  DIGITALAX_SUBSCRIPTIONS_BY_OWNER,
+  DIGITALAX_NFT_STAKERS_BY_ADDRESS,
+  DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS,
+  DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS
 } from './gql.apiService';
 
 const apiRequest = (chainId, gql, params) => request(getAPIUrlByChainId(chainId), gql, params);
@@ -91,11 +93,21 @@ export  const getDigitalaxGarmentV2s = async (chainId, ids) =>
   apiRequest(chainId, DIGITALAX_GARMENT_V2S, { ids })
 
 // For Profile Page
-export  const getDigitalaxGarmentsByOwner = async (chainId, owner) =>
-  apiRequest(chainId, DIGITALAX_GARMENTS_BY_OWNER, { owner })
+export  const getDigitalaxGarmentsByOwner = async (chainId, owner, first=1000, lastID='') =>
+  apiRequest(chainId, DIGITALAX_GARMENTS_BY_OWNER, { owner, first, lastID  })
 
-export  const getDigitalaxGarmentV2sByOwner = async (chainId, owner) =>
-  apiRequest(chainId, DIGITALAX_GARMENT_V2S_BY_OWNER, { owner })
+export  const getDigitalaxGarmentV2sByOwner = async (chainId, owner, first=1000, lastID) =>
+  apiRequest(chainId, DIGITALAX_GARMENT_V2S_BY_OWNER, { owner, first, lastID })
   
 export  const getDigitalaxSubscriptionsByOwner = async (chainId, owner) =>
   apiRequest(chainId, DIGITALAX_SUBSCRIPTIONS_BY_OWNER, { owner })
+
+export  const getDigitalaxNFTStakersByOwner = async (chainId, owner) =>
+  apiRequest(chainId, DIGITALAX_NFT_STAKERS_BY_ADDRESS, { owner })
+
+export  const getDigitalaxGarmentStakedTokensByOwner = async (chainId, owner) =>
+  apiRequest(chainId, DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS, { owner })
+
+  export  const getDigitalaxGenesisStakedTokensByOwner = async (chainId, owner) =>
+  apiRequest(chainId, DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS, { owner })
+

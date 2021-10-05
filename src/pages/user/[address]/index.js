@@ -116,6 +116,7 @@ const UserProfile = () => {
 
       <DigitalChangingRoom
         className={styles.digitalChangingRoom}
+        owner={address}
       />
     </div>
   )
