@@ -138,7 +138,8 @@ const Auctions = () => {
                     product={filteredProducts[index + 1]}
                     v1={filteredProducts[index].version === 1}
                     price={
-                      filteredProducts[index].topBid || filteredProducts[index].primarySalePrice
+                      filteredProducts[index + 1].topBid ||
+                      filteredProducts[index + 1].primarySalePrice
                     }
                     showRarity
                     showCollectionName
