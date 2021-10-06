@@ -11,9 +11,10 @@ const FashionItem = props => {
     onClickViewFashion
   } = props
   const [imageUrl, setImageUrl] = useState(null)
-  if (!image || image == '' || !animation || animation == '') {
+  if ((!image || image == '') && (!animation || animation == '')) {
     axios.get(tokenURI).then(tokenData => {
       const { data } = tokenData
+      console.log('data: ', data)
       setImageUrl(data.image_url)
     })
   }

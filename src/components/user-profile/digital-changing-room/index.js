@@ -94,6 +94,7 @@ const DigitalChangingRoom = props => {
 
       // Get Collection id by garment id
       const { digitalaxGarmentV2Collections } = await getCollectionV2ByGarmentId(POLYGON_CHAINID, fashionId)
+      console.log('digitalaxGarmentV2Collections: ', digitalaxGarmentV2Collections)
 
       // if collection id is invalid, it's not able to show as product
       if (!digitalaxGarmentV2Collections || digitalaxGarmentV2Collections.length <= 0) {
@@ -102,8 +103,8 @@ const DigitalChangingRoom = props => {
       }
 
       // check marketplace if the collection id exists
-      const { digitalaxMarketplaceV2Offers } = getDigitalaxMarketplaceV2Offer(POLYGON_CHAINID, digitalaxGarmentV2Collections[0].id)
-
+      const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offer(POLYGON_CHAINID, digitalaxGarmentV2Collections[0].id)
+      
       // if it doesn't exist, it's not able to show as product.
       if (!digitalaxMarketplaceV2Offers || digitalaxMarketplaceV2Offers.length <= 0) {
         console.log('not on marketplace')
@@ -133,6 +134,7 @@ const DigitalChangingRoom = props => {
         {
           ownedNFTs.slice(currentPage * showPerPage, Math.min(currentPage * showPerPage + showPerPage, ownedNFTs.length)).map(
           (item, index) => {
+            // console.log('item: ', item)
             return (
               <FashionItem 
                 className={styles.nftItem}
