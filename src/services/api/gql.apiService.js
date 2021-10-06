@@ -538,5 +538,16 @@ export const DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID = gql`
   }
 `;
 
+// // get collection id by garment id polygon
+// export const DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID = gql`
+//   query digitalaxGarmentV2Collections ($garmentIDs: [ID!]) {
+//     digitalaxGarmentV2Collections (where: {garments_contains: $garmentIDs}) {
+//       id
+//       rarity
+//       garmentAuctionID
+//     }
+//   }
+// `;
+
 
 
