@@ -11,7 +11,8 @@ import {
   getDigitalaxGarmentStakedTokensByOwner,
   getDigitalaxGenesisNFTsByOwner,
   getDigitalaxGenesisStakedTokensByOwner,
-  getCollectionV2ByGarmentId
+  getCollectionV2ByGarmentId,
+  getDigitalaxMarketplaceV2Offer
 } from '@services/api/apiService'
 
 
@@ -88,14 +89,28 @@ const DigitalChangingRoom = props => {
   }
 
   const onClickViewFashion = async (fashionId, type) => {
+    // if the NFT is digitalx NFT V2 on Polygon network
     if (type == 'digitalaxNFTV2sPolygon') {
+
+      // Get Collection id by garment id
       const { digitalaxGarmentV2Collections } = await getCollectionV2ByGarmentId(POLYGON_CHAINID, fashionId)
-      console.log('digitalaxGarmentV2Collections: ', digitalaxGarmentV2Collections)
+
+      // if collection id is invalid, it's not able to show as product
       if (!digitalaxGarmentV2Collections || digitalaxGarmentV2Collections.length <= 0) {
         console.log('not on marketplace')
         return  
       }
 
+      // check marketplace if the collection id exists
+      const { digitalaxMarketplaceV2Offers } = getDigitalaxMarketplaceV2Offer(POLYGON_CHAINID, digitalaxGarmentV2Collections[0].id)
+
+      // if it doesn't exist, it's not able to show as product.
+      if (!digitalaxMarketplaceV2Offers || digitalaxMarketplaceV2Offers.length <= 0) {
+        console.log('not on marketplace')
+        return
+      }
+
+      // Yay! It's good to go. it can be shown on product page.
       window.open(`/product/${digitalaxGarmentV2Collections[0].id}/${getRarityId(digitalaxGarmentV2Collections[0].rarity)}/0`, '_self')
     } else {
       console.log('not on marketplace')
@@ -118,7 +133,6 @@ const DigitalChangingRoom = props => {
         {
           ownedNFTs.slice(currentPage * showPerPage, Math.min(currentPage * showPerPage + showPerPage, ownedNFTs.length)).map(
           (item, index) => {
-            console.log('item: ', item)
             return (
               <FashionItem 
                 className={styles.nftItem}
@@ -126,6 +140,7 @@ const DigitalChangingRoom = props => {
                 animation={item.animation}
                 image={item.image}
                 type={item.type}
+                tokenURI={item.tokenUri}
                 onClickViewFashion={() => onClickViewFashion(item.id, item.type)}
               />
             )

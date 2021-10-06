@@ -25,6 +25,9 @@
     background: transparent;
     border: none;
     transition: 0.3s all;
+    position: absolute;
+    top: 85%;
+    left: -0.5vw;
 
     &:hover {
       transition: 0.3s all;

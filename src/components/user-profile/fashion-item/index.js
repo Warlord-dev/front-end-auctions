@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 import styles from './styles.module.scss'
 
 const FashionItem = props => {
@@ -6,8 +7,16 @@ const FashionItem = props => {
     className,
     animation,
     image,
+    tokenURI,
     onClickViewFashion
   } = props
+  const [imageUrl, setImageUrl] = useState(null)
+  if (!image || image == '' || !animation || animation == '') {
+    axios.get(tokenURI).then(tokenData => {
+      const { data } = tokenData
+      setImageUrl(data.image_url)
+    })
+  }
   return (
     <div className={[styles.wrapper, className].join(' ')}>
       {
@@ -19,9 +28,12 @@ const FashionItem = props => {
           image && image != ''
           ?
             <img src={image} className={styles.photoItem} />
-            
           : <div></div>
         )
+      }
+      {
+        imageUrl && 
+        <img src={imageUrl} className={styles.photoItem} />
       }
       <button
         className={[styles.viewFashion].join(' ')}
