@@ -5,7 +5,8 @@ const FashionItem = props => {
   const {
     className,
     animation,
-    image
+    image,
+    onClickViewFashion
   } = props
   return (
     <div className={[styles.wrapper, className].join(' ')}>
@@ -22,7 +23,10 @@ const FashionItem = props => {
           : <div></div>
         )
       }
-      <button className={styles.viewFashion} onClick={() => {}}>
+      <button
+        className={[styles.viewFashion].join(' ')}
+        onClick={onClickViewFashion}
+      >
         <img src={'/images/metaverse/pinkb.png'} />
         <div>VIEW FASHION</div>
       </button>

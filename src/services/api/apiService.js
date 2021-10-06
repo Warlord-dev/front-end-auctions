@@ -29,7 +29,8 @@ import {
   DIGITALAX_NFT_STAKERS_BY_ADDRESS,
   DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS,
   DIGITALAX_GENESIS_NFTS_BY_ADDRESS,
-  DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS
+  DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS,
+  DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID
 } from './gql.apiService';
 
 const apiRequest = (chainId, gql, params) => request(getAPIUrlByChainId(chainId), gql, params);
@@ -112,6 +113,10 @@ export  const getDigitalaxGarmentStakedTokensByOwner = async (chainId, staker, f
 export  const getDigitalaxGenesisNFTsByOwner = async (chainId, owner, first=1000, lastID='') =>
   apiRequest(chainId, DIGITALAX_GENESIS_NFTS_BY_ADDRESS, { owner, first, lastID })
 
-  export  const getDigitalaxGenesisStakedTokensByOwner = async (chainId, staker, first=1000, lastID='') =>
+export  const getDigitalaxGenesisStakedTokensByOwner = async (chainId, staker, first=1000, lastID='') =>
   apiRequest(chainId, DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS, { staker, first, lastID  })
+
+export const getCollectionV2ByGarmentId = async (chainId, garmentID) =>
+  apiRequest(chainId, DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID, { garmentIDs: [garmentID] });
+
 

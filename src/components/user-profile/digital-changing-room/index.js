@@ -10,11 +10,16 @@ import {
   getDigitalaxNFTStakersByOwner,
   getDigitalaxGarmentStakedTokensByOwner,
   getDigitalaxGenesisNFTsByOwner,
-  getDigitalaxGenesisStakedTokensByOwner
+  getDigitalaxGenesisStakedTokensByOwner,
+  getCollectionV2ByGarmentId
 } from '@services/api/apiService'
+
+
+import { getRarityId } from '@utils/helpers'
 
 const MAINNET_CHAINID = 0x1
 const POLYGON_CHAINID = 0x89
+
 
 const DigitalChangingRoom = props => {
   const { className, owner } = props
@@ -61,11 +66,11 @@ const DigitalChangingRoom = props => {
       console.log('digitalaxGenesisNFTsMainnet: ', digitalaxGenesisNFTsMainnet)
 
       setOwnedNFTs([
-        ...digitalaxNFTsMainnet,
-        ...digitalaxNFTsPolygon,
-        ...digitalaxNFTV2sPolygon,
-        ...digitalaxSubscriptionsPolygon,
-        ...digitalaxGenesisNFTsMainnet
+        ...digitalaxNFTsMainnet.map(item => { return {...item, type: 'digitalaxNFTsMainnet'} }),
+        ...digitalaxNFTsPolygon.map(item => { return {...item, type: 'digitalaxNFTsPolygon'} }),
+        ...digitalaxNFTV2sPolygon.map(item => { return {...item, type: 'digitalaxNFTV2sPolygon'} }),
+        ...digitalaxSubscriptionsPolygon.map(item => { return {...item, type: 'digitalaxSubscriptionsPolygon'} }),
+        ...digitalaxGenesisNFTsMainnet.map(item => { return {...item, type: 'digitalaxGenesisNFTsMainnet'} })
       ])
     }
 
@@ -80,6 +85,22 @@ const DigitalChangingRoom = props => {
   const onClickNext = () => {
     if ((currentPage + 1) * showPerPage  >= ownedNFTs.length) return
     setCurrentPage(currentPage + 1)
+  }
+
+  const onClickViewFashion = async (fashionId, type) => {
+    if (type == 'digitalaxNFTV2sPolygon') {
+      const { digitalaxGarmentV2Collections } = await getCollectionV2ByGarmentId(POLYGON_CHAINID, fashionId)
+      console.log('digitalaxGarmentV2Collections: ', digitalaxGarmentV2Collections)
+      if (!digitalaxGarmentV2Collections || digitalaxGarmentV2Collections.length <= 0) {
+        console.log('not on marketplace')
+        return  
+      }
+
+      window.open(`/product/${digitalaxGarmentV2Collections[0].id}/${getRarityId(digitalaxGarmentV2Collections[0].rarity)}/0`, '_self')
+    } else {
+      console.log('not on marketplace')
+      console.log('fashionId: ', fashionId)
+    }
   }
 
   return (
@@ -97,13 +118,15 @@ const DigitalChangingRoom = props => {
         {
           ownedNFTs.slice(currentPage * showPerPage, Math.min(currentPage * showPerPage + showPerPage, ownedNFTs.length)).map(
           (item, index) => {
-            console.log('item: ', item.id)
+            console.log('item: ', item)
             return (
               <FashionItem 
                 className={styles.nftItem}
                 key={item.id}
                 animation={item.animation}
                 image={item.image}
+                type={item.type}
+                onClickViewFashion={() => onClickViewFashion(item.id, item.type)}
               />
             )
           })
