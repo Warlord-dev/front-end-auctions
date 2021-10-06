@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import LazyLoad from 'react-lazyload'
 import axios from 'axios'
 import styles from './styles.module.scss'
 
@@ -23,13 +24,23 @@ const FashionItem = props => {
     <div className={[styles.wrapper, className].join(' ')}>
       {
         animation && animation != ''
-        ? <video autoPlay muted loop className={styles.videoItem}>
-            <source src={animation} type='video/mp4' />
-        </video>
+        ? <LazyLoad style={{
+            width: '100%',
+            height: '100%'
+          }}>
+            <video autoPlay muted loop className={styles.videoItem}>
+              <source src={animation} type='video/mp4' />
+            </video>
+          </LazyLoad>
         : (
           image && image != ''
           ?
-            <img src={image} className={styles.photoItem} />
+            <LazyLoad style={{
+              width: '100%',
+              height: '100%'
+            }}>
+              <img src={image} className={styles.photoItem} />
+            </LazyLoad>
           : <div></div>
         )
       }

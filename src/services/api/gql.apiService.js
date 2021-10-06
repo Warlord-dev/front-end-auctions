@@ -439,6 +439,21 @@ export const DIGITALAX_GARMENTS_BY_OWNER = gql`
   }
 `;
 
+export const DIGITALAX_GARMENTS = gql`
+  query digitalaxGarments($ids: [ID!], $first: Int!, $lastID: ID!) {
+    digitalaxGarments(first: $first, where: {id_in: $ids, id_gt: $lastID}) {
+      id
+      owner
+    	designer
+      tokenUri
+      image
+      animation
+      name
+      description
+    }
+  }
+`;
+
 // (polygon only)
 export const DIGITALAX_GARMENT_V2S_BY_OWNER = gql`
   query digitalaxGarmentV2S($owner: ID!, $first: Int!, $lastID: ID!) {
@@ -471,7 +486,28 @@ export const DIGITALAX_SUBSCRIPTIONS_BY_OWNER = gql`
 `;
 
 // polygon digifizzy 1155
-
+export const DIGITALAX_SUBSCRIPTION_COLLECTORS_BY_OWNER = gql`
+  query digitalaxSubscriptionCollectors($owner: ID!, $first: Int!, $lastID: ID!) {
+    digitalaxSubscriptionCollectors(first: $first, where: {id: $owner, id_gt: $lastID}) {
+      id
+      childrenOwned {
+        id
+        owner
+        amount
+        tokenUri
+        token {
+          id
+          image
+          animation
+          name
+          description
+          totalSupply
+          tokenUri
+        }
+      }
+    }
+  }
+`;
 
 // staked fashion NFTs polygon
 export const DIGITALAX_NFT_STAKERS_BY_ADDRESS = gql`
@@ -517,6 +553,21 @@ export const DIGITALAX_GENESIS_NFTS_BY_ADDRESS = gql`
   }
 `;
 
+// genesis NFTs by ids ethereum
+export const DIGITALAX_GENESIS_NFTS = gql`
+  query digitalaxGenesisNFTs($ids: [ID!], $first: Int!, $lastID: ID!) {
+    digitalaxGenesisNFTs(first: $first, where: {id_in: $ids, id_gt: $lastID}) {
+      id
+      owner
+      name
+      description
+      image
+      animation
+      tokenUri
+    }
+  }
+`;
+
 // staked genesis NFTs ethereum
 export const DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS = gql`
   query digitalaxGenesisStakedTokens($staker: ID!, $first: Int!, $lastID: ID!) {
@@ -538,7 +589,7 @@ export const DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID = gql`
   }
 `;
 
-// get collection id by garment id polygon
+// get pode tokens by owner
 export const PODE_NFT_V2S_BY_ADDRESS = gql`
   query podeNFTv2S ($owner: ID!, $first: Int!, $lastID: ID!) {
     podeNFTv2S (first: $first, where: {owner: $owner, id_gt: $lastID}) {
@@ -547,6 +598,42 @@ export const PODE_NFT_V2S_BY_ADDRESS = gql`
       tokenUri
       name
       animation
+    }
+  }
+`;
+
+// get staked pode tokens by staker
+export const PODE_NFT_V2_STAKERS_BY_ADDRESS = gql`
+  query podeNFTv2Stakers ($staker: ID!, $first: Int!, $lastID: ID!) {
+    podeNFTv2Stakers (first: $first, where: {id: $staker, id_gt: $lastID}) {
+      id
+      garments {
+        id
+      }
+    }
+  }
+`;
+
+// polygon digitalax 1155
+export const DIGITALAX_COLLETOR_V2_BY_OWNER = gql`
+  query digitalaxCollectorV2($owner: ID!) {
+    digitalaxCollectorV2(id: $owner) {
+      id
+      childrenOwned {
+        id
+        owner
+        amount
+        tokenUri
+        token {
+          id
+          image
+          animation
+          name
+          description
+          totalSupply
+          tokenUri
+        }
+      }
     }
   }
 `;
