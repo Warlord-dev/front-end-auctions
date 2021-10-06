@@ -18,12 +18,14 @@ const FashionItem = props => {
           image && image != ''
           ?
             <img src={image} className={styles.photoItem} />
+            
           : <div></div>
         )
       }
-      {
-        
-      }
+      <button className={styles.viewFashion} onClick={() => {}}>
+        <img src={'/images/metaverse/pinkb.png'} />
+        <div>VIEW FASHION</div>
+      </button>
     </div>
   )
 }

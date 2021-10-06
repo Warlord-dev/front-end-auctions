@@ -9,6 +9,7 @@ import {
   getDigitalaxSubscriptionsByOwner,
   getDigitalaxNFTStakersByOwner,
   getDigitalaxGarmentStakedTokensByOwner,
+  getDigitalaxGenesisNFTsByOwner,
   getDigitalaxGenesisStakedTokensByOwner
 } from '@services/api/apiService'
 
@@ -46,18 +47,25 @@ const DigitalChangingRoom = props => {
   useEffect(() => {
     const getAllNFTs = async () => {
 
-      const digitalaxNFTsMainNet = await getAllResultsFromQuery(getDigitalaxGarmentsByOwner, 'digitalaxGarmentV2S', MAINNET_CHAINID, owner)
+      const digitalaxNFTsMainnet = await getAllResultsFromQuery(getDigitalaxGarmentsByOwner, 'digitalaxGarmentV2S', MAINNET_CHAINID, owner)
       const digitalaxNFTsPolygon = await getAllResultsFromQuery(getDigitalaxGarmentsByOwner, 'digitalaxGarmentV2S', POLYGON_CHAINID, owner)
       const digitalaxNFTV2sPolygon = await getAllResultsFromQuery(getDigitalaxGarmentV2sByOwner, 'digitalaxGarmentV2S', POLYGON_CHAINID, owner)
+
+      const digitalaxSubscriptionsPolygon = await getAllResultsFromQuery(getDigitalaxSubscriptionsByOwner, 'digitalaxSubscriptions', POLYGON_CHAINID, owner)
+      const digitalaxGenesisNFTsMainnet = await getAllResultsFromQuery(getDigitalaxGenesisNFTsByOwner, 'digitalaxGenesisNFTs', MAINNET_CHAINID, owner)
       
-      console.log('digitalaxNFTsMainNet: ', digitalaxNFTsMainNet)
+      console.log('digitalaxNFTsMainnet: ', digitalaxNFTsMainnet)
       console.log('digitalaxNFTsPolygon: ', digitalaxNFTsPolygon)
       console.log('digitalaxNFTV2sPolygon: ', digitalaxNFTV2sPolygon)
+      console.log('digitalaxSubscriptionsPolygon: ', digitalaxSubscriptionsPolygon)
+      console.log('digitalaxGenesisNFTsMainnet: ', digitalaxGenesisNFTsMainnet)
 
       setOwnedNFTs([
-        ...digitalaxNFTsMainNet,
+        ...digitalaxNFTsMainnet,
         ...digitalaxNFTsPolygon,
-        ...digitalaxNFTV2sPolygon
+        ...digitalaxNFTV2sPolygon,
+        ...digitalaxSubscriptionsPolygon,
+        ...digitalaxGenesisNFTsMainnet
       ])
     }
 

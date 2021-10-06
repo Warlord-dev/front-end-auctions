@@ -35,6 +35,10 @@
     flex-direction: row;
     flex-wrap: wrap;
 
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+
     .nftItem {
       width: 40vw;
       height: 40vw;

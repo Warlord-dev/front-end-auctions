@@ -457,8 +457,8 @@ export const DIGITALAX_GARMENT_V2S_BY_OWNER = gql`
 
 // (polygon digi bundle)
 export const DIGITALAX_SUBSCRIPTIONS_BY_OWNER = gql`
-  query digitalaxSubscriptions($owner: ID!) {
-    digitalaxSubscriptions(where: {owner: $owner}) {
+  query digitalaxSubscriptions($owner: ID!, $first: Int!, $lastID: ID!) {
+    digitalaxSubscriptions(first: $first, where: {owner: $owner, id_gt: $lastID}) {
       id
       name
       owner
@@ -469,6 +469,9 @@ export const DIGITALAX_SUBSCRIPTIONS_BY_OWNER = gql`
     }
   }
 `;
+
+// polygon digifizzy 1155
+
 
 // staked fashion NFTs polygon
 export const DIGITALAX_NFT_STAKERS_BY_ADDRESS = gql`
@@ -491,20 +494,36 @@ export const DIGITALAX_NFT_STAKERS_BY_ADDRESS = gql`
 
 // staked fashion NFTs ethereum
 export const DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS = gql`
-  query digitalaxGarmentStakedTokens($staker: ID!) {
-    digitalaxGarmentStakedTokens(where: {staker: $staker}) {
+  query digitalaxGarmentStakedTokens($staker: ID!, $first: Int!, $lastID: ID!) {
+    digitalaxGarmentStakedTokens(first: $first, where: {staker: $staker, id_gt: $lastID}) {
       id
       staker
     }
   }
 `;
 
+// genesis NFTs ethereum
+export const DIGITALAX_GENESIS_NFTS_BY_ADDRESS = gql`
+  query digitalaxGenesisNFTs($owner: ID!, $first: Int!, $lastID: ID!) {
+    digitalaxGenesisNFTs(first: $first, where: {owner: $owner, id_gt: $lastID}) {
+      id
+      owner
+      name
+      description
+      image
+      animation
+      tokenUri
+    }
+  }
+`;
+
 // staked genesis NFTs ethereum
 export const DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS = gql`
-  query digitalaxGenesisStakedTokens($staker: ID!) {
-    digitalaxGenesisStakedTokens(where: {staker: $staker}) {
+  query digitalaxGenesisStakedTokens($staker: ID!, $first: Int!, $lastID: ID!) {
+    digitalaxGenesisStakedTokens(first: $first, where: {staker: $staker, id_gt: $lastID}) {
       id
       staker
     }
   }
 `;
+

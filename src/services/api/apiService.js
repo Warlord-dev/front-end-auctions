@@ -28,6 +28,7 @@ import {
   DIGITALAX_SUBSCRIPTIONS_BY_OWNER,
   DIGITALAX_NFT_STAKERS_BY_ADDRESS,
   DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS,
+  DIGITALAX_GENESIS_NFTS_BY_ADDRESS,
   DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS
 } from './gql.apiService';
 
@@ -96,18 +97,21 @@ export  const getDigitalaxGarmentV2s = async (chainId, ids) =>
 export  const getDigitalaxGarmentsByOwner = async (chainId, owner, first=1000, lastID='') =>
   apiRequest(chainId, DIGITALAX_GARMENTS_BY_OWNER, { owner, first, lastID  })
 
-export  const getDigitalaxGarmentV2sByOwner = async (chainId, owner, first=1000, lastID) =>
+export  const getDigitalaxGarmentV2sByOwner = async (chainId, owner, first=1000, lastID='') =>
   apiRequest(chainId, DIGITALAX_GARMENT_V2S_BY_OWNER, { owner, first, lastID })
   
-export  const getDigitalaxSubscriptionsByOwner = async (chainId, owner) =>
-  apiRequest(chainId, DIGITALAX_SUBSCRIPTIONS_BY_OWNER, { owner })
+export  const getDigitalaxSubscriptionsByOwner = async (chainId, owner, first=1000, lastID='') =>
+  apiRequest(chainId, DIGITALAX_SUBSCRIPTIONS_BY_OWNER, { owner, first, lastID })
 
 export  const getDigitalaxNFTStakersByOwner = async (chainId, owner) =>
   apiRequest(chainId, DIGITALAX_NFT_STAKERS_BY_ADDRESS, { owner })
 
-export  const getDigitalaxGarmentStakedTokensByOwner = async (chainId, owner) =>
-  apiRequest(chainId, DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS, { owner })
+export  const getDigitalaxGarmentStakedTokensByOwner = async (chainId, staker, first=1000, lastID='') =>
+  apiRequest(chainId, DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS, { staker, first, lastID })
 
-  export  const getDigitalaxGenesisStakedTokensByOwner = async (chainId, owner) =>
-  apiRequest(chainId, DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS, { owner })
+export  const getDigitalaxGenesisNFTsByOwner = async (chainId, owner, first=1000, lastID='') =>
+  apiRequest(chainId, DIGITALAX_GENESIS_NFTS_BY_ADDRESS, { owner, first, lastID })
+
+  export  const getDigitalaxGenesisStakedTokensByOwner = async (chainId, staker, first=1000, lastID='') =>
+  apiRequest(chainId, DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS, { staker, first, lastID  })
 
