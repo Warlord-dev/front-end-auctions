@@ -12,7 +12,8 @@ import {
   getDigitalaxGenesisNFTsByOwner,
   getDigitalaxGenesisStakedTokensByOwner,
   getCollectionV2ByGarmentId,
-  getDigitalaxMarketplaceV2Offer
+  getDigitalaxMarketplaceV2Offer,
+  getPodeNFTV2sByOwner
 } from '@services/api/apiService'
 
 
@@ -59,19 +60,22 @@ const DigitalChangingRoom = props => {
 
       const digitalaxSubscriptionsPolygon = await getAllResultsFromQuery(getDigitalaxSubscriptionsByOwner, 'digitalaxSubscriptions', POLYGON_CHAINID, owner)
       const digitalaxGenesisNFTsMainnet = await getAllResultsFromQuery(getDigitalaxGenesisNFTsByOwner, 'digitalaxGenesisNFTs', MAINNET_CHAINID, owner)
+      const podeNFTv2sPolygon = await getAllResultsFromQuery(getPodeNFTV2sByOwner, 'podeNFTv2S', POLYGON_CHAINID, owner)
       
       console.log('digitalaxNFTsMainnet: ', digitalaxNFTsMainnet)
       console.log('digitalaxNFTsPolygon: ', digitalaxNFTsPolygon)
       console.log('digitalaxNFTV2sPolygon: ', digitalaxNFTV2sPolygon)
       console.log('digitalaxSubscriptionsPolygon: ', digitalaxSubscriptionsPolygon)
       console.log('digitalaxGenesisNFTsMainnet: ', digitalaxGenesisNFTsMainnet)
+      console.log('podeNFTv2sPolygon: ', podeNFTv2sPolygon)
 
       setOwnedNFTs([
         ...digitalaxNFTsMainnet.map(item => { return {...item, type: 'digitalaxNFTsMainnet'} }),
         ...digitalaxNFTsPolygon.map(item => { return {...item, type: 'digitalaxNFTsPolygon'} }),
         ...digitalaxNFTV2sPolygon.map(item => { return {...item, type: 'digitalaxNFTV2sPolygon'} }),
         ...digitalaxSubscriptionsPolygon.map(item => { return {...item, type: 'digitalaxSubscriptionsPolygon'} }),
-        ...digitalaxGenesisNFTsMainnet.map(item => { return {...item, type: 'digitalaxGenesisNFTsMainnet'} })
+        ...digitalaxGenesisNFTsMainnet.map(item => { return {...item, type: 'digitalaxGenesisNFTsMainnet'} }),
+        ...podeNFTv2sPolygon.map(item => { return {...item, type: 'podeNFTv2sPolygon'} })
       ])
     }
 
@@ -140,7 +144,11 @@ const DigitalChangingRoom = props => {
                 className={styles.nftItem}
                 key={item.id}
                 animation={item.animation}
-                image={item.image}
+                image={
+                  item.type == 'podeNFTv2sPolygon'
+                    ? 'https://digitalax.mypinata.cloud/ipfs/QmPe67dqkkXW6xrTLqYzpxYtiPjP2RAaTQZZqYiwqiNrb1'
+                    : item.image
+                }
                 type={item.type}
                 tokenURI={item.tokenUri}
                 onClickViewFashion={() => onClickViewFashion(item.id, item.type)}

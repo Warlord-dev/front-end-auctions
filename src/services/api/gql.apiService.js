@@ -538,16 +538,18 @@ export const DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID = gql`
   }
 `;
 
-// // get collection id by garment id polygon
-// export const DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID = gql`
-//   query digitalaxGarmentV2Collections ($garmentIDs: [ID!]) {
-//     digitalaxGarmentV2Collections (where: {garments_contains: $garmentIDs}) {
-//       id
-//       rarity
-//       garmentAuctionID
-//     }
-//   }
-// `;
+// get collection id by garment id polygon
+export const PODE_NFT_V2S_BY_ADDRESS = gql`
+  query podeNFTv2S ($owner: ID!, $first: Int!, $lastID: ID!) {
+    podeNFTv2S (first: $first, where: {owner: $owner, id_gt: $lastID}) {
+      id
+      owner
+      tokenUri
+      name
+      animation
+    }
+  }
+`;
 
 
 

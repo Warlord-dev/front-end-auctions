@@ -30,7 +30,8 @@ import {
   DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS,
   DIGITALAX_GENESIS_NFTS_BY_ADDRESS,
   DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS,
-  DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID
+  DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID,
+  PODE_NFT_V2S_BY_ADDRESS
 } from './gql.apiService';
 
 const apiRequest = (chainId, gql, params) => request(getAPIUrlByChainId(chainId), gql, params);
@@ -118,5 +119,8 @@ export  const getDigitalaxGenesisStakedTokensByOwner = async (chainId, staker, f
 
 export const getCollectionV2ByGarmentId = async (chainId, garmentID) =>
   apiRequest(chainId, DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID, { garmentIDs: [garmentID] });
+
+export const getPodeNFTV2sByOwner = async (chainId, owner, first=1000, lastID='') =>
+  apiRequest(chainId, PODE_NFT_V2S_BY_ADDRESS, { owner, first, lastID });
 
 
