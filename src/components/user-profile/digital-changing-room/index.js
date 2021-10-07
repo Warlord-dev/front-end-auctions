@@ -141,13 +141,27 @@ const DigitalChangingRoom = props => {
       const digitalaxNFTV2sPolygonDrip = [].concat.apply([], 
         availableCollections.filter(
           collection => DRIP_COLLECTION_IDS.indexOf(parseInt(collection.id)) >= 0
-        ).map(item => item.garments)
+        ).map(item => {
+          return item.garments.map(garment => {
+            return {
+              ...garment,
+              collectionId: item.id
+            }
+          })
+        })
       )
 
       const digitalaxNFTV2sPolygonNonDrip = [].concat.apply([], 
         availableCollections.filter(
           item => DRIP_COLLECTION_IDS.indexOf(parseInt(item.id)) < 0
-        ).map(item => item.garments)
+        ).map(item => {
+          return item.garments.map(garment => {
+            return {
+              ...garment,
+              collectionId: item.id
+            }
+          })
+        })
       )
 
       console.log('digitalaxNFTV2sPolygonDrip: ', digitalaxNFTV2sPolygonDrip)
@@ -334,6 +348,7 @@ const DigitalChangingRoom = props => {
                 className={styles.nftItem}
                 key={`${item.type}_${item.id}`}
                 animation={item.animation}
+                category={categories[currentCategory]}
                 image={
                   item.type == 'podeNFTv2sPolygon' || item.type == 'podeStakedNFTsPolygon'
                     ? 'https://digitalax.mypinata.cloud/ipfs/QmPe67dqkkXW6xrTLqYzpxYtiPjP2RAaTQZZqYiwqiNrb1'

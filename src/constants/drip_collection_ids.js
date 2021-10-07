@@ -1,8 +1,10 @@
 export const DRIP_COLLECTION_IDS = [
-  //AAVE
+  // SWORD
+  185,
+  // AAVE
   64, 176, 63, 22, 21, 61,
   // BANCOR
-  156, 68, 157, 66, 161, 65, 519,
+  156, 68, 157, 66, 161, 65, 519, 69,
   // POLYGON
   123, 122, 121, 119, 120, 118,
   // PICKLE

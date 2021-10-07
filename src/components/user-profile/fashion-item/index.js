@@ -3,17 +3,28 @@ import LazyLoad from 'react-lazyload'
 import axios from 'axios'
 import styles from './styles.module.scss'
 
+import {
+  DIGITAL_CHANGING_ROOM,
+  DIGIFIZZY_BUNDLES,
+  DRIP_IDL,
+  GENESIS_MONA_NFT,
+  LOOK_FASHION_LOOT,
+  PODE,
+  GDN_MEMBERSHIP_NFT
+} from '@constants/nft_categories'
+
 const FashionItem = props => {
   const {
     className,
     animation,
     image,
     tokenURI,
-    onClickViewFashion
+    onClickViewFashion,
+    category
   } = props
   const [imageUrl, setImageUrl] = useState(null)
   const [isVideo, setIsVideo] = useState(false)
-  
+
   if ((!image || image == '') && (!animation || animation == '') && tokenURI && tokenURI != '') {
     axios.get(tokenURI).then(tokenData => {
       const { data } = tokenData
@@ -56,13 +67,17 @@ const FashionItem = props => {
           : <img src={imageUrl} className={styles.photoItem} />
         )
       }
-      <button
-        className={[styles.viewFashion].join(' ')}
-        onClick={onClickViewFashion}
-      >
-        <img src={'/images/metaverse/pinkb.png'} />
-        <div>VIEW FASHION</div>
-      </button>
+      {
+        (category == DIGITAL_CHANGING_ROOM ||
+        category == DRIP_IDL) &&
+        <button
+          className={[styles.viewFashion].join(' ')}
+          onClick={onClickViewFashion}
+        >
+          <img src={'/images/metaverse/pinkb.png'} />
+          <div>VIEW FASHION</div>
+        </button>
+      }
     </div>
   )
 }
