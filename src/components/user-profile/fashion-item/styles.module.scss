@@ -11,6 +11,7 @@
   .videoItem {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
   
   .photoItem {
@@ -26,7 +27,7 @@
     border: none;
     transition: 0.3s all;
     position: absolute;
-    top: 85%;
+    top: 90%;
     left: -0.5vw;
 
     &:hover {
@@ -35,7 +36,7 @@
     }
 
     img {
-      width: 70%;
+      width: 60%;
     }
 
     div {
@@ -51,7 +52,7 @@
 
       font-family: Gilroy;
       font-weight: 800;
-      font-size: 2vw;
+      font-size: 1.5vw;
       letter-spacing: 0.12em;
       text-transform: uppercase;
 

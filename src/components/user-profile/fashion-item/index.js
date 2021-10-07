@@ -12,12 +12,16 @@ const FashionItem = props => {
     onClickViewFashion
   } = props
   const [imageUrl, setImageUrl] = useState(null)
-  console.log('animation: ', animation)
+  const [isVideo, setIsVideo] = useState(false)
+  
   if ((!image || image == '') && (!animation || animation == '') && tokenURI && tokenURI != '') {
     axios.get(tokenURI).then(tokenData => {
       const { data } = tokenData
-      console.log('data: ', data)
       setImageUrl(data.image_url)
+
+      var tester=new Image()
+      tester.onerror=() => setIsVideo(true)
+      tester.src=data.image_url
     })
   }
   return (
@@ -45,8 +49,12 @@ const FashionItem = props => {
         )
       }
       {
-        imageUrl && 
-        <img src={imageUrl} className={styles.photoItem} />
+        imageUrl && ( isVideo ?
+          <video autoPlay muted loop className={styles.videoItem}>
+            <source src={imageUrl} type='video/mp4' />
+          </video>
+          : <img src={imageUrl} className={styles.photoItem} />
+        )
       }
       <button
         className={[styles.viewFashion].join(' ')}

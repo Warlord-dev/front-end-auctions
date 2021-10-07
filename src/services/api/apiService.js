@@ -36,7 +36,9 @@ import {
   DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID,
   PODE_NFT_V2S_BY_ADDRESS,
   PODE_NFT_V2_STAKERS_BY_ADDRESS,
-  DIGITALAX_COLLETOR_V2_BY_OWNER
+  DIGITALAX_COLLETOR_V2_BY_OWNER,
+  GDN_MEMBERSHIP_NFTS_BY_OWNER,
+  DIGITALAX_LOOK_NFTS_BY_OWNER
 } from './gql.apiService';
 
 const apiRequest = (chainId, gql, params) => request(getAPIUrlByChainId(chainId), gql, params);
@@ -142,5 +144,11 @@ export const getPodeNFTV2StakersByStaker = async (chainId, staker, first=1000, l
 
 export const getDigitalaxCollectorV2ByOwner = async (chainId, owner) =>
   apiRequest(chainId, DIGITALAX_COLLETOR_V2_BY_OWNER, { owner });
+
+export const getGDNMembershipNFTsByOwner = async (chainId, owner, first=1000, lastID='') =>
+  apiRequest(chainId, GDN_MEMBERSHIP_NFTS_BY_OWNER, { owner, first, lastID  });
+
+  export const getDigitalaxLookNFTsByOwner = async (chainId, owner, first=1000, lastID='') =>
+  apiRequest(chainId, DIGITALAX_LOOK_NFTS_BY_OWNER, { owner, first, lastID });
 
 

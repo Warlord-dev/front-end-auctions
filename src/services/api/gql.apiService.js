@@ -638,5 +638,49 @@ export const DIGITALAX_COLLETOR_V2_BY_OWNER = gql`
   }
 `;
 
+// gdn membership token polygon
+export const GDN_MEMBERSHIP_NFTS_BY_OWNER = gql`
+  query gdnmembershipNFTs($owner: ID!, $first: Int!, $lastID: ID!) {
+    gdnmembershipNFTs (first: $first, where: {owner: $owner, id_gt: $lastID}) {
+      id
+      owner
+      name
+      description
+      image
+      animation
+      tokenUri
+    }
+  }
+`
 
+// digitalax look (loot for fashion) nfts mainnet
+export const DIGITALAX_LOOK_NFTS_BY_OWNER = gql`
+  query digitalaxLookNFTs($owner: ID!, $first: Int!, $lastID: ID!) {
+    digitalaxLookNFTs (first: $first, where: {owner: $owner, id_gt: $lastID}) {
+      id
+      name
+      owner
+      background
+      texture
+      pattern
+      color
+      shape
+      flare
+      form
+      line
+      element
+      tokenUri
+    }
+  }
+`
 
+export const DIGITALAX_GARMENT_V2_COLLECTIONS = gql`
+  query digitalaxGarmentV2Collections ($ids: [ID!], $first: Int!, $lastID: ID!) {
+    digitalaxGarmentV2Collections (first: $first, where: {id_in: $ids, id_gt: $lastID}) {
+      id
+      garments (first: 1000) {
+        id
+      }
+    }
+  }
+`
