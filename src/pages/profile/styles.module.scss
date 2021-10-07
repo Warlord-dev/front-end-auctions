@@ -1,143 +1,35 @@
-.profileWrapper {
-  display: flex;
-  padding: 120px 86px;
-  background-image: url('../../../public/images/metaverse/profile-bg.png');
-  background-size: 100%;
-  background-repeat: repeat;
+@import '../../assets/scss/helpers/grid.scss';
+
+.wrapper {
+  margin: auto;
   position: relative;
+  background-image: url('../../../public/images/metaverse/profile-bg.jpg');
+  background-size: fill;
+  padding: 150px 1rem 100px;
+  min-height: 800px;
 
-  .gamePad {
-    position: absolute;
-    top: 0px;
-    right: 0px;
+  @include sm-width {
+    padding: 170px 0 120px;
+    width: unset;
   }
 
-  @media only screen and (max-width: 980px) {
-    flex-direction: column;
-    padding: 30px 20px;
+  .digitalChangingRoom {
+    margin-top: 50px;
   }
-}
 
-.leftSideWrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  margin-right: 20px;
-}
-
-.avatarIDSection {
-  display: flex;
-  align-items: center;
-  margin-bottom: 49px;
-  img {
-    width: 120px;
-    height: 120px;
-    margin-right: 24px;
-    border-radius: 50%;
+  .loader {
+    margin: auto;
   }
-  span {
-    font-size: 3rem;
-    font-weight: 900;
+
+  .notValidUser {
+    margin: auto;
     color: white;
-  }
-}
+    text-align: center;
 
-.email {
-  color: white;
-  font-size: 1.6875rem;
-  margin-bottom: 49px;
-}
-
-.inputItemwrapper {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 49px;
-  span {
-    color: white;
-    font-size: 1.6875rem;
-  }
-  p {
-    margin-top: 18px;
-    font-size: 2.0625rem;
-    font-weight: 900;
-    color: white;
-  }
-}
-
-.modalButton {
-  width: 154px;
-  font-size: 0.9375rem;
-  font-weight: bold;
-  margin-top: 16px;
-  background-color: #770b47;
-}
-
-.rightSideWrapper {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-}
-
-.titleWrapper {
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  font-weight: bold;
-  color: white;
-}
-
-.divider {
-  width: 227px;
-  height: 2px;
-  background: white;
-  margin-top: 10px;
-  margin-bottom: 44px;
-}
-
-.list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  @media screen and (max-width: 1200px) {
-    display: flex;
-    flex-direction: column;
-  }
-  row-gap: 68px;
-  column-gap: 84px;
-  margin-bottom: 100px;
-}
-
-.loader {
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.walletAddress {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 49px;
-  span {
-    color: white;
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
-  p {
-    display: flex;
-    align-items: center;
-    margin-top: 18px;
-    font-size: 0.625rem;
-    font-weight: 700;
-    color: white;
-    letter-spacing: 0.12em;
-    img {
-      margin-left: 5px;
-      cursor: pointer;
-      width: 15px;
-      height: 15px;
-    }
+    font-family: Gilroy;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
   }
 }

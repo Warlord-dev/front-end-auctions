@@ -32,6 +32,8 @@ const UserProfile = () => {
   const user = getUser()
   const secretKey = user ? user.randomString : null
 
+  const isMyProfile = account && address && account.toLowerCase() === address.toLowerCase()
+
   const fetchViews = async () => {
     const viewData = await digitalaxApi.getViews('profile', address);
     console.log('viewData: ', viewData)
@@ -112,6 +114,7 @@ const UserProfile = () => {
         viewCount={viewCount}
         loveCount={loveCount}
         onClickLove={onClickLove}
+        myProfile={isMyProfile}
       />
 
       <DigitalChangingRoom

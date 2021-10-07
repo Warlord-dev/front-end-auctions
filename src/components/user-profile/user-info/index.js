@@ -1,8 +1,12 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './styles.module.scss'
 
 const UserInfo = props => {
-  const { userName, userAvatar, onClickLove, viewCount, loveCount } = props
+  const { 
+    userName, userAvatar, onClickLove,
+    viewCount, loveCount, myProfile 
+  } = props
 
   return (
     <div className={styles.wrapper}>
@@ -43,6 +47,17 @@ const UserInfo = props => {
             }
             </div>
           </div>
+
+          {
+            myProfile && 
+            <Link href='/profile/edit'>
+              <a target='_self'>
+                <button className={styles.editProfileButton}>
+                  EDIT PROFILE
+                </button>
+              </a>
+            </Link>
+          }
         </div>
       </div>
 

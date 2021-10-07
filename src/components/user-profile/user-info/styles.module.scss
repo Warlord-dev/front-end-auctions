@@ -128,7 +128,25 @@
       img {
 
       }
+
+      .editProfileButton {
+        margin-top: 40px;
+        background: #770B47;
+        color: white;
+        font-family: Inter;
+    
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        width: fit-content;      
+      }
     }
+
+    
   }
 
   .userNameHere {

@@ -1,120 +1,109 @@
-import React, { useEffect, useState } from 'react';
-import cn from 'classnames';
-import copy from 'copy-to-clipboard';
-import { useSelector, useDispatch } from 'react-redux';
-import Router from 'next/router';
-import { toast } from 'react-toastify';
-import NFTProduct from '@components/nft-product';
-import Button from '@components/buttons/button';
-import { getUser, getAccount } from '@selectors/user.selectors';
-import { useProfile, useNFTs } from '@hooks/espa/user.hooks';
-import accountActions from '@actions/user.actions';
-import Loader from '@components/loader';
-import styles from './styles.module.scss';
-import apiService from '@services/api/api.service';
+import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useRouter } from 'next/router'
 
-const Profile = ({ history }) => {
-  const user = useSelector(getUser);
-  const dispatch = useDispatch();
-  if (!user) {
-    dispatch(accountActions.checkStorageAuth());
-  }
-  const account = user.get('wallet');
-  const [nfts, setNfts] = useState([]);
-  const [nftV2s, setNftV2s] = useState([]);
-  const [loading, setLoading] = useState(true);
+import digitalaxApi from '@services/api/espa/api.service'
+import { getAccount } from '@selectors/user.selectors'
 
-  // useEffect(() => {
-  //   const fetchNfts = async () => {
-  //     const { digitalaxCollectors } = await apiService.getCollectorsById(account);
-  //     const { digitalaxCollectorV2S } = await apiService.getCollectorsV2ById(account);
-  //     if (digitalaxCollectors.length) {
-  //       if (digitalaxCollectors[0].parentsOwned?.length) {
-  //         setNfts(digitalaxCollectors[0].parentsOwned);
-  //       }
-  //     }
-  //     if (digitalaxCollectorV2S.length) {
-  //       if (digitalaxCollectorV2S[0].parentsOwned?.length) {
-  //         setNftV2s(digitalaxCollectorV2S[0].parentsOwned);
-  //       }
-  //     }
-  //     setLoading(false);
-  //   };
+import { getUser } from '@helpers/user.helpers'
 
-  //   fetchNfts();
-  // }, []);
+import UserInfo from '@components/user-profile/user-info'
+import DigitalChangingRoom from '@components/user-profile/digital-changing-room'
+import Loader from '@components/loader'
 
-  const getGameTags = (str) => {
-    if (!str) {
-      return '';
+import styles from './styles.module.scss'
+
+const UserProfile = () => {
+  const router = useRouter()
+  const dispatch = useDispatch()
+
+  const [isInitLoading, setIsInitLoading] = useState(true)
+  const [loveCount, setLoveCount] = useState(0)
+  const [viewCount, setViewCount] = useState(0)
+  
+  const account = useSelector(getAccount)
+  const user = getUser()
+  const secretKey = user ? user.randomString : null
+
+  const fetchViews = async () => {
+    const viewData = await digitalaxApi.getViews('profile', account);
+    setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0)
+
+    if (viewData && viewData[0] && viewData[0].viewCount)
+    {
+      setViewCount(viewData[0].viewCount)
     }
-    let tags = str.replace(', ', ',').split(',');
-    tags.sort();
-    return tags.reduce((total, cur) => {
-      let capitalize = cur.replace(/\w\S*/g, (w) => w.replace(/^\w/, (c) => c.toUpperCase()));
-      return `${total}#${capitalize} `;
-    }, '');
-  };
 
-  const onCopyWalletAddress = () => {
-    copy(account);
-    toast('Wallet Address is copied to the clipboard');
-  };
+    await addViewCount()
+    
+  }
 
-  // if (!user || loading) {
-  //   return <Loader size="large" className={styles.loader} />;
-  // }
+  const addViewCount = async () => {
+    const data = await digitalaxApi.addView('profile', account);
+    if (data) {
+      setViewCount(data.viewCount)
+    }
+  }
 
+  const addLove = async () => {
+    const data = await digitalaxApi.addLove(account, secretKey, 'profile', account)
+    if (data && data['success']) {
+      setLoveCount(loveCount + 1)
+    }
+  }
+
+  const onClickLove = e => {
+    addLove()
+  }
+
+  useEffect(() => {
+    const loadUsers = async () => {
+      if (account) {
+        fetchViews()
+      }
+      setIsInitLoading(false)
+    }
+
+    loadUsers()
+  }, [])
+
+  if (isInitLoading) {
+    return (
+      <div className={styles.wrapper}>
+        <Loader 
+          active={true}
+        />
+      </div>
+    )
+  }
+
+  if (!account) {
+    return (
+      <div className={styles.wrapper}>
+        <div className={styles.notValidUser}>
+          It's not digitalax user.
+        </div>
+      </div>
+    )
+  }
+  
   return (
-    <div className={styles.profileWrapper}>
-      <img src="./images/metaverse/Gamepad 4.png" className={styles.gamePad} />
-      <div className={styles.leftSideWrapper}>
-        <div className={styles.avatarIDSection}>
-          <img src={user.get('avatar') ? user.get('avatar') : '../../../images/user-photo.svg'} />
-          <span>{user.get('username')}</span>
-        </div>
-        <span className={styles.email}>{user.get('email')}</span>
-        <div className={styles.inputItemwrapper}>
-          <span>Changing Room</span>
-          <p>{nfts.length}</p>
-        </div>
-        <div className={styles.inputItemwrapper}>
-          <span>Game Tags</span>
-          <p>{getGameTags(user.get('gameTags'))}</p>
-        </div>
-        <div className={styles.inputItemwrapper}>
-          <span>Whitelisted IP address</span>
-          <p>{user.get('ipAddrs')}</p>
-        </div>
-        <div className={styles.walletAddress}>
-          <span>Connected Wallet Address</span>
-          <p>
-            {account}
-            <img src="/images/clipboard.png" onClick={onCopyWalletAddress} />
-          </p>
-        </div>
-        <Button
-          className={styles.modalButton}
-          background="black"
-          onClick={() => Router.push('/profile/edit').then(() => window.scrollTo(0, 0))}
-        >
-          Edit Profile
-        </Button>
-      </div>
-      <div className={styles.rightSideWrapper}>
-        <p className={styles.titleWrapper}>CHANGING ROOM</p>
-        <div className={styles.divider} />
-        <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
-          {/* {nfts.map((nft) => (
-            <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
-          ))}
-          {nftV2s.map((nft) => (
-            <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
-          ))} */}
-        </ul>
-      </div>
-    </div>
-  );
-};
+    <div className={styles.wrapper}>
+      <UserInfo 
+        userName={user.username}
+        userAvatar={user.avatar}
+        viewCount={viewCount}
+        loveCount={loveCount}
+        onClickLove={onClickLove}
+        myProfile={true}
+      />
 
-export default Profile;
+      <DigitalChangingRoom
+        className={styles.digitalChangingRoom}
+        owner={account}
+      />
+    </div>
+  )
+}
+
+export default UserProfile
