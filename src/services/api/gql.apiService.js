@@ -684,3 +684,21 @@ export const DIGITALAX_GARMENT_V2_COLLECTIONS = gql`
     }
   }
 `
+
+export const DIGITALAX_GARMENT_V2_COLLECTIONS_BY_GARMENT_IDS = gql`
+  query digitalaxGarmentV2Collections ($garmentIDs: [ID!], $first: Int!, $lastID: ID!) {
+    digitalaxGarmentV2Collections (first: $first, where: {id_gt: $lastID}) {
+      id
+      garments (first: 1000, where: {id_in: $garmentIDs}) {
+        id
+        owner
+        designer
+        tokenUri
+        image
+        animation
+        name
+        description
+      }
+    }
+  }
+`
