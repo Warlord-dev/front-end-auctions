@@ -22,7 +22,8 @@ import {
   getDigitalaxCollectorV2ByOwner,
   getGDNMembershipNFTsByOwner,
   getDigitalaxLookNFTsByOwner,
-  getDigitalaxGarmentV2CollectionsByGarmentIDs
+  getDigitalaxGarmentV2CollectionsByGarmentIDs,
+  getDigitalaxLookGoldenTicketsByOwner
 } from '@services/api/apiService'
 
 
@@ -174,38 +175,83 @@ const DigitalChangingRoom = props => {
 
       // Get Staked NFTs on Mainnet
       const digitalaxGarmentStakedTokensMainnet 
-        = await getAllResultsFromQuery(getDigitalaxGarmentStakedTokensByOwner, 'digitalaxGarmentStakedTokens', MAINNET_CHAINID, owner)
+        = await getAllResultsFromQuery(
+          getDigitalaxGarmentStakedTokensByOwner,
+          'digitalaxGarmentStakedTokens',
+          MAINNET_CHAINID,
+          owner
+      )
       const stakedGarmentTokenIDsMainnet = digitalaxGarmentStakedTokensMainnet.map(item => item.id)
       const digitalaxStakedNFTsMainnet = stakedGarmentTokenIDsMainnet && stakedGarmentTokenIDsMainnet.length > 0
-        ? await getAllResultsFromQuery(getDigitalaxGarments, 'digitalaxGarments', MAINNET_CHAINID, stakedGarmentTokenIDsMainnet)
+        ? await getAllResultsFromQuery(
+          getDigitalaxGarments,
+          'digitalaxGarments',
+          MAINNET_CHAINID,
+          stakedGarmentTokenIDsMainnet
+        )
         : []
       
       // get digitalax subscriptions (digi bundle) on polygon
-      const digitalaxSubscriptionsPolygon = await getAllResultsFromQuery(getDigitalaxSubscriptionsByOwner, 'digitalaxSubscriptions', POLYGON_CHAINID, owner)
+      const digitalaxSubscriptionsPolygon = await getAllResultsFromQuery(
+        getDigitalaxSubscriptionsByOwner,
+        'digitalaxSubscriptions',
+        POLYGON_CHAINID,
+        owner
+      )
 
       // get digitalax subscription 1155s on polygon
       const digitalaxSubscriptionCollectorsPolygon
-        = await getAllResultsFromQuery(getDigitalaxSubscriptionCollectorsByOwner, 'digitalaxSubscriptionCollectors', POLYGON_CHAINID, owner)
+        = await getAllResultsFromQuery(
+          getDigitalaxSubscriptionCollectorsByOwner,
+          'digitalaxSubscriptionCollectors',
+          POLYGON_CHAINID,
+          owner
+        )
       const digitalaxSubscription1155sPolygon = digitalaxSubscriptionCollectorsPolygon && digitalaxSubscriptionCollectorsPolygon.length > 0 
         ? digitalaxSubscriptionCollectorsPolygon[0].childrenOwned.map(item => item.token)
         : []
 
       // get genesis nfts on mainnet
-      const digitalaxGenesisNFTsMainnet = await getAllResultsFromQuery(getDigitalaxGenesisNFTsByOwner, 'digitalaxGenesisNFTs', MAINNET_CHAINID, owner)
+      const digitalaxGenesisNFTsMainnet = await getAllResultsFromQuery(
+        getDigitalaxGenesisNFTsByOwner,
+        'digitalaxGenesisNFTs',
+        MAINNET_CHAINID,
+        owner
+      )
 
       // get staked genesis nfts on mainnet
       const digitalaxGenesisStakedTokensMainnet
-        = await getAllResultsFromQuery(getDigitalaxGenesisStakedTokensByOwner, 'digitalaxGenesisStakedTokens', MAINNET_CHAINID, owner)
+        = await getAllResultsFromQuery(
+          getDigitalaxGenesisStakedTokensByOwner,
+          'digitalaxGenesisStakedTokens',
+          MAINNET_CHAINID,
+          owner
+      )
       const stakedGenesisTokenIDsMainnet = digitalaxGenesisStakedTokensMainnet.map(item => item.id)
       
       const digitalaxStakedGenesisNFTsMainnet = stakedGenesisTokenIDsMainnet && stakedGenesisTokenIDsMainnet.length > 0
-        ? await getAllResultsFromQuery(getDigitalaxGenesisNFTs, 'digitalaxGenesisNFTs', MAINNET_CHAINID, stakedGenesisTokenIDsMainnet)
+        ? await getAllResultsFromQuery(
+          getDigitalaxGenesisNFTs,
+          'digitalaxGenesisNFTs',
+          MAINNET_CHAINID,
+          stakedGenesisTokenIDsMainnet
+        )
         : []
 
       // get pode nftV2s on polygon
-      const podeNFTv2sPolygon = await getAllResultsFromQuery(getPodeNFTV2sByOwner, 'podeNFTv2S', POLYGON_CHAINID, owner)
+      const podeNFTv2sPolygon = await getAllResultsFromQuery(
+        getPodeNFTV2sByOwner,
+        'podeNFTv2S',
+        POLYGON_CHAINID,
+        owner
+      )
       // get staked pode nft v2s on polygon
-      const podeNFTv2StakersPolygon = await getAllResultsFromQuery(getPodeNFTV2StakersByStaker, 'podeNFTv2Stakers', POLYGON_CHAINID, owner)
+      const podeNFTv2StakersPolygon = await getAllResultsFromQuery(
+        getPodeNFTV2StakersByStaker,
+        'podeNFTv2Stakers',
+        POLYGON_CHAINID,
+        owner
+      )
       const podeStakedNFTsPolygon = podeNFTv2StakersPolygon && podeNFTv2StakersPolygon.length > 0 
       ? podeNFTv2StakersPolygon[0].garments
       : []
@@ -218,17 +264,37 @@ const DigitalChangingRoom = props => {
         : []
       
       // get gdn membership tokens on polygon
-      const gdnMembershipNFTsPolygon = await getAllResultsFromQuery(getGDNMembershipNFTsByOwner, 'gdnmembershipNFTs', POLYGON_CHAINID, owner)
-      console.log('gdnMembershipNFTsPolygon:', gdnMembershipNFTsPolygon)
+      const gdnMembershipNFTsPolygon = await getAllResultsFromQuery(
+        getGDNMembershipNFTsByOwner,
+        'gdnmembershipNFTs',
+        POLYGON_CHAINID,
+        owner
+      )
 
       // get look nfts on mainnet
-      const digitalaxLookNFTsMainnet = await getAllResultsFromQuery(getDigitalaxLookNFTsByOwner, 'digitalaxLookNFTs', MAINNET_CHAINID, owner)
+      const digitalaxLookNFTsMainnet = await getAllResultsFromQuery(
+        getDigitalaxLookNFTsByOwner,
+        'digitalaxLookNFTs',
+        MAINNET_CHAINID,
+        owner
+      )
       console.log('digitalaxLookNFTsMainnet:', digitalaxLookNFTsMainnet)
       digitalaxLookNFTsMainnet.map(item => {
         const json = atob(item.tokenUri.substring(29))
         const result = JSON.parse(json)
         console.log(result)
       })
+
+      // get look golden tickets on mainnet
+      const digitalaxLookGoldenTicketsPolygon
+        = await getAllResultsFromQuery(
+          getDigitalaxLookGoldenTicketsByOwner,
+          'digitalaxLookGoldenTickets',
+          POLYGON_CHAINID,
+          owner
+      )
+
+      console.log('digitalaxLookGoldenTicketsPolygon:', digitalaxLookGoldenTicketsPolygon)
 
       console.log('digitalaxNFTsMainnet: ', digitalaxNFTsMainnet)
       console.log('digitalaxNFTsPolygon: ', digitalaxNFTsPolygon)
@@ -271,8 +337,9 @@ const DigitalChangingRoom = props => {
             ...item, 
             type: 'digitalaxLookNFTsMainnet',
             image: generateLookImage(item)
-          } 
-        })
+          }
+        }),
+        ...digitalaxLookGoldenTicketsPolygon.map(item => { return {...item, type: 'digitalaxLookGoldenTicketsPolygon'} })
       ]
 
       fetchedNFTs[PODE] = [

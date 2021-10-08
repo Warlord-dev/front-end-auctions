@@ -39,7 +39,8 @@ import {
   DIGITALAX_COLLETOR_V2_BY_OWNER,
   GDN_MEMBERSHIP_NFTS_BY_OWNER,
   DIGITALAX_LOOK_NFTS_BY_OWNER,
-  DIGITALAX_GARMENT_V2_COLLECTIONS_BY_GARMENT_IDS
+  DIGITALAX_GARMENT_V2_COLLECTIONS_BY_GARMENT_IDS,
+  DIGITALAX_LOOK_GOLDEN_TICKETS_BY_OWNER
 } from './gql.apiService';
 
 const apiRequest = (chainId, gql, params) => request(getAPIUrlByChainId(chainId), gql, params);
@@ -154,5 +155,8 @@ export const getDigitalaxLookNFTsByOwner = async (chainId, owner, first=1000, la
 
 export const getDigitalaxGarmentV2CollectionsByGarmentIDs = async (chainId, garmentIDs, first=1000, lastID='') =>
   apiRequest(chainId, DIGITALAX_GARMENT_V2_COLLECTIONS_BY_GARMENT_IDS, { garmentIDs, first, lastID });
+
+export const getDigitalaxLookGoldenTicketsByOwner = async (chainId, owner, first=1000, lastID='') =>
+  apiRequest(chainId, DIGITALAX_LOOK_GOLDEN_TICKETS_BY_OWNER, { owner, first, lastID });
 
 

@@ -702,3 +702,17 @@ export const DIGITALAX_GARMENT_V2_COLLECTIONS_BY_GARMENT_IDS = gql`
     }
   }
 `
+
+export const DIGITALAX_LOOK_GOLDEN_TICKETS_BY_OWNER = gql`
+  query digitalaxLookGoldenTickets ($owner: ID!, $first: Int!, $lastID: ID!) {
+    digitalaxLookGoldenTickets (first: $first, where: {owner: $owner, id_gt: $lastID}) {
+      id
+      name
+      description
+      animation
+      image
+      owner
+      tokenUri
+    }
+  }
+`
