@@ -38,7 +38,7 @@ import globalActions from '@actions/global.actions';
 
 import secondDesignerData from 'src/data/second-designers.json';
 
-const Product = () => {
+const Product = props => {
   const router = useRouter();
   const dispatch = useDispatch();
   const { id, rarity, isAuction } = router.query;
@@ -299,23 +299,33 @@ const Product = () => {
   return (
     <>
       <Head>
-        <title key="title">{product?.garment?.name}</title>
+        <title key="title">{'Hello'}</title>
         <meta key="description" name="description" content={product?.garment?.description} />
+        <meta property="og:site_name" content={`Skin Product - {${product?.garment?.name}} - Digitalax`} />
+        <meta property="og:type" content="website" />
         <meta
           key="og:title"
-          name="og:title"
+          property="og:title"
           content={product?.garment?.name}
         />
         <meta
           key="og:description"
-          name="og:description"
+          property="og:description"
           content={product?.garment?.description}
         />
         <meta
           key="og:image"
-          name="og:image"
+          property="og:image"
           content={product?.garment?.image}
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={product?.garment?.image} />
+        <meta name="twitter:title" content={product?.garment?.name} />
+        <meta name="twitter:description" content={product?.garment?.description} />
+
+
+        {/* <meta property="og:url" content={} />
+        <meta name="twitter:url" content={} /> */}
       </Head>
 
       <div className={styles.wrapper}>
@@ -539,4 +549,12 @@ const Product = () => {
   );
 };
 
+export async function getServerSideProps(context) {
+  return {
+    props: {
+    }, // will be passed to the page component as props
+  }
+}
+
 export default Product;
+
