@@ -300,7 +300,7 @@ const Product = () => {
     <>
       <Head>
         <title key="title">{product?.garment?.name}</title>
-        <meta key="description" name="description">{product?.garment?.description}</meta>
+        <meta key="description" name="description" content={product?.garment?.description} />
         <meta
           key="og:title"
           name="og:title"
