@@ -28,7 +28,11 @@ import {
 
 import { getRarityId } from '@utils/helpers'
 
-import { DRIP_COLLECTION_IDS } from '@constants/drip_collection_ids'
+import {
+  DRIP_COLLECTION_IDS,
+  DRIP_COLLECTION_NAMES
+} from '@constants/drip_collection_ids'
+
 import {
   DIGITAL_CHANGING_ROOM,
   DIGIFIZZY_BUNDLES,
@@ -294,7 +298,8 @@ const DigitalChangingRoom = props => {
     setCurrentCategory(currentCategory + 1)
   }
 
-  const onClickViewFashion = async (fashionId, type) => {
+  const onClickViewFashion = async item => {
+    const { fashionId, type } = item
     // if the NFT is digitalx NFT V2 on Polygon network
     if (type == 'digitalaxNFTV2sPolygon' || type == 'digitalaxStakedNFTsPolygon') {
 
@@ -319,6 +324,16 @@ const DigitalChangingRoom = props => {
 
       // Yay! It's good to go. it can be shown on product page.
       window.open(`/product/${digitalaxGarmentV2Collections[0].id}/${getRarityId(digitalaxGarmentV2Collections[0].rarity)}/0`, '_self')
+    } else if (type == 'digitalaxDripNFTV2sPolygon') {
+      console.log('item: ', item.collectionId)
+      const collectionNameObj = DRIP_COLLECTION_NAMES[item.collectionId]
+      console.log('collectionNameObj: ', collectionNameObj)
+      if (collectionNameObj) {
+        const { group, name } = collectionNameObj
+        window.open(`https://drip.digitalax.xyz/product/${group.toLowerCase()}-${item.collectionId}-${name.replaceAll(' ', '-').toLowerCase()}`, '_new')
+      }
+      
+      
     } else {
       console.log('not on marketplace')
       console.log('fashionId: ', fashionId)
@@ -356,7 +371,7 @@ const DigitalChangingRoom = props => {
                 }
                 type={item.type}
                 tokenURI={item.tokenUri}
-                onClickViewFashion={() => onClickViewFashion(item.id, item.type)}
+                onClickViewFashion={() => onClickViewFashion(item)}
               />
             )
           })
