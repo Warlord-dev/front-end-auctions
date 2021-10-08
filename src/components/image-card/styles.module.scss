@@ -58,12 +58,11 @@
   }
 
   .designerLink {
-
     .designerWrapper .photo,
     .designerWrapper .name {
       transition: all 0.4s ease;
     }
-    
+
     &:hover {
       .designerWrapper .photo,
       .designerWrapper .name {
@@ -121,11 +120,6 @@
     }
 
     .video {
-      // width: calc(100% - 4rem);
-      // height: calc(100% - 4rem);
-      // position: absolute;
-      // top: 2rem;
-      // left: 2rem;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -205,8 +199,11 @@
         object-fit: contain;
         transition: all 0.3s;
       }
-    }
 
-    
+      .muteButton {
+        left: 150px;
+        top: calc(80vh + 10px);
+      }
+    }
   }
 }

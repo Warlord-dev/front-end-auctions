@@ -39,8 +39,10 @@ const History = ({ className, title, type }) => {
       const fetchHistories = async () => {
         if (type === 1) {
           if (parseInt(tokenIds[0]) <= 4) {
-            const { digitalaxGarmentAuctionHistories } =
-              await getDigitalaxGarmentPurchaseHistories(chainId, tokenIds[0]);
+            const { digitalaxGarmentAuctionHistories } = await getDigitalaxGarmentPurchaseHistories(
+              chainId,
+              tokenIds[0],
+            );
             setHistory(digitalaxGarmentAuctionHistories);
           } else {
             const { digitalaxGarmentV2AuctionHistories } =
@@ -52,9 +54,10 @@ const History = ({ className, title, type }) => {
           if (!v1) {
             const { digitalaxMarketplaceV2PurchaseHistories } =
               await getDigitalaxMarketplaceV2PurchaseHistories(chainId, tokenIds);
-              setHistory(digitalaxMarketplaceV2PurchaseHistories);
+            setHistory(digitalaxMarketplaceV2PurchaseHistories);
           } else {
-            const { digitalaxMarketplacePurchaseHistories } = await getDigitalaxMarketplacePurchaseHistories(chainId, tokenIds);
+            const { digitalaxMarketplacePurchaseHistories } =
+              await getDigitalaxMarketplacePurchaseHistories(chainId, tokenIds);
             setHistory(digitalaxMarketplacePurchaseHistories);
           }
           setLoading(false);
@@ -70,8 +73,8 @@ const History = ({ className, title, type }) => {
       if (parseInt(a.timestamp) > parseInt(b.timestamp)) return 1;
       if (parseInt(a.timestamp) == parseInt(b.timestamp)) return 0;
       return -1;
-    })
-  }
+    });
+  };
 
   return (
     <>
@@ -102,11 +105,25 @@ const History = ({ className, title, type }) => {
                           {' '}
                           {type === 1 ? tx.bidder?.id.slice(0, 8) : tx.buyer.slice(0, 8)}...{' '}
                         </td>
-                        <td> {tx.transactionHash.slice(0, 8)}... </td>
+                        <td>
+                          {' '}
+                          <a
+                            href={`https://polygonscan.com/tx/${tx.transactionHash}`}
+                            target="_blank"
+                          >
+                            {' '}
+                            {tx.transactionHash.slice(0, 8)}...{' '}
+                          </a>{' '}
+                        </td>
                         <td> {new Date(parseInt(tx.timestamp) * 1000).toDateString()} </td>
                       </tr>
                     ))}
-                    {!history.length && <tr> <td colSpan="4">No History</td> </tr>}
+                    {!history.length && (
+                      <tr>
+                        {' '}
+                        <td colSpan="4">No History</td>{' '}
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>

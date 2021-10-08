@@ -298,9 +298,6 @@ const Product = () => {
   return (
     <div className={styles.wrapper}>
       <section className={styles.mainSection}>
-        <video autoPlay loop muted className={styles.video}>
-          <source src="./images/metaverse/all_skins.mp4" type="video/mp4" />
-        </video>
         <Container>
           <div className={styles.body}>
             <div className={styles.mainBody}>
@@ -329,10 +326,7 @@ const Product = () => {
                     <span className={styles.questionMark}>?</span>
                     <span className={styles.description}>
                       You can also stake this NFT for yield + get the original source file. Check{' '}
-                      <a href="https://staking.digitalax.xyz/" target="_blank">
-                        here
-                      </a>
-                      .
+                      <a href={`${window.location.pathname}#fashion_list`}>here</a>.
                     </span>
                   </div>
                 </div>
@@ -512,12 +506,12 @@ const Product = () => {
         </>
       ) : null}
 
-      {!id.includes('v1') &&
-      ((parseInt(id) >= 11 && parseInt(id) < 100294) || parseInt(id) > 130000) ? (
-        <>
+      <section id="fashion_list">
+        {!id.includes('v1') &&
+        ((parseInt(id) >= 11 && parseInt(id) < 100294) || parseInt(id) > 130000) ? (
           <FashionList fashionData={fashionData} collections={product} />
-        </>
-      ) : null}
+        ) : null}
+      </section>
     </div>
   );
 };

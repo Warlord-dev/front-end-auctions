@@ -33,24 +33,29 @@ const ImageCard = ({
   const router = useRouter();
   const account = useSelector(getAccount);
   const chainId = useSelector(getChainId);
-  const {asPath} = router;
+  const { asPath } = router;
   const dispatch = useDispatch();
   const [zoomMedia, setZoomMedia] = useState(false);
   const videoTagRef = useRef();
-  const [hasAudio, setHasAudio] = useState(false)
-  const [videoMuted, setVideoMuted] = useState(true)
+  const [hasAudio, setHasAudio] = useState(false);
+  const [videoMuted, setVideoMuted] = useState(true);
 
-  function getAudio (video) {
-
-    return video.mozHasAudio ||
-    Boolean(video.webkitAudioDecodedByteCount) ||
-    Boolean(video.audioTracks && video.audioTracks.length);
+  function getAudio(video) {
+    return (
+      video.mozHasAudio ||
+      Boolean(video.webkitAudioDecodedByteCount) ||
+      Boolean(video.audioTracks && video.audioTracks.length)
+    );
   }
 
   const onBuyNow = () => {
     if (!router.asPath.includes('product')) {
       router
-        .push(`/product/${v1 ? `v1-${data?.id}` : data?.id}/${getRarityId(data.rarity)}/${isAuction ? 1 : 0}`)
+        .push(
+          `/product/${v1 ? `v1-${data?.id}` : data?.id}/${getRarityId(data.rarity)}/${
+            isAuction ? 1 : 0
+          }`,
+        )
         .then(() => window.scrollTo(0, 0));
     } else {
       if (account) {
@@ -89,9 +94,9 @@ const ImageCard = ({
 
   const onClickMute = () => {
     videoTagRef.current.pause();
-    setVideoMuted(!videoMuted)
+    setVideoMuted(!videoMuted);
     videoTagRef.current.play();
-  }
+  };
 
   const renderImage = () => {
     return (
@@ -107,24 +112,28 @@ const ImageCard = ({
             {data.garment?.animation?.length || data.animation?.length ? (
               <LazyLoad>
                 {/* <video key={data.id} autoPlay muted={!asPath.includes('product')} loop className={styles.video} */}
-                <video key={data.id} autoPlay muted={videoMuted} loop className={styles.video}
-                ref={videoTagRef}
-                preload={'auto'}
-                onLoadedData={
-                  () => {
-                    if (!asPath.includes('product')) return
+                <video
+                  key={data.id}
+                  autoPlay
+                  muted={videoMuted}
+                  loop
+                  className={styles.video}
+                  ref={videoTagRef}
+                  preload={'auto'}
+                  onLoadedData={() => {
+                    if (!asPath.includes('product')) return;
                     // console.log('videoTagRef: ', videoTagRef.current)
                     var video = videoTagRef.current;
                     // console.log('video: ', video)
                     if (getAudio(video)) {
-                        // console.log('video has audio')
-                        setHasAudio(true)
+                      // console.log('video has audio')
+                      setHasAudio(true);
                     } else {
-                      setHasAudio(false)
-                        // console.log(`video doesn't have audio`)
+                      setHasAudio(false);
+                      // console.log(`video doesn't have audio`)
                     }
-                  }
-                }>
+                  }}
+                >
                   <source
                     src={reviseUrl(data.garment ? data.garment.animation : data.animation)}
                     type="video/mp4"
@@ -132,10 +141,22 @@ const ImageCard = ({
                 </video>
               </LazyLoad>
             ) : (
-              <img
-                src={data.garment ? data.garment.image : data.image}
-                className={styles.image}
-              />
+              <img src={data.garment ? data.garment.image : data.image} className={styles.image} />
+            )}
+            {hasAudio && zoomMedia && (
+              <Button
+                className={styles.muteButton}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onClickMute();
+                }}
+              >
+                {videoMuted ? (
+                  <img src="/images/audio-off.png" />
+                ) : (
+                  <img src="/images/audio-on.png" />
+                )}
+              </Button>
             )}
           </div>
         ) : null}
@@ -146,33 +167,22 @@ const ImageCard = ({
         )}
         {hasAudio && (
           <Button className={styles.muteButton} onClick={() => onClickMute()}>
-            {
-              videoMuted
-              ? <img src="/images/audio-off.png" />
-              : <img src="/images/audio-on.png" />
-            }
-            
+            {videoMuted ? <img src="/images/audio-off.png" /> : <img src="/images/audio-on.png" />}
           </Button>
         )}
         {imgUrl ? <img src={reviseUrl(imgUrl)} className={styles.image} /> : null}
         {showButton && (
           <div className={styles.buyNow}>
             <NewButton
-              text={
-                isAuction
-                  ? disable
-                    ? 'Sold'
-                    : 'Place A Bid'
-                  : 'Buy Now'
-              }
+              text={isAuction ? (disable ? 'Sold' : 'Place A Bid') : 'Buy Now'}
               onClick={onBuyNow}
               disable={disable}
             />
           </div>
         )}
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <>
@@ -183,18 +193,24 @@ const ImageCard = ({
           </div>
         ) : null}
         {showDesigner ? (
-          <a href={`https://designers.digitalax.xyz/designers/${data?.designer?.name}`} target="_blank" className={styles.designerLink}>
+          <a
+            href={`https://designers.digitalax.xyz/designers/${data?.designer?.name}`}
+            target="_blank"
+            className={styles.designerLink}
+          >
             <div className={styles.designerWrapper}>
               <img src={data?.designer?.image} className={styles.photo} />
               <div className={styles.name}>{data?.designer?.name} </div>
             </div>
           </a>
         ) : null}
-        {withLink ? <Link href={`/product/${data?.id}/${getRarityId(data?.rarity)}/${isAuction ? 1 : 0}`}>
-          <a>
-            {renderImage()}
-          </a>
-        </Link> : renderImage()}
+        {withLink ? (
+          <Link href={`/product/${data?.id}/${getRarityId(data?.rarity)}/${isAuction ? 1 : 0}`}>
+            <a>{renderImage()}</a>
+          </Link>
+        ) : (
+          renderImage()
+        )}
       </div>
     </>
   );
