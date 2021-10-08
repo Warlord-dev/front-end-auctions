@@ -22,6 +22,7 @@ import {
   getDigitalaxMarketplaceV2PurchaseHistory,
   getLiveAuctionsV2,
   getCollectorsByIdV2,
+  getDigitalaxCollectorV2,
 } from './gql.queries.v2.api.service';
 
 class APIService {
@@ -92,6 +93,10 @@ class APIService {
 
   async getLiveAuctionsV2() {
     return request(this.url, getLiveAuctionsV2);
+  }
+
+  async getDigitalaxCollectorV2(address) {
+    return request(this.url, getDigitalaxCollectorV2, { id: address });
   }
 
   async getGarmentsCollectionsV2() {
