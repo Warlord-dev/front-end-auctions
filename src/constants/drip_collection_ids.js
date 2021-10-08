@@ -33,165 +33,204 @@ export const DRIP_COLLECTION_IDS = [
 
 export const DRIP_COLLECTION_NAMES = {
   // AAVE
+  // Confirmed
   '64': {
     'group': 'AAVE', 
     'name': 'COLLATERALIZED COUTURE HOODIE'
   },
+  // Confirmed
   '176': {
     'group': 'AAVE', 
     'name': 'AAVE AAVE HOODIE'
   },
+  // Confirmed
   '63': {
     'group': 'AAVE', 
     'name': 'FLASH HOODIE'
   },
+  // Confirmed
   '22': {
     'group': 'AAVE', 
     'name': 'FLASH CAP'
   },
+  // Confirmed
   '21': {
     'group': 'AAVE', 
     'name': 'AAVE AAVE CAP'
   },
+  // Confirmed
   '61': {
     'group': 'AAVE', 
-    'name': 'COLLATERALIZED COUTURE CAP'
+    'name': 'over-collateralized-cap'
   },
   // Bancor
+  // Confirmed
   '156': {
     'group': 'BANCOR', 
     'name': 'BNT REVOLUTION HOODIE'
   },
+  // '69': {
+  //   'group': 'BANCOR', 
+  //   'name': 'BNT REVOLUTION HOODIE'
+  // },
+  // Confirmed
   '68': {
     'group': 'BANCOR', 
-    'name': 'BANCOR OR BANK MORE? HOODIE'
+    'name': 'BANCOR OR BANK MORE HOODIE'
   },
+  // Confirmed
   '157': {
     'group': 'BANCOR', 
     'name': 'POCKETS FULL HOODIE'
   },
+  // Confirmed
   '66': {
     'group': 'BANCOR', 
     'name': 'BNT REVOLUTION CAP'
   },
+  // Confirmed
   '161': {
     'group': 'BANCOR', 
     'name': 'POCKETS FULL CAP'
   },
+  // Confirmed
   '65': {
     'group': 'BANCOR', 
-    'name': 'BANCOR OR BANK MORE? CAP'
+    'name': 'BANCOR OR BANK MORE CAP'
   },
+  // confirmed
   '519': {
     'group': 'BANCOR', 
     'name': 'BNT-LINK TEE'
   },
   // Polygon
+  // Confirmed
   '123': {
     'group': 'POLYGON', 
-    'name': 'WEARING WASM HOODIE'
+    'name': 'POLYGON2'
   },
+  // Confirmed
   '122': {
     'group': 'POLYGON', 
-    'name': 'FULL STACK SWAG HOODIE'
+    'name': 'POLYGON'
   },
+  // Confirmed
   '121': {
     'group': 'POLYGON', 
-    'name': 'SCALE 2 HOODIE'
+    'name': 'POLYGON3'
   },
+  // Confirmed
   '119': {
     'group': 'POLYGON', 
     'name': 'FULL STACK SWAG CAP'
   },
+  // Confirmed
   '120': {
     'group': 'POLYGON', 
     'name': 'WEARING WASM CAP'
   },
+  // Confirmed
   '118': {
     'group': 'POLYGON', 
-    'name': 'SCALE 2 CAP'
+    'name': 'SCALE 2 hat'
   },
   // Pickle
+  // Confirmed  
   '180': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'DILL DAO HOODIE'
   },
+    // Confirmed
   '177': {
-    'group': 'PICKLE', 
-    'name': 'CUCUMBER NO? V2 HOODIE'
+    'group': 'PICKLEFINANCE', 
+    'name': 'copy-of-aave-aave-hoodie'
   },
+    // Confirmed
   '179': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'GREEN EXPLOSION HOODIE'
   },
+  // Confirmed
   '178': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'MORE PICKLE HOODIE'
   },
+  // Confirmed
   '183': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'DILL DAO CAP'
   },
+  // Confirmed
   '182': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'MORE PICKLE CAP'
   },
+  // Confirmed
   '181': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'GREEN EXPLOSION CAP'
   },
+  // Confirmed
   '102': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'SEEING GREEN HOODIE'
   },
+  // Confirmed
   '159': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'PICKLE WEAR HOODIE'
   },
+  // Confirmed
   '158': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'CUCUMBER NO HOODIE'
   },
+  // Confirmed
   '99': {
-    'group': 'PICKLE', 
-    'name': 'SEEING GREEN CAP'
+    'group': 'PICKLEFINANCE', 
+    'name': 'copy-of-cucumber-no-cap'
   },
+  // Confirmed
   '97': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'CUCUMBER NO CAP'
   },
+  // Confirmed
   '98': {
-    'group': 'PICKLE', 
+    'group': 'PICKLEFINANCE', 
     'name': 'PICKLE WEAR CAP'
   },
   
-  
-  
+  // Confirmed
   '109': {
     'group': 'INSTADAPP', 
-    'name': 'LOOK PROPOSAL HOODIE'
+    'name': 'LOOK PROPOSAL'
   },
+  // Confirmed
   '110': {
     'group': 'INSTADAPP', 
     'name': 'MULTICHAIN HOODIE'
   },
+  // Confirmed
   '111': {
     'group': 'INSTADAPP', 
     'name': 'DEFI SPELL HOODIE'
   },
+  // Confirmed
   '108': {
     'group': 'INSTADAPP', 
     'name': 'DEFI SPELL CAP'
   },
+  // Confirmed
   '104': {
     'group': 'INSTADAPP', 
     'name': 'MULTICHAIN CAP'
   },
+  // Confirmed
   '103': {
     'group': 'INSTADAPP', 
     'name': 'LOOK PROPOSAL CAP'
   },
-
 
   '93': {
     'group': 'RULER', 
@@ -218,171 +257,200 @@ export const DRIP_COLLECTION_NAMES = {
     'name': 'CLOSE THE DISTANCE CAP'
   },
 
-
+  // Confirmed
   '130': {
     'group': 'OPYN', 
-    'name': 'NEW MONEY HOODIE'
+    'name': 'NEW MONEY'
   },
+  // Confirmed
   '128': {
     'group': 'OPYN', 
-    'name': 'PARTIALLY COLLATERIZED HOODIE'
+    'name': 'PARTIALLY COLLATERIZED'
   },
+  // Confirmed
   '129': {
     'group': 'OPYN', 
-    'name': 'GET WITH THE GREEKS HOODIE'
+    'name': 'GET WITH THE GREEKS 1'
   },
+  // Confirmed
   '125': {
     'group': 'OPYN', 
     'name': 'PARTIALLY COLLATERIZED CAP'
   },
+  // Confirmed
   '127': {
     'group': 'OPYN', 
     'name': 'NEW MONEY CAP'
   },
+  // Confirmed
   '126': {
     'group': 'OPYN', 
     'name': 'GET WITH THE GREEKS CAP'
   },
 
-
-  '134': {
+// Confirmed
+  '131': {
     'group': 'MAKER', 
     'name': 'GOVERNANCE WEAVE CAP'
   },
-  '136': {
+  // Confirmed
+  '135': {
     'group': 'MAKER', 
-    'name': 'LIVE FREE OR DAI HOODIE'
+    'name': 'LIVE FREE OR DAI'
   },
-  '133': {
+  // Confirmed
+  '132': {
     'group': 'MAKER', 
     'name': 'LIVE FREE OR DAI CAP'
   },
-  '132': {
+  // Confirmed
+  '133': {
     'group': 'MAKER', 
     'name': 'STAY STABLE CAP'
   },
-  '135': {
+  // Confirmed
+  '136': {
     'group': 'MAKER', 
-    'name': 'STAY STABLE HOODIE'
+    'name': 'STAY STABLE'
   },
-  '131': {
+  // Confirmed
+  '134': {
     'group': 'MAKER', 
-    'name': 'GOVERNANCE WEAVE HOODIE'
+    'name': 'copy-of-live-free-or-dai'
   },
 
-
+  // Confirmed
   '142': {
-    'group': 'FORCE', 
-    'name': 'SIMPLE STRATEGY HOODIE'
+    'group': 'FORCEDAO', 
+    'name': 'SIMPLE STRATEGY'
   },
+  // Confirmed
   '141': {
-    'group': 'FORCE', 
-    'name': 'WAY OF THE DAO HOODIE'
+    'group': 'FORCEDAO', 
+    'name': 'WAY OF THE DAO'
   },
+  // Confirmed
   '140': {
-    'group': 'FORCE', 
-    'name': 'MORE ALPHA HOODIE'
+    'group': 'FORCEDAO', 
+    'name': 'force'
   },
+  // Confirmed
   '138': {
-    'group': 'FORCE', 
+    'group': 'FORCEDAO', 
     'name': 'WAY OF THE DAO CAP'
   },
+  // Confirmed
   '139': {
-    'group': 'FORCE', 
+    'group': 'FORCEDAO', 
     'name': 'SIMPLE STRATEGY CAP'
   },
+  // Confirmed
   '137': {
-    'group': 'FORCE', 
+    'group': 'FORCEDAO', 
     'name': 'MORE ALPHA CAP'
   },
 
-
+  // Confirmed
   '117': {
     'group': 'FEI', 
-    'name': 'THREADED STABILITY HOODIE'
+    'name': 'THREADED STABILITY'
   },
+  // Confirmed
   '115': {
     'group': 'FEI', 
-    'name': 'FIND YOUR TRIBE HOODIE'
+    'name': 'liquid-style'
   },
+  // Confirmed
   '116': {
     'group': 'FEI', 
-    'name': 'LIQUID STYLE HOODIE'
+    'name': 'liquid-style-1'
   },
+  // Confirmed
   '114': {
     'group': 'FEI', 
     'name': 'THREADED STABILITY CAP'
   },
+  // Confirmed
   '113': {
     'group': 'FEI', 
-    'name': 'LIQUID STYLE CAP'
+    'name': 'copy-of-liquid-style-cap'
   },
+  // Confirmed
   '112': {
     'group': 'FEI', 
     'name': 'FIND YOUR TRIBE CAP'
   },
 
-
+  // Minecraft
+  // Confirmed
   '173': {
     'group': 'MINECRAFT', 
-    'name': 'MINECRAFT GUILD HOODIE'
+    'name': 'PANDA HOODIE'
   },
+  // Confirmed
   '172': {
     'group': 'MINECRAFT', 
-    'name': 'MINECRAFT ENDER DRAGON HOODIE'
+    'name': 'ENDER DRAGON HOODIE'
   },
+  // Confirmed
   '171': {
     'group': 'MINECRAFT', 
-    'name': 'MINECRAFT PANDA HOODIE'
+    'name': 'guild-hoodie'
   },
 
-
+  // confirmed
   '162': {
-    'group': 'META-MEME', 
+    'group': 'METAMEME', 
     'name': 'SWORD ART HOODIE'
   },
+  // confirmed
   '165': {
-    'group': 'META-MEME', 
-    'name': 'SWORD ART T-SHIRT'
+    'group': 'METAMEME', 
+    'name': 'SWORD ART T-SHIRT 1'
   },
+  // confirmed
   '163': {
-    'group': 'META-MEME', 
+    'group': 'METAMEME', 
     'name': 'TOKYO WEB HOODIE'
   },
+  // confirmed
   '166': {
-    'group': 'META-MEME', 
+    'group': 'METAMEME', 
     'name': 'TOKYO WEB T-SHIRT'
   },
+  // confirmed
   '164': {
-    'group': 'META-MEME', 
+    'group': 'METAMEME', 
     'name': 'LEVELING WARRIOR HOODIE'
   },
-  '167': {
-    'group': 'META-MEME', 
-    'name': 'LEVELING WARRIOR T-SHIRT'
+  // confirmed
+  '168': {
+    'group': 'METAMEME', 
+    'name': 'test-drip-shirt-2'
   },
 
-
-
+  // Confirmed
   '543': {
-    'group': 'W3FW', 
-    'name': 'GDN 2021 VARSITY JACKET'
+    'group': 'web3', 
+    'name': 'w3fw-2021-varsity-jacket'
   },
+  // Confirmed
   '249': {
-    'group': 'W3FW', 
-    'name': 'W3FW 2021 VARSITY JACKET'
+    'group': 'web3', 
+    'name': 'gdn-2021-varsity-jacket'
   },
 
-
-
+  // Confirmed
   '532': {
     'group': 'LOOK', 
     'name': 'custom varsity jacket'
   },
+  // Confirmed
   '533': {
     'group': 'LOOK', 
     'name': 'loot varsity jacket 1'
   },
+  // Confirmed
   '534': {
     'group': 'LOOK', 
     'name': 'loot-varsity-jacket-2'
