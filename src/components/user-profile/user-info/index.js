@@ -15,7 +15,7 @@ const UserInfo = props => {
         Web3 Fashion Inventory
       </div>
       <div className={styles.avatar}>
-        <img className={styles.avatarImage} src={userAvatar ? userAvatar : '/images/user-profile/user-avatar-large.png'} />
+        <img className={styles.avatarImage} src={userAvatar ? userAvatar : '/images/user-profile/user-avatar-black.png'} />
         <div className={styles.lovesWrapper}>
           <div className={styles.lovesContainer}>
             <div className={styles.leftSide}>

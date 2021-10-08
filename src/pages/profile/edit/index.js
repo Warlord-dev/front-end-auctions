@@ -103,7 +103,7 @@ const EditProfile = ({ history }) => {
         <InfoCard mainColor={'rgba(247, 207, 207, 0.47)'} bodyClass={styles.padding5}>
           <div className={styles.profileWrapper}>
             <div className={styles.avatarWrapper}>
-              <img src={user.avatar ? user.avatar : '../../../images/user-photo.svg'} />
+              <img src={user.avatar ? user.avatar : '../../../images/user-profile/user-avatar-black.svg'} />
               <input
                 id="avatar-upload"
                 type="file"

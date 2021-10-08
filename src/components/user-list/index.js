@@ -19,7 +19,11 @@ const UserList = props => {
             return (
               <Link href={`/user/${item.wallet}`}>
                 <a key={item.name}>
-                  <img src={`${avatar && avatar != '' ? avatar : '/images/user-avatar.png'}`} key={index} />
+                  <img 
+                    className={avatar && avatar != '' ? styles.rounded : ''}
+                    src={`${avatar && avatar != '' ? avatar : '/images/user-profile/user-avatar-black.png'}`} 
+                    key={index}
+                  />
                 </a>
               </Link>
             )

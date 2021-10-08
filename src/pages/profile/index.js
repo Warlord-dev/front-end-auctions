@@ -21,8 +21,9 @@ const UserProfile = () => {
   const [loveCount, setLoveCount] = useState(0)
   const [viewCount, setViewCount] = useState(0)
   
-  const account = useSelector(getAccount)
   const user = getUser()
+  const account = user.wallet
+
   const secretKey = user ? user.randomString : null
 
   const fetchViews = async () => {
@@ -77,15 +78,15 @@ const UserProfile = () => {
     )
   }
 
-  if (!account) {
-    return (
-      <div className={styles.wrapper}>
-        <div className={styles.notValidUser}>
-          It's not digitalax user.
-        </div>
-      </div>
-    )
-  }
+//   if (!account) {
+//     return (
+//       <div className={styles.wrapper}>
+//         <div className={styles.notValidUser}>
+//           It's not digitalax user.
+//         </div>
+//       </div>
+//     )
+//   }
   
   return (
     <div className={styles.wrapper}>
