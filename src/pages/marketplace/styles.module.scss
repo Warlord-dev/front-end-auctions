@@ -47,7 +47,6 @@
       grid-template-columns: 1fr;
       align-items: flex-end;
       gap: 5rem;
-      background-color: black;
 
       @include sm-width {
         padding: 5rem 3rem;
