@@ -128,7 +128,10 @@ const ModalCurrentWearers = ({ className, title, type }) => {
                     {sortByTime(wearers).map((ownerInfo, index) => (
                       <tr key={index}>
                         <td>
-                          <img className={styles.ownerAvatar} src={`${ownerInfo.ownerAvatar ? ownerInfo.ownerAvatar : '/images/user-avatar.png'}`} />
+                          <img
+                            className={styles.ownerAvatar}
+                            src={`${ownerInfo.ownerAvatar ? ownerInfo.ownerAvatar : '/images/user-profile/user-avatar-black.png'}`}
+                          />
                         </td>
                         <td>
                           {' '}

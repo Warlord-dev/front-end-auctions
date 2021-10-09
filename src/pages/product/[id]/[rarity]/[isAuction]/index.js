@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import styles from './styles.module.scss';
 
 import ImageCard from '@components/image-card';
@@ -37,7 +38,7 @@ import globalActions from '@actions/global.actions';
 
 import secondDesignerData from 'src/data/second-designers.json';
 
-const Product = () => {
+const Product = props => {
   const router = useRouter();
   const dispatch = useDispatch();
   const { id, rarity, isAuction } = router.query;
@@ -205,9 +206,9 @@ const Product = () => {
 
     const fetchViews = async () => {
       const viewData = await digitalaxApi.getViews('product', id);
-      setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0);
-      setViewCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].viewCount : 0);
-    };
+      setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0)
+      setViewCount(viewData && viewData[0] && viewData[0].viewCount ? viewData[0].viewCount : 0)
+    }
 
     const addViewCount = async () => {
       const data = await digitalaxApi.addView('product', id);
@@ -293,159 +294,131 @@ const Product = () => {
     );
   };
 
-  // console.log('owners: ', owners)
+  console.log('product: ', product)
 
   return (
-    <div className={styles.wrapper}>
-      <section className={styles.mainSection}>
-        <Container>
-          <div className={styles.body}>
-            <div className={styles.mainBody}>
-              <div className={styles.imageCardWrapper}>
-                <div className={styles.rarity}> {getRarity(parseInt(rarity))} </div>
-                <ImageCard
-                  data={product}
-                  price={(getPrice() / 10 ** 18).toFixed(2)}
-                  isAuction={!!parseInt(isAuction)}
-                  disable={
-                    (parseInt(isAuction) === 1 && Date.now() > product.endTime * 1000) ||
-                    offer?.amountSold >= offer?.totalAmount
-                  }
-                />
-              </div>
-              <div className={styles.infoWrapper}>
-                <div className={styles.amount}>
-                  {parseInt(isAuction) !== 1 ? (
-                    <>
-                      {offer?.amountSold} of {offer?.totalAmount}
-                    </>
-                  ) : (
-                    <>{`${days}:${hours}:${minutes}`}</>
-                  )}
-                  <div className={styles.helper}>
-                    <span className={styles.questionMark}>?</span>
-                    <span className={styles.description}>
-                      You can also stake this NFT for yield + get the original source file. Check{' '}
-                      <a href={`${window.location.pathname}#fashion_list`}>here</a>.
-                    </span>
-                  </div>
+    <>
+      <Head>
+        <title key="title">{'Hello'}</title>
+        <meta key="description" name="description" content={product?.garment?.description} />
+        <meta property="og:site_name" content={`Skin Product - {${product?.garment?.name}} - Digitalax`} />
+        <meta property="og:type" content="website" />
+        <meta
+          key="og:title"
+          property="og:title"
+          content={product?.garment?.name}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={product?.garment?.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={product?.garment?.image}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={product?.garment?.image} />
+        <meta name="twitter:title" content={product?.garment?.name} />
+        <meta name="twitter:description" content={product?.garment?.description} />
+
+
+        {/* <meta property="og:url" content={} />
+        <meta name="twitter:url" content={} /> */}
+      </Head>
+
+      <div className={styles.wrapper}>
+        <section className={styles.mainSection}>
+          <Container>
+            <div className={styles.body}>
+              <div className={styles.mainBody}>
+                <div className={styles.imageCardWrapper}>
+                  <div className={styles.rarity}> {getRarity(parseInt(rarity))} </div>
+                  <ImageCard
+                    data={product}
+                    price={(getPrice() / 10 ** 18).toFixed(2)}
+                    isAuction={!!parseInt(isAuction)}
+                    disable={
+                      (parseInt(isAuction) === 1 && Date.now() > product.endTime * 1000) ||
+                      offer?.amountSold >= offer?.totalAmount
+                    }
+                  />
                 </div>
-
-                <div className={styles.lovesWrapper}>
-                  <button type="button" className={styles.loveButton} onClick={onClickLove}>
-                    <img src="/images/like_icon.png" />
-                  </button>
-
-                  <div className={styles.likeCount}>
-                    {loveCount}
-                    <span>LOVES</span>
-                  </div>
-                  <img src="/images/view_icon.png" />
-                  <div className={styles.viewCount}>
-                    {viewCount}
-                    <span>VIEWS</span>
-                  </div>
-                </div>
-
-                <InfoCard>
-                  <div className={styles.infoCard}>
-                    <div className={styles.skinName}>
-                      <div className={styles.text}> {product?.garment?.name} </div>
+                <div className={styles.infoWrapper}>
+                  <div className={styles.amount}>
+                    {parseInt(isAuction) !== 1 ? (
+                      <>
+                        {offer?.amountSold} of {offer?.totalAmount}
+                      </>
+                    ) : (
+                      <>{`${days}:${hours}:${minutes}`}</>
+                    )}
+                    <div className={styles.helper}>
+                      <span className={styles.questionMark}>?</span>
+                      <span className={styles.description}>
+                        You can also stake this NFT for yield + get the original source file. Check{' '}
+                        <a href={`${window.location.pathname}#fashion_list`}>here</a>.
+                      </span>
                     </div>
-                    <div className={styles.description}>{product?.garment?.description}</div>
                   </div>
-                </InfoCard>
-                <div className={styles.actions}>
-                  <div className={styles.buttonWrapper}>
-                    <PriceCard
-                      mainText={`${(getPrice() / 10 ** 18).toFixed(2)} MONA ($${(
-                        (getPrice() / 10 ** 18) *
-                        parseFloat(monaPerEth) *
-                        exchangeRate
-                      ).toFixed(2)})`}
-                      subText={parseInt(isAuction) === 1 ? 'highest bid' : 'sale price'}
-                    />
+
+                  <div className={styles.lovesWrapper}>
+                    <button type="button" className={styles.loveButton} onClick={onClickLove}>
+                      <img src="/images/like_icon.png" />
+                    </button>
+
+                    <div className={styles.likeCount}>
+                      {loveCount}
+                      <span>LOVES</span>
+                    </div>
+                    <img src="/images/view_icon.png" />
+                    <div className={styles.viewCount}>
+                      {viewCount}
+                      <span>VIEWS</span>
+                    </div>
                   </div>
-                </div>
-                <button type="button" className={styles.viewBidHistory} onClick={onHistory}>
-                  view {parseInt(isAuction) === 1 ? 'bid' : 'purchase'} history
-                </button>
-                <button type="button" className={styles.bespokeBtn} onClick={onBespokeBtn}>
-                  Want something more Bespoke?
-                </button>
-                <a href="https://staking.digitalax.xyz/" target="_blank">
-                  <button type="button" className={styles.stakeBtn}>
-                    STAKE YOUR FASHION FOR $MONA YIELD
+
+                  <InfoCard>
+                    <div className={styles.infoCard}>
+                      <div className={styles.skinName}>
+                        <div className={styles.text}> {product?.garment?.name} </div>
+                      </div>
+                      <div className={styles.description}>{product?.garment?.description}</div>
+                    </div>
+                  </InfoCard>
+                  <div className={styles.actions}>
+                    <div className={styles.buttonWrapper}>
+                      <PriceCard
+                        mainText={`${(getPrice() / 10 ** 18).toFixed(2)} MONA ($${(
+                          (getPrice() / 10 ** 18) *
+                          parseFloat(monaPerEth) *
+                          exchangeRate
+                        ).toFixed(2)})`}
+                        subText={parseInt(isAuction) === 1 ? 'highest bid' : 'sale price'}
+                      />
+                    </div>
+                  </div>
+                  <button type="button" className={styles.viewBidHistory} onClick={onHistory}>
+                    view {parseInt(isAuction) === 1 ? 'bid' : 'purchase'} history
                   </button>
-                </a>
+                  <button type="button" className={styles.bespokeBtn} onClick={onBespokeBtn}>
+                    Want something more Bespoke?
+                  </button>
+                  <a href="https://staking.digitalax.xyz/" target="_blank">
+                    <button type="button" className={styles.stakeBtn}>
+                      STAKE YOUR FASHION FOR $MONA YIELD
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </Container>
-      </section>
-      <BannerBar className={styles.homeHeroBar} type={2} />
-      {product?.designer ? (
-        <>
-          <section className={styles.designerSection}>
-            <video autoPlay loop muted className={styles.video}>
-              <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
-            </video>
-            <Container>
-              <div className={styles.designerBody}>
-                <div className={styles.title}> designer </div>
-                <div className={styles.data}>
-                  <a
-                    href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
-                    target="_blank"
-                  >
-                    <ImageCard showButton={false} imgUrl={product?.designer?.image} />
-                  </a>
-                  <div className={styles.infoWrapper}>
-                    {owners.length ? (
-                      <div className={styles.wearersLabel}>current wearer/S</div>
-                    ) : (
-                      <></>
-                    )}
-                    {owners.length ? (
-                      <UserList
-                        className={styles.userList}
-                        userLimit={7}
-                        users={owners}
-                        onClickSeeAll={onClickSeeAllWearers}
-                      />
-                    ) : (
-                      <></>
-                    )}
-                    <InfoCard libon="./images/metaverse/party_glasses.png">
-                      <a
-                        href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
-                        target="_blank"
-                      >
-                        <div className={styles.name}> {product?.designer?.name} </div>
-                      </a>
-                      <div className={styles.description}>{product?.designer?.description}</div>
-                      <a
-                        href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
-                        target="_blank"
-                      >
-                        <button type="button" className={styles.profileButton}>
-                          View Full Profile
-                        </button>
-                      </a>
-                    </InfoCard>
-                    <a href="https://designers.digitalax.xyz/getdressed" target="_blank">
-                      <button type="button" className={styles.getDressedButton}>
-                        GET BESPOKE DRESSED BY THIS DESIGNER!
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Container>
-          </section>
-
-          {secondDesigner && (
-            <section className={[styles.designerSection, styles.margin50].join(' ')}>
+          </Container>
+        </section>
+        <BannerBar className={styles.homeHeroBar} type={2} />
+        {product?.designer ? (
+          <>
+            <section className={styles.designerSection}>
               <video autoPlay loop muted className={styles.video}>
                 <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
               </video>
@@ -454,10 +427,10 @@ const Product = () => {
                   <div className={styles.title}> designer </div>
                   <div className={styles.data}>
                     <a
-                      href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
+                      href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
                       target="_blank"
                     >
-                      <ImageCard showButton={false} imgUrl={secondDesigner.image} />
+                      <ImageCard showButton={false} imgUrl={product?.designer?.image} />
                     </a>
                     <div className={styles.infoWrapper}>
                       {owners.length ? (
@@ -468,8 +441,8 @@ const Product = () => {
                       {owners.length ? (
                         <UserList
                           className={styles.userList}
-                          users={owners}
                           userLimit={7}
+                          users={owners}
                           onClickSeeAll={onClickSeeAllWearers}
                         />
                       ) : (
@@ -477,14 +450,14 @@ const Product = () => {
                       )}
                       <InfoCard libon="./images/metaverse/party_glasses.png">
                         <a
-                          href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
+                          href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
                           target="_blank"
                         >
-                          <div className={styles.name}> {secondDesigner.name} </div>
+                          <div className={styles.name}> {product?.designer?.name} </div>
                         </a>
-                        <div className={styles.description}>{secondDesigner.description}</div>
+                        <div className={styles.description}>{product?.designer?.description}</div>
                         <a
-                          href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
+                          href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
                           target="_blank"
                         >
                           <button type="button" className={styles.profileButton}>
@@ -502,18 +475,86 @@ const Product = () => {
                 </div>
               </Container>
             </section>
-          )}
-        </>
-      ) : null}
 
-      <section id="fashion_list">
-        {!id.includes('v1') &&
-        ((parseInt(id) >= 11 && parseInt(id) < 100294) || parseInt(id) > 130000) ? (
-          <FashionList fashionData={fashionData} collections={product} />
+            {secondDesigner && (
+              <section className={[styles.designerSection, styles.margin50].join(' ')}>
+                <video autoPlay loop muted className={styles.video}>
+                  <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
+                </video>
+                <Container>
+                  <div className={styles.designerBody}>
+                    <div className={styles.title}> designer </div>
+                    <div className={styles.data}>
+                      <a
+                        href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
+                        target="_blank"
+                      >
+                        <ImageCard showButton={false} imgUrl={secondDesigner.image} />
+                      </a>
+                      <div className={styles.infoWrapper}>
+                        {owners.length ? (
+                          <div className={styles.wearersLabel}>current wearer/S</div>
+                        ) : (
+                          <></>
+                        )}
+                        {owners.length ? (
+                          <UserList
+                            className={styles.userList}
+                            users={owners}
+                            userLimit={7}
+                            onClickSeeAll={onClickSeeAllWearers}
+                          />
+                        ) : (
+                          <></>
+                        )}
+                        <InfoCard libon="./images/metaverse/party_glasses.png">
+                          <a
+                            href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
+                            target="_blank"
+                          >
+                            <div className={styles.name}> {secondDesigner.name} </div>
+                          </a>
+                          <div className={styles.description}>{secondDesigner.description}</div>
+                          <a
+                            href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
+                            target="_blank"
+                          >
+                            <button type="button" className={styles.profileButton}>
+                              View Full Profile
+                            </button>
+                          </a>
+                        </InfoCard>
+                        <a href="https://designers.digitalax.xyz/getdressed" target="_blank">
+                          <button type="button" className={styles.getDressedButton}>
+                            GET BESPOKE DRESSED BY THIS DESIGNER!
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Container>
+              </section>
+            )}
+          </>
         ) : null}
-      </section>
-    </div>
+
+        <section id="fashion_list">
+          {!id.includes('v1') &&
+          ((parseInt(id) >= 11 && parseInt(id) < 100294) || parseInt(id) > 130000) ? (
+            <FashionList fashionData={fashionData} collections={product} />
+          ) : null}
+        </section>
+      </div>
+    </>
   );
 };
 
+export async function getServerSideProps(context) {
+  return {
+    props: {
+    }, // will be passed to the page component as props
+  }
+}
+
 export default Product;
+

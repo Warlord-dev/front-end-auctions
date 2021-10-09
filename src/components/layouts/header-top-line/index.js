@@ -138,7 +138,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           {user ? (
             <div className={styles.buttonWrapper} onClick={() => setIsShowMenu(!isShowMenu)}>
               <SmallPhotoWithText
-                photo={user.get('avatar') ? user.get('avatar') : './images/user.png'}
+                photo={user.get('avatar') ? user.get('avatar') : './images/user-profile/user-avatar-black.png'}
                 address={user.get('username')}
                 className={styles.hashAddress}
               >
