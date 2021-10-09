@@ -12,7 +12,7 @@
     font-weight: 800;
     font-size: 1.5rem;
     text-transform: uppercase;
-    background-color: black;
+    background0-color: #a500fd;
     display: flex;
     align-items: center;
 
@@ -27,6 +27,11 @@
     margin-bottom: -5px;
     overflow: hidden;
 
+    .backVideo {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 
     .gamePad {
