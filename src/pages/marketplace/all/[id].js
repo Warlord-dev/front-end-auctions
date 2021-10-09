@@ -120,9 +120,9 @@ const Auctions = () => {
         if (index % 2 === 1) return <> </>;
         return (
           <section className={styles.productsSection} key={prod.id}>
-            <video autoPlay muted loop className={styles.backVideo}>
+            {/* <video autoPlay muted loop className={styles.backVideo}>
               <source src="./images/metaverse/all_skins.mp4" type="video/mp4" />
-            </video>
+            </video> */}
             <Container>
               <div className={styles.body}>
                 <ProductInfoCard
