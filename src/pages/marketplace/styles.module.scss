@@ -12,7 +12,7 @@
     font-weight: 800;
     font-size: 1.5rem;
     text-transform: uppercase;
-    background-color: black;
+    background0-color: #a500fd;
     display: flex;
     align-items: center;
 
@@ -47,6 +47,7 @@
       grid-template-columns: 1fr;
       align-items: flex-end;
       gap: 5rem;
+      background-color: black;
 
       @include sm-width {
         padding: 5rem 3rem;
