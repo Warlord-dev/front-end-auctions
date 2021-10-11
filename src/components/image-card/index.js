@@ -174,7 +174,7 @@ const ImageCard = ({
         {showButton && (
           <div className={styles.buyNow}>
             <NewButton
-              text={isAuction ? (disable ? 'Sold' : 'Place A Bid') : 'Buy Now'}
+              text={disable ? 'Sold Out' : isAuction ? 'Place A Bid' : 'Buy Now'}
               onClick={onBuyNow}
               disable={disable}
             />
