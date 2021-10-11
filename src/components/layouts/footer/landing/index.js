@@ -7,7 +7,7 @@ const LandingFooter = () => {
       <div className={styles.footerWrapper}>
         <div className={styles.heading}>GET IN TOUCH</div>
         <div className={styles.description}>
-          Connect with us and the broader Web3 Fashion community on our Discord or Twitter.
+          Connect with us and the broader Web3 Fashion community on our Discord or Twitter. 
           We would love to hear from you.
         </div>
         <div className={styles.centerWrapper}>
