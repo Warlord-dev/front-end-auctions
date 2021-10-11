@@ -28,6 +28,9 @@ export const requestSwitchNetwork = () => {
 };
 
 export const getAPIUrlByChainId = (chainId) => {
+  if (chainId === 0x1) {
+    return config.API_URLS['mainnet']
+  }
   return config.API_URLS['matic'];
 };
 

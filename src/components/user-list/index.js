@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './styles.module.scss'
 
 const UserList = props => {
@@ -16,9 +17,15 @@ const UserList = props => {
             console.log('item: ', item)
             const { avatar } = item
             return (
-              <a href='' key={item.name}>
-                <img src={`${avatar && avatar != '' ? avatar : '/images/user-avatar.png'}`} key={index} />
-              </a>
+              <Link href={`/user/${item.wallet}`}>
+                <a key={item.name}>
+                  <img 
+                    className={avatar && avatar != '' ? styles.rounded : ''}
+                    src={`${avatar && avatar != '' ? avatar : '/images/user-profile/user-avatar-black.png'}`} 
+                    key={index}
+                  />
+                </a>
+              </Link>
             )
           })
         }

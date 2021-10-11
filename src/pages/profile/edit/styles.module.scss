@@ -3,7 +3,7 @@
 .container {
   margin: auto;
   position: relative;
-  background-image: url('../../../../public/images/metaverse/profile-bg.png');
+  background: #0A0A0A;
   background-size: cover;
   padding: 150px 1rem 100px;
 
@@ -28,7 +28,7 @@
 
   @include md-width {
     grid-template-columns: auto auto;
-    gap: 4rem;
+    gap: 10rem;
   }
 }
 
@@ -61,6 +61,7 @@
 
 .detailsWrapper {
   padding-top: 20px;
+  padding-right: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -91,7 +92,7 @@
     padding-left: 12px;
 
     @include sm-width {
-      width: 363px;
+      width: 260px;
     }
   }
 }
@@ -181,7 +182,7 @@
   height: 41px;
   font-size: 0.9375rem;
   color: white;
-  margin-left: 1rem;
+  margin-left: -3rem;
   background-color: #770b47;
   white-space: nowrap;
   @media only screen and (max-width: 480px) {
@@ -193,5 +194,10 @@
 .buttonsWrapper {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.padding5 {
+  padding: 5rem 5rem 2rem 5rem !important;
 }
