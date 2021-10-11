@@ -84,7 +84,7 @@ const UserProfile = () => {
     loadUsers()
   }, [])
 
-  if (isInitLoading ) {
+  if (isInitLoading) {
     return (
       <div className={styles.wrapper}>
         <Loader 

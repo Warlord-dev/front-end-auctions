@@ -137,8 +137,22 @@ const ModalCurrentWearers = ({ className, title, type }) => {
                           {' '}
                           {ownerInfo.ownerName ? ownerInfo.ownerName : `${ownerInfo.owner.slice(0, 8)}...`}
                         </td>
-                        <td> {ownerInfo.timestamp ? new Date(parseInt(ownerInfo.timestamp) * 1000).toDateString() : ''} </td>
-                        <td> {ownerInfo.transactionHash ? `${ownerInfo.transactionHash.slice(0, 8)}...` : ''} </td>
+                        {
+                          ownerInfo.ownerName
+                          ? (
+                            <td> {ownerInfo.timestamp ? new Date(parseInt(ownerInfo.timestamp) * 1000).toDateString() : ''} </td>
+                          )
+                          : (
+                            <td colspan='2'> No active account with DIGITALAX </td>
+                          )
+                        }
+                        {
+                          ownerInfo.ownerName
+                          && (
+                            <td> {ownerInfo.transactionHash ? `${ownerInfo.transactionHash.slice(0, 8)}...` : ''} </td>
+                          )
+                        }
+                         
                       </tr>
                     ))}
                     {!wearers.length && <tr> <td colSpan="4">No Wearers</td> </tr>}
