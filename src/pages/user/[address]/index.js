@@ -98,7 +98,7 @@ const UserProfile = () => {
     return (
       <div className={styles.wrapper}>
         <div className={styles.notValidUser}>
-          It's not digitalax user.
+         No active account with DIGITALAX
         </div>
       </div>
     )
