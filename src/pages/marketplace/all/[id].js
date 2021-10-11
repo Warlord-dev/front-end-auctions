@@ -120,9 +120,6 @@ const Auctions = () => {
         if (index % 2 === 1) return <> </>;
         return (
           <section className={styles.productsSection} key={prod.id}>
-            <video autoPlay muted loop className={styles.backVideo}>
-              <source src="./images/metaverse/all_skins.mp4" type="video/mp4" />
-            </video>
             <Container>
               <div className={styles.body}>
                 <ProductInfoCard
@@ -151,36 +148,6 @@ const Auctions = () => {
           </section>
         );
       })}
-      {/* {collections.map((collection, index) => {
-        if (index % 2 === 1) return <></>;
-        return (
-          <section className={styles.productsSection} key={collection.id}>
-            <video autoPlay muted loop className={styles.backVideo}>
-              <source src="./images/metaverse/all_skins.mp4" type="video/mp4" />
-            </video>
-            <Container>
-              <div className={styles.body}>
-                <ProductInfoCard
-                  product={collections[index]}
-                  v1={collections[index].version === 1}
-                  price={collections[index].primarySalePrice}
-                  showCollectionName
-                  showRarity
-                />
-                {index + 1 < collections.length ? (
-                  <ProductInfoCard
-                    product={collections[index + 1]}
-                    v1={collections[index].version === 1}
-                    price={collections[index + 1].primarySalePrice}
-                    showCollectionName
-                    showRarity
-                  />
-                ) : null}
-              </div>
-            </Container>
-          </section>
-        );
-      })} */}
     </div>
   );
 };
