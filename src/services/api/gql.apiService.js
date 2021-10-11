@@ -716,3 +716,59 @@ export const DIGITALAX_LOOK_GOLDEN_TICKETS_BY_OWNER = gql`
     }
   }
 `
+
+// staked nfts by id list on polygon
+export const DIGITALAX_NFT_STAKERS_BY_GARMENTS = gql`
+  query digitalaxNFTStakers($garmentIDs: [ID!], $first: Int!, $lastID: ID!) {
+    digitalaxNFTStakers(first: $first, where: {id_gt: $lastID}) {
+      id
+      garments (first: 1000, where: {id_in: $garmentIDs}) {
+        id
+        owner
+        designer
+        tokenUri
+        image
+        animation
+        name
+        description
+      }
+    }
+  }
+`;
+
+// whitelisted staked nfts on dlta by id list on polygon
+export const GUILD_WHITELISTED_NFT_STAKERS_BY_GARMENTS = gql`
+  query guildWhitelistedNFTStakers($garmentIDs: [ID!], $first: Int!, $lastID: ID!) {
+    guildWhitelistedNFTStakers(first: $first, where: {id_gt: $lastID}) {
+      id
+      garments (first: 1000, where: {id_in: $garmentIDs}) {
+        id
+        owner
+        tokenUri
+        image
+        animation
+        name
+        description
+      }
+    }
+  }
+`;
+
+// get staked pode tokens by staker
+export const GUILD_WHITELISTED_NFT_STAKERS_BY_STAKER = gql`
+  query guildWhitelistedNFTStakers ($staker: ID!, $first: Int!, $lastID: ID!) {
+    guildWhitelistedNFTStakers (first: $first, where: {id: $staker, id_gt: $lastID}) {
+      id
+      garments {
+        id
+        owner
+        tokenAddress
+        tokenUri
+        image
+        animation
+        name
+        description
+      }
+    }
+  }
+`;
