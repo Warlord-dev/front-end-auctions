@@ -23,7 +23,8 @@ import {
   getGDNMembershipNFTsByOwner,
   getDigitalaxLookNFTsByOwner,
   getDigitalaxGarmentV2CollectionsByGarmentIDs,
-  getDigitalaxLookGoldenTicketsByOwner
+  getDigitalaxLookGoldenTicketsByOwner,
+  getGuildWhitelistedNFTStakersByStaker
 } from '@services/api/apiService'
 
 
@@ -70,18 +71,24 @@ const DigitalChangingRoom = props => {
     const fetchCountPerOnce = 1000
 
     const resultArray = []
-    while (isContinue) {
-      const result = await query(chainId, owner, fetchCountPerOnce, lastID)
-      if (!result[resultKey] || result[resultKey].length <= 0) isContinue = false
-      else {
-        resultArray.push(...result[resultKey])
-        if (result[resultKey].length < fetchCountPerOnce) {
-          isContinue = false
-        } else {
-          lastID = result[resultKey][fetchCountPerOnce - 1]['id']
+    try {
+      while (isContinue) {
+        const result = await query(chainId, owner, fetchCountPerOnce, lastID)
+        if (!result[resultKey] || result[resultKey].length <= 0) isContinue = false
+        else {
+          resultArray.push(...result[resultKey])
+          if (result[resultKey].length < fetchCountPerOnce) {
+            isContinue = false
+          } else {
+            lastID = result[resultKey][fetchCountPerOnce - 1]['id']
+          }
         }
       }
+    } catch (e) {
+      
     }
+
+    
     
     return resultArray
   }
@@ -126,9 +133,30 @@ const DigitalChangingRoom = props => {
           ? digitalaxNFTStakersPolygon[0].garments
           : []
 
+      const guildWhitelistedNFTStakersPolygon = await getAllResultsFromQuery(
+        getGuildWhitelistedNFTStakersByStaker,
+          'guildWhitelistedNFTStakers',
+          POLYGON_CHAINID,
+          owner
+        )
+
+      const guildWhitelistedStakedNFTsPolygon = 
+      guildWhitelistedNFTStakersPolygon && guildWhitelistedNFTStakersPolygon.length > 0 
+          ? guildWhitelistedNFTStakersPolygon[0].garments.filter(
+              item => item.tokenAddress == '0x7b2a989c4d1ad1b79a84ce2eb79da5d8d9c2b7a7'
+            ).map(garment => {
+              return {
+                ...garment,
+                id: garment.id.split('-')[1]
+              }
+            })
+          : []    
+
+
       const allDigitalaxNFTV2sPolygon = [
         ...digitalaxNFTV2sPolygon,
-        ...digitalaxStakedNFTsPolygon
+        ...digitalaxStakedNFTsPolygon,
+        ...guildWhitelistedStakedNFTsPolygon
       ].map(item => item.id)
 
       const digitalaxGarmentV2CollectionsPolygon = await getAllResultsFromQuery(
@@ -142,7 +170,7 @@ const DigitalChangingRoom = props => {
         digitalaxGarmentV2CollectionsPolygon.filter(
           item => item.garments && item.garments.length > 0
         )
-
+      
       const digitalaxNFTV2sPolygonDrip = [].concat.apply([], 
         availableCollections.filter(
           collection => DRIP_COLLECTION_IDS.indexOf(parseInt(collection.id)) >= 0
@@ -169,8 +197,18 @@ const DigitalChangingRoom = props => {
         })
       )
 
+      const weirdItems = [
+        ...digitalaxNFTV2sPolygon,
+        ...digitalaxStakedNFTsPolygon,
+        ...guildWhitelistedStakedNFTsPolygon
+      ].filter(
+        garment => digitalaxNFTV2sPolygonDrip.findIndex(item => item.id == garment.id) < 0
+        && digitalaxNFTV2sPolygonNonDrip.findIndex(item => item.id == garment.id) < 0
+      )
+
       console.log('digitalaxNFTV2sPolygonDrip: ', digitalaxNFTV2sPolygonDrip)
       console.log('digitalaxNFTV2sPolygonNonDrip: ', digitalaxNFTV2sPolygonNonDrip)
+      console.log('weirdItems: ', weirdItems)
 
 
       // Get Staked NFTs on Mainnet
@@ -294,18 +332,18 @@ const DigitalChangingRoom = props => {
           owner
       )
 
-      console.log('digitalaxLookGoldenTicketsPolygon:', digitalaxLookGoldenTicketsPolygon)
+      // console.log('digitalaxLookGoldenTicketsPolygon:', digitalaxLookGoldenTicketsPolygon)
 
-      console.log('digitalaxNFTsMainnet: ', digitalaxNFTsMainnet)
-      console.log('digitalaxNFTsPolygon: ', digitalaxNFTsPolygon)
-      console.log('digitalaxNFTStakersPolygon: ', digitalaxNFTStakersPolygon)
-      console.log('digitalaxStakedNFTsMainnet: ', digitalaxStakedNFTsMainnet)
-      console.log('digitalaxNFTV2sPolygon: ', digitalaxNFTV2sPolygon)
-      console.log('digitalaxSubscriptionsPolygon: ', digitalaxSubscriptionsPolygon)
-      console.log('digitalaxGenesisNFTsMainnet: ', digitalaxGenesisNFTsMainnet)
-      console.log('digitalaxStakedGenesisNFTsMainnet: ', digitalaxStakedGenesisNFTsMainnet)
-      console.log('podeNFTv2sPolygon: ', podeNFTv2sPolygon)
-      console.log('podeStakedNFTsPolygon: ', podeStakedNFTsPolygon)
+      // console.log('digitalaxNFTsMainnet: ', digitalaxNFTsMainnet)
+      // console.log('digitalaxNFTsPolygon: ', digitalaxNFTsPolygon)
+      // console.log('digitalaxNFTStakersPolygon: ', digitalaxNFTStakersPolygon)
+      // console.log('digitalaxStakedNFTsMainnet: ', digitalaxStakedNFTsMainnet)
+      // console.log('digitalaxNFTV2sPolygon: ', digitalaxNFTV2sPolygon)
+      // console.log('digitalaxSubscriptionsPolygon: ', digitalaxSubscriptionsPolygon)
+      // console.log('digitalaxGenesisNFTsMainnet: ', digitalaxGenesisNFTsMainnet)
+      // console.log('digitalaxStakedGenesisNFTsMainnet: ', digitalaxStakedGenesisNFTsMainnet)
+      // console.log('podeNFTv2sPolygon: ', podeNFTv2sPolygon)
+      // console.log('podeStakedNFTsPolygon: ', podeStakedNFTsPolygon)
 
       const fetchedNFTs = {}
 
@@ -313,6 +351,7 @@ const DigitalChangingRoom = props => {
         ...digitalaxNFTsMainnet.map(item => { return {...item, type: 'digitalaxNFTsMainnet'} }),
         ...digitalaxNFTsPolygon.map(item => { return {...item, type: 'digitalaxNFTsPolygon'} }),
         ...digitalaxNFTV2sPolygonNonDrip.map(item => { return {...item, type: 'digitalaxNFTV2sPolygon'} }),  
+        ...weirdItems.map(item => { return {...item, type: 'digitalaxNFTV2sPolygon'} }),  
         ...digitalaxV21155sPolygon.map(item => { return {...item, type: 'digitalaxV21155sPolygon'} }),
         ...digitalaxStakedNFTsMainnet.map(item => { return {...item, type: 'digitalaxStakedNFTsMainnet'} }),
       ]
@@ -366,13 +405,12 @@ const DigitalChangingRoom = props => {
   }
 
   const onClickViewFashion = async item => {
-    const { fashionId, type } = item
+    const { id: fashionId, type } = item
     // if the NFT is digitalx NFT V2 on Polygon network
     if (type == 'digitalaxNFTV2sPolygon' || type == 'digitalaxStakedNFTsPolygon') {
 
       // Get Collection id by garment id
       const { digitalaxGarmentV2Collections } = await getCollectionV2ByGarmentId(POLYGON_CHAINID, fashionId)
-      console.log('digitalaxGarmentV2Collections: ', digitalaxGarmentV2Collections)
 
       // if collection id is invalid, it's not able to show as product
       if (!digitalaxGarmentV2Collections || digitalaxGarmentV2Collections.length <= 0) {
@@ -392,9 +430,9 @@ const DigitalChangingRoom = props => {
       // Yay! It's good to go. it can be shown on product page.
       window.open(`/product/${digitalaxGarmentV2Collections[0].id}/${getRarityId(digitalaxGarmentV2Collections[0].rarity)}/0`, '_self')
     } else if (type == 'digitalaxDripNFTV2sPolygon') {
-      console.log('item: ', item.collectionId)
+      // console.log('item: ', item.collectionId)
       const collectionNameObj = DRIP_COLLECTION_NAMES[item.collectionId]
-      console.log('collectionNameObj: ', collectionNameObj)
+      // console.log('collectionNameObj: ', collectionNameObj)
       if (collectionNameObj) {
         const { group, name } = collectionNameObj
         window.open(`https://drip.digitalax.xyz/product/${group.toLowerCase()}-${item.collectionId}-${name.replaceAll(' ', '-').toLowerCase()}`, '_new')
