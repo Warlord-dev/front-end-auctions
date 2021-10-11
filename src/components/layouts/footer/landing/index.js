@@ -7,7 +7,7 @@ const LandingFooter = () => {
       <div className={styles.footerWrapper}>
         <div className={styles.heading}>GET IN TOUCH</div>
         <div className={styles.description}>
-          Contact us through contact@digitalax.xyz or reach out on any of our social media channels.
+          Connect with us and the broader Web3 Fashion community on our Discord or Twitter.
           We would love to hear from you.
         </div>
         <div className={styles.centerWrapper}>
@@ -18,8 +18,8 @@ const LandingFooter = () => {
             <a href="https://digitalax.gitbook.io/digitalax/" target="_blank">
               DOCUMENTATION
             </a>
-            <a href="https://drive.google.com/file/d/1oFiBGBr_CN0-mUuuEp_g6wDBr-mNA0Uh/view?usp=sharing">
-              READ ABOUT ESPA
+            <a href="https://designers.digitalax.xyz/">
+              GLOBAL DESIGNER NETWORK
             </a>
           </div>
           <img
@@ -119,7 +119,7 @@ const LandingFooter = () => {
               FAQs
             </a>
             <a href="https://www.digitalax.xyz/marketplace" target="_blank">
-              Digital Fashion Auctions
+              Indie Web3 Fashion NFTs
             </a>
             <a href="https://staking.digitalax.xyz" target="_blank">
               Staking
