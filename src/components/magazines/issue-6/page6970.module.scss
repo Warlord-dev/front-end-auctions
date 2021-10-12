@@ -1,0 +1,147 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .image1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1497px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 484px;
+    height: 257px;
+    left: 56px;
+    top: -37px;
+    
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200px;
+    line-height: 261px;
+    
+    color: #FFFFFF;        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 874px;
+    height: 256px;
+    left: 56px;
+    top: 186px;
+    
+    font-family: 'Iowan Old Style';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    color: #FFFFFF;
+    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 816px;
+    height: 86px;
+    left: 1041px;
+    top: 301px;
+    
+    font-family: 'Iowan Old Style';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+
+    color: #A893FF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 224px;
+    height: 906px;
+    left: 56px;
+    top: 522px;
+    
+    font-family: 'Iowan Old Style';
+    font-size: 17px;
+    line-height: 30px;
+    color: #A893FF;    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 234px;
+    height: 580px;
+    left: 1623px;
+    top: 391px;
+    
+    font-family: Iowan Old Style;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    /* or 176% */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 234px;
+    height: 580px;
+    left: 1623px;
+    top: 962px;
+    
+    font-family: Iowan Old Style;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    /* or 176% */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 614px;
+    height: 174px;
+    left: 316px;
+    top: 1302px;
+    
+    font-family: 'Iowan Old Style';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    /* or 133% */
+    
+    
+    color: #A893FF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 523px;
+    height: 120px;
+    left: 1030px;
+    top: 1311px;
+    
+    font-family: 'Iowan Old Style';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    /* or 176% */
+    
+    
+    color: #FFFFFF;
+    
+  }
+}

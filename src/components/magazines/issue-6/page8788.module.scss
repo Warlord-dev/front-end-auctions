@@ -1,0 +1,42 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: white;
+
+  .image1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0;
+    top: 0; 
+  }
+
+  .text1 {
+    position: absolute;
+    width: 409px;
+    height: 879px;
+    left: 482px;
+    top: 68px;
+    
+    font-family: Papyrus;
+    font-size: 25px;
+    line-height: 39px;
+    
+    color: #FFFFFF;        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 561px;
+    height: 879px;
+    left: 1134px;
+    top: 68px;
+    
+    font-family: Papyrus;
+    font-size: 25px;
+    line-height: 39px;
+    
+    color: #FFFFFF;
+  }
+}

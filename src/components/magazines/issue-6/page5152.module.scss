@@ -1,0 +1,184 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  color: #000;
+  background: white;
+
+  .image1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 351px;
+    height: 373px;
+    left: 785px;
+    top: 37px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 581px;
+    height: 502px;
+    left: 66px;
+    top: 13px;
+    
+    background: rgba(255, 255, 255, 0.68);    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 581px;
+    height: 519px;
+    left: 66px;
+    top: 529px;
+    
+    background: rgba(255, 255, 255, 0.68);    
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 581px;
+    height: 393px;
+    left: 66px;
+    top: 1062px;
+    
+    background: rgba(255, 255, 255, 0.68);
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 581px;
+    height: 1013px;
+    left: 670px;
+    top: 442px;
+    
+    background: rgba(255, 255, 255, 0.68);
+  }
+
+  .rect5 {
+    position: absolute;
+    width: 581px;
+    height: 466px;
+    left: 1289px;
+    top: 13px;
+    
+    background: rgba(255, 255, 255, 0.68);
+  }
+
+  .rect6 {
+    position: absolute;
+    width: 581px;
+    height: 958px;
+    left: 1289px;
+    top: 497px;
+    
+    background: rgba(255, 255, 255, 0.68);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 510px;
+    height: 432px;
+    left: 99px;
+    top: 38px;
+    
+    font-family: Elysian Fields;
+    font-size: 21px;
+    line-height: 24px;
+    
+    color: #000000;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 510px;
+    height: 480px;
+    left: 101px;
+    top: 568px;
+    
+    font-family: Elysian Fields;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 24px;
+    
+    color: #000000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 510px;
+    height: 312px;
+    left: 101px;
+    top: 1101px;
+    
+    font-family: Elysian Fields;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 24px;
+    
+    color: #000000;
+    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 510px;
+    height: 899px;
+    left: 705px;
+    top: 490px;
+    
+    font-family: Elysian Fields;
+    font-size: 25px;
+    line-height: 29px;
+    
+    color: #000000;
+    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 510px;
+    height: 390px;
+    left: 1324px;
+    top: 52px;
+    
+    font-family: Elysian Fields;
+    font-size: 23px;
+    line-height: 26px;
+    
+    color: #000000;
+    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 510px;
+    height: 902px;
+    left: 1324px;
+    top: 527px;
+    
+    font-family: Elysian Fields;
+    font-size: 19.5px;
+    line-height: 22px;
+    
+    color: #000000;    
+  }
+
+  // a {
+  //   div, img {
+  //     transition: 0.3s all;
+  //     &:hover {
+  //       transform: scale(1.1);
+  //       transition: 0.3s all;
+  //     }
+  //   }
+  // }
+}

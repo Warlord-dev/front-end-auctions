@@ -1,0 +1,248 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #fff;
+
+  .image1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0;
+    top: 0;
+  }
+
+  .playButton1 {
+    position: absolute;
+    width: 297px;
+    height: 297px;
+    left: 243px;
+    top: 202px;    
+  }
+
+  .imageBack {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imagePlay {
+    position: absolute;
+    width: 152px;
+    height: 173px;
+    left: 90px;
+    top: 65px;
+  }
+  
+  .imagePause {
+    position: absolute;
+    width: 129px;
+    height: 163px;
+    left: 85px;
+    top: 65px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 701px;
+    height: 143px;
+    left: 999px;
+    top: 6px;
+    
+    font-family: Planet Benson;
+    font-size: 130px;
+    line-height: 171px;
+    
+    color: #FAFF00;
+    -webkit-text-stroke: 1px #A20AFF;
+
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(1.1);
+    }
+    // border: 1px solid #A20AFF; 
+  }
+
+  .text2 {
+    position: absolute;
+    width: 261px;
+    height: 90px;
+    left: 1655px;
+    top: 17px;
+    
+    font-family: Planet Benson;
+    font-size: 20px;
+    line-height: 26px;
+    
+    color: #FAFF00;
+    -webkit-text-stroke: 1px #A20AFF
+  }
+
+  .text3 {
+    position: absolute;
+    width: 598px;
+    height: 225px;
+    left: 992px;
+    top: 164px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    
+    color: #FFFFFF;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text4 {
+    position: absolute;
+    width: 679px;
+    height: 43px;
+    left: 992px;
+    top: 346px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 551px;
+    height: 225px;
+    left: 1141px;
+    top: 389px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 591px;
+    height: 225px;
+    left: 1088px;
+    top: 502px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    
+    color: #FFFFFF;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text7 {
+    position: absolute;
+    width: 180px;
+    height: 225px;
+    left: 976px;
+    top: 642px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    
+    color: #FFFFFF;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text8 {
+    position: absolute;
+    width: 414px;
+    height: 225px;
+    left: 1172px;
+    top: 909px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    
+    color: #FFFFFF;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text9 {
+    position: absolute;
+    width: 253px;
+    height: 466px;
+    left: 1651px;
+    top: 648px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    
+    color: #FFFFFF;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text10 {
+    position: absolute;
+    width: 298px;
+    height: 114px;
+    left: 1611px;
+    top: 952px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    
+    color: #FFFFFF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 900px;
+    height: 148px;
+    left: 990px;
+    top: 1336px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    
+    color: #FFFFFF;
+    span {
+      font-weight: bold;
+    }
+  }
+}

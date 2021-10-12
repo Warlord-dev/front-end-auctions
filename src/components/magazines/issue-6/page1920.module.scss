@@ -1,0 +1,143 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .background1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+  
+  .video1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 59px;
+    left: 960px;
+    top: 50px;        
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 59px;
+    left: 960px;
+    top: 128px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 960px;
+    height: 59px;
+    left: 960px;
+    top: 206px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 960px;
+    height: 59px;
+    left: 960px;
+    top: 284px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 960px;
+    height: 59px;
+    left: 960px;
+    top: 1126px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 960px;
+    height: 59px;
+    left: 960px;
+    top: 1204px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 960px;
+    height: 59px;
+    left: 960px;
+    top: 1282px;
+    
+  }
+
+  .image8 {
+    position: absolute;
+    width: 960px;
+    height: 59px;
+    left: 960px;
+    top: 1360px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 960px;
+    height: 59px;
+    left: 960px;
+    top: 1438px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 604px;
+    height: 507px;
+    left: 1022px;
+    top: 346px;
+    font-family: POLYA Regular;
+    font-size: 100px;
+    line-height: 120px;
+    color: #FFFFFF;
+    -webkit-text-stroke: 2px #769CFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 811px;
+    height: 149px;
+    left: 1022px;
+    top: 957px;
+    
+    font-family: POLYA Regular;
+    font-size: 130px;
+    line-height: 156px;
+    color: #FFFFFF;
+    -webkit-text-stroke: 2px #769CFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 724px;
+    height: 332px;
+    left: 1815px;
+    top: 1010px;
+    
+    font-family: Artifika;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140px;
+    /* or 700% */
+    
+    
+    color: #FFFFFF;    
+  }
+}

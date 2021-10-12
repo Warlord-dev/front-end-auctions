@@ -1,0 +1,155 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    right: 0;
+    top: 0;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 262px;
+    height: 1640px;
+    left: -48px;
+    top: -2px;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 596px;
+    height: 1139px;
+    left: 697px;
+    top: 403px;    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 858px;
+    height: 871.25px;
+    left: 21px;
+    top: -369px;    
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 688px;
+    height: 1207px;
+    left: 1172px;
+    top: 192px;
+    
+    background: rgba(0, 0, 0, 0.46);    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 718px;
+    height: 185px;
+    left: 462px;
+    top: 1464px;
+
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 75px;
+    line-height: 100%;
+    color: #FFFFFF;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+  }
+
+  .text2 {
+    position: absolute;
+    width: 80px;
+    height: 849px;
+    left: 239px;
+    top: 519px;
+    
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FF0000;
+    
+    text-shadow: -3px 0 #FF0000, 0 -3px #FF0000, 3px 0 #FF0000, 0 3px #FF0000;
+    filter: blur(2px);
+    word-break: break-all;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 80px;
+    height: 849px;
+    left: 239px;
+    top: 1023px;
+    
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+    color: #0066FF;
+  
+    text-shadow: -3px 0 #0066FF, 0 -3px #0066FF, 3px 0 #0066FF, 0 3px #0066FF;
+    filter: blur(2px);
+    word-break: break-all;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 80px;
+    height: 849px;
+    left: 332px;
+    top: 693px;
+    
+    font-family: THIS FONT IS EMPTY1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+    text-shadow: -3px 0 #FFFFFF, 0 -3px #FFFFFF, 3px 0 #FFFFFF, 0 3px #FFFFFF;
+    filter: blur(2px);
+    word-break: break-all;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 676px;
+    height: 185px;
+    left: 982px;
+    top: 22px;
+    
+    font-family: Tomorrow;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100%;
+    background: linear-gradient(90deg, #BC66FF 0%, #FFDD66 93.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 666px;
+    height: 1218px;
+    left: 1183px;
+    top: 216px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    
+    color: #FF5F5F;    
+  }
+}

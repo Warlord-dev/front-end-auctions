@@ -1,0 +1,97 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .video1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 187px;
+    left: 0px;
+    top: 1313px;
+    
+    background: rgba(0, 0, 0, 0.4);    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 358px;
+    height: 88px;
+    left: 29px;
+    top: 1313px;
+    
+    font-family: Acme;
+    font-size: 40px;
+    line-height: 51px;
+    
+    color: #00FF38;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 901px;
+    height: 128px;
+    left: 29px;
+    top: 1372px;
+    
+    font-family: Lacquer;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 133px;
+    height: 57px;
+    left: 986px;
+    top: 13px;
+    
+    font-family: Abel;
+    font-size: 50px;
+    line-height: 64px;
+    
+    color: #FF0000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 204px;
+    height: 37px;
+    left: 989px;
+    top: 70px;
+    
+    font-family: Alice;
+    font-size: 15px;
+    line-height: 17px;
+    
+    color: #FF0000;
+  }
+
+  a {
+    div {
+      transition: 0.3s all;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.3s all;
+      }
+    }
+  }
+}

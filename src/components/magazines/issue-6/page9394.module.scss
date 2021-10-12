@@ -1,0 +1,240 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 17px;
+    top: 0px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FA00FF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 603px;
+    top: 29px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FA00FF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: -155px;
+    top: 252px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FA00FF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 428px;
+    top: 286px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FA00FF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: -115px;
+    top: 525px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    text-align: center;
+    color: #FA00FF;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    
+    background: #000000;    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 620px;
+    height: 375px;
+    left: 29px;
+    top: 1088px;
+    
+    font-family: CF Punk Fashion PERSONAL;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FA00FF;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 194px;
+    height: 147px;
+    left: 1484px;
+    top: 0px;    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 672px;
+    height: 202px;
+    left: 999px;
+    top: 37px;
+    
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    color: #FFFFFF;    
+  }
+
+  .text8 {
+    position: absolute;
+    width: 688px;
+    height: 235px;
+    left: 999px;
+    top: 194px;
+    
+    font-family: Times New Roman;
+    font-size: 30px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 880px;
+    height: 756px;
+    left: 999px;
+    top: 429px;
+    
+    font-family: Times New Roman;
+    font-size: 30px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 285px;
+    height: 285px;
+    left: 995px;
+    top: 1185px;        
+  }
+
+  .image5 {
+    position: absolute;
+    width: 285px;
+    height: 285px;
+    left: 1297px;
+    top: 1185px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 285px;
+    height: 285px;
+    left: 1599px;
+    top: 1185px;    
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+    left: 1701px;
+    top: 0px;
+    
+    background: #6534FF;
+    border: 4px solid #FCCDD3;
+    border-radius: 50%;    
+  }
+
+  .circleText1 {
+    position: absolute;
+    width: 167.74px;
+    height: 119px;
+    left: 1696px;
+    top: 68.51px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+    
+    color: #FCCDD3;
+    -webkit-text-stroke:  1px #FCCDD3;
+    transform-origin: 0 0;
+    transform: rotate(-20deg);    
+  }
+
+  .circleText2 {
+    position: absolute;
+    width: 152px;
+    height: 119px;
+    left: 1743px;
+    top: 130px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .poapImage {
+    position: absolute;
+    width: 154.85px;
+    height: 154.85px;
+    left: 1657px;
+    top: 172.96px;
+    
+    transform-origin: 0 0;
+    transform: rotate(-20deg);
+
+    transition: all 0.3s;
+    &:hover {
+      transition: all 0.3s;
+      transform: rotate(-20deg) scale(1.1);
+    }
+  }
+}

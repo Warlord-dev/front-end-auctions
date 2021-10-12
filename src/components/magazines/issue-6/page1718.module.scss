@@ -1,0 +1,197 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #FFFFFF;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .rect1 {
+    position: absolute;
+    width: 883px;
+    height: 1420px;
+    left: 29px;
+    top: 38px;
+    
+    background: #D595DB;    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 883px;
+    height: 1420px;
+    left: 1007px;
+    top: 38px;
+    
+    background: #D595DB;
+  }
+
+  h1 {
+    position: absolute;
+    width: 1051px;
+    height: 165px;
+    left: -44px;
+    top: 965px;
+    
+    font-family: PLAYPULL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 130px;
+    line-height: 150%;
+    /* or 195px */
+    
+    text-align: center;
+    
+    color: #ECBE1D;
+
+    .impact1 {
+      font-family: Rugsnatcher DEMO;
+      color: #DA283E;
+    }
+
+    .impact2 {
+      color: #DA283E;
+    }
+
+    .impact3 {
+      font-family: Rugrats;
+      color: #f2ea27;
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 536px;
+    height: 450px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 883px;
+    height: 707px;
+    left: 29px;
+    top: 300px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 190px;
+    height: 68px;
+    left: 721px;
+    top: 175px;
+    
+    font-family: Nella Sue Demo;
+    font-size: 28px;
+    line-height: 120.53%;
+    color: #FFFFFF;        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 657px;
+    height: 52px;
+    left: 29px;
+    top: 1115px;
+    
+    font-family: Mervale Script;
+    font-size: 40px;
+    line-height: 150%;
+    text-align: center;
+    color: #000000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 466px;
+    height: 120px;
+    left: 405px;
+    top: 1204px;
+    
+    font-family: Beth Ellen;
+    font-size: 17px;
+    line-height: 150%;
+    color: #FFFFFF;    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 686px;
+    height: 90px;
+    left: 1107px;
+    top: 87px;
+    
+    font-family: Nella Sue Demo;
+    font-size: 75px;
+    line-height: 120.53%;
+    text-align: center;
+    color: #FFFFFF;    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 812px;
+    height: 212px;
+    left: 1043px;
+    top: 211px;
+    
+    font-family: Jockey One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 348px;
+    height: 960px;
+    left: 1072px;
+    top: 443px;
+    
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 348px;
+    height: 967px;
+    left: 1477px;
+    top: 444px;
+    
+    font-family: Jacques Francois;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    
+    
+    color: #FFFFFF;
+    
+  }
+
+  a {
+    color: white;
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
