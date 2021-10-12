@@ -3,32 +3,52 @@ import styles from './page0910.module.scss'
 const Page0910 = () => {
   return (
     <div className={styles.wrapper}>         
-      <img src='/magazine/5/images/0910_image1.png' className={styles.image1}/>
-      <img src='/magazine/5/images/0910_image2.png' className={styles.image2}/>
-      <img src='/magazine/5/images/0910_image3.png' className={styles.image3}/>
-      <img src='/magazine/5/images/0910_image4.png' className={styles.image4}/>
+      <img src='./magazine/6/images/0910_image1.jpg' className={styles.image1} />
+      <img src='./magazine/6/images/0910_image2.jpg' className={styles.image2} />
+      <img src='./magazine/6/images/0910_image3.png' className={styles.image3} />
+      <img src='./magazine/6/images/0910_image3.png' className={styles.image4} />
+      <img src='./magazine/6/images/0910_image4.png' className={styles.image5} />
+
+      <div className={styles.rect1}></div>
+      <div className={styles.rect2}></div>
 
       <div className={styles.text1}>
-        We’re all only human. In the end, web3 social networks will still revolve around clout, status, capital, and public image. There will always be cliques. They will always be prone to the worst excesses of narcissism and hubris. But the on-chain signal-to-noise ratio promotes a more credible, superior level of engagement than its web2 counterparts could ever muster.        
+        No matter how long we’ve been in crypto, many still struggle to grasp what is entirely going on with the furious pace the industry moves. All we know is something is happening, and things are moving. Fast. 
+        <br /><br />
+        But that’s just part and parcel of being in a space where a day is literally 1,000 years.
+        <br /><br />
+        Diving into web3 is diving into a perpetual learning process. That’s what makes it so enticing and challenging–and ultimately rewarding.
+        <br /><br />
+        Everyone who already has skin in this game shares the same dream of becoming a web3 full-timer.
+        <br /><br />
+        But where does one even start to begin? How do we find our way to the tribes we belong to within the vast expanses of the metaverse considering its diffuse, decentralized, and sometimes nebulous structures–and contribute to efforts to build, strengthen, and engage for the DAO?
+        <br /><br />
+        The answer is in the community. Community is everything in web3. 
+        <br /><br />
+        Because, the fact of the matter is, you can’t go it alone.
+        <br /><br />
+        The concept of being part of a community has never been as crucial as it is in crypto and web3–especially given its constant noise and the industry’s furious, breakneck pace.
+        <br /><br />
+        Mankind is a social species, and we have evolved to be tribal by design. The need for belonging, empathy, compassion, communication, and organization is what has led to our species’ triumph throughout the annals of history. It’s in our DNA to want to be part of and be something greater than ourselves.         
       </div>
       <div className={styles.text2}>
-        Web3 social clubs built around NFTs are becoming decentralized communities much in the same vein as DAOs are – and derive their value in proportion to their token prices. As tokens rise in value, so do the communities that use them – and so does the startup-like cultic belief that these communities thrive on. It doesn’t matter what angle you wish to view web3 from – status, identity, culture, community, or scarcity – the value it is creating is real and tangible by every metric possible.
+        We need the right individuals to support us, encourage us, look out for us, and push us towards progress to find our way through the morass.
         <br /><br />
-        Web3 is reshaping the internet regardless of the vertical. Many of the projects in the NFT space will ultimately become the infrastructure for the metaversal economy.
+        We need to be part of a community where our voice matters—a place where we’re not only recognized but received with open arms. A community where our passion, presence, and participation are cherished and valued. A place where the value we create is closely entwined with the lives of real people–regardless of gender, race, creed, politics, sexuality, and everything else that divides us IRL. A community where we know 100% for sure we’re among kindred spirits.
         <br /><br />
-        But beyond the prestige, beyond the hype, beyond the communities, beyond the gaudy prices that OG PFP projects like Punks and BAYC go for on the secondary markets, we have to take pause and address the elephant in the room: the principles on which web3 was founded.
+        DAOs and decentralized web3 communities are the next logical evolution of how humans organize and coordinate resources. They serve as the neighborhoods our virtual selves “live” in. 
         <br /><br />
-        Where is all this building heading to? For all the billions of dollars that have changed hands, and in spite of the rising pushback against the Facebooks and the Googles of the world, are we headed towards a “decentralization theater” where the leading projects in the space live long enough to see themselves become the villains – much like their despised web2 counterparts once did? 
+        But joining a web3 community isn’t as simple as just buying an NFT, joining a Discord server, and then sitting with your fingers up your ass expecting the world to cater to you. It doesn’t work like that. 
         <br /><br />
-        Is web3 devolving into a race to the bottom, with cynical cash grabs and creeping centralization at every turn?
+        Yes, they are permissionless. Yes, they are decentralized. But the lifeblood of web3 community is action.
         <br /><br />
-        Are we returning to the decidedly web2, walled-garden approach where we build towards exclusion and let money and status override the principles with which web3 was founded on? 
+        It’s about engaging and incentivizing its members to build up the community proactively. And in doing so, improve the network, improve themselves, and lift the efforts of the entire organization in line with its aims.
         <br /><br />
-        Does it all boil down to just the fortunate bros going “lol hfsp” and “ngmi” in a world where the barrier to participating in NFTs and DeFi are increasing by the literal second – and in doing so, pricing out web3 outsiders and disincentivizing them from joining a FOMO- and exclusivity-driven metaverse favoring a select few? Why even bother?
+        It’s an entirely different paradigm from the legacy web community’s passive consumption.
         <br /><br />
-        Your guess is as good as mine.
+        We need the right individuals to support us, encourage us, look out for us, and push us towards progress to find our way through the morass.
         <br /><br />
-        But the tea leaves aren’t looking good.
+        We need to be part of a community where our voice matters—a place where we’re not only recognized but received with open arms. A community where our passion, presence, and participation are cherished and valued. A place where the value we create is closely entwined with the lives of real people–regardless of gender, race, creed, politics, sexuality, and everything else that divides us IRL. A community where we know 100% for sure we’re among kindred spirits.
       </div>
     </div>
   )
