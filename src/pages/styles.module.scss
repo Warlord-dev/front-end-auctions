@@ -26,12 +26,24 @@
       padding-bottom: 7.5rem;
     }
 
-    .heroLogo {
+    .leftWrapper {
       width: 100%;
 
       @include md-width {
         width: 50%;
         margin-right: 2rem;
+      }
+
+      .heroLogo {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        a {
+          color: white;
+          text-decoration: underline;
+        }
       }
     }
 

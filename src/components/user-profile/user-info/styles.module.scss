@@ -61,7 +61,7 @@
           flex-direction: column;
 
           .label {
-            color: #FFFFFF;
+            color: #ffffff;
             font-family: Inter;
             font-weight: bold;
             font-size: 33px;
@@ -101,7 +101,7 @@
           flex-direction: column;
 
           .label {
-            color: #FFFFFF;
+            color: #ffffff;
             font-family: Inter;
             font-weight: bold;
             font-size: 33px;
@@ -126,15 +126,14 @@
       }
 
       img {
-
       }
 
       .editProfileButton {
         margin-top: 40px;
-        background: #770B47;
+        background: #770b47;
         color: white;
         font-family: Inter;
-    
+
         font-weight: bold;
         font-size: 15px;
         line-height: 18px;
@@ -142,33 +141,45 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         padding: 10px 15px;
-        width: fit-content;      
+        width: fit-content;
+      }
+    }
+  }
+
+  .userNameWrapper {
+    position: relative;
+    margin-top: 40px;
+
+    a {
+      position: absolute;
+      top: -5px;
+      left: -60px;
+
+      img {
+        margin-right: 1rem;
       }
     }
 
-    
-  }
+    .userNameHere {
+      background: #770b47;
+      color: white;
+      font-family: Inter;
 
-  .userNameHere {
-    margin-top: 40px;
-    background: #770B47;
-    color: white;
-    font-family: Inter;
-
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 18px;
-    text-align: center;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 10px 15px;
-    width: fit-content;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      width: fit-content;
+    }
   }
 
   .bottomLine {
     margin-top: 50px;
     width: 80%;
-    border: 2px solid #FFFFFF;
-    background-color: #FFFFFF;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
   }
 }

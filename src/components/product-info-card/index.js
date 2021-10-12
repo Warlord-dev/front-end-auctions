@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
 import InfoCard from '@components/info-card';
 import ImageCard from '@components/image-card';
 import PriceCard from '@components/price-card';
@@ -10,7 +10,15 @@ import { getRarityId } from '@utils/helpers';
 import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import { useRouter } from 'next/router';
 
-const ProductInfoCard = ({ product, price, showCollectionName = false, showRarity = false, isAuction = false, v1 = false }) => {
+const ProductInfoCard = ({
+  product,
+  price,
+  showCollectionName = false,
+  showRarity = false,
+  isAuction = false,
+  v1 = false,
+  sold,
+}) => {
   const router = useRouter();
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
@@ -68,12 +76,13 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
                 <PriceCard mainText={getPrice()} />
               </div>
               <div className={styles.buttonWrapper}>
-                <Link href={`/product/${v1 ? `v1-${product?.id}` : product?.id}/${getRarityId(product?.rarity)}/${isAuction ? 1 : 0}`}>
+                <Link
+                  href={`/product/${v1 ? `v1-${product?.id}` : product?.id}/${getRarityId(
+                    product?.rarity,
+                  )}/${isAuction ? 1 : 0}`}
+                >
                   <a>
-                    <NewButton
-                      disable={Date.now() > product.endTime * 1000}
-                      text={Date.now() > product.endTime * 1000 ? 'Sold' : 'Place a Bid'}
-                    />
+                    <NewButton disable={sold} text={sold ? 'Sold' : 'Place a Bid'} />
                   </a>
                 </Link>
               </div>
@@ -81,9 +90,13 @@ const ProductInfoCard = ({ product, price, showCollectionName = false, showRarit
           ) : (
             <div className={styles.infoWrapper}>
               <PriceCard mainText={getPrice()} />
-              <Link href={`/product/${v1 ? `v1-${product?.id}` : product?.id}/${getRarityId(product?.rarity)}/${isAuction ? 1 : 0}`}>
+              <Link
+                href={`/product/${v1 ? `v1-${product?.id}` : product?.id}/${getRarityId(
+                  product?.rarity,
+                )}/${isAuction ? 1 : 0}`}
+              >
                 <a>
-                  <NewButton text={'Buy Now'} />
+                  <NewButton disable={sold} text={sold ? 'Sold out' : 'Buy Now'} />
                 </a>
               </Link>
             </div>

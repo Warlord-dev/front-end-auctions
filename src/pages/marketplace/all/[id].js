@@ -38,6 +38,7 @@ const Auctions = () => {
           digitalaxCollectionGroup.auctions.forEach((auction) => {
             aucs.push({
               ...auction,
+              sold: Date.now() > auction.endTime * 1000,
               auction: true,
               rarity: 'Exclusive',
             });
@@ -60,6 +61,7 @@ const Auctions = () => {
               developer: collection.developer,
               auction: false,
               startTime: foundOfferItem.startTime,
+              sold: collection.garments.length === parseInt(foundOfferItem.amountSold),
               garment: {
                 ...collection.garments[0],
               },
@@ -83,6 +85,7 @@ const Auctions = () => {
             garment: collection.garments[0],
             startTime: offer.startTime,
             primarySalePrice: offer ? offer.primarySalePrice : 0,
+            sold: collection.garments.length === parseInt(offer.amountSold),
             rarity: collection.rarity,
             auction: false,
             version: 1,
@@ -116,38 +119,48 @@ const Auctions = () => {
         setSortBy={(v) => setSortBy(v)}
       />
 
-      {filteredProducts.map((prod, index) => {
-        if (index % 2 === 1) return <> </>;
-        return (
-          <section className={styles.productsSection} key={prod.id}>
-            <Container>
-              <div className={styles.body}>
-                <ProductInfoCard
-                  product={filteredProducts[index]}
-                  v1={filteredProducts[index].version === 1}
-                  price={filteredProducts[index].topBid || filteredProducts[index].primarySalePrice}
-                  showRarity
-                  showCollectionName
-                  isAuction={filteredProducts[index].auction}
-                />
-                {index + 1 < filteredProducts.length ? (
+      {filteredProducts
+        .sort((a, b) => {
+          if (a.sold && !b.sold) return 1;
+          if (!a.sold && b.sold) return -1;
+          return 0;
+        })
+        .map((prod, index) => {
+          if (index % 2 === 1) return <> </>;
+          return (
+            <section className={styles.productsSection} key={prod.id}>
+              <Container>
+                <div className={styles.body}>
                   <ProductInfoCard
-                    product={filteredProducts[index + 1]}
+                    product={filteredProducts[index]}
                     v1={filteredProducts[index].version === 1}
                     price={
-                      filteredProducts[index + 1].topBid ||
-                      filteredProducts[index + 1].primarySalePrice
+                      filteredProducts[index].topBid || filteredProducts[index].primarySalePrice
                     }
                     showRarity
                     showCollectionName
+                    sold={filteredProducts[index].sold}
                     isAuction={filteredProducts[index].auction}
                   />
-                ) : null}
-              </div>
-            </Container>
-          </section>
-        );
-      })}
+                  {index + 1 < filteredProducts.length ? (
+                    <ProductInfoCard
+                      product={filteredProducts[index + 1]}
+                      v1={filteredProducts[index].version === 1}
+                      price={
+                        filteredProducts[index + 1].topBid ||
+                        filteredProducts[index + 1].primarySalePrice
+                      }
+                      showRarity
+                      sold={filteredProducts[index + 1].sold}
+                      showCollectionName
+                      isAuction={filteredProducts[index].auction}
+                    />
+                  ) : null}
+                </div>
+              </Container>
+            </section>
+          );
+        })}
     </div>
   );
 };

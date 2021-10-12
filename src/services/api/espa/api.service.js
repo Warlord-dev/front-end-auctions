@@ -128,7 +128,7 @@ class EspaApiService {
     try {
       const views = await get('/get-views-by-id', {
         viewsType,
-        viewsId
+        viewsId,
       });
       return views;
     } catch (e) {
@@ -151,7 +151,7 @@ class EspaApiService {
         wallet: account,
         randomString: signMsg,
         viewsType,
-        viewsId
+        viewsId,
       });
       return data;
     } catch (e) {
@@ -163,11 +163,20 @@ class EspaApiService {
     try {
       const data = await post('/add-view', {
         viewsType,
-        viewsId
+        viewsId,
       });
       return data;
     } catch (e) {
       return null;
+    }
+  }
+
+  async getSourceType(name) {
+    try {
+      const data = await get(`/get-fashion-by-item-name`, { name });
+      return data[0];
+    } catch (e) {
+      throw e;
     }
   }
 }

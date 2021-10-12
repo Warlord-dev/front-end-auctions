@@ -152,7 +152,7 @@ class UserActions extends BaseActions {
         if (data) {
           dispatch(this.setValue('user', data));
           localStorage.setItem(STORAGE_USER, JSON.stringify(data));
-          toast.success('Your TX was approved');
+          toast.success('Your profile updated successfully.');
         } else {
         }
       } catch (e) {}
