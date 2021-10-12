@@ -3,7 +3,7 @@ import styles from './page34.module.scss'
 const Page34 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='./magazine/5/images/0304_image1.png' className={styles.image4} />
+      <img src='./magazine/6/images/0304_image1.png' className={styles.image4} />
       <p className={styles.text1}>Building in the Bazaar.</p>
       <p className={styles.text2}>
         Web3 at its core is an open bazaar of chaotic live fire markets, bustling open source development, vast creativity and decentralised tinkering of the very source code that gives so much vitality and wealth to NFTs, DeFi, Decentralised Commerce, DAOs and more. 
@@ -19,10 +19,8 @@ const Page34 = () => {
         In this dynamically occupied metaversal bazaar, our identities, self interest and self sovereignty are now directly under our own agency, instead of the centralised systems that don’t work or actively work against us to the benefit of the very few. It's this rightful ownership that allows us to start truly forging the narratives and stories that we want to be a part of and contribute to, that we are indispensable and consequential to.
       </p>
       <p className={styles.text12}>- Emma-Jane MacKinnon-Lee</p>
-      <img src='./magazine/5/images/0304_background.jpg' className={styles.image1} />
+      <img src='./magazine/6/images/0304_image2.jpg' className={styles.image1} />
       
-
-      <div className={styles.image2}></div>
       <p className={styles.text3}>contributors</p>
       <p className={styles.text4}>
         Emma-Jane MacKinnon-Lee

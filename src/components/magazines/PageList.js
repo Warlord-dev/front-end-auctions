@@ -11,7 +11,7 @@ const issueList = {
   3: issue3PageList,
   4: issue4PageList,
   5: issue5PageList,
-  6: issue5PageList
+  6: issue6PageList
 }
 
 const getPageList = issueId => {

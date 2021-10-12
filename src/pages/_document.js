@@ -1641,6 +1641,14 @@ class MyDocument extends Document {
               font-weight: 400;
               src: url("./fonts/Karla Tamil Upright 400.ttf");
             }
+
+            @font-face {
+              font-family: 'Johnny Long';
+              font-weight: 400;
+              src: url("./fonts/JohnnyLong.ttf");
+            }
+
+            
           `,
             }}
           />
