@@ -51,7 +51,7 @@ const POLYGON_CHAINID = 0x89
 const categories = [
   DIGITAL_CHANGING_ROOM,
   DIGIFIZZY_BUNDLES,
-  DRIP_IDL,
+  // DRIP_IDL,
   GENESIS_MONA_NFT,
   LOOK_FASHION_LOOT,
   PODE,
@@ -351,6 +351,7 @@ const DigitalChangingRoom = props => {
         ...digitalaxNFTsMainnet.map(item => { return {...item, type: 'digitalaxNFTsMainnet'} }),
         ...digitalaxNFTsPolygon.map(item => { return {...item, type: 'digitalaxNFTsPolygon'} }),
         ...digitalaxNFTV2sPolygonNonDrip.map(item => { return {...item, type: 'digitalaxNFTV2sPolygon'} }),  
+        ...digitalaxNFTV2sPolygonDrip.map(item => { return {...item, type: 'digitalaxDripNFTV2sPolygon'} }),
         ...weirdItems.map(item => { return {...item, type: 'digitalaxNFTV2sPolygon'} }),  
         ...digitalaxV21155sPolygon.map(item => { return {...item, type: 'digitalaxV21155sPolygon'} }),
         ...digitalaxStakedNFTsMainnet.map(item => { return {...item, type: 'digitalaxStakedNFTsMainnet'} }),
@@ -361,9 +362,9 @@ const DigitalChangingRoom = props => {
         ...digitalaxSubscription1155sPolygon.map(item => { return {...item, type: 'digitalaxSubscription1155sPolygon'} }),
       ]
 
-      fetchedNFTs[DRIP_IDL] = [
-        ...digitalaxNFTV2sPolygonDrip.map(item => { return {...item, type: 'digitalaxDripNFTV2sPolygon'} }),
-      ]
+      // fetchedNFTs[DRIP_IDL] = [
+      //   ...digitalaxNFTV2sPolygonDrip.map(item => { return {...item, type: 'digitalaxDripNFTV2sPolygon'} }),
+      // ]
 
       fetchedNFTs[GENESIS_MONA_NFT] = [
         ...digitalaxGenesisNFTsMainnet.map(item => { return {...item, type: 'digitalaxGenesisNFTsMainnet'} }),
