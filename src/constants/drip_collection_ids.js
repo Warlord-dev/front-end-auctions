@@ -4,7 +4,7 @@ export const DRIP_COLLECTION_IDS = [
   // AAVE
   64, 176, 63, 22, 21, 61,
   // BANCOR
-  156, 68, 157, 66, 161, 65, 519, 69,
+  156, 68, 157, 66, 161, 65, 519, 69, 67, 70,
   // POLYGON
   123, 122, 121, 119, 120, 118,
   // PICKLE
@@ -74,6 +74,11 @@ export const DRIP_COLLECTION_NAMES = {
   //   'name': 'BNT REVOLUTION HOODIE'
   // },
   // Confirmed
+  // '67': {
+  //   'group': 'BANCOR', 
+  //   'name': 'POCKETS FULL CAP'
+  // },
+
   '68': {
     'group': 'BANCOR', 
     'name': 'BANCOR OR BANK MORE HOODIE'

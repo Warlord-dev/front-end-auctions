@@ -40,7 +40,10 @@ import {
   GDN_MEMBERSHIP_NFTS_BY_OWNER,
   DIGITALAX_LOOK_NFTS_BY_OWNER,
   DIGITALAX_GARMENT_V2_COLLECTIONS_BY_GARMENT_IDS,
-  DIGITALAX_LOOK_GOLDEN_TICKETS_BY_OWNER
+  DIGITALAX_LOOK_GOLDEN_TICKETS_BY_OWNER,
+  DIGITALAX_NFT_STAKERS_BY_GARMENTS,
+  GUILD_WHITELISTED_NFT_STAKERS_BY_GARMENTS,
+  GUILD_WHITELISTED_NFT_STAKERS_BY_STAKER
 } from './gql.apiService';
 
 const apiRequest = (chainId, gql, params) => request(getAPIUrlByChainId(chainId), gql, params);
@@ -158,5 +161,14 @@ export const getDigitalaxGarmentV2CollectionsByGarmentIDs = async (chainId, garm
 
 export const getDigitalaxLookGoldenTicketsByOwner = async (chainId, owner, first=1000, lastID='') =>
   apiRequest(chainId, DIGITALAX_LOOK_GOLDEN_TICKETS_BY_OWNER, { owner, first, lastID });
+
+export const getDigitalaxNFTStakersByGarments = async (chainId, garmentIDs, first=1000, lastID='') =>
+  apiRequest(chainId, DIGITALAX_NFT_STAKERS_BY_GARMENTS, { garmentIDs, first, lastID });
+
+export const getGuildWhitelistedNFTStakersByGarments = async (chainId, garmentIDs, first=1000, lastID='') =>
+  apiRequest(chainId, GUILD_WHITELISTED_NFT_STAKERS_BY_GARMENTS, { garmentIDs, first, lastID });
+
+  export const getGuildWhitelistedNFTStakersByStaker = async (chainId, staker, first=1000, lastID='') =>
+  apiRequest(chainId, GUILD_WHITELISTED_NFT_STAKERS_BY_STAKER, { staker, first, lastID });
 
 

@@ -16,9 +16,35 @@ import {
   getDigitalaxGarmentV2PurchaseHistories,
   getDigitalaxMarketplacePurchaseHistories,
   getDigitalaxMarketplaceV2PurchaseHistories,
-  getDigitalaxGarmentV2s
+  getDigitalaxGarmentV2s,
+  getDigitalaxNFTStakersByGarments,
+  getGuildWhitelistedNFTStakersByGarments
 } from '@services/api/apiService';
 import digitalaxApi from '@services/api/espa/api.service'
+import config from '@utils/config'
+const POLYGON_CHAINID = 0x89
+
+const getAllResultsFromQuery = async (query, resultKey, chainId, owner) => {
+  let lastID = ''
+  let isContinue = true
+  const fetchCountPerOnce = 1000
+
+  const resultArray = []
+  while (isContinue) {
+    const result = await query(chainId, owner, fetchCountPerOnce, lastID)
+    if (!result[resultKey] || result[resultKey].length <= 0) isContinue = false
+    else {
+      resultArray.push(...result[resultKey])
+      if (result[resultKey].length < fetchCountPerOnce) {
+        isContinue = false
+      } else {
+        lastID = result[resultKey][fetchCountPerOnce - 1]['id']
+      }
+    }
+  }
+  
+  return resultArray
+}
 
 const ModalCurrentWearers = ({ className, title, type }) => {
   const dispatch = useDispatch();
@@ -62,12 +88,57 @@ const ModalCurrentWearers = ({ className, title, type }) => {
 
           const { digitalaxGarmentV2S } = await getDigitalaxGarmentV2s(chainId, soldItems)
 
+          const digitalaxAllNFTStakersByGarments = await getAllResultsFromQuery(
+            getDigitalaxNFTStakersByGarments, 
+            'digitalaxNFTStakers', 
+            POLYGON_CHAINID,
+            soldItems
+          )
+
+          const guildAllNFTStakersByGarments = await getAllResultsFromQuery(
+            getGuildWhitelistedNFTStakersByGarments, 
+            'guildWhitelistedNFTStakers', 
+            POLYGON_CHAINID,
+            soldItems.map(item => config.DTX_ADDRESSES['matic'].toLowerCase() + '-' + item)
+          )
+
+          const digitalaxStakedGarments = {}
+          digitalaxAllNFTStakersByGarments
+            .filter(
+              item => item.garments && item.garments.length > 0
+            )
+            .map(staker => {
+              staker.garments.forEach(garment => {
+                digitalaxStakedGarments[garment.id] = staker.id
+              })
+            })
+          
+          guildAllNFTStakersByGarments
+            .filter(
+              item => item.garments && item.garments.length > 0
+            )
+            .map(staker => {
+              staker.garments.forEach(garment => {
+                console.log(`${garment.id} : ${staker.id}`)
+                digitalaxStakedGarments[garment.id.split('-')[1]] = staker.id
+              })
+            })
+          
+      
+          console.log('--digitalaxStakedGarments:', digitalaxStakedGarments);
+
           setWearers(digitalaxGarmentV2S.map(garment => {
-            const user = allUsers.find(user => user.wallet && user.wallet.toLowerCase() == garment.owner.toLowerCase())
+            
+            let actualOwner = garment.owner.toLowerCase()
+            if (digitalaxStakedGarments && digitalaxStakedGarments[garment.id]) {
+              actualOwner = digitalaxStakedGarments[garment.id].toLowerCase()
+            }
+
+            const user = allUsers.find(user => user.wallet && user.wallet.toLowerCase() == actualOwner)
             const history = historyItems.find(
               history =>
                 history.id == garment.id 
-                && history.buyer.toLowerCase() == garment.owner.toLowerCase()
+                && history.buyer.toLowerCase() == actualOwner
             )
 
             return {
@@ -100,8 +171,6 @@ const ModalCurrentWearers = ({ className, title, type }) => {
   }
 
   console.log('wearers: ', sortByTime(wearers))
-
-
 
   return (
     <>
@@ -137,8 +206,22 @@ const ModalCurrentWearers = ({ className, title, type }) => {
                           {' '}
                           {ownerInfo.ownerName ? ownerInfo.ownerName : `${ownerInfo.owner.slice(0, 8)}...`}
                         </td>
-                        <td> {ownerInfo.timestamp ? new Date(parseInt(ownerInfo.timestamp) * 1000).toDateString() : ''} </td>
-                        <td> {ownerInfo.transactionHash ? `${ownerInfo.transactionHash.slice(0, 8)}...` : ''} </td>
+                        {
+                          ownerInfo.ownerName
+                          ? (
+                            <td> {ownerInfo.timestamp ? new Date(parseInt(ownerInfo.timestamp) * 1000).toDateString() : ''} </td>
+                          )
+                          : (
+                            <td colspan='2'> No active account with DIGITALAX </td>
+                          )
+                        }
+                        {
+                          ownerInfo.ownerName
+                          && (
+                            <td> {ownerInfo.transactionHash ? `${ownerInfo.transactionHash.slice(0, 8)}...` : ''} </td>
+                          )
+                        }
+                         
                       </tr>
                     ))}
                     {!wearers.length && <tr> <td colSpan="4">No Wearers</td> </tr>}

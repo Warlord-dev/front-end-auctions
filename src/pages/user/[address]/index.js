@@ -20,7 +20,8 @@ const UserProfile = () => {
   const router = useRouter()
   const dispatch = useDispatch()
 
-  const { address } = router.query
+  const { address: walletAddress } = router.query
+  const address = walletAddress ? walletAddress.toLowerCase() : null
   const [isInitLoading, setIsInitLoading] = useState(true)
   const [currentUserInfo, setCurrentUserInfo] = useState(null)
   const [loveCount, setLoveCount] = useState(0)
@@ -84,7 +85,7 @@ const UserProfile = () => {
     loadUsers()
   }, [])
 
-  if (isInitLoading ) {
+  if (isInitLoading) {
     return (
       <div className={styles.wrapper}>
         <Loader 
@@ -98,7 +99,7 @@ const UserProfile = () => {
     return (
       <div className={styles.wrapper}>
         <div className={styles.notValidUser}>
-          It's not digitalax user.
+         No active account with DIGITALAX
         </div>
       </div>
     )

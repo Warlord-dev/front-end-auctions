@@ -1,4 +1,4 @@
-export const DIGITAL_CHANGING_ROOM = 'DIGITAL CHANGING ROOM'
+export const DIGITAL_CHANGING_ROOM = 'Indie Digital & Physical Fashion Changing Room'
 export const DIGIFIZZY_BUNDLES = 'DIGIFIZZY BUNDLES'
 export const DRIP_IDL = 'DRIP IRL'
 export const GENESIS_MONA_NFT = 'GENESIS MONA NFT'
