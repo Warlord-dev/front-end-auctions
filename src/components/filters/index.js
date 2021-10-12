@@ -28,6 +28,7 @@ const Filters = ({ filter, filterChange, sortByChange }) => {
           <div className={styles.sortLabel}>sort by</div>
           <div className={styles.sortInput}>
             <select className={styles.sort} onChange={(e) => sortByChange(e.target.value)}>
+              <option value="0"> </option>
               <option value="1"> most recent </option>
               <option value="2"> highest price </option>
               <option value="3"> lowest price </option>
