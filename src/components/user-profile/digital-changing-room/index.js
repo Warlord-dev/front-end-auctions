@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { generateLookImage } from '@utils/helpers'
+import config from '@utils/config'
 import styles from './styles.module.scss'
 
 import FashionItem from '@components/user-profile/fashion-item'
@@ -143,7 +144,7 @@ const DigitalChangingRoom = props => {
       const guildWhitelistedStakedNFTsPolygon = 
       guildWhitelistedNFTStakersPolygon && guildWhitelistedNFTStakersPolygon.length > 0 
           ? guildWhitelistedNFTStakersPolygon[0].garments.filter(
-              item => item.tokenAddress == '0x7b2a989c4d1ad1b79a84ce2eb79da5d8d9c2b7a7'
+              item => item.tokenAddress == config.DTX_ADDRESSES['matic'].toLowerCase(),
             ).map(garment => {
               return {
                 ...garment,

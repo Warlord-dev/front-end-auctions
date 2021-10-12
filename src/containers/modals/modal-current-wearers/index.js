@@ -21,7 +21,7 @@ import {
   getGuildWhitelistedNFTStakersByGarments
 } from '@services/api/apiService';
 import digitalaxApi from '@services/api/espa/api.service'
-
+import config from '@utils/config'
 const POLYGON_CHAINID = 0x89
 
 const getAllResultsFromQuery = async (query, resultKey, chainId, owner) => {
@@ -99,7 +99,7 @@ const ModalCurrentWearers = ({ className, title, type }) => {
             getGuildWhitelistedNFTStakersByGarments, 
             'guildWhitelistedNFTStakers', 
             POLYGON_CHAINID,
-            soldItems
+            soldItems.map(item => config.DTX_ADDRESSES['matic'].toLowerCase() + '-' + item)
           )
 
           const digitalaxStakedGarments = {}
@@ -119,7 +119,8 @@ const ModalCurrentWearers = ({ className, title, type }) => {
             )
             .map(staker => {
               staker.garments.forEach(garment => {
-                digitalaxStakedGarments[garment.id] = staker.id
+                console.log(`${garment.id} : ${staker.id}`)
+                digitalaxStakedGarments[garment.id.split('-')[1]] = staker.id
               })
             })
           

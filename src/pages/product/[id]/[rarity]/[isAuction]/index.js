@@ -29,6 +29,7 @@ import { getChainId, getExchangeRateETH, getMonaPerEth } from '@selectors/global
 import { getAccount } from '@selectors/user.selectors';
 import { getUser } from '@helpers/user.helpers';
 import { getRarity } from '@utils/helpers';
+import config from '@utils/config'
 import {
   openBespokeModal,
   openBidHistoryModal,
@@ -121,7 +122,7 @@ const Product = ({ pageTitle }) => {
       getGuildWhitelistedNFTStakersByGarments, 
       'guildWhitelistedNFTStakers', 
       POLYGON_CHAINID,
-      soldGarments
+      soldGarments.map(item => config.DTX_ADDRESSES['matic'].toLowerCase() + '-' + item)
     )
 
     const digitalaxStakedGarments = {}
@@ -141,7 +142,7 @@ const Product = ({ pageTitle }) => {
       )
       .map(staker => {
         staker.garments.forEach(garment => {
-          digitalaxStakedGarments[garment.id] = staker.id
+          digitalaxStakedGarments[garment.id.split('-')[1]] = staker.id
         })
       })
 
@@ -161,8 +162,6 @@ const Product = ({ pageTitle }) => {
       };
     });
   };
-
-  console.log('owners: ', owners)
 
   useEffect(() => {
     const fetchGarmentV2ByID = async () => {
@@ -362,8 +361,6 @@ const Product = ({ pageTitle }) => {
       }),
     );
   };
-
-  console.log('product: ', product)
 
   return (
     <>

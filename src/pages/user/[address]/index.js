@@ -20,7 +20,8 @@ const UserProfile = () => {
   const router = useRouter()
   const dispatch = useDispatch()
 
-  const { address } = router.query
+  const { address: walletAddress } = router.query
+  const address = walletAddress ? walletAddress.toLowerCase() : null
   const [isInitLoading, setIsInitLoading] = useState(true)
   const [currentUserInfo, setCurrentUserInfo] = useState(null)
   const [loveCount, setLoveCount] = useState(0)
