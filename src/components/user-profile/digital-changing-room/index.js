@@ -332,7 +332,7 @@ const DigitalChangingRoom = props => {
           owner
       )
 
-      // console.log('digitalaxLookGoldenTicketsPolygon:', digitalaxLookGoldenTicketsPolygon)
+      console.log('digitalaxLookGoldenTicketsPolygon:', digitalaxLookGoldenTicketsPolygon)
 
       // console.log('digitalaxNFTsMainnet: ', digitalaxNFTsMainnet)
       // console.log('digitalaxNFTsPolygon: ', digitalaxNFTsPolygon)
