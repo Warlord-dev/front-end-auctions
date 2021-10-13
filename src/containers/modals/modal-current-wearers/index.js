@@ -143,7 +143,7 @@ const ModalCurrentWearers = ({ className, title, type }) => {
 
             return {
               id: garment.id,
-              owner: garment.owner,
+              owner: actualOwner,
               ownerAvatar: user ? user.avatar : null,
               ownerName: user ? user.username: null,
               timestamp: history ? history.timestamp : 0,
@@ -168,6 +168,12 @@ const ModalCurrentWearers = ({ className, title, type }) => {
       if (parseInt(a.timestamp) > parseInt(b.timestamp)) return 1;
       return -1;
     })
+  }
+
+  const onClickWearer = ownerInfo => {
+    if (ownerInfo.ownerName !== null) {
+      window.open(`/user/${ownerInfo.owner}`, '_new')
+    }
   }
 
   console.log('wearers: ', sortByTime(wearers))
@@ -195,7 +201,7 @@ const ModalCurrentWearers = ({ className, title, type }) => {
                   </thead>
                   <tbody>
                     {sortByTime(wearers).map((ownerInfo, index) => (
-                      <tr key={index}>
+                      <tr key={index} onClick={() => onClickWearer(ownerInfo)}>
                         <td>
                           <img
                             className={styles.ownerAvatar}
