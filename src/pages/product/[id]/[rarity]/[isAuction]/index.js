@@ -20,7 +20,7 @@ import {
   getGarmentV2ByAuctionId,
   getGarmentV2ByCollectionId,
   getDigitalaxNFTStakersByGarments,
-  getGuildWhitelistedNFTStakersByGarments
+  getGuildWhitelistedNFTStakersByGarments,
 } from '@services/api/apiService';
 
 import digitalaxApi from '@services/api/espa/api.service';
@@ -29,7 +29,7 @@ import { getChainId, getExchangeRateETH, getMonaPerEth } from '@selectors/global
 import { getAccount } from '@selectors/user.selectors';
 import { getUser } from '@helpers/user.helpers';
 import { getRarity } from '@utils/helpers';
-import config from '@utils/config'
+import config from '@utils/config';
 import {
   openBespokeModal,
   openBidHistoryModal,
@@ -41,29 +41,29 @@ import globalActions from '@actions/global.actions';
 
 import secondDesignerData from 'src/data/second-designers.json';
 
-const POLYGON_CHAINID = 0x89
+const POLYGON_CHAINID = 0x89;
 
 const getAllResultsFromQuery = async (query, resultKey, chainId, owner) => {
-  let lastID = ''
-  let isContinue = true
-  const fetchCountPerOnce = 1000
+  let lastID = '';
+  let isContinue = true;
+  const fetchCountPerOnce = 1000;
 
-  const resultArray = []
+  const resultArray = [];
   while (isContinue) {
-    const result = await query(chainId, owner, fetchCountPerOnce, lastID)
-    if (!result[resultKey] || result[resultKey].length <= 0) isContinue = false
+    const result = await query(chainId, owner, fetchCountPerOnce, lastID);
+    if (!result[resultKey] || result[resultKey].length <= 0) isContinue = false;
     else {
-      resultArray.push(...result[resultKey])
+      resultArray.push(...result[resultKey]);
       if (result[resultKey].length < fetchCountPerOnce) {
-        isContinue = false
+        isContinue = false;
       } else {
-        lastID = result[resultKey][fetchCountPerOnce - 1]['id']
+        lastID = result[resultKey][fetchCountPerOnce - 1]['id'];
       }
     }
   }
-  
-  return resultArray
-}
+
+  return resultArray;
+};
 
 const Product = ({ pageTitle }) => {
   const router = useRouter();
@@ -103,55 +103,58 @@ const Product = ({ pageTitle }) => {
     },
   ];
 
+  const sourceTypeDescription = {
+    'AR FILTER': 'You can wear and view this fashion in AR',
+    'DIGITAL DRESSING': 'Get digitally dressed in this fashion',
+    'IN-GAME': 'You can take this fashion in-game',
+    PHYSICAL: 'This fashion includes the physical counterpart',
+  };
+
   const account = useSelector(getAccount);
   const user = getUser();
   const secretKey = user ? user.randomString : null;
 
   const getOwners = async (garments, itemSold, users) => {
     if (!garments) return [];
-    console.log('garments: ', garments)
+    console.log('garments: ', garments);
     const soldGarments = garments.slice(0, itemSold).map((garment) => garment.id);
     // get digitalax NFTs on Mainnet
     const digitalaxAllNFTStakersByGarments = await getAllResultsFromQuery(
-      getDigitalaxNFTStakersByGarments, 
-      'digitalaxNFTStakers', 
+      getDigitalaxNFTStakersByGarments,
+      'digitalaxNFTStakers',
       POLYGON_CHAINID,
-      soldGarments
-    )
-    
-    const guildAllNFTStakersByGarments = await getAllResultsFromQuery(
-      getGuildWhitelistedNFTStakersByGarments, 
-      'guildWhitelistedNFTStakers', 
-      POLYGON_CHAINID,
-      soldGarments.map(item => config.DTX_ADDRESSES['matic'].toLowerCase() + '-' + item)
-    )
+      soldGarments,
+    );
 
-    const digitalaxStakedGarments = {}
+    const guildAllNFTStakersByGarments = await getAllResultsFromQuery(
+      getGuildWhitelistedNFTStakersByGarments,
+      'guildWhitelistedNFTStakers',
+      POLYGON_CHAINID,
+      soldGarments.map((item) => config.DTX_ADDRESSES['matic'].toLowerCase() + '-' + item),
+    );
+
+    const digitalaxStakedGarments = {};
     digitalaxAllNFTStakersByGarments
-      .filter(
-        item => item.garments && item.garments.length > 0
-      )
-      .map(staker => {
-        staker.garments.forEach(garment => {
-          digitalaxStakedGarments[garment.id] = staker.id
-        })
-      })
-    
+      .filter((item) => item.garments && item.garments.length > 0)
+      .map((staker) => {
+        staker.garments.forEach((garment) => {
+          digitalaxStakedGarments[garment.id] = staker.id;
+        });
+      });
+
     guildAllNFTStakersByGarments
-      .filter(
-        item => item.garments && item.garments.length > 0
-      )
-      .map(staker => {
-        staker.garments.forEach(garment => {
-          digitalaxStakedGarments[garment.id.split('-')[1]] = staker.id
-        })
-      })
+      .filter((item) => item.garments && item.garments.length > 0)
+      .map((staker) => {
+        staker.garments.forEach((garment) => {
+          digitalaxStakedGarments[garment.id.split('-')[1]] = staker.id;
+        });
+      });
 
     const owners = garments.slice(0, itemSold).map((garment) => {
-      const owner = garment.owner.toLowerCase()
-      return (digitalaxStakedGarments && digitalaxStakedGarments[garment.id])
+      const owner = garment.owner.toLowerCase();
+      return digitalaxStakedGarments && digitalaxStakedGarments[garment.id]
         ? digitalaxStakedGarments[garment.id]
-        : owner
+        : owner;
     });
     const arranged = owners.filter((item, pos) => {
       return owners.indexOf(item) == pos;
@@ -178,12 +181,14 @@ const Product = ({ pageTitle }) => {
             digitalaxGarmentCollection.id,
           );
           console.log('digitalaxMarketplaceOffers: ', digitalaxMarketplaceOffers);
-          setOwners(await getOwners(
-            digitalaxMarketplaceOffer[0].garmentCollection?.garments,
-            digitalaxMarketplaceOffers[0].amountSold,
-            users,
-          ))
-          
+          setOwners(
+            await getOwners(
+              digitalaxMarketplaceOffer[0].garmentCollection?.garments,
+              digitalaxMarketplaceOffers[0].amountSold,
+              users,
+            ),
+          );
+
           // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
           setTokenIds(
             digitalaxMarketplaceOffers[0].garmentCollection?.garments?.map((garment) => garment.id),
@@ -213,8 +218,8 @@ const Product = ({ pageTitle }) => {
             );
 
             console.log('digitalaxMarketplaceV2Offers: ', digitalaxMarketplaceV2Offers);
-            setOwners(await 
-              getOwners(
+            setOwners(
+              await getOwners(
                 digitalaxMarketplaceV2Offers[0].garmentCollection?.garments,
                 digitalaxMarketplaceV2Offers[0].amountSold,
                 users,
@@ -468,6 +473,7 @@ const Product = ({ pageTitle }) => {
                               <span className={styles.checkmark} />
                             </label>
                             <div className={styles.label}> {st} </div>
+                            <span className={styles.tooltip}> {sourceTypeDescription[st]} </span>
                           </div>
                         ))}
                       </div>
@@ -505,6 +511,7 @@ const Product = ({ pageTitle }) => {
                             <span className={styles.checkmark} />
                           </label>
                           <div className={styles.label}> {st} </div>
+                          <span className={styles.tooltip}> {sourceTypeDescription[st]} </span>
                         </div>
                       ))}
                     </div>

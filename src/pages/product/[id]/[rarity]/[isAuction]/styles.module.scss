@@ -279,9 +279,16 @@
             flex-direction: column;
 
             .item {
+              position: relative;
               display: flex;
               align-items: cneter;
               margin-bottom: 1rem;
+
+              &:hover {
+                .tooltip {
+                  display: block;
+                }
+              }
 
               .label {
                 white-space: nowrap;
@@ -291,6 +298,28 @@
                 height: 40px;
                 display: flex;
                 align-items: center;
+              }
+
+              .tooltip {
+                display: none;
+                position: absolute;
+                padding: 0.5rem;
+                top: 100%;
+                left: 55px;
+                z-index: 1;
+                background: #591d4f;
+                width: 175px;
+                color: white;
+                font-family: Gilroy;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 14px;
+                line-height: 20px;
+                /* or 143% */
+
+                align-items: center;
+
+                color: #ffffff;
               }
             }
 
