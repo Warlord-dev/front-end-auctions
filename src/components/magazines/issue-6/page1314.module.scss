@@ -2,8 +2,109 @@
 
 .wrapper {
   @include magazineWrapper();
-  background-color: white;
+  background-color: #393939;
   color: black;
   display: flex;
   position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 165px;
+    height: 157px;
+    left: 0px;
+    top: 1px;    
+  }
+
+  .video2 {
+    position: absolute;
+    width: 165px;
+    height: 157px;
+    left: 0px;
+    top: 158px;
+    
+  }
+
+  .video3 {
+    position: absolute;
+    width: 165px;
+    height: 157px;
+    left: 0px;
+    top: 315px;
+    
+  }
+
+  .video4 {
+    position: absolute;
+    width: 165px;
+    height: 157px;
+    left: 0px;
+    top: 472px;
+  }
+
+  .video5 {
+    position: absolute;
+    width: 165px;
+    height: 157px;
+    left: 0px;
+    top: 629px;
+  }
+
+  .video6 {
+    position: absolute;
+    width: 165px;
+    height: 157px;
+    left: 0px;
+    top: 786px;
+        
+  }
+
+  .video7 {
+    position: absolute;
+    width: 165px;
+    height: 157px;
+    left: 0px;
+    top: 943px;
+  }
+
+  .video8 {
+    position: absolute;
+    width: 165px;
+    height: 157px;
+    left: 0px;
+    top: 1100px;
+  }
+
+  .video9 {
+    position: absolute;
+    width: 165px;
+    height: 157px;
+    left: 0px;
+    top: 1257px;
+    
+  }
+
+  .video10 {
+    position: absolute;
+    width: 165px;
+    height: 157px;
+    left: 0px;
+    top: 1414px;   
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 50px;
+    height: 1493px;
+    left: 163px;
+    top: 0px;
+    background: #FFFFFF;    
+  }
 }

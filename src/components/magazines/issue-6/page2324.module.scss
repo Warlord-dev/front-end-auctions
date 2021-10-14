@@ -2,8 +2,16 @@
 
 .wrapper {
   @include magazineWrapper();
-  background-color: black;
+  background-color: #00D6E3;
   color: white;
   display: flex;
   position: relative;
+
+  .image1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1497px;
+  }
 }

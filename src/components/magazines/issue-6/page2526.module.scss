@@ -1,14 +1,18 @@
 @import './styles.module.scss';
 
-@keyframes scrolling {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-602px); }
-}
-
 .wrapper {
   @include magazineWrapper();
-  background: linear-gradient(180deg, #3F40BF 0%, rgba(54, 55, 157, 0.9) 100%);
+  background: #39DBFF;
   color: black;
   display: flex;
   position: relative;
+
+
+  .image1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1497px;
+  }
 }

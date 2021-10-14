@@ -6,4 +6,249 @@
   display: flex;
   position: relative;
   background-color: #FFFFFF;
+
+  .line1 {
+    position: absolute;
+    width: 780px;
+    height: 9px;
+    left: 778px;
+    top: 886px;
+    background-color: black;
+    transform-origin: 0 0;
+    transform: rotate(180deg);    
+  }
+
+  .line2 {
+    position: absolute;
+    width: 1511px;
+    height: 9px;
+    left: 786px;
+    top: 0px;
+    background-color: black;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+  }
+
+  .line3 {
+    position: absolute;
+    width: 1142px;
+    height: 9px;
+    left: 1920px;
+    top: 989px;
+    background-color: black;
+    transform-origin: 0 0;
+    transform: rotate(180deg);
+  }
+
+  .line4 {
+    position: absolute;
+    width: 990px;
+    height: 9px;
+    left: 1344px;
+    top: 0px;
+    background-color: black;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 779px;
+    height: 268px;
+    left: -1px;
+    top: 0px;
+    
+    background: rgba(66, 255, 107, 0.36);    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 526px;
+    height: 526px;
+    left: 12px;
+    top: 280px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 539px;
+    height: 751px;
+    left: 1360px;
+    top: 22px;    
+  }
+
+  .video1 {
+    position: absolute;
+    width: 519px;
+    height: 652px;
+    left: 800px;
+    top: 321px;
+    object-fit: cover;
+  }
+
+  .video2 {
+    position: absolute;
+    width: 548px;
+    height: 554px;
+    left: 212px;
+    top: 930px;
+    object-fit: cover;
+  }
+
+  .video3 {
+    position: absolute;
+    width: 484px;
+    height: 478px;
+    left: 796px;
+    top: 1006px;
+    object-fit: cover;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 1066.16px;
+    height: 956.13px;
+    left: -197px;
+    top: 109.14px;
+    
+    transform-origin: 0 0;
+    transform: rotate(-10deg);    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 1141px;
+    height: 1152px;
+    left: 780px;
+    top: -333px;
+    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 758px;
+    height: 724px;
+    left: 0px;
+    bottom: 0px;    
+  }
+
+  .image6 {
+    position: absolute;
+    width: 47px;
+    height: 440px;
+    left: 570px;
+    top: 306px;
+        
+  }
+
+  .image7 {
+    position: absolute;
+    width: 187px;
+    height: 89px;
+    left: 1132px;
+    top: 22px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 187px;
+    height: 89px;
+    left: 1132px;
+    top: 111px;
+  }
+
+  .image9 {
+    position: absolute;
+    width: 187px;
+    height: 89px;
+    left: 1132px;
+    top: 200px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 1190px;
+    height: 151px;
+    left: -206px;
+    top: 17px;
+    
+    font-family: Artypa;
+    font-size: 80px;
+    line-height: 104px;
+    text-align: center;
+    
+    color: #001E25;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 398px;
+    height: 141px;
+    left: 75px;
+    top: 98px;
+    
+    font-family: The ART;
+    font-size: 100px;
+    line-height: 115px;
+    
+    color: #C8CC00;
+    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 333px;
+    height: 178px;
+    left: 427px;
+    top: 90px;
+    
+    font-family: Arthure;
+    font-size: 200px;
+    line-height: 266px;
+    
+    color: #C8CC00;
+    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 442px;
+    height: 139px;
+    left: 628px;
+    top: 748px;
+    
+    font-family: Carter One;
+    font-size: 90px;
+    line-height: 139px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #E7A600;
+    
+    // border: 1px solid #594600;
+    -webkit-text-stroke: 1px #594600;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 236px;
+    height: 23px;
+    left: 14px;
+    top: 825px;
+    
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 120.53%;
+    /* or 42px */
+    
+    
+    color: #000000;
+    
+  }
 }

@@ -2,8 +2,16 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: linear-gradient(180deg, #3F40BF 0%, rgba(54, 55, 157, 0.9) 100%);
+  background: linear-gradient(90.51deg, #2BD1B3 0.44%, #1F6458 100.61%);
   display: flex;
   position: relative;
   color: #FFFFFF;
+
+  .image1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1497px;
+  }
 }
