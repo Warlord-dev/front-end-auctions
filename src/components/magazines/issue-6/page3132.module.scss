@@ -241,14 +241,351 @@
     top: 825px;
     
     font-family: Imprima;
+    font-size: 35px;
+    line-height: 120.53%;   
+    color: #000000;
+    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 338px;
+    height: 272px;
+    left: 800px;
+    top: -50px;
+    
+    font-family: Aubrey;
+    font-size: 70px;
+    line-height: 120.53%;
+    /* or 84px */
+    
+    display: flex;
+    align-items: center;    
+
+    background: linear-gradient(90deg, #FFDB00 2.38%, #000000 96.87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 418px;
+    height: 63px;
+    left: 800px;
+    top: 180px;
+    
+    font-family: Aubrey;
     font-style: normal;
     font-weight: normal;
-    font-size: 35px;
+    font-size: 100px;
     line-height: 120.53%;
-    /* or 42px */
+    /* or 121px */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #000000;
+    
+  }
+
+  .text8 {
+    position: absolute;
+    width: 155px;
+    height: 20px;
+    left: 800px;
+    top: 270px;
+    
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    
+    color: #000000;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 500px;
+    height: 75px;
+    left: 1360px;
+    top: 773px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 75px;
+    /* identical to box height */
+    
+    
+    color: #8000FF;
+    
+  }
+
+  .text10 {
+    position: absolute;
+    width: 500px;
+    height: 75px;
+    left: 1360px;
+    top: 827px;
+    
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 75px;
+    /* identical to box height */
+    
+    
+    color: #8000FF;
+    
+  }
+
+  .text11 {
+    position: absolute;
+    width: 403px;
+    height: 97px;
+    left: 1360px;
+    top: 878px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 100px;
+    line-height: 97px;
+    color: #B1369B;
+
+    span {
+      color: #CFD68F;
+    }
+  }
+
+  .text12 {
+    position: absolute;
+    width: 164px;
+    height: 20px;
+    left: 1853px;
+    top: 952px;
+    
+    font-family: Imprima;
+    font-size: 20px;
+    line-height: 120.53%;
+    text-align: right;
+    
+    color: #000000;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+    
+  }
+
+  .text13 {
+    position: absolute;
+    width: 537px;
+    height: 50px;
+    left: 9px;
+    top: 1479px;
+    
+    font-family: Planet Benson;
+    font-size: 48px;
+    line-height: 50px;
+    text-align: center;
+    
+    color: #9A0000;
+    
+    -webkit-text-stroke: 1px #C78300;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);    
+  }
+
+  .text14 {
+
+    position: absolute;
+    width: 155px;
+    height: 20px;
+    left: 49px;
+    top: 930px;
+    
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    text-align: right;
+    
+    color: #000000;
+    
+  }
+
+  .text15 {
+    position: absolute;
+    width: 143px;
+    height: 23px;
+    left: 64px;
+    top: 953px;
+    
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 120.53%;
+    /* identical to box height, or 23px */
+    
+    text-align: right;
+    
+    color: #FF0000;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 465px;
+    height: 75px;
+    left: 1304px;
+    top: 1029px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 75px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+        
+  }
+
+  .text17 {
+
+    position: absolute;
+    width: 465px;
+    height: 75px;
+    left: 1304px;
+    top: 1104px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 75px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 465px;
+    height: 75px;
+    left: 1304px;
+    top: 1179px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 75px;
+    /* identical to box height */
     
     
     color: #000000;
     
+  }
+
+  .text19 {
+    position: absolute;
+    width: 465px;
+    height: 75px;
+    left: 1304px;
+    top: 1254px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 75px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+    
+  }
+
+  .text20 {
+    position: absolute;
+    width: 465px;
+    height: 75px;
+    left: 1304px;
+    top: 1329px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 75px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+    
+  }
+
+  .text21 {
+    position: absolute;
+    width: 465px;
+    height: 75px;
+    left: 1304px;
+    top: 1404px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 75px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+    
+  }
+
+  .text22 {
+    position: absolute;
+    width: 245px;
+    height: 20px;
+    left: 1651px;
+    top: 1006px;
+    
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    text-align: right;
+    
+    color: #000000;
+  }
+
+  .text23 {
+    position: absolute;
+    width: 428px;
+    height: 128px;
+    left: 1774px;
+    top: 1469px;
+    
+    font-family: Nova Cut;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 130px;
+    line-height: 157px;
+    
+    color: #9A0000;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
   }
 }

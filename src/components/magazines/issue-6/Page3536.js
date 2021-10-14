@@ -1,162 +1,173 @@
-import React, { useRef, useState } from 'react'
-import Link from 'next/link'
+import React from 'react'
 import styles from './page3536.module.scss'
 
 const Page3536 = () => {
-  const audioRef = useRef()
-  const [isPlaying, setIsPlaying] = useState(false)
-
-  const startAudio = () => {
-    audioRef.current.play()
-    setIsPlaying(true)
-  }
-
-  const pauseAudio = () => {
-    audioRef.current.pause()
-    setIsPlaying(false)
-  }
-
   return (
     <div className={styles.wrapper}>
-      <img src='./magazine/5/images/3536_image2.png' className={styles.image2} />
-      <img src='./magazine/5/images/3536_image1.png' className={styles.image1} />
+      <div className={styles.line1}></div>
+      <div className={styles.line2}></div>
+      <div className={styles.line3}></div>
+      <div className={styles.line4}></div>
+      <div className={styles.line5}></div>
+      <div className={styles.line6}></div>
+      <div className={styles.line7}></div>
+      <div className={styles.line8}></div>
+
       <div className={styles.rect1}></div>
-      <img src='./magazine/5/images/3536_image3.png' className={styles.circle1} />
-      <img src='./magazine/5/images/3536_image3.png' className={styles.circle2} />
-      <img src='./magazine/5/images/3536_image3.png' className={styles.circle3} />
-      <img src='./magazine/5/images/3536_image3.png' className={styles.circle4} />
-      <img src='./magazine/5/images/3536_image3.png' className={styles.circle5} />
-      <img src='./magazine/5/images/3536_image3.png' className={styles.circle6} />
-      <img src='./magazine/5/images/3536_image3.png' className={styles.circle7} />
-      <img src='./magazine/5/images/3536_image3.png' className={styles.circle8} />
-      <img src='./magazine/5/images/3536_image3.png' className={styles.circle9} />
-      <img src='./magazine/5/images/3536_image3.png' className={styles.circle10} />
-
-      <img src='./magazine/5/images/3536_image6.png' className={styles.image6} />
-      <img src='./magazine/5/images/3536_image4.png' className={styles.image4} />
-
-      <div className={styles.circle11}></div>
-
-      <div className={styles.text1}>
-        Eva Beylin
-      </div>
-      <div className={styles.text2}>
-        Eva Beylin
-      </div>
-      <div className={styles.text3}>
-        Eva Beylin
-      </div>
-      <div className={styles.text4}>
-        Eva Beylin
-      </div>
-      <div className={styles.text5}>
-        Eva Beylin
-      </div>
-      <div className={styles.text6}>
-        Eva Beylin
-      </div>
-      <div className={styles.text7}>
-        Director of The Graph Foundation
-      </div>
-
       <div className={styles.rect2}></div>
       <div className={styles.rect3}></div>
       <div className={styles.rect4}></div>
       <div className={styles.rect5}></div>
       <div className={styles.rect6}></div>
-      <div className={styles.rect7}></div>
 
-      <Link href='https://twitter.com/austingriffith'>
-        <a target='_blank'>
-          <div className={styles.text8}>
-            Austin Griffiths
-          </div>
-        </a>
-      </Link>
-      <div className={styles.text9}>
-        Burner Wallets & Web3 Identity
+      <div className={styles.line9}></div>
+      <div className={styles.line10}></div>
+      <div className={styles.line11}></div>
+      <div className={styles.line12}></div>
+
+      <div className={styles.text1}>
+        Crypto Art 
       </div>
-      <Link href='https://burnerwallet.co/'>
-        <a target='_blank'>
-          <div className={styles.text10}>
-            Find Out More About Burner Wallets Here
-          </div>
-        </a>
-      </Link>
+      <div className={styles.text2}>
+        Faster, Dugtrio! Trio! Trio!
+      </div>
+      <div className={styles.text3}>
+        Minted on HEN
+      </div>
+      <div className={styles.text4}>
+          mesozord
+      </div>
+      <div className={styles.text5}>
+        ON-CHAIN. ART. NFTS. <span>CRYPTO</span>. 
+      </div>
+      <div className={styles.text6}>
+        ON-CHAIN. ART. NFTS. <span>CRYPTO</span>. 
+      </div>
+      <div className={styles.text7}>
+        ON-CHAIN. ART. NFTS. <span>CRYPTO</span>.
+      </div>
+      <div className={styles.text8}>
+        Sept 16th 2021        
+      </div>
+      <div className={styles.text9}>
+        Anonymous Digital Portrait v002
+      </div>
+      <div className={styles.text10}>
+        zebbler
+      </div>
       <div className={styles.text11}>
-        <span>
-          From an implementation layer, where is web3 authentication at right now? How far along is it for being easily implemented in various DAPPs?
-        </span>
-        <br /><br />
-        Signed messages are still a really powerful mechanic and Dapps are using them for a lot of authentication. 
-        <br /><br />
-        We have a few “sign-in-with-web3” starter kits in 🏗 scaffold-eth and I would recommend checking them out: 
-        <ul>
-          <li>
-            https://github.com/austintgriffith/scaffold-eth/tree/sign-in-with-web3
-          </li>
-          <li>
-            https://github.com/austintgriffith/scaffold-eth/tree/serverless-auth
-          </li>
-        </ul>
-        <br />
-        Also, Wallet Connect is becoming a new standard of how folks interface with Dapps. We are building a gnosis safe starter kit that you can log in to as a burner, metamask, or wallet connect. Then, the dapp itself can log into other dapps like uniswap and propose a trade.
+        zebbler
       </div>
       <div className={styles.text12}>
-        <span>
-          You made it easy for people to add burner wallets to their web3 front ends. What are some best use cases for people implementing burner wallets? 
-        </span>
-        <br /><br />
-        I think <Link href='http://Nifty.ink'><a target='_blank' className={styles.link}>http://Nifty.ink</a></Link> is one of the best examples of smooth artist onboarding; an artist using a tablet and traditional web browser can make art, sign it with a private key, and <Link href='http://Nifty.ink'><a target='_blank' className={styles.link}>http://Nifty.ink</a></Link> pays the gas using meta transactions. The artist can make are and sell it without every downloading a wallet or saving a seed phrase. (But as soon as they have value in a burner wallet they need to upgrade to something safer!!)
-        <br /><br />
-        DARK FOREST on xDAI is another really great example. 
+        zebbler
       </div>
       <div className={styles.text13}>
-        <span>
-          Can you describe more what burner wallets are? How did you come up with the concept? The focus is really more on easy onboarding into web3, but have you thought about how these could impact on-chain identity?
-        </span>
-        <br /><br />
-        A Burner wallet is like a session wallet, it lives in the browser without having to back up a 12 word seed phrase or handle a private key. This is great for small amounts of value and initial experiences in decentralized apps. 
-        <br /><br />
-        Identity in web3 will be a bottom up narrative not just of one account, but of an aggregation of many accounts. A burner wallet is used for a session and then can be destroyed, but right before you do that you could mark it as part of a larger identity. Something like a “delegated identity”. (This is my main wallet austingriffith.eth, but I just funded and deployed this contract from a burner which has signed an extra message proving that it is owned by austingriffith.eth (or something like that)).
-
+        zebbler
       </div>
       <div className={styles.text14}>
-        <span>
-          Are there any major hurdles that people using web3 authentication for the first time might encounter?
-        </span>
-        <br /><br />
-        Of course. The private key. This is like asking if I am used to using the phone all day will I encounter an hurdles using an email address. 
-        <br /><br />
-        The private key means you control your own keys and with great power comes great responsibility. There is no password recovery here.
-        <br /><br />
-        Smart contract wallets and other solutions are helping this problem with social recovery, but it’s still a new paradigm that users have to get used to. 
-
+        zebbler
       </div>
       <div className={styles.text15}>
-        <span>
-          Are there situations were it makes sense for identity to be attached to a wallet? Or multiple wallets?
-        </span>
-        <br /><br />
-        Yes of course, I think your identity in web3 is very important and it will be a bottom-up aggregate narrative of the wallets you control.
+        zebbler
       </div>
-      <img src='./magazine/5/images/3536_image7.png' className={styles.image7} />
-
-      <div
-        className={styles.image5}
-        onClick={() => {
-          isPlaying ? pauseAudio() : startAudio()
-        }}
-      >
-        <img src='./magazine/5/images/3536_image5.png' />
-        <div className={styles.text16}>
-         {!isPlaying ? 'LISTEN HERE' : 'PAUSE' }
-        </div>
+      
+      <div className={styles.text16}>
+        玄: Hakui By-pass
       </div>
-      <audio ref={audioRef} loop>
-        <source src='./magazine/5/sounds/3536_sound1.mp3' type='audio/mpeg' />
-      </audio>
+      <div className={styles.text17}>
+        Oct 4th 2021
+      </div>
+      <div className={styles.text18}>
+        Gutty Kreum
+      </div>
+      
+      <div className={styles.text19}>
+        CYBERLOOP
+      </div>
+      <div className={styles.text20}>
+        Oct 5th 2021
+      </div>
+      <div className={styles.text21}>
+        Mitsi studio
+      </div>
 
+      <div className={styles.text22}>
+        MAKERS
+      </div>
+      <div className={styles.text23}>
+        MAKERS
+      </div>
+      <div className={styles.text24}>
+        MAKERS
+      </div>
+      <div className={styles.text25}>
+        MAKERS
+      </div>
+      <div className={styles.text26}>
+        June 29th 2021
+      </div>
+      
+      <div className={styles.text27}>
+        Kristen Roos
+      </div>
+      <div className={styles.text28}>
+        Kristen Roos
+      </div>
+      <div className={styles.text29}>
+        Kristen Roos
+      </div>
+      <div className={styles.text30}>
+        Kristen Roos
+      </div>
+      <div className={styles.text31}>
+        Kristen Roos
+      </div>
+      <div className={styles.text32}>
+        Kristen Roos
+      </div>
+      <div className={styles.text33}>
+        Kristen Roos
+      </div>
+      <div className={styles.text34}>
+        Kristen Roos
+      </div>
+      <div className={styles.text35}>
+        Kristen Roos
+      </div>
+      <div className={styles.text36}>
+        Kristen Roos
+      </div>
+      
+      <div className={styles.text37}>
+        {`ROY G BIV CITY (amiga & macintosh plus)`}
+      </div>
+
+      <a href='https://www.hicetnunc.xyz/objkt/398848' target='_blank'>
+        <img src='/magazine/6/images/3536_image1.png' className={styles.image1} />
+      </a>
+      <a href='https://superrare.com/artwork-v2/anonymous-digital-portrait-v002-28496' target='_blank'>
+        <img src='/magazine/6/images/3536_image2.gif' className={styles.image2} />
+      </a>
+      <a href='https://superrare.com/artwork-v2/%E7%8E%84:-hakui-by-pass-29090' target='_blank'>
+        <img src='/magazine/6/images/3536_image3.gif' className={styles.image3} />
+      </a>
+
+      <a href='https://superrare.com/artwork-v2/cyberloop-29128' target='_blank'>
+        <video autoPlay muted loop className={styles.video1}>
+          <source src='./magazine/6/videos/3536_video1.mp4' type='video/mp4' />
+        </video>
+      </a>
+      
+      <a href='https://foundation.app/@kristenroos/~/54546' target='_blank'>
+        <video autoPlay muted loop className={styles.video2}>
+          <source src='./magazine/6/videos/3536_video2.mp4' type='video/mp4' />
+        </video>
+      </a>
+
+
+    <img src='/magazine/6/images/3536_image4.png' className={styles.image4} />
+    <img src='/magazine/6/images/3536_image4.png' className={styles.image5} />
+    <img src='/magazine/6/images/3536_image4.png' className={styles.image6} />
     </div>
   )
 }

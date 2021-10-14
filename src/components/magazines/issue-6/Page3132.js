@@ -60,13 +60,60 @@ const Page3132 = () => {
       </div>
       
       <div className={styles.text6}>
-        
+        That Afternoon
       </div>
       <div className={styles.text7}>
-        
+        Lana Denina
       </div>
       <div className={styles.text8}>
-        
+        June 7th, 2021
+      </div>
+
+      <div className={styles.text9}>
+        OLD MONEY CORRUPTS XI
+      </div>
+      <div className={styles.text10}>
+        OLD MONEY CORRUPTS XI
+      </div>
+      <div className={styles.text11}>
+        miss al <span>simpson</span>
+      </div>
+      <div className={styles.text12}>
+        March 7th 2021
+      </div>
+      <div className={styles.text13}>
+        SCAVENGERS...Panel Two
+      </div>
+      <div className={styles.text14}>
+        April 8th, 2021
+      </div>
+      <div className={styles.text15}>
+        threepanelcrimes
+      </div>
+
+      <div className={styles.text16}>
+      #16 SEQ_SLICE_IIII
+      </div>
+      <div className={styles.text17}>
+      #16 SEQ_SLICE_IIII
+      </div>
+      <div className={styles.text18}>
+      #16 SEQ_SLICE_IIII
+      </div>
+      <div className={styles.text19}>
+       #16 SEQ_SLICE_IIII
+      </div>
+      <div className={styles.text20}>
+      #16 SEQ_SLICE_IIII
+      </div>
+      <div className={styles.text21}>
+        #16 SEQ_SLICE_IIII
+      </div>
+      <div className={styles.text22}>
+      August 21st, 2021
+      </div>
+      <div className={styles.text23}>
+      Moeen
       </div>
     </div>
   )
