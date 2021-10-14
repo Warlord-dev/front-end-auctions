@@ -33,9 +33,15 @@ const LandingPage = () => {
       const collections = [];
       const auctions = [];
 
+      const sortedCollectionGroups = digitalaxCollectionGroups.sort((a, b) => {
+        if (parseInt(a.id) > parseInt(b.id)) return -1;
+        if (parseInt(a.id) === parseInt(b.id)) return 0;
+        return 1;
+      });
+
       const reOrderedCollectionGroups = [
-        ...digitalaxCollectionGroups.slice(1),
-        digitalaxCollectionGroups[0],
+        ...sortedCollectionGroups.slice(1),
+        sortedCollectionGroups[0],
       ];
 
       reOrderedCollectionGroups.forEach((digitalaxCollectionGroup) => {
