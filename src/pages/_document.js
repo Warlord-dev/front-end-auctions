@@ -334,7 +334,13 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syncopate"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nova+Cut"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gudea:wght@700"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Devonshire"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dekko"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavivanar"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kameron"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -1647,8 +1653,12 @@ class MyDocument extends Document {
               font-weight: 400;
               src: url("./fonts/JohnnyLong.ttf");
             }
-
             
+            @font-face {
+              font-family: 'Reguler';
+              font-weight: 400;
+              src: url("./fonts/FragilleReguler-lgLVd.otf");
+            }
           `,
             }}
           />
