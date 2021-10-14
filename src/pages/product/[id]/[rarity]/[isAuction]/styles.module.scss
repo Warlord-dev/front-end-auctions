@@ -305,8 +305,8 @@
                 display: none;
                 position: absolute;
                 padding: 0.5rem;
-                top: 100%;
-                left: 55px;
+                top: calc(100% + 0.5rem);
+                left: 0;
                 z-index: 1;
                 background: #591d4f;
                 width: 175px;
