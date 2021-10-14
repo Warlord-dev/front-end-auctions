@@ -172,7 +172,7 @@ const ModalCurrentWearers = ({ className, title, type }) => {
 
   const onClickWearer = ownerInfo => {
     if (ownerInfo.ownerName !== null) {
-      window.open(`/user/${ownerInfo.owner}`, '_new')
+      window.open(`/user/${ownerInfo.owner}`, '_self')
     }
   }
 

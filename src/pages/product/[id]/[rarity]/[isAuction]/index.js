@@ -300,7 +300,7 @@ const Product = ({ pageTitle }) => {
     if (product?.garment?.name) {
       const fetchSourceType = async () => {
         const data = await digitalaxApi.getSourceType(product.garment.name);
-        if (data.sourceType) setSourceType(data.sourceType);
+        if (data && data.sourceType) setSourceType(data.sourceType);
       };
 
       fetchSourceType();
