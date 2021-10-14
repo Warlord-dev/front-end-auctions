@@ -4,93 +4,20 @@ import styles from './page8990.module.scss'
 const Page8990 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/5/images/8990_image2.png' className={styles.image2} />
-      <img src='/magazine/5/images/8990_image1.png' className={styles.image1} />
-      <img src='/magazine/5/images/8990_image3.gif' className={styles.image3} />
+      <img src='/magazine/6/images/8990_image1.gif' className={styles.image1} />
 
-      <img src='/magazine/5/images/7980_image3.png' className={styles.image4} />
-      <img src='/magazine/5/images/7980_image2.png' className={styles.image5} />
-      <img src='/magazine/5/images/7980_image4.png' className={styles.image6} />
-      <img src='/magazine/5/images/7980_image5.png' className={styles.image7} />
+      <div className={styles.rect1}></div>
+      <div className={styles.rect2}></div>
+      <div className={styles.rect3}></div>
 
       <div className={styles.text1}>
-        WEB3 WIZARDS        
-      </div>
-      <div className={styles.text2}>
-        Identity Meddlers.
-      </div>
-      <div className={styles.text3}>
-        Our identities are fluid— changing and evolving with us as we take on new experiences, are exposed to different environments and naturally progress through our lives. They represent the full spectrum of who we allow ourselves to be. And, as our digital identities and reputation online become not only more intertwined with who we are but also more and more critical to who we intend to be and how we cascade the liquidity needed to fuel that growth, it only makes complete sense that so many of us are looking for better ways to gain full ownership through the tools that most empower how we can represent ourselves in digital mediums. 
+        Even the leadership dynamic changes within the context of web3 community structure. While we’re all too familiar with the almost cartoonishly cold and sociopathic Zuccs and Bezoses of the web2 realm, web3 founders need to be empathic to be able to collaborate, build trust within the community and engage, inspire, get down in the trenches, and achieve greater missions and visions together.
         <br /><br />
-        Because, although our identity is constantly shifting, it also needs a persistent pivot point from which we can anchor ourselves. Web3 is what allows us to keep our own skin in the game, and the appeal of building out on-chain identities only grows day by day as the broader NFT and crypto space continues to rapidly magnify. With that said, for this edition of Web3 Wizards we are paying it back to the devs pioneering web3 authentication, decentralised identity management and blockchain native encapsulations of ourselves. These devs are the real Identity Meddlers. 
-      </div>
-      <div className={styles.text4}>
-        Vitalik Buterin.
-      </div>
-      <div className={styles.text5}>
-        Project: Ethereum Foundation.
-      </div>
-      <div className={styles.text6}>
-        Kevin Owocki.
-      </div>
-      <div className={styles.text7}>
-        Project: Gitcoin.
-      </div>
-      <div className={styles.text8}>
-        Dan Finlay.
-      </div>
-      <div className={styles.text9}>
-        Project: Metamask.
-      </div>
-      <div className={styles.text10}>
-        Nick Johnson.
-      </div>
-      <div className={styles.text11}>
-        Project: ENS.
-      </div>
-
-      <div className={styles.text12}>
-        MUST TRYS OF THE METAVERSE
-      </div>
-      <div className={styles.text13}>
-        MUST TRYS OF THE METAVERSE
-      </div>
-      <div className={styles.text14}>
-        MUST TRYS OF THE METAVERSE
-      </div>
-      <div className={styles.text15}>
-        #IDENTITYEDITION
-      </div>
-
-      <a href='https://ens.domains/' target='_blank'>
-        <img src='/magazine/5/images/8990_image4.png' className={styles.image8} />
-      </a>
-      <div className={styles.text16}>
-        ENS
-      </div>
-      <a href='https://y.at/' target='_blank'>
-        <img src='/magazine/5/images/8990_image5.png' className={styles.image9} />
-      </a>
-      <div className={styles.text17}>
-        Y.AT
-      </div>
-      <a href='https://www.blitmap.com/' target='_blank'>
-        <img src='/magazine/5/images/8990_image6.png' className={styles.image10} />
-      </a>
-      <div className={styles.text18}>
-        Blitmap
-      </div>
-      <a href='https://at.amulet.garden/' target='_blank'>
-        <img src='/magazine/5/images/8990_image7.png' className={styles.image11} />
-      </a>
-      <div className={styles.text19}>
-        Amulet
-      </div>
-      <a href='https://www.sickvibes.xyz/' target='_blank'>
-        <img src='/magazine/5/images/8990_image8.png' className={styles.image12} />
-      </a>
-      <div className={styles.text20}>
-        [VIBES]
+        NFTs are poised to be a supremely fundamental platform of how community is defined in the web3 ecosystem because of their significant role in organization, mobilization, and community building. By nature, we all desire to become part of and thrive in ecosystems that give us more value than we can contribute–but everybody has to be on board with the community’s vision for that to happen.
+        <br /><br />
+        Sure, to the unwashed, Crypto Twitter might appear to be a toxic cesspool. There’s a lot of people with a lot to say, with a variety of passionate opinions from a diverse selection of identities belonging to some tribal confederation of some sort defined by the PFPs they use. There is a lot of vitriol, venom, and criticism at times, but that’s just a built-in feature of the space. It’s part of being part of the community: web3 empowers individuals to find their voices and identities, their tribes, so they can interact and engage. And that passion for wanting to help make things better is what drives the entire space in the first place. 
+        <br /><br />
+        The mere fact that everyone is free to share their own worldview about how things can be better can only be a good thing. The more individuals are encouraged to do just that, the more freedom and opportunity the community and its members gain to see their efforts come to fruition. Ultimately, no one has all the answers, and no one knows whose vision is the right one. It’s an opportunity to rethink, reframe, and recreate the world and make it better than it was.
       </div>
     </div>
   )

@@ -3,7 +3,6 @@
 .wrapper {
   @include magazineWrapper();
   background-color: #000000;
-
   .back {
     position: absolute;
     width: 1920px;
