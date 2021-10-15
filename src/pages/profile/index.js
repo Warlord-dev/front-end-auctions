@@ -84,8 +84,18 @@ const UserProfile = () => {
   //     )
   //   }
 
+  const onClickReturn = () => {
+    window.history.back()
+  }
+
   return (
     <div className={styles.wrapper}>
+      <button
+        className={styles.returnButton}
+        onClick={onClickReturn}
+      >
+        RETURN
+      </button>
       <UserInfo
         twitter={user.twitter}
         userName={user.username}

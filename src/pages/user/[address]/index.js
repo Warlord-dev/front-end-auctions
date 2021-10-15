@@ -105,10 +105,20 @@ const UserProfile = () => {
     )
   }
 
+  const onClickReturn = () => {
+    window.history.back()
+  }
+
   console.log('currentUserInfo: ', currentUserInfo)
   
   return (
     <div className={styles.wrapper}>
+      <button
+        className={styles.returnButton}
+        onClick={onClickReturn}
+      >
+        RETURN
+      </button>
       <UserInfo 
         userName={currentUserInfo.username}
         userAvatar={currentUserInfo.avatar}
