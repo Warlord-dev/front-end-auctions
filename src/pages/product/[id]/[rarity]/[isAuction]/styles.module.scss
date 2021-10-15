@@ -91,6 +91,40 @@
             }
           }
 
+          .childrenDescription {
+            margin-top: 7rem;
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 23px;
+            line-height: 31px;
+
+            color: #ffffff;
+
+            a {
+              color: white;
+              text-decoration: underline;
+            }
+          }
+
+          .childrenWrapper {
+            display: flex;
+            margin-top: 1rem;
+            width: 100%;
+            // overflow: auto;
+            flex-wrap: wrap;
+
+            img,
+            video {
+              width: 81px;
+              height: 81px;
+              margin-right: 0.5rem;
+              border: 2px solid #9c00ff;
+              box-sizing: border-box;
+              box-shadow: 0px 4px 20px 10px #9d1e71;
+            }
+          }
+
           .lookTitle {
             font-family: Gilroy;
             font-style: normal;
@@ -200,7 +234,6 @@
                   display: none;
                   background: #c047e7;
                   border: 2px solid #c047e7;
-                  width: 300px;
                   padding: 7px 12px;
                   justify-content: center;
                   align-items: center;
@@ -209,7 +242,6 @@
                   font-size: 14px;
 
                   margin-left: 10px;
-                  height: 52px;
 
                   a {
                     text-decoration: underline;

@@ -28,7 +28,7 @@ import digitalaxApi from '@services/api/espa/api.service';
 import { getChainId, getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
 import { getAccount } from '@selectors/user.selectors';
 import { getUser } from '@helpers/user.helpers';
-import { getRarity } from '@utils/helpers';
+import { getRarity, reviseUrl } from '@utils/helpers';
 import config from '@utils/config';
 import {
   openBespokeModal,
@@ -64,6 +64,14 @@ const getAllResultsFromQuery = async (query, resultKey, chainId, owner) => {
   }
 
   return resultArray;
+};
+
+const fetchChildTokenInfo = async (tokenUri) => {
+  return fetch(tokenUri)
+    .then((res) => res.json())
+    .then((res) => {
+      return res;
+    });
 };
 
 const Product = ({ pageTitle }) => {
@@ -218,12 +226,21 @@ const Product = ({ pageTitle }) => {
       //   }
       // } else if (id) {
       if (!parseInt(isAuction)) {
+        const children = [];
+
         const { digitalaxGarmentV2Collection } = await getGarmentV2ByCollectionId(chainId, id);
         if (digitalaxGarmentV2Collection.id) {
           const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offer(
             chainId,
             digitalaxGarmentV2Collection.id,
           );
+
+          if (digitalaxGarmentV2Collection.garments[0].children.length) {
+            digitalaxGarmentV2Collection.garments[0].children.forEach(async (child) => {
+              const info = await fetchChildTokenInfo(child.tokenUri);
+              children.push(info);
+            });
+          }
 
           console.log('digitalaxMarketplaceV2Offers: ', digitalaxMarketplaceV2Offers);
           setOwners(
@@ -249,6 +266,7 @@ const Product = ({ pageTitle }) => {
           setProduct({
             id: digitalaxGarmentV2Collection.id,
             garment: digitalaxGarmentV2Collection.garments[0],
+            children,
             designer: digitalaxGarmentV2Collection.designer,
             developer: digitalaxGarmentV2Collection.developer,
           });
@@ -438,6 +456,29 @@ const Product = ({ pageTitle }) => {
                     }
                     showButton={!isLookHakathon()}
                   />
+                  {!!product?.children?.length && (
+                    <>
+                      <div className={styles.childrenDescription}>
+                        Open Source{' '}
+                        <a href="https://designers.digitalax.xyz/fractional/" target="_blank">
+                          Fractional Garment Ownership
+                        </a>
+                      </div>
+                      <div className={styles.childrenWrapper}>
+                        {product.children.map((child) => {
+                          if (child.image_url) {
+                            return <img src={reviseUrl(child.image_url)} />;
+                          } else if (child.animation_url) {
+                            return (
+                              <video muted autoPlay loop>
+                                <source src={reviseUrl(child.animation_url)} />
+                              </video>
+                            );
+                          }
+                        })}
+                      </div>
+                    </>
+                  )}
                 </div>
                 <div className={styles.infoWrapper}>
                   <div className={styles.leftSection}>
@@ -451,15 +492,22 @@ const Product = ({ pageTitle }) => {
                       ) : (
                         <>{`${days}:${hours}:${minutes}`}</>
                       )}
-                      {!isLookHakathon() && (
-                        <div className={styles.helper}>
-                          <span className={styles.questionMark}>?</span>
-                          <span className={styles.description}>
-                            You can also stake this NFT for yield + get the original source file.
-                            Check <a href={`${window.location.pathname}#fashion_list`}>here</a>.
-                          </span>
-                        </div>
-                      )}
+                      <div className={styles.helper}>
+                        <span className={styles.questionMark}>?</span>
+                        <span
+                          className={styles.description}
+                          style={{ width: isLookHakathon() ? 170 : 300 }}
+                        >
+                          {!isLookHakathon() ? (
+                            <>
+                              You can also stake this NFT for yield + get the original source file.
+                              Check <a href={`${window.location.pathname}#fashion_list`}>here</a>.
+                            </>
+                          ) : (
+                            <>Please sign in to vote</>
+                          )}
+                        </span>
+                      </div>
                     </div>
 
                     <div className={styles.lovesWrapper}>
