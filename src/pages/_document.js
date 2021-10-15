@@ -1869,6 +1869,12 @@ class MyDocument extends Document {
               font-weight: 400;
               src: url("./fonts/FragilleReguler-lgLVd.otf");
             }
+            
+            @font-face {
+              font-family: 'Wicked Halloween';
+              font-weight: 400;
+              src: url("./fonts/Wicked Halloween.ttf");
+            }
           `,
             }}
           />

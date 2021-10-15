@@ -3,4 +3,520 @@
 .wrapper {
   @include magazineWrapper();
   background: #000000;
+
+  .text1 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 22px;
+    top: 20px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #FF00E5;
+    -webkit-text-stroke: 0.6 white;      
+  }
+
+  .text2 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 22px;
+    top: 164px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #FF00E5;
+    -webkit-text-stroke: 0.6 white;      
+  }
+
+  .text3 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 436px;
+    top: 164px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 436px;
+    top: 20px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 1165px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+        
+  }
+
+  .text6 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 1021px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 877px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 733px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 589px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;    
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 445px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 308px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 164px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 20px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 1312px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 1017px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 873px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+    
+  }
+
+  .text17 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 729px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 585px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text19 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 441px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text20 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 297px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text21 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 160px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text22 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 16px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text23 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: -128px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text24 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 1164px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text25 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 1312px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text26 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 1312px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text27 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 1309px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text28 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 1165px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text29 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 1021px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text30 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 877px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text31 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 729px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text32 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 585px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text33 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 441px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text34 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 297px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text35 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 164px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text36 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 16px;
+    
+    font-family: MUSICNET;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    /* or 72px */
+    
+    
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+
 }
