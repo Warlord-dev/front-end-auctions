@@ -21,6 +21,8 @@ const CollectionCard = ({ collection }) => {
     'Seasonal Styles',
     'Fantastical Chic',
     'Trash Fashion',
+    'Fashion Hackathon',
+    'Meta Spree',
   ];
 
   return (
