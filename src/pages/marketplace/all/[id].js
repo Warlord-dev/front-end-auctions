@@ -2,12 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from './index.module.scss';
 import Container from '@components/container';
-import {
-  getCollectionGroupById,
-  getDigitalaxGarmentCollections,
-  getDigitalaxMarketplaceOffers,
-  getDigitalaxMarketplaceV2Offers,
-} from '@services/api/apiService';
+import { getCollectionGroupById, getDigitalaxMarketplaceV2Offers } from '@services/api/apiService';
 import { useSelector } from 'react-redux';
 import { getChainId } from '@selectors/global.selectors';
 import HeroSection from '@components/hero-section';
@@ -27,68 +22,46 @@ const Auctions = () => {
     const fetchCollectionGroup = async () => {
       let aucs = [];
       let colls = [];
-      if (parseInt(id) >= 1) {
-        const { digitalaxCollectionGroup } = await getCollectionGroupById(chainId, id);
-        if (
-          !(
-            digitalaxCollectionGroup.auctions.length === 1 &&
-            digitalaxCollectionGroup.auctions[0].id === '0'
-          )
-        ) {
-          digitalaxCollectionGroup.auctions.forEach((auction) => {
-            aucs.push({
-              ...auction,
-              sold: Date.now() > auction.endTime * 1000,
-              auction: true,
-              rarity: 'Exclusive',
-            });
+      const { digitalaxCollectionGroup } = await getCollectionGroupById(chainId, id);
+      if (
+        !(
+          digitalaxCollectionGroup.auctions.length === 1 &&
+          digitalaxCollectionGroup.auctions[0].id === '0'
+        )
+      ) {
+        digitalaxCollectionGroup.auctions.forEach((auction) => {
+          aucs.push({
+            ...auction,
+            sold: Date.now() > auction.endTime * 1000,
+            auction: true,
+            rarity: 'Exclusive',
           });
-        }
+        });
+      }
 
-        const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offers(chainId);
-        if (
-          !(
-            digitalaxCollectionGroup.collections.length === 1 &&
-            digitalaxCollectionGroup.collections[0].id === '0'
-          )
-        ) {
-          digitalaxCollectionGroup.collections.forEach((collection) => {
-            const foundOfferItem = digitalaxMarketplaceV2Offers.find(
-              (offer) => offer.id === collection.id,
-            );
-            colls.push({
-              designer: collection.designer,
-              developer: collection.developer,
-              auction: false,
-              startTime: foundOfferItem.startTime,
-              sold: collection.garments.length === parseInt(foundOfferItem.amountSold),
-              garment: {
-                ...collection.garments[0],
-              },
-              primarySalePrice: foundOfferItem ? foundOfferItem.primarySalePrice : 0,
-              id: collection.id,
-              rarity: collection.rarity,
-            });
-          });
-        }
-      } else {
-        const { digitalaxGarmentCollections } = await getDigitalaxGarmentCollections(chainId);
-        const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffers(chainId);
-        digitalaxGarmentCollections.forEach((collection) => {
-          const offer = digitalaxMarketplaceOffers.find((offer) => offer.id === collection.id);
+      const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offers(chainId);
+      if (
+        !(
+          digitalaxCollectionGroup.collections.length === 1 &&
+          digitalaxCollectionGroup.collections[0].id === '0'
+        )
+      ) {
+        digitalaxCollectionGroup.collections.forEach((collection) => {
+          const foundOfferItem = digitalaxMarketplaceV2Offers.find(
+            (offer) => offer.id === collection.id,
+          );
           colls.push({
-            id: collection.id,
-            designer: {
-              name: 'Mirth',
-              image: '/images/metaverse/mirth.png',
-            },
-            garment: collection.garments[0],
-            startTime: offer.startTime,
-            primarySalePrice: offer ? offer.primarySalePrice : 0,
-            sold: collection.garments.length === parseInt(offer.amountSold),
-            rarity: collection.rarity,
+            designer: collection.designer,
+            developer: collection.developer,
             auction: false,
-            version: 1,
+            startTime: foundOfferItem.startTime,
+            sold: collection.garments.length === parseInt(foundOfferItem.amountSold),
+            garment: {
+              ...collection.garments[0],
+            },
+            primarySalePrice: foundOfferItem ? foundOfferItem.primarySalePrice : 0,
+            id: collection.id,
+            rarity: collection.rarity,
           });
         });
       }
@@ -132,8 +105,8 @@ const Auctions = () => {
               <Container>
                 <div className={styles.body}>
                   <ProductInfoCard
+                    isLook={id === '15'}
                     product={filteredProducts[index]}
-                    v1={filteredProducts[index].version === 1}
                     price={
                       filteredProducts[index].topBid || filteredProducts[index].primarySalePrice
                     }
@@ -144,8 +117,8 @@ const Auctions = () => {
                   />
                   {index + 1 < filteredProducts.length ? (
                     <ProductInfoCard
+                      isLook={id === '15'}
                       product={filteredProducts[index + 1]}
-                      v1={filteredProducts[index].version === 1}
                       price={
                         filteredProducts[index + 1].topBid ||
                         filteredProducts[index + 1].primarySalePrice

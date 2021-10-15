@@ -29,6 +29,7 @@ const ImageCard = ({
   withLink = false,
   isAuction = false,
   v1 = false,
+  buttonText,
 }) => {
   const router = useRouter();
   const account = useSelector(getAccount);
@@ -174,7 +175,15 @@ const ImageCard = ({
         {showButton && (
           <div className={styles.buyNow}>
             <NewButton
-              text={disable ? 'Sold Out' : isAuction ? 'Place A Bid' : 'Buy Now'}
+              text={
+                buttonText
+                  ? buttonText
+                  : disable
+                  ? 'Sold Out'
+                  : isAuction
+                  ? 'Place A Bid'
+                  : 'Buy Now'
+              }
               onClick={onBuyNow}
               disable={disable}
             />

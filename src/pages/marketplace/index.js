@@ -9,7 +9,6 @@ import HeroSection from '@components/hero-section';
 const LandingPage = () => {
   const chainId = useSelector(getChainId);
   const [collectionGroups, setCollectionGroups] = useState([]);
-  const [auctionsGroups, setAuctionGroups] = useState([]);
   const previewIds = {
     3: 49,
     4: 2,
@@ -27,8 +26,6 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchCollectionGroups = async () => {
       const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
-      const { digitalaxGarmentCollections } = await getDigitalaxGarmentCollections(chainId);
-      const amongUsPrice = digitalaxGarmentCollections.reduce((a, b) => a + Number(b.valueSold), 0);
 
       const collections = [];
       const auctions = [];
@@ -39,12 +36,7 @@ const LandingPage = () => {
         return 1;
       });
 
-      const reOrderedCollectionGroups = [
-        ...sortedCollectionGroups.slice(1),
-        sortedCollectionGroups[0],
-      ];
-
-      reOrderedCollectionGroups.forEach((digitalaxCollectionGroup) => {
+      sortedCollectionGroups.forEach((digitalaxCollectionGroup) => {
         const collectionPrice = digitalaxCollectionGroup.collections
           .filter((collection) => collection.id !== '0')
           .reduce((a, b) => a + Number(b.valueSold), 0);
@@ -85,16 +77,13 @@ const LandingPage = () => {
         }
       });
 
-      collections.push({
-        ...digitalaxGarmentCollections[0].garments[0],
-        designer: null,
-        id: '0',
-        sold: amongUsPrice / 1e18,
-        isAuction: false,
-      });
-
-      setCollectionGroups(collections);
-      setAuctionGroups(auctions);
+      setCollectionGroups(
+        [...collections, ...auctions].sort((a, b) => {
+          if (parseInt(a.id) > parseInt(b.id)) return -1;
+          if (parseInt(a.id) < parseInt(b.id)) return 1;
+          return 0;
+        }),
+      );
     };
 
     fetchCollectionGroups();
@@ -106,15 +95,7 @@ const LandingPage = () => {
 
       <section className={styles.collectionSection}>
         <div className={styles.collectionWrapper}>
-          {collectionGroups?.length && auctionsGroups?.length ? (
-            <CollectionList
-              items={[
-                ...collectionGroups.slice(0, -2),
-                ...auctionsGroups,
-                ...collectionGroups.slice(-2),
-              ]}
-            />
-          ) : null}
+          {!!collectionGroups?.length && <CollectionList items={collectionGroups} />}
         </div>
       </section>
     </div>

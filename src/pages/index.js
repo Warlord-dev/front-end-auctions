@@ -22,6 +22,7 @@ const LandingPage = () => {
   const [products, setProducts] = useState([]);
   const [filter, setFilter] = useState('');
   const [sortBy, setSortBy] = useState(null);
+  const [lookIds, setLookIds] = useState([]);
 
   useEffect(() => {
     import('react-facebook-pixel')
@@ -80,19 +81,18 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchCollectionGroups = async () => {
       const { digitalaxCollectionGroups } = await getCollectionGroups(chainId);
-      const { digitalaxGarmentCollections } = await getDigitalaxGarmentCollections(chainId);
-      const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffers(chainId);
       const { digitalaxMarketplaceV2Offers } = await getDigitalaxMarketplaceV2Offers(chainId);
       const users = await digitalaxApi.getAllUsersName();
 
       const prods = [];
 
-      const reoderedCollectionGroups = [
-        ...digitalaxCollectionGroups.slice(1),
-        digitalaxCollectionGroups[0],
-      ];
-
-      shuffle(reoderedCollectionGroups).forEach((collectionGroup) => {
+      shuffle(digitalaxCollectionGroups).forEach((collectionGroup) => {
+        if (collectionGroup.id === '15') {
+          const ids = [];
+          collectionGroup.auctions.forEach((auction) => ids.push(auction.id));
+          collectionGroup.collections.forEach((collection) => ids.push(collection.id));
+          setLookIds(ids);
+        }
         if (
           collectionGroup.auctions.length > 1 ||
           (collectionGroup.auctions.length === 1 && collectionGroup.auctions[0].id !== '0')
@@ -157,27 +157,6 @@ const LandingPage = () => {
             });
           });
         }
-      });
-
-      digitalaxGarmentCollections.forEach((collection) => {
-        const offer = digitalaxMarketplaceOffers.find((offer) => offer.id === collection.id);
-        // console.log('offer: ', offer)
-        prods.push({
-          id: collection.id,
-          designer: {
-            name: 'Mirth',
-            image: '/images/metaverse/mirth.png',
-          },
-          startTime: offer.startTime,
-          garment: collection.garments[0],
-          sold: collection.garments.length === parseInt(offer.amountSold),
-          // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
-          owners: getOwners(offer.garmentCollection.garments, offer.amountSold, users),
-          primarySalePrice: offer ? offer.primarySalePrice : 0,
-          rarity: collection.rarity,
-          auction: false,
-          version: 1,
-        });
       });
 
       setProducts(prods);
@@ -258,11 +237,11 @@ const LandingPage = () => {
                   <ProductInfoCard
                     product={prod}
                     price={prod.auction ? prod.topBid : prod.primarySalePrice}
-                    v1={prod.version === 1}
                     sold={prod.sold}
                     showRarity
                     showCollectionName
                     isAuction={prod.auction}
+                    isLook={lookIds.includes(prod.id)}
                   />
                 </>
               );

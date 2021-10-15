@@ -21,6 +21,8 @@ const CollectionCard = ({ collection }) => {
     'Seasonal Styles',
     'Fantastical Chic',
     'Trash Fashion',
+    'Look Hackathon',
+    'Meta Spree',
   ];
 
   return (
@@ -28,7 +30,9 @@ const CollectionCard = ({ collection }) => {
       <div className={styles.wrapper}>
         <div className={styles.title}>{collectionNames[parseInt(collection?.id)]}</div>
         <div className={styles.imageWrapper}>
-          {collection.endTime && parseInt(collection.endTime) < Date.now() / 1000 ? (
+          {collection?.id !== '15' &&
+          collection.endTime &&
+          parseInt(collection.endTime) < Date.now() / 1000 ? (
             <NewButton className={styles.soldOut} text="Sold out" disable />
           ) : null}
           <Link href={`/marketplace/all/${collection.id}`}>

@@ -1,3 +1,5 @@
+@import '../../../assets/scss/helpers/grid.scss';
+
 .wrapper {
   .cardBodyWrapper {
     .link {
@@ -28,6 +30,20 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       align-items: start;
+    }
+
+    .lookText {
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 3rem;
+      white-space: nowrap;
+      line-height: 91px;
+      text-align: center;
+
+      color: #ffffff;
+
+      text-shadow: 0px 4px 20px #ff12f6;
     }
   }
 }

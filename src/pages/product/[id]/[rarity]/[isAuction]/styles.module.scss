@@ -91,6 +91,21 @@
             }
           }
 
+          .lookTitle {
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 60px;
+            line-height: 74px;
+            /* identical to box height */
+            text-align: center;
+            margin-bottom: 1rem;
+
+            color: #ffffff;
+
+            text-shadow: 0px 4px 20px #ff12f6;
+          }
+
           .timeWrapper {
             width: 250px;
             margin: auto;
@@ -383,6 +398,34 @@
 
             .check {
               background: #111111;
+            }
+          }
+
+          .lookInspo {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            .title {
+              font-family: Gilroy;
+              font-style: normal;
+              font-weight: 800;
+              font-size: 40px;
+              line-height: 49px;
+
+              color: #ffffff;
+
+              text-shadow: 0px 4px 20px #ff12f6;
+            }
+
+            .inspoItem {
+              font-family: Gilroy;
+              font-style: normal;
+              font-weight: 800;
+              font-size: 22px;
+              line-height: 27px;
+
+              color: #ffffff;
             }
           }
         }
