@@ -238,7 +238,11 @@ const Product = ({ pageTitle }) => {
           if (digitalaxGarmentV2Collection.garments[0].children.length) {
             digitalaxGarmentV2Collection.garments[0].children.forEach(async (child) => {
               const info = await fetchChildTokenInfo(child.tokenUri);
-              children.push(info);
+              console.log({ info });
+              children.push({
+                ...info,
+                id: child.id.split('-')[1],
+              });
             });
           }
 
@@ -466,15 +470,20 @@ const Product = ({ pageTitle }) => {
                       </div>
                       <div className={styles.childrenWrapper}>
                         {product.children.map((child) => {
-                          if (child.image_url) {
-                            return <img src={reviseUrl(child.image_url)} />;
-                          } else if (child.animation_url) {
-                            return (
-                              <video muted autoPlay loop>
-                                <source src={reviseUrl(child.animation_url)} />
-                              </video>
-                            );
-                          }
+                          return (
+                            <a
+                              href={`https://opensea.io/assets/matic/0x567c7b3364ba2903a80ecbad6c54ba8c0e1a069e/${child.id}`}
+                              target="_blank"
+                            >
+                              {child.image_url ? (
+                                <img src={reviseUrl(child.image_url)} />
+                              ) : child.animation_url ? (
+                                <video muted autoPlay loop>
+                                  <source src={reviseUrl(child.animation_url)} />
+                                </video>
+                              ) : null}
+                            </a>
+                          );
                         })}
                       </div>
                     </>

@@ -176,6 +176,7 @@ export const GARMENTV2_BY_COLLECTION_ID = gql`
         description
         primarySalePrice
         children {
+          id
           tokenUri
         }
       }
