@@ -426,7 +426,7 @@ const Product = ({ pageTitle }) => {
                   {!isLookHakathon() ? (
                     <div className={styles.rarity}> {getRarity(parseInt(rarity))}</div>
                   ) : (
-                    <div className={styles.lookTitle}>LOOK Hakathon</div>
+                    <div className={styles.lookTitle}>LOOK Hackathon</div>
                   )}
                   <ImageCard
                     data={product}
