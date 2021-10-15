@@ -98,6 +98,11 @@ const Auctions = () => {
           if (!a.sold && b.sold) return -1;
           return 0;
         })
+        .sort((a, b) => {
+          if (parseInt(a.startTime) > parseInt(b.startTime)) return -1;
+          if (parseInt(a.startTime) < parseInt(b.startTime)) return 1;
+          return 0;
+        })
         .map((prod, index) => {
           if (index % 2 === 1) return <> </>;
           return (
