@@ -174,6 +174,7 @@ export const GARMENTV2_BY_COLLECTION_ID = gql`
         image
         animation
         description
+        tokenUri
         primarySalePrice
         children {
           id

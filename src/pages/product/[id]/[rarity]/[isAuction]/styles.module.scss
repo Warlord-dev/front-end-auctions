@@ -91,6 +91,19 @@
             }
           }
 
+          .additionalImages {
+            margin-top: 3rem;
+            display: flex;
+
+            img,
+            video {
+              width: 53px;
+              height: 65px;
+              margin-right: 1rem;
+              box-shadow: 0px 4px 20px 10px #9d1e71;
+            }
+          }
+
           .childrenDescription {
             margin-top: 7rem;
             font-family: Gilroy;

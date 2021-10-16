@@ -66,7 +66,7 @@ const getAllResultsFromQuery = async (query, resultKey, chainId, owner) => {
   return resultArray;
 };
 
-const fetchChildTokenInfo = async (tokenUri) => {
+const fetchTokenUri = async (tokenUri) => {
   return fetch(tokenUri)
     .then((res) => res.json())
     .then((res) => {
@@ -234,10 +234,31 @@ const Product = ({ pageTitle }) => {
             chainId,
             digitalaxGarmentV2Collection.id,
           );
+          const additionalSources = [];
+
+          if (digitalaxGarmentV2Collection.garments[0].tokenUri) {
+            const info = await fetchTokenUri(digitalaxGarmentV2Collection.garments[0].tokenUri);
+            for (let i = 1; i <= 4; i += 1) {
+              if (info[`image_${i}_url`]) {
+                additionalSources.push({
+                  url: info[`image_${i}_url`],
+                  type: 'image',
+                });
+              }
+            }
+            for (let i = 1; i <= 4; i += 1) {
+              if (info[`animation_${i}_url`]) {
+                additionalSources.push({
+                  url: info[`animation_${i}_url`],
+                  type: 'animation',
+                });
+              }
+            }
+          }
 
           if (digitalaxGarmentV2Collection.garments[0].children.length) {
             digitalaxGarmentV2Collection.garments[0].children.forEach(async (child) => {
-              const info = await fetchChildTokenInfo(child.tokenUri);
+              const info = await fetchTokenUri(child.tokenUri);
               console.log({ info });
               children.push({
                 ...info,
@@ -271,6 +292,7 @@ const Product = ({ pageTitle }) => {
             id: digitalaxGarmentV2Collection.id,
             garment: digitalaxGarmentV2Collection.garments[0],
             children,
+            additionalSources,
             designer: digitalaxGarmentV2Collection.designer,
             developer: digitalaxGarmentV2Collection.developer,
           });
@@ -460,6 +482,21 @@ const Product = ({ pageTitle }) => {
                     }
                     showButton={!isLookHakathon()}
                   />
+                  {!!product?.additionalSources?.length && (
+                    <div className={styles.additionalImages}>
+                      {product?.additionalSources.map((item) => {
+                        if (item.type === 'image') {
+                          return <img src={reviseUrl(item.url)} />;
+                        } else if (item.type === 'animation') {
+                          return (
+                            <video muted autoPlay loop>
+                              <source src={reviseUrl(item.url)} />
+                            </video>
+                          );
+                        }
+                      })}
+                    </div>
+                  )}
                   {!!product?.children?.length && (
                     <>
                       <div className={styles.childrenDescription}>
