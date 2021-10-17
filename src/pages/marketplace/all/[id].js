@@ -50,6 +50,7 @@ const Auctions = () => {
           const foundOfferItem = digitalaxMarketplaceV2Offers.find(
             (offer) => offer.id === collection.id,
           );
+          if (!foundOfferItem) return;
           colls.push({
             designer: collection.designer,
             developer: collection.developer,
