@@ -85,7 +85,7 @@ const Product = ({ pageTitle }) => {
   const [days, setDays] = useState('00');
   const [hours, setHours] = useState('00');
   const [minutes, setMinutes] = useState('00');
-  const [secondDesigner, setSecondDesigner] = useState(null);
+  const [secondDesigners, setSecondDesigners] = useState([]);
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
   const [loveCount, setLoveCount] = useState(0);
@@ -316,18 +316,23 @@ const Product = ({ pageTitle }) => {
       return item.id == id && item.rarity == rarity && item.isAuction == isAuction;
     });
 
-    if (secondDesigner && secondDesigner.designer) {
-      fetch(secondDesigner.designer)
+    if (secondDesigner && secondDesigner.designer && secondDesigner.designer.length > 0) {
+      const secondDesignersRes = []
+      secondDesigner.designer.map(designerItem => {
+        fetch(designerItem)
         .then((response) => response.json())
         .then((designerData) => {
-          setSecondDesigner({
+          secondDesignersRes.push({
             name: designerData['Designer ID'],
             description: designerData['description'],
             image: designerData['image_url'],
-          });
+          })
+          setSecondDesigners(secondDesignersRes);
         });
+      })
+      
     } else {
-      setSecondDesigner(null);
+      setSecondDesigners([]);
     }
 
     const fetchViews = async () => {
@@ -712,65 +717,70 @@ const Product = ({ pageTitle }) => {
               </Container>
             </section>
 
-            {secondDesigner && (
-              <section className={[styles.designerSection, styles.margin50].join(' ')}>
-                <video autoPlay loop muted className={styles.video}>
-                  <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
-                </video>
-                <Container>
-                  <div className={styles.designerBody}>
-                    <div className={styles.title}> designer </div>
-                    <div className={styles.data}>
-                      <a
-                        href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
-                        target="_blank"
-                      >
-                        <ImageCard showButton={false} imgUrl={secondDesigner.image} />
-                      </a>
-                      <div className={styles.infoWrapper}>
-                        {owners.length ? (
-                          <div className={styles.wearersLabel}>current wearer/S</div>
-                        ) : (
-                          <></>
-                        )}
-                        {owners.length ? (
-                          <UserList
-                            className={styles.userList}
-                            users={owners}
-                            userLimit={7}
-                            onClickSeeAll={onClickSeeAllWearers}
-                          />
-                        ) : (
-                          <></>
-                        )}
-                        <InfoCard libon="./images/metaverse/party_glasses.png">
-                          <a
-                            href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
-                            target="_blank"
-                          >
-                            <div className={styles.name}> {secondDesigner.name} </div>
-                          </a>
-                          <div className={styles.description}>{secondDesigner.description}</div>
-                          <a
-                            href={`https://designers.digitalax.xyz/designers/${secondDesigner.name}`}
-                            target="_blank"
-                          >
-                            <button type="button" className={styles.profileButton}>
-                              View Full Profile
+            {
+            secondDesigners && secondDesigners.length > 0 && 
+            secondDesigners.map(item => {
+              return (
+                <section className={[styles.designerSection, styles.margin50].join(' ')} key={item.name}>
+                  <video autoPlay loop muted className={styles.video}>
+                    <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
+                  </video>
+                  <Container>
+                    <div className={styles.designerBody}>
+                      <div className={styles.title}> designer </div>
+                      <div className={styles.data}>
+                        <a
+                          href={`https://designers.digitalax.xyz/designers/${item.name}`}
+                          target="_blank"
+                        >
+                          <ImageCard showButton={false} imgUrl={item.image} />
+                        </a>
+                        <div className={styles.infoWrapper}>
+                          {owners.length ? (
+                            <div className={styles.wearersLabel}>current wearer/S</div>
+                          ) : (
+                            <></>
+                          )}
+                          {owners.length ? (
+                            <UserList
+                              className={styles.userList}
+                              users={owners}
+                              userLimit={7}
+                              onClickSeeAll={onClickSeeAllWearers}
+                            />
+                          ) : (
+                            <></>
+                          )}
+                          <InfoCard libon="./images/metaverse/party_glasses.png">
+                            <a
+                              href={`https://designers.digitalax.xyz/designers/${item.name}`}
+                              target="_blank"
+                            >
+                              <div className={styles.name}> {item.name} </div>
+                            </a>
+                            <div className={styles.description}>{item.description}</div>
+                            <a
+                              href={`https://designers.digitalax.xyz/designers/${item.name}`}
+                              target="_blank"
+                            >
+                              <button type="button" className={styles.profileButton}>
+                                View Full Profile
+                              </button>
+                            </a>
+                          </InfoCard>
+                          <a href="https://designers.digitalax.xyz/getdressed" target="_blank">
+                            <button type="button" className={styles.getDressedButton}>
+                              GET BESPOKE DRESSED BY THIS DESIGNER!
                             </button>
                           </a>
-                        </InfoCard>
-                        <a href="https://designers.digitalax.xyz/getdressed" target="_blank">
-                          <button type="button" className={styles.getDressedButton}>
-                            GET BESPOKE DRESSED BY THIS DESIGNER!
-                          </button>
-                        </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Container>
-              </section>
-            )}
+                  </Container>
+                </section>
+              )
+            })
+            }
           </>
         ) : null}
 
