@@ -110,9 +110,10 @@ const ImageCard = ({
   };
 
   useEffect(() => {
-    console.log('this is main image', { mainImage });
-    console.log('this is main image type', mainImageType);
-  }, [mainImage, mainImageType]);
+    if (mainImageType === 1 && videoTagRef.current) {
+      videoTagRef.current.load();
+    }
+  }, [mainImageType, mainImage]);
 
   const renderImage = () => {
     return (
@@ -213,12 +214,12 @@ const ImageCard = ({
               },
             ]
               .filter((item) => item.url !== mainImage)
-              .map((item, index) => {
+              .map((item) => {
                 if (item.type === 'image') {
                   return (
                     <img
                       src={reviseUrl(item.url)}
-                      key={index}
+                      key={item.url}
                       onClick={() => {
                         setMainImage(item.url);
                         setMainImageType(2);
@@ -231,7 +232,7 @@ const ImageCard = ({
                       muted
                       autoPlay
                       loop
-                      key={index}
+                      key={item.url}
                       onClick={() => {
                         setMainImage(item.url);
                         setMainImageType(1);
