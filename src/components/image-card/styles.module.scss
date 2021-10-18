@@ -4,6 +4,21 @@
   width: 100%;
   margin: auto;
 
+  .additionalImages {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    display: flex;
+
+    img,
+    video {
+      width: 53px;
+      height: 65px;
+      margin-right: 1rem;
+      object-fit: cover;
+      box-shadow: 0px 4px 20px 10px #9d1e71;
+    }
+  }
+
   @include sm-width {
     width: 400px;
 
