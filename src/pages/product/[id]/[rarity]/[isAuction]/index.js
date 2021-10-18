@@ -298,8 +298,10 @@ const Product = ({ pageTitle }) => {
           });
         }
       } else {
+        console.log('id: ', id)
         if (parseInt(id) > 4) {
           const { digitalaxGarmentV2Auction } = await getGarmentV2ByAuctionId(chainId, id);
+          console.log('digitalaxGarmentV2Auction: ', digitalaxGarmentV2Auction)
           setTokenIds([digitalaxGarmentV2Auction.garment.id]);
           setProduct(digitalaxGarmentV2Auction);
         } else {
