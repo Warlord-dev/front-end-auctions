@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { getAccount } from '@selectors/user.selectors';
 import LazyLoad from 'react-lazyload';
 import { useRouter } from 'next/router';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRarityId, reviseUrl } from '@utils/helpers';
 import styles from './styles.module.scss';
@@ -40,6 +40,8 @@ const ImageCard = ({
   const videoTagRef = useRef();
   const [hasAudio, setHasAudio] = useState(false);
   const [videoMuted, setVideoMuted] = useState(true);
+  const [mainImage, setMainImage] = useState('');
+  const [mainImageType, setMainImageType] = useState(0);
 
   function getAudio(video) {
     return (
@@ -48,6 +50,14 @@ const ImageCard = ({
       Boolean(video.audioTracks && video.audioTracks.length)
     );
   }
+
+  useEffect(() => {
+    setMainImage(
+      data?.garment?.animation || data?.animation || data?.garment?.image || data?.image,
+    );
+    if (data?.garment?.animation || data?.animation) setMainImageType(1);
+    else if (data?.garment?.image || data?.image) setMainImageType(2);
+  }, [data]);
 
   const onBuyNow = () => {
     if (!router.asPath.includes('product')) {
@@ -99,6 +109,11 @@ const ImageCard = ({
     videoTagRef.current.play();
   };
 
+  useEffect(() => {
+    console.log('this is main image', { mainImage });
+    console.log('this is main image type', mainImageType);
+  }, [mainImage, mainImageType]);
+
   const renderImage = () => {
     return (
       <div className={styles.bodyWrapper}>
@@ -110,7 +125,7 @@ const ImageCard = ({
             className={zoomMedia ? styles.zoomWrapper : styles.mediaWrapper}
             onClick={() => onClickZoomIn()}
           >
-            {data.garment?.animation?.length || data.animation?.length ? (
+            {mainImageType === 1 ? (
               <LazyLoad>
                 {/* <video key={data.id} autoPlay muted={!asPath.includes('product')} loop className={styles.video} */}
                 <video
@@ -135,15 +150,12 @@ const ImageCard = ({
                     }
                   }}
                 >
-                  <source
-                    src={reviseUrl(data.garment ? data.garment.animation : data.animation)}
-                    type="video/mp4"
-                  />
+                  <source src={reviseUrl(mainImage)} type="video/mp4" />
                 </video>
               </LazyLoad>
-            ) : (
-              <img src={data.garment ? data.garment.image : data.image} className={styles.image} />
-            )}
+            ) : mainImageType === 2 ? (
+              <img src={mainImage} className={styles.image} />
+            ) : null}
             {hasAudio && zoomMedia && (
               <Button
                 className={styles.muteButton}
@@ -164,7 +176,7 @@ const ImageCard = ({
         <Button className={styles.zoomButton} onClick={() => onClickZoomOut()}>
           <img src="/images/zoom_btn.png" />
         </Button>
-        {hasAudio && (
+        {hasAudio && mainImageType === 1 && (
           <Button className={styles.muteButton} onClick={() => onClickMute()}>
             {videoMuted ? <img src="/images/audio-off.png" /> : <img src="/images/audio-on.png" />}
           </Button>
@@ -185,6 +197,51 @@ const ImageCard = ({
               onClick={onBuyNow}
               disable={disable}
             />
+          </div>
+        )}
+        {!!data?.additionalSources?.length && (
+          <div className={styles.additionalImages}>
+            {[
+              ...data?.additionalSources,
+              {
+                type: data?.garment?.animation || data?.animation ? 'animation' : 'image',
+                url:
+                  data?.garment?.animation ||
+                  data?.animation ||
+                  data?.garment?.image ||
+                  data?.image,
+              },
+            ]
+              .filter((item) => item.url !== mainImage)
+              .map((item, index) => {
+                if (item.type === 'image') {
+                  return (
+                    <img
+                      src={reviseUrl(item.url)}
+                      key={index}
+                      onClick={() => {
+                        setMainImage(item.url);
+                        setMainImageType(2);
+                      }}
+                    />
+                  );
+                } else if (item.type === 'animation') {
+                  return (
+                    <video
+                      muted
+                      autoPlay
+                      loop
+                      key={index}
+                      onClick={() => {
+                        setMainImage(item.url);
+                        setMainImageType(1);
+                      }}
+                    >
+                      <source src={reviseUrl(item.url)} />
+                    </video>
+                  );
+                }
+              })}
           </div>
         )}
       </div>

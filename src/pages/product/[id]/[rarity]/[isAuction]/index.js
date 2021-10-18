@@ -482,21 +482,7 @@ const Product = ({ pageTitle }) => {
                     }
                     showButton={!isLookHakathon()}
                   />
-                  {!!product?.additionalSources?.length && (
-                    <div className={styles.additionalImages}>
-                      {product?.additionalSources.map((item) => {
-                        if (item.type === 'image') {
-                          return <img src={reviseUrl(item.url)} />;
-                        } else if (item.type === 'animation') {
-                          return (
-                            <video muted autoPlay loop>
-                              <source src={reviseUrl(item.url)} />
-                            </video>
-                          );
-                        }
-                      })}
-                    </div>
-                  )}
+
                   {!!product?.children?.length && (
                     <>
                       <div className={styles.childrenDescription}>
