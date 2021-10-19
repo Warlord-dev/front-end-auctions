@@ -1,46 +1,58 @@
-import React from 'react'
-import styles from './page7374.module.scss'
+import React from 'react';
+import styles from './page7374.module.scss';
 
 const Page7374 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/5/images/7374_image1.png' className={styles.image1} />
-      <img src='/magazine/5/images/7374_image2.png' className={styles.image2} />
-      <div className={styles.rect1}></div>
-      <img src='/magazine/5/images/7374_image3.png' className={styles.image3} />
-      <img src='/magazine/5/images/7374_image4.png' className={styles.image4} />
-      <img src='/magazine/5/images/7374_image5.png' className={styles.image5} />
-
-      <a href='https://twitter.com/CixLiv' target='_blank'>
-        <img src='/magazine/5/images/7374_image6.gif' className={styles.image6} />
-      </a>
-      <div className={styles.rect2}></div>
-
+      <img src="/magazine/6/images/73_74_back.png" className={styles.back} />
       <div className={styles.text1}>
-        I think the NFT social clubs are the epitome of all that could go wrong with crypto. It’s a centralized social club, built on decentralized technology. That represents exclusionary idealism. They can only be purchased once you reach a very high socioeconomic status, and not based on the merit of what you have done. In addition, many of these NFTs are just held and promoted to increase their value. The identity holders don’t truly see themselves as these profile pictures, and rather see them as a “joke” or “good times”. I believe the future NFTs must carry a sense of achievement, instead of simply being based on a secondary resale market, or exclusionary social signaling.
-        <br /><br />
-        Unfortunately due to economic reasons, we won’t see open XR hardware for quite a while. The value of these ecosystems for the technology titans spending heavily in space, is full control over the devices. I am a pessimist, in that I believe XR hardware will not become open while the cost of the hardware is heavily subsidized (done so for mass adoption). We will see a company eventually create an open platform, but that may have to wait until the high R&D costs to make this hardware smaller/cheaper has gone through significant strides. This may take up to 10 years. In the meantime, the decentralized world will likely have to be powered outside headsets, through more open ecosystems like PCs.
-        <br /><br />
-        Facebook is a curse to the future of the metaverse, in the same vein as IOI from Ready Player One. The idea of identity permanence is contrary to how humans grow and evolve. To beat them, we must move those human connections outside their platform, and build platforms that allow identity to continually evolve in a Web3 world.
+        Fact is, many communities purporting to adhere to the principles of decentralization and
+        utmost transparency still adopt centralized, unilateral mechanisms to govern. But in truth,
+        they are just paying lip service in the service of window-dressing. Beware of grifters.
+        <br />
+        <br />
+        The heart of a strong community is a shared set of values, purpose, and identity. When we
+        find and join communities, we contribute part of ourselves to making the community greater
+        than the sum of its parts.
+        <br />
+        <br />
+        Communities scale by decentralizing power and distributing it to its participants, evolving
+        into progressive decentralization into their own autonomous organizations. And with great
+        power comes great responsibility, because what you contribute to the community is what
+        builds your reputation and trust on-chain.
+        <br />
+        <br />
+        After all, your wallet is the gateway to your digital web3 identity, because your
+        participation in your community’s efforts can be verified on the blockchain. It’s your
+        curriculum vitae, web3 style.
+        <br />
+        <br />
+        And being a good community member is all about offering something of value to the community
+        and paying it forward to build value for you and others and uplift your community’s efforts
+        to achieve its vision.
       </div>
       <div className={styles.text2}>
-        Wrekt<br />
-        Through <br />
-        Regulation        
-      </div>
-      <div className={styles.text3}>
-        Regulations exist to protect consumers and investors when appropriately conceived and enforced. However, as we all know, with all things, power corrupts. And
+        Onboard yourself as much as you can. Reach out and touch base with community members. Ask
+        for help. That’s what community is for.
         <br />
-        absolute power corrupts absolutely. 
-      </div>
-      <div className={styles.text4}>
-        the industry destroying, economy crippling, and consumer / investor harming effects of overly broad, arbitrary, power hungry, and inscrutable regulatory action needs to be called out for what it is. simply being appointed as a commissioner on a regulatory body does not somehow grant the auora of virtue and immunity from critique. All the moreso in a nation and economy founded on principle that “we people are the ultimate owners and arbiters or what is just.” here in the us, the sec works for us— even if that is often completely dismissed as wishful thinking.
-      </div>
-      <div className={styles.text5}>
-        When regulators attempt in overreach beyond their jurisdiction it poses the question of cui bono? who benefits and who are they actually benefitting? because it is certainly not the people, not the consumers or the investors. In fact it creates huge chilling effects to American innovation. Being the global tech leader is not guaranteed. 
+        <br />
+        Participate and join community calls, be proactive, contribute to the discussion, share what
+        you find cool, be yourself, and be kind–seek to provide value.
+        <br />
+        <br />
+        And once you’ve situated yourself within your chosen community, help in any way you can.
+        Pass it on, create content, answer questions, try to help others solve their problems.
+        Participate in bounties and in quests that help generate value for others. Leave the ego at
+        the door, too–everyone was a beginner at one point or another. Besides, there’s nothing that
+        will turn off individuals more than arrogance.
+        <br />
+        <br />
+        The heart of a strong community is a shared sense of purpose, identity, and ethos. And when
+        we contribute a part of ourselves to something greater, each of us becomes decentralized
+        sparks of energy, each seeking to empower and build towards a better future.
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page7374
+export default Page7374;

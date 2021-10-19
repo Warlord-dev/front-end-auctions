@@ -1,39 +1,91 @@
-import React from 'react'
-import Link from 'next/link'
-import styles from './page6566.module.scss'
+import React from 'react';
+import Link from 'next/link';
+import styles from './page6566.module.scss';
 
 const Page6566 = () => {
-
   return (
     <div className={styles.wrapper}>
-      <video autoPlay muted loop className={styles.video1}>
-        <source src='./magazine/5/videos/6566_video1.mp4' type='video/mp4' />
-      </video>
-      <img src='/magazine/5/images/6566_image1.png' className={styles.image1}/>
-      <div className={styles.rect1}></div>
-
-      <Link href='https://www.instagram.com/meggievanzwieten/'>
-        <a target='_blank'>
-          <div className={styles.text1}>
-            Meggie van Zwieten
-          </div>
-        </a>
-      </Link>
+      <img src="/magazine/6/images/65_66_back.png" className={styles.back} />
+      <div className={styles.rect1} />
+      <div className={styles.rect2} />
+      <div className={styles.rect3} />
+      <div className={styles.rect4} />
+      <div className={styles.text1}>
+        Portugal has very good quality fashion resources from shoemaking to manufacturing of fabrics
+        and garments, a lot of big luxury brands buy products and hire garment workers in the North
+        of Portugal - which is where all the fashion industry of the country exists. Moda Lisboa and
+        Portugal Fashion Week are very active which helps spreading the name of young designers but
+        there almost no help in making it happen, the designers that are picked to show their
+        collections need to have quite a support moneywise to be able to launch their brands in this
+        platform. The fashion education is also quite versatile and complete but once the designers
+        graduate is very hard to get recognized, especially if you have no contacts in the field,
+        even if you land the job, you will be facing the minimum wage for quite some time until you
+        will be able to call yourself a senior designer and only then you may see little bit more
+        money at the end of the month. This actual situation lids to a lot of young people leave the
+        country or switch careers.
+      </div>
       <div className={styles.text2}>
-        Meggie van Zwieten is a digital artist, based in The Hague. She creates 3D artworks, digital fashion and often works with Augmented Reality and Mixed Reality. By working multidisciplinary she tries to build a welcoming digital environment, to bring individuals closer to this world in order to be able to experience it for all its positive possibilities and potential. And hereby also aiming to use digital means to create awareness around sustainability and equality. As an artist she wants to create an accessible environment in which one can find relief, beauty and escape. With her creations she strives to generate astonishment that cares for curiosity, leading to an urge to further explore the digital environment. And hereby also aiming to use digital means to create awareness around sustainability and equality.        
+        Unfortunately, I haven't found significant activity in this fields in Portugal, I do know
+        there's been adoption of 3D technology in several fashion companies and know a few very good
+        3D Portuguese artists, where there is more 'commotion' around this topic is in the football
+        team's associations which like every other business trying to profit on this new big thing!
+        I sincerely hope that Portugal adopts this world as it would mean a great deal for
+        unrecognized Portuguese artists to stop being exploited in their craft!
       </div>
-      <Link href='https://www.instagram.com/devandvan/'>
-        <a target='_blank'>
-          <div className={styles.text3}>
-            DEVAN
-          </div>
-        </a>
-      </Link>
+      <div className={styles.text3}>
+        It was quite a funny feeling when I decided to work on my FGO because I was quite homesick
+        that week, ended up scrolling through my photo library and I felt super inspired by them.
+        The 'Rock Shattering' series were photos taken at my grandmother's place which is a very
+        peaceful valley with about only 6 more houses around and therefore barely any human
+        influence on nature, so it makes it very inspiring. The photo was taken to one of the sides
+        of this rock where you could clearly see its natural evolution process.
+        <br />
+        <br />
+        The 'Pego do Inferno' is a "secret" paradise in my hometown, Tavira, a peaceful lake with a
+        waterfall but it got its name by an old legend which most people won't agree with once they
+        get there! I have spent good times there with family and friends, so I have decided to
+        manipulate one of the photos of the pathway to get to this place which is the most
+        challenging bit about it!
+        <br />
+        <br />
+        All this places are located in the south of Portugal, Algarve but my 3rd Portuguese
+        reference I have used was from Porto, North of Portugal - I have spent 3 years studying in
+        this beautiful place which initiated my career in Fashion so I wanted to dedicate some FGO
+        to this very special place to me, my second home - also known as 'Invicta' which means
+        invincible in Portuguese, how not to be inspired by it?!
+      </div>
       <div className={styles.text4}>
-        Digital artist working with lettering+calligraphy+CG+AR.
+        I was reached out by Digitalax to join a contest and since then my professional life and
+        creative side have had a massive swift! The GDN community is very precious to me, I have
+        never experienced this community feeling before and it is so fast paced, exciting and always
+        learning so much from others!
+        <br />
+        <br />
+        Right now, I'm collaborating Alana's creator - Stella - for the LOOK project featuring Alana
+        the digi model, possible minting it to Digitalax Marketplace and use one of the show pieces
+        as an AR filter. I'm super excited by this project as it was the first time, I have drawn
+        inspiration from a text based NFT and it worked out better than I thought so stay tune for
+        this one
+        <br />
+        <br />
+        And as a individual project I'm working on my own digi model, still learning my way around
+        Daz Studios and probably Unreal to be able to bring - Aryes - to life, and of course she
+        will in very cool wearables in Digitalax Marketplace!
+        <br />
+        <br />
+        The absolute freedom! Since I started studying fashion I have always felt somewhat type of
+        constraints on what I would create and ended up not fulling my teachers or myself, I'm
+        pretty certain because deep inside I knew this was coming to me one day and I'm know
+        learning to create without any limitations which ironically sometimes sounds scary to me
+        because all this time I felt inside of the box and now I need to slowly let go of it, if
+        that makes any sense!
       </div>
+      <a href="" target="_blank" className={styles.link1}>
+        RealFevr
+      </a>
+      <div className={styles.text5}>Crypto Regulations in Portugal</div>
     </div>
-  )
-}
+  );
+};
 
-export default Page6566
+export default Page6566;

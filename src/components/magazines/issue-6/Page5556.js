@@ -1,74 +1,147 @@
-import React from 'react'
-import styles from './page5556.module.scss'
+import React from 'react';
+import styles from './page5556.module.scss';
 
 const Page5556 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/5/images/5556_image1.jpg' className={styles.image1} />
-      <img src='/magazine/5/images/5556_image2.png' className={styles.image2} />
-      <img src='/magazine/5/images/5556_image3.png' className={styles.image3} />
+      <img src="/magazine/6/images/55_56_back.png" className={styles.back} />
+      <a href="https://twitter.com/KRSuperSoldier" target="_blank">
+        <img src="/magazine/6/images/55_56_image1.png" className={styles.link1} />
+      </a>
+      <img src="/magazine/6/images/55_56_gif1.gif" className={styles.image1} />
+      <div className={styles.rect1} />
+      <div className={styles.rect2} />
+      <div className={styles.rect3} />
+      <div className={styles.rect4} />
       <div className={styles.text1}>
-        PLOPSKI        
+        I've been creating 3D models since 2015. I enrolled in a university here in the Philippines
+        as a Bachelor of Science in Information Technology majoring in Animation and Game
+        Development. I always envision myself to be part of something big and I thought making games
+        was really a thing that I might enjoy since I was dreaming to make one ever since I was a
+        kid but I just didn’t know how back then. Creating art has always been my passion and seeing
+        it inside a game where everyone enjoys gives me a different kind of excitement. I myself
+        don’t like my art but seeing others appreciate what I do just fills me up with joy.
       </div>
       <div className={styles.text2}>
-        E-SPORTS RISING STAR OF THE MONTH
+        <b>Favourite 3D software?</b>
       </div>
       <div className={styles.text3}>
-        Plopski is a 19 year old Swedish-Spanish CSGO player and has already competed professionally in over 60 tournaments. He is currently playing for Ninjas in Pyjamas as a rifler. Plopski’s family history in gaming goes back to the roots, where his dad was previously also a CSGO player and has been his biggest supporter since, instilling a strong work ethic into Plopski, that is shown through his willingness to maintain as a student of the game and put in the hours necessary to improve his craft— killstreaks and more.
+        I love Blender because it's open source and you can do beyond so many things! My favorite
+        software for Sculpting 3D is Zbrush since it offers a variety of tools and I think it’s
+        simply the best software for creating organic creatures. For hard surface modelling or any
+        game props, I use Maya since it’s what I was taught in college and I was very used to the
+        interface after using it for a long time.
+        <br />
+        <br />
+        Last but definitely not the least, for anything voxel art, nothing beats VoxEdit. In my
+        opinion it’s simply one of the best, especially when combined with the features and tools of
+        magica voxel I believe you can break boundaries which inspires me to produce this artwork.
+        <br />
+        <br />
+        The actual asset is also animated using VoxEdit and this software keeps getting better at
+        every update.
       </div>
       <div className={styles.text4}>
-        metaverse ready score: 8
+        At first, NFT was a vague concept to me but I was already amazed by crypto currency in
+        general so I ended up investing some of my savings into crypto after doing some research.
       </div>
       <div className={styles.text5}>
-        CEB
+        Looking for a job opportunity here after graduating from college is quite challenging
+        because every company is looking for someone who has experience already in a certain field.
+        Having said that, it was pre-pandemic when I was hired at a startup gaming company which I
+        absolutely loved and I really enjoy doing. For all I thought my dream was finally moving
+        forward then, the Covid 19 came along and the company didn’t have enough power to sustain us
+        which led us to be laid off. Looking for another job after that was a tough journey, so I
+        decided to try 3D printing but that didn’t go so well either.
+        <br />
+        <br />I was thinking of other ways to earn money online, and was looking for investment
+        opportunities until I saw Sandbox. Fortunately, they had an opening post as a freelance
+        Creator Fund Artist so I tried my luck applying. To my surprise, I passed the exam and have
+        been doing voxel art since then. The atmosphere that they brought made me motivated until I
+        got an offer for a full-time job. The team is simply amazing and talented but what made me
+        stick to Sandbox is how they care about their artists.
       </div>
       <div className={styles.text6}>
-        E-SPORTS PLAYER OF THE MONTH
+        On Sandbox we do a variety of assets with certain themes which are often exciting such as
+        mechas, halloween, and Christmas. You can take a look at them{' '}
+        <a
+          href="https://www.sandbox.game/en/users/kradsupersoldier/95619c69-f6af-4335-9d1c-d23cab9275c3/"
+          target="_blank"
+        >
+          here
+        </a>
+        . For wearables, I was able to make a legendary tier asset inspired from Chinese mythology.
       </div>
       <div className={styles.text7}>
-        metaverse ready score: 9
+        Why Sandbox? Just like what I’ve mentioned, it makes me want to stay and be loyal to them
+        because of how they treat us artists. They never forget to give us the right compensation
+        and the opportunities that they opened for us that would never be available if it weren’t
+        for them. Our first NFT sale was a major success all thanks to their support.
+        <br />
+        <br />I believe that the pandemic made us realize there is also life in the metaverse. The
+        concept of P2E brought food to the table for people like me who were laid off because of the
+        Covid 19 virus. These games made us enjoy life and support our families at the same time
+        although it’s not yet stable since it’s still a new concept to us, I believe in the future
+        that it holds for everyone. Decentralization made us realize how free we can be with our
+        finances that benefits everyone. I think we are still early in these stages but it has been
+        looking very good from this point. I think the metaverse will soon be our new reality as
+        time goes by and it can be both good and bad. It’s bad if we forget how to live in the real
+        world but it’s great if we can benefit from it so we can live our life in the real world.
       </div>
       <div className={styles.text8}>
-        CEB is all about Dota2, currently playing for OG. His professional career started all the way back in 2011, and over the length of his time in the spotlight he’s certainly experienced both the highs and lows of the industry; from the 2012 International collapse to reaching coach level at OG. His resiliance is a testament to all, as he continues to prove the haters wrong and remove all doubt that any of his skills have suffered decay. 
+        The biggest challenge for me as an artist and I think I speak for a lot of artists out
+        there, is that we don’t get valued as much in the real world. A lot of creative and artistic
+        minds don’t get paid as much as they deserve because they feel so low about themselves that
+        they are willing to accept any value people think they’re worth but with NFT’s, it makes
+        people like us special. It shows us our worth as an artist and it brought everyone
+        confidence in their art. Even memes are welcome and I think the community has been really
+        generous about NFTs and I hope it could continue on and fix every artist’s sense of self
+        worth. For Web3 I think it mostly values you as a person where you aren’t seen as a product
+        anymore and which gives you more privacy and control over your own assets.
+        <br />
+        <br />
+        To all the artists out there, I know how it can be scary to try a new path for our creative
+        journey and sometimes we only want to try the things that other people already did however I
+        think the universe has a way of creating new paths for us that may result to either good or
+        bad but if we keep going through the same path over and over again, how do we experience
+        change and growth? If people are not seeing value in your works it means that your place
+        belongs somewhere else where you could fit in and who knows, it could be the metaverse.
+        Alongside this, I would always recommend doing your own research before jumping on anything.
+        <br />
+        <br />
+        Lots of creative stuff coming for the next few months. Of course, the most exciting part is
+        still being part of The Sandbox, we saw how other games grew so big and The Sandbox already
+        built a community that opened up doors for other communities as well. I’ve also been working
+        on 2 NFT collections at the side, which is VoxaMech and PixaSouls. VoxaMech is a voxel art
+        animated mecha card that I'm planning to release on Opensea but there will also be an
+        animated game asset available soon in the TSB marketplace so watch out for that. Pixelsouls
+        is a passion project that’s also an NFT collection that has 7777 unique souls that will soon
+        be available on Opensea as well. If we’re lucky to have a successful launch, we also plan to
+        create our own metaverse on Sandbox and we will be making Pixelsouls a playable NFT game.
+        <br />
+        <br />
+        For some updates about what I’m working on and you can also follow VoxaMech{' '}
+        <a href="https://twitter.com/VoxaMech" target="_blank">
+          here
+        </a>
+        . For my The Sandbox NFT's you may look at them{' '}
+        <a
+          href="https://www.sandbox.game/en/users/kradsupersoldier/95619c69-f6af-4335-9d1c-d23cab9275c3/"
+          target="_blank"
+        >
+          here
+        </a>
+        .
       </div>
-      <div className={styles.text9}>
-        E-SPORTS BUZZZZ
-      </div>
-      <div className={styles.text10}>
-        E-SPORTS BUZZZZ
-      </div>
-      <div className={styles.text11}>
-        E-SPORTS BUZZZZ
-      </div>
-      <div className={styles.text12}>
-        E-SPORTS BUZZZZ
-      </div>
-      <div className={styles.text13}>
-        <br /><br /><br />
-        BYBIT EXCHANGE SIGNS EXPOSRTS DEAL
-        <br /><br /><br />
-      </div>
-      <div className={styles.text14}>
-        After a delayed launch, it’s safe to say that crypto x gaming is finally seeing the dawn of the recognition that it deserves. And casual gaming through Play-to-Earn models only scratches the surface of just how much value can be brought to the gaming industry through the direct connectivity of NFTs, DeFi and other crypto powered tools. Esports is another huge untapped sector for building wealth catalysts that can transform the entire top down approach that the current model is locked within— bridging stronger access channels so that any passionate player willing to put in the effort can have a fair shot at a player’s chair. 
-        <br /><br />
-        Bybit crypto exchange is making further moves into the esports world, starting with partnerships with esports organizations Astralis and Alliance. Here, they plan to expand their player engagement strategy that are inclusive of financial education programs— esports yield farming might not be that far away.
-
-      </div>
-      <div className={styles.text15}>
-        Le Mans Virtual Series LAUNCH
-      </div>
-      <div className={styles.text16}>
-        Motorsport Games and the Automobile Club de l’Ouest (ACO) have joined forces to launch the Le Mans Virtual Series with a $250,000 prize pool. It’s another bullish sign for the adoption of digital motorsports racing, where sponsors for the series include that of Goodyear, Thrustmaster, Rolex and Total Energies. Who knows when we will see  F1 Monte Carlo racecd in VR, my bet is that it will be much sooner than one might initially expect. As more liquidity pours into virtual racing, more of us will start to recognise that immersives tracks don’t have a speed limit or set DRS zones.
-      </div>
-      <div className={styles.text17}>
-        Team Singularity To launch NFT series
-      </div>
-      <div className={styles.text18}>
-        Team Singularity is expanding their partnership with Blocksport to develop an NFT marketplace, allowing fans to purchase unique NFTs as both collectibles and access passes. Think a bit like NBA topshot but for esports— jersey skins, cards, pictures and in-game highlights. Onwards and upwards for new digital frontiers as more and more teams start navigating the web3 space; moving from groupie hype to properly incorporated decentralised front ends.
-      </div>
-
+      <img src="/magazine/6/images/55_56_image2.png" className={styles.image2} />
+      <img src="/magazine/6/images/55_56_image3.png" className={styles.image3} />
+      <img src="/magazine/6/images/55_56_image4.png" className={styles.image4} />
+      <img src="/magazine/6/images/55_56_image5.png" className={styles.image5} />
+      <img src="/magazine/6/images/55_56_image6.png" className={styles.image6} />
+      <img src="/magazine/6/images/55_56_gif2.gif" className={styles.image7} />
+      <img src="/magazine/6/images/55_56_gif3.gif" className={styles.image8} />
     </div>
-  )
-}
+  );
+};
 
-export default Page5556
+export default Page5556;
