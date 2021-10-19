@@ -442,24 +442,6 @@
 }
 
 @font-face {
-  font-family: 'Barlow';
-  font-weight: 400;
-  src: url("./Barlow-Regular.ttf");
-}
-
-@font-face {
-  font-family: 'Barlow';
-  font-weight: 700;
-  src: url("./Barlow-Bold.ttf");
-}
-
-@font-face {
-  font-family: 'Barlow';
-  font-weight: 900;
-  src: url("./Barlow-Black.ttf");
-}
-
-@font-face {
   font-family: 'FresHot_DEMO';
   src: url("./FresHot_DEMO.ttf");
 }

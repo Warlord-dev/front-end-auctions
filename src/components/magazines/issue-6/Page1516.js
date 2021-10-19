@@ -40,7 +40,7 @@ const Page1516 = () => {
       </a>
 
       <audio ref={refAudio} loop>
-        <source src='/magazine/5/sounds/4950_sound1.mp3' type='audio/mpeg' />
+        <source src='/magazine/6/sounds/1516_sound1.mp3' type='audio/mpeg' />
       </audio>
       <div
         className={styles.playButton1}

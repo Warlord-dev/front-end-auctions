@@ -469,6 +469,10 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kameron"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barrio"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster+Two"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=New+Rocker"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pirata+One"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Warnes"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -875,24 +879,6 @@ class MyDocument extends Document {
             @font-face {
               font-family: 'Capriola';
               src: url("./fonts/Capriola-Regular.ttf");
-            }
-
-            @font-face {
-              font-family: 'Barlow';
-              font-weight: 400;
-              src: url("./fonts/Barlow-Regular.ttf");
-            }
-
-            @font-face {
-              font-family: 'Barlow';
-              font-weight: 700;
-              src: url("./fonts/Barlow-Bold.ttf");
-            }
-            
-            @font-face {
-              font-family: 'Barlow';
-              font-weight: 900;
-              src: url("./fonts/Barlow-Black.ttf");
             }
 
             @font-face {

@@ -32,12 +32,19 @@ const UnlockPageThree = props => {
           COLLECT YOUR FREE DIGIFIZZY ISSUE FIVE POAP BY CLICKING ON UNLOCK!
         </div>
       }
+      { 
+        issueId == 6 && 
+        <div className={styles.text1}>
+          COLLECT YOUR FREE DIGIFIZZY ISSUE SIX POAP BY CLICKING ON UNLOCK!
+        </div>
+      }
       <button
         className={styles.unlock} 
         onClick={() => {
           issueId == 3 && Router.push('https://digifizzy.xyz/unlockable/3')
           issueId == 4 && Router.push('https://digifizzy.xyz/unlockable/1')
           issueId == 5 && Router.push('/unlockable/1')
+          issueId == 6 && Router.push('/unlockable/1')
         }}
       >
         Unlock
