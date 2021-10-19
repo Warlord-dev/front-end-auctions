@@ -454,6 +454,19 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700"
           ></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nova+Cut"></link>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700"
+          ></link>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Gudea:wght@700"
+          ></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Devonshire"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dekko"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavivanar"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kameron"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
@@ -1843,6 +1856,18 @@ class MyDocument extends Document {
               font-family: 'CantoraOne';
               font-weight: 400;
               src: url("./fonts/CantoraOne-Regular.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Johnny Long';
+              font-weight: 400;
+              src: url("./fonts/JohnnyLong.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Reguler';
+              font-weight: 400;
+              src: url("./fonts/FragilleReguler-lgLVd.otf");
             }
           `,
             }}

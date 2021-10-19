@@ -1,75 +1,88 @@
-import React from 'react'
-import Link from 'next/link'
+import React, { useRef, useState }  from 'react'
 import styles from './page1516.module.scss'
 
 const Page1516 = () => {
+  const [isPlaying1, setIsPlaying1] = useState(false)
+  const refAudio = useRef()
+
+    const startAudio1 = () => {
+    refAudio.current.play()
+    setIsPlaying1(true)
+  }
+
+  const pauseAudio1 = () => {
+    refAudio.current.pause()
+    setIsPlaying1(false)
+  }
+
   return (
     <div className={styles.wrapper}>
-
-      <img src='/magazine/5/images/1516_background1.jpg' className={styles.background1} />
-      <video autoPlay muted loop className={styles.video1}>
-        <source src='./magazine/5/videos/1516_video1.mp4' type='video/mp4' />
-      </video>
-      <div className={styles.rect1}></div>
+      <img src='./magazine/6/images/1516_image1.jpg' className={styles.image1} />
+      <img src='./magazine/6/images/1516_image2.jpg' className={styles.image2} />
       <div className={styles.text1}>
-        <span>You talk about how the best talent will have DAOs competing for their time. How will a DAO know who the best talent is? Will it be on-chain data? How does someone new break in?
-        </span>
-        <br /><br />
-        I think for DAOs to scale, we need on-chain reputation and credentialing systems to source and vet talent. Right now, onboarding talent is challenging because we’re relying on web2 reputation and credentialing systems. In web3, your contributions are your resume -- rather than relying on where you went to school or your title at your last job, these systems leverage your on-chain activity.
-        <br /><br />
-        Projects like RabbitHole and Station are based on this premise and what’s amazing about this is that it opens up opportunities for work to people who traditionally wouldn’t have access. Geography, education, web2 work experience -- none of those things matter in web3; it’s all about your contributions and that breaks down traditional barriers to entry significantly. I’m incredibly excited for DAOs to create this open, global labor market that makes opportunities for work accessible to everyone.        
+        Community with a Capital C
       </div>
       <div className={styles.text2}>
-        <span>
-        How transient can identity be with immutable chains?
-        </span>
-        <br /><br />
-        I think there are two approaches to this question. The first is to say that you can just spin up a new identity and begin contributing, so immutability doesn’t really matter because it doesn’t impact your ability to create new identities and begin building those identities on-chain.
-        <br /><br />
-        The second way to approach this is to see identity as something that compounds -- that who you are in a given moment is shaped by all of your past experiences. In that world, identity is still transient but it’s a snapshot of a moment in a broader evolution of who you are.
-        <br /><br />
-        I think the important aspect here is optionality -- the ability to choose between these two different approaches is more important than the approach itself. In web3, you are not constrained to a single identity, nor are you forced to constantly spin up new identities.        
+        NFTs
       </div>
       <div className={styles.text3}>
-        <span>
-        You talk about the power and significance of community ownership. Will collective ownership be more important than individual? Which one will shape our identity more? 
-        </span>
-        <br /><br />
-        I always like to break things down into lived experiences. When I think about how ownership feels as a lived experience, it’s very intimate. That feeling of ownership emerges from investing resources (energy, money, time) into something, having the ability to control how that thing acts, and feeling like you have intimate knowledge of the thing. At an individual level, these things can create a sense of pride and connectedness to something -- you might even feel that you identify as an owner of that thing. But ownership alone is lonely. Feeling connected to an asset or a thing can leave this sense of emptiness -- it doesn’t fulfill our very human desire to be connected and loved by other humans.
-        <br /><br />
-        Collective ownership fulfills that innate desire. By owning something with other people, we feel all the benefits of ownership, but we get to share that experience with other people. Out of that shared experience, identity emerges. These collectives often have a purpose, some goal that people are coordinating to achieve that is greater than what an individual alone could accomplish. This is where things get really interesting because it gives members of the collective a sense of purpose, that they are working toward something greater than themselves. The power of collective ownership is this intersection of identity and purpose and often these things actually reinforce one another -- a sense of purpose drives identification with the collective and identification with the collective tends to create a deeper sense of purpose.
-        <br /><br />
-        This is why I think collective ownership is going to be one of the most powerful mechanisms to emerge from web3.
+        YangGang
       </div>
-      <div className={styles.text4}>
-        <span>
-        Do you think that this shift will not only affect corporate culture but most importantly actually empower a lot more people to truly take ownership and agency of our own lives?
-        </span>
-        <br /><br />
-        I hope so! I think as we become more crypto native, we’ll feel less satisfied with consumption that doesn’t result in ownership. A simple example of this is something like a Substack subscription. In web3, rather than having readers pay a monthly subscription to access content, you have models where readers need to own tokens. Once your mental model changes to ownership, something like a subscription seems like a ripoff. But that’s such a simple example -- this same logic applies to the organizations we work at and the groups we belong to.
+      <a href='https://twitter.com/Chupwn' target='_blank'>
+        <div className={styles.text4}>
+          Eddie Briseño
+        </div>
+      </a>
+      <a href='https://twitter.com/Chupwn' target='_blank'>
+        <div className={styles.text5}>
+          Eddie Briseño
+        </div>
+      </a>
+
+      <audio ref={refAudio} loop>
+        <source src='/magazine/5/sounds/4950_sound1.mp3' type='audio/mpeg' />
+      </audio>
+      <div
+        className={styles.playButton1}
+        onClick={() => {
+          isPlaying1 ? pauseAudio1() : startAudio1()
+        }}
+      >
+        <img className={styles.imageBack} src='/magazine/6/images/1516_button_back.png' />
+        {
+          !isPlaying1
+          ? <img className={styles.imagePlay} src='/magazine/6/images/1516_playbutton.png' />
+          : <img className={styles.imagePause} src='/magazine/6/images/1516_pausebutton.png' />
+        }
       </div>
-      <Link href='https://twitter.com/chaserchapman'>
-        <a target='_blank'>
-          <div className={styles.text5}>
-            Chapman Hot Tweets            
-          </div>
-        </a>
-      </Link>
-      <Link href='https://twitter.com/chaserchapman'>
-        <a target='_blank'>
-          <div className={styles.text6}>
-            Chapman Hot Tweets    
-          </div>
-        </a>
-      </Link>
-      <Link href='https://twitter.com/chaserchapman'>
-        <a target='_blank'>
-          <div className={styles.text7}>
-            Chapman Hot Tweets
-          </div>
-        </a>
-      </Link>
-      <img src='/magazine/5/images/1516_image1.png' className={styles.image1} />
+
+
+      <a href='https://twitter.com/Musashi14790940' target='_blank'>
+        <img src='./magazine/6/images/1516_image3.png' className={styles.image3} />
+      </a>
+      <img src='./magazine/6/images/1516_image3.png' className={styles.image4} />
+      <img src='./magazine/6/images/1516_image4.png' className={styles.image5} />
+      <div className={styles.rect1}></div>
+      <div className={styles.rect2}></div>
+
+      <div className={styles.text6}>
+        So, I guess, since the Bitcoin, white paper came out, I've kind of been just following the politics and the economics of it. Until about a couple of years ago, I finally invested and then really started researching each of the networks and each of the tokens and realizing how, how much in in our infancy we still were, and then started joining some of the communities and really getting into the DAO aspect of it and loving the freedoms of being able to kind of control it from the protocol coding level up. And, and really, I've always been into the arts, music, crafting, building and agriculture. So like, I had a big motivation to, I don't know, kind of empower myself to help change the world more in that way. And blockchain kind of helped in so many different ways. And now here I am in the metaverse.
+        <br /><br />
+        Yeah, so it started off you know, I was researching a lot into defy decentralized finance and blockchain games and kind of the play to earn type of aspect, because I grew up a gamer. And I've, you know, been through the rounds and rounds and rounds of games that start off Free to Play give you the, you know, shiny golden object to chase for the carrot chase that, you know, you'll Own your your assets, but you really don't in the end, and it's really a pay to play type of game. And so, blockchain world was bringing in this, you know, digital ownership of the actual in game assets. And, and that, in itself was what was opening the door to, for me in my mind was okay, there's already full economic systems within these games, if they only allowed, you know, digital ownership, that'd be the end game right there. It would automatically become played at earn and that was where everyone kind of win. And the gottschee was really at the forefront of the fight phi of NF T's have their use case. And kind of like collaborating with other ecosystems to bring value to their assets, they're, they're creating, and they were old school gamers, so they have a beautiful visual aspect and a fun gaming mechanism built in. So gamified d phi was what was really piquing my interest the most at that time, and I felt like agachi was on on the bleeding edge of it. And so I became a tester I became one of their gottschee agents, and have been a tester ever since and then I became an ambassador. So I started running an onboarding group for apa gottschee and decided that within that group and a few other communities I'm a part of like, shenanigans, metagame meta cartel, the whole meta family and, and of a gottschee the gotcha gang. We decided to start our guild preparing for the rail launch coming soon. And start getting our coordination efforts down. starting our dow our Our goal is to not only onboard people Dr. gottschee, but also to build out a further ecosystem kind of on the backup or surrounding the APA gotcha ecosystem.
+        <br /><br />
+        Now well, basically, there's new ones forming all the time. And the only requirement to have a guild once the realm is live, is to have a parcel. And so those parcels sales haven't even started yet. They'll be starting very shortly. And if you have a parcel, then you can start a guild.
+        <br /><br />
+        Well, I think of a gottschee represents a lot of good examples in the web three space. So there Tao is a very good example of a nice, a well organized, and very active dow and a very efficient dow. So there's quite a few members of this dow it's one of the most active dows in the web three space, and yet able to execute some pretty large movements in a fairly quick amount of time. Their structure kind of has three tiers where a discussion starts, either on telegram, Twitter, or Discord. And that kind of gets moved into if people think that Yeah, we should probably make a decision surrounding this, this idea. And it gets turned into a signal Prop, and we kind of, you know, take a snapshot vote, and then discussion surrounding it on chain. And then if that comes to a conclusion, then it goes to an official galvao. And so they kind of have a structure of communication within our dow that kind of works its way to the top. They also have a good tokenomics structure, which I won't get terribly, terribly deep into. But I do recommend anyone who's into tokenomics, or maybe thinking about starting a token that they might take a look at the structure of the ghost token itself. has, you know, deep, a lot of Deep Thought has gone into the, the mechanism of building the ghost token itself. Everything from the curve to how the Dow interacts with it. And then, I guess, the community itself has just been very encouraging. As far as a lot of old school gaming spaces, it was kind of rough for a new to get in. Someone who hasn't been into the space at all kind of gets made fun of until they fit in. He was one of those communities that just wasn't that way. They, you know, we all recognize web three is new to all of us, even those who are building it. And so, you know, everyone has more freshly been that new person saying how do you set up a wallet what is a token, you know, what, what made a mask. So, I found that community beer to be very loving. Very supportive, just a great community to be a part of overall.
+      </div>
+      <div className={styles.text7}>
+        So Wow, this is such a heavy question. And something that, you know, is sparking long term conversations throughout a lot of communities surrounding all of this. And I do have a lot of pretty strong thoughts on good practices and bad practices, I do believe that there are already some that are kind of coming into view is maybe, maybe not the best way to do things. Some that look like maybe there are better way better ways of doing things. So as far as token gating content, or token gating sections of a community, I think that I stand on both sides of the fence somewhere in the middle of a good integration of both, where you do token gate, certain aspects to encourage quality work, getting done without disruption, but also, really being careful not to gate off too much of your community so as to not become more elitist. So I think some communities have, basically, maybe not even on purpose have stood on this elitist mentality where to get into our discord to get into our content to get into our incentives, you must buy this much and own this much per month or whatever. And I think a lot of these types of incentive structures will kind of fade away. Those who push more for either sweat equity, or quality content, I think is really more the better practice. I think we're moving away from Well, I think most of us in this space we're moving away from say, like a YouTuber, content creator is moving more away from chasing what the mainstream media says the content everyone wants is the stuff I should do. Rather, the stuff I'm going to do is my passion, my skill, set my experience, and provide the best, the highest quality content that I can, according to my skill set according to my character who I have and and applying that to the world and not chasing the dollar. So really chasing trying to affect the individual getting the content or whatever the product might be in a positive manner, rather than just trying to extract value out of another human.
+        <br /><br />
+        So yeah, it's really fun and interesting to watch the organic growth that comes from projects like metal metaverse, Music Festival, and BMS If that is like to be seen kind of thing, and I love being a part of that type of stuff, even in real life, when seeking out communities or homesteads to go, help build infrastructure, I seek out people who are just implementing their vision, who are just starting their farm or whatever. So I love to see organic growth and see visions come to a reality and help be a part of supporting that. But I think a really good example of community that's a little bit further in their development, and are regularly daily, hourly, by the minute struggling with making this with they're struggling with this actual coordination problem and trying to make services products, platforms that just make this type of coordination easier, and make everyone more successful, that's metagame. metagame, they're really, they're working hard to not only change the world, but to bridge that gap from where we are now, to where we all want to already be, we'd rather just be building the new world, but we realize that there is this bridge, there's all these bridges that need to be built for everyone to be able to walk across from the old system to the new system, you can't just flip a switch, we really, we have to build these tools, these mechanisms, these systems, for people to plug into and be able to, not the system that's already set up and created with the rules in place, but no a system that's set up for them to create their own rules in their opinion and make their own system.
+        <br /><br /><br />
+        I think we'll kind of have a mix, you know, there, we're kind of at the beginning of a massive explosion of new platforms, new products, new networks, new meta versus and I think, I think later on down the road much later on down the road, it will be a mixed a mixed platform, a multi verse, multi platform, multi chain type of thing that we deal with, but not necessarily one to rule them all for each sector. And so kind of like it when we talk about metal versus there are certain aspects to different metal verses that I like more than others. And yet, I don't discount certain metal verses because they have their own use case. You know, I love crypto voxels but I can't display certain materials there. I love somnium space for the for the realistic type of items that I can put in that area. But I don't like the movement as much. So I like decentraland in the cartoony style that they have going and the movement. I like how game like it is. I don't like their governance. So there are different aspects that I think different people will like and not like. They may completely discount some meta verses altogether and hate them. Or they may have a list of metal verses that are their favorites and they use multiples. So I think that's kind of We're going to be the same for tokens for networks for different NFT platforms and things are the same.
+        <br /><br />
+        Um, well, I'd say one thing is to always take your time, this space, because it's exploding. There's always so many projects going on that it can really keep you moving too fast from one thing to the next, that you never really deep dive deep into each thing. So I would encourage people to do things like read the boring white paper, they're not that bad, we try to make them pretty cool now. That's, that's really important to really understand the use case of whatever platform or token or community you might be entering into, or, or whether you even want to be a part of that. And I'd say the other big thing is, don't be afraid to and it's probably one of the most important parts is to get into the discords. Get into the telegrams. I don't personally like telegram, but get into the community chat rooms, because that's where all the action is. That's where all the alpha is. join their community calls. Don't be afraid to speak up when they ask. And there's no question too, too dumb, too small, too stupid, whatever. I don't believe in that. There's no way for any of us to learn anything without asking questions so that we can understand so come in, we're all you know, most of us are pretty kind and cool.
+      </div>
     </div>
   )
 }

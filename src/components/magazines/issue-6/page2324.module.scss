@@ -2,97 +2,64 @@
 
 .wrapper {
   @include magazineWrapper();
-  background-color: black;
+  background-color: #00D6E3;
   color: white;
   display: flex;
   position: relative;
-    
+
   .image1 {
     position: absolute;
-    width: 960px;
+    left: 0;
+    top: 0;
+    width: 1920px;
     height: 1497px;
-    left: 0px;
-    top: 0px;
-  }
-  
-  .image2 {
-    position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 960px;
-    top: 0px;    
-  }
-
-  .video1 {
-    position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
-  }
-  
-  .video2 {
-    position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 960px;
-    top: 0px;    
-  }
-
-  .rect1 {
-    position: absolute;
-    width: 606px;
-    height: 1042px;
-    left: 177px;
-    top: 226px;
-    
-    background: #003C73;    
-  }
-
-  .rect2 {
-    position: absolute;
-    width: 606px;
-    height: 727px;
-    left: 1137px;
-    top: 226px;
-    
-    background: #0068C8;
   }
 
   .text1 {
     position: absolute;
-    width: 525px;
-    height: 921px;
-    left: 217px;
-    top: 264px;
+    width: 670px;
+    height: 572px;
+    left: 36px;
+    top: 35px;
     
-    font-family: Jockey One;
-    font-size: 19px;
-    line-height: 150%;
-    text-align: center;
-    color: #0286FF;
+    font-family: Antonio;
+    font-size: 130px;
+    line-height: 110%;
+    color: #FBFF43;    
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 828px;
+    height: 1243px;
+    left: 923px;
+    top: 173px;
+    
+    background: rgba(255, 255, 255, 0.79);
+    border-radius: 147px;    
   }
 
   .text2 {
     position: absolute;
-    width: 525px;
-    height: 657px;
-    left: 1177px;
-    top: 267px;
+    width: 743px;
+    height: 1170px;
+    left: 985px;
+    top: 235px;
     
-    font-family: Jockey One;
-    font-size: 19px;
-    line-height: 150%;
-    text-align: center;
-    color: #FFFFFF;
+    font-family: Reem Kufi;
+    font-size: 24px;
+    line-height: 39px;
+    
+    color: #FA00FF;    
   }
 
   .circle1 {
     position: absolute;
     width: 203px;
     height: 203px;
-    left: 1291px;
-    top: 1161px;
+    left: 31px;
+    top: 1178px;
+   
     
     background: #6534FF;
     border: 4px solid #FCCDD3;
@@ -103,8 +70,8 @@
     position: absolute;
     width: 167.74px;
     height: 119px;
-    left: 1286px;
-    top: 1230.51px;
+    left: 26px;
+    top: 1246.51px;
     
     font-family: Poppins;
     font-style: normal;
@@ -123,8 +90,8 @@
     position: absolute;
     width: 152px;
     height: 119px;
-    left: 1333px;
-    top: 1291px;
+    left: 73px;
+    top: 1308px;
     
     font-family: Poppins;
     font-style: normal;
@@ -139,8 +106,8 @@
     position: absolute;
     width: 154.85px;
     height: 154.85px;
-    left: 1409px;
-    top: 1195.96px;
+    left: 152px;
+    top: 1215.96px;
     
     transform-origin: 0 0;
     transform: rotate(-20deg);
@@ -151,12 +118,4 @@
       transform: rotate(-20deg) scale(1.1);
     }
   }
-
-  // a {
-  //   transition: all 0.3s;
-  //   &:hover {
-  //     transition: all 0.3s;
-  //     transform: scale(1.1);
-  //   }
-  // }
 }

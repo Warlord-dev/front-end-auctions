@@ -2,142 +2,173 @@
 
 .wrapper {
   @include magazineWrapper();
-  background-color: black;
-  color: white;
+  background-color: #FFFFFF;
   display: flex;
   position: relative;
 
-  .background1 {
+  .rect1 {
     position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
+    width: 883px;
+    height: 1420px;
+    left: 29px;
+    top: 38px;
+    
+    background: #E78A7D;    
   }
-  
-  .video1 {
+
+  .rect2 {
     position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 960px;
-    top: 0px;
+    width: 883px;
+    height: 1420px;
+    left: 1007px;
+    top: 38px;
+    
+    background: #E78A7D;
   }
 
   .image1 {
     position: absolute;
-    width: 960px;
-    height: 59px;
-    left: 960px;
-    top: 50px;        
+    width: 686px;
+    height: 662px;
+    left: 0px;
+    top: 0px;
   }
 
   .image2 {
     position: absolute;
-    width: 960px;
-    height: 59px;
-    left: 960px;
-    top: 128px;    
+    width: 832px;
+    height: 726px;
+    left: 66px;
+    top: 243px;
   }
 
-  .image3 {
+  h1 {
     position: absolute;
-    width: 960px;
-    height: 59px;
-    left: 960px;
-    top: 206px;
-  }
-
-  .image4 {
-    position: absolute;
-    width: 960px;
-    height: 59px;
-    left: 960px;
-    top: 284px;
-  }
-
-  .image5 {
-    position: absolute;
-    width: 960px;
-    height: 59px;
-    left: 960px;
-    top: 1126px;
-  }
-
-  .image6 {
-    position: absolute;
-    width: 960px;
-    height: 59px;
-    left: 960px;
-    top: 1204px;
-  }
-
-  .image7 {
-    position: absolute;
-    width: 960px;
-    height: 59px;
-    left: 960px;
-    top: 1282px;
+    width: 1051px;
+    height: 165px;
+    left: -44px;
+    top: 960px;
     
-  }
+    font-family: PLAYPULL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 130px;
+    line-height: 150%;
+    /* or 195px */
+    
+    text-align: center;
+    
+    color: #ECBE1D;
 
-  .image8 {
-    position: absolute;
-    width: 960px;
-    height: 59px;
-    left: 960px;
-    top: 1360px;
-  }
+    .impact1 {
+      font-family: Rugsnatcher DEMO;
+      color: #DA283E;
+    }
 
-  .image9 {
-    position: absolute;
-    width: 960px;
-    height: 59px;
-    left: 960px;
-    top: 1438px;
+    .impact2 {
+      color: #DA283E;
+    }
+
+    .impact3 {
+      font-family: Rugrats;
+      color: #f2ea27;
+    }
   }
 
   .text1 {
     position: absolute;
-    width: 604px;
-    height: 507px;
-    left: 1022px;
-    top: 346px;
-    font-family: POLYA Regular;
-    font-size: 100px;
-    line-height: 120px;
-    color: #FFFFFF;
-    -webkit-text-stroke: 2px #769CFF;    
+    width: 190px;
+    height: 68px;
+    left: 706px;
+    top: 151px;
+    
+    font-family: Nella Sue Demo;
+    font-size: 28px;
+    line-height: 120.53%;
+    color: #FFFFFF;    
   }
 
   .text2 {
     position: absolute;
-    width: 811px;
-    height: 149px;
-    left: 1022px;
-    top: 957px;
+    width: 657px;
+    height: 52px;
+    left: 29px;
+    top: 1115px;
     
-    font-family: POLYA Regular;
-    font-size: 130px;
-    line-height: 156px;
-    color: #FFFFFF;
-    -webkit-text-stroke: 2px #769CFF;
+    font-family: Mervale Script;
+    font-size: 40px;
+    line-height: 150%;
+    text-align: center;
+    color: #000000;
   }
 
   .text3 {
     position: absolute;
-    width: 724px;
-    height: 332px;
-    left: 1815px;
-    top: 1010px;
+    width: 466px;
+    height: 120px;
+    left: 405px;
+    top: 1204px;
     
-    font-family: Artifika;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 140px;
-    /* or 700% */
+    font-family: Beth Ellen;
+    font-size: 17px;
+    line-height: 150%;
+    color: #FFFFFF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 672px;
+    height: 90px;
+    left: 1114px;
+    top: 87px;
     
+    font-family: Nella Sue Demo;
+    font-size: 75px;
+    line-height: 120.53%;
+    text-align: center;
     
-    color: #FFFFFF;    
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 812px;
+    height: 212px;
+    left: 1043px;
+    top: 211px;
+    
+    font-family: Jockey One;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 348px;
+    height: 960px;
+    left: 1072px;
+    top: 443px;
+    
+    font-family: Jacques Francois;
+    font-size: 15px;
+    line-height: 150%;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 348px;
+    height: 967px;
+    left: 1477px;
+    top: 444px;
+    
+    font-family: Jacques Francois;
+    font-size: 15px;
+    line-height: 150%;
+    color: #FFFFFF;
+    
   }
 }
