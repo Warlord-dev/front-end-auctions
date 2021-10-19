@@ -122,6 +122,91 @@ $base-hue: 0; // change for diff colors (180 is nice)
     top: 1238.96px;
   }
 
+  .text3 {
+    position: absolute;
+    width: 655px;
+    height: 293px;
+    left: 191px;
+    top: 385px;
+
+    font-family: Baloo Chettan 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #ffffff;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 339px;
+    height: 729px;
+    left: 1007px;
+    top: 65px;
+
+    font-family: Baloo Chettan 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #ffffff;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 655px;
+    height: 293px;
+    left: 53px;
+    top: 757px;
+
+    font-family: Baloo Chettan 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #ffffff;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 787px;
+    height: 250px;
+    left: 1106px;
+    top: 744px;
+
+    font-family: Baloo Chettan 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #ffffff;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 428px;
+    height: 250px;
+    left: 1103px;
+    top: 1026px;
+
+    font-family: Baloo Chettan 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #ffffff;
+  }
+
   @keyframes rotate {
     100% {
       transform: rotateY(360deg) rotateX(360deg);

@@ -303,12 +303,26 @@
     color: #9a6600;
   }
 
+  .link7 {
+    position: absolute;
+    width: 421px;
+    height: 333px;
+    left: 998px;
+    top: 1075px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
   .text13 {
     position: absolute;
-    width: 127px;
+    width: 139px;
     height: 45px;
-    left: 1505px;
-    top: 1286px;
+    left: 1456px;
+    top: 1068px;
 
     font-family: Reem Kufi;
     font-style: normal;
@@ -317,15 +331,16 @@
     line-height: 45px;
     /* identical to box height */
 
-    color: #ffffff;
+    color: #000000;
+    white-space: nowrap;
   }
 
   .text14 {
     position: absolute;
-    width: 340px;
+    width: 172px;
     height: 35px;
-    left: 1505px;
-    top: 1320px;
+    left: 1456px;
+    top: 1105px;
 
     font-family: Roboto;
     font-style: normal;
@@ -333,15 +348,16 @@
     font-size: 30px;
     line-height: 35px;
 
-    color: #ffffff;
+    color: #000000;
+    white-space: nowrap;
   }
 
   .text15 {
     position: absolute;
     width: 365px;
-    height: 90px;
-    left: 1505px;
-    top: 1358px;
+    height: 180px;
+    left: 1456px;
+    top: 1145px;
 
     font-family: Roboto;
     font-style: normal;
@@ -349,6 +365,51 @@
     font-size: 15px;
     line-height: 18px;
 
-    color: #ffffff;
+    color: #ff0000;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 365px;
+    height: 180px;
+    left: 1456px;
+    top: 1240px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: white;
+  }
+
+  .play {
+    position: absolute;
+    width: 262px;
+    height: 261px;
+    left: 50px;
+    top: 716px;
+  }
+
+  .pause {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 94px;
+    top: 773px;
+  }
+
+  .playRect {
+    position: absolute;
+    width: 338px;
+    height: 338px;
+    left: 25px;
+    top: 695px;
+
+    background: #ff0000;
+    border: 10px solid #00ff19;
+    border-radius: 50%;
+    box-sizing: border-box;
   }
 }

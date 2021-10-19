@@ -137,8 +137,8 @@
     position: absolute;
     width: 749px;
     height: 66px;
-    left: 1056px;
-    top: 88px;
+    left: 1019px;
+    top: 58px;
 
     font-family: Neon Vortex;
     font-style: normal;
@@ -203,5 +203,21 @@
       transform: scale(1.05);
       transition: all 0.3s ease;
     }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 904px;
+    height: 226px;
+    left: 25px;
+    top: 644px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 856px;
+    height: 1323px;
+    left: 1018px;
+    top: 152px;
   }
 }

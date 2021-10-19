@@ -121,10 +121,9 @@
 
   .link1 {
     position: absolute;
-    width: 450px;
+    left: 970px;
+    width: 940px;
     height: 100px;
-    top: 20px;
-    left: 980px;
 
     font-family: McLaren;
     font-style: normal;
@@ -135,27 +134,48 @@
 
     color: #ad00ff;
 
-    -webkit-text-stroke: 2px #ffffff;
     box-sizing: border-box;
+
+    -webkit-text-stroke: 2px #ffffff;
   }
 
   .text5 {
     position: absolute;
     width: 795px;
-    height: 50px;
-    top: 780px;
-    left: 980px;
+    height: 100px;
+    left: 986px;
+    top: 874px;
 
     font-family: McLaren;
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
     line-height: 100%;
-    /* identical to box height, or 50px */
+    /* or 50px */
 
     color: #ad00ff;
 
     -webkit-text-stroke: 2px #ffffff;
+    box-sizing: border-box;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 905px;
+    height: 663px;
+    left: 986px;
+    top: 140px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 100%;
+    /* or 23px */
+
+    color: #ffffff;
+
+    -webkit-text-stroke: 0.5px #ad00ff;
     box-sizing: border-box;
   }
 }

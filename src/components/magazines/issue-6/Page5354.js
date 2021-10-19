@@ -6,6 +6,9 @@ const Page5354 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/6/images/53_54_back.png" className={styles.back} />
+      <video autoPlay muted loop className={styles.right}>
+        <source src="/magazine/6/images/53_54_right.mp4" />
+      </video>
       <img src="/magazine/6/images/53_54_image1.png" className={styles.image1} />
       <div className={styles.text1}>A Dill for DeFi DAOs.</div>
       <div className={styles.circle1} />

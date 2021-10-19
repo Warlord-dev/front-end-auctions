@@ -26,11 +26,13 @@ const Page7980 = () => {
       <div className={styles.text5}>3D FASHION COLLECTIBLE CONTENT BY CRYPTSIE</div>
       <div className={styles.text6}>Web3 wizards collectibles</div>
       <div className={styles.text7}>TICKETS TO GET DRESSED BY THE GLOBAL DESIGNER NETWORK</div>
-      <div className={styles.text8}>INDIE ART COLLECTIBLE CONTENT BY SSW</div>
+      <div className={styles.text8}>screensaver world community art feature</div>
       <a href="" target="_blank" className={styles.seeMoreLink}>
         <div className={styles.seeMore1}>SEE MORE</div>
         <div className={styles.seeMore2}>SEE MORE</div>
       </a>
+      <img src="/magazine/6/images/79_80_image1.png" className={styles.image1} />
+      <img src="/magazine/6/images/79_80_image2.png" className={styles.image2} />
     </div>
   );
 };

@@ -12,6 +12,15 @@
     top: 0;
   }
 
+  .right {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0;
+    object-fit: cover;
+  }
+
   .image1 {
     position: absolute;
     width: 309px;

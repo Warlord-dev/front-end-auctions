@@ -1224,6 +1224,71 @@ const Page7778 = () => {
         <img src="/magazine/6/images/53_54_image2.png" className={styles.link1} />
       </a>
       <img src="/magazine/6/images/53_54_image3.png" className={styles.image3} />
+      <div className={styles.text3}>
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination? How do we assess the value of
+        digital assets and then come to decentralised consensus around a particular determination?
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination? How do we assess the value of
+        digital assets and then come to decentralised consensus around a particular determination?
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination?
+      </div>
+      <div className={styles.text4}>
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination? How do we assess the value of
+        digital assets and then come to decentralised consensus around a particular determination?
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination? How do we assess the value of
+        digital assets and then come to decentralised consensus around a particular determination?
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination?
+      </div>
+      <div className={styles.text5}>
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination? How do we assess the value of
+        digital assets and then come to decentralised consensus around a particular determination?
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination? How do we assess the value of
+        digital assets and then come to decentralised consensus around a particular determination?
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination?
+      </div>
+      <div className={styles.text6}>
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination? How do we assess the value of
+        digital assets and then come to decentralised consensus around a particular determination?
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination? How do we assess the value of
+        digital assets and then come to decentralised consensus around a particular determination?
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination?
+      </div>
+      <div className={styles.text7}>
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination? How do we assess the value of
+        digital assets and then come to decentralised consensus around a particular determination?
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination? How do we assess the value of
+        digital assets and then come to decentralised consensus around a particular determination?
+        How do we assess the value of digital assets and then come to decentralised consensus around
+        a particular determination? How do we assess the value of digital assets and then come to
+        decentralised consensus around a particular determination?
+      </div>
     </div>
   );
 };

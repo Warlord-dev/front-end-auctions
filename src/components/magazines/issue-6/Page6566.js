@@ -80,10 +80,36 @@ const Page6566 = () => {
         because all this time I felt inside of the box and now I need to slowly let go of it, if
         that makes any sense!
       </div>
-      <a href="" target="_blank" className={styles.link1}>
-        RealFevr
+      <a href="https://www.thefintechhouse.com/" target="_blank" className={styles.link1}>
+        The Fintech House
       </a>
-      <div className={styles.text5}>Crypto Regulations in Portugal</div>
+      <div className={styles.text6}>
+        Lisbon is probably one of the most vibrant, innovative and opportunity equipped startup and
+        emerging tech hubs in the whole Europe. The region is exposed to a fantastic climate, the
+        population has an extremely high level of English language proficiency, the culture is
+        welcoming and, it’s become a honey trap for digital nomads with talent and global developer
+        communities.
+        <br />
+        <br />
+        This nexus is also well known for its many notable tech events and meetups year-round, which
+        mix between both the web2 and web3 scenes— one of those web3 occasions being that of Eth
+        Lisbon. The city is well shaped for hosting and cultivating dedicated open concept coworking
+        spaces that provide a perfect environment for growing strong community bases and
+        collaborative centres.
+        <br />
+        <br />
+        One of these spaces is The Fintech House, which is dedicated to fostering and supporting the
+        regtech, insurtech and fintech capacity of the country, and pushing beyond the closed off
+        reactions of local banks to enable a platform for new financial, decentralised and monetary
+        solutions to be able to effectively interface with the local population and citizens. The
+        impact of COVID-19 globally most certainly removed a lot of individuals previous dependence
+        on IRL locations, however, with that said, humans still always respond better to variable
+        experiences. And, until the immersiveness of the metaverse is able to offer this to us in a
+        way that rewards all of our senses, IRL environments, and especially dedicated settings like
+        The Fintech House with a strong forward mission, will continue to be stronger bets for
+        fertalising relationships, culture and inter-connected communities.
+      </div>
+      <div className={styles.text5}>Portuguese Crypto Artist Spotlight</div>
     </div>
   );
 };

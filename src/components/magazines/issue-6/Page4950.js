@@ -3,6 +3,19 @@ import Link from 'next/link';
 import styles from './page4950.module.scss';
 
 const Page4950 = () => {
+  const audioRef = useRef();
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const startAudio = () => {
+    audioRef.current.play();
+    setIsPlaying(true);
+  };
+
+  const pauseAudio = () => {
+    audioRef.current.pause();
+    setIsPlaying(false);
+  };
+
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/6/images/49_50_back.png" className={styles.back} />
@@ -71,13 +84,32 @@ const Page4950 = () => {
       <div className={styles.text12}>
         A classic (2016) Letsglitchit .FBX format 3D glitch Turn on screen reader support
       </div>
-      <div className={styles.text13}>SquintDev</div>
-      <div className={styles.text14}>Dreams of Disconnection</div>
+      <a href="https://twitter.com/madkrahen" target="_blank">
+        <img src="/magazine/6/images/49_50_image8.png" className={styles.link7} />
+      </a>
+      <div className={styles.text13}>Hugo Alves</div>
+      <div className={styles.text14}>New Heights</div>
       <div className={styles.text15}>
-        This piece represents my subconscious desire to disconnect from everything and everyone and
-        just isolate. By creating pieces like this, it helps me stay self-aware that my thinking can
-        go in this direction and I can be vigilant about it.
+        This piece is a mark of improvement of the artistic skills, it simbolizes the path to get
+        where you want to get, i did this piece in a particular moment where a was stuck in place, i
+        was stopping myself to grow artistically, so i made this piece to remind me where a
       </div>
+      <div className={styles.text16}>
+        can get if i study and didn't stop there, i'm glad i did, that why the astronaut in the
+        moon, as a small step for the man, but a giant leap for mankind, and the constellations in
+        the sky spelling new heights, so i can forever remember to keep going.
+      </div>
+      <div className={styles.playRect} />
+      <img
+        src={`/magazine/6/images/49_50_${!isPlaying ? 'play' : 'pause'}.png`}
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio();
+        }}
+        className={!isPlaying ? styles.play : styles.pause}
+      />
+      <audio ref={audioRef} loop>
+        <source src="./magazine/6/images/49_50_audio.mp3" type="audio/mp3" />
+      </audio>
     </div>
   );
 };

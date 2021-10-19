@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './page8182.module.scss';
 
 const Page8182 = () => {
+  const audioRef = useRef();
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const startAudio = () => {
+    audioRef.current.play();
+    setIsPlaying(true);
+  };
+
+  const pauseAudio = () => {
+    audioRef.current.pause();
+    setIsPlaying(false);
+  };
+
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/6/images/81_82_back.png" className={styles.back} />
@@ -193,7 +206,17 @@ const Page8182 = () => {
         the last six months is douse downs after you know, after defy, and that is, I think, going
         to be an enormous, enormous change in the ecosystem.
       </div>
-      <div className={styles.play}>PLAY</div>
+      <div
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio();
+        }}
+        className={styles.play}
+      >
+        {!isPlaying ? 'PLAY' : 'PAUSE'}
+      </div>
+      <audio ref={audioRef} loop>
+        <source src="./magazine/6/images/81_82_audio.mp3" type="audio/mp3" />
+      </audio>
     </div>
   );
 };
