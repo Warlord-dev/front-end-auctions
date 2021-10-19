@@ -14,15 +14,21 @@ const UserList = props => {
           users.slice(0, length).map((item, index) => {
             const { avatar } = item
             return (
+              item.wallet ?
               <Link href={`/user/${item.wallet}`} key={item.name}>
-                <a key={item.name} target='_self'>
+                <a target='_self'>
                   <img 
                     className={avatar && avatar != '' ? styles.rounded : ''}
                     src={`${avatar && avatar != '' ? avatar : '/images/user-profile/user-avatar-black.png'}`} 
-                    key={index}
                   />
                 </a>
               </Link>
+              :
+              <img 
+                className={avatar && avatar != '' ? styles.rounded : ''}
+                src={`${avatar && avatar != '' ? avatar : '/images/user-profile/user-avatar-black.png'}`} 
+                key={item.name}
+              />
             )
           })
         }

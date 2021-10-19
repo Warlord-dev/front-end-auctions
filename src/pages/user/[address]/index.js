@@ -37,7 +37,6 @@ const UserProfile = () => {
 
   const fetchViews = async () => {
     const viewData = await digitalaxApi.getViews('profile', address);
-    console.log('viewData: ', viewData)
     setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0)
 
     if (viewData && viewData[0] && viewData[0].viewCount)
@@ -108,8 +107,6 @@ const UserProfile = () => {
   const onClickReturn = () => {
     window.history.back()
   }
-
-  console.log('currentUserInfo: ', currentUserInfo)
   
   return (
     <div className={styles.wrapper}>

@@ -119,8 +119,6 @@ const LandingPage = () => {
         ) {
           collectionGroup.collections.forEach((collection) => {
             const offer = digitalaxMarketplaceV2Offers.find((offer) => offer.id === collection.id);
-            // console.log('offer: ', offer.garmentCollection)
-            console.log(collection.garments.length);
             prods.push({
               id: collection.id,
               designer: collection.designer,

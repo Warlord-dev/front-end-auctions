@@ -46,9 +46,9 @@ const getAllResultsFromQuery = async (query, resultKey, chainId, owner) => {
   return resultArray
 }
 
-const ModalCurrentWearers = ({ className, title, type }) => {
+const ModalCurrentWearers = ({ className, title }) => {
   const dispatch = useDispatch();
-  const { tokenIds, v1 } = useSelector(getModalParams);
+  const { tokenIds, v1, type } = useSelector(getModalParams);
   const chainId = useSelector(getChainId);
   // const [history, setHistory] = useState([]);
   const [wearers, setWearers] = useState([]);
@@ -63,18 +63,23 @@ const ModalCurrentWearers = ({ className, title, type }) => {
   useEffect(() => {
     if (tokenIds.length) {
       const fetchHistories = async () => {
+        let soldItems = []
+        let historyItems = []
+
         if (type === 1) {
           if (parseInt(tokenIds[0]) <= 4) {
             const { digitalaxGarmentAuctionHistories } =
               await getDigitalaxGarmentPurchaseHistories(chainId, tokenIds[0]);
+            soldItems = digitalaxGarmentAuctionHistories.map(item => item.token.id)
+            historyItems = digitalaxGarmentAuctionHistories
           } else {
             const { digitalaxGarmentV2AuctionHistories } =
               await getDigitalaxGarmentV2PurchaseHistories(chainId, tokenIds[0]);
+            soldItems = digitalaxGarmentV2AuctionHistories.map(item => item.token.id)
+            historyItems = digitalaxGarmentV2AuctionHistories
           }
           setLoading(false);
         } else {
-          let soldItems = []
-          let historyItems = []
           if (!v1) {
             const { digitalaxMarketplaceV2PurchaseHistories } =
               await getDigitalaxMarketplaceV2PurchaseHistories(chainId, tokenIds);
@@ -85,75 +90,68 @@ const ModalCurrentWearers = ({ className, title, type }) => {
             soldItems = digitalaxMarketplacePurchaseHistories.map(item => item.id)
             historyItems = digitalaxMarketplacePurchaseHistories
           }
-
-          const { digitalaxGarmentV2S } = await getDigitalaxGarmentV2s(chainId, soldItems)
-
-          const digitalaxAllNFTStakersByGarments = await getAllResultsFromQuery(
-            getDigitalaxNFTStakersByGarments, 
-            'digitalaxNFTStakers', 
-            POLYGON_CHAINID,
-            soldItems
-          )
-
-          const guildAllNFTStakersByGarments = await getAllResultsFromQuery(
-            getGuildWhitelistedNFTStakersByGarments, 
-            'guildWhitelistedNFTStakers', 
-            POLYGON_CHAINID,
-            soldItems.map(item => config.DTX_ADDRESSES['matic'].toLowerCase() + '-' + item)
-          )
-
-          const digitalaxStakedGarments = {}
-          digitalaxAllNFTStakersByGarments
-            .filter(
-              item => item.garments && item.garments.length > 0
-            )
-            .map(staker => {
-              staker.garments.forEach(garment => {
-                digitalaxStakedGarments[garment.id] = staker.id
-              })
-            })
-          
-          guildAllNFTStakersByGarments
-            .filter(
-              item => item.garments && item.garments.length > 0
-            )
-            .map(staker => {
-              staker.garments.forEach(garment => {
-                console.log(`${garment.id} : ${staker.id}`)
-                digitalaxStakedGarments[garment.id.split('-')[1]] = staker.id
-              })
-            })
-          
-      
-          console.log('--digitalaxStakedGarments:', digitalaxStakedGarments);
-
-          setWearers(digitalaxGarmentV2S.map(garment => {
-            
-            let actualOwner = garment.owner.toLowerCase()
-            if (digitalaxStakedGarments && digitalaxStakedGarments[garment.id]) {
-              actualOwner = digitalaxStakedGarments[garment.id].toLowerCase()
-            }
-
-            const user = allUsers.find(user => user.wallet && user.wallet.toLowerCase() == actualOwner)
-            const history = historyItems.find(
-              history =>
-                history.id == garment.id 
-                && history.buyer.toLowerCase() == actualOwner
-            )
-
-            return {
-              id: garment.id,
-              owner: actualOwner,
-              ownerAvatar: user ? user.avatar : null,
-              ownerName: user ? user.username: null,
-              timestamp: history ? history.timestamp : 0,
-              transactionHash: history ? history.transactionHash : null
-            }
-          }))
-          setLoading(false);
         }
 
+        const { digitalaxGarmentV2S } = await getDigitalaxGarmentV2s(chainId, soldItems)
+
+        const digitalaxAllNFTStakersByGarments = await getAllResultsFromQuery(
+          getDigitalaxNFTStakersByGarments, 
+          'digitalaxNFTStakers', 
+          POLYGON_CHAINID,
+          soldItems
+        )
+
+        const guildAllNFTStakersByGarments = await getAllResultsFromQuery(
+          getGuildWhitelistedNFTStakersByGarments, 
+          'guildWhitelistedNFTStakers', 
+          POLYGON_CHAINID,
+          soldItems.map(item => config.DTX_ADDRESSES['matic'].toLowerCase() + '-' + item)
+        )
+
+        const digitalaxStakedGarments = {}
+        digitalaxAllNFTStakersByGarments
+          .filter(
+            item => item.garments && item.garments.length > 0
+          )
+          .map(staker => {
+            staker.garments.forEach(garment => {
+              digitalaxStakedGarments[garment.id] = staker.id
+            })
+          })
         
+        guildAllNFTStakersByGarments
+          .filter(
+            item => item.garments && item.garments.length > 0
+          )
+          .map(staker => {
+            staker.garments.forEach(garment => {
+              digitalaxStakedGarments[garment.id.split('-')[1]] = staker.id
+            })
+          })
+        setWearers(digitalaxGarmentV2S.map(garment => {
+          
+          let actualOwner = garment.owner.toLowerCase()
+          if (digitalaxStakedGarments && digitalaxStakedGarments[garment.id]) {
+            actualOwner = digitalaxStakedGarments[garment.id].toLowerCase()
+          }
+
+          const user = allUsers.find(user => user.wallet && user.wallet.toLowerCase() == actualOwner)
+          const history = historyItems.find(
+            history =>
+              (type ? history.token.id : history.id) == garment.id 
+              && (type ? history.bidder.id : history.buyer).toLowerCase() == actualOwner
+          )
+
+          return {
+            id: garment.id,
+            owner: actualOwner,
+            ownerAvatar: user ? user.avatar : null,
+            ownerName: user ? user.username: null,
+            timestamp: history ? history.timestamp : 0,
+            transactionHash: history ? history.transactionHash : null
+          }
+        }))
+        setLoading(false);        
       };
 
       fetchHistories();
@@ -175,8 +173,6 @@ const ModalCurrentWearers = ({ className, title, type }) => {
       window.open(`/user/${ownerInfo.owner}`, '_self')
     }
   }
-
-  console.log('wearers: ', sortByTime(wearers))
 
   return (
     <>
@@ -245,12 +241,12 @@ const ModalCurrentWearers = ({ className, title, type }) => {
 
 ModalCurrentWearers.propTypes = {
   className: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string
 };
 
 ModalCurrentWearers.defaultProps = {
   className: '',
-  title: 'Current Wearers',
+  title: 'Current Wearers'
 };
 
 export default ModalCurrentWearers;

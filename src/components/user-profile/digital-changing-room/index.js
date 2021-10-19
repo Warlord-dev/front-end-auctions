@@ -207,9 +207,9 @@ const DigitalChangingRoom = props => {
         && digitalaxNFTV2sPolygonNonDrip.findIndex(item => item.id == garment.id) < 0
       )
 
-      console.log('digitalaxNFTV2sPolygonDrip: ', digitalaxNFTV2sPolygonDrip)
-      console.log('digitalaxNFTV2sPolygonNonDrip: ', digitalaxNFTV2sPolygonNonDrip)
-      console.log('weirdItems: ', weirdItems)
+      // console.log('digitalaxNFTV2sPolygonDrip: ', digitalaxNFTV2sPolygonDrip)
+      // console.log('digitalaxNFTV2sPolygonNonDrip: ', digitalaxNFTV2sPolygonNonDrip)
+      // console.log('weirdItems: ', weirdItems)
 
 
       // Get Staked NFTs on Mainnet
@@ -317,11 +317,9 @@ const DigitalChangingRoom = props => {
         MAINNET_CHAINID,
         owner
       )
-      console.log('digitalaxLookNFTsMainnet:', digitalaxLookNFTsMainnet)
       digitalaxLookNFTsMainnet.map(item => {
         const json = atob(item.tokenUri.substring(29))
         const result = JSON.parse(json)
-        console.log(result)
       })
 
       // get look golden tickets on mainnet
@@ -332,8 +330,6 @@ const DigitalChangingRoom = props => {
           POLYGON_CHAINID,
           owner
       )
-
-      console.log('digitalaxLookGoldenTicketsPolygon:', digitalaxLookGoldenTicketsPolygon)
 
       // console.log('digitalaxNFTsMainnet: ', digitalaxNFTsMainnet)
       // console.log('digitalaxNFTsPolygon: ', digitalaxNFTsPolygon)
@@ -447,7 +443,7 @@ const DigitalChangingRoom = props => {
     }
   }
 
-  console.log('ownedNFTs: ', ownedNFTs)
+  // console.log('ownedNFTs: ', ownedNFTs)
 
   return (
     <div className={[styles.wrapper, className].join(' ')}>

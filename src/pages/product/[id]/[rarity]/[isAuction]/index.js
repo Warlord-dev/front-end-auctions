@@ -127,7 +127,6 @@ const Product = ({ pageTitle }) => {
 
   const getOwners = async (garments, itemSold, users) => {
     if (!garments) return [];
-    console.log('garments: ', garments);
     const soldGarments = garments.slice(0, itemSold).map((garment) => garment.id);
     // get digitalax NFTs on Mainnet
     const digitalaxAllNFTStakersByGarments = await getAllResultsFromQuery(
@@ -259,7 +258,6 @@ const Product = ({ pageTitle }) => {
           if (digitalaxGarmentV2Collection.garments[0].children.length) {
             digitalaxGarmentV2Collection.garments[0].children.forEach(async (child) => {
               const info = await fetchTokenUri(child.tokenUri);
-              console.log({ info });
               children.push({
                 ...info,
                 id: child.id.split('-')[1],
@@ -267,7 +265,6 @@ const Product = ({ pageTitle }) => {
             });
           }
 
-          console.log('digitalaxMarketplaceV2Offers: ', digitalaxMarketplaceV2Offers);
           setOwners(
             await getOwners(
               digitalaxMarketplaceV2Offers[0].garmentCollection?.garments,
@@ -298,10 +295,16 @@ const Product = ({ pageTitle }) => {
           });
         }
       } else {
-        console.log('id: ', id)
         if (parseInt(id) > 4) {
           const { digitalaxGarmentV2Auction } = await getGarmentV2ByAuctionId(chainId, id);
-          console.log('digitalaxGarmentV2Auction: ', digitalaxGarmentV2Auction)
+          const ownersList = (digitalaxGarmentV2Auction && digitalaxGarmentV2Auction.resulted) ? await getOwners(
+            [digitalaxGarmentV2Auction?.garment],
+            1,
+            users,
+          ) : []
+          setOwners(
+            ownersList
+          );
           setTokenIds([digitalaxGarmentV2Auction.garment.id]);
           setProduct(digitalaxGarmentV2Auction);
         } else {
@@ -429,6 +432,7 @@ const Product = ({ pageTitle }) => {
       openCurrentWearersModal({
         tokenIds,
         v1: id.includes('v1'),
+        type: parseInt(isAuction)
       }),
     );
   };

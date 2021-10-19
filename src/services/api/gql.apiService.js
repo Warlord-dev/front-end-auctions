@@ -232,12 +232,14 @@ export const GARMENTV2_BY_AUCTION_ID = gql`
       startTime
       endTime
       topBid
+      resulted
       garment {
         id
         name
         image
         animation
         description
+        owner
         primarySalePrice
       }
       designer {
