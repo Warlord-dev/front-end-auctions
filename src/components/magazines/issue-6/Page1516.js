@@ -1,4 +1,4 @@
-import React, { useRef, useState }  from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './page1516.module.scss'
 
 const Page1516 = () => {

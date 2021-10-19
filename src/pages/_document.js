@@ -467,6 +467,8 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dekko"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavivanar"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kameron"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barrio"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster+Two"></link>
           {/* ipfs next.js fix */}
           <style
             dangerouslySetInnerHTML={{
