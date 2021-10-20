@@ -489,13 +489,6 @@
     height: 249px;
     left: 1620px;
     top: 10px;
-
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: scale(1.05);
-      transition: all 0.3s ease;
-    }
   }
 
   .image2 {
@@ -504,6 +497,13 @@
     height: 154.85px;
     left: 1746px;
     top: 47.96px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+    }
   }
 
   .logo1 {

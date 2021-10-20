@@ -3,74 +3,44 @@ import styles from './coverpage.module.scss'
 const CoverPage = () => {
   console.log('this is loaded.')
   return (
-    <div className={styles.wrapper}>         
-      <img className={styles.background} src='/magazine/5/images/cover_background.png' />
+    <div className={styles.wrapper}>
+      <img className={styles.background} src='/magazine/6/images/frontcover_background.jpg' />
+      <img className={styles.image1} src='/magazine/6/images/backcover_image1.png' />
       <div className={styles.text1}>
-        The Metaverse 
+        Web3 Wayfinding with Open Token Communities         
       </div>
       <div className={styles.text2}>
-        The Metaverse 
+        GDN PURVEYORS
       </div>
       <div className={styles.text3}>
-        Multipass 
+        Growing Inter and Intra DAO Connections
       </div>
       <div className={styles.text4}>
-        Multipass 
+        nicholas.sol + Sharkdao
       </div>
       <div className={styles.text5}>
-        METAMASK. <br />
-        The Face of Web3
+        pORTUGAL AND EMERGING TECH
       </div>
       <div className={styles.text6}>
-        Crypto, DeFi & US Regulations
+        Josh Quittner
       </div>
       <div className={styles.text7}>
-        BAYC with OHHSHINY
+        Social tokens for Community & More. 
       </div>
       <div className={styles.text8}>
-        This Outfit Does Not Exist
-      </div>
-      <div className={styles.text9}>
-        Santiago Siri and Web3 Authentication
-      </div>
-      <div className={styles.text10}>
-        PFP
-        <br /><br />
-        S<br />
-        O<br />
-        C<br />
-        I<br />
-        A<br />
-        L<br />
-        <br />
-        CLUBS
-      </div>
-      <div className={styles.text12}>
-        DIGIFIZZY
-      </div>
-      <div className={styles.text13}>
-        DIGIFIZZY
-      </div>
-      <div className={styles.text14}>
-        DIGIFIZZY
-      </div>
-      <div className={styles.text15}>
-        IssueFive
-      </div>
-      <div className={styles.text16}>
-        IssueFive
+        Composable Metaversal Communities w/ Loot
       </div>
 
       <div className={styles.circle1}></div>
       <div className={styles.circleText1}>
-        6       
+        7      
       </div>
       <div className={styles.circleText2}>
-        POAPS TO COLLECT INSIDE!    
+        POAPS TO COLLECT INSIDE!   
       </div>
-      <a href='https://digifizzy.xyz/magazines/5/' target='_blank'>
-        <img src='/images/poap-logo.png' className={styles.poapImage} />
-      </a>
+      {/* <a href='https://poap.website/identityacrossthemetaverse' target='_blank'> */}
+      <img src='/images/poap-logo.png' className={styles.poapImage} />
+      {/* </a> */}
     </div>
   )
 }

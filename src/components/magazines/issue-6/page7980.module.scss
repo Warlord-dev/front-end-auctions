@@ -33,15 +33,16 @@
     height: 144px;
     left: 105px;
     top: 180px;
-
+    
     font-family: Muna;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
     line-height: 110%;
     /* or 18px */
-
-    color: #ffffff;
+    
+    
+    color: #FFFFFF;
   }
 
   .text3 {
@@ -78,42 +79,43 @@
     color: #ffffff;
 
     a {
+      text-decoration: none;
       color: #fafa06;
     }
   }
 
   .text5 {
     position: absolute;
-    width: 783px;
-    height: 66px;
-    left: 28px;
-    top: 542px;
-
+    width: 749px;
+    height: 33px;
+    left: 50px;
+    top: 590px;
+    
     font-family: Neon Vortex;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
     line-height: 110%;
-    /* or 33px */
-
-    color: #ffffff;
+    color: #FFFFFF;
   }
 
   .text6 {
     position: absolute;
     width: 749px;
     height: 33px;
-    left: 259px;
-    top: 953px;
-
+    left: 138px;
+    top: 1018px;
+    
     font-family: Neon Vortex;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
     line-height: 110%;
     /* identical to box height, or 33px */
-
-    color: #ffffff;
+    
+    text-align: right;
+    
+    color: #FFFFFF;
   }
 
   .text7 {

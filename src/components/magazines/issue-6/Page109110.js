@@ -4,77 +4,46 @@ import styles from './page109110.module.scss'
 const Page109110 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/5/images/109110_image1.png' className={styles.image1} />
-      <img src='/magazine/5/images/109110_image2.png' className={styles.image2} />
-      <img src='/magazine/5/images/109110_image3.png' className={styles.image3} />
-      <img src='/magazine/5/images/109110_image6.png' className={styles.image6} />
-      <img src='/magazine/5/images/109110_image6.png' className={styles.image7} />
-      <img src='/magazine/5/images/109110_image7.png' className={styles.image8} />
-      <img src='/magazine/5/images/109110_image8.png' className={styles.image9} />
-      <img src='/magazine/5/images/109110_image8.png' className={styles.image10} />
-      <img src='/magazine/5/images/109110_image8.png' className={styles.image11} />
-
       <div className={styles.rect1}></div>
-      <div className={styles.rect2}></div>
-      <div className={styles.rect3}></div>
-      <div className={styles.rect4}></div>
-      <div className={styles.rect5}></div>
+      <img src='/magazine/6/images/109110_image1.png' className={styles.image1} />
 
       <div className={styles.text1}>
-        XENOTECH
+        The Launch of $W3F
       </div>
       <div className={styles.text2}>
-        XENOTECH
+        The Launch of $W3F
       </div>
       <div className={styles.text3}>
-        XENOTECH
+        The Launch of $W3F
       </div>
       <div className={styles.text4}>
-        XENOTECH
+        The Launch of $W3F
       </div>
       
       <div className={styles.text5}>
-        Cryptovoxels store has been remodeled! I've updated the Metaverse location with all the new XENOTECH garments which launched during Web3 Fashion Week. There will be a hidden POAP in the cryptovoxels soon!
+        The token distribution and allocation mechanics ensure that decentralisation remains at the core and all aligned members of the web3 and fashion communities are able to leverage its existance for generating and powering squad wealth.         
       </div>
-
       <div className={styles.text6}>
-        During W3FW there were several new XENOTECH drops. The most notable piece is the Platonic Solids Ring: The ring is an interpretation of astronomer Johannes Kepler's Mysterium Cosmographicum (1597).        
+        The distribution itself takes place over a 24 month period, with staking allocation across four major pools. 
       </div>
-
       <div className={styles.text7}>
-        <span>
-          Further info on Kepler's Universe model:
-        </span>
-        <br /><br />
-        By inscribing and circumscribing each of the Platonic Solids (octahedron, icosahedron, dodecahedron, tetrahedron and cube), Kepler identified 6-layers representing each of the 6 known planets at the time—Mercury, Venus, Earth, Mars, Jupiter, and Saturn.
-        <br /><br />
-        The 5 Platonic Solids: the only 3D shapes whose faces are identical regular polygons.
+        Just like the launch of $MONA, there are no VC backers, no private allocations, no ad models, no corporate control— instead $W3F is built as an intrinsically and extrinsically community rooted token for every designer, buyer, collector and wearer navigating this new entirely distinct, yet, perpetually familiar and tantilising new world.  
       </div>
-
       <div className={styles.text8}>
-        During W3FW there were several new XENOTECH drops. The most notable piece is the Platonic Solids Ring: The ring is an interpretation of astronomer Johannes Kepler's Mysterium Cosmographicum (1597).
-        <br /><br />
-        Each Platonic Solid can be nested precisely within a sphere, where each corner of the solid perfectly touches the inner edge of the sphere.        
+        With DIGITALAX building out an entire cityscape for web3 fashion, the GDN is elevating the game with the necessary liquidity for a full metaversal scale up. The token will give holders utility in the DIGITALAX and GDN ecosystems, everything from access to events and experiences brought forth, new exclusive NFT content releases, and unique community engagement incentives.  
       </div>
       <div className={styles.text9}>
-        I had first learned about Kepler's model when I was reading the book "The Sleepwalkers" by Arthur Koestler. This book was hugely influential in the course of my work. The book helped me clearly identify the direct connections between Art and Science. The whole thesis behind the book is that creative breakthroughs that have pushed humanity forward (like scientific discoveries) are often derived from 'sleepwalking' trance-like states where intuition takes over. I was particularly struck by how artistic Kepler's intuitive model of the universe is - particularly how mathematically perfect the model is (with each platonic solid inscribed and circumscribed by spheres). This realization of the interconnectedness of science and art has since led me to pursue many technology related skills and is the whole reason I fell down the rabbit hole of blockchain!
+        $W3F mixes utility with DeFi, NFTs, DAOs and more— having compounded distribution through staking, inclusion in large scale exhibits like Web3 Fashion Week (W3FW), and, even limited governance responsibility in guiding the future of the DAO, and thus the industry itself. 
       </div>
-
-      <video autoPlay muted loop className={styles.video1}>
-        <source src={`/magazine/5/videos/109110_video1.mp4`} type="video/mp4" />
-      </video>
-
-      <video autoPlay muted loop className={styles.video2}>
-        <source src={`/magazine/5/videos/109110_video2.mp4`} type="video/mp4" />
-      </video>
-      
-      <video autoPlay muted loop className={styles.video3}>
-        <source src={`/magazine/5/videos/109110_video3.mp4`} type="video/mp4" />
-      </video>
-
-      <video autoPlay muted loop className={styles.video4}>
-        <source src={`/magazine/5/videos/109110_video4.mp4`} type="video/mp4" />
-      </video>
+      <div className={styles.text10}>
+        The GDN DAO and all of the value created in and around it will be further ignited by the DIGITALAX ecosystem and its eventual progression into full decentralisation itself. 
+      </div>
+      <div className={styles.text11}>
+        $MONA and $W3F encapsulate and distribute in a steady flow the cornerstone essence of everything that fashion in web3 stands for. The metaverse is our fabric, display screen, and canvas, not only for how we show ourselves to each other, but, for how we interact with the assets that build our world, old and new. 
+      </div>
+      <div className={styles.text12}>
+        The launch of $W3F is on its way, and we couldn’t be more excited for its arrival and its ability to serve as a conveyance mechanism at the intersection at the abstract made manifest— the open metaverse.
+      </div>
     </div>
   )
 }

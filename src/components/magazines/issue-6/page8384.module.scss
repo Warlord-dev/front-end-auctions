@@ -3,7 +3,6 @@
 .wrapper {
   @include magazineWrapper();
   background-color: #000000;
-
   .back {
     position: absolute;
     width: 1920px;
@@ -256,8 +255,6 @@
     height: 312px;
     left: 29px;
     top: 260px;
-
-    background: #c4c4c4;
   }
 
   .link1 {

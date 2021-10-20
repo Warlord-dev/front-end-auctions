@@ -1,0 +1,102 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: linear-gradient(180deg, #8F37FF 0%, #000000 100%);
+
+  .image1 {
+    position: absolute;
+    width: 399px;
+    height: 183px;
+    left: -21px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 399px;
+    height: 183px;
+    left: -21px;
+    top: 190px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 399px;
+    height: 183px;
+    left: -21px;
+    top: 380px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 399px;
+    height: 183px;
+    left: -21px;
+    top: 573px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 399px;
+    height: 183px;
+    left: -21px;
+    top: 766px;    
+  }
+
+  .image6 {
+    position: absolute;
+    width: 399px;
+    height: 183px;
+    left: -21px;
+    top: 965px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 399px;
+    height: 183px;
+    left: -21px;
+    top: 1158px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 399px;
+    height: 183px;
+    left: -21px;
+    top: 1357px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 438px;
+    height: 1435px;
+    left: 443px;
+    top: 28px;
+    
+    font-family: Didot;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 35px;
+    
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 735px;
+    height: 1320px;
+    left: 1096px;
+    top: 56px;
+    
+    font-family: Didot;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 44px;
+    
+    color: #FFFFFF;    
+  }
+}

@@ -153,6 +153,9 @@ const Page1718 = () => {
       <div className={styles.text23}>
         IRL NFT ACCESS
       </div>
+      <div className={styles.text24}>
+        JLO
+      </div>
     </div>
   )
 }

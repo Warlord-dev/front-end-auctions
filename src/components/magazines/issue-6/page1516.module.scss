@@ -145,6 +145,19 @@
     }
   }
 
+  h1 {
+    position: absolute;
+    width: 206px;
+    height: 100px;
+    left: 1424px;
+    top: 14px;
+    
+    font-family: Bahiana;
+    font-size: 100px;
+    line-height: 100%;
+    color: #FFFFFF;    
+  }
+
   .image5 {
     position: absolute;
     width: 89px;
@@ -166,7 +179,7 @@
   .rect2 {
     position: absolute;
     width: 401px;
-    height: 1055px;
+    height: 1070px;
     left: 1428px;
     top: 412px;
     
@@ -201,7 +214,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 11px;
-    line-height: 12px;
+    line-height: 105%;
     
     color: #FFFFFF;
   }

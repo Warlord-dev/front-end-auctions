@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './page8384.module.scss';
 
 const Page8384 = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    document.getElementsByClassName("twitter-embed")[0].appendChild(script);
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/6/images/83_84_back.png" className={styles.back} />
@@ -71,7 +77,7 @@ const Page8384 = () => {
         long-term timeline. The Loot community is much more experimental, where builders going
         directly to users makes more sense.
       </div>
-      <div className={styles.embed}>
+      <div className={[styles.embed, 'twitter-embed'].join(' ')}>
         <blockquote className="twitter-tweet">
           <p lang="en" dir="ltr">
             My ETH Global Talk on Loot,
@@ -98,7 +104,6 @@ const Page8384 = () => {
             October 6, 2021
           </a>
         </blockquote>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <a href="https://twitter.com/WillPapper" target="_blank">
         <img src="/magazine/6/images/83_84_image1.png" className={styles.link1} />

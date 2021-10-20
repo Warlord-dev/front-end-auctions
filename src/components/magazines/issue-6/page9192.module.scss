@@ -1,236 +1,58 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper();
+  @include magazineWrapper();    
+  background: black;
 
   .image1 {
     position: absolute;
-    width: 1920px;
+    width: 960px;
     height: 1497px;
     left: 0px;
-    top: 0px;
-  }
-
-  .text1 {
-    position: absolute;
-    width: 486px;
-    height: 144px;
-    left: 22px;
-    top: 20px;
-    
-    font-family: MUSICNET;
-    font-size: 60px;
-    line-height: 120.53%;
-    color: #FF00E5;
-    -webkit-text-stroke: 0.6px #FFF7EF;
-  }
-
-  .text2 {
-    position: absolute;
-    width: 486px;
-    height: 144px;
-    left: 22px;
-    top: 164px;
-    
-    font-family: MUSICNET;
-    font-size: 60px;
-    line-height: 120.53%;
-    color: #FF00E5;
-    -webkit-text-stroke: 0.6px #FFF7EF;
-  }
-
-  .text3 {
-    position: absolute;
-    width: 486px;
-    height: 144px;
-    left: 436px;
-    top: 20px;
-    
-    font-family: MUSICNET;
-    font-size: 60px;
-    line-height: 120.53%;
-    color: #BDFF00;
-    -webkit-text-stroke: 0.6px #FFF7EF;
-  }
-
-  .text4 {
-    position: absolute;
-    width: 486px;
-    height: 144px;
-    left: 436px;
-    top: 164px;
-    
-    font-family: MUSICNET;
-    font-size: 60px;
-    line-height: 120.53%;
-    color: #BDFF00;
-    -webkit-text-stroke: 0.6px #FFF7EF;
-  }
-
-  .text5 {
-    position: absolute;
-    width: 486px;
-    height: 144px;
-    left: 1018px;
-    top: 1312px;
-    
-    font-family: MUSICNET;
-    font-size: 60px;
-    line-height: 120.53%;
-    color: #BDFF00;
-    -webkit-text-stroke: 0.6px #FFF7EF;
-  }
-
-  .text6 {
-    position: absolute;
-    width: 486px;
-    height: 144px;
-    left: 1427px;
-    top: 1312px;
-    
-    font-family: MUSICNET;
-    font-size: 60px;
-    line-height: 120.53%;
-    color: #BDFF00;
-    -webkit-text-stroke: 0.6px #FFF7EF;
-  }
-
-  .text7 {
-    position: absolute;
-    width: 486px;
-    height: 144px;
-    left: 1832px;
-    top: 1309px;
-    
-    font-family: MUSICNET;
-    font-size: 60px;
-    line-height: 120.53%;
-    color: #BDFF00;
-    -webkit-text-stroke: 0.6px #FFF7EF;
-  }
-
-  .text8 {
-    position: absolute;
-    width: 204px;
-    height: 131px;
-    left: 137px;
-    top: 331px;
-    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 100px;
-    line-height: 117px;
-    
-    color: #FFFFFF;    
-  }
-
-  .text9 {
-    position: absolute;
-    width: 204px;
-    height: 131px;
-    left: 393px;
-    top: 333px;
-    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 100px;
-    line-height: 117px;
-    
-    color: #FFFFFF;
-  }
-
-  .text10 {
-    position: absolute;
-    width: 204px;
-    height: 131px;
-    left: 635px;
-    top: 333px;
-    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 100px;
-    line-height: 117px;
-    
-    color: #FFFFFF;
-  }
-
-  .text11 {
-    position: absolute;
-    width: 204px;
-    height: 131px;
-    left: 1287px;
-    top: 532px;
-    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 100px;
-    line-height: 117px;
-    
-    color: #FFFFFF;
-    
+    top: 0px;    
   }
 
   .rect1 {
     position: absolute;
-    width: 783px;
-    height: 986px;
-    left: 42px;
-    top: 450px;
-    
-    background: #000000;    
+    width: 960px;
+    height: 10px;
+    left: 960px;
+    top: 44px;
+    background-color: white;
   }
 
-  .image2 {
+  .rect2 {
     position: absolute;
-    width: 317px;
-    height: 320px;
-    left: 978px;
-    top: 774px;        
+    width: 960px;
+    height: 10px;
+    left: 960px;
+    top: 69px;
+    background-color: white;
   }
 
-  .image3 {
+  .rect3 {
     position: absolute;
-    width: 414px;
-    height: 517px;
-    left: 1320px;
-    top: 680px;    
+    width: 960px;
+    height: 10px;
+    left: 960px;
+    top: 94px;
+    background-color: white;
   }
 
-  .text12 {
+  .text1 {
     position: absolute;
-    width: 704px;
-    height: 823px;
-    left: 96px;
-    top: 485px;
+    width: 688px;
+    height: 1312px;
+    left: 1096px;
+    top: 185px;
     
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 29px;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
     
-    color: #FF0000;    
-  }
-
-  .audioWrapper {
-    position: absolute;
-    width: 509px;
-    height: 124px;
-    left: 988px;
-    top: 376px;    
-  }
-
-  a {
-    div {
-      transition: 0.3s all;
-      &:hover {
-        transition: 0.3s all;
-        transform: scale(0.9)
-      }
-    }
+    color: #FFFFFF;
+    
   }
 }

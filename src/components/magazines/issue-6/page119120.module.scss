@@ -1,0 +1,30 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: black;
+
+  .image1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 960px;
+    height: 1497px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 735px;
+    height: 114px;
+    left: 112px;
+    top: 97px;
+    
+    font-family: Didot;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 38px;
+    
+    color: #FFFFFF;    
+  }
+}

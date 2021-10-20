@@ -59,51 +59,102 @@ const Page1314 = () => {
         Open<br />
         Web
       </div>
-      <a href='https://li.finance/about' target='_blank'>
+      <a href='https://twitter.com/nftscan_com' target='_blank'>
         <img src='./magazine/6/images/1314_image2.png' className={styles.image2} />
       </a>
-      <a href='' target='_blank'>
+      <a href='https://twitter.com/apoorvlathey' target='_blank'>
         <img src='./magazine/6/images/1314_image3.png' className={styles.image3} />
       </a>
-      <a href='' target='_blank'>
+      <a href='https://twitter.com/banksea_finance' target='_blank'>
         <img src='./magazine/6/images/1314_image4.png' className={styles.image4} />
       </a>
-      <a href='' target='_blank'>
+      <a href='https://twitter.com/_venrate' target='_blank'>
         <img src='./magazine/6/images/1314_image5.png' className={styles.image5} />
       </a>
-      <a href='https://cryptotesters.com/%E2%80%8B' target='_blank'>
+      <a href='https://twitter.com/GetMooli' target='_blank'>
         <img src='./magazine/6/images/1314_image6.png' className={styles.image6} />
       </a>
       <div className={styles.text7}>
-        <span>Li Finance</span><br />
-        Imagine a cross-chain 1inch— that’s Li Finance. Their thesis centres around providing instant liquidity with a next-gen UX by aggregating networks, DEXes and liquidity providers so that any to any swaps become as easy as it is to figure out that as collecting bags in a bull market. 
+        <span>NFTSCAN</span><br />
+        With so much volume cascading into the NFT space, it’s no wonder that there is high demand for better tools and interfaces for being able to effectively intake and make sense of all of that data— for, although it’s transparently all there on 
       </div>
       <div className={styles.text8}>
-        And the best part is that Li Finance isn’t just available as a DAPP but also as a widget so that other DAPP devs can leverage the tool and keep their users on their respective platforms when engaging in swapping actions. Providing simplified and more user friendly tools and UIs is essential for scaling web3 to the average market participant, and the work from the Li Finance team is adding greater support to help get us there. 
+        the blockchain for anyone to query, learning how to effectively use a block explorer and then extrapolate other metadata is no simple feat. Dedicated to building the infrastructure of the blockchain world and providing high-quality blockchain data support and services for developers and users. And this is exactly what NFTScan is solving for, developing a platform and API for easy NFT asset browsing and data analysis, for how else are we meant to stay ahead of all those HFT NFT traders? xD
       </div>
       <div className={styles.text9}>
-        <span>Flashnft</span><br />
-        Hot off the press as a derivative from the Loot Project, FlashNFT is building an NFT platform for the Loot community with freely available tools that will help users with more efficient token minting. The current version supports token ID queries, whereby users can query not yet minted token metadata and mint in batches to avoid wasting gas on already claimed items. Their plans for the future include multi-chain support and real time notification casting, as Loot expands out further into the broader web3 sphere. 
+        <span>IMPERSONATOR</span><br />
+        Impersonator is an interesting project that has come to fruition, where it effectively allows anyone to “impersonate” a wallet address under a read only status. It’s motivation is for increasing ease of access to web3 and removing first mile technical barriers to entry, whereby many DAPPs today require login/”connect wallet” in order for a user to access and better understand what the product is all about. Impersonator let’s you get this “behind the scenes” access without having to go through the full process of setting up a wallet + there are also unique use cases like being able to check how whales are using dapps like Aave, Uniswap etc. and getting information on liquidity provisions, amount borrowed etc. 
       </div>
       <div className={styles.text10}>
-        <span>ROTKI</span><br />
-        Rotki is an open source portfolio tracking and financial accounting tool. The unique part is that unlike almost all of its competing services where the use of closed source SaaS in the stack means that you are handing over your critical financial data to the company, with Rotki your data is encrypted and locally stored— no one but you needs to know the ins and outs of your PnL. Rotki started with a focus on more centralised exchanges, where the most volume and liquidity was, however, as DEXes have continued to take market share, they now include support for a lot of DeFi applications, including Sushiswap, AAVE, Curve and more. 
+        <span>BanksEA Finance</span><br />
+        The intersection between NFTs and DeFi continues to strengthen as new innovative use cases come to light and more of the web3 ecosystem experiments to better understand just how utility can be compounded when the two sectors are combined together.  Banksea Finance is one of these protocols mixing NFTs with DeFi through their NFT price discovery protocol and pool-based lending hub whereby price oracles consist of both an on-chain and off chain layer where AI nodes feed price prediction into the onchain layer. This off-chain layer is decentralised allowing for the Banksea Oracle Smart Contract to use the consensus algorithm to eliminate a bad node if one turns malicious. 
       </div>
       <div className={styles.text11}>
-        <span>UPALA</span><br />
-        Extremely fitting to the focus on identity for this issue of DIGIFIZZY, Upala is a Proof-of-PersonHood system that provides human uniqueness score to DApps and beyond. The score given represents how much financial cost, in $, it would take to forge the account. It’s an interesting concept and brings a unique flavor to how we validate good actors online, whereby group consensus and skin in the game through payments is leveraged to curate people and “explode” pools when malicious actors are found in the system. 
+        <span>Venrate</span><br />
+        Our reputations dictate a lot. And, this can be a very positive feature (when it’s accurate), however, in the centralised web2 era whereby often your reputation score is not actually reflective of your actions and activity, but rather, at the whims of a centralised controller, it’s most often not (accurate). Venrate is a decentralised credit score and reputation system, whereby blockchain activity and data is used to assess the reputation of a user. It’s still not completely comprehensive in covering all relevant and important data points for ensuring our contributions at all scales are unambiguously evaluated, but, it is certainly a great first step in moving away from traditional means of reputation scoring, which are designed to benefit just a select few.
       </div>
       <div className={styles.text12}>
-        <span>Cryptotesters</span><br />
-        Have you ever wondered 
+        <span>MOOLI</span><br />
+        Mooli is a no-code smart contract tool whereby
       </div>
       <div className={styles.text13}>
-        how to keep up with that new project alpha like everyone else in the market? Ever wished that crypto had a native product hunt type dapp? 
+        the team is developing code template frameworks and creating code generators that accept configurations from end-users.
         <br /><br />
-        Well, Cryptotesters is here to help with all of your market and project discovery, navigation and validation needs! They are slowing transforming into a one stop shop for newcomers and curious web3 minds. But it’s not just a static interface, Cryptotesters is also assisting projects with their marketing, branding and communication, specifically to provide clear and simple messaging to those users that are still understanding more about  the space and sifting through the potential less well inclined projects for those that are truly building this new era. 
+        When implemented, this is a big game changer for bootstrapping web2 devs directly into the full immersion of web3. There are still far too few full time proficient web3 Solidity devs — and learning complex immutable code with automated executions that is optimised for gas fees and also the live market is no easy task. 
         <br /><br />
-        Further, the Cryptotesters team is also putting together recommendation lists, basic “how tos”, community review tools and additional content such as blogs and podcasts. It won’t be long before they have enough building blocks to go full web3 and launch a project token for incentivising decentralised content curation and checks and balances on it. 
+        Having more streamlined and supportive infrastructure to guide code best practises and also make readily available important features and functions is fundamental to quickly scaling this space in a robust manner. For, eventually, imagine being able to drag and drop code modules to safely deploy an entire web3 ecosytem; from NFT minting, DeFi lending, DeCo and more. 
+        <br /><br />
+        And frankly, this just supports the entire shift further into full metaversal immersion. Our interfaces are changing, and to think that lines of code in a IDE is how we will be creating and shaping the future of digital assets and more is well off the mark. 
       </div>
+      <div className={styles.text14}>
+        WayFare
+      </div>
+      <div className={styles.text15}>
+        Setting up a DAO or decentralised community is one thing, and in fact, to label yourself as a pseudo-DAO isn’t really that hard. We’ve all heard the popular lightning round steps on “how to set up a DAO”... and it usually goes somewhere along the lines of; post on Mirror to start a crowdfund and launch a token, set up a multisig, launch a discord and include token gated access etc. etc. 
+        <br /><br />
+        However, in reality, starting a long lasting, vibrant and on-course decentralised community that actually has the necessary aligned engagement to achieve what it has set out to accomplish, with enough purpose and value to not lose criticial momentum— well, that’s a completely different story, and, coming from someone who is breathing this in day and night, it’s also not that easy. It requires real commitment, time, effort and resource. The tools we use to create the DAO might be readily available, but often, the pre-cultivated tribes of eager participants are not. 
+        <br /><br />
+        However, with that said, one remarkable attribute of building in web3 is that network effects are so much more kinetic, spreading from edge to edge in rapid cycles. Thus, cultivating strengthened trust and relationships between community members reaps massive benefits.  And, when this is combined with intrinsic and extrinsic rewards, this connective fuel ignites. 
+        <br /><br />
+        Wayfare is a newly designed discord bot that builds both inter and intra DAO trust and affinity through mutual assistance and incentivised web3 contributor wayfinding. 
+        <br /><br />
+        It works right out of the discord servers that a lot of us call home, creating network effects at squad scale. The bot actively sources quests from DAOs and individual DAO members and connects these quests up with people that are well positioned to solve them.
+        <br /><br />
+        Community members and DAOs can submit !gives and !asks and alongside direct mutual assists between DAO members, DAOs can route contribution bounties through the bot to the members in the extended meta-community best positioned and most eager to go full time DAO.
+        <br /><br />
+        Rewards can be anything from native tokens, speciality NFTs, to the possibility of a full time gig within a truly web3 native world.
+        <br /><br />
+        You can think of Wayfare like a human in the loop AMM, where rather than incentivising a generic race to the bottom free for all where the reward is little and competition is high, instead, Wayfare responds what people actually want— high quality personalised human connection. 
+        <br /><br />
+        If you’d like to try out Wayfare in your own discord server today, send a message to <span>Emma_13#2010.</span>
+      </div>
+      <div className={styles.text16}>
+        Try the Wayfare discord bot in your server now!
+      </div>
+      <img src='./magazine/6/images/1314_image7.png' className={styles.image7} />
+      <img src='./magazine/6/images/1314_image7.png' className={styles.image71} />
+      <img src='./magazine/6/images/1314_image7.png' className={styles.image72} />
+      <img src='./magazine/6/images/1314_image7.png' className={styles.image73} />
+      <img src='./magazine/6/images/1314_image7.png' className={styles.image74} />
+      <img src='./magazine/6/images/1314_image7.png' className={styles.image75} />
+      <img src='./magazine/6/images/1314_image7.png' className={styles.image76} />
+      <img src='./magazine/6/images/1314_image7.png' className={styles.image77} />
+
+      <img src='./magazine/6/images/1314_image8.png' className={styles.image8} />
+      <img src='./magazine/6/images/1314_image8.png' className={styles.image81} />
+      <img src='./magazine/6/images/1314_image8.png' className={styles.image82} />
+      <img src='./magazine/6/images/1314_image8.png' className={styles.image83} />
+
+      <div className={styles.circle1}></div>
+      <div className={styles.circleText1}>
+        Collect POAP!        
+      </div>
+      <div className={styles.circleText2}>
+        yay        
+      </div>
+      <a href='https://poap.xyz/wayfare' target='_blank'>
+        <img src='/images/poap-logo.png' className={styles.poapImage} />
+      </a>
     </div>
   )
 }

@@ -4,19 +4,9 @@ const Page34 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='./magazine/6/images/0304_image1.png' className={styles.image4} />
-      <p className={styles.text1}>Building in the Bazaar.</p>
+      <p className={styles.text1}>Olympic Sneakers of Conviction.</p>
       <p className={styles.text2}>
-        Web3 at its core is an open bazaar of chaotic live fire markets, bustling open source development, vast creativity and decentralised tinkering of the very source code that gives so much vitality and wealth to NFTs, DeFi, Decentralised Commerce, DAOs and more. 
-        <br /><br />
-        Amongst all the noise there is an elegant coherence of signal, coordinating rapid code improvement and effective debugging so that designers, creators, players and everyday people are able to better start finding their way in this new world and embrace the market for its entire range of most important features and the full set of tools of what it can offer us.
-        <br /><br />
-        This complete breadth of optionality becomes so much more interesting given that in web3, for the first time, everything can be directly incentivised through streamlining the mechanisms for value exchange, securing it all through decentralisation and eliminating barriers to the creation of goods and services that you actually own— the bedrock and foundation to the open metaverse. 
-        <br /><br />
-        And it is only in building in such an open way that truly gives this market, and everyone a part of it, continuous opportunities to get better, at whatever that might be. Mistakes, big or small, core or peripheral, point us in the way toward getting better. Being able to confront the mistakes so publicly, fess up to what went wrong, and then go at it again in completely new and different ways ensures we dig into the root causes and address those before iterating to the next stage.   
-        <br /><br />
-        In fact, it's this permissionless and unrestricted nature of decentralised tech that made me fall in love with it right from the start. And the appreciation I have for the market and the respect that it commands, in all of its chaotic calmness, only continues to grow each day I have the opportunity to build and create in it. For, our mistakes in this market are ultimately what point the way to the best solutions— the solutions unshrouded by personal ego, cognitive dissonance or political bureaucracy. And it’s not just pointing the way to best solutions, but also just as much pointing the way so we can embrace the best versions of who we are and continually evolve to become. 
-        <br /><br />
-        In this dynamically occupied metaversal bazaar, our identities, self interest and self sovereignty are now directly under our own agency, instead of the centralised systems that don’t work or actively work against us to the benefit of the very few. It's this rightful ownership that allows us to start truly forging the narratives and stories that we want to be a part of and contribute to, that we are indispensable and consequential to.
+        Wow. Issue 6 of DIGIFIZZY. That’s a massive milestone! To everyone that has contributed, supported, read and loved the magazine so far, I extend my warmest appreciation. I remember designing, curating and launching the first issue just 6 months ago, with the  
       </p>
       <p className={styles.text12}>- Emma-Jane MacKinnon-Lee</p>
       <img src='./magazine/6/images/0304_image2.jpg' className={styles.image1} />
@@ -25,127 +15,119 @@ const Page34 = () => {
       <p className={styles.text4}>
         Emma-Jane MacKinnon-Lee
         <br />
+        Isramae Visales
         <br />
-        Isramae Visales <br />
-        <br />
-        Peezy R<br />
+        Peezy R
         <br />
         Victor
         <br />
-        <br />
         Haruto Inoue
-        <br />
         <br />
       </p>
       <p className={styles.text5}>
         Stan McLygin
         <br />
-        <br />
-        Micha Almeda 
-        <br />
-        <br />
         Glitch Faced King
-        <br />
         <br />
         Cameron Sato
         <br />
-        <br />
         James Lin
+        <br />
+        Aditya
+        <br />
+        Ana Rivera
       </p>
       <p className={styles.text6}>
-        Owocki
+        Eddie Briseño
         <br />
+        Musashi
         <br />
-        Rafi 0x
+        JLo
         <br />
+        David Phelps
         <br />
-        Austin Griffiths
+        Jacob Martin
         <br />
+        vocesferales
         <br />
-        Santiago Siri
-        <br />
-        <br />
-        Brantly Millegan
+        Professor-Wrecks
       </p>
       <p className={styles.text7}>
-        Idena 
+        Josh Quittner
         <br />
+        Will Papper
         <br />
-        Magic
+        Jess Sloss 
         <br />
+        Ellie Day
         <br />
-        IDX/Ceramic
+        Nicholas
         <br />
+        The Philosopher
         <br />
-        Cryptsie <br />
+        Deported Photographer
+        <br />
+        Hugo Alves
+      </p>
+      <p className={styles.text8}>
+        Tania Viegas
+        <br />
+        Arawn Pierer
+        <br />
+        Bon
+        <br />
+        Screensaver World
+        <br />
+        Dansky3D
+        <br />
+        ohmyelijah
+        <br />
+        Mx Spite
+      </p>
+      <p className={styles.text9}>
+        Jacob Smalls
+        <br />
+        Felirami
+        <br />
+        Nick Gaul
+        <br />
+        Jean-Baptiste Gaeng
+        <br />
+        Thedholes
+        <br />
+        Tom Binkiewinkie
+        <br />
+        Jessytsuki
+      </p>
+      <p className={styles.text10}>
+        Xcelencia
         <br />
         Global Designer Network
         <br />
+        Ben Roberts
         <br />
-        Zack
+        SquintDev
         <br />
+        Letsglitchit
         <br />
-        {/* Alex Adelman */}
-      </p>
-      <p className={styles.text8}>
-        Eva Beylin
+        Suliman
         <br />
-        <br />
-        ThisOutfitDoesntExist
-        <br />
-        <br />
-        McMistrzYT
-        <br />
-        <br />
-        Jordan Lyall
-        <br />
-        <br />
-        OhhShiny
-        <br />
-        <br />
-        {/* Witek Radomski */}
-      </p>
-      <p className={styles.text9}>
-        Cix Liv
-        <br />
-        <br />
-        Crytpo Yuna
-        <br />
-        <br />
-        DIGITONICA
-        <br />
-        <br />
-        Xenotech
-        <br />
-        <br />
-        DEVAN
-      </p>
-      <p className={styles.text10}>
-        Rachel Cope
-        <br />
-        <br />
-        Chase Chapman
-        <br />
-        <br />
-        Maria Burlova
-        <br />
-        <br />
-        Oxmoz
-        <br />
-        <br />
-        Kodo/Mirth
+        XWAVE
       </p>
       <p className={styles.text11}>
-        Meggie van ZwietenAditya
+        TheGlitchedArts
         <br />
+        voidkross
         <br />
-        Ana Rivera
+        JanusSpans
         <br />
+        x3r0ne
         <br />
-        Rachel Cope
+        Blu Simon Wasem
         <br />
+        Aumm das Cripto
         <br />
-        Chaim Holtjer
+        Isaiah Lemmon
       </p>
     </div>
   )
