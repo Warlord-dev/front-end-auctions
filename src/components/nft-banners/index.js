@@ -85,7 +85,7 @@ const NftBanners = () => {
         <img src={`images/nft/4/8.png`} /> */}
 
         {/* issue 5 */}
-        <div className={s.firstBanner}>
+        {/* <div className={s.firstBanner}>
           <img src={`images/nft/5/1.png`} />
           <Link href="/unlockable/">
             <a className={s.viewBundles}> VIEW BUNDLES </a>
@@ -97,7 +97,22 @@ const NftBanners = () => {
         <img src={`images/nft/5/5.png`} />
         <img src={`images/nft/5/6.png`} />
         <img src={`images/nft/5/7.png`} />
-        <img src={`images/nft/5/8.png`} />
+        <img src={`images/nft/5/8.png`} /> */}
+
+        {/* issue 5 */}
+        <div className={s.firstBanner}>
+          <img src={`images/nft/6/1.png`} />
+          <Link href="/unlockable/">
+            <a className={s.viewBundles}> VIEW BUNDLES </a>
+          </Link>
+        </div>
+        <img src={`images/nft/6/2.png`} />
+        <img src={`images/nft/6/3.png`} />
+        <img src={`images/nft/6/4.png`} />
+        <img src={`images/nft/6/5.png`} />
+        <img src={`images/nft/6/6.png`} />
+        <img src={`images/nft/6/7.png`} />
+        <img src={`images/nft/6/8.png`} />
       </Carousel>
     </div>
   );
