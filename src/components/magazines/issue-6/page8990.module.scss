@@ -1,7 +1,7 @@
 @import './styles.module.scss';
 
 .wrapper {
-  @include magazineWrapper();    
+  @include magazineWrapper();
   background: black;
 
   .image1 {
@@ -42,9 +42,9 @@
   .text1 {
     position: absolute;
     width: 688px;
-    height: 1312px;
+    height: 1152px;
     left: 1096px;
-    top: 185px;
+    top: 211px;
     
     font-family: Roboto;
     font-style: normal;
@@ -52,7 +52,6 @@
     font-size: 27px;
     line-height: 32px;
     
-    color: #FFFFFF;
-    
+    color: #FFFFFF;    
   }
 }

@@ -4,162 +4,122 @@ import styles from './page103104.module.scss'
 const Page103104 = () => {
   return (
     <div className={styles.wrapper}>
-      <a href='https://designers.digitalax.xyz/designers/DomingoBeta/' target='_blank'>
+      <img src='/magazine/6/images/103104_image1.png' className={styles.image1} />
+
+      <a href='https://designers.digitalax.xyz/designers/osumikat/' target='_blank'>
         <img src='/magazine/6/images/103104_designer1.png' className={styles.designer1} />
       </a>
       <div className={styles.text1}>
-        DOMINGOBETA
+        Osumikat
       </div>
       <div className={styles.text2}>
-        Colombia Graphic Design, Fashion & Studio Community        
+        IRL Los Angeles + Exploring Retro-Futurism in Digital Fashion
       </div>
       
-      <a href='https://designers.digitalax.xyz/designers/Cryptsie/' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Ycesh/' target='_blank'>
         <img src='/magazine/6/images/103104_designer2.png' className={styles.designer2} />
       </a>
       <div className={styles.text3}>
-        CRYPTSIE
+        Ycesh
       </div>
       <div className={styles.text4}>
-        Hyperpop Fashion (Digital / Physical) + Web3 Cooperativist Communities
+        Vienna, Austria Design, Fashion & Web3 Communities
       </div>
 
-      <a href='https://designers.digitalax.xyz/designers/Emma-Jane%20MacKinnon-Lee/' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/ORDO/' target='_blank'>
         <img src='/magazine/6/images/103104_designer3.png' className={styles.designer3} />
       </a>
       <div className={styles.text5}>
-        EMMA-JANE MACKINNON-LEE
+        ORDO
       </div>
       <div className={styles.text6}>
-        San Francisco IRL, Core Blender + Trash Fashion Communities
+        Melbourne, Australia Universities & Student Sector Communities
       </div>
-      <a href='https://designers.digitalax.xyz/designers/pr.esc' target='_blank'>
+      
+      <a href='https://designers.digitalax.xyz/designers/alanatheweb3girl/' target='_blank'>
         <img src='/magazine/6/images/103104_designer4.png' className={styles.designer4} />
       </a>
       <div className={styles.text7}>
-        PR.ESC
+        Alana The Web3 Girl
       </div>
       <div className={styles.text8}>
-        Burg Giebichenstein University of Arts, Halle
+        Digital Model Metaversal Realms and Communities
       </div>
       
-      <a href='https://designers.digitalax.xyz/designers/Musashi/' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Infinito/' target='_blank'>
         <img src='/magazine/6/images/103104_designer5.png' className={styles.designer5} />
       </a>
       <div className={styles.text9}>
-        MUSASHI
+        INFINITO
       </div>
       <div className={styles.text10}>
-        Blockchain Gaming Wearable Communities (CV, AAVEGOTCHI, DCL)
+        Colombia + Latin Student Creators, Universities & Schools
       </div>
       
-      <a href='https://designers.digitalax.xyz/designers/Stan%20Mclygin/' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/an.nyen' target='_blank'>
         <img src='/magazine/6/images/103104_designer6.png' className={styles.designer6} />
       </a>
       <div className={styles.text11}>
-        STAN MCLYGIN
+        AN.NYEN
       </div>
       <div className={styles.text12}>
-        Russian Design, Web3 + 3D Modeling Community
+        Metaverse Street Style Fashion Communities
       </div>
-
-      <a href='https://designers.digitalax.xyz/designers/KALAU/' target='_blank'>
+      
+      <a href='https://designers.digitalax.xyz/designers/Paola%20Olaguivel/' target='_blank'>
         <img src='/magazine/6/images/103104_designer7.png' className={styles.designer7} />
       </a>
       <div className={styles.text13}>
-        KALAU
+        Paola Olaguivel
       </div>
       <div className={styles.text14}>
-        Phygital + Luxury Design/Studio Community
+        Web3 Music Fashion Intersection & Community Cultivation
       </div>
-      <a href='https://designers.digitalax.xyz/designers/Saso/' target='_blank'>
+      
+      <a href='https://designers.digitalax.xyz/designers/ENKI%20Digital%20Fashion/' target='_blank'>
         <img src='/magazine/6/images/103104_designer8.png' className={styles.designer8} />
       </a>
       <div className={styles.text15}>
-        saso
+        ENKI Digital Fashion
       </div>
       <div className={styles.text16}>
-        Digigoth, Japanese Horror, Dark Fantasy + Wellness Designer Community
+        Physical Brand/Studio Sherpa to Web3
       </div>
-
-      <a href='https://designers.digitalax.xyz/designers/Tania%20MV%20Studio/' target='_blank'>
+      
+      <a href="https://designers.digitalax.xyz/designers/Mo'Casso/" target='_blank'>
         <img src='/magazine/6/images/103104_designer9.png' className={styles.designer9} />
       </a>
       <div className={styles.text17}>
-        Tania MV
+        Mo’Casso
       </div>
       <div className={styles.text18}>
-        Portugal Designer, Fashion, Web3 Community + University of Arts London
+        Newbie Digital + Virtual Onboarding Support
       </div>
       
-      <a href='https://designers.digitalax.xyz/designers/Alyona%20Briukhanova/' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Mutani.io' target='_blank'>
         <img src='/magazine/6/images/103104_designer10.png' className={styles.designer10} />
       </a>
       <div className={styles.text19}>
-        Alyona Briukhanova
+        MUTANI.IO
       </div>
       <div className={styles.text20}>
-        Ukraine Designer, Fashion, Web3 Community
-      </div>
-
-      <a href='https://designers.digitalax.xyz/designers/Hadeeart/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer11.png' className={styles.designer11} />
-      </a>
-      <div className={styles.text21}>
-        Hadeeart
-      </div>
-      <div className={styles.text22}>
-        Traditional + Afrofuturist Design Communities
-      </div>
-
-      <a href='https://designers.digitalax.xyz/designers/Sasa3dimensions/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer12.png' className={styles.designer12} />
-      </a>
-      <div className={styles.text23}>
-        Sasa3dimensions
-      </div>
-      <div className={styles.text24}>
-        Italian Designer, Fashion, Web3 Communities
-      </div>
-
-      <a href='https://designers.digitalax.xyz/designers/LivingSparks/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer13.png' className={styles.designer13} />
-      </a>
-      <div className={styles.text25}>
-        LIVINGSPARKS
-      </div>
-      <div className={styles.text26}>
-        Italian Designer, Fashion, Web3 Communities
+        Physical Traditional Fashion Indie Design Community
       </div>
       
-      <a href='https://designers.digitalax.xyz/designers/Deep%20Thought/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer14.png' className={styles.designer14} />
+      <div className={styles.text21}>
+        Every designer in the Global Designer Network is traversing new territory for continuing to expand and deepen the range of mediums, materials, utility and possibilities for web3 fashion. And, as the network continues to radically expand, certain GDN members are taking the lead over key categories and sub-sectors that we are further supporting and empowering for catalysing the broader web3 fashion community— both digital and IRL in the ever evolving multi-dimensional metaverse. 
+        <br /><br />
+        Having a more composable and modular structure within the GDN DAO is also critical to maintaining momentum, engagement and driving forth our aligned mission. This is how we continuously refresh the magic of scalable small world networks. It allows us to be nimble, fast pace and cover a broader range of areas.        
+      </div>
+ 
+      <a href='https://designers.digitalax.xyz/designers/Majestic%20Apparell/' target='_blank'>
+        <img src='/magazine/6/images/103104_designer11.png' className={styles.designer11} />
       </a>
-      <div className={styles.text27}>
-        Deep Thought
+      <div className={styles.text22}>
+        MAJESTIC APPARELl
       </div>
-      <div className={styles.text28}>
-        Web3 Fashion Horizon Scanning + Deep Future Tech Research/Crossover Inflections
-      </div>
-
-      <a href='https://designers.digitalax.xyz/designers/Aisha/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer15.png' className={styles.designer15} />
-      </a>
-      <div className={styles.text29}>
-        Aisha
-      </div>
-      <div className={styles.text30}>
-        Nigerian Metaverse, Nollywood, and Web3 Fashion Communities
-      </div>
-
-      <a href='https://designers.digitalax.xyz/designers/Jessica%20James/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer16.png' className={styles.designer16} />
-      </a>
-      <div className={styles.text31}>
-        Jessica James
-      </div>
-      <div className={styles.text32}>
-        Metaverse Models & Neo African Identity
+      <div className={styles.text23}>
+        High-end Fashion, Metaverse Fashion and African Design Community
       </div>
     </div>
   )

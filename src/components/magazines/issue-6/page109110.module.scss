@@ -2,63 +2,69 @@
 
 .wrapper {
   @include magazineWrapper();
-  background-color: white;
+  background-color: #5F5BFF;
+
+  .rect1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: linear-gradient(90deg, #FF9B7B 0%, #CE648E 100%);    
+  }
 
   .image1 {
     position: absolute;
-    width: 356px;
+    width: 1920px;
     height: 1497px;
-    left: 0;
-    top: 0;
+    left: 0px;
+    top: 0px;    
   }
 
-  .image2 {
+  .rect2 {
     position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 960px;
-    top: 0;    
+    width: 839px;
+    height: 1169px;
+    left: 70px;
+    top: 139px;
+    
+    background: rgba(255, 255, 255, 0.85);    
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 839px;
+    height: 1169px;
+    left: 1021px;
+    top: 139px;
+    
+    background: rgba(255, 255, 255, 0.85);
   }
 
   .text1 {
     position: absolute;
-    width: 573px;
-    height: 33px;
-    left: 228px;
-    top: 199px;
+    width: 773px;
+    height: 1077px;
+    left: 103px;
+    top: 185px;
     
-    font-family: Courier;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 27px;
-    line-height: 120.53%;
-    color: #000000;        
+    font-family: Pirata One;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FF0000;        
   }
 
   .text2 {
     position: absolute;
-    width: 624px;
-    height: 1061px;
-    left: 228px;
-    top: 243px;
+    width: 773px;
+    height: 1077px;
+    left: 1054px;
+    top: 185px;
     
-    
-    font-family: 'Courier New';
-    font-size: 18px;
-    line-height: 120.53%;
-    color: #000000;    
-  }
-
-  .text3 {
-    position: absolute;
-    width: 288px;
-    height: 22px;
-    left: 227px;
-    top: 1248px;
-    
-    font-family: 'Courier New';
-    font-size: 18px;
-    line-height: 120.53%;   
-    color: #000000;
+    font-family: Pirata One;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FF0000;
   }
 }
