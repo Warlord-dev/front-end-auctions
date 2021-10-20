@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://skins.digitalax.xyz
+Host: https://digifizzy.xyz

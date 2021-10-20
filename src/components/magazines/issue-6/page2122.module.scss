@@ -131,6 +131,12 @@
     text-align: center;
     color: #FFFFFF;
     text-shadow: -10px 0 black, 0 -10px black, 10px 0 black, 0 10px black, -10px -10px black, -10px 10px black, 10px -10px black, 10px 10px black;
+    cursor: pointer;
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(1.1);
+    }
   }
 
   .text3 {
@@ -165,6 +171,12 @@
     text-align: center;
     color: #FFFFFF;
     text-shadow: -10px 0 black, 0 -10px black, 10px 0 black, 0 10px black, -10px -10px black, -10px 10px black, 10px -10px black, 10px 10px black;
+    cursor: pointer;
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(1.1);
+    }
   }
 
   .image3 {

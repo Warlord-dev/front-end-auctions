@@ -4,20 +4,93 @@ import styles from './page107108.module.scss'
 const Page107108 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/5/images/107108_image1.png' className={styles.image1} />
+      <div className={styles.rect1}></div>
+      <img src='/magazine/6/images/107108_image1.png' className={styles.image1} />
+
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile1} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile2} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile3} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile4} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile5} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile6} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile7} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile8} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile9} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile10} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile11} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile12} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile13} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile14} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile15} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile16} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile17} />
+      <img src='/magazine/6/images/107108_image2.png' className={styles.smile18} />
 
       <div className={styles.text1}>
-        Case in point, it’s in fashion to claim you’re in web3. But are you really grounded in its principles or is it really just a race to squeeze the most money out of the most marks possible? Are you really for decentralization or are you just selling the illusion and milking the proverbial cow one more time?
-        <br /><br />
-        See, the term “metaverse” has fast become a buzzword being co-opted by opportunistic corporates and brands looking to profit from its cachet in recent years (with a matching press release to boot), or by unscrupulous folks trying to make a quick buck shilling their latest NFTs to make some quick cash.
-        <br /><br />
-        The lack of this firm grounding on the principles of decentralization has led to a severe misunderstanding of the web3 technologies that serve as its infrastructure and the values they espouse.        
+        $GDN Distribution + Experimenting with Fashion DAO Token Economics 
       </div>
-      
       <div className={styles.text2}>
-        Anchoring our identities to the core principles of web3 gives us the technology’s greatest advantages, rather than the mere knowledge of how to build, mint, and take part in the ecosystems we frequent on web3.
+        The Global Designer Network is the very first on-chain web3 fashion DAO, bridging designers from the physical to the digital, and from the extractive world of web2, to a lucrative self sustaining ecosystem enabled by web3 and decentralised tech.
+      </div>
+      <div className={styles.text3}>
+        From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
         <br /><br />
-        Anchored identities don’t ebb and flow with the times. Or the next grift.
+        For GDN is not here for the 
+      </div>
+      <div className={styles.text4}>
+        From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align 
+      </div>
+      <div className={styles.text5}>
+        incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the 
+      </div>
+      <div className={styles.text6}>
+        incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the 
+      </div>
+      <div className={styles.text7}>
+        From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for theFrom the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for For GDN is not here for the  For GDN is not here for the  For GDN is not here for the  the  
+      </div>
+
+      <div className={styles.text8}>
+        The Launch of $W3F
+      </div>
+      <div className={styles.rect2}>
+      </div>
+      <div className={styles.text9}>
+        From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        <br /><br />
+        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
       </div>
     </div>
   )

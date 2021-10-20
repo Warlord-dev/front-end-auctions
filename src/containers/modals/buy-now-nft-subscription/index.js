@@ -13,6 +13,7 @@ import {
 import bidActions from '@actions/bid.actions';
 import global from '@actions/global.actions';
 import { getModalParams } from '@selectors/modal.selectors';
+import { DIGITALAX_FASHION_WEBSITE } from '@constants/urls'
 import styles from './styles.module.scss';
 
 const BuyNowNftSubscription = ({ className, title, buttonText1, buttonText2 }) => {
@@ -87,7 +88,7 @@ const BuyNowNftSubscription = ({ className, title, buttonText1, buttonText2 }) =
             <p className={styles.footerCaption}>
               <span>
                 Need to top up on $MONA? Get it{' '}
-                <a href="https://skins.digitalax.xyz/swap/" target="_blank">
+                <a href={`${DIGITALAX_FASHION_WEBSITE}/swap/`} target="_blank">
                   here.
                 </a>
               </span>

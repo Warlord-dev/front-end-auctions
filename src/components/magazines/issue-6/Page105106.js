@@ -4,21 +4,162 @@ import styles from './page105106.module.scss'
 const Page105106 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/5/images/105106_image1.png' className={styles.image1} />
-
+      <a href='https://designers.digitalax.xyz/designers/DomingoBeta/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer1.png' className={styles.designer1} />
+      </a>
       <div className={styles.text1}>
-        Our individual identities are the intersections of our desires, tastes, affiliations, and purpose – and have become central to the totality of our interactions with the blockchain.
-        <br /><br />
-        The identities we assume aren’t exactly the same as our real-world selves, because the characteristics and beliefs we choose to represent online are different from those that we actually represent in the real world.
-        <br /><br />
-        However, identity is much more than just minting an NFT and becoming a part of a social club. Identity is more than just the PNGs we choose to slap on our Twitter profiles. It’s more than the totality of our collective presence on the social networks we use, and the content we create with each one we use.
+        DOMINGOBETA
       </div>
       <div className={styles.text2}>
-        More than the individuals, associations, brands, and philosophies our avatars stand for, what forms our identities are the values and personal beliefs that override our actions and drive our interactions. It’s the principles on which our avatars are rooted.
-        <br /><br />
-        Our beliefs determine what matters most to us when the chips are down. For instance, a desire to stand up for free speech might mean eschewing platforms, projects, and systems that are undemocratic by nature, and thrive on censorship. The same values that draw our boundaries with others are the same ones that will keep our identities anchored even in the constantly changing worlds we teleport in and out of.
-        <br /><br />
-        Perhaps it starts with staying true to its philosophical underpinnings: mainly, the all-encompassing principle of decentralization.
+        Colombia Graphic Design, Fashion & Studio Community        
+      </div>
+      
+      <a href='https://designers.digitalax.xyz/designers/Cryptsie/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer2.png' className={styles.designer2} />
+      </a>
+      <div className={styles.text3}>
+        CRYPTSIE
+      </div>
+      <div className={styles.text4}>
+        Hyperpop Fashion (Digital / Physical) + Web3 Cooperativist Communities
+      </div>
+
+      <a href='https://designers.digitalax.xyz/designers/Emma-Jane%20MacKinnon-Lee/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer3.png' className={styles.designer3} />
+      </a>
+      <div className={styles.text5}>
+        EMMA-JANE MACKINNON-LEE
+      </div>
+      <div className={styles.text6}>
+        San Francisco IRL, Core Blender + Trash Fashion Communities
+      </div>
+      <a href='https://designers.digitalax.xyz/designers/pr.esc' target='_blank'>
+        <img src='/magazine/6/images/105106_designer4.png' className={styles.designer4} />
+      </a>
+      <div className={styles.text7}>
+        PR.ESC
+      </div>
+      <div className={styles.text8}>
+        Burg Giebichenstein University of Arts, Halle
+      </div>
+      
+      <a href='https://designers.digitalax.xyz/designers/Musashi/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer5.png' className={styles.designer5} />
+      </a>
+      <div className={styles.text9}>
+        MUSASHI
+      </div>
+      <div className={styles.text10}>
+        Blockchain Gaming Wearable Communities (CV, AAVEGOTCHI, DCL)
+      </div>
+      
+      <a href='https://designers.digitalax.xyz/designers/Stan%20Mclygin/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer6.png' className={styles.designer6} />
+      </a>
+      <div className={styles.text11}>
+        STAN MCLYGIN
+      </div>
+      <div className={styles.text12}>
+        Russian Design, Web3 + 3D Modeling Community
+      </div>
+
+      <a href='https://designers.digitalax.xyz/designers/KALAU/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer7.png' className={styles.designer7} />
+      </a>
+      <div className={styles.text13}>
+        KALAU
+      </div>
+      <div className={styles.text14}>
+        Phygital + Luxury Design/Studio Community
+      </div>
+      <a href='https://designers.digitalax.xyz/designers/Saso/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer8.png' className={styles.designer8} />
+      </a>
+      <div className={styles.text15}>
+        saso
+      </div>
+      <div className={styles.text16}>
+        Digigoth, Japanese Horror, Dark Fantasy + Wellness Designer Community
+      </div>
+
+      <a href='https://designers.digitalax.xyz/designers/Tania%20MV%20Studio/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer9.png' className={styles.designer9} />
+      </a>
+      <div className={styles.text17}>
+        Tania MV
+      </div>
+      <div className={styles.text18}>
+        Portugal Designer, Fashion, Web3 Community + University of Arts London
+      </div>
+      
+      <a href='https://designers.digitalax.xyz/designers/Alyona%20Briukhanova/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer10.png' className={styles.designer10} />
+      </a>
+      <div className={styles.text19}>
+        Alyona Briukhanova
+      </div>
+      <div className={styles.text20}>
+        Ukraine Designer, Fashion, Web3 Community
+      </div>
+
+      <a href='https://designers.digitalax.xyz/designers/Hadeeart/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer11.png' className={styles.designer11} />
+      </a>
+      <div className={styles.text21}>
+        Hadeeart
+      </div>
+      <div className={styles.text22}>
+        Traditional + Afrofuturist Design Communities
+      </div>
+
+      <a href='https://designers.digitalax.xyz/designers/Sasa3dimensions/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer12.png' className={styles.designer12} />
+      </a>
+      <div className={styles.text23}>
+        Sasa3dimensions
+      </div>
+      <div className={styles.text24}>
+        Italian Designer, Fashion, Web3 Communities
+      </div>
+
+      <a href='https://designers.digitalax.xyz/designers/LivingSparks/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer13.png' className={styles.designer13} />
+      </a>
+      <div className={styles.text25}>
+        LIVINGSPARKS
+      </div>
+      <div className={styles.text26}>
+        Italian Designer, Fashion, Web3 Communities
+      </div>
+      
+      <a href='https://designers.digitalax.xyz/designers/Deep%20Thought/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer14.png' className={styles.designer14} />
+      </a>
+      <div className={styles.text27}>
+        Deep Thought
+      </div>
+      <div className={styles.text28}>
+        Web3 Fashion Horizon Scanning + Deep Future Tech Research/Crossover Inflections
+      </div>
+
+      <a href='https://designers.digitalax.xyz/designers/Aisha/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer15.png' className={styles.designer15} />
+      </a>
+      <div className={styles.text29}>
+        Aisha
+      </div>
+      <div className={styles.text30}>
+        Nigerian Metaverse, Nollywood, and Web3 Fashion Communities
+      </div>
+
+      <a href='https://designers.digitalax.xyz/designers/Jessica%20James/' target='_blank'>
+        <img src='/magazine/6/images/105106_designer16.png' className={styles.designer16} />
+      </a>
+      <div className={styles.text31}>
+        Jessica James
+      </div>
+      <div className={styles.text32}>
+        Metaverse Models & Neo African Identity
       </div>
     </div>
   )

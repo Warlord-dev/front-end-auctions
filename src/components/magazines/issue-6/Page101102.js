@@ -1,38 +1,109 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { useRouter } from 'next/router'
+import React  from 'react'
+import { DIGITALAX_FASHION_WEBSITE } from '@constants/urls'
 import styles from './page101102.module.scss'
-import UnlockPage from '../common/UnlockPage-Poap'
 
 const Page101102 = () => {
-  const router = useRouter()
-  const { slug } = router.query
-  const issueId = slug && slug.length > 0 ? slug[0] : magazineIssues[0].issueId
-  const { contentUnlocked } = useSelector((state) => state.global.toJS())
-
+  
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/5/images/101102_image1.png' className={styles.image1} />
-      <img src='/magazine/5/images/101102_image2.png' className={styles.image2} />
+      <img src='/magazine/6/images/99100_image1.gif' className={styles.image1} />
+
+      <video autoPlay muted loop className={styles.video1}>
+        <source src='./magazine/6/videos/101102_video1.mp4' type='video/mp4' />
+      </video>
+
+      <img src='/magazine/6/images/101102_image1.png' className={styles.image2} />
+
+      <div className={styles.rect1}></div>
 
       <div className={styles.text1}>
-        Global Individualism. 
+        GDN PURVEYORS
       </div>
       <div className={styles.text2}>
-        Although obvious to so many today, going back in time, it’s sometimes hard to fathom that innovations as industrial as the printing press or as boring as a novel approach to keeping records of mundane information, like who owns what and how much, has paved the way for things so globally transformative and impactful to not just how we exist now but how we comprehend the full shapes, scope and vitality of every part of our experiences. 
-        <br /><br />
-        It’s these increasingly efficienct approaches to creating and transferring information and content that continue to drive forth opportunities for better societal conditions and economic activity. The blockchain, as the first real world proof of triple entry bookkeeping, allows us to gain additional dimensions of context and expand the range of space we can create wealth within; both financially and culturally.  
-        <br /><br />
-        We are still not yet even close to realising the magnitude of just what is in store for our society, and everyday that decentralised tech becomes increasingly adopted, utilised and valued, this becomes just that much more saliently evident. With incentives aligned and everyone sharing in the value generated across all aspects of the system, our individual agency and ownership is directly baked into everything that we do, further empowering our recognised worth on the global stage. 
-        <br /><br />
-        Yet, it’s not just how we are seen in the eyes of others, but true self ownership, empowered by decentralised tech and its principles, enables us to form our digital identities and have them exist well past the platforms that they were built on. We no longer have to conform to the norm, industry standards, bigger players or contort ourselves to fit into ever smaller boxes. Decentralised identity maximises our potential for growth, prosperity, creativity and wealth. 
-        <br /><br />
-        And it’s this autonomy that leads us to greater mastery over our primary skills and drives so that we can effectively self weaponise all of our attributes and find new means of collaboration in ever present competition. 
+        GDN PURVEYORS
       </div>
       <div className={styles.text3}>
-        - Emma-Jane MacKinnon-Lee
+        GDN PURVEYORS
       </div>
-      {!contentUnlocked && <UnlockPage issueId={issueId} />}
+      <div className={styles.text4}>
+        GDN PURVEYORS
+      </div>
+
+      <div className={styles.circle1}></div>
+      <div className={styles.circleText1}>
+        Collect POAP!        
+      </div>
+      <div className={styles.circleText2}>
+        yay        
+      </div>
+      <a href='https://poap.website/identityacrossthemetaverse' target='_blank'>
+        <img src='/images/poap-logo.png' className={styles.poapImage} />
+      </a>
+
+      <a href='https://twitter.com/JordanLzG' target='_blank'>
+        <img src='/magazine/6/images/101102_image2.png' className={styles.image3} />
+      </a>
+      <a href='https://twitter.com/evabeylin' target='_blank'>
+        <img src='/magazine/6/images/101102_image3.png' className={styles.image4} />
+      </a>
+      <a href='https://twitter.com/robnessofficial' target='_blank'>
+        <img src='/magazine/6/images/101102_image4.png' className={styles.image5} />
+      </a>
+      <a href='https://twitter.com/coin_artist' target='_blank'>
+        <img src='/magazine/6/images/101102_image5.png' className={styles.image6} />
+      </a>
+
+      <img src='/magazine/6/images/99100_image4.png' className={styles.itemImage1} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/565/1/0/`} target='_blank'>
+        <video autoPlay muted loop className={styles.item1}>
+          <source src='https://digitalax.mypinata.cloud/ipfs/QmPF67d58n1oAWG7x7foC9nGs33zDXB952V74bknTn5XXe' type="video/mp4" />
+        </video>
+      </a>
+
+      <img src='/magazine/6/images/99100_image4.png' className={styles.itemImage2} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/566/1/0/`} target='_blank'>
+        <video autoPlay muted loop className={styles.item2}>
+          <source src='https://digitalax.mypinata.cloud/ipfs/QmWVFr5A1fQ2c9oAsoeb9nkMRheWNPpKpuUae7JTXogrDv' type="video/mpeg" />
+        </video>
+      </a>
+
+      <img src='/magazine/6/images/99100_image4.png' className={styles.itemImage3} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/567/1/0/`} target='_blank'>
+        <img
+          className={styles.item3}
+          src="https://digitalax.mypinata.cloud/ipfs/QmbjkrN8vXFY43jaWjwgT36fw3iktwWgXTGZGHKvNCWeYi"
+        />
+      </a>
+
+      <img src='/magazine/6/images/99100_image4.png' className={styles.itemImage4} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/568/1/0/`} target='_blank'>
+      <video autoPlay muted loop className={styles.item4}>
+          <source src='https://digitalax.mypinata.cloud/ipfs/QmTpBqm297SmZ1kJCxisSQjCRXNC5V1yaF953PSsSgNXND' type="video/mp4" />
+        </video>
+      </a>
+
+      <img src='/magazine/6/images/99100_image4.png' className={styles.itemImage5} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/569/1/0/`} target='_blank'>
+        <img
+          className={styles.item5}
+          src="https://digitalax.mypinata.cloud/ipfs/QmW21TSpG7UTHszokYf7LC4CE3fd27qcvN6rqWDNXsBsBe"
+        />
+      </a>
+
+      <img src='/magazine/6/images/99100_image4.png' className={styles.itemImage6} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/570/1/0/`} target='_blank'>
+        <img
+          className={styles.item6}
+          src="https://digitalax.mypinata.cloud/ipfs/QmRYQkGHjbyzDRFycFCYUw4YnKo7rUyNFXTyEgNA7gMALv" 
+        />
+      </a>
+
+      <img src='/magazine/6/images/99100_image4.png' className={styles.itemImage7} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/571/1/0/`} target='_blank'>
+        <video autoPlay muted loop className={styles.item7}>
+          <source src='https://digitalax.mypinata.cloud/ipfs/QmS8PWRY4YrCQMyNBRsDfvJSSPk4hY45rwNePdNgyRGskP' type="video/mp4" />
+        </video>
+      </a>
     </div>
   )
 }

@@ -1,0 +1,75 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: linear-gradient(180deg, #8F37FF 0%, #000000 100%);
+
+  .image1 {
+    position: absolute;
+    width: 753px;
+    height: 345px;
+    left: 0px;
+    top: -74px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 753px;
+    height: 345px;
+    left: 0px;
+    top: 271px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 753px;
+    height: 345px;
+    left: 0px;
+    top: 616px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 753px;
+    height: 345px;
+    left: 0px;
+    top: 961px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 753px;
+    height: 345px;
+    left: 0px;
+    top: 1306px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 706px;
+    height: 400px;
+    left: 220px;
+    top: 1059px;
+    
+    font-family: Farah;
+    font-size: 100px;
+    line-height: 100px;
+    
+    color: #FFFFFF;
+    -webkit-text-stroke: 3px #B338FF;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 735px;
+    height: 1363px;
+    left: 1072px;
+    top: 56px;
+    
+    font-family: Didot;
+    font-size: 37px;
+    line-height: 47px;
+    
+    color: #FFFFFF;
+  }
+}
