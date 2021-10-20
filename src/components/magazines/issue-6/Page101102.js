@@ -36,7 +36,7 @@ const Page101102 = () => {
       <div className={styles.circleText2}>
         yay        
       </div>
-      <a href='https://poap.website/identityacrossthemetaverse' target='_blank'>
+      <a href='https://poap.website/gdnpurveyors' target='_blank'>
         <img src='/images/poap-logo.png' className={styles.poapImage} />
       </a>
 
@@ -62,9 +62,13 @@ const Page101102 = () => {
 
       <img src='/magazine/6/images/99100_image4.png' className={styles.itemImage2} />
       <a href={`${DIGITALAX_FASHION_WEBSITE}/product/566/1/0/`} target='_blank'>
-        <video autoPlay muted loop className={styles.item2}>
+        <img
+          className={styles.item2}
+          src="https://digitalax.mypinata.cloud/ipfs/QmWVFr5A1fQ2c9oAsoeb9nkMRheWNPpKpuUae7JTXogrDv"
+        />
+        {/* <video autoPlay muted loop className={styles.item2}>
           <source src='https://digitalax.mypinata.cloud/ipfs/QmWVFr5A1fQ2c9oAsoeb9nkMRheWNPpKpuUae7JTXogrDv' type="video/mpeg" />
-        </video>
+        </video> */}
       </a>
 
       <img src='/magazine/6/images/99100_image4.png' className={styles.itemImage3} />

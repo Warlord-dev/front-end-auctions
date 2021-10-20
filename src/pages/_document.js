@@ -188,6 +188,10 @@ class MyDocument extends Document {
           ></link>
           <link
             rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Patrick+Hand"
+          ></link>
+          <link
+            rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One"
           ></link>
           <link
@@ -471,6 +475,7 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster+Two"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=New+Rocker"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yantramanav:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pirata+One"></link>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Warnes"></link>
           {/* ipfs next.js fix */}
@@ -1823,12 +1828,6 @@ class MyDocument extends Document {
             }
 
             @font-face {
-              font-family: 'Yantramanav';
-              font-weight: 400;
-              src: url("./fonts/Yantramanav-Regular.ttf");
-            }
-
-            @font-face {
               font-family: 'Astral Groove';
               font-weight: 400;
               src: url("./fonts/Astral Groove.ttf");
@@ -1862,6 +1861,12 @@ class MyDocument extends Document {
               font-family: 'Wicked Halloween';
               font-weight: 400;
               src: url("./fonts/Wicked Halloween.ttf");
+            }
+            
+            @font-face {
+              font-family: 'Andada SC';
+              font-weight: 400;
+              src: url("./fonts/AndadaSC-Regular.otf");
             }
           `,
             }}

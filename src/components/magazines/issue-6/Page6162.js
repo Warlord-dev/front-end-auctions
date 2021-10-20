@@ -12,58 +12,29 @@ const Page6162 = () => {
       <div className={styles.text1}>DREAZ</div>
       <div className={styles.text2}>E-SPORTS RISING STAR OF THE MONTH</div>
       <div className={styles.text3}>
-        Plopski is a 19 year old Swedish-Spanish CSGO player and has already competed professionally
-        in over 60 tournaments. He is currently playing for Ninjas in Pyjamas as a rifler. Plopski’s
-        family history in gaming goes back to the roots, where his dad was previously also a CSGO
-        player and has been his biggest supporter since, instilling a strong work ethic into
-        Plopski, that is shown through his willingness to maintain as a student of the game and put
-        in the hours necessary to improve his craft— killstreaks and more.
+        At just 15 years old, Dreaz is considered one of the fastest rising Rocket League players, having only started with competing at a professional scale end of 2019. He joined team Guppies mid 2020 until its disbandment the same year in September. Since then he’s gone on to join G2 Esports as an active player, with the team placing 7th place in the RLCS 2021-22 - Fall: North America Regional Event 1. He’s still got a lot to prove and more work to put in, however, being in the industry so young, it’s exciting to see how his career pans out as blockchain, esports and gaming merge.
       </div>
       <div className={styles.text4}>metaverse ready score: 6</div>
       <div className={styles.text5}>lIP</div>
       <div className={styles.text6}>E-SPORTS PLAYER OF THE MONTH</div>
       <div className={styles.text7}>metaverse ready score: 5</div>
       <div className={styles.text8}>
-        CEB is all about Dota2, currently playing for OG. His professional career started all the
-        way back in 2011, and over the length of his time in the spotlight he’s certainly
-        experienced both the highs and lows of the industry; from the 2012 International collapse to
-        reaching coach level at OG. His resiliance is a testament to all, as he continues to prove
-        the haters wrong and remove all doubt that any of his skills have suffered decay.
+        Shanghai Dragon’s player Jae-Won Lip was named the 2021 Overwatch League Grand Finals MVP. He is a South Korean player, and one of the most outspoken on the team, having had to even make public apology statements previously for uttering inappropriate slurs against rival teams. And, it is this passion that has also kept him a student of his game, as he continues to improve and acquire more impressive win streaks. 
       </div>
-      <div className={styles.text9}>evos nft collaboration</div>
+      <div className={styles.text9}>TSM FTX partners with solana and aurory</div>
       <div className={styles.text10}>
-        After a delayed launch, it’s safe to say that crypto x gaming is finally seeing the dawn of
-        the recognition that it deserves. And casual gaming through Play-to-Earn models only
-        scratches the surface of just how much value can be brought to the gaming industry through
-        the direct connectivity of NFTs, DeFi and other crypto powered tools. Esports is another
-        huge untapped sector for building wealth catalysts that can transform the entire top down
-        approach that the current model is locked within— bridging stronger access channels so that
-        any passionate player willing to put in the effort can have a fair shot at a player’s chair.
-        <br />
-        <br />
-        Bybit crypto exchange is making further moves into the esports world, starting with
-        partnerships with esports organizations Astralis and Alliance. Here, they plan to expand
-        their player engagement strategy that are inclusive of financial education programs— esports
-        yield farming might not be that far away.
+        The TSM FTX esports team recently released their first official NFT collection on Solana as exclusive NFT avatars combined with the team’s official merch. This partnership between TSM and FTX is an interesting mix, with FTX paying over $200 million for the co-naming rights in a very web2 deal. Esports x crypto is certainly a space worth paying close attention to, especially as P2E becomes more and more the gaming norm. However, it also poses the question— is P2E not just decentralised esports and if so, why do we need the old traditional camp programs and industry agencies that take all of the profits from the players and set up the deal to be extractive. Removing barriers and central controllers so that finally anyone can earn income and a livelihood from engaging in and adding value to a digital economy changes the enitre gaming landscape. These middleman are no longer needed.
       </div>
-      <div className={styles.text11}>enjin major gaming updates</div>
       <div className={styles.text12}>
-        Motorsport Games and the Automobile Club de l’Ouest (ACO) have joined forces to launch the
-        Le Mans Virtual Series with a $250,000 prize pool. It’s another bullish sign for the
-        adoption of digital motorsports racing, where sponsors for the series include that of
-        Goodyear, Thrustmaster, Rolex and Total Energies. Who knows when we will see F1 Monte Carlo
-        racecd in VR, my bet is that it will be much sooner than one might initially expect. As more
-        liquidity pours into virtual racing, more of us will start to recognise that immersives
-        tracks don’t have a speed limit or set DRS zones.
+        And so, although this TSM FTX NFT drop propels the broader esports and gaming industries towards becoming more web3 accustomed, 
+        it also emphasises the need for us to take the bottom up approach from the start. 
+        For, if not, then ultimately all we are engaging in is one-sided NFT drops & big branded partnerships that perpetuate the legacy players 
+        for leveraging off their “web2.5” status. 
+        Truly embracing a decentralised esports model empowers both players and creators, and that game, is one anyone would prefer to play, stream or watch. 
       </div>
       <div className={styles.text13}>ar to programming for mass adoption</div>
       <div className={styles.text14}>
-        Team Singularity is expanding their partnership with Blocksport to develop an NFT
-        marketplace, allowing fans to purchase unique NFTs as both collectibles and access passes.
-        Think a bit like NBA topshot but for esports— jersey skins, cards, pictures and in-game
-        highlights. Onwards and upwards for new digital frontiers as more and more teams start
-        navigating the web3 space; moving from groupie hype to properly incorporated decentralised
-        front ends.
+        As the whole world continues to go NFT, so does EVOS Esports, in a collaborative effort with Sora’s Dreamworld. 10,000 avatars will be minted on Ethereum, with a special 5 custom PFPs set aside for the EVOS team and coach— which they will rep in upcoming tournaments. It won’t be long before we see these avatars make their way across games, full representing the players during their competitive battles and major highlight moments. 
       </div>
     </div>
   );

@@ -60,8 +60,14 @@ const Page1516 = () => {
       <a href='https://twitter.com/Musashi14790940' target='_blank'>
         <img src='./magazine/6/images/1516_image3.png' className={styles.image3} />
       </a>
+
       <img src='./magazine/6/images/1516_image3.png' className={styles.image4} />
       <img src='./magazine/6/images/1516_image4.png' className={styles.image5} />
+
+      <h1>
+        MUSASHI
+      </h1>
+
       <div className={styles.rect1}></div>
       <div className={styles.rect2}></div>
 

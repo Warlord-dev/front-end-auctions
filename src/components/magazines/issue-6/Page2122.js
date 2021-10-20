@@ -60,6 +60,12 @@ const Page2122 = () => {
       <audio ref={refAudio} loop>
         <source src='/magazine/6/sounds/2122_sound1.mp3' type='audio/mpeg' />
       </audio>
+      <div className={styles.text5}>
+        Ana Rivera
+      </div>
+      <div className={styles.text6}>
+        The Glitched Face King. Pizza Draw.
+      </div>
     </div>
   )
 }

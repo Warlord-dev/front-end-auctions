@@ -205,11 +205,11 @@
     transform-origin: 0 0;
     transform: rotate(-30deg);
 
-    transition: all 0.3s;
-    &:hover {
-      transition: all 0.3s;
-      transform: rotate(-30deg) scale(1.1);
-    }
+    // transition: all 0.3s;
+    // &:hover {
+    //   transition: all 0.3s;
+    //   transform: rotate(-30deg) scale(1.1);
+    // }
   }
 }
 

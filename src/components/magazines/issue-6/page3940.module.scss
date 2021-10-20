@@ -492,4 +492,14 @@
 
     box-sizing: border-box;
   }
+
+  a {
+    img, div {
+      transition: 0.3s all;
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(0.9)
+      };
+    }
+  }
 }

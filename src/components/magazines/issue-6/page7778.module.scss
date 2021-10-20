@@ -71,15 +71,16 @@ $base-hue: 0; // change for diff colors (180 is nice)
     height: 56px;
     left: 65px;
     top: 70px;
-
+    
     font-family: Yantramanav;
     font-style: normal;
     font-weight: bold;
     font-size: 55px;
     line-height: 71px;
     text-align: center;
-
-    color: #ffffff;
+    
+    color: #FFFFFF;
+    -webkit-text-stroke: 0.7 white;
   }
 
   .text2 {
@@ -105,13 +106,6 @@ $base-hue: 0; // change for diff colors (180 is nice)
     height: 247px;
     left: 1536px;
     top: 1201px;
-
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: scale(1.05);
-      transition: all 0.3s ease;
-    }
   }
 
   .image3 {
@@ -120,91 +114,70 @@ $base-hue: 0; // change for diff colors (180 is nice)
     height: 154.85px;
     left: 1657px;
     top: 1238.96px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+    }
   }
 
   .text3 {
     position: absolute;
     width: 655px;
-    height: 293px;
-    left: 191px;
-    top: 385px;
-
-    font-family: Baloo Chettan 2;
+    height: 593px;
+    left: 61px;
+    top: 196px;
+    
+    font-family: Andada SC;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 20px;
     line-height: 100%;
     /* or 20px */
-
-    color: #ffffff;
+    
+    
+    color: #FFFFFF;    
   }
 
   .text4 {
     position: absolute;
-    width: 339px;
-    height: 729px;
-    left: 1007px;
-    top: 65px;
-
-    font-family: Baloo Chettan 2;
-    font-style: normal;
-    font-weight: bold;
+    width: 655px;
+    height: 429px;
+    left: 61px;
+    top: 834px;
+    
+    font-family: Andada SC;
     font-size: 20px;
     line-height: 100%;
-    /* or 20px */
-
-    color: #ffffff;
+    color: #FFFFFF;
   }
 
   .text5 {
     position: absolute;
-    width: 655px;
-    height: 293px;
-    left: 53px;
-    top: 757px;
-
-    font-family: Baloo Chettan 2;
-    font-style: normal;
-    font-weight: bold;
+    width: 293px;
+    height: 720px;
+    left: 1044px;
+    top: 70px;
+    
+    font-family: Andada SC;
     font-size: 20px;
     line-height: 100%;
-    /* or 20px */
-
-    color: #ffffff;
+    color: #FFFFFF;    
   }
 
   .text6 {
     position: absolute;
-    width: 787px;
-    height: 250px;
-    left: 1106px;
-    top: 744px;
-
-    font-family: Baloo Chettan 2;
-    font-style: normal;
-    font-weight: bold;
+    width: 811px;
+    height: 492px;
+    left: 1044px;
+    top: 816px;
+    
+    font-family: Andada SC;
     font-size: 20px;
     line-height: 100%;
-    /* or 20px */
-
-    color: #ffffff;
-  }
-
-  .text7 {
-    position: absolute;
-    width: 428px;
-    height: 250px;
-    left: 1103px;
-    top: 1026px;
-
-    font-family: Baloo Chettan 2;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 100%;
-    /* or 20px */
-
-    color: #ffffff;
+    color: #FFFFFF;
   }
 
   @keyframes rotate {

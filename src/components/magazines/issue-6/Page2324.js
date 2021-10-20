@@ -33,7 +33,7 @@ const Page2324 = () => {
       <div className={styles.circleText2}>
         yay        
       </div>
-      <a href='https://poap.website/identityacrossthemetaverse' target='_blank'>
+      <a href='https://poap.website/daoquests' target='_blank'>
         <img src='/images/poap-logo.png' className={styles.poapImage} />
       </a>
     </div>

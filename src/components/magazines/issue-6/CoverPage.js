@@ -33,14 +33,14 @@ const CoverPage = () => {
 
       <div className={styles.circle1}></div>
       <div className={styles.circleText1}>
-        6      
+        7      
       </div>
       <div className={styles.circleText2}>
         POAPS TO COLLECT INSIDE!   
       </div>
-      <a href='https://poap.website/identityacrossthemetaverse' target='_blank'>
-        <img src='/images/poap-logo.png' className={styles.poapImage} />
-      </a>
+      {/* <a href='https://poap.website/identityacrossthemetaverse' target='_blank'> */}
+      <img src='/images/poap-logo.png' className={styles.poapImage} />
+      {/* </a> */}
     </div>
   )
 }
