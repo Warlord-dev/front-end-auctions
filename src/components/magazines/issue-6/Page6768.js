@@ -1,64 +1,131 @@
-import React from 'react'
-import Link from 'next/link'
-import styles from './page6768.module.scss'
+import React, { useRef, useState } from 'react';
+import Link from 'next/link';
+import styles from './page6768.module.scss';
 
 const Page6768 = () => {
- 
+  const audioRef = useRef();
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const startAudio = () => {
+    audioRef.current.play();
+    setIsPlaying(true);
+  };
+
+  const pauseAudio = () => {
+    audioRef.current.pause();
+    setIsPlaying(false);
+  };
+
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/5/images/6768_image1.png' className={styles.image1} />
-      <img src='/magazine/5/images/6768_image2.png' className={styles.image2} />
-      <Link href='https://www.instagram.com/clothes_3d/'>
-        <a target='_blank'>
-          <div className={styles.text1}>
-            Irina Blagochevskaya        
-          </div>
-        </a>
-      </Link>
-      <div className={styles.text2}>
-        I'm a fashion designer from Russia with more than 8 years of experience. For most of it I lived and worked in Bali. When Covid started, I had to find a remote job and this is when I discovered CLO3D. I fell in love with the possibilities of this program and now I can proudly call myself a digital fashion designer. I really enjoy what I do and keep learning every day. I believe that 3D is going to change the whole process of designing, production and make it more sustainable. 
-      </div>
+      <img src="/magazine/6/images/67_68_back.png" className={styles.back} />
+      <a href="" target="_blank">
+        <div className={styles.text1}>João Pereira</div>
+      </a>
+      <div className={styles.rect1} />
+      <a href="https://twitter.com/nnnnicholas" target="_blank">
+        <div className={styles.text2}>nicholas.sol</div>
+      </a>
       <div className={styles.text3}>
-        Gatekeeper Gardens
+        TUNE IN FOR EVERYTHING crypto art, nfts, building communities in web3, awesome daos to check
+        out and more!
       </div>
       <div className={styles.text4}>
-        Sifting through the web2 weeds— spotlighting stories from the walled gardens where they love to tangle and lurk. 
+        <span>
+          Can you tell us more about how you got into 3D design and what inspired you to go down
+          that path?
+        </span>
+        <br />
+        I've always been doing Visual effects and art since I got a computer, I followed a different
+        path down the road when I got into college though. The moment I built my portfolio and sent
+        it to the biggest Company in Portugal and got a job offer everything changed for me, I quit
+        college and started working on the area I love.
+        <br />
+        <br />
+        <span>
+          Do you have any cool stories that you can share behind any of the artworks/pieces that you
+          have released?
+        </span>
+        <br />
+        I'm in Love with Real world Simulations, I love all the process of converting natural
+        phenomena onto Mathematical equations. Doing it in a visual form makes it even more
+        satisfying.
+        <br />
+        <br />
+        <span>
+          How did you find about NFTs and what's your process for ideating the story behind an art
+          NFT? Is it different to how you've ideated art concepts/pieces outside of web3?
+        </span>
+        <br />
+        Found it though a friend, told me about it and I was instantly in love with the idea. I
+        don't see a difference to the process to be honest, I just create it as it was for myself or
+        my company.
+        <br />
+        <br />
+        <span>
+          Can you tell us more about the art/NFT scene in Portugal? Are there many artists that you
+          know of exploring more of web3 and going down this rabbit hole?{' '}
+        </span>
+        <br />
+        In Portugal Art in general is really underrated and under invested. People here don't look
+        at Art like it's worth the time or money, they take it for granted. We have talented Artists
+        here, Vhils is one of them, pushing it thorough the NFT and real world space! For sure an
+        inpiration!
+        <br />
+        <br />
+        <span>
+          Lisbon is a very active tech and innovation hub and this nexus has accelerated a lot
+          during the pandemic, do you know of more artists/entrepreneurs/creators moving to the city
+          over the past year? Would you suggest for more creators to check out the location?{' '}
+        </span>
+        <br />
+        If you are into it and plan to come here, for sure you need to come to Web-summit. Outside
+        that, Lisbon is a beautiful city, you find so much of everything, people, architecture,
+        food, culture...
+        <br />
+        <br />
+        <span>
+          Do you hope/plan to move into selling NFTs as a full time thing or are you already doing
+          this or instead are eager to move full time into other parts of web3 i.e. DAOs etc.?
+        </span>
+        <br />I don't plan to, I just really love the tech and people behind this new space! I love
+        my job doing commercials, doing a NFT for me is a question of time and standards. I don't
+        like to rush things, It may take me 1 week or 1 year to finish a piece, I just need to make
+        sure it makes sense for me and I'm truly happy with it.
+        <br />
+        <br />
+        <span>
+          A tough question— any advice for new creators/artists exploring NFTs for the first time?
+        </span>
+        <br />
+        Don't give up, don't rush things, don't lose focus. If you love your art and you stay
+        consistent you'll eventually make it!
       </div>
-      <div className={styles.text5}>
-        FACEBOOK.
-      </div>
-      <div className={styles.text6}>
-        Satrting off as a simple profile photo orientated address book, who would have thought that Zuckerberg would one day try to control everything about our personal identity, digital relationships around us, and everything from what we see to what we buy. I’m sure that we’ve all had that moment of engaging in some obscure IRL conversation or internet search and then seeing the specific subject matter show up on our FB feed. And yet they still claim that they aren’t listening in, it’s just their amazing algos can somehow predict the future in super high fidelity. Lol. 
-      </div>
-      <div className={styles.text7}>
-        Sure, it is a bit of a Lol. But, it’s also incredibly dangerous and scary. Even the new Ray-Ban Stories / Facebook smart glasses require you to log in to your Facebook account in order to gain access. It’s this death by a thousand cuts and little assaults they use to chip away at our self ownership. For fans of The Great Game, the centuries long battle between primarily the Britsh Crown, Russia and China to carve up the central land masses spanning across Eastern Europe and Asia. It looks a lot like Tsarist, and later, Soviet Russia’s salami slicing strategy. Facebook is clearly intending to gain total domination over our lives with incramentalist approaches that can be dismissed as smal trade offs that we shouldn’t worry about. Another strategy that this resembles is boil the frog— a slow and steady increase in the heat applied will lull the product to sleep without them even noticing. It just feels like a natural progression, resembling exactly the way that when we don’t own our own data and identity we are the product being boiled.
+      <video autoPlay muted loop className={styles.video1}>
+        <source src="/magazine/6/images/67_68_video1.mp4" />
+      </video>
+      <video autoPlay muted loop className={styles.video2}>
+        <source src="/magazine/6/images/67_68_video2.mp4" />
+      </video>
+      <video autoPlay muted loop className={styles.video3}>
+        <source src="/magazine/6/images/67_68_video3.mp4" />
+      </video>
 
-        Beyond a liquid flippable PFP, this is why identity based NFTs are so important. They represent something much bigger for all of us. Not just on-chain immutable and consensus verified markers of our own identity, but a path towards the creation of capital that is necessary to counter Facebook’s attempts at control.
-      </div>
-      <div className={styles.text8}>
-        Fundamentally, Facebook survives by keeping us dependent on them. And that’s why decentralisation and the open metaverse is such a threat, because it completely removes any need for reliance on any one party. And frankly, in an even slightly more transparent market than what web2 resembles today, people will start seeing more of the Devil’s Bargain at the heart of Zuck’s promises.  
-      </div>
-      <div className={styles.text9}>
-        Destroy the wall
-      </div>
-
-      <div className={styles.circle1}></div>
-      <div className={styles.circleText1}>
-        Collect POAP!        
-      </div>
-      <div className={styles.circleText2}>
-        yay        
-      </div>
-      <a href='https://poap.website/gatekeepergardens' target='_blank'>
-        <img src='/images/poap-logo.png' className={styles.poapImage} />
+      <a href="" target="_blank" className={styles.link1}>
+        SHARKDAO
       </a>
-
-      <img src='/magazine/5/images/6768_image3.png' className={styles.image30} />
-      <img src='/magazine/5/images/6768_image3.png' className={styles.image31} />
-      <img src='/magazine/5/images/6768_image3.png' className={styles.image32} />
-      <img src='/magazine/5/images/6768_image4.png' className={styles.image4} />
+      <img
+        src={`/magazine/6/images/67_68_${!isPlaying ? 'play' : 'pause'}.png`}
+        onClick={() => {
+          isPlaying ? pauseAudio() : startAudio();
+        }}
+        className={!isPlaying ? styles.play : styles.pause}
+      />
+      <audio ref={audioRef} loop>
+        <source src="./magazine/6/images/67_68_audio.mp3" type="audio/mp3" />
+      </audio>
     </div>
-  )
-}
+  );
+};
 
-export default Page6768
+export default Page6768;

@@ -3,95 +3,179 @@
 .wrapper {
   @include magazineWrapper();
 
-  .video1 {
+  .back {
     position: absolute;
-    width: 960px;
+    width: 1920px;
     height: 1497px;
     left: 0px;
-    top: 0px;
-    object-fit: cover;
-  }
-
-  .image1 {
-    position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 960px;
     top: 0px;
   }
 
   .rect1 {
     position: absolute;
-    width: 960px;
-    height: 187px;
+    width: 880px;
+    height: 251px;
     left: 0px;
-    top: 1313px;
-    
-    background: rgba(0, 0, 0, 0.4);    
+    top: 0px;
+
+    background: rgba(174, 202, 249, 0.71);
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 890px;
+    height: 169px;
+    left: 0px;
+    top: 324px;
+
+    background: rgba(249, 174, 246, 0.71);
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 890px;
+    height: 419px;
+    left: 63px;
+    top: 516px;
+
+    background: rgba(249, 174, 246, 0.71);
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 890px;
+    height: 539px;
+    left: 0px;
+    top: 958px;
+
+    background: rgba(249, 174, 246, 0.71);
   }
 
   .text1 {
     position: absolute;
-    width: 358px;
-    height: 88px;
-    left: 29px;
-    top: 1313px;
-    
-    font-family: Acme;
-    font-size: 40px;
-    line-height: 51px;
-    
-    color: #00FF38;
+    width: 826px;
+    height: 204px;
+    left: 24px;
+    top: 20px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 100%;
+    /* or 17px */
+
+    color: #810000;
   }
 
   .text2 {
     position: absolute;
-    width: 901px;
-    height: 128px;
-    left: 29px;
-    top: 1372px;
-    
-    font-family: Lacquer;
-    font-size: 13px;
-    line-height: 16px;
-    color: #FFFFFF;
+    width: 826px;
+    height: 126px;
+    left: 28px;
+    top: 346px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: #000000;
   }
 
   .text3 {
     position: absolute;
-    width: 133px;
-    height: 57px;
-    left: 986px;
-    top: 13px;
-    
-    font-family: Abel;
-    font-size: 50px;
-    line-height: 64px;
-    
-    color: #FF0000;
+    width: 826px;
+    height: 342px;
+    left: 95px;
+    top: 550px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: #000000;
   }
 
   .text4 {
     position: absolute;
-    width: 204px;
-    height: 37px;
-    left: 989px;
-    top: 70px;
-    
-    font-family: Alice;
-    font-size: 15px;
-    line-height: 17px;
-    
-    color: #FF0000;
+    width: 826px;
+    height: 480px;
+    left: 28px;
+    top: 991px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #000000;
   }
 
-  a {
-    div {
-      transition: 0.3s all;
-      &:hover {
-        transform: scale(1.1);
-        transition: 0.3s all;
-      }
-    }
+  .link1 {
+    position: absolute;
+    left: 970px;
+    width: 940px;
+    height: 100px;
+
+    font-family: McLaren;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    /* identical to box height, or 100px */
+
+    color: #ad00ff;
+
+    box-sizing: border-box;
+
+    -webkit-text-stroke: 2px #ffffff;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 795px;
+    height: 100px;
+    left: 986px;
+    top: 874px;
+
+    font-family: McLaren;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    color: #ad00ff;
+
+    -webkit-text-stroke: 2px #ffffff;
+    box-sizing: border-box;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 905px;
+    height: 663px;
+    left: 986px;
+    top: 140px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 100%;
+    /* or 23px */
+
+    color: #ffffff;
+
+    -webkit-text-stroke: 0.5px #ad00ff;
+    box-sizing: border-box;
   }
 }
