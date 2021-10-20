@@ -83,7 +83,9 @@ const Page3940 = () => {
       <a href="https://dancefloordefi.com/" target="_blank">
         <div className={styles.link7}>DANCEFLOOR DEFI</div>
       </a>
-      <div className={styles.text5}>David Spinks</div>
+      <a href="https://twitter.com/DavidSpinks" target="_blank">
+        <div className={styles.text5}>David Spinks</div>
+      </a>
       <div className={styles.text6}>
         What got you interested in advocating more for community with a capital C?
       </div>
