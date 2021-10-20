@@ -9,7 +9,6 @@ const Page6364 = () => {
       <video autoPlay muted loop className={styles.video1}>
         <source src="./magazine/1/videos/moshed-05-02-1-15-28.mp4" type="video/mp4" />
       </video>
-      <img src="/magazine/6/images/63_64_image1.png" className={styles.image1} />
       <img src="/magazine/6/images/63_64_image2.png" className={styles.image2} />
       <a href="https://poap.xyz" target="_blank">
         <img src="/magazine/6/images/53_54_image2.png" className={styles.link1} />
@@ -17,7 +16,9 @@ const Page6364 = () => {
       <img src="/magazine/6/images/53_54_image3.png" className={styles.image3} />
       <div className={styles.text1}>P O R T U G A L</div>
       <div className={styles.text2}> INTERNATIONAL PLAYERS</div>
-      <div className={styles.text3}> Tania Viegas </div>
+      <a href="https://designers.digitalax.xyz/designers/Tania%20MV%20Studio/" target="_blank">
+        <div className={styles.text3}> Tania Viegas </div>
+      </a>
       <div className={styles.rect1} />
       <div className={styles.rect2} />
       <div className={styles.text4}>
@@ -56,6 +57,7 @@ const Page6364 = () => {
         storytelling even greater! fashion design, so... I may have been subconsciously bias this
         all time!
       </div>
+      <img src="/magazine/6/images/63_64_image1.png" className={styles.image1} />
     </div>
   );
 };

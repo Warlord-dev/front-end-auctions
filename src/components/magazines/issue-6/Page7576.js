@@ -232,7 +232,7 @@ const Page7576 = () => {
         there's so many other small things that like we all have to keep up with and help out with
         so
       </div>
-      <a href="" target="_blank">
+      <a href="https://twitter.com/heyellieday" target="_blank">
         <img src="/magazine/6/images/75_76_image.png" className={styles.link1} />
       </a>
     </div>

@@ -9,7 +9,9 @@ const Page5354 = () => {
       <video autoPlay muted loop className={styles.right}>
         <source src="/magazine/6/images/53_54_right.mp4" />
       </video>
-      <img src="/magazine/6/images/53_54_image1.png" className={styles.image1} />
+      <a href="https://pickle.finance/" target="_blank">
+        <img src="/magazine/6/images/53_54_image1.png" className={styles.image1} />
+      </a>
       <div className={styles.text1}>A Dill for DeFi DAOs.</div>
       <div className={styles.circle1} />
       <div className={styles.circle2} />
@@ -173,51 +175,53 @@ const Page5354 = () => {
       <div className={styles.text16}>EPIC GAMES.</div>
       <div className={styles.text17}>
         Well, to some, this edition of Gatekeeper Gardens featuring Epic Games might come as a bit
-        of a shock, although if you’ve been paying any attention whatsoever, it really shouldn’t.
-        Sure, you’ve read the newspapers, seen the “epic” battle with Apple and the Judge’s ultimate
-        decision that Tim Sweeney’s “personal beliefs about the future of the metaverse are
+        of a shock, because a lot of us associate Tim Sweeney with the metaverse. And, the metaverse
+        is meant to be open, founded on decentralised principles, and for that matter, definitely
+        include NFTs. You’ve read the newspapers, seen the “epic” battle with Apple and the Judge’s
+        ultimate decision that Tim Sweeney’s “personal beliefs about the future of the metaverse are
         sincerely held”— but how sincere can beliefs really be for a metaverse that isn’t completely
         and totaly embodying decentralisation across every aspect of it. The “open metaverse” isn’t
         just a buzzword, it isn’t just a technical nuance referring to implementation of advanced 3D
         interoperability, and it certainly isn’t a place where extractive web2 mechanisms and
         arrangements provide any value, besides to the same old small few, even if their PFPs or
         digital representations might allow them to seem more familiar and aligned.
+        <br />
+        <br />
+        And, unfortunately, Sweeney’s views of the metaverse aren’t all that open. Instead, they
+        support a tightly scoped region whereby Epic can maintain centralised control over how far
+        reaching that digital conent is and the potential for perpetuous derivative, modded and
+        expansive secondary market wealth generation.
       </div>
       <div className={styles.text18}>
-        As much as appreciate going up against Apple and providing an alternative to Facebook , wake
-        me when they go up against the CCP a thousand cuts and little assaults they use to chip away
-        at our self ownership. For fans of The Great Game, the centuries long battle between
-        primarily the Britsh Crown, Russia and China to carve up the central land masses spanning
-        across Eastern Europe and Asia. It looks a lot like Tsarist, and later, Soviet Russia’s
-        salami slicing strategy. Facebook is clearly intending to gain total domination over our
-        lives with incramentalist ap
+        It’s a shame really, as actually, instead of taking a defensive approach, Epic is well
+        positioned, at least for now, to fully embrace NFTs, reward the players and creators who
+        have made their digital economy, and, also leverage the influence and sway they have in the
+        traditional gaming market to accelerate the pace at which web3, NFTs and decentralisation is
+        normalised and adopted by all. To them, embracing “openness” might seem counter intuitive to
+        their business model, however, if done right, web3 far outpaces any gains possible under
+        web2’s jurisdiction, for catalytic squad wealth has commnunity and network effect impacts
+        ten thousand X in magnitude than any one-sided user-as-product approach.
       </div>
       <div className={styles.text19}>
-        worry about. Another strategy that this resembles is boil the frog— a slow and steady
-        increase in the heat applied will lull the product to sleep without them even noticing. It
-        just feels like a natural progression, resembling exactly the way that when we don’t own our
-        own data and identity we are the product being boiledBeyond a liquid flippable PFP, this is
-        why identity based NFTs are so important. They represent something much bigger for all of
-        us. Not just on-chain immutable and consensus verified markers of our own identity, but a
-        path towards the creation of capital that is necessary to counter Facebook’s attempts at
-      </div>
-      <div className={styles.text20}>
-        Fundamentally, Facebook survives by keeping us dependent on them. And that’s why
-        decentralisation and the open metaverse is such a threat, because it completely removes any
-        need for reliance on any one party. And frankly, in an even slightly more transparent market
-        than what web2 resembles today, people will start seeing more of the Devil’s Bargain at the
-        heart of Zuck’s promises. eb2 resembles today, people will start seeing more of the Devil’s
-        Bargain at the heart of Zuck’s promises. eb2 resembles today, people will start seeing more.
-        eb2 resembles today, people will start seeing more. eb2 resembles today, people will start
-        seeing more. eb2 resembles today, people will start seeing more. eb2 resembles today, people
-        will start seeing more. eb2 resembles today, people will start seeing more. will start
-        seeing.
+        As much as we appreciate him going up against Apple and providing an alternative to
+        Facebook, in all seriousness, wake me up when they go up against the CCP — the epitome of
+        how devastatingly horrendous and catastrophic centralised governance really is and can be.
+        And, with Tencent owning 40% of Epic Games, frankly, any metaverse coming out of Epic cannot
+        be open, for this goes against everything that the CCP stands for, puts up with and
+        sanctions as even remotely possible. So, what does it mean for us pioneering web3? We need
+        to stop turning to legacy players as any sort of market validation that we are on the right
+        track or reaching mainstream inflection points. Instead, being authentic and building to
+        leverage the features of decentralisation is a far more sustainable and convex arbitrage
+        than what we could imagine.
       </div>
       <div className={styles.text21}>Destroy the wall</div>
       <a href="https://poap.xyz" target="_blank">
         <img src="/magazine/6/images/53_54_image2.png" className={styles.link1} />
       </a>
       <img src="/magazine/6/images/53_54_image3.png" className={styles.image2} />
+      <img src="/magazine/6/images/53_54_epic_logo.png" className={styles.logo1} />
+      <img src="/magazine/6/images/53_54_epic_logo.png" className={styles.logo2} />
+      <img src="/magazine/6/images/53_54_epic_logo.png" className={styles.logo3} />
     </div>
   );
 };
