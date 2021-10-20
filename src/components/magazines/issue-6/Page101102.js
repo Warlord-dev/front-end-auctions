@@ -111,6 +111,16 @@ const Page101102 = () => {
         <br /><br />
         Having a more composable and modular structure within the GDN DAO is also critical to maintaining momentum, engagement and driving forth our aligned mission. This is how we continuously refresh the magic of scalable small world networks. It allows us to be nimble, fast pace and cover a broader range of areas.        
       </div>
+ 
+      <a href='https://designers.digitalax.xyz/designers/Majestic%20Apparell/' target='_blank'>
+        <img src='/magazine/6/images/101102_designer11.png' className={styles.designer11} />
+      </a>
+      <div className={styles.text22}>
+        MAJESTIC APPARELl
+      </div>
+      <div className={styles.text23}>
+        High-end Fashion, Metaverse Fashion and African Design Community
+      </div>
     </div>
   )
 }

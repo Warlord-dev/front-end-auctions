@@ -166,41 +166,177 @@
     position: absolute;
     width: 196px;
     height: 196px;
-    left: 633px;
-    top: 58px;    
+    left: 589px;
+    top: 21px;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.1)
+    }
   }
 
   .image4 {
     position: absolute;
     width: 196px;
     height: 196px;
-    left: 731px;
-    top: 287px;
+    left: 709px;
+    top: 194px;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.1)
+    }
   }
 
   .image5 {
     position: absolute;
     width: 196px;
     height: 196px;
-    left: 498px;
-    top: 402px;
+    left: 542px;
+    top: 309px;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.1)
+    }
   }
 
   .image6 {
     position: absolute;
     width: 196px;
     height: 196px;
-    left: 694px;
-    top: 598px;
+    left: 702px;
+    top: 442px;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.1)
+    }
   }
 
-  a {
-    img {
-      transition: 0.3s all;
+  .itemImage1 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 237px;
+    top: 39px;    
+  }
 
-      &:hover {
-        transform: scale(1.1)
-      }
-    }
+  .item1 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 237px;
+    top: 39px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .itemImage2 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 10px;
+    top: 350px;
+  }
+
+  .item2 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 10px;
+    top: 350px;
+    padding: 35px;
+    object-fit: cover;    
+  }
+
+  .itemImage3 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 340px;
+    top: 540px;
+  }
+
+  .item3 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 340px;
+    top: 540px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .itemImage4 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 11px;
+    top: 808px;
+  }
+
+  .item4 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 11px;
+    top: 808px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .itemImage5 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 615px;
+    top: 851px;
+  }
+
+  .item5 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 615px;
+    top: 851px;
+    padding: 35px;
+    object-fit: cover;   
+  }
+
+  .itemImage6 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 47px;
+    top: 1163px;
+  }
+
+  .item6 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 47px;
+    top: 1163px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .itemImage7 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 446px;
+    top: 1170px;
+  }
+
+  .item7 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 446px;
+    top: 1170px;
+    padding: 35px;
+    object-fit: cover;
   }
 }

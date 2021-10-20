@@ -4,7 +4,7 @@ import styles from './page103104.module.scss'
 const Page103104 = () => {
   return (
     <div className={styles.wrapper}>
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/DomingoBeta/' target='_blank'>
         <img src='/magazine/6/images/103104_designer1.png' className={styles.designer1} />
       </a>
       <div className={styles.text1}>
@@ -14,7 +14,7 @@ const Page103104 = () => {
         Colombia Graphic Design, Fashion & Studio Community        
       </div>
       
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Cryptsie/' target='_blank'>
         <img src='/magazine/6/images/103104_designer2.png' className={styles.designer2} />
       </a>
       <div className={styles.text3}>
@@ -24,7 +24,7 @@ const Page103104 = () => {
         Hyperpop Fashion (Digital / Physical) + Web3 Cooperativist Communities
       </div>
 
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Emma-Jane%20MacKinnon-Lee/' target='_blank'>
         <img src='/magazine/6/images/103104_designer3.png' className={styles.designer3} />
       </a>
       <div className={styles.text5}>
@@ -33,7 +33,7 @@ const Page103104 = () => {
       <div className={styles.text6}>
         San Francisco IRL, Core Blender + Trash Fashion Communities
       </div>
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/pr.esc' target='_blank'>
         <img src='/magazine/6/images/103104_designer4.png' className={styles.designer4} />
       </a>
       <div className={styles.text7}>
@@ -43,7 +43,7 @@ const Page103104 = () => {
         Burg Giebichenstein University of Arts, Halle
       </div>
       
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Musashi/' target='_blank'>
         <img src='/magazine/6/images/103104_designer5.png' className={styles.designer5} />
       </a>
       <div className={styles.text9}>
@@ -53,7 +53,7 @@ const Page103104 = () => {
         Blockchain Gaming Wearable Communities (CV, AAVEGOTCHI, DCL)
       </div>
       
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Stan%20Mclygin/' target='_blank'>
         <img src='/magazine/6/images/103104_designer6.png' className={styles.designer6} />
       </a>
       <div className={styles.text11}>
@@ -63,7 +63,7 @@ const Page103104 = () => {
         Russian Design, Web3 + 3D Modeling Community
       </div>
 
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/KALAU/' target='_blank'>
         <img src='/magazine/6/images/103104_designer7.png' className={styles.designer7} />
       </a>
       <div className={styles.text13}>
@@ -72,7 +72,7 @@ const Page103104 = () => {
       <div className={styles.text14}>
         Phygital + Luxury Design/Studio Community
       </div>
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Saso/' target='_blank'>
         <img src='/magazine/6/images/103104_designer8.png' className={styles.designer8} />
       </a>
       <div className={styles.text15}>
@@ -81,7 +81,8 @@ const Page103104 = () => {
       <div className={styles.text16}>
         Digigoth, Japanese Horror, Dark Fantasy + Wellness Designer Community
       </div>
-      <a href='' target='_blank'>
+
+      <a href='https://designers.digitalax.xyz/designers/Tania%20MV%20Studio/' target='_blank'>
         <img src='/magazine/6/images/103104_designer9.png' className={styles.designer9} />
       </a>
       <div className={styles.text17}>
@@ -91,7 +92,7 @@ const Page103104 = () => {
         Portugal Designer, Fashion, Web3 Community + University of Arts London
       </div>
       
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Alyona%20Briukhanova/' target='_blank'>
         <img src='/magazine/6/images/103104_designer10.png' className={styles.designer10} />
       </a>
       <div className={styles.text19}>
@@ -101,7 +102,7 @@ const Page103104 = () => {
         Ukraine Designer, Fashion, Web3 Community
       </div>
 
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Hadeeart/' target='_blank'>
         <img src='/magazine/6/images/103104_designer11.png' className={styles.designer11} />
       </a>
       <div className={styles.text21}>
@@ -111,7 +112,7 @@ const Page103104 = () => {
         Traditional + Afrofuturist Design Communities
       </div>
 
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Sasa3dimensions/' target='_blank'>
         <img src='/magazine/6/images/103104_designer12.png' className={styles.designer12} />
       </a>
       <div className={styles.text23}>
@@ -121,7 +122,7 @@ const Page103104 = () => {
         Italian Designer, Fashion, Web3 Communities
       </div>
 
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/LivingSparks/' target='_blank'>
         <img src='/magazine/6/images/103104_designer13.png' className={styles.designer13} />
       </a>
       <div className={styles.text25}>
@@ -131,7 +132,7 @@ const Page103104 = () => {
         Italian Designer, Fashion, Web3 Communities
       </div>
       
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Deep%20Thought/' target='_blank'>
         <img src='/magazine/6/images/103104_designer14.png' className={styles.designer14} />
       </a>
       <div className={styles.text27}>
@@ -141,7 +142,7 @@ const Page103104 = () => {
         Web3 Fashion Horizon Scanning + Deep Future Tech Research/Crossover Inflections
       </div>
 
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Aisha/' target='_blank'>
         <img src='/magazine/6/images/103104_designer15.png' className={styles.designer15} />
       </a>
       <div className={styles.text29}>
@@ -151,7 +152,7 @@ const Page103104 = () => {
         Nigerian Metaverse, Nollywood, and Web3 Fashion Communities
       </div>
 
-      <a href='' target='_blank'>
+      <a href='https://designers.digitalax.xyz/designers/Jessica%20James/' target='_blank'>
         <img src='/magazine/6/images/103104_designer16.png' className={styles.designer16} />
       </a>
       <div className={styles.text31}>
@@ -160,7 +161,6 @@ const Page103104 = () => {
       <div className={styles.text32}>
         Metaverse Models & Neo African Identity
       </div>
-
     </div>
   )
 }

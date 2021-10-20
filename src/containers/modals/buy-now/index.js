@@ -10,6 +10,9 @@ import { closeBuynowModal, openESPAReadyModal } from '@actions/modals.actions';
 import bidActions from '@actions/bid.actions';
 import { getModalParams } from '@selectors/modal.selectors';
 import styles from './styles.module.scss';
+import {
+  DIGITALAX_FASHION_WEBSITE
+} from '@constants/urls'
 
 const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
   const dispatch = useDispatch();
@@ -77,7 +80,7 @@ const BuyNow = ({ className, title, buttonText1, buttonText2 }) => {
           <div className={styles.footer}>
             <p className={styles.footerCaption}>
               <span>
-                Need to top up on $MONA? Get it <a href="https://skins.digitalax.xyz/swap/" target="_blank">here.</a>
+                Need to top up on $MONA? Get it <a href={`${DIGITALAX_FASHION_WEBSITE}/swap/`} target="_blank">here.</a>
               </span>
             </p>
             <div className={styles.selectWrapper}>
