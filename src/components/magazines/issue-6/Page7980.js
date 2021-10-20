@@ -19,20 +19,20 @@ const Page7980 = () => {
       </div>
       <div className={styles.text3}>ERC-998 BUNDLE</div>
       <div className={styles.text4}>
-        BURN YOUR ERC-721 THROUGH THE DIGIFIZZY.XYZ WEBSITE TO UNLOCK A COLLECTION OF ERC-1155 NFTs
+        BURN YOUR ERC-721 <a href='/unlockable/1/'>THROUGH THE DIGIFIZZY.XYZ WEBSITE</a> TO UNLOCK A COLLECTION OF ERC-1155 NFTs
         + HIDDEN MAGAZINE CONTENT AND DYNAMIC NFT AIRDROPS. 3 x BUNDLES: COMMON, SEMI-RARE,
         EXCLUSIVE.
       </div>
-      <div className={styles.text5}>3D FASHION COLLECTIBLE CONTENT BY CRYPTSIE</div>
-      <div className={styles.text6}>Web3 wizards collectibles</div>
+      <div className={styles.text5}>Web3 wizards collectibles</div>
+      <div className={styles.text6}>Physical glitch drip</div>
       <div className={styles.text7}>TICKETS TO GET DRESSED BY THE GLOBAL DESIGNER NETWORK</div>
       <div className={styles.text8}>screensaver world community art feature</div>
-      <a href="" target="_blank" className={styles.seeMoreLink}>
+      <img src="/magazine/6/images/79_80_image1.png" className={styles.image1} />
+      <img src="/magazine/6/images/79_80_image2.png" className={styles.image2} />
+      <a href="/unlockable/1/" target="_blank" className={styles.seeMoreLink}>
         <div className={styles.seeMore1}>SEE MORE</div>
         <div className={styles.seeMore2}>SEE MORE</div>
       </a>
-      <img src="/magazine/6/images/79_80_image1.png" className={styles.image1} />
-      <img src="/magazine/6/images/79_80_image2.png" className={styles.image2} />
     </div>
   );
 };

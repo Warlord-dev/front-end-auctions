@@ -33,64 +33,49 @@ const Page107108 = () => {
         The Global Designer Network is the very first on-chain web3 fashion DAO, bridging designers from the physical to the digital, and from the extractive world of web2, to a lucrative self sustaining ecosystem enabled by web3 and decentralised tech.
       </div>
       <div className={styles.text3}>
-        From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        From the start we have  been students of our own game, operating at the very heart of the medium that we have chose to immerse ourselves in— web3. 
         <br /><br />
-        For GDN is not here for the 
+        And, for that matter, it means being highly experimental. For, if we are not pushing forth to continue to define the new luxury, then we   
       </div>
       <div className={styles.text4}>
-        From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align 
+        are only continuing to limit ourselves to what has already happened before, and frankly now passed.
       </div>
       <div className={styles.text5}>
-        incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the 
+        The token economics distribution and allocation structure that we have set up is reflective of this, through $gdn. 
       </div>
       <div className={styles.text6}>
-        incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the 
+        Here, the token can only be earned by members participating in the DAO and actively contributing across multiple quest categories. This token remains illiquid on the market and can’t be bought by non-members outside the GDN, rather it is a decentralised and on-chain point system for recording each of the members contributions and activity over the course of the week. 
       </div>
       <div className={styles.text7}>
-        From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        It serves as a fair way to  assess value underwriting the DAO by the members and keep this dynamic and relevant to live market conditions, and, at the same time preventing an  inaccurate hierarchy where sway on governance is purely determined by how much is in your pocket.
         <br /><br />
-        For GDN is not here for theFrom the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for For GDN is not here for the  For GDN is not here for the  For GDN is not here for the  the  
+        The GDN will continue to experiment and itterate with new tokeneconomics structures overtime and further streamline our distrbiution. We’ve even introduced an accounting discord bot for better recording the distribution of $GDN to each member based on their activity, where this info can be queried out of our discoord.  
       </div>
 
       <div className={styles.text8}>
         The Launch of $W3F
       </div>
-      <div className={styles.rect2}>
-      </div>
       <div className={styles.text9}>
-        From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
-        <br /><br />
-        For GDN is not here for the From the start the entire DAO has been highly experimental, where we have instantiated web3 first principles to align incentives between each member of the DAO and also the members and the broader mission we are undertaking.  
+        The Launch of $W3F
+      </div>
+      
+      <div className={styles.text10}>
+        The second major arc for the GDN DAO is underway. We are soon to be launching the liquid trading ERC-20 token under the DAO, $W3F. It is our inteface with the crypto market at large, and a big next leap for the broader web3 fashion community, as every GDN designer continues to make this market.          
+      </div>
+      <div className={styles.text11}>
+        This vast decentralised network of designers that has been cultivated from the ground up, with pervasive reinforcements arising from the DIGITALAX ecosystem, is set to define the new luxury. Because, web3 fashion doesn’t just look rare, but is actually it is found and flaunted in the unique expressions of savvy. 
+      </div>
+      <div className={styles.text12}>
+        The token is a complimentary record and conveyance of value to the $MONA token, whereby $W3F operates with liquidity between DIGITALAX and other cellular clusters of activity throughout the web3 fashion enabled metaverse. The value is intrinsically underwritten by designer merchant activity and the critical role that this plays in propelling supply in order to establish abundant demand. 
+      </div>
+      <div className={styles.text13}>
+        A true understanding of the entirely new terrain web3 and the metaverse present is by far the most scarce thing. 
+      </div>
+      <div className={styles.text14}>
+        For many, NFT digital fashion is the pinnacle, but really, that’s already in the past. And, how can a repeat of the old that’s become stale be the new luxury?
+      </div>
+      <div className={styles.text15}>
+        Put simply, it can’t. Instead let’s recognise this new frontier for what it is and embrace all of the promise of discovery ahead.
       </div>
     </div>
   )

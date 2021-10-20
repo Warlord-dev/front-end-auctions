@@ -10,10 +10,11 @@ const Page6364 = () => {
         <source src="./magazine/1/videos/moshed-05-02-1-15-28.mp4" type="video/mp4" />
       </video>
       <img src="/magazine/6/images/63_64_image2.png" className={styles.image2} />
-      <a href="https://poap.xyz" target="_blank">
-        <img src="/magazine/6/images/53_54_image2.png" className={styles.link1} />
+      <img src="/magazine/6/images/53_54_image2.png" className={styles.link1} />
+
+      <a href="https://poap.website/portugalplayers" target="_blank">
+        <img src="/magazine/6/images/53_54_image3.png" className={styles.image3} />
       </a>
-      <img src="/magazine/6/images/53_54_image3.png" className={styles.image3} />
       <div className={styles.text1}>P O R T U G A L</div>
       <div className={styles.text2}> INTERNATIONAL PLAYERS</div>
       <a href="https://designers.digitalax.xyz/designers/Tania%20MV%20Studio/" target="_blank">

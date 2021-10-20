@@ -212,9 +212,9 @@
 
   .text3 {
     position: absolute;
-    width: 508px;
-    height: 277px;
-    left: 426px;
+    width: 463px;
+    height: 213px;
+    left: 471px;
     top: 263px;
     
     font-family: Warnes;
@@ -233,10 +233,10 @@
 
   .text4 {
     position: absolute;
-    width: 348px;
-    height: 139px;
-    left: 578px;
-    top: 451px;
+    width: 374px;
+    height: 77px;
+    left: 560px;
+    top: 465px;
     
     font-family: Warnes;
     font-style: normal;
@@ -254,10 +254,10 @@
 
   .text5 {
     position: absolute;
-    width: 416px;
-    height: 277px;
-    left: 510px;
-    top: 576px;
+    width: 410px;
+    height: 80px;
+    left: 524px;
+    top: 562px;
     
     font-family: Warnes;
     font-style: normal;
@@ -275,10 +275,10 @@
 
   .text6 {
     position: absolute;
-    width: 537px;
-    height: 129px;
-    left: 389px;
-    top: 724px;
+    width: 569px;
+    height: 181px;
+    left: 365px;
+    top: 665px;
     
     font-family: Warnes;
     font-style: normal;
@@ -296,10 +296,10 @@
 
   .text7 {
     position: absolute;
-    width: 300px;
-    height: 630px;
-    left: 634px;
-    top: 845px;
+    width: 316px;
+    height: 574px;
+    left: 618px;
+    top: 875px;
     
     font-family: Warnes;
     font-style: normal;
@@ -323,42 +323,123 @@
     top: 43px;
     
     font-family: Wafer;
-    font-style: normal;
-    font-weight: normal;
     font-size: 100px;
     line-height: 100%;
-    /* or 100px */
-    
     text-align: right;
     
     color: #FAFF00;
     -webkit-text-stroke: 3px #0047FF;
   }
 
-  .rect2 {
-    position: absolute;
-    width: 839px;
-    height: 1169px;
-    left: 1022px;
-    top: 153px;
-    
-    background: rgba(255, 255, 255, 0.85);
-  }
   .text9 {
     position: absolute;
-    width: 773px;
-    height: 1077px;
-    left: 1054px;
-    top: 185px;
+    width: 835px;
+    height: 122px;
+    left: 1022px;
+    top: 1362px;
+
+    font-family: Wafer;
+    font-size: 100px;
+    line-height: 100%;
+    text-align: right;
+
+    color: #FAFF00;
+    -webkit-text-stroke: 3px #0047FF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 358px;
+    height: 397px;
+    left: 1314px;
+    top: 127px;
     
-    font-family: Pirata One;
+    font-family: 'Patrick Hand';
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 100%;
-    /* or 20px */
+    /* or 30px */
     
+    text-align: center;
     
-    color: #FF0000;
+    color: #FFFFFF;    
+  }
+
+  .text11 {
+    position: absolute;
+    width: 287px;
+    height: 445px;
+    left: 960px;
+    top: 352px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 510px;
+    height: 397px;
+    left: 1388px;
+    top: 573px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text13 {
+    position: absolute;
+    width: 339px;
+    height: 123px;
+    left: 999px;
+    top: 861px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text14 {
+    position: absolute;
+    width: 462px;
+    height: 397px;
+    left: 984px;
+    top: 988px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text15 {
+    position: absolute;
+    width: 311px;
+    height: 186px;
+    left: 1591px;
+    top: 1173px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
   }
 }

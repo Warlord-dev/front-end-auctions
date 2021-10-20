@@ -215,10 +215,11 @@ const Page5354 = () => {
         than what we could imagine.
       </div>
       <div className={styles.text21}>Destroy the wall</div>
-      <a href="https://poap.xyz" target="_blank">
-        <img src="/magazine/6/images/53_54_image2.png" className={styles.link1} />
+      
+      <img src="/magazine/6/images/53_54_image2.png" className={styles.link1} />
+      <a href="https://poap.website/gatekeepergardens6" target="_blank">
+        <img src="/magazine/6/images/53_54_image3.png" className={styles.image2} />
       </a>
-      <img src="/magazine/6/images/53_54_image3.png" className={styles.image2} />
       <img src="/magazine/6/images/53_54_epic_logo.png" className={styles.logo1} />
       <img src="/magazine/6/images/53_54_epic_logo.png" className={styles.logo2} />
       <img src="/magazine/6/images/53_54_epic_logo.png" className={styles.logo3} />

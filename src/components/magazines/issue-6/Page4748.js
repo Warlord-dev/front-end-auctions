@@ -14,7 +14,7 @@ const Page4748 = () => {
         pop culture and current events.
       </div>
       <a href="https://www.instagram.com/maxim_gehricke/" target="_blank">
-        <div className={styles.link2}>Dansky3D</div>
+        <div className={styles.link2}>maxim gehricke</div>
       </a>
       <div className={styles.text2}>
         Preferably operating in 3D, I started my career working with Blender when I was 15, creating
