@@ -37,7 +37,7 @@ const Page5354 = () => {
         process we have in place currently is a good
         <br />
         balance of robust disucssion and decision making, while still being nimble and taking
-        advantage or the opportunities that arise in this fast moving
+        advantage of the opportunities that arise in this fast moving
         <br />
         environment.
       </div>
@@ -79,15 +79,15 @@ const Page5354 = () => {
         that you are considering to experiment with? Why this model?
       </div>
       <div className={styles.text7}>
-        DILL is based the model pioneered by Curve Finance and their veCRV approach to governance.
+        DILL is based on the model pioneered by Curve Finance and their veCRV approach to governance.
         The process of locking a token for a significant period of time (up to 4 years!) means that
-        the DAO tend to have the long term interests of the protocol at heart, not just short term
+        the DAO tends to have the long term interests of the protocol at heart, not just short term
         focus that can come from the approach of just holding a token in your wallet - as is the
         case with many other DEFI projects. Since Pickle implemented DILL, the same approach has
         gained populatory across many other projects. That said, we are always looking for ways to
         improve further. One aspect that leads to some debate currently is the fact that larger DILL
         holders can have significantly more say in governance than smaller holders. In one respect,
-        this is justified because they have a greater monetary inverstment in the protocol (ie more
+        this is justified because they have a greater monetary investment in the protocol (ie more
         Pickles locked for DILL). However in the context of a DAO, it means that the opinion of a
         few (people) can outweigh the wishes of the many. Before DILL,
         <br />
@@ -120,8 +120,8 @@ const Page5354 = () => {
         previous groups formed for the pupose of making some key hiring decisions, a model that
         worked well and so the scope was expanded and enhanced to include more responsibilties. So
         far, the SCCOC retains the trust of the Team and community and is making great progress on
-        several fronts! The approach of tiers within a DOA works because it helps to focus the
-        disucssion within a smaller group. A DAO by its very nature can be large and diverse, but
+        several fronts! The approach of tiers within a DAO works because it helps to focus the
+        discussion within a smaller group. A DAO by its very nature can be large and diverse, but
         that can at times make decision making difficult. An appointed committee such as the SCCOC
         <br />
         becomes the voice of the DAO and its focus helps to
@@ -141,7 +141,7 @@ const Page5354 = () => {
         After some debate, we have decided to make the DILLDAO channel in Pickle's Discord server
         open for all to see - however only DILLDAO members will retain write access (a right we feel
         they have by nature of their DAO membership). There will remain some information that is
-        held from the public eye, because it is either sensitive/compeitive information, or because
+        held from the public eye, because it is either sensitive/competitive information, or because
         it provides added benefit for those in
         <br />
         the DILLDAO - for example, early access to new Jars or Chains.
@@ -155,15 +155,15 @@ const Page5354 = () => {
       <div className={styles.text12}>
         What's the dill
         <br />
-        with Dill DAO...As an honorary member myself, this is a shill question 😄 why should people
+        with Dill DAO...As an honorary member myself, 😄 why should people
         be lining up to get in to the Pickle shop?
       </div>
       <div className={styles.text13}>
         The DILLDAO is a strong community that is working together to drive growth and success for
-        Pickle Finance. Practically, holding DILL entitles you to 45% share of Pickle's revenues and
+        Pickle Finance. Practically, holding DILL entitles you to a 45% share of Pickle's revenues and
         so the success of the protocol automatically benefits the DAO - perhaps one of the reasons
         why the community is so strong and works together to help make Pickle successful. Also, it's
-        a lot of fun! Great balance of in-depth disucssion and <br /> memes among a friendly and
+        a lot of fun! Great balance of in-depth discussion and <br /> memes among a friendly and
         welcoming <br /> community of like-minded Picklers. <br /> Some might say that it's a Big
         Dill :)
       </div>
