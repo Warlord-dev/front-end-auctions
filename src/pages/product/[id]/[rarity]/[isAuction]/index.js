@@ -13,10 +13,8 @@ import BannerBar from '@components/banner-bar';
 import PriceCard from '@components/price-card';
 
 import {
-  getDigitalaxMarketplaceOffer,
   getDigitalaxMarketplaceV2Offer,
   getGarmentByAuctionId,
-  getGarmentByCollectionId,
   getGarmentV2ByAuctionId,
   getGarmentV2ByCollectionId,
   getDigitalaxNFTStakersByGarments,
@@ -186,44 +184,7 @@ const Product = ({ pageTitle }) => {
       digitalaxCollectionGroup.collections.forEach((collection) => ids.push(collection.id));
       setLookIds(ids);
       dispatch(globalActions.setAllUsers(users));
-
-      // if (id.indexOf('v1') >= 0) {
-      //   const v1Id = id.split('-')[1];
-      //   const { digitalaxGarmentCollection } = await getGarmentByCollectionId(chainId, v1Id);
-      //   if (digitalaxGarmentCollection.id) {
-      //     const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffer(
-      //       chainId,
-      //       digitalaxGarmentCollection.id,
-      //     );
-      //     console.log('digitalaxMarketplaceOffers: ', digitalaxMarketplaceOffers);
-      //     setOwners(
-      //       await getOwners(
-      //         digitalaxMarketplaceOffer[0].garmentCollection?.garments,
-      //         digitalaxMarketplaceOffers[0].amountSold,
-      //         users,
-      //       ),
-      //     );
-
-      //     // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
-      //     setTokenIds(
-      //       digitalaxMarketplaceOffers[0].garmentCollection?.garments?.map((garment) => garment.id),
-      //     );
-      //     setOffer({
-      //       id: digitalaxMarketplaceOffers[0].id,
-      //       primarySalePrice: digitalaxMarketplaceOffers[0].primarySalePrice,
-      //       startTime: digitalaxMarketplaceOffers[0].startTime,
-      //       endTime: digitalaxMarketplaceOffers[0].startTime,
-      //       amountSold: digitalaxMarketplaceOffers[0].amountSold,
-      //       totalAmount: 64,
-      //     });
-      //     setProduct({
-      //       id: digitalaxGarmentCollection.id,
-      //       garment: digitalaxGarmentCollection.garments[0],
-      //       designer: null,
-      //       developer: null,
-      //     });
-      //   }
-      // } else if (id) {
+      
       if (!parseInt(isAuction)) {
         const children = [];
 
