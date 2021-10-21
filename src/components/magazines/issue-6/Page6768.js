@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import styles from './page6768.module.scss';
 
-const Page6768 = () => {
+const Page6768 = () => { 
   const audioRef = useRef();
   const [isPlaying, setIsPlaying] = useState(false);
 
