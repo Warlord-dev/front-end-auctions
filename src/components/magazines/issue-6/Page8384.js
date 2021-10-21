@@ -122,119 +122,107 @@ const Page8384 = () => {
       <div className={styles.rect3} />
       <div className={styles.rect4} />
       <div className={styles.text16}>
-        so I came out of university, right as like, as social media was becoming a thing, and I'd
-        run a small business for, to pay my way through university. And all sudden, like, social
-        media, and Google and all these things are really hitting just blew my mind, like all of a
-        sudden, this ability to have an audience and to run my own TV station or, you know, as a
-        blogger back then, so be able to publish the world. So it was just this democratization of
-        distribution was really exciting. And being sort of the front end, it became very clear,
-        much earlier than most that, you know, Facebook or YouTube, or, you know, Twitter, kind of
+        I came out of university right as social media was becoming a thing, and I had
+        run a small business to pay my way through university. And all of a sudden, social
+        media, and Google and all these things were hitting and just blew my mind, like all of a
+        sudden, this ability to have an audience and to run my own TV station or, as a blogger back
+        then, to be able to publish to the world. So it was just that this democratization of
+        distribution was really exciting. And being sort of at the front end of it, it became very 
+        clear, much earlier than most that Facebook or YouTube, Twitter, kind of where
         running the rails or owning the rails for which we rely on for our economic stability. And
-        opportunity was just not an exciting thing. And so when I saw tokens in, like 2017, it just
-        really, everything clicked for me this idea of being able to have an ownership stake in the
-        networks that we're hoping to build and where we're creating a lot of the value through our
-        network effects through participating. And so yeah, I got, I tried to, I bought my first
-        Ethereum, so I could try to participate in in the Dow, but I wasn't technical enough to
-        figure out how to actually do that, which was like, so good, ultimately, but that's laughing
-        that day today. Yeah, and then 2017, early 2017, just fell down a rabbit hole, and ended up
+        opportunity was just not an exciting thing. And so when I saw tokens in 2017,everything 
+        clicked for me. This idea of being able to have an ownership stake in the networks
+        that we're hoping to build is everything. We're creating a lot of the value through our
+        network effects through participation. And so I bought my first crypto and
+        Ethereum, so I could try to participate in in The DAO, but I wasn't technical enough to
+        figure out how to actually do that, which was so good, ultimately, but that's for laughing
+        at today. And then early 2017, I just fell down a rabbit hole, and ended up
         working on an early security token issuance for a fund, which was sort of like the wrong
-        thing at the wrong time, and then worked through 2018 to 2019, on a couple different
+        thing at the wrong time, and then worked through 2018 to 2019 on a couple different
         projects, all around this idea of turning collective contribution into sort of collectively
-        on value. So this somewhat past summer 2020, had a few friends that Brian Flan and Alex
-        massman, she has launched her on social tokens. And then Andrew Lee sort of launched the
-        karma Dao social token. And it just became apparent to me that there was this new
+        on value. So this somewhat past summer 2020, had a few friends that went ahead to launch
+        their own social tokens. And from there, we had Andrew Lee go on to launche the
+        Karma DAO social token. And it just became apparent to me that there was this new
         opportunity that was right in front of us, which is that, you know, communities on the
         internet could own themselves and could have their own assets and their own bank account.
-        And it didn't even connected with the the broader idea of like, dows. At the time, it was
-        just this much simpler. You know, if I hold on to X number of tokens, I get access to
+        And it didn't even connect with the the broader idea of DAOs yet. At the time, it was
+        just this much simpler version of; if I hold on to X number of tokens, I get access to
         community, there's only so many tokens, and therefore I own a piece of the community. And I
         thought that was quite revolutionary. And so we dove in with two feet, trying to help answer
         the multitude of questions that come up when you start to think about what it looks like for
         a community to have their own cap table and bank account.
       </div>
       <div className={styles.text17}>
-        I think the missing piece there was that he didn't have a community he had an audience. And
-        so truly what people are buying today, when you know it ranks for product market fit exists
-        in the community, token world and the Dow world or social token world is people coming
-        together to go on an adventure and hopefully change the the idea of this you know,
-        multiplayer adventure that you're going on is key and if you look at a project like a cloud,
-        like I don't see that happening there and so I'm not like or DSL or whatever we're calling
-        it these days like I'm not the most bullish on that where I am bullish is on when looking at
-        a chart here from shark down like these people are crazy they're like we're gonna go buy all
-        the nouns are nouns auction and on the shark and it's just chaos in there and yet people are
-        having a time that a lot like you'll constantly see people say this is the most fun I've
-        ever had working ever and it's probably not even probably not getting paid for it right like
-        or maybe they're earning some small amount tokens so I think that's the thing it's like we
-        have an opportunity to go play multiplayer games and make money and have an impact and you
-        know, absolutely if you don't have that as your core product in a tokenized community or
-        token can be social tokens generally I think it's not going to work out so well.
+        And today, finding product market fit for the community is absolutely essential, for
+        whether it is in the token world, the DAO world or social token world; people are coming
+        together to go on an adventure and hopefully change something for the better. It is like a
+        multiplayer adventure that you're going on and the people that we incentivise along the way
+        of that adventure is really important. Because if we can bring fire to the community then 
+        there is so much more potential around every part of what we set out to achieve. And it gets
+        crazy, like in Shark DAO, these people are crazy, they're like we're gonna go buy all
+        the Nouns, and the sharks at the Nouns auction it's just chaos in there and yet people are
+        having the time of their life! You'll constantly see people say this is the most fun I've
+        ever had working and it's probably not even that they are getting paid for it. Maybe they're 
+        earning some small amounts of tokens so I think that's the thing it's like we have an
+        opportunity to go play multiplayer games and make money and have an impact and absolutely 
+        if you don't have that as your core product in a tokenized community then generally it's going 
+        to be a lot harder to continue to keep momentum. 
       </div>
       <div className={styles.text18}>
-        I don't think it's necessary I think like the idea of coming together to create something is
-        you know, can be the core promise I think if your promises included or we're actually gonna
-        go you know, people should hold on to these tokens because the tokens will have value or
-        increasing value then there's a an expectation there. This is frankly, I think almost a
-        question I would turn to you because I think you've had a really interesting experience in
-        putting a token out into the world and like do you feel like it's like have you lost
-        momentum on on on your projects since the token because the token price went up quite a bit
-        it's down quite a bit but my guess is there still a lot of people that are hyped on what
-        you're building? the big difference to like in like launching when you guys did which was
-        still in the early part of like this bull run I think even Yeah, I guess we'd call it Bull
-        Run up but launching a token today like is even more crazy right like that. And so one of
-        the things we work with so much in our projects is thinking through distribution and how and
-        when to put a token out and I think it's so interesting that the most exciting most
-        interesting token distributions were done in obscurity for the most part, like even I think
-        even buying the powder pot. What am I? Yeah, like it was most people didn't remember people
-        like sending the people in the middle like fuck is this? And that's like a great thing,
-        right? Because most people can buy it at this time or like, or whether it's Fw B or Bitcoin
-        or a crypto punk when somebody looked at it the first time they were like, Fuck this. This
-        doesn't make any sense. But that allows for people to acquire it who actually truly believe
-        in squiggles on the big squiggle guy gets me to the squiggles for three months, four months
-        before it had any secondary value whatsoever now there's trading for $50,000 is like crazy.
-        So I think like trying to launch something in this world right now it's Yeah, it'd be a lot
-        more limited in who you try to get it because you're the wind man. I know it's maybe a bit
-        of a tangent. No,
+        I think the idea of coming together to create something for the sake of it is powerful, 
+        and, it can be hard when tokens are involved from the early stages, especially now when 
+        the market is still volatile. Because when you introduce a token you are introducing a
+        completely new incentive & there is an expectation that value will grow overtime. The token
+        for some projects can be a distraction or take them off the best path forward where instead
+        they become more fixated on the dollar amount and the hype around that, rather than sticking
+        to continue to build. And so one of the things we work with so much in our projects is thinking 
+        through distribution and how and when to put a token out and I think it's so interesting that 
+        the most exciting most interesting token distributions were done in obscurity for the most part.
+        And that can be a great thing. Because mystery is great for the market, or whether 
+        it's FWB or Bitcoin or a crypto punk; when somebody looked at it the first time they were like, 
+        Fuck this. This doesn't make any sense. But that allows for people to acquire it who actually 
+        truly believe in the particular community, DAO, person to get in and be best served.
+        So I think like trying to launch something in this world right now is challenging, but, there 
+        are so many great tools and products being built that it's all being supported in parallel.
       </div>
       <div className={styles.text19}>
-        we have to take a long term view on this, and I think probably one of the most amazing
+        We have to take a long term view on this, and I think probably one of the most amazing
         things with tokens and crypto is how early you get liquidity. And it's also one of the worst
-        things where, you know, like, truly the value, you know, the value of most enterprises has
-        created your 710 20. Right, like there's compounding benefits of holding and investing and
-        reinvesting. And so I think we're playing way too many short term gains, short term,
-        speculative gains. And so you know, for for people who are here, because they're on a
-        mission, and they want to have an impact, they're trying to show headcase how creators can
-        truly make a living and, and earn and do so and community, they're not so worried about the
-        short term price fluctuations, at best will take advantage of them for, you know, good
-        fundraising opportunities, etc. But they'll you know, what we suggest is really, a, we don't
-        talk about price. B, we're taught, we talk about mission. And mission is the thing that we
-        do, we'll do whether the price is up or the prices down. And that, you know, if price is
+        things where, truly the value of most enterprises is created over the course of 10-20
+        years and in crypto that's expected overnight. There's compounding benefits of holding and 
+        investing and reinvesting. And so I think we're playing way too many short term gains, short
+        term, speculative gains. And so you know, for people who are here, because they're on a
+        mission, and they want to have an impact, they're trying to show how creators can
+        truly make a living and, and earn and community, they're not so worried about the
+        short term price fluctuations, at best they will take advantage of them for good
+        fundraising opportunities, etc. And at Seed what we suggest is really, A., we don't
+        talk about price. B. we're taught, we talk about mission. And mission is the thing that we
+        do whether the price is up or the price is down. And then if the price is
         down, then the true mission believers stay around. And it's an opportunity to really
         reconstitute and reform that core group. And so I think it is, right now there's just a lot
         of short term speculation. And yeah, the reality is, a lot of these things will go to zero
         or near to it. And why we are so excited about communities is because we believe that true
         communities will sustain regardless of whether there's, like exceptional returns in the near
-        term, or, or not. And we can see an example of this even in like the last little while, like
-        friends with benefits had, you know, a huge drawdown due to the hat, the roll hack that
-        happened earlier this year. And for the longest time, which was trading far below what
-        people had, like they just closed a private investment round. And it was trading far below
+        term, or not. And we can see an example of this even in the last little while, like
+        Friends With Benefits had a huge drawdown due to the hack that occurred earlier this year
+        And for the longest time, it was trading far below what people had bought it for and they 
+        just had closed a private investment round. And it was trading far below
         that for months and months and months. And yet, there was no decrease in the number of
-        people in that discord, there's only more excitement it was because there was this true
-        sense of community and people were getting value through the interaction. And so that the
-        fact that could sort of fall back on, you know, people like us do things like this, and the
-        things like this is some sort of mission or adventure that we're on that I think the price
-        matters a lot less than if we believe that web three is the big transformative, you know,
-        shift, but I think many of us do, then. And if you've been around, or at least have people
-        around you who have been around since 2014, or 2017, and you recognize that there will be a
+        people in that discord, there was only more excitement. It was because there was this true
+        sense of community and people were getting value through the interaction. And so the
+        fact that you could sort of fall back on, the people in and around the community for support
+        is fundamental, because it means that the price matters a lot less and this is more so the
+        case if we truly believe that web three is the big transformative shift and explosion
+        that I think many of us do. And if you've been around, or at least have people
+        around you who have been here since 2014, or 2017, then you recognize that there will be a
         lot of draw downs. And that's just part of the game. And if you stick with it, then the
         opportunities just multiply. That's my long winded rant, of all the things I would say to
-        somebody like that. No, I just can't like, people are just sleeping on how big a fucking
-        opportunity this is, frankly. And so you're thinking about, I gotta get mine and you know,
-        you're looking 10 feet in front of you. And there's 10 years that we're going down. And, you
-        know, like the sure there's going to be probably whether your token or not that you've
-        launched is worth something, the feeling of A plus talk to you, whether your token or not is
-        worth anything, the future, the value that you and your community are co creating, just
-        through the act of practicing how to actually innovating and just being a part of this world
-        is it's not going anywhere. And the only way it's going to go somewhere is if you play short
+        somebody. People are just sleeping on how massive a fucking
+        opportunity this is, frankly. And so if you're thinking about, I gotta get my bags full
+        then you are looking at 10 feet in front of you rather than the next few years. Whether your 
+        token or not is worth anything, the future, the value that you and your community are co creating, 
+        just through the act of practicing how to actually innovate and just be a part of this world
+        is not going nowhere. And the only way it's going to go nowhere is if you play short
         term games and do something stupid that you know, is counterproductive to being a good human
         being.
       </div>

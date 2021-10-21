@@ -4,9 +4,9 @@ const Page34 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='./magazine/6/images/0304_image1.png' className={styles.image4} />
-      <p className={styles.text1}>Olympic Sneakers of Conviction.</p>
+      <p className={styles.text1}></p>
       <p className={styles.text2}>
-        Wow. Issue 6 of DIGIFIZZY. That’s a massive milestone! To everyone that has contributed, supported, read and loved the magazine so far, I extend my warmest appreciation. I remember designing, curating and launching the first issue just 6 months ago, with the  
+        
       </p>
       <p className={styles.text12}>- Emma-Jane MacKinnon-Lee</p>
       <img src='./magazine/6/images/0304_image2.jpg' className={styles.image1} />
