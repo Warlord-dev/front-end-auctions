@@ -25,6 +25,10 @@ const Page2324 = () => {
         <br /><br />
         Web3 is all about building for the bazaar–the speed, the sound, the light, and the chaos of open source development, open, permissionless, and accessible for anyone and everyone with value to contribute. Contrast that to the cathedral frameworks of web2, where development is siloed, isolated, and kept under wraps.
       </div>
+      
+      <div className={styles.text3}>
+        dec.t
+      </div>
 
       <div className={styles.circle1}></div>
       <div className={styles.circleText1}>

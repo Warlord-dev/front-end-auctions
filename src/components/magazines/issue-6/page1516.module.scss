@@ -169,9 +169,9 @@
   .rect1 {
     position: absolute;
     width: 444px;
-    height: 816px;
+    height: 1200px;
     left: 973px;
-    top: 678px;
+    top: 320px;    
     
     background: rgba(0, 0, 0, 0.4);    
   }
@@ -179,9 +179,9 @@
   .rect2 {
     position: absolute;
     width: 401px;
-    height: 1070px;
+    height: 1329px;
     left: 1428px;
-    top: 412px;
+    top: 135px;
     
     background: rgba(0, 0, 0, 0.4);
   }
@@ -189,34 +189,47 @@
   .text6 {
     position: absolute;
     width: 419px;
-    height: 803px;
+    height: 1039px;
     left: 985px;
-    top: 699px;
+    top: 400px;
     
     font-family: Reguler;
     font-style: normal;
     font-weight: normal;
-    font-size: 11px;
-    line-height: 11.5px;
-    
+    font-size: 13px;
+    line-height: 13px;
     color: #FFFFFF;
-    
   }
 
   .text7 {
     position: absolute;
     width: 366px;
-    height: 1056px;
-    left: 1447px;
-    top: 427px;
+    height: 1313px;
+    left: 1446px;
+    top: 151px;
     
     font-family: Reguler;
     font-style: normal;
     font-weight: normal;
-    font-size: 11px;
-    line-height: 105%;
-    
+    font-size: 13.2px;
+    line-height: 13px;
     color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 419px;
+    height: 22px;
+    left: 985px;
+    top: 340px;
+    
+    font-family: Reguler;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 19px;
+    
+    color: #FFFFFF;    
   }
 
   .playButton1 {

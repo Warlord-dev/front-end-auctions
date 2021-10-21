@@ -21,6 +21,10 @@ const Page6970 = () => {
         used to refer to the greater symbiotic network of infrastructure, human resources, products,
         and early adopters that make up a project.
       </div>
+
+      <div className={styles.text2}>
+        PEEZY R
+      </div>
     </div>
   );
 };

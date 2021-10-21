@@ -31,6 +31,10 @@ const Page8788 = () => {
       <div className={styles.text2}>
         Community: The Powerhouse of Web THREE        
       </div>
+
+      <div className={styles.text3}>
+        Dno O
+      </div>
     </div>
   )
 }
