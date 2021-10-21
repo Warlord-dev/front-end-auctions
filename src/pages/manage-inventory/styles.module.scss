@@ -1,0 +1,38 @@
+.wrapper {
+  background: black;
+
+  .innerWrapper {
+    padding: 1rem;
+
+    .topSection {
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+      border-bottom: 1px solid white;
+
+      h1 {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 53px;
+        /* identical to box height, or 106% */
+
+        text-align: center;
+
+        color: #ffffff;
+      }
+    }
+
+    .productsWrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 5rem;
+      row-gap: 10rem;
+      padding: 5rem 0;
+
+      @media (max-width: 992px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

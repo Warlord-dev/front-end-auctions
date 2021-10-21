@@ -13,9 +13,9 @@ import { useRouter } from 'next/router';
 import React, { useState, useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRarityId, reviseUrl } from '@utils/helpers';
-import styles from './styles.module.scss';
 import { getChainId } from '@selectors/global.selectors';
 import Button from '@components/buttons/button';
+import styles from './styles.module.scss';
 
 const ImageCard = ({
   data,

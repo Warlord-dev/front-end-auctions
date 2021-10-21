@@ -1,0 +1,93 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  border: 4px solid #ff2cb2;
+  padding: 5px;
+  width: fit-content;
+  label {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+
+    color: #ff2cb2;
+  }
+
+  .inputWrapper {
+    position: relative;
+
+    .spinUp {
+      border: none;
+      background: transparent;
+      position: absolute;
+      top: 2px;
+      right: 8px;
+
+      img {
+        width: 17px;
+        height: 17px;
+        transform: rotate(180deg);
+      }
+    }
+
+    .spinDown {
+      border: none;
+      background: transparent;
+      position: absolute;
+      bottom: 0;
+      right: 8px;
+
+      img {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+
+  input {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    margin-right: 8px;
+
+    color: #ff2cb2;
+  }
+
+  .hour {
+    width: 35px;
+  }
+
+  .minute {
+    width: 35px;
+  }
+
+  .day {
+    width: 35px;
+  }
+
+  .month {
+    width: 35px;
+  }
+
+  .year {
+    width: 80px;
+  }
+
+  .devider {
+    height: 15px;
+    width: 1px;
+    background: #ff2cb2;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
