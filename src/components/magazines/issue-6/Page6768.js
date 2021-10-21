@@ -39,7 +39,7 @@ const Page6768 = () => {
         I've always been doing Visual effects and art since I got a computer, I followed a different
         path down the road when I got into college though. The moment I built my portfolio and sent
         it to the biggest Company in Portugal and got a job offer everything changed for me, I quit
-        college and started working on the area I love.
+        college and started working in the area I love.
         <br />
         <br />
         <span>
@@ -48,7 +48,7 @@ const Page6768 = () => {
         </span>
         <br />
         I'm in Love with Real world Simulations, I love all the process of converting natural
-        phenomena onto Mathematical equations. Doing it in a visual form makes it even more
+        phenomena into Mathematical equations. Doing it in a visual form makes it even more
         satisfying.
         <br />
         <br />
@@ -57,9 +57,9 @@ const Page6768 = () => {
           NFT? Is it different to how you've ideated art concepts/pieces outside of web3?
         </span>
         <br />
-        Found it though a friend, told me about it and I was instantly in love with the idea. I
-        don't see a difference to the process to be honest, I just create it as it was for myself or
-        my company.
+        Found out though a friend and I was instantly in love with the idea. I don't see a difference
+        to the process to be honest, I just create as it was for myself or my company, and that 
+        always keeps me correctly anchored in the craft. 
         <br />
         <br />
         <span>
@@ -69,7 +69,7 @@ const Page6768 = () => {
         <br />
         In Portugal Art in general is really underrated and under invested. People here don't look
         at Art like it's worth the time or money, they take it for granted. We have talented Artists
-        here, Vhils is one of them, pushing it thorough the NFT and real world space! For sure an
+        here, Vhils is one of them, pushing it through the NFT and real world space! For sure an
         inpiration!
         <br />
         <br />
