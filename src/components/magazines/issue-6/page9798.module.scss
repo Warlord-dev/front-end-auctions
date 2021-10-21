@@ -544,6 +544,15 @@
     font-size: 60px;
     line-height: 120.53%;
     color: #FFFFFF;
+
+    &:hover {
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      }
+    }
   }
 
   .text38 {
@@ -556,6 +565,14 @@
     font-size: 60px;
     line-height: 120.53%;
     color: #FFFFFF;
+    &:hover {
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      }
+    }
   }
 
   .text39 {
@@ -568,6 +585,14 @@
     font-size: 60px;
     line-height: 120.53%;
     color: #FFFFFF;
+    &:hover {
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      }
+    }
   }
 
   .text40 {
