@@ -19,7 +19,7 @@ const Page6768 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/6/images/67_68_back.jpg" className={styles.back} />
-      <a href="" target="_blank">
+      <a href="https://twitter.com/DerJcmp" target="_blank">
         <div className={styles.text1}>João Pereira</div>
       </a>
       <div className={styles.rect1} />
