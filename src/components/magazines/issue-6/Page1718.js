@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import styles from './page1718.module.scss'
 
 const Page1718 = () => {
@@ -8,7 +7,10 @@ const Page1718 = () => {
       <img src='./magazine/6/images/1718_image1.png'  className={styles.image1}/>
       <img src='./magazine/6/images/1718_image1.png'  className={styles.image2}/>
       <img src='./magazine/6/images/1718_image2.png'  className={styles.image3}/>
-      <img src='./magazine/6/images/1718_image4.png'  className={styles.image4}/>
+
+      <a href='https://twitter.com/jlomichaux' target='_blank'>
+        <img src='./magazine/6/images/1718_image4.png'  className={styles.image4}/>
+      </a>
 
       <img src='./magazine/6/images/1718_image3.png'  className={styles.image5}/>
       <img src='./magazine/6/images/1718_image3.png'  className={styles.image6}/>

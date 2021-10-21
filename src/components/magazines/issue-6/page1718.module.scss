@@ -573,4 +573,14 @@
     color: #FFFFFF;
     -webkit-text-stroke: 3px #1400FF;
   }
+
+  a {
+    img {
+      transition: 0.3s all;
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(0.9);
+      }
+    }
+  }
 }

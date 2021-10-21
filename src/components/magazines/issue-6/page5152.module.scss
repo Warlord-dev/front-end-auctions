@@ -909,4 +909,14 @@
     top: 837px;
     object-fit: cover;
   }
+
+  a {
+    img {
+      transition: 0.3s all;
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(1.1);
+      }
+    }
+  }
 }

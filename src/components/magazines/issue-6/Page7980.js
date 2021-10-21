@@ -29,6 +29,8 @@ const Page7980 = () => {
       <div className={styles.text8}>screensaver world community art feature</div>
       <img src="/magazine/6/images/79_80_image1.png" className={styles.image1} />
       <img src="/magazine/6/images/79_80_image2.png" className={styles.image2} />
+      <img src="/magazine/6/images/79_80_image3.png" className={styles.image3} />
+      <img src="/magazine/6/images/79_80_image4.png" className={styles.image4} />
       <a href="/unlockable/1/" target="_blank" className={styles.seeMoreLink}>
         <div className={styles.seeMore1}>SEE MORE</div>
         <div className={styles.seeMore2}>SEE MORE</div>
