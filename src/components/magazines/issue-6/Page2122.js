@@ -43,7 +43,7 @@ const Page2122 = () => {
         PLAY
       </div>
       <div className={styles.text3}>
-        Authentically contributing to, growing,  and maintaining momentum in decentralised communities. 
+        Authentically contributing to, growing, and maintaining momentum in decentralised communities. 
       </div>
       <div
         className={styles.text4}
