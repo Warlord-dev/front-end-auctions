@@ -18,7 +18,7 @@ const Page1920 = () => {
       </h1>
 
       <div className={styles.text1}>
-        Gravity holde for the masses.
+        Gravity hole for the masses.
       </div>
       <div className={styles.text2}>
         How do we truly hack web3 onboarding ?
@@ -50,7 +50,7 @@ const Page1920 = () => {
         <br /><br />
         So, for those on-ramping into web3 for more than just a transient romance hopped up on new relationship energy, being a student of the game and putting effort into leveling up on how you can actually contribute to each other for its own sake, without the need for immediate return, will have the wonderous effect of both maximising your long term return and growing a thriving ecosystem around you.  
         <br /><br />
-        That’s all well and good, but what proof do we have that community actually matters for anything in web3. Well, let’s take a look at what we are talking about when we are talking about crypto networks. Whether it is DAOs, text based NFTs and derivatives inspired by 1970s D&D and early text based adventure video games, or, the nuts and bolts of how consensus coordination systems deliver nearly unstoppable mediums for value exchange, community is welded into the bones of all of it. These wild rocket rides that we all seek out are literally functionality, mathematically not possible without community based network effects. 
+        That’s all well and good, but what proof do we have that community actually matters for anything in web3. Well, let’s take a look at what we are talking about when we are talking about crypto networks. Whether it is DAOs, text based NFTs and derivatives inspired by 1970s D&D and early text based adventure video games, or, the nuts and bolts of how consensus coordination systems deliver nearly unstoppable mediums for value exchange, community is welded into the bones of all of it. These wild rocket rides that we all seek out are literally functionally & mathematically not possible without community based network effects. 
         <br /><br />
         A simple rational analysis shows us that there is simply no better explanation for how web3 underwrites the squad wealth that we all want. 
       </div>
