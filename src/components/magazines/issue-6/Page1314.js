@@ -79,7 +79,7 @@ const Page1314 = () => {
         With so much volume cascading into the NFT space, it’s no wonder that there is high demand for better tools and interfaces for being able to effectively intake and make sense of all of that data— for, although it’s transparently all there on 
       </div>
       <div className={styles.text8}>
-        the blockchain for anyone to query, learning how to effectively use a block explorer and then extrapolate other metadata is no simple feat. Dedicated to building the infrastructure of the blockchain world and providing high-quality blockchain data support and services for developers and users. And this is exactly what NFTScan is solving for, developing a platform and API for easy NFT asset browsing and data analysis, for how else are we meant to stay ahead of all those HFT NFT traders? xD
+        the blockchain for anyone to query, learning how to effectively use a block explorer and then extrapolate other metadata is no simple feat. NFTScan is Dedicated to building the infrastructure of the blockchain world and providing high-quality blockchain data support and services for developers and users. The project is developing a platform and API for easy NFT asset browsing and data analysis, for how else are we meant to stay ahead of all those HFT NFT traders? xD
       </div>
       <div className={styles.text9}>
         <span>IMPERSONATOR</span><br />
@@ -87,7 +87,7 @@ const Page1314 = () => {
       </div>
       <div className={styles.text10}>
         <span>BanksEA Finance</span><br />
-        The intersection between NFTs and DeFi continues to strengthen as new innovative use cases come to light and more of the web3 ecosystem experiments to better understand just how utility can be compounded when the two sectors are combined together.  Banksea Finance is one of these protocols mixing NFTs with DeFi through their NFT price discovery protocol and pool-based lending hub whereby price oracles consist of both an on-chain and off chain layer where AI nodes feed price prediction into the onchain layer. This off-chain layer is decentralised allowing for the Banksea Oracle Smart Contract to use the consensus algorithm to eliminate a bad node if one turns malicious. 
+        The intersection between NFTs and DeFi continues to strengthen as new innovative use cases come to light and more of the web3 ecosystem experiments to better understand just how utility can be compounded when the two sectors are combined together.  Banksea Finance is one of these protocols mixing NFTs with DeFi through their NFT price discovery protocol and pool-based lending hub whereby price oracles consist of both an on-chain and off chain layer, and leverage AI nodes for feeding price prediction into the onchain layer. This off-chain layer is decentralised allowing for the Banksea Oracle Smart Contract to use the consensus algorithm to eliminate a bad node if one does turn out to be malicious. 
       </div>
       <div className={styles.text11}>
         <span>Venrate</span><br />
@@ -104,7 +104,7 @@ const Page1314 = () => {
         <br /><br />
         Having more streamlined and supportive infrastructure to guide code best practises and also make readily available important features and functions is fundamental to quickly scaling this space in a robust manner. For, eventually, imagine being able to drag and drop code modules to safely deploy an entire web3 ecosytem; from NFT minting, DeFi lending, DeCo and more. 
         <br /><br />
-        And frankly, this just supports the entire shift further into full metaversal immersion. Our interfaces are changing, and to think that lines of code in a IDE is how we will be creating and shaping the future of digital assets and more is well off the mark. 
+        And frankly, this just supports the entire shift further into full metaversal immersion. Our interfaces are changing, and to think that lines of code in an IDE is how we will be creating and shaping the future of digital assets and more is well off the mark. 
       </div>
       <div className={styles.text14}>
         WayFare
