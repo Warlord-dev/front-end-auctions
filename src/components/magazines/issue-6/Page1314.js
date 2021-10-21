@@ -152,7 +152,7 @@ const Page1314 = () => {
       <div className={styles.circleText2}>
         yay        
       </div>
-      <a href='https://poap.xyz/wayfare' target='_blank'>
+      <a href='https://poap.website/wayfare' target='_blank'>
         <img src='/images/poap-logo.png' className={styles.poapImage} />
       </a>
     </div>
