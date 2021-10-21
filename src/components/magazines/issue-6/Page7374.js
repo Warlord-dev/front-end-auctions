@@ -17,7 +17,7 @@ const Page7374 = () => {
         <br />
         <br />
         Communities scale by decentralizing power and distributing it to its participants, evolving
-        into progressive decentralization into their own autonomous organizations. And with great
+        through progressive decentralization into their own autonomous organizations. And with great
         power comes great responsibility, because what you contribute to the community is what
         builds your reputation and trust on-chain.
         <br />
@@ -49,7 +49,7 @@ const Page7374 = () => {
         <br />
         The heart of a strong community is a shared sense of purpose, identity, and ethos. And when
         we contribute a part of ourselves to something greater, each of us becomes decentralized
-        sparks of energy, each seeking to empower and build towards a better future.
+        sparks of energy, seeking to empower and build towards a better future.
       </div>
     </div>
   );
