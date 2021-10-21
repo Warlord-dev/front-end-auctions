@@ -212,7 +212,7 @@ const LandingPage = () => {
 
         <div className={styles.actionsWrapper}>
           <Link href="/collections">
-            <a className={styles.heroSectionLink}>{`View All Collections >`}</a>
+            <a className={styles.heroSectionLink}>{`View All Fashion >`}</a>
           </Link>
 
           <div className={styles.filtersWrapper}>
