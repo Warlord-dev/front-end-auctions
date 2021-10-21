@@ -24,11 +24,11 @@ const Page2930 = () => {
         feature digital twins of the endangered Pandas for the metadata.
       </div>
       <div className={styles.text3}>
-        rather an exclusive NFT sale featuring  <br />
-        digital twins of the endangered Pandas as the metadata. With only 1864 Pandas left in the wild this couldn’t come at a better time, as well as highlight the real power of NFTs in all of their glory. This unique and transparent unit of record and conveyance means that capital, time and 
+        With only 1864 Pandas left in the wild  <br />
+        this couldn’t come at a better time, as well as highlight the real power of NFTs in all of their glory. This unique and transparent unit of record and conveyance means that capital, time and resource can be openly and almost instantly
       </div>
       <div className={styles.text4}>
-        resource can be openly and almost instantly routed to the places and people where it will have the highest and most catalytic impact. 
+        routed to the places and people where it will have the highest and most catalytic impact. 
       </div>
       <div className={styles.text5}>
         Manhattan Solar Partners recently announced their plans to construct the biggest renewable-powered cryptocurrency mining data center in the USA, whereby the new centers will utilize more than a gigawatt of renewable energy in Texas. To give some greater perspective, a single gigawatt is enough to power north of either 10 million light bulbs, 3.125 Million Photovoltaic (PV) Panels, 1.3 million horses, or 9,090 Nissan Leafs. 

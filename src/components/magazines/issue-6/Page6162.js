@@ -33,7 +33,7 @@ const Page6162 = () => {
       </div>
       <div className={styles.text13}>ar to programming for mass adoption</div>
       <div className={styles.text14}>
-        As the whole world continues to go NFT, so does EVOS Esports, in a collaborative effort with Sora’s Dreamworld. 10,000 avatars will be minted on Ethereum, with a special 5 custom PFPs set aside for the EVOS team and coach— which they will rep in upcoming tournaments. It won’t be long before we see these avatars make their way across games, full representing the players during their competitive battles and major highlight moments. 
+        As the whole world continues to go NFT, so does EVOS Esports, in a collaborative effort with Sora’s Dreamworld. 10,000 avatars will be minted on Ethereum, with a special 5 custom PFPs set aside for the EVOS team and coach— which they will rep in upcoming tournaments. It won’t be long before we see these avatars make their way across games, fully representing the players during their competitive battles and major highlight moments. 
       </div>
     </div>
   );

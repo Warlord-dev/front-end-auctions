@@ -46,9 +46,9 @@ const Page5960 = () => {
         motivated with modding and maybe inspire them to make their mod!
         <br />
         <br />
-        <b>5. Any cool/best/crazy stories you have from modding?</b> <br /> I think it's not that
-        best, but a guy mailed me for a Fortnite private server idea that would make me join into
-        Fortnite modding community, now that guy is my community manager.
+        <b>5. Any cool/best/crazy stories you have from modding?</b> <br /> Well, whether it's 
+        cool or not is highly subjective, but, the I randomly received in an invite to a private 
+        Fortnite server one day, and later found out that the invite came from my now community manager! 
         <br />
         <br />
         <b>6. What's your fav game/s and why?</b> <br /> Fortnite, Minecraft, Stick Empires, Portal,

@@ -1226,7 +1226,7 @@ const Page7778 = () => {
         <img src="/magazine/6/images/53_54_image3.png" className={styles.image3} />
       </a>
       <div className={styles.text3}>
-        Everything in life can be simplified to a sorting, naming, coordination and retrieval problem— from how our innate bioliogy functions to how we go about building the metaverse. And that’s all that the metaverse really is, data, data, data...and then, some more data. 
+        Everything in life can be simplified to a sorting, naming, coordination and retrieval problem— from how our innate bioliogy functions work to how we go about building the metaverse. And that’s all that the metaverse really is, data, data, data...and then, some more data. 
         <br /><br />
         And, as we integrate further with these different metaversal realms, digital data is becoming more important and essential. This is of huge benefit, because there is so much frozen value to be unlocked in the nascent digital economies of today, and NFTs and decentralised tech help us get there all the more faster in ensuring that no value is left on the table— however, if we don’t have efficient systems for sorting, naming, coordinating and retrieving this data, then things get messy pretty quickly, as we will continue to scale at a rapid pace without an antifragile base and robust understanding of how to value the digital assets we derive the meaning and substance of entire worlds from.  
         <br /><br />

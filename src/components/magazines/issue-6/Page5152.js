@@ -120,8 +120,8 @@ const Page5152 = () => {
       <div className={styles.text37}>Blu Simon Wasem</div>
       <div className={styles.text38}>bitmap painting sequence [비트맵 페인팅 시퀀스]</div>
       <div className={styles.text39}>
-        My last series on ssw was a collection of bmp files that i sent to myself on 2nd december
-        2013, and i coulndt imagine that it will become really an artwork. It is a form of
+        My last series on ssw was a collection of bmp files that i sent to myself on the 2nd of december
+        2013, and i couldn't imagine that it will become really an artwork. It is a form of
         performative action painting on digital mediums, using the most simple software to create
         graphics, that can makes no sense, but at the same time tells a story, about places,
         feelings, rests of propaganda, internet trash files. This piece is a gif animation, merging

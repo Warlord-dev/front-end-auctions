@@ -17,7 +17,7 @@ const Page7172 = () => {
         participants, and therefore the most power (e.g., Facebook, Google, TikTok, and the rest of
         their ilk). Instead, a better yardstick of measure is how balanced, unifying, and engaging
         the interaction in a particular community is and how dedicated they are in working towards
-        building together. Because everyone has a stake in
+        building together. Because everyone has a stake.
         <br />
         <br />
         In putting community first, web3 pushes the outer limits of what traditional community
@@ -26,7 +26,7 @@ const Page7172 = () => {
         from the woefully antiquated hierarchies imported straight outta the Industrial Revolution.
       </div>
       <div className={styles.text2}>
-        The lean, flat structures and governance frameworks of web3 projects rely on their
+        The lean dynamic structures and governance frameworks of web3 projects rely on their
         communities to vote on governance proposals, determine the direction of a project or
         initiative’s development, who to collaborate with, who to support, how the treasury is going
         to be set up and ultimately determine their project’s viability over the long run. They are

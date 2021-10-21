@@ -25,25 +25,25 @@ const Page3940 = () => {
         built, and that is the most interesting part by far. The best way to learn is by doing.
       </div>
       <div className={styles.text2}>
-        ELI5: There 1 giant pool of floor priced NFTs from various sets. Putting NFTs into the pool
-        gives you varying amount of (erc20) FLOOR tokens that can be used anywhere in DeFi. Floor
-        can be redeemed for any NFTs in the pool. The value of the NFTs in the pool is always at
-        least 1:1 with FLOOR tokens value. NFTs have taught more people about crypto than any other
-        type of product by several orders of magnitude. The dream is for NFT holders to learn about
-        DeFi and all the cool financial tools that they have never had access to before. There are
-        several protocols like NFT20 and NFTX that just scrape the surface of unlocking the value of
-        NFTs for DeFi. However, each type of NFT gets its own pool, so the liquidity for each one is
-        small & not enough to really do much with at the moment. Its obvious that there will be an
-        AAVE like protocol a year from now when lending + yield on NFTs, there simply too much money
-        on the table for there not to be. But we can’t build that without liquidity pools. I started
-        DanceFloor (still a WIP) because I was tired of waiting for those other protocols to figure
-        out how to increase usable liquidity dramatically. With DanceFloor’s “one big pool” design,
-        instead of many smaller ones, I believe we can create a more effective pool to liquidate &
-        efficiently trade bulk NFTs against, totally unlocking DeFi for them.
+        ELI5 on Dancefloor DefI: There is 1 giant pool of floor priced NFTs from various sets. Putting 
+        NFTs into the pool gives you a varying amount of (erc20) FLOOR tokens that can be used anywhere 
+        in DeFi. FLOOR can be redeemed for any NFTs in the pool. The value of the NFTs in the pool is
+        always at least 1:1 with FLOOR tokens value. NFTs have taught more people about crypto than 
+        any other type of product by several orders of magnitude. The dream is for NFT holders to 
+        learn about DeFi and all the cool financial tools that they have never had access to before. 
+        There are  several protocols like NFT20 and NFTX that just scrape the surface of unlocking 
+        the value of NFTs for DeFi. However, each type of NFT gets its own pool, so the liquidity 
+        for each one is small & not enough to really do much with at the moment. Its obvious that 
+        there will be an AAVE like protocol a year from now with lending + yield on NFTs, there is
+        simply too much money on the table for there not to be. But we can’t build that without 
+        liquidity pools. I started DanceFloor (still a WIP) because I was tired of waiting for those 
+        other protocols to figure out how to increase usable liquidity dramatically. With DanceFloor’s 
+        “one big pool” design, instead of many smaller ones, I believe we can create a more effective 
+        pool to liquidate & efficiently trade bulk NFTs against, totally unlocking DeFi for them.
       </div>
       <div className={styles.text3}>
         If you’re buying floor priced assets, that is to say NFTs that are priced at the minimum
-        price items in that set are going for, do you care which one you get? If you’re buying a
+        price items that set is going for, do you care which one you get? If you’re buying a
         bunch all at once at this minimum “Floor” price probably not. This is where the floor in
         Dance Floor comes from. #1 is bunchy protocol, I think they are most likely to become the
         “aave of NFTs”. But there are all kind of pawn shop, yield aggregating, options, and lending
@@ -51,18 +51,18 @@ const Page3940 = () => {
         liquidations against.
       </div>
       <div className={styles.text4}>
-        I think its impossible to programatically decide whats a “good” type of NFT and not. That
-        has to be decided by the community of users, who can judge for themselves. That where the
+        I think its impossible to programatically decide what's a “good” type of NFT and not. That
+        has to be decided by the community of users, who can judge for themselves. That's where the
         DANCE token comes in. DANCE governs the protocol, and the community of holders decides what
         NFT types are allowed to be used in DanceFloor. At some point we will definitely rent out a
-        night club in NYC and only DANCE holders in. On top of that… I’m not sure yet, theres a lot
-        of ways the protocol could evolve from the early stage we are still at. I’m excited to see
-        what other people come up with.
+        night club in NYC and let only DANCE holders in. On top of that… I’m not sure yet, there's a 
+        lot of ways the protocol could evolve from the early stage we are still at. I’m excited to 
+        see what other people come up with.
         <br />
         <br />
         The thing thats the most interesting to me is the permenance of it all. Humans have pretty
-        much always clung to various kinds of collectables. But how many of those are simply lost to
-        time? I think theres a serious chance many of the NFTs I own will exist longer than I will,
+        much always clung to various kinds of collectibles. But how many of those are simply lost to
+        time? I think there's a serious chance many of the NFTs I own will exist longer than I will,
         and thats pretty cool to me.
       </div>
       <a href="https://dancefloordefi.com/" target="_blank">
@@ -132,10 +132,10 @@ const Page3940 = () => {
         <br />
         <br />
         Status: think things like badges, karma, points, titles… anything that signifies status
-        within a community Networking: inviting members to exclusive events and experiences together
+        within a community. Networking: inviting members to exclusive events and experiences together.
         Access: giving members the ability to meet people or groups that they otherwise wouldn't
-        have access to… like your CEO or a celebrity Perks: swag, discounts, benefits, gifts… people
-        love their branded socks
+        have access to… like your CEO or a celebrity. Perks: swag, discounts, benefits, gifts… people
+        love their branded socks.
       </div>
       <div className={styles.text10}>
         Engagement and momentum within a community are two important key features. What are some of
@@ -163,7 +163,7 @@ const Page3940 = () => {
         24/7.
         <br />
         <br />
-        Finally, built rituals into your community. You could do a weekly "new member welcome" or a
+        Finally, build rituals into your community. You could do a weekly "new member welcome" or a
         monthly meetup on the first Tuesday of every month. Perhaps every member who joins your
         community goes through the same initiation ritual. It creates repetition for your members,
         which helps them build habits of participation and a sense of shared experience.
@@ -171,7 +171,7 @@ const Page3940 = () => {
       <div className={styles.text12}>
         You are moving more into exploring further around web3 communities. How do you think that
         greater emphasis on community building within web3 will unlock, reinforce and ultimately
-        multiple adoption of this space?
+        multiply adoption of this space?
       </div>
       <div className={styles.text13}>
         Web3 and community come hand-in-hand. DAOs are led by the community. NFT projects are
@@ -200,11 +200,11 @@ const Page3940 = () => {
         <ul>
           <li>
             Community first. If it's good for your business, but not good for your community, don't
-            do it
+            do it.
           </li>
           <li>
             Build with, not for. Involve your members in the process of crafting the community. This
-            was inspired by my friends who published the book Get Together
+            was inspired by my friends who published the book Get Together.
           </li>
           <li>
             Change reality. Communities are alternate universes where you get to design a new social

@@ -64,7 +64,7 @@ const Page107108 = () => {
         The second major arc for the GDN DAO is underway. We are soon to be launching the liquid trading ERC-20 token under the DAO, $W3F. It is our inteface with the crypto market at large, and a big next leap for the broader web3 fashion community, as every GDN designer continues to make this market.          
       </div>
       <div className={styles.text11}>
-        This vast decentralised network of designers that has been cultivated from the ground up, with pervasive reinforcements arising from the DIGITALAX ecosystem, is set to define the new luxury. Because, web3 fashion doesn’t just look rare, but is actually it is found and flaunted in the unique expressions of savvy. 
+        This vast decentralised network of designers that has been cultivated from the ground up, with pervasive reinforcements arising from the DIGITALAX ecosystem, is set to define the new luxury. Because, web3 fashion doesn’t just look rare, but it is actually found and flaunted in the unique expressions of savvy. 
       </div>
       <div className={styles.text12}>
         The token is a complimentary record and conveyance of value to the $MONA token, whereby $W3F operates with liquidity between DIGITALAX and other cellular clusters of activity throughout the web3 fashion enabled metaverse. The value is intrinsically underwritten by designer merchant activity and the critical role that this plays in propelling supply in order to establish abundant demand. 
