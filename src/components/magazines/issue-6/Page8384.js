@@ -2,10 +2,14 @@ import React, { useEffect } from 'react';
 import styles from './page8384.module.scss';
 
 const Page8384 = () => {
-  useEffect(() => {
+  const loadTwitterWidgetScript = () => {
     const script = document.createElement("script");
     script.src = "https://platform.twitter.com/widgets.js";
     document.getElementsByClassName("twitter-embed")[0].appendChild(script);
+  }
+
+  useEffect(() => {
+    loadTwitterWidgetScript()
   }, []);
 
   return (
@@ -78,7 +82,7 @@ const Page8384 = () => {
         directly to users makes more sense.
       </div>
       <div className={[styles.embed, 'twitter-embed'].join(' ')}>
-        <blockquote className="twitter-tweet">
+        <blockquote className="twitter-tweet" >
           <p lang="en" dir="ltr">
             My ETH Global Talk on Loot,
             <a href="https://twitter.com/search?q=%24AGLD&amp;src=ctag&amp;ref_src=twsrc%5Etfw">
