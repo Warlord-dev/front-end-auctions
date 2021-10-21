@@ -4,7 +4,7 @@ const Page34 = () => {
   return (
     <div className={styles.wrapper}>
       <img src='./magazine/6/images/0304_image1.png' className={styles.image4} />
-      <p className={styles.text1}></p> Olympic Sneakers of Conviction.</p>
+      <p className={styles.text1}> Olympic Sneakers of Conviction.</p>
       <p className={styles.text2}>
       As we swim through ever-deepening layers of complexity and exhiliration in building out the metaverse and its multidimensional realms, it’s far too predictable that some of that us will get caught up in the short sighted hope of being able to guess the winning lotto numbers of the market each day.
       <br /><br />
