@@ -4,7 +4,7 @@ import styles from './page4344.module.scss';
 const Page4344 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="./magazine/6/images/43_44_back.png" className={styles.back} />
+      <img src="./magazine/6/images/43_44_back.jpg" className={styles.back} />
       <a href="https://www.instagram.com/realparent.co/" target="_blank">
         <div className={styles.link1}>REAL</div>
       </a>

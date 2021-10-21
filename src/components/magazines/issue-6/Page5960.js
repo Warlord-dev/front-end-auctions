@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import styles from './page5960.module.scss';
 
 const Page5960 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/59_60_back.png" className={styles.back} />
+      <img src="/magazine/6/images/59_60_back.jpg" className={styles.back} />
       <div className={styles.text1}>Arawn Pierer</div>
       <div className={styles.rect1}></div>
       <div className={styles.text2}>

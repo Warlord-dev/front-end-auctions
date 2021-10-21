@@ -5,7 +5,7 @@ import styles from './page6566.module.scss';
 const Page6566 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/65_66_back.png" className={styles.back} />
+      <img src="/magazine/6/images/65_66_back.jpg" className={styles.back} />
       <div className={styles.rect1} />
       <div className={styles.rect2} />
       <div className={styles.rect3} />

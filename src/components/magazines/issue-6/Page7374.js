@@ -4,7 +4,7 @@ import styles from './page7374.module.scss';
 const Page7374 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/73_74_back.png" className={styles.back} />
+      <img src="/magazine/6/images/73_74_back.jpg" className={styles.back} />
       <div className={styles.text1}>
         Fact is, many communities purporting to adhere to the principles of decentralization and
         utmost transparency still adopt centralized, unilateral mechanisms to govern. But in truth,

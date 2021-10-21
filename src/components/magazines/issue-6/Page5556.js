@@ -4,7 +4,7 @@ import styles from './page5556.module.scss';
 const Page5556 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/55_56_back.png" className={styles.back} />
+      <img src="/magazine/6/images/55_56_back.jpg" className={styles.back} />
       <a href="https://twitter.com/KRSuperSoldier" target="_blank">
         <img src="/magazine/6/images/55_56_image1.png" className={styles.link1} />
       </a>

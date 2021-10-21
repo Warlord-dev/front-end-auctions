@@ -5,7 +5,8 @@ import styles from './page5152.module.scss';
 const Page5152 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/51_52_back.png" className={styles.back} />
+      <div className={styles.rect1}></div>
+      <img src="/magazine/6/images/51_52_back.jpg" className={styles.back} />
       <a href="https://twitter.com/julietaVezes" target="_blank">
         <img src="/magazine/6/images/51_52_link1.png" className={styles.link1} />
       </a>

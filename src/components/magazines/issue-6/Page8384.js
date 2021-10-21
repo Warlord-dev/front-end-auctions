@@ -10,7 +10,7 @@ const Page8384 = () => {
 
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/83_84_back.png" className={styles.back} />
+      <img src="/magazine/6/images/83_84_back.jpg" className={styles.back} />
       <div className={styles.text1}>Composable Metaversal Communities w/ Loot</div>
       <div className={styles.text2}>
         {' '}

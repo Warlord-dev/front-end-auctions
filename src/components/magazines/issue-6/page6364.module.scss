@@ -2,13 +2,13 @@
 
 .wrapper {
   @include magazineWrapper();
-  background-color: #ffffff;
+  background-color: black;
 
   .back {
     position: absolute;
-    width: 1920px;
+    width: 960px;
     height: 1497px;
-    left: 0px;
+    left: 960px;
     top: 0px;
   }
 

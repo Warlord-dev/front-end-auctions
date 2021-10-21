@@ -5,7 +5,7 @@ import styles from './page5758.module.scss';
 const Page5758 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/57_58_back.png" className={styles.back} />
+      <img src="/magazine/6/images/57_58_back.jpg" className={styles.back} />
     </div>
   );
 };

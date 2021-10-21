@@ -4,7 +4,7 @@ import styles from './page7576.module.scss';
 const Page7576 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/75_76_back.png" className={styles.back} />
+      <img src="/magazine/6/images/75_76_back.jpg" className={styles.back} />
       <div className={styles.rect1} />
       <div className={styles.rect2} />
       <div className={styles.rect3} />

@@ -18,7 +18,7 @@ const Page4950 = () => {
 
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/49_50_back.png" className={styles.back} />
+      <img src="/magazine/6/images/49_50_back.jpg" className={styles.back} />
       <a href="" target="_blank">
         <img src="/magazine/6/images/49_50_image1.png" className={styles.link1} />
       </a>
@@ -56,7 +56,7 @@ const Page4950 = () => {
         code is open sourced and vibes are strong!
       </div>
       <a href="https://twitter.com/Burb8873" target="_blank">
-        <img src="/magazine/6/images/49_50_image6.png" className={styles.link4} />
+        <img src="/magazine/6/images/49_50_image6.jpg" className={styles.link4} />
       </a>
       <div className={styles.text4}>SquintDev</div>
       <div className={styles.text5}>Dreams of Disconnection</div>
@@ -77,7 +77,7 @@ const Page4950 = () => {
         A mysterious machine appears in the city. It is opening a doorway to somewhere....{' '}
       </div>
       <a href="https://twitter.com/letsglitchit" target="_blank">
-        <img src="/magazine/6/images/49_50_image7.png" className={styles.link6} />
+        <img src="/magazine/6/images/49_50_image7.jpg" className={styles.link6} />
       </a>
       <div className={styles.text10}>Dawnia Darkstone aka Letsglitchit</div>
       <div className={styles.text11}>Ensnared</div>
@@ -85,7 +85,7 @@ const Page4950 = () => {
         A classic (2016) Letsglitchit .FBX format 3D glitch Turn on screen reader support
       </div>
       <a href="https://twitter.com/madkrahen" target="_blank">
-        <img src="/magazine/6/images/49_50_image8.png" className={styles.link7} />
+        <img src="/magazine/6/images/49_50_image8.jpg" className={styles.link7} />
       </a>
       <div className={styles.text13}>Hugo Alves</div>
       <div className={styles.text14}>New Heights</div>

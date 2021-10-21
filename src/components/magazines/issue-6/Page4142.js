@@ -5,7 +5,7 @@ import styles from './page4142.module.scss';
 const Page4142 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/41_42_back.png" className={styles.back} />
+      <img src="/magazine/6/images/41_42_back.jpg" className={styles.back} />
       <img src="/magazine/6/images/41_42_image1.png" className={styles.image1} />
       <div className={styles.text1}>Throughout the Metaverse</div>
       <div className={styles.text2}> #realparent </div>

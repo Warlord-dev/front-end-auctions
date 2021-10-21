@@ -4,7 +4,7 @@ import styles from './page4748.module.scss';
 const Page4748 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/47_48_back.png" className={styles.back} />
+      <img src="/magazine/6/images/47_48_back.jpg" className={styles.back} />
       <a href="https://www.instagram.com/dansky3d/" target="_blank">
         <div className={styles.link1}>Dansky3D</div>
       </a>

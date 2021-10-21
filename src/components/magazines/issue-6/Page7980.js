@@ -5,7 +5,7 @@ import styles from './page7980.module.scss';
 const Page7980 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/79_80_back.png" className={styles.back} />
+      <img src="/magazine/6/images/79_80_back.jpg" className={styles.back} />
       <div className={styles.text1}>NFT BUNDLES</div>
       <div className={styles.text2}>
         Through DIGIFIZZY we are proving out a new publishing model with NFT based decentralised

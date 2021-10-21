@@ -5,12 +5,19 @@
   color: #000;
   background: white;
 
-  .back {
-    position: absolute;
+  .rect1 {
     width: 1920px;
     height: 1497px;
     left: 0px;
     top: 0px;
+    background: rgba(255, 233, 31, 0.7);
+  }
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 261px;
+    left: 0px;
+    top: 1236px;
   }
 
   .link1 {

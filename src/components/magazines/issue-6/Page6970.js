@@ -4,7 +4,7 @@ import styles from './page6970.module.scss';
 const Page6970 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/69_70_back.png" className={styles.back} />
+      <img src="/magazine/6/images/69_70_back.jpg" className={styles.back} />
       <div className={styles.text1}>
         Web3 was founded on the egalitarian and democratic principles of decentralization that
         guarantee that no one man or organization can have the power to take complete control of a

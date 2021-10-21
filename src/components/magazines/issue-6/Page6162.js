@@ -1,11 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
 import styles from './page6162.module.scss';
 
 const Page6162 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/61_62_back.png" className={styles.back} />
+      <img src="/magazine/6/images/61_62_back.jpg" className={styles.back} />
       <img src="/magazine/6/images/61_62_image1.png" className={styles.image1} />
       <img src="/magazine/6/images/61_62_image2.png" className={styles.image2} />
 

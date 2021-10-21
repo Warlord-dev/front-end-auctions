@@ -5,7 +5,7 @@ import styles from './page3940.module.scss';
 const Page3940 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/39_40_back.png" className={styles.back} />
+      <img src="/magazine/6/images/39_40_back.jpg" className={styles.back} />
       <a href="https://twitter.com/shegenerates" target="_blank">
         <img src="/magazine/6/images/39_40_link1.png" className={styles.link1} />
       </a>

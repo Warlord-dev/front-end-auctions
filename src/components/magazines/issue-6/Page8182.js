@@ -17,7 +17,7 @@ const Page8182 = () => {
 
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/81_82_back.png" className={styles.back} />
+      <img src="/magazine/6/images/81_82_back.jpg" className={styles.back} />
       <a href="https://twitter.com/thenftattorney" target="_blank">
         <img src="/magazine/6/images/81_82_link1.png" className={styles.link1} />
       </a>

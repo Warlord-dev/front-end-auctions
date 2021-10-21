@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Page7172 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/71_72_back.png" className={styles.back} />
+      <img src="/magazine/6/images/71_72_back.jpg" className={styles.back} />
       <div className={styles.text1}>
         Communities are the cornerstone and élan vital of web3 because they provide tremendous value
         from the closely-knit symbiosis between market participants in this particular context.

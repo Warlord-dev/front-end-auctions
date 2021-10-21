@@ -5,7 +5,7 @@ import styles from './page6364.module.scss';
 const Page6364 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src="/magazine/6/images/63_64_back.png" className={styles.back} />
+      <img src="/magazine/6/images/63_64_back.jpg" className={styles.back} />
       <video autoPlay muted loop className={styles.video1}>
         <source src="./magazine/1/videos/moshed-05-02-1-15-28.mp4" type="video/mp4" />
       </video>
