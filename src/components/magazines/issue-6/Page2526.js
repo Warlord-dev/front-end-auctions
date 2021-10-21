@@ -22,9 +22,9 @@ const Page2526 = () => {
       <div className={styles.text2}>
         Quests, in particular, are an excellent way to drive contributions to a community, apart from a critical tool for onboarding users who wish to contribute to a community looking for new talent or members who are aligned with its values and vision. Participating in quests allows communities to interact with communities outside their ecosystem and tap into new streams of human capital to achieve new goals.
         <br /><br />
-        Quests also enable communities the talent it takes to create value across the ecosystem from within their ranks and openly allow anyone to participate, regardless of background. It’s all about delivering the task at hand and offering your marketable skills and value to the community one way or another. It builds their on-chain reputation and identity as a trustworthy, reliable member of the community with verifiable proof of your participation. And there’s a lot of ongoing demand for talent who can do just that.
+        Quests also enable communities the talent it takes to create value across the ecosystem from within their ranks and openly allow anyone to participate, regardless of background. It’s all about delivering the task at hand and offering your marketable skills and value to the community one way or another. It builds your on-chain reputation and identity as a trustworthy, reliable member of the community with verifiable proof of your participation. And there’s a lot of ongoing demand for talent who can do just that.
         <br /><br />
-        Rewarding community members for participation and engagement allows them to reward users for their contribution and offer the perfect way to put new members through their paces - akin to a learn-to-earn model.
+        Rewarding community members for participation and engagement allows them to reward users for their contribution and offers the perfect way to put new members through their paces - akin to a learn-to-earn model.
 
       </div>
     </div>
