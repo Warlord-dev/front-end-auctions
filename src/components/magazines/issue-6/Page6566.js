@@ -109,7 +109,12 @@ const Page6566 = () => {
         The Fintech House with a strong forward mission, will continue to be stronger bets for
         fertalising relationships, culture and inter-connected communities.
       </div>
-      <div className={styles.text5}>Portuguese Crypto Artist Spotlight</div>
+
+      <div className={styles.rect5} />
+      <div className={styles.rect6} />
+      <div className={styles.rect7} />
+      <div className={styles.rect8} />
+      <div className={styles.rect9} />
     </div>
   );
 };
