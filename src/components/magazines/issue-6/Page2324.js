@@ -19,7 +19,7 @@ const Page2324 = () => {
         <br /><br />
         Many individuals otherwise interested in the space are turned off by its seemingly arcane UX and end up just dabbling around in it and eventually leave communities.
         <br /><br />
-        Much of it has to do with the lack of context they need to determine where they slot into the project in terms of their value to be contributed lies. It’s the Wild West, after all.
+        Much of it has to do with the lack of context they need to determine where they slot into the project and where they can tangibly contribute value. It’s the Wild West, after all.
         <br /><br />
         Nevertheless, as organizations remain loyal to the web3 line of decentralization evolve, teams play significantly less in managing the protocol. Rather, the power devolves to the participants, who are incentivized to continue using, building, and keeping the protocol secure. 
         <br /><br />
