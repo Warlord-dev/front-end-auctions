@@ -1,0 +1,225 @@
+@import './styles.module.scss';
+// best in chrome
+$total: 300; // total particles
+$orb-size: 300px;
+$particle-size: 2px;
+$time: 14s;
+$base-hue: 0; // change for diff colors (180 is nice)
+.wrapper {
+  @include magazineWrapper();
+  background: black;
+  position: relative;
+  width: 1920px;
+  height: 1497px;
+  overflow: hidden; // no scrollbars..
+
+  .wrap1 {
+    position: absolute;
+    left: 350px;
+    top: 350px;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: rotate $time infinite linear; // rotate orb
+  }
+
+  .wrap2 {
+    position: absolute;
+    left: 0px;
+    top: 916px;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: rotate $time infinite linear; // rotate orb
+  }
+
+  .wrap3 {
+    position: absolute;
+    left: 1156px;
+    top: 962px;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: rotate $time infinite linear; // rotate orb
+  }
+
+  .wrap4 {
+    position: absolute;
+    left: 1700px;
+    top: -100px;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: rotate $time infinite linear; // rotate orb
+  }
+
+  .image {
+    position: absolute;
+    width: 481px;
+    height: 573px;
+    left: 1374px;
+    top: 70px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 646px;
+    height: 56px;
+    left: 65px;
+    top: 70px;
+    
+    font-family: Yantramanav;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 71px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    -webkit-text-stroke: 0.7 white;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 706px;
+    height: 44px;
+    left: 35px;
+    top: 1398px;
+
+    font-family: Astral Groove;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    /* identical to box height, or 44px */
+
+    color: #ffffff;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 203px;
+    height: 247px;
+    left: 1536px;
+    top: 1201px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 154.85px;
+    height: 154.85px;
+    left: 1657px;
+    top: 1238.96px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 655px;
+    height: 593px;
+    left: 61px;
+    top: 196px;
+    
+    font-family: Andada SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    
+    
+    color: #FFFFFF;    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 655px;
+    height: 429px;
+    left: 61px;
+    top: 834px;
+    
+    font-family: Andada SC;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 293px;
+    height: 720px;
+    left: 1044px;
+    top: 70px;
+    
+    font-family: Andada SC;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 811px;
+    height: 492px;
+    left: 1044px;
+    top: 816px;
+    
+    font-family: Andada SC;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotateY(360deg) rotateX(360deg);
+    }
+  }
+
+  .c {
+    position: absolute;
+    width: $particle-size;
+    height: $particle-size;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  @for $i from 1 through $total {
+    $z: (random(360) * 1deg); // random angle to rotateZ
+    $y: (random(360) * 1deg); // random to rotateX
+    $hue: ((40 / $total * $i) + $base-hue); // set hue
+
+    .c:nth-child(#{$i}) {
+      // grab the nth particle
+      animation: orbit#{$i} $time infinite;
+      animation-delay: ($i * 0.01s);
+      background-color: hsla($hue, 100%, 50%, 1);
+    }
+
+    @keyframes orbit#{$i} {
+      20% {
+        opacity: 1; // fade in
+      }
+      30% {
+        transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); // form orb
+      }
+      80% {
+        transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); // hold orb state 30-80
+        opacity: 1; // hold opacity 20-80
+      }
+      100% {
+        transform: rotateZ(-$z) rotateY($y) translateX(($orb-size * 3)) rotateZ($z); // translateX * 3
+      }
+    }
+  }
+}

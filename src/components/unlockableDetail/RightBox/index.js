@@ -3,20 +3,19 @@ import {
   openBuynowNftSubscriptionModal,
   openConnectMaticModal,
   openConnectMetamaskModal,
+
+  openBuynowNftCoolDownModal,
+  closeBuynowNftSubscriptionModal,
 } from '@actions/modals.actions';
 import { getChainId } from '@selectors/global.selectors';
 import { getAccount } from '@selectors/user.selectors';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styles from './styles.module.scss';
 import api from '@services/api/api.service';
-import {
-  openBuynowNftCoolDownModal,
-  closeBuynowNftSubscriptionModal,
-} from '@actions/modals.actions';
 import Button from '@components/buttons/button';
 import { useRouter } from 'next/router';
+import styles from './styles.module.scss';
 
 const RightBox = ({ details, id, activeImage }) => {
   const dispatch = useDispatch();
@@ -37,7 +36,7 @@ const RightBox = ({ details, id, activeImage }) => {
     const fetchSubscriptionOffer = async () => {
       try {
         const { digitalaxSubscriptionMarketplaceOffer } = await api.getDigitalaxSubscriptionOffer(
-          details.id
+          details.id,
         );
         setAmountSold(digitalaxSubscriptionMarketplaceOffer.amountSold);
       } catch (e) {
@@ -53,10 +52,9 @@ const RightBox = ({ details, id, activeImage }) => {
 
         for (let i = 0; i < digitalaxSubscriptionCollectors.length; i += 1) {
           for (let j = 0; j < digitalaxSubscriptionCollectors[i].parentsOwned.length; j += 1) {
-            const { digitalaxSubscriptionPurchaseHistory } =
-              await api.getDigitalaxSubscriptionPurchase(
-                digitalaxSubscriptionCollectors[i].parentsOwned[j].id
-              );
+            const { digitalaxSubscriptionPurchaseHistory } = await api.getDigitalaxSubscriptionPurchase(
+              digitalaxSubscriptionCollectors[i].parentsOwned[j].id,
+            );
             if (digitalaxSubscriptionPurchaseHistory.bundleId === details.id) {
               ids.push(digitalaxSubscriptionPurchaseHistory);
               if (lastPurchasedTime < parseInt(digitalaxSubscriptionPurchaseHistory.timestamp)) {
@@ -107,7 +105,7 @@ const RightBox = ({ details, id, activeImage }) => {
             openBuynowNftSubscriptionModal({
               id: details.id,
               priceEth: details.price,
-            })
+            }),
           );
         } else {
           dispatch(openConnectMetamaskModal());
@@ -154,8 +152,8 @@ const RightBox = ({ details, id, activeImage }) => {
         ) : null}
       </div>
       <div className={styles.poapWrapper}>
-        <a href="https://poap.website/digifizzyissue5" target="_blank">
-          <Button className={styles.poapClaimButton}>CLAIM ISSUE 5 POAP!</Button>
+        <a href="https://poap.website/digifizzyissue6" target="_blank" rel="noreferrer">
+          <Button className={styles.poapClaimButton}>CLAIM ISSUE 6 POAP!</Button>
         </a>
         <img src="/images/poap.png" />
       </div>

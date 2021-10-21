@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://skins.digitalax.xyz',  
+  siteUrl: 'https://digifizzy.xyz',  
   generateRobotsTxt: true
 } 

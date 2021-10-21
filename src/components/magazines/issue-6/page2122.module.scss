@@ -1,0 +1,224 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: white;
+  color: black;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+  
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;    
+  }
+
+  .ellipse1 {
+    position: absolute;
+    width: 960px;
+    height: 36px;
+    left: 720px;
+    top: 26px;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #FFFFFF 90.09%, rgba(255, 255, 255, 0) 90.1%);    
+  }
+  .ellipse2 {
+    position: absolute;
+    width: 960px;
+    height: 34px;
+    left: 960px;
+    top: 513px;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #FFFFFF 90.09%, rgba(255, 255, 255, 0) 90.1%);
+  }
+  .ellipse3 {
+    position: absolute;
+    width: 960px;
+    height: 34px;
+    left: 960px;
+    top: 571px;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #FFFFFF 90.09%, rgba(255, 255, 255, 0) 90.1%);
+  }
+  .ellipse4 {
+    position: absolute;
+    width: 960px;
+    height: 34px;
+    left: 960px;
+    top: 629px;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #FFFFFF 90.09%, rgba(255, 255, 255, 0) 90.1%);
+  }
+  .ellipse5 {
+    position: absolute;
+    width: 960px;
+    height: 34px;
+    left: 960px;
+    top: 687px;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #FFFFFF 90.09%, rgba(255, 255, 255, 0) 90.1%);
+  }
+
+  .ellipse6 {
+    position: absolute;
+    width: 960px;
+    height: 246px;
+    left: 960px;
+    top: 759px;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #FFFFFF 36.46%, rgba(255, 255, 255, 0) 67.19%, #FFFFFF 100%);    
+  }
+
+  .ellipse7 {
+    position: absolute;
+    width: 960px;
+    height: 246px;
+    left: 960px;
+    top: 1005px;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #FFFFFF 36.46%, rgba(255, 255, 255, 0) 67.19%, #FFFFFF 100%);    
+  }
+
+  .ellipse8 {
+    position: absolute;
+    width: 960px;
+    height: 246px;
+    left: 960px;
+    top: 1251px;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #FFFFFF 36.46%, rgba(255, 255, 255, 0) 67.19%, #FFFFFF 100%);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 783px;
+    height: 403px;
+    left: 986px;
+    top: 86px;
+    
+    font-family: Bitter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 200px;
+    line-height: 100%;
+    color: #FFFFFF;
+    text-shadow: -10px 0 black, 0 -10px black, 10px 0 black, 0 10px black, -10px -10px black, -10px 10px black, 10px -10px black, 10px 10px black;
+    // -webkit-text-stroke: 10px black;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 274px;
+    height: 111px;
+    left: 1303px;
+    top: 826px;
+    
+    font-family: Bitter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: -10px 0 black, 0 -10px black, 10px 0 black, 0 10px black, -10px -10px black, -10px 10px black, 10px -10px black, 10px 10px black;
+    cursor: pointer;
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(1.1);
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 807px;
+    height: 131px;
+    left: 1036px;
+    top: 1072px;
+    
+    font-family: Bitter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: -3px 0 black, 0 -3px black, 3px 0 black, 0 3px black, -3px -3px black, -3px 3px black, 3px -3px black, 3px 3px black;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 325px;
+    height: 111px;
+    left: 1277px;
+    top: 1329px;
+    
+    font-family: Bitter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: -10px 0 black, 0 -10px black, 10px 0 black, 0 10px black, -10px -10px black, -10px 10px black, 10px -10px black, 10px 10px black;
+    cursor: pointer;
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(1.1);
+    }
+  }
+
+  .image3 {
+    position: absolute;
+    width: 321px;
+    height: 331px;
+    left: 1600px;
+    top: 0px;
+    
+    transition: 0.3s all;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s all;
+    }
+  }
+
+  .text5 {
+    position: absolute;
+    width: 133px;
+    height: 50px;
+    left: 21px;
+    top: 882px;
+    
+    font-family: A DAY WITHOUT SUN;
+    font-size: 50px;
+    line-height: 100%;
+    color: #FFFFFF;    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 227px;
+    height: 40px;
+    left: 21px;
+    top: 1159px;
+    
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+    
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+  }
+}

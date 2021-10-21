@@ -1,0 +1,86 @@
+@import './styles.module.scss';
+.wrapper {
+  @include magazineWrapper();
+
+  background-color: white;
+  display: flex;
+  position: relative;
+
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 243px;
+    height: 100px;
+    left: 702px;
+    top: 35px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 100%;
+    /* identical to box height, or 100px */
+
+    color: #1c6d86;
+
+    -webkit-text-stroke: 3px #ffffff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+    box-sizing: border-box;
+  }
+
+  .link2 {
+    position: absolute;
+    width: 170px;
+    height: 40px;
+    left: 1724px;
+    top: 10px;
+
+    font-family: PingFang HK;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    /* or 100% */
+
+    color: #59d7ff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .text1 {
+    position: absolute;
+    width: 170px;
+    height: 357px;
+    left: 1724px;
+    top: 54px;
+
+    font-family: PingFang HK;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+
+    color: #ff2121;
+
+    a {
+      text-decoration: underline;
+      color: #ff2121;
+    }
+  }
+}

@@ -1,0 +1,532 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #fff;
+
+  .back {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0;
+    top: 0;
+  }
+
+  .right {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0;
+    object-fit: cover;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 309px;
+    height: 116.67px;
+    left: 22px;
+    top: 13px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .text1 {
+    position: absolute;
+    width: 543px;
+    height: 92px;
+    left: 357px;
+    top: 19px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 85px;
+    /* or 170% */
+
+    text-align: right;
+
+    color: #ffffff;
+
+    -webkit-text-stroke: 2px #05ff00;
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 504px;
+    height: 482px;
+    left: -119px;
+    top: 145px;
+
+    background: #000000;
+    border-radius: 50%;
+  }
+
+  .circle2 {
+    position: absolute;
+    width: 424px;
+    height: 424px;
+    left: 460px;
+    top: 191px;
+
+    background: #000000;
+    border-radius: 50%;
+  }
+
+  .circle3 {
+    position: absolute;
+    width: 479px;
+    height: 479px;
+    left: 35px;
+    top: 615px;
+
+    background: #000000;
+    border-radius: 50%;
+  }
+
+  .circle4 {
+    position: absolute;
+    width: 363px;
+    height: 363px;
+    left: 537px;
+    top: 620px;
+
+    background: #000000;
+    border-radius: 50%;
+  }
+
+  .circle5 {
+    position: absolute;
+    width: 281px;
+    height: 281px;
+    left: 21px;
+    top: 1127px;
+
+    background: #000000;
+    border-radius: 50%;
+  }
+
+  .circle6 {
+    position: absolute;
+    width: 292px;
+    height: 292px;
+    left: 432px;
+    top: 988px;
+
+    background: #000000;
+    border-radius: 50%;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 311px;
+    height: 159px;
+    left: 15px;
+    top: 200px;
+    font-family: InaiMathi;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    /* or 154% */
+
+    color: #05ff00;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 334px;
+    height: 214px;
+    left: 17px;
+    top: 359px;
+
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    /* or 154% */
+
+    color: #ffffff;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 384px;
+    height: 214px;
+    left: 480px;
+    top: 230px;
+
+    font-family: InaiMathi;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    /* or 154% */
+
+    text-align: center;
+
+    color: #05ff00;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 387px;
+    height: 305px;
+    left: 477px;
+    top: 314px;
+
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    /* or 154% */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 315px;
+    height: 96px;
+    left: 117px;
+    top: 637px;
+
+    font-family: InaiMathi;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    /* or 150% */
+
+    text-align: center;
+
+    color: #05ff00;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 402px;
+    height: 305px;
+    left: 73px;
+    top: 727px;
+
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    /* or 125% */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 294px;
+    height: 115px;
+    left: 571px;
+    top: 657px;
+
+    font-family: InaiMathi;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 15px;
+    /* or 167% */
+
+    text-align: center;
+
+    color: #05ff00;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 328px;
+    height: 188px;
+    left: 554px;
+    top: 761px;
+
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 15px;
+    /* or 167% */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 212px;
+    height: 115px;
+    left: 472px;
+    top: 1007px;
+
+    font-family: InaiMathi;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 15px;
+    /* or 167% */
+
+    text-align: center;
+
+    color: #05ff00;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 277px;
+    height: 148px;
+    left: 440px;
+    top: 1101px;
+
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 15px;
+    /* or 167% */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 160px;
+    height: 115px;
+    left: 81px;
+    top: 1139px;
+
+    font-family: InaiMathi;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 15px;
+    /* or 167% */
+
+    text-align: center;
+
+    color: #05ff00;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 225px;
+    height: 148px;
+    left: 49px;
+    top: 1213px;
+
+    font-family: Imprima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 15px;
+    /* or 167% */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 572px;
+    height: 160px;
+    left: 994px;
+    top: 31px;
+
+    font-family: DJB Emilys Garden;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 85px;
+    /* or 85% */
+
+    color: #ffffff;
+
+    -webkit-text-stroke: 1px #92ec00;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 891px;
+    height: 92px;
+    left: 1001px;
+    top: 231px;
+
+    font-family: Inter;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    /* or 120% */
+
+    color: #ffffff;
+
+    -webkit-text-stroke: 0.5px #92ec00;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 336px;
+    height: 92px;
+    left: 1531px;
+    top: 300px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 85px;
+    /* or 170% */
+
+    text-align: right;
+
+    color: #ffffff;
+
+    -webkit-text-stroke: 1px #2d42ff;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 883px;
+    height: 431px;
+    left: 985px;
+    top: 371px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    /* or 176% */
+
+    text-align: right;
+
+    color: #ffffff;
+
+    -webkit-text-stroke: 0.3px #92ec00;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 600px;
+    height: 312px;
+    left: 1263px;
+    top: 800px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    /* or 176% */
+
+    text-align: right;
+
+    color: #ffffff;
+
+    -webkit-text-stroke: 0.3px #92ec00;
+  }
+
+  .text19 {
+    position: absolute;
+    width: 777px;
+    height: 261px;
+    left: 990px;
+    top: 1112px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    /* or 176% */
+
+    color: #ffffff;
+    -webkit-text-stroke: 0.3px #92ec00;
+  }
+
+  .text21 {
+    position: absolute;
+    width: 925px;
+    height: 160px;
+    left: 960px;
+    top: 1391px;
+
+    font-family: DJB Emilys Garden;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 85px;
+    /* or 85% */
+
+    color: #ffffff;
+    -webkit-text-stroke: 1px #92ec00;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 208px;
+    height: 249px;
+    left: 1620px;
+    top: 10px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 154.85px;
+    height: 154.85px;
+    left: 1746px;
+    top: 47.96px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .logo1 {
+    position: absolute;
+    width: 317px;
+    height: 317px;
+    left: 940px;
+    top: 784px;
+  }
+
+  .logo2 {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+    left: 1737px;
+    top: 1083px;
+  }
+
+  .logo3 {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+    left: 1737px;
+    top: 1286px;
+  }
+}

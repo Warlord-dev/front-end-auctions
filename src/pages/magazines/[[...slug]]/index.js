@@ -26,9 +26,9 @@ const MagazinePages = () => {
   useEffect(() => {
     const fetchDigitalaxSubscriptionCollectors = async () => {
       try {
-        console.log('account: ', account)
+        console.log('account: ', account);
         let contentUnlocked = false;
-          const issueIndex = magazineIssues.findIndex((item) => item.issueId === issueId);
+        const issueIndex = magazineIssues.findIndex((item) => item.issueId === issueId);
 
         if (account) {
           const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
@@ -45,7 +45,7 @@ const MagazinePages = () => {
             dispatch(globalActions.setContentUnlocked(false));
           }
         }
-        
+
         if (issueIndex < 0) {
           Router.push(`/magazines/${magazineIssues[0].issueId}`);
           return;
@@ -66,9 +66,8 @@ const MagazinePages = () => {
           setCurrentPage(pageNumber);
         }
       } catch (e) {
-        console.log('e: ', e)
+        console.log('e: ', e);
       }
-      
     };
 
     fetchDigitalaxSubscriptionCollectors();

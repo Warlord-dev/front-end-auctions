@@ -1,0 +1,96 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #ff0000;
+
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 412px;
+    height: 26px;
+    left: 31px;
+    top: 45px;
+
+    font-family: Snowburst One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 20px;
+    /* or 40% */
+
+    color: #e10000;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .text1 {
+    position: absolute;
+    width: 626px;
+    height: 80px;
+    left: 324px;
+    top: 21px;
+
+    font-family: Snowburst One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    /* or 111% */
+
+    color: #000000;
+  }
+
+  .link2 {
+    position: absolute;
+    width: 262px;
+    height: 20px;
+    left: 1618px;
+    top: 41px;
+
+    font-family: SNOWBREAK;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 20px;
+    /* or 40% */
+
+    color: #e10087;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .text2 {
+    position: absolute;
+    width: 484px;
+    height: 120px;
+    left: 1396px;
+    top: 85px;
+
+    font-family: SNOWBREAK;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    /* or 133% */
+
+    text-align: right;
+
+    color: #e10087;
+  }
+}

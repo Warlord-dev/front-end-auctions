@@ -1,0 +1,105 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  color: #FF0000;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 798px;
+    height: 836px;
+    left: 192px;
+    top: -88px;        
+  }
+
+  .image4 {
+    position: absolute;
+    width: 489px;
+    height: 512px;
+    left: 0px;
+    top: 985px;    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 323px;
+    height: 338px;
+    left: 1597px;
+    top: 1159px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 717px;
+    height: 1199px;
+    left: 105px;
+    top: 149px;
+    
+    background: linear-gradient(180deg, rgba(93, 0, 108, 0.85) 0%, rgba(200, 156, 207, 0.85) 100%);
+    border: 10px solid #74FF07;
+    box-sizing: border-box;    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 717px;
+    height: 1199px;
+    left: 1082px;
+    top: 149px;
+    
+    background: linear-gradient(180deg, rgba(93, 0, 108, 0.85) 0%, rgba(200, 156, 207, 0.85) 100%);
+    border: 10px solid #74FF07;
+    box-sizing: border-box;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 537px;
+    height: 1058px;
+    left: 212px;
+    top: 215px;
+    
+    font-family: ROMANUS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #FFFFFF;
+        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 537px;
+    height: 1058px;
+    left: 1172px;
+    top: 215px;
+    
+    font-family: ROMANUS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #FFFFFF;
+  }
+}

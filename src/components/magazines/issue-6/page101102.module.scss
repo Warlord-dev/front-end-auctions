@@ -1,0 +1,342 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  background-color: #000000;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+  }
+
+  .video1 {
+    position: absolute;
+    width: 962px;
+    height: 962px;
+    left: 958px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 461px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 463px;
+    left: 960px;
+    top: 1034px;
+    
+    background: #A748F2;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 906px;
+    height: 110px;
+    left: 986px;
+    top: 964px;
+    
+    font-family: Wicked Halloween;
+    font-size: 110px;
+    line-height: 100%;
+    color: #62FFEC;
+    -webkit-text-stroke: 1px #FF5C92;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 906px;
+    height: 110px;
+    left: 1186px;
+    top: 1094px;
+    
+    font-family: Wicked Halloween;
+    font-size: 110px;
+    line-height: 100%;
+    color: #62FFEC;
+    -webkit-text-stroke: 1px #FF5C92;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 906px;
+    height: 110px;
+    left: 1186px;
+    top: 1209px;
+    
+    font-family: Wicked Halloween;
+    font-size: 110px;
+    line-height: 100%;
+    color: #62FFEC;
+    -webkit-text-stroke: 1px #FF5C92;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 906px;
+    height: 110px;
+    left: 1439px;
+    top: 1339px;
+    
+    font-family: Wicked Halloween;
+    font-size: 110px;
+    line-height: 100%;
+    color: #62FFEC;
+    -webkit-text-stroke: 1px #FF5C92;
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 202px;
+    height: 202px;
+    left: 967px;
+    top: 1279px;
+   
+    
+    background: #6534FF;
+    border: 4px solid #FCCDD3;
+    border-radius: 50%;    
+  }
+
+  .circleText1 {
+    position: absolute;
+    width: 167.1px;
+    height: 118.55px;
+    left: 962px;
+    top: 1347.2px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+    
+    color: #FCCDD3;
+    -webkit-text-stroke:  1px #FCCDD3;
+    transform-origin: 0 0;
+    transform: rotate(-20deg);    
+  }
+
+  .circleText2 {
+    position: absolute;
+    width: 151px;
+    height: 119px;
+    left: 1009px;
+    top: 1408px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .poapImage {
+    position: absolute;
+    width: 154.26px;
+    height: 154.26px;
+    left: 1087.52px;
+    top: 1316.76px;
+    
+    transform-origin: 0 0;
+    transform: rotate(-20deg);
+
+    transition: all 0.3s;
+    &:hover {
+      transition: all 0.3s;
+      transform: rotate(-20deg) scale(1.1);
+    }
+  }
+
+  .image3 {
+    position: absolute;
+    width: 196px;
+    height: 196px;
+    left: 589px;
+    top: 21px;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.1)
+    }
+  }
+
+  .image4 {
+    position: absolute;
+    width: 196px;
+    height: 196px;
+    left: 709px;
+    top: 194px;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.1)
+    }
+  }
+
+  .image5 {
+    position: absolute;
+    width: 196px;
+    height: 196px;
+    left: 542px;
+    top: 309px;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.1)
+    }
+  }
+
+  .image6 {
+    position: absolute;
+    width: 196px;
+    height: 196px;
+    left: 702px;
+    top: 442px;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.1)
+    }
+  }
+
+  .itemImage1 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 237px;
+    top: 39px;    
+  }
+
+  .item1 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 237px;
+    top: 39px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .itemImage2 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 10px;
+    top: 350px;
+  }
+
+  .item2 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 10px;
+    top: 350px;
+    padding: 35px;
+    object-fit: cover;    
+  }
+
+  .itemImage3 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 340px;
+    top: 540px;
+  }
+
+  .item3 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 340px;
+    top: 540px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .itemImage4 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 11px;
+    top: 808px;
+  }
+
+  .item4 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 11px;
+    top: 808px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .itemImage5 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 615px;
+    top: 851px;
+  }
+
+  .item5 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 615px;
+    top: 851px;
+    padding: 35px;
+    object-fit: cover;   
+  }
+
+  .itemImage6 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 47px;
+    top: 1163px;
+  }
+
+  .item6 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 47px;
+    top: 1163px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .itemImage7 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 446px;
+    top: 1170px;
+  }
+
+  .item7 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 446px;
+    top: 1170px;
+    padding: 35px;
+    object-fit: cover;
+  }
+}

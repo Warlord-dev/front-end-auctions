@@ -1,0 +1,61 @@
+@import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+.wrapper {
+  @include magazineWrapper();
+  background: black;
+
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 583px;
+    height: 86px;
+    left: 981px;
+    top: 9px;
+
+    font-family: 'Baloo Chettan 2';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+    /* or 80px */
+
+    color: #f2ff57;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 539px;
+    height: 1043px;
+    left: 1170px;
+    top: 250px;
+
+    background: #000000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 463px;
+    height: 940px;
+    left: 1206px;
+    top: 281px;
+
+    font-family: 'Baloo Chettan 2';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+}
