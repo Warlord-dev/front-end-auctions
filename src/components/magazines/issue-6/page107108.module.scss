@@ -16,10 +16,20 @@
 
   .image1 {
     position: absolute;
+    width: 1111px;
+    height: 1497px;
+    right: 0px;
+    top: 0px;    
+  }
+
+  .rect2 {
+    position: absolute;
     width: 960px;
     height: 1497px;
-    left: 960px;
-    top: 0px;    
+    left: 0px;
+    top: 0px;
+    
+    background: white;
   }
 
   .smile1 {

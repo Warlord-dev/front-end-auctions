@@ -6,6 +6,7 @@ const Page107108 = () => {
     <div className={styles.wrapper}>
       <div className={styles.rect1}></div>
       <img src='/magazine/6/images/107108_image1.png' className={styles.image1} />
+      <div className={styles.rect2}></div>
 
       <img src='/magazine/6/images/107108_image2.png' className={styles.smile1} />
       <img src='/magazine/6/images/107108_image2.png' className={styles.smile2} />
