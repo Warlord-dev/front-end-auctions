@@ -124,7 +124,7 @@ const Page1314 = () => {
         <br /><br />
         Rewards can be anything from native tokens, speciality NFTs, to the possibility of a full time gig within a truly web3 native world.
         <br /><br />
-        You can think of Wayfare like a human in the loop AMM, where rather than incentivising a generic race to the bottom free for all where the reward is little and competition is high, instead, Wayfare responds what people actually want— high quality personalised human connection. 
+        You can think of Wayfare like a human in the loop AMM, where rather than incentivising a generic race to the bottom free for all where the reward is little and competition is high, instead, Wayfare responds to what people actually want— high quality personalised human connection. 
         <br /><br />
         If you’d like to try out Wayfare in your own discord server today, send a message to <span>Emma_13#2010.</span>
       </div>
