@@ -46,9 +46,9 @@ const Page0910 = () => {
         <br /><br />
         It’s an entirely different paradigm from the legacy web community’s passive consumption.
         <br /><br />
-        We need the right individuals to support us, encourage us, look out for us, and push us towards progress to find our way through the morass.
+        Web3 communities may be smaller as far as size is concerned compared to those whose businesses are supported by advertising–but the difference is when the community is committed to creating content, cooperating, and collaborating on projects beneficial to the group.
         <br /><br />
-        We need to be part of a community where our voice matters—a place where we’re not only recognized but received with open arms. A community where our passion, presence, and participation are cherished and valued. A place where the value we create is closely entwined with the lives of real people–regardless of gender, race, creed, politics, sexuality, and everything else that divides us IRL. A community where we know 100% for sure we’re among kindred spirits.
+        And contrary to what you might think, there IS a community for you out there. There are a plethora of interests out there with a community with your name on it–whatever your passion might be.
       </div>
     </div>
   )
