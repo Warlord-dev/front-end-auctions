@@ -117,7 +117,7 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           <Link href="/marketplace">
             <a className={styles.link}>DIGITAL WEB3 FASHION</a>
           </Link>
-          <Link href="http://globaldesignernetwork.xyz/global">
+          <Link href="https://designers.digitalax.xyz/global/">
             <a className={styles.link} target="_blank">
               GLOBAL DESIGNER NETWORK
             </a>
