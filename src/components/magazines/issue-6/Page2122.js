@@ -58,7 +58,7 @@ const Page2122 = () => {
       </a>
 
       <audio ref={refAudio} loop>
-        <source src='/magazine/6/sounds/2122_sound1.mp3' type='audio/mpeg' />
+        <source src='/magazine/6/sounds/david2.mp3' type='audio/mpeg' />
       </audio>
       <div className={styles.text5}>
         Ana Rivera
