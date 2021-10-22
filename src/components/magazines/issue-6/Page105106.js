@@ -50,7 +50,7 @@ const Page105106 = () => {
         MUSASHI
       </div>
       <div className={styles.text10}>
-        Blockchain Gaming Wearable Communities (CV, AAVEGOTCHI, DCL)
+        Blockchain Gaming Wearable Communities (CV, NEOS VR, The Reaalm)
       </div>
       
       <a href='https://designers.digitalax.xyz/designers/Stan%20Mclygin/' target='_blank'>
