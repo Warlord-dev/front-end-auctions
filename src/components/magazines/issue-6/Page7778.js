@@ -1222,7 +1222,7 @@ const Page7778 = () => {
       <div className={styles.text2}> THE DLTA GUILD </div>
       
       <img src="/magazine/6/images/53_54_image2.png" className={styles.link1} />
-      <a href="https://poap.website/metaversalappraisals" target="_blank">
+      <a href="https://poap.website/metaversalappraisals6" target="_blank">
         <img src="/magazine/6/images/53_54_image3.png" className={styles.image3} />
       </a>
       <div className={styles.text3}>
