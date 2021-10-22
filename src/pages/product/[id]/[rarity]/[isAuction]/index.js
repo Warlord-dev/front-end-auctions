@@ -11,6 +11,7 @@ import UserList from '@components/user-list';
 import FashionList from '@components/fashion-list';
 import BannerBar from '@components/banner-bar';
 import PriceCard from '@components/price-card';
+import ProductPageLoader from '@components/product-page-loader';
 
 import {
   getDigitalaxMarketplaceV2Offer,
@@ -92,6 +93,10 @@ const Product = ({ pageTitle }) => {
   const [sourceType, setSourceType] = useState([]);
   const [lookIds, setLookIds] = useState([]);
   const [lookInspo, setLookInspo] = useState([]);
+
+  const [isFetchedProduct, setIsFetchedProduct] = useState(false)
+  const [isFetchedViewCount, setIsFetchedViewCount] = useState(false)
+  const [isFetchedSecondDesigners, setIsFetchedSecondDesigners] = useState(false)
   const fashionData = [
     {
       title: 'DeFi Staking Functionality',
@@ -271,6 +276,8 @@ const Product = ({ pageTitle }) => {
           setProduct(digitalaxGarmentAuction);
         }
       }
+
+      setIsFetchedProduct(true)
     };
     // };
     fetchGarmentV2ByID();
@@ -291,16 +298,19 @@ const Product = ({ pageTitle }) => {
               image: designerData['image_url'],
             });
             setSecondDesigners(secondDesignersRes);
+            setIsFetchedSecondDesigners(true)
           });
       });
     } else {
       setSecondDesigners([]);
+      setIsFetchedSecondDesigners(true)
     }
 
     const fetchViews = async () => {
       const viewData = await digitalaxApi.getViews('product', id);
       setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0);
       setViewCount(viewData && viewData[0] && viewData[0].viewCount ? viewData[0].viewCount : 0);
+      setIsFetchedViewCount(true)
     };
 
     const addViewCount = async () => {
@@ -397,6 +407,12 @@ const Product = ({ pageTitle }) => {
   // const isLookHakathon = () => {
   //   return lookIds.includes(id);
   // };
+
+  if (!isFetchedProduct || !isFetchedSecondDesigners || !isFetchedViewCount) {
+    return (
+      <ProductPageLoader />
+    )
+  }
 
   return (
     <>
