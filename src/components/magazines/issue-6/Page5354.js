@@ -217,7 +217,7 @@ const Page5354 = () => {
       <div className={styles.text21}>Destroy the wall</div>
       
       <img src="/magazine/6/images/53_54_image2.png" className={styles.link1} />
-      <a href="https://poap.website/gatekeepergardens6" target="_blank">
+      <a href="https://poap.website/gatekeeperg6" target="_blank">
         <img src="/magazine/6/images/53_54_image3.png" className={styles.image2} />
       </a>
       <img src="/magazine/6/images/53_54_epic_logo.png" className={styles.logo1} />
