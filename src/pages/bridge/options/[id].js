@@ -19,7 +19,7 @@ const Options = () => {
               <a className={styles.mainBtn}> $MONA ERC-20 </a>
             </Link>
             <Link href={`/bridge/${id === 1 ? 'withdraw' : 'deposit'}/2`}>
-              <a className={styles.mainBtn}> ESPA NFT SKINS </a>
+              <a className={styles.mainBtn}> WEB3 FASHION NFTS </a>
             </Link>
             {/* <Link href={`/bridge/${id === 1 ? 'withdraw' : 'deposit'}/3`}>
               <a className={styles.mainBtn}> DIGIFIZZY ERC-998 BUNDLE </a>
