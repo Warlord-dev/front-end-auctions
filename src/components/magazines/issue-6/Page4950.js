@@ -90,14 +90,19 @@ const Page4950 = () => {
       <div className={styles.text13}>Hugo Alves</div>
       <div className={styles.text14}>New Heights</div>
       <div className={styles.text15}>
-        This piece is a mark of improvement of my artistic skills, it symbolizes the path to get
-        to where you want to, I did this piece in a particular moment where a was stuck in place, I
-        was stopping myself from growing artistically, so I made this piece to remind me where I
+        This piece is a mark of improvement of the artistic skills, it simbolizes the path to get where you want to get, i did this piece in a particular moment where a was stuck in place, i was stopping myself to grow artistically, so i made this piece to remind me where a can get if i study and didn't stop there, i'm glad i did, that why the astronaut in the moon, as a small step for the man, but a giant leap for mankind, and the constellations in the sky spelling new heights, so i can forever remember to keep going.
       </div>
+      <a href="https://twitter.com/voidkross" target="_blank">
+        <img src="/magazine/6/images/49_50_image9.gif" className={styles.link8} />
+      </a>
       <div className={styles.text16}>
-        can get to if I study and don't stop there, I'm glad I did, that's why the astronaut on the
-        moon, as a small step for man, but a giant leap for mankind, and the constellations in
-        the sky spelling new heights, so I can forever remember to keep going.
+        voidkross  
+      </div>
+      <div className={styles.text17}>
+        21st_century_decay.gif
+      </div>
+      <div className={styles.text18}>
+        GOLDEN LUCK, PENNY HEADS UP. THIS IS AN ARTISTIC STATEMENT TO COMPRESSION, COLOR, DISTORTION, AND PUNK VOIDKROSS_2021
       </div>
       <div className={styles.playRect} />
       <img
