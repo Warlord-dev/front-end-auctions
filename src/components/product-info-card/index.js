@@ -17,7 +17,6 @@ const ProductInfoCard = ({
   showRarity = false,
   isAuction = false,
   sold,
-  isLook = false,
 }) => {
   const router = useRouter();
   const monaPerEth = useSelector(getMonaPerEth);
@@ -61,50 +60,47 @@ const ProductInfoCard = ({
           showDesigner
           showCollectionName={showCollectionName}
           showRarity={showRarity}
-          showButton={isLook}
+          showButton={false}
           isAuction={isAuction}
           withLink
-          buttonText={isLook ? 'Vote now' : null}
         />
       </div>
-      {!isLook && (
-        <div className={styles.infoCardWrapper}>
-          <InfoCard borderColor="#9c28ff" boxShadow="rgba(197, 32, 129, 0.5)">
-            {isAuction ? (
-              <>
-                <div className={styles.infoWrapper}>
-                  <PriceCard mainText={time} />
-                  <PriceCard mainText={getPrice()} />
-                </div>
-                <div className={styles.buttonWrapper}>
-                  <Link
-                    href={`/product/${product?.id}/${getRarityId(product?.rarity)}/${
-                      isAuction ? 1 : 0
-                    }`}
-                  >
-                    <a>
-                      <NewButton disable={sold} text={sold ? 'Sold' : 'Place a Bid'} />
-                    </a>
-                  </Link>
-                </div>
-              </>
-            ) : (
+      <div className={styles.infoCardWrapper}>
+        <InfoCard borderColor="#9c28ff" boxShadow="rgba(197, 32, 129, 0.5)">
+          {isAuction ? (
+            <>
               <div className={styles.infoWrapper}>
+                <PriceCard mainText={time} />
                 <PriceCard mainText={getPrice()} />
+              </div>
+              <div className={styles.buttonWrapper}>
                 <Link
                   href={`/product/${product?.id}/${getRarityId(product?.rarity)}/${
                     isAuction ? 1 : 0
                   }`}
                 >
                   <a>
-                    <NewButton disable={sold} text={sold ? 'Sold out' : 'Buy Now'} />
+                    <NewButton disable={sold} text={sold ? 'Sold' : 'Place a Bid'} />
                   </a>
                 </Link>
               </div>
-            )}
-          </InfoCard>
-        </div>
-      )}
+            </>
+          ) : (
+            <div className={styles.infoWrapper}>
+              <PriceCard mainText={getPrice()} />
+              <Link
+                href={`/product/${product?.id}/${getRarityId(product?.rarity)}/${
+                  isAuction ? 1 : 0
+                }`}
+              >
+                <a>
+                  <NewButton disable={sold} text={sold ? 'Sold out' : 'Buy Now'} />
+                </a>
+              </Link>
+            </div>
+          )}
+        </InfoCard>
+      </div>
     </div>
   );
 };

@@ -87,12 +87,12 @@ const LandingPage = () => {
       const prods = [];
 
       shuffle(digitalaxCollectionGroups).forEach((collectionGroup) => {
-        if (collectionGroup.id === '15') {
-          const ids = [];
-          collectionGroup.auctions.forEach((auction) => ids.push(auction.id));
-          collectionGroup.collections.forEach((collection) => ids.push(collection.id));
-          setLookIds(ids);
-        }
+        // if (collectionGroup.id === '15') {
+        //   const ids = [];
+        //   collectionGroup.auctions.forEach((auction) => ids.push(auction.id));
+        //   collectionGroup.collections.forEach((collection) => ids.push(collection.id));
+        //   setLookIds(ids);
+        // }
         if (
           collectionGroup.auctions.length > 1 ||
           (collectionGroup.auctions.length === 1 && collectionGroup.auctions[0].id !== '0')
@@ -239,7 +239,6 @@ const LandingPage = () => {
                     showRarity
                     showCollectionName
                     isAuction={prod.auction}
-                    isLook={lookIds.includes(prod.id)}
                   />
                 </>
               );
