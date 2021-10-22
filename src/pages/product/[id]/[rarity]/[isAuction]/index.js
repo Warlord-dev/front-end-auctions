@@ -184,7 +184,7 @@ const Product = ({ pageTitle }) => {
       digitalaxCollectionGroup.collections.forEach((collection) => ids.push(collection.id));
       setLookIds(ids);
       dispatch(globalActions.setAllUsers(users));
-      
+
       if (!parseInt(isAuction)) {
         const children = [];
 
@@ -258,14 +258,11 @@ const Product = ({ pageTitle }) => {
       } else {
         if (parseInt(id) > 4) {
           const { digitalaxGarmentV2Auction } = await getGarmentV2ByAuctionId(chainId, id);
-          const ownersList = (digitalaxGarmentV2Auction && digitalaxGarmentV2Auction.resulted) ? await getOwners(
-            [digitalaxGarmentV2Auction?.garment],
-            1,
-            users,
-          ) : []
-          setOwners(
-            ownersList
-          );
+          const ownersList =
+            digitalaxGarmentV2Auction && digitalaxGarmentV2Auction.resulted
+              ? await getOwners([digitalaxGarmentV2Auction?.garment], 1, users)
+              : [];
+          setOwners(ownersList);
           setTokenIds([digitalaxGarmentV2Auction.garment.id]);
           setProduct(digitalaxGarmentV2Auction);
         } else {
@@ -283,20 +280,19 @@ const Product = ({ pageTitle }) => {
     });
 
     if (secondDesigner && secondDesigner.designer && secondDesigner.designer.length > 0) {
-      const secondDesignersRes = []
-      secondDesigner.designer.map(designerItem => {
+      const secondDesignersRes = [];
+      secondDesigner.designer.map((designerItem) => {
         fetch(designerItem)
-        .then((response) => response.json())
-        .then((designerData) => {
-          secondDesignersRes.push({
-            name: designerData['Designer ID'],
-            description: designerData['description'],
-            image: designerData['image_url'],
-          })
-          setSecondDesigners(secondDesignersRes);
-        });
-      })
-      
+          .then((response) => response.json())
+          .then((designerData) => {
+            secondDesignersRes.push({
+              name: designerData['Designer ID'],
+              description: designerData['description'],
+              image: designerData['image_url'],
+            });
+            setSecondDesigners(secondDesignersRes);
+          });
+      });
     } else {
       setSecondDesigners([]);
     }
@@ -329,7 +325,7 @@ const Product = ({ pageTitle }) => {
       const fetchSourceType = async () => {
         const data = await digitalaxApi.getSourceType(product.garment.name);
         if (data?.sourceType) setSourceType(data.sourceType);
-        if (isLookHakathon() && data?.LOOKNFTInspo) setLookInspo(data?.LOOKNFTInspo.split(','));
+        // if (isLookHakathon() && data?.LOOKNFTInspo) setLookInspo(data?.LOOKNFTInspo.split(','));
       };
 
       fetchSourceType();
@@ -393,14 +389,14 @@ const Product = ({ pageTitle }) => {
       openCurrentWearersModal({
         tokenIds,
         v1: id.includes('v1'),
-        type: parseInt(isAuction)
+        type: parseInt(isAuction),
       }),
     );
   };
 
-  const isLookHakathon = () => {
-    return lookIds.includes(id);
-  };
+  // const isLookHakathon = () => {
+  //   return lookIds.includes(id);
+  // };
 
   return (
     <>
@@ -439,11 +435,11 @@ const Product = ({ pageTitle }) => {
             <div className={styles.body}>
               <div className={styles.mainBody}>
                 <div className={styles.imageCardWrapper}>
-                  {!isLookHakathon() ? (
-                    <div className={styles.rarity}> {getRarity(parseInt(rarity))}</div>
-                  ) : (
-                    <div className={styles.lookTitle}>LOOK Hackathon</div>
-                  )}
+                  {/* {!isLookHakathon() ? ( */}
+                  <div className={styles.rarity}> {getRarity(parseInt(rarity))}</div>
+                  {/* ) : ( */}
+                  {/* <div className={styles.lookTitle}>LOOK Hackathon</div> */}
+                  {/* )} */}
                   <ImageCard
                     data={product}
                     price={(getPrice() / 10 ** 18).toFixed(2)}
@@ -452,7 +448,7 @@ const Product = ({ pageTitle }) => {
                       (parseInt(isAuction) === 1 && Date.now() > product.endTime * 1000) ||
                       offer?.amountSold >= offer?.totalAmount
                     }
-                    showButton={!isLookHakathon()}
+                    // showButton={!isLookHakathon()}
                   />
 
                   {!!product?.children?.length && (
@@ -487,9 +483,7 @@ const Product = ({ pageTitle }) => {
                 <div className={styles.infoWrapper}>
                   <div className={styles.leftSection}>
                     <div className={styles.amount}>
-                      {isLookHakathon() ? (
-                        'React with Love to Vote'
-                      ) : parseInt(isAuction) !== 1 ? (
+                      {parseInt(isAuction) !== 1 ? (
                         <>
                           {offer?.amountSold} of {offer?.totalAmount}
                         </>
@@ -498,18 +492,9 @@ const Product = ({ pageTitle }) => {
                       )}
                       <div className={styles.helper}>
                         <span className={styles.questionMark}>?</span>
-                        <span
-                          className={styles.description}
-                          style={{ width: isLookHakathon() ? 170 : 300 }}
-                        >
-                          {!isLookHakathon() ? (
-                            <>
-                              You can also stake this NFT for yield + get the original source file.
-                              Check <a href={`${window.location.pathname}#fashion_list`}>here</a>.
-                            </>
-                          ) : (
-                            <>Please sign in to vote</>
-                          )}
+                        <span className={styles.description} style={{ width: 300 }}>
+                          You can also stake this NFT for yield + get the original source file.
+                          Check <a href={`${window.location.pathname}#fashion_list`}>here</a>.
                         </span>
                       </div>
                     </div>
@@ -538,7 +523,7 @@ const Product = ({ pageTitle }) => {
                         <div className={styles.description}>{product?.garment?.description}</div>
                       </div>
                     </InfoCard>
-                    {!isLookHakathon() && !!sourceType.length && (
+                    {/* {!isLookHakathon() && !!sourceType.length && (
                       <div className={styles.mobileRightSection}>
                         {sourceType.map((st) => (
                           <div className={styles.item}>
@@ -551,46 +536,46 @@ const Product = ({ pageTitle }) => {
                           </div>
                         ))}
                       </div>
-                    )}
-                    {!isLookHakathon() ? (
-                      <>
-                        <div className={styles.actions}>
-                          <div className={styles.buttonWrapper}>
-                            <PriceCard
-                              mainText={`${(getPrice() / 10 ** 18).toFixed(2)} MONA ($${(
-                                (getPrice() / 10 ** 18) *
-                                parseFloat(monaPerEth) *
-                                exchangeRate
-                              ).toFixed(2)})`}
-                              subText={parseInt(isAuction) === 1 ? 'highest bid' : 'sale price'}
-                            />
-                          </div>
-                        </div>
-                        <button type="button" className={styles.viewBidHistory} onClick={onHistory}>
-                          view {parseInt(isAuction) === 1 ? 'bid' : 'purchase'} history
-                        </button>
-                        <button type="button" className={styles.bespokeBtn} onClick={onBespokeBtn}>
-                          Want something more Bespoke?
-                        </button>
-                        <a href="https://staking.digitalax.xyz/" target="_blank">
-                          <button type="button" className={styles.stakeBtn}>
-                            STAKE YOUR FASHION FOR $MONA YIELD
-                          </button>
-                        </a>
-                      </>
-                    ) : null}
-                    {isLookHakathon() && (
-                      <div className={styles.lookInspo}>
-                        <div className={styles.title}>LOOK NFT Inspo:</div>
-                        {lookInspo.map((item, index) => (
-                          <div className={styles.inspoItem} key={index}>
-                            {item}
-                          </div>
-                        ))}
+                    )} */}
+                    {/* {!isLookHakathon() ? ( */}
+                    {/* <> */}
+                    <div className={styles.actions}>
+                      <div className={styles.buttonWrapper}>
+                        <PriceCard
+                          mainText={`${(getPrice() / 10 ** 18).toFixed(2)} MONA ($${(
+                            (getPrice() / 10 ** 18) *
+                            parseFloat(monaPerEth) *
+                            exchangeRate
+                          ).toFixed(2)})`}
+                          subText={parseInt(isAuction) === 1 ? 'highest bid' : 'sale price'}
+                        />
                       </div>
-                    )}
+                    </div>
+                    <button type="button" className={styles.viewBidHistory} onClick={onHistory}>
+                      view {parseInt(isAuction) === 1 ? 'bid' : 'purchase'} history
+                    </button>
+                    <button type="button" className={styles.bespokeBtn} onClick={onBespokeBtn}>
+                      Want something more Bespoke?
+                    </button>
+                    <a href="https://staking.digitalax.xyz/" target="_blank">
+                      <button type="button" className={styles.stakeBtn}>
+                        STAKE YOUR FASHION FOR $MONA YIELD
+                      </button>
+                    </a>
+                    {/* </> */}
+                    {/* ) : null} */}
+                    {/* {isLookHakathon() && (
+                    <div className={styles.lookInspo}>
+                      <div className={styles.title}>LOOK NFT Inspo:</div>
+                      {lookInspo.map((item, index) => (
+                        <div className={styles.inspoItem} key={index}>
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                    )} */}
                   </div>
-                  {!isLookHakathon() && !!sourceType.length && (
+                  {/* {!isLookHakathon() && !!sourceType.length && (
                     <div className={styles.rightSection}>
                       {sourceType.map((st) => (
                         <div className={styles.item}>
@@ -603,7 +588,7 @@ const Product = ({ pageTitle }) => {
                         </div>
                       ))}
                     </div>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
@@ -670,70 +655,72 @@ const Product = ({ pageTitle }) => {
               </Container>
             </section>
 
-            {
-            secondDesigners && secondDesigners.length > 0 && 
-            secondDesigners.map(item => {
-              return (
-                <section className={[styles.designerSection, styles.margin50].join(' ')} key={item.name}>
-                  <video autoPlay loop muted className={styles.video}>
-                    <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
-                  </video>
-                  <Container>
-                    <div className={styles.designerBody}>
-                      <div className={styles.title}> designer </div>
-                      <div className={styles.data}>
-                        <a
-                          href={`https://designers.digitalax.xyz/designers/${item.name}`}
-                          target="_blank"
-                        >
-                          <ImageCard showButton={false} imgUrl={item.image} />
-                        </a>
-                        <div className={styles.infoWrapper}>
-                          {owners.length ? (
-                            <div className={styles.wearersLabel}>current wearer/S</div>
-                          ) : (
-                            <></>
-                          )}
-                          {owners.length ? (
-                            <UserList
-                              className={styles.userList}
-                              users={owners}
-                              userLimit={7}
-                              onClickSeeAll={onClickSeeAllWearers}
-                            />
-                          ) : (
-                            <></>
-                          )}
-                          <InfoCard libon="./images/metaverse/party_glasses.png">
-                            <a
-                              href={`https://designers.digitalax.xyz/designers/${item.name}`}
-                              target="_blank"
-                            >
-                              <div className={styles.name}> {item.name} </div>
-                            </a>
-                            <div className={styles.description}>{item.description}</div>
-                            <a
-                              href={`https://designers.digitalax.xyz/designers/${item.name}`}
-                              target="_blank"
-                            >
-                              <button type="button" className={styles.profileButton}>
-                                View Full Profile
+            {secondDesigners &&
+              secondDesigners.length > 0 &&
+              secondDesigners.map((item) => {
+                return (
+                  <section
+                    className={[styles.designerSection, styles.margin50].join(' ')}
+                    key={item.name}
+                  >
+                    <video autoPlay loop muted className={styles.video}>
+                      <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
+                    </video>
+                    <Container>
+                      <div className={styles.designerBody}>
+                        <div className={styles.title}> designer </div>
+                        <div className={styles.data}>
+                          <a
+                            href={`https://designers.digitalax.xyz/designers/${item.name}`}
+                            target="_blank"
+                          >
+                            <ImageCard showButton={false} imgUrl={item.image} />
+                          </a>
+                          <div className={styles.infoWrapper}>
+                            {owners.length ? (
+                              <div className={styles.wearersLabel}>current wearer/S</div>
+                            ) : (
+                              <></>
+                            )}
+                            {owners.length ? (
+                              <UserList
+                                className={styles.userList}
+                                users={owners}
+                                userLimit={7}
+                                onClickSeeAll={onClickSeeAllWearers}
+                              />
+                            ) : (
+                              <></>
+                            )}
+                            <InfoCard libon="./images/metaverse/party_glasses.png">
+                              <a
+                                href={`https://designers.digitalax.xyz/designers/${item.name}`}
+                                target="_blank"
+                              >
+                                <div className={styles.name}> {item.name} </div>
+                              </a>
+                              <div className={styles.description}>{item.description}</div>
+                              <a
+                                href={`https://designers.digitalax.xyz/designers/${item.name}`}
+                                target="_blank"
+                              >
+                                <button type="button" className={styles.profileButton}>
+                                  View Full Profile
+                                </button>
+                              </a>
+                            </InfoCard>
+                            <a href="https://designers.digitalax.xyz/getdressed" target="_blank">
+                              <button type="button" className={styles.getDressedButton}>
+                                GET BESPOKE DRESSED BY THIS DESIGNER!
                               </button>
                             </a>
-                          </InfoCard>
-                          <a href="https://designers.digitalax.xyz/getdressed" target="_blank">
-                            <button type="button" className={styles.getDressedButton}>
-                              GET BESPOKE DRESSED BY THIS DESIGNER!
-                            </button>
-                          </a>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </Container>
-                </section>
-              )
-            })
-            }
+                    </Container>
+                  </section>
+                );
+              })}
           </>
         ) : null}
 

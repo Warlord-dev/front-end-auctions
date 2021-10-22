@@ -111,7 +111,6 @@ const Auctions = () => {
               <Container>
                 <div className={styles.body}>
                   <ProductInfoCard
-                    isLook={id === '15'}
                     product={filteredProducts[index]}
                     price={
                       filteredProducts[index].topBid || filteredProducts[index].primarySalePrice

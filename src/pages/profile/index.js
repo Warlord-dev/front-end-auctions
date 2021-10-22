@@ -85,15 +85,12 @@ const UserProfile = () => {
   //   }
 
   const onClickReturn = () => {
-    window.history.back()
-  }
+    window.history.back();
+  };
 
   return (
     <div className={styles.wrapper}>
-      <button
-        className={styles.returnButton}
-        onClick={onClickReturn}
-      >
+      <button className={styles.returnButton} onClick={onClickReturn}>
         RETURN
       </button>
       <UserInfo
