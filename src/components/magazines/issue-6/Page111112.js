@@ -16,18 +16,19 @@ const Page111112 = () => {
       <img src='/magazine/6/images/111112_image2.png' className={styles.image2} />
 
       <div className={styles.text1}>
-        Global Individualism. 
+        Native to the Medium.
       </div>
       <div className={styles.text2}>
-        Although obvious to so many today, going back in time, it’s sometimes hard to fathom that innovations as industrial as the printing press or as boring as a novel approach to keeping records of mundane information, like who owns what and how much, has paved the way for things so globally transformative and impactful to not just how we exist now but how we comprehend the full shapes, scope and vitality of every part of our experiences. 
-        <br /><br />
+        Currency is a time keeping device meant to help us find our way from wherever we may be to the places we desire to go. In many ways, it is what also allows us to cease being captive to the myth of normalcy and the centralised tyranny that tells us that there are only a handful of valid ways to be human, and, if for some reason we aren’t in fitting with this from the get go, then the demands for us to contort into these accepted forms of being continue to become more and more asphyxiating.        <br /><br />
         It’s these increasingly efficienct approaches to creating and transferring information and content that continue to drive forth opportunities for better societal conditions and economic activity. The blockchain, as the first real world proof of triple entry bookkeeping, allows us to gain additional dimensions of context and expand the range of space we can create wealth within; both financially and culturally.  
         <br /><br />
-        We are still not yet even close to realising the magnitude of just what is in store for our society, and everyday that decentralised tech becomes increasingly adopted, utilised and valued, this becomes just that much more saliently evident. With incentives aligned and everyone sharing in the value generated across all aspects of the system, our individual agency and ownership is directly baked into everything that we do, further empowering our recognised worth on the global stage. 
+        Keeping the courage of your convictions even in the most unstable and erratic environments requires continued practice for mastering of the fundamentals. We must dislodge from the toxic status quo and embrace the surroundings of this new world, rebuilding our lives on a more authentic and sincere basis and reconfiguring our internal clocks.         <br /><br />
         <br /><br />
-        Yet, it’s not just how we are seen in the eyes of others, but true self ownership, empowered by decentralised tech and its principles, enables us to form our digital identities and have them exist well past the platforms that they were built on. We no longer have to conform to the norm, industry standards, bigger players or contort ourselves to fit into ever smaller boxes. Decentralised identity maximises our potential for growth, prosperity, creativity and wealth. 
+        Because navigation is all about effective timekeeping and learning to record the movement of dynamic streams of relevant information as they disperse and cluster across topic spaces over time. One of the most astonishing internal clocks belongs to the bioluminescent Bermuda fireworm. A tiny marine organism with just a fraction of the cognitive capacity of us humans, and yet, internally equipped with three different timekeeping devices, each with extreme precision: regular twenty-four-hour diurnal clock, a lunar clock with a 27.3-day cycle, and an interval timer to tick out the exact minutes past sunset.        <br /><br />
         <br /><br />
-        And it’s this autonomy that leads us to greater mastery over our primary skills and drives so that we can effectively self weaponise all of our attributes and find new means of collaboration in ever present competition. 
+        The exactitude is utterly remarkable and like with this case and others, we can take instruction from evolutionary systems, battle hardened by hundreds of millions of years of testing and optimisation, to learn how we can best configure consensus and coordination in decentralised networks. 
+        <br /><br />
+        Extending this further, we can then build higher fidelity representations of locations that are based on our point of view, experiences, memories, goals, and desires; manifesting the metaverse from the abstract to the tangible. It provides the infrastructure for our selfhood and levels up our mechanism design for better navigating the chaos of convex opportunities and events. 
       </div>
       <div className={styles.text3}>
         - Emma-Jane MacKinnon-Lee
