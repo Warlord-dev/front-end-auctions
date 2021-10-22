@@ -36,7 +36,7 @@ const Page101102 = () => {
       <div className={styles.circleText2}>
         yay        
       </div>
-      <a href='https://poap.website/gdnpurveyors' target='_blank'>
+      <a href='https://poap.website/gdnpurveyors6' target='_blank'>
         <img src='/images/poap-logo.png' className={styles.poapImage} />
       </a>
 
