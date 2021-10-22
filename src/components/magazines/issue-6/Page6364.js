@@ -12,7 +12,7 @@ const Page6364 = () => {
       <img src="/magazine/6/images/63_64_image2.png" className={styles.image2} />
       <img src="/magazine/6/images/53_54_image2.png" className={styles.link1} />
 
-      <a href="https://poap.website/portugalplayers" target="_blank">
+      <a href="https://poap.website/portugal6" target="_blank">
         <img src="/magazine/6/images/53_54_image3.png" className={styles.image3} />
       </a>
       <div className={styles.text1}>P O R T U G A L</div>
