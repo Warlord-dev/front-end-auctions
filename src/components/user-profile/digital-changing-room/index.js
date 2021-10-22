@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { generateLookImage } from '@utils/helpers'
-import config from '@utils/config'
 import styles from './styles.module.scss'
 
 import FashionItem from '@components/user-profile/fashion-item'
@@ -28,8 +26,8 @@ import {
   getGuildWhitelistedNFTStakersByStaker
 } from '@services/api/apiService'
 
-
-import { getRarityId } from '@utils/helpers'
+import { generateLookImage, getRarityId } from '@utils/helpers'
+import config from '@utils/config'
 
 import {
   DRIP_COLLECTION_IDS,
