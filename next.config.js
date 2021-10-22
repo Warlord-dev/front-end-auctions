@@ -20,7 +20,8 @@ const {
   USDT_ADDRESS,
   QUICKSWAP_ROUTER,
   DIGITALAX_SUBSCRIPTION_MARKETPLACE,
-  DIGITALAX_SUBSCRIPTION_NFT
+  DIGITALAX_SUBSCRIPTION_NFT,
+  DTX_ADDRESSES
 } = require('config');
 const withImages = require('next-images');
 
@@ -47,7 +48,8 @@ module.exports = withImages({
     USDT_ADDRESS,
     QUICKSWAP_ROUTER,
     DIGITALAX_SUBSCRIPTION_NFT,
-    DIGITALAX_SUBSCRIPTION_MARKETPLACE
+    DIGITALAX_SUBSCRIPTION_MARKETPLACE,
+    DTX_ADDRESSES
   },
   trailingSlash: true,
   assetPrefix: './',

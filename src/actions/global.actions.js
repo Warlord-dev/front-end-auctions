@@ -166,6 +166,12 @@ class GlobalActions extends BaseActions {
       dispatch(this.setValue('currentPage', value));
     }
   }
+
+  setAllUsers(values) {
+    return (dispatch) => {
+      dispatch(this.setValue('allUsers', values));
+    };
+  }
 }
 
 export default new GlobalActions(globalReducer);

@@ -1,6 +1,6 @@
 import { createModule } from 'redux-modules';
 import cloneDeep from 'lodash.clonedeep';
-import { Map } from 'immutable';
+import { List, Map } from 'immutable';
 import TransformModules from '../utils/transform-modules';
 
 const DEFAULT_FIELDS = Map({
@@ -14,7 +14,8 @@ const DEFAULT_FIELDS = Map({
   rewards: 0,
   monaPerEth: 0,
   viewMethod: 'magazineview',
-  currentPage: 0
+  currentPage: 0,
+  allUsers: List([])
 });
 
 export default createModule({

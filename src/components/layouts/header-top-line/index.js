@@ -14,7 +14,6 @@ import accountActions from '@actions/user.actions';
 import { getEnabledNetworkByChainId } from '@services/network.service';
 
 import Logo from './logo';
-import LandingHeader from './landing';
 import styles from './styles.module.scss';
 
 const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText, isMagazineContents }) => {
@@ -104,61 +103,17 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText, isMagaz
       {!isOnRightNetwork && <p className={styles.notification}>{wrongNetworkText}</p>}
       <div className={styles.leftBox}>
         <Logo isMobile={isMobile} />
-        {/* <a href="https://marketplace.digitalax.xyz/" className={styles.backToMainNetButton}>
-          Switch to Eth Mainnet
-        </a> */}
       </div>
       <div
         className={cn(
           styles.rightBox,
           pathname.includes('purchase') ||
-            pathname.includes('contact') ||
-            pathname.includes('profile')
+            pathname.includes('contact')
             ? styles.blackWrapper
             : styles.whiteWrapper
         )}
       >
         <div className={cn(styles.links, isCollapse ? styles.expandedMenu : '')}>
-          {/* <Link href="/">
-          <a className={styles.link}>Auctions</a>
-        </Link>
-        <Link href="/sold">
-          <a className={styles.link}>Previously Sold</a>
-        </Link> 
-        <a
-          href="https://pode.digitalax.xyz/"
-          className={styles.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          PODE
-        </a> 
-          <a
-            href="https://medium.com/@digitalax"
-            className={styles.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Blog
-          </a>
-          <a
-            href="https://community.digitalax.xyz/"
-            className={styles.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Forum
-          </a>
-          {isShowStaking && (
-            <a
-              href="http://staking.digitalax.xyz/"
-              className={styles.link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {linkText}
-            </a>
-          )}*/}
           <Link href="/all-issues">
             <a className={styles.link}>All Issues</a>
           </Link>

@@ -1,0 +1,60 @@
+.wrapper {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    button {
+      background: transparent;
+      border: none;
+
+      transition: 0.3s all;
+
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(1.1);
+      }
+    }
+
+    .label {
+      width: 374px;
+      font-family: Gilroy;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+      color: #FFFFFF;
+
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .content {
+    margin-top: 80px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+
+    .nftItem {
+      width: 30vw;
+      height: 30vw;
+      margin-left: 6.5vw;
+      margin-right: 6.5vw;
+      margin-bottom: 10vw;
+
+      @media (max-width: 767px) {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}

@@ -1,182 +1,126 @@
-import React, { useEffect, useState } from 'react';
-import cn from 'classnames';
-import copy from 'copy-to-clipboard';
-import { useSelector, useDispatch } from 'react-redux';
-import Router from 'next/router';
-import { toast } from 'react-toastify';
-import NFTProduct from '@components/nft-product';
-import Button from '@components/buttons/button';
-import { getUser, getAccount } from '@selectors/user.selectors';
-import { useProfile, useNFTs } from '@hooks/espa/user.hooks';
-import accountActions from '@actions/user.actions';
-import api from '@services/api/api.service';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
+
+import digitalaxApi from '@services/api/espa/api.service';
+import { getAccount } from '@selectors/user.selectors';
+
+import { getUser } from '@helpers/user.helpers';
+
+import UserInfo from '@components/user-profile/user-info';
+import DigitalChangingRoom from '@components/user-profile/digital-changing-room';
 import Loader from '@components/loader';
+
 import styles from './styles.module.scss';
-import { details } from '@constants/nft_subscription_issues';
-import NftSubscriptionCard from '@components/nftsubscriptioncard';
-import { getSubscriptionNFTAddressByChainId } from '@services/network.service';
-import { getSubscriptionNFTContract } from '@services/contract.service';
-import { getChainId } from '@selectors/global.selectors';
-import { openConnectMetamaskModal } from '@actions/modals.actions';
 
-const Profile = ({ history }) => {
-  const user = useSelector(getUser);
+const UserProfile = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
-  const chainId = useSelector(getChainId);
-  const [activeTab, setActiveTab] = useState(0);
-  const [dizifizzyItems, setDizifizzyItems] = useState([]);
-  const [skins, setSkins] = useState([]);
-  const [ids, setIds] = useState([]);
 
-  if (!user) {
-    dispatch(accountActions.checkStorageAuth());
-  }
-  const account = user.get('wallet');
-  const nfts = useNFTs(account);
+  const [isInitLoading, setIsInitLoading] = useState(true);
+  const [loveCount, setLoveCount] = useState(0);
+  const [viewCount, setViewCount] = useState(0);
+
+  const user = getUser();
+  const account = user.wallet;
+
+  const secretKey = user ? user.randomString : null;
+
+  const fetchViews = async () => {
+    const viewData = await digitalaxApi.getViews('profile', account);
+    setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0);
+
+    if (viewData && viewData[0] && viewData[0].viewCount) {
+      setViewCount(viewData[0].viewCount);
+    }
+
+    await addViewCount();
+  };
+
+  const addViewCount = async () => {
+    const data = await digitalaxApi.addView('profile', account);
+    if (data) {
+      setViewCount(data.viewCount);
+    }
+  };
+
+  const addLove = async () => {
+    const data = await digitalaxApi.addLove(account, secretKey, 'profile', account);
+    if (data && data['success']) {
+      setLoveCount(loveCount + 1);
+    }
+  };
+
+  const onClickLove = (e) => {
+    addLove();
+  };
 
   useEffect(() => {
-    const fetchSubscriptionStatus = async () => {
-      const { digitalaxSubscriptionCollectors } = await api.getSubscriptionNftStatus(account);
-      const items1 = [];
-      const items2 = [];
-      const ids = [];
-      for (let i = 0; i < digitalaxSubscriptionCollectors.length; i += 1) {
-        for (let j = 0; j < digitalaxSubscriptionCollectors[i].parentsOwned.length; j += 1) {
-          if (
-            digitalaxSubscriptionCollectors[i].parentsOwned[j].attributes.filter(
-              (attribute) => attribute.type === 'DigiFizzy Pioneers'
-            ).length
-          ) {
-            const name = digitalaxSubscriptionCollectors[i].parentsOwned[j].name;
-            items1.push(digitalaxSubscriptionCollectors[i].parentsOwned[j]);
-            for (let k = 0; k < details.length; k += 1) {
-              if (name.includes(details[k][0].issueIndex)) {
-                ids.push(k + 1);
-                break;
-              }
-            }
-          } else {
-            items2.push(digitalaxSubscriptionCollectors[i].parentsOwned[j]);
-          }
-        }
+    const loadUsers = async () => {
+      if (account) {
+        fetchViews();
       }
-      setDizifizzyItems(items1);
-      setSkins(items2);
-      setIds(ids);
+      setIsInitLoading(false);
     };
 
-    fetchSubscriptionStatus();
+    loadUsers();
   }, []);
 
-  const getGameTags = (str) => {
-    if (!str) {
-      return '';
-    }
-    let tags = str.replace(', ', ',').split(',');
-    tags.sort();
-    return tags.reduce((total, cur) => {
-      let capitalize = cur.replace(/\w\S*/g, (w) => w.replace(/^\w/, (c) => c.toUpperCase()));
-      return `${total}#${capitalize} `;
-    }, '');
-  };
-
-  const onCopyWalletAddress = () => {
-    copy(account);
-    toast('Wallet Address is copied to the clipboard');
-  };
-
-  const burn721 = async (id) => {
-    if (account) {
-      const subscriptionNftAddress = getSubscriptionNFTAddressByChainId(chainId);
-      const contract = await getSubscriptionNFTContract(subscriptionNftAddress);
-      const res = await contract.methods.burn(id).send({
-        from: account,
-      });
-      return res;
-    } else {
-      dispatch(openConnectMetamaskModal());
-    }
-  };
-
-  if (!user || !nfts) {
-    return <Loader size="large" className={styles.loader} />;
+  if (isInitLoading) {
+    return (
+      <div style={{
+        width: '100%',
+        background: '#0A0A0A'
+      }}>
+        <div className={styles.wrapper}>
+          <Loader
+            className={styles.loader}
+            active={true}
+            size={"large"}
+            white
+          />
+        </div>
+      </div>
+    );
   }
 
+  //   if (!account) {
+  //     return (
+  //       <div className={styles.wrapper}>
+  //         <div className={styles.notValidUser}>
+  //           It's not digitalax user.
+  //         </div>
+  //       </div>
+  //     )
+  //   }
+
+  const onClickReturn = () => {
+    window.history.back();
+  };
+
   return (
-    <div className={styles.profileWrapper}>
-      <div className={styles.leftSideWrapper}>
-        <div className={styles.avatarIDSection}>
-          <img src={user.get('avatar') ? user.get('avatar') : '../../../images/user-photo.svg'} />
-          <span>{user.get('username')}</span>
-        </div>
-        <span className={styles.email}>{user.get('email')}</span>
-        <div className={styles.inputItemwrapper}>
-          <span>Changing Room</span>
-          <p>{nfts.length}</p>
-        </div>
-        <div className={styles.inputItemwrapper}>
-          <span>Game Tags</span>
-          <p>{getGameTags(user.get('gameTags'))}</p>
-        </div>
-        <div className={styles.inputItemwrapper}>
-          <span>Whitelisted IP address</span>
-          <p>{user.get('ipAddrs')}</p>
-        </div>
-        <div className={styles.walletAddress}>
-          <span>Connected Wallet Address</span>
-          <p>
-            {account}
-            <img src="/images/clipboard.png" onClick={onCopyWalletAddress} />
-          </p>
-        </div>
-        <Button
-          className={styles.modalButton}
-          background="black"
-          onClick={() => Router.push('/profile/edit')}
-        >
-          Edit Profile
-        </Button>
-      </div>
-      <div className={styles.rightSideWrapper}>
-        <div className={styles.rightSideTab}>
-          <div
-            className={`${styles.tabItem} ${activeTab === 0 && styles.active}`}
-            onClick={() => setActiveTab(0)}
-          >
-            <p className={styles.titleWrapper}>CHANGING ROOM</p>
-          </div>
-          <div
-            className={`${styles.tabItem} ${activeTab === 1 && styles.active}`}
-            onClick={() => setActiveTab(1)}
-          >
-            <p className={styles.titleWrapper}>ISSUE COLLECTION</p>
-          </div>
-        </div>
-        <div className={styles.tabBody}>
-          {activeTab === 0 ? (
-            <ul className={cn(styles.list, 'animate__animated animate__fadeIn')}>
-              {skins.map((nft) => (
-                <NFTProduct key={`nft_${nft.id}`} nft={nft} nftId={parseInt(nft.id)} />
-              ))}
-            </ul>
-          ) : (
-            <div className={styles.subscriptionWrapper}>
-              {dizifizzyItems.map((nft, index) => (
-                <>
-                  <NftSubscriptionCard
-                    key={`nft_subscription_${nft.id}`}
-                    id={ids[index]}
-                    details={nft}
-                    burn721={burn721}
-                  />
-                </>
-              ))}
-            </div>
-          )}
-        </div>
+    <div style={{
+      width: '100%',
+      background: '#0A0A0A'
+    }}>
+      <div className={styles.wrapper}>
+        <button className={styles.returnButton} onClick={onClickReturn}>
+          RETURN
+        </button>
+        <UserInfo
+          twitter={user.twitter}
+          userName={user.username}
+          userAvatar={user.avatar}
+          viewCount={viewCount}
+          loveCount={loveCount}
+          onClickLove={onClickLove}
+          myProfile={true}
+        />
+
+        <DigitalChangingRoom className={styles.digitalChangingRoom} owner={account} />
       </div>
     </div>
   );
 };
 
-export default Profile;
+export default UserProfile;
