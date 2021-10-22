@@ -102,9 +102,12 @@ const Deposite = () => {
         <div className={styles.amountWrapper}>
           <div className={styles.amountPrefix}> $MONA </div>
           <input
-            type="text"
+            type="number"
             className={styles.amount}
             value={amount}
+            onBlur={() => {
+              if (amount[0] === '.') setAmount(`0${amount}`);
+            }}
             onChange={(e) => setAmount(e.target.value)}
           />
         </div>
