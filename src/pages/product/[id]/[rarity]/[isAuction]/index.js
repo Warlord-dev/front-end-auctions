@@ -735,17 +735,17 @@ const Product = ({ pageTitle }) => {
                       </div>
                     </Container>
                   </section>
-                );
+                );  
               })}
           </>
         ) : null}
 
-//         <section id="fashion_list">
-//           {!id.includes('v1') &&
-//           ((parseInt(id) >= 11 && parseInt(id) < 100294) || parseInt(id) > 130000) ? (
+         <section id="fashion_list">
+           {!id.includes('v1') &&
+          ((parseInt(id) >= 11 && parseInt(id) < 100294) || parseInt(id) > 130000) ? (
 //             <FashionList fashionData={fashionData} collections={product} />
-//           ) : null}
-//         </section>
+           ) : null}
+         </section>
       </div>
     </>
   );
