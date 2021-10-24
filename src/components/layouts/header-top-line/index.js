@@ -71,14 +71,14 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
       </div>
       <div className={styles.rightBox}>
         <div className={cn(styles.links, isCollapse ? styles.expandedMenu : '')}>
-          <Link href="https://skins.digitalax.xyz">
+          <Link href="https://fashion.digitalax.xyz">
             <a className={styles.link} target="_blank">
-              SUIT UP IN YOUR GAME SKINS
+              COLLECT AND WEAR WEB3 FASHION
             </a>
           </Link>
-          <Link href="https://marketplace.digitalax.xyz">
+          <Link href="https://drip.digitalax.xyz">
             <a className={styles.link} target="_blank">
-              REP YOUR STLE IRL
+              REP YOUR STYLE IRL
             </a>
           </Link>
           <Link href="https://designers.digitalax.xyz/global">
