@@ -9,18 +9,18 @@ const LandingFooter = () => {
           STAY UP TO DATE
         </div>
         <div className={styles.description}>
-          Check out our Medium and join our Discord community to stay up to date!
+          Connect with us and the broader Web3 Fashion community on our Discord or Twitter. We would love to hear from you!
         </div>
         <div className={styles.centerWrapper}>
           <div className={[styles.dFlex, styles.aboutLine].join(' ')}>
-            <a href='https://drive.google.com/file/d/1zG8h4GnodW7uWm_OsUY3g4I4RpOx6bMH/view?usp=sharing'>
-              ABOUT DIGITALAX
+            <a href='https://blog.digitalax.xyz/'>
+              DIGITALAX UPDATES
             </a>
             <a href='https://digitalax.gitbook.io/digitalax/' target='_blank'>
               DOCUMENTATION
             </a>
-            <a href='https://drive.google.com/file/d/1oFiBGBr_CN0-mUuuEp_g6wDBr-mNA0Uh/view?usp=sharing'>
-              READ ABOUT ESPA
+            <a href='https://designers.digitalax.xyz/'>
+              GLOBAL DESIGNER NETWORK
             </a>
           </div>
           <img src='/images/social-icons/white-logo.svg' alt='white-logo' className={styles.whiteLogo} />
