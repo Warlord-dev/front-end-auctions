@@ -8,6 +8,8 @@ import styles from './styles.module.scss';
 
 const SellWeb3Fashion = () => {
   const [type, setType] = useState();
+  const [startTime, setStartTime] = useState(new Date().getTime());
+  const [endTime, setEndTime] = useState(new Date().getTime());
   const product = {
     name: 'Test',
     image: '',
@@ -49,11 +51,14 @@ const SellWeb3Fashion = () => {
                 <>
                   <div className={styles.formInput}>
                     <div className={styles.label}> start time </div>
-                    <DatetimeInput timestamp={0} />
+                    <DatetimeInput
+                      timestamp={startTime}
+                      timeStampChanged={(v) => setStartTime(v)}
+                    />
                   </div>
                   <div className={styles.formInput}>
                     <div className={styles.label}> end time </div>
-                    <DatetimeInput timestamp={0} />
+                    <DatetimeInput timestamp={endTime} timeStampChanged={(v) => setEndTime(v)} />
                   </div>
                 </>
               )}
