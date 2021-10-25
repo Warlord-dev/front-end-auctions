@@ -539,7 +539,7 @@ const Product = ({ pageTitle }) => {
                         <div className={styles.description}>{product?.garment?.description}</div>
                       </div>
                     </InfoCard>
-                    {/* {!isLookHakathon() && !!sourceType.length && (
+                    {!!sourceType.length && (
                       <div className={styles.mobileRightSection}>
                         {sourceType.map((st) => (
                           <div className={styles.item}>
@@ -552,7 +552,7 @@ const Product = ({ pageTitle }) => {
                           </div>
                         ))}
                       </div>
-                    )} */}
+                    )}
                     {/* {!isLookHakathon() ? ( */}
                     {/* <> */}
                     <div className={styles.actions}>
@@ -591,7 +591,7 @@ const Product = ({ pageTitle }) => {
                     </div>
                     )} */}
                   </div>
-                  {/* {!isLookHakathon() && !!sourceType.length && (
+                  {!!sourceType.length && (
                     <div className={styles.rightSection}>
                       {sourceType.map((st) => (
                         <div className={styles.item}>
@@ -604,7 +604,7 @@ const Product = ({ pageTitle }) => {
                         </div>
                       ))}
                     </div>
-                  )} */}
+                  )}
                 </div>
               </div>
             </div>
