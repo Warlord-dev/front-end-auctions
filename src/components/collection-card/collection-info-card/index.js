@@ -12,11 +12,7 @@ const CollectionInfoCard = ({ collection }) => {
 
   return (
     <div className={styles.wrapper}>
-      <InfoCard
-        borderColor="#9c28ff"
-        boxShadow="rgba(197, 32, 129, 0.5)"
-        mainColor="rgba(189, 61, 169, 0.47)"
-      >
+      <InfoCard>
         <div className={styles.cardBodyWrapper}>
           <Link href={`/marketplace/all/${collection.id}`}>
             <a className={styles.link}>

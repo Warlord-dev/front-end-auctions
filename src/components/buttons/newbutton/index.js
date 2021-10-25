@@ -7,7 +7,7 @@ const NewButton = ({ onClick, text, className, disable = false }) => {
   return (
     <>
       <button type="button" className={classes} onClick={onClick} disabled={disable}>
-        <img src="./images/metaverse/pinkb.png" />
+        <img src="./images/metaverse/gray_button.png" />
         <span> {text} </span>
       </button>
     </>

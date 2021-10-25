@@ -28,22 +28,46 @@
     .leftWrapper {
       width: 100%;
 
-      @include md-width {
-        width: 50%;
-        margin-right: 2rem;
-      }
+      .title {
+        font-family: Orbitron;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 125%;
 
-      .heroLogo {
-        width: 100%;
+        color: #FFFFFF;
         margin-bottom: 1rem;
       }
 
       p {
+        font-family: Gilroy;
+        font-size: 18px;
+        line-height: 200%;
         a {
           color: white;
           text-decoration: underline;
         }
       }
+
+      @include md-width {
+        width: 50%;
+        margin-right: 2rem;
+        .title {
+          font-size: 40px;
+        }
+      }
+
+      @include xxl-width {
+        .title {
+          font-size: 4.2vw;
+        }
+
+        p {
+          font-size: 30px;
+        }
+      }
+
+      
     }
 
     .actionsWrapper {
@@ -66,6 +90,7 @@
       margin-top: 1rem;
       margin-bottom: 2rem;
       transition: all 0.3s ease;
+      text-transform: uppercase;
 
       @include md-width {
         margin-top: 0;
