@@ -42,7 +42,7 @@ const MarketplaceNotActive = () => (
           </div>
           <br />
           <br />
-          <a href="https://fashion.digitalax.xyz" target="_blank" className={styles.proceed}>
+          <a href="https://marketplace.digitalax.xyz" target="_blank" className={styles.proceed}>
             PROCEED >
           </a>
         </div>
