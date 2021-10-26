@@ -91,7 +91,10 @@ const LandingPage = () => {
 
   return (
     <div className={styles.wrapper}>
-      <HeroSection logo="/images/metaverse/marketplaceLogo.png" />
+      <HeroSection 
+        title='DIGITAL'
+        subTitle='INDIE WEB3 FASHION'
+      />
 
       <section className={styles.collectionSection}>
         <div className={styles.collectionWrapper}>
