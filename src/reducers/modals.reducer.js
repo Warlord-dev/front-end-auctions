@@ -11,9 +11,9 @@ const DEFAULT_FIELDS = Map({
   isShowNotificationConnectMetamask: false,
   isShowBuyNow: false,
   isShowPreviewMaterial: false,
+  isShowMarketplaceNotActive: false,
   params: null,
 });
-
 
 export default createModule({
   name: 'modals',

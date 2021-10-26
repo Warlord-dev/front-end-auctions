@@ -1,5 +1,5 @@
-import React, { memo } from 'react';
-import { useSelector } from 'react-redux';
+import React, { memo, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import ModalConnectWallet from '@containers/modals/modal-connect-wallet';
 import ModalPlaceBid from '@containers/modals/modal-place-bid';
 import ModalRaiseBid from '@containers/modals/modal-raise-bid';
@@ -8,8 +8,10 @@ import ModalSignup from '@containers/modals/modal-sign-up';
 import BuyNow from '@containers/modals/buy-now';
 import PreviewMaterial from '@containers/modals/preview-material';
 import MarketplaceNotActive from './marketplace-not-active';
+import { openMarketplaceNotActiveModal } from '@actions/modals.actions';
 
 const Modals = () => {
+  const dispatch = useDispatch();
   const modals = useSelector((state) => state.modals.toJS());
   const {
     isShowModalConnectMetamask,
@@ -19,7 +21,12 @@ const Modals = () => {
     isShowModalSignup,
     isShowBuyNow,
     isShowPreviewMaterial,
+    isShowMarketplaceNotActive,
   } = modals;
+
+  useEffect(() => {
+    dispatch(openMarketplaceNotActiveModal());
+  }, []);
 
   return (
     <>
@@ -30,7 +37,7 @@ const Modals = () => {
       {isShowModalSignup && <ModalSignup />}
       {isShowBuyNow && <BuyNow />}
       {isShowPreviewMaterial && <PreviewMaterial />}
-      <MarketplaceNotActive />
+      {isShowMarketplaceNotActive && <MarketplaceNotActive />}
     </>
   );
 };
