@@ -10,7 +10,6 @@ const HeroSection = ({ children, logo, width = '80%', filter, setFilter, setSort
     <>
       <div className={styles.wrapper}>
         <section className={styles.heroSection}>
-          {/* <img src="/images/metaverse/marketplaceBack.png" className={styles.back} /> */}
           {logo && <img src={logo} className={styles.logo} style={{ width: width }} />}
           {
             !logo &&

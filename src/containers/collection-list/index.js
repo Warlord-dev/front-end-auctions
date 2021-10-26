@@ -2,31 +2,22 @@ import React, { memo, useEffect, useMemo, useState } from 'react';
 import BigNumber from 'bignumber.js';
 import cn from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
-import { Dropdown } from 'semantic-ui-react';
 import { convertToEth } from '@helpers/price.helpers';
 import auctionPageActions from '@actions/auction.page.actions';
-import { MAIN_GRAPH_COUNT_DAYS, TOTAL_VOLUME_DAYS } from '@constants/global.constants';
-import { STORAGE_SORT_BY_AUCTION } from '@constants/storage.constants';
-import { getChainId } from '@selectors/global.selectors';
+import { TOTAL_VOLUME_DAYS } from '@constants/global.constants';
 import { getMonaPerEth } from '@selectors/global.selectors';
 import collectionActions from '@actions/collection.actions';
-import { getAllCollections, getAllMarketplaceOffers } from '@selectors/collection.selectors';
 import {
   getAllAuctions,
   getGlobalStats,
   getWeekResultedAuctions,
-  getMonthResultedAuctions,
 } from '@selectors/auction.selectors';
 import { useAPY } from '@hooks/apy.hooks';
-import wsApi from '@services/api/ws.service';
-import { useSubscription } from '@hooks/subscription.hooks';
-import GeneralInformation from '@containers/page-products-list/general-information';
 import TextContent from '@containers/page-products-list/text-content';
 import ProductCollection from '@components/product-collection';
 import 'semantic-ui-css/components/dropdown.css';
 import 'semantic-ui-css/components/transition.css';
 import styles from './styles.module.scss';
-import apiService from '@services/api/api.service';
 
 const collections = [
   {
@@ -62,53 +53,8 @@ const PageAuctionList = () => {
   const auctions = useSelector(getAllAuctions);
   const weekResultedAuctions = useSelector(getWeekResultedAuctions).toJS();
   const globalStats = useSelector(getGlobalStats).toJS();
-  // const monthResultedAuctions = useSelector(getMonthResultedAuctions).toJS();
-  // const currentCollections = useSelector(getAllCollections).toJS();
-  // const chainId = useSelector(getChainId);
   const monaPerEth = useSelector(getMonaPerEth);
   const currentAuctions = auctions.toJS();
-
-  // useSubscription(
-  //   {
-  //     request: wsApi.onDaysChange(MAIN_GRAPH_COUNT_DAYS),
-  //     next: (data) => dispatch(auctionPageActions.updateMonthStats(data.days)),
-  //   },
-  //   [chainId],
-  // );
-
-  // useSubscription(
-  //   {
-  //     request: wsApi.onDaysChange(TOTAL_VOLUME_DAYS),
-  //     next: (data) => dispatch(auctionPageActions.updateWeekStats(data.days)),
-  //   },
-  //   [chainId],
-  // );
-
-  // useSubscription(
-  //   {
-  //     request: wsApi.onNFTGlobalStats(),
-  //     next: (data) => {
-  //       dispatch(
-  //         auctionPageActions.updateGlobalStats(
-  //           data.digitalaxGarmentNFTGlobalStats.length > 0
-  //             ? data.digitalaxGarmentNFTGlobalStats[0]
-  //             : [],
-  //         ),
-  //       );
-  //     },
-  //   },
-  //   [chainId],
-  // );
-
-  // useSubscription(
-  //   {
-  //     request: wsApi.onDigitalaxMarketplaceOffers(currentCollections.map((val) => val.id)),
-  //     next: (data) => {
-  //       dispatch(collectionActions.updateMarketplaceOffers(data.digitalaxMarketplaceOffers));
-  //     },
-  //   },
-  //   [chainId, currentCollections],
-  // );
 
   useEffect(
     () => () => {
@@ -193,12 +139,6 @@ const PageAuctionList = () => {
 
   return (
     <>
-      {/* <GeneralInformation
-        title="All Bids"
-        list={list}
-        timestamp={minTimestampAutcionTime}
-        history={monthResultedAuctions}
-      /> */}
       <div className={styles.textContent}>
         <TextContent />
       </div>

@@ -78,7 +78,7 @@ const Auctions = () => {
     if (id === '0') return '/images/metaverse/amongus-logo1.png';
     if (id === '1') return '/images/metaverse/minecraft-logo.png';
     if (id === '3') return '/images/metaverse/auctionsLogo.png';
-    return '/images/metaverse/marketplaceLogo.png';
+    return null;
   };
 
   const filteredProducts = filterProducts([...auctions, ...collections], filter, sortBy) || [];
@@ -88,6 +88,8 @@ const Auctions = () => {
       <HeroSection
         width={id === '0' ? '60%' : '80%'}
         logo={getLogo()}
+        title='DIGITAL'
+        subTitle='INDIE WEB3 FASHION'
         filter={filter}
         setFilter={(v) => setFilter(v)}
         setSortBy={(v) => setSortBy(v)}

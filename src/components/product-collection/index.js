@@ -1,13 +1,10 @@
-import React, { useMemo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import SmallPhotoWithText from '@components/small-photo-with-text';
 import kebabCase from 'lodash.kebabcase';
-import { create2KURL } from '@services/imgix.service';
-import { getImageForCardProduct } from '@helpers/photo.helpers';
-import { useTokenInfo } from '@hooks/token.info.hooks';
 import { getDesignerInfoByName } from '@selectors/designer.selectors';
 import ImportantCollectionInformation from '@containers/important-collection-information';
 

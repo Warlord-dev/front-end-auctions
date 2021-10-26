@@ -664,60 +664,6 @@
     background-color: black;
   }
 
-  .botiqueSection {
-    position: relative;
-    background-color: black;
-    background-image: url('/images/metaverse/Dust 1.png');
-    background-size: 100%;
-    padding: 3rem;
-    margin-top: -10px;
-
-    .content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-
-    .mainText {
-      font-family: 'Rose Cake' !important;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 10vw;
-      line-height: 10.5vw;
-      text-align: right;
-      white-space: nowrap;
-      text-align: center;
-      width: fit-content;
-
-      color: #ffffff;
-      background-color: black;
-      padding: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .linkText {
-      font-family: 'Rose Cake' !important;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 6vw;
-      line-height: 6.5vw;
-      text-align: center;
-      white-space: nowrap;
-      text-align: center;
-
-      color: #bbfbff;
-      padding: 1rem;
-      background-color: black;
-      transition: all 0.3s ease;
-
-      &:hover {
-        transform: scale(1.05);
-        transition: all 0.3s ease;
-      }
-    }
-  }
-
   .fashionListSection {
     position: relative;
     background-image: url('/images/metaverse/starbg.png');

@@ -1,10 +1,7 @@
-import React, { memo, useEffect, useState, useRef } from 'react';
-import { useSelector } from 'react-redux';
-import { getAllDesignerIDs } from '@selectors/designer.selectors';
+import React, { memo, useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
 import physicals from '../../data/drip.json';
-import { getCollectionV2ByIds } from '@services/api/apiService';
-import { getChainId } from '@selectors/global.selectors';
+
 
 const canvasWidth = 1920;
 const canvasHeight = 1000;

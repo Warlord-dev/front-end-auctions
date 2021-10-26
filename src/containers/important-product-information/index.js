@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import config from '@utils/config';
 import Router from 'next/router';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
@@ -37,13 +36,11 @@ import {
 import wsApi from '@services/api/ws.service';
 import { useAPY } from '@hooks/apy.hooks';
 import { useSubscription } from '@hooks/subscription.hooks';
-import { utils as ethersUtils } from 'ethers';
 
 import styles from './styles.module.scss';
 import { getAllCollections, getAllMarketplaceOffers, getAllMarketplaceOffersV1 } from '@selectors/collection.selectors';
 import { COMMON_RARITY, EXCLUSIVE_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 import { getEnabledNetworkByChainId } from '@services/network.service';
-import { getContract } from '@services/contract.service';
 
 const ImportantProductInformation = ({
   collectionId,
