@@ -51,11 +51,7 @@ const MarketplaceNotActive = () => {
             </div>
             <br />
             <br />
-            <a
-              href="https://marketplace.digitalax.xyz/marketplace/"
-              target="_blank"
-              className={styles.proceed}
-            >
+            <a href="https://marketplace.digitalax.xyz/marketplace/" className={styles.proceed}>
               PROCEED >
             </a>
           </div>
