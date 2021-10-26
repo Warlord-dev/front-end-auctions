@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.scss';
 
 const Filters = ({ filter, filterChange, sortByChange }) => {
+  const [showFilters, setShowFilters] = useState(false)
+  const [currentSelectedIndex, setCurrentSelectedIndex] = useState(0)
+
+  const filterItems = [
+    ' ',
+    ' most recent ',
+    ' highest price ',
+    ' lowest price ',
+    ' sold ',
+    ' auction ',
+    ' instant buy ',
+    ' exclusive rarity ',
+    ' semi-rare rarity ',
+    ' common rarity ',
+  ]
+
+  const onClickItem = (e) => {
+    const value = e.getAttribute('data-value')
+    console.log('value: ', value)
+    setCurrentSelectedIndex(value)
+    sortByChange(value)
+    setShowFilters(false)
+  }
+
   return (
     <>
       <div className={styles.actions}>
@@ -26,19 +50,33 @@ const Filters = ({ filter, filterChange, sortByChange }) => {
         </div>
         <div className={styles.sortWrapper}>
           <div className={styles.sortLabel}>sort by</div>
-          <div className={styles.sortInput}>
-            <select className={styles.sort} onChange={(e) => sortByChange(e.target.value)}>
-              <option value="0"> </option>
-              <option value="1"> most recent </option>
-              <option value="2"> highest price </option>
-              <option value="3"> lowest price </option>
-              <option value="4"> sold </option>
-              <option value="5"> auction </option>
-              <option value="6"> instant buy </option>
-              <option value="7"> exclusive rarity </option>
-              <option value="8"> semi-rare rarity </option>
-              <option value="9"> common rarity </option>
-            </select>
+          <div
+            className={styles.sortInput}
+            onClick={() => {
+              !showFilters && setShowFilters(true)
+            }}
+          >
+            {
+              !showFilters && (
+                <div className={styles.currentItem}>
+                  <span>{filterItems[currentSelectedIndex]}</span>
+                  <img
+                    className={styles.arrowBottomImg}
+                    src="./images/icons/arrow-bottom.svg"
+                    alt="arrow-bottom"
+                  />
+                </div>
+              )
+            }
+            <ul className={showFilters ? styles.show : styles.hidden}>
+              {
+                filterItems.map((item, index) => {
+                  return (
+                    <li key={index} data-value={`${index}`} onClick={e => onClickItem(e.target)}>{item}</li>
+                  )
+                })
+              }
+            </ul>
           </div>
         </div>
       </div>
