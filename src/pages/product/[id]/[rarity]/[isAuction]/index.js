@@ -94,9 +94,9 @@ const Product = ({ pageTitle }) => {
   const [lookIds, setLookIds] = useState([]);
   const [lookInspo, setLookInspo] = useState([]);
 
-  const [isFetchedProduct, setIsFetchedProduct] = useState(false)
-  const [isFetchedViewCount, setIsFetchedViewCount] = useState(false)
-  const [isFetchedSecondDesigners, setIsFetchedSecondDesigners] = useState(false)
+  const [isFetchedProduct, setIsFetchedProduct] = useState(false);
+  const [isFetchedViewCount, setIsFetchedViewCount] = useState(false);
+  const [isFetchedSecondDesigners, setIsFetchedSecondDesigners] = useState(false);
   const fashionData = [
     {
       title: 'DeFi Staking Functionality',
@@ -121,7 +121,7 @@ const Product = ({ pageTitle }) => {
     'AR FILTER': 'You can wear and view this fashion in AR',
     'DIGITAL DRESSING': 'Get digitally dressed in this fashion',
     'IN-GAME': 'You can take this fashion in-game',
-    'PHYSICAL': 'This fashion includes the physical counterpart',
+    PHYSICAL: 'This fashion includes the physical counterpart',
   };
 
   const account = useSelector(getAccount);
@@ -277,7 +277,7 @@ const Product = ({ pageTitle }) => {
         }
       }
 
-      setIsFetchedProduct(true)
+      setIsFetchedProduct(true);
     };
     // };
     fetchGarmentV2ByID();
@@ -298,19 +298,19 @@ const Product = ({ pageTitle }) => {
               image: designerData['image_url'],
             });
             setSecondDesigners(secondDesignersRes);
-            setIsFetchedSecondDesigners(true)
+            setIsFetchedSecondDesigners(true);
           });
       });
     } else {
       setSecondDesigners([]);
-      setIsFetchedSecondDesigners(true)
+      setIsFetchedSecondDesigners(true);
     }
 
     const fetchViews = async () => {
       const viewData = await digitalaxApi.getViews('product', id);
       setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0);
       setViewCount(viewData && viewData[0] && viewData[0].viewCount ? viewData[0].viewCount : 0);
-      setIsFetchedViewCount(true)
+      setIsFetchedViewCount(true);
     };
 
     const addViewCount = async () => {
@@ -409,9 +409,7 @@ const Product = ({ pageTitle }) => {
   // };
 
   if (!isFetchedProduct || !isFetchedSecondDesigners || !isFetchedViewCount) {
-    return (
-      <ProductPageLoader />
-    )
+    return <ProductPageLoader />;
   }
 
   return (
@@ -735,17 +733,17 @@ const Product = ({ pageTitle }) => {
                       </div>
                     </Container>
                   </section>
-                );  
+                );
               })}
           </>
         ) : null}
 
-         <section id="fashion_list">
-           {!id.includes('v1') &&
+        <section id="fashion_list">
+          {!id.includes('v1') &&
           ((parseInt(id) >= 11 && parseInt(id) < 100294) || parseInt(id) > 130000) ? (
-             <FashionList fashionData={fashionData} collections={product} />
-           ) : null}
-         </section>
+            <FashionList fashionData={fashionData} collections={product} />
+          ) : null}
+        </section>
       </div>
     </>
   );

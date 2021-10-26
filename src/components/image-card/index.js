@@ -156,7 +156,7 @@ const ImageCard = ({
             ) : mainImageType === 2 ? (
               <img src={mainImage} className={styles.image} />
             ) : null}
-            {hasAudio && zoomMedia && (
+            {hasAudio && zoomMedia && asPath.includes('product/') && (
               <Button
                 className={styles.muteButton}
                 onClick={(e) => {
@@ -173,9 +173,11 @@ const ImageCard = ({
             )}
           </div>
         ) : null}
-        <Button className={styles.zoomButton} onClick={() => onClickZoomOut()}>
-          <img src="/images/zoom_btn.png" />
-        </Button>
+        {asPath.includes('product/') && (
+          <Button className={styles.zoomButton} onClick={() => onClickZoomOut()}>
+            <img src="/images/zoom_btn.png" />
+          </Button>
+        )}
         {hasAudio && mainImageType === 1 && (
           <Button className={styles.muteButton} onClick={() => onClickMute()}>
             {videoMuted ? <img src="/images/audio-off.png" /> : <img src="/images/audio-on.png" />}
