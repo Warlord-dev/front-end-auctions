@@ -29,27 +29,47 @@ export const closeModal = (modalNameInReducer, statusScroll) => (dispatch) => {
   showScroll(statusScroll);
 };
 
-export const openConnectMetamaskModal = () => (dispatch) => dispatch(openModal('isShowModalConnectMetamask', 'hideScroll'));
-export const closeConnectMetamaskModal = () => (dispatch) => dispatch(closeModal('isShowModalConnectMetamask', 'addScroll'));
+export const openConnectMetamaskModal = () => (dispatch) =>
+  dispatch(openModal('isShowModalConnectMetamask', 'hideScroll'));
+export const closeConnectMetamaskModal = () => (dispatch) =>
+  dispatch(closeModal('isShowModalConnectMetamask', 'addScroll'));
 
-export const openNotInstalledMetamask = () => (dispatch) => dispatch(openModal('isShowNotificationConnectMetamask'));
-export const closeNotInstalledMetamask = () => (dispatch) => dispatch(closeModal('isShowNotificationConnectMetamask'));
+export const openNotInstalledMetamask = () => (dispatch) =>
+  dispatch(openModal('isShowNotificationConnectMetamask'));
+export const closeNotInstalledMetamask = () => (dispatch) =>
+  dispatch(closeModal('isShowNotificationConnectMetamask'));
 
-export const openPlaceBidModal = (params) => (dispatch) => dispatch(openModal('isShowModalPlaceBid', 'hideScroll', params));
-export const closePlaceBidModal = () => (dispatch) => dispatch(closeModal('isShowModalPlaceBid', 'addScroll'));
+export const openPlaceBidModal = (params) => (dispatch) =>
+  dispatch(openModal('isShowModalPlaceBid', 'hideScroll', params));
+export const closePlaceBidModal = () => (dispatch) =>
+  dispatch(closeModal('isShowModalPlaceBid', 'addScroll'));
 
+export const openWithdrawModal = (params) => (dispatch) =>
+  dispatch(openModal('isShowModalWithdrawBid', 'hideScroll', params));
+export const closeWithdrawModal = () => (dispatch) =>
+  dispatch(closeModal('isShowModalWithdrawBid', 'addScroll'));
 
-export const openWithdrawModal = (params) => (dispatch) => dispatch(openModal('isShowModalWithdrawBid', 'hideScroll', params));
-export const closeWithdrawModal = () => (dispatch) => dispatch(closeModal('isShowModalWithdrawBid', 'addScroll'));
+export const openBuynowModal = (params) => (dispatch) =>
+  dispatch(openModal('isShowBuyNow', 'hideScroll', params));
+export const closeBuynowModal = () => (dispatch) =>
+  dispatch(closeModal('isShowBuyNow', 'addScroll'));
 
-export const openBuynowModal = (params) => (dispatch) => dispatch(openModal('isShowBuyNow', 'hideScroll', params));
-export const closeBuynowModal = () => (dispatch) => dispatch(closeModal('isShowBuyNow', 'addScroll'));
+export const openPreviewMaterialModal = (params) => (dispatch) =>
+  dispatch(openModal('isShowPreviewMaterial', 'hideScroll', params));
+export const closePreviewMaterialModal = () => (dispatch) =>
+  dispatch(closeModal('isShowPreviewMaterial', 'addScroll'));
 
-export const openPreviewMaterialModal = (params) => (dispatch) => dispatch(openModal('isShowPreviewMaterial', 'hideScroll', params));
-export const closePreviewMaterialModal = () => (dispatch) => dispatch(closeModal('isShowPreviewMaterial', 'addScroll'));
+export const openRaiseModal = (params) => (dispatch) =>
+  dispatch(openModal('isShowModalRaiseBid', 'hideScroll', params));
+export const closeRaiseModal = () => (dispatch) =>
+  dispatch(closeModal('isShowModalRaiseBid', 'addScroll'));
 
-export const openRaiseModal = (params) => (dispatch) => dispatch(openModal('isShowModalRaiseBid', 'hideScroll', params));
-export const closeRaiseModal = () => (dispatch) => dispatch(closeModal('isShowModalRaiseBid', 'addScroll'));
+export const openSignupModal = (params) => (dispatch) =>
+  dispatch(openModal('isShowModalSignup', 'hideScroll', params));
+export const closeSignupModal = () => (dispatch) =>
+  dispatch(closeModal('isShowModalSignup', 'addScroll'));
 
-export const openSignupModal = (params) => (dispatch) => dispatch(openModal('isShowModalSignup', 'hideScroll', params));
-export const closeSignupModal = () => (dispatch) => dispatch(closeModal('isShowModalSignup', 'addScroll'));
+export const openMarketplaceNotActiveModal = () => (dispatch) =>
+  dispatch(openModal('isShowMarketplaceNotActive', 'hideScroll'));
+export const closeMarketplaceNotActiveModal = () => (dispatch) =>
+  dispatch(closeModal('isShowMarketplaceNotActive', 'addScroll'));

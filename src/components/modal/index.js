@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
-const Modal = ({
-  className, title, withCloseIcon, text, onClose, children, titleStyle,
-}) => (
+const Modal = ({ className, title, withCloseIcon, text, onClose, children, titleStyle, mode }) => (
   <div className={styles.wrapper}>
     <div className={cn(styles.modal, className)}>
       {(title || withCloseIcon) && (
@@ -14,7 +12,7 @@ const Modal = ({
           {withCloseIcon && (
             <button
               onClick={onClose}
-              className={styles.closeIcon}
+              className={cn(styles.closeIcon, mode === 'dark' && styles.blackIcon)}
             >
               <img src="./images/icons/close-button.svg" alt="close-icon" />
             </button>
@@ -22,7 +20,12 @@ const Modal = ({
         </div>
       )}
       <div>
-        {!!text && text.map((item) => <p key={item} className={styles.modalBodyText}>{item}</p>)}
+        {!!text &&
+          text.map((item) => (
+            <p key={item} className={styles.modalBodyText}>
+              {item}
+            </p>
+          ))}
       </div>
       {children}
     </div>
@@ -37,6 +40,7 @@ Modal.propTypes = {
   onClose: PropTypes.func,
   children: PropTypes.any,
   titleStyle: PropTypes.any,
+  mode: PropTypes.string,
 };
 
 Modal.defaultProps = {
@@ -47,6 +51,7 @@ Modal.defaultProps = {
   onClose: () => {},
   children: null,
   titleStyle: {},
+  mode: 'light',
 };
 
 export default Modal;

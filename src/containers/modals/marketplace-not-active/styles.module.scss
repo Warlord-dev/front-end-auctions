@@ -1,0 +1,42 @@
+.modalItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+
+  .description {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #ffffff;
+
+    a {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+
+  .proceed {
+    color: white;
+    background: #3cc95b;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+}
+
+.darkModal {
+  background: black;
+}
