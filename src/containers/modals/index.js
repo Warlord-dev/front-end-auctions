@@ -59,7 +59,6 @@ const Modals = () => {
       {isPurchaseSuccess && <PurchaseSuccess />}
       {isShowModalBespoke && <ModalBespoke />}
       {isShowModalCurrentWearers && <ModalCurrentWearers />}
-      {<MarketplaceDown />}
     </>
   );
 };
