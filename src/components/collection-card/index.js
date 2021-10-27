@@ -34,7 +34,7 @@ const CollectionCard = ({ collection }) => {
           {collection?.id !== '15' &&
           collection.endTime &&
           parseInt(collection.endTime) < Date.now() / 1000 ? (
-            <NewButton className={styles.soldOut} text="Sold out" disable />
+            <NewButton className={styles.soldOut} text="Sold out" disable backgroundType={1}/>
           ) : null}
           <Link href={`/marketplace/all/${collection.id}`}>
             <a className={styles.image}>

@@ -101,7 +101,12 @@ const EditProfile = ({ history }) => {
   return (
     <div className={styles.container}>
       <div className={styles.cardWrapper}>
-        <InfoCard mainColor={'rgba(247, 207, 207, 0.47)'} bodyClass={styles.padding5}>
+        <InfoCard 
+          mainColor={'rgba(255, 255, 255, 0.47)'}
+          borderColor = {'#fff'}
+          boxShadow = {'rgba(255, 255, 255, 0.5)'}
+          bodyClass={styles.padding5}
+        >
           <div className={styles.profileWrapper}>
             <div className={styles.avatarWrapper}>
               <img

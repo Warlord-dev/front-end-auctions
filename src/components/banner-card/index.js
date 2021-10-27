@@ -1,13 +1,7 @@
-import { openBuynowModal, openConnectMetamaskModal, openPlaceBidModal, openSwitchNetworkModal } from '@actions/modals.actions';
-import NewButton from '@components/buttons/newbutton';
-import { getAccount } from '@selectors/user.selectors';
 import LazyLoad from 'react-lazyload';
-import { useRouter } from 'next/router';
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getRarityId, reviseUrl } from '@utils/helpers';
+import { reviseUrl } from '@utils/helpers';
 import styles from './styles.module.scss';
-import { getChainId } from '@selectors/global.selectors';
 
 const ImageCard = ({ data, showDesigner = false, imgUrl = null, blue = true }) => {
   return (

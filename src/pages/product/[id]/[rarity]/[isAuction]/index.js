@@ -8,7 +8,6 @@ import ImageCard from '@components/image-card';
 import InfoCard from '@components/info-card';
 import Container from '@components/container';
 import UserList from '@components/user-list';
-import FashionList from '@components/fashion-list';
 import BannerBar from '@components/banner-bar';
 import PriceCard from '@components/price-card';
 import ProductPageLoader from '@components/product-page-loader';
@@ -94,34 +93,16 @@ const Product = ({ pageTitle }) => {
   const [lookIds, setLookIds] = useState([]);
   const [lookInspo, setLookInspo] = useState([]);
 
-  const [isFetchedProduct, setIsFetchedProduct] = useState(false);
-  const [isFetchedViewCount, setIsFetchedViewCount] = useState(false);
-  const [isFetchedSecondDesigners, setIsFetchedSecondDesigners] = useState(false);
-  const fashionData = [
-    {
-      title: 'DeFi Staking Functionality',
-      description: `All NFTs can be staked in the DIGITALAX NFT Staking Contracts on Polygon for $MONA yield. This forms part of the broader Fashion x DeFi merger that DIGITALAX has undertaken to bring greater utility to metaversal fashion and also welcome multitudes more into web3 and DeFi. 
-
-      What if you could earn more from what you wear? Wear to DeFi lets you put your fashion to work for you. We are melting the centralised exploitative crown to weave the fabric of a generative ecosystem.            
-      `,
-    },
-    {
-      title: 'Fractional Garment ERC-1155 Open Source Pattern',
-      description: `Fractional Garment Ownership (FGO) sets forth the standard and dress code for the manufacture of digital fashion along the content supply chain. FGO leverages ERC Protocol standards across the Ethereum Blockchain and Polygon (Matic Network) for breaking down a master ERC-721 digital garment into its programmable and composable ERC-1155 elements of materials, patterns and textures.
-
-      Here, we are using a variant on the ERC-998 standard, where each ERC-721 token can hold a balance of ERC-1155 NFTs. We coin this respectively the Parent and Child NFTs. This allows for other designers to leverage off of the open source digital libraries, incorporating the patterns, materials and textures into their master garments.`,
-    },
-    {
-      title: '3D Model File Included',
-      description: `All of the DIGITALAX digital fashion garment and accessory ERC-721 NFTs are backed by the underlying 3D model FBX file, stored in IPFS. This forms part of the platform’s broader pursuit for decentralising content distribution and access to it. The FBX file is one of the most popular and widely used 3D data interchange formats between 3D editors and game engines. There are still efficiency problems that exist with it, which DIGITALAX is working to solve through it’s DASH File Format architecture. `,
-    },
-  ];
+  const [isFetchedProduct, setIsFetchedProduct] = useState(false)
+  const [isFetchedViewCount, setIsFetchedViewCount] = useState(false)
+  const [isFetchedSecondDesigners, setIsFetchedSecondDesigners] = useState(false)
 
   const sourceTypeDescription = {
     'AR FILTER': 'You can wear and view this fashion in AR',
     'DIGITAL DRESSING': 'Get digitally dressed in this fashion',
     'IN-GAME': 'You can take this fashion in-game',
-    PHYSICAL: 'This fashion includes the physical counterpart',
+    'PHYSICAL COUNTERPART': 'This fashion includes the physical counterpart',
+    'FBX SOURCE FILE': 'type of source file included',
   };
 
   const account = useSelector(getAccount);
@@ -404,12 +385,30 @@ const Product = ({ pageTitle }) => {
     );
   };
 
+  const getPriceElement = () => {
+    return (
+      <>
+        {(getPrice() / 10 ** 18).toFixed(2)}
+        {` MONA `}
+        <span>
+          ($
+          {
+            ((getPrice() / 10 ** 18) * parseFloat(monaPerEth) * exchangeRate).toFixed(2)
+          }
+          )
+        </span>
+      </>
+    )
+  }
+
   // const isLookHakathon = () => {
   //   return lookIds.includes(id);
   // };
 
   if (!isFetchedProduct || !isFetchedSecondDesigners || !isFetchedViewCount) {
-    return <ProductPageLoader />;
+    return (
+      <ProductPageLoader />
+    )
   }
 
   return (
@@ -450,7 +449,7 @@ const Product = ({ pageTitle }) => {
               <div className={styles.mainBody}>
                 <div className={styles.imageCardWrapper}>
                   {/* {!isLookHakathon() ? ( */}
-                  <div className={styles.rarity}> {getRarity(parseInt(rarity))}</div>
+                  <div className={styles.productName}> {product?.garment?.name} </div>
                   {/* ) : ( */}
                   {/* <div className={styles.lookTitle}>LOOK Hackathon</div> */}
                   {/* )} */}
@@ -508,7 +507,6 @@ const Product = ({ pageTitle }) => {
                         <span className={styles.questionMark}>?</span>
                         <span className={styles.description} style={{ width: 300 }}>
                           You can also stake this NFT for yield + get the original source file.
-                          Check <a href={`${window.location.pathname}#fashion_list`}>here</a>.
                         </span>
                       </div>
                     </div>
@@ -529,10 +527,14 @@ const Product = ({ pageTitle }) => {
                       </div>
                     </div>
 
-                    <InfoCard>
+                    <InfoCard
+                      borderColor='white'
+                      boxShadow2='inset 0px 0px 10px 10px rgba(255, 255, 255, 0.47)'
+                      mainColor='rgba(95, 95, 95, 0.47)'
+                    >
                       <div className={styles.infoCard}>
                         <div className={styles.skinName}>
-                          <div className={styles.text}> {product?.garment?.name} </div>
+                          <div className={styles.text}> {getRarity(parseInt(rarity))} </div>
                         </div>
                         <div className={styles.description}>{product?.garment?.description}</div>
                       </div>
@@ -556,11 +558,8 @@ const Product = ({ pageTitle }) => {
                     <div className={styles.actions}>
                       <div className={styles.buttonWrapper}>
                         <PriceCard
-                          mainText={`${(getPrice() / 10 ** 18).toFixed(2)} MONA ($${(
-                            (getPrice() / 10 ** 18) *
-                            parseFloat(monaPerEth) *
-                            exchangeRate
-                          ).toFixed(2)})`}
+                          mode={1}
+                          mainText={getPriceElement()}
                           subText={parseInt(isAuction) === 1 ? 'highest bid' : 'sale price'}
                         />
                       </div>
@@ -623,7 +622,7 @@ const Product = ({ pageTitle }) => {
                       href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
                       target="_blank"
                     >
-                      <ImageCard showButton={false} imgUrl={product?.designer?.image} />
+                      <ImageCard showButton={false} imgUrl={product?.designer?.image} borderType='pink' />
                     </a>
                     <div className={styles.infoWrapper}>
                       {owners.length ? (
@@ -641,7 +640,12 @@ const Product = ({ pageTitle }) => {
                       ) : (
                         <></>
                       )}
-                      <InfoCard libon="./images/metaverse/party_glasses.png">
+                      <InfoCard
+                        libon="./images/metaverse/party_glasses.png"
+                        borderColor='#c52081'
+                        boxShadow='rgba(197, 32, 129, 0.5)'
+                        mainColor='rgba(189, 61, 169, 0.47)'
+                      >
                         <a
                           href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
                           target="_blank"
@@ -688,7 +692,11 @@ const Product = ({ pageTitle }) => {
                             href={`https://designers.digitalax.xyz/designers/${item.name}`}
                             target="_blank"
                           >
-                            <ImageCard showButton={false} imgUrl={item.image} />
+                            <ImageCard
+                              showButton={false}
+                              imgUrl={item.image}
+                              borderType='pink'
+                            />
                           </a>
                           <div className={styles.infoWrapper}>
                             {owners.length ? (
@@ -706,7 +714,12 @@ const Product = ({ pageTitle }) => {
                             ) : (
                               <></>
                             )}
-                            <InfoCard libon="./images/metaverse/party_glasses.png">
+                            <InfoCard
+                              libon="./images/metaverse/party_glasses.png"
+                              borderColor='#c52081'
+                              boxShadow='rgba(197, 32, 129, 0.5)'
+                              mainColor='rgba(189, 61, 169, 0.47)'
+                            >
                               <a
                                 href={`https://designers.digitalax.xyz/designers/${item.name}`}
                                 target="_blank"
@@ -737,13 +750,6 @@ const Product = ({ pageTitle }) => {
               })}
           </>
         ) : null}
-
-        <section id="fashion_list">
-          {!id.includes('v1') &&
-          ((parseInt(id) >= 11 && parseInt(id) < 100294) || parseInt(id) > 130000) ? (
-            <FashionList fashionData={fashionData} collections={product} />
-          ) : null}
-        </section>
       </div>
     </>
   );

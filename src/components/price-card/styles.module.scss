@@ -6,6 +6,7 @@
 
   .mainWrapper {
     position: relative;
+    min-height: 50px;
 
     .backImage {
       width: 100%;
@@ -19,22 +20,37 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-flow: wrap-reverse;
 
       p {
         font-family: Gilroy;
-        font-size: 15px;
-        color: black;
+        font-size: 25px;
+        color: white;
         font-weight: 600;
-        font-style: italic;
         text-transform: uppercase;
         text-align: center;
+        word-wrap: normal;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        span {
+          font-weight: normal;
+        }
+
+        @include md-width {
+          font-size: 20px;
+        }
 
         @include lg-width {
-          font-size: 16px;
+          font-size: 22px;
         }
 
         @include xxl-width {
-          font-size: 18px;
+          font-size: 30px;
+        }
+
+        &.oswaldFont {
+          
         }
       }
     }
@@ -51,7 +67,7 @@
 
     letter-spacing: 0.56em;
     text-align: center;
-
+    white-space: nowrap;
     color: #FFFFFF;
   }
 }

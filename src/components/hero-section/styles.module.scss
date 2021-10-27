@@ -5,14 +5,54 @@
   background-color: black;
   margin-top: 76px;
   overflow: hidden;
-
-  .back {
-    position: relative;
-    width: 100%;
-    top: 0;
+  width: 100%;
+  @include lg-width {
     min-height: 200px;
   }
+  
 
+  .titleWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+    margin-top: 15px;
+
+    @include lg-width {
+      margin-bottom: 4vw;
+      margin-top: 3vw;  
+    }
+
+    h1 {
+      font-family: Orbitron;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 50px;      
+      line-height: 125%;
+      text-align: center;
+      width: 100%;
+      color: #FFFFFF;
+
+      @include lg-width {
+        font-size: 10.4vw;
+      }
+    }
+  
+    h2 {
+      font-family: Orbitron;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 125%;
+      color: #FFFFFF;  
+      @include lg-width {
+        font-size: 4.16vw;
+      }
+    }
+  }
+ 
   .logo {
     position: absolute;
     left: 50%;

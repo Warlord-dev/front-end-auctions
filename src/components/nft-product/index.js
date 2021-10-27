@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
@@ -6,9 +6,7 @@ import { useSelector } from 'react-redux';
 import kebabCase from 'lodash.kebabcase';
 import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getDesignerInfoByName } from '@selectors/designer.selectors';
-import { create2KURL } from '@services/imgix.service';
 import { getImageForCardProduct, getDesignerName } from '@helpers/photo.helpers';
-import { useTokenInfo } from '@hooks/token.info.hooks';
 import ImportantNFTInformation from '@containers/important-nft-information';
 
 import styles from './styles.module.scss';

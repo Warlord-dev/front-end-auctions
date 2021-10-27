@@ -33,10 +33,15 @@ const ProductInfoCard = ({
   }, [product]);
 
   const getPrice = () => {
-    return `${(price / 10 ** 18).toFixed(2)} MONA ($${(
-      (parseFloat(monaPerEth) * exchangeRate * price) /
-      10 ** 18
-    ).toFixed(2)})`;
+    return (
+      <>
+        {`${(price / 10 ** 18).toFixed(2)} $MONA`}
+        <span>{` ($${(
+          (parseFloat(monaPerEth) * exchangeRate * price) / 10 ** 18).toFixed(2)})
+        `}
+        </span>
+      </>
+    );
   };
 
   const getTimeFormat = () => {
@@ -52,6 +57,10 @@ const ProductInfoCard = ({
     }
   };
 
+  const getTime = () => {
+    return <span>{time}</span>
+  }
+
   return (
     <div className={styles.productInfoCardwrapper}>
       <div className={styles.imageWrapper}>
@@ -66,12 +75,12 @@ const ProductInfoCard = ({
         />
       </div>
       <div className={styles.infoCardWrapper}>
-        <InfoCard borderColor="#9c28ff" boxShadow="rgba(197, 32, 129, 0.5)">
+        <InfoCard>
           {isAuction ? (
             <>
-              <div className={styles.infoWrapper}>
-                <PriceCard mainText={time} />
-                <PriceCard mainText={getPrice()} />
+              <div className={[styles.infoWrapper, styles.flexRow].join(' ')}>
+                <PriceCard mainText={getTime()} subText={'TIME LEFT'} />
+                <PriceCard mainText={getPrice()} subText={'HIGHEST BID'} />
               </div>
               <div className={styles.buttonWrapper}>
                 <Link
@@ -87,7 +96,7 @@ const ProductInfoCard = ({
             </>
           ) : (
             <div className={styles.infoWrapper}>
-              <PriceCard mainText={getPrice()} />
+              <PriceCard mainText={getPrice()} subText={'SALE PRICE'} />
               <Link
                 href={`/product/${product?.id}/${getRarityId(product?.rarity)}/${
                   isAuction ? 1 : 0

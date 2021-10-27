@@ -62,7 +62,7 @@
         }
 
         .imageCardWrapper {
-          .rarity {
+          .productName {
             width: 100%;
             left: 50%;
             padding: 2rem 0;
@@ -70,9 +70,11 @@
             text-transform: uppercase;
             color: white;
             font-size: 30px;
-            font-family: m12;
-            // transform: translate(-50%, -100%);
-            -webkit-text-stroke: 2px rgb(156, 40, 255);
+            line-height: 125%;
+
+            font-family: Orbitron;
+            font-style: normal;
+            font-weight: 900;
 
             @include md-width {
               font-size: 30px;
@@ -158,7 +160,7 @@
             flex-grow: 1;
 
             .bespokeBtn {
-              background: rgba(63, 159, 248, 0.51);
+              background: rgba(92, 89, 91, 0.5);
               position: relative;
               color: white;
               font-size: 24px;
@@ -168,6 +170,8 @@
               font-family: 'Bebas Neue';
               margin-top: 1rem;
               border: none;
+              width: 80%;
+              align-self: center;
 
               @include transition();
 
@@ -177,8 +181,12 @@
               }
             }
 
+            a {
+              text-align: center;
+            }
+
             .stakeBtn {
-              background: rgba(27, 65, 200, 0.51);
+              background: rgba(92, 89, 91, 0.5);
               position: relative;
               color: white;
               font-size: 24px;
@@ -188,7 +196,8 @@
               font-family: 'Bebas Neue';
               margin-top: 1rem;
               border: none;
-              width: 100%;
+              width: 80%;
+              align-self: center;
 
               @include transition();
 
@@ -206,6 +215,7 @@
               margin-bottom: 1rem;
               display: flex;
               width: 200%;
+              text-shadow: 0px 4px 10px #FFFFFF;
 
               .helper {
                 cursor: pointer;
@@ -213,6 +223,7 @@
                 height: 52px;
                 margin-top: -30px;
                 align-items: center;
+                text-shadow: none;
 
                 .questionMark {
                   border: 1px solid white;
@@ -232,15 +243,14 @@
 
                 .description {
                   display: none;
-                  background: #c047e7;
-                  border: 2px solid #c047e7;
+                  background: #000000;
+                  border: 2px solid #FFFFFF;
                   padding: 7px 12px;
                   justify-content: center;
                   align-items: center;
                   font-family: Gilroy;
                   font-weight: 800;
                   font-size: 14px;
-
                   margin-left: 10px;
 
                   a {
@@ -355,7 +365,8 @@
                 top: calc(100% + 0.5rem);
                 left: 0;
                 z-index: 1;
-                background: #591d4f;
+                background: #000000;
+                border: 2px solid white;
                 width: 175px;
                 color: white;
                 font-family: Gilroy;
@@ -395,11 +406,10 @@
                 left: 0;
                 height: 40px;
                 width: 40px;
-                background-color: #111111;
-                border: 3px solid #9d1e71;
+                background: #111111;
+                border: 3px solid #FFFFFF;
                 border-radius: 13px;
-                background: #591d4f;
-                box-shadow: 0px 4px 20px 2px #9d1e71;
+                box-shadow: 0px 4px 10px 1px #FFFFFF;
 
                 &:after {
                   content: '';
@@ -484,6 +494,12 @@
 
           .skinName {
             margin-bottom: 0.5rem;
+
+            .text {
+              font-family: Orbitron;
+              font-style: normal;
+              font-weight: bold;
+            }
           }
 
           .description {
@@ -506,8 +522,22 @@
           .buttonWrapper {
             display: flex;
             flex-direction: column;
-            width: 200px;
+            width: 260px;
             margin: auto;
+
+
+            @include md-width {
+              width: 260px;
+            }
+            
+            @include xl-width {
+              width: 300px;
+            }
+
+
+            @include xxl-width {
+              width: 340px;
+            }
 
             .buttonLabel {
               font-family: Inter;
@@ -525,7 +555,7 @@
 
         .viewBidHistory {
           position: relative;
-          background: rgba(128, 150, 230, 0.51);
+          background: rgba(92, 89, 91, 0.5);
           color: white;
           font-size: 24px;
           padding: 0.75rem 1rem;
@@ -534,6 +564,8 @@
           font-family: 'Bebas Neue';
           border: none;
           margin-top: 1rem;
+          width: 80%;
+          align-self: center;
 
           @include transition();
 

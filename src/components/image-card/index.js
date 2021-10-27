@@ -29,6 +29,7 @@ const ImageCard = ({
   withLink = false,
   isAuction = false,
   v1 = false,
+  borderType = 'white'
 }) => {
   const router = useRouter();
   const account = useSelector(getAccount);
@@ -116,7 +117,7 @@ const ImageCard = ({
 
   const renderImage = () => {
     return (
-      <div className={styles.bodyWrapper}>
+      <div className={[styles.bodyWrapper, borderType === 'white' ? styles.white : ''].join(' ')}>
         {showRarity ? (
           <div className={styles.rarity}> {data?.rarity || data?.garment?.rarity} </div>
         ) : null}

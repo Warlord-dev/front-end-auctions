@@ -3,8 +3,10 @@
   padding: 2rem;
   border-radius: 2rem;
   height: 80vw;
-  border: 2px solid #9c28ff;
-  box-shadow: inset 0px 0px 30px 20px rgb(197 32 129 / 50%), 0px 0px 30px 20px rgb(197 32 129 / 50%);
+  // border: 3px solid #FFFFFF;
+  // box-shadow: inset 0px 4px 30px 10px #ffffff, 0px 4px 25px 10px #ffffff
+  border: 2px solid #fff;
+  box-shadow: inset 0px 0px 30px 20px rgba(255, 255, 255, 0.5), 0px 0px 30px 20px rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
 
