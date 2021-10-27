@@ -13,7 +13,7 @@ const ProductPageLoader = (props) => {
         viewBox="0 0 480 550"
         backgroundColor="#291c2c"
         foregroundColor="#ae04ec"
-        style={{ width: '100%' }}
+        style={{ width: '100%', height: '100%' }}
         {...props}
       >
     <rect x="35" y="56" rx="12" ry="12" width="147" height="147" /> 

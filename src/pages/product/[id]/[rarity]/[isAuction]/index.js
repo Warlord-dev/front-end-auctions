@@ -405,7 +405,7 @@ const Product = ({ pageTitle }) => {
   //   return lookIds.includes(id);
   // };
 
-  if (!isFetchedProduct || !isFetchedSecondDesigners || !isFetchedViewCount) {
+  if (!isFetchedProduct || !isFetchedSecondDesigners || !isFetchedViewCount || 1) {
     return (
       <ProductPageLoader />
     )
