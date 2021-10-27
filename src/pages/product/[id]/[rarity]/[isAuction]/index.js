@@ -406,7 +406,9 @@ const Product = ({ pageTitle }) => {
   // };
 
   if (!isFetchedProduct || !isFetchedSecondDesigners || !isFetchedViewCount) {
-    return <ProductPageLoader />;
+    return (
+      <ProductPageLoader />
+    )
   }
 
   return (
