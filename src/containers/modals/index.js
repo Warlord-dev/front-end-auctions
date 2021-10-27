@@ -1,21 +1,22 @@
-import React, { memo } from "react";
-import { useSelector } from "react-redux";
-import ModalConnectWallet from "@containers/modals/modal-connect-wallet";
-import ModalPlaceBid from "@containers/modals/modal-place-bid";
-import ModalRaiseBid from "@containers/modals/modal-raise-bid";
-import ModalWithdrawBid from "@containers/modals/modal-withdraw-bid";
-import ModalSignup from "@containers/modals/modal-sign-up";
-import BuyNow from "@containers/modals/buy-now";
-import PreviewMaterial from "@containers/modals/preview-material";
-import ModalESPAReady from "./modal-espa-ready";
-import ModalConnectMatic from "./modal-connect-matic";
+import React, { memo } from 'react';
+import { useSelector } from 'react-redux';
+import ModalConnectWallet from '@containers/modals/modal-connect-wallet';
+import ModalPlaceBid from '@containers/modals/modal-place-bid';
+import ModalRaiseBid from '@containers/modals/modal-raise-bid';
+import ModalWithdrawBid from '@containers/modals/modal-withdraw-bid';
+import ModalSignup from '@containers/modals/modal-sign-up';
+import BuyNow from '@containers/modals/buy-now';
+import PreviewMaterial from '@containers/modals/preview-material';
+import ModalESPAReady from './modal-espa-ready';
+import ModalConnectMatic from './modal-connect-matic';
 import BuyNowCooldown from './modal-cooldown';
 import BuyNowLimit from './modal-limit';
-import History from "./history";
-import SwitchNetworkModal from "./switch-network";
-import PurchaseSuccess from "./purchase-success";
-import ModalBespoke from "./modal-bespoke";
-import ModalCurrentWearers from "./modal-current-wearers";
+import History from './history';
+import SwitchNetworkModal from './switch-network';
+import PurchaseSuccess from './purchase-success';
+import ModalBespoke from './modal-bespoke';
+import ModalCurrentWearers from './modal-current-wearers';
+import MarketplaceDown from './marketplace-down';
 
 const Modals = () => {
   const modals = useSelector((state) => state.modals.toJS());
@@ -36,7 +37,7 @@ const Modals = () => {
     isSwitchNetwork,
     isPurchaseSuccess,
     isShowModalBespoke,
-    isShowModalCurrentWearers
+    isShowModalCurrentWearers,
   } = modals;
 
   return (
@@ -58,6 +59,7 @@ const Modals = () => {
       {isPurchaseSuccess && <PurchaseSuccess />}
       {isShowModalBespoke && <ModalBespoke />}
       {isShowModalCurrentWearers && <ModalCurrentWearers />}
+      {<MarketplaceDown />}
     </>
   );
 };
