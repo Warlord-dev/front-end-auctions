@@ -6,7 +6,7 @@
 
   .mainWrapper {
     position: relative;
-    height: 50px;
+    min-height: 50px;
 
     .backImage {
       width: 100%;
@@ -25,11 +25,13 @@
       p {
         font-family: Gilroy;
         font-size: 25px;
-        color: black;
+        color: white;
         font-weight: 600;
         text-transform: uppercase;
         text-align: center;
         word-wrap: normal;
+        padding-left: 1rem;
+        padding-right: 1rem;
 
         span {
           font-weight: normal;
@@ -45,6 +47,10 @@
 
         @include xxl-width {
           font-size: 30px;
+        }
+
+        &.oswaldFont {
+          
         }
       }
     }

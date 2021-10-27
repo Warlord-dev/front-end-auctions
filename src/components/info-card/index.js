@@ -6,6 +6,7 @@ const InfoCard = ({
   libon,
   borderColor = '',
   boxShadow = '',
+  boxShadow2 = '',
   mainColor = 'transparent',
   bodyClass = ''
 }) => {
@@ -14,7 +15,13 @@ const InfoCard = ({
       className={styles.wrapper}
       style={{
         border: borderColor !== '' ? `2px solid ${borderColor}` : 'none',
-        boxShadow: boxShadow !== '' ? `inset 0px 0px 30px 20px ${boxShadow},0px 0px 30px 20px ${boxShadow}` : '',
+        boxShadow: boxShadow2 !== ''
+          ? boxShadow2
+          : (
+            boxShadow !== ''
+            ? `inset 0px 0px 30px 20px ${boxShadow}, 0px 0px 30px 20px ${boxShadow}`
+            : ''
+          ),
       }}
     >
       {libon ? <img src={libon} className={styles.libon} /> : null}

@@ -16,7 +16,7 @@ const PriceCard = ({ mode = 0, mainText, subText }) => {
           <img src={images[mode]} className={styles.backImage} />
         }
         <div className={styles.mainText}>
-          <p style={{color: mode ? 'black' : 'white'}}> {mainText} </p>
+          <p className={mode == 1 ? styles.oswaldFont : ''}> {mainText} </p>
         </div>
       </div>
       {subText ? <p className={styles.subText}> {subText} </p> : null}
