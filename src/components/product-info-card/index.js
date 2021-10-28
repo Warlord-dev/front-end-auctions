@@ -75,7 +75,9 @@ const ProductInfoCard = ({
         />
       </div>
       <div className={styles.infoCardWrapper}>
-        <InfoCard>
+        <InfoCard
+          bodyClass={styles.noHorizontalPadding}
+        >
           {isAuction ? (
             <>
               <div className={[styles.infoWrapper, styles.flexRow].join(' ')}>

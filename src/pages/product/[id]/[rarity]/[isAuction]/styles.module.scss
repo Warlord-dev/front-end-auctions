@@ -162,7 +162,11 @@
 
         .infoWrapper {
           display: flex;
-          margin-top: -30px;
+          margin-top: 10px;
+
+          @include md-width {
+            margin-top: -30px;
+          }
 
           .leftSection {
             display: flex;
