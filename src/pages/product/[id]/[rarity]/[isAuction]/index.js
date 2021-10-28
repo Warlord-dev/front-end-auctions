@@ -446,10 +446,11 @@ const Product = ({ pageTitle }) => {
         <section className={styles.mainSection}>
           <Container>
             <div className={styles.body}>
+              <div className={styles.productName}> {product?.garment?.name} </div>
               <div className={styles.mainBody}>
                 <div className={styles.imageCardWrapper}>
                   {/* {!isLookHakathon() ? ( */}
-                  <div className={styles.productName}> {product?.garment?.name} </div>
+                  
                   {/* ) : ( */}
                   {/* <div className={styles.lookTitle}>LOOK Hackathon</div> */}
                   {/* )} */}

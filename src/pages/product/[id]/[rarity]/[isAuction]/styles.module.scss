@@ -35,10 +35,51 @@
         padding: 7.5rem 0rem;
       }
 
+      .productName {
+        width: 100%;
+        left: 50%;
+        padding: 2rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        font-size: 30px;
+        line-height: 125%;
+
+        font-family: Orbitron;
+        font-style: normal;
+        font-weight: 900;
+        margin: auto;
+
+        @include sm-width {
+          width: 400px;
+        }
+
+        @include md-width {
+          font-size: 30px;
+          width: 500px;
+        }
+
+        @include lg-width {
+          font-size: 40px;
+          width: 350px;
+          margin: 0;
+        }
+
+        @include xl-width {
+          font-size: 50px;
+          width: 400px;
+        }
+
+        @include xxl-width {
+          font-size: 60px;
+          width: 500px;
+        }
+      }
+
       .mainBody {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 4rem;
         position: relative;
         z-index: 10;
 
@@ -48,51 +89,21 @@
 
         @include lg-width {
           grid-template-columns: 350px auto;
-          gap: 2rem;
+          gap: 4rem;
         }
 
         @include xl-width {
           grid-template-columns: 400px auto;
-          gap: 3rem;
+          gap: 6rem;
         }
 
         @include xxl-width {
           grid-template-columns: 500px auto;
-          gap: 5rem;
+          gap: 8rem;
         }
 
         .imageCardWrapper {
-          .productName {
-            width: 100%;
-            left: 50%;
-            padding: 2rem 0;
-            text-align: center;
-            text-transform: uppercase;
-            color: white;
-            font-size: 30px;
-            line-height: 125%;
-
-            font-family: Orbitron;
-            font-style: normal;
-            font-weight: 900;
-
-            @include md-width {
-              font-size: 30px;
-            }
-
-            @include lg-width {
-              font-size: 40px;
-            }
-
-            @include xl-width {
-              font-size: 50px;
-            }
-
-            @include xxl-width {
-              font-size: 60px;
-            }
-          }
-
+          
           .childrenDescription {
             margin-top: 9rem;
             font-family: Gilroy;
@@ -151,7 +162,7 @@
 
         .infoWrapper {
           display: flex;
-          padding-top: 100px;
+          margin-top: -30px;
 
           .leftSection {
             display: flex;
@@ -513,7 +524,8 @@
         }
 
         .actions {
-          margin-top: 3rem;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
           display: grid;
           grid-template-columns: 1fr;
           gap: 1rem;
@@ -522,22 +534,8 @@
           .buttonWrapper {
             display: flex;
             flex-direction: column;
-            width: 260px;
+            width: 200px;
             margin: auto;
-
-
-            @include md-width {
-              width: 260px;
-            }
-            
-            @include xl-width {
-              width: 300px;
-            }
-
-
-            @include xxl-width {
-              width: 340px;
-            }
 
             .buttonLabel {
               font-family: Inter;

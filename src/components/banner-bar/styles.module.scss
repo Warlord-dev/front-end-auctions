@@ -61,20 +61,22 @@
 .wrapper2 {
   width: 100%;
   background-color: black;
-  min-height: 150px;
+  padding: 1.5vw 0;
   z-index: 2;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
 
-  .node{
+  
+
+  .node {
     margin: auto;
     z-index: 2;
-    position: absolute;
     margin-left: auto;
     margin-right: auto;      
     left: 0;
     right: 0;
     text-align: center;
     width: 100%;
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
 
