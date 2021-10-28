@@ -98,7 +98,7 @@ const Product = ({ pageTitle }) => {
   const [isFetchedSecondDesigners, setIsFetchedSecondDesigners] = useState(false)
 
   const sourceTypeDescription = {
-    'AR FILTER': 'You can wear and view this fashion in AR',
+    'AR': 'You can wear and view this fashion in AR',
     'DIGITAL DRESSING': 'Get digitally dressed in this fashion',
     'IN-GAME': 'You can take this fashion in-game',
     'PHYSICAL COUNTERPART': 'This fashion includes the physical counterpart',
@@ -506,7 +506,7 @@ const Product = ({ pageTitle }) => {
                       )}
                       <div className={styles.helper}>
                         <span className={styles.questionMark}>?</span>
-                        <span className={styles.description} style={{ width: 300 }}>
+                        <span className={styles.description} >
                           You can also stake this NFT for yield + get the original source file.
                         </span>
                       </div>
