@@ -5,6 +5,7 @@ const Page8586 = () => {
   return (
     <div className={styles.wrapper}>
       <img src="/magazine/6/images/85_86.png" className={styles.image1} />
+
       <div className={styles.text1}>
         How Lobster NFTs and a DAO Helped Give Crypto a Voice in Washington
       </div>
