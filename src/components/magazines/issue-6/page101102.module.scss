@@ -2,8 +2,7 @@
 
 .wrapper {
   @include magazineWrapper();
-
-  background-color: #000000;
+  background: black;
 
   .image1 {
     position: absolute;
@@ -14,328 +13,255 @@
     object-fit: cover;
   }
 
-  .video1 {
-    position: absolute;
-    width: 962px;
-    height: 962px;
-    left: 958px;
-    top: 0px;
-  }
-
   .image2 {
     position: absolute;
-    width: 461px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
-  }
-
-  .rect1 {
-    position: absolute;
     width: 960px;
-    height: 463px;
+    height: 1497px;
     left: 960px;
-    top: 1034px;
-    
-    background: #A748F2;    
+    top: 0px;
+    object-fit: cover;
   }
 
   .text1 {
     position: absolute;
-    width: 906px;
-    height: 110px;
-    left: 986px;
-    top: 964px;
+    width: 620px;
+    height: 239px;
+    left: 17px;
+    top: 0px;
     
-    font-family: Wicked Halloween;
-    font-size: 110px;
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
     line-height: 100%;
-    color: #62FFEC;
-    -webkit-text-stroke: 1px #FF5C92;
+    color: #FFD057;        
   }
 
   .text2 {
     position: absolute;
-    width: 906px;
-    height: 110px;
-    left: 1186px;
-    top: 1094px;
+    width: 620px;
+    height: 239px;
+    left: 603px;
+    top: 29px;
     
-    font-family: Wicked Halloween;
-    font-size: 110px;
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
     line-height: 100%;
-    color: #62FFEC;
-    -webkit-text-stroke: 1px #FF5C92;
+    color: #FFD057;
   }
 
   .text3 {
     position: absolute;
-    width: 906px;
-    height: 110px;
-    left: 1186px;
-    top: 1209px;
+    width: 620px;
+    height: 239px;
+    left: -155px;
+    top: 252px;
     
-    font-family: Wicked Halloween;
-    font-size: 110px;
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
     line-height: 100%;
-    color: #62FFEC;
-    -webkit-text-stroke: 1px #FF5C92;
+    color: #FFD057;    
   }
 
   .text4 {
     position: absolute;
-    width: 906px;
-    height: 110px;
-    left: 1439px;
-    top: 1339px;
+    width: 620px;
+    height: 239px;
+    left: 428px;
+    top: 286px;
     
-    font-family: Wicked Halloween;
-    font-size: 110px;
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
     line-height: 100%;
-    color: #62FFEC;
-    -webkit-text-stroke: 1px #FF5C92;
+    color: #FFD057;    
   }
 
-  .circle1 {
+  .text5 {
     position: absolute;
-    width: 202px;
-    height: 202px;
-    left: 967px;
-    top: 1279px;
-   
+    width: 620px;
+    height: 239px;
+    left: -115px;
+    top: 525px;
     
-    background: #6534FF;
-    border: 4px solid #FCCDD3;
-    border-radius: 50%;    
-  }
-
-  .circleText1 {
-    position: absolute;
-    width: 167.1px;
-    height: 118.55px;
-    left: 962px;
-    top: 1347.2px;
-    
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 46px;
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
     text-align: center;
     
-    color: #FCCDD3;
-    -webkit-text-stroke:  1px #FCCDD3;
-    transform-origin: 0 0;
-    transform: rotate(-20deg);    
+    color: #FFD057;    
   }
 
-  .circleText2 {
+  .text6 {
     position: absolute;
-    width: 151px;
-    height: 119px;
-    left: 1009px;
-    top: 1408px;
+    width: 620px;
+    height: 375px;
+    left: 29px;
+    top: 1088px;
     
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 30px;
-    text-align: center;
-    color: #FFFFFF;
-  }
-
-  .poapImage {
-    position: absolute;
-    width: 154.26px;
-    height: 154.26px;
-    left: 1087.52px;
-    top: 1316.76px;
-    
-    transform-origin: 0 0;
-    transform: rotate(-20deg);
-
-    transition: all 0.3s;
-    &:hover {
-      transition: all 0.3s;
-      transform: rotate(-20deg) scale(1.1);
-    }
+    font-family: CF Punk Fashion PERSONAL;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FFD057;    
   }
 
   .image3 {
     position: absolute;
-    width: 196px;
-    height: 196px;
-    left: 589px;
-    top: 21px;
-    transition: 0.3s all;
+    width: 917px;
+    height: 1286px;
+    left: 1003px;
+    top: 211px;    
+  }
 
-    &:hover {
-      transform: scale(1.1)
-    }
+  .rect1 {
+    position: absolute;
+    width: 704px;
+    height: 155px;
+    left: 1088px;
+    top: 37px;
+    
+    background: #000000;
+    border: 10px solid #10C700;    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 704px;
+    height: 125px;
+    left: 1088px;
+    top: 53px;
+    
+    font-family: Joti One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+    
+    text-align: center;
+    
+    color: #10C700;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 632px;
+    height: 80px;
+    left: 1124px;
+    top: 122px;
+    
+    font-family: Joti One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 47px;
+    text-align: center;
+    
+    color: #FFFFFF;    
   }
 
   .image4 {
     position: absolute;
-    width: 196px;
-    height: 196px;
-    left: 709px;
-    top: 194px;
-    transition: 0.3s all;
-
-    &:hover {
-      transform: scale(1.1)
-    }
+    width: 311px;
+    height: 311px;
+    left: 1010px;
+    top: 243px;    
   }
 
   .image5 {
     position: absolute;
-    width: 196px;
-    height: 196px;
-    left: 542px;
-    top: 309px;
-    transition: 0.3s all;
-
-    &:hover {
-      transform: scale(1.1)
-    }
+    width: 321px;
+    height: 321px;
+    left: 1583px;
+    top: 273px;
   }
 
   .image6 {
     position: absolute;
-    width: 196px;
-    height: 196px;
-    left: 702px;
-    top: 442px;
-    transition: 0.3s all;
-
-    &:hover {
-      transform: scale(1.1)
-    }
+    width: 311px;
+    height: 311px;
+    left: 1272px;
+    top: 564px;
   }
 
-  .itemImage1 {
+  .image7 {
     position: absolute;
     width: 311px;
     height: 311px;
-    left: 237px;
-    top: 39px;    
+    left: 1010px;
+    top: 931px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1588px;
+    top: 875px;
+    
+  }
+
+  .image9 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1300px;
+    top: 1196px;
   }
 
   .item1 {
     position: absolute;
     width: 311px;
     height: 311px;
-    left: 237px;
-    top: 39px;
-    padding: 35px;
-    object-fit: cover;
-  }
-
-  .itemImage2 {
-    position: absolute;
-    width: 311px;
-    height: 311px;
-    left: 10px;
-    top: 350px;
-  }
-
-  .item2 {
-    position: absolute;
-    width: 311px;
-    height: 311px;
-    left: 10px;
-    top: 350px;
+    left: 1010px;
+    top: 243px;
     padding: 35px;
     object-fit: cover;    
   }
 
-  .itemImage3 {
+  .item2 {
     position: absolute;
-    width: 311px;
-    height: 311px;
-    left: 340px;
-    top: 540px;
+    width: 321px;
+    height: 321px;
+    left: 1583px;
+    top: 273px;
+    padding: 35px;
+    object-fit: cover;
   }
 
   .item3 {
     position: absolute;
     width: 311px;
     height: 311px;
-    left: 340px;
-    top: 540px;
+    left: 1272px;
+    top: 564px;
     padding: 35px;
     object-fit: cover;
-  }
-
-  .itemImage4 {
-    position: absolute;
-    width: 311px;
-    height: 311px;
-    left: 11px;
-    top: 808px;
   }
 
   .item4 {
     position: absolute;
     width: 311px;
     height: 311px;
-    left: 11px;
-    top: 808px;
+    left: 1010px;
+    top: 931px;
     padding: 35px;
     object-fit: cover;
-  }
-
-  .itemImage5 {
-    position: absolute;
-    width: 311px;
-    height: 311px;
-    left: 615px;
-    top: 851px;
   }
 
   .item5 {
     position: absolute;
     width: 311px;
     height: 311px;
-    left: 615px;
-    top: 851px;
+    left: 1588px;
+    top: 875px;
     padding: 35px;
-    object-fit: cover;   
-  }
-
-  .itemImage6 {
-    position: absolute;
-    width: 311px;
-    height: 311px;
-    left: 47px;
-    top: 1163px;
+    object-fit: cover;
   }
 
   .item6 {
     position: absolute;
     width: 311px;
     height: 311px;
-    left: 47px;
-    top: 1163px;
-    padding: 35px;
-    object-fit: cover;
-  }
-
-  .itemImage7 {
-    position: absolute;
-    width: 311px;
-    height: 311px;
-    left: 446px;
-    top: 1170px;
-  }
-
-  .item7 {
-    position: absolute;
-    width: 311px;
-    height: 311px;
-    left: 446px;
-    top: 1170px;
+    left: 1300px;
+    top: 1196px;
     padding: 35px;
     object-fit: cover;
   }

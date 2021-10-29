@@ -1,29 +1,55 @@
-import React from 'react'
-import styles from './page8990.module.scss'
-
+import React from 'react';
+import styles from './page8990.module.scss';
 
 const Page8990 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/6/images/8990_image1.gif' className={styles.image1} />
+      <img src="/magazine/6/images/8788_image1.gif" className={styles.image1} />
 
       <div className={styles.rect1}></div>
       <div className={styles.rect2}></div>
       <div className={styles.rect3}></div>
 
       <div className={styles.text1}>
-        Web3 communities have the proverbial skin in the game for them to have an incentive to achieve broader goals as a group. They are platformless and censorship-resistant, as opposed to the passively consuming communities of web2 whose sole existence is to consume content and have their data extracted for massive value–rather than sharing in the community’s upside. 
-        <br /><br />
-        And without that community, every facet of value–from finances, culture, to content–can not be captured, created, or scaled.
-        <br /><br />
-        We all want to be part of something greater than ourselves. That’s why we crave community, identity, for our place in the world. 
-        <br /><br />
-        Think about how the largest communities draw their strength from the intensity of their individuals’ passion and belief. Take religion, for instance: religion captures the biggest delta of all because it costs virtually nothing to manufacture faith in a supreme being or an afterlife, regardless of the belief system in question. Then, think of how many people are willing to make the ultimate sacrifice–to die for their faith. 
-        <br /><br />
-        In many ways, it takes that same fervor and zeal in incentivizing the community members to act in its best interest and govern and derive consensus if it is to move forward and achieve its objectives. Tokenomics, value creation, capturing the value between the cost of what it takes for the community to manufacture to provide the members and the community value in return all of these are features of web3 communities. Arguably, much of the value that’s going to be generated is in intangible items that don’t cost the greater community anything at all.
+        The most significant difference between the emergence of crypto and everything else that
+        came after it–including the advent of web3–can all be credited to one thing: community.
+        <br />
+        <br />
+        Crypto brought decentralization, and decentralization brought back the power to the
+        communities–and the individuals that comprise them.
+        <br />
+        <br />
+        Before that, the way the world has always worked was that there has always been an
+        intermediary somewhere along the value chain.
+        <br />
+        <br />
+        One thing is for certain: communities have always been and always will be an essential part
+        not just of our genetic makeup but also of ideation, governance, research, marketing, and
+        product development.
+        <br />
+        <br />
+        But the rise of decentralization–and with it, the rise of decentralized autonomous
+        organizations, web3 social communities, and everything in between–has allowed us to set
+        rules and algorithms as to how the communities we belong to in web3 are going to be governed
+        and led.
+        <br />
+        <br />
+        And as we’re right at the beginning of the new era of web3, which puts together the diffuse,
+        decentralized nature of web1, the strong ethos of community-driven governance, and the
+        sleek, state-of-the-art function of web2...the neighborhoods we live our virtual lives in
+        taking center stage.
+        <br />
+        <br />
+        No surprises there. Community is, after all, the foundation stone on which web3 is built on.
+        Community ultimately underwrites every iota of value it generates–and their strength (or
+        lack thereof) will determine whether the project sinks or swims.
       </div>
-    </div>
-  )
-}
 
-export default Page8990
+      <div className={styles.text2}>Community: The Powerhouse of Web THREE</div>
+
+      <div className={styles.text3}>Dno O</div>
+    </div>
+  );
+};
+
+export default Page8990;
