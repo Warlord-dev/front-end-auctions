@@ -1,35 +1,64 @@
-import React from 'react'
-import styles from './page117118.module.scss'
+import React from 'react';
+import styles from './page117118.module.scss';
 
 const Page117118 = () => {
-
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/6/images/113114_image1.png' className={styles.image1} />
-      <img src='/magazine/6/images/113114_image1.png' className={styles.image2} />
-      <img src='/magazine/6/images/113114_image1.png' className={styles.image3} />
-      <img src='/magazine/6/images/113114_image1.png' className={styles.image4} />
-      <img src='/magazine/6/images/113114_image1.png' className={styles.image5} />
-      <img src='/magazine/6/images/113114_image1.png' className={styles.image6} />
-      <img src='/magazine/6/images/113114_image1.png' className={styles.image7} />
-      <img src='/magazine/6/images/113114_image1.png' className={styles.image8} />
+      <img src="/magazine/6/images/113114_image1.png" className={styles.image1} />
+      <img src="/magazine/6/images/113114_image1.png" className={styles.image2} />
+      <img src="/magazine/6/images/113114_image1.png" className={styles.image3} />
+      <img src="/magazine/6/images/113114_image1.png" className={styles.image4} />
+      <img src="/magazine/6/images/113114_image1.png" className={styles.image5} />
+      <img src="/magazine/6/images/113114_image1.png" className={styles.image6} />
+      <img src="/magazine/6/images/113114_image1.png" className={styles.image7} />
+      <img src="/magazine/6/images/113114_image1.png" className={styles.image8} />
 
       <div className={styles.text1}>
-        Community is where we need to begin if there is to be any continued evolution and progress in web3. Communities are built on one defining and common denominator: individuals. Communities tend to unify individuals who are greater than their sum. A modicum of centralization is required in every community to build one, regardless of the vision and purpose thereof, and that’s where web2 apps like Discord, Telegram, or Twitter come into play. It’s just the rule with startups of any kind.
-        <br /><br />
-        There is yet value for all the limitations and pitfalls web2 apps possess, even when it is entirely apparent that there will be a time to “sunset” them all together. And it’s in their ability to harness the power of individuals working towards a shared vision and goal. 
-        <br /><br />
-        We’ve seen how apps like Discord have become indispensable tools for building crypto and web3 communities, particularly for the token-gated communities that have sprouted forth in the wake of the ascent of NFTs, which have gotten individuals into the web3 rabbit hole in massive droves. Practically every project, community, DAO, or crypto-native creator has a server of some sort. The center of crypto discussion, on the other hand, is right in the thick of Twitter. 
+        Centralization is anti-democratic at heart, and the evidence is out there in the open.
+        <br />
+        <br />
+        Social networks were once fun and novel for friends and strangers to bond over commonalities
+        and interests until their dispiriting, frustrating, and demoralizing descent into the
+        degenerate circus that they have been reduced to now.
+        <br />
+        <br />
+        But many users begrudgingly accept the social media monkey on their backs, warts, scars,
+        centralization, and all–especially given the fact that our primary means of socialization
+        during the pandemic became the Facebook groups, Telegram chats, Discord servers, and TikTok
+        stories on our computers and mobile devices.
+        <br />
+        <br />
+        Web2 creates communities that don’t really feel like communities in the sense of the word
+        because of its apparent pitfalls. Spend any amount of time on social media, and you’ll run
+        into some form of toxicity one way or another. Unfortunately, there isn’t an alternative yet
+        – and the reality is that only Big Tech has hitherto provided the only option for any sort
+        of community in these trying times.
       </div>
       <div className={styles.text2}>
-        The most cutting-edge conversations are happening in a Twitter Space somewhere, 24/7/365, no matter where you are. Ultimately, we can harness web2 apps as growth levers in our efforts to build towards a more open and decentralized future in web3–building at the speed of sound–until such time NFTs become the new paradigm of social media.
-        <br /><br />
-        Discord has, for instance, superseded Facebook Groups as far as being the primary platform for building community for the next generation. Ditto for Telegram Groups. We can’t deny the key role social media plays in fostering community–but we should all the more be wary of its totalitarian, anti-democratic tendencies. But they can be used as tools at the top of the funnel that lead into the token-gated communities we are increasingly starting to live in. 
-        <br /><br />
-        There’s no doubt that the future of social media could lie in decentralization. It’s already happening. NFTs are unlocking community and delivering unique, shared experiences with individuals who share the same passion (or PFP)–and it’s just a matter of time until the next great web3 social platform fixes the broken model of web2 social media.
+        Case in point: Facebook and Twitter have mushroomed into monoliths that hold all the stroke
+        over how we interact on the internet and how we consume our media. Social media is behind
+        some of the most pressing questions about the value these technologies have brought–or
+        Pandora’s box they have wrought–on society.
+        <br />
+        <br />
+        Facebook has been a cesspool of political propaganda, gaslighting, and brainwashing, richly
+        living off the content that its users create, regardless of their veracity. Twitter is rife
+        with coordinated actions involving bots and fake accounts that run roughshod on individuals’
+        feeds (and collective sanity).
+        <br />
+        <br />
+        We’ve gotten so used to putting up with the centralized bullshit that we tolerate the
+        pitfalls of losing privacy, being exposed to malicious or coordinated online social
+        behavior, and the constant censorship prevalent on each platform. But for lack of a better
+        option, we’ve acclimated ourselves to finding communities on web2.
+        <br />
+        <br />
+        It’s far from perfect. It’s far from “free.” But we can’t discount the fact that web2 apps
+        are valuable tools for furthering the tenets of decentralization, web3, and the lifeblood of
+        the latter: community.
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page117118
+export default Page117118;

@@ -1,128 +1,111 @@
-import React from 'react'
-import styles from './page103104.module.scss'
+import React from 'react';
+import { DIGITALAX_FASHION_WEBSITE } from '@constants/urls';
+import styles from './page103104.module.scss';
 
 const Page103104 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='/magazine/6/images/103104_image1.png' className={styles.image1} />
+      <img src="/magazine/6/images/99100_image1.gif" className={styles.image1} />
 
-      <a href='https://designers.digitalax.xyz/designers/osumikat/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer1.png' className={styles.designer1} />
-      </a>
-      <div className={styles.text1}>
-        Osumikat
-      </div>
-      <div className={styles.text2}>
-        IRL Los Angeles + Exploring Retro-Futurism in Digital Fashion
-      </div>
-      
-      <a href='https://designers.digitalax.xyz/designers/Ycesh/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer2.png' className={styles.designer2} />
-      </a>
-      <div className={styles.text3}>
-        Ycesh
-      </div>
-      <div className={styles.text4}>
-        Vienna, Austria Design, Fashion & Web3 Communities
-      </div>
+      <video autoPlay muted loop className={styles.video1}>
+        <source src="./magazine/6/videos/101102_video1.mp4" type="video/mp4" />
+      </video>
 
-      <a href='https://designers.digitalax.xyz/designers/ORDO/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer3.png' className={styles.designer3} />
+      <img src="/magazine/6/images/101102_image1.png" className={styles.image2} />
+
+      <div className={styles.rect1}></div>
+
+      <div className={styles.text1}>GDN PURVEYORS</div>
+      <div className={styles.text2}>GDN PURVEYORS</div>
+      <div className={styles.text3}>GDN PURVEYORS</div>
+      <div className={styles.text4}>GDN PURVEYORS</div>
+
+      <div className={styles.circle1}></div>
+      <div className={styles.circleText1}>Collect POAP!</div>
+      <div className={styles.circleText2}>yay</div>
+      <a href="https://poap.website/gdnpurveyors6" target="_blank">
+        <img src="/images/poap-logo.png" className={styles.poapImage} />
       </a>
-      <div className={styles.text5}>
-        ORDO
-      </div>
-      <div className={styles.text6}>
-        Melbourne, Australia Universities & Student Sector Communities
-      </div>
-      
-      <a href='https://designers.digitalax.xyz/designers/alanatheweb3girl/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer4.png' className={styles.designer4} />
+
+      <a href="https://twitter.com/JordanLzG" target="_blank">
+        <img src="/magazine/6/images/101102_image2.png" className={styles.image3} />
       </a>
-      <div className={styles.text7}>
-        Alana The Web3 Girl
-      </div>
-      <div className={styles.text8}>
-        Digital Model Metaversal Realms and Communities
-      </div>
-      
-      <a href='https://designers.digitalax.xyz/designers/Infinito/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer5.png' className={styles.designer5} />
+      <a href="https://twitter.com/evabeylin" target="_blank">
+        <img src="/magazine/6/images/101102_image3.png" className={styles.image4} />
       </a>
-      <div className={styles.text9}>
-        INFINITO
-      </div>
-      <div className={styles.text10}>
-        Colombia + Latin Student Creators, Universities & Schools
-      </div>
-      
-      <a href='https://designers.digitalax.xyz/designers/an.nyen' target='_blank'>
-        <img src='/magazine/6/images/103104_designer6.png' className={styles.designer6} />
+      <a href="https://twitter.com/robnessofficial" target="_blank">
+        <img src="/magazine/6/images/101102_image4.png" className={styles.image5} />
       </a>
-      <div className={styles.text11}>
-        AN.NYEN
-      </div>
-      <div className={styles.text12}>
-        Metaverse Street Style Fashion Communities
-      </div>
-      
-      <a href='https://designers.digitalax.xyz/designers/Paola%20Olaguivel/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer7.png' className={styles.designer7} />
+      <a href="https://twitter.com/coin_artist" target="_blank">
+        <img src="/magazine/6/images/101102_image5.png" className={styles.image6} />
       </a>
-      <div className={styles.text13}>
-        Paola Olaguivel
-      </div>
-      <div className={styles.text14}>
-        Web3 Music Fashion Intersection & Community Cultivation
-      </div>
-      
-      <a href='https://designers.digitalax.xyz/designers/ENKI%20Digital%20Fashion/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer8.png' className={styles.designer8} />
+
+      <img src="/magazine/6/images/99100_image4.png" className={styles.itemImage1} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/565/1/0/`} target="_blank">
+        <video autoPlay muted loop className={styles.item1}>
+          <source
+            src="https://digitalax.mypinata.cloud/ipfs/QmPF67d58n1oAWG7x7foC9nGs33zDXB952V74bknTn5XXe"
+            type="video/mp4"
+          />
+        </video>
       </a>
-      <div className={styles.text15}>
-        ENKI Digital Fashion
-      </div>
-      <div className={styles.text16}>
-        Physical Brand/Studio Sherpa to Web3
-      </div>
-      
-      <a href="https://designers.digitalax.xyz/designers/Mo'Casso/" target='_blank'>
-        <img src='/magazine/6/images/103104_designer9.png' className={styles.designer9} />
+
+      <img src="/magazine/6/images/99100_image4.png" className={styles.itemImage2} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/566/1/0/`} target="_blank">
+        <img
+          className={styles.item2}
+          src="https://digitalax.mypinata.cloud/ipfs/QmWVFr5A1fQ2c9oAsoeb9nkMRheWNPpKpuUae7JTXogrDv"
+        />
+        {/* <video autoPlay muted loop className={styles.item2}>
+          <source src='https://digitalax.mypinata.cloud/ipfs/QmWVFr5A1fQ2c9oAsoeb9nkMRheWNPpKpuUae7JTXogrDv' type="video/mpeg" />
+        </video> */}
       </a>
-      <div className={styles.text17}>
-        Mo’Casso
-      </div>
-      <div className={styles.text18}>
-        Newbie Digital + Virtual Onboarding Support
-      </div>
-      
-      <a href='https://designers.digitalax.xyz/designers/Mutani.io' target='_blank'>
-        <img src='/magazine/6/images/103104_designer10.png' className={styles.designer10} />
+
+      <img src="/magazine/6/images/99100_image4.png" className={styles.itemImage3} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/567/1/0/`} target="_blank">
+        <img
+          className={styles.item3}
+          src="https://digitalax.mypinata.cloud/ipfs/QmbjkrN8vXFY43jaWjwgT36fw3iktwWgXTGZGHKvNCWeYi"
+        />
       </a>
-      <div className={styles.text19}>
-        MUTANI.IO
-      </div>
-      <div className={styles.text20}>
-        Physical Traditional Fashion Indie Design Community
-      </div>
-      
-      <div className={styles.text21}>
-        Every designer in the Global Designer Network is traversing new territory for continuing to expand and deepen the range of mediums, materials, utility and possibilities for web3 fashion. And, as the network continues to radically expand, certain GDN members are taking the lead over key categories and sub-sectors that we are further supporting and empowering for catalysing the broader web3 fashion community— both digital and IRL in the ever evolving multi-dimensional metaverse. 
-        <br /><br />
-        Having a more composable and modular structure within the GDN DAO is also critical to maintaining momentum, engagement and driving forth our aligned mission. This is how we continuously refresh the magic of scalable small world networks. It allows us to be nimble, fast pace and cover a broader range of areas.        
-      </div>
- 
-      <a href='https://designers.digitalax.xyz/designers/Majestic%20Apparell/' target='_blank'>
-        <img src='/magazine/6/images/103104_designer11.png' className={styles.designer11} />
+
+      <img src="/magazine/6/images/99100_image4.png" className={styles.itemImage4} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/568/1/0/`} target="_blank">
+        <video autoPlay muted loop className={styles.item4}>
+          <source
+            src="https://digitalax.mypinata.cloud/ipfs/QmTpBqm297SmZ1kJCxisSQjCRXNC5V1yaF953PSsSgNXND"
+            type="video/mp4"
+          />
+        </video>
       </a>
-      <div className={styles.text22}>
-        MAJESTIC APPARELl
-      </div>
-      <div className={styles.text23}>
-        High-end Fashion, Metaverse Fashion and African Design Community
-      </div>
+
+      <img src="/magazine/6/images/99100_image4.png" className={styles.itemImage5} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/569/1/0/`} target="_blank">
+        <img
+          className={styles.item5}
+          src="https://digitalax.mypinata.cloud/ipfs/QmW21TSpG7UTHszokYf7LC4CE3fd27qcvN6rqWDNXsBsBe"
+        />
+      </a>
+
+      <img src="/magazine/6/images/99100_image4.png" className={styles.itemImage6} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/570/1/0/`} target="_blank">
+        <img
+          className={styles.item6}
+          src="https://digitalax.mypinata.cloud/ipfs/QmRYQkGHjbyzDRFycFCYUw4YnKo7rUyNFXTyEgNA7gMALv"
+        />
+      </a>
+
+      <img src="/magazine/6/images/99100_image4.png" className={styles.itemImage7} />
+      <a href={`${DIGITALAX_FASHION_WEBSITE}/product/571/1/0/`} target="_blank">
+        <video autoPlay muted loop className={styles.item7}>
+          <source
+            src="https://digitalax.mypinata.cloud/ipfs/QmS8PWRY4YrCQMyNBRsDfvJSSPk4hY45rwNePdNgyRGskP"
+            type="video/mp4"
+          />
+        </video>
+      </a>
     </div>
-  )
-}
+  );
+};
 
-export default Page103104
+export default Page103104;

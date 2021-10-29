@@ -1,51 +1,112 @@
-import React from 'react'
-import styles from './page109110.module.scss'
+import React from 'react';
+import styles from './page109110.module.scss';
 
 const Page109110 = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.rect1}></div>
-      <img src='/magazine/6/images/109110_image1.png' className={styles.image1} />
+      <img src="/magazine/6/images/107108_image1.png" className={styles.image1} />
+      <div className={styles.rect2}></div>
+
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile1} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile2} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile3} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile4} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile5} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile6} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile7} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile8} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile9} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile10} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile11} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile12} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile13} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile14} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile15} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile16} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile17} />
+      <img src="/magazine/6/images/107108_image2.png" className={styles.smile18} />
 
       <div className={styles.text1}>
-        The Launch of $W3F
+        $GDN Distribution + Experimenting with Fashion DAO Token Economics
       </div>
       <div className={styles.text2}>
-        The Launch of $W3F
+        The Global Designer Network is the very first on-chain web3 fashion DAO, bridging designers
+        from the physical to the digital, and from the extractive world of web2, to a lucrative self
+        sustaining ecosystem enabled by web3 and decentralised tech.
       </div>
       <div className={styles.text3}>
-        The Launch of $W3F
+        From the start we have been students of our own game, operating at the very heart of the
+        medium that we have chose to immerse ourselves in— web3.
+        <br />
+        <br />
+        And, for that matter, it means being highly experimental. For, if we are not pushing forth
+        to continue to define the new luxury, then we
       </div>
       <div className={styles.text4}>
-        The Launch of $W3F
+        are only continuing to limit ourselves to what has already happened before, and frankly now
+        passed.
       </div>
-      
       <div className={styles.text5}>
-        The token distribution and allocation mechanics ensure that decentralisation remains at the core and all aligned members of the web3 and fashion communities are able to leverage its existance for generating and powering squad wealth.         
+        The token economics distribution and allocation structure that we have set up is reflective
+        of this, through $gdn.
       </div>
       <div className={styles.text6}>
-        The distribution itself takes place over a 24 month period, with staking allocation across four major pools. 
+        Here, the token can only be earned by members participating in the DAO and actively
+        contributing across multiple quest categories. This token remains illiquid on the market and
+        can’t be bought by non-members outside the GDN, rather it is a decentralised and on-chain
+        point system for recording each of the members contributions and activity over the course of
+        the week.
       </div>
       <div className={styles.text7}>
-        Just like the launch of $MONA, there are no VC backers, no private allocations, no ad models, no corporate control— instead $W3F is built as an intrinsically and extrinsically community rooted token for every designer, buyer, collector and wearer navigating this new entirely distinct, yet, perpetually familiar and tantilising new world.  
+        It serves as a fair way to assess value underwriting the DAO by the members and keep this
+        dynamic and relevant to live market conditions, and, at the same time preventing an
+        inaccurate hierarchy where sway on governance is purely determined by how much is in your
+        pocket.
+        <br />
+        <br />
+        The GDN will continue to experiment and itterate with new tokeneconomics structures overtime
+        and further streamline our distrbiution. We’ve even introduced an accounting discord bot for
+        better recording the distribution of $GDN to each member based on their activity, where this
+        info can be queried out of our discoord.
       </div>
-      <div className={styles.text8}>
-        With DIGITALAX building out an entire cityscape for web3 fashion, the GDN is elevating the game with the necessary liquidity for a full metaversal scale up. The token will give holders utility in the DIGITALAX and GDN ecosystems, everything from access to events and experiences brought forth, new exclusive NFT content releases, and unique community engagement incentives.  
-      </div>
-      <div className={styles.text9}>
-        $W3F mixes utility with DeFi, NFTs, DAOs and more— having compounded distribution through staking, inclusion in large scale exhibits like Web3 Fashion Week (W3FW), and, even limited governance responsibility in guiding the future of the DAO, and thus the industry itself. 
-      </div>
+
+      <div className={styles.text8}>The Launch of $W3F</div>
+      <div className={styles.text9}>The Launch of $W3F</div>
+
       <div className={styles.text10}>
-        The GDN DAO and all of the value created in and around it will be further ignited by the DIGITALAX ecosystem and its eventual progression into full decentralisation itself. 
+        The second major arc for the GDN DAO is underway. We are soon to be launching the liquid
+        trading ERC-20 token under the DAO, $W3F. It is our inteface with the crypto market at
+        large, and a big next leap for the broader web3 fashion community, as every GDN designer
+        continues to make this market.
       </div>
       <div className={styles.text11}>
-        $MONA and $W3F encapsulate and distribute in a steady flow the cornerstone essence of everything that fashion in web3 stands for. The metaverse is our fabric, display screen, and canvas, not only for how we show ourselves to each other, but, for how we interact with the assets that build our world, old and new. 
+        This vast decentralised network of designers that has been cultivated from the ground up,
+        with pervasive reinforcements arising from the DIGITALAX ecosystem, is set to define the new
+        luxury. Because, web3 fashion doesn’t just look rare, but it is actually found and flaunted
+        in the unique expressions of savvy.
       </div>
       <div className={styles.text12}>
-        The launch of $W3F is on its way, and we couldn’t be more excited for its arrival and its ability to serve as a conveyance mechanism at the intersection at the abstract made manifest— the open metaverse.
+        The token is a complimentary record and conveyance of value to the $MONA token, whereby $W3F
+        operates with liquidity between DIGITALAX and other cellular clusters of activity throughout
+        the web3 fashion enabled metaverse. The value is intrinsically underwritten by designer
+        merchant activity and the critical role that this plays in propelling supply in order to
+        establish abundant demand.
+      </div>
+      <div className={styles.text13}>
+        A true understanding of the entirely new terrain web3 and the metaverse present is by far
+        the most scarce thing.
+      </div>
+      <div className={styles.text14}>
+        For many, NFT digital fashion is the pinnacle, but really, that’s already in the past. And,
+        how can a repeat of the old that’s become stale be the new luxury?
+      </div>
+      <div className={styles.text15}>
+        Put simply, it can’t. Instead let’s recognise this new frontier for what it is and embrace
+        all of the promise of discovery ahead.
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page109110
+export default Page109110;
