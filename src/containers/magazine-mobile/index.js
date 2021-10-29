@@ -13,7 +13,7 @@ const MobileViewer = props => {
           <br /><br />
           So, with that said, it’s best to view on computer!
           <br /><br />
-          Open the magazine when your at a desktop/laptop and start getting lost in the pages!          
+          Open the magazine when you're at a desktop/laptop and start getting lost in the pages!          
         </div>
       </div>
 
