@@ -24,6 +24,7 @@ const CollectionCard = ({ collection }) => {
     'Fashion Hackathon',
     'Meta Spree',
     'Whimsical Stitches',
+    'Elegant Threads',
   ];
 
   return (
