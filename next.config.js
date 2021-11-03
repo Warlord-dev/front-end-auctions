@@ -27,6 +27,7 @@ const {
   CHILD_TUNNEL_V2_ADDRESS,
   ROOT_TUNNEL_V2_ADDRESS,
   AUCTION_CONTRACT_ADDRESS,
+  DLTA_API_URL,
 } = require('config');
 const withImages = require('next-images');
 
@@ -63,6 +64,7 @@ module.exports = withImages({
     CHILD_TUNNEL_V2_ADDRESS,
     ROOT_TUNNEL_V2_ADDRESS,
     AUCTION_CONTRACT_ADDRESS,
+    DLTA_API_URL,
   },
   trailingSlash: true,
   assetPrefix: './',

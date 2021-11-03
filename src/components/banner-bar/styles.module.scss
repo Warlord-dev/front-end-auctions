@@ -61,23 +61,60 @@
 .wrapper2 {
   width: 100%;
   background-color: black;
-  height: 70px;
+  padding: 1.5vw 0;
   z-index: 2;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
 
-  .node{
+  
+
+  .node {
     margin: auto;
     z-index: 2;
-    position: absolute;
     margin-left: auto;
     margin-right: auto;      
     left: 0;
     right: 0;
     text-align: center;
-    width: 600px;
-    margin-top: 10px;
-    @include xs-width {
-      width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    a {
+      padding: 5px 20px;
+      width: 100%;
+      font-family: Oswald;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 148%;
+      text-align: center;
+
+      color: #FFFFFF;
+
+      transition: all 0.2s ease-out;
+      &:hover {
+        transition: all 0.2s ease-out;
+        text-shadow: 0px 5px 10px #FFFFFF;
+        transform: translate3d(0px, -1px, 10px);
+        -webkit-text-stroke: 1px solid black;
+        // transform: translateY(10px);
+      }
     }
+
+
+    @include md-width {
+      display: flex;
+      flex-direction: row;
+      
+
+      a {
+        font-size: 1.5vw;
+        width: 33%;  
+      }
+    }
+
   }
 
   img{

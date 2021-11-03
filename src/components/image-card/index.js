@@ -29,7 +29,7 @@ const ImageCard = ({
   withLink = false,
   isAuction = false,
   v1 = false,
-  buttonText,
+  borderType = 'white'
 }) => {
   const router = useRouter();
   const account = useSelector(getAccount);
@@ -117,7 +117,7 @@ const ImageCard = ({
 
   const renderImage = () => {
     return (
-      <div className={styles.bodyWrapper}>
+      <div className={[styles.bodyWrapper, borderType === 'white' ? styles.white : ''].join(' ')}>
         {showRarity ? (
           <div className={styles.rarity}> {data?.rarity || data?.garment?.rarity} </div>
         ) : null}
@@ -157,7 +157,7 @@ const ImageCard = ({
             ) : mainImageType === 2 ? (
               <img src={mainImage} className={styles.image} />
             ) : null}
-            {hasAudio && zoomMedia && (
+            {hasAudio && zoomMedia && asPath.includes('product/') && (
               <Button
                 className={styles.muteButton}
                 onClick={(e) => {
@@ -174,9 +174,11 @@ const ImageCard = ({
             )}
           </div>
         ) : null}
-        <Button className={styles.zoomButton} onClick={() => onClickZoomOut()}>
-          <img src="/images/zoom_btn.png" />
-        </Button>
+        {asPath.includes('product/') && (
+          <Button className={styles.zoomButton} onClick={() => onClickZoomOut()}>
+            <img src="/images/zoom_btn.png" />
+          </Button>
+        )}
         {hasAudio && mainImageType === 1 && (
           <Button className={styles.muteButton} onClick={() => onClickMute()}>
             {videoMuted ? <img src="/images/audio-off.png" /> : <img src="/images/audio-on.png" />}
@@ -186,15 +188,7 @@ const ImageCard = ({
         {showButton && (
           <div className={styles.buyNow}>
             <NewButton
-              text={
-                buttonText
-                  ? buttonText
-                  : disable
-                  ? 'Sold Out'
-                  : isAuction
-                  ? 'Place A Bid'
-                  : 'Buy Now'
-              }
+              text={disable ? 'Sold Out' : isAuction ? 'Place A Bid' : 'Buy Now'}
               onClick={onBuyNow}
               disable={disable}
             />

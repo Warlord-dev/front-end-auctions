@@ -1,9 +1,7 @@
 .wrapper {
   width: 100%;
   position: relative;
-  overflow: hidden;
-  background-color: #ba0c76;
-  background-image: url('/images/metaverse/viewallskinsbg.png');
+  background-color: black;
   background-size: cover;
   padding: 1.5rem 5rem;
 
@@ -11,11 +9,32 @@
   justify-content: space-between;
   align-items: center;
 
+  .leftPane {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 115%;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    span {
+      font-weight: 600;
+
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+
   @media (max-width: 576px) {
     padding: 1rem;
 
     .leftPane {
       text-align: center;
+      font-size: 15px;
     }
   }
 
@@ -32,25 +51,7 @@
     height: 100%;
   }
 
-  .leftPane {
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 30px;
-    align-items: center;
-
-    color: #FFFFFF;
-
-    span {
-      font-weight: 600;
-
-      a {
-        color: white;
-        text-decoration: underline;
-      }
-    }
-  }
+ 
 
   .filter {
     // position: absolute;

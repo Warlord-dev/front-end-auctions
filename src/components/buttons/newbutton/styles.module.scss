@@ -26,12 +26,13 @@
     text-transform: uppercase;
     font-style: italic;
     font-size: 1.5rem;
-    font-weight: bold;
-    font-family: 'Bebas Neue';
+    font-weight: 600;
+    font-family: 'Oswald';
+    line-height: 120%;
     position: absolute;
     text-align: center;
     left: 50%;
-    top: 50%;
+    top: 48%;
     z-index: 10;
     transform: translate(-50%, -50%);
   }

@@ -1,21 +1,30 @@
 @import '../../../assets/scss/helpers/grid.scss';
 
 .wrapper {
+  margin-top: -2rem;
   .cardBodyWrapper {
     .link {
       display: flex;
       align-items: center;
       justify-content: center;
-      text-transform: uppercase;
-      padding: 1rem;
-      font-family: Gilroy;
-      background: rgba(247, 207, 207, 0.47);
-      color: white;
-      font-weight: bold;
       margin-bottom: 1rem;
 
       img {
-        height: 2rem;
+        width: 200px;
+      }
+
+      span {
+        position: absolute;
+        font-family: Oswald;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 20px;
+        
+        line-height: 49px;
+        text-align: center;
+        text-transform: uppercase;
+        
+        color: #FFFFFF;        
       }
 
       &:hover {
@@ -26,10 +35,10 @@
     }
 
     .pricesWrapper {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      align-items: start;
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      // gap: 1rem;
+      // align-items: start;
     }
 
     .lookText {
@@ -44,6 +53,30 @@
       color: #ffffff;
 
       text-shadow: 0px 4px 20px #ff12f6;
+    }
+
+    // @include md-width {
+    //   .link {
+    //     img {
+    //       width: 80%;
+    //     }
+
+    //     span {
+    //       font-size: 36px;
+    //     }
+    //   }
+    // }
+
+    @include lg-width {
+      .link {
+        img {
+          width: 350px;
+        }
+
+        span {
+          font-size: 36px;
+        }
+      }
     }
   }
 }

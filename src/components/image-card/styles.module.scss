@@ -1,7 +1,7 @@
 @import '../../assets/scss/helpers/grid.scss';
 
 .imageCardWrapper {
-  width: 100%;
+  width: 300px;
   margin: auto;
 
   .additionalImages {
@@ -15,47 +15,7 @@
       height: 65px;
       margin-right: 1rem;
       object-fit: cover;
-      box-shadow: 0px 4px 20px 10px #9d1e71;
-    }
-  }
-
-  @include sm-width {
-    width: 400px;
-
-    .bodyWrapper {
-      height: 400px !important;
-    }
-  }
-
-  @include md-width {
-    width: 500px;
-
-    .bodyWrapper {
-      height: 500px !important;
-    }
-  }
-
-  @include lg-width {
-    width: 350px;
-
-    .bodyWrapper {
-      height: 350px !important;
-    }
-  }
-
-  @include xl-width {
-    width: 400px;
-
-    .bodyWrapper {
-      height: 400px !important;
-    }
-  }
-
-  @include xxl-width {
-    width: 500px;
-
-    .bodyWrapper {
-      height: 500px !important;
+      box-shadow: 0px 4px 20px 10px #ffffff;
     }
   }
 
@@ -68,7 +28,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: 800;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 44px;
   }
 
@@ -91,7 +51,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
 
     .photo {
       width: 50px;
@@ -103,7 +64,7 @@
       font-family: Gilroy;
       font-style: normal;
       font-weight: 800;
-      font-size: 22px;
+      font-size: 18px;
       line-height: 27px;
       /* identical to box height */
 
@@ -115,10 +76,40 @@
     position: relative;
     padding: 2rem;
     border-radius: 2rem;
-    height: 80vw;
+    height: 300px;
     border: 2px solid #9c28ff;
-    box-shadow: inset 0px 0px 30px 20px rgba(197, 32, 129, 0.5),
-      0px 0px 30px 20px rgba(197, 32, 129, 0.5);
+    // background: black;
+    // box-shadow: inset 0px 0px 30px 20px rgba(197, 32, 129, 0.5),
+      // 0px 0px 30px 20px rgba(197, 32, 129, 0.5);
+
+    &.white {
+      z-index: 100;
+      border: 3px solid #C2EABA;
+      &:before {
+        content: "";
+        position: absolute;
+        border-radius: 2rem;
+        background: linear-gradient(319deg, #C2EABA 0%, #C5F4E0 37%, #EFC2CF 100%);
+        z-index: -1;
+        left: -2%;
+        top: -2%;
+        height: 104%;
+        width: 104%;
+        filter: blur(15px);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        border-radius: 2rem;
+        background: black;
+        z-index: -1;
+        left: 2%;
+        top: 2%;
+        height: 96%;
+        width: 96%;
+        filter: blur(10px);
+      }
+    }
 
     .rarity {
       position: absolute;
@@ -219,6 +210,56 @@
         left: 150px;
         top: calc(80vh + 10px);
       }
+    }
+  }
+
+  @include sm-width {
+    width: 400px;
+
+    .bodyWrapper {
+      height: 400px !important;
+    }
+  }
+
+  @include md-width {
+    width: 500px;
+
+    .bodyWrapper {
+      height: 500px !important;
+    }
+
+    .collectionName {
+      font-size: 36px;
+    }
+
+    .designerWrapper {
+      .name {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @include lg-width {
+    width: 350px;
+
+    .bodyWrapper {
+      height: 350px !important;
+    }
+  }
+
+  @include xl-width {
+    width: 400px;
+
+    .bodyWrapper {
+      height: 400px !important;
+    }
+  }
+
+  @include xxl-width {
+    width: 500px;
+
+    .bodyWrapper {
+      height: 500px !important;
     }
   }
 }

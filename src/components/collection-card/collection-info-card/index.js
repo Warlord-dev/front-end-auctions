@@ -1,47 +1,55 @@
 import React from 'react';
-import InfoCard from '@components/info-card';
-import Link from 'next/link';
-import PriceCard from '@components/price-card';
-import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
+import Link from 'next/link';
+
+import InfoCard from '@components/info-card';
+import PriceCard from '@components/price-card';
+
 import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
+
+import styles from './styles.module.scss';
 
 const CollectionInfoCard = ({ collection }) => {
   const monaPerEth = useSelector(getMonaPerEth);
   const exchangeRate = useSelector(getExchangeRateETH);
 
+  const getPrice = () => {
+    return (
+      <>
+        {parseFloat(collection.sold).toFixed(2)} $MONA
+        <span>
+          {` `}(${(parseFloat(monaPerEth) * exchangeRate * collection.sold).toFixed(2)})
+        </span>
+      </>
+    )
+  }
+
   return (
     <div className={styles.wrapper}>
-      <InfoCard
-        borderColor="#9c28ff"
-        boxShadow="rgba(197, 32, 129, 0.5)"
-        mainColor="rgba(189, 61, 169, 0.47)"
-      >
+      <InfoCard>
         <div className={styles.cardBodyWrapper}>
           <Link href={`/marketplace/all/${collection.id}`}>
             <a className={styles.link}>
-              view collection
-              <img src="./images/metaverse/right-arrow-pink.png" />
+              <img src='/images/metaverse/gray_button2.png' />
+              <span>view collection</span>
             </a>
           </Link>
-          {collection?.id !== '15' ? (
-            <div className={styles.pricesWrapper}>
-              <PriceCard
-                mode={0}
-                mainText={`${parseFloat(collection.sold).toFixed(2)} $MONA`}
-                subText="total sold"
-              />
-              <PriceCard
-                mode={0}
-                mainText={`$${(parseFloat(monaPerEth) * exchangeRate * collection.sold).toFixed(
-                  2,
-                )}`}
-                subText="dollar equivalent"
-              />
-            </div>
-          ) : (
+          {/* {collection?.id !== '15' ? ( */}
+          <div className={styles.pricesWrapper}>
+            <PriceCard
+              mode={0}
+              mainText={getPrice()}
+              subText="total sold"
+            />
+            {/* <PriceCard
+              mode={0}
+              mainText={`$${(parseFloat(monaPerEth) * exchangeRate * collection.sold).toFixed(2)}`}
+              subText="dollar equivalent"
+            /> */}
+          </div>
+          {/* ) : (
             <div className={styles.lookText}>LOOK Hackathon</div>
-          )}
+          )} */}
         </div>
       </InfoCard>
     </div>

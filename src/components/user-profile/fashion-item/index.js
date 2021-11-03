@@ -74,7 +74,7 @@ const FashionItem = props => {
           className={[styles.viewFashion].join(' ')}
           onClick={onClickViewFashion}
         >
-          <img src={'/images/metaverse/pinkb.png'} />
+          <img src={'/images/metaverse/gray_button.png'} />
           <div>VIEW FASHION</div>
         </button>
       }

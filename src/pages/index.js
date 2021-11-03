@@ -87,12 +87,12 @@ const LandingPage = () => {
       const prods = [];
 
       shuffle(digitalaxCollectionGroups).forEach((collectionGroup) => {
-        if (collectionGroup.id === '15') {
-          const ids = [];
-          collectionGroup.auctions.forEach((auction) => ids.push(auction.id));
-          collectionGroup.collections.forEach((collection) => ids.push(collection.id));
-          setLookIds(ids);
-        }
+        // if (collectionGroup.id === '15') {
+        //   const ids = [];
+        //   collectionGroup.auctions.forEach((auction) => ids.push(auction.id));
+        //   collectionGroup.collections.forEach((collection) => ids.push(collection.id));
+        //   setLookIds(ids);
+        // }
         if (
           collectionGroup.auctions.length > 1 ||
           (collectionGroup.auctions.length === 1 && collectionGroup.auctions[0].id !== '0')
@@ -200,19 +200,21 @@ const LandingPage = () => {
       </Head>
       <section className={styles.homeHeroSection}>
         <div className={styles.leftWrapper}>
-          <img src="/images/metaverse/web3fashion.png" className={styles.heroLogo} />
+          <div className={styles.title}>
+            DIGITAL INDIE<br/>WEB3 FASHION
+          </div>
           <p>
-            Indie Web3 Fashion Marketplace on Polygon Network. Powered by the{' '}
+            Powered by the{' '}
             <a href="https://designers.digitalax.xyz/" target="_blank">
               Global Designer Network
             </a>
-            .
+            {' '}on Polygon Network
           </p>
         </div>
 
         <div className={styles.actionsWrapper}>
-          <Link href="/collections">
-            <a className={styles.heroSectionLink}>{`View All Collections >`}</a>
+          <Link href="/marketplace">
+            <a className={styles.heroSectionLink}>{`View All Fashion >`}</a>
           </Link>
 
           <div className={styles.filtersWrapper}>
@@ -239,7 +241,6 @@ const LandingPage = () => {
                     showRarity
                     showCollectionName
                     isAuction={prod.auction}
-                    isLook={lookIds.includes(prod.id)}
                   />
                 </>
               );

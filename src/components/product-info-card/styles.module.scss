@@ -24,20 +24,41 @@
     width: 500px;
   }
 
+  .noHorizontalPadding {
+    padding: 1rem 0rem;
+  }
+
   .infoCardWrapper {
     margin: auto;
     width: 100%;
   }
 
   .imageWrapper {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .infoWrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.flexRow {
+      flex-direction: row;
+      justify-content: center;
+      align-items: normal;
+
+      &>:first-child {
+        width: 40%;
+        margin-right: 1%;
+      }
+      margin-bottom: 1rem;
+    }
+
+    a {
+      margin-top: 0.5rem;
+      width: 60%;
+    }
 
     button {
       width: 100%;
@@ -52,5 +73,10 @@
   .buttonWrapper {
     margin: auto;
     text-align: center;
+
+    button {
+      width: 60%;
+      min-width: unset;
+    }
   }
 }

@@ -104,10 +104,13 @@ const Withdraw = () => {
         <div className={styles.amountWrapper}>
           <div className={styles.amountPrefix}> $MONA </div>
           <input
-            type="text"
+            type="number"
             className={styles.amount}
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+            onBlur={() => {
+              if (amount[0] === '.') setAmount(`0${amount}`);
+            }}
           />
         </div>
         <div className={styles.amountMax}>

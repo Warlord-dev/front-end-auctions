@@ -11,8 +11,6 @@ import ImportantProductInformation from '@containers/important-product-informati
 import SmallPhotoWithText from '@components/small-photo-with-text';
 import { getDesignerInfoById } from '@selectors/designer.selectors';
 import { getCardProductChartOptions } from '@services/graph.service';
-import { create2KURL } from '@services/imgix.service';
-import { getImageForCardProduct } from '@helpers/photo.helpers';
 import { PRODUCTS } from '@constants/router-constants';
 import { EXCLUSIVE_RARITY, COMMON_RARITY, SEMI_RARE_RARITY } from '@constants/global.constants';
 import { useTokenInfo } from '@hooks/token.info.hooks';

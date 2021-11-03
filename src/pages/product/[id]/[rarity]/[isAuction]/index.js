@@ -8,15 +8,13 @@ import ImageCard from '@components/image-card';
 import InfoCard from '@components/info-card';
 import Container from '@components/container';
 import UserList from '@components/user-list';
-import FashionList from '@components/fashion-list';
 import BannerBar from '@components/banner-bar';
 import PriceCard from '@components/price-card';
+import ProductPageLoader from '@components/product-page-loader';
 
 import {
-  getDigitalaxMarketplaceOffer,
   getDigitalaxMarketplaceV2Offer,
   getGarmentByAuctionId,
-  getGarmentByCollectionId,
   getGarmentV2ByAuctionId,
   getGarmentV2ByCollectionId,
   getDigitalaxNFTStakersByGarments,
@@ -94,31 +92,17 @@ const Product = ({ pageTitle }) => {
   const [sourceType, setSourceType] = useState([]);
   const [lookIds, setLookIds] = useState([]);
   const [lookInspo, setLookInspo] = useState([]);
-  const fashionData = [
-    {
-      title: 'DeFi Staking Functionality',
-      description: `All NFTs can be staked in the DIGITALAX NFT Staking Contracts on Polygon for $MONA yield. This forms part of the broader Fashion x DeFi merger that DIGITALAX has undertaken to bring greater utility to metaversal fashion and also welcome multitudes more into web3 and DeFi. 
 
-      What if you could earn more from what you wear? Wear to DeFi lets you put your fashion to work for you. We are melting the centralised exploitative crown to weave the fabric of a generative ecosystem.            
-      `,
-    },
-    {
-      title: 'Fractional Garment ERC-1155 Open Source Pattern',
-      description: `Fractional Garment Ownership (FGO) sets forth the standard and dress code for the manufacture of digital fashion along the content supply chain. FGO leverages ERC Protocol standards across the Ethereum Blockchain and Polygon (Matic Network) for breaking down a master ERC-721 digital garment into its programmable and composable ERC-1155 elements of materials, patterns and textures.
-
-      Here, we are using a variant on the ERC-998 standard, where each ERC-721 token can hold a balance of ERC-1155 NFTs. We coin this respectively the Parent and Child NFTs. This allows for other designers to leverage off of the open source digital libraries, incorporating the patterns, materials and textures into their master garments.`,
-    },
-    {
-      title: '3D Model File Included',
-      description: `All of the DIGITALAX digital fashion garment and accessory ERC-721 NFTs are backed by the underlying 3D model FBX file, stored in IPFS. This forms part of the platform’s broader pursuit for decentralising content distribution and access to it. The FBX file is one of the most popular and widely used 3D data interchange formats between 3D editors and game engines. There are still efficiency problems that exist with it, which DIGITALAX is working to solve through it’s DASH File Format architecture. `,
-    },
-  ];
+  const [isFetchedProduct, setIsFetchedProduct] = useState(false)
+  const [isFetchedViewCount, setIsFetchedViewCount] = useState(false)
+  const [isFetchedSecondDesigners, setIsFetchedSecondDesigners] = useState(false)
 
   const sourceTypeDescription = {
-    'AR FILTER': 'You can wear and view this fashion in AR',
+    'AR': 'You can wear and view this fashion in AR',
     'DIGITAL DRESSING': 'Get digitally dressed in this fashion',
     'IN-GAME': 'You can take this fashion in-game',
-    PHYSICAL: 'This fashion includes the physical counterpart',
+    'PHYSICAL COUNTERPART': 'This fashion includes the physical counterpart',
+    'FBX SOURCE FILE': 'type of source file included',
   };
 
   const account = useSelector(getAccount);
@@ -187,43 +171,6 @@ const Product = ({ pageTitle }) => {
       setLookIds(ids);
       dispatch(globalActions.setAllUsers(users));
 
-      // if (id.indexOf('v1') >= 0) {
-      //   const v1Id = id.split('-')[1];
-      //   const { digitalaxGarmentCollection } = await getGarmentByCollectionId(chainId, v1Id);
-      //   if (digitalaxGarmentCollection.id) {
-      //     const { digitalaxMarketplaceOffers } = await getDigitalaxMarketplaceOffer(
-      //       chainId,
-      //       digitalaxGarmentCollection.id,
-      //     );
-      //     console.log('digitalaxMarketplaceOffers: ', digitalaxMarketplaceOffers);
-      //     setOwners(
-      //       await getOwners(
-      //         digitalaxMarketplaceOffer[0].garmentCollection?.garments,
-      //         digitalaxMarketplaceOffers[0].amountSold,
-      //         users,
-      //       ),
-      //     );
-
-      //     // garments: getGarmentsWithOwnerInfo(offer.garmentCollection.garments, users),
-      //     setTokenIds(
-      //       digitalaxMarketplaceOffers[0].garmentCollection?.garments?.map((garment) => garment.id),
-      //     );
-      //     setOffer({
-      //       id: digitalaxMarketplaceOffers[0].id,
-      //       primarySalePrice: digitalaxMarketplaceOffers[0].primarySalePrice,
-      //       startTime: digitalaxMarketplaceOffers[0].startTime,
-      //       endTime: digitalaxMarketplaceOffers[0].startTime,
-      //       amountSold: digitalaxMarketplaceOffers[0].amountSold,
-      //       totalAmount: 64,
-      //     });
-      //     setProduct({
-      //       id: digitalaxGarmentCollection.id,
-      //       garment: digitalaxGarmentCollection.garments[0],
-      //       designer: null,
-      //       developer: null,
-      //     });
-      //   }
-      // } else if (id) {
       if (!parseInt(isAuction)) {
         const children = [];
 
@@ -297,14 +244,11 @@ const Product = ({ pageTitle }) => {
       } else {
         if (parseInt(id) > 4) {
           const { digitalaxGarmentV2Auction } = await getGarmentV2ByAuctionId(chainId, id);
-          const ownersList = (digitalaxGarmentV2Auction && digitalaxGarmentV2Auction.resulted) ? await getOwners(
-            [digitalaxGarmentV2Auction?.garment],
-            1,
-            users,
-          ) : []
-          setOwners(
-            ownersList
-          );
+          const ownersList =
+            digitalaxGarmentV2Auction && digitalaxGarmentV2Auction.resulted
+              ? await getOwners([digitalaxGarmentV2Auction?.garment], 1, users)
+              : [];
+          setOwners(ownersList);
           setTokenIds([digitalaxGarmentV2Auction.garment.id]);
           setProduct(digitalaxGarmentV2Auction);
         } else {
@@ -313,6 +257,8 @@ const Product = ({ pageTitle }) => {
           setProduct(digitalaxGarmentAuction);
         }
       }
+
+      setIsFetchedProduct(true);
     };
     // };
     fetchGarmentV2ByID();
@@ -322,28 +268,30 @@ const Product = ({ pageTitle }) => {
     });
 
     if (secondDesigner && secondDesigner.designer && secondDesigner.designer.length > 0) {
-      const secondDesignersRes = []
-      secondDesigner.designer.map(designerItem => {
+      const secondDesignersRes = [];
+      secondDesigner.designer.map((designerItem) => {
         fetch(designerItem)
-        .then((response) => response.json())
-        .then((designerData) => {
-          secondDesignersRes.push({
-            name: designerData['Designer ID'],
-            description: designerData['description'],
-            image: designerData['image_url'],
-          })
-          setSecondDesigners(secondDesignersRes);
-        });
-      })
-      
+          .then((response) => response.json())
+          .then((designerData) => {
+            secondDesignersRes.push({
+              name: designerData['Designer ID'],
+              description: designerData['description'],
+              image: designerData['image_url'],
+            });
+            setSecondDesigners(secondDesignersRes);
+            setIsFetchedSecondDesigners(true);
+          });
+      });
     } else {
       setSecondDesigners([]);
+      setIsFetchedSecondDesigners(true);
     }
 
     const fetchViews = async () => {
       const viewData = await digitalaxApi.getViews('product', id);
       setLoveCount(viewData && viewData[0] && viewData[0].loves ? viewData[0].loves.length : 0);
       setViewCount(viewData && viewData[0] && viewData[0].viewCount ? viewData[0].viewCount : 0);
+      setIsFetchedViewCount(true);
     };
 
     const addViewCount = async () => {
@@ -368,7 +316,7 @@ const Product = ({ pageTitle }) => {
       const fetchSourceType = async () => {
         const data = await digitalaxApi.getSourceType(product.garment.name);
         if (data?.sourceType) setSourceType(data.sourceType);
-        if (isLookHakathon() && data?.LOOKNFTInspo) setLookInspo(data?.LOOKNFTInspo.split(','));
+        // if (isLookHakathon() && data?.LOOKNFTInspo) setLookInspo(data?.LOOKNFTInspo.split(','));
       };
 
       fetchSourceType();
@@ -432,14 +380,36 @@ const Product = ({ pageTitle }) => {
       openCurrentWearersModal({
         tokenIds,
         v1: id.includes('v1'),
-        type: parseInt(isAuction)
+        type: parseInt(isAuction),
       }),
     );
   };
 
-  const isLookHakathon = () => {
-    return lookIds.includes(id);
-  };
+  const getPriceElement = () => {
+    return (
+      <>
+        {(getPrice() / 10 ** 18).toFixed(2)}
+        {` MONA `}
+        <span>
+          ($
+          {
+            ((getPrice() / 10 ** 18) * parseFloat(monaPerEth) * exchangeRate).toFixed(2)
+          }
+          )
+        </span>
+      </>
+    )
+  }
+
+  // const isLookHakathon = () => {
+  //   return lookIds.includes(id);
+  // };
+
+  if (!isFetchedProduct || !isFetchedSecondDesigners || !isFetchedViewCount) {
+    return (
+      <ProductPageLoader />
+    )
+  }
 
   return (
     <>
@@ -476,13 +446,14 @@ const Product = ({ pageTitle }) => {
         <section className={styles.mainSection}>
           <Container>
             <div className={styles.body}>
+              <div className={styles.productName}> {product?.garment?.name} </div>
               <div className={styles.mainBody}>
                 <div className={styles.imageCardWrapper}>
-                  {!isLookHakathon() ? (
-                    <div className={styles.rarity}> {getRarity(parseInt(rarity))}</div>
-                  ) : (
-                    <div className={styles.lookTitle}>LOOK Hackathon</div>
-                  )}
+                  {/* {!isLookHakathon() ? ( */}
+                  
+                  {/* ) : ( */}
+                  {/* <div className={styles.lookTitle}>LOOK Hackathon</div> */}
+                  {/* )} */}
                   <ImageCard
                     data={product}
                     price={(getPrice() / 10 ** 18).toFixed(2)}
@@ -491,7 +462,7 @@ const Product = ({ pageTitle }) => {
                       (parseInt(isAuction) === 1 && Date.now() > product.endTime * 1000) ||
                       offer?.amountSold >= offer?.totalAmount
                     }
-                    showButton={!isLookHakathon()}
+                    // showButton={!isLookHakathon()}
                   />
 
                   {!!product?.children?.length && (
@@ -526,9 +497,7 @@ const Product = ({ pageTitle }) => {
                 <div className={styles.infoWrapper}>
                   <div className={styles.leftSection}>
                     <div className={styles.amount}>
-                      {isLookHakathon() ? (
-                        'React with Love to Vote'
-                      ) : parseInt(isAuction) !== 1 ? (
+                      {parseInt(isAuction) !== 1 ? (
                         <>
                           {offer?.amountSold} of {offer?.totalAmount}
                         </>
@@ -537,18 +506,8 @@ const Product = ({ pageTitle }) => {
                       )}
                       <div className={styles.helper}>
                         <span className={styles.questionMark}>?</span>
-                        <span
-                          className={styles.description}
-                          style={{ width: isLookHakathon() ? 170 : 300 }}
-                        >
-                          {!isLookHakathon() ? (
-                            <>
-                              You can also stake this NFT for yield + get the original source file.
-                              Check <a href={`${window.location.pathname}#fashion_list`}>here</a>.
-                            </>
-                          ) : (
-                            <>Please sign in to vote</>
-                          )}
+                        <span className={styles.description} >
+                          You can also stake this NFT for yield + get the original source file.
                         </span>
                       </div>
                     </div>
@@ -569,15 +528,19 @@ const Product = ({ pageTitle }) => {
                       </div>
                     </div>
 
-                    <InfoCard>
+                    <InfoCard
+                      borderColor='white'
+                      boxShadow2='inset 0px 0px 10px 10px rgba(255, 255, 255, 0.47)'
+                      mainColor='rgba(95, 95, 95, 0.47)'
+                    >
                       <div className={styles.infoCard}>
                         <div className={styles.skinName}>
-                          <div className={styles.text}> {product?.garment?.name} </div>
+                          <div className={styles.text}> {getRarity(parseInt(rarity))} </div>
                         </div>
                         <div className={styles.description}>{product?.garment?.description}</div>
                       </div>
                     </InfoCard>
-                    {!isLookHakathon() && !!sourceType.length && (
+                    {!!sourceType.length && (
                       <div className={styles.mobileRightSection}>
                         {sourceType.map((st) => (
                           <div className={styles.item}>
@@ -591,45 +554,42 @@ const Product = ({ pageTitle }) => {
                         ))}
                       </div>
                     )}
-                    {!isLookHakathon() ? (
-                      <>
-                        <div className={styles.actions}>
-                          <div className={styles.buttonWrapper}>
-                            <PriceCard
-                              mainText={`${(getPrice() / 10 ** 18).toFixed(2)} MONA ($${(
-                                (getPrice() / 10 ** 18) *
-                                parseFloat(monaPerEth) *
-                                exchangeRate
-                              ).toFixed(2)})`}
-                              subText={parseInt(isAuction) === 1 ? 'highest bid' : 'sale price'}
-                            />
-                          </div>
-                        </div>
-                        <button type="button" className={styles.viewBidHistory} onClick={onHistory}>
-                          view {parseInt(isAuction) === 1 ? 'bid' : 'purchase'} history
-                        </button>
-                        <button type="button" className={styles.bespokeBtn} onClick={onBespokeBtn}>
-                          Want something more Bespoke?
-                        </button>
-                        <a href="https://staking.digitalax.xyz/" target="_blank">
-                          <button type="button" className={styles.stakeBtn}>
-                            STAKE YOUR FASHION FOR $MONA YIELD
-                          </button>
-                        </a>
-                      </>
-                    ) : null}
-                    {isLookHakathon() && (
-                      <div className={styles.lookInspo}>
-                        <div className={styles.title}>LOOK NFT Inspo:</div>
-                        {lookInspo.map((item, index) => (
-                          <div className={styles.inspoItem} key={index}>
-                            {item}
-                          </div>
-                        ))}
+                    {/* {!isLookHakathon() ? ( */}
+                    {/* <> */}
+                    <div className={styles.actions}>
+                      <div className={styles.buttonWrapper}>
+                        <PriceCard
+                          mode={1}
+                          mainText={getPriceElement()}
+                          subText={parseInt(isAuction) === 1 ? 'highest bid' : 'sale price'}
+                        />
                       </div>
-                    )}
+                    </div>
+                    <button type="button" className={styles.viewBidHistory} onClick={onHistory}>
+                      view {parseInt(isAuction) === 1 ? 'bid' : 'purchase'} history
+                    </button>
+                    <button type="button" className={styles.bespokeBtn} onClick={onBespokeBtn}>
+                      Want something more Bespoke?
+                    </button>
+                    <a href="https://staking.digitalax.xyz/" target="_blank">
+                      <button type="button" className={styles.stakeBtn}>
+                        STAKE YOUR FASHION FOR $MONA YIELD
+                      </button>
+                    </a>
+                    {/* </> */}
+                    {/* ) : null} */}
+                    {/* {isLookHakathon() && (
+                    <div className={styles.lookInspo}>
+                      <div className={styles.title}>LOOK NFT Inspo:</div>
+                      {lookInspo.map((item, index) => (
+                        <div className={styles.inspoItem} key={index}>
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                    )} */}
                   </div>
-                  {!isLookHakathon() && !!sourceType.length && (
+                  {!!sourceType.length && (
                     <div className={styles.rightSection}>
                       {sourceType.map((st) => (
                         <div className={styles.item}>
@@ -663,7 +623,7 @@ const Product = ({ pageTitle }) => {
                       href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
                       target="_blank"
                     >
-                      <ImageCard showButton={false} imgUrl={product?.designer?.image} />
+                      <ImageCard showButton={false} imgUrl={product?.designer?.image} borderType='pink' />
                     </a>
                     <div className={styles.infoWrapper}>
                       {owners.length ? (
@@ -681,7 +641,12 @@ const Product = ({ pageTitle }) => {
                       ) : (
                         <></>
                       )}
-                      <InfoCard libon="./images/metaverse/party_glasses.png">
+                      <InfoCard
+                        libon="./images/metaverse/party_glasses.png"
+                        borderColor='#c52081'
+                        boxShadow='rgba(197, 32, 129, 0.5)'
+                        mainColor='rgba(189, 61, 169, 0.47)'
+                      >
                         <a
                           href={`https://designers.digitalax.xyz/designers/${product?.designer?.name}`}
                           target="_blank"
@@ -709,79 +674,83 @@ const Product = ({ pageTitle }) => {
               </Container>
             </section>
 
-            {
-            secondDesigners && secondDesigners.length > 0 && 
-            secondDesigners.map(item => {
-              return (
-                <section className={[styles.designerSection, styles.margin50].join(' ')} key={item.name}>
-                  <video autoPlay loop muted className={styles.video}>
-                    <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
-                  </video>
-                  <Container>
-                    <div className={styles.designerBody}>
-                      <div className={styles.title}> designer </div>
-                      <div className={styles.data}>
-                        <a
-                          href={`https://designers.digitalax.xyz/designers/${item.name}`}
-                          target="_blank"
-                        >
-                          <ImageCard showButton={false} imgUrl={item.image} />
-                        </a>
-                        <div className={styles.infoWrapper}>
-                          {owners.length ? (
-                            <div className={styles.wearersLabel}>current wearer/S</div>
-                          ) : (
-                            <></>
-                          )}
-                          {owners.length ? (
-                            <UserList
-                              className={styles.userList}
-                              users={owners}
-                              userLimit={7}
-                              onClickSeeAll={onClickSeeAllWearers}
+            {secondDesigners &&
+              secondDesigners.length > 0 &&
+              secondDesigners.map((item) => {
+                return (
+                  <section
+                    className={[styles.designerSection, styles.margin50].join(' ')}
+                    key={item.name}
+                  >
+                    <video autoPlay loop muted className={styles.video}>
+                      <source src="./images/metaverse/designer-bg.mp4" type="video/mp4" />
+                    </video>
+                    <Container>
+                      <div className={styles.designerBody}>
+                        <div className={styles.title}> designer </div>
+                        <div className={styles.data}>
+                          <a
+                            href={`https://designers.digitalax.xyz/designers/${item.name}`}
+                            target="_blank"
+                          >
+                            <ImageCard
+                              showButton={false}
+                              imgUrl={item.image}
+                              borderType='pink'
                             />
-                          ) : (
-                            <></>
-                          )}
-                          <InfoCard libon="./images/metaverse/party_glasses.png">
-                            <a
-                              href={`https://designers.digitalax.xyz/designers/${item.name}`}
-                              target="_blank"
+                          </a>
+                          <div className={styles.infoWrapper}>
+                            {owners.length ? (
+                              <div className={styles.wearersLabel}>current wearer/S</div>
+                            ) : (
+                              <></>
+                            )}
+                            {owners.length ? (
+                              <UserList
+                                className={styles.userList}
+                                users={owners}
+                                userLimit={7}
+                                onClickSeeAll={onClickSeeAllWearers}
+                              />
+                            ) : (
+                              <></>
+                            )}
+                            <InfoCard
+                              libon="./images/metaverse/party_glasses.png"
+                              borderColor='#c52081'
+                              boxShadow='rgba(197, 32, 129, 0.5)'
+                              mainColor='rgba(189, 61, 169, 0.47)'
                             >
-                              <div className={styles.name}> {item.name} </div>
-                            </a>
-                            <div className={styles.description}>{item.description}</div>
-                            <a
-                              href={`https://designers.digitalax.xyz/designers/${item.name}`}
-                              target="_blank"
-                            >
-                              <button type="button" className={styles.profileButton}>
-                                View Full Profile
+                              <a
+                                href={`https://designers.digitalax.xyz/designers/${item.name}`}
+                                target="_blank"
+                              >
+                                <div className={styles.name}> {item.name} </div>
+                              </a>
+                              <div className={styles.description}>{item.description}</div>
+                              <a
+                                href={`https://designers.digitalax.xyz/designers/${item.name}`}
+                                target="_blank"
+                              >
+                                <button type="button" className={styles.profileButton}>
+                                  View Full Profile
+                                </button>
+                              </a>
+                            </InfoCard>
+                            <a href="https://designers.digitalax.xyz/getdressed" target="_blank">
+                              <button type="button" className={styles.getDressedButton}>
+                                GET BESPOKE DRESSED BY THIS DESIGNER!
                               </button>
                             </a>
-                          </InfoCard>
-                          <a href="https://designers.digitalax.xyz/getdressed" target="_blank">
-                            <button type="button" className={styles.getDressedButton}>
-                              GET BESPOKE DRESSED BY THIS DESIGNER!
-                            </button>
-                          </a>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </Container>
-                </section>
-              )
-            })
-            }
+                    </Container>
+                  </section>
+                );
+              })}
           </>
         ) : null}
-
-        <section id="fashion_list">
-          {!id.includes('v1') &&
-          ((parseInt(id) >= 11 && parseInt(id) < 100294) || parseInt(id) > 130000) ? (
-            <FashionList fashionData={fashionData} collections={product} />
-          ) : null}
-        </section>
       </div>
     </>
   );

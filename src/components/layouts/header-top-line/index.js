@@ -51,9 +51,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
   const isLandingPage = pathname === '/';
 
   const isOnRightNetwork =
-    pathname !== '/bridge' && pathname !== '/bridge/deposit'
-      ? chainId === '0x89'
-      : chainId === '0x1';
+    pathname !== '/bridge' &&
+    pathname !== '/bridge/deposit' &&
+    !pathname.includes('withdraw/pending');
 
   const wrongNetworkText =
     pathname !== '/bridge' && pathname !== '/bridge/deposit'
@@ -87,6 +87,8 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
     dispatch(accountActions.logout());
   };
 
+  console.log({ isOnRightNetwork });
+
   return (
     <div
       className={cn(
@@ -113,11 +115,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
             </a>
           </Link>
           <Link href="/marketplace">
-            <a className={styles.link}>
-              DIGITAL WEB3 FASHION
-            </a>
+            <a className={styles.link}>DIGITAL WEB3 FASHION</a>
           </Link>
-          <Link href="http://globaldesignernetwork.xyz/global">
+          <Link href="https://designers.digitalax.xyz/global/">
             <a className={styles.link} target="_blank">
               GLOBAL DESIGNER NETWORK
             </a>
@@ -138,7 +138,11 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
           {user ? (
             <div className={styles.buttonWrapper} onClick={() => setIsShowMenu(!isShowMenu)}>
               <SmallPhotoWithText
-                photo={user.get('avatar') ? user.get('avatar') : './images/user-profile/user-avatar-black.png'}
+                photo={
+                  user.get('avatar')
+                    ? user.get('avatar')
+                    : './images/user-profile/user-avatar-black.png'
+                }
                 address={user.get('username')}
                 className={styles.hashAddress}
               >
@@ -162,7 +166,9 @@ const HeaderTopLine = ({ className, isShowStaking, buttonText, linkText }) => {
               )}
             </div>
           ) : (
-            <Button className={styles.signInButton} onClick={() => handleClick()}>{buttonText}</Button>
+            <Button className={styles.signInButton} onClick={() => handleClick()}>
+              {buttonText}
+            </Button>
           )}
         </div>
         <a href="javascript:void(0);" className={styles.collapseIcon} onClick={onIconHander}>

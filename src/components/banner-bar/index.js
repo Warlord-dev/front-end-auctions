@@ -37,7 +37,16 @@ const HeroBar = ({ className, type }) => {
       <div className={classes2}>
       <div>
         <div className={styles.node}>
-          <img src="./images/metaverse/webfashion.png" className={styles.toptext} />
+          <a href='/' target='_blank'>
+            DIGITAL WEB3 FASHION
+          </a>
+          <a href='https://designers.digitalax.xyz/getdressed' target='_blank'>
+            ORDER BOUTIQUE METAVERSE FASHION
+          </a>
+          <a href='https://drip.digitalax.xyz' target='_blank'>
+            PHYSICAL WEB3 FASHION
+          </a>
+          {/* <img src="./images/metaverse/webfashion.png" className={styles.toptext} /> */}
         </div>
       </div>
     </div>
