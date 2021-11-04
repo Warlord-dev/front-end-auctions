@@ -46,6 +46,8 @@ import {
   GUILD_WHITELISTED_NFT_STAKERS_BY_STAKER
 } from './gql.apiService';
 
+import config from '@utils/config';
+
 const apiRequest = (chainId, gql, params) => request(getAPIUrlByChainId(chainId), gql, params);
 
 export const getCollections = async (chainId) => apiRequest(chainId, COLLECTIONS);
@@ -127,25 +129,25 @@ export  const getDigitalaxNFTStakersByOwner = async (chainId, staker, first=1000
   apiRequest(chainId, DIGITALAX_NFT_STAKERS_BY_ADDRESS, { staker, first, lastID  })
 
 export  const getDigitalaxGarmentStakedTokensByOwner = async (chainId, staker, first=1000, lastID='') =>
-  apiRequest(chainId, DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS, { staker, first, lastID })
+  request(config.API_URLS['mainnet'], DIGITALAX_GARMENT_STAKED_TOKENS_BY_ADDRESS, { staker, first, lastID })
 
 export  const getDigitalaxGenesisNFTsByOwner = async (chainId, owner, first=1000, lastID='') =>
-  apiRequest(chainId, DIGITALAX_GENESIS_NFTS_BY_ADDRESS, { owner, first, lastID })
+  request(config.API_URLS['mainnet'], DIGITALAX_GENESIS_NFTS_BY_ADDRESS, { owner, first, lastID })
 
 export  const getDigitalaxGenesisNFTs = async (chainId, ids, first=1000, lastID='') =>
-  apiRequest(chainId, DIGITALAX_GENESIS_NFTS, { ids, first, lastID })
+  request(config.API_URLS['mainnet'], DIGITALAX_GENESIS_NFTS, { ids, first, lastID })
 
 export  const getDigitalaxGenesisStakedTokensByOwner = async (chainId, staker, first=1000, lastID='') =>
-  apiRequest(chainId, DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS, { staker, first, lastID  })
+  request(config.API_URLS['mainnet'], DIGITALAX_GENESIS_STAKED_TOKENS_BY_ADDRESS, { staker, first, lastID  })
 
 export const getCollectionV2ByGarmentId = async (chainId, garmentID) =>
   apiRequest(chainId, DIGITALAX_GARMENT_V2_COLLECTION_BY_GARMENT_ID, { garmentIDs: [garmentID] });
 
 export const getPodeNFTV2sByOwner = async (chainId, owner, first=1000, lastID='') =>
-  apiRequest(chainId, PODE_NFT_V2S_BY_ADDRESS, { owner, first, lastID });
+  request(config.API_DLTA_URL, PODE_NFT_V2S_BY_ADDRESS, { owner, first, lastID });
 
 export const getPodeNFTV2StakersByStaker = async (chainId, staker, first=1000, lastID='') =>
-  apiRequest(chainId, PODE_NFT_V2_STAKERS_BY_ADDRESS, { staker, first, lastID });
+  request(config.API_DLTA_URL, PODE_NFT_V2_STAKERS_BY_ADDRESS, { staker, first, lastID });
 
 export const getDigitalaxCollectorV2ByOwner = async (chainId, owner) =>
   apiRequest(chainId, DIGITALAX_COLLETOR_V2_BY_OWNER, { owner });
@@ -154,7 +156,7 @@ export const getGDNMembershipNFTsByOwner = async (chainId, owner, first=1000, la
   apiRequest(chainId, GDN_MEMBERSHIP_NFTS_BY_OWNER, { owner, first, lastID  });
 
 export const getDigitalaxLookNFTsByOwner = async (chainId, owner, first=1000, lastID='') =>
-  apiRequest(chainId, DIGITALAX_LOOK_NFTS_BY_OWNER, { owner, first, lastID });
+  request(config.API_URLS['mainnet'], DIGITALAX_LOOK_NFTS_BY_OWNER, { owner, first, lastID });
 
 export const getDigitalaxGarmentV2CollectionsByGarmentIDs = async (chainId, garmentIDs, first=1000, lastID='') =>
   apiRequest(chainId, DIGITALAX_GARMENT_V2_COLLECTIONS_BY_GARMENT_IDS, { garmentIDs, first, lastID });
@@ -166,9 +168,9 @@ export const getDigitalaxNFTStakersByGarments = async (chainId, garmentIDs, firs
   apiRequest(chainId, DIGITALAX_NFT_STAKERS_BY_GARMENTS, { garmentIDs, first, lastID });
 
 export const getGuildWhitelistedNFTStakersByGarments = async (chainId, garmentIDs, first=1000, lastID='') =>
-  apiRequest(chainId, GUILD_WHITELISTED_NFT_STAKERS_BY_GARMENTS, { garmentIDs, first, lastID });
+  request(config.API_DLTA_URL, GUILD_WHITELISTED_NFT_STAKERS_BY_GARMENTS, { garmentIDs, first, lastID });
 
   export const getGuildWhitelistedNFTStakersByStaker = async (chainId, staker, first=1000, lastID='') =>
-  apiRequest(chainId, GUILD_WHITELISTED_NFT_STAKERS_BY_STAKER, { staker, first, lastID });
+  request(config.API_DLTA_URL, GUILD_WHITELISTED_NFT_STAKERS_BY_STAKER, { staker, first, lastID });
 
 
