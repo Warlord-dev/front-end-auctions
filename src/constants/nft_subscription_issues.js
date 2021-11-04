@@ -521,7 +521,7 @@ export const details = [
   ],
   [
     {
-      id: 9,
+      id: 35,
       title: 'Common Unlock',
       subTitle: [
         'Issue Two',
