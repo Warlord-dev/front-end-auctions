@@ -162,6 +162,12 @@ class MyDocument extends Document {
               src: url("./fonts/Rose Cake - Personal Use.otf");
               font-weight: 400;
             }
+
+            @font-face {
+              font-family: "Oswald";
+              src: url("./fonts/Oswald-VariableFont_wght.ttf");
+              font-weight: 400;
+            }
           
           `,
             }}

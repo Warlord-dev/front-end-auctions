@@ -1,6 +1,26 @@
 .wrapper {
   background: black;
+  
+  .description {
+    padding: 3rem 3rem;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 60px;
+    /* or 150% */
 
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #D3D3D3;
+
+    @media (max-width: 576px) {
+      padding: 1rem;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
   .innerWrapper {
     padding: 1rem;
 
@@ -22,19 +42,6 @@
       }
     }
 
-    .description {
-      padding: 3rem 0;
-      font-family: Inter;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 23px;
-      line-height: 24px;
-      /* or 104% */
-
-      text-transform: uppercase;
-
-      color: #d3d3d3;
-    }
 
     .itemName {
       margin-bottom: 3rem;

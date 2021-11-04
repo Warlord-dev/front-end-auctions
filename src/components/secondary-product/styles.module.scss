@@ -1,0 +1,128 @@
+.wrapper {
+  width: 100%;
+  max-width: 1382px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .topSection {
+    padding: 5rem;
+    width: 100%;
+    border-bottom: 2px solid #FFFFFF;
+  }
+
+  .bottomSection {
+    padding: 3rem;
+    margin-bottom: 3rem;
+    max-width: 639px;
+    
+    .title {
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 45px;
+      line-height: 55px;
+      text-align: center;
+
+      color: #FFFFFF;
+      margin-bottom: 2rem;
+    }
+
+    .buttonTab {
+      display: flex;
+      justify-content: space-around;
+
+      button {
+        width: 40%;
+      }
+
+      .deactive {
+        opacity: 0.6;
+      }
+    }
+
+    .formGroup {
+      margin: 2rem 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .formLabel {
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height, or 120% */
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #CECECE;
+        margin-bottom: 1rem;
+      }
+
+      .inputGroup {
+        background: #111111;
+        border: 1px solid #3D3B3C;
+        box-sizing: border-box;
+        border-radius: 5px;
+        height: 60px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .prefix {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 25px;
+
+          color: #FFFFFF;
+        }
+
+        input {
+          border: none;
+          outline: none;
+          font-family: Inter;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 25px;
+          text-align: right;
+          flex-grow: 1;
+
+          color: #FFFFFF;
+          background: transparent;
+        }
+      }
+    }
+
+    .listBtn {
+      background: #111111;
+      border: 0.7px solid #3D3B3C;
+      box-sizing: border-box;
+      border-radius: 5px;
+      width: 100%;
+      height: 60px;
+      margin: 2rem 0;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 21px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+
+      color: #FFFFFF;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

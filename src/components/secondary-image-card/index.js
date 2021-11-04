@@ -1,120 +1,116 @@
-import NewButton from '@components/buttons/newbutton';
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import InfoCard from '@components/info-card';
+import ImageCard from '@components/image-card';
 import PriceCard from '@components/price-card';
-import { reviseUrl } from '@utils/helpers';
-import React, { useRef, useState } from 'react';
-import LazyLoad from 'react-lazyload';
-import { Button } from 'semantic-ui-react';
+import NewButton from '@components/buttons/newbutton';
 import styles from './styles.module.scss';
+import { useSelector } from 'react-redux';
+import { getRarityId } from '@utils/helpers';
+import { getExchangeRateETH, getMonaPerEth } from '@selectors/global.selectors';
+import { useRouter } from 'next/router';
 
-const SecondaryImageCard = ({ data, showButton = false, shwoSecondButton = false }) => {
-  const [zoomMedia, setZoomMedia] = useState(false);
-  const videoTagRef = useRef();
-  const [hasAudio, setHasAudio] = useState(false);
-  const [videoMuted, setVideoMuted] = useState(true);
+const SecondaryImageCard = ({
+  product,
+  price,
+  showCollectionName = false,
+  showRarity = false,
+  isAuction = false,
+  sold,
+}) => {
+  const router = useRouter();
+  const monaPerEth = useSelector(getMonaPerEth);
+  const exchangeRate = useSelector(getExchangeRateETH);
+  const [time, setTime] = useState('00:00:00');
 
-  function getAudio(video) {
+  useEffect(() => {
+    if (product?.endTime && product.rarity === 'Exclusive') {
+      getTimeFormat();
+      setInterval(() => {
+        getTimeFormat();
+      }, 60000);
+    }
+  }, [product]);
+
+  const getPrice = () => {
     return (
-      video.mozHasAudio ||
-      Boolean(video.webkitAudioDecodedByteCount) ||
-      Boolean(video.audioTracks && video.audioTracks.length)
+      <>
+        {`${(price / 10 ** 18).toFixed(2)} $MONA`}
+        <span>{` ($${(
+          (parseFloat(monaPerEth) * exchangeRate * price) / 10 ** 18).toFixed(2)})
+        `}
+        </span>
+      </>
     );
+  };
+
+  const getTimeFormat = () => {
+    const timeStamp = Date.now();
+    if (timeStamp > product.endTime * 1000) {
+      return;
+    } else {
+      const offset = product.endTime * 1000 - timeStamp;
+      const days = parseInt(offset / 86400000);
+      const hours = parseInt((offset % 86400000) / 3600000);
+      const minutes = parseInt((offset % 3600000) / 60000);
+      setTime(`${`00${days}`.slice(-2)}:${`00${hours}`.slice(-2)}:${`00${minutes}`.slice(-2)}`);
+    }
+  };
+
+  const getTime = () => {
+    return <span>{time}</span>
   }
 
-  const onClickZoomOut = () => {
-    setZoomMedia(true);
-  };
-
-  const onClickZoomIn = () => {
-    setZoomMedia(false);
-  };
-
-  const onClickMute = () => {
-    videoTagRef.current.pause();
-    setVideoMuted(!videoMuted);
-    videoTagRef.current.play();
-  };
-
-  const onSell = () => {};
-
-  const onDelist = () => {};
-
   return (
-    <div className={styles.wrapper}>
-      {data ? (
-        <div
-          className={zoomMedia ? styles.zoomWrapper : styles.mediaWrapper}
-          onClick={() => onClickZoomIn()}
+    <div className={styles.productInfoCardwrapper}>
+      <div className={styles.imageWrapper}>
+        <ImageCard
+          data={product}
+          showDesigner
+          showCollectionName={showCollectionName}
+          showRarity={showRarity}
+          showButton={false}
+          isAuction={isAuction}
+          withLink
+        />
+      </div>
+      <div className={styles.infoCardWrapper}>
+        <InfoCard
+          bodyClass={styles.noHorizontalPadding}
         >
-          {data?.garment?.animation || data?.animation ? (
-            <LazyLoad>
-              {/* <video key={data.id} autoPlay muted={!asPath.includes('product')} loop className={styles.video} */}
-              <video
-                key={data.id}
-                autoPlay
-                muted={videoMuted}
-                loop
-                className={styles.video}
-                ref={videoTagRef}
-                preload={'auto'}
-                onLoadedData={() => {
-                  if (!asPath.includes('product')) return;
-                  // console.log('videoTagRef: ', videoTagRef.current)
-                  var video = videoTagRef.current;
-                  // console.log('video: ', video)
-                  if (getAudio(video)) {
-                    // console.log('video has audio')
-                    setHasAudio(true);
-                  } else {
-                    setHasAudio(false);
-                    // console.log(`video doesn't have audio`)
-                  }
-                }}
+          {isAuction ? (
+            <>
+              <div className={[styles.infoWrapper, styles.flexRow].join(' ')}>
+                <PriceCard mainText={getTime()} subText={'TIME LEFT'} />
+                <PriceCard mainText={getPrice()} subText={'HIGHEST BID'} />
+              </div>
+              <div className={styles.buttonWrapper}>
+                <Link
+                  href={`/product/${product?.id}/${getRarityId(product?.rarity)}/${
+                    isAuction ? 1 : 0
+                  }`}
+                >
+                  <a>
+                    <NewButton disable={sold} text={sold ? 'Sold' : 'Place a Bid'} />
+                  </a>
+                </Link>
+              </div>
+            </>
+          ) : (
+            <div className={styles.infoWrapper}>
+              <PriceCard mainText={getPrice()} subText={'SALE PRICE'} />
+              <Link
+                href={`/product/${product?.id}/${getRarityId(product?.rarity)}/${
+                  isAuction ? 1 : 0
+                }`}
               >
-                <source
-                  src={reviseUrl(data?.garment?.animation || data?.animation)}
-                  type="video/mp4"
-                />
-              </video>
-            </LazyLoad>
-          ) : data?.garment?.image || data?.image ? (
-            <img src={reviseUrl(data?.garment?.image || data?.image)} className={styles.image} />
-          ) : null}
-          {hasAudio && zoomMedia && (
-            <Button
-              className={styles.muteButton}
-              onClick={(e) => {
-                e.stopPropagation();
-                onClickMute();
-              }}
-            >
-              {videoMuted ? (
-                <img src="/images/audio-off.png" />
-              ) : (
-                <img src="/images/audio-on.png" />
-              )}
-            </Button>
+                <a>
+                  <NewButton disable={sold} text={sold ? 'Sold out' : 'Buy Now'} />
+                </a>
+              </Link>
+            </div>
           )}
-        </div>
-      ) : null}
-      <Button className={styles.zoomButton} onClick={() => onClickZoomOut()}>
-        <img src="/images/zoom_btn.png" />
-      </Button>
-      {hasAudio && (data?.garment?.animation || data?.animation) && (
-        <Button className={styles.muteButton} onClick={() => onClickMute()}>
-          {videoMuted ? <img src="/images/audio-off.png" /> : <img src="/images/audio-on.png" />}
-        </Button>
-      )}
-      <div className={styles.buttonsWrapper}>
-        {showButton && (
-          <div className={styles.buyNow}>
-            <NewButton text="SELL" mode="1" onClick={onSell} />
-          </div>
-        )}
-        {shwoSecondButton && (
-          <div className={styles.secondButton}>
-            <NewButton text="DELIST" mode="1" onClick={onDelist} />
-          </div>
-        )}
+        </InfoCard>
       </div>
     </div>
   );

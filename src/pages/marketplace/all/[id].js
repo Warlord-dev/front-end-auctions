@@ -88,59 +88,43 @@ const Auctions = () => {
       <HeroSection
         width={id === '0' ? '60%' : '80%'}
         logo={getLogo()}
-        title='DIGITAL'
-        subTitle='INDIE WEB3 FASHION'
+        title="DIGITAL"
+        subTitle="INDIE WEB3 FASHION"
         filter={filter}
         setFilter={(v) => setFilter(v)}
         setSortBy={(v) => setSortBy(v)}
       />
 
-      {filteredProducts
-        .sort((a, b) => {
-          if (a.sold && !b.sold) return 1;
-          if (!a.sold && b.sold) return -1;
-          return 0;
-        })
-        .sort((a, b) => {
-          if (parseInt(a.startTime) > parseInt(b.startTime)) return -1;
-          if (parseInt(a.startTime) < parseInt(b.startTime)) return 1;
-          return 0;
-        })
-        .map((prod, index) => {
-          if (index % 2 === 1) return <> </>;
-          return (
-            <section className={styles.productsSection} key={prod.id}>
-              <Container>
-                <div className={styles.body}>
+      <section className={styles.productsSection}>
+        <Container>
+          <div className={styles.body}>
+            {filteredProducts
+              .sort((a, b) => {
+                if (a.sold && !b.sold) return 1;
+                if (!a.sold && b.sold) return -1;
+                return 0;
+              })
+              .sort((a, b) => {
+                if (parseInt(a.startTime) > parseInt(b.startTime)) return -1;
+                if (parseInt(a.startTime) < parseInt(b.startTime)) return 1;
+                return 0;
+              })
+              .map((prod) => {
+                return (
                   <ProductInfoCard
-                    product={filteredProducts[index]}
-                    price={
-                      filteredProducts[index].topBid || filteredProducts[index].primarySalePrice
-                    }
+                    key={prod.id}
+                    product={prod}
+                    price={prod.topBid || prod.primarySalePrice}
                     showRarity
                     showCollectionName
-                    sold={filteredProducts[index].sold}
-                    isAuction={filteredProducts[index].auction}
+                    sold={prod.sold}
+                    isAuction={prod.auction}
                   />
-                  {index + 1 < filteredProducts.length ? (
-                    <ProductInfoCard
-                      isLook={id === '15'}
-                      product={filteredProducts[index + 1]}
-                      price={
-                        filteredProducts[index + 1].topBid ||
-                        filteredProducts[index + 1].primarySalePrice
-                      }
-                      showRarity
-                      sold={filteredProducts[index + 1].sold}
-                      showCollectionName
-                      isAuction={filteredProducts[index].auction}
-                    />
-                  ) : null}
-                </div>
-              </Container>
-            </section>
-          );
-        })}
+                );
+              })}
+          </div>
+        </Container>
+      </section>
     </div>
   );
 };
