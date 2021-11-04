@@ -14,6 +14,7 @@
     "mumbai": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxmumbai",
     "matic": "https://api.thegraph.com/subgraphs/name/digitalax/digitalaxmatic"
   },
+  "API_DLTA_URL": "https://api.thegraph.com/subgraphs/name/digitalax/the-dlta",
   "DEFAULT_NETWORK": "matic",
   "DEFAULT_WEB3_URL": "https://mainnet.infura.io/v3/6e9690131f584ee0a8b445ebb4740f8b",
   "WEB3_URLS": {
