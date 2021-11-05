@@ -14,6 +14,7 @@ const DEFAULT_FIELDS = Map({
   isShowPreviewMaterial: false,
   isShowBuyNowNftCooldown: false,
   isShowBuyNowNftLimit: false,
+  isShowModalUnlock: false,
   params: null,
 });
 

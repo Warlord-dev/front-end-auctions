@@ -12,6 +12,7 @@ const Button = ({
       {
         [styles.transparent]: background === 'transparent',
         [styles.black]: background === 'black',
+        [styles.pink]: background === 'pink'
       },
       className,
     )}

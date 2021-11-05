@@ -13,6 +13,7 @@ import BuyNowNftSubscription from './buy-now-nft-subscription';
 import ModalNftSubscriptionAReady from './modal-nft-subscription-ready';
 import BuyNowNftCooldown from './buy-now-nft-cooldown';
 import BuyNowNftLimit from './buy-now-nft-limit';
+import Unlock from "./modal-unlock";
 
 const Modals = () => {
   const modals = useSelector((state) => state.modals.toJS());
@@ -29,7 +30,8 @@ const Modals = () => {
     isShowModalESPAReady,
     isNftSubscriptionReady,
     isShowBuyNowNftCooldown,
-    isShowBuyNowNftLimit
+    isShowBuyNowNftLimit,
+    isShowModalUnlock
   } = modals;
 
   return (
@@ -47,6 +49,7 @@ const Modals = () => {
       {isNftSubscriptionReady && <ModalNftSubscriptionAReady />}
       {isShowBuyNowNftCooldown && <BuyNowNftCooldown />}
       {isShowBuyNowNftLimit && <BuyNowNftLimit />}
+      {isShowModalUnlock && <Unlock />}
     </>
   );
 };

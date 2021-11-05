@@ -34,6 +34,20 @@
   }
 }
 
+.pink {
+  background: #FF2095;
+  color: white;
+  border: 1px solid black;
+ 
+  &:not([disabled]) {
+    @include active();
+  }
+
+  &[disabled]  {
+    opacity: 0.6;
+  }
+}
+
 .black {
   background: $black;
   color: #fff;
