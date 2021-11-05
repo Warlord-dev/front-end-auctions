@@ -105,7 +105,7 @@ const SecondaryImageCard = ({
                 }`}
               >
                 <a>
-                  <NewButton disable={sold} text={sold ? 'Sold out' : 'Buy Now'} />
+                  <NewButton disable={sold} text={sold ? 'DELIST' : 'LIST ON MARKET'} />
                 </a>
               </Link>
             </div>
