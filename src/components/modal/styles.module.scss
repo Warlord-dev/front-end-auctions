@@ -8,11 +8,11 @@
   top: 0;
   left: 0;
   overflow: auto;
-  z-index: 3;
+  z-index: 180;
 }
 
 .modal {
-  background-color: #fff;
+  background-color: black;
   padding: 48px;
   position: relative;
   max-width: 840px;
@@ -25,6 +25,7 @@
   position: absolute;
   right: 32px;
   top: 32px;
+  filter: invert(1);
 }
 
 .title {
@@ -32,12 +33,15 @@
   line-height: 24px;
   font-weight: bold;
   margin-bottom: 44px;
+  color: white;
 }
 
 .modalBodyText {
   font-size: 1rem;
   line-height: 24px;
   font-weight: 400;
+  color: white;
+  text-align: center;
 
   &:not(:last-child) {
     margin-bottom: 18px;

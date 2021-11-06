@@ -34,6 +34,8 @@ import {
   DRIP_COLLECTION_NAMES
 } from '@constants/drip_collection_ids'
 
+import { details as subscriptionDetails } from '@constants/nft_subscription_issues'
+
 import {
   DIGITAL_CHANGING_ROOM,
   DIGIFIZZY_BUNDLES,
@@ -43,6 +45,8 @@ import {
   PODE,
   GDN_MEMBERSHIP_NFT
 } from '@constants/nft_categories'
+import { useDispatch, useSelector } from 'react-redux'
+import { openUnlockModal } from '@actions/modals.actions'
 
 const MAINNET_CHAINID = 0x1
 const POLYGON_CHAINID = 0x89
@@ -62,6 +66,8 @@ const DigitalChangingRoom = props => {
   const [currentPage, setCurrentPage] = useState(0)
   const [currentCategory, setCurrentCategory] = useState(0)
   const [ownedNFTs, setOwnedNFTs] = useState([])
+  const dispatch = useDispatch()
+  const modals = useSelector(state => state.modals.toJS());
   const showPerPage = 10
 
   const getAllResultsFromQuery = async (query, resultKey, chainId, owner) => {
@@ -91,6 +97,42 @@ const DigitalChangingRoom = props => {
     
     return resultArray
   }
+
+  useEffect(() => {
+    const fetchDigitalaxSubscriptions = async () => {
+      // get digitalax subscription 1155s on polygon
+      const digitalaxSubscriptionCollectorsPolygon
+        = await getAllResultsFromQuery(
+          getDigitalaxSubscriptionCollectorsByOwner,
+          'digitalaxSubscriptionCollectors',
+          POLYGON_CHAINID,
+          owner
+        )
+      const digitalaxSubscription1155sPolygon = digitalaxSubscriptionCollectorsPolygon && digitalaxSubscriptionCollectorsPolygon.length > 0 
+        ? digitalaxSubscriptionCollectorsPolygon[0].childrenOwned.map(item => item.token)
+        : []
+      
+      // get digitalax subscriptions (digi bundle) on polygon
+      const digitalaxSubscriptionsPolygon = await getAllResultsFromQuery(
+        getDigitalaxSubscriptionsByOwner,
+        'digitalaxSubscriptions',
+        POLYGON_CHAINID,
+        owner
+      )
+      
+      setOwnedNFTs({
+        ...ownedNFTs,
+        [DIGIFIZZY_BUNDLES]: {
+          ...digitalaxSubscriptionsPolygon.map(item => { return {...item, type: 'digitalaxSubscriptionsPolygon'} }),
+          ...digitalaxSubscription1155sPolygon.map(item => { return {...item, type: 'digitalaxSubscription1155sPolygon'} }),
+        }
+      });
+    };
+
+    if (modals.isShowModalUnlock === false && ownedNFTs.length) {
+      fetchDigitalaxSubscriptions();
+    }
+  }, [modals.isShowModalUnlock])
   
   useEffect(() => {
     const getAllNFTs = async () => {
@@ -433,8 +475,35 @@ const DigitalChangingRoom = props => {
         const { group, name } = collectionNameObj
         window.open(`https://drip.digitalax.xyz/product/${group.toLowerCase()}-${item.collectionId}-${name.replaceAll(' ', '-').toLowerCase()}`, '_new')
       }
-      
-      
+    } else if (type == 'digitalaxSubscription1155sPolygon') {
+      let sub = null, subIndex
+      for (let i = 0; i < subscriptionDetails.length; i += 1) {
+        subscriptionDetails[i].forEach((issue) => {
+          if (issue.subTitle) {
+            const filteredIssues = issue.subTitle.filter((subtitle) => {
+              return item.name.toLowerCase().includes(subtitle.toLowerCase())
+            });
+
+            if (filteredIssues.length) {
+              sub = issue;
+            }
+          } else {
+            if (item.name.toLowerCase().includes(issue.title.toLowerCase())) {
+              sub = issue;
+            }
+          }
+        })
+        if (sub) {
+          subIndex = i + 1;
+          break;
+        }
+      }
+      const rarity = sub?.title.includes('Common') ? 1 : sub?.title.includes('Semi-Rare') ? 2 : 3;
+      window.open(`https://digifizzy.xyz/purchase/${subIndex}/${rarity}`, '_new');
+    } else if (type == 'digitalaxSubscriptionsPolygon') {
+      dispatch(openUnlockModal({
+        item 
+      }));
     } else {
       console.log('not on marketplace')
       console.log('fashionId: ', fashionId)

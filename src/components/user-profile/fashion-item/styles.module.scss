@@ -3,10 +3,37 @@
   padding: 2rem;
   border-radius: 2rem;
   height: 80vw;
-  border: 2px solid #9c28ff;
-  box-shadow: inset 0px 0px 30px 20px rgb(197 32 129 / 50%), 0px 0px 30px 20px rgb(197 32 129 / 50%);
   display: flex;
   flex-direction: column;
+  // border: 3px solid #FFFFFF;
+  // box-shadow: inset 0px 4px 30px 10px #ffffff, 0px 4px 25px 10px #ffffff
+  z-index: 100;
+  border: 3px solid #C2EABA;
+  &:before {
+    content: "";
+    position: absolute;
+    border-radius: 2rem;
+    background: linear-gradient(319deg, #C2EABA 0%, #C5F4E0 37%, #EFC2CF 100%);
+    z-index: -1;
+    left: -2%;
+    top: -2%;
+    height: 104%;
+    width: 104%;
+    filter: blur(15px);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    border-radius: 2rem;
+    background: black;
+    z-index: -1;
+    left: 2%;
+    top: 2%;
+    height: 96%;
+    width: 96%;
+    filter: blur(10px);
+  }
+  
 
   .videoItem {
     width: 100%;
