@@ -1,0 +1,91 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #000000;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 960px;
+    height: 10px;
+    left: 960px;
+    top: 44px;
+    background-color: white;
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 960px;
+    height: 10px;
+    left: 960px;
+    top: 69px;
+    background-color: white;
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 960px;
+    height: 10px;
+    left: 960px;
+    top: 94px;
+    background-color: white;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 688px;
+    height: 1184px;
+    left: 1112px;
+    top: 275px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+    
+    color: #FFFFFF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 739px;
+    height: 216px;
+    left: 30px;
+    top: 1242px;
+    
+    font-family: MUSICNET;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #000000;
+    // -webkit-text-stroke: 10px black;
+    text-shadow: 10px 10px 30px #000000;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 159px;
+    height: 48px;
+    left: 30px;
+    top: 1180px;
+    
+    font-family: Mrs Sheppards;
+    font-size: 40px;
+    line-height: 120.53%;
+    
+    color: #000000;
+    -webkit-text-stroke: 10px black;
+    box-sizing: border-box;
+    text-shadow: 10px 10px 30px #000000;    
+  }
+}

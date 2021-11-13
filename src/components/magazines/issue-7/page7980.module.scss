@@ -1,0 +1,241 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 705px;
+    height: 120px;
+    left: 55px;
+    top: 58px;
+
+    font-family: Neon Lights;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 100%;
+    /* identical to box height, or 120px */
+
+    color: #ec008e;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 783px;
+    height: 144px;
+    left: 105px;
+    top: 180px;
+    
+    font-family: Muna;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    /* or 18px */
+    
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 710px;
+    height: 55px;
+    left: 50px;
+    top: 345px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    /* identical to box height, or 55px */
+
+    color: #ffffff;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 765px;
+    height: 132px;
+    left: 72px;
+    top: 400px;
+
+    font-family: NATS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
+
+    color: #ffffff;
+
+    a {
+      text-decoration: none;
+      color: #fafa06;
+    }
+  }
+
+  .text5 {
+    position: absolute;
+    width: 749px;
+    height: 33px;
+    left: 50px;
+    top: 590px;
+    
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 749px;
+    height: 33px;
+    left: 138px;
+    top: 1018px;
+    
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* identical to box height, or 33px */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 749px;
+    height: 74px;
+    left: 1071px;
+    top: 532px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
+
+    color: #ffffff;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 749px;
+    height: 66px;
+    left: 1019px;
+    top: 58px;
+
+    font-family: Neon Vortex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 33px */
+
+    color: #ffffff;
+  }
+
+  .seeMoreLink {
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .seeMore1 {
+    position: absolute;
+    width: 240px;
+    height: 144px;
+    left: 1655px;
+    top: 1306px;
+
+    font-family: Noto Sans Armenian;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 90%;
+    /* or 72px */
+
+    color: #ffffff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .seeMore2 {
+    position: absolute;
+    width: 240px;
+    height: 144px;
+    left: 1658px;
+    top: 1311px;
+
+    font-family: Noto Sans Armenian;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 90%;
+    /* or 72px */
+
+    color: #ec008e;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 904px;
+    height: 226px;
+    left: 25px;
+    top: 644px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 856px;
+    height: 1323px;
+    left: 1018px;
+    top: 152px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 367px;
+    height: 364px;
+    left: 195px;
+    top: 1086px;        
+  }
+
+  .image4 {
+    position: absolute;
+    width: 367px;
+    height: 364px;
+    left: 562px;
+    top: 1086px;    
+  }
+}

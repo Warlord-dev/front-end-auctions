@@ -1,0 +1,952 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #000000;
+
+  .text1 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 22px;
+    top: 20px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #FF00E5;
+    -webkit-text-stroke: 0.6 white;      
+  }
+
+  .text2 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 22px;
+    top: 164px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #FF00E5;
+    -webkit-text-stroke: 0.6 white;      
+  }
+
+  .text3 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 436px;
+    top: 164px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 436px;
+    top: 20px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 1165px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+        
+  }
+
+  .text6 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 1021px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 877px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 733px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 589px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;    
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 445px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 308px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 164px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 20px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1018px;
+    top: 1312px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 1017px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text16 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 873px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+    
+  }
+
+  .text17 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 729px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 585px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text19 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 441px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text20 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 297px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text21 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 160px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text22 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 16px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text23 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: -128px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text24 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 1164px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #00FFF0;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text25 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 1312px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text26 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1427px;
+    top: 1312px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text27 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 1309px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text28 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 1165px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text29 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 1021px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text30 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 877px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text31 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 729px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text32 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 585px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text33 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 441px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text34 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 297px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text35 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 164px;
+    
+    font-family: MUSICNET;
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .text36 {
+    position: absolute;
+    width: 486px;
+    height: 144px;
+    left: 1832px;
+    top: 16px;
+    
+    font-family: MUSICNET;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 120.53%;
+    /* or 72px */
+    
+    
+    color: #BDFF00;
+    -webkit-text-stroke: 0.6 #FFF7EF;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 890px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 456px;
+    height: 456px;
+    left: 434px;
+    top: 1042px;    
+  }
+
+  .text37 {
+    position: absolute;
+    width: 243px;
+    height: 72px;
+    left: 48px;
+    top: 14px;
+    font-family: 'New Rocker';
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+
+    &:hover {
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .text38 {
+    position: absolute;
+    width: 243px;
+    height: 72px;
+    left: 48px;
+    top: 70px;
+    font-family: 'New Rocker';
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    &:hover {
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .text39 {
+    position: absolute;
+    width: 243px;
+    height: 72px;
+    left: 48px;
+    top: 126px;
+    font-family: 'New Rocker';
+    font-size: 60px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+    &:hover {
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .text40 {
+    position: absolute;
+    width: 228px;
+    height: 180px;
+    left: 55px;
+    top: 207px;
+    
+    font-family: 'New Rocker';
+    font-size: 30px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text41 {
+    position: absolute;
+    width: 228px;
+    height: 24px;
+    left: 327px;
+    top: 315px;
+    
+    font-family: 'New Rocker';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text42 {
+    position: absolute;
+    width: 538px;
+    height: 162px;
+    left: 327px;
+    top: 347px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #FFFFFF;
+  }
+
+  .text43 {
+    position: absolute;
+    width: 228px;
+    height: 24px;
+    left: 55px;
+    top: 531px;
+    
+    font-family: New Rocker;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    
+    color: #FFF1F1;
+  }
+
+  .text44 {
+    position: absolute;
+    width: 772px;
+    height: 126px;
+    left: 55px;
+    top: 563px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    
+    color: #FFF1F1;
+  }
+
+  .text45 {
+    position: absolute;
+    width: 228px;
+    height: 24px;
+    left: 55px;
+    top: 748px;
+    
+    font-family: New Rocker;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    
+    color: #FFF1F1;
+    
+  }
+
+  .text46 {
+    position: absolute;
+    width: 772px;
+    height: 198px;
+    left: 55px;
+    top: 780px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    
+    color: #FFF1F1;
+    
+  }
+
+  .text47 {
+    position: absolute;
+    width: 283px;
+    height: 24px;
+    left: 55px;
+    top: 1022px;
+    
+    font-family: New Rocker;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120.53%;
+    /* or 24px */
+    
+    
+    color: #FFF1F1;
+  }
+
+  .text48 {
+    position: absolute;
+    width: 335px;
+    height: 261px;
+    left: 55px;
+    top: 1054px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #FFF1F1;
+  }
+
+  .line1 {
+    position: absolute;
+    width: 1497px;
+    height: 10px;
+    left: 890px;
+    top: 0px;
+    
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+    background-color: #FFFFFF;
+  }
+
+  .line2 {
+    position: absolute;
+    width: 1497px;
+    height: 10px;
+    left: 913px;
+    top: 0px;
+    
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+    background-color: #FFFFFF;
+  }
+
+  .line3 {
+    position: absolute;
+    width: 1497px;
+    height: 10px;
+    left: 936px;
+    top: 0px;
+    
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+    background-color: #FFFFFF;
+  }
+
+  .line4 {
+    position: absolute;
+    width: 1497px;
+    height: 10px;
+    left: 960px;
+    top: 0px;
+    
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+    background-color: #FFFFFF;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 947px;
+    height: 1498px;
+    left: 974px;
+    top: -1px;
+    
+    background: rgba(0, 0, 0, 0.5);    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 919px;
+    height: 260px;
+    left: 994px;
+    top: 58px;
+    
+    background: #000000;    
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 919px;
+    height: 383px;
+    left: 994px;
+    top: 350px;
+    
+    background: #000000;
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 919px;
+    height: 134px;
+    left: 994px;
+    top: 773px;
+    
+    background: #000000;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 355px;
+    height: 474px;
+    left: 1566px;
+    top: 1021px;    
+  }
+
+  .text49 {
+    position: absolute;
+    width: 283px;
+    height: 24px;
+    left: 1034px;
+    top: 76px;
+    
+    font-family: New Rocker;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFF1F1;    
+  }
+
+  .text50 {
+    position: absolute;
+    width: 853px;
+    height: 136px;
+    left: 1034px;
+    top: 108px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    /* or 18px */
+    
+    
+    color: #FFF1F1;
+  }
+
+  .text51 {
+    position: absolute;
+    width: 283px;
+    height: 24px;
+    left: 1034px;
+    top: 372px;
+    
+    font-family: New Rocker;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFF1F1;
+  }
+
+  .text52 {
+    position: absolute;
+    width: 853px;
+    height: 312px;
+    left: 1034px;
+    top: 404px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #FFF1F1;
+  }
+
+  .text53 {
+    position: absolute;
+    width: 283px;
+    height: 24px;
+    left: 1034px;
+    top: 795px;
+    
+    font-family: New Rocker;
+    font-size: 20px;
+    line-height: 120.53%;
+    color: #FFF1F1;
+  }
+
+  .text54 {
+    position: absolute;
+    width: 853px;
+    height: 70px;
+    left: 1034px;
+    top: 827px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120.53%;
+    color: #FFF1F1;
+  }
+
+  .audioWrapper1 {
+    position: absolute;
+    width: 509px;
+    left: 1018px;
+    top: 1021px;
+    border: none;    
+  }
+
+  .audioWrapper2 {
+    position: absolute;
+    width: 509px;
+    left: 1018px;
+    top: 1161px;        
+  }
+
+  .audioWrapper3 {
+    position: absolute;
+    width: 509px;
+    left: 1018px;
+    top: 1301px;
+  }
+}

@@ -1,0 +1,266 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  color: black;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 902px;
+    height: 158px;
+    left: 0px;
+    top: 35px;
+    
+    font-family: Devonshire;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    /* or 100px */
+    
+    text-align: center;
+    
+    color: #B04AFF;
+    -webkit-text-stroke: 1px black;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 301px;
+    height: 158px;
+    left: 228px;
+    top: 419px;
+    
+    font-family: Galvji;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    /* or 100px */
+    
+    
+    color: #FFF500;
+    -webkit-text-stroke: 1px black;
+  
+  }
+
+  .text3 {
+    position: absolute;
+    width: 504px;
+    height: 158px;
+    left: 427px;
+    top: 884px;
+    
+    font-family: Galvji;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    color: #FF8383;
+    -webkit-text-stroke: 1px black; 
+  }
+
+  .text4 {
+    position: absolute;
+    width: 604px;
+    height: 101px;
+    left: 427px;
+    top: 1298px;
+    
+    font-family: Dekko;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    color: #FFD74A;
+    -webkit-text-stroke: 1px black; 
+  }
+
+  .text5 {
+    position: absolute;
+    width: 604px;
+    height: 101px;
+    left: 427px;
+    top: 1397px;
+    font-family: Dekko;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    color: #FFD74A;
+    -webkit-text-stroke: 1px black; 
+  }
+
+  .image3 {
+    position: absolute;
+    width: 237px;
+    height: 237px;
+    left: 1004px;
+    top: 14px;
+    border-radius: 183px;    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 143px;
+    height: 143px;
+    left: 1261px;
+    top: 14px;
+    border-radius: 183px;
+  }
+
+  a {
+    div {
+      transition: 0.3s all;
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(0.9);
+      }
+    }
+    
+    img {
+      transition: 0.3s all;
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  h1 {
+    position: absolute;
+    width: 206px;
+    height: 100px;
+    left: 1424px;
+    top: 14px;
+    
+    font-family: Bahiana;
+    font-size: 100px;
+    line-height: 100%;
+    color: #FFFFFF;    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 89px;
+    height: 1497px;
+    left: 1831px;
+    top: 0px;    
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 444px;
+    height: 1200px;
+    left: 973px;
+    top: 320px;    
+    
+    background: rgba(0, 0, 0, 0.4);    
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 401px;
+    height: 1329px;
+    left: 1428px;
+    top: 135px;
+    
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .text6 {
+    position: absolute;
+    width: 419px;
+    height: 1039px;
+    left: 985px;
+    top: 400px;
+    
+    font-family: Reguler;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 366px;
+    height: 1313px;
+    left: 1446px;
+    top: 151px;
+    
+    font-family: Reguler;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13.2px;
+    line-height: 13px;
+    color: #FFFFFF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 419px;
+    height: 22px;
+    left: 985px;
+    top: 340px;
+    
+    font-family: Reguler;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 19px;
+    
+    color: #FFFFFF;    
+  }
+
+  .playButton1 {
+    position: absolute;
+    width: 268px;
+    height: 268px;
+    left: 26px;
+    top: 964px; 
+  }
+
+  .imageBack {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imagePlay {
+    position: absolute;
+    width: 152px;
+    height: 173px;
+    left: 80px;
+    top: 50px;
+  }
+  
+  .imagePause {
+    position: absolute;
+    width: 129px;
+    height: 163px;
+    left: 73px;
+    top: 55px;
+  }
+}

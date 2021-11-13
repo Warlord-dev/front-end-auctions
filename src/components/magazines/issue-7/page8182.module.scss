@@ -1,0 +1,136 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .link1 {
+    position: absolute;
+    top: 10;
+    left: 10;
+    width: 254px;
+    height: 254px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .link2 {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    left: 1631px;
+    top: 33px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .gif1 {
+    position: absolute;
+    left: -900px;
+    top: 538px;
+  }
+
+  .gif2 {
+    position: absolute;
+    left: -580px;
+    top: 538px;
+  }
+
+  .gif3 {
+    position: absolute;
+    left: -270px;
+    top: 538px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 311px;
+    height: 50px;
+    left: 975px;
+    top: 0px;
+
+    font-family: Baloo Chettan 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+
+    text-align: center;
+
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 593px;
+    height: 209px;
+    left: 1001px;
+    top: 59px;
+
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 100%;
+    /* or 11px */
+
+    color: #ffd363;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 879px;
+    height: 1222px;
+    left: 1000px;
+    top: 287px;
+
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 100%;
+    /* or 11px */
+
+    color: #ffd363;
+  }
+
+  .play {
+    position: absolute;
+    width: 250px;
+    height: 90px;
+    left: 147px;
+    top: 763px;
+
+    font-family: Noto Sans Armenian;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 90%;
+    /* identical to box height, or 90px */
+
+    color: #ff0000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+}

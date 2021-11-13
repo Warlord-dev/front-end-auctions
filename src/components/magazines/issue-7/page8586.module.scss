@@ -1,0 +1,170 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #000000;
+
+  .image1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 594px;
+    height: 220px;
+    left: 366px;
+    top: 30px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 110%;
+    /* or 55px */
+
+    color: #ffffff;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 472px;
+    height: 54px;
+    left: 434px;
+    top: 287px;
+
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: #ffffff;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 365px;
+    height: 304px;
+    top: 379px;
+    left: 561px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    /* or 16px */
+
+    color: #ffffff;
+    a {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+
+  .text4 {
+    position: absolute;
+    width: 846px;
+    height: 240px;
+    top: 748px;
+    left: 50px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    /* or 16px */
+
+    color: #ffffff;
+    a {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+
+  .text5 {
+    position: absolute;
+    width: 511px;
+    height: 384px;
+    top: 1043px;
+    left: 50px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    /* or 16px */
+
+    color: #ffffff;
+    a {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+
+  .text6 {
+    position: absolute;
+    width: 573px;
+    height: 1260px;
+    left: 1040px;
+    top: 56px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: #ffffff;
+    a {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+
+  .text7 {
+    position: absolute;
+    width: 594px;
+    height: 55px;
+    left: 1040px;
+    top: 1316px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 110%;
+    /* identical to box height, or 55px */
+
+    color: #ffffff;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 515px;
+    height: 64px;
+    left: 1040px;
+    top: 1406px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 120%;
+    /* or 31px */
+
+    color: #6a0000;
+    a {
+      text-decoration: underline;
+      color: #6a0000;
+    }
+  }
+}

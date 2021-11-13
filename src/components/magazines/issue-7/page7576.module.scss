@@ -1,0 +1,141 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: black;
+
+  .image1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 405px;
+    height: 1083px;
+    left: 32px;
+    top: 206px;
+
+    background: rgba(190, 15, 173, 0.72);
+    border-radius: 114px;
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 405px;
+    height: 818px;
+    left: 496px;
+    top: 206px;
+
+    background: rgba(190, 15, 173, 0.72);
+    border-radius: 114px;
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 405px;
+    height: 1325px;
+    left: 1022px;
+    top: 66px;
+
+    background: rgba(190, 15, 173, 0.72);
+    border-radius: 114px;
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 405px;
+    height: 956px;
+    left: 1486px;
+    top: 388px;
+
+    background: rgba(190, 15, 173, 0.72);
+    border-radius: 114px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 378px;
+    height: 966px;
+    left: 50px;
+    top: 271px;
+
+    font-family: Poor Story;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+
+    color: #fafff7;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 378px;
+    height: 672px;
+    left: 516px;
+    top: 271px;
+
+    font-family: Poor Story;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+
+    color: #fafff7;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 378px;
+    height: 1190px;
+    left: 1042px;
+    top: 131px;
+
+    font-family: Poor Story;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+
+    color: #fafff7;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 378px;
+    height: 872px;
+    left: 1506px;
+    top: 472px;
+
+    font-family: Poor Story;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+
+    color: #fafff7;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 313px;
+    height: 313px;
+    left: 1590px;
+    top: 21px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+}

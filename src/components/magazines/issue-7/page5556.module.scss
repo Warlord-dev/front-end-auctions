@@ -1,0 +1,280 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #ffffff;
+
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0;
+    top: 0;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    left: 206px;
+    top: -7px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .image1 {
+    position: absolute;
+    width: 302px;
+    height: 302px;
+    left: 474px;
+    top: 12px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 746px;
+    height: 492px;
+    left: 36px;
+    top: 323px;
+
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 67px;
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 746px;
+    height: 364px;
+    left: 36px;
+    top: 1101px;
+
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 67px;
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 746px;
+    height: 465px;
+    left: 1095px;
+    top: 301px;
+
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 67px;
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 746px;
+    height: 529px;
+    left: 1095px;
+    top: 954px;
+
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 67px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 644px;
+    height: 88px;
+    left: 87px;
+    top: 367px;
+
+    font-family: Balthazar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+
+    color: #000000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 451px;
+    height: 148px;
+    left: 87px;
+    top: 513px;
+
+    font-family: Baloo Tammudu;
+    font-style: bold;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+
+    color: #000000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 638px;
+    height: 198px;
+    left: 87px;
+    top: 533px;
+
+    font-family: Balthazar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+
+    color: #000000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 342px;
+    height: 92px;
+    left: 81px;
+    top: 1136px;
+
+    font-family: Balthazar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+
+    color: #000000;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 671px;
+    height: 163px;
+    left: 81px;
+    top: 1218px;
+
+    font-family: Balthazar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+
+    color: #000000;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 671px;
+    height: 58px;
+    left: 1138px;
+    top: 349px;
+
+    font-family: Balthazar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+
+    color: #000000;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .text7 {
+    position: absolute;
+    width: 502px;
+    height: 309px;
+    left: 1138px;
+    top: 429px;
+
+    font-family: Balthazar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+
+    color: #000000;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 671px;
+    height: 574px;
+    left: 1132px;
+    top: 985px;
+
+    font-family: Balthazar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+
+    color: #000000;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .image2 {
+    position: absolute;
+    width: 394px;
+    height: 236px;
+    left: 29px;
+    top: 799px;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 387px;
+    height: 218px;
+    left: 440px;
+    top: 719px;
+  }
+
+  .image4 {
+    position: absolute;
+    width: 387px;
+    height: 227px;
+    left: 440px;
+    top: 961px;
+  }
+
+  .image5 {
+    position: absolute;
+    width: 239px;
+    height: 239px;
+    left: 1229px;
+    top: 715px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 243px;
+    height: 355px;
+    left: 1663px;
+    top: 407px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 323px;
+    height: 323px;
+    left: 1051px;
+    top: -9px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 1570px;
+    top: -49px;
+  }
+}

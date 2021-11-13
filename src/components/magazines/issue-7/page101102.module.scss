@@ -1,0 +1,268 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: black;
+
+  .image1 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+  }
+
+  .image2 {
+    position: absolute;
+    width: 960px;
+    height: 1497px;
+    left: 960px;
+    top: 0px;
+    object-fit: cover;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 17px;
+    top: 0px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FFD057;        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 603px;
+    top: 29px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FFD057;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: -155px;
+    top: 252px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FFD057;    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: 428px;
+    top: 286px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FFD057;    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 620px;
+    height: 239px;
+    left: -115px;
+    top: 525px;
+    
+    font-family: Rose Cake - Personal Use;
+    font-size: 120px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFD057;    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 620px;
+    height: 375px;
+    left: 29px;
+    top: 1088px;
+    
+    font-family: CF Punk Fashion PERSONAL;
+    font-size: 120px;
+    line-height: 100%;
+    color: #FFD057;    
+  }
+
+  .image3 {
+    position: absolute;
+    width: 917px;
+    height: 1286px;
+    left: 1003px;
+    top: 211px;    
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 704px;
+    height: 155px;
+    left: 1088px;
+    top: 37px;
+    
+    background: #000000;
+    border: 10px solid #10C700;    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 704px;
+    height: 125px;
+    left: 1088px;
+    top: 53px;
+    
+    font-family: Joti One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+    
+    text-align: center;
+    
+    color: #10C700;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 632px;
+    height: 80px;
+    left: 1124px;
+    top: 122px;
+    
+    font-family: Joti One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 47px;
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .image4 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1010px;
+    top: 243px;    
+  }
+
+  .image5 {
+    position: absolute;
+    width: 321px;
+    height: 321px;
+    left: 1583px;
+    top: 273px;
+  }
+
+  .image6 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1272px;
+    top: 564px;
+  }
+
+  .image7 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1010px;
+    top: 931px;
+  }
+
+  .image8 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1588px;
+    top: 875px;
+    
+  }
+
+  .image9 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1300px;
+    top: 1196px;
+  }
+
+  .item1 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1010px;
+    top: 243px;
+    padding: 35px;
+    object-fit: cover;    
+  }
+
+  .item2 {
+    position: absolute;
+    width: 321px;
+    height: 321px;
+    left: 1583px;
+    top: 273px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .item3 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1272px;
+    top: 564px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .item4 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1010px;
+    top: 931px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .item5 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1588px;
+    top: 875px;
+    padding: 35px;
+    object-fit: cover;
+  }
+
+  .item6 {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: 1300px;
+    top: 1196px;
+    padding: 35px;
+    object-fit: cover;
+  }
+}

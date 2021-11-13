@@ -1,0 +1,230 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 880px;
+    height: 251px;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(174, 202, 249, 0.71);
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 890px;
+    height: 169px;
+    left: 0px;
+    top: 324px;
+
+    background: rgba(249, 174, 246, 0.71);
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 890px;
+    height: 419px;
+    left: 63px;
+    top: 516px;
+
+    background: rgba(249, 174, 246, 0.71);
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 890px;
+    height: 539px;
+    left: 0px;
+    top: 958px;
+
+    background: rgba(249, 174, 246, 0.71);
+  }
+
+  .text1 {
+    position: absolute;
+    width: 826px;
+    height: 204px;
+    left: 24px;
+    top: 20px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 100%;
+    /* or 17px */
+
+    color: #810000;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 826px;
+    height: 126px;
+    left: 28px;
+    top: 346px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: #000000;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 826px;
+    height: 342px;
+    left: 95px;
+    top: 550px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: #000000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 826px;
+    height: 480px;
+    left: 28px;
+    top: 991px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #000000;
+  }
+
+  .link1 {
+    position: absolute;
+    left: 970px;
+    width: 940px;
+    height: 100px;
+
+    font-family: McLaren;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    /* identical to box height, or 100px */
+
+    color: #ad00ff;
+
+    box-sizing: border-box;
+
+    -webkit-text-stroke: 2px #ffffff;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 795px;
+    height: 100px;
+    left: 986px;
+    top: 874px;
+
+    font-family: McLaren;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    color: #ad00ff;
+
+    -webkit-text-stroke: 2px #ffffff;
+    box-sizing: border-box;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 905px;
+    height: 663px;
+    left: 986px;
+    top: 140px;
+
+    font-family: Archivo Black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 100%;
+    /* or 23px */
+
+    color: #ffffff;
+
+    -webkit-text-stroke: 0.5px #ad00ff;
+    box-sizing: border-box;
+  }
+
+  .rect5 {
+    position: absolute;
+    width: 960px;
+    height: 118px;
+    left: 960px;
+    top: 817px;
+    
+    background: rgba(255, 0, 0, 0.7);    
+  }
+
+  .rect6 {
+    position: absolute;
+    width: 960px;
+    height: 118px;
+    left: 960px;
+    top: 958px;
+    
+    background: rgba(255, 0, 0, 0.43);
+  }
+
+  .rect7 {
+    position: absolute;
+    width: 960px;
+    height: 118px;
+    left: 960px;
+    top: 1099px;
+    
+    background: rgba(255, 0, 0, 0.43);
+  }
+
+  .rect8 {
+    position: absolute;
+    width: 960px;
+    height: 118px;
+    left: 959px;
+    top: 1240px;
+    
+    background: rgba(255, 0, 0, 0.43);
+  }
+
+  .rect9 {
+    position: absolute;
+    width: 960px;
+    height: 118px;
+    left: 959px;
+    top: 1381px;
+    background: rgba(255, 0, 0, 0.7);    
+  }
+}

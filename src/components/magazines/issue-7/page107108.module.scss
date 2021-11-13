@@ -1,0 +1,630 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background: #A748F2;
+
+  .designer1 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 148px;
+    top: 6px;
+    
+  }
+
+  .designer2 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 580px;
+    top: 6px;
+  }
+
+  .designer3 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 148px;
+    top: 378px;
+    
+  }
+
+  .designer4 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 580px;
+    top: 378px;
+    
+  }
+
+  .designer5 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 148px;
+    top: 752px;
+    
+  }
+
+  .designer6 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 580px;
+    top: 752px;    
+  }
+
+  .designer7 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 148px;
+    top: 1125px;
+  }
+
+  .designer8 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 581px;
+    top: 1125px;
+  }
+
+  .designer9 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1108px;
+    top: 6px;
+  }
+
+  .designer10 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1540px;
+    top: 6px;
+  }
+
+  .designer11 {
+    position: absolute;
+    width: 230px;
+    height: 234px;
+    left: 1109px;
+    top: 374px;
+        
+  }
+
+  .designer12 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1540px;
+    top: 378px;
+  }
+
+  .designer13 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1108px;
+    top: 752px;
+    
+  }
+
+  .designer14 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1540px;
+    top: 752px;
+    
+  }
+
+  .designer15 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1108px;
+    top: 1125px;
+  }
+
+  .designer16 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1540px;
+    top: 1125px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 206px;
+    height: 60px;
+    left: 160px;
+    top: 230px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 156px;
+    top: 281px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 136px;
+    height: 120px;
+    left: 626px;
+    top: 230px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 587px;
+    top: 281px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 433px;
+    height: 120px;
+    left: 46px;
+    top: 604px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+    
+    
+    color: #DD95FF;
+  }
+  
+  .text6 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 156px;
+    top: 657px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+        
+  }
+
+  .text7 {
+    position: absolute;
+    width: 106px;
+    height: 60px;
+    left: 641px;
+    top: 604px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 587px;
+    top: 657px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 124px;
+    height: 60px;
+    left: 194px;
+    top: 978px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 156px;
+    top: 1032px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 212px;
+    height: 60px;
+    left: 591px;
+    top: 978px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF; 
+  }
+
+  .text12 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 587px;
+    top: 1032px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 92px;
+    height: 60px;
+    left: 217px;
+    top: 1354px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    
+    color: #DD95FF;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 156px;
+    top: 1407px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 73px;
+    height: 60px;
+    left: 660px;
+    top: 1354px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;    
+  }
+
+  .text16 {
+    position: absolute;
+    width: 266px;
+    height: 90px;
+    left: 564px;
+    top: 1407px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text17 {
+    position: absolute;
+    width: 133px;
+    height: 60px;
+    left: 1154px;
+    top: 230px;
+    
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;
+  }
+
+  .text18 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 1116px;
+    top: 284px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text19 {
+    position: absolute;
+    width: 317px;
+    height: 120px;
+    left: 1496px;
+    top: 230px;
+    
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;    
+  }
+
+  .text20 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 1547px;
+    top: 284px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text21 {
+    position: absolute;
+    width: 151px;
+    height: 120px;
+    left: 1147px;
+    top: 608px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;    
+  }
+
+  .text22 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 1116px;
+    top: 660px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text23 {
+    position: absolute;
+    width: 267px;
+    height: 60px;
+    left: 1521px;
+    top: 604px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;    
+  }
+
+  .text24 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 1547px;
+    top: 660px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text25 {
+    position: absolute;
+    width: 204px;
+    height: 120px;
+    left: 1122px;
+    top: 975px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;    
+  }
+
+  .text26 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 1116px;
+    top: 1035px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+       
+  }
+
+  .text27 {
+    position: absolute;
+    width: 219px;
+    height: 60px;
+    left: 1545px;
+    top: 975px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    
+    color: #DD95FF; 
+  }
+
+  .text28 {
+    position: absolute;
+    width: 270px;
+    height: 90px;
+    left: 1523px;
+    top: 1032px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text29 {
+    position: absolute;
+    width: 84px;
+    height: 60px;
+    left: 1181px;
+    top: 1352px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;
+  }
+
+  .text30 {
+    position: absolute;
+    width: 235px;
+    height: 90px;
+    left: 1097px;
+    top: 1408px;
+
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .text31 {
+    position: absolute;
+    width: 230px;
+    height: 120px;
+    left: 1540px;
+    top: 1352px;
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;
+  }
+
+  .text32 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 1547px;
+    top: 1408px;
+
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  a {
+    img {
+      transition: 0.3s all;
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(0.9)
+      }
+    }
+  }
+}

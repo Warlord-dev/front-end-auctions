@@ -1,0 +1,505 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 247px;
+    height: 247px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 315px;
+    height: 315px;
+    left: 982px;
+    top: 19px;
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 644px;
+    height: 262px;
+    left: 282px;
+    top: 19px;
+
+    background: #ff4747;
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 895px;
+    height: 321px;
+    left: 31px;
+    top: 291px;
+
+    background: #ff4747;
+  }
+
+  .rect3 {
+    position: absolute;
+    width: 895px;
+    height: 175px;
+    left: 33px;
+    top: 627px;
+
+    background: #ff4747;
+  }
+
+  .rect4 {
+    position: absolute;
+    width: 895px;
+    height: 272px;
+    left: 31px;
+    top: 930px;
+
+    background: #ff4747;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 600px;
+    height: 208px;
+    left: 304px;
+    top: 45px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: #ffffff;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 853px;
+    height: 208px;
+    left: 51px;
+    top: 316px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: #ffffff;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 853px;
+    height: 126px;
+    left: 52px;
+    top: 655px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: #ffffff;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 853px;
+    height: 231px;
+    left: 54px;
+    top: 957px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: #ffffff;
+  }
+
+  .link2 {
+    position: absolute;
+    width: 381px;
+    height: 56px;
+    left: 54px;
+    top: 1252px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+    color: #c4ff1d;
+
+    box-sizing: border-box;
+  }
+
+  .link3 {
+    position: absolute;
+    width: 381px;
+    height: 56px;
+    left: 433px;
+    top: 1252px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+    color: #c4ff1d;
+
+    box-sizing: border-box;
+  }
+
+  .link4 {
+    position: absolute;
+    width: 381px;
+    height: 56px;
+    left: 54px;
+    top: 1344px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+    color: #c4ff1d;
+
+    box-sizing: border-box;
+  }
+
+  .link5 {
+    position: absolute;
+    width: 381px;
+    height: 56px;
+    left: 433px;
+    top: 1344px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+    color: #c4ff1d;
+
+    box-sizing: border-box;
+  }
+
+  .link6 {
+    position: absolute;
+    width: 381px;
+    height: 56px;
+    left: 52px;
+    top: 1427px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+    color: #c4ff1d;
+
+    box-sizing: border-box;
+  }
+
+  .link7 {
+    position: absolute;
+    width: 381px;
+    height: 56px;
+    left: 433px;
+    top: 1427px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+    color: #c4ff1d;
+
+    box-sizing: border-box;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 504px;
+    height: 100px;
+    left: 1341px;
+    top: 40px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+    /* identical to box height, or 100px */
+    white-space: nowrap;
+    text-align: right;
+
+    color: #fbff2d;
+  }
+
+  .text6 {
+    position: absolute;
+    width: 552px;
+    height: 54px;
+    left: 1341px;
+    top: 135px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #dbff00;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 552px;
+    height: 221px;
+    left: 1341px;
+    top: 177px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+
+    li {
+      list-style: decimal;
+      margin-left: 20px;
+    }
+  }
+
+  .text8 {
+    position: absolute;
+    width: 552px;
+    height: 45px;
+    left: 1341px;
+    top: 413px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #dbff00;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 552px;
+    height: 258px;
+    left: 1341px;
+    top: 455px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+  }
+  .text10 {
+    position: absolute;
+    width: 552px;
+    height: 45px;
+    left: 1341px;
+    top: 729px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #dbff00;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 552px;
+    height: 292px;
+    left: 1341px;
+    top: 837px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+  }
+
+  .text12 {
+    position: absolute;
+    width: 552px;
+    height: 45px;
+    left: 1341px;
+    top: 1146px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #dbff00;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 569px;
+    height: 292px;
+    left: 1341px;
+    top: 1237px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+  }
+
+  .text14 {
+    position: absolute;
+    width: 342px;
+    height: 45px;
+    left: 976px;
+    top: 356px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #dbff00;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 350px;
+    height: 323px;
+    left: 978px;
+    top: 401px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+
+    li {
+      list-style: disc;
+      margin-left: 20px;
+    }
+  }
+
+  .text16 {
+    position: absolute;
+    width: 327px;
+    height: 45px;
+    left: 982px;
+    top: 765px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #dbff00;
+  }
+
+  .text17 {
+    position: absolute;
+    width: 327px;
+    height: 605px;
+    left: 982px;
+    top: 839px;
+
+    font-family: Night Trippers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+  }
+
+  a {
+    img, div {
+      transition: 0.3s all;
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(0.9)
+      };
+    }
+  }
+}

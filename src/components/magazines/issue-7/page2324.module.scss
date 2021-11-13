@@ -1,0 +1,134 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #00D6E3;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .image1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1497px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 670px;
+    height: 572px;
+    left: 36px;
+    top: 35px;
+    
+    font-family: Antonio;
+    font-size: 130px;
+    line-height: 110%;
+    color: #FBFF43;    
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 828px;
+    height: 1243px;
+    left: 923px;
+    top: 173px;
+    
+    background: rgba(255, 255, 255, 0.79);
+    border-radius: 147px;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 743px;
+    height: 1170px;
+    left: 985px;
+    top: 235px;
+    
+    font-family: Reem Kufi;
+    font-size: 24px;
+    line-height: 39px;
+    
+    color: #FA00FF;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 261px;
+    height: 115px;
+    left: 187px;
+    top: 617px;
+    
+    font-family: Inter;
+    font-size: 30px;
+    line-height: 120.53%;
+    color: #DC0101;
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+    left: 31px;
+    top: 1178px;
+   
+    
+    background: #6534FF;
+    border: 4px solid #FCCDD3;
+    border-radius: 50%;    
+  }
+
+  .circleText1 {
+    position: absolute;
+    width: 167.74px;
+    height: 119px;
+    left: 26px;
+    top: 1246.51px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+    
+    color: #FCCDD3;
+    -webkit-text-stroke:  1px #FCCDD3;
+    transform-origin: 0 0;
+    transform: rotate(-20deg);    
+  }
+
+  .circleText2 {
+    position: absolute;
+    width: 152px;
+    height: 119px;
+    left: 73px;
+    top: 1308px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .poapImage {
+    position: absolute;
+    width: 154.85px;
+    height: 154.85px;
+    left: 152px;
+    top: 1215.96px;
+    
+    transform-origin: 0 0;
+    transform: rotate(-20deg);
+
+    transition: all 0.3s;
+    &:hover {
+      transition: all 0.3s;
+      transform: rotate(-20deg) scale(1.1);
+    }
+  }
+}

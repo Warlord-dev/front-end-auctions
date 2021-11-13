@@ -1,0 +1,126 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0;
+  }
+
+  .image1 {
+    position: absolute;
+    width: 518px;
+    height: 76px;
+    left: 32px;
+    top: 44px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 756px;
+    height: 88px;
+    left: 70px;
+    top: 103px;
+
+    font-family: Julietta Messie Demo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 110%;
+    /* identical to box height, or 88px */
+
+    color: #00ff38;
+  }
+
+  .text2 {
+    position: absolute;
+    width: 170px;
+    height: 25px;
+    left: 8px;
+    top: 1381px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 100%;
+    /* identical to box height, or 25px */
+
+    color: #8f0009;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 243px;
+    height: 100px;
+    left: 8px;
+    top: 1397px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 100%;
+    /* identical to box height, or 100px */
+
+    color: #a000d9;
+
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    -webkit-text-stroke: 3px white;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .link2 {
+    position: absolute;
+    width: 315px;
+    height: 60px;
+    left: 1586px;
+    top: 45px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+
+    color: #fb46ff;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 395px;
+    height: 60px;
+    left: 1499px;
+    top: 111px;
+
+    font-family: Porter Sans Block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    /* or 12px */
+
+    text-align: right;
+
+    color: #ffffff;
+  }
+}

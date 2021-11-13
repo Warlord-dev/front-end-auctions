@@ -1,0 +1,181 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 538px;
+    height: 86px;
+    left: 16px;
+    top: 30px;
+
+    font-family: Marker Felt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100%;
+    /* or 100px */
+
+    color: #ffb905;
+
+    -webkit-text-stroke: 5px #ff0202;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .rect1 {
+    position: absolute;
+    width: 455px;
+    height: 1298px;
+    left: 19px;
+    top: 154px;
+
+    background: rgba(211, 0, 101, 0.83);
+  }
+
+  .text2 {
+    position: absolute;
+    width: 720px;
+    height: 50px;
+    left: 1002px;
+    top: 30px;
+
+    font-family: Elysian Fields;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+
+    color: #ff6ea7;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .text3 {
+    position: absolute;
+    width: 434px;
+    height: 415px;
+    left: 1226px;
+    top: 619px;
+
+    font-family: Fatcat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* or 50px */
+
+    text-align: center;
+
+    color: #ff6ea7;
+
+    -webkit-text-stroke: 3px #000000;
+    box-sizing: border-box;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 416px;
+    height: 1162px;
+    left: 40px;
+    top: 222px;
+
+    font-family: Anime Inept;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    color: white;
+    span {
+      color: #00d1ff;
+    }
+  }
+
+  .video1 {
+    position: absolute;
+    width: 459px;
+    height: 288px;
+    left: 487px;
+    top: 334px;
+  }
+
+  .video2 {
+    position: absolute;
+    width: 273px;
+    height: 399px;
+    left: 673px;
+    top: 637px;
+  }
+
+  .video3 {
+    position: absolute;
+    width: 273px;
+    height: 399px;
+    left: 490px;
+    top: 1052px;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 720px;
+    height: 50px;
+    left: 1002px;
+    top: 98px;
+
+    font-family: Elysian Fields;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 100%;
+    /* identical to box height, or 50px */
+
+    color: #ffffff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .play {
+    position: absolute;
+    width: 190px;
+    height: 181px;
+    left: 1290px;
+    top: 1160px;
+    transform: rotate(-2deg);
+    cursor: pointer;
+    transform-origin: top left;
+  }
+
+  .pause {
+    position: absolute;
+    width: 150px;
+    height: 144px;
+    left: 1316px;
+    top: 1195px;
+    cursor: pointer;
+  }
+}

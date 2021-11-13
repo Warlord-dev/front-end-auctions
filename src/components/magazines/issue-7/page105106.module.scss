@@ -1,0 +1,496 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #A748F2;
+
+  .image1 {
+    position: absolute;
+    width: 946px;
+    height: 629px;
+    left: 0px;
+    top: 339px;
+  }
+
+  .designer1 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 46px;
+    top: 1038px;
+  }
+
+  .designer2 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 365px;
+    top: 1038px;
+    
+  }
+
+  .designer3 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1108px;
+    top: 6px;
+  }
+
+  .designer4 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1540px;
+    top: 6px;
+  }
+
+  .designer5 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1108px;
+    top: 378px;
+  }
+
+  .designer6 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1540px;
+    top: 378px;
+  }
+
+  .designer7 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1108px;
+    top: 757px;
+  }
+
+  .designer8 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1540px;
+    top: 757px;
+  }
+
+  .designer9 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1108px;
+    top: 1127px;
+  }
+
+  .designer10 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 1541px;
+    top: 1127px;
+  }
+
+  .text1 {
+    position: absolute;
+    width: 140px;
+    height: 120px;
+    left: 91px;
+    top: 1279px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;    
+  }
+
+  .text2 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 53px;
+    top: 1342px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 92px;
+    height: 60px;
+    left: 434px;
+    top: 1279px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;    
+  }
+
+  .text4 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 372px;
+    top: 1342px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text5 {
+    position: absolute;
+    width: 77px;
+    height: 120px;
+    left: 1184px;
+    top: 231px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 1116px;
+    top: 281px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .text7 {
+    position: absolute;
+    width: 332px;
+    height: 60px;
+    left: 1489px;
+    top: 231px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;
+  }
+
+  .text8 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 1547px;
+    top: 291px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 124px;
+    height: 60px;
+    left: 1154px;
+    top: 608px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    
+    color: #DD95FF;
+  }
+
+  .text10 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 1116px;
+    top: 658px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 126px;
+    height: 60px;
+    left: 1585px;
+    top: 608px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    
+    color: #DD95FF;
+        
+  }
+
+  .text12 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 1547px;
+    top: 661px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text13 {
+    position: absolute;
+    width: 261px;
+    height: 60px;
+    left: 1092px;
+    top: 987px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    
+    color: #DD95FF;
+    
+  }
+
+  .text14 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 1116px;
+    top: 1037px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text15 {
+    position: absolute;
+    width: 325px;
+    height: 120px;
+    left: 1492px;
+    top: 987px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* or 60px */
+    
+    
+    color: #DD95FF;
+    
+  }
+
+  .text16 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 1547px;
+    top: 1037px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+        
+  }
+
+  .text17 {
+    position: absolute;
+    width: 144px;
+    height: 60px;
+    left: 1154px;
+    top: 1357px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    
+    color: #DD95FF;
+    
+  }
+
+  .text18 {
+    position: absolute;
+    width: 216px;
+    height: 60px;
+    left: 1116px;
+    top: 1407px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text19 {
+    position: absolute;
+    width: 148px;
+    height: 60px;
+    left: 1581px;
+    top: 1357px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    /* identical to box height, or 60px */
+    
+    
+    color: #DD95FF;
+    
+  }
+
+  .text20 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 1547px;
+    top: 1407px;
+    
+    font-family: Bahiana;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text21 {
+    position: absolute;
+    width: 905px;
+    height: 261px;
+    left: 33px;
+    top: 53px;
+    
+    font-family: Indie Flower;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
+    
+    color: #FFFFFF;
+  }
+
+  .designer11 {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 686px;
+    top: 1038px;    
+  }
+
+  .text22 {
+    position: absolute;
+    width: 296px;
+    height: 60px;
+    left: 653px;
+    top: 1279px;
+    
+    font-family: Bahiana;
+    font-size: 60px;
+    line-height: 100%;
+    color: #DD95FF;    
+  }
+
+  .text23 {
+    position: absolute;
+    width: 216px;
+    height: 90px;
+    left: 693px;
+    top: 1342px;
+    
+    font-family: Bahiana;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  a {
+    img {
+      transition: 0.3s all;
+      &:hover {
+        transition: 0.3s all;
+        transform: scale(0.9)
+      }
+    }
+  }
+}

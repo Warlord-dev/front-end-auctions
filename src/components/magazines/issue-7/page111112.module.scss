@@ -1,0 +1,214 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+  background-color: #5F5BFF;
+
+  .rect1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+    
+    background: linear-gradient(90deg, #FF9B7B 0%, #CE648E 100%);    
+  }
+
+  .image1 {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
+  }
+
+  .text1 {
+    position: absolute;
+    width: 835px;
+    height: 122px;
+    left: 70px;
+    top: 35px;
+    
+    font-family: Wafer;
+    font-size: 100px;
+    line-height: 100%;
+    text-align: right;
+    
+    color: #FAFF00;
+    
+    -webkit-text-stroke: 3px #0047FF; 
+  }
+
+  .text2 {
+    position: absolute;
+    width: 835px;
+    height: 122px;
+    left: 70px;
+    top: 1368px;
+    
+    font-family: Wafer;
+    font-size: 100px;
+    line-height: 100%;
+    text-align: right;
+    
+    color: #FAFF00;
+    
+    -webkit-text-stroke: 3px #0047FF;
+  }
+
+  .text3 {
+    position: absolute;
+    width: 835px;
+    height: 122px;
+    left: 1003px;
+    top: 35px;
+    
+    font-family: Wafer;
+    font-size: 100px;
+    line-height: 100%;
+    text-align: right;
+    
+    color: #FAFF00;
+    
+    -webkit-text-stroke: 3px #0047FF;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 835px;
+    height: 122px;
+    left: 1021px;
+    top: 1364px;
+    
+    font-family: Wafer;
+    font-size: 100px;
+    line-height: 100%;
+    text-align: right;
+    
+    color: #FAFF00;
+    
+    -webkit-text-stroke: 3px #0047FF;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 390px;
+    height: 260px;
+    left: 178px;
+    top: 146px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text6 {
+    position: absolute;
+    width: 354px;
+    height: 124px;
+    left: 256px;
+    top: 398px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;    
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text7 {
+    position: absolute;
+    width: 365px;
+    height: 397px;
+    left: 597px;
+    top: 516px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;    
+    text-align: center;
+    
+    color: #FFFFFF;    
+  }
+
+  .text8 {
+    position: absolute;
+    width: 383px;
+    height: 397px;
+    left: 70px;
+    top: 804px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;    
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .text9 {
+    position: absolute;
+    width: 390px;
+    height: 299px;
+    left: 539px;
+    top: 1010px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text10 {
+    position: absolute;
+    width: 375px;
+    height: 224px;
+    left: 1180px;
+    top: 230px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .text11 {
+    position: absolute;
+    width: 390px;
+    height: 397px;
+    left: 1384px;
+    top: 546px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .text12 {
+    position: absolute;
+    width: 265px;
+    height: 397px;
+    left: 1097px;
+    top: 896px;
+    
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+  }
+}

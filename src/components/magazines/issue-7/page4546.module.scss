@@ -1,0 +1,40 @@
+@import './styles.module.scss';
+
+.wrapper {
+  @include magazineWrapper();
+
+  background-color: #000000;
+  display: flex;
+  position: relative;
+
+  .back {
+    position: absolute;
+    width: 1920px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .link1 {
+    position: absolute;
+    width: 412px;
+    height: 40px;
+    left: 22px;
+    top: 1400px;
+
+    font-family: Shadows Into Light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 20px;
+    /* or 20% */
+
+    color: #05e100;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+  }
+}
