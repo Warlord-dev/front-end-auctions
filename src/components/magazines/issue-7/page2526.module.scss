@@ -2,73 +2,54 @@
 
 .wrapper {
   @include magazineWrapper();
-  background: #39DBFF;
-  color: black;
+  background: #CF7924;
+  color: white;
   display: flex;
   position: relative;
-
-
+  
   .image1 {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 1920px;
+    width: 1047px;
     height: 1497px;
+    left: 873px;
+    top: 0px;    
   }
 
-  .rect1 {
+  .image2 {
     position: absolute;
-    width: 828px;
-    height: 1243px;
-    left: 0px;
-    top: -3px;
+    width: 598px;
+    height: 341px;
+    left: -105px;
+    top: 1332px;
     
-    background: rgba(255, 255, 255, 0.79);
-    border-radius: 147px;    
+    transform-origin: 0 0;
+    transform: rotate(-30deg);    
   }
 
-  .rect2 {
+  .image3 {
     position: absolute;
-    width: 828px;
-    height: 1243px;
-    left: 1092px;
-    top: 254px;
+    width: 314px;
+    height: 179px;
+    left: -0.5px;
+    top: 1018px;
     
-    background: rgba(255, 255, 255, 0.79);
-    border-radius: 147px;
+    transform-origin: 0 0;
+    transform: rotate(30deg);
   }
 
   .text1 {
     position: absolute;
-    width: 743px;
-    height: 1092px;
-    left: 62px;
-    top: 59px;
+    width: 732px;
+    height: 1311px;
+    left: 64px;
+    top: 61px;
     
-    font-family: Reem Kufi;
+    font-family: Rochester;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 39px;
+    font-size: 27px;
+    line-height: 35px;
     
-    color: #FA00FF;
-    
-  }
-
-  .text2 {
-    position: absolute;
-    width: 713px;
-    height: 1125px;
-    left: 1161px;
-    top: 316px;
-    
-    font-family: Reem Kufi;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 45px;
-    
-    color: #FA00FF;
-    
+    color: #FFFFFF;    
   }
 }

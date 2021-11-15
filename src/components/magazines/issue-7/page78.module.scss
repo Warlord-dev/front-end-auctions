@@ -5,359 +5,210 @@
   color: white;
   display: flex;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #ECBEDD;
+
+  .rect1 {
+    position: absolute;
+    width: 842px;
+    height: 1406px;
+    left: 68px;
+    top: 45px;
+    border: 5px solid black;   
+  }
+
+  .rect2 {
+    position: absolute;
+    width: 842px;
+    height: 1406px;
+    left: 1011px;
+    top: 45px;
+    border: 5px solid black;
+  }
+
+  .line1 {
+    position: absolute;
+    width: 842px;
+    height: 5px;
+    left: 68px;
+    top: 229px;
+    
+    background-color: black;
+  }
+
+  .line2 {
+    position: absolute;
+    width: 842px;
+    height: 5px;
+    left: 68px;
+    top: 395px;
+    background-color: black;
+  }
+
+  .line3 {
+    position: absolute;
+    width: 842px;
+    height: 0px;
+    left: 68px;
+    top: 1353px;
+    background-color: black;
+  }
+
+  .line4 {
+    position: absolute;
+    width: 1406px;
+    height: 5px;
+    left: 1432px;
+    top: 45px;
+    background-color: black;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+  }
 
   .image1 {
     position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 0px;
-    top: 0px;
+    width: 92px;
+    height: 134px;
+    left: 649px;
+    top: 75px;    
   }
 
   .image2 {
     position: absolute;
-    width: 960px;
-    height: 1497px;
-    left: 960px;
-    top: 0px;
-  }
-
-  .text1 {
-    position: absolute;
-    width: 787px;
-    height: 178px;
-    left: 134px;
-    top: 23px;
-    
-    font-family: Ceviche One;
-    font-size: 100px;
-    line-height: 100%;    
-    color: rgba(0, 92, 230, 0.45);        
-  }
-
-  .text2 {
-    position: absolute;
-    width: 787px;
-    height: 178px;
-    left: 0px;
-    top: 230px;
-    
-    font-family: Ceviche One;
-    font-size: 100px;
-    line-height: 100%;    
-    color: rgba(0, 92, 230, 0.45);    
-  }
-
-  .text3 {
-    position: absolute;
-    width: 787px;
-    height: 178px;
-    left: 100px;
-    top: 630px;
-    
-    font-family: Ceviche One;
-    font-size: 100px;
-    line-height: 100%;    
-    color: rgba(0, 92, 230, 0.45);    
-  }
-
-  .text4 {
-    position: absolute;
-    width: 787px;
-    height: 178px;
-    left: 0px;
-    top: 830px;
-    
-    font-family: Ceviche One;
-    font-size: 100px;
-    line-height: 100%;    
-    color: rgba(0, 92, 230, 0.45);    
-  }
-
-  .text5 {
-    position: absolute;
-    width: 787px;
-    height: 178px;
-    left: 118px;
-    top: 1030px;
-    
-    font-family: Ceviche One;
-    font-size: 100px;
-    line-height: 100%;    
-    color: rgba(0, 92, 230, 0.45);    
-  }
-
-  .text6 {
-    position: absolute;
-    width: 787px;
-    height: 178px;
-    left: 118px;
-    top: 1215px;
-    
-    font-family: Ceviche One;
-    font-size: 100px;
-    line-height: 100%;    
-    color: rgba(0, 92, 230, 0.45);    
-  }
-
-  .text7 {
-    position: absolute;
-    width: 787px;
-    height: 89px;
-    left: 0px;
-    top: 1408px;
-    
-    font-family: Ceviche One;
-    font-size: 100px;
-    line-height: 100%;    
-    color: rgba(0, 92, 230, 0.45);    
-  }
-
-  .text8 {
-    position: absolute;
-    width: 787px;
-    height: 178px;
-    left: 118px;
-    top: 430px;
-    
-    font-family: Ceviche One;
-    font-size: 100px;
-    line-height: 100%;
-    color: #005CE6;
-    
-    -webkit-text-stroke: 3px black;
-    box-sizing: border-box;
-    text-shadow: 0px 4px 4px #70FF00;    
-  }
-
-  .text9 {
-    position: absolute;
-    width: 787px;
-    height: 178px;
-    left: 154px;
-    top: 652px;
-    
-    font-family: Ceviche One;
-    font-size: 100px;
-    line-height: 100%;
-    color: #005CE6;
-    
-    -webkit-text-stroke: 3px black;
-    box-sizing: border-box;
-    text-shadow: 0px 4px 4px #70FF00;
-  }
-
-  .text10 {
-    position: absolute;
-    width: 787px;
-    height: 178px;
-    left: 136px;
-    top: 852px;
-    
-    font-family: Ceviche One;
-    font-size: 100px;
-    line-height: 100%;
-    color: #005CE6;
-    
-    -webkit-text-stroke: 3px black;
-    box-sizing: border-box;
-    text-shadow: 0px 4px 4px #70FF00;
+    width: 92px;
+    height: 134px;
+    left: 762px;
+    top: 75px;    
   }
 
   .image3 {
     position: absolute;
-    width: 253px;
-    height: 265px;
-    left: -65px;
-    top: -6px;    
+    width: 92px;
+    height: 134px;
+    left: 103px;
+    top: 240px;
   }
 
   .image4 {
     position: absolute;
-    width: 253px;
-    height: 265px;
-    left: -65px;
-    top: 259px;
+    width: 92px;
+    height: 134px;
+    left: 212px;
+    top: 240px;    
   }
 
   .image5 {
     position: absolute;
-    width: 253px;
-    height: 265px;
-    left: -65px;
-    top: 508px;
+    width: 92px;
+    height: 134px;
+    left: 321px;
+    top: 240px;    
   }
 
   .image6 {
     position: absolute;
-    width: 253px;
-    height: 265px;
-    left: -65px;
-    top: 1030px;
+    width: 92px;
+    height: 134px;
+    left: 430px;
+    top: 240px;
   }
 
   .image7 {
     position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 779px;
-    top: 0px;
+    width: 370px;
+    height: 540px;
+    left: 1504px;
+    top: 1093px;
   }
 
   .image8 {
     position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 779px;
-    top: 259px;
+    width: 772px;
+    height: 901px;
+    left: 103px;
+    top: 414px;    
   }
 
-  .image9 {
+  .rect3 {
     position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 779px;
-    top: 524px;
-  }
-
-  .image10 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 779px;
-    top: 773px;
-  }
-
-  .image11 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 779px;
-    top: 1038px;
-  }
-
-  .image12 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 779px;
-    top: 1287px;
-  }
-
-  .image13 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1454px;
-    top: -156px;    
-  }
-
-  .image14 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1160px;
-    top: 43px;
-  }
-
-  .image15 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1667px;
-    top: 43px;
-  }
-
-  .image16 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1414px;
-    top: 144px;
-  }
-
-  .image17 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1187px;
-    top: 392px;
-  }
-
-  .image18 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1581px;
-    top: 365px;    
-  }
-
-  .image19 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1414px;
-    top: 546px;
-  }
-
-  .image20 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1287px;
-    top: 906px;
-  }
-
-  .image21 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1581px;
-    top: 792px;
-  }
-
-  .image22 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1314px;
-    top: 1232px;
-  }
-  
-  .image23 {
-    position: absolute;
-    width: 253px;
-    height: 265px;
-    left: 1647px;
-    top: 1171px;
-  }
-
-  .rect1 {
-    position: absolute;
-    width: 717px;
-    height: 1199px;
-    left: 1082px;
-    top: 149px;
+    width: 494px;
+    height: 86px;
+    left: 242px;
+    top: 748px;
     
-    background: linear-gradient(180deg, rgba(93, 0, 108, 0.85) 0%, rgba(200, 156, 207, 0.85) 100%);
-    border: 10px solid #74FF07;    
+    background: #000000;    
   }
 
-  .text11 {
+  .text1 {
     position: absolute;
-    width: 537px;
-    height: 1058px;
-    left: 1170px;
-    top: 196px;
+    width: 542px;
+    height: 80px;
+    left: 111px;
+    top: 98px;
     
-    font-family: ROMANUS;
+    font-family: Wicked Halloween;
+    font-size: 80px;
+    line-height: 100%;
+    color: #000000;        
+  }
+
+  .text2 {
+    position: absolute;
+    width: 542px;
+    height: 80px;
+    left: 555px;
+    top: 267px;
+    
+    font-family: Wicked Halloween;
+    font-size: 80px;
+    line-height: 100%;
+    color: #000000;    
+  }
+
+  .text3 {
+    position: absolute;
+    width: 776px;
+    height: 80px;
+    left: 111px;
+    top: 1353px;
+    
+    font-family: Wicked Halloween;
+    font-size: 80px;
+    line-height: 100%;
+    color: #000000;
+  }
+
+  .text4 {
+    position: absolute;
+    width: 355px;
+    height: 1228px;
+    left: 1051px;
+    top: 87px;
+    
+    font-family: Arial Black;
     font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 30px;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 100%;
+    color: #000000;
+  }
+
+  .text5 {
+    position: absolute;
+    width: 355px;
+    height: 1228px;
+    left: 1474px;
+    top: 91px;
     
-    color: #FFFFFF;    
+    font-family: Arial Black;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 30px */
+    
+    
+    color: #000000;
+    
   }
 }
 

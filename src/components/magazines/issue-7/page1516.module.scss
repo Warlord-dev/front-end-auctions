@@ -1,4 +1,5 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro');
 
 .wrapper {
   @include magazineWrapper();
@@ -19,225 +20,213 @@
     width: 960px;
     height: 1497px;
     left: 960px;
-    top: 0px;    
+    top: 0px;
   }
 
   .text1 {
     position: absolute;
-    width: 902px;
-    height: 158px;
+    width: 547px;
+    height: 169px;
     left: 0px;
-    top: 35px;
+    top: -20px;
     
-    font-family: Devonshire;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100px;
-    line-height: 100%;
-    /* or 100px */
-    
-    text-align: center;
-    
-    color: #B04AFF;
-    -webkit-text-stroke: 1px black;
+    font-family: Anonymous Pro;
+    font-size: 130px;
+    line-height: 110%;
+    color: #3BE300;
+    -webkit-text-stroke: 3px #3312FF;
+
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(0.9);
+    }
   }
 
   .text2 {
     position: absolute;
-    width: 301px;
-    height: 158px;
-    left: 228px;
-    top: 419px;
+    width: 547px;
+    height: 169px;
+    left: 0px;
+    top: 93px;
     
-    font-family: Galvji;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100px;
-    line-height: 100%;
-    /* or 100px */
-    
-    
-    color: #FFF500;
-    -webkit-text-stroke: 1px black;
-  
+    font-family: Anonymous Pro;
+    font-size: 130px;
+    line-height: 110%;
+    color: #3BE300;
+    -webkit-text-stroke: 3px #3312FF;
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(0.9);
+    }
   }
 
   .text3 {
     position: absolute;
-    width: 504px;
-    height: 158px;
-    left: 427px;
-    top: 884px;
+    width: 547px;
+    height: 169px;
+    left: 0px;
+    top: 206px;
     
-    font-family: Galvji;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100px;
-    line-height: 100%;
-    color: #FF8383;
-    -webkit-text-stroke: 1px black; 
+    
+    font-family: Anonymous Pro;
+    font-size: 130px;
+    line-height: 110%;
+    color: #3BE300;
+    -webkit-text-stroke: 3px #3312FF;
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(0.9);
+    }
   }
 
   .text4 {
     position: absolute;
-    width: 604px;
-    height: 101px;
-    left: 427px;
-    top: 1298px;
+    width: 465px;
+    height: 391px;
+    left: 44px;
+    top: 1226px;
     
-    font-family: Dekko;
+    font-family: Abyssinica SIL;
     font-style: normal;
     font-weight: normal;
-    font-size: 100px;
-    line-height: 100%;
-    color: #FFD74A;
-    -webkit-text-stroke: 1px black; 
+    font-size: 70px;
+    line-height: 110%;
+    /* or 77px */
+    
+    
+    color: #5956FF;
+    -webkit-text-stroke: 3px #3312FF;
   }
 
-  .text5 {
+  .greenyLion1 {
     position: absolute;
-    width: 604px;
-    height: 101px;
-    left: 427px;
-    top: 1397px;
-    font-family: Dekko;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100px;
-    line-height: 100%;
-    color: #FFD74A;
-    -webkit-text-stroke: 1px black; 
+    width: 184px;
+    height: 188px;
+    left: 776px;
+    top: 0px;        
   }
 
-  .image3 {
+  .greenyLion2 {
     position: absolute;
-    width: 237px;
-    height: 237px;
-    left: 1004px;
-    top: 14px;
-    border-radius: 183px;    
+    width: 184px;
+    height: 188px;
+    left: 776px;
+    top: 187px;
   }
 
-  .image4 {
+  .greenyLion3 {
     position: absolute;
-    width: 143px;
-    height: 143px;
-    left: 1261px;
-    top: 14px;
-    border-radius: 183px;
+    width: 184px;
+    height: 188px;
+    left: 776px;
+    top: 375px;
+  }
+
+  .greenyLion4 {
+    position: absolute;
+    width: 183px;
+    height: 188px;
+    left: 0px;
+    top: 915px;        
+  }
+
+  .greenyLion5 {
+    position: absolute;
+    width: 184px;
+    height: 188px;
+    left: 183px;
+    top: 915px;
+  }
+
+  .greenyLion6 {
+    position: absolute;
+    width: 183px;
+    height: 188px;
+    left: 364px;
+    top: 915px;
+  }
+
+  .greenyLion7 {
+    position: absolute;
+    width: 184px;
+    height: 188px;
+    left: 547px;
+    top: 915px;
+        
+  }
+
+  .greenyLion8 {
+    position: absolute;
+    width: 186px;
+    height: 188px;
+    left: 731px;
+    top: 915px;
+  }
+
+  .greenyLion9 {
+    position: absolute;
+    width: 186px;
+    height: 188px;
+    left: 917px;
+    top: 915px;
   }
 
   a {
-    div {
+    h1 {
       transition: 0.3s all;
       &:hover {
         transition: 0.3s all;
         transform: scale(0.9);
       }
     }
+  }
+
+  h1 {
+    position: absolute;
+    width: 804px;
+    height: 169px;
+    left: 999px;
+    top: 37px;
     
-    img {
+    font-family: Barriecito;
+    font-size: 110px;
+    line-height: 110%;
+    color: #000000;
+    -webkit-text-stroke: 3px #3312FF;
+  }
+
+  .image3 {
+    position: absolute;
+    width: 218px;
+    height: 218px;
+    left: 1500px;
+    top: 1254px;
+    border-radius: 50%;
+
       transition: 0.3s all;
       &:hover {
         transition: 0.3s all;
         transform: scale(1.1);
       }
-    }
-  }
-
-  h1 {
-    position: absolute;
-    width: 206px;
-    height: 100px;
-    left: 1424px;
-    top: 14px;
-    
-    font-family: Bahiana;
-    font-size: 100px;
-    line-height: 100%;
-    color: #FFFFFF;    
-  }
-
-  .image5 {
-    position: absolute;
-    width: 89px;
-    height: 1497px;
-    left: 1831px;
-    top: 0px;    
-  }
-
-  .rect1 {
-    position: absolute;
-    width: 444px;
-    height: 1200px;
-    left: 973px;
-    top: 320px;    
-    
-    background: rgba(0, 0, 0, 0.4);    
-  }
-
-  .rect2 {
-    position: absolute;
-    width: 401px;
-    height: 1329px;
-    left: 1428px;
-    top: 135px;
-    
-    background: rgba(0, 0, 0, 0.4);
-  }
-
-  .text6 {
-    position: absolute;
-    width: 419px;
-    height: 1039px;
-    left: 985px;
-    top: 400px;
-    
-    font-family: Reguler;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 13px;
-    color: #FFFFFF;
-  }
-
-  .text7 {
-    position: absolute;
-    width: 366px;
-    height: 1313px;
-    left: 1446px;
-    top: 151px;
-    
-    font-family: Reguler;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13.2px;
-    line-height: 13px;
-    color: #FFFFFF;
-  }
-
-  .text8 {
-    position: absolute;
-    width: 419px;
-    height: 22px;
-    left: 985px;
-    top: 340px;
-    
-    font-family: Reguler;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 19px;
-    
-    color: #FFFFFF;    
   }
 
   .playButton1 {
     position: absolute;
-    width: 268px;
-    height: 268px;
-    left: 26px;
-    top: 964px; 
+    width: 267px;
+    height: 267px;
+    left: 547px;
+    top: 1174px;
+
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(1.1);
+    }
   }
 
   .imageBack {
@@ -262,5 +251,27 @@
     height: 163px;
     left: 73px;
     top: 55px;
+  }
+
+  .gradient {
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #9c9c9c;
+    background: linear-gradient(to right, #9c9c9c 8%, #f4f4f4 38%, #9c9c9c 54%);
+    background-size: 1000px 640px;
+    
+    position: relative;     
+  }
+
+  @keyframes placeHolderShimmer{
+    0%{
+      background-position: -468px 0
+    }
+    100%{
+      background-position: 468px 0
+    }
   }
 }

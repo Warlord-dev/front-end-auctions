@@ -5,23 +5,19 @@
   color: white;
   display: flex;
   position: relative;
-  background-color: #1CEC24;
+  background-color: #E81CEC;
 
   h1 {
     position: absolute;
-    width: 1585px;
-    height: 1461px;
-    left: 181px;
-    top: 78px;
+    width: 1401px;
+    height: 1878px;
+    left: 133px;
+    top: 100px;
     
-    font-family: Johnny Long;
-    font-style: normal;
+    font-family: A DAY WITHOUT SUN;
     font-weight: normal;
-    font-size: 1800px;
-    line-height: 1800px;
-    
-    color: #FFFFFF;
-    
+    font-size: 1900px;
+    line-height: 1900px;
   }
 
   .text1 {
@@ -39,16 +35,15 @@
     transform-origin: 0 0;
     transform: rotate(-90deg);
   }
-  .text3 {
+
+  .text2 {
     position: absolute;
     width: 1585px;
-    height: 567px;
-    left: 1431px;
+    height: 500px;
+    left: 1550px;
     top: 1428px;
     
     font-family: A DAY WITHOUT SUN;
-    font-style: normal;
-    font-weight: normal;
     font-size: 300px;
     line-height: 374px;
         

@@ -8,12 +8,52 @@
   background-color: #FFFFFF;
 }
 
+.rect1 {
+  position: absolute;
+  width: 960px;
+  height: 22px;
+  left: 0px;
+  top: 23px;
+  
+  background: rgba(222, 21, 21, 0.43);  
+}
+
+.rect2 {
+  position: absolute;
+  width: 960px;
+  height: 22px;
+  left: 0px;
+  top: 56px;
+  
+  background: rgba(222, 21, 21, 0.43);
+}
+
+.rect3 {
+  position: absolute;
+  width: 960px;
+  height: 22px;
+  left: 0px;
+  top: 89px;
+  
+  background: rgba(222, 21, 21, 0.43);
+}
+
 .image1 {
   position: absolute;
   width: 960px;
   height: 1499px;
   left: 960px;
   top: -2px;
+}
+
+.rect4 {
+  position: absolute;
+  width: 960px;
+  height: 1497px;
+  left: 960px;
+  top: 0px;
+
+  background: rgba(0, 0, 0, 0.3);  
 }
 
 .image4 {

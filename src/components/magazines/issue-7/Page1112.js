@@ -4,41 +4,33 @@ import styles from './page1112.module.scss'
 
 const Page1112 = () => {
   return (
-    <div className={styles.wrapper}>         
-      <img src='./magazine/6/images/1112_image1.jpg' className={styles.image1} />
-      <img src='./magazine/6/images/1112_image2.jpg' className={styles.image2} />
-      <img src='./magazine/6/images/1112_image3.png' className={styles.image3} />
-      <img src='./magazine/6/images/1112_image4.png' className={styles.image4} />
-      <img src='./magazine/6/images/1112_image3.png' className={styles.image5} />
-
+    <div className={styles.wrapper}>
       <div className={styles.rect1}></div>
       <div className={styles.rect2}></div>
 
+      <div className={styles.line1}></div>
+      <div className={styles.line2}></div>
+      <div className={styles.line3}></div>
+      <div className={styles.line4}></div>
+
+      <img src='/magazine/7/images/0708_image1.png' className={styles.image1} />
+      <img src='/magazine/7/images/0708_image1.png' className={styles.image2} />
+      <img src='/magazine/7/images/0708_image1.png' className={styles.image3} />
+
       <div className={styles.text1}>
-        Rather, decentralized communities thrive on active participation and direct engagement with the participants and the community at large. 
-        <br /><br />
-        And like anything IRL, you get what you put in.
-        <br /><br />
-        That said, you don’t need to be a Solidity dev to become part of a DAO. There are so many aspects of web3 communities whose ecosystems go beyond the gamut of just development.            
-        <br /><br />
-        We’re talking about design, marketing, community management, onboarding, education, practically anything–where anybody with an iota of transferable skill can provide value and contribute to the community’s goals from the get-go.  
-        <br /><br />
-        NFTs are a fantastic way to get your feet wet in web3 because they enable community and ownership. But what do you do once you’re in? How do you take action?
-        <br /><br />
-        Context is key. You can’t just show up in a community you don’t know from Adam and expect to contribute right away. Before contributing to a web3 community, you need to understand its vision, goals, and direction and determine whether it aligns with your passion, purpose, and beliefs.
-        <br /><br />
-        Better yet, apart from immersing yourself in countless Discord servers, Crypto Twitter, Telegram, and all the usual suspects, there’s a tool that makes it even easier for you to set your course towards web3 via Wayfare–the Discord bot designed specifically to help individuals find their DAOs, and for DAOs to find the right individuals to contribute to their respective communities. Head on to the DIGITALAX discord to see what the fuss is all about.
-        <br /><br />
-        Core web3 communities are open, kind, inclusive, and some of the nicest and most amazing, inspiring, and dynamic people you will ever meet, despite the existing barriers. It’s all about finding the right ones to guide you on your quest.
+        It’s not just another iteration of an ultimately extractive “metaverse” run by the whim of whales and those with the capital to throw around.         
       </div>
       <div className={styles.text2}>
-        If you’re still on the fence about diving deeper into web3, let me tell you from personal experience: your skills are transferable. There’s a place for you on the team. 
+        Who wants a metaverse where its participants are reduced to real estate brokers selling a piece of virtual land. Virtual land that was expressly made for the corporate fat cats and their murder of lawyers to market to? One that exists for the benefit of gatekeepers rubbing their grubby hands at the filthy lucre they stand to gain from the money that will undoubtedly plow into the metaverse economy–regardless of who wins the race to define what it really is.
         <br /><br />
-        It’s early AF. It’s going to be a wild ride, and it’s going to be oodles and oodles of fun.
+        Nevertheless, Nifty Island is proving this model out. Nifty Island rewards the creators, builders, artisans, and risk-takers of the new digital era an opportunity to create wealth through the creation of value. It’s not just the value of the parcels of virtual islands with heavy traffic that will benefit (from the platform’s to-be-released native token). It’s the individuals actively taking the time to build who are strongly incentivized to create, move fast, break things, create network effects, and therefore generate clout in web3–which is more than its weight than anything in this space.
         <br /><br />
-        The best part? It’s not always about the money or the status. It’s not always about the “I’m-cooler-than-thou” posturing. It’s not always about the clout and who has the most followers. It’s just about the people. Don’t make any mistake – web3 is where the party’s at.
+        Clout attracts creators and new participants in the ecosystem–each of which brings their own unique value proposition to the worlds they choose to inhabit.
         <br /><br />
-        Find your tribe, find your purpose, find your place, and once you do, double down on it. Big time.
+        Therefore, the striking difference between the first generation and the new one is how they incentivize their users to create genuine, tangible economic and social value for every participant who chooses to spend their time living their digital life in that particular world. 
+      </div>
+      <div className={styles.text3}>
+        Time is, after all, the final currency. Who wants to live in the shadow of the terrifying prospect of a Zuckerverse? Why even spend a single second living in a digital, dystopian fantasy of a virtual world that exists solely for faceless corporations and web2 also-rans to advertise to?
       </div>
     </div>
   )

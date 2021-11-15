@@ -13,7 +13,7 @@
     left: 29px;
     top: 38px;
     
-    background: #E78A7D;    
+    background: #CBE77D;    
   }
 
   .rect2 {
@@ -23,23 +23,26 @@
     left: 1007px;
     top: 38px;
     
-    background: #E78A7D;
+    background: #CBE77D;
   }
 
   .image1 {
     position: absolute;
-    width: 686px;
+    width: 851px;
     height: 662px;
-    left: 0px;
-    top: 0px;
+    left: -165px;
+    top: 29px;    
   }
 
   .image2 {
     position: absolute;
-    width: 832px;
-    height: 726px;
-    left: 66px;
-    top: 243px;
+    width: 384.67px;
+    height: 610.7px;
+    left: 177px;
+    top: 497.34px;
+
+    transform-origin: 0 0;
+    transform: rotate(-30deg);
   }
 
   h1 {
@@ -117,17 +120,18 @@
 
   .text4 {
     position: absolute;
-    width: 672px;
+    width: 953px;
     height: 90px;
-    left: 1114px;
+    left: 1024px;
     top: 87px;
     
     font-family: Nella Sue Demo;
     font-size: 75px;
     line-height: 120.53%;
-    text-align: center;
+    text-align: left;
     
     color: #FFFFFF;
+    
   }
 
   .text5 {

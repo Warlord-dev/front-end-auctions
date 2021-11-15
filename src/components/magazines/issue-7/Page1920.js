@@ -7,8 +7,8 @@ const Page1920 = () => {
       <div className={styles.rect1}></div>
       <div className={styles.rect2}></div>
 
-      <img src='./magazine/6/images/1920_image1.png' className={styles.image1} />
-      <img src='./magazine/6/images/1920_image2.png' className={styles.image2} />
+      <img src='./magazine/7/images/1920_image1.png' className={styles.image1} />
+      <img src='./magazine/7/images/1920_image2.png' className={styles.image2} />
       
       <h1>
         RUG
@@ -18,16 +18,16 @@ const Page1920 = () => {
       </h1>
 
       <div className={styles.text1}>
-        Gravity hole for the masses.
+        It’s a battle to stay open.
       </div>
       <div className={styles.text2}>
-        How do we truly hack web3 onboarding ?
+        Will the metaverse just be a more immersive web2?
       </div>
       <div className={styles.text3}>
-        Growing and maintaining community engagement, activity and momentum for decentralised tech projects is essential for achieving anything in this space. For, after all, community is web3. 
+        With Zuck announcing Facebook’s name change to Meta and going all in on building out a closed source, copyrighted, IP locked metaverse. What does it mean for web3?
       </div>
       <div className={styles.text4}>
-        The On-Ramp RugPull
+        The Open Metaverse RugPull
       </div>
       <div className={styles.text5}>
         What strikes me as most exciting about the numerous decentralised communities and DAOs that seem to be emerging across the entire space, is that many are truly bringing together like minded individuals with a strong desire to solve specific obstacles and barriers currently in the way of the 10,000x metaverse scale up to come. And, it comes as no surprise that one, or even two, of the biggest of these hurdles is that of the on-ramp. How do we actually get the masses from stage 0 to 1, from seed to harvest, to fully embracing and welcoming web3 and all it has to offer? 

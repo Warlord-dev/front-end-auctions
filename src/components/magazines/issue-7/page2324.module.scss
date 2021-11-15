@@ -1,134 +1,276 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet');
 
 .wrapper {
   @include magazineWrapper();
-  background-color: #00D6E3;
+  background-color: #000000;
   color: white;
   display: flex;
   position: relative;
 
   .image1 {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 1920px;
+    width: 1047px;
     height: 1497px;
+    left: 873px;
+    top: 0px;    
+  }
+
+  .image2 {
+    position: absolute;
+    width: 873px;
+    height: 1497px;
+    left: 0px;
+    top: 0px;    
   }
 
   .text1 {
     position: absolute;
-    width: 670px;
-    height: 572px;
-    left: 36px;
-    top: 35px;
+    width: 133px;
+    height: 50px;
+    left: 25px;
+    top: 1195px;
     
-    font-family: Antonio;
-    font-size: 130px;
-    line-height: 110%;
-    color: #FBFF43;    
-  }
-
-  .rect1 {
-    position: absolute;
-    width: 828px;
-    height: 1243px;
-    left: 923px;
-    top: 173px;
-    
-    background: rgba(255, 255, 255, 0.79);
-    border-radius: 147px;    
+    font-family: A DAY WITHOUT SUN;
+    font-size: 50px;
+    line-height: 100%;
+    color: #FFFFFF;        
   }
 
   .text2 {
     position: absolute;
-    width: 743px;
-    height: 1170px;
-    left: 985px;
-    top: 235px;
+    width: 227px;
+    height: 40px;
+    left: 25px;
+    top: 1472px;
     
-    font-family: Reem Kufi;
-    font-size: 24px;
-    line-height: 39px;
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);    
+  }
+
+  .textLand1 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 901px;
+    top: 101px;
     
-    color: #FA00FF;    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;        
+  }
+
+  .textLand2 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 1421px;
+    top: 101px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand3 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 901px;
+    top: 261px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand4 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 1421px;
+    top: 261px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand5 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 901px;
+    top: 421px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;  
+  }
+
+  .textLand6 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 1421px;
+    top: 421px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand7 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 901px;
+    top: 596px;
+   
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;  
+  }
+
+  .textLand8 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 1421px;
+    top: 596px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand9 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 901px;
+    top: 756px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand10 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 1421px;
+    top: 756px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand11 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 901px;
+    top: 916px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;    
+  }
+
+  .textLand12 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 1421px;
+    top: 916px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand13 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 901px;
+    top: 1076px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand14 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 1421px;
+    top: 1076px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand15 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 901px;
+    top: 1236px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .textLand16 {
+    position: absolute;
+    width: 648px;
+    height: 160px;
+    left: 1421px;
+    top: 1236px;
+    
+    font-family: Wallpoet;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFFFFF;
   }
 
   .text3 {
     position: absolute;
-    width: 261px;
-    height: 115px;
-    left: 187px;
-    top: 617px;
+    width: 648px;
+    height: 30px;
+    left: 901px;
+    top: 1402px;
     
-    font-family: Inter;
+    font-family: Wallpoet;
     font-size: 30px;
-    line-height: 120.53%;
-    color: #DC0101;
-  }
-
-  .circle1 {
-    position: absolute;
-    width: 203px;
-    height: 203px;
-    left: 31px;
-    top: 1178px;
-   
-    
-    background: #6534FF;
-    border: 4px solid #FCCDD3;
-    border-radius: 50%;    
-  }
-
-  .circleText1 {
-    position: absolute;
-    width: 167.74px;
-    height: 119px;
-    left: 26px;
-    top: 1246.51px;
-    
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 46px;
-    text-align: center;
-    
-    color: #FCCDD3;
-    -webkit-text-stroke:  1px #FCCDD3;
-    transform-origin: 0 0;
-    transform: rotate(-20deg);    
-  }
-
-  .circleText2 {
-    position: absolute;
-    width: 152px;
-    height: 119px;
-    left: 73px;
-    top: 1308px;
-    
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 30px;
-    text-align: center;
-    color: #FFFFFF;
-  }
-
-  .poapImage {
-    position: absolute;
-    width: 154.85px;
-    height: 154.85px;
-    left: 152px;
-    top: 1215.96px;
-    
-    transform-origin: 0 0;
-    transform: rotate(-20deg);
-
-    transition: all 0.3s;
-    &:hover {
-      transition: all 0.3s;
-      transform: rotate(-20deg) scale(1.1);
-    }
+    line-height: 100%;
+    color: #FFFFFF;    
   }
 }

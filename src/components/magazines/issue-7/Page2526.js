@@ -1,31 +1,48 @@
 import React, { useState } from 'react'
+import Image from 'next/image'
 import styles from './page2526.module.scss'
 
 const Page2526 = () => {
 
   return (
     <div className={styles.wrapper}>
-      <img src='./magazine/6/images/2526_image1.png' className={styles.image1} />
-      <div className={styles.rect1}></div>
-      <div className={styles.rect2}></div>
-      <div className={styles.text1}>
-        The spirit of building for the bazaar is what makes web3 so unique. It is an aggregation of individuals acting autonomously to work over a shared vision, as the feedback loop that constantly stimulates the ecosystem generates value for each participant. It’s also what makes it so daunting.
-        <br /><br />
-        The signal-to-noise ratio increases as more protocols are created, increasing the curve for users who wish to experience using decentralized applications. On the other hand, networks have been trying to progressively decentralize to turn spectators and onlookers into users of an ecosystem. 
-        <br /><br />
-        Fortunately, the natively gamified nature of web3–expanding into more ways to gamify communities, projects, and incentives than you can shake a stick at–has made it easier than ever to onboard the increasing numbers of individuals determined to carve their way “on-chain.”
-        <br /><br />
-        From quests, leaderboards, teams, clans, hackathons, scavenger hunts, token drops, badges for participation in events, capital raising, social media, party voting, all sorts of strategies can be employed to further onboard, stimulate and incentivize members to contribute to the protocol’s growth.
-        <br /><br />
-        Gamification is taking over entire facets of our lives as we march bravely into 2525. There’s so much to discover and learn by just participating in web3 life–decentralized communities, DeFi, metaverse, NFTs, and modding–such that it almost feels like a renaissance is just around the bend.         
+      <div className={styles.image1}>
+        <Image
+          src='/magazine/7/images/2324_image1.jpg'
+          width={1047}
+          height={1497}
+        />
       </div>
-      <div className={styles.text2}>
-        Quests, in particular, are an excellent way to drive contributions to a community, apart from a critical tool for onboarding users who wish to contribute to a community looking for new talent or members who are aligned with its values and vision. Participating in quests allows communities to interact with communities outside their ecosystem and tap into new streams of human capital to achieve new goals.
+      <div className={styles.image2}>
+        <Image
+          src='/magazine/7/images/2526_image1.png'
+          width={599}
+          height={342}
+        />
+      </div>
+      <div className={styles.image3}>
+        <Image
+          src='/magazine/7/images/2526_image1.png'
+          width={315}
+          height={180}
+        />
+      </div>
+      <div className={styles.text1}>
+        Digital real estate is fast appreciating in prices just as new, uncharted virtual realms emerge from the fertile soil of web3. We’ve seen digital property prices across metaverses like Decentraland and their ilk as metaverse mania runs wild on the tech news cycle.
         <br /><br />
-        Quests also enable communities the talent it takes to create value across the ecosystem from within their ranks and openly allow anyone to participate, regardless of background. It’s all about delivering the task at hand and offering your marketable skills and value to the community one way or another. It builds your on-chain reputation and identity as a trustworthy, reliable member of the community with verifiable proof of your participation. And there’s a lot of ongoing demand for talent who can do just that.
+        Much of the discussion centers on how virtual land made artificially scarce by their founders and operators has appreciated in value as speculation over the metaverse gravy train intensifies. Which non-fungible tokenized real estate sells for hundreds of thousands to “metaverse real estate agencies” and “landlords” all seeking to flip it to the next newcomer for a hot profit? That’s where the media coverage is. Money talks, media listens.
         <br /><br />
-        Rewarding community members for participation and engagement allows them to reward users for their contribution and offers the perfect way to put new members through their paces - akin to a learn-to-earn model.
-
+        But is that all that there really is about digital property? 
+        <br /><br />
+        A healthy dose of skepticism is always necessary amidst all the hopium and fud the space thrives on.
+        <br /><br />
+        Is ownership of virtual real estate a zero-sum game of speculation and amassing capital as what we are now being led to believe?
+        <br /><br />
+        There are already enough issues with owning private property for most of the millennials and zoomers who have been royally fucked over by the system. Are we really going to do the same thing for a reality as expansive and all-encompassing as the metaverse?
+        <br /><br />
+        How can it be that something as infinite and as limitless as the open metaverse is limited to just 90,000 plots of land? Or a variation thereof, depending on which virtual world you wish to settle and live in?
+        <br /><br />
+        How many pitches have you heard of new protocols whose sole modus vivendi is centered on being sold the fantasy of becoming some sort of digital landlord? Quite frankly, most of them do. We already see a pivot from this angle with projects like Nifty Island, where everyone–EVERYONE can build their on their virtual island, build it, and attract individuals who actually wish to live in it, rather than some marketing-and-billboard infested phantasmagoric hogwash simulating the flawed, extractive model of physical real estate’s property regime. 
       </div>
     </div>
   )

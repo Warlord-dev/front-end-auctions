@@ -1,8 +1,9 @@
 @import './styles.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Titan+One');
 
 .wrapper {
   @include magazineWrapper();
-  background-color: #393939;
+  background-color: #F1C148;
   color: black;
   display: flex;
   position: relative;
@@ -12,100 +13,7 @@
     width: 960px;
     height: 1497px;
     left: 960px;
-    top: 0px;    
-  }
-
-  .video1 {
-    position: absolute;
-    width: 165px;
-    height: 157px;
-    left: 0px;
-    top: 1px;    
-  }
-
-  .video2 {
-    position: absolute;
-    width: 165px;
-    height: 157px;
-    left: 0px;
-    top: 158px;
-    
-  }
-
-  .video3 {
-    position: absolute;
-    width: 165px;
-    height: 157px;
-    left: 0px;
-    top: 315px;
-    
-  }
-
-  .video4 {
-    position: absolute;
-    width: 165px;
-    height: 157px;
-    left: 0px;
-    top: 472px;
-  }
-
-  .video5 {
-    position: absolute;
-    width: 165px;
-    height: 157px;
-    left: 0px;
-    top: 629px;
-  }
-
-  .video6 {
-    position: absolute;
-    width: 165px;
-    height: 157px;
-    left: 0px;
-    top: 786px;
-        
-  }
-
-  .video7 {
-    position: absolute;
-    width: 165px;
-    height: 157px;
-    left: 0px;
-    top: 943px;
-  }
-
-  .video8 {
-    position: absolute;
-    width: 165px;
-    height: 157px;
-    left: 0px;
-    top: 1100px;
-  }
-
-  .video9 {
-    position: absolute;
-    width: 165px;
-    height: 157px;
-    left: 0px;
-    top: 1257px;
-    
-  }
-
-  .video10 {
-    position: absolute;
-    width: 165px;
-    height: 157px;
-    left: 0px;
-    top: 1414px;   
-  }
-
-  .rect1 {
-    position: absolute;
-    width: 50px;
-    height: 1493px;
-    left: 163px;
     top: 0px;
-    background: #FFFFFF;    
   }
 
   .text1 {
@@ -225,17 +133,6 @@
     height: 96px;
     left: 1675px;
     top: 50px;
-  }
-
-  a {
-    img {
-      transition: 0.3s all;
-
-      &:hover {
-        transition: 0.3s all;
-        transform: scale(1.1);
-      }
-    }
   }
 
   .text7 {
@@ -359,233 +256,164 @@
     color: #FFFFFF;
   }
 
-  .text14 {
+  .rect1 {
     position: absolute;
-    width: 427px;
-    height: 169px;
-    left: 511px;
-    top: 36px;
-    
-    font-family: Antonio;
-    font-size: 130px;
-    line-height: 110%;
-    color: #7976FF;        
+    left: 0;
+    top: 0;
+    width: 370px;
+    height: 1497px;
+    background-color: white;
   }
 
-  .text15 {
-    position: absolute;
-    width: 225px;
-    height: 1402px;
-    left: 244px;
-    top: 36px;
-    
-    font-family: Lobster Two;
-    font-size: 15px;
-    line-height: 110%;
-    color: #FFFFFF;
-
-    span {
-      color: red;
-    }
-  }
-
-  .text16 {
-    position: absolute;
-    width: 420px;
-    height: 169px;
-    left: 524px;
-    top: 179px;
-
-    font-family: Antonio;
-    font-size: 50px;
-    line-height: 110%;
-    color: #FFFFFF;
-    -webkit-text-stroke: 1px black;
-    z-index: 10;
-  }
-
-  .image7 {
-    position: absolute;
-    width: 399px;
-    height: 167px;
-    left: 561px;
-    top: 367px;
-    
-    transform-origin: 0 0;
-    transform: matrix(1, 0, 0, -1, 0, 0);
-  }
-  
   .image71 {
     position: absolute;
-    width: 399px;
-    height: 167px;
-    left: 500px;
-    top: 534px;
-    
-    transform-origin: 0 0;
-    transform: matrix(1, 0, 0, -1, 0, 0);
+    width: 271px;
+    height: 308px;
+    left: 40px;
+    top: 20px;    
   }
 
   .image72 {
     position: absolute;
-    width: 399px;
-    height: 167px;
-    left: 561px;
-    top: 701px;
-    
-    transform-origin: 0 0;
-    transform: matrix(1, 0, 0, -1, 0, 0);    
+    width: 271px;
+    height: 308px;
+    left: 40px;
+    top: 350px;    
   }
-  
+
   .image73 {
     position: absolute;
-    width: 399px;
-    height: 167px;
-    left: 500px;
-    top: 868px;
-    
-    transform-origin: 0 0;
-    transform: matrix(1, 0, 0, -1, 0, 0);
+    width: 271px;
+    height: 308px;
+    left: 40px;
+    top: 680px;
   }
 
   .image74 {
     position: absolute;
-    width: 399px;
-    height: 167px;
-    left: 561px;
-    top: 1035px;
-    
-    transform-origin: 0 0;
-    transform: matrix(1, 0, 0, -1, 0, 0);    
-  }
-  
-  .image75 {
-    position: absolute;
-    width: 399px;
-    height: 167px;
-    left: 500px;
-    top: 1202px;
-    
-    transform-origin: 0 0;
-    transform: matrix(1, 0, 0, -1, 0, 0);
+    width: 271px;
+    height: 308px;
+    left: 40px;
+    top: 1010px;
   }
 
-  .image76 {
+  .image75 {
     position: absolute;
-    width: 399px;
-    height: 167px;
-    left: 561px;
-    top: 1369px;
-    
-    transform-origin: 0 0;
-    transform: matrix(1, 0, 0, -1, 0, 0);
-  }
-  
-  .image77 {
-    position: absolute;
-    width: 399px;
-    height: 167px;
-    left: 500px;
-    top: 1536px;
-    
-    transform-origin: 0 0;
-    transform: matrix(1, 0, 0, -1, 0, 0);
+    width: 271px;
+    height: 308px;
+    left: 40px;
+    top: 1338px;
   }
 
   .image8 {
     position: absolute;
-    width: 218px;
-    height: 610px;
-    left: 524px;
-    top: 367px;      
+    width: 824px;
+    height: 1188px;
+    left: 0px;
+    top: 309px;    
   }
 
-  .image81 {
+  .image9 {
+    background-color: gray;
+    border-radius: 50%;
     position: absolute;
-    width: 218px;
-    height: 610px;
-    left: 742px;
-    top: 367px;
+    width: 399px;
+    height: 399px;
+    left: 561px;
+    top: 1098px;
+
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(0.9);
+    }
   }
 
-  .image82 {
-    position: absolute;
-    width: 218px;
-    height: 610px;
-    left: 524px;
-    top: 980px;
-  }
-
-  .image83 {
-    position: absolute;
-    width: 218px;
-    height: 610px;
-    left: 742px;
-    top: 980px;
-  }
-
-  .circle1 {
-    position: absolute;
-    width: 203px;
-    height: 203px;
-    left: 540px;
-    top: 1230px;
-   
-    background: #6534FF;
-    border: 4px solid #FCCDD3;
-    border-radius: 50%;    
-  }
-
-  .circleText1 {
-    position: absolute;
-    width: 167.74px;
-    height: 119px;
-    left: 535px;
-    top: 1298.51px;
+  .gradient {
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #9c9c9c;
+    background: linear-gradient(to right, #9c9c9c 8%, #f4f4f4 38%, #9c9c9c 54%);
+    background-size: 1000px 640px;
     
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 46px;
-    text-align: center;
-    
-    color: #FCCDD3;
-    -webkit-text-stroke:  1px #FCCDD3;
-    transform-origin: 0 0;
-    transform: rotate(-20deg);    
+    position: relative;     
   }
 
-  .circleText2 {
+  @keyframes placeHolderShimmer{
+    0%{
+      background-position: -468px 0
+    }
+    100%{
+      background-position: 468px 0
+    }
+  }
+
+  .text14 {
+    position: absolute;
+    width: 574px;
+    height: 80px;
+    left: 386px;
+    top: 15px;
+    
+    font-family: Titan One;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FF1ECD;
+    text-shadow: -1px 0 black, 0 -1px black, -1px -1px black, 0 1px black, 1px 0 black, -1px 1px black, 1px -1px black, 1px 1px black;
+    -webkit-text-stroke: 1px solid #000000;
+
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(0.9);
+    }
+  }
+
+
+  .playButton1 {
+    position: absolute;
+    width: 268px;
+    height: 268px;
+    left: 26px;
+    top: 964px;
+
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:hover {
+      transition: 0.3s all;
+      transform: scale(1.1);
+    }
+  }
+
+  .imageBack {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imagePlay {
     position: absolute;
     width: 152px;
-    height: 119px;
-    left: 582px;
-    top: 1360px;
-    
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 30px;
-    text-align: center;
-    color: #FFFFFF;
+    height: 173px;
+    left: 80px;
+    top: 50px;
   }
-
-  .poapImage {
+  
+  .imagePause {
     position: absolute;
-    width: 154.85px;
-    height: 154.85px;
-    left: 661px;
-    top: 1267.96px;
-    
-    transform-origin: 0 0;
-    transform: rotate(-20deg);
-
-    transition: all 0.3s;
-    &:hover {
-      transition: all 0.3s;
-      transform: rotate(-20deg) scale(1.1);
-    }
+    width: 129px;
+    height: 163px;
+    left: 73px;
+    top: 55px;
   }
 }

@@ -3,7 +3,9 @@ import styles from './page34.module.scss'
 const Page34 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='./magazine/6/images/0304_image1.png' className={styles.image4} />
+      <div className={styles.rect1}></div>
+      <div className={styles.rect2}></div>
+      <div className={styles.rect3}></div>
       <p className={styles.text1}> Olympic Sneakers of Conviction.</p>
       <p className={styles.text2}>
       As we swim through ever-deepening layers of complexity and exhiliration in building out the metaverse and its multidimensional realms, it’s far too predictable that some of that us will get caught up in the short sighted hope of being able to guess the winning lotto numbers of the market each day.
@@ -17,7 +19,8 @@ const Page34 = () => {
       The road to gold at the top of a mountain requires tremendous tenacity to discover, reach, claim and return to tell the tale. The gold is real. But, it is rare and exists dispersed on out of the way mountains not yet discovered in terrain filled with the fog of information assymetry. The lesson is that in order to succeed you must have the courage of your conviction. Then find your own mountain. 
      </p>
      <p className={styles.text12}>- Emma-Jane MacKinnon-Lee</p>
-     <img src='./magazine/6/images/0304_image2.jpg' className={styles.image1} />
+     <img src='./magazine/7/images/0304_image1.jpg' className={styles.image1} />
+     <div className={styles.rect4}></div>
       
       <p className={styles.text3}>contributors</p>
       <p className={styles.text4}>

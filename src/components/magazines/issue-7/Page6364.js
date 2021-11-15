@@ -1,6 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
-import styles from './page6364.module.scss';
+import React from 'react'
+import styles from './page6364.module.scss'
 
 const Page6364 = () => {
   return (
@@ -59,7 +58,7 @@ const Page6364 = () => {
       </div>
       <img src="/magazine/6/images/63_64_image1.png" className={styles.image1} />
     </div>
-  );
-};
+  )
+}
 
-export default Page6364;
+export default Page6364

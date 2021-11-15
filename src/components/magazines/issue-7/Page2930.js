@@ -6,7 +6,7 @@ const Page2930 = () => {
   return (
     <div className={styles.wrapper}>
       <video autoPlay muted loop className={styles.video1}>
-        <source src='./magazine/6/videos/2930_video1.mp4' type='video/mp4' />
+        <source src='/magazine/7/videos/2930_video1.mp4' type='video/mp4' />
       </video>
       <div className={styles.rect1}></div>
       <h1>SUSTAINABILITY PIONEERS</h1>

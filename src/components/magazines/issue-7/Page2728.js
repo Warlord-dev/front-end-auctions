@@ -1,19 +1,56 @@
 import React  from 'react'
+import Image from 'next/image'
 import styles from './page2728.module.scss'
 
 const Page2728 = () => {
   return (
     <div className={styles.wrapper}>
-      <img src='./magazine/6/images/2728_image1.png' className={styles.image1} />
-      <div className={styles.rect1}></div>
-      <div className={styles.rect2}></div>
-      <div className={styles.text1}>
-        Web3 social clubs are increasingly adopting quests to onboard individuals who’ve always wanted to break into the space. For instance, we can look towards web3 social clubs such as RabbitHole, which developed a portal for individuals to learn about crypto and earn it by using the most frequently relied-on apps in web3. Quests include learning to use protocols and dapps such as Aave, Uniswap, Ethereum Name Service, or by learning everything about NFTs to start, doing so by simply connecting their web3 wallets to their service. New users also have the opportunity to onboard themselves, participate via their Discord server, and get involved in the discussion.
-        <br /><br />
-        Ultimately, gamification supercharges communities and infuses them with the lifeblood needed to use and build web3 through an open approach to solving problems and sharing value. Leaderboards, badges, and quests allow organizations to align rewards with activities the users perform and desire. It’s also the potential unlock to financially rewarding the entire network for their engagement and intrinsic motivation for its participants to succeed.
+      <div className={styles.image1}>
+        <Image
+          src='/magazine/7/images/2324_image1.jpg'
+          width={1047}
+          height={1497}
+        />
       </div>
-      <div className={styles.text2}>
-        In the end, the history of religion is a testament to how gamification has always driven us to achieve extraordinary things. Plenty of belief systems are prefaced on fulfilling quests. Quests to make chaste, to make divine, ordeals, and travails to go through, to attain a higher state of being. Call it nirvana, salvation, reincarnation, redemption, practically any belief system’s end goal, for that matter, and the ultimate end is to achieve a prize. Religion is inherently incentivized to those who believe, and quests, as they do in web3 today, have always taken root deep into the human condition.
+      <div className={styles.image2}>
+        <Image
+          src='/magazine/7/images/2526_image1.png'
+          width={599}
+          height={342}
+        />
+      </div>
+      <div className={styles.image3}>
+        <Image
+          src='/magazine/7/images/2526_image1.png'
+          width={315}
+          height={180}
+        />
+      </div>
+      <div className={styles.image4}>
+        <Image
+          src='/magazine/7/images/2526_image1.png'
+          width={315}
+          height={180}
+        />
+      </div>
+      <div className={styles.text1}>
+        We can have an infinity of metaverse spaces we ALL can live in–not just anyone who can fork over the most.
+        <br /><br />
+        We’re building in web3 so we can replace all those flawed systems. Why should virtual land be limited to being a base layer for private land ownership when it can be so much more than just another boring real estate play that’s strictly worse than the existing paradigm anyway?
+        <br /><br />
+        Approaching virtual land based on an IRL property regime is probably looking at virtual land the wrong way. Besides, with the multitude of virtual worlds out there, how can we attach our identities to the parcels of digital land we own?
+        <br /><br />
+        Well, the Ethereum Name Service (ENS) just might have the answer. ENS, which basically serves as an entity’s digital identity in the metaverse, has come across as potentially a solution to coordinating ownership of virtual land across the realms they might exist in and mapping them in an organized, easily iterable fashion.
+        <br /><br />
+        And just as domain names became the undisputed virtual land of the web1 era, the same future just might play out in web3.
+        <br /><br />
+        ENS has supported custom text fields since last October, which are basically arbitrary records that can store any data without adding new types for new use cases–virtual land included.
+        <br /><br />
+        Besides, addresses are much simpler to organize, significantly more composable, and data–including virtual spaces–can be layered on top of it in various ways. Therefore, everything you wish to register–land included–can be done using ENS.
+        <br /><br />
+        And just as web1 domains were, ENS can very well be on the cusp of becoming a fundamental element of the open and decentralized metaverse.
+        <br /><br />
+        We’ve already lost the shackles that restrain us from enjoying the privilege of true, unbridled ownership of whatever it is we wish to own in the metaverse. Why put them back on for the lack of imagination?
       </div>
     </div>
   )

@@ -1869,6 +1869,12 @@ class MyDocument extends Document {
               font-weight: 400;
               src: url("./fonts/AndadaSC-Regular.otf");
             }
+            
+            @font-face {
+              font-family: 'Abyssinica SIL';
+              font-weight: 400;
+              src: url("./fonts/AbyssinicaSIL-R.ttf");
+            }
           `,
             }}
           />
